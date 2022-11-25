@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage cache parameter groups in Amazon ElastiCache}
+  community.aws.elasticache_parameter_group:
+    group_family: ${2:# The name of the cache parameter group family that the cache parameter group can be used with}
+    name: ${3:# A user-specified name for the cache parameter group}
+    description: ${4:# A user-specified description for the cache parameter group}
+    state: ${5:# Idempotent actions that will create/modify, destroy, or reset a cache parameter group as needed}
+    values: ${6:# A user-specified dictionary of parameters to reset or modify for the cache parameter group}
+    access_key: ${7:# AWS access key ID}
+    secret_key: ${8:# AWS secret access key}
+    session_token: ${9:# AWS STS session token for use with temporary credentials}
+    profile: ${10:# A named AWS profile to use for authentication}
+    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${12:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${13:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${14:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${15:# Use a C(botocore}
+    region: ${16:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - elasticache_parameter_group]]></content>
+  <tabTrigger>community.aws.elasticache_parameter_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage cache parameter groups in Amazon ElastiCache</description>
+</snippet>

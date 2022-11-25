@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage tenants}
+  cisco.mso.mso_tenant:
+    tenant: ${2:# The name of the tenant}
+    display_name: ${3:# The name of the tenant to be displayed in the web UI}
+    description: ${4:# The description for this tenant}
+    users: ${5:# A list of associated users for this tenant}
+    sites: ${6:# A list of associated sites for this tenant}
+    state: ${7:# Use C(present) or C(absent) for adding or removing}
+    host: ${8:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    port: ${9:# Port number to be used for the REST connection}
+    username: ${10:# The username to use for authentication}
+    password: ${11:# The password to use for authentication}
+    output_level: ${12:# Influence the output of this MSO module}
+    timeout: ${13:# The socket level timeout in seconds}
+    use_proxy: ${14:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${15:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    validate_certs: ${16:# If C(no), SSL certificates will not be validated}
+    login_domain: ${17:# The login domain name to use for authentication}
+  tags:
+    - cisco
+    - mso
+    - mso_tenant]]></content>
+  <tabTrigger>cisco.mso.mso_tenant</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage tenants</description>
+</snippet>

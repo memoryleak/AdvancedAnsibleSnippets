@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Back up an Azure Virtual Machine using Azure Backup}
+  azure.azcollection.azure_rm_backupazurevm:
+    resource_group: ${2:# The name of the resource group}
+    recovery_vault_name: ${3:# The name of the Azure Recovery Service Vault}
+    resource_id: ${4:# Azure Virtual Machine Resource ID}
+    backup_policy_id: ${5:# Backup Policy ID present under Recovery Service Vault mentioned in recovery_vault_name field}
+    state: ${6:# Assert the state of the protection item}
+    ad_user: ${7:# Active Directory username}
+    password: ${8:# Active Directory user password}
+    profile: ${9:# Security profile found in ~/}
+    subscription_id: ${10:# Your Azure subscription Id}
+    client_id: ${11:# Azure client ID}
+    secret: ${12:# Azure client secret}
+    tenant: ${13:# Azure tenant ID}
+    cloud_environment: ${14:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${15:# Azure AD authority url}
+    cert_validation_mode: ${16:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${17:# Controls the source of the credentials to use for authentication}
+    api_profile: ${18:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${19:# Parent argument}
+    log_mode: ${20:# Parent argument}
+    x509_certificate_path: ${21:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${22:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${23:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${24:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_backupazurevm]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_backupazurevm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Back up an Azure Virtual Machine using Azure Backup</description>
+</snippet>

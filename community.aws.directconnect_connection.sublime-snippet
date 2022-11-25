@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates, deletes, modifies a DirectConnect connection}
+  community.aws.directconnect_connection:
+    state: ${2:# The state of the Direct Connect connection}
+    name: ${3:# The name of the Direct Connect connection}
+    connection_id: ${4:# The ID of the Direct Connect connection}
+    location: ${5:# Where the Direct Connect connection is located}
+    bandwidth: ${6:# The bandwidth of the Direct Connect connection}
+    link_aggregation_group: ${7:# The ID of the link aggregation group you want to associate with the connection}
+    forced_update: ${8:# To modify I(bandwidth) or I(location) the connection needs to be deleted and recreated}
+    access_key: ${9:# AWS access key ID}
+    secret_key: ${10:# AWS secret access key}
+    session_token: ${11:# AWS STS session token for use with temporary credentials}
+    profile: ${12:# A named AWS profile to use for authentication}
+    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${16:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
+    region: ${18:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - directconnect_connection]]></content>
+  <tabTrigger>community.aws.directconnect_connection</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates, deletes, modifies a DirectConnect connection</description>
+</snippet>

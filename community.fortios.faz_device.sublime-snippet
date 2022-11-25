@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add or remove device}
+  community.fortios.faz_device:
+    adom: ${2:# The ADOM the configuration should belong to}
+    mode: ${3:# Add or delete devices}
+    device_username: ${4:# The username of the device being added to FortiAnalyzer}
+    device_password: ${5:# The password of the device being added to FortiAnalyzer}
+    device_ip: ${6:# The IP of the device being added to FortiAnalyzer}
+    device_unique_name: ${7:# The desired 'friendly' name of the device being added to FortiAnalyzer}
+    device_serial: ${8:# The serial number of the device being added to FortiAnalyzer}
+    os_type: ${9:# The os type of the device being added (default 0)}
+    mgmt_mode: ${10:# Management Mode of the device you are adding}
+    os_minor_vers: ${11:# Minor OS rev of the device}
+    os_ver: ${12:# Major OS rev of the device}
+    platform_str: ${13:# Required for determine the platform for VM platforms}
+    faz_quota: ${14:# Specifies the quota for the device in FAZ}
+  tags:
+    - community
+    - fortios
+    - faz_device]]></content>
+  <tabTrigger>community.fortios.faz_device</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add or remove device</description>
+</snippet>

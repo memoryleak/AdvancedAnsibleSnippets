@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates a GCP Trigger}
+  google.cloud.gcp_cloudbuild_trigger:
+    state: ${2:# Whether the given object should exist in GCP}
+    id: ${3:# The unique identifier for the trigger}
+    name: ${4:# Name of the trigger}
+    description: ${5:# Human-readable description of the trigger}
+    tags: ${6:# Tags for annotation of a BuildTrigger }
+    disabled: ${7:# Whether the trigger is disabled or not}
+    substitutions: ${8:# Substitutions data for Build resource}
+    filename: ${9:# Path, from the source root, to a file whose contents is used for the template}
+    ignored_files: ${10:# ignoredFiles and includedFiles are file glob matches using U(https://golang}
+    included_files: ${11:# ignoredFiles and includedFiles are file glob matches using U(https://golang}
+    trigger_template: ${12:# Template describing the types of source changes to trigger a build}
+    github: ${13:# Describes the configuration of a trigger that creates a build whenever a GitHub event is received}
+    build: ${14:# Contents of the build template}
+    project: ${15:# The Google Cloud Platform project to use}
+    auth_kind: ${16:# The type of credential used}
+    service_account_contents: ${17:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_file: ${18:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    service_account_email: ${19:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    scopes: ${20:# Array of scopes to be used}
+    env_type: ${21:# Specifies which Ansible environment you're running this module within}
+  tags:
+    - google
+    - cloud
+    - gcp_cloudbuild_trigger]]></content>
+  <tabTrigger>google.cloud.gcp_cloudbuild_trigger</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates a GCP Trigger</description>
+</snippet>

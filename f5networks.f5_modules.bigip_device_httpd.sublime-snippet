@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage HTTPD related settings on a BIG-IP system}
+  f5networks.f5_modules.bigip_device_httpd:
+    allow: ${2:# If you have enabled HTTPD access, specifies the IP address or address range for other systems that can communicate with this system}
+    auth_name: ${3:# Sets the BIG-IP authentication realm name}
+    auth_pam_idle_timeout: ${4:# Sets the GUI timeout for automatic logout, in seconds}
+    auth_pam_validate_ip: ${5:# Sets the authPamValidateIp setting}
+    auth_pam_dashboard_timeout: ${6:# Sets whether or not the BIG-IP dashboard will timeout}
+    fast_cgi_timeout: ${7:# Sets the timeout of FastCGI}
+    hostname_lookup: ${8:# Sets whether or not to display the hostname, if possible}
+    log_level: ${9:# Sets the minimum HTTPD log level}
+    max_clients: ${10:# Sets the maximum number of clients that can connect to the GUI at once}
+    redirect_http_to_https: ${11:# Whether or not to redirect HTTP requests to the GUI to HTTPS}
+    ssl_port: ${12:# The HTTPS port on which the system should listen}
+    ssl_cipher_suite: ${13:# Specifies the ciphers the system uses}
+    ssl_protocols: ${14:# The list of SSL protocols to accept on the management console}
+    provider: ${15:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_device_httpd]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_device_httpd</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage HTTPD related settings on a BIG-IP system</description>
+</snippet>

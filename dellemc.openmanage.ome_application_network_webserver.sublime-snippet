@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Updates the Web server configuration on OpenManage Enterprise}
+  dellemc.openmanage.ome_application_network_webserver:
+    webserver_port: ${2:# Port number used by OpenManage Enterprise to establish a secure server connection}
+    webserver_timeout: ${3:# The duration in minutes after which a web user interface session is automatically disconnected}
+    hostname: ${4:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    username: ${5:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    password: ${6:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${7:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${8:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${9:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${10:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_application_network_webserver]]></content>
+  <tabTrigger>dellemc.openmanage.ome_application_network_webserver</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Updates the Web server configuration on OpenManage Enterprise</description>
+</snippet>

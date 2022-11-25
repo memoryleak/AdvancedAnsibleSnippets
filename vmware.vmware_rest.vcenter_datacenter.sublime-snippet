@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create a new datacenter in the vCenter inventory}
+  vmware.vmware_rest.vcenter_datacenter:
+    datacenter: ${2:# Identifier of the datacenter to be deleted}
+    folder: ${3:# Datacenter folder in which the new datacenter should be created}
+    force: ${4:# If true, delete the datacenter even if it is not empty}
+    name: ${5:# The name of the datacenter to be created}
+    session_timeout: ${6:# Timeout settings for client session}
+    state: ${7:# No description available}
+    vcenter_hostname: ${8:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${9:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${10:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${11:# The vSphere vCenter username}
+    vcenter_validate_certs: ${12:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware_rest
+    - vcenter_datacenter]]></content>
+  <tabTrigger>vmware.vmware_rest.vcenter_datacenter</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create a new datacenter in the vCenter inventory</description>
+</snippet>

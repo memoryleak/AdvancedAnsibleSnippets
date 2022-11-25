@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about objects in S3}
+  amazon.aws.s3_object_info:
+    bucket_name: ${2:# The name of the bucket that contains the object}
+    object_name: ${3:# The name of the object}
+    endpoint_url: ${4:# S3 URL endpoint for usage with Ceph, Eucalyptus and fakes3 etc}
+    dualstack: ${5:# Enables Amazon S3 Dual-Stack Endpoints, allowing S3 communications using both IPv4 and IPv6}
+    ceph: ${6:# Enable API compatibility with Ceph RGW}
+    object_details: ${7:# Retrieve requested S3 object detailed information}
+    access_key: ${8:# AWS access key ID}
+    secret_key: ${9:# AWS secret access key}
+    session_token: ${10:# AWS STS session token for use with temporary credentials}
+    profile: ${11:# A named AWS profile to use for authentication}
+    aws_ca_bundle: ${12:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${13:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${14:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${15:# Use a C(botocore}
+    region: ${16:# The AWS region to use}
+  tags:
+    - amazon
+    - aws
+    - s3_object_info]]></content>
+  <tabTrigger>amazon.aws.s3_object_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about objects in S3</description>
+</snippet>

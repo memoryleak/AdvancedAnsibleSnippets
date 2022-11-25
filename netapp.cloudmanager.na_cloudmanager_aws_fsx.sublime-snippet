@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Cloud ONTAP file system(FSx) in AWS}
+  netapp.cloudmanager.na_cloudmanager_aws_fsx:
+    state: ${2:# Whether the specified FSx in AWS should exist or not}
+    name: ${3:# The name of the CVO/Working Environment for AWS FSx to manage}
+    region: ${4:# The region where the working environment will be created}
+    aws_credentials_name: ${5:# The name of the AWS Credentials account name}
+    workspace_id: ${6:# The ID of the Cloud Manager workspace of working environment}
+    tenant_id: ${7:# The NetApp account ID that the File System will be associated with}
+    working_environment_id: ${8:# The ID of the AWS FSx working environment used for delete}
+    storage_capacity_size: ${9:# volume size for the first data aggregate}
+    storage_capacity_size_unit: ${10:# The unit for volume size}
+    fsx_admin_password: ${11:# The admin password for Cloud Volumes ONTAP fsxadmin user}
+    throughput_capacity: ${12:# The capacity of the throughput}
+    security_group_ids: ${13:# The IDs of the security groups for the working environment, multiple security groups can be provided separated by ','}
+    kms_key_id: ${14:# AWS encryption parameters}
+    tags: ${15:# Additional tags for the FSx AWS working environment}
+    primary_subnet_id: ${16:# The subnet ID of the first node}
+    secondary_subnet_id: ${17:# The subnet ID of the second node}
+    route_table_ids: ${18:# The list of route table IDs that will be updated with the floating IPs}
+    minimum_ssd_iops: ${19:# Provisioned SSD IOPS}
+    endpoint_ip_address_range: ${20:# The endpoint IP address range}
+    import_file_system: ${21:# bool option to existing import AWS file system to CloudManager}
+    file_system_id: ${22:# The AWS file system ID to import to CloudManager}
+    refresh_token: ${23:# The refresh token for NetApp Cloud Manager API operations}
+    sa_secret_key: ${24:# The service account secret key for NetApp Cloud Manager API operations}
+    sa_client_id: ${25:# The service account secret client ID for NetApp Cloud Manager API operations}
+    environment: ${26:# The environment for NetApp Cloud Manager API operations}
+    feature_flags: ${27:# Enable or disable a new feature}
+  tags:
+    - netapp
+    - cloudmanager
+    - na_cloudmanager_aws_fsx]]></content>
+  <tabTrigger>netapp.cloudmanager.na_cloudmanager_aws_fsx</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Cloud ONTAP file system(FSx) in AWS</description>
+</snippet>

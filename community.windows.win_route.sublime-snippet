@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add or remove a static route}
+  community.windows.win_route:
+    destination: ${2:# Destination IP address in CIDR format (ip address/prefix length)}
+    gateway: ${3:# The gateway used by the static route}
+    metric: ${4:# Metric used by the static route}
+    state: ${5:# If C(absent), it removes a network static route}
+  tags:
+    - community
+    - windows
+    - win_route]]></content>
+  <tabTrigger>community.windows.win_route</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add or remove a static route</description>
+</snippet>

@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create / delete a load balancer in Rackspace Public Cloud}
+  community.general.rax_clb:
+    algorithm: ${2:# algorithm for the balancer being created}
+    meta: ${3:# A hash of metadata to associate with the instance}
+    name: ${4:# Name to give the load balancer}
+    port: ${5:# Port for the balancer being created}
+    protocol: ${6:# Protocol for the balancer being created}
+    state: ${7:# Indicate desired state of the resource}
+    timeout: ${8:# timeout for communication between the balancer and the node}
+    type: ${9:# type of interface for the balancer being created}
+    vip_id: ${10:# Virtual IP ID to use when creating the load balancer for purposes of sharing an IP with another load balancer of another protocol}
+    wait: ${11:# wait for the balancer to be in state 'running' before returning}
+    wait_timeout: ${12:# how long before wait gives up, in seconds}
+    api_key: ${13:# Rackspace API key, overrides I(credentials)}
+    credentials: ${14:# File to find the Rackspace credentials in}
+    env: ${15:# Environment as configured in I(~/}
+    region: ${16:# Region to create an instance in}
+    username: ${17:# Rackspace username, overrides I(credentials)}
+    validate_certs: ${18:# Whether or not to require SSL validation of API endpoints}
+    auth_endpoint: ${19:# The URI of the authentication service}
+    identity_type: ${20:# Authentication mechanism to use, such as rackspace or keystone}
+    tenant_id: ${21:# The tenant ID used for authentication}
+    tenant_name: ${22:# The tenant name used for authentication}
+  tags:
+    - community
+    - general
+    - rax_clb]]></content>
+  <tabTrigger>community.general.rax_clb</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create / delete a load balancer in Rackspace Public Cloud</description>
+</snippet>

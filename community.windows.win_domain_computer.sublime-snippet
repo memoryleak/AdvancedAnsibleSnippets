@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage computers in Active Directory}
+  community.windows.win_domain_computer:
+    name: ${2:# Specifies the name of the object}
+    sam_account_name: ${3:# Specifies the Security Account Manager (SAM) account name of the computer}
+    enabled: ${4:# Specifies if an account is enabled}
+    ou: ${5:# Specifies the X}
+    description: ${6:# Specifies a description of the object}
+    dns_hostname: ${7:# Specifies the fully qualified domain name (FQDN) of the computer}
+    domain_username: ${8:# The username to use when interacting with AD}
+    domain_password: ${9:# The password for I(username)}
+    domain_server: ${10:# Specifies the Active Directory Domain Services instance to connect to}
+    state: ${11:# Specified whether the computer should be C(present) or C(absent) in Active Directory}
+    managed_by: ${12:# The value to be assigned to the LDAP C(managedBy) attribute}
+    offline_domain_join: ${13:# Provisions a computer in the directory and provides a BLOB file that can be used on the target computer/image to join it to the domain while offline}
+    odj_blob_path: ${14:# The path to the file where the BLOB will be saved}
+  tags:
+    - community
+    - windows
+    - win_domain_computer]]></content>
+  <tabTrigger>community.windows.win_domain_computer</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage computers in Active Directory</description>
+</snippet>

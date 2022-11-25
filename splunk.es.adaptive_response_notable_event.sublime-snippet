@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Splunk Enterprise Security Notable Event Adaptive Responses}
+  splunk.es.adaptive_response_notable_event:
+    name: ${2:# Name of notable event}
+    correlation_search_name: ${3:# Name of correlation search to associate this notable event adaptive response with}
+    description: ${4:# Description of the notable event, this will populate the description field for the web console}
+    state: ${5:# Add or remove a data source}
+    security_domain: ${6:# Splunk Security Domain}
+    severity: ${7:# Severity rating}
+    default_owner: ${8:# Default owner of the notable event, if unset it will default to Splunk System Defaults}
+    default_status: ${9:# Default status of the notable event, if unset it will default to Splunk System Defaults}
+    drill_down_name: ${10:# Name for drill down search, Supports variable substitution with fields from the matching event}
+    drill_down_search: ${11:# Drill down search, Supports variable substitution with fields from the matching event}
+    drill_down_earliest_offset: ${12:# Set the amount of time before the triggering event to search for related events}
+    drill_down_latest_offset: ${13:# Set the amount of time after the triggering event to search for related events}
+    investigation_profiles: ${14:# Investigation profile to assiciate the notable event with}
+    next_steps: ${15:# List of adaptive responses that should be run next}
+    recommended_actions: ${16:# List of adaptive responses that are recommended to be run next}
+    asset_extraction: ${17:# list of assets to extract, select any one or many of the available choices}
+    identity_extraction: ${18:# list of identity fields to extract, select any one or many of the available choices}
+  tags:
+    - splunk
+    - es
+    - adaptive_response_notable_event]]></content>
+  <tabTrigger>splunk.es.adaptive_response_notable_event</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Splunk Enterprise Security Notable Event Adaptive Responses</description>
+</snippet>

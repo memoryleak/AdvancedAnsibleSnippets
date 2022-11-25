@@ -1,0 +1,48 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Hostgroups}
+  theforeman.foreman.hostgroup:
+    name: ${2:# Name of hostgroup}
+    updated_name: ${3:# New name of hostgroup}
+    description: ${4:# Description of hostgroup}
+    parent: ${5:# Hostgroup parent name}
+    organization: ${6:# Organization for scoped resources attached to the hostgroup}
+    parameters: ${7:# Hostgroup specific host parameters}
+    ansible_roles: ${8:# A list of ansible roles to associate with the hostgroup}
+    server_url: ${9:# URL of the Foreman server}
+    username: ${10:# Username accessing the Foreman server}
+    password: ${11:# Password of the user accessing the Foreman server}
+    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${13:# State of the entity}
+    organizations: ${14:# List of organizations the entity should be assigned to}
+    locations: ${15:# List of locations the entity should be assigned to}
+    compute_resource: ${16:# Compute resource name}
+    compute_profile: ${17:# Compute profile name}
+    domain: ${18:# Domain name}
+    subnet: ${19:# IPv4 Subnet name}
+    subnet6: ${20:# IPv6 Subnet name}
+    root_pass: ${21:# Root password}
+    realm: ${22:# Realm name}
+    architecture: ${23:# Architecture name}
+    medium: ${24:# Medium name}
+    pxe_loader: ${25:# PXE Bootloader}
+    ptable: ${26:# Partition table name}
+    environment: ${27:# Puppet environment name}
+    puppetclasses: ${28:# List of puppet classes to include in this host group}
+    config_groups: ${29:# Config groups list}
+    puppet_proxy: ${30:# Puppet server proxy name}
+    puppet_ca_proxy: ${31:# Puppet CA proxy name}
+    openscap_proxy: ${32:# OpenSCAP proxy name}
+    content_source: ${33:# Content source}
+    lifecycle_environment: ${34:# Lifecycle environment}
+    kickstart_repository: ${35:# Kickstart repository name}
+    content_view: ${36:# Content view}
+    activation_keys: ${37:# Activation Keys used for deployment}
+    operatingsystem: ${38:# Operating systems are looked up by their title which is composed as '<name> <major>}
+  tags:
+    - theforeman
+    - foreman
+    - hostgroup]]></content>
+  <tabTrigger>theforeman.foreman.hostgroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Hostgroups</description>
+</snippet>

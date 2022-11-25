@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create SSL CSR files on the BIG-IP}
+  f5networks.f5_modules.bigip_ssl_csr:
+    name: ${2:# The name of the CSR file}
+    common_name: ${3:# The certificate common name}
+    key_name: ${4:# The SSL key to be used to generate the CSR}
+    state: ${5:# When C(present), ensures the resource exists}
+    dest: ${6:# Destination on your local filesystem when you want to save the CSR file}
+    force: ${7:# If C(no), the file will only be transferred if the destination does not exist}
+    provider: ${8:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_ssl_csr]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_ssl_csr</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create SSL CSR files on the BIG-IP</description>
+</snippet>

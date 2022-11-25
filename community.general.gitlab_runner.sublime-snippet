@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, modify and delete GitLab Runners}
+  community.general.gitlab_runner:
+    project: ${2:# ID or full path of the project in the form of group/name}
+    description: ${3:# The unique name of the runner}
+    state: ${4:# Make sure that the runner with the same name exists with the same configuration or delete the runner with the same name}
+    registration_token: ${5:# The registration token is used to register new runners}
+    owned: ${6:# Searches only runners available to the user when searching for existing, when false admin token required}
+    active: ${7:# Define if the runners is immediately active after creation}
+    locked: ${8:# Determines if the runner is locked or not}
+    access_level: ${9:# Determines if a runner can pick up jobs only from protected branches}
+    maximum_timeout: ${10:# The maximum time that a runner has to complete a specific job}
+    run_untagged: ${11:# Run untagged jobs or not}
+    tag_list: ${12:# The tags that apply to the runner}
+    api_url: ${13:# The resolvable endpoint for the API}
+    api_username: ${14:# The username to use for authentication against the API}
+    api_password: ${15:# The password to use for authentication against the API}
+    validate_certs: ${16:# Whether or not to validate SSL certs when supplying a https endpoint}
+    api_token: ${17:# GitLab access token with API permissions}
+    api_oauth_token: ${18:# GitLab OAuth token for logging in}
+    api_job_token: ${19:# GitLab CI job token for logging in}
+  tags:
+    - community
+    - general
+    - gitlab_runner]]></content>
+  <tabTrigger>community.general.gitlab_runner</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, modify and delete GitLab Runners</description>
+</snippet>

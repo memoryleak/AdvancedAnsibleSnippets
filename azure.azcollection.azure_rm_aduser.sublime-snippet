@@ -1,0 +1,43 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Modify an Azure Active Directory user}
+  azure.azcollection.azure_rm_aduser:
+    tenant: ${2:# The tenant ID}
+    state: ${3:# State of the ad user}
+    object_id: ${4:# The object id for the user}
+    account_enabled: ${5:# A boolean determing whether or not the user account is enabled}
+    display_name: ${6:# The display name of the user}
+    given_name: ${7:# The given name for the user}
+    surname: ${8:# The surname for the user}
+    immutable_id: ${9:# The immutable_id of the user}
+    mail: ${10:# The primary email address of the user}
+    mail_nickname: ${11:# The mail alias for the user}
+    password_profile: ${12:# The password for the user}
+    usage_location: ${13:# A two letter country code, ISO standard 3166}
+    user_type: ${14:# A string value that can be used to classify user types in your directory, such as Member and Guest}
+    user_principal_name: ${15:# The principal name of the user}
+    attribute_name: ${16:# The name of an attribute that you want to match to attribute_value}
+    attribute_value: ${17:# The value to match attribute_name to}
+    odata_filter: ${18:# Filter that can be used to specify a user to update or delete}
+    ad_user: ${19:# Active Directory username}
+    password: ${20:# Active Directory user password}
+    profile: ${21:# Security profile found in ~/}
+    subscription_id: ${22:# Your Azure subscription Id}
+    client_id: ${23:# Azure client ID}
+    secret: ${24:# Azure client secret}
+    cloud_environment: ${25:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${26:# Azure AD authority url}
+    cert_validation_mode: ${27:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${28:# Controls the source of the credentials to use for authentication}
+    api_profile: ${29:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${30:# Parent argument}
+    log_mode: ${31:# Parent argument}
+    x509_certificate_path: ${32:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${33:# The thumbprint of the private key specified in I(x509_certificate_path)}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_aduser]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_aduser</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Modify an Azure Active Directory user</description>
+</snippet>

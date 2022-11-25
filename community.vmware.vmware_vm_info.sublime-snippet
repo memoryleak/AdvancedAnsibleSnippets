@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Return basic info pertaining to a VMware machine guest}
+  community.vmware.vmware_vm_info:
+    vm_type: ${2:# If set to C(vm), then information are gathered for virtual machines only}
+    show_attribute: ${3:# Attributes related to VM guest shown in information only when this is set C(true)}
+    folder: ${4:# Specify a folder location of VMs to gather information from}
+    show_tag: ${5:# Tags related to virtual machine are shown if set to C(True)}
+    show_allocated: ${6:# Allocated storage in byte and memory in MB are shown if it set to True}
+    vm_name: ${7:# Name of the virtual machine to get related configurations information from}
+    hostname: ${8:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${9:# The username of the vSphere vCenter or ESXi server}
+    password: ${10:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${11:# Allows connection when SSL certificates are not valid}
+    port: ${12:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${13:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${14:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_vm_info]]></content>
+  <tabTrigger>community.vmware.vmware_vm_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Return basic info pertaining to a VMware machine guest</description>
+</snippet>

@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module will manage a user entities in a SAP S4/HANA environment}
+  community.sap.sap_user:
+    state: ${2:# The decision what to do with the user}
+    force: ${3:# Must be C('True') if the password or type should be overwritten}
+    conn_username: ${4:# The required username for the SAP system}
+    conn_password: ${5:# The required password for the SAP system}
+    host: ${6:# The required host for the SAP system}
+    sysnr: ${7:# The system number of the SAP system}
+    client: ${8:# The client number to connect to}
+    username: ${9:# The username}
+    firstname: ${10:# The Firstname of the user in the SAP system}
+    lastname: ${11:# The lastname of the user in the SAP system}
+    email: ${12:# The email address of the user in the SAP system}
+    password: ${13:# The password for the user in the SAP system}
+    useralias: ${14:# The alias for the user in the SAP system}
+    user_type: ${15:# The type for the user in the SAP system}
+    company: ${16:# The specific company the user belongs to}
+    profiles: ${17:# Assign profiles to the user}
+    roles: ${18:# Assign roles to the user}
+  tags:
+    - community
+    - sap
+    - sap_user]]></content>
+  <tabTrigger>community.sap.sap_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module will manage a user entities in a SAP S4/HANA environment</description>
+</snippet>

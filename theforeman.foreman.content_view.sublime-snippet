@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Content Views}
+  theforeman.foreman.content_view:
+    name: ${2:# Name of the Content View}
+    description: ${3:# Description of the Content View}
+    label: ${4:# Label of the Content View}
+    repositories: ${5:# List of repositories that include name and product}
+    auto_publish: ${6:# Auto publish composite view when a new version of a component content view is created}
+    solve_dependencies: ${7:# Solve RPM dependencies by default on Content View publish}
+    composite: ${8:# A composite view contains other content views}
+    components: ${9:# List of content views to includes content_view and either version or latest}
+    server_url: ${10:# URL of the Foreman server}
+    username: ${11:# Username accessing the Foreman server}
+    password: ${12:# Password of the user accessing the Foreman server}
+    validate_certs: ${13:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${14:# State of the entity}
+    organization: ${15:# Organization that the entity is in}
+  tags:
+    - theforeman
+    - foreman
+    - content_view]]></content>
+  <tabTrigger>theforeman.foreman.content_view</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Content Views</description>
+</snippet>

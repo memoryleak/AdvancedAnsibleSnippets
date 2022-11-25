@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Executes a groovy script in the jenkins instance}
+  community.general.jenkins_script:
+    script: ${2:# The groovy script to be executed}
+    url: ${3:# The jenkins server to execute the script against}
+    validate_certs: ${4:# If set to C(false), the SSL certificates will not be validated}
+    user: ${5:# The username to connect to the jenkins server with}
+    password: ${6:# The password to connect to the jenkins server with}
+    timeout: ${7:# The request timeout in seconds}
+    args: ${8:# A dict of key-value pairs used in formatting the script using string}
+  tags:
+    - community
+    - general
+    - jenkins_script]]></content>
+  <tabTrigger>community.general.jenkins_script</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Executes a groovy script in the jenkins instance</description>
+</snippet>

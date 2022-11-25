@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP modify storage disk options}
+  netapp.ontap.na_ontap_disk_options:
+    node: ${2:# The node to modify a disk option for}
+    bkg_firmware_update: ${3:# Whether or not background disk firmware updates should be enabled}
+    autocopy: ${4:# Whether or not disk auto copies should be enabled}
+    autoassign: ${5:# Whether or not disks should be automatically assigned to a node}
+    autoassign_policy: ${6:# the auto assign policy to use}
+    hostname: ${7:# The hostname or IP address of the ONTAP instance}
+    username: ${8:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${9:# Password for the specified user}
+    cert_filepath: ${10:# path to SSL client cert file (}
+    key_filepath: ${11:# path to SSL client key file}
+    https: ${12:# Enable and disable https}
+    validate_certs: ${13:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${14:# Override the default port (80 or 443) with this port}
+    ontapi: ${15:# The ontap api version to use}
+    use_rest: ${16:# Whether to use REST or ZAPI}
+    feature_flags: ${17:# Enable or disable a new feature}
+    force_ontap_version: ${18:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_disk_options]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_disk_options</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP modify storage disk options</description>
+</snippet>

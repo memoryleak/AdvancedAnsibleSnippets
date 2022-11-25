@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set Hostname (Site ID), Location, Asset Tag parameters in WTI OOB and PDU devices}
+  wti.remote.cpm_hostname_config:
+    cpm_url: ${2:# This is the URL of the WTI device to send the module}
+    cpm_username: ${3:# This is the Username of the WTI device to send the module}
+    cpm_password: ${4:# This is the Password of the WTI device to send the module}
+    use_https: ${5:# Designates to use an https connection or http connection}
+    validate_certs: ${6:# If false, SSL certificates will not be validated}
+    use_proxy: ${7:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+    hostname: ${8:# This is the Hostname (Site-ID) tag to be set for the WTI OOB and PDU device}
+    location: ${9:# This is the Location tag to be set for the WTI OOB and PDU device}
+    assettag: ${10:# This is the Asset Tag to be set for the WTI OOB and PDU device}
+  tags:
+    - wti
+    - remote
+    - cpm_hostname_config]]></content>
+  <tabTrigger>wti.remote.cpm_hostname_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set Hostname (Site ID), Location, Asset Tag parameters in WTI OOB and PDU devices</description>
+</snippet>

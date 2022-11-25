@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates a resource of Evs/Disk in Huawei Cloud}
+  community.general.hwc_evs_disk:
+    state: ${2:# Whether the given object should exist in Huaweicloud Cloud}
+    timeouts: ${3:# The timeouts for each operations}
+    availability_zone: ${4:# Specifies the AZ where you want to create the disk}
+    name: ${5:# Specifies the disk name}
+    volume_type: ${6:# Specifies the disk type}
+    backup_id: ${7:# Specifies the ID of the backup that can be used to create a disk}
+    description: ${8:# Specifies the disk description}
+    enable_full_clone: ${9:# If the disk is created from a snapshot and linked cloning needs to be used, set this parameter to True}
+    enable_scsi: ${10:# If this parameter is set to True, the disk device type will be SCSI, which allows ECS OSs to directly access underlying storage media}
+    enable_share: ${11:# Specifies whether the disk is shareable}
+    encryption_id: ${12:# Specifies the encryption ID}
+    enterprise_project_id: ${13:# Specifies the enterprise project ID}
+    image_id: ${14:# Specifies the image ID}
+    size: ${15:# Specifies the disk size, in GB}
+    snapshot_id: ${16:# Specifies the snapshot ID}
+    identity_endpoint: ${17:# The Identity authentication URL}
+    user: ${18:# The user name to login with (currently only user names are supported, and not user IDs)}
+    password: ${19:# The password to login with}
+    domain: ${20:# The name of the Domain to scope to (Identity v3)}
+    project: ${21:# The name of the Tenant (Identity v2) or Project (Identity v3)}
+    region: ${22:# The region to which the project belongs}
+    id: ${23:# The id of resource to be managed}
+  tags:
+    - community
+    - general
+    - hwc_evs_disk]]></content>
+  <tabTrigger>community.general.hwc_evs_disk</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates a resource of Evs/Disk in Huawei Cloud</description>
+</snippet>

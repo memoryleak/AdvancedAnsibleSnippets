@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Grafana plugins via grafana-cli}
+  community.grafana.grafana_plugin:
+    name: ${2:# Name of the plugin}
+    version: ${3:# Version of the plugin to install}
+    grafana_plugins_dir: ${4:# Directory where the Grafana plugin will be installed}
+    grafana_repo: ${5:# URL to the Grafana plugin repository}
+    grafana_plugin_url: ${6:# Full URL to the plugin zip file instead of downloading the file from U(https://grafana}
+    state: ${7:# Whether the plugin should be installed}
+  tags:
+    - community
+    - grafana
+    - grafana_plugin]]></content>
+  <tabTrigger>community.grafana.grafana_plugin</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Grafana plugins via grafana-cli</description>
+</snippet>

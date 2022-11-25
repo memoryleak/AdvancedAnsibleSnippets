@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module allows to generate a CSR and upload the certificate}
+  dellemc.openmanage.ome_application_certificate:
+    command: ${2:# C(generate_csr) allows the generation of a CSR and C(upload) uploads the certificate}
+    distinguished_name: ${3:# Name of the certificate issuer}
+    department_name: ${4:# Name of the department that issued the certificate}
+    business_name: ${5:# Name of the business that issued the certificate}
+    locality: ${6:# Local address of the issuer of the certificate}
+    country_state: ${7:# State in which the issuer resides}
+    country: ${8:# Country in which the issuer resides}
+    email: ${9:# Email associated with the issuer}
+    upload_file: ${10:# Local path of the certificate file to be uploaded}
+    hostname: ${11:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    username: ${12:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    password: ${13:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${14:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${15:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${16:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${17:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_application_certificate]]></content>
+  <tabTrigger>dellemc.openmanage.ome_application_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module allows to generate a CSR and upload the certificate</description>
+</snippet>

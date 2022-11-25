@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages SNMP community configuration on HUAWEI CloudEngine switches}
+  community.network.ce_snmp_community:
+    acl_number: ${2:# Access control list number}
+    community_name: ${3:# Unique name to identify the community}
+    access_right: ${4:# Access right read or write}
+    community_mib_view: ${5:# Mib view name}
+    group_name: ${6:# Unique name to identify the SNMPv3 group}
+    security_level: ${7:# Security level indicating whether to use authentication and encryption}
+    read_view: ${8:# Mib view name for read}
+    write_view: ${9:# Mib view name for write}
+    notify_view: ${10:# Mib view name for notification}
+    state: ${11:# Manage the state of the resource}
+  tags:
+    - community
+    - network
+    - ce_snmp_community]]></content>
+  <tabTrigger>community.network.ce_snmp_community</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages SNMP community configuration on HUAWEI CloudEngine switches</description>
+</snippet>

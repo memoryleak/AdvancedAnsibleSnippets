@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage DNS resolver cache configuration on a BIG-IP}
+  f5networks.f5_modules.bigip_dns_cache_resolver:
+    name: ${2:# Specifies the name of the cache}
+    answer_default_zones: ${3:# Specifies whether the system answers DNS queries for the default zones localhost, reverse 127}
+    forward_zones: ${4:# Forward zones associated with the cache}
+    route_domain: ${5:# Specifies the route domain the resolver uses for outbound traffic}
+    state: ${6:# When C(present), ensures the resource exists}
+    partition: ${7:# Device partition to manage resources on}
+    provider: ${8:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_dns_cache_resolver]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_dns_cache_resolver</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage DNS resolver cache configuration on a BIG-IP</description>
+</snippet>

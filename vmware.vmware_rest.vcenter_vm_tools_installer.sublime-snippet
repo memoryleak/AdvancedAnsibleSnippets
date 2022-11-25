@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Connects the VMware Tools CD installer as a CD-ROM for the guest operating system}
+  vmware.vmware_rest.vcenter_vm_tools_installer:
+    session_timeout: ${2:# Timeout settings for client session}
+    state: ${3:# No description available}
+    vcenter_hostname: ${4:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${5:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${6:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${7:# The vSphere vCenter username}
+    vcenter_validate_certs: ${8:# Allows connection when SSL certificates are not valid}
+    vm: ${9:# Virtual machine ID This parameter is mandatory}
+  tags:
+    - vmware
+    - vmware_rest
+    - vcenter_vm_tools_installer]]></content>
+  <tabTrigger>vmware.vmware_rest.vcenter_vm_tools_installer</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Connects the VMware Tools CD installer as a CD-ROM for the guest operating system</description>
+</snippet>

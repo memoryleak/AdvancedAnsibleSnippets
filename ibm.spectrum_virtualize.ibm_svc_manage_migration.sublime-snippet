@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages volume migration between clusters on IBM Spectrum Virtualize family storage systems}
+  ibm.spectrum_virtualize.ibm_svc_manage_migration:
+    source_volume: ${2:# Specifies the name of the existing source volume to be used in migration}
+    target_volume: ${3:# Specifies the name of the volume to be created on the target system}
+    clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
+    remote_cluster: ${5:# Specifies the name of the remote cluster}
+    domain: ${6:# Domain for the Spectrum Virtualize storage system}
+    username: ${7:# REST API username for the Spectrum Virtualize storage system}
+    remote_username: ${8:# REST API username for the partner Spectrum Virtualize storage system}
+    password: ${9:# REST API password for the Spectrum Virtualize storage system}
+    remote_password: ${10:# REST API password for the partner Spectrum Virtualize storage system}
+    relationship_name: ${11:# Name of the migration relationship}
+    state: ${12:# Specifies the different states of the migration process}
+    token: ${13:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    remote_token: ${14:# The authentication token to verify a user on the partner Spectrum Virtualize storage system}
+    remote_pool: ${15:# Specifies the pool on which the volume on Partner Spectrum Virtualize storage system should get created}
+    validate_certs: ${16:# Validates certification}
+    remote_validate_certs: ${17:# Validates certification for partner Spectrum Virtualize storage system}
+    replicate_hosts: ${18:# Replicates the hosts mapped to a source volume on the source system, to the target system, and maps the hosts to the target volume}
+    log_path: ${19:# Path of debug log file}
+  tags:
+    - ibm
+    - spectrum_virtualize
+    - ibm_svc_manage_migration]]></content>
+  <tabTrigger>ibm.spectrum_virtualize.ibm_svc_manage_migration</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages volume migration between clusters on IBM Spectrum Virtualize family storage systems</description>
+</snippet>

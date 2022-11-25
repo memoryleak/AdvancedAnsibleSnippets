@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get Azure Kubernetes Service facts}
+  azure.azcollection.azure_rm_aks_info:
+    name: ${2:# Limit results to a specific resource group}
+    resource_group: ${3:# The resource group to search for the desired Azure Kubernetes Service}
+    tags: ${4:# Limit results by providing a list of tags}
+    show_kubeconfig: ${5:# Show kubeconfig of the AKS cluster}
+    ad_user: ${6:# Active Directory username}
+    password: ${7:# Active Directory user password}
+    profile: ${8:# Security profile found in ~/}
+    subscription_id: ${9:# Your Azure subscription Id}
+    client_id: ${10:# Azure client ID}
+    secret: ${11:# Azure client secret}
+    tenant: ${12:# Azure tenant ID}
+    cloud_environment: ${13:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${14:# Azure AD authority url}
+    cert_validation_mode: ${15:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${16:# Controls the source of the credentials to use for authentication}
+    api_profile: ${17:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${18:# Parent argument}
+    log_mode: ${19:# Parent argument}
+    x509_certificate_path: ${20:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${21:# The thumbprint of the private key specified in I(x509_certificate_path)}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_aks_info]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_aks_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get Azure Kubernetes Service facts</description>
+</snippet>

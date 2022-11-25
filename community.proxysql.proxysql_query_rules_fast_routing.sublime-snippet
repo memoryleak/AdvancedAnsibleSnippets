@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Modifies query rules for fast routing policies using the proxysql admin interface}
+  community.proxysql.proxysql_query_rules_fast_routing:
+    username: ${2:# Filtering criteria matching username, a query will match only if the connection is made with the correct username}
+    schemaname: ${3:# Filtering criteria matching schemaname, a query will match only if the connection uses schemaname as its default schema}
+    flagIN: ${4:# Evaluated in the same way as I(flagIN) is in B(mysql_query_rules) and correlates to the I(flagOUT/apply) specified in the B(mysql_query_rules) table}
+    destination_hostgroup: ${5:# Route matched queries to this hostgroup}
+    comment: ${6:# Free form text field, usable for a descriptive comment of the query rule}
+    state: ${7:# When C(present), adds the rule}
+    force_delete: ${8:# By default, we avoid deleting more than one schedule in a single batch; however, if you need this behaviour and you are not concerned about the schedules deleted, you can set I(force_delete) to C(True)}
+    save_to_disk: ${9:# Save config to sqlite db on disk to persist the configuration}
+    load_to_runtime: ${10:# Dynamically load config to runtime memory}
+    login_user: ${11:# The username used to authenticate to ProxySQL admin interface}
+    login_password: ${12:# The password used to authenticate to ProxySQL admin interface}
+    login_host: ${13:# The host used to connect to ProxySQL admin interface}
+    login_unix_socket: ${14:# The socket used to connect to ProxySQL admin interface}
+    login_port: ${15:# The port used to connect to ProxySQL admin interface}
+    config_file: ${16:# Specify a config file from which I(login_user) and I(login_password) are to be read}
+  tags:
+    - community
+    - proxysql
+    - proxysql_query_rules_fast_routing]]></content>
+  <tabTrigger>community.proxysql.proxysql_query_rules_fast_routing</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Modifies query rules for fast routing policies using the proxysql admin interface</description>
+</snippet>

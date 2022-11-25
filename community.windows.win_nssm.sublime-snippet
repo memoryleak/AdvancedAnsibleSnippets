@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Install a service using NSSM}
+  community.windows.win_nssm:
+    name: ${2:# Name of the service to operate on}
+    state: ${3:# State of the service on the system}
+    application: ${4:# The application binary to run as a service}
+    executable: ${5:# The location of the NSSM utility (in case it is not located in your PATH)}
+    description: ${6:# The description to set for the service}
+    display_name: ${7:# The display name to set for the service}
+    working_directory: ${8:# The working directory to run the service executable from (defaults to the directory containing the application binary)}
+    stdout_file: ${9:# Path to receive output}
+    stderr_file: ${10:# Path to receive error output}
+    app_parameters: ${11:# A string representing a dictionary of parameters to be passed to the application when it starts}
+    arguments: ${12:# Parameters to be passed to the application when it starts}
+    dependencies: ${13:# Service dependencies that has to be started to trigger startup, separated by comma}
+    username: ${14:# User to be used for service startup}
+    password: ${15:# Password to be used for service startup}
+    start_mode: ${16:# If C(auto) is selected, the service will start at bootup}
+    app_environment: ${17:# Key/Value pairs which will be added to the environment of the service application}
+    app_rotate_bytes: ${18:# NSSM will not rotate any file which is smaller than the configured number of bytes}
+    app_rotate_online: ${19:# If set to 1, nssm can rotate files which grow to the configured file size limit while the service is running}
+    app_stop_method_console: ${20:# Time to wait after sending Control-C}
+    app_stop_method_skip: ${21:# To disable service shutdown methods, set to the sum of one or more of the numbers}
+  tags:
+    - community
+    - windows
+    - win_nssm]]></content>
+  <tabTrigger>community.windows.win_nssm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Install a service using NSSM</description>
+</snippet>

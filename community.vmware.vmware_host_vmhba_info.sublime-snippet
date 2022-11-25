@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gathers info about vmhbas available on the given ESXi host}
+  community.vmware.vmware_host_vmhba_info:
+    esxi_hostname: ${2:# Name of the host system to work with}
+    cluster_name: ${3:# Name of the cluster from which all host systems will be used}
+    hostname: ${4:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${5:# The username of the vSphere vCenter or ESXi server}
+    password: ${6:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${7:# Allows connection when SSL certificates are not valid}
+    port: ${8:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${9:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${10:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_host_vmhba_info]]></content>
+  <tabTrigger>community.vmware.vmware_host_vmhba_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gathers info about vmhbas available on the given ESXi host</description>
+</snippet>

@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages VRRP configuration on NX-OS switches}
+  cisco.nxos.nxos_vrrp:
+    group: ${2:# VRRP group number}
+    interface: ${3:# Full name of interface that is being managed for VRRP}
+    interval: ${4:# Time interval between advertisement or 'default' keyword}
+    priority: ${5:# VRRP priority or 'default' keyword}
+    preempt: ${6:# Enable/Disable preempt}
+    vip: ${7:# VRRP virtual IP address or 'default' keyword}
+    authentication: ${8:# Clear text authentication string or 'default' keyword}
+    admin_state: ${9:# Used to enable or disable the VRRP process}
+    state: ${10:# Specify desired state of the resource}
+  tags:
+    - cisco
+    - nxos
+    - nxos_vrrp]]></content>
+  <tabTrigger>cisco.nxos.nxos_vrrp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages VRRP configuration on NX-OS switches</description>
+</snippet>

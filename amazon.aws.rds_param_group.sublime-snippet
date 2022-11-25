@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:manage RDS parameter groups}
+  amazon.aws.rds_param_group:
+    state: ${2:# Specifies whether the group should be present or absent}
+    name: ${3:# Database parameter group identifier}
+    description: ${4:# Database parameter group description}
+    engine: ${5:# The type of database for this group}
+    immediate: ${6:# Whether to apply the changes immediately, or after the next reboot of any associated instances}
+    params: ${7:# Map of parameter names and values}
+    access_key: ${8:# AWS access key ID}
+    secret_key: ${9:# AWS secret access key}
+    session_token: ${10:# AWS STS session token for use with temporary credentials}
+    profile: ${11:# A named AWS profile to use for authentication}
+    endpoint_url: ${12:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${13:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${14:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${15:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${16:# Use a C(botocore}
+    region: ${17:# The AWS region to use}
+    tags: ${18:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${19:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - rds_param_group]]></content>
+  <tabTrigger>amazon.aws.rds_param_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>manage RDS parameter groups</description>
+</snippet>

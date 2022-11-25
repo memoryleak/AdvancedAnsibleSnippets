@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds or removes mysql users from proxysql admin interface}
+  community.proxysql.proxysql_mysql_users:
+    username: ${2:# Name of the user connecting to the mysqld or ProxySQL instance}
+    password: ${3:# Password of the user connecting to the mysqld or ProxySQL instance}
+    encrypt_password: ${4:# Encrypt a cleartext password passed in the I(password) option, using the method defined in I(encryption_method)}
+    encryption_method: ${5:# Encryption method used when I(encrypt_password) is set to C(True)}
+    active: ${6:# A user with I(active) set to C(False) will be tracked in the database, but will be never loaded in the in-memory data structures}
+    use_ssl: ${7:# If I(use_ssl) is set to C(True), connections by this user will be made using SSL connections}
+    default_hostgroup: ${8:# If there is no matching rule for the queries sent by this user, the traffic it generates is sent to the specified hostgroup}
+    default_schema: ${9:# The schema to which the connection should change to by default}
+    transaction_persistent: ${10:# If this is set for the user with which the MySQL client is connecting to ProxySQL (thus a 'frontend' user), transactions started within a hostgroup will remain within that hostgroup regardless of any other rules}
+    fast_forward: ${11:# If I(fast_forward) is set to C(True), I(fast_forward) will bypass the query processing layer (rewriting, caching) and pass through the query directly as is to the backend server}
+    backend: ${12:# If I(backend) is set to C(True), this (username, password) pair is used for authenticating to the ProxySQL instance}
+    frontend: ${13:# If I(frontend) is set to C(True), this (username, password) pair is used for authenticating to the mysqld servers against any hostgroup}
+    max_connections: ${14:# The maximum number of connections ProxySQL will open to the backend for this user}
+    state: ${15:# When C(present) - adds the user, when C(absent) - removes the user}
+    save_to_disk: ${16:# Save config to sqlite db on disk to persist the configuration}
+    load_to_runtime: ${17:# Dynamically load config to runtime memory}
+    login_user: ${18:# The username used to authenticate to ProxySQL admin interface}
+    login_password: ${19:# The password used to authenticate to ProxySQL admin interface}
+    login_host: ${20:# The host used to connect to ProxySQL admin interface}
+    login_unix_socket: ${21:# The socket used to connect to ProxySQL admin interface}
+    login_port: ${22:# The port used to connect to ProxySQL admin interface}
+    config_file: ${23:# Specify a config file from which I(login_user) and I(login_password) are to be read}
+  tags:
+    - community
+    - proxysql
+    - proxysql_mysql_users]]></content>
+  <tabTrigger>community.proxysql.proxysql_mysql_users</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds or removes mysql users from proxysql admin interface</description>
+</snippet>

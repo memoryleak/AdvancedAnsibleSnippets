@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages Sensu handler configuration}
+  community.general.sensu_handler:
+    state: ${2:# Whether the handler should be present or not}
+    name: ${3:# A unique name for the handler}
+    type: ${4:# The handler type}
+    filter: ${5:# The Sensu event filter (name) to use when filtering events for the handler}
+    filters: ${6:# An array of Sensu event filters (names) to use when filtering events for the handler}
+    severities: ${7:# An array of check result severities the handler will handle}
+    mutator: ${8:# The Sensu event mutator (name) to use to mutate event data for the handler}
+    timeout: ${9:# The handler execution duration timeout in seconds (hard stop)}
+    handle_silenced: ${10:# If events matching one or more silence entries should be handled}
+    handle_flapping: ${11:# If events in the flapping state should be handled}
+    command: ${12:# The handler command to be executed}
+    socket: ${13:# The socket definition scope, used to configure the TCP/UDP handler socket}
+    pipe: ${14:# The pipe definition scope, used to configure the Sensu transport pipe}
+    handlers: ${15:# An array of Sensu event handlers (names) to use for events using the handler set}
+  tags:
+    - community
+    - general
+    - sensu_handler]]></content>
+  <tabTrigger>community.general.sensu_handler</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages Sensu handler configuration</description>
+</snippet>

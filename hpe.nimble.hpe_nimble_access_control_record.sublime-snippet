@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the HPE Nimble Storage access control records}
+  hpe.nimble.hpe_nimble_access_control_record:
+    apply_to: ${2:# The type of object to which this access control record applies}
+    chap_user: ${3:# Name for the CHAP user}
+    initiator_group: ${4:# The initiator group name}
+    lun: ${5:# If this access control record applies to a regular volume, this attribute is the volume's LUN (Logical Unit Number)}
+    state: ${6:# The access control record operation}
+    volume: ${7:# The name of the volume that this access control record applies to}
+    host: ${8:# HPE Nimble Storage IP address}
+    password: ${9:# HPE Nimble Storage password}
+    username: ${10:# HPE Nimble Storage user name}
+  tags:
+    - hpe
+    - nimble
+    - hpe_nimble_access_control_record]]></content>
+  <tabTrigger>hpe.nimble.hpe_nimble_access_control_record</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the HPE Nimble Storage access control records</description>
+</snippet>

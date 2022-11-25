@@ -1,0 +1,52 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages Fast L4 profiles}
+  f5networks.f5_modules.bigip_profile_fastl4:
+    name: ${2:# Specifies the name of the profile}
+    parent: ${3:# Specifies the profile from which this profile inherits settings}
+    idle_timeout: ${4:# Specifies the length of time a connection is idle (has no traffic) before the connection is eligible for deletion}
+    client_timeout: ${5:# Specifies a timeout for Late Binding}
+    description: ${6:# Description of the profile}
+    explicit_flow_migration: ${7:# Specifies whether a qualified late-binding connection requires an explicit iRule command to migrate down to ePVA hardware}
+    ip_df_mode: ${8:# Specifies the Don't Fragment (DF) bit setting in the IP Header of the outgoing TCP packet}
+    ip_tos_to_client: ${9:# For IP traffic passing through the system to clients, specifies whether the system modifies the IP type-of-service (ToS) setting in an IP packet header}
+    ip_tos_to_server: ${10:# For IP traffic passing through the system to back-end servers, specifies whether the system modifies the IP type-of-service (ToS) setting in an IP packet header}
+    ip_ttl_mode: ${11:# Specifies the outgoing TCP packet's IP Header TTL mode}
+    ip_ttl_v4: ${12:# Specifies the outgoing packet's IP Header TTL value for IPv4 traffic}
+    ip_ttl_v6: ${13:# Specifies the outgoing packet's IP Header TTL value for IPv6 traffic}
+    keep_alive_interval: ${14:# Specifies the keep-alive probe interval, in seconds}
+    late_binding: ${15:# Enables intelligent selection of a back-end server or pool, using an iRule to make the selection}
+    link_qos_to_client: ${16:# For IP traffic passing through the system to clients, specifies whether the system modifies the link quality-of-service (QoS) setting in an IP packet header}
+    link_qos_to_server: ${17:# For IP traffic passing through the system to back-end servers, specifies whether the system modifies the link quality-of-service (QoS) setting in an IP packet header}
+    loose_close: ${18:# When C(yes), specifies the system closes a loosely-initiated connection when the system receives the first FIN packet from either the client or the server}
+    loose_initialization: ${19:# When C(yes), specifies the system initializes a connection when it receives any TCP packet, rather than requiring a SYN packet for connection initiation}
+    mss_override: ${20:# Specifies a maximum segment size (MSS) override for server-side connections}
+    reassemble_fragments: ${21:# When C(yes), specifies the system reassembles IP fragments}
+    receive_window_size: ${22:# Specifies the amount of data the BIG-IP system can accept without acknowledging the server}
+    reset_on_timeout: ${23:# When C(yes), specifies the system sends a reset packet (RST) in addition to deleting the connection, when a connection exceeds the idle timeout value}
+    rtt_from_client: ${24:# When C(yes), specifies the system uses TCP timestamp options to measure the round-trip time to the client}
+    rtt_from_server: ${25:# When C(yes), specifies the system uses TCP timestamp options to measure the round-trip time to the server}
+    server_sack: ${26:# Specifies whether the BIG-IP system processes Selective ACK (Sack) packets in cookie responses from the server}
+    server_timestamp: ${27:# Specifies whether the BIG-IP system processes timestamp request packets in cookie responses from the server}
+    syn_cookie_mss: ${28:# Specifies a value that overrides the SYN cookie maximum segment size (MSS) value in the SYN-ACK packet that is returned to the client}
+    tcp_close_timeout: ${29:# Specifies the length of time a connection can remain idle before deletion}
+    tcp_generate_isn: ${30:# When C(yes), specifies the system generates initial sequence numbers for SYN packets, according to RFC 1948}
+    tcp_handshake_timeout: ${31:# Specifies the acceptable duration for a TCP handshake (the maximum idle time between a client synchronization (SYN) and a client acknowledgment (ACK))}
+    tcp_strip_sack: ${32:# When C(yes), specifies the system blocks a TCP selective ACK SackOK option from passing to the server on an initiating SYN}
+    tcp_time_wait_timeout: ${33:# Specifies the number of milliseconds a connection is in the TIME-WAIT state before closing}
+    tcp_timestamp_mode: ${34:# Specifies the action the system should take on TCP timestamps}
+    tcp_wscale_mode: ${35:# Specifies the action the system should take on TCP windows}
+    timeout_recovery: ${36:# Specifies how to handle client-timeout errors for Late Binding}
+    hardware_syn_cookie: ${37:# Enables or disables hardware SYN cookie support when PVA10 is present on the system}
+    syn_cookie_enable: ${38:# Specifies whether or not to use SYN Cookie}
+    pva_acceleration: ${39:# Specifies the Packet Velocity ASIC acceleration policy}
+    partition: ${40:# Device partition to manage resources on}
+    state: ${41:# When C(present), ensures the profile exists}
+    provider: ${42:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_profile_fastl4]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_profile_fastl4</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages Fast L4 profiles</description>
+</snippet>

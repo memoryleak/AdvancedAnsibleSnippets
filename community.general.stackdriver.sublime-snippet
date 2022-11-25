@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Send code deploy and annotation events to stackdriver}
+  community.general.stackdriver:
+    key: ${2:# API key}
+    event: ${3:# The type of event to send, either annotation or deploy}
+    revision_id: ${4:# The revision of the code that was deployed}
+    deployed_by: ${5:# The person or robot responsible for deploying the code}
+    deployed_to: ${6:# The environment code was deployed to}
+    repository: ${7:# The repository (or project) deployed}
+    msg: ${8:# The contents of the annotation message, in plain text}
+    annotated_by: ${9:# The person or robot who the annotation should be attributed to}
+    level: ${10:# one of INFO/WARN/ERROR, defaults to INFO if not supplied}
+    instance_id: ${11:# id of an EC2 instance that this event should be attached to, which will limit the contexts where this event is shown}
+    event_epoch: ${12:# Unix timestamp of where the event should appear in the timeline, defaults to now}
+  tags:
+    - community
+    - general
+    - stackdriver]]></content>
+  <tabTrigger>community.general.stackdriver</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Send code deploy and annotation events to stackdriver</description>
+</snippet>

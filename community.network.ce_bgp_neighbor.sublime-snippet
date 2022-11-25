@@ -1,0 +1,43 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages BGP peer configuration on HUAWEI CloudEngine switches}
+  community.network.ce_bgp_neighbor:
+    state: ${2:# Specify desired state of the resource}
+    vrf_name: ${3:# Name of a BGP instance}
+    peer_addr: ${4:# Connection address of a peer, which can be an IPv4 or IPv6 address}
+    remote_as: ${5:# AS number of a peer}
+    description: ${6:# Description of a peer, which can be letters or digits}
+    fake_as: ${7:# Fake AS number that is specified for a local peer}
+    dual_as: ${8:# If the value is true, the EBGP peer can use either a fake AS number or the actual AS number}
+    conventional: ${9:# If the value is true, the router has all extended capabilities}
+    route_refresh: ${10:# If the value is true, BGP is enabled to advertise REFRESH packets}
+    is_ignore: ${11:# If the value is true, the session with a specified peer is torn down and all related routing entries are cleared}
+    local_if_name: ${12:# Name of a source interface that sends BGP packets}
+    ebgp_max_hop: ${13:# Maximum number of hops in an indirect EBGP connection}
+    valid_ttl_hops: ${14:# Enable GTSM on a peer or peer group}
+    connect_mode: ${15:# The value can be Connect-only, Listen-only, or Both}
+    is_log_change: ${16:# If the value is true, BGP is enabled to record peer session status and event information}
+    pswd_type: ${17:# Enable BGP peers to establish a TCP connection and perform the Message Digest 5 (MD5) authentication for BGP messages}
+    pswd_cipher_text: ${18:# The character string in a password identifies the contents of the password, spaces not supported}
+    keep_alive_time: ${19:# Specify the Keepalive time of a peer or peer group}
+    hold_time: ${20:# Specify the Hold time of a peer or peer group}
+    min_hold_time: ${21:# Specify the Min hold time of a peer or peer group}
+    key_chain_name: ${22:# Specify the Keychain authentication name used when BGP peers establish a TCP connection}
+    conn_retry_time: ${23:# ConnectRetry interval}
+    tcp_MSS: ${24:# Maximum TCP MSS value used for TCP connection establishment for a peer}
+    mpls_local_ifnet_disable: ${25:# If the value is true, peer create MPLS Local IFNET disable}
+    prepend_global_as: ${26:# Add the global AS number to the Update packets to be advertised}
+    prepend_fake_as: ${27:# Add the Fake AS number to received Update packets}
+    is_bfd_block: ${28:# If the value is true, peers are enabled to inherit the BFD function from the peer group}
+    multiplier: ${29:# Specify the detection multiplier}
+    is_bfd_enable: ${30:# If the value is true, BFD is enabled}
+    rx_interval: ${31:# Specify the minimum interval at which BFD packets are received}
+    tx_interval: ${32:# Specify the minimum interval at which BFD packets are sent}
+    is_single_hop: ${33:# If the value is true, the system is enabled to preferentially use the single-hop mode for BFD session setup between IBGP peers}
+  tags:
+    - community
+    - network
+    - ce_bgp_neighbor]]></content>
+  <tabTrigger>community.network.ce_bgp_neighbor</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages BGP peer configuration on HUAWEI CloudEngine switches</description>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Nokia SR OS rollback}
+  community.network.sros_rollback:
+    rollback_location: ${2:# The I(rollback_location) specifies the location and filename of the rollback checkpoint files}
+    remote_max_checkpoints: ${3:# The I(remote_max_checkpoints) argument configures the maximum number of rollback files that can be transferred and saved to a remote location}
+    local_max_checkpoints: ${4:# The I(local_max_checkpoints) argument configures the maximum number of rollback files that can be saved on the devices local compact flash}
+    rescue_location: ${5:# The I(rescue_location) specifies the location of the rescue file}
+    state: ${6:# The I(state) argument specifies the state of the configuration entries in the devices active configuration}
+  tags:
+    - community
+    - network
+    - sros_rollback]]></content>
+  <tabTrigger>community.network.sros_rollback</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Nokia SR OS rollback</description>
+</snippet>

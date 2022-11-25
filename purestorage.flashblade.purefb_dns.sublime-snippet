@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Pure Storage FlashBlade DNS settings}
+  purestorage.flashblade.purefb_dns:
+    state: ${2:# Create or delete DNS servers configuration}
+    domain: ${3:# Domain suffix to be appended when perofrming DNS lookups}
+    nameservers: ${4:# List of up to 3 unique DNS server IP addresses}
+    search: ${5:# Ordered list of domain names to search}
+    fb_url: ${6:# FlashBlade management IP address or Hostname}
+    api_token: ${7:# FlashBlade API token for admin privileged user}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_dns]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_dns</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Pure Storage FlashBlade DNS settings</description>
+</snippet>

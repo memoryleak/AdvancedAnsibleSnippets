@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for setup of MicroServiceGroup Avi RESTful Object}
+  community.network.avi_microservicegroup:
+    state: ${2:# The state that should be applied on the entity}
+    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
+    created_by: ${5:# Creator name}
+    description: ${6:# User defined description for the object}
+    name: ${7:# Name of the microservice group}
+    service_refs: ${8:# Configure microservice(es)}
+    tenant_ref: ${9:# It is a reference to an object of type tenant}
+    url: ${10:# Avi controller URL of the object}
+    uuid: ${11:# Uuid of the microservice group}
+    controller: ${12:# IP address or hostname of the controller}
+    username: ${13:# Username used for accessing Avi controller}
+    password: ${14:# Password of Avi user in Avi controller}
+    tenant: ${15:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${16:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${17:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${18:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${19:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${20:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_microservicegroup]]></content>
+  <tabTrigger>community.network.avi_microservicegroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for setup of MicroServiceGroup Avi RESTful Object</description>
+</snippet>

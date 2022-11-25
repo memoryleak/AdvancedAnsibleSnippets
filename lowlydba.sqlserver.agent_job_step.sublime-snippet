@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures a SQL Agent job step}
+  lowlydba.sqlserver.agent_job_step:
+    job: ${2:# The name of the job to which to add the step}
+    step_id: ${3:# The sequence identification number for the job step}
+    step_name: ${4:# The name of the step}
+    database: ${5:# The name of the database in which to execute a Transact-SQL step}
+    subsystem: ${6:# The subsystem used by the SQL Server Agent service to execute command}
+    command: ${7:# The commands to be executed by SQLServerAgent service through subsystem}
+    on_success_action: ${8:# The action to perform if the step succeeds}
+    on_success_step_id: ${9:# The ID of the step in this job to execute if the step succeeds and I(on_success_action=GoToStep)}
+    on_fail_action: ${10:# The action to perform if the step fails}
+    on_fail_step_id: ${11:# The ID of the step in this job to execute if the step fails and I(on_fail_action=GoToStep)}
+    retry_attempts: ${12:# The number of retry attempts to use if this step fails}
+    retry_interval: ${13:# The amount of time in minutes between retry attempts}
+    sql_instance: ${14:# The SQL Server instance to modify}
+    sql_username: ${15:# Username for SQL Authentication}
+    sql_password: ${16:# Password for SQL Authentication}
+    state: ${17:# Whether or not the object should be C(present) or C(absent)}
+  tags:
+    - lowlydba
+    - sqlserver
+    - agent_job_step]]></content>
+  <tabTrigger>lowlydba.sqlserver.agent_job_step</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures a SQL Agent job step</description>
+</snippet>

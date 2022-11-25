@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or delete a Neutron policy to apply a RBAC rule against an object}
+  openstack.cloud.neutron_rbac_policy:
+    policy_id: ${2:# The RBAC policy ID}
+    object_id: ${3:# The object ID (the subject of the policy) to which the RBAC rule applies}
+    object_type: ${4:# Can be one of the following object types C(network), C(security_group) or C(qos_policy)}
+    target_project_id: ${5:# The project to which access to be allowed or revoked/disallowed}
+    project_id: ${6:# The project to which the object_id belongs}
+    action: ${7:# Can be either of the following options C(access_as_shared) | C(access_as_external)}
+    state: ${8:# Whether the RBAC rule should be C(present) or C(absent)}
+    cloud: ${9:# Named cloud or cloud config to operate against}
+    auth: ${10:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${11:# Name of the auth plugin to use}
+    region_name: ${12:# Name of the region}
+    wait: ${13:# Should ansible wait until the requested resource is complete}
+    timeout: ${14:# How long should ansible wait for the requested resource}
+    api_timeout: ${15:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${16:# Whether or not SSL API requests should be verified}
+    ca_cert: ${17:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${18:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${19:# A path to a client key to use as part of the SSL transaction}
+    interface: ${20:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${21:# Ignored}
+    sdk_log_path: ${22:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${23:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - neutron_rbac_policy]]></content>
+  <tabTrigger>openstack.cloud.neutron_rbac_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or delete a Neutron policy to apply a RBAC rule against an object</description>
+</snippet>

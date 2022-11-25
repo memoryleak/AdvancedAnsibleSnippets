@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures the resource governor on a SQL Server instance}
+  lowlydba.sqlserver.resource_governor:
+    enabled: ${2:# Whether to enable or disable resource governor}
+    classifier_function: ${3:# The name of the classifier function that resource governor will use}
+    sql_instance: ${4:# The SQL Server instance to modify}
+    sql_username: ${5:# Username for SQL Authentication}
+    sql_password: ${6:# Password for SQL Authentication}
+  tags:
+    - lowlydba
+    - sqlserver
+    - resource_governor]]></content>
+  <tabTrigger>lowlydba.sqlserver.resource_governor</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures the resource governor on a SQL Server instance</description>
+</snippet>

@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:CyberArk Authentication using PAS Web Services SDK}
+  cyberark.pas.cyberark_authentication:
+    state: ${2:# Specifies if an authentication logon/logoff and a cyberark_session should be added/removed}
+    username: ${3:# The name of the user who will logon to the Vault}
+    password: ${4:# The password of the user}
+    new_password: ${5:# The new password of the user}
+    api_base_url: ${6:# A string containing the base URL of the server hosting CyberArk's Privileged Account Security Web Services SDK}
+    validate_certs: ${7:# If C(false), SSL certificates will not be validated}
+    use_ldap_authentication: ${8:# Whether or not LDAP will be used}
+    use_windows_authentication: ${9:# Whether or not Windows will be used}
+    use_cyberark_authentication: ${10:# Whether or not LDAP will be used}
+    use_radius_authentication: ${11:# Whether or not users will be authenticated via a RADIUS server}
+    connection_number: ${12:# To support multiple connections for same user specify}
+    cyberark_session: ${13:# Dictionary set by a CyberArk authentication containing the different values to perform actions on a logged-on CyberArk session}
+  tags:
+    - cyberark
+    - pas
+    - cyberark_authentication]]></content>
+  <tabTrigger>cyberark.pas.cyberark_authentication</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>CyberArk Authentication using PAS Web Services SDK</description>
+</snippet>

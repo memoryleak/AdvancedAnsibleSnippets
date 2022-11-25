@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and delete AWS VPN Virtual Gateways}
+  community.aws.ec2_vpc_vgw:
+    state: ${2:# C(present) to ensure resource is created}
+    name: ${3:# Name of the VGW to be created or deleted}
+    type: ${4:# Type of the virtual gateway to be created}
+    vpn_gateway_id: ${5:# VPN gateway ID of an existing virtual gateway}
+    vpc_id: ${6:# The ID of a VPC to attach or detach to the VGW}
+    asn: ${7:# The BGP ASN on the Amazon side}
+    wait_timeout: ${8:# Number of seconds to wait for status during VPC attach and detach}
+    region: ${9:# The AWS region to use}
+    access_key: ${10:# AWS access key ID}
+    secret_key: ${11:# AWS secret access key}
+    session_token: ${12:# AWS STS session token for use with temporary credentials}
+    profile: ${13:# A named AWS profile to use for authentication}
+    endpoint_url: ${14:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${15:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${17:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${18:# Use a C(botocore}
+    tags: ${19:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${20:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - community
+    - aws
+    - ec2_vpc_vgw]]></content>
+  <tabTrigger>community.aws.ec2_vpc_vgw</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and delete AWS VPN Virtual Gateways</description>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/delete/update firewall policies}
+  community.general.clc_firewall_policy:
+    location: ${2:# Target datacenter for the firewall policy}
+    state: ${3:# Whether to create or delete the firewall policy}
+    source: ${4:# The list  of source addresses for traffic on the originating firewall}
+    destination: ${5:# The list of destination addresses for traffic on the terminating firewall}
+    ports: ${6:# The list of ports associated with the policy}
+    firewall_policy_id: ${7:# Id of the firewall policy}
+    source_account_alias: ${8:# CLC alias for the source account}
+    destination_account_alias: ${9:# CLC alias for the destination account}
+    wait: ${10:# Whether to wait for the provisioning tasks to finish before returning}
+    enabled: ${11:# Whether the firewall policy is enabled or disabled}
+  tags:
+    - community
+    - general
+    - clc_firewall_policy]]></content>
+  <tabTrigger>community.general.clc_firewall_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/delete/update firewall policies</description>
+</snippet>

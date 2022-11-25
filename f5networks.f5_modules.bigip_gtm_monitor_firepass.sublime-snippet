@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages F5 BIG-IP GTM FirePass monitors}
+  f5networks.f5_modules.bigip_gtm_monitor_firepass:
+    name: ${2:# Monitor name}
+    parent: ${3:# The parent template of this monitor template}
+    ip: ${4:# IP address part of the IP/port definition}
+    port: ${5:# Port address part of the IP/port definition}
+    interval: ${6:# The interval specifying how frequently the monitor instance of this template runs}
+    timeout: ${7:# The number of seconds in which the node or service must respond to the monitor request}
+    partition: ${8:# Device partition to manage resources on}
+    state: ${9:# When C(present), ensures the monitor exists}
+    probe_timeout: ${10:# Specifies the number of seconds after which the system times out the probe request to the system}
+    ignore_down_response: ${11:# Specifies the monitor allows more than one probe attempt per interval}
+    target_username: ${12:# Specifies the user name, if the monitored target requires authentication}
+    target_password: ${13:# Specifies the password, if the monitored target requires authentication}
+    update_password: ${14:# C(always) updates passwords if the C(target_password) is specified}
+    cipher_list: ${15:# Specifies the list of ciphers for this monitor}
+    max_load_average: ${16:# Specifies the number the monitor uses to mark the Secure Access Manager system up or down}
+    concurrency_limit: ${17:# Specifies the maximum percentage of licensed connections currently in use under which the monitor marks the Secure Access Manager system up}
+    provider: ${18:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_gtm_monitor_firepass]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_gtm_monitor_firepass</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages F5 BIG-IP GTM FirePass monitors</description>
+</snippet>

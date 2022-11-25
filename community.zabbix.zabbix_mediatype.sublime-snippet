@@ -1,0 +1,48 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/Update/Delete Zabbix media types}
+  community.zabbix.zabbix_mediatype:
+    name: ${2:# Name of the media type}
+    description: ${3:# Description of the media type}
+    state: ${4:# Desired state of the mediatype}
+    type: ${5:# Type of the media type}
+    status: ${6:# Whether the media type is enabled or no}
+    max_sessions: ${7:# The maximum number of alerts that can be processed in parallel}
+    max_attempts: ${8:# The maximum number of attempts to send an alert}
+    attempt_interval: ${9:# The interval between retry attempts}
+    script_name: ${10:# The name of the executed script}
+    script_params: ${11:# List of script parameters}
+    gsm_modem: ${12:# Serial device name of the gsm modem}
+    username: ${13:# Username or Jabber identifier}
+    password: ${14:# Authentication password}
+    smtp_server: ${15:# SMTP server host}
+    smtp_server_port: ${16:# SMTP server port}
+    smtp_helo: ${17:# SMTP HELO}
+    smtp_email: ${18:# Email address from which notifications will be sent}
+    smtp_authentication: ${19:# Whether SMTP authentication with username and password should be enabled or not}
+    smtp_security: ${20:# SMTP connection security level to use}
+    smtp_verify_host: ${21:# SSL verify host for SMTP}
+    smtp_verify_peer: ${22:# SSL verify peer for SMTP}
+    message_text_limit: ${23:# The message text limit}
+    webhook_script: ${24:# Required when I(type=webhook)}
+    webhook_timeout: ${25:# Can be used when I(type=webhook)}
+    process_tags: ${26:# Can be used when I(type=webhook)}
+    event_menu: ${27:# Can be used when I(type=webhook)}
+    event_menu_url: ${28:# Requred when I(event_menu=True)}
+    event_menu_name: ${29:# Requred when I(event_menu=True)}
+    webhook_params: ${30:# Can be used when I(type=webhook)}
+    message_templates: ${31:# Default notification messages for the event types}
+    server_url: ${32:# URL of Zabbix server, with protocol (http or https)}
+    login_user: ${33:# Zabbix user name}
+    login_password: ${34:# Zabbix user password}
+    http_login_user: ${35:# Basic Auth login}
+    http_login_password: ${36:# Basic Auth password}
+    timeout: ${37:# The timeout of API request (seconds)}
+    validate_certs: ${38:# If set to False, SSL certificates will not be validated}
+  tags:
+    - community
+    - zabbix
+    - zabbix_mediatype]]></content>
+  <tabTrigger>community.zabbix.zabbix_mediatype</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/Update/Delete Zabbix media types</description>
+</snippet>

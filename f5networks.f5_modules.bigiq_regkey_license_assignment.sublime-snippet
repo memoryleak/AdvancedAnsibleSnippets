@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage regkey license assignment on BIG-IPs from a BIG-IQ}
+  f5networks.f5_modules.bigiq_regkey_license_assignment:
+    pool: ${2:# The registration key pool to use}
+    key: ${3:# The registration key you want to assign from the pool}
+    device: ${4:# When C(managed) is C(no), specifies the address, or hostname, where the BIG-IQ can reach the remote device to register}
+    managed: ${5:# Whether the specified device is a managed or un-managed device}
+    device_port: ${6:# Specifies the port of the remote device to connect to}
+    device_username: ${7:# The username used to connect to the remote device}
+    device_password: ${8:# The password of the C(device_username)}
+    state: ${9:# When C(present), ensures the device is assigned the specified license}
+    provider: ${10:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigiq_regkey_license_assignment]]></content>
+  <tabTrigger>f5networks.f5_modules.bigiq_regkey_license_assignment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage regkey license assignment on BIG-IPs from a BIG-IQ</description>
+</snippet>

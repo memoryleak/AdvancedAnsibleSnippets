@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP network VLAN}
+  netapp.ontap.na_ontap_net_vlan:
+    state: ${2:# Whether the specified network VLAN should exist or not}
+    parent_interface: ${3:# The interface that hosts the VLAN interface}
+    vlanid: ${4:# The VLAN id}
+    node: ${5:# Node name of VLAN interface}
+    broadcast_domain: ${6:# Specify the broadcast_domain name}
+    ipspace: ${7:# Specify the ipspace for the broadcast domain}
+    enabled: ${8:# Enable/Disable Net vlan}
+    hostname: ${9:# The hostname or IP address of the ONTAP instance}
+    username: ${10:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${11:# Password for the specified user}
+    cert_filepath: ${12:# path to SSL client cert file (}
+    key_filepath: ${13:# path to SSL client key file}
+    https: ${14:# Enable and disable https}
+    validate_certs: ${15:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${16:# Override the default port (80 or 443) with this port}
+    ontapi: ${17:# The ontap api version to use}
+    use_rest: ${18:# Whether to use REST or ZAPI}
+    feature_flags: ${19:# Enable or disable a new feature}
+    force_ontap_version: ${20:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_net_vlan]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_net_vlan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP network VLAN</description>
+</snippet>

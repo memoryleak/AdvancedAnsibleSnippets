@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the HPE Nimble Storage snapshots}
+  hpe.nimble.hpe_nimble_snapshot:
+    agent_type: ${2:# External management agent type}
+    app_uuid: ${3:# Application identifier of snapshot}
+    change_name: ${4:# Change name of the existing snapshot}
+    description: ${5:# Text description of snapshot}
+    expiry_after: ${6:# Number of seconds after which this snapshot is considered expired by snapshot TTL}
+    force: ${7:# Forcibly delete the specified snapshot even if it is the last replicated collection}
+    metadata: ${8:# Key-value pairs that augment a snapshot's attributes}
+    name: ${9:# Name of the snapshot}
+    online: ${10:# Online state for a snapshot means it could be mounted for data restore}
+    state: ${11:# The snapshot state}
+    volume: ${12:# Parent volume name}
+    writable: ${13:# Allow snapshot to be writable}
+    host: ${14:# HPE Nimble Storage IP address}
+    password: ${15:# HPE Nimble Storage password}
+    username: ${16:# HPE Nimble Storage user name}
+  tags:
+    - hpe
+    - nimble
+    - hpe_nimble_snapshot]]></content>
+  <tabTrigger>hpe.nimble.hpe_nimble_snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the HPE Nimble Storage snapshots</description>
+</snippet>

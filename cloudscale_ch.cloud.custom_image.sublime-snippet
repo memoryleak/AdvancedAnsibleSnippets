@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage custom images on the cloudscale}
+  cloudscale_ch.cloud.custom_image:
+    url: ${2:# The URL used to download the image}
+    force_retry: ${3:# Retry the image import even if a failed import using the same name and URL already exists}
+    name: ${4:# The human readable name of the custom image}
+    uuid: ${5:# The unique identifier of the custom image import}
+    slug: ${6:# A string identifying the custom image for use within the API}
+    user_data_handling: ${7:# How user_data will be handled when creating a server}
+    zones: ${8:# Specify zones in which the custom image will be available (e}
+    source_format: ${9:# The file format of the image referenced in the url}
+    tags: ${10:# The tags assigned to the custom image}
+    state: ${11:# State of the coustom image}
+    api_url: ${12:# cloudscale}
+    api_token: ${13:# cloudscale}
+    api_timeout: ${14:# Timeout in seconds for calls to the cloudscale}
+  tags:
+    - cloudscale_ch
+    - cloud
+    - custom_image]]></content>
+  <tabTrigger>cloudscale_ch.cloud.custom_image</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage custom images on the cloudscale</description>
+</snippet>

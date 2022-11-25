@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP FlexCache - create/delete relationship}
+  netapp.ontap.na_ontap_flexcache:
+    state: ${2:# Whether the specified relationship should exist or not}
+    origin_volume: ${3:# Name of the origin volume for the FlexCache}
+    origin_vserver: ${4:# Name of the origin vserver for the FlexCache}
+    origin_cluster: ${5:# Name of the origin cluster for the FlexCache}
+    name: ${6:# Name of the target volume for the FlexCache}
+    junction_path: ${7:# Junction path of the cache volume}
+    auto_provision_as: ${8:# Use this parameter to automatically select existing aggregates for volume provisioning}
+    size: ${9:# Size of cache volume}
+    size_unit: ${10:# The unit used to interpret the size parameter}
+    vserver: ${11:# Name of the target vserver for the FlexCache}
+    aggr_list: ${12:# List of aggregates to host target FlexCache volume}
+    aggr_list_multiplier: ${13:# Aggregate list repeat count}
+    force_unmount: ${14:# Unmount FlexCache volume}
+    force_offline: ${15:# Offline FlexCache volume before deleting the FlexCache relationship}
+    time_out: ${16:# time to wait for flexcache creation or deletion in seconds}
+    prepopulate: ${17:# prepopulate FlexCache with data from origin volume}
+    hostname: ${18:# The hostname or IP address of the ONTAP instance}
+    username: ${19:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${20:# Password for the specified user}
+    cert_filepath: ${21:# path to SSL client cert file (}
+    key_filepath: ${22:# path to SSL client key file}
+    https: ${23:# Enable and disable https}
+    validate_certs: ${24:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${25:# Override the default port (80 or 443) with this port}
+    ontapi: ${26:# The ontap api version to use}
+    use_rest: ${27:# Whether to use REST or ZAPI}
+    feature_flags: ${28:# Enable or disable a new feature}
+    force_ontap_version: ${29:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_flexcache]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_flexcache</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP FlexCache - create/delete relationship</description>
+</snippet>

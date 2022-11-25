@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for Trustsec VN VLAN Mapping}
+  cisco.ise.trustsec_vn_vlan_mapping:
+    id: ${2:# Identifier of the VN-VLAN Mapping}
+    isData: ${3:# Flag which indicates whether the VLAN is data or voice type}
+    isDefaultVLAN: ${4:# Flag which indicates if the VLAN is default}
+    lastUpdate: ${5:# Timestamp for the last update of the VN-VLAN Mapping}
+    maxValue: ${6:# Max value}
+    name: ${7:# Name of the VLAN}
+    vnId: ${8:# Identifier for the associated Virtual Network which is required unless its name is provided}
+    vnName: ${9:# Name of the associated Virtual Network to be used for identity if id is not provided}
+    ise_hostname: ${10:# The Identity Services Engine hostname}
+    ise_username: ${11:# The Identity Services Engine username to authenticate}
+    ise_password: ${12:# The Identity Services Engine password to authenticate}
+    ise_verify: ${13:# Flag to enable or disable SSL certificate verification}
+    ise_version: ${14:# Informs the SDK which version of Identity Services Engine to use}
+    ise_wait_on_rate_limit: ${15:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
+    ise_debug: ${16:# Flag for Identity Services Engine SDK to enable debugging}
+    ise_uses_api_gateway: ${17:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
+    ise_uses_csrf_token: ${18:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+  tags:
+    - cisco
+    - ise
+    - trustsec_vn_vlan_mapping]]></content>
+  <tabTrigger>cisco.ise.trustsec_vn_vlan_mapping</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for Trustsec VN VLAN Mapping</description>
+</snippet>

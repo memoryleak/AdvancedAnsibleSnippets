@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Exports the APM policy or APM access profile from remote nodes}
+  f5networks.f5_modules.bigip_apm_policy_fetch:
+    name: ${2:# The name of the APM policy or APM access profile exported to create a file on the remote device for downloading}
+    dest: ${3:# A directory to save the file into}
+    file: ${4:# The name of the file to be created on the remote device for downloading}
+    type: ${5:# Specifies the type of item to export from the device}
+    force: ${6:# If C(no), the file will only be transferred if it does not exist in the the destination}
+    partition: ${7:# Device partition which contains the APM policy or APM access profile to export}
+    provider: ${8:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_apm_policy_fetch]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_apm_policy_fetch</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Exports the APM policy or APM access profile from remote nodes</description>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the user accounts on Ruckus ICX 7000 series switches}
+  community.network.icx_user:
+    aggregate: ${2:# The set of username objects to be configured on the remote ICX device}
+    name: ${3:# The username to be configured on the ICX device}
+    configured_password: ${4:# The password to be configured on the ICX device}
+    update_password: ${5:# This  argument will instruct the module when to change the password}
+    privilege: ${6:# The privilege level to be granted to the user}
+    nopassword: ${7:# Defines the username without assigning a password}
+    purge: ${8:# If set to true module will remove any previously configured usernames on the device except the current defined set of users}
+    state: ${9:# Configures the state of the username definition as it relates to the device operational configuration}
+    access_time: ${10:# This parameter indicates the time the file's access time should be set to}
+    check_running_config: ${11:# Check running configuration}
+  tags:
+    - community
+    - network
+    - icx_user]]></content>
+  <tabTrigger>community.network.icx_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the user accounts on Ruckus ICX 7000 series switches</description>
+</snippet>

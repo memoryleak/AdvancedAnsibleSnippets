@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about ELB target groups in AWS}
+  community.aws.elb_target_group_info:
+    load_balancer_arn: ${2:# The Amazon Resource Name (ARN) of the load balancer}
+    target_group_arns: ${3:# The Amazon Resource Names (ARN) of the target groups}
+    names: ${4:# The names of the target groups}
+    collect_targets_health: ${5:# When set to C(True), output contains targets health description}
+    access_key: ${6:# AWS access key ID}
+    secret_key: ${7:# AWS secret access key}
+    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    profile: ${9:# A named AWS profile to use for authentication}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${13:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
+    region: ${15:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - elb_target_group_info]]></content>
+  <tabTrigger>community.aws.elb_target_group_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about ELB target groups in AWS</description>
+</snippet>

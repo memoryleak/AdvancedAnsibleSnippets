@@ -1,0 +1,51 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage Virtual Machine and floating disks in oVirt/RHV}
+  ovirt.ovirt.ovirt_disk:
+    id: ${2:# ID of the disk to manage}
+    name: ${3:# Name of the disk to manage}
+    description: ${4:# Description of the disk image to manage}
+    vm_name: ${5:# Name of the Virtual Machine to manage}
+    vm_id: ${6:# ID of the Virtual Machine to manage}
+    state: ${7:# Should the Virtual Machine disk be present/absent/attached/detached/exported/imported}
+    download_image_path: ${8:# Path on a file system where disk should be downloaded}
+    upload_image_path: ${9:# Path to disk image, which should be uploaded}
+    size: ${10:# Size of the disk}
+    interface: ${11:# Driver of the storage interface}
+    format: ${12:# Specify format of the disk}
+    content_type: ${13:# Specify if the disk is a data disk or ISO image or a one of a the Hosted Engine disk types}
+    sparse: ${14:# I(True) if the disk should be sparse (also known as I(thin provision))}
+    storage_domain: ${15:# Storage domain name where disk should be created}
+    storage_domains: ${16:# Storage domain names where disk should be copied}
+    force: ${17:# Please take a look at C(image_path) documentation to see the correct usage of this parameter}
+    profile: ${18:# Disk profile name to be attached to disk}
+    quota_id: ${19:# Disk quota ID to be used for disk}
+    bootable: ${20:# I(True) if the disk should be bootable}
+    shareable: ${21:# I(True) if the disk should be shareable}
+    read_only: ${22:# I(True) if the disk should be read_only}
+    logical_unit: ${23:# Dictionary which describes LUN to be directly attached to VM:}
+    sparsify: ${24:# I(True) if the disk should be sparsified}
+    openstack_volume_type: ${25:# Name of the openstack volume type}
+    image_provider: ${26:# When C(state) is I(exported) disk is exported to given Glance image provider}
+    host: ${27:# When the hypervisor name is specified the newly created disk or an existing disk will refresh its information about the underlying storage( Disk size, Serial, Product ID, Vendor ID }
+    wipe_after_delete: ${28:# If the disk's Wipe After Delete is enabled, then the disk is first wiped}
+    activate: ${29:# I(True) if the disk should be activated}
+    backup: ${30:# The backup behavior supported by the disk}
+    scsi_passthrough: ${31:# Indicates whether SCSI passthrough is enable and its policy}
+    propagate_errors: ${32:# Indicates if disk errors should cause virtual machine to be paused or if disk errors should be}
+    pass_discard: ${33:# Defines whether the virtual machine passes discard commands to the storage}
+    uses_scsi_reservation: ${34:# Defines whether SCSI reservation is enabled for this disk}
+    max_workers: ${35:# The number of workers which should be used in the upload/download of the image}
+    wait: ${36:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${37:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${38:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${39:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${40:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${41:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_disk]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_disk</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage Virtual Machine and floating disks in oVirt/RHV</description>
+</snippet>

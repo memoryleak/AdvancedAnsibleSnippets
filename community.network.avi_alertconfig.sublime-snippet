@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for setup of AlertConfig Avi RESTful Object}
+  community.network.avi_alertconfig:
+    state: ${2:# The state that should be applied on the entity}
+    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
+    action_group_ref: ${5:# The alert config will trigger the selected alert action, which can send notifications and execute a controlscript}
+    alert_rule: ${6:# List of filters matching on events or client logs used for triggering alerts}
+    autoscale_alert: ${7:# This alert config applies to auto scale alerts}
+    category: ${8:# Determines whether an alert is raised immediately when event occurs (realtime) or after specified number of events occurs within rolling time}
+    description: ${9:# A custom description field}
+    enabled: ${10:# Enable or disable this alert config from generating new alerts}
+    expiry_time: ${11:# An alert is expired and deleted after the expiry time has elapsed}
+    name: ${12:# Name of the alert configuration}
+    obj_uuid: ${13:# Uuid of the resource for which alert was raised}
+    object_type: ${14:# The object type to which the alert config is associated with}
+    recommendation: ${15:# Recommendation of alertconfig}
+    rolling_window: ${16:# Only if the number of events is reached or exceeded within the time window will an alert be generated}
+    source: ${17:# Signifies system events or the type of client logsused in this alert configuration}
+    summary: ${18:# Summary of reason why alert is generated}
+    tenant_ref: ${19:# It is a reference to an object of type tenant}
+    threshold: ${20:# An alert is created only when the number of events meets or exceeds this number within the chosen time frame}
+    throttle: ${21:# Alerts are suppressed (throttled) for this duration of time since the last alert was raised for this alert config}
+    url: ${22:# Avi controller URL of the object}
+    uuid: ${23:# Unique object identifier of the object}
+    controller: ${24:# IP address or hostname of the controller}
+    username: ${25:# Username used for accessing Avi controller}
+    password: ${26:# Password of Avi user in Avi controller}
+    tenant: ${27:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${28:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${29:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${30:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${31:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${32:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_alertconfig]]></content>
+  <tabTrigger>community.network.avi_alertconfig</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for setup of AlertConfig Avi RESTful Object</description>
+</snippet>

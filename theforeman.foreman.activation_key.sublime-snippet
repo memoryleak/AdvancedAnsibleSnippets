@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Activation Keys}
+  theforeman.foreman.activation_key:
+    name: ${2:# Name of the activation key}
+    description: ${3:# Description of the activation key}
+    lifecycle_environment: ${4:# Name of the lifecycle environment}
+    content_view: ${5:# Name of the content view}
+    subscriptions: ${6:# List of subscriptions that include either Name, Pool ID, or Upstream Pool ID}
+    host_collections: ${7:# List of host collections to add to activation key}
+    content_overrides: ${8:# List of content overrides that include label and override state}
+    auto_attach: ${9:# Set Auto-Attach on or off}
+    release_version: ${10:# Set the content release version}
+    service_level: ${11:# Set the service level}
+    max_hosts: ${12:# Maximum number of registered content hosts}
+    unlimited_hosts: ${13:# Can the activation key have unlimited hosts}
+    purpose_usage: ${14:# Sets the system purpose usage}
+    purpose_role: ${15:# Sets the system purpose role}
+    purpose_addons: ${16:# Sets the system purpose add-ons}
+    state: ${17:# State of the Activation Key}
+    new_name: ${18:# Name of the new activation key when state == copied}
+    server_url: ${19:# URL of the Foreman server}
+    username: ${20:# Username accessing the Foreman server}
+    password: ${21:# Password of the user accessing the Foreman server}
+    validate_certs: ${22:# Whether or not to verify the TLS certificates of the Foreman server}
+    organization: ${23:# Organization that the entity is in}
+  tags:
+    - theforeman
+    - foreman
+    - activation_key]]></content>
+  <tabTrigger>theforeman.foreman.activation_key</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Activation Keys</description>
+</snippet>

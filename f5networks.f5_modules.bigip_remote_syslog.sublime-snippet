@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manipulate remote syslog settings on a BIG-IP}
+  f5networks.f5_modules.bigip_remote_syslog:
+    remote_host: ${2:# Specifies the IP address or hostname for the remote system, to which the system sends log messages}
+    name: ${3:# Specifies the name of the syslog object}
+    remote_port: ${4:# Specifies the port the system uses to send messages to the remote logging server}
+    local_ip: ${5:# Specifies the local IP address of the system that is logging}
+    state: ${6:# When C(present), guarantees the remote syslog exists with the provided attributes}
+    provider: ${7:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_remote_syslog]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_remote_syslog</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manipulate remote syslog settings on a BIG-IP</description>
+</snippet>

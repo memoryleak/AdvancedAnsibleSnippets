@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage OpenStack DNS zones}
+  openstack.cloud.os_zone:
+    name: ${2:# Zone name}
+    zone_type: ${3:# Zone type}
+    email: ${4:# Email of the zone owner (only applies if zone_type is primary)}
+    description: ${5:# Zone description}
+    ttl: ${6:# TTL (Time To Live) value in seconds}
+    masters: ${7:# Master nameservers (only applies if zone_type is secondary)}
+    state: ${8:# Should the resource be present or absent}
+    cloud: ${9:# Named cloud or cloud config to operate against}
+    auth: ${10:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${11:# Name of the auth plugin to use}
+    region_name: ${12:# Name of the region}
+    wait: ${13:# Should ansible wait until the requested resource is complete}
+    timeout: ${14:# How long should ansible wait for the requested resource}
+    api_timeout: ${15:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${16:# Whether or not SSL API requests should be verified}
+    ca_cert: ${17:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${18:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${19:# A path to a client key to use as part of the SSL transaction}
+    interface: ${20:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${21:# Ignored}
+    sdk_log_path: ${22:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${23:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - os_zone]]></content>
+  <tabTrigger>openstack.cloud.os_zone</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage OpenStack DNS zones</description>
+</snippet>

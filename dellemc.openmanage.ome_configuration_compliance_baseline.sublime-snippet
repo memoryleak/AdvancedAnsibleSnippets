@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, modify, and delete a configuration compliance baseline and remediate non-compliant devices on OpenManage Enterprise}
+  dellemc.openmanage.ome_configuration_compliance_baseline:
+    command: ${2:# C(create) creates a configuration baseline from an existing compliance template}
+    names: ${3:# Name(s) of the configuration compliance baseline}
+    new_name: ${4:# New name of the compliance baseline to be modified}
+    template_name: ${5:# Name of the compliance template for creating the compliance baseline(s)}
+    template_id: ${6:# ID of the deployment template to be used for creating a compliance baseline}
+    device_ids: ${7:# IDs of the target devices}
+    device_service_tags: ${8:# Service tag of the target device}
+    device_group_names: ${9:# Name of the target device group}
+    description: ${10:# Description of the compliance baseline}
+    job_wait: ${11:# Provides the option to wait for job completion}
+    job_wait_timeout: ${12:# The maximum wait time of I(job_wait) in seconds}
+    hostname: ${13:# OpenManage Enterprise IP address or hostname}
+    username: ${14:# OpenManage Enterprise username}
+    password: ${15:# OpenManage Enterprise password}
+    port: ${16:# OpenManage Enterprise HTTPS port}
+    validate_certs: ${17:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${18:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${19:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_configuration_compliance_baseline]]></content>
+  <tabTrigger>dellemc.openmanage.ome_configuration_compliance_baseline</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, modify, and delete a configuration compliance baseline and remediate non-compliant devices on OpenManage Enterprise</description>
+</snippet>

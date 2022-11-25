@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages SNMP communities on a BIG-IP}
+  f5networks.f5_modules.bigip_snmp_community:
+    state: ${2:# When C(present), ensures the address list and entries exists}
+    version: ${3:# Specifies to which SNMP version the trap destination applies}
+    name: ${4:# Name that identifies the SNMP community}
+    community: ${5:# Specifies the community string (password) for access to the MIB}
+    source: ${6:# Specifies the source address for access to the MIB}
+    port: ${7:# Specifies the port for the trap destination}
+    oid: ${8:# Specifies the object identifier (OID) for the record}
+    access: ${9:# Specifies the user's access level to the MIB}
+    ip_version: ${10:# Specifies whether the record applies to IPv4 or IPv6 addresses}
+    snmp_username: ${11:# Specifies the name of the user for whom you want to grant access to the SNMP v3 MIB}
+    snmp_auth_protocol: ${12:# Specifies the authentication method for the user}
+    snmp_auth_password: ${13:# Specifies the password for the user}
+    snmp_privacy_protocol: ${14:# Specifies the encryption protocol}
+    snmp_privacy_password: ${15:# Specifies the password for the user}
+    update_password: ${16:# C(always) allows users to update passwords}
+    partition: ${17:# Device partition to manage resources on}
+    provider: ${18:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_snmp_community]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_snmp_community</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages SNMP communities on a BIG-IP</description>
+</snippet>

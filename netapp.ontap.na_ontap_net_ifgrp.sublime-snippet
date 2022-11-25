@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp Ontap modify network interface group}
+  netapp.ontap.na_ontap_net_ifgrp:
+    state: ${2:# Whether the specified network interface group should exist or not}
+    distribution_function: ${3:# Specifies the traffic distribution function for the ifgrp}
+    name: ${4:# Specifies the interface group name}
+    mode: ${5:# Specifies the link policy for the ifgrp}
+    node: ${6:# Specifies the name of node}
+    ports: ${7:# List of expected ports to be present in the interface group}
+    from_lag_ports: ${8:# Only supported with REST and is ignored with ZAPI}
+    broadcast_domain: ${9:# Specify the broadcast_domain name}
+    ipspace: ${10:# Specify the ipspace for the broadcast domain}
+    hostname: ${11:# The hostname or IP address of the ONTAP instance}
+    username: ${12:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${13:# Password for the specified user}
+    cert_filepath: ${14:# path to SSL client cert file (}
+    key_filepath: ${15:# path to SSL client key file}
+    https: ${16:# Enable and disable https}
+    validate_certs: ${17:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${18:# Override the default port (80 or 443) with this port}
+    ontapi: ${19:# The ontap api version to use}
+    use_rest: ${20:# Whether to use REST or ZAPI}
+    feature_flags: ${21:# Enable or disable a new feature}
+    force_ontap_version: ${22:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_net_ifgrp]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_net_ifgrp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp Ontap modify network interface group</description>
+</snippet>

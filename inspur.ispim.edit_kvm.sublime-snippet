@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set KVM}
+  inspur.ispim.edit_kvm:
+    client_type: ${2:# Client Type}
+    kvm_encryption: ${3:# Encrypt KVM packets}
+    media_attach: ${4:# Two types of VM attach mode are available}
+    keyboard_language: ${5:# Select the Keyboard Language}
+    retry_count: ${6:# Number of times to be retried in case a KVM failure occurs}
+    retry_time_interval: ${7:# The Identification for retry time interval configuration (5-30) seconds}
+    local_monitor_off: ${8:# Server Monitor OFF Feature Status}
+    automatic_off: ${9:# Automatically OFF Server Monitor, When KVM Launches}
+    non_secure: ${10:# Enable/disable Non Secure Connection Type}
+    ssh_vnc: ${11:# Enable/disable VNC over SSH in BMC}
+    stunnel_vnc: ${12:# Enable/disable VNC over Stunnel in BMC}
+    provider: ${13:# A dict object containing connection details}
+    host: ${14:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${15:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${16:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - ispim
+    - edit_kvm]]></content>
+  <tabTrigger>inspur.ispim.edit_kvm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set KVM</description>
+</snippet>

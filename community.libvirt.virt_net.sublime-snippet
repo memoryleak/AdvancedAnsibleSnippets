@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage libvirt network configuration}
+  community.libvirt.virt_net:
+    name: ${2:# Name of the network being managed}
+    state: ${3:# Specify which state you want a network to be in}
+    command: ${4:# In addition to state management, various non-idempotent commands are available}
+    autostart: ${5:# Specify if a given network should be started automatically on system boot}
+    uri: ${6:# Libvirt connection uri}
+    xml: ${7:# XML document used with the define command}
+  tags:
+    - community
+    - libvirt
+    - virt_net]]></content>
+  <tabTrigger>community.libvirt.virt_net</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage libvirt network configuration</description>
+</snippet>

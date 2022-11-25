@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about DigitalOcean domain records}
+  community.digitalocean.digital_ocean_domain_record_info:
+    state: ${2:# Indicate desired state of the target}
+    name: ${3:# Name of the domain}
+    record_id: ${4:# Used to retrieve a specific record}
+    type: ${5:# The type of record you would like to retrieve}
+    baseurl: ${6:# DigitalOcean API base url}
+    oauth_token: ${7:# DigitalOcean OAuth token}
+    timeout: ${8:# The timeout in seconds used for polling DigitalOcean's API}
+    validate_certs: ${9:# If set to C(no), the SSL certificates will not be validated}
+  tags:
+    - community
+    - digitalocean
+    - digital_ocean_domain_record_info]]></content>
+  <tabTrigger>community.digitalocean.digital_ocean_domain_record_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about DigitalOcean domain records</description>
+</snippet>

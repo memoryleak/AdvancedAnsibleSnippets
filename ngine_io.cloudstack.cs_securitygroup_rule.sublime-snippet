@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages security group rules on Apache CloudStack based clouds}
+  ngine_io.cloudstack.cs_securitygroup_rule:
+    security_group: ${2:# Name of the security group the rule is related to}
+    state: ${3:# State of the security group rule}
+    protocol: ${4:# Protocol of the security group rule}
+    type: ${5:# Ingress or egress security group rule}
+    cidr: ${6:# CIDR (full notation) to be used for security group rule}
+    user_security_group: ${7:# Security group this rule is based of}
+    start_port: ${8:# Start port for this rule}
+    end_port: ${9:# End port for this rule}
+    icmp_type: ${10:# Type of the icmp message being sent}
+    icmp_code: ${11:# Error code for this icmp message}
+    project: ${12:# Name of the project the security group to be created in}
+    poll_async: ${13:# Poll async jobs until job has finished}
+    api_key: ${14:# API key of the CloudStack API}
+    api_secret: ${15:# Secret key of the CloudStack API}
+    api_url: ${16:# URL of the CloudStack API e}
+    api_http_method: ${17:# HTTP method used to query the API endpoint}
+    api_timeout: ${18:# HTTP timeout in seconds}
+    api_verify_ssl_cert: ${19:# Verify CA authority cert file}
+  tags:
+    - ngine_io
+    - cloudstack
+    - cs_securitygroup_rule]]></content>
+  <tabTrigger>ngine_io.cloudstack.cs_securitygroup_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages security group rules on Apache CloudStack based clouds</description>
+</snippet>

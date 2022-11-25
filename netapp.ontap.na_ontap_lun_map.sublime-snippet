@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP LUN maps}
+  netapp.ontap.na_ontap_lun_map:
+    state: ${2:# Whether the specified LUN should exist or not}
+    initiator_group_name: ${3:# Initiator group to map to the given LUN}
+    path: ${4:# Path of the LUN}
+    vserver: ${5:# The name of the vserver to use}
+    lun_id: ${6:# LUN ID assigned for the map}
+    hostname: ${7:# The hostname or IP address of the ONTAP instance}
+    username: ${8:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${9:# Password for the specified user}
+    cert_filepath: ${10:# path to SSL client cert file (}
+    key_filepath: ${11:# path to SSL client key file}
+    https: ${12:# Enable and disable https}
+    validate_certs: ${13:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${14:# Override the default port (80 or 443) with this port}
+    ontapi: ${15:# The ontap api version to use}
+    use_rest: ${16:# Whether to use REST or ZAPI}
+    feature_flags: ${17:# Enable or disable a new feature}
+    force_ontap_version: ${18:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_lun_map]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_lun_map</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP LUN maps</description>
+</snippet>

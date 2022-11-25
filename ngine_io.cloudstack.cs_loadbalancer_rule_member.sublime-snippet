@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages load balancer rule members on Apache CloudStack based clouds}
+  ngine_io.cloudstack.cs_loadbalancer_rule_member:
+    name: ${2:# The name of the load balancer rule}
+    ip_address: ${3:# Public IP address from where the network traffic will be load balanced from}
+    vms: ${4:# List of VMs to assign to or remove from the rule}
+    state: ${5:# Should the VMs be present or absent from the rule}
+    project: ${6:# Name of the project the firewall rule is related to}
+    domain: ${7:# Domain the rule is related to}
+    account: ${8:# Account the rule is related to}
+    zone: ${9:# Name of the zone in which the rule should be located}
+    poll_async: ${10:# Poll async jobs until job has finished}
+    api_key: ${11:# API key of the CloudStack API}
+    api_secret: ${12:# Secret key of the CloudStack API}
+    api_url: ${13:# URL of the CloudStack API e}
+    api_http_method: ${14:# HTTP method used to query the API endpoint}
+    api_timeout: ${15:# HTTP timeout in seconds}
+    api_verify_ssl_cert: ${16:# Verify CA authority cert file}
+  tags:
+    - ngine_io
+    - cloudstack
+    - cs_loadbalancer_rule_member]]></content>
+  <tabTrigger>ngine_io.cloudstack.cs_loadbalancer_rule_member</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages load balancer rule members on Apache CloudStack based clouds</description>
+</snippet>

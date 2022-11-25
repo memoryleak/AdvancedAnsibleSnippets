@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Avi API Version Module}
+  community.network.avi_api_version:
+    controller: ${2:# IP address or hostname of the controller}
+    username: ${3:# Username used for accessing Avi controller}
+    password: ${4:# Password of Avi user in Avi controller}
+    tenant: ${5:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${6:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${7:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${8:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${9:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${10:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_api_version]]></content>
+  <tabTrigger>community.network.avi_api_version</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Avi API Version Module</description>
+</snippet>

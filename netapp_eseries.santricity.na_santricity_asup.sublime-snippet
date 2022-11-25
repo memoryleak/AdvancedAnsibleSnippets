@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series manage auto-support settings}
+  netapp_eseries.santricity.na_santricity_asup:
+    state: ${2:# Enable/disable the E-Series auto-support configuration or maintenance mode}
+    active: ${3:# Enable active/proactive monitoring for ASUP}
+    start: ${4:# A start hour may be specified in a range from 0 to 23 hours}
+    end: ${5:# An end hour may be specified in a range from 1 to 24 hours}
+    days: ${6:# A list of days of the week that ASUP bundles will be sent}
+    method: ${7:# AutoSupport dispatch delivery method}
+    routing_type: ${8:# AutoSupport routing}
+    proxy: ${9:# Information particular to the proxy delivery method}
+    email: ${10:# Information particular to the e-mail delivery method}
+    maintenance_duration: ${11:# The duration of time the ASUP maintenance mode will be active}
+    maintenance_emails: ${12:# List of email addresses for maintenance notifications}
+    validate: ${13:# Validate ASUP configuration}
+    api_username: ${14:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_password: ${15:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${16:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    validate_certs: ${17:# Should https certificates be validated?}
+    ssid: ${18:# The ID of the array to manage}
+  tags:
+    - netapp_eseries
+    - santricity
+    - na_santricity_asup]]></content>
+  <tabTrigger>netapp_eseries.santricity.na_santricity_asup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series manage auto-support settings</description>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Local User Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_local_user_policy:
+    state: ${2:# If C(present), will verify the resource is present and will create if needed}
+    organization: ${3:# The name of the Organization this resource is assigned to}
+    name: ${4:# The name assigned to the Local User Policy}
+    tags: ${5:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    description: ${6:# The user-defined description of the Local User policy}
+    enforce_strong_password: ${7:# If true, enables a strong password policy}
+    enable_password_expiry: ${8:# Enables password expiry on the endpoint}
+    password_history: ${9:# Specifies number of times a password cannot repeat when changed (value between 0 and 5)}
+    local_users: ${10:# List of local users on the endpoint}
+    purge: ${11:# The purge argument instructs the module to consider the resource definition absolute}
+    always_update_password: ${12:# Since passwords are not returned by the API and are encrypted on the endpoint, this option will instruct the module when to change the password}
+    api_private_key: ${13:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${14:# URI used to access the Intersight API}
+    api_key_id: ${15:# Public API Key ID associated with the private key}
+    validate_certs: ${16:# Boolean control for verifying the api_uri TLS certificate}
+    use_proxy: ${17:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+  tags:
+    - cisco
+    - intersight
+    - intersight_local_user_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_local_user_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Local User Policy configuration for Cisco Intersight</description>
+</snippet>

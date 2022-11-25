@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage filesystem replica links between Pure Storage FlashBlades}
+  purestorage.flashblade.purefb_fs_replica:
+    name: ${2:# Local Filesystem Name}
+    state: ${3:# Creates or modifies a filesystem replica link}
+    target_array: ${4:# Remote array name to create replica on}
+    target_fs: ${5:# Name of target filesystem name}
+    policy: ${6:# Name of filesystem snapshot policy to apply to the replica link}
+    fb_url: ${7:# FlashBlade management IP address or Hostname}
+    api_token: ${8:# FlashBlade API token for admin privileged user}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_fs_replica]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_fs_replica</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage filesystem replica links between Pure Storage FlashBlades</description>
+</snippet>

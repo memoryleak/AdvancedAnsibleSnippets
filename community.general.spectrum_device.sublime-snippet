@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates/deletes devices in CA Spectrum}
+  community.general.spectrum_device:
+    device: ${2:# IP address of the device}
+    community: ${3:# SNMP community used for device discovery}
+    landscape: ${4:# Landscape handle of the SpectroServer to which add or remove the device}
+    state: ${5:# On C(present) creates the device when it does not exist}
+    url: ${6:# HTTP, HTTPS URL of the Oneclick server in the form C((http|https)://host}
+    url_username: ${7:# Oneclick user name}
+    url_password: ${8:# Oneclick user password}
+    use_proxy: ${9:# if C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${10:# If C(false), SSL certificates will not be validated}
+    agentport: ${11:# UDP port used for SNMP discovery}
+  tags:
+    - community
+    - general
+    - spectrum_device]]></content>
+  <tabTrigger>community.general.spectrum_device</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates/deletes devices in CA Spectrum</description>
+</snippet>

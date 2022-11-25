@@ -1,0 +1,63 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages BGP neighbor Address-family configuration on HUAWEI CloudEngine switches}
+  community.network.ce_bgp_neighbor_af:
+    vrf_name: ${2:# Name of a BGP instance}
+    af_type: ${3:# Address family type of a BGP instance}
+    remote_address: ${4:# IPv4 or IPv6 peer connection address}
+    advertise_irb: ${5:# If the value is true, advertised IRB routes are distinguished}
+    advertise_arp: ${6:# If the value is true, advertised ARP routes are distinguished}
+    advertise_remote_nexthop: ${7:# If the value is true, the remote next-hop attribute is advertised to peers}
+    advertise_community: ${8:# If the value is true, the community attribute is advertised to peers}
+    advertise_ext_community: ${9:# If the value is true, the extended community attribute is advertised to peers}
+    discard_ext_community: ${10:# If the value is true, the extended community attribute in the peer route information is discarded}
+    allow_as_loop_enable: ${11:# If the value is true, repetitive local AS numbers are allowed}
+    allow_as_loop_limit: ${12:# Set the maximum number of repetitive local AS number}
+    keep_all_routes: ${13:# If the value is true, the system stores all route update messages received from all peers (groups) after BGP connection setup}
+    nexthop_configure: ${14:# null, The next hop is not changed}
+    preferred_value: ${15:# Assign a preferred value for the routes learned from a specified peer}
+    public_as_only: ${16:# If the value is true, sent BGP update messages carry only the public AS number but do not carry private AS numbers}
+    public_as_only_force: ${17:# If the value is true, sent BGP update messages carry only the public AS number but do not carry private AS numbers}
+    public_as_only_limited: ${18:# Limited use public as number}
+    public_as_only_replace: ${19:# Private as replaced by public as number}
+    public_as_only_skip_peer_as: ${20:# Public as only skip peer as}
+    route_limit: ${21:# Configure the maximum number of routes that can be accepted from a peer}
+    route_limit_percent: ${22:# Specify the percentage of routes when a router starts to generate an alarm}
+    route_limit_type: ${23:# Noparameter, After the number of received routes exceeds the threshold and the timeout timer expires,no action}
+    route_limit_idle_timeout: ${24:# Specify the value of the idle-timeout timer to automatically reestablish the connections after they are cut off when the number of routes exceeds the set threshold}
+    rt_updt_interval: ${25:# Specify the minimum interval at which Update packets are sent}
+    redirect_ip: ${26:# Redirect ip}
+    redirect_ip_validation: ${27:# Redirect ip validation}
+    reflect_client: ${28:# If the value is true, the local device functions as the route reflector and a peer functions as a client of the route reflector}
+    substitute_as_enable: ${29:# If the value is true, the function to replace a specified peer's AS number in the AS-Path attribute with the local AS number is enabled}
+    import_rt_policy_name: ${30:# Specify the filtering policy applied to the routes learned from a peer}
+    export_rt_policy_name: ${31:# Specify the filtering policy applied to the routes to be advertised to a peer}
+    import_pref_filt_name: ${32:# Specify the IPv4 filtering policy applied to the routes received from a specified peer}
+    export_pref_filt_name: ${33:# Specify the IPv4 filtering policy applied to the routes to be advertised to a specified peer}
+    import_as_path_filter: ${34:# Apply an AS_Path-based filtering policy to the routes received from a specified peer}
+    export_as_path_filter: ${35:# Apply an AS_Path-based filtering policy to the routes to be advertised to a specified peer}
+    import_as_path_name_or_num: ${36:# A routing strategy based on the AS path list for routing received by a designated peer}
+    export_as_path_name_or_num: ${37:# Application of a AS path list based filtering policy to the routing of a specified peer}
+    import_acl_name_or_num: ${38:# Apply an IPv4 ACL-based filtering policy to the routes received from a specified peer}
+    export_acl_name_or_num: ${39:# Apply an IPv4 ACL-based filtering policy to the routes to be advertised to a specified peer}
+    ipprefix_orf_enable: ${40:# If the value is true, the address prefix-based Outbound Route Filter (ORF) capability is enabled for peers}
+    is_nonstd_ipprefix_mod: ${41:# If the value is true, Non-standard capability codes are used during capability negotiation}
+    orftype: ${42:# ORF Type}
+    orf_mode: ${43:# ORF mode}
+    soostring: ${44:# Configure the Site-of-Origin (SoO) extended community attribute}
+    default_rt_adv_enable: ${45:# If the value is true, the function to advertise default routes to peers is enabled}
+    default_rt_adv_policy: ${46:# Specify the name of a used policy}
+    default_rt_match_mode: ${47:# null, Null}
+    add_path_mode: ${48:# null, Null}
+    adv_add_path_num: ${49:# The number of addPath advertise route}
+    origin_as_valid: ${50:# If the value is true, Application results of route announcement}
+    vpls_enable: ${51:# If the value is true, vpls enable}
+    vpls_ad_disable: ${52:# If the value is true, enable vpls-ad}
+    update_pkt_standard_compatible: ${53:# If the value is true, When the vpnv4 multicast neighbor receives and updates the message, the message has no label}
+  tags:
+    - community
+    - network
+    - ce_bgp_neighbor_af]]></content>
+  <tabTrigger>community.network.ce_bgp_neighbor_af</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages BGP neighbor Address-family configuration on HUAWEI CloudEngine switches</description>
+</snippet>

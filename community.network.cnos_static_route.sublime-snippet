@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage static IP routes on Lenovo CNOS network devices}
+  community.network.cnos_static_route:
+    prefix: ${2:# Network prefix of the static route}
+    mask: ${3:# Network prefix mask of the static route}
+    next_hop: ${4:# Next hop IP of the static route}
+    interface: ${5:# Interface of the static route}
+    description: ${6:# Name of the static route}
+    admin_distance: ${7:# Admin distance of the static route}
+    tag: ${8:# Set tag of the static route}
+    aggregate: ${9:# List of static route definitions}
+    state: ${10:# State of the static route configuration}
+  tags:
+    - community
+    - network
+    - cnos_static_route]]></content>
+  <tabTrigger>community.network.cnos_static_route</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage static IP routes on Lenovo CNOS network devices</description>
+</snippet>

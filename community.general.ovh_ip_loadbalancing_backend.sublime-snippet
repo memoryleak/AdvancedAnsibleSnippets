@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage OVH IP LoadBalancing backends}
+  community.general.ovh_ip_loadbalancing_backend:
+    name: ${2:# Name of the LoadBalancing internal name (ip-X}
+    backend: ${3:# The IP address of the backend to update / modify / delete}
+    state: ${4:# Determines whether the backend is to be created/modified or deleted}
+    probe: ${5:# Determines the type of probe to use for this backend}
+    weight: ${6:# Determines the weight for this backend}
+    endpoint: ${7:# The endpoint to use ( for instance ovh-eu)}
+    application_key: ${8:# The applicationKey to use}
+    application_secret: ${9:# The application secret to use}
+    consumer_key: ${10:# The consumer key to use}
+    timeout: ${11:# The timeout in seconds used to wait for a task to be completed}
+  tags:
+    - community
+    - general
+    - ovh_ip_loadbalancing_backend]]></content>
+  <tabTrigger>community.general.ovh_ip_loadbalancing_backend</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage OVH IP LoadBalancing backends</description>
+</snippet>

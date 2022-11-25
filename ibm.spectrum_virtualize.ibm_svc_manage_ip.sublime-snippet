@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages IP provisioning on IBM Spectrum Virtualize family storage systems}
+  ibm.spectrum_virtualize.ibm_svc_manage_ip:
+    state: ${2:# Creates (C(present)) or removes (C(absent)) an IP address}
+    clustername: ${3:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${4:# Domain for the Spectrum Virtualize storage system}
+    username: ${5:# REST API username for the Spectrum Virtualize storage system}
+    password: ${6:# REST API password for the Spectrum Virtualize storage system}
+    token: ${7:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    node: ${8:# Specifies the name of the node}
+    port: ${9:# Specifies a port ranging from 1 - 16 to which IP shall be assigned}
+    portset: ${10:# Specifies the name of the portset object}
+    ip_address: ${11:# Specifies a valid ipv4/ipv6 address}
+    subnet_prefix: ${12:# Specifies the prefix of subnet mask}
+    gateway: ${13:# Specifies the gateway address}
+    vlan: ${14:# Specifies a vlan id ranging from 1 - 4096}
+    shareip: ${15:# Specifies the flag when IP is shared between multiple portsets}
+    validate_certs: ${16:# Validates certification}
+    log_path: ${17:# Path of debug log file}
+  tags:
+    - ibm
+    - spectrum_virtualize
+    - ibm_svc_manage_ip]]></content>
+  <tabTrigger>ibm.spectrum_virtualize.ibm_svc_manage_ip</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages IP provisioning on IBM Spectrum Virtualize family storage systems</description>
+</snippet>

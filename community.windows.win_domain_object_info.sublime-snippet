@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information an Active Directory object}
+  community.windows.win_domain_object_info:
+    domain_password: ${2:# The password for C(domain_username)}
+    domain_server: ${3:# Specified the Active Directory Domain Services instance to connect to}
+    domain_username: ${4:# The username to use when interacting with AD}
+    filter: ${5:# Specifies a query string using the PowerShell Expression Language syntax}
+    identity: ${6:# Specifies a single Active Directory object by its distinguished name or its object GUID}
+    include_deleted: ${7:# Also search for deleted Active Directory objects}
+    ldap_filter: ${8:# Like I(filter) but this is a tradiitional LDAP query string to filter the objects to return}
+    properties: ${9:# A list of properties to return}
+    search_base: ${10:# Specify the Active Directory path to search for objects in}
+    search_scope: ${11:# Specify the scope of when searching for an object in the C(search_base)}
+  tags:
+    - community
+    - windows
+    - win_domain_object_info]]></content>
+  <tabTrigger>community.windows.win_domain_object_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information an Active Directory object</description>
+</snippet>

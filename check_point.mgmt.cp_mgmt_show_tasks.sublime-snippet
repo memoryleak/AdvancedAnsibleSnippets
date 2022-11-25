@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieve all tasks and show their progress and details}
+  check_point.mgmt.cp_mgmt_show_tasks:
+    initiator: ${2:# Initiator's name}
+    status: ${3:# Status}
+    from_date: ${4:# The date from which tracking tasks is to be performed, by the task's last update date}
+    to_date: ${5:# The date until which tracking tasks is to be performed, by the task's last update date}
+    limit: ${6:# The maximal number of returned results}
+    offset: ${7:# Number of the results to initially skip}
+    order: ${8:# Sorts results by the given field}
+    details_level: ${9:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    wait_for_task: ${10:# Wait for the task to end}
+    wait_for_task_timeout: ${11:# How many minutes to wait until throwing a timeout error}
+    version: ${12:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_show_tasks]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_show_tasks</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieve all tasks and show their progress and details</description>
+</snippet>

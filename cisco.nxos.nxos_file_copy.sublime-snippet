@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Copy a file to a remote NXOS device}
+  cisco.nxos.nxos_file_copy:
+    local_file: ${2:# When (file_pull is False) this is the path to the local file on the Ansible controller}
+    remote_file: ${3:# When (file_pull is False) this is the remote file path on the NXOS device}
+    file_system: ${4:# The remote file system on the nxos device}
+    connect_ssh_port: ${5:# B(Deprecated)}
+    file_pull: ${6:# When (False) file is copied from the Ansible controller to the NXOS device}
+    file_pull_protocol: ${7:# When file_pull is True, this can be used to define the transfer protocol for copying file from remote to the NXOS device}
+    file_pull_compact: ${8:# When file_pull is True, this is used to compact nxos image files}
+    file_pull_kstack: ${9:# When file_pull is True, this can be used to speed up file copies when the nxos running image supports the use-kstack option}
+    local_file_directory: ${10:# When (file_pull is True) file is copied from a remote SCP server to the NXOS device, and written to this directory on the NXOS device}
+    file_pull_timeout: ${11:# B(Deprecated)}
+    remote_scp_server: ${12:# The remote scp server address when file_pull is True}
+    remote_scp_server_user: ${13:# The remote scp server username when file_pull is True}
+    remote_scp_server_password: ${14:# The remote scp server password when file_pull is True}
+    vrf: ${15:# The VRF used to pull the file}
+  tags:
+    - cisco
+    - nxos
+    - nxos_file_copy]]></content>
+  <tabTrigger>cisco.nxos.nxos_file_copy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Copy a file to a remote NXOS device</description>
+</snippet>

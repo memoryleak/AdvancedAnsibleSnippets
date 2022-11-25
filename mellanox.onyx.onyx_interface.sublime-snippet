@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Interfaces on Mellanox ONYX network devices}
+  mellanox.onyx.onyx_interface:
+    name: ${2:# Name of the Interface}
+    description: ${3:# Description of Interface}
+    enabled: ${4:# Interface link status}
+    speed: ${5:# Interface link speed}
+    mtu: ${6:# Maximum size of transmit packet}
+    aggregate: ${7:# List of Interfaces definitions}
+    duplex: ${8:# Interface link status}
+    tx_rate: ${9:# Transmit rate in bits per second (bps)}
+    rx_rate: ${10:# Receiver rate in bits per second (bps)}
+    delay: ${11:# Time in seconds to wait before checking for the operational state on remote device}
+    purge: ${12:# Purge Interfaces not defined in the aggregate parameter}
+    state: ${13:# State of the Interface configuration, C(up) means present and operationally up and C(down) means present and operationally C(down)}
+  tags:
+    - mellanox
+    - onyx
+    - onyx_interface]]></content>
+  <tabTrigger>mellanox.onyx.onyx_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Interfaces on Mellanox ONYX network devices</description>
+</snippet>

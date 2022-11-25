@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP add/remove ports}
+  netapp.ontap.na_ontap_ports:
+    state: ${2:# Whether the specified port should be added or removed}
+    vserver: ${3:# Name of the SVM}
+    names: ${4:# List of ports}
+    resource_name: ${5:# name of the portset or broadcast domain}
+    resource_type: ${6:# type of the resource to add a port to or remove a port from}
+    ipspace: ${7:# Specify the required ipspace for the broadcast domain}
+    portset_type: ${8:# Protocols accepted for portset}
+    hostname: ${9:# The hostname or IP address of the ONTAP instance}
+    username: ${10:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${11:# Password for the specified user}
+    cert_filepath: ${12:# path to SSL client cert file (}
+    key_filepath: ${13:# path to SSL client key file}
+    https: ${14:# Enable and disable https}
+    validate_certs: ${15:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${16:# Override the default port (80 or 443) with this port}
+    ontapi: ${17:# The ontap api version to use}
+    use_rest: ${18:# Whether to use REST or ZAPI}
+    feature_flags: ${19:# Enable or disable a new feature}
+    force_ontap_version: ${20:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_ports]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_ports</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP add/remove ports</description>
+</snippet>

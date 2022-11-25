@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Execute command in a docker container}
+  community.docker.docker_container_exec:
+    container: ${2:# The name of the container to execute the command in}
+    argv: ${3:# The command to execute}
+    command: ${4:# The command to execute}
+    chdir: ${5:# The directory to run the command in}
+    detach: ${6:# Whether to run the command synchronously (I(detach=false), default) or asynchronously (I(detach=true))}
+    user: ${7:# If specified, the user to execute this command with}
+    stdin: ${8:# Set the stdin of the command directly to the specified value}
+    stdin_add_newline: ${9:# If set to C(true), appends a newline to I(stdin)}
+    strip_empty_ends: ${10:# Strip empty lines from the end of stdout/stderr in result}
+    tty: ${11:# Whether to allocate a TTY}
+    env: ${12:# Dictionary of environment variables with their respective values to be passed to the command ran inside the container}
+    docker_host: ${13:# The URL or Unix socket path used to connect to the Docker API}
+    tls_hostname: ${14:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    api_version: ${15:# The version of the Docker API running on the Docker Host}
+    timeout: ${16:# The maximum amount of time in seconds to wait on a response from the API}
+    ca_cert: ${17:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${18:# Path to the client's TLS certificate file}
+    client_key: ${19:# Path to the client's TLS key file}
+    ssl_version: ${20:# Provide a valid SSL version number}
+    tls: ${21:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    use_ssh_client: ${22:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${23:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    debug: ${24:# Debug mode}
+  tags:
+    - community
+    - docker
+    - docker_container_exec]]></content>
+  <tabTrigger>community.docker.docker_container_exec</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Execute command in a docker container</description>
+</snippet>

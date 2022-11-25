@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Modify FlashBlade user accounts}
+  purestorage.flashblade.purefb_user:
+    name: ${2:# The name of the user account}
+    password: ${3:# Password for the local user}
+    old_password: ${4:# If changing an existing password, you must provide the old password for security}
+    public_key: ${5:# The API clients PEM formatted (Base64 encoded) RSA public key}
+    clear_lock: ${6:# Clear user lockout flag}
+    fb_url: ${7:# FlashBlade management IP address or Hostname}
+    api_token: ${8:# FlashBlade API token for admin privileged user}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_user]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Modify FlashBlade user accounts</description>
+</snippet>

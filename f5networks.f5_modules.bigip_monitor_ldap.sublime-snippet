@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages BIG-IP LDAP monitors}
+  f5networks.f5_modules.bigip_monitor_ldap:
+    name: ${2:# Monitor name}
+    description: ${3:# Specifies descriptive text that identifies the monitor}
+    parent: ${4:# The parent template of this monitor template}
+    ip: ${5:# IP address part of the IP/port definition}
+    port: ${6:# Port address part of the IP/port definition}
+    interval: ${7:# Specifies the frequency, in seconds, at which the system issues the monitor check when either the resource is down or the status of the resource is unknown}
+    timeout: ${8:# Specifies the number of seconds the target has in which to respond to the monitor request}
+    time_until_up: ${9:# Specifies the number of seconds to wait after a resource first responds correctly to the monitor before setting the resource to 'up'}
+    up_interval: ${10:# Specifies the interval for the system to use to perform the health check when a resource is up}
+    manual_resume: ${11:# Specifies whether the system automatically changes the status of a resource to B(enabled) at the next successful monitor check}
+    target_username: ${12:# Specifies the user name, if the monitored target requires authentication}
+    target_password: ${13:# Specifies the password, if the monitored target requires authentication}
+    base: ${14:# Specifies the location in the LDAP tree from which the monitor starts the health check}
+    filter: ${15:# Specifies an LDAP key for which the monitor searches}
+    security: ${16:# Specifies the secure protocol type for communication with the target}
+    mandatory_attributes: ${17:# Specifies whether the target must include attributes in its response to be considered up}
+    chase_referrals: ${18:# Upon receipt of an LDAP referral entry, specifies whether the target follows (or chases) that referral}
+    debug: ${19:# Specifies whether the monitor sends error messages and additional information to a log file created and labeled specifically for this monitor}
+    update_password: ${20:# C(always) will update passwords if the C(target_password) is specified}
+    partition: ${21:# Device partition to manage resources on}
+    state: ${22:# When C(present), ensures the monitor exists}
+    provider: ${23:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_monitor_ldap]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_monitor_ldap</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages BIG-IP LDAP monitors</description>
+</snippet>

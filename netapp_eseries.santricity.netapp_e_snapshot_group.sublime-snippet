@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series manage snapshot groups}
+  netapp_eseries.santricity.netapp_e_snapshot_group:
+    ssid: ${2:# Storage system identifier}
+    api_username: ${3:# The username to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    api_password: ${4:# The password to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    api_url: ${5:# The url to the SANtricity WebServices Proxy or embedded REST API}
+    validate_certs: ${6:# Should https certificates be validated?}
+    state: ${7:# Whether to ensure the group is present or absent}
+    name: ${8:# The name to give the snapshot group}
+    base_volume_name: ${9:# The name of the base volume or thin volume to use as the base for the new snapshot group}
+    repo_pct: ${10:# The size of the repository in relation to the size of the base volume}
+    warning_threshold: ${11:# The repository utilization warning threshold, as a percentage of the repository volume capacity}
+    delete_limit: ${12:# The automatic deletion indicator}
+    full_policy: ${13:# The behavior on when the data repository becomes full}
+    storage_pool_name: ${14:# The name of the storage pool on which to allocate the repository volume}
+    rollback_priority: ${15:# The importance of the rollback operation}
+  tags:
+    - netapp_eseries
+    - santricity
+    - netapp_e_snapshot_group]]></content>
+  <tabTrigger>netapp_eseries.santricity.netapp_e_snapshot_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series manage snapshot groups</description>
+</snippet>

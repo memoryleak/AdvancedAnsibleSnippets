@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Allows to prune various docker objects}
+  community.docker.docker_prune:
+    containers: ${2:# Whether to prune containers}
+    containers_filters: ${3:# A dictionary of filter values used for selecting containers to delete}
+    images: ${4:# Whether to prune images}
+    images_filters: ${5:# A dictionary of filter values used for selecting images to delete}
+    networks: ${6:# Whether to prune networks}
+    networks_filters: ${7:# A dictionary of filter values used for selecting networks to delete}
+    volumes: ${8:# Whether to prune volumes}
+    volumes_filters: ${9:# A dictionary of filter values used for selecting volumes to delete}
+    builder_cache: ${10:# Whether to prune the builder cache}
+    docker_host: ${11:# The URL or Unix socket path used to connect to the Docker API}
+    tls_hostname: ${12:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    api_version: ${13:# The version of the Docker API running on the Docker Host}
+    timeout: ${14:# The maximum amount of time in seconds to wait on a response from the API}
+    ca_cert: ${15:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${16:# Path to the client's TLS certificate file}
+    client_key: ${17:# Path to the client's TLS key file}
+    ssl_version: ${18:# Provide a valid SSL version number}
+    tls: ${19:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    use_ssh_client: ${20:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${21:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    debug: ${22:# Debug mode}
+  tags:
+    - community
+    - docker
+    - docker_prune]]></content>
+  <tabTrigger>community.docker.docker_prune</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Allows to prune various docker objects</description>
+</snippet>

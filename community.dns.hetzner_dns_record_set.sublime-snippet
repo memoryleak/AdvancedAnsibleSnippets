@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add or delete record sets in Hetzner DNS service}
+  community.dns.hetzner_dns_record_set:
+    prefix: ${2:# The prefix of the DNS record}
+    hetzner_token: ${3:# The token for the Hetzner API}
+    ttl: ${4:# The TTL to give the new record, in seconds}
+    type: ${5:# The type of DNS record to create or delete}
+    zone_id: ${6:# The ID of the DNS zone to modify}
+    state: ${7:# Specifies the state of the resource record}
+    zone_name: ${8:# The DNS zone to modify}
+    record: ${9:# The full DNS record to create or delete}
+    value: ${10:# The new value when creating a DNS record}
+    on_existing: ${11:# This option defines the behavior if the record set already exists, but differs from the specified record set}
+    bulk_operation_threshold: ${12:# Determines the threshold from when on bulk operations are used}
+    txt_transformation: ${13:# Determines how TXT entry values are converted between the API and this module's input and output}
+  tags:
+    - community
+    - dns
+    - hetzner_dns_record_set]]></content>
+  <tabTrigger>community.dns.hetzner_dns_record_set</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add or delete record sets in Hetzner DNS service</description>
+</snippet>

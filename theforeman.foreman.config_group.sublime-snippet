@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage (Puppet) Config Groups}
+  theforeman.foreman.config_group:
+    name: ${2:# The config group name}
+    updated_name: ${3:# New config group name}
+    puppetclasses: ${4:# List of puppet classes to include in this group}
+    server_url: ${5:# URL of the Foreman server}
+    username: ${6:# Username accessing the Foreman server}
+    password: ${7:# Password of the user accessing the Foreman server}
+    validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${9:# State of the entity}
+  tags:
+    - theforeman
+    - foreman
+    - config_group]]></content>
+  <tabTrigger>theforeman.foreman.config_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage (Puppet) Config Groups</description>
+</snippet>

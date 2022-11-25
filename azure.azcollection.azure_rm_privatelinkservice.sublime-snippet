@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Managed private link service resource}
+  azure.azcollection.azure_rm_privatelinkservice:
+    name: ${2:# The name of the private link service}
+    resource_group: ${3:# The name of the resource group}
+    location: ${4:# The resource location}
+    load_balancer_frontend_ip_configurations: ${5:# An array of references to the load balancer IP configurations}
+    fqdns: ${6:# The list of Fqdn}
+    auto_approval: ${7:# The auto-approval list of the private link service}
+    visibility: ${8:# The visibility list of the private link service}
+    enable_proxy_protocol: ${9:# Whether the private link service is enabled for proxy protocol or not}
+    ip_configurations: ${10:# An array of private link service IP configurations}
+    state: ${11:# Assert the state of the pirvate link service}
+    ad_user: ${12:# Active Directory username}
+    password: ${13:# Active Directory user password}
+    profile: ${14:# Security profile found in ~/}
+    subscription_id: ${15:# Your Azure subscription Id}
+    client_id: ${16:# Azure client ID}
+    secret: ${17:# Azure client secret}
+    tenant: ${18:# Azure tenant ID}
+    cloud_environment: ${19:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${20:# Azure AD authority url}
+    cert_validation_mode: ${21:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${22:# Controls the source of the credentials to use for authentication}
+    api_profile: ${23:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${24:# Parent argument}
+    log_mode: ${25:# Parent argument}
+    x509_certificate_path: ${26:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${27:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${28:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${29:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_privatelinkservice]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_privatelinkservice</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Managed private link service resource</description>
+</snippet>

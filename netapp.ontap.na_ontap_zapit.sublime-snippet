@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP Run any ZAPI on ONTAP}
+  netapp.ontap.na_ontap_zapit:
+    zapi: ${2:# A dictionary for the zapi and arguments}
+    vserver: ${3:# if provided, forces vserver tunneling}
+    hostname: ${4:# The hostname or IP address of the ONTAP instance}
+    username: ${5:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${6:# Password for the specified user}
+    cert_filepath: ${7:# path to SSL client cert file (}
+    key_filepath: ${8:# path to SSL client key file}
+    https: ${9:# Enable and disable https}
+    validate_certs: ${10:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${11:# Override the default port (80 or 443) with this port}
+    ontapi: ${12:# The ontap api version to use}
+    use_rest: ${13:# This module only support ZAPI and will can not be swtich to REST}
+    feature_flags: ${14:# Enable or disable a new feature}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_zapit]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_zapit</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP Run any ZAPI on ONTAP</description>
+</snippet>

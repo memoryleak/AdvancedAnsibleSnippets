@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Move a virtual machine using vMotion, and/or its vmdks using storage vMotion}
+  community.vmware.vmware_vmotion:
+    vm_name: ${2:# Name of the VM to perform a vMotion on}
+    vm_uuid: ${3:# UUID of the virtual machine to perform a vMotion operation on}
+    moid: ${4:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    use_instance_uuid: ${5:# Whether to use the VMware instance UUID rather than the BIOS UUID}
+    destination_host: ${6:# Name of the destination host the virtual machine should be running on}
+    destination_cluster: ${7:# Name of the destination cluster the virtual machine should be running on}
+    destination_datastore_cluster: ${8:# Name of the destination datastore cluster (storage pod) the virtual machine's vmdk should be moved on}
+    destination_datastore: ${9:# Name of the destination datastore the virtual machine's vmdk should be moved on}
+    destination_datacenter: ${10:# Name of the destination datacenter the datastore is located on}
+    destination_resourcepool: ${11:# Name of the destination resource pool where the virtual machine should be running}
+    hostname: ${12:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${13:# The username of the vSphere vCenter or ESXi server}
+    password: ${14:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${15:# Allows connection when SSL certificates are not valid}
+    port: ${16:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${17:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${18:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_vmotion]]></content>
+  <tabTrigger>community.vmware.vmware_vmotion</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Move a virtual machine using vMotion, and/or its vmdks using storage vMotion</description>
+</snippet>

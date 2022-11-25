@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set ipv4 information}
+  inspur.ispim.edit_ipv4:
+    interface_name: ${2:# Set interface_name}
+    ipv4_status: ${3:# Enable or disable IPV4}
+    ipv4_dhcp_enable: ${4:# Enable 'Enable DHCP' to dynamically configure IPv4 address using Dynamic Host Configuration Protocol (DHCP)}
+    ipv4_address: ${5:# If DHCP is disabled, specify a static IPv4 address to be configured for the selected interface}
+    ipv4_subnet: ${6:# If DHCP is disabled, specify a static Subnet Mask to be configured for the selected interface}
+    ipv4_gateway: ${7:# If DHCP is disabled, specify a static Default Gateway to be configured for the selected interface}
+    provider: ${8:# A dict object containing connection details}
+    host: ${9:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${10:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${11:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - ispim
+    - edit_ipv4]]></content>
+  <tabTrigger>inspur.ispim.edit_ipv4</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set ipv4 information</description>
+</snippet>

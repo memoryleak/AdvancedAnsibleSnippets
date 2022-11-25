@@ -1,0 +1,57 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage virtual machine templates in oVirt/RHV}
+  ovirt.ovirt.ovirt_template:
+    name: ${2:# Name of the template to manage}
+    id: ${3:# ID of the template to be registered}
+    state: ${4:# Should the template be present/absent/exported/imported/registered}
+    vm: ${5:# Name of the VM, which will be used to create template}
+    description: ${6:# Description of the template}
+    cpu_profile: ${7:# CPU profile to be set to template}
+    cluster: ${8:# Name of the cluster, where template should be created/imported}
+    allow_partial_import: ${9:# Boolean indication whether to allow partial registration of a template when C(state) is registered}
+    vnic_profile_mappings: ${10:# Mapper which maps an external virtual NIC profile to one that exists in the engine when C(state) is registered}
+    cluster_mappings: ${11:# Mapper which maps cluster name between Template's OVF and the destination cluster this Template should be registered to, relevant when C(state) is registered}
+    role_mappings: ${12:# Mapper which maps role name between Template's OVF and the destination role this Template should be registered to, relevant when C(state) is registered}
+    domain_mappings: ${13:# Mapper which maps aaa domain name between Template's OVF and the destination aaa domain this Template should be registered to, relevant when C(state) is registered}
+    exclusive: ${14:# When C(state) is I(exported) this parameter indicates if the existing templates with the same name should be overwritten}
+    export_domain: ${15:# When C(state) is I(exported) or I(imported) this parameter specifies the name of the export storage domain}
+    image_provider: ${16:# When C(state) is I(imported) this parameter specifies the name of the image provider to be used}
+    image_disk: ${17:# When C(state) is I(imported) and C(image_provider) is used this parameter specifies the name of disk to be imported as template}
+    io_threads: ${18:# Number of IO threads used by virtual machine}
+    template_image_disk_name: ${19:# When C(state) is I(imported) and C(image_provider) is used this parameter specifies the new name for imported disk, if omitted then I(image_disk) name is used by default}
+    storage_domain: ${20:# When C(state) is I(imported) this parameter specifies the name of the destination data storage domain}
+    clone_permissions: ${21:# If I(True) then the permissions of the VM (only the direct ones, not the inherited ones) will be copied to the created template}
+    seal: ${22:# 'Sealing' is an operation that erases all machine-specific configurations from a filesystem: This includes SSH keys, UDEV rules, MAC addresses, system ID, hostname, etc}
+    operating_system: ${23:# Operating system of the template, for example 'rhel_8x64'}
+    memory: ${24:# Amount of memory of the template}
+    memory_guaranteed: ${25:# Amount of minimal guaranteed memory of the template}
+    memory_max: ${26:# Upper bound of template memory up to which memory hot-plug can be performed}
+    version: ${27:# C(name) - The name of this version}
+    clone_name: ${28:# Name for importing Template from storage domain}
+    usb_support: ${29:# I(True) enable USB support, I(False) to disable it}
+    timezone: ${30:# Sets time zone offset of the guest hardware clock}
+    sso: ${31:# I(True) enable Single Sign On by Guest Agent, I(False) to disable it}
+    soundcard_enabled: ${32:# If I(true), the sound card is added to the virtual machine}
+    smartcard_enabled: ${33:# If I(true), use smart card authentication}
+    kvm: ${34:# Dictionary of values to be used to connect to kvm and import a template to oVirt}
+    cloud_init: ${35:# Dictionary with values for Unix-like Virtual Machine initialization using cloud init}
+    cloud_init_nics: ${36:# List of dictionaries representing network interfaces to be setup by cloud init}
+    ballooning_enabled: ${37:# If I(true), use memory ballooning}
+    bios_type: ${38:# Set bios type, necessary for some operating systems and secure boot}
+    boot_menu: ${39:# I(True) enable menu to select boot device, I(False) to disable it}
+    nics: ${40:# List of NICs, which should be attached to Virtual Machine}
+    sysprep: ${41:# Dictionary with values for Windows Virtual Machine initialization using sysprep}
+    wait: ${42:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${43:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${44:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${45:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${46:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${47:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_template]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage virtual machine templates in oVirt/RHV</description>
+</snippet>

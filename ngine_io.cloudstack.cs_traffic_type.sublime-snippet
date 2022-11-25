@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages traffic types on CloudStack Physical Networks}
+  ngine_io.cloudstack.cs_traffic_type:
+    physical_network: ${2:# the name of the Physical Network}
+    zone: ${3:# Name of the zone with the physical network}
+    traffic_type: ${4:# the trafficType to be added to the physical network}
+    state: ${5:# State of the traffic type}
+    hyperv_networklabel: ${6:# The network name label of the physical device dedicated to this traffic on a HyperV host}
+    isolation_method: ${7:# Use if the physical network has multiple isolation types and traffic type is public}
+    kvm_networklabel: ${8:# The network name label of the physical device dedicated to this traffic on a KVM host}
+    ovm3_networklabel: ${9:# The network name of the physical device dedicated to this traffic on an OVM3 host}
+    vlan: ${10:# The VLAN id to be used for Management traffic by VMware host}
+    vmware_networklabel: ${11:# The network name label of the physical device dedicated to this traffic on a VMware host}
+    xen_networklabel: ${12:# The network name label of the physical device dedicated to this traffic on a XenServer host}
+    poll_async: ${13:# Poll async jobs until job has finished}
+    api_key: ${14:# API key of the CloudStack API}
+    api_secret: ${15:# Secret key of the CloudStack API}
+    api_url: ${16:# URL of the CloudStack API e}
+    api_http_method: ${17:# HTTP method used to query the API endpoint}
+    api_timeout: ${18:# HTTP timeout in seconds}
+    api_verify_ssl_cert: ${19:# Verify CA authority cert file}
+  tags:
+    - ngine_io
+    - cloudstack
+    - cs_traffic_type]]></content>
+  <tabTrigger>ngine_io.cloudstack.cs_traffic_type</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages traffic types on CloudStack Physical Networks</description>
+</snippet>

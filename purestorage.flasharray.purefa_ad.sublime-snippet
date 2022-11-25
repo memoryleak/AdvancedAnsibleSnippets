@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FlashArray Active Directory Account}
+  purestorage.flasharray.purefa_ad:
+    name: ${2:# Name of the AD account}
+    state: ${3:# Define whether the AD sccount is deleted or not}
+    computer: ${4:# The common name of the computer account to be created in the Active Directory domain}
+    domain: ${5:# The Active Directory domain to join}
+    username: ${6:# A user capable of creating a computer account within the domain}
+    password: ${7:# Password string for I(username)}
+    directory_servers: ${8:# A list of directory servers that will be used for lookups related to user authorization}
+    kerberos_servers: ${9:# A list of key distribution servers to use for Kerberos protocol}
+    local_only: ${10:# Do a local-only delete of an active directory account}
+    join_ou: ${11:# Distinguished name of organization unit in which the computer account should be created when joining the domain}
+    tls: ${12:# TLS mode for communication with domain controllers}
+    join_existing: ${13:# If specified as I(true), the domain is searched for a pre-existing computer account to join to, and no new account will be created within the domain}
+    fa_url: ${14:# FlashArray management IPv4 address or Hostname}
+    api_token: ${15:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_ad]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_ad</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FlashArray Active Directory Account</description>
+</snippet>

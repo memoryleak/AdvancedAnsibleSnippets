@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure VMware DRS Affinity rule for virtual machines in the given cluster}
+  community.vmware.vmware_vm_vm_drs_rule:
+    cluster_name: ${2:# Desired cluster name where virtual machines are present for the DRS rule}
+    vms: ${3:# List of virtual machines name for which DRS rule needs to be applied}
+    drs_rule_name: ${4:# The name of the DRS rule to manage}
+    enabled: ${5:# If set to C(True), the DRS rule will be enabled}
+    mandatory: ${6:# If set to C(True), the DRS rule will be mandatory}
+    affinity_rule: ${7:# If set to C(True), the DRS rule will be an Affinity rule}
+    state: ${8:# If set to C(present), then the DRS rule is created if not present}
+    hostname: ${9:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${10:# The username of the vSphere vCenter or ESXi server}
+    password: ${11:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${12:# Allows connection when SSL certificates are not valid}
+    port: ${13:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${14:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${15:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_vm_vm_drs_rule]]></content>
+  <tabTrigger>community.vmware.vmware_vm_vm_drs_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure VMware DRS Affinity rule for virtual machines in the given cluster</description>
+</snippet>

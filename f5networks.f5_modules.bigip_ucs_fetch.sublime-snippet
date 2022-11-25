@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Fetches a UCS file from remote nodes}
+  f5networks.f5_modules.bigip_ucs_fetch:
+    backup: ${2:# Creates a backup file including the timestamp information so you can get the original file back if you overwrote it incorrectly}
+    create_on_missing: ${3:# Creates the UCS based on the value of C(src), if the file does not already exist on the remote system}
+    dest: ${4:# A directory to save the UCS file into}
+    encryption_password: ${5:# Password to use to encrypt the UCS file if desired}
+    fail_on_missing: ${6:# Make the module fail if the UCS file on the remote system is missing}
+    force: ${7:# If C(no), the file is only transferred if the destination does not exist}
+    src: ${8:# The name of the UCS file to create on the remote server for downloading}
+    async_timeout: ${9:# Parameter used when creating new UCS file on a device}
+    only_create_file: ${10:# If C(yes), the file is created on device and not downloaded}
+    provider: ${11:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_ucs_fetch]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_ucs_fetch</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Fetches a UCS file from remote nodes</description>
+</snippet>

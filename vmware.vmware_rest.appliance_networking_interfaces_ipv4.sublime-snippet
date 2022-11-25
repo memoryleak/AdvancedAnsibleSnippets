@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set IPv4 network configuration for specific network interface}
+  vmware.vmware_rest.appliance_networking_interfaces_ipv4:
+    address: ${2:# The IPv4 address, for example, '10}
+    default_gateway: ${3:# The IPv4 address of the default gateway}
+    interface_name: ${4:# Network interface to update, for example, 'nic0'}
+    mode: ${5:# The C(mode) defines different IPv4 address assignment modes}
+    prefix: ${6:# The IPv4 CIDR prefix, for example, 24}
+    session_timeout: ${7:# Timeout settings for client session}
+    state: ${8:# No description available}
+    vcenter_hostname: ${9:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${10:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${11:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${12:# The vSphere vCenter username}
+    vcenter_validate_certs: ${13:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware_rest
+    - appliance_networking_interfaces_ipv4]]></content>
+  <tabTrigger>vmware.vmware_rest.appliance_networking_interfaces_ipv4</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set IPv4 network configuration for specific network interface</description>
+</snippet>

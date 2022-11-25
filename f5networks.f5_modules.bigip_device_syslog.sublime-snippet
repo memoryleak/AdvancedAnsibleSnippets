@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage system-level syslog settings on BIG-IP}
+  f5networks.f5_modules.bigip_device_syslog:
+    auth_priv_from: ${2:# Specifies the lowest level of messages about user authentication to include in the system log}
+    auth_priv_to: ${3:# Specifies the highest level of messages about user authentication to include in the system log}
+    console_log: ${4:# Enables or disables logging emergency syslog messages to the console}
+    cron_from: ${5:# Specifies the lowest level of messages about time-based scheduling to include in the system log}
+    cron_to: ${6:# Specifies the highest level of messages about time-based scheduling to include in the system log}
+    daemon_from: ${7:# Specifies the lowest level of messages about daemon performance to include in the system log}
+    daemon_to: ${8:# Specifies the highest level of messages about daemon performance to include in the system log}
+    include: ${9:# Syslog-NG configuration to include in the device syslog config}
+    iso_date: ${10:# Enables or disables the ISO date format for messages in the log files}
+    kern_from: ${11:# Specifies the lowest level of kernel messages to include in the system log}
+    kern_to: ${12:# Specifies the highest level of kernel messages to include in the system log}
+    local6_from: ${13:# Specifies the lowest error level for messages from the local6 facility to include in the log}
+    local6_to: ${14:# Specifies the highest error level for messages from the local6 facility to include in the log}
+    mail_from: ${15:# Specifies the lowest level of mail log messages to include in the system log}
+    mail_to: ${16:# Specifies the highest level of mail log messages to include in the system log}
+    messages_from: ${17:# Specifies the lowest level of system messages to include in the system log}
+    messages_to: ${18:# Specifies the highest level of system messages to include in the system log}
+    user_log_from: ${19:# Specifies the lowest level of user account messages to include in the system log}
+    user_log_to: ${20:# Specifies the highest level of user account messages to include in the system log}
+    provider: ${21:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_device_syslog]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_device_syslog</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage system-level syslog settings on BIG-IP</description>
+</snippet>

@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series update the role of a storage array within an Asynchronous Mirror Group (AMG)}
+  netapp_eseries.santricity.netapp_e_amg_role:
+    api_username: ${2:# The username to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    api_password: ${3:# The password to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    api_url: ${4:# The url to the SANtricity WebServices Proxy or embedded REST API}
+    validate_certs: ${5:# Should https certificates be validated?}
+    ssid: ${6:# The ID of the primary storage array for the async mirror action}
+    name: ${7:# Name of the role}
+    role: ${8:# Whether the array should be the primary or secondary array for the AMG}
+    noSync: ${9:# Whether to avoid synchronization prior to role reversal}
+    force: ${10:# Whether to force the role reversal regardless of the online-state of the primary}
+  tags:
+    - netapp_eseries
+    - santricity
+    - netapp_e_amg_role]]></content>
+  <tabTrigger>netapp_eseries.santricity.netapp_e_amg_role</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series update the role of a storage array within an Asynchronous Mirror Group (AMG)</description>
+</snippet>

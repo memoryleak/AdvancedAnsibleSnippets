@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages threat-exception objects on Check Point over Web Services API}
+  check_point.mgmt.cp_mgmt_threat_exception:
+    name: ${2:# The name of the exception}
+    position: ${3:# Position in the rulebase}
+    exception_group_uid: ${4:# The UID of the exception-group}
+    exception_group_name: ${5:# The name of the exception-group}
+    layer: ${6:# Layer that the rule belongs to identified by the name or UID}
+    rule_name: ${7:# The name of the parent rule}
+    action: ${8:# Action-the enforced profile}
+    destination: ${9:# Collection of Network objects identified by the name or UID}
+    destination_negate: ${10:# True if negate is set for destination}
+    enabled: ${11:# Enable/Disable the rule}
+    install_on: ${12:# Which Gateways identified by the name or UID to install the policy on}
+    protected_scope: ${13:# Collection of objects defining Protected Scope identified by the name or UID}
+    protected_scope_negate: ${14:# True if negate is set for Protected Scope}
+    protection_or_site: ${15:# Name of the protection or site}
+    service: ${16:# Collection of Network objects identified by the name or UID}
+    service_negate: ${17:# True if negate is set for Service}
+    source: ${18:# Collection of Network objects identified by the name or UID}
+    source_negate: ${19:# True if negate is set for source}
+    track: ${20:# Packet tracking}
+    comments: ${21:# Comments string}
+    details_level: ${22:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_warnings: ${23:# Apply changes ignoring warnings}
+    ignore_errors: ${24:# Apply changes ignoring errors}
+    state: ${25:# State of the access rule (present or absent)}
+    auto_publish_session: ${26:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${27:# Wait for the task to end}
+    wait_for_task_timeout: ${28:# How many minutes to wait until throwing a timeout error}
+    version: ${29:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_threat_exception]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_threat_exception</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages threat-exception objects on Check Point over Web Services API</description>
+</snippet>

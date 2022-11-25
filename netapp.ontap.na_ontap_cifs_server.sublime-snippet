@@ -1,0 +1,45 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP CIFS server configuration}
+  netapp.ontap.na_ontap_cifs_server:
+    state: ${2:# Whether the specified cifs_server should exist or not}
+    service_state: ${3:# CIFS Server Administrative Status}
+    name: ${4:# Specifies the cifs_server name}
+    admin_user_name: ${5:# Specifies the cifs server admin username}
+    admin_password: ${6:# Specifies the cifs server admin password}
+    domain: ${7:# The Fully Qualified Domain Name of the Windows Active Directory this CIFS server belongs to}
+    workgroup: ${8:# The NetBIOS name of the domain or workgroup this CIFS server belongs to}
+    ou: ${9:# The Organizational Unit (OU) within the Windows Active Directory this CIFS server belongs to}
+    force: ${10:# When state is present, if this is set and a machine account with the same name as specified in 'name' exists in the Active Directory, it will be overwritten and reused}
+    vserver: ${11:# The name of the vserver to use}
+    from_name: ${12:# Specifies the existing cifs_server name}
+    encrypt_dc_connection: ${13:# Specifies whether encryption is required for domain controller connections}
+    kdc_encryption: ${14:# Specifies whether AES-128 and AES-256 encryption is enabled for all Kerberos-based communication with the Active Directory KDC}
+    smb_encryption: ${15:# Determine whether SMB encryption is required for incoming CIFS traffic}
+    smb_signing: ${16:# Specifies whether signing is required for incoming CIFS traffic}
+    restrict_anonymous: ${17:# Specifies what level of access an anonymous user is granted}
+    aes_netlogon_enabled: ${18:# Specifies whether or not an AES session key is enabled for the Netlogon channel}
+    ldap_referral_enabled: ${19:# Specifies whether or not LDAP referral chasing is enabled for AD LDAP connections}
+    use_ldaps: ${20:# Specifies whether or not to use use LDAPS for secure Active Directory LDAP connections}
+    use_start_tls: ${21:# Specifies whether or not to use SSL/TLS for allowing secure LDAP communication with Active Directory LDAP servers}
+    try_ldap_channel_binding: ${22:# Specifies whether or not channel binding is attempted in the case of TLS/LDAPS}
+    session_security: ${23:# Specifies client session security for AD LDAP connections}
+    hostname: ${24:# The hostname or IP address of the ONTAP instance}
+    username: ${25:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${26:# Password for the specified user}
+    cert_filepath: ${27:# path to SSL client cert file (}
+    key_filepath: ${28:# path to SSL client key file}
+    https: ${29:# Enable and disable https}
+    validate_certs: ${30:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${31:# Override the default port (80 or 443) with this port}
+    ontapi: ${32:# The ontap api version to use}
+    use_rest: ${33:# Whether to use REST or ZAPI}
+    feature_flags: ${34:# Enable or disable a new feature}
+    force_ontap_version: ${35:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_cifs_server]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_cifs_server</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP CIFS server configuration</description>
+</snippet>

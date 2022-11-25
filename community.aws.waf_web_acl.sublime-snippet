@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and delete WAF Web ACLs}
+  community.aws.waf_web_acl:
+    name: ${2:# Name of the Web Application Firewall ACL to manage}
+    default_action: ${3:# The action that you want AWS WAF to take when a request doesn't match the criteria specified in any of the Rule objects that are associated with the WebACL}
+    state: ${4:# Whether the Web ACL should be present or absent}
+    metric_name: ${5:# A friendly name or description for the metrics for this WebACL}
+    rules: ${6:# A list of rules that the Web ACL will enforce}
+    purge_rules: ${7:# Whether to remove rules that aren't passed with I(rules)}
+    waf_regional: ${8:# Whether to use C(waf-regional) module}
+    access_key: ${9:# AWS access key ID}
+    secret_key: ${10:# AWS secret access key}
+    session_token: ${11:# AWS STS session token for use with temporary credentials}
+    profile: ${12:# A named AWS profile to use for authentication}
+    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${16:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
+    region: ${18:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - waf_web_acl]]></content>
+  <tabTrigger>community.aws.waf_web_acl</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and delete WAF Web ACLs</description>
+</snippet>

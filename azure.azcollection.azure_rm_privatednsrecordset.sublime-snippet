@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, delete and update Private DNS record sets and records}
+  azure.azcollection.azure_rm_privatednsrecordset:
+    resource_group: ${2:# Name of resource group}
+    zone_name: ${3:# Name of the existing Private DNS zone in which to manage the record set}
+    relative_name: ${4:# Relative name of the record set}
+    record_type: ${5:# The type of record set to create or delete}
+    record_mode: ${6:# Whether existing record values not sent to the module should be purged}
+    state: ${7:# Assert the state of the record set}
+    time_to_live: ${8:# Time to live of the record set in seconds}
+    records: ${9:# List of records to be created depending on the type of record (set)}
+    ad_user: ${10:# Active Directory username}
+    password: ${11:# Active Directory user password}
+    profile: ${12:# Security profile found in ~/}
+    subscription_id: ${13:# Your Azure subscription Id}
+    client_id: ${14:# Azure client ID}
+    secret: ${15:# Azure client secret}
+    tenant: ${16:# Azure tenant ID}
+    cloud_environment: ${17:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${18:# Azure AD authority url}
+    cert_validation_mode: ${19:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${20:# Controls the source of the credentials to use for authentication}
+    api_profile: ${21:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${22:# Parent argument}
+    log_mode: ${23:# Parent argument}
+    x509_certificate_path: ${24:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${25:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${26:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${27:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_privatednsrecordset]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_privatednsrecordset</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, delete and update Private DNS record sets and records</description>
+</snippet>

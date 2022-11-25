@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Export or Import iDRAC Server Configuration Profile (SCP)}
+  dellemc.openmanage.idrac_server_config_profile:
+    command: ${2:# If C(import), the module performs SCP import operation}
+    job_wait: ${3:# Whether to wait for job completion or not}
+    share_name: ${4:# Network share or local path}
+    share_user: ${5:# Network share user in the format 'user@domain' or 'domain\\\\user' if user is part of a domain else 'user'}
+    share_password: ${6:# Network share user password}
+    scp_file: ${7:# Name of the server configuration profile (SCP) file}
+    scp_components: ${8:# If C(ALL), this module exports or imports all components configurations from SCP file}
+    shutdown_type: ${9:# This option is applicable for C(import) command}
+    end_host_power_state: ${10:# This option is applicable for C(import) command}
+    export_format: ${11:# Specify the output file format}
+    export_use: ${12:# Specify the type of server configuration profile (SCP) to be exported}
+    idrac_ip: ${13:# iDRAC IP Address}
+    idrac_user: ${14:# iDRAC username}
+    idrac_password: ${15:# iDRAC user password}
+    idrac_port: ${16:# iDRAC port}
+    validate_certs: ${17:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${18:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${19:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_server_config_profile]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_server_config_profile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Export or Import iDRAC Server Configuration Profile (SCP)</description>
+</snippet>

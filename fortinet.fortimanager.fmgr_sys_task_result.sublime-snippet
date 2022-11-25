@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:no description}
+  fortinet.fortimanager.fmgr_sys_task_result:
+    enable_log: ${2:# Enable/Disable logging for task}
+    bypass_validation: ${3:# only set to True when module schema diffs with FortiManager API structure,
+ module continues to execute without validating parameters
+}
+    workspace_locking_adom: ${4:# the adom to lock for FortiManager running in workspace mode, the value can be global and others including root
+}
+    workspace_locking_timeout: ${5:# the maximum time in seconds to wait for other user to release the workspace lock}
+    rc_succeeded: ${6:# the rc codes list with which the conditions to succeed will be overriden}
+    rc_failed: ${7:# the rc codes list with which the conditions to fail will be overriden}
+    sys_task_result: ${8:# the top level parameters set}
+  tags:
+    - fortinet
+    - fortimanager
+    - fmgr_sys_task_result]]></content>
+  <tabTrigger>fortinet.fortimanager.fmgr_sys_task_result</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>no description</description>
+</snippet>

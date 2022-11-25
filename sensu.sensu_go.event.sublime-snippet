@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sensu events}
+  sensu.sensu_go.event:
+    timestamp: ${2:# UNIX time at which the event occurred}
+    entity: ${3:# Name of the entity associated with this event}
+    check: ${4:# Name of the check associated with this event}
+    check_attributes: ${5:# Additional check parameters}
+    metric_attributes: ${6:# Metric attributes}
+    auth: ${7:# Authentication parameters}
+    namespace: ${8:# RBAC namespace to operate in}
+  tags:
+    - sensu
+    - sensu_go
+    - event]]></content>
+  <tabTrigger>sensu.sensu_go.event</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sensu events</description>
+</snippet>

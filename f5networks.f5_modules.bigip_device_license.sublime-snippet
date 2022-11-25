@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage license installation and activation on BIG-IP devices}
+  f5networks.f5_modules.bigip_device_license:
+    license_key: ${2:# The registration key to use to license the BIG-IP}
+    addon_keys: ${3:# The list of addon keys to use to in conjunction with the base license}
+    license_server: ${4:# The F5 license server to use when getting a license and validating a dossier}
+    state: ${5:# The state of the license on the system}
+    accept_eula: ${6:# Declares whether you accept the BIG-IP EULA or not}
+    force: ${7:# Declares whether to force license renewal}
+    provider: ${8:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_device_license]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_device_license</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage license installation and activation on BIG-IP devices</description>
+</snippet>

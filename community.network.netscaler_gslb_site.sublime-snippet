@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage gslb site entities in Netscaler}
+  community.network.netscaler_gslb_site:
+    sitename: ${2:# Name for the GSLB site}
+    sitetype: ${3:# Type of site to create}
+    siteipaddress: ${4:# IP address for the GSLB site}
+    publicip: ${5:# Public IP address for the local site}
+    metricexchange: ${6:# Exchange metrics with other sites}
+    nwmetricexchange: ${7:# Exchange, with other GSLB sites, network metrics such as round-trip time (RTT), learned from communications with various local DNS (LDNS) servers used by clients}
+    sessionexchange: ${8:# Exchange persistent session entries with other GSLB sites every five seconds}
+    triggermonitor: ${9:# Specify the conditions under which the GSLB service must be monitored by a monitor, if one is bound}
+    parentsite: ${10:# Parent site of the GSLB site, in a parent-child topology}
+    clip: ${11:# Cluster IP address}
+    publicclip: ${12:# IP address to be used to globally access the remote cluster when it is deployed behind a NAT}
+    naptrreplacementsuffix: ${13:# The naptr replacement suffix configured here will be used to construct the naptr replacement field in NAPTR record}
+    nsip: ${14:# The ip address of the netscaler appliance where the nitro API calls will be made}
+    nitro_user: ${15:# The username with which to authenticate to the netscaler node}
+    nitro_pass: ${16:# The password with which to authenticate to the netscaler node}
+    nitro_protocol: ${17:# Which protocol to use when accessing the nitro API objects}
+    validate_certs: ${18:# If C(no), SSL certificates will not be validated}
+    nitro_timeout: ${19:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
+    state: ${20:# The state of the resource being configured by the module on the netscaler node}
+    save_config: ${21:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+  tags:
+    - community
+    - network
+    - netscaler_gslb_site]]></content>
+  <tabTrigger>community.network.netscaler_gslb_site</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage gslb site entities in Netscaler</description>
+</snippet>

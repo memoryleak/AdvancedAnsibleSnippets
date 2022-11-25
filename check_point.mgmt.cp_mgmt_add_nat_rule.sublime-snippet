@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create new object}
+  check_point.mgmt.cp_mgmt_add_nat_rule:
+    package: ${2:# Name of the package}
+    position: ${3:# Position in the rulebase}
+    enabled: ${4:# Enable/Disable the rule}
+    install_on: ${5:# Which Gateways identified by the name or UID to install the policy on}
+    method: ${6:# Nat method}
+    original_destination: ${7:# Original destination}
+    original_service: ${8:# Original service}
+    original_source: ${9:# Original source}
+    translated_destination: ${10:# Translated  destination}
+    translated_service: ${11:# Translated  service}
+    translated_source: ${12:# Translated  source}
+    comments: ${13:# Comments string}
+    details_level: ${14:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_warnings: ${15:# Apply changes ignoring warnings}
+    ignore_errors: ${16:# Apply changes ignoring errors}
+    wait_for_task: ${17:# Wait for the task to end}
+    wait_for_task_timeout: ${18:# How many minutes to wait until throwing a timeout error}
+    version: ${19:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_add_nat_rule]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_add_nat_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create new object</description>
+</snippet>

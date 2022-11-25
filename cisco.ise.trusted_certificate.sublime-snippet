@@ -1,0 +1,44 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for Trusted Certificate}
+  cisco.ise.trusted_certificate:
+    authenticateBeforeCRLReceived: ${2:# Switch to enable or disable CRL verification if CRL is not received}
+    automaticCRLUpdate: ${3:# Switch to enable or disable automatic CRL update}
+    automaticCRLUpdatePeriod: ${4:# Automatic CRL update period}
+    automaticCRLUpdateUnits: ${5:# Unit of time for automatic CRL update}
+    crlDistributionUrl: ${6:# CRL Distribution URL}
+    crlDownloadFailureRetries: ${7:# If CRL download fails, wait time before retry}
+    crlDownloadFailureRetriesUnits: ${8:# Unit of time before retry if CRL download fails}
+    description: ${9:# Description for trust certificate}
+    downloadCRL: ${10:# Switch to enable or disable download of CRL}
+    enableOCSPValidation: ${11:# Switch to enable or disable OCSP Validation}
+    enableServerIdentityCheck: ${12:# Switch to enable or disable verification if HTTPS or LDAP server certificate name fits the configured server URL}
+    id: ${13:# Id path parameter}
+    ignoreCRLExpiration: ${14:# Switch to enable or disable ignore CRL expiration}
+    name: ${15:# Friendly name of the certificate}
+    nonAutomaticCRLUpdatePeriod: ${16:# Non automatic CRL update period}
+    nonAutomaticCRLUpdateUnits: ${17:# Unit of time of non automatic CRL update}
+    rejectIfNoStatusFromOCSP: ${18:# Switch to reject certificate if there is no status from OCSP}
+    rejectIfUnreachableFromOCSP: ${19:# Switch to reject certificate if unreachable from OCSP}
+    selectedOCSPService: ${20:# Name of selected OCSP Service}
+    status: ${21:# Trusted Certificate's status}
+    trustForCertificateBasedAdminAuth: ${22:# Trust for Certificate based Admin authentication}
+    trustForCiscoServicesAuth: ${23:# Trust for authentication of Cisco Services}
+    trustForClientAuth: ${24:# Trust for client authentication and Syslog}
+    trustForIseAuth: ${25:# Trust for authentication within Cisco ISE}
+    ise_hostname: ${26:# The Identity Services Engine hostname}
+    ise_username: ${27:# The Identity Services Engine username to authenticate}
+    ise_password: ${28:# The Identity Services Engine password to authenticate}
+    ise_verify: ${29:# Flag to enable or disable SSL certificate verification}
+    ise_version: ${30:# Informs the SDK which version of Identity Services Engine to use}
+    ise_wait_on_rate_limit: ${31:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
+    ise_debug: ${32:# Flag for Identity Services Engine SDK to enable debugging}
+    ise_uses_api_gateway: ${33:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
+    ise_uses_csrf_token: ${34:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+  tags:
+    - cisco
+    - ise
+    - trusted_certificate]]></content>
+  <tabTrigger>cisco.ise.trusted_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for Trusted Certificate</description>
+</snippet>

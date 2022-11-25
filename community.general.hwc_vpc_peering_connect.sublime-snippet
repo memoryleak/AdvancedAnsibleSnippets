@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates a resource of Vpc/PeeringConnect in Huawei Cloud}
+  community.general.hwc_vpc_peering_connect:
+    state: ${2:# Whether the given object should exist in Huawei Cloud}
+    timeouts: ${3:# The timeouts for each operations}
+    local_vpc_id: ${4:# Specifies the ID of local VPC}
+    name: ${5:# Specifies the name of the VPC peering connection}
+    peering_vpc: ${6:# Specifies information about the peering VPC}
+    description: ${7:# The description of vpc peering connection}
+    identity_endpoint: ${8:# The Identity authentication URL}
+    user: ${9:# The user name to login with (currently only user names are supported, and not user IDs)}
+    password: ${10:# The password to login with}
+    domain: ${11:# The name of the Domain to scope to (Identity v3)}
+    project: ${12:# The name of the Tenant (Identity v2) or Project (Identity v3)}
+    region: ${13:# The region to which the project belongs}
+    id: ${14:# The id of resource to be managed}
+  tags:
+    - community
+    - general
+    - hwc_vpc_peering_connect]]></content>
+  <tabTrigger>community.general.hwc_vpc_peering_connect</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates a resource of Vpc/PeeringConnect in Huawei Cloud</description>
+</snippet>

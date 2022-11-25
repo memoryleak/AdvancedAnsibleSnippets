@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages Cisco EVPN VXLAN Network Identifier (VNI)}
+  cisco.nxos.nxos_evpn_vni:
+    vni: ${2:# The EVPN VXLAN Network Identifier}
+    route_distinguisher: ${3:# The VPN Route Distinguisher (RD)}
+    route_target_both: ${4:# Enables/Disables route-target settings for both import and export target communities using a single property}
+    route_target_import: ${5:# Sets the route-target 'import' extended communities}
+    route_target_export: ${6:# Sets the route-target 'export' extended communities}
+    state: ${7:# Determines whether the config should be present or not on the device}
+  tags:
+    - cisco
+    - nxos
+    - nxos_evpn_vni]]></content>
+  <tabTrigger>cisco.nxos.nxos_evpn_vni</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages Cisco EVPN VXLAN Network Identifier (VNI)</description>
+</snippet>

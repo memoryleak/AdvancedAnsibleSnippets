@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the trust relationships between BIG-IPs}
+  f5networks.f5_modules.bigip_device_trust:
+    peer_server: ${2:# The peer address to connect to and trust for synchronizing the configuration}
+    peer_hostname: ${3:# The hostname you want to associate with the device}
+    peer_user: ${4:# The API username of the remote peer device you are trusting}
+    peer_password: ${5:# The password of the API username of the remote peer device you are trusting}
+    type: ${6:# Specifies whether the device you are adding is a Peer or a Subordinate}
+    state: ${7:# When C(present), ensures the specified devices are trusted}
+    provider: ${8:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_device_trust]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_device_trust</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the trust relationships between BIG-IPs</description>
+</snippet>

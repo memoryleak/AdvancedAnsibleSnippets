@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp Element Software Manage ldap admin users}
+  netapp.elementsw.na_elementsw_ldap:
+    state: ${2:# Whether the specified volume should exist or not}
+    authType: ${3:# Identifies which user authentication method to use}
+    groupSearchBaseDn: ${4:# The base DN of the tree to start the group search (will do a subtree search from here)}
+    groupSearchType: ${5:# Controls the default group search filter used}
+    serverURIs: ${6:# A comma-separated list of LDAP server URIs}
+    userSearchBaseDN: ${7:# The base DN of the tree to start the search (will do a subtree search from here)}
+    searchBindDN: ${8:# A dully qualified DN to log in with to perform an LDAp search for the user (needs read access to the LDAP directory)}
+    searchBindPassword: ${9:# The password for the searchBindDN account used for searching}
+    userSearchFilter: ${10:# the LDAP Filter to use}
+    userDNTemplate: ${11:# A string that is used form a fully qualified user DN}
+    groupSearchCustomFilter: ${12:# For use with the CustomFilter Search type}
+    hostname: ${13:# The hostname or IP address of the SolidFire cluster}
+    username: ${14:# Please ensure that the user has the adequate permissions}
+    password: ${15:# Password for the specified user}
+  tags:
+    - netapp
+    - elementsw
+    - na_elementsw_ldap]]></content>
+  <tabTrigger>netapp.elementsw.na_elementsw_ldap</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp Element Software Manage ldap admin users</description>
+</snippet>

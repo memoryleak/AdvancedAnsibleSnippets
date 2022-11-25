@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages host cluster on IBM Spectrum Virtualize family storage systems}
+  ibm.spectrum_virtualize.ibm_svc_hostcluster:
+    name: ${2:# Specifies a name or label for the new host cluster object}
+    state: ${3:# Creates (C(present)) or removes (C(absent)) a host cluster}
+    clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${5:# Domain for the Spectrum Virtualize storage system}
+    username: ${6:# REST API username for the Spectrum Virtualize storage system}
+    password: ${7:# REST API password for the Spectrum Virtualize storage system}
+    token: ${8:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    ownershipgroup: ${9:# The name of the ownership group to which the host cluster object is being added}
+    noownershipgroup: ${10:# If specified True, the host cluster object is removed from the ownership group to which it belongs}
+    removeallhosts: ${11:# Specifies that all hosts in the host cluster and the associated host cluster object be deleted}
+    log_path: ${12:# Path of debug log file}
+    validate_certs: ${13:# Validates certification}
+  tags:
+    - ibm
+    - spectrum_virtualize
+    - ibm_svc_hostcluster]]></content>
+  <tabTrigger>ibm.spectrum_virtualize.ibm_svc_hostcluster</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages host cluster on IBM Spectrum Virtualize family storage systems</description>
+</snippet>

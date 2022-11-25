@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Sync OpenShift Groups with records from an external provider}
+  community.okd.openshift_adm_groups_sync:
+    state: ${2:# Determines if the group should be sync when set to C(present) or pruned when set to C(absent)}
+    type: ${3:# which groups allow and deny list entries refer to}
+    sync_config: ${4:# Provide a valid YAML definition of an LDAP sync configuration}
+    deny_groups: ${5:# Denied groups, could be openshift group name or LDAP group dn value}
+    allow_groups: ${6:# Allowed groups, could be openshift group name or LDAP group dn value}
+    host: ${7:# Provide a URL for accessing the API}
+    api_key: ${8:# Token used to authenticate with the API}
+    kubeconfig: ${9:# Path to an existing Kubernetes config file}
+    context: ${10:# The name of a context found in the config file}
+    username: ${11:# Provide a username for authenticating with the API}
+    password: ${12:# Provide a password for authenticating with the API}
+    client_cert: ${13:# Path to a certificate used to authenticate with the API}
+    client_key: ${14:# Path to a key file used to authenticate with the API}
+    ca_cert: ${15:# Path to a CA certificate used to authenticate with the API}
+    validate_certs: ${16:# Whether or not to verify the API server's SSL certificates}
+    proxy: ${17:# The URL of an HTTP proxy to use for the connection}
+    no_proxy: ${18:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
+    proxy_headers: ${19:# The Header used for the HTTP proxy}
+    persist_config: ${20:# Whether or not to save the kube config refresh tokens}
+    impersonate_user: ${21:# Username to impersonate for the operation}
+    impersonate_groups: ${22:# Group(s) to impersonate for the operation}
+  tags:
+    - community
+    - okd
+    - openshift_adm_groups_sync]]></content>
+  <tabTrigger>community.okd.openshift_adm_groups_sync</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Sync OpenShift Groups with records from an external provider</description>
+</snippet>

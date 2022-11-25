@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure Role Assignment}
+  azure.azcollection.azure_rm_roleassignment:
+    assignee_object_id: ${2:# The object id of assignee}
+    id: ${3:# Fully qualified id of assignment to delete or create}
+    name: ${4:# Unique name of role assignment}
+    role_definition_id: ${5:# The role definition id used in the role assignment}
+    scope: ${6:# The scope of the role assignment to create}
+    state: ${7:# Assert the state of the role assignment}
+    ad_user: ${8:# Active Directory username}
+    password: ${9:# Active Directory user password}
+    profile: ${10:# Security profile found in ~/}
+    subscription_id: ${11:# Your Azure subscription Id}
+    client_id: ${12:# Azure client ID}
+    secret: ${13:# Azure client secret}
+    tenant: ${14:# Azure tenant ID}
+    cloud_environment: ${15:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${16:# Azure AD authority url}
+    cert_validation_mode: ${17:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${18:# Controls the source of the credentials to use for authentication}
+    api_profile: ${19:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${20:# Parent argument}
+    log_mode: ${21:# Parent argument}
+    x509_certificate_path: ${22:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${23:# The thumbprint of the private key specified in I(x509_certificate_path)}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_roleassignment]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_roleassignment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure Role Assignment</description>
+</snippet>

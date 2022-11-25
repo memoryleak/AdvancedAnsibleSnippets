@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp information gatherer}
+  netapp.ontap.na_ontap_info:
+    state: ${2:# deprecated as of 21}
+    vserver: ${3:# If present, 'vserver tunneling' will limit the output to the vserver scope}
+    gather_subset: ${4:# When supplied, this argument will restrict the information collected to a given subset}
+    max_records: ${5:# Maximum number of records returned in a single ZAPI call}
+    summary: ${6:# Boolean flag to control return all attributes of the module info or only the names}
+    volume_move_target_aggr_info: ${7:# Required options for volume_move_target_aggr_info}
+    desired_attributes: ${8:# Advanced feature requiring to understand ZAPI internals}
+    query: ${9:# Advanced feature requiring to understand ZAPI internals}
+    use_native_zapi_tags: ${10:# By default, I(-) in the returned dictionary keys are translated to I(_)}
+    continue_on_error: ${11:# By default, this module fails on the first error}
+    hostname: ${12:# The hostname or IP address of the ONTAP instance}
+    username: ${13:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${14:# Password for the specified user}
+    cert_filepath: ${15:# path to SSL client cert file (}
+    key_filepath: ${16:# path to SSL client key file}
+    https: ${17:# Enable and disable https}
+    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${19:# Override the default port (80 or 443) with this port}
+    ontapi: ${20:# The ontap api version to use}
+    use_rest: ${21:# This module only support ZAPI and will can not be swtich to REST}
+    feature_flags: ${22:# Enable or disable a new feature}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_info]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp information gatherer</description>
+</snippet>

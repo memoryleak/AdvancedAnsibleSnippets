@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages servers on the cloudscale}
+  cloudscale_ch.cloud.server:
+    state: ${2:# State of the server}
+    name: ${3:# Name of the Server}
+    uuid: ${4:# UUID of the server}
+    flavor: ${5:# Flavor of the server}
+    image: ${6:# Image used to create the server}
+    zone: ${7:# Zone in which the server resides (e}
+    volume_size_gb: ${8:# Size of the root volume in GB}
+    bulk_volume_size_gb: ${9:# Size of the bulk storage volume in GB}
+    ssh_keys: ${10:# List of SSH public keys}
+    password: ${11:# Password for the server}
+    use_public_network: ${12:# Attach a public network interface to the server}
+    use_private_network: ${13:# Attach a private network interface to the server}
+    use_ipv6: ${14:# Enable IPv6 on the public network interface}
+    interfaces: ${15:# List of network interface objects specifying the interfaces to be attached to the server}
+    server_groups: ${16:# List of UUID or names of server groups}
+    user_data: ${17:# Cloud-init configuration (cloud-config) data to use for the server}
+    force: ${18:# Allow to stop the running server for updating if necessary}
+    tags: ${19:# Tags assosiated with the servers}
+    api_url: ${20:# cloudscale}
+    api_token: ${21:# cloudscale}
+    api_timeout: ${22:# Timeout in seconds for calls to the cloudscale}
+  tags:
+    - cloudscale_ch
+    - cloud
+    - server]]></content>
+  <tabTrigger>cloudscale_ch.cloud.server</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages servers on the cloudscale</description>
+</snippet>

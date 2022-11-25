@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage VLANs on VyOS network devices}
+  vyos.vyos.vyos_vlan:
+    name: ${2:# Name of the VLAN}
+    address: ${3:# Configure Virtual interface address}
+    vlan_id: ${4:# ID of the VLAN}
+    interfaces: ${5:# List of interfaces that should be associated to the VLAN}
+    associated_interfaces: ${6:# This is a intent option and checks the operational state of the for given vlan C(name) for associated interfaces}
+    delay: ${7:# Delay the play should wait to check for declarative intent params values}
+    aggregate: ${8:# List of VLANs definitions}
+    purge: ${9:# Purge VLANs not defined in the I(aggregate) parameter}
+    state: ${10:# State of the VLAN configuration}
+  tags:
+    - vyos
+    - vyos
+    - vyos_vlan]]></content>
+  <tabTrigger>vyos.vyos.vyos_vlan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage VLANs on VyOS network devices</description>
+</snippet>

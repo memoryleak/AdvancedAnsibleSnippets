@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages DNS domains on Vultr}
+  vultr.cloud.dns_domain:
+    domain: ${2:# The domain name}
+    ip: ${3:# The default server IP}
+    dns_sec: ${4:# Ensure DNSSEC is enabled or disabled}
+    state: ${5:# State of the DNS domain}
+    api_key: ${6:# API key of the Vultr API}
+    api_timeout: ${7:# HTTP timeout to Vultr API}
+    api_retries: ${8:# Amount of retries in case of the Vultr API retuns an HTTP 503 code}
+    api_retry_max_delay: ${9:# Retry backoff delay in seconds is exponential up to this max}
+    api_endpoint: ${10:# URL to API endpint (without trailing slash)}
+    validate_certs: ${11:# Validate SSL certs of the Vultr API}
+  tags:
+    - vultr
+    - cloud
+    - dns_domain]]></content>
+  <tabTrigger>vultr.cloud.dns_domain</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages DNS domains on Vultr</description>
+</snippet>

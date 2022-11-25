@@ -1,0 +1,44 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add/Delete images from OpenStack Cloud}
+  openstack.cloud.image:
+    name: ${2:# The name of the image when uploading - or the name/ID of the image if deleting}
+    id: ${3:# The ID of the image when uploading an image}
+    checksum: ${4:# The checksum of the image}
+    disk_format: ${5:# The format of the disk that is getting uploaded}
+    container_format: ${6:# The format of the container}
+    project: ${7:# The name or ID of the project owning the image}
+    project_domain: ${8:# The domain the project owning the image belongs to}
+    min_disk: ${9:# The minimum disk space (in GB) required to boot this image}
+    min_ram: ${10:# The minimum ram (in MB) required to boot this image}
+    is_public: ${11:# Whether the image can be accessed publicly}
+    protected: ${12:# Prevent image from being deleted}
+    filename: ${13:# The path to the file which has to be uploaded}
+    ramdisk: ${14:# The name of an existing ramdisk image that will be associated with this image}
+    kernel: ${15:# The name of an existing kernel image that will be associated with this image}
+    properties: ${16:# Additional properties to be associated with this image}
+    state: ${17:# Should the resource be present or absent}
+    tags: ${18:# List of tags to be applied to the image}
+    volume: ${19:# ID of a volume to create an image from}
+    cloud: ${20:# Named cloud or cloud config to operate against}
+    auth: ${21:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${22:# Name of the auth plugin to use}
+    region_name: ${23:# Name of the region}
+    wait: ${24:# Should ansible wait until the requested resource is complete}
+    timeout: ${25:# How long should ansible wait for the requested resource}
+    api_timeout: ${26:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${27:# Whether or not SSL API requests should be verified}
+    ca_cert: ${28:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${29:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${30:# A path to a client key to use as part of the SSL transaction}
+    interface: ${31:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${32:# Ignored}
+    sdk_log_path: ${33:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${34:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - image]]></content>
+  <tabTrigger>openstack.cloud.image</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add/Delete images from OpenStack Cloud</description>
+</snippet>

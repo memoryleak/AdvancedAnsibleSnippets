@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Target claim configuraiton for Cisco Intersight}
+  cisco.intersight.intersight_target_claim:
+    claim_code: ${2:# Claim code required for registering a new Target}
+    device_id: ${3:# Device id (serial number) of target}
+    state: ${4:# If C(present), will verify the resource is present and will create if needed}
+    api_private_key: ${5:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${6:# URI used to access the Intersight API}
+    api_key_id: ${7:# Public API Key ID associated with the private key}
+    validate_certs: ${8:# Boolean control for verifying the api_uri TLS certificate}
+    use_proxy: ${9:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+  tags:
+    - cisco
+    - intersight
+    - intersight_target_claim]]></content>
+  <tabTrigger>cisco.intersight.intersight_target_claim</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Target claim configuraiton for Cisco Intersight</description>
+</snippet>

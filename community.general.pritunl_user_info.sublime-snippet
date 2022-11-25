@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:List Pritunl Users using the Pritunl API}
+  community.general.pritunl_user_info:
+    organization: ${2:# The name of the organization the user is part of}
+    user_name: ${3:# Name of the user to filter on Pritunl}
+    user_type: ${4:# Type of the user I(user_name)}
+    pritunl_url: ${5:# URL and port of the Pritunl server on which the API is enabled}
+    pritunl_api_token: ${6:# API Token of a Pritunl admin user}
+    pritunl_api_secret: ${7:# API Secret found in Administrators > USERNAME > API Secret}
+    validate_certs: ${8:# If certificates should be validated or not}
+  tags:
+    - community
+    - general
+    - pritunl_user_info]]></content>
+  <tabTrigger>community.general.pritunl_user_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>List Pritunl Users using the Pritunl API</description>
+</snippet>

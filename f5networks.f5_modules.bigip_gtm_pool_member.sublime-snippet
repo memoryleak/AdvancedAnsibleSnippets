@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage GTM pool member settings}
+  f5networks.f5_modules.bigip_gtm_pool_member:
+    virtual_server: ${2:# Specifies the name of the GTM virtual server which is assigned to the specified C(server)}
+    server_name: ${3:# Specifies the GTM server which contains the C(virtual_server)}
+    type: ${4:# The type of GTM pool that the member is in}
+    pool: ${5:# Name of the GTM pool}
+    partition: ${6:# Device partition to manage resources on}
+    member_order: ${7:# Specifies the order in which the member will appear in the pool}
+    monitor: ${8:# Specifies the monitor assigned to this pool member}
+    ratio: ${9:# Specifies the weight of the pool member for load balancing purposes}
+    description: ${10:# The description of the pool member}
+    aggregate: ${11:# List of GTM pool member definitions to be created, modified, or removed}
+    replace_all_with: ${12:# Removes members not defined in the C(aggregate) parameter}
+    limits: ${13:# Specifies resource thresholds or limit requirements at the pool member level}
+    state: ${14:# Pool member state}
+    provider: ${15:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_gtm_pool_member]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_gtm_pool_member</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage GTM pool member settings</description>
+</snippet>

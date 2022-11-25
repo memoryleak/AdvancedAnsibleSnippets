@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp Element Software Manage Volumes}
+  netapp.elementsw.na_elementsw_volume:
+    state: ${2:# Whether the specified volume should exist or not}
+    name: ${3:# The name of the volume to manage}
+    account_id: ${4:# Account ID for the owner of this volume}
+    enable512e: ${5:# Required when C(state=present)}
+    qos: ${6:# Initial quality of service settings for this volume}
+    qos_policy_name: ${7:# Quality of service policy for this volume}
+    attributes: ${8:# A YAML dictionary of attributes that you would like to apply on this volume}
+    size: ${9:# The size of the volume in (size_unit)}
+    size_unit: ${10:# The unit used to interpret the size parameter}
+    access: ${11:# Access allowed for the volume}
+    hostname: ${12:# The hostname or IP address of the SolidFire cluster}
+    username: ${13:# Please ensure that the user has the adequate permissions}
+    password: ${14:# Password for the specified user}
+  tags:
+    - netapp
+    - elementsw
+    - na_elementsw_volume]]></content>
+  <tabTrigger>netapp.elementsw.na_elementsw_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp Element Software Manage Volumes</description>
+</snippet>

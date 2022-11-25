@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage VMware vSphere datastore clusters}
+  community.vmware.vmware_datastore_cluster:
+    datacenter_name: ${2:# The name of the datacenter}
+    datastore_cluster_name: ${3:# The name of the datastore cluster}
+    state: ${4:# If the datastore cluster should be present or absent}
+    folder: ${5:# Destination folder, absolute path to place datastore cluster in}
+    enable_sdrs: ${6:# Whether or not storage DRS is enabled}
+    automation_level: ${7:# Run SDRS automated or manually}
+    keep_vmdks_together: ${8:# Specifies whether or not each VM in this datastore cluster should have its virtual disks on the same datastore by default}
+    loadbalance_interval: ${9:# Specify the interval in minutes that storage DRS runs to load balance among datastores}
+    enable_io_loadbalance: ${10:# Whether or not storage DRS takes into account storage I/O workload when making load balancing and initial placement recommendations}
+    hostname: ${11:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${12:# The username of the vSphere vCenter or ESXi server}
+    password: ${13:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${14:# Allows connection when SSL certificates are not valid}
+    port: ${15:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${16:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${17:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_datastore_cluster]]></content>
+  <tabTrigger>community.vmware.vmware_datastore_cluster</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage VMware vSphere datastore clusters</description>
+</snippet>

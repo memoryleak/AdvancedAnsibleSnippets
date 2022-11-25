@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/update/delete/dump Zabbix template}
+  community.zabbix.zabbix_template:
+    template_name: ${2:# Name of Zabbix template}
+    template_json: ${3:# JSON dump of templates to import}
+    template_xml: ${4:# XML dump of templates to import}
+    template_groups: ${5:# List of template groups to add template to when template is created}
+    link_templates: ${6:# List of template names to be linked to the template}
+    clear_templates: ${7:# List of template names to be unlinked and cleared from the template}
+    macros: ${8:# List of user macros to create for the template}
+    dump_format: ${9:# Format to use when dumping template with C(state=dump)}
+    omit_date: ${10:# Removes the date field for the exported/dumped template}
+    state: ${11:# Required state of the template}
+    server_url: ${12:# URL of Zabbix server, with protocol (http or https)}
+    login_user: ${13:# Zabbix user name}
+    login_password: ${14:# Zabbix user password}
+    http_login_user: ${15:# Basic Auth login}
+    http_login_password: ${16:# Basic Auth password}
+    timeout: ${17:# The timeout of API request (seconds)}
+    validate_certs: ${18:# If set to False, SSL certificates will not be validated}
+  tags:
+    - community
+    - zabbix
+    - zabbix_template]]></content>
+  <tabTrigger>community.zabbix.zabbix_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/update/delete/dump Zabbix template</description>
+</snippet>

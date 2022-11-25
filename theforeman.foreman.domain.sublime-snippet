@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Domains}
+  theforeman.foreman.domain:
+    name: ${2:# The full DNS domain name}
+    updated_name: ${3:# New domain name}
+    dns_proxy: ${4:# DNS proxy to use within this domain for managing A records}
+    description: ${5:# Full name describing the domain}
+    parameters: ${6:# Domain specific host parameters}
+    server_url: ${7:# URL of the Foreman server}
+    username: ${8:# Username accessing the Foreman server}
+    password: ${9:# Password of the user accessing the Foreman server}
+    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${11:# State of the entity}
+    organizations: ${12:# List of organizations the entity should be assigned to}
+    locations: ${13:# List of locations the entity should be assigned to}
+  tags:
+    - theforeman
+    - foreman
+    - domain]]></content>
+  <tabTrigger>theforeman.foreman.domain</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Domains</description>
+</snippet>

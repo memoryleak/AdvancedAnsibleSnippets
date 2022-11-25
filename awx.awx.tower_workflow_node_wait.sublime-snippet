@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Approve an approval node in a workflow job}
+  awx.awx.tower_workflow_node_wait:
+    workflow_job_id: ${2:# ID of the workflow job to monitor for node}
+    name: ${3:# Name of the workflow node to wait on}
+    interval: ${4:# The interval in sections, to request an update from the controller}
+    timeout: ${5:# Maximum time in seconds to wait for a workflow job to to reach approval node}
+    controller_host: ${6:# URL to your Automation Platform Controller instance}
+    controller_username: ${7:# Username for your controller instance}
+    controller_password: ${8:# Password for your controller instance}
+    controller_oauthtoken: ${9:# The OAuth token to use}
+    validate_certs: ${10:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${11:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - tower_workflow_node_wait]]></content>
+  <tabTrigger>awx.awx.tower_workflow_node_wait</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Approve an approval node in a workflow job</description>
+</snippet>

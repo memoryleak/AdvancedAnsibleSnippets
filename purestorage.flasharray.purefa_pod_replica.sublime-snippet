@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage ActiveDR pod replica links between Pure Storage FlashArrays}
+  purestorage.flasharray.purefa_pod_replica:
+    name: ${2:# ActiveDR source pod name}
+    state: ${3:# Creates or modifies a pod replica link}
+    target_array: ${4:# Remote array name to create replica on}
+    target_pod: ${5:# Name of target pod}
+    pause: ${6:# Pause/unpause a pod replica link}
+    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
+    api_token: ${8:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_pod_replica]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_pod_replica</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage ActiveDR pod replica links between Pure Storage FlashArrays</description>
+</snippet>

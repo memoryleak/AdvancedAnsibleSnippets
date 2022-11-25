@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about Intersight}
+  cisco.intersight.intersight_info:
+    server_names: ${2:# Server names to retrieve information from}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    api_key_id: ${5:# Public API Key ID associated with the private key}
+    validate_certs: ${6:# Boolean control for verifying the api_uri TLS certificate}
+    use_proxy: ${7:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+  tags:
+    - cisco
+    - intersight
+    - intersight_info]]></content>
+  <tabTrigger>cisco.intersight.intersight_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about Intersight</description>
+</snippet>

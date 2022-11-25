@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get IoT Hub facts}
+  azure.azcollection.azure_rm_iothub_info:
+    name: ${2:# Limit results to a specific resource group}
+    resource_group: ${3:# The resource group to search for the desired IoT Hub}
+    tags: ${4:# Limit results by providing a list of tags}
+    show_stats: ${5:# Show the statistics for IoT Hub}
+    show_quota_metrics: ${6:# Get the quota metrics for an IoT hub}
+    show_endpoint_health: ${7:# Get the health for routing endpoints}
+    test_route_message: ${8:# Test routes message}
+    list_consumer_groups: ${9:# List the consumer group of the built-in event hub}
+    list_keys: ${10:# List the keys of IoT Hub}
+    ad_user: ${11:# Active Directory username}
+    password: ${12:# Active Directory user password}
+    profile: ${13:# Security profile found in ~/}
+    subscription_id: ${14:# Your Azure subscription Id}
+    client_id: ${15:# Azure client ID}
+    secret: ${16:# Azure client secret}
+    tenant: ${17:# Azure tenant ID}
+    cloud_environment: ${18:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${19:# Azure AD authority url}
+    cert_validation_mode: ${20:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${21:# Controls the source of the credentials to use for authentication}
+    api_profile: ${22:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${23:# Parent argument}
+    log_mode: ${24:# Parent argument}
+    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_iothub_info]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_iothub_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get IoT Hub facts</description>
+</snippet>

@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure remote syslog module}
+  mellanox.onyx.onyx_syslog_remote:
+    enabled: ${2:# Disable/Enable logging to given remote host}
+    host: ${3:# <IP4/IP6 Hostname> Send event logs to this server using the syslog protocol}
+    port: ${4:# Set remote server destination port for log messages}
+    trap: ${5:# Minimum severity level for messages to this syslog server}
+    trap_override: ${6:# Override log levels for this sink on a per-class basis}
+    filter: ${7:# Specify a filter type}
+    filter_str: ${8:# Specify a regex filter string}
+  tags:
+    - mellanox
+    - onyx
+    - onyx_syslog_remote]]></content>
+  <tabTrigger>mellanox.onyx.onyx_syslog_remote</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure remote syslog module</description>
+</snippet>

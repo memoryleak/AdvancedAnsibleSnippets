@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Setup login banner and message of the day}
+  netapp.ontap.na_ontap_login_messages:
+    banner: ${2:# Login banner Text message}
+    vserver: ${3:# The name of the SVM login messages should be set for}
+    motd_message: ${4:# MOTD Text message}
+    show_cluster_motd: ${5:# Set to I(false) if Cluster-level Message of the Day should not be shown}
+    hostname: ${6:# The hostname or IP address of the ONTAP instance}
+    username: ${7:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${8:# Password for the specified user}
+    cert_filepath: ${9:# path to SSL client cert file (}
+    key_filepath: ${10:# path to SSL client key file}
+    https: ${11:# Enable and disable https}
+    validate_certs: ${12:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${13:# Override the default port (80 or 443) with this port}
+    ontapi: ${14:# The ontap api version to use}
+    use_rest: ${15:# Whether to use REST or ZAPI}
+    feature_flags: ${16:# Enable or disable a new feature}
+    force_ontap_version: ${17:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_login_messages]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_login_messages</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Setup login banner and message of the day</description>
+</snippet>

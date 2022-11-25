@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure ApiManagementService instance}
+  azure.azcollection.azure_rm_apimanagementservice:
+    resource_group: ${2:# The name of the resource group}
+    name: ${3:# Service name}
+    location: ${4:# Location of the Api management service}
+    publisher_name: ${5:# Publisher name}
+    publisher_email: ${6:# Publisher email}
+    sku_name: ${7:# Name of the Sku}
+    sku_capacity: ${8:# Capacity of the SKU (number of deployed units of the SKU)}
+    state: ${9:# Assert the state of the ApiManagementService}
+    ad_user: ${10:# Active Directory username}
+    password: ${11:# Active Directory user password}
+    profile: ${12:# Security profile found in ~/}
+    subscription_id: ${13:# Your Azure subscription Id}
+    client_id: ${14:# Azure client ID}
+    secret: ${15:# Azure client secret}
+    tenant: ${16:# Azure tenant ID}
+    cloud_environment: ${17:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${18:# Azure AD authority url}
+    cert_validation_mode: ${19:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${20:# Controls the source of the credentials to use for authentication}
+    api_profile: ${21:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${22:# Parent argument}
+    log_mode: ${23:# Parent argument}
+    x509_certificate_path: ${24:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${25:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${26:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${27:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_apimanagementservice]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_apimanagementservice</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure ApiManagementService instance</description>
+</snippet>

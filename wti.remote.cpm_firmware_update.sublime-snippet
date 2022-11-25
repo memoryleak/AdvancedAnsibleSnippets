@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set Serial port parameters in WTI OOB and PDU devices}
+  wti.remote.cpm_firmware_update:
+    cpm_url: ${2:# This is the URL of the WTI device to send the module}
+    cpm_username: ${3:# This is the Username of the WTI device to send the module}
+    cpm_password: ${4:# This is the Password of the WTI device to send the module}
+    cpm_path: ${5:# This is the directory path to store the WTI device configuration file}
+    cpm_file: ${6:# If a file is defined, this file will be used to update the WTI device}
+    use_force: ${7:# If set to True, the upgrade will happen even if the device doesnt need it}
+    use_https: ${8:# Designates to use an https connection or http connection}
+    validate_certs: ${9:# If false, SSL certificates will not be validated}
+    use_proxy: ${10:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+    family: ${11:# Force the download to both either Console (1) or Power (0)}
+    removefileonexit: ${12:# After an upgrade, remove the upgrade OS image}
+  tags:
+    - wti
+    - remote
+    - cpm_firmware_update]]></content>
+  <tabTrigger>wti.remote.cpm_firmware_update</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set Serial port parameters in WTI OOB and PDU devices</description>
+</snippet>

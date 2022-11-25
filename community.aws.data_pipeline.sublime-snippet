@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and manage AWS Datapipelines}
+  community.aws.data_pipeline:
+    name: ${2:# The name of the Datapipeline to create/modify/delete}
+    description: ${3:# An optional description for the pipeline being created}
+    objects: ${4:# A list of pipeline object definitions, each of which is a dict that takes the keys I(id), I(name) and I(fields)}
+    parameters: ${5:# A list of parameter objects (dicts) in the pipeline definition}
+    values: ${6:# A list of parameter values (dicts) in the pipeline definition}
+    timeout: ${7:# Time in seconds to wait for the pipeline to transition to the requested state, fail otherwise}
+    state: ${8:# The requested state of the pipeline}
+    tags: ${9:# A dict of key:value pair(s) to add to the pipeline}
+    access_key: ${10:# AWS access key ID}
+    secret_key: ${11:# AWS secret access key}
+    session_token: ${12:# AWS STS session token for use with temporary credentials}
+    profile: ${13:# A named AWS profile to use for authentication}
+    endpoint_url: ${14:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${15:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${17:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${18:# Use a C(botocore}
+    region: ${19:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - data_pipeline]]></content>
+  <tabTrigger>community.aws.data_pipeline</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and manage AWS Datapipelines</description>
+</snippet>

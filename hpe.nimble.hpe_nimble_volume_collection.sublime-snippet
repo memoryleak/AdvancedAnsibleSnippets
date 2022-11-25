@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the HPE Nimble Storage volume collections}
+  hpe.nimble.hpe_nimble_volume_collection:
+    abort_handover: ${2:# Abort in-progress handover}
+    agent_hostname: ${3:# Generic backup agent hostname}
+    agent_password: ${4:# Generic backup agent password}
+    agent_username: ${5:# Generic backup agent username}
+    app_cluster: ${6:# If the application is running within a Windows cluster environment, this is the cluster name}
+    app_id: ${7:# Application ID running on the server}
+    app_server: ${8:# Application server hostname}
+    app_service: ${9:# If the application is running within a windows cluster environment then this is the instance name of the service running within the cluster environment}
+    app_sync: ${10:# Application synchronization}
+    change_name: ${11:# Change name of the existing volume collection}
+    demote: ${12:# Release ownership of the specified volume collection}
+    description: ${13:# Text description of volume collection}
+    handover: ${14:# Gracefully transfer ownership of the specified volume collection}
+    invoke_on_upstream_partner: ${15:# Invoke handover request on upstream partner}
+    is_standalone_volcoll: ${16:# Indicates whether this is a standalone volume collection}
+    metadata: ${17:# User defined key-value pairs that augment a volume collection attributes}
+    name: ${18:# Name of the volume collection}
+    no_reverse: ${19:# Do not automatically reverse direction of replication}
+    override_upstream_down: ${20:# Allow the handover request to proceed even if upstream array is down}
+    promote: ${21:# Take ownership of the specified volume collection}
+    prot_template: ${22:# Name of the protection template whose attributes will be used to create this volume collection}
+    replication_partner: ${23:# Name of the new volume collection owner}
+    replication_type: ${24:# Type of replication configured for the volume collection}
+    state: ${25:# The volume collection operations}
+    validate: ${26:# Validate a volume collection with either Microsoft VSS or VMware application synchronization}
+    vcenter_hostname: ${27:# VMware vCenter hostname}
+    vcenter_username: ${28:# Application VMware vCenter username}
+    vcenter_password: ${29:# Application VMware vCenter password}
+    host: ${30:# HPE Nimble Storage IP address}
+    password: ${31:# HPE Nimble Storage password}
+    username: ${32:# HPE Nimble Storage user name}
+  tags:
+    - hpe
+    - nimble
+    - hpe_nimble_volume_collection]]></content>
+  <tabTrigger>hpe.nimble.hpe_nimble_volume_collection</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the HPE Nimble Storage volume collections</description>
+</snippet>

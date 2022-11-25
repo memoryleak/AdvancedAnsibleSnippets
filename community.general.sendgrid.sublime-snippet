@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Sends an email with the SendGrid API}
+  community.general.sendgrid:
+    username: ${2:# Username for logging into the SendGrid account}
+    password: ${3:# Password that corresponds to the username}
+    from_address: ${4:# The address in the 'from' field for the email}
+    to_addresses: ${5:# A list with one or more recipient email addresses}
+    subject: ${6:# The desired subject for the email}
+    api_key: ${7:# Sendgrid API key to use instead of username/password}
+    cc: ${8:# A list of email addresses to cc}
+    bcc: ${9:# A list of email addresses to bcc}
+    attachments: ${10:# A list of relative or explicit paths of files you want to attach (7MB limit as per SendGrid docs)}
+    from_name: ${11:# The name you want to appear in the from field, i}
+    html_body: ${12:# Whether the body is html content that should be rendered}
+    headers: ${13:# A dict to pass on as headers}
+    body: ${14:# The e-mail body content}
+  tags:
+    - community
+    - general
+    - sendgrid]]></content>
+  <tabTrigger>community.general.sendgrid</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Sends an email with the SendGrid API</description>
+</snippet>

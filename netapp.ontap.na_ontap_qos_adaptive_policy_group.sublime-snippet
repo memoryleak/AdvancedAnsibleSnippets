@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP Adaptive Quality of Service policy group}
+  netapp.ontap.na_ontap_qos_adaptive_policy_group:
+    state: ${2:# Whether the specified policy group should exist or not}
+    name: ${3:# The name of the policy group to manage}
+    vserver: ${4:# Name of the vserver to use}
+    from_name: ${5:# Name of the existing policy group to be renamed to name}
+    absolute_min_iops: ${6:# Absolute minimum IOPS defined by this policy}
+    expected_iops: ${7:# Minimum expected IOPS defined by this policy}
+    peak_iops: ${8:# Maximum possible IOPS per allocated or used TB|GB}
+    peak_iops_allocation: ${9:# Whether peak_iops is specified by allocated or used space}
+    force: ${10:# Setting to 'true' forces the deletion of the workloads associated with the policy group along with the policy group}
+    hostname: ${11:# The hostname or IP address of the ONTAP instance}
+    username: ${12:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${13:# Password for the specified user}
+    cert_filepath: ${14:# path to SSL client cert file (}
+    key_filepath: ${15:# path to SSL client key file}
+    https: ${16:# Enable and disable https}
+    validate_certs: ${17:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${18:# Override the default port (80 or 443) with this port}
+    ontapi: ${19:# The ontap api version to use}
+    use_rest: ${20:# This module only support ZAPI and will can not be swtich to REST}
+    feature_flags: ${21:# Enable or disable a new feature}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_qos_adaptive_policy_group]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_qos_adaptive_policy_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP Adaptive Quality of Service policy group</description>
+</snippet>

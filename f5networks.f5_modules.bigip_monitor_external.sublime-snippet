@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages external LTM monitors on a BIG-IP}
+  f5networks.f5_modules.bigip_monitor_external:
+    name: ${2:# Specifies the name of the monitor}
+    description: ${3:# The description of the monitor}
+    parent: ${4:# The parent template of this monitor template}
+    arguments: ${5:# Specifies any command-line arguments the script requires}
+    ip: ${6:# IP address part of the IP/port definition}
+    port: ${7:# Port address part of the IP/port definition}
+    external_program: ${8:# Specifies the name of the file for the monitor to use}
+    interval: ${9:# The interval specifying how frequently the monitor instance of this template will run}
+    timeout: ${10:# The number of seconds in which the node or service must respond to the monitor request}
+    variables: ${11:# Specifies any variables the script requires}
+    partition: ${12:# Device partition to manage resources on}
+    state: ${13:# When C(present), ensures the monitor exists}
+    provider: ${14:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_monitor_external]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_monitor_external</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages external LTM monitors on a BIG-IP</description>
+</snippet>

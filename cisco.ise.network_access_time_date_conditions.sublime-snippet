@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for Network Access Time Date Conditions}
+  cisco.ise.network_access_time_date_conditions:
+    attributeName: ${2:# Dictionary attribute name}
+    attributeValue: ${3:# <ul><li>Attribute value for condition</li> <li>Value type is specified in dictionary object</li> <li>if multiple values allowed is specified in dictionary object</li></ul>}
+    children: ${4:# In case type is andBlock or orBlock addtional conditions will be aggregated under this logical (OR/AND) condition}
+    conditionType: ${5:# <ul><li>Inidicates whether the record is the condition itself(data) or a logical(or,and) aggregation</li> <li>Data type enum(reference,single) indicates than 'conditonId' OR 'ConditionAttrs' fields should contain condition data but not both</li> <li>Logical aggreation(and,or) enum indicates that additional conditions are present under the children field</li></ul>}
+    datesRange: ${6:# <p>Defines for which date/s TimeAndDate condition will be matched<br> Options are - Date range, for specific date, the same date should be used for start/end date <br> Default - no specific dates<br> In order to reset the dates to have no specific dates Date format - yyyy-mm-dd (MM = month, dd = day, yyyy = year)</p>}
+    datesRangeException: ${7:# <p>Defines for which date/s TimeAndDate condition will be matched<br> Options are - Date range, for specific date, the same date should be used for start/end date <br> Default - no specific dates<br> In order to reset the dates to have no specific dates Date format - yyyy-mm-dd (MM = month, dd = day, yyyy = year)</p>}
+    description: ${8:# Condition description}
+    dictionaryName: ${9:# Dictionary name}
+    dictionaryValue: ${10:# Dictionary value}
+    hoursRange: ${11:# <p>Defines for which hours a TimeAndDate condition will be matched<br> Time format - hh mm ( h = hour , mm = minutes ) <br> Default - All Day </p>}
+    hoursRangeException: ${12:# <p>Defines for which hours a TimeAndDate condition will be matched<br> Time format - hh mm ( h = hour , mm = minutes ) <br> Default - All Day </p>}
+    id: ${13:# Network Access Time Date Conditions's id}
+    isNegate: ${14:# Indicates whereas this condition is in negate mode}
+    link: ${15:# Network Access Time Date Conditions's link}
+    name: ${16:# Condition name}
+    operator: ${17:# Equality operator}
+    weekDays: ${18:# <p>Defines for which days this condition will be matched<br> Days format - Arrays of WeekDay enums <br> Default - List of All week days</p>}
+    weekDaysException: ${19:# <p>Defines for which days this condition will NOT be matched<br> Days format - Arrays of WeekDay enums <br> Default - Not enabled</p>}
+    ise_hostname: ${20:# The Identity Services Engine hostname}
+    ise_username: ${21:# The Identity Services Engine username to authenticate}
+    ise_password: ${22:# The Identity Services Engine password to authenticate}
+    ise_verify: ${23:# Flag to enable or disable SSL certificate verification}
+    ise_version: ${24:# Informs the SDK which version of Identity Services Engine to use}
+    ise_wait_on_rate_limit: ${25:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
+    ise_debug: ${26:# Flag for Identity Services Engine SDK to enable debugging}
+    ise_uses_api_gateway: ${27:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
+    ise_uses_csrf_token: ${28:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+  tags:
+    - cisco
+    - ise
+    - network_access_time_date_conditions]]></content>
+  <tabTrigger>cisco.ise.network_access_time_date_conditions</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for Network Access Time Date Conditions</description>
+</snippet>

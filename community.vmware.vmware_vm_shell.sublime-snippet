@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Run commands in a VMware guest operating system}
+  community.vmware.vmware_vm_shell:
+    datacenter: ${2:# The datacenter hosting the virtual machine}
+    cluster: ${3:# The cluster hosting the virtual machine}
+    folder: ${4:# Destination folder, absolute or relative path to find an existing guest or create the new guest}
+    vm_id: ${5:# Name of the virtual machine to work with}
+    vm_id_type: ${6:# The VMware identification method by which the virtual machine will be identified}
+    vm_username: ${7:# The user to login-in to the virtual machine}
+    vm_password: ${8:# The password used to login-in to the virtual machine}
+    vm_shell: ${9:# The absolute path to the program to start}
+    vm_shell_args: ${10:# The argument to the program}
+    vm_shell_env: ${11:# Comma separated list of environment variable, specified in the guest OS notation}
+    vm_shell_cwd: ${12:# The current working directory of the application from which it will be run}
+    wait_for_process: ${13:# If set to C(True), module will wait for process to complete in the given virtual machine}
+    timeout: ${14:# Timeout in seconds}
+    hostname: ${15:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${16:# The username of the vSphere vCenter or ESXi server}
+    password: ${17:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${18:# Allows connection when SSL certificates are not valid}
+    port: ${19:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${20:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${21:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_vm_shell]]></content>
+  <tabTrigger>community.vmware.vmware_vm_shell</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Run commands in a VMware guest operating system</description>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages traffic groups on BIG-IP}
+  f5networks.f5_modules.bigip_device_traffic_group:
+    name: ${2:# The name of the traffic group}
+    mac_address: ${3:# Specifies the floating Media Access Control (MAC) address associated with the floating IP addresses defined for a traffic group}
+    ha_order: ${4:# Specifies the order in which you would like to assign devices for failover}
+    ha_group: ${5:# Specifies a configured C(HA group) to be associated with the traffic group}
+    ha_load_factor: ${6:# The value of the load the traffic-group presents the system relative to other traffic groups}
+    auto_failback: ${7:# Specifies whether the traffic group fails back to the initial device specified in C(ha_order)}
+    auto_failback_time: ${8:# Specifies the number of seconds the system delays before failing back to the initial device specified in C(ha_order)}
+    partition: ${9:# Device partition to manage resources on}
+    state: ${10:# When C(present), ensures the traffic group exists}
+    provider: ${11:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_device_traffic_group]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_device_traffic_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages traffic groups on BIG-IP</description>
+</snippet>

@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP Run any REST API on ONTAP}
+  netapp.ontap.na_ontap_restit:
+    api: ${2:# The REST API to call (eg I(cluster/software), I(svms/svm))}
+    method: ${3:# The REST method to use}
+    query: ${4:# A list of dictionaries for the query parameters}
+    body: ${5:# A dictionary for the info parameter}
+    vserver_name: ${6:# if provided, forces vserver tunneling}
+    vserver_uuid: ${7:# if provided, forces vserver tunneling}
+    hal_linking: ${8:# if true, HAL-encoded links are returned in the response}
+    wait_for_completion: ${9:# when true, POST/PATCH/DELETE can be handled synchronously and asynchronously}
+    files: ${10:# A dictionary for the parameters when using multipart/form-data}
+    accept_header: ${11:# Value for the Accept request HTTP header}
+    hostname: ${12:# The hostname or IP address of the ONTAP instance}
+    username: ${13:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${14:# Password for the specified user}
+    cert_filepath: ${15:# path to SSL client cert file (}
+    key_filepath: ${16:# path to SSL client key file}
+    https: ${17:# Enable and disable https}
+    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${19:# Override the default port (80 or 443) with this port}
+    ontapi: ${20:# The ontap api version to use}
+    use_rest: ${21:# Whether to use REST or ZAPI}
+    feature_flags: ${22:# Enable or disable a new feature}
+    force_ontap_version: ${23:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_restit]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_restit</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP Run any REST API on ONTAP</description>
+</snippet>

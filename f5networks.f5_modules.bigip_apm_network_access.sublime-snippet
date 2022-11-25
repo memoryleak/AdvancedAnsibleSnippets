@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage APM Network Access resource}
+  f5networks.f5_modules.bigip_apm_network_access:
+    name: ${2:# Specifies the name of the APM network access to manage/create}
+    description: ${3:# User created network access description}
+    ip_version: ${4:# Supported IP version on the network access resource}
+    allow_local_subnet: ${5:# Enables local subnet access and local access to any host or subnet in routes specified in the client routing table}
+    allow_local_dns: ${6:# Enables local access to DNS servers configured on the client prior to establishing a network access connection}
+    split_tunnel: ${7:# Specifies that only the traffic targeted to a specified address space is sent over the network access tunnel}
+    snat_pool: ${8:# Specifies the name of a SNAT pool used for implementing selective and intelligent SNATs}
+    dtls: ${9:# When C(yes) the network access connection uses Datagram Transport Level Security instead of TCP, to provide better throughput for high demand applications like VoIP or streaming video}
+    dtls_port: ${10:# Specifies the port number the network access resource uses for secure UDP traffic with DTLS}
+    ipv4_lease_pool: ${11:# Specifies the IPV4 lease pool resource to use with network access}
+    ipv6_lease_pool: ${12:# Specifies the IPV6 lease pool resource to use with network access}
+    excluded_ipv6_adresses: ${13:# Specifies IPV6 address spaces for which traffic is not forced through the tunnel}
+    excluded_ipv4_adresses: ${14:# Specifies IPV4 address spaces for which traffic is not forced through the tunnel}
+    excluded_dns_addresses: ${15:# Specifies the DNS address spaces for which traffic is not forced through the tunnel}
+    dns_address_space: ${16:# Specifies a list of domain names describing the target LAN DNS addresses}
+    ipv4_address_space: ${17:# Specifies a list of IPv4 hosts or networks describing the target LAN}
+    ipv6_address_space: ${18:# Specifies a list of IPv6 hosts or networks describing the target LAN}
+    partition: ${19:# Device partition to manage resources on}
+    state: ${20:# When C(state) is C(present), ensures the ACL exists}
+    provider: ${21:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_apm_network_access]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_apm_network_access</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage APM Network Access resource</description>
+</snippet>

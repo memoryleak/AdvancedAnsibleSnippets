@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Restart grid services}
+  infoblox.nios_modules.nios_restartservices:
+    groups: ${2:# The list of the Service Restart Groups to restart}
+    members: ${3:# The list of the Grid Members to restart}
+    mode: ${4:# The restart method in case of grid restart}
+    restart_option: ${5:# Controls whether services are restarted unconditionally or when needed}
+    services: ${6:# The list of services the restart applicable to}
+    provider: ${7:# A dict object containing connection details}
+  tags:
+    - infoblox
+    - nios_modules
+    - nios_restartservices]]></content>
+  <tabTrigger>infoblox.nios_modules.nios_restartservices</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Restart grid services</description>
+</snippet>

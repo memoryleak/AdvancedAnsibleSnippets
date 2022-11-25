@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage source address persistence profiles}
+  f5networks.f5_modules.bigip_profile_persistence_src_addr:
+    name: ${2:# Specifies the name of the profile}
+    parent: ${3:# Specifies the profile from which this profile inherits settings}
+    match_across_services: ${4:# When C(yes), specifies all persistent connections from a client IP address that go to the same virtual IP address also go to the same node}
+    match_across_virtuals: ${5:# When C(yes), specifies all persistent connections from the same client IP address go to the same node}
+    match_across_pools: ${6:# When C(yes), specifies the system can use any pool that contains this persistence record}
+    mirror: ${7:# When C(yes), specifies that if the active unit goes into the standby mode, the system mirrors any persistence records to its peer}
+    mask: ${8:# Specifies a value the system applies as the prefix length}
+    hash_algorithm: ${9:# Specifies the algorithm the system uses for hash persistence load balancing}
+    entry_timeout: ${10:# Specifies the duration of the persistence entries}
+    override_connection_limit: ${11:# When C(yes), specifies the system allows you to specify that pool member connection limits will be overridden for persisted clients}
+    partition: ${12:# Device partition to manage resources on}
+    state: ${13:# When C(present), ensures the profile exists}
+    provider: ${14:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_profile_persistence_src_addr]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_profile_persistence_src_addr</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage source address persistence profiles</description>
+</snippet>

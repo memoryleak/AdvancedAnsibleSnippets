@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sensu cluster role bindings}
+  sensu.sensu_go.cluster_role_binding:
+    cluster_role: ${2:# Name of the cluster role}
+    users: ${3:# List of users to bind to the cluster role}
+    groups: ${4:# List of groups to bind to the cluster role}
+    auth: ${5:# Authentication parameters}
+    name: ${6:# The Sensu resource's name}
+    state: ${7:# Target state of the Sensu object}
+  tags:
+    - sensu
+    - sensu_go
+    - cluster_role_binding]]></content>
+  <tabTrigger>sensu.sensu_go.cluster_role_binding</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sensu cluster role bindings</description>
+</snippet>

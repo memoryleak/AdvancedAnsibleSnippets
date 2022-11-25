@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage NetApp Azure Files Account}
+  netapp.azure.azure_rm_netapp_account:
+    name: ${2:# The name of the NetApp account}
+    location: ${3:# Resource location}
+    active_directories: ${4:# list of active directory dictionaries}
+    state: ${5:# State C(present) will check that the NetApp account exists with the requested configuration}
+    debug: ${6:# output details about current account if it exists}
+    ad_user: ${7:# Active Directory username}
+    password: ${8:# Active Directory user password}
+    profile: ${9:# Security profile found in ~/}
+    subscription_id: ${10:# Your Azure subscription Id}
+    client_id: ${11:# Azure client ID}
+    secret: ${12:# Azure client secret}
+    tenant: ${13:# Azure tenant ID}
+    cloud_environment: ${14:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${15:# Azure AD authority url}
+    cert_validation_mode: ${16:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${17:# Controls the source of the credentials to use for authentication}
+    api_profile: ${18:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${19:# Parent argument}
+    log_mode: ${20:# Parent argument}
+    tags: ${21:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${22:# Use to control if tags field is canonical or just appends to existing tags}
+    resource_group: ${23:# Name of the resource group}
+  tags:
+    - netapp
+    - azure
+    - azure_rm_netapp_account]]></content>
+  <tabTrigger>netapp.azure.azure_rm_netapp_account</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage NetApp Azure Files Account</description>
+</snippet>

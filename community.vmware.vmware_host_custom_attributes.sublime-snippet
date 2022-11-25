@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage custom attributes from VMware for the given ESXi host}
+  community.vmware.vmware_host_custom_attributes:
+    esxi_hostname: ${2:# Name of the ESXi host to work with}
+    state: ${3:# The action to take}
+    attributes: ${4:# A list of name and value of custom attributes that needs to be manage}
+    hostname: ${5:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${6:# The username of the vSphere vCenter or ESXi server}
+    password: ${7:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${8:# Allows connection when SSL certificates are not valid}
+    port: ${9:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${10:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${11:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_host_custom_attributes]]></content>
+  <tabTrigger>community.vmware.vmware_host_custom_attributes</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage custom attributes from VMware for the given ESXi host</description>
+</snippet>

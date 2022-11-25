@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates a GCP Instance}
+  google.cloud.gcp_redis_instance:
+    state: ${2:# Whether the given object should exist in GCP}
+    alternative_location_id: ${3:# Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two zones}
+    auth_enabled: ${4:# Optional}
+    authorized_network: ${5:# The full name of the Google Compute Engine network to which the instance is connected}
+    connect_mode: ${6:# The connection mode of the Redis instance}
+    display_name: ${7:# An arbitrary and optional user-provided name for the instance}
+    labels: ${8:# Resource labels to represent user provided metadata}
+    redis_configs: ${9:# Redis configuration parameters, according to U(http://redis}
+    location_id: ${10:# The zone where the instance will be provisioned}
+    name: ${11:# The ID of the instance or a fully qualified identifier for the instance}
+    memory_size_gb: ${12:# Redis memory size in GiB}
+    redis_version: ${13:# The version of Redis software}
+    reserved_ip_range: ${14:# The CIDR range of internal addresses that are reserved for this instance}
+    tier: ${15:# The service tier of the instance}
+    region: ${16:# The name of the Redis region of the instance}
+    project: ${17:# The Google Cloud Platform project to use}
+    auth_kind: ${18:# The type of credential used}
+    service_account_contents: ${19:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_file: ${20:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    service_account_email: ${21:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    scopes: ${22:# Array of scopes to be used}
+    env_type: ${23:# Specifies which Ansible environment you're running this module within}
+  tags:
+    - google
+    - cloud
+    - gcp_redis_instance]]></content>
+  <tabTrigger>google.cloud.gcp_redis_instance</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates a GCP Instance</description>
+</snippet>

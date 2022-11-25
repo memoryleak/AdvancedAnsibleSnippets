@@ -1,0 +1,52 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/Delete Compute Instances from OpenStack}
+  openstack.cloud.server:
+    name: ${2:# Name that has to be given to the instance}
+    image: ${3:# The name or id of the base image to boot}
+    image_exclude: ${4:# Text to use to filter image names, for the case, such as HP, where there are multiple image names matching the common identifying portions}
+    flavor: ${5:# The name or id of the flavor in which the new instance has to be created}
+    flavor_ram: ${6:# The minimum amount of ram in MB that the flavor in which the new instance has to be created must have}
+    flavor_include: ${7:# Text to use to filter flavor names, for the case, such as Rackspace, where there are multiple flavors that have the same ram count}
+    key_name: ${8:# The key pair name to be used when creating a instance}
+    security_groups: ${9:# Names of the security groups to which the instance should be added}
+    network: ${10:# Name or ID of a network to attach this instance to}
+    nics: ${11:# A list of networks to which the instance's interface should be attached}
+    auto_ip: ${12:# Ensure instance has public ip however the cloud wants to do that}
+    floating_ips: ${13:# list of valid floating IPs that pre-exist to assign to this node}
+    floating_ip_pools: ${14:# Name of floating IP pool from which to choose a floating IP}
+    meta: ${15:# A list of key value pairs that should be provided as a metadata to the new instance or a string containing a list of key-value pairs}
+    wait: ${16:# If the module should wait for the instance to be created}
+    timeout: ${17:# The amount of time the module should wait for the instance to get into active state}
+    config_drive: ${18:# Whether to boot the server with config drive enabled}
+    userdata: ${19:# Opaque blob of data which is made available to the instance}
+    boot_from_volume: ${20:# Should the instance boot from a persistent volume created based on the image given}
+    volume_size: ${21:# The size of the volume to create in GB if booting from volume based on an image}
+    boot_volume: ${22:# Volume name or id to use as the volume to boot from}
+    terminate_volume: ${23:# If C(yes), delete volume when deleting instance (if booted from volume)}
+    volumes: ${24:# A list of preexisting volumes names or ids to attach to the instance}
+    scheduler_hints: ${25:# Arbitrary key/value pairs to the scheduler for custom use}
+    state: ${26:# Should the resource be present or absent}
+    delete_fip: ${27:# When I(state) is absent and this option is true, any floating IP associated with the instance will be deleted along with the instance}
+    reuse_ips: ${28:# When I(auto_ip) is true and this option is true, the I(auto_ip) code will attempt to re-use unassigned floating ips in the project before creating a new one}
+    availability_zone: ${29:# Availability zone in which to create the server}
+    description: ${30:# Description of the server}
+    cloud: ${31:# Named cloud or cloud config to operate against}
+    auth: ${32:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${33:# Name of the auth plugin to use}
+    region_name: ${34:# Name of the region}
+    api_timeout: ${35:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${36:# Whether or not SSL API requests should be verified}
+    ca_cert: ${37:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${38:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${39:# A path to a client key to use as part of the SSL transaction}
+    interface: ${40:# Endpoint URL type to fetch from the service catalog}
+    sdk_log_path: ${41:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${42:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - server]]></content>
+  <tabTrigger>openstack.cloud.server</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/Delete Compute Instances from OpenStack</description>
+</snippet>

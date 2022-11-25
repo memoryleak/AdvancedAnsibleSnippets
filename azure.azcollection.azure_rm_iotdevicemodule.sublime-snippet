@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure IoT hub device module}
+  azure.azcollection.azure_rm_iotdevicemodule:
+    hub: ${2:# Name of IoT Hub}
+    hub_policy_name: ${3:# Policy name of the IoT Hub which will be used to query from IoT hub}
+    hub_policy_key: ${4:# Key of the I(hub_policy_name)}
+    name: ${5:# Name of the IoT hub device identity}
+    device: ${6:# Device name the module associate with}
+    state: ${7:# State of the IoT hub}
+    auth_method: ${8:# The authorization type an entity is to be created with}
+    primary_key: ${9:# Explicit self-signed certificate thumbprint to use for primary key}
+    secondary_key: ${10:# Explicit self-signed certificate thumbprint to use for secondary key}
+    twin_tags: ${11:# A section that the solution back end can read from and write to}
+    desired: ${12:# Used along with reported properties to synchronize device configuration or conditions}
+    ad_user: ${13:# Active Directory username}
+    password: ${14:# Active Directory user password}
+    profile: ${15:# Security profile found in ~/}
+    subscription_id: ${16:# Your Azure subscription Id}
+    client_id: ${17:# Azure client ID}
+    secret: ${18:# Azure client secret}
+    tenant: ${19:# Azure tenant ID}
+    cloud_environment: ${20:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${21:# Azure AD authority url}
+    cert_validation_mode: ${22:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${23:# Controls the source of the credentials to use for authentication}
+    api_profile: ${24:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${25:# Parent argument}
+    log_mode: ${26:# Parent argument}
+    x509_certificate_path: ${27:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${28:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${29:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${30:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_iotdevicemodule]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_iotdevicemodule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure IoT hub device module</description>
+</snippet>

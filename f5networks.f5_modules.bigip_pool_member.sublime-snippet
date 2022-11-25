@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages F5 BIG-IP LTM pool members}
+  f5networks.f5_modules.bigip_pool_member:
+    name: ${2:# Name of the node to create or re-use when creating a new pool member}
+    state: ${3:# Pool member state}
+    pool: ${4:# Pool name}
+    partition: ${5:# Partition to manage resources on}
+    address: ${6:# IP address of the pool member}
+    fqdn: ${7:# FQDN name of the pool member}
+    port: ${8:# Pool member port}
+    connection_limit: ${9:# Pool member connection limit}
+    description: ${10:# Pool member description}
+    rate_limit: ${11:# Pool member rate limit (connections-per-second)}
+    ratio: ${12:# Pool member ratio weight}
+    preserve_node: ${13:# When state is C(absent), the system attempts to remove the node the pool member references}
+    priority_group: ${14:# Specifies a number representing the priority group for the pool member}
+    fqdn_auto_populate: ${15:# Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN}
+    reuse_nodes: ${16:# Reuses node definitions if requested}
+    monitors: ${17:# Specifies the health monitors the system currently uses to monitor this resource}
+    availability_requirements: ${18:# If you activate more than one health monitor, specifies the number of health monitors that must receive successful responses in order for the link to be considered available}
+    ip_encapsulation: ${19:# Specifies the IP encapsulation using either IPIP (IP encapsulation within IP, RFC 2003) or GRE (Generic Router Encapsulation, RFC 2784) on outbound packets (from BIG-IP system to server-pool member)}
+    aggregate: ${20:# List of pool member definitions to be created, modified, or removed}
+    replace_all_with: ${21:# Removes members not defined in the C(aggregate) parameter}
+    provider: ${22:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_pool_member]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_pool_member</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages F5 BIG-IP LTM pool members</description>
+</snippet>

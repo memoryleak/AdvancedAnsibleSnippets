@@ -1,0 +1,43 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP LDAP client}
+  netapp.ontap.na_ontap_ldap_client:
+    state: ${2:# Whether the specified LDAP client configuration exist or not}
+    vserver: ${3:# vserver/svm that holds LDAP client configuration}
+    name: ${4:# The name of LDAP client configuration}
+    servers: ${5:# Comma separated list of LDAP servers}
+    schema: ${6:# LDAP schema}
+    ad_domain: ${7:# Active Directory Domain Name}
+    base_dn: ${8:# LDAP base DN}
+    base_scope: ${9:# LDAP search scope}
+    bind_as_cifs_server: ${10:# The cluster uses the CIFS server's credentials to bind to the LDAP server}
+    preferred_ad_servers: ${11:# Preferred Active Directory (AD) Domain Controllers}
+    port: ${12:# LDAP server TCP port}
+    query_timeout: ${13:# LDAP server query timeout}
+    min_bind_level: ${14:# Minimal LDAP server bind level}
+    bind_dn: ${15:# LDAP bind user DN}
+    bind_password: ${16:# LDAP bind user password}
+    use_start_tls: ${17:# Start TLS on LDAP connection}
+    referral_enabled: ${18:# LDAP Referral Chasing}
+    session_security: ${19:# Client Session Security}
+    ldaps_enabled: ${20:# Specifies whether or not LDAPS is enabled}
+    skip_config_validation: ${21:# Indicates whether or not the validation for the specified LDAP configuration is disabled}
+    hostname: ${22:# The hostname or IP address of the ONTAP instance}
+    username: ${23:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${24:# Password for the specified user}
+    cert_filepath: ${25:# path to SSL client cert file (}
+    key_filepath: ${26:# path to SSL client key file}
+    https: ${27:# Enable and disable https}
+    validate_certs: ${28:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${29:# Override the default port (80 or 443) with this port}
+    ontapi: ${30:# The ontap api version to use}
+    use_rest: ${31:# Whether to use REST or ZAPI}
+    feature_flags: ${32:# Enable or disable a new feature}
+    force_ontap_version: ${33:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_ldap_client]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_ldap_client</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP LDAP client</description>
+</snippet>

@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Open vSwitch bonds}
+  openvswitch.openvswitch.openvswitch_bond:
+    bridge: ${2:# Name of bridge to manage}
+    port: ${3:# Name of port to manage on the bridge}
+    interfaces: ${4:# List of interfaces to add to the bond}
+    bond_mode: ${5:# Sets the bond mode}
+    lacp: ${6:# Sets LACP mode}
+    bond_updelay: ${7:# Number of milliseconds a link must be up to be activated to prevent flapping}
+    bond_downdelay: ${8:# Number of milliseconds a link must be down to be deactivated to prevent flapping}
+    state: ${9:# Whether the port should exist}
+    timeout: ${10:# How long to wait for ovs-vswitchd to respond in seconds}
+    external_ids: ${11:# Dictionary of external_ids applied to a port}
+    other_config: ${12:# Dictionary of other_config applied to a port}
+    set: ${13:# Sets one or more properties on a port}
+    database_socket: ${14:# Path/ip to datbase socket to use}
+  tags:
+    - openvswitch
+    - openvswitch
+    - openvswitch_bond]]></content>
+  <tabTrigger>openvswitch.openvswitch.openvswitch_bond</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Open vSwitch bonds</description>
+</snippet>

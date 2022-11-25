@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Deploy Virtual Machine from template stored in content library}
+  community.vmware.vmware_content_deploy_template:
+    log_level: ${2:# The level of logging desired in this module}
+    template: ${3:# The name of template from which VM to be deployed}
+    library: ${4:# The name of the content library from where the template resides}
+    name: ${5:# The name of the VM to be deployed}
+    datacenter: ${6:# Name of the datacenter, where VM to be deployed}
+    datastore: ${7:# Name of the datastore to store deployed VM and disk}
+    datastore_cluster: ${8:# Name of the datastore cluster to store deployed VM and disk}
+    folder: ${9:# Name of the folder in datacenter in which to place deployed VM}
+    host: ${10:# Name of the ESX Host in datacenter in which to place deployed VM}
+    resource_pool: ${11:# Name of the resource pool in datacenter in which to place deployed VM}
+    cluster: ${12:# Name of the cluster in datacenter in which to place deployed VM}
+    state: ${13:# The state of Virtual Machine deployed from template in content library}
+    hostname: ${14:# The hostname or IP address of the vSphere vCenter server}
+    username: ${15:# The username of the vSphere vCenter server}
+    password: ${16:# The password of the vSphere vCenter server}
+    validate_certs: ${17:# Allows connection when SSL certificates are not valid}
+    port: ${18:# The port number of the vSphere vCenter}
+    protocol: ${19:# The connection to protocol}
+    proxy_host: ${20:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${21:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_content_deploy_template]]></content>
+  <tabTrigger>community.vmware.vmware_content_deploy_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Deploy Virtual Machine from template stored in content library</description>
+</snippet>

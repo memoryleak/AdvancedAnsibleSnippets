@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the HPE Nimble Storage performance policies}
+  hpe.nimble.hpe_nimble_performance_policy:
+    app_category: ${2:# Specifies the application category of the associated volume}
+    block_size: ${3:# Block Size in bytes to be used by the volumes created with this specific performance policy}
+    cache: ${4:# Flag denoting if data in the associated volume should be cached}
+    cache_policy: ${5:# Specifies how data of associated volume should be cached}
+    change_name: ${6:# Change name of the existing performance policy}
+    compress: ${7:# Flag denoting if data in the associated volume should be compressed}
+    description: ${8:# Description of a performance policy}
+    dedupe: ${9:# Specifies if dedupe is enabled for volumes created with this performance policy}
+    name: ${10:# Name of the performance policy}
+    space_policy: ${11:# Specifies the state of the volume upon space constraint violation such as volume limit violation or volumes above their volume reserve, if the pool free space is exhausted}
+    state: ${12:# The performance policy operation}
+    host: ${13:# HPE Nimble Storage IP address}
+    password: ${14:# HPE Nimble Storage password}
+    username: ${15:# HPE Nimble Storage user name}
+  tags:
+    - hpe
+    - nimble
+    - hpe_nimble_performance_policy]]></content>
+  <tabTrigger>hpe.nimble.hpe_nimble_performance_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the HPE Nimble Storage performance policies</description>
+</snippet>

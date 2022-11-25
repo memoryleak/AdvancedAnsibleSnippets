@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage protection groups on Pure Storage FlashArrays}
+  purestorage.flasharray.purefa_pg:
+    name: ${2:# The name of the protection group}
+    state: ${3:# Define whether the protection group should exist or not}
+    volume: ${4:# List of existing volumes to add to protection group}
+    host: ${5:# List of existing hosts to add to protection group}
+    hostgroup: ${6:# List of existing hostgroups to add to protection group}
+    eradicate: ${7:# Define whether to eradicate the protection group on delete and leave in trash}
+    enabled: ${8:# Define whether to enabled snapshots for the protection group}
+    target: ${9:# List of remote arrays or offload target for replication protection group to connect to}
+    rename: ${10:# Rename a protection group}
+    safe_mode: ${11:# Enables SafeMode restrictions on the protection group}
+    fa_url: ${12:# FlashArray management IPv4 address or Hostname}
+    api_token: ${13:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_pg]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_pg</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage protection groups on Pure Storage FlashArrays</description>
+</snippet>

@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Scaleway Security Group Rule management module}
+  community.general.scaleway_security_group_rule:
+    state: ${2:# Indicate desired state of the Security Group Rule}
+    region: ${3:# Scaleway region to use (for example C(par1))}
+    protocol: ${4:# Network protocol to use}
+    port: ${5:# Port related to the rule, null value for all the ports}
+    ip_range: ${6:# IPV4 CIDR notation to apply to the rule}
+    direction: ${7:# Rule direction}
+    action: ${8:# Rule action}
+    security_group: ${9:# Security Group unique identifier}
+    api_token: ${10:# Scaleway OAuth token}
+    api_url: ${11:# Scaleway API URL}
+    api_timeout: ${12:# HTTP timeout to Scaleway API in seconds}
+    query_parameters: ${13:# List of parameters passed to the query string}
+    validate_certs: ${14:# Validate SSL certs of the Scaleway API}
+  tags:
+    - community
+    - general
+    - scaleway_security_group_rule]]></content>
+  <tabTrigger>community.general.scaleway_security_group_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Scaleway Security Group Rule management module</description>
+</snippet>

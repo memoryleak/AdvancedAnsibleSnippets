@@ -1,0 +1,47 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the HPE Nimble Storage volumes}
+  hpe.nimble.hpe_nimble_volume:
+    agent_type: ${2:# External management agent type}
+    app_uuid: ${3:# Application identifier of volume}
+    block_size: ${4:# Size in bytes of blocks in the volume}
+    cache_pinned: ${5:# If set to true, all the contents of this volume are kept in flash cache}
+    caching: ${6:# Indicate caching the volume is enabled}
+    change_name: ${7:# Change name of the existing source volume}
+    clone: ${8:# Whether this volume is a clone}
+    dedupe: ${9:# Indicate whether dedupe is enabled}
+    description: ${10:# Text description of volume}
+    destination: ${11:# Name of the destination pool where the volume is moving to}
+    encryption_cipher: ${12:# The encryption cipher of the volume}
+    folder: ${13:# Name of the folder holding this volume}
+    force: ${14:# Forcibly offline, reduce size or change read-only status a volume}
+    force_vvol: ${15:# Forcibly move a virtual volume}
+    iscsi_target_scope: ${16:# This indicates whether volume is exported under iSCSI Group Target or iSCSI volume target}
+    limit: ${17:# Limit on the volume's mapped usage, expressed as a percentage of the volume's size}
+    limit_iops: ${18:# IOPS limit for this volume}
+    limit_mbps: ${19:# Throughput limit for this volume in MB/s}
+    metadata: ${20:# User defined key-value pairs that augment an volume's attributes}
+    move: ${21:# Move a volume to different pool}
+    multi_initiator: ${22:# For iSCSI volume target, this flag indicates whether the volume and its snapshots can be accessed from multiple initiators at the same time}
+    name: ${23:# Name of the source volume}
+    online: ${24:# Online state of volume, available for host initiators to establish connections}
+    owned_by_group: ${25:# Name of group that currently owns the volume}
+    parent: ${26:# Name of parent volume}
+    perf_policy: ${27:# Name of the performance policy}
+    pool: ${28:# Name associated with the pool in the storage pool table}
+    read_only: ${29:# Volume is read-only}
+    size: ${30:# Volume size in megabytes}
+    snapshot: ${31:# Base snapshot name}
+    state: ${32:# The volume operations}
+    thinly_provisioned: ${33:# Set volume's provisioning level to thin}
+    volcoll: ${34:# Name of volume collection of which this volume is a member}
+    host: ${35:# HPE Nimble Storage IP address}
+    password: ${36:# HPE Nimble Storage password}
+    username: ${37:# HPE Nimble Storage user name}
+  tags:
+    - hpe
+    - nimble
+    - hpe_nimble_volume]]></content>
+  <tabTrigger>hpe.nimble.hpe_nimble_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the HPE Nimble Storage volumes</description>
+</snippet>

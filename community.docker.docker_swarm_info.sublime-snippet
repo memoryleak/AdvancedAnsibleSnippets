@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieves facts about Docker Swarm cluster}
+  community.docker.docker_swarm_info:
+    nodes: ${2:# Whether to list swarm nodes}
+    nodes_filters: ${3:# A dictionary of filter values used for selecting nodes to list}
+    services: ${4:# Whether to list swarm services}
+    services_filters: ${5:# A dictionary of filter values used for selecting services to list}
+    tasks: ${6:# Whether to list containers}
+    tasks_filters: ${7:# A dictionary of filter values used for selecting tasks to list}
+    unlock_key: ${8:# Whether to retrieve the swarm unlock key}
+    verbose_output: ${9:# When set to C(true) and I(nodes), I(services) or I(tasks) is set to C(true), then the module output will contain verbose information about objects matching the full output of API method}
+    docker_host: ${10:# The URL or Unix socket path used to connect to the Docker API}
+    tls_hostname: ${11:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    api_version: ${12:# The version of the Docker API running on the Docker Host}
+    timeout: ${13:# The maximum amount of time in seconds to wait on a response from the API}
+    ca_cert: ${14:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${15:# Path to the client's TLS certificate file}
+    client_key: ${16:# Path to the client's TLS key file}
+    ssl_version: ${17:# Provide a valid SSL version number}
+    tls: ${18:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    use_ssh_client: ${19:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${20:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    debug: ${21:# Debug mode}
+  tags:
+    - community
+    - docker
+    - docker_swarm_info]]></content>
+  <tabTrigger>community.docker.docker_swarm_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieves facts about Docker Swarm cluster</description>
+</snippet>

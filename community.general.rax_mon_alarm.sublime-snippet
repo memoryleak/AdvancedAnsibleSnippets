@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or delete a Rackspace Cloud Monitoring alarm}
+  community.general.rax_mon_alarm:
+    state: ${2:# Ensure that the alarm with this C(label) exists or does not exist}
+    label: ${3:# Friendly name for this alarm, used to achieve idempotence}
+    entity_id: ${4:# ID of the entity this alarm is attached to}
+    check_id: ${5:# ID of the check that should be alerted on}
+    notification_plan_id: ${6:# ID of the notification plan to trigger if this alarm fires}
+    criteria: ${7:# Alarm DSL that describes alerting conditions and their output states}
+    disabled: ${8:# If yes, create this alarm, but leave it in an inactive state}
+    metadata: ${9:# Arbitrary key/value pairs to accompany the alarm}
+    api_key: ${10:# Rackspace API key, overrides I(credentials)}
+    auth_endpoint: ${11:# The URI of the authentication service}
+    credentials: ${12:# File to find the Rackspace credentials in}
+    env: ${13:# Environment as configured in I(~/}
+    identity_type: ${14:# Authentication mechanism to use, such as rackspace or keystone}
+    region: ${15:# Region to create an instance in}
+    tenant_id: ${16:# The tenant ID used for authentication}
+    tenant_name: ${17:# The tenant name used for authentication}
+    username: ${18:# Rackspace username, overrides I(credentials)}
+    validate_certs: ${19:# Whether or not to require SSL validation of API endpoints}
+  tags:
+    - community
+    - general
+    - rax_mon_alarm]]></content>
+  <tabTrigger>community.general.rax_mon_alarm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or delete a Rackspace Cloud Monitoring alarm</description>
+</snippet>

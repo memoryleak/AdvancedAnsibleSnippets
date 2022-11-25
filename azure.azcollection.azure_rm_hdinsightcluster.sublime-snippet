@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure HDInsight Cluster instance}
+  azure.azcollection.azure_rm_hdinsightcluster:
+    resource_group: ${2:# The name of the resource group}
+    name: ${3:# The name of the cluster}
+    location: ${4:# Resource location}
+    cluster_version: ${5:# The version of the cluster}
+    os_type: ${6:# The type of operating system}
+    tier: ${7:# The cluster tier}
+    cluster_definition: ${8:# The cluster definition}
+    compute_profile_roles: ${9:# The list of roles in the cluster}
+    storage_accounts: ${10:# The list of storage accounts in the cluster}
+    state: ${11:# Assert the state of the cluster}
+    ad_user: ${12:# Active Directory username}
+    password: ${13:# Active Directory user password}
+    profile: ${14:# Security profile found in ~/}
+    subscription_id: ${15:# Your Azure subscription Id}
+    client_id: ${16:# Azure client ID}
+    secret: ${17:# Azure client secret}
+    tenant: ${18:# Azure tenant ID}
+    cloud_environment: ${19:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${20:# Azure AD authority url}
+    cert_validation_mode: ${21:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${22:# Controls the source of the credentials to use for authentication}
+    api_profile: ${23:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${24:# Parent argument}
+    log_mode: ${25:# Parent argument}
+    x509_certificate_path: ${26:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${27:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${28:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${29:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_hdinsightcluster]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_hdinsightcluster</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure HDInsight Cluster instance</description>
+</snippet>

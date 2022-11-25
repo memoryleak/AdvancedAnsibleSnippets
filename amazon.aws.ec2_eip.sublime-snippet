@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:manages EC2 elastic IP (EIP) addresses}
+  amazon.aws.ec2_eip:
+    device_id: ${2:# The id of the device for the EIP}
+    public_ip: ${3:# The IP address of a previously allocated EIP}
+    state: ${4:# When C(state=present), allocate an EIP or associate an existing EIP with a device}
+    in_vpc: ${5:# Allocate an EIP inside a VPC or not}
+    reuse_existing_ip_allowed: ${6:# Reuse an EIP that is not associated to a device (when available), instead of allocating a new one}
+    release_on_disassociation: ${7:# Whether or not to automatically release the EIP when it is disassociated}
+    private_ip_address: ${8:# The primary or secondary private IP address to associate with the Elastic IP address}
+    allow_reassociation: ${9:# Specify this option to allow an Elastic IP address that is already associated with another network interface or instance to be re-associated with the specified instance or interface}
+    tag_name: ${10:# When I(reuse_existing_ip_allowed=true), supplement with this option to only reuse an Elastic IP if it is tagged with I(tag_name)}
+    tag_value: ${11:# Supplements I(tag_name) but also checks that the value of the tag provided in I(tag_name) matches I(tag_value)}
+    public_ipv4_pool: ${12:# Allocates the new Elastic IP from the provided public IPv4 pool (BYOIP) only applies to newly allocated Elastic IPs, isn't validated when I(reuse_existing_ip_allowed=true)}
+    access_key: ${13:# AWS access key ID}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    profile: ${16:# A named AWS profile to use for authentication}
+    endpoint_url: ${17:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${18:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${19:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${20:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${21:# Use a C(botocore}
+    region: ${22:# The AWS region to use}
+    tags: ${23:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${24:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - ec2_eip]]></content>
+  <tabTrigger>amazon.aws.ec2_eip</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>manages EC2 elastic IP (EIP) addresses</description>
+</snippet>

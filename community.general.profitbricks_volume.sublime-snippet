@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or destroy a volume}
+  community.general.profitbricks_volume:
+    datacenter: ${2:# The datacenter in which to create the volumes}
+    name: ${3:# The name of the volumes}
+    size: ${4:# The size of the volume}
+    bus: ${5:# The bus type}
+    image: ${6:# The system image ID for the volume, e}
+    image_password: ${7:# Password set for the administrative user}
+    ssh_keys: ${8:# Public SSH keys allowing access to the virtual machine}
+    disk_type: ${9:# The disk type of the volume}
+    licence_type: ${10:# The licence type for the volume}
+    count: ${11:# The number of volumes you wish to create}
+    auto_increment: ${12:# Whether or not to increment a single number in the name for created virtual machines}
+    instance_ids: ${13:# list of instance ids, currently only used when state='absent' to remove instances}
+    subscription_user: ${14:# The ProfitBricks username}
+    subscription_password: ${15:# THe ProfitBricks password}
+    wait: ${16:# wait for the datacenter to be created before returning}
+    wait_timeout: ${17:# how long before wait gives up, in seconds}
+    state: ${18:# create or terminate datacenters}
+    server: ${19:# Server name to attach the volume to}
+  tags:
+    - community
+    - general
+    - profitbricks_volume]]></content>
+  <tabTrigger>community.general.profitbricks_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or destroy a volume</description>
+</snippet>

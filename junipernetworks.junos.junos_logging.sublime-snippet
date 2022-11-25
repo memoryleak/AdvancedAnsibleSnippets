@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage logging on network devices}
+  junipernetworks.junos.junos_logging:
+    dest: ${2:# Destination of the logs}
+    name: ${3:# If value of C(dest) is I(file) it indicates file-name, for I(user) it indicates username and for I(host) indicates the host name to be notified}
+    facility: ${4:# Set logging facility}
+    level: ${5:# Set logging severity levels}
+    aggregate: ${6:# List of logging definitions}
+    state: ${7:# State of the logging configuration}
+    active: ${8:# Specifies whether or not the configuration is active or deactivated}
+    rotate_frequency: ${9:# Rotate log frequency in minutes, this is applicable if value of I(dest) is C(file)}
+    size: ${10:# Size of the file in archive, this is applicable if value of I(dest) is C(file)}
+    files: ${11:# Number of files to be archived, this is applicable if value of I(dest) is C(file)}
+  tags:
+    - junipernetworks
+    - junos
+    - junos_logging]]></content>
+  <tabTrigger>junipernetworks.junos.junos_logging</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage logging on network devices</description>
+</snippet>

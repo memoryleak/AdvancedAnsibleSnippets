@@ -1,0 +1,43 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage network adapters of specified virtual machine in given vCenter infrastructure}
+  community.vmware.vmware_guest_network:
+    name: ${2:# Name of virtual machine}
+    uuid: ${3:# vm uuid}
+    use_instance_uuid: ${4:# Whether to use the VMware instance UUID rather than the BIOS UUID}
+    moid: ${5:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    folder: ${6:# Folder location of given VM, this is only required when there's multiple VM's with the same name}
+    datacenter: ${7:# Datacenter the VM belongs to}
+    cluster: ${8:# Name of cluster where VM belongs to}
+    esxi_hostname: ${9:# The hostname of the ESXi host where the VM belongs to}
+    mac_address: ${10:# MAC address of the NIC that should be altered, if a MAC address is not supplied a new nic will be created}
+    vlan_id: ${11:# VLAN id associated with the network}
+    network_name: ${12:# Name of network in vSphere}
+    device_type: ${13:# Type of virtual network device}
+    label: ${14:# Alter the name of the network adapter}
+    switch: ${15:# Name of the (dv)switch for destination network, this is only required for dvswitches}
+    guest_control: ${16:# Enables guest control over whether the connectable device is connected}
+    state: ${17:# NIC state}
+    start_connected: ${18:# If NIC should be connected to network on startup}
+    wake_onlan: ${19:# Enable wake on LAN}
+    connected: ${20:# If NIC should be connected to the network}
+    directpath_io: ${21:# Enable Universal Pass-through (UPT)}
+    physical_function_backing: ${22:# If set, specifies the PCI ID of the physical function to use as backing for a SR-IOV network adapter}
+    virtual_function_backing: ${23:# If set, specifies the PCI ID of the physical function to use as backing for a SR-IOV network adapter}
+    allow_guest_os_mtu_change: ${24:# Allows the guest OS to change the MTU on a SR-IOV network adapter}
+    force: ${25:# Force adapter creation even if an existing adapter is attached to the same network}
+    gather_network_info: ${26:# Return information about current guest network adapters}
+    hostname: ${27:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${28:# The username of the vSphere vCenter or ESXi server}
+    password: ${29:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${30:# Allows connection when SSL certificates are not valid}
+    port: ${31:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${32:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${33:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_guest_network]]></content>
+  <tabTrigger>community.vmware.vmware_guest_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage network adapters of specified virtual machine in given vCenter infrastructure</description>
+</snippet>

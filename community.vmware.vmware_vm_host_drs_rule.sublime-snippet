@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates vm/host group in a given cluster}
+  community.vmware.vmware_vm_host_drs_rule:
+    affinity_rule: ${2:# If set to C(True), the DRS rule will be an Affinity rule}
+    datacenter: ${3:# Datacenter to search for given cluster}
+    cluster_name: ${4:# Cluster to create VM-Host rule}
+    drs_rule_name: ${5:# Name of rule to create or remove}
+    enabled: ${6:# If set to C(True), the DRS rule will be enabled}
+    host_group_name: ${7:# Name of Host group to use with rule}
+    mandatory: ${8:# If set to C(True), the DRS rule will be mandatory}
+    state: ${9:# If set to C(present) and the rule does not exist then the rule will be created}
+    vm_group_name: ${10:# Name of VM group to use with rule}
+    hostname: ${11:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${12:# The username of the vSphere vCenter or ESXi server}
+    password: ${13:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${14:# Allows connection when SSL certificates are not valid}
+    port: ${15:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${16:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${17:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_vm_host_drs_rule]]></content>
+  <tabTrigger>community.vmware.vmware_vm_host_drs_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates vm/host group in a given cluster</description>
+</snippet>

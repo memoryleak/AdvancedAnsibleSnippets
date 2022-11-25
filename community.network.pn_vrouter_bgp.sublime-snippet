@@ -1,0 +1,43 @@
+<snippet>
+  <content><![CDATA[- name: ${1:CLI command to add/modify/remove vrouter-bgp}
+  community.network.pn_vrouter_bgp:
+    pn_cliswitch: ${2:# Target switch to run the CLI on}
+    state: ${3:# vrouter-bgp configuration command}
+    pn_neighbor: ${4:# IP address for BGP neighbor}
+    pn_vrouter_name: ${5:# name of service config}
+    pn_send_community: ${6:# send any community attribute to neighbor}
+    pn_weight: ${7:# default weight value between 0 and 65535 for the neighbor's routes}
+    pn_multi_protocol: ${8:# Multi-protocol features}
+    pn_prefix_list_in: ${9:# prefixes used for filtering}
+    pn_route_reflector_client: ${10:# set as route reflector client}
+    pn_default_originate: ${11:# announce default routes to the neighbor or not}
+    pn_neighbor_holdtime: ${12:# BGP Holdtime (seconds)}
+    pn_connect_retry_interval: ${13:# BGP Connect retry interval (seconds)}
+    pn_advertisement_interval: ${14:# Minimum interval between sending BGP routing updates}
+    pn_route_map_out: ${15:# route map out for nbr}
+    pn_update_source: ${16:# IP address of BGP packets required for peering over loopback interface}
+    pn_bfd: ${17:# BFD protocol support for fault detection}
+    pn_next_hop_self: ${18:# BGP next hop is self or not}
+    pn_allowas_in: ${19:# Allow/reject routes with local AS in AS_PATH}
+    pn_neighbor_keepalive_interval: ${20:# BGP Keepalive interval (seconds)}
+    pn_max_prefix: ${21:# maximum number of prefixes}
+    pn_bfd_multihop: ${22:# always use BFD multi-hop port for fault detection}
+    pn_interface: ${23:# Interface to reach the neighbor}
+    pn_password: ${24:# password for MD5 BGP}
+    pn_route_map_in: ${25:# route map in for nbr}
+    pn_soft_reconfig_inbound: ${26:# soft reset to reconfigure inbound traffic}
+    pn_override_capability: ${27:# override capability}
+    pn_max_prefix_warn_only: ${28:# warn if the maximum number of prefixes is exceeded}
+    pn_ebgp_multihop: ${29:# value for external BGP from 1 to 255}
+    pn_remote_as: ${30:# BGP remote AS from 1 to 4294967295}
+    pn_prefix_list_out: ${31:# prefixes used for filtering outgoing packets}
+    pn_no_route_map_out: ${32:# Remove egress route-map from BGP neighbor}
+    pn_no_route_map_in: ${33:# Remove ingress route-map from BGP neighbor}
+  tags:
+    - community
+    - network
+    - pn_vrouter_bgp]]></content>
+  <tabTrigger>community.network.pn_vrouter_bgp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>CLI command to add/modify/remove vrouter-bgp</description>
+</snippet>

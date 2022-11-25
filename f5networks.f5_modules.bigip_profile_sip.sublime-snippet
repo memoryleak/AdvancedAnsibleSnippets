@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage SIP profiles on a BIG-IP}
+  f5networks.f5_modules.bigip_profile_sip:
+    name: ${2:# Specifies the name of the SIP profile to manage}
+    parent: ${3:# Specifies the profile from which this profile inherits settings}
+    community: ${4:# When the C(dialog_aware) is C(yes) and the configuration requires multiple SIP virtual server-profile pairings, this string value indicates whether the pair belongs to the same SIP proxy functional group}
+    description: ${5:# Description of the profile}
+    dialog_aware: ${6:# When C(yes), the system gathers SIP dialog information and automatically forwards SIP messages belonging to the known SIP dialog}
+    enable_sip_firewall: ${7:# Specifies whether the Advanced Firewall Manager (AFM) policy is enabled}
+    insert_record_route_header: ${8:# When C(yes), inserts a Record-Route SIP header, which indicates the next hop for the following SIP request messages}
+    insert_via_header: ${9:# When C(yes), inserts a Via header in the forwarded SIP request}
+    user_via_header: ${10:# When C(insert_via_header) is C(yes), specifies the Via value the system inserts as the top Via header in a SIP REQUEST message}
+    log_profile: ${11:# Specifies the logging settings the publisher uses to send log messages}
+    log_publisher: ${12:# Specifies the publisher defined to log messages}
+    secure_via_header: ${13:# When checked (enabled), inserts a secure Via header in the forwarded SIP request}
+    security: ${14:# When C(yes)}
+    terminate_on_bye: ${15:# When C(yes), closes a connection when a BYE transaction finishes}
+    max_size: ${16:# Specifies the maximum SIP message size that the BIG-IP system accepts}
+    partition: ${17:# Device partition to manage resources on}
+    state: ${18:# When C(present), ensures the profile exists}
+    provider: ${19:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_profile_sip]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_profile_sip</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage SIP profiles on a BIG-IP</description>
+</snippet>

@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for setup of Network Avi RESTful Object}
+  community.network.avi_network:
+    state: ${2:# The state that should be applied on the entity}
+    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
+    cloud_ref: ${5:# It is a reference to an object of type cloud}
+    configured_subnets: ${6:# List of subnet}
+    dhcp_enabled: ${7:# Select the ip address management scheme for this network}
+    exclude_discovered_subnets: ${8:# When selected, excludes all discovered subnets in this network from consideration for virtual service placement}
+    ip6_autocfg_enabled: ${9:# Enable ipv6 auto configuration}
+    name: ${10:# Name of the object}
+    synced_from_se: ${11:# Boolean flag to set synced_from_se}
+    tenant_ref: ${12:# It is a reference to an object of type tenant}
+    url: ${13:# Avi controller URL of the object}
+    uuid: ${14:# Unique object identifier of the object}
+    vcenter_dvs: ${15:# Boolean flag to set vcenter_dvs}
+    vimgrnw_ref: ${16:# It is a reference to an object of type vimgrnwruntime}
+    vrf_context_ref: ${17:# It is a reference to an object of type vrfcontext}
+    controller: ${18:# IP address or hostname of the controller}
+    username: ${19:# Username used for accessing Avi controller}
+    password: ${20:# Password of Avi user in Avi controller}
+    tenant: ${21:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${22:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${23:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${24:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${25:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${26:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_network]]></content>
+  <tabTrigger>community.network.avi_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for setup of Network Avi RESTful Object</description>
+</snippet>

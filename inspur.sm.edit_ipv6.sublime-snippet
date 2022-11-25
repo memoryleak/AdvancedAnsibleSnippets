@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set ipv6 information}
+  inspur.sm.edit_ipv6:
+    interface_name: ${2:# Set interface_name}
+    ipv6_status: ${3:# Enable or disable IPV6}
+    ipv6_dhcp_enable: ${4:# Enable 'Enable DHCP' to dynamically configure IPv6 address using Dynamic Host Configuration Protocol (DHCP)}
+    ipv6_address: ${5:# If DHCP is disabled, specify a static IPv6 address to be configured for the selected interface}
+    ipv6_index: ${6:# Ipv6 index(0-15)}
+    ipv6_prefix: ${7:# The subnet prefix length for the IPv6 settings(0-128)}
+    ipv6_gateway: ${8:# If DHCP is disabled, specify a static Default Gateway to be configured for the selected interface}
+    provider: ${9:# A dict object containing connection details}
+    host: ${10:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${11:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${12:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - sm
+    - edit_ipv6]]></content>
+  <tabTrigger>inspur.sm.edit_ipv6</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set ipv6 information</description>
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about availability zones in AWS}
+  amazon.aws.aws_az_info:
+    filters: ${2:# A dict of filters to apply}
+    access_key: ${3:# AWS access key ID}
+    secret_key: ${4:# AWS secret access key}
+    session_token: ${5:# AWS STS session token for use with temporary credentials}
+    profile: ${6:# A named AWS profile to use for authentication}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${8:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${9:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${10:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${11:# Use a C(botocore}
+    region: ${12:# The AWS region to use}
+  tags:
+    - amazon
+    - aws
+    - aws_az_info]]></content>
+  <tabTrigger>amazon.aws.aws_az_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about availability zones in AWS</description>
+</snippet>

@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set passwords in LDAP}
+  community.general.ldap_passwd:
+    passwd: ${2:# The (plaintext) password to be set for I(dn)}
+    bind_dn: ${3:# A DN to bind with}
+    bind_pw: ${4:# The password to use with I(bind_dn)}
+    dn: ${5:# The DN of the entry to add or remove}
+    referrals_chasing: ${6:# Set the referrals chasing behavior}
+    server_uri: ${7:# The I(server_uri) parameter may be a comma- or whitespace-separated list of URIs containing only the schema, the host, and the port fields}
+    start_tls: ${8:# If true, we'll use the START_TLS LDAP extension}
+    validate_certs: ${9:# If set to C(false), SSL certificates will not be validated}
+    sasl_class: ${10:# The class to use for SASL authentication}
+  tags:
+    - community
+    - general
+    - ldap_passwd]]></content>
+  <tabTrigger>community.general.ldap_passwd</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set passwords in LDAP</description>
+</snippet>

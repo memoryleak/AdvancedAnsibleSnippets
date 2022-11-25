@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Infoblox NIOS NAPTR records}
+  infoblox.nios_modules.nios_naptr_record:
+    name: ${2:# Specifies the fully qualified hostname to add or remove from the system}
+    view: ${3:# Sets the DNS view to associate this a record with}
+    order: ${4:# Configures the order (0-65535) for this NAPTR record}
+    preference: ${5:# Configures the preference (0-65535) for this NAPTR record}
+    replacement: ${6:# Configures the replacement field for this NAPTR record}
+    services: ${7:# Configures the services field (128 characters maximum) for this NAPTR record}
+    flags: ${8:# Configures the flags field for this NAPTR record}
+    regexp: ${9:# Configures the regexp field for this NAPTR record}
+    ttl: ${10:# Configures the TTL to be associated with this NAPTR record}
+    extattrs: ${11:# Allows for the configuration of Extensible Attributes on the instance of the object}
+    comment: ${12:# Configures a text string comment to be associated with the instance of this object}
+    state: ${13:# Configures the intended state of the instance of the object on the NIOS server}
+    provider: ${14:# A dict object containing connection details}
+  tags:
+    - infoblox
+    - nios_modules
+    - nios_naptr_record]]></content>
+  <tabTrigger>infoblox.nios_modules.nios_naptr_record</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Infoblox NIOS NAPTR records</description>
+</snippet>

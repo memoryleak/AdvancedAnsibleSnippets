@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage hostgroups on Pure Storage FlashArrays}
+  purestorage.flasharray.purefa_hg:
+    hostgroup: ${2:# The name of the hostgroup}
+    state: ${3:# Define whether the hostgroup should exist or not}
+    host: ${4:# List of existing hosts to add to hostgroup}
+    volume: ${5:# List of existing volumes to add to hostgroup}
+    lun: ${6:# LUN ID to assign to volume for hostgroup}
+    rename: ${7:# New name of hostgroup}
+    fa_url: ${8:# FlashArray management IPv4 address or Hostname}
+    api_token: ${9:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_hg]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_hg</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage hostgroups on Pure Storage FlashArrays</description>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage AWS IAM groups}
+  community.aws.iam_group:
+    name: ${2:# The name of the group to create}
+    managed_policies: ${3:# A list of managed policy ARNs or friendly names to attach to the role}
+    users: ${4:# A list of existing users to add as members of the group}
+    state: ${5:# Create or remove the IAM group}
+    purge_policies: ${6:# When I(purge_policies=true) any managed policies not listed in I(managed_policies) will be detatched}
+    purge_users: ${7:# When I(purge_users=true) users which are not included in I(users) will be detached}
+    access_key: ${8:# AWS access key ID}
+    secret_key: ${9:# AWS secret access key}
+    session_token: ${10:# AWS STS session token for use with temporary credentials}
+    profile: ${11:# A named AWS profile to use for authentication}
+    endpoint_url: ${12:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${13:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${14:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${15:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${16:# Use a C(botocore}
+    region: ${17:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - iam_group]]></content>
+  <tabTrigger>community.aws.iam_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage AWS IAM groups</description>
+</snippet>

@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages DHCP Options, and can ensure the DHCP options for the given VPC match what's requested}
+  amazon.aws.ec2_vpc_dhcp_option:
+    domain_name: ${2:# The domain name to set in the DHCP option sets}
+    dns_servers: ${3:# A list of IP addresses to set the DNS servers for the VPC to}
+    ntp_servers: ${4:# List of hosts to advertise as NTP servers for the VPC}
+    netbios_name_servers: ${5:# List of hosts to advertise as NetBIOS servers}
+    netbios_node_type: ${6:# NetBIOS node type to advertise in the DHCP options}
+    vpc_id: ${7:# VPC ID to associate with the requested DHCP option set}
+    delete_old: ${8:# Whether to delete the old VPC DHCP option set when associating a new one}
+    inherit_existing: ${9:# For any DHCP options not specified in these parameters, whether to inherit them from the options set already applied to I(vpc_id), or to reset them to be empty}
+    dhcp_options_id: ${10:# The resource_id of an existing DHCP options set}
+    state: ${11:# create/assign or remove the DHCP options}
+    access_key: ${12:# AWS access key ID}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    profile: ${15:# A named AWS profile to use for authentication}
+    endpoint_url: ${16:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${17:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${19:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${20:# Use a C(botocore}
+    region: ${21:# The AWS region to use}
+    tags: ${22:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${23:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - ec2_vpc_dhcp_option]]></content>
+  <tabTrigger>amazon.aws.ec2_vpc_dhcp_option</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages DHCP Options, and can ensure the DHCP options for the given VPC match what's requested</description>
+</snippet>

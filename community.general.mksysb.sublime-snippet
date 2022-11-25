@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Generates AIX mksysb rootvg backups}
+  community.general.mksysb:
+    backup_crypt_files: ${2:# Backup encrypted files}
+    backup_dmapi_fs: ${3:# Back up DMAPI filesystem files}
+    create_map_files: ${4:# Creates a new MAP files}
+    exclude_files: ${5:# Excludes files using C(/etc/rootvg}
+    exclude_wpar_files: ${6:# Excludes WPAR files}
+    extended_attrs: ${7:# Backup extended attributes}
+    name: ${8:# Backup name}
+    new_image_data: ${9:# Creates a new file data}
+    software_packing: ${10:# Exclude files from packing option listed in C(/etc/exclude_packing}
+    storage_path: ${11:# Storage path where the mksysb will stored}
+    use_snapshot: ${12:# Creates backup using snapshots}
+  tags:
+    - community
+    - general
+    - mksysb]]></content>
+  <tabTrigger>community.general.mksysb</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Generates AIX mksysb rootvg backups</description>
+</snippet>

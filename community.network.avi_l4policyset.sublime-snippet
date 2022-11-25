@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for setup of L4PolicySet Avi RESTful Object}
+  community.network.avi_l4policyset:
+    state: ${2:# The state that should be applied on the entity}
+    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
+    created_by: ${5:# Creator name}
+    description: ${6:# Field introduced in 17}
+    is_internal_policy: ${7:# Field introduced in 17}
+    l4_connection_policy: ${8:# Policy to apply when a new transport connection is setup}
+    name: ${9:# Name of the l4 policy set}
+    tenant_ref: ${10:# It is a reference to an object of type tenant}
+    url: ${11:# Avi controller URL of the object}
+    uuid: ${12:# Id of the l4 policy set}
+    controller: ${13:# IP address or hostname of the controller}
+    username: ${14:# Username used for accessing Avi controller}
+    password: ${15:# Password of Avi user in Avi controller}
+    tenant: ${16:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${17:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${18:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${19:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${20:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${21:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_l4policyset]]></content>
+  <tabTrigger>community.network.avi_l4policyset</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for setup of L4PolicySet Avi RESTful Object</description>
+</snippet>

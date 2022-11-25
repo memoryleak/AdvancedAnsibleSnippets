@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Realms}
+  theforeman.foreman.realm:
+    name: ${2:# Name of the realm}
+    realm_proxy: ${3:# Proxy to use for this realm}
+    realm_type: ${4:# Realm type}
+    server_url: ${5:# URL of the Foreman server}
+    username: ${6:# Username accessing the Foreman server}
+    password: ${7:# Password of the user accessing the Foreman server}
+    validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${9:# State of the entity}
+    organizations: ${10:# List of organizations the entity should be assigned to}
+    locations: ${11:# List of locations the entity should be assigned to}
+  tags:
+    - theforeman
+    - foreman
+    - realm]]></content>
+  <tabTrigger>theforeman.foreman.realm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Realms</description>
+</snippet>

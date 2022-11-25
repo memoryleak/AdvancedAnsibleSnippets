@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Active Directory groups to be used with Directory Services}
+  dellemc.openmanage.ome_active_directory:
+    domain_server: ${2:# Enter the domain name or FQDN or IP address of the domain controller}
+    domain_controller_lookup: ${3:# Select the Domain Controller Lookup method}
+    domain_controller_port: ${4:# Domain controller port}
+    group_domain: ${5:# Provide the group domain in the format C(example}
+    id: ${6:# Provide the ID of the existing Active Directory service connection}
+    name: ${7:# Provide a name for the Active Directory connection}
+    network_timeout: ${8:# Enter the network timeout duration in seconds}
+    search_timeout: ${9:# Enter the search timeout duration in seconds}
+    state: ${10:# C(present) allows to create or modify an Active Directory service}
+    test_connection: ${11:# Enables testing the connection to the domain controller}
+    domain_password: ${12:# Provide the domain password}
+    domain_username: ${13:# Provide the domain username either in the UPN (username@domain) or NetBIOS (domain\\\\username) format}
+    validate_certificate: ${14:# Enables validation of SSL certificate of the domain controller}
+    certificate_file: ${15:# Provide the full path of the SSL certificate}
+    hostname: ${16:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    username: ${17:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    password: ${18:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${19:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${20:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${21:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${22:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_active_directory]]></content>
+  <tabTrigger>dellemc.openmanage.ome_active_directory</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Active Directory groups to be used with Directory Services</description>
+</snippet>

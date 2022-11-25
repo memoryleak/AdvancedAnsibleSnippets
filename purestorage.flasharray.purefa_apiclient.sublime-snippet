@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FlashArray API Clients}
+  purestorage.flasharray.purefa_apiclient:
+    name: ${2:# Name of the API Client}
+    state: ${3:# Define whether the API client should exist or not}
+    role: ${4:# The maximum role allowed for ID Tokens issued by this API client}
+    issuer: ${5:# The name of the identity provider that will be issuing ID Tokens for this API client}
+    public_key: ${6:# The API clients PEM formatted (Base64 encoded) RSA public key}
+    token_ttl: ${7:# Time To Live length in seconds for the exchanged access token}
+    enabled: ${8:# State of the API Client Key}
+    fa_url: ${9:# FlashArray management IPv4 address or Hostname}
+    api_token: ${10:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_apiclient]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_apiclient</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FlashArray API Clients</description>
+</snippet>

@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages hosts on IBM Spectrum Virtualize family storage systems}
+  ibm.spectrum_virtualize.ibm_svc_host:
+    name: ${2:# Specifies a name or label for the new host object}
+    state: ${3:# Creates or updates (C(present)) or removes (C(absent)) a host}
+    clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${5:# Domain for the Spectrum Virtualize storage system}
+    username: ${6:# REST API username for the Spectrum Virtualize storage system}
+    password: ${7:# REST API password for the Spectrum Virtualize storage system}
+    token: ${8:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    fcwwpn: ${9:# List of Initiator WWPNs to be added to the host}
+    iscsiname: ${10:# Initiator IQN to be added to the host}
+    iogrp: ${11:# Specifies a set of one or more input/output (I/O) groups from which the host can access the volumes}
+    protocol: ${12:# Specifies the protocol used by the host to communicate with the storage system}
+    type: ${13:# Specifies the type of host}
+    site: ${14:# Specifies the site name of the host}
+    hostcluster: ${15:# Specifies the name of the host cluster to which the host object is to be added}
+    nohostcluster: ${16:# If specified as C(True), host object is removed from the host cluster}
+    old_name: ${17:# Specifies the old name of the host while renaming}
+    log_path: ${18:# Path of debug log file}
+    validate_certs: ${19:# Validates certification}
+  tags:
+    - ibm
+    - spectrum_virtualize
+    - ibm_svc_host]]></content>
+  <tabTrigger>ibm.spectrum_virtualize.ibm_svc_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages hosts on IBM Spectrum Virtualize family storage systems</description>
+</snippet>

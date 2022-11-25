@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[- name: ${1:add or delete entries in Amazons Route 53 DNS service}
+  amazon.aws.route53:
+    state: ${2:# Specifies the state of the resource record}
+    zone: ${3:# The DNS zone to modify}
+    hosted_zone_id: ${4:# The Hosted Zone ID of the DNS zone to modify}
+    record: ${5:# The full DNS record to create or delete}
+    ttl: ${6:# The TTL, in second, to give the new record}
+    type: ${7:# The type of DNS record to create}
+    alias: ${8:# Indicates if this is an alias record}
+    alias_hosted_zone_id: ${9:# The hosted zone identifier}
+    alias_evaluate_target_health: ${10:# Whether or not to evaluate an alias target health}
+    value: ${11:# The new value when creating a DNS record}
+    overwrite: ${12:# Whether an existing record should be overwritten on create if values do not match}
+    retry_interval: ${13:# In the case that Route 53 is still servicing a prior request, this module will wait and try again after this many seconds}
+    private_zone: ${14:# If set to C(true), the private zone matching the requested name within the domain will be used if there are both public and private zones}
+    identifier: ${15:# Have to be specified for Weighted, latency-based and failover resource record sets only}
+    weight: ${16:# Weighted resource record sets only}
+    region: ${17:# Latency-based resource record sets only Among resource record sets that have the same combination of DNS name and type, a value that determines which region this should be associated with for the latency-based routing}
+    geo_location: ${18:# Allows to control how Amazon Route 53 responds to DNS queries based on the geographic origin of the query}
+    health_check: ${19:# Health check to associate with this record}
+    failover: ${20:# Failover resource record sets only}
+    vpc_id: ${21:# When used in conjunction with private_zone: true, this will only modify records in the private hosted zone attached to this VPC}
+    wait: ${22:# Wait until the changes have been replicated to all Amazon Route 53 DNS servers}
+    wait_timeout: ${23:# How long to wait for the changes to be replicated, in seconds}
+    access_key: ${24:# AWS access key ID}
+    secret_key: ${25:# AWS secret access key}
+    session_token: ${26:# AWS STS session token for use with temporary credentials}
+    profile: ${27:# A named AWS profile to use for authentication}
+    endpoint_url: ${28:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${29:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${30:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${31:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${32:# Use a C(botocore}
+  tags:
+    - amazon
+    - aws
+    - route53]]></content>
+  <tabTrigger>amazon.aws.route53</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>add or delete entries in Amazons Route 53 DNS service</description>
+</snippet>

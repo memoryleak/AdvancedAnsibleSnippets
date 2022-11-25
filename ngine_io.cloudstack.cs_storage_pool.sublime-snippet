@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages Primary Storage Pools on Apache CloudStack based clouds}
+  ngine_io.cloudstack.cs_storage_pool:
+    name: ${2:# Name of the storage pool}
+    zone: ${3:# Name of the zone in which the host should be deployed}
+    storage_url: ${4:# URL of the storage pool}
+    pod: ${5:# Name of the pod}
+    cluster: ${6:# Name of the cluster}
+    scope: ${7:# The scope of the storage pool}
+    managed: ${8:# Whether the storage pool should be managed by CloudStack}
+    hypervisor: ${9:# Required when creating a zone scoped pool}
+    storage_tags: ${10:# Tags associated with this storage pool}
+    provider: ${11:# Name of the storage provider e}
+    capacity_bytes: ${12:# Bytes CloudStack can provision from this storage pool}
+    capacity_iops: ${13:# Bytes CloudStack can provision from this storage pool}
+    allocation_state: ${14:# Allocation state of the storage pool}
+    state: ${15:# State of the storage pool}
+    api_key: ${16:# API key of the CloudStack API}
+    api_secret: ${17:# Secret key of the CloudStack API}
+    api_url: ${18:# URL of the CloudStack API e}
+    api_http_method: ${19:# HTTP method used to query the API endpoint}
+    api_timeout: ${20:# HTTP timeout in seconds}
+    api_verify_ssl_cert: ${21:# Verify CA authority cert file}
+  tags:
+    - ngine_io
+    - cloudstack
+    - cs_storage_pool]]></content>
+  <tabTrigger>ngine_io.cloudstack.cs_storage_pool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages Primary Storage Pools on Apache CloudStack based clouds</description>
+</snippet>

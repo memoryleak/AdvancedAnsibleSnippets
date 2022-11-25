@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, modify or delete a user on OpenManage Enterprise}
+  dellemc.openmanage.ome_user:
+    state: ${2:# C(present) creates a user in case the I(UserName) provided inside I(attributes) does not exist}
+    user_id: ${3:# Unique ID of the user to be deleted}
+    name: ${4:# Unique Name of the user to be deleted}
+    attributes: ${5:# Payload data for the user operations}
+    hostname: ${6:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    username: ${7:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    password: ${8:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${9:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${10:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${11:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${12:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_user]]></content>
+  <tabTrigger>dellemc.openmanage.ome_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, modify or delete a user on OpenManage Enterprise</description>
+</snippet>

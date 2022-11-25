@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage networks in the Meraki cloud}
+  cisco.meraki.meraki_network:
+    state: ${2:# Create or modify an organization}
+    net_name: ${3:# Name of a network}
+    net_id: ${4:# ID number of a network}
+    type: ${5:# Type of network device network manages}
+    tags: ${6:# List of tags to assign to network}
+    timezone: ${7:# Timezone associated to network}
+    enable_vlans: ${8:# Boolean value specifying whether VLANs should be supported on a network}
+    local_status_page_enabled: ${9:# - Enables the local device status pages (U[my}
+    remote_status_page_enabled: ${10:# Enables access to the device status page (U(http://device LAN IP))}
+    copy_from_network_id: ${11:# New network inherits properties from this network ID}
+    auth_key: ${12:# Authentication key provided by the dashboard}
+    host: ${13:# Hostname for Meraki dashboard}
+    use_proxy: ${14:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${15:# If C(no), it will use HTTP}
+    output_format: ${16:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${17:# Set amount of debug output during module execution}
+    timeout: ${18:# Time to timeout for HTTP requests}
+    validate_certs: ${19:# Whether to validate HTTP certificates}
+    org_name: ${20:# Name of organization}
+    org_id: ${21:# ID of organization}
+    rate_limit_retry_time: ${22:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${23:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_network]]></content>
+  <tabTrigger>cisco.meraki.meraki_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage networks in the Meraki cloud</description>
+</snippet>

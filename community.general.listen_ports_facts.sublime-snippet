@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather facts on processes listening on TCP and UDP ports}
+  community.general.listen_ports_facts:
+    command: ${2:# Override which command to use for fetching listen ports}
+    include_non_listening: ${3:# Show both listening and non-listening sockets (for TCP this means established connections)}
+  tags:
+    - community
+    - general
+    - listen_ports_facts]]></content>
+  <tabTrigger>community.general.listen_ports_facts</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather facts on processes listening on TCP and UDP ports</description>
+</snippet>

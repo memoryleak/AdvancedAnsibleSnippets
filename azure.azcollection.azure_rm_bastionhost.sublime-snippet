@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Managed bastion host resource}
+  azure.azcollection.azure_rm_bastionhost:
+    name: ${2:# The name of the bastion host}
+    resource_group: ${3:# The name of the resource group}
+    location: ${4:# The resource location}
+    sku: ${5:# The sku of this Bastion Host}
+    enable_tunneling: ${6:# Enable or Disable Tunneling feature of the Bastion Host resource}
+    enable_shareable_link: ${7:# Enable or Disable Shareable Link of the Bastion Host resource}
+    enable_ip_connect: ${8:# Enable or Disable IP Connect feature of the Bastion Host resource}
+    enable_file_copy: ${9:# Enable or Disable File Copy feature of the Bastion Host resource}
+    scale_units: ${10:# The scale units for the Bastion Host resource}
+    disable_copy_paste: ${11:# Enable or Disable Copy or Paste feature of the Bastion Host resource}
+    ip_configurations: ${12:# An array of bastion host IP configurations}
+    state: ${13:# Assert the state of the pirvate link service}
+    ad_user: ${14:# Active Directory username}
+    password: ${15:# Active Directory user password}
+    profile: ${16:# Security profile found in ~/}
+    subscription_id: ${17:# Your Azure subscription Id}
+    client_id: ${18:# Azure client ID}
+    secret: ${19:# Azure client secret}
+    tenant: ${20:# Azure tenant ID}
+    cloud_environment: ${21:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${22:# Azure AD authority url}
+    cert_validation_mode: ${23:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${24:# Controls the source of the credentials to use for authentication}
+    api_profile: ${25:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${26:# Parent argument}
+    log_mode: ${27:# Parent argument}
+    x509_certificate_path: ${28:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${29:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${30:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${31:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_bastionhost]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_bastionhost</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Managed bastion host resource</description>
+</snippet>

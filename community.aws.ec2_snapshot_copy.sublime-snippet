@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Copies an EC2 snapshot and returns the new Snapshot ID}
+  community.aws.ec2_snapshot_copy:
+    source_region: ${2:# The source region the Snapshot should be copied from}
+    source_snapshot_id: ${3:# The ID of the Snapshot in source region that should be copied}
+    description: ${4:# An optional human-readable string describing purpose of the new Snapshot}
+    encrypted: ${5:# Whether or not the destination Snapshot should be encrypted}
+    kms_key_id: ${6:# KMS key id used to encrypt snapshot}
+    wait: ${7:# Wait for the copied Snapshot to be in the C(Available) state before returning}
+    wait_timeout: ${8:# How long before wait gives up, in seconds}
+    tags: ${9:# A dictionary representing the tags to be applied to the newly created resource}
+    access_key: ${10:# AWS access key ID}
+    secret_key: ${11:# AWS secret access key}
+    session_token: ${12:# AWS STS session token for use with temporary credentials}
+    profile: ${13:# A named AWS profile to use for authentication}
+    endpoint_url: ${14:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${15:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${17:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${18:# Use a C(botocore}
+    region: ${19:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - ec2_snapshot_copy]]></content>
+  <tabTrigger>community.aws.ec2_snapshot_copy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Copies an EC2 snapshot and returns the new Snapshot ID</description>
+</snippet>

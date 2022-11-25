@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set network interface parameters in WTI OOB and PDU devices}
+  wti.remote.cpm_interface_config:
+    cpm_url: ${2:# This is the URL of the WTI device to send the module}
+    cpm_username: ${3:# This is the Username of the WTI device to send the module}
+    cpm_password: ${4:# This is the Password of the WTI device to send the module}
+    use_https: ${5:# Designates to use an https connection or http connection}
+    validate_certs: ${6:# If false, SSL certificates will not be validated}
+    use_proxy: ${7:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+    interface: ${8:# This is the ethernet port name that is getting configured}
+    negotiation: ${9:# This is the speed of the interface port being configured}
+    ipv4address: ${10:# IPv4 format IP address for the defined interface Port}
+    ipv4netmask: ${11:# IPv4 format Netmask for the defined interface Port}
+    ipv4gateway: ${12:# IPv4 format Gateway address for the defined interface Port}
+    ipv4dhcpenable: ${13:# Enable IPv4 DHCP request call to obtain confufuration information}
+    ipv4dhcphostname: ${14:# Define IPv4 DHCP Hostname}
+    ipv4dhcplease: ${15:# IPv4 DHCP Lease Time}
+    ipv4dhcpobdns: ${16:# IPv6 DHCP Obtain DNS addresses auto}
+    ipv4dhcpupdns: ${17:# IPv4 DHCP DNS Server Update}
+    ipv4dhcpdefgateway: ${18:# Enable or Disable this ports configuration as the default IPv4 route for the device}
+    ipv6address: ${19:# IPv6 format IP address for the defined interface Port}
+    ipv6subnetprefix: ${20:# IPv6 format Subnet Prefix for the defined interface Port}
+    ipv6gateway: ${21:# IPv6 format Gateway address for the defined interface Port}
+  tags:
+    - wti
+    - remote
+    - cpm_interface_config]]></content>
+  <tabTrigger>wti.remote.cpm_interface_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set network interface parameters in WTI OOB and PDU devices</description>
+</snippet>

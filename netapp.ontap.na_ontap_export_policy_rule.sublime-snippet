@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP manage export policy rules}
+  netapp.ontap.na_ontap_export_policy_rule:
+    state: ${2:# Whether the specified export policy rule should exist or not}
+    name: ${3:# The name of the export policy this rule will be added to (or modified, or removed from)}
+    client_match: ${4:# List of Client Match host names, IP Addresses, Netgroups, or Domains}
+    anonymous_user_id: ${5:# User name or ID to which anonymous users are mapped}
+    ro_rule: ${6:# List of Read only access specifications for the rule}
+    rw_rule: ${7:# List of Read Write access specifications for the rule}
+    super_user_security: ${8:# List of Read Write access specifications for the rule}
+    allow_suid: ${9:# If 'true', NFS server will honor SetUID bits in SETATTR operation}
+    protocol: ${10:# List of Client access protocols}
+    rule_index: ${11:# Index of the export policy rule}
+    from_rule_index: ${12:# index of the export policy rule to be re-indexed}
+    vserver: ${13:# Name of the vserver to use}
+    ntfs_unix_security: ${14:# NTFS export UNIX security options}
+    force_delete_on_first_match: ${15:# when rule_index is not set, the default is to report an error on multiple matches}
+    chown_mode: ${16:# Specifies who is authorized to change the ownership mode of a file}
+    allow_device_creation: ${17:# Specifies whether or not device creation is allowed}
+    hostname: ${18:# The hostname or IP address of the ONTAP instance}
+    username: ${19:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${20:# Password for the specified user}
+    cert_filepath: ${21:# path to SSL client cert file (}
+    key_filepath: ${22:# path to SSL client key file}
+    https: ${23:# Enable and disable https}
+    validate_certs: ${24:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${25:# Override the default port (80 or 443) with this port}
+    ontapi: ${26:# The ontap api version to use}
+    use_rest: ${27:# Whether to use REST or ZAPI}
+    feature_flags: ${28:# Enable or disable a new feature}
+    force_ontap_version: ${29:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_export_policy_rule]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_export_policy_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP manage export policy rules</description>
+</snippet>

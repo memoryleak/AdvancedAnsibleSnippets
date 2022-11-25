@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Mellanox ONYX configuration sections}
+  mellanox.onyx.onyx_config:
+    lines: ${2:# The ordered set of commands that should be configured in the section}
+    parents: ${3:# The ordered set of parents that uniquely identify the section the commands should be checked against}
+    src: ${4:# Specifies the source path to the file that contains the configuration or configuration template to load}
+    before: ${5:# The ordered set of commands to push on to the command stack if a change needs to be made}
+    after: ${6:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
+    match: ${7:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
+    replace: ${8:# Instructs the module on the way to perform the configuration on the device}
+    backup: ${9:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
+    config: ${10:# The C(config) argument allows the playbook designer to supply the base configuration to be used to validate configuration changes necessary}
+    save: ${11:# The C(save) argument instructs the module to save the running- config to the startup-config at the conclusion of the module running}
+    backup_options: ${12:# This is a dict object containing configurable options related to backup file path}
+  tags:
+    - mellanox
+    - onyx
+    - onyx_config]]></content>
+  <tabTrigger>mellanox.onyx.onyx_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Mellanox ONYX configuration sections</description>
+</snippet>

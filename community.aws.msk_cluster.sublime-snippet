@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Amazon MSK clusters}
+  community.aws.msk_cluster:
+    state: ${2:# Create (C(present)) or delete (C(absent)) cluster}
+    name: ${3:# The name of the cluster}
+    version: ${4:# The version of Apache Kafka}
+    configuration_arn: ${5:# ARN of the configuration to use}
+    configuration_revision: ${6:# The revision of the configuration to use}
+    nodes: ${7:# The number of broker nodes in the cluster}
+    instance_type: ${8:# The type of Amazon EC2 instances to use for Kafka brokers}
+    ebs_volume_size: ${9:# The size in GiB of the EBS volume for the data drive on each broker node}
+    subnets: ${10:# The list of subnets to connect to in the client virtual private cloud (VPC)}
+    security_groups: ${11:# The AWS security groups to associate with the elastic network interfaces in order to specify who can connect to and communicate with the Amazon MSK cluster}
+    encryption: ${12:# Includes all encryption-related information}
+    authentication: ${13:# Includes all client authentication related information}
+    enhanced_monitoring: ${14:# Specifies the level of monitoring for the MSK cluster}
+    open_monitoring: ${15:# The settings for open monitoring}
+    logging: ${16:# Logging configuration}
+    wait: ${17:# Whether to wait for the cluster to be available or deleted}
+    wait_timeout: ${18:# How many seconds to wait}
+    access_key: ${19:# AWS access key ID}
+    secret_key: ${20:# AWS secret access key}
+    session_token: ${21:# AWS STS session token for use with temporary credentials}
+    profile: ${22:# A named AWS profile to use for authentication}
+    endpoint_url: ${23:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${24:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${25:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${26:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${27:# Use a C(botocore}
+    region: ${28:# The AWS region to use}
+    tags: ${29:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${30:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - community
+    - aws
+    - msk_cluster]]></content>
+  <tabTrigger>community.aws.msk_cluster</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Amazon MSK clusters</description>
+</snippet>

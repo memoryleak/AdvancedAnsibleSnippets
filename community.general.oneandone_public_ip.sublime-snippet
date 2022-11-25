@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure 1&1 public IPs}
+  community.general.oneandone_public_ip:
+    state: ${2:# Define a public ip state to create, remove, or update}
+    auth_token: ${3:# Authenticating API token provided by 1&1}
+    api_url: ${4:# Custom API URL}
+    reverse_dns: ${5:# Reverse DNS name}
+    datacenter: ${6:# ID of the datacenter where the IP will be created (only for unassigned IPs)}
+    type: ${7:# Type of IP}
+    public_ip_id: ${8:# The ID of the public IP used with update and delete states}
+    wait: ${9:# wait for the instance to be in state 'running' before returning}
+    wait_timeout: ${10:# how long before wait gives up, in seconds}
+    wait_interval: ${11:# Defines the number of seconds to wait when using the _wait_for methods}
+  tags:
+    - community
+    - general
+    - oneandone_public_ip]]></content>
+  <tabTrigger>community.general.oneandone_public_ip</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure 1&1 public IPs</description>
+</snippet>

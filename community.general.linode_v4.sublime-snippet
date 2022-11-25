@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage instances on the Linode cloud}
+  community.general.linode_v4:
+    region: ${2:# The region of the instance}
+    image: ${3:# The image of the instance}
+    type: ${4:# The type of the instance}
+    label: ${5:# The instance label}
+    group: ${6:# The group that the instance should be marked under}
+    private_ip: ${7:# If C(true), the created Linode will have private networking enabled and assigned a private IPv4 address}
+    tags: ${8:# The tags that the instance should be marked under}
+    root_pass: ${9:# The password for the root user}
+    authorized_keys: ${10:# A list of SSH public key parts to deploy for the root user}
+    state: ${11:# The desired instance state}
+    access_token: ${12:# The Linode API v4 access token}
+    stackscript_id: ${13:# The numeric ID of the StackScript to use when creating the instance}
+    stackscript_data: ${14:# An object containing arguments to any User Defined Fields present in the StackScript used when creating the instance}
+  tags:
+    - community
+    - general
+    - linode_v4]]></content>
+  <tabTrigger>community.general.linode_v4</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage instances on the Linode cloud</description>
+</snippet>

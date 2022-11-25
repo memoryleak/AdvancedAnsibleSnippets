@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Grafana Teams}
+  community.grafana.grafana_team:
+    name: ${2:# The name of the Grafana Team}
+    email: ${3:# The mail address associated with the Team}
+    members: ${4:# List of team members (emails)}
+    state: ${5:# Delete the members not found in the C(members) parameters from the}
+    enforce_members: ${6:# Delete the members not found in the C(members) parameters from the}
+    skip_version_check: ${7:# Skip Grafana version check and try to reach api endpoint anyway}
+    url: ${8:# The Grafana URL}
+    url_username: ${9:# The Grafana user for API authentication}
+    url_password: ${10:# The Grafana password for API authentication}
+    use_proxy: ${11:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    client_cert: ${12:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${13:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    validate_certs: ${14:# If C(no), SSL certificates will not be validated}
+    grafana_api_key: ${15:# The Grafana API key}
+  tags:
+    - community
+    - grafana
+    - grafana_team]]></content>
+  <tabTrigger>community.grafana.grafana_team</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Grafana Teams</description>
+</snippet>

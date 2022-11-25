@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP protocol and feature license packages}
+  netapp.ontap.na_ontap_license:
+    state: ${2:# Whether the specified license packages should be installed or removed}
+    remove_unused: ${3:# Remove license packages that have no controller affiliation in the cluster}
+    remove_expired: ${4:# Remove license packages that have expired in the cluster}
+    serial_number: ${5:# Serial number of the node or cluster associated with the license package}
+    license_names: ${6:# List of license package names to remove}
+    license_codes: ${7:# List of license codes to be installed}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    username: ${9:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${10:# Password for the specified user}
+    cert_filepath: ${11:# path to SSL client cert file (}
+    key_filepath: ${12:# path to SSL client key file}
+    https: ${13:# Enable and disable https}
+    validate_certs: ${14:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${15:# Override the default port (80 or 443) with this port}
+    ontapi: ${16:# The ontap api version to use}
+    use_rest: ${17:# Whether to use REST or ZAPI}
+    feature_flags: ${18:# Enable or disable a new feature}
+    force_ontap_version: ${19:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_license]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_license</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP protocol and feature license packages</description>
+</snippet>

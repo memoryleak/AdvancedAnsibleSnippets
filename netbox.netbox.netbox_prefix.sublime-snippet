@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates or removes prefixes from NetBox}
+  netbox.netbox.netbox_prefix:
+    data: ${2:# Defines the prefix configuration}
+    first_available: ${3:# If C(yes) and state C(present), if an parent is given, it will get the first available prefix of the given prefix_length inside the given parent (and vrf, if given)}
+    netbox_url: ${4:# The URL of the NetBox instance}
+    netbox_token: ${5:# The NetBox API token}
+    state: ${6:# The state of the object}
+    query_params: ${7:# This can be used to override the specified values in ALLOWED_QUERY_PARAMS that are defined}
+    validate_certs: ${8:# If C(no), SSL certificates will not be validated}
+    cert: ${9:# Certificate path}
+  tags:
+    - netbox
+    - netbox
+    - netbox_prefix]]></content>
+  <tabTrigger>netbox.netbox.netbox_prefix</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates or removes prefixes from NetBox</description>
+</snippet>

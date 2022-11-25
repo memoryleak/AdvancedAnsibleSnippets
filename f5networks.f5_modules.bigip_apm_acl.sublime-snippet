@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage user-defined APM ACLs}
+  f5networks.f5_modules.bigip_apm_acl:
+    name: ${2:# Specifies the name of the ACL to manage}
+    description: ${3:# User created ACL description}
+    type: ${4:# Specifies the type of ACL to create}
+    acl_order: ${5:# Specifies a number that indicates the order of this ACL relative to other ACLs}
+    path_match_case: ${6:# Specifies whether alphabetic case is considered when matching paths in an access control entry}
+    entries: ${7:# Access control entries that define the ACL matching and its respective behavior}
+    partition: ${8:# Device partition to manage resources on}
+    state: ${9:# When C(state) is C(present), ensures that the ACL exists}
+    provider: ${10:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_apm_acl]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_apm_acl</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage user-defined APM ACLs</description>
+</snippet>

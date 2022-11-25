@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage jobs in oVirt/RHV}
+  ovirt.ovirt.ovirt_job:
+    description: ${2:# Description of the job}
+    state: ${3:# Should the job be C(present)/C(absent)/C(failed)}
+    steps: ${4:# The steps of the job}
+    wait: ${5:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${6:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${7:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${8:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${9:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${10:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_job]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_job</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage jobs in oVirt/RHV</description>
+</snippet>

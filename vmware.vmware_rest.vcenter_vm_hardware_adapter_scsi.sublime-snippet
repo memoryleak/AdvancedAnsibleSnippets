@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds a virtual SCSI adapter to the virtual machine}
+  vmware.vmware_rest.vcenter_vm_hardware_adapter_scsi:
+    adapter: ${2:# Virtual SCSI adapter identifier}
+    bus: ${3:# SCSI bus number}
+    label: ${4:# The name of the item}
+    pci_slot_number: ${5:# Address of the SCSI adapter on the PCI bus}
+    session_timeout: ${6:# Timeout settings for client session}
+    sharing: ${7:# The C(sharing) defines the valid bus sharing modes for a virtual SCSI adapter}
+    state: ${8:# No description available}
+    type: ${9:# The C(type) defines the valid emulation types for a virtual SCSI adapter}
+    vcenter_hostname: ${10:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${11:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${12:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${13:# The vSphere vCenter username}
+    vcenter_validate_certs: ${14:# Allows connection when SSL certificates are not valid}
+    vm: ${15:# Virtual machine identifier}
+  tags:
+    - vmware
+    - vmware_rest
+    - vcenter_vm_hardware_adapter_scsi]]></content>
+  <tabTrigger>vmware.vmware_rest.vcenter_vm_hardware_adapter_scsi</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds a virtual SCSI adapter to the virtual machine</description>
+</snippet>

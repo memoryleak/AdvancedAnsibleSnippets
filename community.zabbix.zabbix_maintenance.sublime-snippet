@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create Zabbix maintenance windows}
+  community.zabbix.zabbix_maintenance:
+    state: ${2:# Create or remove a maintenance window}
+    host_names: ${3:# Hosts to manage maintenance window for}
+    host_groups: ${4:# Host groups to manage maintenance window for}
+    minutes: ${5:# Length of maintenance window in minutes}
+    name: ${6:# Unique name of maintenance window}
+    desc: ${7:# Short description of maintenance window}
+    collect_data: ${8:# Type of maintenance}
+    visible_name: ${9:# Type of zabbix host name to use for identifying hosts to include in the maintenance}
+    tags: ${10:# List of tags to assign to the hosts in maintenance}
+    server_url: ${11:# URL of Zabbix server, with protocol (http or https)}
+    login_user: ${12:# Zabbix user name}
+    login_password: ${13:# Zabbix user password}
+    http_login_user: ${14:# Basic Auth login}
+    http_login_password: ${15:# Basic Auth password}
+    timeout: ${16:# The timeout of API request (seconds)}
+    validate_certs: ${17:# If set to False, SSL certificates will not be validated}
+  tags:
+    - community
+    - zabbix
+    - zabbix_maintenance]]></content>
+  <tabTrigger>community.zabbix.zabbix_maintenance</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create Zabbix maintenance windows</description>
+</snippet>

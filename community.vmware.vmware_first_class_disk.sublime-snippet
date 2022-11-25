@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage VMware vSphere First Class Disks}
+  community.vmware.vmware_first_class_disk:
+    datacenter_name: ${2:# The name of the datacenter}
+    datastore_name: ${3:# Name of datastore or datastore cluster to be used for the disk}
+    disk_name: ${4:# The name of the disk}
+    size: ${5:# Disk storage size, an integer plus a unit}
+    state: ${6:# If the disk should be present or absent}
+    hostname: ${7:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${8:# The username of the vSphere vCenter or ESXi server}
+    password: ${9:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${10:# Allows connection when SSL certificates are not valid}
+    port: ${11:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${12:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_first_class_disk]]></content>
+  <tabTrigger>community.vmware.vmware_first_class_disk</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage VMware vSphere First Class Disks</description>
+</snippet>

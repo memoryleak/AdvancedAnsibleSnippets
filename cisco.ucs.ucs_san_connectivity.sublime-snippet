@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures SAN Connectivity Policies on Cisco UCS Manager}
+  cisco.ucs.ucs_san_connectivity:
+    state: ${2:# If C(present), will verify SAN Connectivity Policies are present and will create if needed}
+    name: ${3:# The name of the SAN Connectivity Policy}
+    description: ${4:# A description of the policy}
+    wwnn_pool: ${5:# Name of the WWNN pool to use for WWNN assignment}
+    vhba_list: ${6:# List of vHBAs used by the SAN Connectivity Policy}
+    org_dn: ${7:# Org dn (distinguished name)}
+    hostname: ${8:# IP address or hostname of Cisco UCS Manager}
+    username: ${9:# Username for Cisco UCS Manager authentication}
+    password: ${10:# Password for Cisco UCS Manager authentication}
+    port: ${11:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    use_ssl: ${12:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    use_proxy: ${13:# If C(no), will not use the proxy as defined by system environment variable}
+    proxy: ${14:# If use_proxy is no, specfies proxy to be used for connection}
+  tags:
+    - cisco
+    - ucs
+    - ucs_san_connectivity]]></content>
+  <tabTrigger>cisco.ucs.ucs_san_connectivity</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures SAN Connectivity Policies on Cisco UCS Manager</description>
+</snippet>

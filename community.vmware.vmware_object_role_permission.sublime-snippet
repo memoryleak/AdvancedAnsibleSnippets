@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage local roles on an ESXi host}
+  community.vmware.vmware_object_role_permission:
+    role: ${2:# The role to be assigned permission}
+    principal: ${3:# The user to be assigned permission}
+    group: ${4:# The group to be assigned permission}
+    object_name: ${5:# The object name to assigned permission}
+    object_type: ${6:# The object type being targeted}
+    recursive: ${7:# Should the permissions be recursively applied}
+    state: ${8:# Indicate desired state of the object's permission}
+    hostname: ${9:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${10:# The username of the vSphere vCenter or ESXi server}
+    password: ${11:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${12:# Allows connection when SSL certificates are not valid}
+    port: ${13:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${14:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${15:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_object_role_permission]]></content>
+  <tabTrigger>community.vmware.vmware_object_role_permission</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage local roles on an ESXi host</description>
+</snippet>

@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, destroy, start, stop, and reboot a ProfitBricks virtual machine}
+  community.general.profitbricks:
+    auto_increment: ${2:# Whether or not to increment a single number in the name for created virtual machines}
+    name: ${3:# The name of the virtual machine}
+    image: ${4:# The system image ID for creating the virtual machine, e}
+    image_password: ${5:# Password set for the administrative user}
+    ssh_keys: ${6:# Public SSH keys allowing access to the virtual machine}
+    datacenter: ${7:# The datacenter to provision this virtual machine}
+    cores: ${8:# The number of CPU cores to allocate to the virtual machine}
+    ram: ${9:# The amount of memory to allocate to the virtual machine}
+    cpu_family: ${10:# The CPU family type to allocate to the virtual machine}
+    volume_size: ${11:# The size in GB of the boot volume}
+    bus: ${12:# The bus type for the volume}
+    instance_ids: ${13:# list of instance ids, currently only used when state='absent' to remove instances}
+    count: ${14:# The number of virtual machines to create}
+    location: ${15:# The datacenter location}
+    assign_public_ip: ${16:# This will assign the machine to the public LAN}
+    lan: ${17:# The ID of the LAN you wish to add the servers to}
+    subscription_user: ${18:# The ProfitBricks username}
+    subscription_password: ${19:# THe ProfitBricks password}
+    wait: ${20:# wait for the instance to be in state 'running' before returning}
+    wait_timeout: ${21:# how long before wait gives up, in seconds}
+    remove_boot_volume: ${22:# remove the bootVolume of the virtual machine you're destroying}
+    state: ${23:# create or terminate instances}
+    disk_type: ${24:# the type of disk to be allocated}
+  tags:
+    - community
+    - general
+    - profitbricks]]></content>
+  <tabTrigger>community.general.profitbricks</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, destroy, start, stop, and reboot a ProfitBricks virtual machine</description>
+</snippet>

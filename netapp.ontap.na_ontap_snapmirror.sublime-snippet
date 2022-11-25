@@ -1,0 +1,53 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP or ElementSW Manage SnapMirror}
+  netapp.ontap.na_ontap_snapmirror:
+    state: ${2:# Whether the specified relationship should exist or not}
+    source_volume: ${3:# Specifies the name of the source volume for the SnapMirror}
+    destination_volume: ${4:# Specifies the name of the destination volume for the SnapMirror}
+    source_vserver: ${5:# Name of the source vserver for the SnapMirror}
+    destination_vserver: ${6:# Name of the destination vserver for the SnapMirror}
+    source_path: ${7:# Specifies the source endpoint of the SnapMirror relationship}
+    destination_path: ${8:# Specifies the destination endpoint of the SnapMirror relationship}
+    relationship_type: ${9:# Specify the type of SnapMirror relationship}
+    schedule: ${10:# Specify the name of the current schedule, which is used to update the SnapMirror relationship}
+    policy: ${11:# Specify the name of the SnapMirror policy that applies to this relationship}
+    source_hostname: ${12:# DEPRECATED - please use C(peer_options)}
+    source_username: ${13:# DEPRECATED - please use C(peer_options)}
+    source_password: ${14:# DEPRECATED - please use C(peer_options)}
+    connection_type: ${15:# Type of SnapMirror relationship}
+    max_transfer_rate: ${16:# Specifies the upper bound, in kilobytes per second, at which data is transferred}
+    initialize: ${17:# Specifies whether to initialize SnapMirror relation}
+    update: ${18:# Specifies whether to update the destination endpoint of the SnapMirror relationship only if the relationship is already present and active}
+    relationship_info_only: ${19:# If relationship-info-only is set to true then only relationship information is removed}
+    relationship_state: ${20:# Specifies whether to break SnapMirror relation or establish a SnapMirror relationship}
+    source_snapshot: ${21:# Specifies the Snapshot from the source to be restored}
+    identity_preserve: ${22:# Specifies whether or not the identity of the source Vserver is replicated to the destination Vserver}
+    create_destination: ${23:# Requires ONTAP 9}
+    destination_cluster: ${24:# Requires ONTAP 9}
+    source_cluster: ${25:# Requires ONTAP 9}
+    source_endpoint: ${26:# source endpoint of a SnapMirror relationship}
+    destination_endpoint: ${27:# destination endpoint of a SnapMirror relationship}
+    transferring_time_out: ${28:# How long to wait when a transfer is in progress (after initializing for instance)}
+    clean_up_failure: ${29:# An optional parameter to recover from an aborted or failed restore operation}
+    validate_source_path: ${30:# The relationship is found based on the destination as it is unique}
+    hostname: ${31:# The hostname or IP address of the ONTAP instance}
+    username: ${32:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${33:# Password for the specified user}
+    cert_filepath: ${34:# path to SSL client cert file (}
+    key_filepath: ${35:# path to SSL client key file}
+    https: ${36:# Enable and disable https}
+    validate_certs: ${37:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${38:# Override the default port (80 or 443) with this port}
+    ontapi: ${39:# The ontap api version to use}
+    use_rest: ${40:# Whether to use REST or ZAPI}
+    feature_flags: ${41:# Enable or disable a new feature}
+    force_ontap_version: ${42:# Override the cluster ONTAP version when using REST}
+    peer_options: ${43:# IP address and connection options for the peer system}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_snapmirror]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_snapmirror</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP or ElementSW Manage SnapMirror</description>
+</snippet>

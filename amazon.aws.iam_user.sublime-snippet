@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage AWS IAM users}
+  amazon.aws.iam_user:
+    name: ${2:# The name of the user to create}
+    password: ${3:# The password to apply to the user}
+    password_reset_required: ${4:# Defines if the user is required to set a new password after login}
+    update_password: ${5:# When to update user passwords}
+    remove_password: ${6:# Option to delete user login passwords}
+    managed_policies: ${7:# A list of managed policy ARNs or friendly names to attach to the user}
+    state: ${8:# Create or remove the IAM user}
+    purge_policies: ${9:# When I(purge_policies=true) any managed policies not listed in I(managed_policies) will be detached}
+    wait: ${10:# When I(wait=True) the module will wait for up to I(wait_timeout) seconds for IAM user creation before returning}
+    wait_timeout: ${11:# How long (in seconds) to wait for creation / updates to complete}
+    access_key: ${12:# AWS access key ID}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    profile: ${15:# A named AWS profile to use for authentication}
+    endpoint_url: ${16:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${17:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${19:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${20:# Use a C(botocore}
+    region: ${21:# The AWS region to use}
+    tags: ${22:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${23:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - iam_user]]></content>
+  <tabTrigger>amazon.aws.iam_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage AWS IAM users</description>
+</snippet>

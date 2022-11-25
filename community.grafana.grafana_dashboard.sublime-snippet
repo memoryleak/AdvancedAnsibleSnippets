@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Grafana dashboards}
+  community.grafana.grafana_dashboard:
+    org_id: ${2:# The Grafana Organisation ID where the dashboard will be imported / exported}
+    folder: ${3:# The Grafana folder where this dashboard will be imported to}
+    state: ${4:# State of the dashboard}
+    slug: ${5:# Deprecated since Grafana 5}
+    uid: ${6:# uid of the dashboard to export when C(state) is C(export) or C(absent)}
+    path: ${7:# The path to the json file containing the Grafana dashboard to import or export}
+    overwrite: ${8:# Override existing dashboard when state is present}
+    dashboard_id: ${9:# Public Grafana}
+    dashboard_revision: ${10:# Revision of the public grafana dashboard to import}
+    commit_message: ${11:# Set a commit message for the version history}
+    url: ${12:# The Grafana URL}
+    url_username: ${13:# The Grafana user for API authentication}
+    url_password: ${14:# The Grafana password for API authentication}
+    use_proxy: ${15:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    client_cert: ${16:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${17:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    validate_certs: ${18:# If C(no), SSL certificates will not be validated}
+    grafana_api_key: ${19:# The Grafana API key}
+  tags:
+    - community
+    - grafana
+    - grafana_dashboard]]></content>
+  <tabTrigger>community.grafana.grafana_dashboard</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Grafana dashboards</description>
+</snippet>

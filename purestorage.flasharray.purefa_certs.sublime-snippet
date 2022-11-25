@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FlashArray SSL Certificates}
+  purestorage.flasharray.purefa_certs:
+    name: ${2:# Name of the SSL Certificate}
+    state: ${3:# Action for the module to perform}
+    country: ${4:# The two-letter ISO code for the country where your organization is located}
+    province: ${5:# The full name of the state or province where your organization is located}
+    locality: ${6:# The full name of the city where your organization is located}
+    organization: ${7:# The full and exact legal name of your organization}
+    org_unit: ${8:# The department within your organization that is managing the certificate}
+    common_name: ${9:# The fully qualified domain name (FQDN) of the current array}
+    email: ${10:# The email address used to contact your organization}
+    key_size: ${11:# The key size in bits if you generate a new private key}
+    days: ${12:# The number of valid days for the self-signed certificate being generated}
+    generate: ${13:# Generate a new private key}
+    certificate: ${14:# Required for I(import)}
+    intermeadiate_cert: ${15:# Intermeadiate certificate provided by the CA}
+    key: ${16:# If the Certificate Signed Request (CSR) was not constructed on the array or the private key has changed since construction the CSR, provide a new private key here}
+    passphrase: ${17:# Passphrase if the private key is encrypted}
+    export_file: ${18:# Name of file to contain Certificate Signing Request when `status sign`}
+    fa_url: ${19:# FlashArray management IPv4 address or Hostname}
+    api_token: ${20:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_certs]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_certs</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FlashArray SSL Certificates</description>
+</snippet>

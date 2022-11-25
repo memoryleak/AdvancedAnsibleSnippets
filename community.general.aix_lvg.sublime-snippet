@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage LVM volume groups on AIX}
+  community.general.aix_lvg:
+    force: ${2:# Force volume group creation}
+    pp_size: ${3:# The size of the physical partition in megabytes}
+    pvs: ${4:# List of comma-separated devices to use as physical devices in this volume group}
+    state: ${5:# Control if the volume group exists and volume group AIX state varyonvg C(varyon) or varyoffvg C(varyoff)}
+    vg: ${6:# The name of the volume group}
+    vg_type: ${7:# The type of the volume group}
+  tags:
+    - community
+    - general
+    - aix_lvg]]></content>
+  <tabTrigger>community.general.aix_lvg</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage LVM volume groups on AIX</description>
+</snippet>

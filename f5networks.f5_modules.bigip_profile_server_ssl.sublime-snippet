@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages server SSL profiles on a BIG-IP}
+  f5networks.f5_modules.bigip_profile_server_ssl:
+    name: ${2:# Specifies the name of the profile}
+    parent: ${3:# The parent template of this monitor template}
+    ciphers: ${4:# Specifies the list of ciphers the system supports}
+    cipher_group: ${5:# Specifies the cipher group to assign to this profile}
+    renegotiation: ${6:# Enables or disables SSL renegotiation}
+    secure_renegotiation: ${7:# Specifies the method of secure renegotiations for SSL connections}
+    server_name: ${8:# Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications}
+    sni_default: ${9:# Indicates the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support}
+    sni_require: ${10:# Requires the network peers also provide SNI support}
+    server_certificate: ${11:# Specifies the way the system handles server certificates}
+    certificate: ${12:# Specifies the name of the certificate the system uses for server-side SSL processing}
+    key: ${13:# Specifies the file name of the SSL key}
+    chain: ${14:# Specifies the certificates-key chain to associate with the SSL profile}
+    passphrase: ${15:# Specifies a passphrase used to encrypt the key}
+    update_password: ${16:# C(always) allows users to update passwords if they choose to do so}
+    ocsp_profile: ${17:# Specifies the name of the OCSP profile for purpose of validating the status of server certificate}
+    partition: ${18:# Device partition to manage resources on}
+    state: ${19:# When C(present), ensures the profile exists}
+    provider: ${20:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_profile_server_ssl]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_profile_server_ssl</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages server SSL profiles on a BIG-IP</description>
+</snippet>

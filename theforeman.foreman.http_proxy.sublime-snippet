@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage HTTP Proxies}
+  theforeman.foreman.http_proxy:
+    name: ${2:# The HTTP Proxy name}
+    url: ${3:# URL of the HTTP Proxy}
+    proxy_username: ${4:# Username used to authenticate with the HTTP Proxy}
+    proxy_password: ${5:# Password used to authenticate with the HTTP Proxy}
+    server_url: ${6:# URL of the Foreman server}
+    username: ${7:# Username accessing the Foreman server}
+    password: ${8:# Password of the user accessing the Foreman server}
+    validate_certs: ${9:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${10:# State of the entity}
+    organizations: ${11:# List of organizations the entity should be assigned to}
+    locations: ${12:# List of locations the entity should be assigned to}
+  tags:
+    - theforeman
+    - foreman
+    - http_proxy]]></content>
+  <tabTrigger>theforeman.foreman.http_proxy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage HTTP Proxies</description>
+</snippet>

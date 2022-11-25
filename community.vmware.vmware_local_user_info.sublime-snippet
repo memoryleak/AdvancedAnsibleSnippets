@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather info about users on the given ESXi host}
+  community.vmware.vmware_local_user_info:
+    hostname: ${2:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${3:# The username of the vSphere vCenter or ESXi server}
+    password: ${4:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${5:# Allows connection when SSL certificates are not valid}
+    port: ${6:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${7:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${8:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_local_user_info]]></content>
+  <tabTrigger>community.vmware.vmware_local_user_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather info about users on the given ESXi host</description>
+</snippet>

@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series storage system's snapshots}
+  netapp_eseries.santricity.na_santricity_snapshot:
+    state: ${2:# When I(state==absent) ensures the I(type) has been removed}
+    type: ${3:# Type of snapshot object to effect}
+    group_name: ${4:# Name of the snapshot consistency group or snapshot volume}
+    volumes: ${5:# Details for each consistency group base volume for defining reserve capacity, preferred reserve capacity storage pool, and snapshot volume options}
+    maximum_snapshots: ${6:# Total number of snapshot images to maintain}
+    reserve_capacity_pct: ${7:# Default percentage of base volume capacity to reserve for snapshot copy-on-writes (COW)}
+    preferred_reserve_storage_pool: ${8:# Default preferred storage pool or volume group for the reserve capacity volume}
+    alert_threshold_pct: ${9:# Percent of filled reserve capacity to issue alert}
+    reserve_capacity_full_policy: ${10:# Policy for full reserve capacity}
+    rollback_priority: ${11:# Storage system priority given to restoring snapshot point in time}
+    rollback_backup: ${12:# Whether a point-in-time snapshot should be taken prior to performing a rollback}
+    pit_name: ${13:# Name of a consistency group's snapshot images}
+    pit_description: ${14:# Arbitrary description for a consistency group's snapshot images}
+    pit_timestamp: ${15:# Snapshot image timestamp in the YYYY-MM-DD HH:MM:SS (AM|PM) (hours, minutes, seconds, and day-period are optional)}
+    view_name: ${16:# Consistency group snapshot volume group}
+    view_host: ${17:# Default host or host group to map snapshot volumes}
+    view_writable: ${18:# Default whether snapshot volumes should be writable}
+    view_validate: ${19:# Default whether snapshop volumes should be validated}
+    api_username: ${20:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_password: ${21:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${22:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    validate_certs: ${23:# Should https certificates be validated?}
+    ssid: ${24:# The ID of the array to manage}
+  tags:
+    - netapp_eseries
+    - santricity
+    - na_santricity_snapshot]]></content>
+  <tabTrigger>netapp_eseries.santricity.na_santricity_snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series storage system's snapshots</description>
+</snippet>

@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Partition Table Templates}
+  theforeman.foreman.partition_table:
+    file_name: ${2:# The path of a template file, that shall be imported}
+    layout: ${3:# The content of the Partitioning Table Template}
+    locked: ${4:# Determines whether the template shall be locked}
+    name: ${5:# The name of the Partition Table}
+    updated_name: ${6:# New name of the template}
+    os_family: ${7:# The OS family the template shall be assigned with}
+    server_url: ${8:# URL of the Foreman server}
+    username: ${9:# Username accessing the Foreman server}
+    password: ${10:# Password of the user accessing the Foreman server}
+    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${12:# State of the entity}
+    organizations: ${13:# List of organizations the entity should be assigned to}
+    locations: ${14:# List of locations the entity should be assigned to}
+  tags:
+    - theforeman
+    - foreman
+    - partition_table]]></content>
+  <tabTrigger>theforeman.foreman.partition_table</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Partition Table Templates</description>
+</snippet>

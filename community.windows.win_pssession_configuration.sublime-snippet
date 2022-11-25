@@ -1,0 +1,58 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage PSSession Configurations}
+  community.windows.win_pssession_configuration:
+    name: ${2:# The name of the session configuration to manage}
+    state: ${3:# The desired state of the configuration}
+    guid: ${4:# The GUID (UUID) of the session configuration file}
+    schema_version: ${5:# The schema version of the session configuration file}
+    author: ${6:# The author of the session configuration}
+    description: ${7:# The description of the session configuration}
+    company_name: ${8:# The company that authored the session configuration}
+    copyright: ${9:# The copyright statement of the session configuration}
+    session_type: ${10:# Controls what type of session this is}
+    transcript_directory: ${11:# Automatic session transcripts will be written to this directory}
+    run_as_virtual_account: ${12:# If C(yes) the session runs as a virtual account}
+    run_as_virtual_account_groups: ${13:# If I(run_as_virtual_account=yes) this is a list of groups to add the virtual account to}
+    mount_user_drive: ${14:# If C(yes) the session creates and mounts a user-specific PSDrive for use with file transfers}
+    user_drive_maximum_size: ${15:# The maximum size of the user drive in bytes}
+    group_managed_service_account: ${16:# If the session will run as a group managed service account (gMSA) then this is the name}
+    scripts_to_process: ${17:# A list of paths to script files ending in C(}
+    role_definitions: ${18:# A dict defining the roles for JEA sessions}
+    required_groups: ${19:# For JEA sessions, defines conditional access rules about which groups a connecting user must belong to}
+    language_mode: ${20:# Determines the language mode of the PowerShell session}
+    execution_policy: ${21:# The execution policy controlling script execution in the PowerShell session}
+    powershell_version: ${22:# The minimum required PowerShell version for this session}
+    modules_to_import: ${23:# A list of modules that should be imported into the session}
+    visible_aliases: ${24:# The aliases that can be used in the session}
+    visible_cmdlets: ${25:# The cmdlets that can be used in the session}
+    visible_functions: ${26:# The functions that can be used in the session}
+    visible_external_commands: ${27:# The external commands and scripts that can be used in the session}
+    alias_definitions: ${28:# A dict that defines aliases for each session}
+    function_definitions: ${29:# A dict that defines functions for each session}
+    variable_definitions: ${30:# A list of dicts where each elements defines a variable for each session}
+    environment_variables: ${31:# A dict that defines environment variables for each session}
+    types_to_process: ${32:# Paths to type definition files to process for each session}
+    formats_to_process: ${33:# Paths to format definition files to process for each session}
+    assemblies_to_load: ${34:# The assemblies that should be loaded into each session}
+    processor_architecure: ${35:# The processor architecture of the session (32 bit vs}
+    access_mode: ${36:# Controls whether the session configuration allows connection from the C(local) machine only, both local and C(remote), or none (C(disabled))}
+    use_shared_process: ${37:# If C(yes) then the session shares a process for each session}
+    thread_apartment_state: ${38:# The apartment state for the PowerShell session}
+    thread_options: ${39:# Sets thread options for the session}
+    startup_script: ${40:# A script that gets run on session startup}
+    maximum_received_data_size_per_command_mb: ${41:# Sets the maximum received data size per command in MB}
+    maximum_received_object_size_mb: ${42:# Sets the maximum object size in MB}
+    security_descriptor_sddl: ${43:# An SDDL string that controls which users and groups can connect to the session}
+    run_as_credential_username: ${44:# Used to set a RunAs account for the session}
+    run_as_credential_password: ${45:# The password for I(run_as_credential_username)}
+    lenient_config_fields: ${46:# Some fields used in the session configuration do not affect its function, and are sometimes auto-generated when not specified}
+    async_timeout: ${47:# Sets a timeout for how long in seconds to wait for asynchronous module execution and waiting for the connection to recover}
+    async_poll: ${48:# Sets a delay in seconds between each check of the asynchronous execution status}
+  tags:
+    - community
+    - windows
+    - win_pssession_configuration]]></content>
+  <tabTrigger>community.windows.win_pssession_configuration</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage PSSession Configurations</description>
+</snippet>

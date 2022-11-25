@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Docker volumes}
+  community.docker.docker_volume:
+    volume_name: ${2:# Name of the volume to operate on}
+    driver: ${3:# Specify the type of volume}
+    driver_options: ${4:# Dictionary of volume settings}
+    labels: ${5:# Dictionary of label key/values to set for the volume}
+    recreate: ${6:# Controls when a volume will be recreated when I(state) is C(present)}
+    state: ${7:# C(absent) deletes the volume}
+    docker_host: ${8:# The URL or Unix socket path used to connect to the Docker API}
+    tls_hostname: ${9:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    api_version: ${10:# The version of the Docker API running on the Docker Host}
+    timeout: ${11:# The maximum amount of time in seconds to wait on a response from the API}
+    ca_cert: ${12:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${13:# Path to the client's TLS certificate file}
+    client_key: ${14:# Path to the client's TLS key file}
+    ssl_version: ${15:# Provide a valid SSL version number}
+    tls: ${16:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    use_ssh_client: ${17:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${18:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    debug: ${19:# Debug mode}
+  tags:
+    - community
+    - docker
+    - docker_volume]]></content>
+  <tabTrigger>community.docker.docker_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Docker volumes</description>
+</snippet>

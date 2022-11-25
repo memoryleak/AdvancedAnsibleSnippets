@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Notify airbrake about app deployments}
+  community.general.airbrake_deployment:
+    project_id: ${2:# Airbrake PROJECT_ID}
+    project_key: ${3:# Airbrake PROJECT_KEY}
+    environment: ${4:# The airbrake environment name, typically 'production', 'staging', etc}
+    user: ${5:# The username of the person doing the deployment}
+    repo: ${6:# URL of the project repository}
+    revision: ${7:# A hash, number, tag, or other identifier showing what revision from version control was deployed}
+    version: ${8:# A string identifying what version was deployed}
+    url: ${9:# Optional URL to submit the notification to}
+    validate_certs: ${10:# If C(false), SSL certificates for the target url will not be validated}
+  tags:
+    - community
+    - general
+    - airbrake_deployment]]></content>
+  <tabTrigger>community.general.airbrake_deployment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Notify airbrake about app deployments</description>
+</snippet>

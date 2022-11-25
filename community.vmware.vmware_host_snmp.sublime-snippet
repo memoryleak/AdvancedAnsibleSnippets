@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures SNMP on an ESXi host system}
+  community.vmware.vmware_host_snmp:
+    state: ${2:# Enable, disable, or reset the SNMP agent}
+    community: ${3:# List of SNMP community strings}
+    snmp_port: ${4:# Port used by the SNMP agent}
+    trap_targets: ${5:# A list of trap targets}
+    trap_filter: ${6:# A list of trap oids for traps not to be sent by agent, e}
+    send_trap: ${7:# Send a test trap to validate the configuration}
+    hw_source: ${8:# Source hardware events from IPMI sensors or CIM Indications}
+    log_level: ${9:# Syslog logging level}
+    sys_contact: ${10:# System contact who manages the system}
+    sys_location: ${11:# System location}
+    hostname: ${12:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${13:# The username of the vSphere vCenter or ESXi server}
+    password: ${14:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${15:# Allows connection when SSL certificates are not valid}
+    port: ${16:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${17:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${18:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_host_snmp]]></content>
+  <tabTrigger>community.vmware.vmware_host_snmp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures SNMP on an ESXi host system</description>
+</snippet>

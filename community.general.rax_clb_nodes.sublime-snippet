@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add, modify and remove nodes from a Rackspace Cloud Load Balancer}
+  community.general.rax_clb_nodes:
+    address: ${2:# IP address or domain name of the node}
+    condition: ${3:# Condition for the node, which determines its role within the load balancer}
+    load_balancer_id: ${4:# Load balancer id}
+    node_id: ${5:# Node id}
+    port: ${6:# Port number of the load balanced service on the node}
+    state: ${7:# Indicate desired state of the node}
+    type: ${8:# Type of node}
+    wait: ${9:# Wait for the load balancer to become active before returning}
+    wait_timeout: ${10:# How long to wait before giving up and returning an error}
+    weight: ${11:# Weight of node}
+    virtualenv: ${12:# Virtualenv to execute this module in}
+    api_key: ${13:# Rackspace API key, overrides I(credentials)}
+    credentials: ${14:# File to find the Rackspace credentials in}
+    env: ${15:# Environment as configured in I(~/}
+    region: ${16:# Region to create an instance in}
+    username: ${17:# Rackspace username, overrides I(credentials)}
+    validate_certs: ${18:# Whether or not to require SSL validation of API endpoints}
+    auth_endpoint: ${19:# The URI of the authentication service}
+    identity_type: ${20:# Authentication mechanism to use, such as rackspace or keystone}
+    tenant_id: ${21:# The tenant ID used for authentication}
+    tenant_name: ${22:# The tenant name used for authentication}
+  tags:
+    - community
+    - general
+    - rax_clb_nodes]]></content>
+  <tabTrigger>community.general.rax_clb_nodes</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add, modify and remove nodes from a Rackspace Cloud Load Balancer</description>
+</snippet>

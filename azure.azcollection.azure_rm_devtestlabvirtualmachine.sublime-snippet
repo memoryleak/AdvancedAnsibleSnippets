@@ -1,0 +1,45 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure DevTest Lab Virtual Machine instance}
+  azure.azcollection.azure_rm_devtestlabvirtualmachine:
+    resource_group: ${2:# The name of the resource group}
+    lab_name: ${3:# The name of the lab}
+    name: ${4:# The name of the virtual machine}
+    notes: ${5:# The notes of the virtual machine}
+    os_type: ${6:# Base type of operating system}
+    vm_size: ${7:# A valid Azure VM size value}
+    user_name: ${8:# The user name of the virtual machine}
+    password: ${9:# The password of the virtual machine administrator}
+    ssh_key: ${10:# The SSH key of the virtual machine administrator}
+    lab_subnet: ${11:# An existing subnet within lab's virtual network}
+    disallow_public_ip_address: ${12:# Indicates whether the virtual machine is to be created without a public IP address}
+    artifacts: ${13:# The artifacts to be installed on the virtual machine}
+    image: ${14:# The Microsoft Azure Marketplace image reference of the virtual machine}
+    expiration_date: ${15:# The expiration date for VM}
+    allow_claim: ${16:# Indicates whether another user can take ownership of the virtual machine}
+    storage_type: ${17:# Storage type to use for virtual machine}
+    state: ${18:# Assert the state of the Virtual Machine}
+    ad_user: ${19:# Active Directory username}
+    profile: ${20:# Security profile found in ~/}
+    subscription_id: ${21:# Your Azure subscription Id}
+    client_id: ${22:# Azure client ID}
+    secret: ${23:# Azure client secret}
+    tenant: ${24:# Azure tenant ID}
+    cloud_environment: ${25:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${26:# Azure AD authority url}
+    cert_validation_mode: ${27:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${28:# Controls the source of the credentials to use for authentication}
+    api_profile: ${29:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${30:# Parent argument}
+    log_mode: ${31:# Parent argument}
+    x509_certificate_path: ${32:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${33:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${34:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${35:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_devtestlabvirtualmachine]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_devtestlabvirtualmachine</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure DevTest Lab Virtual Machine instance</description>
+</snippet>

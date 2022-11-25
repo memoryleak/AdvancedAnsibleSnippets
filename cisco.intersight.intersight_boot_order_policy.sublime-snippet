@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Boot Order policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_boot_order_policy:
+    state: ${2:# If C(present), will verify the resource is present and will create if needed}
+    organization: ${3:# The name of the Organization this resource is assigned to}
+    name: ${4:# The name assigned to the Boot Order policy}
+    tags: ${5:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    description: ${6:# The user-defined description of the Boot Order policy}
+    configured_boot_mode: ${7:# Sets the BIOS boot mode}
+    uefi_enable_secure_boot: ${8:# Secure boot enforces that device boots using only software that is trusted by the Original Equipment Manufacturer (OEM)}
+    boot_devices: ${9:# List of Boot Devices configured on the endpoint}
+    api_private_key: ${10:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${11:# URI used to access the Intersight API}
+    api_key_id: ${12:# Public API Key ID associated with the private key}
+    validate_certs: ${13:# Boolean control for verifying the api_uri TLS certificate}
+    use_proxy: ${14:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+  tags:
+    - cisco
+    - intersight
+    - intersight_boot_order_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_boot_order_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Boot Order policy configuration for Cisco Intersight</description>
+</snippet>

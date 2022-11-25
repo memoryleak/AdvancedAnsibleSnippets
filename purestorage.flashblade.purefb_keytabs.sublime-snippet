@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FlashBlade Kerberos Keytabs}
+  purestorage.flashblade.purefb_keytabs:
+    state: ${2:# Manage Kerberos Keytabs}
+    name: ${3:# Name of the Keytab}
+    prefix: ${4:# Only required for I(import) or I(rotate)}
+    keytab_file: ${5:# Name of file holding Keytab}
+    filetype: ${6:# Format of the keytab file}
+    fb_url: ${7:# FlashBlade management IP address or Hostname}
+    api_token: ${8:# FlashBlade API token for admin privileged user}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_keytabs]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_keytabs</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FlashBlade Kerberos Keytabs</description>
+</snippet>

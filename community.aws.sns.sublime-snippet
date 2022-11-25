@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Send Amazon Simple Notification Service messages}
+  community.aws.sns:
+    msg: ${2:# Default message for subscriptions without a more specific message}
+    subject: ${3:# Message subject}
+    topic: ${4:# The name or ARN of the topic to publish to}
+    email: ${5:# Message to send to email subscriptions}
+    email_json: ${6:# Message to send to email-json subscriptions}
+    sqs: ${7:# Message to send to SQS subscriptions}
+    sms: ${8:# Message to send to SMS subscriptions}
+    http: ${9:# Message to send to HTTP subscriptions}
+    https: ${10:# Message to send to HTTPS subscriptions}
+    application: ${11:# Message to send to application subscriptions}
+    lambda: ${12:# Message to send to Lambda subscriptions}
+    message_attributes: ${13:# Dictionary of message attributes}
+    message_structure: ${14:# The payload format to use for the message}
+    region: ${15:# The AWS region to use}
+    access_key: ${16:# AWS access key ID}
+    secret_key: ${17:# AWS secret access key}
+    session_token: ${18:# AWS STS session token for use with temporary credentials}
+    profile: ${19:# A named AWS profile to use for authentication}
+    endpoint_url: ${20:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${21:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${22:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${23:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${24:# Use a C(botocore}
+  tags:
+    - community
+    - aws
+    - sns]]></content>
+  <tabTrigger>community.aws.sns</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Send Amazon Simple Notification Service messages</description>
+</snippet>

@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for Device Administration Policy Set}
+  cisco.ise.device_administration_policy_set:
+    condition: ${2:# Device Administration Policy Set's condition}
+    default: ${3:# Flag which indicates if this policy set is the default one}
+    description: ${4:# The description for the policy set}
+    hitCounts: ${5:# The amount of times the policy was matched}
+    id: ${6:# Identifier for the policy set}
+    isProxy: ${7:# Flag which indicates if the policy set service is of type 'Proxy Sequence' or 'Allowed Protocols'}
+    link: ${8:# Device Administration Policy Set's link}
+    name: ${9:# Given name for the policy set, Valid characters are alphanumerics, underscore, hyphen, space, period, parentheses}
+    rank: ${10:# The rank(priority) in relation to other policy set}
+    serviceName: ${11:# Policy set service identifier - Allowed Protocols,Server Sequence}
+    state_: ${12:# The state that the policy set is in}
+    ise_hostname: ${13:# The Identity Services Engine hostname}
+    ise_username: ${14:# The Identity Services Engine username to authenticate}
+    ise_password: ${15:# The Identity Services Engine password to authenticate}
+    ise_verify: ${16:# Flag to enable or disable SSL certificate verification}
+    ise_version: ${17:# Informs the SDK which version of Identity Services Engine to use}
+    ise_wait_on_rate_limit: ${18:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
+    ise_debug: ${19:# Flag for Identity Services Engine SDK to enable debugging}
+    ise_uses_api_gateway: ${20:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
+    ise_uses_csrf_token: ${21:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+  tags:
+    - cisco
+    - ise
+    - device_administration_policy_set]]></content>
+  <tabTrigger>cisco.ise.device_administration_policy_set</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for Device Administration Policy Set</description>
+</snippet>

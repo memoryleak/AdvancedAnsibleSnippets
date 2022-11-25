@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage nic tags on SmartOS systems}
+  community.general.nictagadm:
+    name: ${2:# Name of the nic tag}
+    mac: ${3:# Specifies the I(mac) address to attach the nic tag to when not creating an I(etherstub)}
+    etherstub: ${4:# Specifies that the nic tag will be attached to a created I(etherstub)}
+    mtu: ${5:# Specifies the size of the I(mtu) of the desired nic tag}
+    force: ${6:# When I(state) is absent set this switch will use the C(-f) parameter and delete the nic tag regardless of existing VMs}
+    state: ${7:# Create or delete a SmartOS nic tag}
+  tags:
+    - community
+    - general
+    - nictagadm]]></content>
+  <tabTrigger>community.general.nictagadm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage nic tags on SmartOS systems</description>
+</snippet>

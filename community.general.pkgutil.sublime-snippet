@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:OpenCSW package management on Solaris}
+  community.general.pkgutil:
+    name: ${2:# The name of the package}
+    site: ${3:# The repository path to install the package from}
+    state: ${4:# Whether to install (C(present)/C(installed)), or remove (C(absent)/C(removed)) packages}
+    update_catalog: ${5:# If you always want to refresh your catalog from the mirror, even when it's not stale, set this to C(true)}
+    force: ${6:# To allow the update process to downgrade packages to match what is present in the repository, set this to C(true)}
+  tags:
+    - community
+    - general
+    - pkgutil]]></content>
+  <tabTrigger>community.general.pkgutil</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>OpenCSW package management on Solaris</description>
+</snippet>

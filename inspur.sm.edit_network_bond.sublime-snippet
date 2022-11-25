@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set network bond}
+  inspur.sm.edit_network_bond:
+    bond: ${2:# Network bond status,If VLAN is enabled for slave interfaces, then Bonding cannot be enabled}
+    interface: ${3:# Interface name}
+    auto_config: ${4:# Enable this option to configure the interfaces in service configuration automatically}
+    provider: ${5:# A dict object containing connection details}
+    host: ${6:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${7:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${8:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - sm
+    - edit_network_bond]]></content>
+  <tabTrigger>inspur.sm.edit_network_bond</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set network bond</description>
+</snippet>

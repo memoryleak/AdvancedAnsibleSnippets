@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, Delete and Modify network spaces on Infinibox}
+  infinidat.infinibox.infini_network_space:
+    name: ${2:# Network space name}
+    state: ${3:# Creates/Modifies network spaces when present}
+    interfaces: ${4:# A list of interfaces for the space}
+    service: ${5:# Choose a service}
+    mtu: ${6:# Set an MTU}
+    network: ${7:# Starting IP address}
+    netmask: ${8:# Network mask}
+    ips: ${9:# List of IPs}
+    rate_limit: ${10:# Specify the throughput limit per node}
+    system: ${11:# Infinibox Hostname or IPv4 Address}
+    user: ${12:# Infinibox User username with sufficient priveledges ( see notes )}
+    password: ${13:# Infinibox User password}
+  tags:
+    - infinidat
+    - infinibox
+    - infini_network_space]]></content>
+  <tabTrigger>infinidat.infinibox.infini_network_space</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, Delete and Modify network spaces on Infinibox</description>
+</snippet>

@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or delete routers from OpenStack}
+  openstack.cloud.router:
+    state: ${2:# Indicate desired state of the resource}
+    name: ${3:# Name to be give to the router}
+    admin_state_up: ${4:# Desired admin state of the created or existing router}
+    enable_snat: ${5:# Enable Source NAT (SNAT) attribute}
+    network: ${6:# Unique name or ID of the external gateway network}
+    project: ${7:# Unique name or ID of the project}
+    external_fixed_ips: ${8:# The IP address parameters for the external gateway network}
+    interfaces: ${9:# List of subnets to attach to the router internal interface}
+    cloud: ${10:# Named cloud or cloud config to operate against}
+    auth: ${11:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${12:# Name of the auth plugin to use}
+    region_name: ${13:# Name of the region}
+    wait: ${14:# Should ansible wait until the requested resource is complete}
+    timeout: ${15:# How long should ansible wait for the requested resource}
+    api_timeout: ${16:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${17:# Whether or not SSL API requests should be verified}
+    ca_cert: ${18:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${19:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${20:# A path to a client key to use as part of the SSL transaction}
+    interface: ${21:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${22:# Ignored}
+    sdk_log_path: ${23:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${24:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - router]]></content>
+  <tabTrigger>openstack.cloud.router</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or delete routers from OpenStack</description>
+</snippet>

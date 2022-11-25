@@ -1,0 +1,59 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage wireless SSIDs in the Meraki cloud}
+  cisco.meraki.meraki_mr_ssid:
+    state: ${2:# Specifies whether SNMP information should be queried or modified}
+    number: ${3:# SSID number within network}
+    name: ${4:# Name of SSID}
+    net_name: ${5:# Name of network}
+    net_id: ${6:# ID of network}
+    enabled: ${7:# Enable or disable SSID network}
+    auth_mode: ${8:# Set authentication mode of network}
+    encryption_mode: ${9:# Set encryption mode of network}
+    psk: ${10:# Password for wireless network}
+    wpa_encryption_mode: ${11:# Encryption mode within WPA specification}
+    splash_page: ${12:# Set to enable splash page and specify type of splash}
+    radius_servers: ${13:# List of RADIUS servers}
+    radius_proxy_enabled: ${14:# Enable or disable RADIUS Proxy on SSID}
+    radius_coa_enabled: ${15:# Enable or disable RADIUS CoA (Change of Authorization) on SSID}
+    radius_failover_policy: ${16:# Set client access policy in case RADIUS servers aren't available}
+    radius_load_balancing_policy: ${17:# Set load balancing policy when multiple RADIUS servers are specified}
+    radius_accounting_enabled: ${18:# Enable or disable RADIUS accounting}
+    radius_accounting_servers: ${19:# List of RADIUS servers for RADIUS accounting}
+    ip_assignment_mode: ${20:# Method of which SSID uses to assign IP addresses}
+    lan_isolation_enabled: ${21:# Enable or disable Layer 2 Lan isolation}
+    use_vlan_tagging: ${22:# Set whether to use VLAN tagging}
+    visible: ${23:# Enable or disable whether APs should broadcast this SSID}
+    default_vlan_id: ${24:# Default VLAN ID}
+    vlan_id: ${25:# ID number of VLAN on SSID}
+    ap_tags_vlan_ids: ${26:# List of VLAN tags}
+    walled_garden_enabled: ${27:# Enable or disable walled garden functionality}
+    walled_garden_ranges: ${28:# List of walled garden ranges}
+    available_on_all_aps: ${29:# Set whether all APs should broadcast the SSID or if it should be restricted to APs matching any availability tags}
+    ap_availability_tags: ${30:# Set whether SSID will be broadcast by APs with tags matching any of the tags in this list}
+    min_bitrate: ${31:# Minimum bitrate (Mbps) allowed on SSID}
+    band_selection: ${32:# Set band selection mode}
+    per_client_bandwidth_limit_up: ${33:# Maximum bandwidth in Mbps devices on SSID can upload}
+    per_client_bandwidth_limit_down: ${34:# Maximum bandwidth in Mbps devices on SSID can download}
+    concentrator_network_id: ${35:# The concentrator to use for 'Layer 3 roaming with a concentrator' or 'VPN'}
+    enterprise_admin_access: ${36:# Whether SSID is accessible by enterprise administrators}
+    splash_guest_sponsor_domains: ${37:# List of valid sponsor email domains for sponsored guest portal}
+    auth_key: ${38:# Authentication key provided by the dashboard}
+    host: ${39:# Hostname for Meraki dashboard}
+    use_proxy: ${40:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${41:# If C(no), it will use HTTP}
+    output_format: ${42:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${43:# Set amount of debug output during module execution}
+    timeout: ${44:# Time to timeout for HTTP requests}
+    validate_certs: ${45:# Whether to validate HTTP certificates}
+    org_name: ${46:# Name of organization}
+    org_id: ${47:# ID of organization}
+    rate_limit_retry_time: ${48:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${49:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_mr_ssid]]></content>
+  <tabTrigger>cisco.meraki.meraki_mr_ssid</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage wireless SSIDs in the Meraki cloud</description>
+</snippet>

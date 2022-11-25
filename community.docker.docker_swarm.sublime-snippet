@@ -1,0 +1,50 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Swarm cluster}
+  community.docker.docker_swarm:
+    advertise_addr: ${2:# Externally reachable address advertised to other nodes}
+    default_addr_pool: ${3:# Default address pool in CIDR format}
+    subnet_size: ${4:# Default address pool subnet mask length}
+    listen_addr: ${5:# Listen address used for inter-manager communication}
+    force: ${6:# Use with state C(present) to force creating a new Swarm, even if already part of one}
+    state: ${7:# Set to C(present), to create/update a new cluster}
+    node_id: ${8:# Swarm id of the node to remove}
+    join_token: ${9:# Swarm token used to join a swarm cluster}
+    remote_addrs: ${10:# Remote address of one or more manager nodes of an existing Swarm to connect to}
+    task_history_retention_limit: ${11:# Maximum number of tasks history stored}
+    snapshot_interval: ${12:# Number of logs entries between snapshot}
+    keep_old_snapshots: ${13:# Number of snapshots to keep beyond the current snapshot}
+    log_entries_for_slow_followers: ${14:# Number of log entries to keep around to sync up slow followers after a snapshot is created}
+    heartbeat_tick: ${15:# Amount of ticks (in seconds) between each heartbeat}
+    election_tick: ${16:# Amount of ticks (in seconds) needed without a leader to trigger a new election}
+    dispatcher_heartbeat_period: ${17:# The delay for an agent to send a heartbeat to the dispatcher}
+    node_cert_expiry: ${18:# Automatic expiry for nodes certificates}
+    name: ${19:# The name of the swarm}
+    labels: ${20:# User-defined key/value metadata}
+    signing_ca_cert: ${21:# The desired signing CA certificate for all swarm node TLS leaf certificates, in PEM format}
+    signing_ca_key: ${22:# The desired signing CA key for all swarm node TLS leaf certificates, in PEM format}
+    ca_force_rotate: ${23:# An integer whose purpose is to force swarm to generate a new signing CA certificate and key, if none have been specified}
+    autolock_managers: ${24:# If set, generate a key and use it to lock data stored on the managers}
+    rotate_worker_token: ${25:# Rotate the worker join token}
+    rotate_manager_token: ${26:# Rotate the manager join token}
+    data_path_addr: ${27:# Address or interface to use for data path traffic}
+    data_path_port: ${28:# Port to use for data path traffic}
+    docker_host: ${29:# The URL or Unix socket path used to connect to the Docker API}
+    tls_hostname: ${30:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    api_version: ${31:# The version of the Docker API running on the Docker Host}
+    timeout: ${32:# The maximum amount of time in seconds to wait on a response from the API}
+    ca_cert: ${33:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${34:# Path to the client's TLS certificate file}
+    client_key: ${35:# Path to the client's TLS key file}
+    ssl_version: ${36:# Provide a valid SSL version number}
+    tls: ${37:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    use_ssh_client: ${38:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${39:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    debug: ${40:# Debug mode}
+  tags:
+    - community
+    - docker
+    - docker_swarm]]></content>
+  <tabTrigger>community.docker.docker_swarm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Swarm cluster</description>
+</snippet>

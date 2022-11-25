@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller team}
+  awx.awx.tower_team:
+    name: ${2:# Name to use for the team}
+    new_name: ${3:# To use when changing a team's name}
+    description: ${4:# The description to use for the team}
+    organization: ${5:# Organization the team should be made a member of}
+    state: ${6:# Desired state of the resource}
+    controller_host: ${7:# URL to your Automation Platform Controller instance}
+    controller_username: ${8:# Username for your controller instance}
+    controller_password: ${9:# Password for your controller instance}
+    controller_oauthtoken: ${10:# The OAuth token to use}
+    validate_certs: ${11:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${12:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - tower_team]]></content>
+  <tabTrigger>awx.awx.tower_team</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>create, update, or destroy Automation Platform Controller team</description>
+</snippet>

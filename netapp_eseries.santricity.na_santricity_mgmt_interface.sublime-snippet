@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series manage management interface configuration}
+  netapp_eseries.santricity.na_santricity_mgmt_interface:
+    state: ${2:# Enable or disable IPv4 network interface configuration}
+    controller: ${3:# The controller that owns the port you want to configure}
+    port: ${4:# The ethernet port configuration to modify}
+    address: ${5:# The IPv4 address to assign to the interface}
+    subnet_mask: ${6:# The subnet mask to utilize for the interface}
+    gateway: ${7:# The IPv4 gateway address to utilize for the interface}
+    config_method: ${8:# The configuration method type to use for network interface ports}
+    dns_config_method: ${9:# The configuration method type to use for DNS services}
+    dns_address: ${10:# Primary IPv4 or IPv6 DNS server address}
+    dns_address_backup: ${11:# Secondary IPv4 or IPv6 DNS server address}
+    ntp_config_method: ${12:# The configuration method type to use for NTP services}
+    ntp_address: ${13:# Primary IPv4, IPv6, or FQDN NTP server address}
+    ntp_address_backup: ${14:# Secondary IPv4, IPv6, or FQDN NTP server address}
+    ssh: ${15:# Enable ssh access to the controller for debug purposes}
+    api_username: ${16:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_password: ${17:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${18:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    validate_certs: ${19:# Should https certificates be validated?}
+    ssid: ${20:# The ID of the array to manage}
+  tags:
+    - netapp_eseries
+    - santricity
+    - na_santricity_mgmt_interface]]></content>
+  <tabTrigger>netapp_eseries.santricity.na_santricity_mgmt_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series manage management interface configuration</description>
+</snippet>

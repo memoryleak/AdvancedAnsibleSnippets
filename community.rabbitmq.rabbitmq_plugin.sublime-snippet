@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage RabbitMQ plugins}
+  community.rabbitmq.rabbitmq_plugin:
+    names: ${2:# Comma-separated list of plugin names}
+    new_only: ${3:# Only enable missing plugins}
+    state: ${4:# Specify if plugins are to be enabled or disabled}
+    broker_state: ${5:# Specify whether the broker should be online or offline for the plugin change}
+    prefix: ${6:# Specify a custom install prefix to a Rabbit}
+  tags:
+    - community
+    - rabbitmq
+    - rabbitmq_plugin]]></content>
+  <tabTrigger>community.rabbitmq.rabbitmq_plugin</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage RabbitMQ plugins</description>
+</snippet>

@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage AWS Batch Job Definitions}
+  community.aws.batch_job_definition:
+    job_definition_arn: ${2:# The ARN for the job definition}
+    job_definition_name: ${3:# The name for the job definition}
+    state: ${4:# Describes the desired state}
+    type: ${5:# The type of job definition}
+    parameters: ${6:# Default parameter substitution placeholders to set in the job definition}
+    image: ${7:# The image used to start a container}
+    vcpus: ${8:# The number of vCPUs reserved for the container}
+    memory: ${9:# The hard limit (in MiB) of memory to present to the container}
+    command: ${10:# The command that is passed to the container}
+    job_role_arn: ${11:# The Amazon Resource Name (ARN) of the IAM role that the container can assume for AWS permissions}
+    volumes: ${12:# A list of data volumes used in a job}
+    environment: ${13:# The environment variables to pass to a container}
+    mount_points: ${14:# The mount points for data volumes in your container}
+    readonly_root_filesystem: ${15:# When this parameter is true, the container is given read-only access to its root file system}
+    privileged: ${16:# When this parameter is true, the container is given elevated privileges on the host container instance (similar to the root user)}
+    ulimits: ${17:# A list of ulimits to set in the container}
+    user: ${18:# The user name to use inside the container}
+    attempts: ${19:# Retry strategy - The number of times to move a job to the RUNNABLE status}
+    access_key: ${20:# AWS access key ID}
+    secret_key: ${21:# AWS secret access key}
+    session_token: ${22:# AWS STS session token for use with temporary credentials}
+    profile: ${23:# A named AWS profile to use for authentication}
+    endpoint_url: ${24:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${25:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${26:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${27:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${28:# Use a C(botocore}
+    region: ${29:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - batch_job_definition]]></content>
+  <tabTrigger>community.aws.batch_job_definition</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage AWS Batch Job Definitions</description>
+</snippet>

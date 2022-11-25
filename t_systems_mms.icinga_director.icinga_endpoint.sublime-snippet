@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage endpoints in Icinga2}
+  t_systems_mms.icinga_director.icinga_endpoint:
+    state: ${2:# Apply feature state}
+    object_name: ${3:# Icinga object name for this endpoint}
+    host: ${4:# The hostname/IP address of the remote Icinga 2 instance}
+    port: ${5:# The service name/port of the remote Icinga 2 instance}
+    log_duration: ${6:# Duration for keeping replay logs on connection loss}
+    zone: ${7:# The name of the zone this endpoint is part of}
+    append: ${8:# Do not overwrite the whole object but instead append the defined properties}
+    url: ${9:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    force: ${10:# If C(yes) do not get a cached copy}
+    http_agent: ${11:# Header to identify as, generally appears in web server logs}
+    use_proxy: ${12:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${13:# If C(no), SSL certificates will not be validated}
+    url_username: ${14:# The username for use in HTTP basic authentication}
+    url_password: ${15:# The password for use in HTTP basic authentication}
+    force_basic_auth: ${16:# Credentials specified with I(url_username) and I(url_password) should be passed in HTTP Header}
+    client_cert: ${17:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${18:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    use_gssapi: ${19:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+  tags:
+    - t_systems_mms
+    - icinga_director
+    - icinga_endpoint]]></content>
+  <tabTrigger>t_systems_mms.icinga_director.icinga_endpoint</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage endpoints in Icinga2</description>
+</snippet>

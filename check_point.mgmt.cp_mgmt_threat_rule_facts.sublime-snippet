@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get threat-rule objects facts on Check Point over Web Services API}
+  check_point.mgmt.cp_mgmt_threat_rule_facts:
+    name: ${2:# Object name}
+    layer: ${3:# Layer that the rule belongs to identified by the name or UID}
+    details_level: ${4:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    filter: ${5:# Search expression to filter the rulebase}
+    filter_settings: ${6:# Sets filter preferences}
+    limit: ${7:# No more than that many results will be returned}
+    offset: ${8:# Skip that many results before beginning to return them}
+    order: ${9:# Sorts results by the given field}
+    package: ${10:# Name of the package}
+    use_object_dictionary: ${11:# N/A}
+    dereference_group_members: ${12:# Indicates whether to dereference 'members' field by details level for every object in reply}
+    show_membership: ${13:# Indicates whether to calculate and show 'groups' field for every object in reply}
+    version: ${14:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_threat_rule_facts]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_threat_rule_facts</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get threat-rule objects facts on Check Point over Web Services API</description>
+</snippet>

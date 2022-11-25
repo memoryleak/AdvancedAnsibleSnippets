@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, modify and delete FlashBlade object store remote credentials}
+  purestorage.flashblade.purefb_remote_cred:
+    state: ${2:# Define state of remote credential}
+    name: ${3:# The name of the credential}
+    access_key: ${4:# Access Key ID of the S3 target}
+    secret: ${5:# Secret Access Key for the S3 or Azure target}
+    target: ${6:# Define whether to initialize the S3 bucket}
+    fb_url: ${7:# FlashBlade management IP address or Hostname}
+    api_token: ${8:# FlashBlade API token for admin privileged user}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_remote_cred]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_remote_cred</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, modify and delete FlashBlade object store remote credentials</description>
+</snippet>

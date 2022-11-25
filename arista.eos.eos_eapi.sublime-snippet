@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage and configure Arista EOS eAPI}
+  arista.eos.eos_eapi:
+    http: ${2:# The C(http) argument controls the operating state of the HTTP transport protocol when eAPI is present in the running-config}
+    http_port: ${3:# Configures the HTTP port that will listen for connections when the HTTP transport protocol is enabled}
+    https: ${4:# The C(https) argument controls the operating state of the HTTPS transport protocol when eAPI is present in the running-config}
+    https_port: ${5:# Configures the HTTP port that will listen for connections when the HTTP transport protocol is enabled}
+    local_http: ${6:# The C(local_http) argument controls the operating state of the local HTTP transport protocol when eAPI is present in the running-config}
+    local_http_port: ${7:# Configures the HTTP port that will listen for connections when the HTTP transport protocol is enabled}
+    socket: ${8:# The C(socket) argument controls the operating state of the UNIX Domain Socket used to receive eAPI requests}
+    timeout: ${9:# The time (in seconds) to wait for the eAPI configuration to be reflected in the running-config}
+    vrf: ${10:# The C(vrf) argument will configure eAPI to listen for connections in the specified VRF}
+    config: ${11:# The module, by default, will connect to the remote device and retrieve the current running-config to use as a base for comparing against the contents of source}
+    state: ${12:# The C(state) argument controls the operational state of eAPI on the remote device}
+  tags:
+    - arista
+    - eos
+    - eos_eapi]]></content>
+  <tabTrigger>arista.eos.eos_eapi</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage and configure Arista EOS eAPI</description>
+</snippet>

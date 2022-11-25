@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage replication connections between two FlashBlades}
+  purestorage.flashblade.purefb_connect:
+    state: ${2:# Create or delete replication connection}
+    encrypted: ${3:# Define if replication connection is encrypted}
+    target_url: ${4:# Management IP address of target FlashBlade system}
+    target_api: ${5:# API token for target FlashBlade system}
+    target_repl: ${6:# Replication IP address of target FlashBlade system}
+    default_limit: ${7:# Default maximum bandwidth threshold for outbound traffic in bytes}
+    window_limit: ${8:# Maximum bandwidth threshold for outbound traffic during the specified time range in bytes}
+    window_start: ${9:# The window start time}
+    window_end: ${10:# The window end time}
+    fb_url: ${11:# FlashBlade management IP address or Hostname}
+    api_token: ${12:# FlashBlade API token for admin privileged user}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_connect]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_connect</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage replication connections between two FlashBlades</description>
+</snippet>

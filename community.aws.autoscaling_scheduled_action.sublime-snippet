@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, modify and delete ASG scheduled scaling actions}
+  community.aws.autoscaling_scheduled_action:
+    autoscaling_group_name: ${2:# The name of the autoscaling group to add a scheduled action to}
+    scheduled_action_name: ${3:# The name of the scheduled action}
+    start_time: ${4:# Start time for the action}
+    end_time: ${5:# End time for the action}
+    time_zone: ${6:# Time zone to run against}
+    recurrence: ${7:# Cron style schedule to repeat the action on}
+    min_size: ${8:# ASG min capacity}
+    max_size: ${9:# ASG max capacity}
+    desired_capacity: ${10:# ASG desired capacity}
+    state: ${11:# Create / update or delete scheduled action}
+    access_key: ${12:# AWS access key ID}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    profile: ${15:# A named AWS profile to use for authentication}
+    endpoint_url: ${16:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${17:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${19:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${20:# Use a C(botocore}
+    region: ${21:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - autoscaling_scheduled_action]]></content>
+  <tabTrigger>community.aws.autoscaling_scheduled_action</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, modify and delete ASG scheduled scaling actions</description>
+</snippet>

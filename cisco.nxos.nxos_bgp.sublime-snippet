@@ -1,0 +1,51 @@
+<snippet>
+  <content><![CDATA[- name: ${1:(deprecated, removed after 2023-01-27) Manages BGP configuration}
+  cisco.nxos.nxos_bgp:
+    asn: ${2:# BGP autonomous system number}
+    vrf: ${3:# Name of the VRF}
+    bestpath_always_compare_med: ${4:# Enable/Disable MED comparison on paths from different autonomous systems}
+    bestpath_aspath_multipath_relax: ${5:# Enable/Disable load sharing across the providers with different (but equal-length) AS paths}
+    bestpath_compare_routerid: ${6:# Enable/Disable comparison of router IDs for identical eBGP paths}
+    bestpath_compare_neighborid: ${7:# Enable/Disable neighborid}
+    bestpath_cost_community_ignore: ${8:# Enable/Disable Ignores the cost community for BGP best-path calculations}
+    bestpath_med_confed: ${9:# Enable/Disable enforcement of bestpath to do a MED comparison only between paths originated within a confederation}
+    bestpath_med_missing_as_worst: ${10:# Enable/Disable assigns the value of infinity to received routes that do not carry the MED attribute, making these routes the least desirable}
+    bestpath_med_non_deterministic: ${11:# Enable/Disable deterministic selection of the best MED pat from among the paths from the same autonomous system}
+    cluster_id: ${12:# Route Reflector Cluster-ID}
+    confederation_id: ${13:# Routing domain confederation AS}
+    confederation_peers: ${14:# AS confederation parameters}
+    disable_policy_batching: ${15:# Enable/Disable the batching evaluation of prefix advertisement to all peers}
+    disable_policy_batching_ipv4_prefix_list: ${16:# Enable/Disable the batching evaluation of prefix advertisements to all peers with prefix list}
+    disable_policy_batching_ipv6_prefix_list: ${17:# Enable/Disable the batching evaluation of prefix advertisements to all peers with prefix list}
+    enforce_first_as: ${18:# Enable/Disable enforces the neighbor autonomous system to be the first AS number listed in the AS path attribute for eBGP}
+    event_history_cli: ${19:# Enable/Disable cli event history buffer}
+    event_history_detail: ${20:# Enable/Disable detail event history buffer}
+    event_history_events: ${21:# Enable/Disable event history buffer}
+    event_history_periodic: ${22:# Enable/Disable periodic event history buffer}
+    fast_external_fallover: ${23:# Enable/Disable immediately reset the session if the link to a directly connected BGP peer goes down}
+    flush_routes: ${24:# Enable/Disable flush routes in RIB upon controlled restart}
+    graceful_restart: ${25:# Enable/Disable graceful restart}
+    graceful_restart_helper: ${26:# Enable/Disable graceful restart helper mode}
+    graceful_restart_timers_restart: ${27:# Set maximum time for a restart sent to the BGP peer}
+    graceful_restart_timers_stalepath_time: ${28:# Set maximum time that BGP keeps the stale routes from the restarting BGP peer}
+    isolate: ${29:# Enable/Disable isolate this router from BGP perspective}
+    local_as: ${30:# Local AS number to be used within a VRF instance}
+    log_neighbor_changes: ${31:# Enable/Disable message logging for neighbor up/down event}
+    maxas_limit: ${32:# Specify Maximum number of AS numbers allowed in the AS-path attribute}
+    neighbor_down_fib_accelerate: ${33:# Enable/Disable handle BGP neighbor down event, due to various reasons}
+    reconnect_interval: ${34:# The BGP reconnection interval for dropped sessions}
+    router_id: ${35:# Router Identifier (ID) of the BGP router VRF instance}
+    shutdown: ${36:# Administratively shutdown the BGP protocol}
+    suppress_fib_pending: ${37:# Enable/Disable advertise only routes programmed in hardware to peers}
+    timer_bestpath_limit: ${38:# Specify timeout for the first best path after a restart, in seconds}
+    timer_bgp_hold: ${39:# Set BGP hold timer}
+    timer_bgp_keepalive: ${40:# Set BGP keepalive timer}
+    state: ${41:# Determines whether the config should be present or not on the device}
+  tags:
+    - cisco
+    - nxos
+    - nxos_bgp]]></content>
+  <tabTrigger>cisco.nxos.nxos_bgp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>(deprecated, removed after 2023-01-27) Manages BGP configuration</description>
+</snippet>

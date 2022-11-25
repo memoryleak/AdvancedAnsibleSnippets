@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and attach a volume, return volume ID and device map}
+  amazon.aws.ec2_vol:
+    instance: ${2:# Instance ID if you wish to attach the volume}
+    name: ${3:# Volume Name tag if you wish to attach an existing volume (requires instance)}
+    id: ${4:# Volume ID if you wish to attach an existing volume (requires instance) or remove an existing volume}
+    volume_size: ${5:# Size of volume (in GiB) to create}
+    volume_type: ${6:# Type of EBS volume; C(standard) (magnetic), C(gp2) (SSD), C(gp3) (SSD), C(io1) (Provisioned IOPS), C(io2) (Provisioned IOPS), C(st1) (Throughput Optimized HDD), C(sc1) (Cold HDD)}
+    iops: ${7:# The provisioned IOPs you want to associate with this volume (integer)}
+    encrypted: ${8:# Enable encryption at rest for this volume}
+    kms_key_id: ${9:# Specify the ID of the KMS key to use}
+    device_name: ${10:# Device ID to override device mapping}
+    delete_on_termination: ${11:# When set to C(true), the volume will be deleted upon instance termination}
+    zone: ${12:# Zone in which to create the volume, if unset uses the zone the instance is in (if set)}
+    snapshot: ${13:# Snapshot ID on which to base the volume}
+    state: ${14:# Whether to ensure the volume is present or absent}
+    modify_volume: ${15:# The volume won't be modified unless this key is C(true)}
+    throughput: ${16:# Volume throughput in MB/s}
+    multi_attach: ${17:# If set to C(true), Multi-Attach will be enabled when creating the volume}
+    outpost_arn: ${18:# The Amazon Resource Name (ARN) of the Outpost}
+    access_key: ${19:# AWS access key ID}
+    secret_key: ${20:# AWS secret access key}
+    session_token: ${21:# AWS STS session token for use with temporary credentials}
+    profile: ${22:# A named AWS profile to use for authentication}
+    endpoint_url: ${23:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${24:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${25:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${26:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${27:# Use a C(botocore}
+    region: ${28:# The AWS region to use}
+    tags: ${29:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${30:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - ec2_vol]]></content>
+  <tabTrigger>amazon.aws.ec2_vol</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and attach a volume, return volume ID and device map</description>
+</snippet>

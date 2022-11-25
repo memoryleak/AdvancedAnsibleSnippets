@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure FlashArray Directory Service Roles}
+  purestorage.flasharray.purefa_dsrole:
+    state: ${2:# Create or delete directory service role}
+    role: ${3:# The directory service role to work on}
+    group_base: ${4:# Specifies where the configured group is located in the directory tree}
+    group: ${5:# Sets the common Name (CN) of the configured directory service group containing users for the FlashBlade}
+    fa_url: ${6:# FlashArray management IPv4 address or Hostname}
+    api_token: ${7:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_dsrole]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_dsrole</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure FlashArray Directory Service Roles</description>
+</snippet>

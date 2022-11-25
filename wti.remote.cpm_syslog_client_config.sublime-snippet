@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set network SYSLOG Client parameters in WTI OOB and PDU devices}
+  wti.remote.cpm_syslog_client_config:
+    cpm_url: ${2:# This is the URL of the WTI device to send the module}
+    cpm_username: ${3:# This is the Username of the WTI device to send the module}
+    cpm_password: ${4:# This is the Password of the WTI device to send the module}
+    use_https: ${5:# Designates to use an https connection or http connection}
+    validate_certs: ${6:# If false, SSL certificates will not be validated}
+    use_proxy: ${7:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+    protocol: ${8:# The protocol that the SYSLOG entry should be applied}
+    clear: ${9:# Removes all the IP block entries for the protocol being defined before setting the newly defined entries}
+    index: ${10:# Index of the IP block being modified}
+    address: ${11:# Sets the IP Address of the SYSLOG server to contact}
+    port: ${12:# Defines the port number used by the SYSLOG Client (1 - 65535)}
+    transport: ${13:# Defines the transfer protocol type used by the SYSLOG Client}
+    secure: ${14:# Defines if a secure connection is used by the SYSLOG Client (TCP Transport required)}
+  tags:
+    - wti
+    - remote
+    - cpm_syslog_client_config]]></content>
+  <tabTrigger>wti.remote.cpm_syslog_client_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set network SYSLOG Client parameters in WTI OOB and PDU devices</description>
+</snippet>

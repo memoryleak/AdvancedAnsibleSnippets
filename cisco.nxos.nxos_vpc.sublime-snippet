@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages global VPC configuration}
+  cisco.nxos.nxos_vpc:
+    domain: ${2:# VPC domain}
+    role_priority: ${3:# Role priority for device}
+    system_priority: ${4:# System priority device}
+    pkl_src: ${5:# Source IP address used for peer keepalive link}
+    pkl_dest: ${6:# Destination (remote) IP address used for peer keepalive link}
+    pkl_vrf: ${7:# VRF used for peer keepalive link}
+    peer_gw: ${8:# Enables/Disables peer gateway}
+    auto_recovery: ${9:# Enables/Disables auto recovery on platforms that support disable}
+    auto_recovery_reload_delay: ${10:# Manages auto-recovery reload-delay timer in seconds}
+    delay_restore: ${11:# manages delay restore command and config value in seconds}
+    delay_restore_interface_vlan: ${12:# manages delay restore interface-vlan command and config value in seconds}
+    delay_restore_orphan_port: ${13:# manages delay restore orphan-port command and config value in seconds}
+    state: ${14:# Manages desired state of the resource}
+  tags:
+    - cisco
+    - nxos
+    - nxos_vpc]]></content>
+  <tabTrigger>cisco.nxos.nxos_vpc</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages global VPC configuration</description>
+</snippet>

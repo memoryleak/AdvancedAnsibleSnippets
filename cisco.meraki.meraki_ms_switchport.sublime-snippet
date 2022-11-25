@@ -1,0 +1,45 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage switchports on a switch in the Meraki cloud}
+  cisco.meraki.meraki_ms_switchport:
+    state: ${2:# Specifies whether a switchport should be queried or modified}
+    access_policy_type: ${3:# Type of access policy to apply to port}
+    access_policy_number: ${4:# Number of the access policy to apply}
+    allowed_vlans: ${5:# List of VLAN numbers to be allowed on switchport}
+    enabled: ${6:# Whether a switchport should be enabled or disabled}
+    isolation_enabled: ${7:# Isolation status of switchport}
+    link_negotiation: ${8:# Link speed for the switchport}
+    name: ${9:# Switchport description}
+    number: ${10:# Port number}
+    poe_enabled: ${11:# Enable or disable Power Over Ethernet on a port}
+    rstp_enabled: ${12:# Enable or disable Rapid Spanning Tree Protocol on a port}
+    serial: ${13:# Serial nubmer of the switch}
+    stp_guard: ${14:# Set state of STP guard}
+    tags: ${15:# List of tags to assign to a port}
+    type: ${16:# Set port type}
+    vlan: ${17:# VLAN number assigned to port}
+    voice_vlan: ${18:# VLAN number assigned to a port for voice traffic}
+    voice_vlan_state: ${19:# Specifies whether voice vlan configuration should be present or absent}
+    mac_allow_list: ${20:# MAC addresses list that are allowed on a port}
+    sticky_mac_allow_list: ${21:# MAC addresses list that are allowed on a port}
+    sticky_mac_allow_list_limit: ${22:# The number of MAC addresses allowed in the sticky port allow list}
+    flexible_stacking_enabled: ${23:# Whether flexible stacking capabilities are supported on the port}
+    auth_key: ${24:# Authentication key provided by the dashboard}
+    host: ${25:# Hostname for Meraki dashboard}
+    use_proxy: ${26:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${27:# If C(no), it will use HTTP}
+    output_format: ${28:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${29:# Set amount of debug output during module execution}
+    timeout: ${30:# Time to timeout for HTTP requests}
+    validate_certs: ${31:# Whether to validate HTTP certificates}
+    org_name: ${32:# Name of organization}
+    org_id: ${33:# ID of organization}
+    rate_limit_retry_time: ${34:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${35:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_ms_switchport]]></content>
+  <tabTrigger>cisco.meraki.meraki_ms_switchport</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage switchports on a switch in the Meraki cloud</description>
+</snippet>

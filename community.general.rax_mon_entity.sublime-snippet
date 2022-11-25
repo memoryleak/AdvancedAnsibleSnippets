@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or delete a Rackspace Cloud Monitoring entity}
+  community.general.rax_mon_entity:
+    label: ${2:# Defines a name for this entity}
+    state: ${3:# Ensure that an entity with this C(name) exists or does not exist}
+    agent_id: ${4:# Rackspace monitoring agent on the target device to which this entity is bound}
+    named_ip_addresses: ${5:# Hash of IP addresses that may be referenced by name by rax_mon_checks added to this entity}
+    metadata: ${6:# Hash of arbitrary C(name), C(value) pairs that are passed to associated rax_mon_alarms}
+    api_key: ${7:# Rackspace API key, overrides I(credentials)}
+    auth_endpoint: ${8:# The URI of the authentication service}
+    credentials: ${9:# File to find the Rackspace credentials in}
+    env: ${10:# Environment as configured in I(~/}
+    identity_type: ${11:# Authentication mechanism to use, such as rackspace or keystone}
+    region: ${12:# Region to create an instance in}
+    tenant_id: ${13:# The tenant ID used for authentication}
+    tenant_name: ${14:# The tenant name used for authentication}
+    username: ${15:# Rackspace username, overrides I(credentials)}
+    validate_certs: ${16:# Whether or not to require SSL validation of API endpoints}
+  tags:
+    - community
+    - general
+    - rax_mon_entity]]></content>
+  <tabTrigger>community.general.rax_mon_entity</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or delete a Rackspace Cloud Monitoring entity</description>
+</snippet>

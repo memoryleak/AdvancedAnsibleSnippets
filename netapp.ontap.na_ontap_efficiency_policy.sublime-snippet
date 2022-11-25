@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP manage efficiency policies (sis policies)}
+  netapp.ontap.na_ontap_efficiency_policy:
+    state: ${2:# Whether the specified efficiency policy should exist or not}
+    policy_name: ${3:# the name of the efficiency policy}
+    comment: ${4:# A brief description of the policy}
+    duration: ${5:# The duration in hours for which the scheduled efficiency operation should run}
+    enabled: ${6:# If the value is true, the efficiency policy is active in this cluster}
+    policy_type: ${7:# The policy type reflects the reason a volume using this policy will start processing a changelog}
+    qos_policy: ${8:# QoS policy for the efficiency operation}
+    schedule: ${9:# Cron type job schedule name}
+    vserver: ${10:# Name of the vserver to use}
+    changelog_threshold_percent: ${11:# Specifies the percentage at which the changelog will be processed for a threshold type of policy, tested once each hour}
+    hostname: ${12:# The hostname or IP address of the ONTAP instance}
+    username: ${13:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${14:# Password for the specified user}
+    cert_filepath: ${15:# path to SSL client cert file (}
+    key_filepath: ${16:# path to SSL client key file}
+    https: ${17:# Enable and disable https}
+    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${19:# Override the default port (80 or 443) with this port}
+    ontapi: ${20:# The ontap api version to use}
+    use_rest: ${21:# Whether to use REST or ZAPI}
+    feature_flags: ${22:# Enable or disable a new feature}
+    force_ontap_version: ${23:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_efficiency_policy]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_efficiency_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP manage efficiency policies (sis policies)</description>
+</snippet>

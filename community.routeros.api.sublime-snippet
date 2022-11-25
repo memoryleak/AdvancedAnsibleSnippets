@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Ansible module for RouterOS API}
+  community.routeros.api:
+    path: ${2:# Main path for all other arguments}
+    add: ${3:# Will add selected arguments in selected path to RouterOS config}
+    remove: ${4:# Remove config/value from RouterOS by '}
+    update: ${5:# Update config/value in RouterOS by '}
+    query: ${6:# Query given path for selected query attributes from RouterOS aip}
+    extended_query: ${7:# Extended query given path for selected query attributes from RouterOS API}
+    cmd: ${8:# Execute any/arbitrary command in selected path, after the command we can add C(}
+    hostname: ${9:# RouterOS hostname API}
+    username: ${10:# RouterOS login user}
+    password: ${11:# RouterOS user password}
+    timeout: ${12:# Timeout for the request}
+    tls: ${13:# If is set TLS will be used for RouterOS API connection}
+    port: ${14:# RouterOS api port}
+    validate_certs: ${15:# Set to C(false) to skip validation of TLS certificates}
+    validate_cert_hostname: ${16:# Set to C(true) to validate hostnames in certificates}
+    ca_path: ${17:# PEM formatted file that contains a CA certificate to be used for certificate validation}
+    encoding: ${18:# Use the specified encoding when communicating with the RouterOS device}
+  tags:
+    - community
+    - routeros
+    - api]]></content>
+  <tabTrigger>community.routeros.api</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Ansible module for RouterOS API</description>
+</snippet>

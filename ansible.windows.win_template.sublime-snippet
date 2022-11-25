@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Template a file out to a remote server}
+  ansible.windows.win_template:
+    backup: ${2:# Determine whether a backup should be created}
+    block_end_string: ${3:# The string marking the end of a block}
+    block_start_string: ${4:# The string marking the beginning of a block}
+    dest: ${5:# Location to render the template to on the remote machine}
+    force: ${6:# Determine when the file is being transferred if the destination already exists}
+    lstrip_blocks: ${7:# Determine when leading spaces and tabs should be stripped}
+    newline_sequence: ${8:# Specify the newline sequence to use for templating files}
+    output_encoding: ${9:# Overrides the encoding used to write the template file defined by C(dest)}
+    src: ${10:# Path of a Jinja2 formatted template on the Ansible controller}
+    trim_blocks: ${11:# Determine when newlines should be removed from blocks}
+    variable_end_string: ${12:# The string marking the end of a print statement}
+    variable_start_string: ${13:# The string marking the beginning of a print statement}
+  tags:
+    - ansible
+    - windows
+    - win_template]]></content>
+  <tabTrigger>ansible.windows.win_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Template a file out to a remote server</description>
+</snippet>

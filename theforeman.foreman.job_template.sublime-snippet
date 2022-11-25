@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Job Templates}
+  theforeman.foreman.job_template:
+    audit_comment: ${2:# Content of the audit comment field}
+    description_format: ${3:# description of the job template}
+    file_name: ${4:# The path of a template file, that shall be imported}
+    job_category: ${5:# The category the template should be assigend to}
+    locked: ${6:# Determines whether the template shall be locked}
+    name: ${7:# The name of the Job Template}
+    provider_type: ${8:# Determines via which provider the template shall be executed}
+    snippet: ${9:# Determines whether the template shall be a snippet}
+    template: ${10:# The content of the Job Template}
+    template_inputs: ${11:# The template inputs used in the Job Template}
+    server_url: ${12:# URL of the Foreman server}
+    username: ${13:# Username accessing the Foreman server}
+    password: ${14:# Password of the user accessing the Foreman server}
+    validate_certs: ${15:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${16:# State of the entity}
+    organizations: ${17:# List of organizations the entity should be assigned to}
+    locations: ${18:# List of locations the entity should be assigned to}
+  tags:
+    - theforeman
+    - foreman
+    - job_template]]></content>
+  <tabTrigger>theforeman.foreman.job_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Job Templates</description>
+</snippet>

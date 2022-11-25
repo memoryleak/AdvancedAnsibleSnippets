@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage DNS configuration of an ESXi host system}
+  community.vmware.vmware_host_dns:
+    type: ${2:# Type of DNS assignment}
+    device: ${3:# The VMkernel network adapter to obtain DNS settings from}
+    host_name: ${4:# The hostname to be used for the ESXi host}
+    domain: ${5:# The domain name to be used for the ESXi host}
+    dns_servers: ${6:# A list of DNS servers to be used}
+    search_domains: ${7:# A list of domains to be searched through by the resolver}
+    verbose: ${8:# Verbose output of the DNS server configuration change}
+    esxi_hostname: ${9:# Name of the host system to work with}
+    cluster_name: ${10:# Name of the cluster from which all host systems will be used}
+    hostname: ${11:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${12:# The username of the vSphere vCenter or ESXi server}
+    password: ${13:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${14:# Allows connection when SSL certificates are not valid}
+    port: ${15:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${16:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${17:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_host_dns]]></content>
+  <tabTrigger>community.vmware.vmware_host_dns</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage DNS configuration of an ESXi host system</description>
+</snippet>

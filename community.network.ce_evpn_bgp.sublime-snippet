@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages BGP EVPN configuration on HUAWEI CloudEngine switches}
+  community.network.ce_evpn_bgp:
+    bgp_instance: ${2:# Name of a BGP instance}
+    as_number: ${3:# Specifies integral AS number}
+    peer_address: ${4:# Specifies the IPv4 address of a BGP EVPN peer}
+    peer_group_name: ${5:# Specify the name of a peer group that BGP peers need to join}
+    peer_enable: ${6:# Enable or disable a BGP device to exchange routes with a specified peer or peer group in the address family view}
+    advertise_router_type: ${7:# Configures a device to advertise routes to its BGP EVPN peers}
+    vpn_name: ${8:# Associates a specified VPN instance with the IPv4 address family}
+    advertise_l2vpn_evpn: ${9:# Enable or disable a device to advertise IP routes imported to a VPN instance to its EVPN instance}
+    state: ${10:# Manage the state of the resource}
+  tags:
+    - community
+    - network
+    - ce_evpn_bgp]]></content>
+  <tabTrigger>community.network.ce_evpn_bgp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages BGP EVPN configuration on HUAWEI CloudEngine switches</description>
+</snippet>

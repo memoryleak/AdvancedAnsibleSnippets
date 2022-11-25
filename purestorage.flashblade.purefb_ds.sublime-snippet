@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure FlashBlade Directory Service}
+  purestorage.flashblade.purefb_ds:
+    state: ${2:# Create or delete directory service configuration}
+    dstype: ${3:# The type of directory service to work on}
+    enable: ${4:# Whether to enable or disable directory service support}
+    uri: ${5:# A list of up to 30 URIs of the directory servers}
+    base_dn: ${6:# Sets the base of the Distinguished Name (DN) of the directory service groups}
+    bind_password: ${7:# Sets the password of the bind_user user name account}
+    bind_user: ${8:# Sets the user name that can be used to bind to and query the directory}
+    nis_servers: ${9:# A list of up to 30 IP addresses or FQDNs for NIS servers}
+    nis_domain: ${10:# The NIS domain to search}
+    join_ou: ${11:# The optional organizational unit (OU) where the machine account for the directory service will be created}
+    fb_url: ${12:# FlashBlade management IP address or Hostname}
+    api_token: ${13:# FlashBlade API token for admin privileged user}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_ds]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_ds</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure FlashBlade Directory Service</description>
+</snippet>

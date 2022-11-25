@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages F5 BIG-IP LTM HTTP monitors}
+  f5networks.f5_modules.bigip_monitor_http:
+    name: ${2:# Monitor name}
+    parent: ${3:# The parent template of this monitor template}
+    description: ${4:# The description of the monitor}
+    send: ${5:# The Send string for the monitor call}
+    receive: ${6:# The Receive string for the monitor call}
+    receive_disable: ${7:# This setting works like C(receive), except the system marks the node or pool member disabled when its response matches the C(receive_disable) string but not C(receive)}
+    ip: ${8:# IP address part of the IP/port definition}
+    port: ${9:# Port address part of the IP/port definition}
+    interval: ${10:# The interval specifying how frequently the monitor instance of this template will run}
+    timeout: ${11:# The number of seconds in which the node or service must respond to the monitor request}
+    time_until_up: ${12:# Specifies the amount of time in seconds after the first successful response before a node is marked up}
+    target_username: ${13:# Specifies the user name, if the monitored target requires authentication}
+    target_password: ${14:# Specifies the password, if the monitored target requires authentication}
+    reverse: ${15:# Specifies whether the monitor operates in reverse mode}
+    partition: ${16:# Device partition to manage resources on}
+    state: ${17:# When C(present), ensures the monitor exists}
+    provider: ${18:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_monitor_http]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_monitor_http</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages F5 BIG-IP LTM HTTP monitors</description>
+</snippet>

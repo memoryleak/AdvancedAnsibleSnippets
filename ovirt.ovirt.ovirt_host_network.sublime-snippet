@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage host networks in oVirt/RHV}
+  ovirt.ovirt.ovirt_host_network:
+    name: ${2:# Name of the host to manage networks for}
+    state: ${3:# Should the host be present/absent}
+    bond: ${4:# Dictionary describing network bond:}
+    interface: ${5:# Name of the network interface where logical network should be attached}
+    networks: ${6:# List of dictionary describing networks to be attached to interface or bond:}
+    labels: ${7:# List of names of the network label to be assigned to bond or interface}
+    check: ${8:# If I(true) verify connectivity between host and engine}
+    save: ${9:# If I(true) network configuration will be persistent, otherwise it is temporary}
+    sync_networks: ${10:# If I(true) all networks will be synchronized before modification}
+    wait: ${11:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${12:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${13:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${14:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${15:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${16:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_host_network]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_host_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage host networks in oVirt/RHV</description>
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp Element Software Create Backups}
+  netapp.elementsw.na_elementsw_backup:
+    src_volume_id: ${2:# ID of the backup source volume}
+    dest_hostname: ${3:# hostname for the backup source cluster}
+    dest_username: ${4:# username for the backup destination cluster}
+    dest_password: ${5:# password for the backup destination cluster}
+    dest_volume_id: ${6:# ID of the backup destination volume}
+    format: ${7:# Backup format to use}
+    script: ${8:# the backup script to be executed}
+    script_parameters: ${9:# the backup script parameters}
+    hostname: ${10:# The hostname or IP address of the SolidFire cluster}
+    username: ${11:# Please ensure that the user has the adequate permissions}
+    password: ${12:# Password for the specified user}
+  tags:
+    - netapp
+    - elementsw
+    - na_elementsw_backup]]></content>
+  <tabTrigger>netapp.elementsw.na_elementsw_backup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp Element Software Create Backups</description>
+</snippet>

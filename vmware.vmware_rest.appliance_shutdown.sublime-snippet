@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Cancel pending shutdown action}
+  vmware.vmware_rest.appliance_shutdown:
+    delay: ${2:# Minutes after which poweroff should start}
+    reason: ${3:# Reason for peforming poweroff}
+    session_timeout: ${4:# Timeout settings for client session}
+    state: ${5:# No description available}
+    vcenter_hostname: ${6:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${7:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${8:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${9:# The vSphere vCenter username}
+    vcenter_validate_certs: ${10:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware_rest
+    - appliance_shutdown]]></content>
+  <tabTrigger>vmware.vmware_rest.appliance_shutdown</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Cancel pending shutdown action</description>
+</snippet>

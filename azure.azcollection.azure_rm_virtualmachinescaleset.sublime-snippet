@@ -1,0 +1,70 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure virtual machine scale sets}
+  azure.azcollection.azure_rm_virtualmachinescaleset:
+    resource_group: ${2:# Name of the resource group containing the virtual machine scale set}
+    name: ${3:# Name of the virtual machine}
+    state: ${4:# Assert the state of the virtual machine scale set}
+    location: ${5:# Valid Azure location}
+    short_hostname: ${6:# Short host name}
+    vm_size: ${7:# A valid Azure VM size value}
+    capacity: ${8:# Capacity of VMSS}
+    tier: ${9:# SKU Tier}
+    upgrade_policy: ${10:# Upgrade policy}
+    priority: ${11:# Priority of the VMSS}
+    eviction_policy: ${12:# Specifies the eviction policy for the Azure Spot virtual machine}
+    max_price: ${13:# Specifies the maximum price you are willing to pay for a Azure Spot VM/VMSS}
+    admin_username: ${14:# Admin username used to access the host after it is created}
+    admin_password: ${15:# Password for the admin username}
+    ssh_password_enabled: ${16:# When the os_type is Linux, setting I(ssh_password_enabled=false) will disable SSH password authentication and require use of SSH keys}
+    ssh_public_keys: ${17:# For I(os_type=Linux) provide a list of SSH keys}
+    image: ${18:# Specifies the image used to build the VM}
+    os_disk_caching: ${19:# Type of OS disk caching}
+    os_disk_size_gb: ${20:# Specifies the size of the operating system disk in gigabytes}
+    os_type: ${21:# Base type of operating system}
+    ephemeral_os_disk: ${22:# Parameters of ephemeral disk settings that can be specified for operating system disk}
+    managed_disk_type: ${23:# Managed disk type}
+    data_disks: ${24:# Describes list of data disks}
+    virtual_network_resource_group: ${25:# When creating a virtual machine, if a specific virtual network from another resource group should be used}
+    virtual_network_name: ${26:# Virtual Network name}
+    subnet_name: ${27:# Subnet name}
+    public_ip_per_vm: ${28:# Assign a public IP to each virtual machine of the scale set}
+    load_balancer: ${29:# Load balancer name}
+    application_gateway: ${30:# Application gateway name}
+    remove_on_absent: ${31:# When removing a VM using I(state=absent), also remove associated resources}
+    enable_accelerated_networking: ${32:# Indicates whether user wants to allow accelerated networking for virtual machines in scaleset being created}
+    security_group: ${33:# Existing security group with which to associate the subnet}
+    overprovision: ${34:# Specifies whether the Virtual Machine Scale Set should be overprovisioned}
+    single_placement_group: ${35:# When true this limits the scale set to a single placement group, of max size 100 virtual machines}
+    plan: ${36:# Third-party billing plan for the VM}
+    zones: ${37:# A list of Availability Zones for your virtual machine scale set}
+    custom_data: ${38:# Data which is made available to the virtual machine and used by e}
+    scale_in_policy: ${39:# define the order in which vmss instances are scaled-in}
+    terminate_event_timeout_minutes: ${40:# timeout time for termination notification event}
+    platform_fault_domain_count: ${41:# Fault Domain count for each placement group}
+    orchestration_mode: ${42:# Specifies the orchestration mode for the virtual machine scale set}
+    ad_user: ${43:# Active Directory username}
+    password: ${44:# Active Directory user password}
+    profile: ${45:# Security profile found in ~/}
+    subscription_id: ${46:# Your Azure subscription Id}
+    client_id: ${47:# Azure client ID}
+    secret: ${48:# Azure client secret}
+    tenant: ${49:# Azure tenant ID}
+    cloud_environment: ${50:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${51:# Azure AD authority url}
+    cert_validation_mode: ${52:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${53:# Controls the source of the credentials to use for authentication}
+    api_profile: ${54:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${55:# Parent argument}
+    log_mode: ${56:# Parent argument}
+    x509_certificate_path: ${57:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${58:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${59:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${60:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_virtualmachinescaleset]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_virtualmachinescaleset</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure virtual machine scale sets</description>
+</snippet>

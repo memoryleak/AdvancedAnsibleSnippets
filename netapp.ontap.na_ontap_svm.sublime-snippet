@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP SVM}
+  netapp.ontap.na_ontap_svm:
+    state: ${2:# Whether the specified SVM should exist or not}
+    name: ${3:# The name of the SVM to manage}
+    from_name: ${4:# Name of the SVM to be renamed}
+    admin_state: ${5:# when the SVM is created, it will be in the running state, unless specified otherwise}
+    root_volume: ${6:# Root volume of the SVM}
+    root_volume_aggregate: ${7:# The aggregate on which the root volume will be created}
+    root_volume_security_style: ${8:# Security Style of the root volume}
+    allowed_protocols: ${9:# Allowed Protocols}
+    services: ${10:# Enabled Protocols, only available with REST}
+    aggr_list: ${11:# List of aggregates assigned for volume operations}
+    ipspace: ${12:# IPSpace name}
+    snapshot_policy: ${13:# Default snapshot policy setting for all volumes of the Vserver}
+    language: ${14:# Language to use for the SVM}
+    subtype: ${15:# The subtype for vserver to be created}
+    comment: ${16:# When specified as part of a vserver-create, this field represents the comment associated with the Vserver}
+    ignore_rest_unsupported_options: ${17:# When true, ignore C(root_volume), C(root_volume_aggregate), C(root_volume_security_style) options if target supports REST}
+    max_volumes: ${18:# Maximum number of volumes that can be created on the vserver}
+    web: ${19:# web services security configuration}
+    hostname: ${20:# The hostname or IP address of the ONTAP instance}
+    username: ${21:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${22:# Password for the specified user}
+    cert_filepath: ${23:# path to SSL client cert file (}
+    key_filepath: ${24:# path to SSL client key file}
+    https: ${25:# Enable and disable https}
+    validate_certs: ${26:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${27:# Override the default port (80 or 443) with this port}
+    ontapi: ${28:# The ontap api version to use}
+    use_rest: ${29:# Whether to use REST or ZAPI}
+    feature_flags: ${30:# Enable or disable a new feature}
+    force_ontap_version: ${31:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_svm]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_svm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP SVM</description>
+</snippet>

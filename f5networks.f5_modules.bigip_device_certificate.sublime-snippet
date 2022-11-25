@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage self-signed device certificates}
+  f5networks.f5_modules.bigip_device_certificate:
+    days_valid: ${2:# Specifies the interval for which the self-signed certificate is valid}
+    cert_name: ${3:# Specifies the full name of the certificate file}
+    key_name: ${4:# Specifies the full name of the key file}
+    key_size: ${5:# Specifies the desired key size in bits}
+    issuer: ${6:# Certificate properties, required when generating new certificates}
+    add_to_trusted: ${7:# Specified if the certificate should be added to the trusted client and server certificate files}
+    new_cert: ${8:# Specified if the module should generate a new certificate}
+    force: ${9:# When C(yes), will update or overwrite the existing certificate when it is not expired on the device}
+    provider: ${10:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_device_certificate]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_device_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage self-signed device certificates</description>
+</snippet>

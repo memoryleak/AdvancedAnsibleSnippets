@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates, updates or deletes AWS Lambda policy statements}
+  amazon.aws.lambda_policy:
+    function_name: ${2:# Name of the Lambda function whose resource policy you are updating by adding a new permission}
+    state: ${3:# Describes the desired state}
+    alias: ${4:# Name of the function alias}
+    version: ${5:# Version of the Lambda function}
+    statement_id: ${6:# A unique statement identifier}
+    action: ${7:# The AWS Lambda action you want to allow in this statement}
+    principal: ${8:# The principal who is getting this permission}
+    source_arn: ${9:# This is optional; however, when granting Amazon S3 permission to invoke your function, you should specify this field with the bucket Amazon Resource Name (ARN) as its value}
+    source_account: ${10:# The AWS account ID (without a hyphen) of the source owner}
+    event_source_token: ${11:# Token string representing source ARN or account}
+    access_key: ${12:# AWS access key ID}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    profile: ${15:# A named AWS profile to use for authentication}
+    endpoint_url: ${16:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${17:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${19:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${20:# Use a C(botocore}
+    region: ${21:# The AWS region to use}
+  tags:
+    - amazon
+    - aws
+    - lambda_policy]]></content>
+  <tabTrigger>amazon.aws.lambda_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates, updates or deletes AWS Lambda policy statements</description>
+</snippet>

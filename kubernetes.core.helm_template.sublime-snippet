@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Render chart templates}
+  kubernetes.core.helm_template:
+    binary_path: ${2:# The path of a helm binary to use}
+    chart_ref: ${3:# Chart reference with repo prefix, for example, C(nginx-stable/nginx-ingress)}
+    chart_repo_url: ${4:# Chart repository URL where the requested chart is located}
+    chart_version: ${5:# Chart version to use}
+    include_crds: ${6:# Include custom resource descriptions in rendered templates}
+    output_dir: ${7:# Output directory where templates will be written}
+    release_namespace: ${8:# namespace scope for this request}
+    release_values: ${9:# Values to pass to chart}
+    show_only: ${10:# Only show manifests rendered from the given templates}
+    values_files: ${11:# Value files to pass to chart}
+    update_repo_cache: ${12:# Run C(helm repo update) before the operation}
+  tags:
+    - kubernetes
+    - core
+    - helm_template]]></content>
+  <tabTrigger>kubernetes.core.helm_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Render chart templates</description>
+</snippet>

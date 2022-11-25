@@ -1,0 +1,76 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure virtual machines}
+  azure.azcollection.azure_rm_virtualmachine:
+    resource_group: ${2:# Name of the resource group containing the VM}
+    name: ${3:# Name of the VM}
+    custom_data: ${4:# Data made available to the VM and used by C(cloud-init)}
+    state: ${5:# State of the VM}
+    started: ${6:# Whether the VM is started or stopped}
+    allocated: ${7:# Whether the VM is allocated or deallocated, only useful with I(state=present)}
+    generalized: ${8:# Whether the VM is generalized or not}
+    restarted: ${9:# Set to C(true) with I(state=present) to restart a running VM}
+    location: ${10:# Valid Azure location for the VM}
+    short_hostname: ${11:# Name assigned internally to the host}
+    vm_size: ${12:# A valid Azure VM size value}
+    priority: ${13:# Priority of the VM}
+    eviction_policy: ${14:# Specifies the eviction policy for the Azure Spot virtual machine}
+    max_price: ${15:# Specifies the maximum price you are willing to pay for a Azure Spot VM/VMSS}
+    admin_username: ${16:# Admin username used to access the VM after it is created}
+    admin_password: ${17:# Password for the admin username}
+    ssh_password_enabled: ${18:# Whether to enable or disable SSH passwords}
+    ssh_public_keys: ${19:# For I(os_type=Linux) provide a list of SSH keys}
+    image: ${20:# The image used to build the VM}
+    availability_set: ${21:# Name or ID of an existing availability set to add the VM to}
+    proximity_placement_group: ${22:# The name or ID of the proximity placement group the VM should be associated with}
+    storage_account_name: ${23:# Name of a storage account that supports creation of VHD blobs}
+    storage_container_name: ${24:# Name of the container to use within the storage account to store VHD blobs}
+    storage_blob_name: ${25:# Name of the storage blob used to hold the OS disk image of the VM}
+    managed_disk_type: ${26:# Managed OS disk type}
+    os_disk_name: ${27:# OS disk name}
+    os_disk_caching: ${28:# Type of OS disk caching}
+    os_disk_size_gb: ${29:# Type of OS disk size in GB}
+    os_type: ${30:# Base type of operating system}
+    ephemeral_os_disk: ${31:# Parameters of ephemeral disk settings that can be specified for operating system disk}
+    data_disks: ${32:# Describes list of data disks}
+    public_ip_allocation_method: ${33:# Allocation method for the public IP of the VM}
+    open_ports: ${34:# List of ports to open in the security group for the VM, when a security group and network interface are created with a VM}
+    network_interface_names: ${35:# Network interface names to add to the VM}
+    virtual_network_resource_group: ${36:# The resource group to use when creating a VM with another resource group's virtual network}
+    virtual_network_name: ${37:# The virtual network to use when creating a VM}
+    subnet_name: ${38:# Subnet for the VM}
+    remove_on_absent: ${39:# Associated resources to remove when removing a VM using I(state=absent)}
+    plan: ${40:# Third-party billing plan for the VM}
+    accept_terms: ${41:# Accept terms for Marketplace images that require it}
+    zones: ${42:# A list of Availability Zones for your VM}
+    license_type: ${43:# On-premise license for the image or disk}
+    vm_identity: ${44:# Identity for the VM}
+    winrm: ${45:# List of Windows Remote Management configurations of the VM}
+    boot_diagnostics: ${46:# Manage boot diagnostics settings for a VM}
+    linux_config: ${47:# Specifies the Linux operating system settings on the virtual machine}
+    windows_config: ${48:# Specifies Windows operating system settings on the virtual machine}
+    ad_user: ${49:# Active Directory username}
+    password: ${50:# Active Directory user password}
+    profile: ${51:# Security profile found in ~/}
+    subscription_id: ${52:# Your Azure subscription Id}
+    client_id: ${53:# Azure client ID}
+    secret: ${54:# Azure client secret}
+    tenant: ${55:# Azure tenant ID}
+    cloud_environment: ${56:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${57:# Azure AD authority url}
+    cert_validation_mode: ${58:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${59:# Controls the source of the credentials to use for authentication}
+    api_profile: ${60:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${61:# Parent argument}
+    log_mode: ${62:# Parent argument}
+    x509_certificate_path: ${63:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${64:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${65:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${66:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_virtualmachine]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_virtualmachine</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure virtual machines</description>
+</snippet>

@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage content view version content exports}
+  theforeman.foreman.content_export_version:
+    content_view_version: ${2:# Content view version, e}
+    content_view: ${3:# Content view name}
+    destination_server: ${4:# Destination server name; optional parameter to differentiate between exports}
+    chunk_size_gb: ${5:# Split the exported content into archives no greater than the specified size in gigabytes}
+    fail_on_missing_content: ${6:# Fails if any of the repositories belonging to this version are unexportable}
+    incremental: ${7:# Export only the content that has changed since the last export}
+    from_history_id: ${8:# Export history identifier used for incremental export}
+    server_url: ${9:# URL of the Foreman server}
+    username: ${10:# Username accessing the Foreman server}
+    password: ${11:# Password of the user accessing the Foreman server}
+    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
+    organization: ${13:# Organization that the entity is in}
+  tags:
+    - theforeman
+    - foreman
+    - content_export_version]]></content>
+  <tabTrigger>theforeman.foreman.content_export_version</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage content view version content exports</description>
+</snippet>

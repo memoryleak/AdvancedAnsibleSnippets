@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information on instances of Alibaba Cloud ECS}
+  community.general.ali_instance_info:
+    name_prefix: ${2:# Use a instance name prefix to filter ecs instances}
+    tags: ${3:# A hash/dictionaries of instance tags}
+    filters: ${4:# A dict of filters to apply}
+    alicloud_access_key: ${5:# Alibaba Cloud access key}
+    alicloud_secret_key: ${6:# Alibaba Cloud secret key}
+    alicloud_region: ${7:# The Alibaba Cloud region to use}
+    alicloud_security_token: ${8:# The Alibaba Cloud security token}
+    alicloud_assume_role: ${9:# If provided with a role ARN, Ansible will attempt to assume this role using the supplied credentials}
+    alicloud_assume_role_arn: ${10:# The Alibaba Cloud role_arn}
+    alicloud_assume_role_session_name: ${11:# The Alibaba Cloud session_name}
+    alicloud_assume_role_session_expiration: ${12:# The Alibaba Cloud session_expiration}
+    ecs_role_name: ${13:# The RAM Role Name attached on a ECS instance for API operations}
+    profile: ${14:# This is the Alicloud profile name as set in the shared credentials file}
+    shared_credentials_file: ${15:# This is the path to the shared credentials file}
+  tags:
+    - community
+    - general
+    - ali_instance_info]]></content>
+  <tabTrigger>community.general.ali_instance_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information on instances of Alibaba Cloud ECS</description>
+</snippet>

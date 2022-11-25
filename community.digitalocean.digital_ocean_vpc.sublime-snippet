@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and delete DigitalOcean VPCs}
+  community.digitalocean.digital_ocean_vpc:
+    state: ${2:# Whether the VPC should be present (created) or absent (deleted)}
+    name: ${3:# The name of the VPC}
+    description: ${4:# A free-form text field for describing the VPC's purpose}
+    default: ${5:# A boolean value indicating whether or not the VPC is the default network for the region}
+    region: ${6:# The slug identifier for the region where the VPC will be created}
+    ip_range: ${7:# The requested range of IP addresses for the VPC in CIDR notation}
+    baseurl: ${8:# DigitalOcean API base url}
+    oauth_token: ${9:# DigitalOcean OAuth token}
+    timeout: ${10:# The timeout in seconds used for polling DigitalOcean's API}
+    validate_certs: ${11:# If set to C(no), the SSL certificates will not be validated}
+  tags:
+    - community
+    - digitalocean
+    - digital_ocean_vpc]]></content>
+  <tabTrigger>community.digitalocean.digital_ocean_vpc</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and delete DigitalOcean VPCs</description>
+</snippet>

@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Hardware Models}
+  theforeman.foreman.hardware_model:
+    name: ${2:# Name of the hardware model}
+    info: ${3:# General description of the hardware model}
+    vendor_class: ${4:# The class of the machine as reported by the OpenBoot PROM}
+    hardware_model: ${5:# The class of CPU supplied in this machine}
+    server_url: ${6:# URL of the Foreman server}
+    username: ${7:# Username accessing the Foreman server}
+    password: ${8:# Password of the user accessing the Foreman server}
+    validate_certs: ${9:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${10:# State of the entity}
+  tags:
+    - theforeman
+    - foreman
+    - hardware_model]]></content>
+  <tabTrigger>theforeman.foreman.hardware_model</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Hardware Models</description>
+</snippet>

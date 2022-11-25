@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:manage CloudTrail create, delete, update}
+  amazon.aws.cloudtrail:
+    state: ${2:# Add or remove CloudTrail configuration}
+    name: ${3:# Name for the CloudTrail}
+    enable_logging: ${4:# Start or stop the CloudTrail logging}
+    s3_bucket_name: ${5:# An existing S3 bucket where CloudTrail will deliver log files}
+    s3_key_prefix: ${6:# S3 Key prefix for delivered log files}
+    is_multi_region_trail: ${7:# Specify whether the trail belongs only to one region or exists in all regions}
+    enable_log_file_validation: ${8:# Specifies whether log file integrity validation is enabled}
+    include_global_events: ${9:# Record API calls from global services such as IAM and STS}
+    sns_topic_name: ${10:# SNS Topic name to send notifications to when a log file is delivered}
+    cloudwatch_logs_role_arn: ${11:# Specifies a full ARN for an IAM role that assigns the proper permissions for CloudTrail to create and write to the log group}
+    cloudwatch_logs_log_group_arn: ${12:# A full ARN specifying a valid CloudWatch log group to which CloudTrail logs will be delivered}
+    kms_key_id: ${13:# Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail}
+    access_key: ${14:# AWS access key ID}
+    secret_key: ${15:# AWS secret access key}
+    session_token: ${16:# AWS STS session token for use with temporary credentials}
+    profile: ${17:# A named AWS profile to use for authentication}
+    endpoint_url: ${18:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${19:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${20:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${21:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${22:# Use a C(botocore}
+    region: ${23:# The AWS region to use}
+    tags: ${24:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${25:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - cloudtrail]]></content>
+  <tabTrigger>amazon.aws.cloudtrail</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>manage CloudTrail create, delete, update</description>
+</snippet>

@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage External EPG subnets in schema templates}
+  cisco.mso.mso_schema_template_external_epg_subnet:
+    schema: ${2:# The name of the schema}
+    template: ${3:# The name of the template to change}
+    external_epg: ${4:# The name of the External EPG to manage}
+    subnet: ${5:# The IP range in CIDR notation}
+    scope: ${6:# The scope parameter contains two sections 1}
+    aggregate: ${7:# The aggregate option aggregates shared routes for the subnet}
+    state: ${8:# Use C(present) or C(absent) for adding or removing}
+    host: ${9:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    port: ${10:# Port number to be used for the REST connection}
+    username: ${11:# The username to use for authentication}
+    password: ${12:# The password to use for authentication}
+    output_level: ${13:# Influence the output of this MSO module}
+    timeout: ${14:# The socket level timeout in seconds}
+    use_proxy: ${15:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${16:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    validate_certs: ${17:# If C(no), SSL certificates will not be validated}
+    login_domain: ${18:# The login domain name to use for authentication}
+  tags:
+    - cisco
+    - mso
+    - mso_schema_template_external_epg_subnet]]></content>
+  <tabTrigger>cisco.mso.mso_schema_template_external_epg_subnet</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage External EPG subnets in schema templates</description>
+</snippet>

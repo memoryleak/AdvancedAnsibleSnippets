@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FreeIPA sudo command}
+  community.general.ipa_sudocmd:
+    sudocmd: ${2:# Sudo command}
+    description: ${3:# A description of this command}
+    state: ${4:# State to ensure}
+    ipa_port: ${5:# Port of FreeIPA / IPA server}
+    ipa_host: ${6:# IP or hostname of IPA server}
+    ipa_user: ${7:# Administrative account used on IPA server}
+    ipa_pass: ${8:# Password of administrative user}
+    ipa_prot: ${9:# Protocol used by IPA server}
+    validate_certs: ${10:# This only applies if C(ipa_prot) is I(https)}
+    ipa_timeout: ${11:# Specifies idle timeout (in seconds) for the connection}
+  tags:
+    - community
+    - general
+    - ipa_sudocmd]]></content>
+  <tabTrigger>community.general.ipa_sudocmd</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FreeIPA sudo command</description>
+</snippet>

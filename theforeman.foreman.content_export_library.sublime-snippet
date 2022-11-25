@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage library content exports}
+  theforeman.foreman.content_export_library:
+    destination_server: ${2:# Destination server name; optional parameter to differentiate between exports}
+    chunk_size_gb: ${3:# Split the exported content into archives no greater than the specified size in gigabytes}
+    fail_on_missing_content: ${4:# Fails if any of the repositories belonging to this organization are unexportable}
+    incremental: ${5:# Export only the content that has changed since the last export}
+    from_history_id: ${6:# Export history identifier used for incremental export}
+    server_url: ${7:# URL of the Foreman server}
+    username: ${8:# Username accessing the Foreman server}
+    password: ${9:# Password of the user accessing the Foreman server}
+    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
+    organization: ${11:# Organization that the entity is in}
+  tags:
+    - theforeman
+    - foreman
+    - content_export_library]]></content>
+  <tabTrigger>theforeman.foreman.content_export_library</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage library content exports</description>
+</snippet>

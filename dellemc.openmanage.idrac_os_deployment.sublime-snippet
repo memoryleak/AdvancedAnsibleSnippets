@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Boot to a network ISO image}
+  dellemc.openmanage.idrac_os_deployment:
+    share_name: ${2:# CIFS or NFS Network share}
+    share_user: ${3:# Network share user in the format 'user@domain' or 'domain\\\\user' if user is part of a domain else 'user'}
+    share_password: ${4:# Network share user password}
+    iso_image: ${5:# Network ISO name}
+    expose_duration: ${6:# It is the time taken in minutes for the ISO image file to be exposed as a local CD-ROM device to the host server}
+    idrac_ip: ${7:# iDRAC IP Address}
+    idrac_user: ${8:# iDRAC username}
+    idrac_password: ${9:# iDRAC user password}
+    idrac_port: ${10:# iDRAC port}
+    validate_certs: ${11:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${12:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${13:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_os_deployment]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_os_deployment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Boot to a network ISO image</description>
+</snippet>

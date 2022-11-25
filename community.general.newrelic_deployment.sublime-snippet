@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Notify New Relic about app deployments}
+  community.general.newrelic_deployment:
+    token: ${2:# API token to place in the Api-Key header}
+    app_name: ${3:# The value of app_name in the newrelic}
+    application_id: ${4:# The application ID found in the metadata of the application in APM}
+    changelog: ${5:# A list of changes for this deployment}
+    description: ${6:# Text annotation for the deployment - notes for you}
+    revision: ${7:# A revision number (e}
+    user: ${8:# The name of the user/process that triggered this deployment}
+    appname: ${9:# Name of the application}
+    environment: ${10:# The environment for this deployment}
+    validate_certs: ${11:# If C(false), SSL certificates will not be validated}
+  tags:
+    - community
+    - general
+    - newrelic_deployment]]></content>
+  <tabTrigger>community.general.newrelic_deployment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Notify New Relic about app deployments</description>
+</snippet>

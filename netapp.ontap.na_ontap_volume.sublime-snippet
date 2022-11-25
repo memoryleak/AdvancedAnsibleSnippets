@@ -1,0 +1,80 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP manage volumes}
+  netapp.ontap.na_ontap_volume:
+    state: ${2:# Whether the specified volume should exist or not}
+    name: ${3:# The name of the volume to manage}
+    vserver: ${4:# Name of the vserver to use}
+    from_name: ${5:# Name of the existing volume to be renamed to name}
+    is_infinite: ${6:# Set True if the volume is an Infinite Volume}
+    is_online: ${7:# Whether the specified volume is online, or not}
+    aggregate_name: ${8:# The name of the aggregate the flexvol should exist on}
+    nas_application_template: ${9:# additional options when using the application/applications REST API to create a volume}
+    size: ${10:# The size of the volume in (size_unit)}
+    size_unit: ${11:# The unit used to interpret the size parameter}
+    size_change_threshold: ${12:# Percentage in size change to trigger a resize}
+    sizing_method: ${13:# Represents the method to modify the size of a FlexGroup}
+    type: ${14:# The volume type, either read-write (RW) or data-protection (DP)}
+    export_policy: ${15:# Name of the export policy}
+    junction_path: ${16:# Junction path of the volume}
+    space_guarantee: ${17:# Space guarantee style for the volume}
+    percent_snapshot_space: ${18:# Amount of space reserved for snapshot copies of the volume}
+    volume_security_style: ${19:# The security style associated with this volume}
+    encrypt: ${20:# Whether or not to enable Volume Encryption}
+    efficiency_policy: ${21:# Allows a storage efficiency policy to be set on volume creation}
+    unix_permissions: ${22:# Unix permission bits in octal or symbolic format}
+    group_id: ${23:# The UNIX group ID for the volume}
+    user_id: ${24:# The UNIX user ID for the volume}
+    snapshot_policy: ${25:# The name of the snapshot policy}
+    aggr_list: ${26:# an array of names of aggregates to be used for FlexGroup constituents}
+    aggr_list_multiplier: ${27:# The number of times to iterate over the aggregates listed with the aggr_list parameter when creating a FlexGroup}
+    auto_provision_as: ${28:# Automatically provision a FlexGroup volume}
+    snapdir_access: ${29:# This is an advanced option, the default is False}
+    atime_update: ${30:# This is an advanced option, the default is True}
+    wait_for_completion: ${31:# Set this parameter to 'true' for synchronous execution during create (wait until volume status is online)}
+    time_out: ${32:# With ZAPI - time to wait for Flexgroup creation, modification, or deletion in seconds}
+    max_wait_time: ${33:# Volume move and encryption operations might take longer time to complete}
+    language: ${34:# Language to use for Volume}
+    qos_policy_group: ${35:# Specifies a QoS policy group to be set on volume}
+    qos_adaptive_policy_group: ${36:# Specifies a QoS adaptive policy group to be set on volume}
+    tiering_policy: ${37:# The tiering policy that is to be associated with the volume}
+    space_slo: ${38:# Specifies the space SLO type for the volume}
+    nvfail_enabled: ${39:# If true, the controller performs additional work at boot and takeover times if it finds that there has been any potential data loss in the volume's constituents due to an NVRAM failure}
+    vserver_dr_protection: ${40:# Specifies the protection type for the volume in a Vserver DR setup}
+    comment: ${41:# Sets a comment associated with the volume}
+    snapshot_auto_delete: ${42:# A dictionary for the auto delete options and values}
+    cutover_action: ${43:# Specifies the action to be taken for cutover}
+    check_interval: ${44:# The amount of time in seconds to wait between checks of a volume to see if it has moved successfully}
+    from_vserver: ${45:# The source vserver of the volume is rehosted}
+    auto_remap_luns: ${46:# Flag to control automatic map of LUNs}
+    force_unmap_luns: ${47:# Flag to control automatic unmap of LUNs}
+    force_restore: ${48:# If this field is set to 'true', the Snapshot copy is restored even if the volume has one or more newer Snapshot copies which are currently used as reference Snapshot copy by SnapMirror}
+    preserve_lun_ids: ${49:# If this field is set to 'true', LUNs in the volume being restored will remain mapped and their identities preserved such that host connectivity will not be disrupted during the restore operation}
+    snapshot_restore: ${50:# Name of snapshot to restore from}
+    compression: ${51:# Whether to enable compression for the volume (HDD and Flash Pool aggregates)}
+    inline_compression: ${52:# Whether to enable inline compression for the volume (HDD and Flash Pool aggregates, AFF platforms)}
+    tiering_minimum_cooling_days: ${53:# Determines how many days must pass before inactive data in a volume using the Auto or Snapshot-Only policy is considered cold and eligible for tiering}
+    logical_space_enforcement: ${54:# This optionally specifies whether to perform logical space accounting on the volume}
+    logical_space_reporting: ${55:# This optionally specifies whether to report space logically on the volume}
+    snaplock: ${56:# Starting with ONTAP 9}
+    max_files: ${57:# The maximum number of files (inodes) for user-visible data allowed on the volume}
+    analytics: ${58:# Set file system analytics state of the volume}
+    hostname: ${59:# The hostname or IP address of the ONTAP instance}
+    username: ${60:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${61:# Password for the specified user}
+    cert_filepath: ${62:# path to SSL client cert file (}
+    key_filepath: ${63:# path to SSL client key file}
+    https: ${64:# Enable and disable https}
+    validate_certs: ${65:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${66:# Override the default port (80 or 443) with this port}
+    ontapi: ${67:# The ontap api version to use}
+    use_rest: ${68:# Whether to use REST or ZAPI}
+    feature_flags: ${69:# Enable or disable a new feature}
+    force_ontap_version: ${70:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_volume]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP manage volumes</description>
+</snippet>

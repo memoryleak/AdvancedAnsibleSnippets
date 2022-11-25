@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages netstream export on HUAWEI CloudEngine switches}
+  community.network.ce_netstream_export:
+    type: ${2:# Specifies NetStream feature}
+    source_ip: ${3:# Specifies source address which can be IPv6 or IPv4 of the exported NetStream packet}
+    host_ip: ${4:# Specifies destination address which can be IPv6 or IPv4 of the exported NetStream packet}
+    host_port: ${5:# Specifies the destination UDP port number of the exported packets}
+    host_vpn: ${6:# Specifies the VPN instance of the exported packets carrying flow statistics}
+    version: ${7:# Sets the version of exported packets}
+    as_option: ${8:# Specifies the AS number recorded in the statistics as the original or the peer AS number}
+    bgp_nexthop: ${9:# Configures the statistics to carry BGP next hop information}
+    state: ${10:# Manage the state of the resource}
+  tags:
+    - community
+    - network
+    - ce_netstream_export]]></content>
+  <tabTrigger>community.network.ce_netstream_export</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages netstream export on HUAWEI CloudEngine switches</description>
+</snippet>

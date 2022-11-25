@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages F5 BIG-IP LTM nodes}
+  f5networks.f5_modules.bigip_node:
+    state: ${2:# Specifies the current state of the node}
+    name: ${3:# Specifies the name of the node}
+    monitors: ${4:# Specifies the health monitors the system currently uses to monitor this node}
+    address: ${5:# IP address of the node}
+    fqdn: ${6:# FQDN name of the node}
+    fqdn_address_type: ${7:# Specifies whether the FQDN of the node resolves to an IPv4 or IPv6 address}
+    fqdn_auto_populate: ${8:# Specifies whether the system automatically creates ephemeral nodes using the IP addresses returned by the resolution of a DNS query for a node defined by an FQDN}
+    fqdn_up_interval: ${9:# Specifies the interval at which a query occurs, when the DNS server is up}
+    fqdn_down_interval: ${10:# Specifies the interval in which a query occurs, when the DNS server is down}
+    description: ${11:# Specifies descriptive text that identifies the node}
+    connection_limit: ${12:# Node connection limit}
+    rate_limit: ${13:# Node rate limit (connections-per-second)}
+    ratio: ${14:# Node ratio weight}
+    dynamic_ratio: ${15:# The dynamic ratio number for the node}
+    availability_requirements: ${16:# If you activate more than one health monitor, specifies the number of health monitors that must receive successful responses in order for the link to be considered available}
+    partition: ${17:# Device partition to manage resources on}
+    provider: ${18:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_node]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_node</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages F5 BIG-IP LTM nodes</description>
+</snippet>

@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp Element Software Manage Node Drives}
+  netapp.elementsw.na_elementsw_drive:
+    drive_ids: ${2:# List of Drive IDs or Serial Names of Node drives}
+    state: ${3:# Element SW Storage Drive operation state}
+    node_ids: ${4:# List of IDs or Names of cluster nodes}
+    force_during_upgrade: ${5:# Flag to force drive operation during upgrade}
+    force_during_bin_sync: ${6:# Flag to force during a bin sync operation}
+    hostname: ${7:# The hostname or IP address of the SolidFire cluster}
+    username: ${8:# Please ensure that the user has the adequate permissions}
+    password: ${9:# Password for the specified user}
+  tags:
+    - netapp
+    - elementsw
+    - na_elementsw_drive]]></content>
+  <tabTrigger>netapp.elementsw.na_elementsw_drive</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp Element Software Manage Node Drives</description>
+</snippet>

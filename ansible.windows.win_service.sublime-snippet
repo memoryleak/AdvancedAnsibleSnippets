@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage and query Windows services}
+  ansible.windows.win_service:
+    dependencies: ${2:# A list of service dependencies to set for this particular service}
+    dependency_action: ${3:# Used in conjunction with C(dependency) to either add the dependencies to the existing service dependencies}
+    desktop_interact: ${4:# Whether to allow the service user to interact with the desktop}
+    description: ${5:# The description to set for the service}
+    display_name: ${6:# The display name to set for the service}
+    error_control: ${7:# The severity of the error and action token if the service fails to start}
+    failure_actions: ${8:# A list of failure actions the service controller should take on each failure of a service}
+    failure_actions_on_non_crash_failure: ${9:# Controls whether failure actions will be performed on non crash failures or not}
+    failure_command: ${10:# The command to run for a C(run_command) failure action}
+    failure_reboot_msg: ${11:# The message to be broadcast to users logged on the host for a C(reboot) failure action}
+    failure_reset_period_sec: ${12:# The time in seconds after which the failure action list resets back to the start of the list if there are no failures}
+    force_dependent_services: ${13:# If C(yes), stopping or restarting a service with dependent services will force the dependent services to stop or restart also}
+    load_order_group: ${14:# The name of the load ordering group of which this service is a member}
+    name: ${15:# Name of the service}
+    path: ${16:# The path to the executable to set for the service}
+    password: ${17:# The password to set the service to start as}
+    pre_shutdown_timeout_ms: ${18:# The time in which the service manager waits after sending a preshutdown notification to the service until it proceeds to continue with the other shutdown actions}
+    required_privileges: ${19:# A list of privileges the service must have when starting up}
+    service_type: ${20:# The type of service}
+    sid_info: ${21:# Used to define the behaviour of the service's access token groups}
+    start_mode: ${22:# Set the startup type for the service}
+    state: ${23:# The desired state of the service}
+    update_password: ${24:# When set to C(always) and I(password) is set, the module will always report a change and set the password}
+    username: ${25:# The username to set the service to start as}
+  tags:
+    - ansible
+    - windows
+    - win_service]]></content>
+  <tabTrigger>ansible.windows.win_service</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage and query Windows services</description>
+</snippet>

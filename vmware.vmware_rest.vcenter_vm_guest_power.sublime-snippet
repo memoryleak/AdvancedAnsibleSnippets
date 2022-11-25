@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Issues a request to the guest operating system asking it to perform a soft shutdown, standby (suspend) or soft reboot}
+  vmware.vmware_rest.vcenter_vm_guest_power:
+    session_timeout: ${2:# Timeout settings for client session}
+    state: ${3:# No description available}
+    vcenter_hostname: ${4:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${5:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${6:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${7:# The vSphere vCenter username}
+    vcenter_validate_certs: ${8:# Allows connection when SSL certificates are not valid}
+    vm: ${9:# Identifier of the virtual machine}
+  tags:
+    - vmware
+    - vmware_rest
+    - vcenter_vm_guest_power]]></content>
+  <tabTrigger>vmware.vmware_rest.vcenter_vm_guest_power</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Issues a request to the guest operating system asking it to perform a soft shutdown, standby (suspend) or soft reboot</description>
+</snippet>

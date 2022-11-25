@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage groups of CloudFormation stacks}
+  community.aws.cloudformation_stack_set:
+    name: ${2:# Name of the CloudFormation stack set}
+    description: ${3:# A description of what this stack set creates}
+    parameters: ${4:# A list of hashes of all the template variables for the stack}
+    state: ${5:# If I(state=present), stack will be created}
+    template: ${6:# The local path of the CloudFormation template}
+    template_body: ${7:# Template body}
+    template_url: ${8:# Location of file containing the template body}
+    purge_stacks: ${9:# Only applicable when I(state=absent)}
+    wait: ${10:# Whether or not to wait for stack operation to complete}
+    wait_timeout: ${11:# How long to wait (in seconds) for stacks to complete create/update/delete operations}
+    capabilities: ${12:# Capabilities allow stacks to create and modify IAM resources, which may include adding users or roles}
+    regions: ${13:# A list of AWS regions to create instances of a stack in}
+    accounts: ${14:# A list of AWS accounts in which to create instance of CloudFormation stacks}
+    administration_role_arn: ${15:# ARN of the administration role, meaning the role that CloudFormation Stack Sets use to assume the roles in your child accounts}
+    execution_role_name: ${16:# ARN of the execution role, meaning the role that CloudFormation Stack Sets assumes in your child accounts}
+    tags: ${17:# Dictionary of tags to associate with stack and its resources during stack creation}
+    failure_tolerance: ${18:# Settings to change what is considered 'failed' when running stack instance updates, and how many to do at a time}
+    access_key: ${19:# AWS access key ID}
+    secret_key: ${20:# AWS secret access key}
+    session_token: ${21:# AWS STS session token for use with temporary credentials}
+    profile: ${22:# A named AWS profile to use for authentication}
+    endpoint_url: ${23:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${24:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${25:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${26:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${27:# Use a C(botocore}
+    region: ${28:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - cloudformation_stack_set]]></content>
+  <tabTrigger>community.aws.cloudformation_stack_set</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage groups of CloudFormation stacks</description>
+</snippet>

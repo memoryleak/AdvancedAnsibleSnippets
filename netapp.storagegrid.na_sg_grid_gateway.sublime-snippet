@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Load balancer (gateway) endpoints on StorageGRID}
+  netapp.storagegrid.na_sg_grid_gateway:
+    state: ${2:# Whether the specified load balancer endpoint should be configured}
+    gateway_id: ${3:# ID of the load balancer endpoint}
+    display_name: ${4:# A display name for the configuration}
+    port: ${5:# The TCP port to serve traffic on}
+    secure: ${6:# Whether the load balancer endpoint serves HTTP or HTTPS traffic}
+    enable_ipv4: ${7:# Indicates whether to listen for connections on IPv4}
+    enable_ipv6: ${8:# Indicates whether to listen for connections on IPv6}
+    binding_mode: ${9:# Binding mode to restrict accessibility of the load balancer endpoint}
+    ha_groups: ${10:# A set of StorageGRID HA Groups by name or UUID to bind the load balancer endpoint to}
+    node_interfaces: ${11:# A set of StorageGRID node interfaces to bind the load balancer endpoint to}
+    default_service_type: ${12:# The type of service to proxy through the load balancer}
+    server_certificate: ${13:# X}
+    private_key: ${14:# Certficate private key in PEM-encoding}
+    ca_bundle: ${15:# Intermediate CA certificate bundle in concatenated PEM-encoding}
+    auth_token: ${16:# The authorization token for the API request}
+    api_url: ${17:# The url to the StorageGRID Admin Node REST API}
+    validate_certs: ${18:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_gateway]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_gateway</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Load balancer (gateway) endpoints on StorageGRID</description>
+</snippet>

@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieve inline IAM policies for users, groups, and roles}
+  amazon.aws.iam_policy_info:
+    iam_type: ${2:# Type of IAM resource you wish to retrieve inline policies for}
+    iam_name: ${3:# Name of IAM resource you wish to retrieve inline policies for}
+    policy_name: ${4:# Name of a specific IAM inline policy you with to retrieve}
+    access_key: ${5:# AWS access key ID}
+    secret_key: ${6:# AWS secret access key}
+    session_token: ${7:# AWS STS session token for use with temporary credentials}
+    profile: ${8:# A named AWS profile to use for authentication}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${10:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${11:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${12:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${13:# Use a C(botocore}
+    region: ${14:# The AWS region to use}
+  tags:
+    - amazon
+    - aws
+    - iam_policy_info]]></content>
+  <tabTrigger>amazon.aws.iam_policy_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieve inline IAM policies for users, groups, and roles</description>
+</snippet>

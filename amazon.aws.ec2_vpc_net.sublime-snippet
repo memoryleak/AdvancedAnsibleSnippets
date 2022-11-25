@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure AWS Virtual Private Clouds}
+  amazon.aws.ec2_vpc_net:
+    name: ${2:# The name to give your VPC}
+    vpc_id: ${3:# The ID of the VPC}
+    cidr_block: ${4:# The primary CIDR of the VPC}
+    ipv6_cidr: ${5:# Request an Amazon-provided IPv6 CIDR block with /56 prefix length}
+    purge_cidrs: ${6:# Remove CIDRs that are associated with the VPC and are not specified in I(cidr_block)}
+    tenancy: ${7:# Whether to be default or dedicated tenancy}
+    dns_support: ${8:# Whether to enable AWS DNS support}
+    dns_hostnames: ${9:# Whether to enable AWS hostname support}
+    dhcp_opts_id: ${10:# The id of the DHCP options to use for this VPC}
+    state: ${11:# The state of the VPC}
+    multi_ok: ${12:# By default the module will not create another VPC if there is another VPC with the same name and CIDR block}
+    access_key: ${13:# AWS access key ID}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    profile: ${16:# A named AWS profile to use for authentication}
+    endpoint_url: ${17:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${18:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${19:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${20:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${21:# Use a C(botocore}
+    region: ${22:# The AWS region to use}
+    tags: ${23:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${24:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - ec2_vpc_net]]></content>
+  <tabTrigger>amazon.aws.ec2_vpc_net</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure AWS Virtual Private Clouds</description>
+</snippet>

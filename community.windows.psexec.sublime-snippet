@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Runs commands on a remote Windows host based on the PsExec model}
+  community.windows.psexec:
+    hostname: ${2:# The remote Windows host to connect to, can be either an IP address or a hostname}
+    connection_username: ${3:# The username to use when connecting to the remote Windows host}
+    connection_password: ${4:# The password for I(connection_user)}
+    port: ${5:# The port that the remote SMB service is listening on}
+    encrypt: ${6:# Will use SMB encryption to encrypt the SMB messages sent to and from the host}
+    connection_timeout: ${7:# The timeout in seconds to wait when receiving the initial SMB negotiate response from the server}
+    executable: ${8:# The executable to run on the Windows host}
+    arguments: ${9:# Any arguments as a single string to use when running the executable}
+    working_directory: ${10:# Changes the working directory set when starting the process}
+    asynchronous: ${11:# Will run the command as a detached process and the module returns immediately after starting the process while the process continues to run in the background}
+    load_profile: ${12:# Runs the remote command with the user's profile loaded}
+    process_username: ${13:# The user to run the process as}
+    process_password: ${14:# The password for I(process_username)}
+    integrity_level: ${15:# The integrity level of the process when I(process_username) is defined and is not equal to C(System)}
+    interactive: ${16:# Will run the process as an interactive process that shows a process Window of the Windows session specified by I(interactive_session)}
+    interactive_session: ${17:# The Windows session ID to use when displaying the interactive process on the remote Windows host}
+    priority: ${18:# Set the command's priority on the Windows host}
+    show_ui_on_logon_screen: ${19:# Shows the process UI on the Winlogon secure desktop when I(process_username) is C(System)}
+    process_timeout: ${20:# The timeout in seconds that is placed upon the running process}
+    stdin: ${21:# Data to send on the stdin pipe once the process has started}
+  tags:
+    - community
+    - windows
+    - psexec]]></content>
+  <tabTrigger>community.windows.psexec</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Runs commands on a remote Windows host based on the PsExec model</description>
+</snippet>

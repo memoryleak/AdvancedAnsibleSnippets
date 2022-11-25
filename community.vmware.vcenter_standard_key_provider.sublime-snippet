@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add, reconfigure or remove Standard Key Provider on vCenter server}
+  community.vmware.vcenter_standard_key_provider:
+    name: ${2:# Name of the Key Provider to be added, reconfigured or removed from vCenter}
+    mark_default: ${3:# Set specified Key Provider with name C(name) as the default Key Provider}
+    state: ${4:# If set to C(absent), the named Key Provider will be removed from vCenter}
+    kms_info: ${5:# The information of an external key server (KMS)}
+    proxy_server: ${6:# Address of the proxy server to connect to KMS}
+    proxy_port: ${7:# Port of the proxy server}
+    kms_username: ${8:# Username to authenticate to the KMS}
+    kms_password: ${9:# Password to authenticate to the KMS}
+    make_kms_trust_vc: ${10:# After adding the Standard Key Provider to the vCenter Server, you can establish a trusted connection, the exact process depends on the certificates that the key provider accepts, and on your company policy}
+    hostname: ${11:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${12:# The username of the vSphere vCenter or ESXi server}
+    password: ${13:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${14:# Allows connection when SSL certificates are not valid}
+    port: ${15:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${16:# Address of a proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vcenter_standard_key_provider]]></content>
+  <tabTrigger>community.vmware.vcenter_standard_key_provider</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add, reconfigure or remove Standard Key Provider on vCenter server</description>
+</snippet>

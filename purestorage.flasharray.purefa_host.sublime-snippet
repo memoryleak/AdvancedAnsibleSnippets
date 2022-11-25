@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage hosts on Pure Storage FlashArrays}
+  purestorage.flasharray.purefa_host:
+    name: ${2:# The name of the host}
+    protocol: ${3:# Defines the host connection protocol for volumes}
+    rename: ${4:# The name to rename to}
+    state: ${5:# Define whether the host should exist or not}
+    wwns: ${6:# List of wwns of the host}
+    iqn: ${7:# List of IQNs of the host}
+    nqn: ${8:# List of NQNs of the host}
+    volume: ${9:# Volume name to map to the host}
+    lun: ${10:# LUN ID to assign to volume for host}
+    count: ${11:# Number of hosts to be created in a multiple host creation}
+    start: ${12:# Number at which to start the multiple host creation index}
+    digits: ${13:# Number of digits to use for multiple host count}
+    suffix: ${14:# Suffix string, if required, for multiple host create}
+    personality: ${15:# Define which operating system the host is}
+    preferred_array: ${16:# List of preferred arrays in an ActiveCluster environment}
+    target_user: ${17:# Sets the target user name for CHAP authentication}
+    target_password: ${18:# Sets the target password for CHAP authentication}
+    host_user: ${19:# Sets the host user name for CHAP authentication}
+    host_password: ${20:# Sets the host password for CHAP authentication}
+    fa_url: ${21:# FlashArray management IPv4 address or Hostname}
+    api_token: ${22:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_host]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage hosts on Pure Storage FlashArrays</description>
+</snippet>

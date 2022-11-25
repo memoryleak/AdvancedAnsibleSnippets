@@ -1,0 +1,89 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for setup of Pool Avi RESTful Object}
+  community.network.avi_pool:
+    state: ${2:# The state that should be applied on the entity}
+    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
+    a_pool: ${5:# Name of container cloud application that constitutes a pool in a a-b pool configuration, if different from vs app}
+    ab_pool: ${6:# A/b pool configuration}
+    ab_priority: ${7:# Priority of this pool in a a-b pool pair}
+    analytics_policy: ${8:# Determines analytics settings for the pool}
+    analytics_profile_ref: ${9:# Specifies settings related to analytics}
+    apic_epg_name: ${10:# Synchronize cisco apic epg members with pool servers}
+    application_persistence_profile_ref: ${11:# Persistence will ensure the same user sticks to the same server for a desired duration of time}
+    autoscale_launch_config_ref: ${12:# If configured then avi will trigger orchestration of pool server creation and deletion}
+    autoscale_networks: ${13:# Network ids for the launch configuration}
+    autoscale_policy_ref: ${14:# Reference to server autoscale policy}
+    capacity_estimation: ${15:# Inline estimation of capacity of servers}
+    capacity_estimation_ttfb_thresh: ${16:# The maximum time-to-first-byte of a server}
+    cloud_config_cksum: ${17:# Checksum of cloud configuration for pool}
+    cloud_ref: ${18:# It is a reference to an object of type cloud}
+    conn_pool_properties: ${19:# Connection pool properties}
+    connection_ramp_duration: ${20:# Duration for which new connections will be gradually ramped up to a server recently brought online}
+    created_by: ${21:# Creator name}
+    default_server_port: ${22:# Traffic sent to servers will use this destination server port unless overridden by the server's specific port attribute}
+    delete_server_on_dns_refresh: ${23:# Indicates whether existing ips are disabled(false) or deleted(true) on dns hostname refreshdetail -- on a dns refresh, some ips set on pool may}
+    description: ${24:# A description of the pool}
+    domain_name: ${25:# Comma separated list of domain names which will be used to verify the common names or subject alternative names presented by server certificates}
+    east_west: ${26:# Inherited config from virtualservice}
+    enabled: ${27:# Enable or disable the pool}
+    external_autoscale_groups: ${28:# Names of external auto-scale groups for pool servers}
+    fail_action: ${29:# Enable an action - close connection, http redirect or local http response - when a pool failure happens}
+    fewest_tasks_feedback_delay: ${30:# Periodicity of feedback for fewest tasks server selection algorithm}
+    graceful_disable_timeout: ${31:# Used to gracefully disable a server}
+    gslb_sp_enabled: ${32:# Indicates if the pool is a site-persistence pool}
+    health_monitor_refs: ${33:# Verify server health by applying one or more health monitors}
+    host_check_enabled: ${34:# Enable common name check for server certificate}
+    inline_health_monitor: ${35:# The passive monitor will monitor client to server connections and requests and adjust traffic load to servers based on successful responses}
+    ipaddrgroup_ref: ${36:# Use list of servers from ip address group}
+    lb_algorithm: ${37:# The load balancing algorithm will pick a server within the pool's list of available servers}
+    lb_algorithm_consistent_hash_hdr: ${38:# Http header name to be used for the hash key}
+    lb_algorithm_core_nonaffinity: ${39:# Degree of non-affinity for core affinity based server selection}
+    lb_algorithm_hash: ${40:# Criteria used as a key for determining the hash between the client and  server}
+    lookup_server_by_name: ${41:# Allow server lookup by name}
+    max_concurrent_connections_per_server: ${42:# The maximum number of concurrent connections allowed to each server within the pool}
+    max_conn_rate_per_server: ${43:# Rate limit connections to each server}
+    min_health_monitors_up: ${44:# Minimum number of health monitors in up state to mark server up}
+    min_servers_up: ${45:# Minimum number of servers in up state for marking the pool up}
+    name: ${46:# The name of the pool}
+    networks: ${47:# (internal-use) networks designated as containing servers for this pool}
+    nsx_securitygroup: ${48:# A list of nsx service groups where the servers for the pool are created}
+    pki_profile_ref: ${49:# Avi will validate the ssl certificate present by a server against the selected pki profile}
+    placement_networks: ${50:# Manually select the networks and subnets used to provide reachability to the pool's servers}
+    prst_hdr_name: ${51:# Header name for custom header persistence}
+    request_queue_depth: ${52:# Minimum number of requests to be queued when pool is full}
+    request_queue_enabled: ${53:# Enable request queue when pool is full}
+    rewrite_host_header_to_server_name: ${54:# Rewrite incoming host header to server name of the server to which the request is proxied}
+    rewrite_host_header_to_sni: ${55:# If sni server name is specified, rewrite incoming host header to the sni server name}
+    server_auto_scale: ${56:# Server autoscale}
+    server_count: ${57:# Field deprecated in 18}
+    server_name: ${58:# Fully qualified dns hostname which will be used in the tls sni extension in server connections if sni is enabled}
+    server_reselect: ${59:# Server reselect configuration for http requests}
+    server_timeout: ${60:# Server timeout value specifies the time within which a server connection needs to be established and a request-response exchange completes}
+    servers: ${61:# The pool directs load balanced traffic to this list of destination servers}
+    service_metadata: ${62:# Metadata pertaining to the service provided by this pool}
+    sni_enabled: ${63:# Enable tls sni for server connections}
+    ssl_key_and_certificate_ref: ${64:# Service engines will present a client ssl certificate to the server}
+    ssl_profile_ref: ${65:# When enabled, avi re-encrypts traffic to the backend servers}
+    tenant_ref: ${66:# It is a reference to an object of type tenant}
+    url: ${67:# Avi controller URL of the object}
+    use_service_port: ${68:# Do not translate the client's destination port when sending the connection to the server}
+    uuid: ${69:# Uuid of the pool}
+    vrf_ref: ${70:# Virtual routing context that the pool is bound to}
+    controller: ${71:# IP address or hostname of the controller}
+    username: ${72:# Username used for accessing Avi controller}
+    password: ${73:# Password of Avi user in Avi controller}
+    tenant: ${74:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${75:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${76:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${77:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${78:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${79:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_pool]]></content>
+  <tabTrigger>community.network.avi_pool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for setup of Pool Avi RESTful Object</description>
+</snippet>

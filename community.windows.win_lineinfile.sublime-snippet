@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Ensure a particular line is in a file, or replace an existing line using a back-referenced regular expression}
+  community.windows.win_lineinfile:
+    path: ${2:# The path of the file to modify}
+    backup: ${3:# Determine whether a backup should be created}
+    regex: ${4:# The regular expression to look for in every line of the file}
+    state: ${5:# Whether the line should be there or not}
+    line: ${6:# Required for C(state=present)}
+    backrefs: ${7:# Used with C(state=present)}
+    insertafter: ${8:# Used with C(state=present)}
+    insertbefore: ${9:# Used with C(state=present)}
+    create: ${10:# Used with C(state=present)}
+    validate: ${11:# Validation to run before copying into place}
+    encoding: ${12:# Specifies the encoding of the source text file to operate on (and thus what the output encoding will be)}
+    newline: ${13:# Specifies the line separator style to use for the modified file}
+  tags:
+    - community
+    - windows
+    - win_lineinfile]]></content>
+  <tabTrigger>community.windows.win_lineinfile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Ensure a particular line is in a file, or replace an existing line using a back-referenced regular expression</description>
+</snippet>

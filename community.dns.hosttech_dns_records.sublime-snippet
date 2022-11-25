@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Bulk synchronize DNS record sets in Hosttech DNS service}
+  community.dns.hosttech_dns_records:
+    hosttech_username: ${2:# The username for the Hosttech API user}
+    hosttech_password: ${3:# The password for the Hosttech API user}
+    hosttech_token: ${4:# The password for the Hosttech API user}
+    record_sets: ${5:# The records that should be present in the zone}
+    zone_id: ${6:# The ID of the DNS zone to modify}
+    zone_name: ${7:# The DNS zone to modify}
+    prune: ${8:# If set to C(true), will remove all existing records in the zone that are not listed in I(records)}
+    txt_transformation: ${9:# Determines how TXT entry values are converted between the API and this module's input and output}
+  tags:
+    - community
+    - dns
+    - hosttech_dns_records]]></content>
+  <tabTrigger>community.dns.hosttech_dns_records</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Bulk synchronize DNS record sets in Hosttech DNS service</description>
+</snippet>

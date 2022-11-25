@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Grafana Organization}
+  community.grafana.grafana_organization:
+    name: ${2:# The name of the Grafana Organization}
+    state: ${3:# State if the organization should be present in Grafana or not}
+    url: ${4:# The Grafana URL}
+    url_username: ${5:# The Grafana user for API authentication}
+    url_password: ${6:# The Grafana password for API authentication}
+    use_proxy: ${7:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    client_cert: ${8:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${9:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    validate_certs: ${10:# If C(no), SSL certificates will not be validated}
+  tags:
+    - community
+    - grafana
+    - grafana_organization]]></content>
+  <tabTrigger>community.grafana.grafana_organization</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Grafana Organization</description>
+</snippet>

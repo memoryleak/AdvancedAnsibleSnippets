@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update and delete response headers policies to be used in a Cloudfront distribution}
+  community.aws.cloudfront_response_headers_policy:
+    state: ${2:# Decides if the named policy should be absent or present}
+    name: ${3:# Name of the policy}
+    comment: ${4:# Description of the policy}
+    cors_config: ${5:# CORS header config block}
+    security_headers_config: ${6:# Security headers config block}
+    custom_headers_config: ${7:# Custom headers config block}
+    access_key: ${8:# AWS access key ID}
+    secret_key: ${9:# AWS secret access key}
+    session_token: ${10:# AWS STS session token for use with temporary credentials}
+    profile: ${11:# A named AWS profile to use for authentication}
+    endpoint_url: ${12:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${13:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${14:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${15:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${16:# Use a C(botocore}
+    region: ${17:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - cloudfront_response_headers_policy]]></content>
+  <tabTrigger>community.aws.cloudfront_response_headers_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update and delete response headers policies to be used in a Cloudfront distribution</description>
+</snippet>

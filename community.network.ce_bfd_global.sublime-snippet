@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages BFD global configuration on HUAWEI CloudEngine devices}
+  community.network.ce_bfd_global:
+    bfd_enable: ${2:# Enables the global Bidirectional Forwarding Detection (BFD) function}
+    default_ip: ${3:# Specifies the default multicast IP address}
+    tos_exp_dynamic: ${4:# Indicates the priority of BFD control packets for dynamic BFD sessions}
+    tos_exp_static: ${5:# Indicates the priority of BFD control packets for static BFD sessions}
+    damp_init_wait_time: ${6:# Specifies an initial flapping suppression time for a BFD session}
+    damp_max_wait_time: ${7:# Specifies a maximum flapping suppression time for a BFD session}
+    damp_second_wait_time: ${8:# Specifies a secondary flapping suppression time for a BFD session}
+    delay_up_time: ${9:# Specifies the delay before a BFD session becomes Up}
+    state: ${10:# Determines whether the config should be present or not on the device}
+  tags:
+    - community
+    - network
+    - ce_bfd_global]]></content>
+  <tabTrigger>community.network.ce_bfd_global</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages BFD global configuration on HUAWEI CloudEngine devices</description>
+</snippet>

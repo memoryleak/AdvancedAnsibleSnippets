@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Enables or disables NetApp ONTAP storage auto giveback for a specified node}
+  netapp.ontap.na_ontap_storage_auto_giveback:
+    name: ${2:# Specifies the node name to enable or disable storage auto giveback on}
+    auto_giveback_enabled: ${3:# specifies whether auto give back should be enabled or disabled}
+    auto_giveback_after_panic_enabled: ${4:# specifies whether auto give back on panic should be enabled or disabled}
+    hostname: ${5:# The hostname or IP address of the ONTAP instance}
+    username: ${6:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${7:# Password for the specified user}
+    cert_filepath: ${8:# path to SSL client cert file (}
+    key_filepath: ${9:# path to SSL client key file}
+    https: ${10:# Enable and disable https}
+    validate_certs: ${11:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${12:# Override the default port (80 or 443) with this port}
+    ontapi: ${13:# The ontap api version to use}
+    use_rest: ${14:# Whether to use REST or ZAPI}
+    feature_flags: ${15:# Enable or disable a new feature}
+    force_ontap_version: ${16:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_storage_auto_giveback]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_storage_auto_giveback</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Enables or disables NetApp ONTAP storage auto giveback for a specified node</description>
+</snippet>

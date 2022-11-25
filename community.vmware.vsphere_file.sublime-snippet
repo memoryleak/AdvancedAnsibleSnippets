@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage files on a vCenter datastore}
+  community.vmware.vsphere_file:
+    host: ${2:# The vCenter server on which the datastore is available}
+    username: ${3:# The user name to authenticate on the vCenter server}
+    password: ${4:# The password to authenticate on the vCenter server}
+    datacenter: ${5:# The datacenter on the vCenter server that holds the datastore}
+    datastore: ${6:# The datastore on the vCenter server to push files to}
+    path: ${7:# The file or directory on the datastore on the vCenter server}
+    validate_certs: ${8:# If C(false), SSL certificates will not be validated}
+    timeout: ${9:# The timeout in seconds for the upload to the datastore}
+    state: ${10:# The state of or the action on the provided path}
+  tags:
+    - community
+    - vmware
+    - vsphere_file]]></content>
+  <tabTrigger>community.vmware.vsphere_file</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage files on a vCenter datastore</description>
+</snippet>

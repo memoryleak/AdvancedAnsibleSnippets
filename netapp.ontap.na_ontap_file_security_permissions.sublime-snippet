@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP NTFS file security permissions}
+  netapp.ontap.na_ontap_file_security_permissions:
+    state: ${2:# Whether the specified file security permission should exist or not}
+    path: ${3:# The path of the file or directory on which to apply security permissions}
+    vserver: ${4:# Name of the vserver to use}
+    owner: ${5:# Specifies the owner of the NTFS security descriptor (SD)}
+    control_flags: ${6:# Specifies the control flags in the SD}
+    group: ${7:# Specifies the owner's primary group}
+    ignore_paths: ${8:# For each file or directory in the list, specifies that permissions on this file or directory cannot be replaced}
+    propagation_mode: ${9:# Specifies how to propagate security settings to child subfolders and files}
+    access_control: ${10:# An Access Control Level specifies the access control of the task to be applied}
+    acls: ${11:# A discretionary access security list (DACL) identifies the trustees that are allowed or denied access to a securable object}
+    validate_changes: ${12:# ACLs may not be applied as expected}
+    hostname: ${13:# The hostname or IP address of the ONTAP instance}
+    username: ${14:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${15:# Password for the specified user}
+    cert_filepath: ${16:# path to SSL client cert file (}
+    key_filepath: ${17:# path to SSL client key file}
+    https: ${18:# Enable and disable https}
+    validate_certs: ${19:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${20:# Override the default port (80 or 443) with this port}
+    ontapi: ${21:# The ontap api version to use}
+    use_rest: ${22:# Whether to use REST or ZAPI}
+    feature_flags: ${23:# Enable or disable a new feature}
+    force_ontap_version: ${24:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_file_security_permissions]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_file_security_permissions</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP NTFS file security permissions</description>
+</snippet>

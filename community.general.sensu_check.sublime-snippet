@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sensu checks}
+  community.general.sensu_check:
+    name: ${2:# The name of the check}
+    state: ${3:# Whether the check should be present or not}
+    path: ${4:# Path to the json file of the check to be added/removed}
+    backup: ${5:# Create a backup file (if yes), including the timestamp information so}
+    command: ${6:# Path to the sensu check to run (not required when I(state=absent))}
+    handlers: ${7:# List of handlers to notify when the check fails}
+    subscribers: ${8:# List of subscribers/channels this check should run for}
+    interval: ${9:# Check interval in seconds}
+    timeout: ${10:# Timeout for the check}
+    ttl: ${11:# Time to live in seconds until the check is considered stale}
+    handle: ${12:# Whether the check should be handled or not}
+    subdue_begin: ${13:# When to disable handling of check failures}
+    subdue_end: ${14:# When to enable handling of check failures}
+    dependencies: ${15:# Other checks this check depends on, if dependencies fail handling of this check will be disabled}
+    metric: ${16:# Whether the check is a metric}
+    standalone: ${17:# Whether the check should be scheduled by the sensu client or server}
+    publish: ${18:# Whether the check should be scheduled at all}
+    occurrences: ${19:# Number of event occurrences before the handler should take action}
+    refresh: ${20:# Number of seconds handlers should wait before taking second action}
+    aggregate: ${21:# Classifies the check as an aggregate check,}
+    low_flap_threshold: ${22:# The low threshold for flap detection}
+    high_flap_threshold: ${23:# The high threshold for flap detection}
+    custom: ${24:# A hash/dictionary of custom parameters for mixing to the configuration}
+    source: ${25:# The check source, used to create a JIT Sensu client for an external resource (e}
+  tags:
+    - community
+    - general
+    - sensu_check]]></content>
+  <tabTrigger>community.general.sensu_check</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sensu checks</description>
+</snippet>

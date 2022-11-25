@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Red Hat Network registration using the C(rhnreg_ks) command}
+  community.general.rhn_register:
+    state: ${2:# Whether to register (C(present)), or unregister (C(absent)) a system}
+    username: ${3:# Red Hat Network username}
+    password: ${4:# Red Hat Network password}
+    server_url: ${5:# Specify an alternative Red Hat Network server URL}
+    activationkey: ${6:# Supply an activation key for use with registration}
+    profilename: ${7:# Supply an profilename for use with registration}
+    force: ${8:# Force registration, even if system is already registered}
+    ca_cert: ${9:# Supply a custom ssl CA certificate file for use with registration}
+    systemorgid: ${10:# Supply an organizational id for use with registration}
+    channels: ${11:# Optionally specify a list of channels to subscribe to upon successful registration}
+    enable_eus: ${12:# If C(false), extended update support will be requested}
+    nopackages: ${13:# If C(true), the registered node will not upload its installed packages information to Satellite server}
+  tags:
+    - community
+    - general
+    - rhn_register]]></content>
+  <tabTrigger>community.general.rhn_register</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Red Hat Network registration using the C(rhnreg_ks) command</description>
+</snippet>

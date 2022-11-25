@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Bulk synchronize DNS record sets in Hetzner DNS service}
+  community.dns.hetzner_dns_record_sets:
+    hetzner_token: ${2:# The token for the Hetzner API}
+    record_sets: ${3:# The records that should be present in the zone}
+    zone_id: ${4:# The ID of the DNS zone to modify}
+    zone_name: ${5:# The DNS zone to modify}
+    prune: ${6:# If set to C(true), will remove all existing records in the zone that are not listed in I(records)}
+    bulk_operation_threshold: ${7:# Determines the threshold from when on bulk operations are used}
+    txt_transformation: ${8:# Determines how TXT entry values are converted between the API and this module's input and output}
+  tags:
+    - community
+    - dns
+    - hetzner_dns_record_sets]]></content>
+  <tabTrigger>community.dns.hetzner_dns_record_sets</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Bulk synchronize DNS record sets in Hetzner DNS service</description>
+</snippet>

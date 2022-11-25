@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure network security groups}
+  azure.azcollection.azure_rm_securitygroup:
+    default_rules: ${2:# The set of default rules automatically added to a security group at creation}
+    location: ${3:# Valid azure location}
+    name: ${4:# Name of the security group to operate on}
+    purge_default_rules: ${5:# Remove any existing rules not matching those defined in the default_rules parameter}
+    purge_rules: ${6:# Remove any existing rules not matching those defined in the rules parameters}
+    resource_group: ${7:# Name of the resource group the security group belongs to}
+    rules: ${8:# Set of rules shaping traffic flow to or from a subnet or NIC}
+    state: ${9:# Assert the state of the security group}
+    ad_user: ${10:# Active Directory username}
+    password: ${11:# Active Directory user password}
+    profile: ${12:# Security profile found in ~/}
+    subscription_id: ${13:# Your Azure subscription Id}
+    client_id: ${14:# Azure client ID}
+    secret: ${15:# Azure client secret}
+    tenant: ${16:# Azure tenant ID}
+    cloud_environment: ${17:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${18:# Azure AD authority url}
+    cert_validation_mode: ${19:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${20:# Controls the source of the credentials to use for authentication}
+    api_profile: ${21:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${22:# Parent argument}
+    log_mode: ${23:# Parent argument}
+    x509_certificate_path: ${24:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${25:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${26:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${27:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_securitygroup]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_securitygroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure network security groups</description>
+</snippet>

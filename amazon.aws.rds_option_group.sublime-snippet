@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages the creation, modification, deletion of RDS option groups}
+  amazon.aws.rds_option_group:
+    state: ${2:# Specifies whether the option group should be C(present) or C(absent)}
+    option_group_name: ${3:# Specifies the name of the option group to be created}
+    engine_name: ${4:# Specifies the name of the engine that this option group should be associated with}
+    major_engine_version: ${5:# Specifies the major version of the engine that this option group should be associated with}
+    option_group_description: ${6:# The description of the option group}
+    apply_immediately: ${7:# Indicates whether the changes should be applied immediately, or during the next maintenance window}
+    options: ${8:# Options in this list are added to the option group}
+    wait: ${9:# Whether to wait for the cluster to be available or deleted}
+    access_key: ${10:# AWS access key ID}
+    secret_key: ${11:# AWS secret access key}
+    session_token: ${12:# AWS STS session token for use with temporary credentials}
+    profile: ${13:# A named AWS profile to use for authentication}
+    endpoint_url: ${14:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${15:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${17:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${18:# Use a C(botocore}
+    region: ${19:# The AWS region to use}
+    tags: ${20:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${21:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - rds_option_group]]></content>
+  <tabTrigger>amazon.aws.rds_option_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages the creation, modification, deletion of RDS option groups</description>
+</snippet>

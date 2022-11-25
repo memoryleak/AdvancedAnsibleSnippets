@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages AAA server host-specific configuration}
+  cisco.nxos.nxos_aaa_server_host:
+    server_type: ${2:# The server type is either radius or tacacs}
+    address: ${3:# Address or name of the radius or tacacs host}
+    key: ${4:# Shared secret for the specified host or keyword 'default'}
+    encrypt_type: ${5:# The state of encryption applied to the entered key}
+    host_timeout: ${6:# Timeout period for specified host, in seconds or keyword 'default}
+    auth_port: ${7:# Alternate UDP port for RADIUS authentication or keyword 'default'}
+    acct_port: ${8:# Alternate UDP port for RADIUS accounting or keyword 'default'}
+    tacacs_port: ${9:# Alternate TCP port TACACS Server or keyword 'default'}
+    state: ${10:# Manage the state of the resource}
+  tags:
+    - cisco
+    - nxos
+    - nxos_aaa_server_host]]></content>
+  <tabTrigger>cisco.nxos.nxos_aaa_server_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages AAA server host-specific configuration</description>
+</snippet>

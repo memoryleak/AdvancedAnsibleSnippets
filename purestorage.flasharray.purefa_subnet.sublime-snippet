@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage network subnets in a Pure Storage FlashArray}
+  purestorage.flasharray.purefa_subnet:
+    name: ${2:# Subnet name}
+    state: ${3:# Create or delete subnet}
+    enabled: ${4:# whether the subnet should be enabled or not}
+    prefix: ${5:# Set the IPv4 or IPv6 address to be associated with the subnet}
+    gateway: ${6:# IPv4 or IPv6 address of subnet gateway}
+    mtu: ${7:# MTU size of the subnet}
+    vlan: ${8:# VLAN ID}
+    fa_url: ${9:# FlashArray management IPv4 address or Hostname}
+    api_token: ${10:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_subnet]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_subnet</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage network subnets in a Pure Storage FlashArray</description>
+</snippet>

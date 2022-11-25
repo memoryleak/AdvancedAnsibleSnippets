@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages BIG-IQ HTTPS offload applications}
+  f5networks.f5_modules.bigiq_application_https_offload:
+    name: ${2:# Name of the new application}
+    description: ${3:# Description of the application}
+    servers: ${4:# A list of servers on which the application is hosted}
+    inbound_virtual: ${5:# Settings to configure the virtual which receives the inbound connection}
+    redirect_virtual: ${6:# Settings to configure the virtual which receives the connection to be redirected}
+    client_ssl_profile: ${7:# Specifies the SSL profile for managing client-side SSL traffic}
+    service_environment: ${8:# Specifies the name of service environment or the hostname of the BIG-IP to which the application will be deployed}
+    add_analytics: ${9:# Collects statistics of the BIG-IP to which the application is deployed}
+    state: ${10:# The state of the resource on the system}
+    wait: ${11:# If the module should wait for the application to be created, deleted or updated}
+    provider: ${12:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigiq_application_https_offload]]></content>
+  <tabTrigger>f5networks.f5_modules.bigiq_application_https_offload</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages BIG-IQ HTTPS offload applications</description>
+</snippet>

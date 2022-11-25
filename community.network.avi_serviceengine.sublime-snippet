@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for setup of ServiceEngine Avi RESTful Object}
+  community.network.avi_serviceengine:
+    state: ${2:# The state that should be applied on the entity}
+    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
+    availability_zone: ${5:# Availability_zone of serviceengine}
+    cloud_ref: ${6:# It is a reference to an object of type cloud}
+    container_mode: ${7:# Boolean flag to set container_mode}
+    container_type: ${8:# Enum options - container_type_bridge, container_type_host, container_type_host_dpdk}
+    controller_created: ${9:# Boolean flag to set controller_created}
+    controller_ip: ${10:# Controller_ip of serviceengine}
+    data_vnics: ${11:# List of vnic}
+    enable_state: ${12:# Inorder to disable se set this field appropriately}
+    flavor: ${13:# Flavor of serviceengine}
+    host_ref: ${14:# It is a reference to an object of type vimgrhostruntime}
+    hypervisor: ${15:# Enum options - default, vmware_esx, kvm, vmware_vsan, xen}
+    mgmt_vnic: ${16:# Vnic settings for serviceengine}
+    name: ${17:# Name of the object}
+    resources: ${18:# Seresources settings for serviceengine}
+    se_group_ref: ${19:# It is a reference to an object of type serviceenginegroup}
+    tenant_ref: ${20:# It is a reference to an object of type tenant}
+    url: ${21:# Avi controller URL of the object}
+    uuid: ${22:# Unique object identifier of the object}
+    controller: ${23:# IP address or hostname of the controller}
+    username: ${24:# Username used for accessing Avi controller}
+    password: ${25:# Password of Avi user in Avi controller}
+    tenant: ${26:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${27:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${28:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${29:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${30:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${31:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_serviceengine]]></content>
+  <tabTrigger>community.network.avi_serviceengine</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for setup of ServiceEngine Avi RESTful Object</description>
+</snippet>

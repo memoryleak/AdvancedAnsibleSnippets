@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages server instances on Vultr}
+  vultr.cloud.instance:
+    label: ${2:# Name of the instance}
+    hostname: ${3:# The hostname to assign to this instance}
+    os: ${4:# The operating system name}
+    app: ${5:# The app deploy name of Vultr OneClick apps}
+    image: ${6:# The image deploy name of Vultr Marketplace apps}
+    firewall_group: ${7:# The firewall group description to assign this instance to}
+    plan: ${8:# The plan name to use for the instance}
+    activation_email: ${9:# Whether to send an activation email when the instance is ready or not}
+    backups: ${10:# Whether to enable automatic backups or not}
+    ddos_protection: ${11:# Whether to enable ddos_protection or not}
+    enable_ipv6: ${12:# Whether to enable IPv6 or not}
+    tags: ${13:# Tags for the instance}
+    user_data: ${14:# User data to be passed to the instance}
+    startup_script: ${15:# Name or ID of the startup script to execute on boot}
+    ssh_keys: ${16:# List of SSH key names passed to the instance on creation}
+    reserved_ipv4: ${17:# IP address of the floating IP to use as the main IP of this instance}
+    region: ${18:# Region the instance is deployed into}
+    state: ${19:# State of the instance}
+    api_key: ${20:# API key of the Vultr API}
+    api_timeout: ${21:# HTTP timeout to Vultr API}
+    api_retries: ${22:# Amount of retries in case of the Vultr API retuns an HTTP 503 code}
+    api_retry_max_delay: ${23:# Retry backoff delay in seconds is exponential up to this max}
+    api_endpoint: ${24:# URL to API endpint (without trailing slash)}
+    validate_certs: ${25:# Validate SSL certs of the Vultr API}
+  tags:
+    - vultr
+    - cloud
+    - instance]]></content>
+  <tabTrigger>vultr.cloud.instance</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages server instances on Vultr</description>
+</snippet>

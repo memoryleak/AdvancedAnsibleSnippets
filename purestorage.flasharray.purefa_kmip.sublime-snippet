@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FlashArray KMIP server objects}
+  purestorage.flasharray.purefa_kmip:
+    name: ${2:# Name of the KMIP server object}
+    certificate: ${3:# Name of existing certifcate used to verify FlashArray authenticity to the KMIP server}
+    state: ${4:# Action for the module to perform}
+    ca_certificate: ${5:# The text of the CA certificate for the KMIP server}
+    uris: ${6:# A list of URIs for the configured KMIP servers}
+    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
+    api_token: ${8:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_kmip]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_kmip</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FlashArray KMIP server objects</description>
+</snippet>

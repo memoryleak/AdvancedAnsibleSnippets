@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Windows domain group membership}
+  community.windows.win_domain_group_membership:
+    name: ${2:# Name of the domain group to manage membership on}
+    members: ${3:# A list of members to ensure are present/absent from the group}
+    state: ${4:# Desired state of the members in the group}
+    domain_username: ${5:# The username to use when interacting with AD}
+    domain_password: ${6:# The password for I(username)}
+    domain_server: ${7:# Specifies the Active Directory Domain Services instance to connect to}
+  tags:
+    - community
+    - windows
+    - win_domain_group_membership]]></content>
+  <tabTrigger>community.windows.win_domain_group_membership</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Windows domain group membership</description>
+</snippet>

@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get lsm-cluster objects facts on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_lsm_cluster_facts:
+    name: ${2:# Object name}
+    details_level: ${3:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    filter: ${4:# Search expression to filter objects by}
+    limit: ${5:# The maximal number of returned results}
+    offset: ${6:# Number of the results to initially skip}
+    order: ${7:# Sorts the results by search criteria}
+    show_membership: ${8:# Indicates whether to calculate and show 'groups' field for every object in reply}
+    domains_to_process: ${9:# Indicates which domains to process the commands on}
+    version: ${10:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_lsm_cluster_facts]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_lsm_cluster_facts</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get lsm-cluster objects facts on Checkpoint over Web Services API</description>
+</snippet>

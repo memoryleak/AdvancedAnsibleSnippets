@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, modify, or delete a discovery job on OpenManage Enterprise}
+  dellemc.openmanage.ome_discovery:
+    state: ${2:# C(present) creates a discovery job or modifies an existing discovery job}
+    discovery_job_name: ${3:# Name of the discovery configuration job}
+    discovery_id: ${4:# ID of the discovery configuration group}
+    new_name: ${5:# New name of the discovery configuration job}
+    schedule: ${6:# Provides the option to schedule the discovery job}
+    cron: ${7:# Provide a cron expression based on Quartz cron format}
+    trap_destination: ${8:# Enable OpenManage Enterprise to receive the incoming SNMP traps from the discovered devices}
+    community_string: ${9:# Enable the use of SNMP community strings to receive SNMP traps using Application Settings in OpenManage Enterprise}
+    email_recipient: ${10:# Enter the email address to which notifications are to be sent about the discovery job status}
+    job_wait: ${11:# Provides the option to wait for job completion}
+    job_wait_timeout: ${12:# The maximum wait time of I(job_wait) in seconds}
+    ignore_partial_failure: ${13:# Provides the option to ignore partial failures}
+    discovery_config_targets: ${14:# Provide the list of discovery targets}
+    hostname: ${15:# OpenManage Enterprise IP address or hostname}
+    username: ${16:# OpenManage Enterprise username}
+    password: ${17:# OpenManage Enterprise password}
+    port: ${18:# OpenManage Enterprise HTTPS port}
+    validate_certs: ${19:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${20:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${21:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_discovery]]></content>
+  <tabTrigger>dellemc.openmanage.ome_discovery</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, modify, or delete a discovery job on OpenManage Enterprise</description>
+</snippet>

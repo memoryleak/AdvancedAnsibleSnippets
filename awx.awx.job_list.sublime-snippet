@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:List Automation Platform Controller jobs}
+  awx.awx.job_list:
+    status: ${2:# Only list jobs with this status}
+    page: ${3:# Page number of the results to fetch}
+    all_pages: ${4:# Fetch all the pages and return a single result}
+    query: ${5:# Query used to further filter the list of jobs}
+    controller_host: ${6:# URL to your Automation Platform Controller instance}
+    controller_username: ${7:# Username for your controller instance}
+    controller_password: ${8:# Password for your controller instance}
+    controller_oauthtoken: ${9:# The OAuth token to use}
+    validate_certs: ${10:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${11:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - job_list]]></content>
+  <tabTrigger>awx.awx.job_list</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>List Automation Platform Controller jobs</description>
+</snippet>

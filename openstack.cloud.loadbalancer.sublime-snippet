@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add/Delete load balancer from OpenStack Cloud}
+  openstack.cloud.loadbalancer:
+    name: ${2:# The name of the load balancer}
+    state: ${3:# Should the resource be present or absent}
+    flavor: ${4:# The flavor of the load balancer}
+    vip_network: ${5:# The name or id of the network for the virtual IP of the load balancer}
+    vip_subnet: ${6:# The name or id of the subnet for the virtual IP of the load balancer}
+    vip_port: ${7:# The name or id of the load balancer virtual IP port}
+    vip_address: ${8:# IP address of the load balancer virtual IP}
+    public_ip_address: ${9:# Public IP address associated with the VIP}
+    auto_public_ip: ${10:# Allocate a public IP address and associate with the VIP automatically}
+    public_network: ${11:# The name or ID of a Neutron external network}
+    delete_public_ip: ${12:# When C(state=absent) and this option is true, any public IP address associated with the VIP will be deleted along with the load balancer}
+    listeners: ${13:# A list of listeners that attached to the load balancer}
+    wait: ${14:# If the module should wait for the load balancer to be created or deleted}
+    timeout: ${15:# The amount of time the module should wait}
+    cloud: ${16:# Named cloud or cloud config to operate against}
+    auth: ${17:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${18:# Name of the auth plugin to use}
+    region_name: ${19:# Name of the region}
+    api_timeout: ${20:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${21:# Whether or not SSL API requests should be verified}
+    ca_cert: ${22:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${23:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${24:# A path to a client key to use as part of the SSL transaction}
+    interface: ${25:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${26:# Ignored}
+    sdk_log_path: ${27:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${28:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - loadbalancer]]></content>
+  <tabTrigger>openstack.cloud.loadbalancer</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add/Delete load balancer from OpenStack Cloud</description>
+</snippet>

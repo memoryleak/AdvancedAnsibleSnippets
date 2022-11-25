@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the collection of local users on Lenovo CNOS devices}
+  community.network.cnos_user:
+    aggregate: ${2:# The set of username objects to be configured on the remote Lenovo CNOS device}
+    name: ${3:# The username to be configured on the remote Lenovo CNOS device}
+    configured_password: ${4:# The password to be configured on the network device}
+    update_password: ${5:# Since passwords are encrypted in the device running config, this argument will instruct the module when to change the password}
+    role: ${6:# The C(role) argument configures the role for the username in the device running configuration}
+    sshkey: ${7:# The C(sshkey) argument defines the SSH public key to configure for the username}
+    purge: ${8:# The C(purge) argument instructs the module to consider the resource definition absolute}
+    state: ${9:# The C(state) argument configures the state of the username definition as it relates to the device operational configuration}
+  tags:
+    - community
+    - network
+    - cnos_user]]></content>
+  <tabTrigger>community.network.cnos_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the collection of local users on Lenovo CNOS devices</description>
+</snippet>

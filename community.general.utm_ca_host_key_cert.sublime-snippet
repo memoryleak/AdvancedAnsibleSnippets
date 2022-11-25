@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update or destroy ca host_key_cert entry in Sophos UTM}
+  community.general.utm_ca_host_key_cert:
+    name: ${2:# The name of the object}
+    ca: ${3:# A reference to an existing utm_ca_signing_ca or utm_ca_verification_ca object}
+    meta: ${4:# A reference to an existing utm_ca_meta_x509 object}
+    certificate: ${5:# The certificate in PEM format}
+    comment: ${6:# Optional comment string}
+    encrypted: ${7:# Optionally enable encryption}
+    key: ${8:# Optional private key in PEM format}
+    headers: ${9:# A dictionary of additional headers to be sent to POST and PUT requests}
+    utm_host: ${10:# The REST Endpoint of the Sophos UTM}
+    utm_port: ${11:# The port of the REST interface}
+    utm_token: ${12:# The token used to identify at the REST-API}
+    utm_protocol: ${13:# The protocol of the REST Endpoint}
+    validate_certs: ${14:# Whether the REST interface's ssl certificate should be verified or not}
+    state: ${15:# The desired state of the object}
+  tags:
+    - community
+    - general
+    - utm_ca_host_key_cert]]></content>
+  <tabTrigger>community.general.utm_ca_host_key_cert</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update or destroy ca host_key_cert entry in Sophos UTM</description>
+</snippet>

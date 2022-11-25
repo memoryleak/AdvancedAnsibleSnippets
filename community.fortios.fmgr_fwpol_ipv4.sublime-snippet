@@ -1,0 +1,145 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Allows the add/delete of Firewall Policies on Packages in FortiManager}
+  community.fortios.fmgr_fwpol_ipv4:
+    adom: ${2:# The ADOM the configuration should belong to}
+    mode: ${3:# Sets one of three modes for managing the object}
+    package_name: ${4:# The policy package you want to modify}
+    fail_on_missing_dependency: ${5:# Normal behavior is to 'skip' tasks that fail dependency checks, so other tasks can run}
+    wsso: ${6:# Enable/disable WiFi Single Sign On (WSSO)}
+    webfilter_profile: ${7:# Name of an existing Web filter profile}
+    webcache_https: ${8:# Enable/disable web cache for HTTPS}
+    webcache: ${9:# Enable/disable web cache}
+    wccp: ${10:# Enable/disable forwarding traffic matching this policy to a configured WCCP server}
+    wanopt_profile: ${11:# WAN optimization profile}
+    wanopt_peer: ${12:# WAN optimization peer}
+    wanopt_passive_opt: ${13:# WAN optimization passive mode options}
+    wanopt_detection: ${14:# WAN optimization auto-detection mode}
+    wanopt: ${15:# Enable/disable WAN optimization}
+    waf_profile: ${16:# Name of an existing Web application firewall profile}
+    vpntunnel: ${17:# Policy-based IPsec VPN |  name of the IPsec VPN Phase 1}
+    voip_profile: ${18:# Name of an existing VoIP profile}
+    vlan_filter: ${19:# Set VLAN filters}
+    vlan_cos_rev: ${20:# VLAN reverse direction user priority | 255 passthrough, 0 lowest, 7 highest}
+    vlan_cos_fwd: ${21:# VLAN forward direction user priority | 255 passthrough, 0 lowest, 7 highest}
+    utm_status: ${22:# Enable to add one or more security profiles (AV, IPS, etc}
+    users: ${23:# Names of individual users that can authenticate with this policy}
+    url_category: ${24:# URL category ID list}
+    traffic_shaper_reverse: ${25:# Reverse traffic shaper}
+    traffic_shaper: ${26:# Traffic shaper}
+    timeout_send_rst: ${27:# Enable/disable sending RST packets when TCP sessions expire}
+    tcp_session_without_syn: ${28:# Enable/disable creation of TCP session without SYN flag}
+    tcp_mss_sender: ${29:# Sender TCP maximum segment size (MSS)}
+    tcp_mss_receiver: ${30:# Receiver TCP maximum segment size (MSS)}
+    status: ${31:# Enable or disable this policy}
+    ssl_ssh_profile: ${32:# Name of an existing SSL SSH profile}
+    ssl_mirror_intf: ${33:# SSL mirror interface name}
+    ssl_mirror: ${34:# Enable to copy decrypted SSL traffic to a FortiGate interface (called SSL mirroring)}
+    ssh_filter_profile: ${35:# Name of an existing SSH filter profile}
+    srcintf: ${36:# Incoming (ingress) interface}
+    srcaddr_negate: ${37:# When enabled srcaddr specifies what the source address must NOT be}
+    srcaddr: ${38:# Source address and address group names}
+    spamfilter_profile: ${39:# Name of an existing Spam filter profile}
+    session_ttl: ${40:# TTL in seconds for sessions accepted by this policy (0 means use the system default session TTL)}
+    service_negate: ${41:# When enabled service specifies what the service must NOT be}
+    service: ${42:# Service and service group names}
+    send_deny_packet: ${43:# Enable to send a reply when a session is denied or blocked by a firewall policy}
+    schedule_timeout: ${44:# Enable to force current sessions to end when the schedule object times out}
+    schedule: ${45:# Schedule name}
+    scan_botnet_connections: ${46:# Block or monitor connections to Botnet servers or disable Botnet scanning}
+    rtp_nat: ${47:# Enable Real Time Protocol (RTP) NAT}
+    rtp_addr: ${48:# Address names if this is an RTP NAT policy}
+    rsso: ${49:# Enable/disable RADIUS single sign-on (RSSO)}
+    replacemsg_override_group: ${50:# Override the default replacement message group for this policy}
+    redirect_url: ${51:# URL users are directed to after seeing and accepting the disclaimer or authenticating}
+    radius_mac_auth_bypass: ${52:# Enable MAC authentication bypass}
+    profile_type: ${53:# Determine whether the firewall policy allows security profile groups or single profiles only}
+    profile_protocol_options: ${54:# Name of an existing Protocol options profile}
+    profile_group: ${55:# Name of profile group}
+    poolname: ${56:# IP Pool names}
+    policyid: ${57:# Policy ID}
+    permit_stun_host: ${58:# Accept UDP packets from any Session Traversal Utilities for NAT (STUN) host}
+    permit_any_host: ${59:# Accept UDP packets from any host}
+    per_ip_shaper: ${60:# Per-IP traffic shaper}
+    outbound: ${61:# Policy-based IPsec VPN |  only traffic from the internal network can initiate a VPN}
+    ntlm_guest: ${62:# Enable/disable NTLM guest user access}
+    ntlm_enabled_browsers: ${63:# HTTP-User-Agent value of supported browsers}
+    ntlm: ${64:# Enable/disable NTLM authentication}
+    np_acceleration: ${65:# Enable/disable UTM Network Processor acceleration}
+    natoutbound: ${66:# Policy-based IPsec VPN |  apply source NAT to outbound traffic}
+    natip: ${67:# Policy-based IPsec VPN |  source NAT IP address for outgoing traffic}
+    natinbound: ${68:# Policy-based IPsec VPN |  apply destination NAT to inbound traffic}
+    nat: ${69:# Enable/disable source NAT}
+    name: ${70:# Policy name}
+    mms_profile: ${71:# Name of an existing MMS profile}
+    match_vip: ${72:# Enable to match packets that have had their destination addresses changed by a VIP}
+    logtraffic_start: ${73:# Record logs when a session starts and ends}
+    logtraffic: ${74:# Enable or disable logging}
+    learning_mode: ${75:# Enable to allow everything, but log all of the meaningful data for security information gathering}
+    label: ${76:# Label for the policy that appears when the GUI is in Section View mode}
+    ips_sensor: ${77:# Name of an existing IPS sensor}
+    ippool: ${78:# Enable to use IP Pools for source NAT}
+    internet_service_src_negate: ${79:# When enabled internet-service-src specifies what the service must NOT be}
+    internet_service_src_id: ${80:# Internet Service source ID}
+    internet_service_src_custom: ${81:# Custom Internet Service source name}
+    internet_service_src: ${82:# Enable/disable use of Internet Services in source for this policy}
+    internet_service_negate: ${83:# When enabled internet-service specifies what the service must NOT be}
+    internet_service_id: ${84:# Internet Service ID}
+    internet_service_custom: ${85:# Custom Internet Service name}
+    internet_service: ${86:# Enable/disable use of Internet Services for this policy}
+    inbound: ${87:# Policy-based IPsec VPN |  only traffic from the remote network can initiate a VPN}
+    identity_based_route: ${88:# Name of identity-based routing rule}
+    icap_profile: ${89:# Name of an existing ICAP profile}
+    gtp_profile: ${90:# GTP profile}
+    groups: ${91:# Names of user groups that can authenticate with this policy}
+    global_label: ${92:# Label for the policy that appears when the GUI is in Global View mode}
+    fsso_agent_for_ntlm: ${93:# FSSO agent to use for NTLM authentication}
+    fsso: ${94:# Enable/disable Fortinet Single Sign-On}
+    fixedport: ${95:# Enable to prevent source NAT from changing a session's source port}
+    firewall_session_dirty: ${96:# How to handle sessions if the configuration of this firewall policy changes}
+    dstintf: ${97:# Outgoing (egress) interface}
+    dstaddr_negate: ${98:# When enabled dstaddr specifies what the destination address must NOT be}
+    dstaddr: ${99:# Destination address and address group names}
+    dsri: ${100:# Enable DSRI to ignore HTTP server responses}
+    dscp_value: ${101:# DSCP value}
+    dscp_negate: ${102:# Enable negated DSCP match}
+    dscp_match: ${103:# Enable DSCP check}
+    dnsfilter_profile: ${104:# Name of an existing DNS filter profile}
+    dlp_sensor: ${105:# Name of an existing DLP sensor}
+    disclaimer: ${106:# Enable/disable user authentication disclaimer}
+    diffservcode_rev: ${107:# Change packet's reverse (reply) DiffServ to this value}
+    diffservcode_forward: ${108:# Change packet's DiffServ to this value}
+    diffserv_reverse: ${109:# Enable to change packet's reverse (reply) DiffServ values to the specified diffservcode-rev value}
+    diffserv_forward: ${110:# Enable to change packet's DiffServ values to the specified diffservcode-forward value}
+    devices: ${111:# Names of devices or device groups that can be matched by the policy}
+    delay_tcp_npu_session: ${112:# Enable TCP NPU session delay to guarantee packet order of 3-way handshake}
+    custom_log_fields: ${113:# Custom fields to append to log messages for this policy}
+    comments: ${114:# Comment}
+    capture_packet: ${115:# Enable/disable capture packets}
+    captive_portal_exempt: ${116:# Enable to exempt some users from the captive portal}
+    block_notification: ${117:# Enable/disable block notification}
+    av_profile: ${118:# Name of an existing Antivirus profile}
+    auto_asic_offload: ${119:# Enable/disable offloading security profile processing to CP processors}
+    auth_redirect_addr: ${120:# HTTP-to-HTTPS redirect address for firewall authentication}
+    auth_path: ${121:# Enable/disable authentication-based routing}
+    auth_cert: ${122:# HTTPS server certificate for policy authentication}
+    application_list: ${123:# Name of an existing Application list}
+    application: ${124:# Application ID list}
+    app_group: ${125:# Application group names}
+    app_category: ${126:# Application category ID list}
+    action: ${127:# Policy action (allow/deny/ipsec)}
+    vpn_dst_node: ${128:# EXPERTS ONLY! KNOWLEDGE OF FMGR JSON API IS REQUIRED!}
+    vpn_dst_node_host: ${129:# VPN Destination Node Host}
+    vpn_dst_node_seq: ${130:# VPN Destination Node Seq}
+    vpn_dst_node_subnet: ${131:# VPN Destination Node Seq}
+    vpn_src_node: ${132:# EXPERTS ONLY! KNOWLEDGE OF FMGR JSON API IS REQUIRED!}
+    vpn_src_node_host: ${133:# VPN Source Node Host}
+    vpn_src_node_seq: ${134:# VPN Source Node Seq}
+    vpn_src_node_subnet: ${135:# VPN Source Node}
+  tags:
+    - community
+    - fortios
+    - fmgr_fwpol_ipv4]]></content>
+  <tabTrigger>community.fortios.fmgr_fwpol_ipv4</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Allows the add/delete of Firewall Policies on Packages in FortiManager</description>
+</snippet>

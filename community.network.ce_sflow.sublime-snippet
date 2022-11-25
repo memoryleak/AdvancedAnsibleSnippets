@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages sFlow configuration on HUAWEI CloudEngine switches}
+  community.network.ce_sflow:
+    agent_ip: ${2:# Specifies the IPv4/IPv6 address of an sFlow agent}
+    source_ip: ${3:# Specifies the source IPv4/IPv6 address of sFlow packets}
+    collector_id: ${4:# Specifies the ID of an sFlow collector}
+    collector_ip: ${5:# Specifies the IPv4/IPv6 address of the sFlow collector}
+    collector_ip_vpn: ${6:# Specifies the name of a VPN instance}
+    collector_datagram_size: ${7:# Specifies the maximum length of sFlow packets sent from an sFlow agent to an sFlow collector}
+    collector_udp_port: ${8:# Specifies the UDP destination port number of sFlow packets}
+    collector_meth: ${9:# Configures the device to send sFlow packets through service interfaces, enhancing the sFlow packet forwarding capability}
+    collector_description: ${10:# Specifies the description of an sFlow collector}
+    sflow_interface: ${11:# Full name of interface for Flow Sampling or Counter}
+    sample_collector: ${12:# Indicates the ID list of the collector}
+    sample_rate: ${13:# Specifies the flow sampling rate in the format 1/rate}
+    sample_length: ${14:# Specifies the maximum length of sampled packets}
+    sample_direction: ${15:# Enables flow sampling in the inbound or outbound direction}
+    counter_collector: ${16:# Indicates the ID list of the counter collector}
+    counter_interval: ${17:# Indicates the counter sampling interval}
+    export_route: ${18:# Configures the sFlow packets sent by the switch not to carry routing information}
+    state: ${19:# Determines whether the config should be present or not on the device}
+  tags:
+    - community
+    - network
+    - ce_sflow]]></content>
+  <tabTrigger>community.network.ce_sflow</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages sFlow configuration on HUAWEI CloudEngine switches</description>
+</snippet>

@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Joins an ESXi host system to an Active Directory domain or leaves it}
+  community.vmware.vmware_host_active_directory:
+    ad_domain: ${2:# AD Domain to join}
+    ad_user: ${3:# Username for AD domain join}
+    ad_password: ${4:# Password for AD domain join}
+    ad_state: ${5:# Whether the ESXi host is joined to an AD domain or not}
+    esxi_hostname: ${6:# Name of the host system to work with}
+    cluster_name: ${7:# Name of the cluster from which all host systems will be used}
+    hostname: ${8:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${9:# The username of the vSphere vCenter or ESXi server}
+    password: ${10:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${11:# Allows connection when SSL certificates are not valid}
+    port: ${12:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${13:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${14:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_host_active_directory]]></content>
+  <tabTrigger>community.vmware.vmware_host_active_directory</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Joins an ESXi host system to an Active Directory domain or leaves it</description>
+</snippet>

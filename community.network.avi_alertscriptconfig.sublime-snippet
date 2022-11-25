@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for setup of AlertScriptConfig Avi RESTful Object}
+  community.network.avi_alertscriptconfig:
+    state: ${2:# The state that should be applied on the entity}
+    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
+    action_script: ${5:# User defined alert action script}
+    name: ${6:# A user-friendly name of the script}
+    tenant_ref: ${7:# It is a reference to an object of type tenant}
+    url: ${8:# Avi controller URL of the object}
+    uuid: ${9:# Unique object identifier of the object}
+    controller: ${10:# IP address or hostname of the controller}
+    username: ${11:# Username used for accessing Avi controller}
+    password: ${12:# Password of Avi user in Avi controller}
+    tenant: ${13:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${14:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${15:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${16:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${17:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${18:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_alertscriptconfig]]></content>
+  <tabTrigger>community.network.avi_alertscriptconfig</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for setup of AlertScriptConfig Avi RESTful Object</description>
+</snippet>

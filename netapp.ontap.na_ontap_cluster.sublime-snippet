@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP cluster - create a cluster and add/remove nodes}
+  netapp.ontap.na_ontap_cluster:
+    state: ${2:# Whether the specified cluster should exist (deleting a cluster is not supported)}
+    cluster_name: ${3:# The name of the cluster to manage}
+    cluster_ip_address: ${4:# intra cluster IP address of the node to be added or removed}
+    single_node_cluster: ${5:# Whether the cluster is a single node cluster}
+    cluster_location: ${6:# Cluster location, only relevant if performing a modify action}
+    cluster_contact: ${7:# Cluster contact, only relevant if performing a modify action}
+    node_name: ${8:# Name of the node to be added or removed from the cluster}
+    time_out: ${9:# time to wait for cluster creation in seconds}
+    force: ${10:# forcibly remove a node that is down and cannot be brought online to remove its shared resources}
+    timezone: ${11:# timezone for the cluster}
+    hostname: ${12:# The hostname or IP address of the ONTAP instance}
+    username: ${13:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${14:# Password for the specified user}
+    cert_filepath: ${15:# path to SSL client cert file (}
+    key_filepath: ${16:# path to SSL client key file}
+    https: ${17:# Enable and disable https}
+    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${19:# Override the default port (80 or 443) with this port}
+    ontapi: ${20:# The ontap api version to use}
+    use_rest: ${21:# Whether to use REST or ZAPI}
+    feature_flags: ${22:# Enable or disable a new feature}
+    force_ontap_version: ${23:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_cluster]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_cluster</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP cluster - create a cluster and add/remove nodes</description>
+</snippet>

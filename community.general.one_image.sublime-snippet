@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages OpenNebula images}
+  community.general.one_image:
+    api_url: ${2:# URL of the OpenNebula RPC server}
+    api_username: ${3:# Name of the user to login into the OpenNebula RPC server}
+    api_password: ${4:# Password of the user to login into OpenNebula RPC server}
+    id: ${5:# A C(id) of the image you would like to manage}
+    name: ${6:# A C(name) of the image you would like to manage}
+    state: ${7:# C(present) - state that is used to manage the image}
+    enabled: ${8:# Whether the image should be enabled or disabled}
+    new_name: ${9:# A name that will be assigned to the existing or new image}
+  tags:
+    - community
+    - general
+    - one_image]]></content>
+  <tabTrigger>community.general.one_image</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages OpenNebula images</description>
+</snippet>

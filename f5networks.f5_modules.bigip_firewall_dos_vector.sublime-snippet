@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage attack vector configuration in an AFM DoS profile}
+  f5networks.f5_modules.bigip_firewall_dos_vector:
+    name: ${2:# Specifies the name of the vector to modify}
+    profile: ${3:# Specifies the name of the profile to manage vectors in}
+    auto_blacklist: ${4:# Automatically blacklists detected bad actors}
+    bad_actor_detection: ${5:# Whether Bad Actor detection is enabled or disabled for a vector, if available}
+    attack_ceiling: ${6:# Specifies the absolute maximum allowable for packets of this type}
+    attack_floor: ${7:# Specifies packets per second to identify an attack}
+    allow_advertisement: ${8:# Specifies addresses that are identified for blacklisting are advertised to BGP routers}
+    simulate_auto_threshold: ${9:# Specifies results of the current automatic thresholds are logged, though manual thresholds are enforced, and no action is taken on automatic thresholds}
+    blacklist_detection_seconds: ${10:# Detection before blacklisting occurs, in seconds}
+    blacklist_duration: ${11:# Duration the blacklist will last, in seconds}
+    per_source_ip_detection_threshold: ${12:# Specifies the number of packets per second to identify an IP address as a bad actor}
+    per_source_ip_mitigation_threshold: ${13:# Specifies the rate limit applied to a source IP that is identified as a bad actor}
+    detection_threshold_percent: ${14:# Lists the threshold percent increase over time that the system must detect in traffic in order to detect this attack}
+    detection_threshold_eps: ${15:# Lists how many packets per second the system must discover in traffic in order to detect this attack}
+    mitigation_threshold_eps: ${16:# Specifies the maximum number of this type of packet per second the system allows for a vector}
+    threshold_mode: ${17:# The C(dns-malformed) vector does not support C(fully-automatic) or C(stress-based-mitigation) for this parameter}
+    state: ${18:# When C(state) is C(mitigate), ensures the vector enforces limits and thresholds}
+    partition: ${19:# Device partition to manage resources on}
+    provider: ${20:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_firewall_dos_vector]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_firewall_dos_vector</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage attack vector configuration in an AFM DoS profile</description>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:CLI command to modify cpu-mgmt-class}
+  community.network.pn_cpu_mgmt_class:
+    pn_cliswitch: ${2:# Target switch to run the CLI on}
+    state: ${3:# State the action to perform}
+    pn_burst_size: ${4:# ingress traffic burst size (bytes) or default}
+    pn_name: ${5:# mgmt port ingress traffic class}
+    pn_rate_limit: ${6:# ingress rate limit on mgmt port(bps) or unlimited}
+  tags:
+    - community
+    - network
+    - pn_cpu_mgmt_class]]></content>
+  <tabTrigger>community.network.pn_cpu_mgmt_class</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>CLI command to modify cpu-mgmt-class</description>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set the license for Automation Platform Controller}
+  awx.awx.license:
+    manifest: ${2:# file path to a Red Hat subscription manifest (a }
+    force: ${3:# By default, the license manifest will only be applied if Tower is currently unlicensed or trial licensed}
+    pool_id: ${4:# Red Hat or Red Hat Satellite pool_id to attach to}
+    state: ${5:# Desired state of the resource}
+    controller_host: ${6:# URL to your Automation Platform Controller instance}
+    controller_username: ${7:# Username for your controller instance}
+    controller_password: ${8:# Password for your controller instance}
+    controller_oauthtoken: ${9:# The OAuth token to use}
+    validate_certs: ${10:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${11:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - license]]></content>
+  <tabTrigger>awx.awx.license</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set the license for Automation Platform Controller</description>
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage users in oVirt/RHV}
+  ovirt.ovirt.ovirt_user:
+    name: ${2:# Name of the user to manage}
+    state: ${3:# Should the user be present/absent}
+    authz_name: ${4:# Authorization provider of the user}
+    namespace: ${5:# Namespace where the user resides}
+    ssh_public_key: ${6:# The user public key}
+    wait: ${7:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${8:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${9:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${10:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${11:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${12:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_user]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage users in oVirt/RHV</description>
+</snippet>

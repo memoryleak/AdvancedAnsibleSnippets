@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:CLI command to modify connection-stats-settings}
+  community.network.pn_connection_stats_settings:
+    pn_cliswitch: ${2:# Target switch to run the CLI on}
+    state: ${3:# State the action to perform}
+    pn_enable: ${4:# Enable or disable collecting connections statistics}
+    pn_connection_backup_enable: ${5:# Enable backup for connection statistics collection}
+    pn_client_server_stats_max_memory: ${6:# maximum memory for client server statistics}
+    pn_connection_stats_log_disk_space: ${7:# disk-space allocated for statistics (including rotated log files)}
+    pn_client_server_stats_log_enable: ${8:# Enable or disable statistics}
+    pn_service_stat_max_memory: ${9:# maximum memory allowed for service statistics}
+    pn_connection_stats_log_interval: ${10:# interval to collect statistics}
+    pn_fabric_connection_backup_interval: ${11:# backup interval for fabric connection statistics collection}
+    pn_connection_backup_interval: ${12:# backup interval for connection statistics collection}
+    pn_connection_stats_log_enable: ${13:# enable or disable statistics}
+    pn_fabric_connection_max_memory: ${14:# maximum memory allowed for fabric connection statistics}
+    pn_fabric_connection_backup_enable: ${15:# enable backup for fabric connection statistics collection}
+    pn_client_server_stats_log_disk_space: ${16:# disk-space allocated for statistics (including rotated log files)}
+    pn_connection_max_memory: ${17:# maximum memory allowed for connection statistics}
+    pn_connection_stats_max_memory: ${18:# maximum memory allowed for connection statistics}
+    pn_client_server_stats_log_interval: ${19:# interval to collect statistics}
+  tags:
+    - community
+    - network
+    - pn_connection_stats_settings]]></content>
+  <tabTrigger>community.network.pn_connection_stats_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>CLI command to modify connection-stats-settings</description>
+</snippet>

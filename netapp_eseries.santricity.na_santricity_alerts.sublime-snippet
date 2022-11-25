@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series manage email notification settings}
+  netapp_eseries.santricity.na_santricity_alerts:
+    state: ${2:# Enable/disable the sending of email-based alerts}
+    server: ${3:# A fully qualified domain name, IPv4 address, or IPv6 address of a mail server}
+    sender: ${4:# This is the sender that the recipient will see}
+    contact: ${5:# Allows the owner to specify some free-form contact information to be included in the emails}
+    recipients: ${6:# The email addresses that will receive the email notifications}
+    test: ${7:# When a change is detected in the configuration, a test email will be sent}
+    api_username: ${8:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_password: ${9:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${10:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    validate_certs: ${11:# Should https certificates be validated?}
+    ssid: ${12:# The ID of the array to manage}
+  tags:
+    - netapp_eseries
+    - santricity
+    - na_santricity_alerts]]></content>
+  <tabTrigger>netapp_eseries.santricity.na_santricity_alerts</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series manage email notification settings</description>
+</snippet>

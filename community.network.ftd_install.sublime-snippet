@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Installs FTD pkg image on the firewall}
+  community.network.ftd_install:
+    device_hostname: ${2:# Hostname of the device as appears in the prompt (e}
+    device_username: ${3:# Username to login on the device}
+    device_password: ${4:# Password to login on the device}
+    device_sudo_password: ${5:# Root password for the device}
+    device_new_password: ${6:# New device password to set after image installation}
+    device_ip: ${7:# Device IP address of management interface}
+    device_gateway: ${8:# Device gateway of management interface}
+    device_netmask: ${9:# Device netmask of management interface}
+    device_model: ${10:# Platform model of the device (e}
+    dns_server: ${11:# DNS IP address of management interface}
+    console_ip: ${12:# IP address of a terminal server}
+    console_port: ${13:# Device's port on a terminal server}
+    console_username: ${14:# Username to login on a terminal server}
+    console_password: ${15:# Password to login on a terminal server}
+    rommon_file_location: ${16:# Path to the boot (ROMMON) image on TFTP server}
+    image_file_location: ${17:# Path to the FTD pkg image on the server to be downloaded}
+    image_version: ${18:# Version of FTD image to be installed}
+    force_install: ${19:# Forces the FTD image to be installed even when the same version is already installed on the firewall}
+    search_domains: ${20:# Search domains delimited by comma}
+  tags:
+    - community
+    - network
+    - ftd_install]]></content>
+  <tabTrigger>community.network.ftd_install</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Installs FTD pkg image on the firewall</description>
+</snippet>

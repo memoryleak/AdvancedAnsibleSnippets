@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage affinity labels in oVirt/RHV}
+  ovirt.ovirt.ovirt_affinity_label:
+    name: ${2:# Name of the affinity label to manage}
+    state: ${3:# Should the affinity label be present or absent}
+    cluster: ${4:# Name of the cluster where vms and hosts resides}
+    vms: ${5:# List of the VMs names, which should have assigned this affinity label}
+    hosts: ${6:# List of the hosts names, which should have assigned this affinity label}
+    wait: ${7:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${8:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${9:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${10:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${11:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${12:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_affinity_label]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_affinity_label</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage affinity labels in oVirt/RHV</description>
+</snippet>

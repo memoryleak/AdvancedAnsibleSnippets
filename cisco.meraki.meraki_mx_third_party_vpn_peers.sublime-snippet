@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage third party (IPSec) VPN peers for MX devices}
+  cisco.meraki.meraki_mx_third_party_vpn_peers:
+    state: ${2:# Specifies whether object should be queried, created/modified, or removed}
+    peers: ${3:# The list of VPN peers}
+    auth_key: ${4:# Authentication key provided by the dashboard}
+    host: ${5:# Hostname for Meraki dashboard}
+    use_proxy: ${6:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${7:# If C(no), it will use HTTP}
+    output_format: ${8:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${9:# Set amount of debug output during module execution}
+    timeout: ${10:# Time to timeout for HTTP requests}
+    validate_certs: ${11:# Whether to validate HTTP certificates}
+    org_name: ${12:# Name of organization}
+    org_id: ${13:# ID of organization}
+    rate_limit_retry_time: ${14:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${15:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_mx_third_party_vpn_peers]]></content>
+  <tabTrigger>cisco.meraki.meraki_mx_third_party_vpn_peers</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage third party (IPSec) VPN peers for MX devices</description>
+</snippet>

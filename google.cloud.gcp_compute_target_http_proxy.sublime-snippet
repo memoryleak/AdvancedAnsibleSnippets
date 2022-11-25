@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates a GCP TargetHttpProxy}
+  google.cloud.gcp_compute_target_http_proxy:
+    state: ${2:# Whether the given object should exist in GCP}
+    description: ${3:# An optional description of this resource}
+    name: ${4:# Name of the resource}
+    url_map: ${5:# A reference to the UrlMap resource that defines the mapping from URL to the BackendService}
+    project: ${6:# The Google Cloud Platform project to use}
+    auth_kind: ${7:# The type of credential used}
+    service_account_contents: ${8:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_file: ${9:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    service_account_email: ${10:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    scopes: ${11:# Array of scopes to be used}
+    env_type: ${12:# Specifies which Ansible environment you're running this module within}
+  tags:
+    - google
+    - cloud
+    - gcp_compute_target_http_proxy]]></content>
+  <tabTrigger>google.cloud.gcp_compute_target_http_proxy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates a GCP TargetHttpProxy</description>
+</snippet>

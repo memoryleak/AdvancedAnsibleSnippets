@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates a GCP InterconnectAttachment}
+  google.cloud.gcp_compute_interconnect_attachment:
+    state: ${2:# Whether the given object should exist in GCP}
+    admin_enabled: ${3:# Whether the VLAN attachment is enabled or disabled}
+    interconnect: ${4:# URL of the underlying Interconnect object that this attachment's traffic will traverse through}
+    description: ${5:# An optional description of this resource}
+    bandwidth: ${6:# Provisioned bandwidth capacity for the interconnect attachment}
+    edge_availability_domain: ${7:# Desired availability domain for the attachment}
+    type: ${8:# The type of InterconnectAttachment you wish to create}
+    router: ${9:# URL of the cloud router to be used for dynamic routing}
+    name: ${10:# Name of the resource}
+    candidate_subnets: ${11:# Up to 16 candidate prefixes that can be used to restrict the allocation of cloudRouterIpAddress and customerRouterIpAddress for this attachment}
+    vlan_tag8021q: ${12:# The IEEE 802}
+    region: ${13:# Region where the regional interconnect attachment resides}
+    project: ${14:# The Google Cloud Platform project to use}
+    auth_kind: ${15:# The type of credential used}
+    service_account_contents: ${16:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_file: ${17:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    service_account_email: ${18:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    scopes: ${19:# Array of scopes to be used}
+    env_type: ${20:# Specifies which Ansible environment you're running this module within}
+  tags:
+    - google
+    - cloud
+    - gcp_compute_interconnect_attachment]]></content>
+  <tabTrigger>google.cloud.gcp_compute_interconnect_attachment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates a GCP InterconnectAttachment</description>
+</snippet>

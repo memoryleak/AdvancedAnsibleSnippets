@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or Delete Azure VM Backup Policy}
+  azure.azcollection.azure_rm_vmbackuppolicy:
+    name: ${2:# Policy Name}
+    resource_group: ${3:# The name of the resource group}
+    vault_name: ${4:# Recovery Service Vault Name}
+    time: ${5:# Retention times of retention policy in UTC}
+    weekdays: ${6:# List of days of the week}
+    weeks: ${7:# List of weeks of month}
+    months: ${8:# List of months of year of yearly retention policy}
+    count: ${9:# Count of duration types}
+    state: ${10:# Assert the state of the protection item}
+    ad_user: ${11:# Active Directory username}
+    password: ${12:# Active Directory user password}
+    profile: ${13:# Security profile found in ~/}
+    subscription_id: ${14:# Your Azure subscription Id}
+    client_id: ${15:# Azure client ID}
+    secret: ${16:# Azure client secret}
+    tenant: ${17:# Azure tenant ID}
+    cloud_environment: ${18:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${19:# Azure AD authority url}
+    cert_validation_mode: ${20:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${21:# Controls the source of the credentials to use for authentication}
+    api_profile: ${22:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${23:# Parent argument}
+    log_mode: ${24:# Parent argument}
+    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${27:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${28:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_vmbackuppolicy]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_vmbackuppolicy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or Delete Azure VM Backup Policy</description>
+</snippet>

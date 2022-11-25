@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages VPCs on Vultr}
+  vultr.cloud.vpc:
+    description: ${2:# Description of the VPC}
+    v4_subnet: ${3:# IPv4 subnet of the VPC}
+    v4_subnet_mask: ${4:# IPv4 subnet mask of the VPC}
+    region: ${5:# Region the VPC will be related to}
+    state: ${6:# State of the VPC}
+    api_key: ${7:# API key of the Vultr API}
+    api_timeout: ${8:# HTTP timeout to Vultr API}
+    api_retries: ${9:# Amount of retries in case of the Vultr API retuns an HTTP 503 code}
+    api_retry_max_delay: ${10:# Retry backoff delay in seconds is exponential up to this max}
+    api_endpoint: ${11:# URL to API endpint (without trailing slash)}
+    validate_certs: ${12:# Validate SSL certs of the Vultr API}
+  tags:
+    - vultr
+    - cloud
+    - vpc]]></content>
+  <tabTrigger>vultr.cloud.vpc</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages VPCs on Vultr</description>
+</snippet>

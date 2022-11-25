@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Verifies the software package on target machines}
+  check_point.mgmt.cp_mgmt_verify_software_package:
+    name: ${2:# The name of the software package}
+    targets: ${3:# On what targets to execute this command}
+    concurrency_limit: ${4:# The number of targets, on which the same package is installed at the same time}
+    download_package: ${5:# NOTE, Supported from Check Point version R81}
+    download_package_from: ${6:# NOTE, Supported from Check Point version R81}
+    wait_for_task: ${7:# Wait for the task to end}
+    wait_for_task_timeout: ${8:# How many minutes to wait until throwing a timeout error}
+    version: ${9:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_verify_software_package]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_verify_software_package</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Verifies the software package on target machines</description>
+</snippet>

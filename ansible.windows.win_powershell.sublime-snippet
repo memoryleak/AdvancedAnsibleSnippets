@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Run PowerShell scripts}
+  ansible.windows.win_powershell:
+    arguments: ${2:# A list of arguments to pass to I(executable) when running a script in another PowerShell process}
+    chdir: ${3:# The PowerShell location to set when starting the script}
+    creates: ${4:# A path or path filter pattern; when the referenced path exists on the target host, the task will be skipped}
+    depth: ${5:# How deep the return values are serialized for C(result), C(output), and C(information[x]}
+    error_action: ${6:# The C($ErrorActionPreference) to set before executing I(script)}
+    executable: ${7:# A custom PowerShell executable to run the script in}
+    parameters: ${8:# Parameters to pass into the script as key value pairs}
+    removes: ${9:# A path or path filter pattern; when the referenced path B(does not) exist on the target host, the task will be skipped}
+    script: ${10:# The PowerShell script to run}
+  tags:
+    - ansible
+    - windows
+    - win_powershell]]></content>
+  <tabTrigger>ansible.windows.win_powershell</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Run PowerShell scripts</description>
+</snippet>

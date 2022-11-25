@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages core NTP configuration}
+  cisco.nxos.nxos_ntp:
+    server: ${2:# Network address of NTP server}
+    peer: ${3:# Network address of NTP peer}
+    key_id: ${4:# Authentication key identifier to use with given NTP server or peer or keyword 'default'}
+    prefer: ${5:# Makes given NTP server or peer the preferred NTP server or peer for the device}
+    vrf_name: ${6:# Makes the device communicate with the given NTP server or peer over a specific VRF or keyword 'default'}
+    source_addr: ${7:# Local source address from which NTP messages are sent or keyword 'default'}
+    source_int: ${8:# Local source interface from which NTP messages are sent}
+    state: ${9:# Manage the state of the resource}
+  tags:
+    - cisco
+    - nxos
+    - nxos_ntp]]></content>
+  <tabTrigger>cisco.nxos.nxos_ntp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages core NTP configuration</description>
+</snippet>

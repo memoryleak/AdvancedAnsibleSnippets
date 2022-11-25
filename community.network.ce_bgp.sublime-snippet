@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages BGP configuration on HUAWEI CloudEngine switches}
+  community.network.ce_bgp:
+    state: ${2:# Specify desired state of the resource}
+    as_number: ${3:# Local AS number}
+    graceful_restart: ${4:# Enable GR of the BGP speaker in the specified address family, peer address, or peer group}
+    time_wait_for_rib: ${5:# Period of waiting for the End-Of-RIB flag}
+    as_path_limit: ${6:# Maximum number of AS numbers in the AS_Path attribute}
+    check_first_as: ${7:# Check the first AS in the AS_Path of the update messages from EBGP peers}
+    confed_id_number: ${8:# Confederation ID}
+    confed_nonstanded: ${9:# Configure the device to be compatible with devices in a nonstandard confederation}
+    bgp_rid_auto_sel: ${10:# The function to automatically select router IDs for all VPN BGP instances is enabled}
+    keep_all_routes: ${11:# If the value is true, the system stores all route update messages received from all peers (groups) after BGP connection setup}
+    memory_limit: ${12:# Support BGP RIB memory protection}
+    gr_peer_reset: ${13:# Peer disconnection through GR}
+    is_shutdown: ${14:# Interrupt BGP all neighbor}
+    suppress_interval: ${15:# Suppress interval}
+    hold_interval: ${16:# Hold interval}
+    clear_interval: ${17:# Clear interval}
+    confed_peer_as_num: ${18:# Confederation AS number, in two-byte or four-byte format}
+    vrf_name: ${19:# Name of a BGP instance}
+    vrf_rid_auto_sel: ${20:# If the value is true, VPN BGP instances are enabled to automatically select router IDs}
+    router_id: ${21:# ID of a router that is in IPv4 address format}
+    keepalive_time: ${22:# If the value of a timer changes, the BGP peer relationship between the routers is disconnected}
+    hold_time: ${23:# Hold time, in seconds}
+    min_hold_time: ${24:# Min hold time, in seconds}
+    conn_retry_time: ${25:# ConnectRetry interval}
+    ebgp_if_sensitive: ${26:# If the value is true, After the fast EBGP interface awareness function is enabled, EBGP sessions on an interface are deleted immediately when the interface goes Down}
+    default_af_type: ${27:# Type of a created address family, which can be IPv4 unicast or IPv6 unicast}
+  tags:
+    - community
+    - network
+    - ce_bgp]]></content>
+  <tabTrigger>community.network.ce_bgp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages BGP configuration on HUAWEI CloudEngine switches</description>
+</snippet>

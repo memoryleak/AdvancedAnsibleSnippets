@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update, and delete MCP 1}
+  community.general.dimensiondata_network:
+    name: ${2:# The name of the network domain to create}
+    description: ${3:# Additional description of the network domain}
+    service_plan: ${4:# The service plan, either 'ESSENTIALS' or 'ADVANCED'}
+    state: ${5:# Should the resource be present or absent}
+    region: ${6:# The target region}
+    mcp_user: ${7:# The username used to authenticate to the CloudControl API}
+    mcp_password: ${8:# The password used to authenticate to the CloudControl API}
+    location: ${9:# The target datacenter}
+    validate_certs: ${10:# If C(false), SSL certificates will not be validated}
+    wait: ${11:# Should we wait for the task to complete before moving onto the next}
+    wait_time: ${12:# The maximum amount of time (in seconds) to wait for the task to complete}
+    wait_poll_interval: ${13:# The amount of time (in seconds) to wait between checks for task completion}
+  tags:
+    - community
+    - general
+    - dimensiondata_network]]></content>
+  <tabTrigger>community.general.dimensiondata_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update, and delete MCP 1</description>
+</snippet>

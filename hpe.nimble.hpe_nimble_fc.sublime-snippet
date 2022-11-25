@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the HPE Nimble Storage Fibre Channel}
+  hpe.nimble.hpe_nimble_fc:
+    array_name_or_serial: ${2:# Name or serial number of array where the interface is hosted}
+    controller: ${3:# Name (A or B) of the controller where the interface is hosted}
+    hw_upgrade: ${4:# Update fibre channel configuration after hardware changes}
+    name: ${5:# Name of fibre channel interface}
+    online: ${6:# Identify whether the fibre channel interface is online}
+    precheck: ${7:# Check if the interfaces are offline before regenerating the WWNN}
+    regenerate: ${8:# Regenerate fibre channel configuration}
+    state: ${9:# The fibre channel operation}
+    wwnn_base_str: ${10:# Base WWNN}
+    host: ${11:# HPE Nimble Storage IP address}
+    password: ${12:# HPE Nimble Storage password}
+    username: ${13:# HPE Nimble Storage user name}
+  tags:
+    - hpe
+    - nimble
+    - hpe_nimble_fc]]></content>
+  <tabTrigger>hpe.nimble.hpe_nimble_fc</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the HPE Nimble Storage Fibre Channel</description>
+</snippet>

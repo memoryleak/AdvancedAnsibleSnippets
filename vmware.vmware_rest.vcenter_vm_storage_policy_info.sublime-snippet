@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Returns Information about Storage Policy associated with a virtual machine's home directory and/or its virtual hard disks}
+  vmware.vmware_rest.vcenter_vm_storage_policy_info:
+    session_timeout: ${2:# Timeout settings for client session}
+    vcenter_hostname: ${3:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${4:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${5:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${6:# The vSphere vCenter username}
+    vcenter_validate_certs: ${7:# Allows connection when SSL certificates are not valid}
+    vm: ${8:# Virtual machine identifier Required with I(state=['get'])}
+  tags:
+    - vmware
+    - vmware_rest
+    - vcenter_vm_storage_policy_info]]></content>
+  <tabTrigger>vmware.vmware_rest.vcenter_vm_storage_policy_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Returns Information about Storage Policy associated with a virtual machine's home directory and/or its virtual hard disks</description>
+</snippet>

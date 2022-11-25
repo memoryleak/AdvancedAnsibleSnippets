@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the auto power ON or OFF for vm on ESXi host}
+  community.vmware.vmware_host_auto_start:
+    esxi_hostname: ${2:# ESXi hostname where the VM to set auto power on or off exists}
+    name: ${3:# VM name to set auto power on or off}
+    uuid: ${4:# VM uuid to set auto power on or off, this is VMware's unique identifier}
+    use_instance_uuid: ${5:# Whether to use the VMware instance UUID rather than the BIOS UUID}
+    moid: ${6:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    system_defaults: ${7:# System defaults for auto-start or auto-stop config for virtual machine}
+    power_info: ${8:# Startup or shutdown settings of virtual machine}
+    hostname: ${9:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${10:# The username of the vSphere vCenter or ESXi server}
+    password: ${11:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${12:# Allows connection when SSL certificates are not valid}
+    port: ${13:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${14:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${15:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_host_auto_start]]></content>
+  <tabTrigger>community.vmware.vmware_host_auto_start</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the auto power ON or OFF for vm on ESXi host</description>
+</snippet>

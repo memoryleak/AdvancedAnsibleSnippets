@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage users of ESXi}
+  community.vmware.vmware_host_user_manager:
+    esxi_hostname: ${2:# Name of the ESXi host that is managing the local user}
+    user_name: ${3:# Name of the local user}
+    user_password: ${4:# The local user password}
+    user_description: ${5:# The local user description}
+    override_user_password: ${6:# If the local user exists and updates the password, change this parameter value is true}
+    state: ${7:# If set to C(present), add a new local user or update information}
+    hostname: ${8:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${9:# The username of the vSphere vCenter or ESXi server}
+    password: ${10:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${11:# Allows connection when SSL certificates are not valid}
+    port: ${12:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${13:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${14:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_host_user_manager]]></content>
+  <tabTrigger>community.vmware.vmware_host_user_manager</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage users of ESXi</description>
+</snippet>

@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage devices in the Meraki cloud}
+  cisco.meraki.meraki_device:
+    state: ${2:# Query an organization}
+    net_name: ${3:# Name of a network}
+    net_id: ${4:# ID of a network}
+    serial: ${5:# Serial number of a device to query}
+    hostname: ${6:# Hostname of network device to search for}
+    model: ${7:# Model of network device to search for}
+    tags: ${8:# Space delimited list of tags to assign to device}
+    lat: ${9:# Latitude of device's geographic location}
+    lng: ${10:# Longitude of device's geographic location}
+    address: ${11:# Postal address of device's location}
+    move_map_marker: ${12:# Whether or not to set the latitude and longitude of a device based on the new address}
+    lldp_cdp_timespan: ${13:# Timespan, in seconds, used to query LLDP and CDP information}
+    note: ${14:# Informational notes about a device}
+    query: ${15:# Specifies what information should be queried}
+    auth_key: ${16:# Authentication key provided by the dashboard}
+    host: ${17:# Hostname for Meraki dashboard}
+    use_proxy: ${18:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${19:# If C(no), it will use HTTP}
+    output_format: ${20:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${21:# Set amount of debug output during module execution}
+    timeout: ${22:# Time to timeout for HTTP requests}
+    validate_certs: ${23:# Whether to validate HTTP certificates}
+    org_name: ${24:# Name of organization}
+    org_id: ${25:# ID of organization}
+    rate_limit_retry_time: ${26:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${27:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_device]]></content>
+  <tabTrigger>cisco.meraki.meraki_device</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage devices in the Meraki cloud</description>
+</snippet>

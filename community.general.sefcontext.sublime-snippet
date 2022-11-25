@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages SELinux file context mapping definitions}
+  community.general.sefcontext:
+    target: ${2:# Target path (expression)}
+    ftype: ${3:# The file type that should have SELinux contexts applied}
+    setype: ${4:# SELinux type for the specified target}
+    seuser: ${5:# SELinux user for the specified target}
+    selevel: ${6:# SELinux range for the specified target}
+    state: ${7:# Whether the SELinux file context must be C(absent) or C(present)}
+    reload: ${8:# Reload SELinux policy after commit}
+    ignore_selinux_state: ${9:# Useful for scenarios (chrooted environment) that you can't get the real SELinux state}
+  tags:
+    - community
+    - general
+    - sefcontext]]></content>
+  <tabTrigger>community.general.sefcontext</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages SELinux file context mapping definitions</description>
+</snippet>

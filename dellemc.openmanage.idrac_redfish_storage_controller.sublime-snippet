@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures the physical disk, virtual disk, and storage controller settings}
+  dellemc.openmanage.idrac_redfish_storage_controller:
+    command: ${2:# These actions may require a system reset, depending on the capabilities of the controller}
+    target: ${3:# Fully Qualified Device Descriptor (FQDD) of the target physical drive}
+    volume_id: ${4:# Fully Qualified Device Descriptor (FQDD) of the volume}
+    controller_id: ${5:# Fully Qualified Device Descriptor (FQDD) of the storage controller}
+    key: ${6:# A new security key passphrase that the encryption-capable controller uses to create the encryption key}
+    key_id: ${7:# This is a user supplied text label associated with the passphrase}
+    old_key: ${8:# Security key passphrase used by the encryption-capable controller}
+    mode: ${9:# Encryption mode of the encryption capable controller}
+    job_wait: ${10:# Provides the option if the module has to wait for the job to be completed}
+    job_wait_timeout: ${11:# The maximum wait time of job completion in seconds before the job tracking is stopped}
+    baseuri: ${12:# IP address of the target out-of-band controller}
+    username: ${13:# Username of the target out-of-band controller}
+    password: ${14:# Password of the target out-of-band controller}
+    validate_certs: ${15:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${16:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${17:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_redfish_storage_controller]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_redfish_storage_controller</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures the physical disk, virtual disk, and storage controller settings</description>
+</snippet>

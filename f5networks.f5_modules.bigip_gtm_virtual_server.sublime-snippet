@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages F5 BIG-IP GTM virtual servers}
+  f5networks.f5_modules.bigip_gtm_virtual_server:
+    name: ${2:# Specifies the name of the virtual server}
+    server_name: ${3:# Specifies the name of the server the virtual server is associated with}
+    address: ${4:# Specifies the IP Address of the virtual server}
+    port: ${5:# Specifies the service port number for the virtual server or pool member}
+    translation_address: ${6:# Specifies the translation IP address for the virtual server}
+    translation_port: ${7:# Specifies the translation port number or service name for the virtual server}
+    availability_requirements: ${8:# If you activate more than one health monitor, specifies the number of health monitors that must receive successful responses in order for the link to be considered available}
+    monitors: ${9:# Specifies the health monitors the system currently uses to monitor this resource}
+    virtual_server_dependencies: ${10:# Specifies the virtual servers on which the current virtual server depends}
+    link: ${11:# Specifies a link to assign to the server or virtual server}
+    limits: ${12:# Specifies resource thresholds or limit requirements at the server level}
+    partition: ${13:# Device partition to manage resources on}
+    state: ${14:# When C(present), ensures the resource exists}
+    provider: ${15:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_gtm_virtual_server]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_gtm_virtual_server</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages F5 BIG-IP GTM virtual servers</description>
+</snippet>

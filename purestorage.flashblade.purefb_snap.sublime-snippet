@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage filesystem snapshots on Pure Storage FlashBlades}
+  purestorage.flashblade.purefb_snap:
+    name: ${2:# The name of the source filesystem}
+    suffix: ${3:# Suffix of snapshot name}
+    state: ${4:# Define whether the filesystem snapshot should exist or not}
+    targets: ${5:# Name of target to replicate snapshot to}
+    now: ${6:# Whether to initiate a snapshot replication immeadiately}
+    eradicate: ${7:# Define whether to eradicate the snapshot on delete or leave in trash}
+    fb_url: ${8:# FlashBlade management IP address or Hostname}
+    api_token: ${9:# FlashBlade API token for admin privileged user}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_snap]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_snap</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage filesystem snapshots on Pure Storage FlashBlades</description>
+</snippet>

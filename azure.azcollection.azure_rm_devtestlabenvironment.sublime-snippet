@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure DevTest Lab Environment instance}
+  azure.azcollection.azure_rm_devtestlabenvironment:
+    resource_group: ${2:# The name of the resource group}
+    lab_name: ${3:# The name of the lab}
+    user_name: ${4:# The name of the user profile}
+    name: ${5:# The name of the environment}
+    location: ${6:# The location of the resource}
+    deployment_template: ${7:# The Azure Resource Manager template's identifier}
+    deployment_parameters: ${8:# The parameters of the Azure Resource Manager template}
+    state: ${9:# Assert the state of the Environment}
+    ad_user: ${10:# Active Directory username}
+    password: ${11:# Active Directory user password}
+    profile: ${12:# Security profile found in ~/}
+    subscription_id: ${13:# Your Azure subscription Id}
+    client_id: ${14:# Azure client ID}
+    secret: ${15:# Azure client secret}
+    tenant: ${16:# Azure tenant ID}
+    cloud_environment: ${17:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${18:# Azure AD authority url}
+    cert_validation_mode: ${19:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${20:# Controls the source of the credentials to use for authentication}
+    api_profile: ${21:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${22:# Parent argument}
+    log_mode: ${23:# Parent argument}
+    x509_certificate_path: ${24:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${25:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${26:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${27:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_devtestlabenvironment]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_devtestlabenvironment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure DevTest Lab Environment instance</description>
+</snippet>

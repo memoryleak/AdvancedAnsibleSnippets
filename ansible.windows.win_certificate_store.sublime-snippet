@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages the certificate store}
+  ansible.windows.win_certificate_store:
+    state: ${2:# If C(present), will ensure that the certificate at I(path) is imported into the certificate store specified}
+    path: ${3:# The path to a certificate file}
+    thumbprint: ${4:# The thumbprint as a hex string to either export or remove}
+    store_name: ${5:# The store name to use when importing a certificate or searching for a certificate}
+    store_location: ${6:# The store location to use when importing a certificate or searching for a certificate}
+    store_type: ${7:# The store type to manage}
+    password: ${8:# The password of the pkcs12 certificate key}
+    key_exportable: ${9:# Whether to allow the private key to be exported}
+    key_storage: ${10:# Specifies where Windows will store the private key when it is imported}
+    file_type: ${11:# The file type to export the certificate as when C(state=exported)}
+  tags:
+    - ansible
+    - windows
+    - win_certificate_store]]></content>
+  <tabTrigger>ansible.windows.win_certificate_store</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages the certificate store</description>
+</snippet>

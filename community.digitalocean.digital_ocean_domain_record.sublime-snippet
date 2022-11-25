@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage DigitalOcean domain records}
+  community.digitalocean.digital_ocean_domain_record:
+    state: ${2:# Indicate desired state of the target}
+    record_id: ${3:# Used with C(force_update=yes) and C(state='absent') to update or delete a specific record}
+    force_update: ${4:# If there is already a record with the same C(name) and C(type) force update it}
+    domain: ${5:# Name of the domain}
+    type: ${6:# The type of record you would like to create}
+    data: ${7:# This is the value of the record, depending on the record type}
+    name: ${8:# Required for C(A, AAAA, CNAME, TXT, SRV) records}
+    priority: ${9:# The priority of the host for C(SRV, MX) records)}
+    port: ${10:# The port that the service is accessible on for SRV records only}
+    weight: ${11:# The weight of records with the same priority for SRV records only}
+    ttl: ${12:# Time to live for the record, in seconds}
+    flags: ${13:# An unsignedinteger between 0-255 used for CAA records}
+    tag: ${14:# The parameter tag for CAA records}
+    oauth_token: ${15:# DigitalOcean OAuth token}
+  tags:
+    - community
+    - digitalocean
+    - digital_ocean_domain_record]]></content>
+  <tabTrigger>community.digitalocean.digital_ocean_domain_record</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage DigitalOcean domain records</description>
+</snippet>

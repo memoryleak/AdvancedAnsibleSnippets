@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Self-IPs on a BIG-IP system}
+  f5networks.f5_modules.bigip_selfip:
+    address: ${2:# The IP addresses for the new self IP}
+    allow_service: ${3:# Configure port lockdown for the self IP}
+    name: ${4:# The name of the self IP to create}
+    description: ${5:# Description of the traffic selector}
+    netmask: ${6:# The netmask for the self IP}
+    state: ${7:# When C(present), guarantees the self IP exists with the provided attributes}
+    traffic_group: ${8:# The traffic group for the self IP addresses in an active-active, redundant load balancer configuration}
+    vlan: ${9:# The VLAN for the new self IPs}
+    route_domain: ${10:# The route domain id of the system}
+    fw_enforced_policy: ${11:# Specifies an AFM policy to attach to Self IP}
+    partition: ${12:# Device partition to manage resources on}
+    provider: ${13:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_selfip]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_selfip</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Self-IPs on a BIG-IP system</description>
+</snippet>

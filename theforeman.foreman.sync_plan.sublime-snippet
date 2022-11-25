@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sync Plans}
+  theforeman.foreman.sync_plan:
+    name: ${2:# Name of the sync plan}
+    description: ${3:# Description of the sync plan}
+    interval: ${4:# How often synchronization should run}
+    enabled: ${5:# Whether the sync plan is active}
+    sync_date: ${6:# Start date and time of the first synchronization}
+    cron_expression: ${7:# A cron expression as found in crontab files}
+    products: ${8:# List of products to include in the sync plan}
+    server_url: ${9:# URL of the Foreman server}
+    username: ${10:# Username accessing the Foreman server}
+    password: ${11:# Password of the user accessing the Foreman server}
+    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${13:# State of the entity}
+    organization: ${14:# Organization that the entity is in}
+  tags:
+    - theforeman
+    - foreman
+    - sync_plan]]></content>
+  <tabTrigger>theforeman.foreman.sync_plan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sync Plans</description>
+</snippet>

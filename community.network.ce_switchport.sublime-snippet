@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages Layer 2 switchport interfaces on HUAWEI CloudEngine switches}
+  community.network.ce_switchport:
+    interface: ${2:# Full name of the interface, i}
+    mode: ${3:# The link type of an interface}
+    default_vlan: ${4:# If C(mode=access, or mode=dot1qtunnel), used as the access VLAN ID, in the range from 1 to 4094}
+    pvid_vlan: ${5:# If C(mode=trunk, or mode=hybrid), used as the trunk native VLAN ID, in the range from 1 to 4094}
+    trunk_vlans: ${6:# If C(mode=trunk), used as the VLAN range to ADD or REMOVE from the trunk, such as 2-10 or 2,5,10-15, etc}
+    untagged_vlans: ${7:# If C(mode=hybrid), used as the VLAN range to ADD or REMOVE from the trunk, such as 2-10 or 2,5,10-15, etc}
+    tagged_vlans: ${8:# If C(mode=hybrid), used as the VLAN range to ADD or REMOVE from the trunk, such as 2-10 or 2,5,10-15, etc}
+    state: ${9:# Manage the state of the resource}
+  tags:
+    - community
+    - network
+    - ce_switchport]]></content>
+  <tabTrigger>community.network.ce_switchport</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages Layer 2 switchport interfaces on HUAWEI CloudEngine switches</description>
+</snippet>

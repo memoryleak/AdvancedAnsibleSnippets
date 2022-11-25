@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures system lockdown mode for iDRAC}
+  dellemc.openmanage.dellemc_system_lockdown_mode:
+    share_name: ${2:# (deprecated)Network share or a local path}
+    share_user: ${3:# (deprecated)Network share user in the format 'user@domain' or 'domain\\user' if user is part of a domain else 'user'}
+    share_password: ${4:# (deprecated)Network share user password}
+    share_mnt: ${5:# (deprecated)Local mount path of the network share with read-write permission for ansible user}
+    lockdown_mode: ${6:# Whether to Enable or Disable system lockdown mode}
+    idrac_ip: ${7:# iDRAC IP Address}
+    idrac_user: ${8:# iDRAC username}
+    idrac_password: ${9:# iDRAC user password}
+    idrac_port: ${10:# iDRAC port}
+    validate_certs: ${11:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${12:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${13:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - dellemc_system_lockdown_mode]]></content>
+  <tabTrigger>dellemc.openmanage.dellemc_system_lockdown_mode</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures system lockdown mode for iDRAC</description>
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure DNS servers on Cisco UCS Manager}
+  cisco.ucs.ucs_dns_server:
+    state: ${2:# If C(absent), will remove a DNS server}
+    dns_server: ${3:# DNS server IP address}
+    description: ${4:# A user-defined description of the DNS server}
+    delegate_to: ${5:# Where the module will be run}
+    hostname: ${6:# IP address or hostname of Cisco UCS Manager}
+    username: ${7:# Username for Cisco UCS Manager authentication}
+    password: ${8:# Password for Cisco UCS Manager authentication}
+    port: ${9:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    use_ssl: ${10:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    use_proxy: ${11:# If C(no), will not use the proxy as defined by system environment variable}
+    proxy: ${12:# If use_proxy is no, specfies proxy to be used for connection}
+  tags:
+    - cisco
+    - ucs
+    - ucs_dns_server]]></content>
+  <tabTrigger>cisco.ucs.ucs_dns_server</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure DNS servers on Cisco UCS Manager</description>
+</snippet>

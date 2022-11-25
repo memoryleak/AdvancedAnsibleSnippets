@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieve information about one or more oVirt/RHV virtual machines}
+  ovirt.ovirt.ovirt_vm_info:
+    pattern: ${2:# Search term which is accepted by oVirt/RHV search backend}
+    all_content: ${3:# If I(true) all the attributes of the virtual machines should be included in the response}
+    case_sensitive: ${4:# If I(true) performed search will take case into account}
+    max: ${5:# The maximum number of results to return}
+    next_run: ${6:# Indicates if the returned result describes the virtual machine as it is currently running or if describes the virtual machine with the modifications that have already been performed but that will only come into effect when the virtual machine is restarted}
+    current_cd: ${7:# If I(true) it will get from all virtual machines current attached cd}
+    follow: ${8:# List of linked entities, which should be fetched along with the main entity}
+    fetch_nested: ${9:# If I(yes) the module will fetch additional data from the API}
+    nested_attributes: ${10:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${11:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_vm_info]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_vm_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieve information about one or more oVirt/RHV virtual machines</description>
+</snippet>

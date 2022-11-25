@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages UCS Serial Over Lan Policies on UCS Manager}
+  cisco.ucs.ucs_serial_over_lan_policy:
+    state: ${2:# If C(absent), will remove Serial Over Lan Policy}
+    name: ${3:# The name of the serial over lan policy}
+    description: ${4:# A user-defined description of the serial over lan policy}
+    admin_state: ${5:# The administrative state of the serial over lan policy}
+    speed: ${6:# The transmission speed of the serial over lan policy}
+    org_dn: ${7:# Org dn (distinguished name) of the serial over lan policy}
+    hostname: ${8:# IP address or hostname of Cisco UCS Manager}
+    username: ${9:# Username for Cisco UCS Manager authentication}
+    password: ${10:# Password for Cisco UCS Manager authentication}
+    port: ${11:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    use_ssl: ${12:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    use_proxy: ${13:# If C(no), will not use the proxy as defined by system environment variable}
+    proxy: ${14:# If use_proxy is no, specfies proxy to be used for connection}
+  tags:
+    - cisco
+    - ucs
+    - ucs_serial_over_lan_policy]]></content>
+  <tabTrigger>cisco.ucs.ucs_serial_over_lan_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages UCS Serial Over Lan Policies on UCS Manager</description>
+</snippet>

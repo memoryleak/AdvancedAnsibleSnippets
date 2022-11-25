@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures Service Profile Association on Cisco UCS Manager}
+  cisco.ucs.ucs_service_profile_association:
+    state: ${2:# If C(present), will verify service profile association and associate with specified server or server pool if needed}
+    service_profile_name: ${3:# The name of the Service Profile being associated or disassociated}
+    server_assignment: ${4:# Specifies how to associate servers with this service profile using the following choices:}
+    server_dn: ${5:# The Distinguished Name (dn) of the server object used for pre-provisioning or selecting an existing server}
+    server_pool_name: ${6:# Name of the server pool used for server pool based assignment}
+    restrict_migration: ${7:# Restricts the migration of the service profile after it has been associated with a server}
+    org_dn: ${8:# The distinguished name (dn) of the organization where the resource is assigned}
+    hostname: ${9:# IP address or hostname of Cisco UCS Manager}
+    username: ${10:# Username for Cisco UCS Manager authentication}
+    password: ${11:# Password for Cisco UCS Manager authentication}
+    port: ${12:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    use_ssl: ${13:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    use_proxy: ${14:# If C(no), will not use the proxy as defined by system environment variable}
+    proxy: ${15:# If use_proxy is no, specfies proxy to be used for connection}
+  tags:
+    - cisco
+    - ucs
+    - ucs_service_profile_association]]></content>
+  <tabTrigger>cisco.ucs.ucs_service_profile_association</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures Service Profile Association on Cisco UCS Manager</description>
+</snippet>

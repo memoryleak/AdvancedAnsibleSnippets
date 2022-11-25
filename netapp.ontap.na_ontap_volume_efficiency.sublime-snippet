@@ -1,0 +1,43 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP enables, disables or modifies volume efficiency}
+  netapp.ontap.na_ontap_volume_efficiency:
+    state: ${2:# Whether the specified volume efficiency should be enabled or not}
+    vserver: ${3:# Specifies the vserver for the volume}
+    path: ${4:# Specifies the path for the volume}
+    schedule: ${5:# Specifies the storage efficiency schedule}
+    policy: ${6:# Specifies the storage efficiency policy to use}
+    enable_compression: ${7:# Specifies if compression is to be enabled}
+    enable_inline_compression: ${8:# Specifies if in-line compression is to be enabled}
+    enable_inline_dedupe: ${9:# Specifies if in-line deduplication is to be enabled, only supported on AFF systems or hybrid aggregates}
+    enable_data_compaction: ${10:# Specifies if compaction is to be enabled}
+    enable_cross_volume_inline_dedupe: ${11:# Specifies if in-line cross volume inline deduplication is to be enabled, this can only be enabled when inline deduplication is enabled}
+    enable_cross_volume_background_dedupe: ${12:# Specifies if cross volume background deduplication is to be enabled, this can only be enabled when inline deduplication is enabled}
+    volume_efficiency: ${13:# Start or Stop a volume efficiency operation on a given volume path}
+    start_ve_scan_all: ${14:# Specifies the scanner to scan the entire volume without applying share block optimization}
+    start_ve_build_metadata: ${15:# Specifies the scanner to scan the entire and generate fingerprint database without attempting the sharing}
+    start_ve_delete_checkpoint: ${16:# Specifies the scanner to delete existing checkpoint and start the operation from the begining}
+    start_ve_queue_operation: ${17:# Specifies the operation to queue if an exisitng operation is already running on the volume and in the fingerprint verification phase}
+    start_ve_scan_old_data: ${18:# Specifies the operation to scan the file system to process all the existing data}
+    start_ve_qos_policy: ${19:# Specifies the QoS policy for the operation}
+    stop_ve_all_operations: ${20:# Specifies that all running and queued operations to be stopped}
+    storage_efficiency_mode: ${21:# Storage efficiency mode used by volume}
+    hostname: ${22:# The hostname or IP address of the ONTAP instance}
+    username: ${23:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${24:# Password for the specified user}
+    cert_filepath: ${25:# path to SSL client cert file (}
+    key_filepath: ${26:# path to SSL client key file}
+    https: ${27:# Enable and disable https}
+    validate_certs: ${28:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${29:# Override the default port (80 or 443) with this port}
+    ontapi: ${30:# The ontap api version to use}
+    use_rest: ${31:# Whether to use REST or ZAPI}
+    feature_flags: ${32:# Enable or disable a new feature}
+    force_ontap_version: ${33:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_volume_efficiency]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_volume_efficiency</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP enables, disables or modifies volume efficiency</description>
+</snippet>

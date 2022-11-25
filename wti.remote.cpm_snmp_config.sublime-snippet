@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set network IPTables parameters in WTI OOB and PDU devices}
+  wti.remote.cpm_snmp_config:
+    cpm_url: ${2:# This is the URL of the WTI device to send the module}
+    cpm_username: ${3:# This is the Username of the WTI device to send the module}
+    cpm_password: ${4:# This is the Password of the WTI device to send the module}
+    use_https: ${5:# Designates to use an https connection or http connection}
+    validate_certs: ${6:# If false, SSL certificates will not be validated}
+    use_proxy: ${7:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+    protocol: ${8:# The protocol that the SNMP entry should be applied}
+    enable: ${9:# The activates SNMP polling for the specified interface and protocol}
+    interface: ${10:# The ethernet port for the SNMP we are defining}
+    readonly: ${11:# Controls the ability to change configuration parameters with SNMP}
+    version: ${12:# Defined which version of SNMP the device will respond to 0 = V1/V2 Only, 1 = V3 Only, 2 = V1/V2/V3}
+    contact: ${13:# The name of the administrator responsible for SNMP issues}
+    location: ${14:# The location of the SNMP Server}
+    systemname: ${15:# The hostname of the WTI Device}
+    rocommunity: ${16:# Read Only Community Password, not used for SNMP V3}
+    rwcommunity: ${17:# Read/Write Community Password, not used for SNMP V3}
+    clear: ${18:# Removes all the users for the protocol being defined before setting the newly defined entries}
+    index: ${19:# Index of the user being modified (V3 only)}
+    username: ${20:# Sets the User Name for SNMPv3 access (V3 only)}
+    authpriv: ${21:# Configures the Authentication and Privacy features for SNMPv3 communication, 0 = Auth/NoPriv, 1 = Auth/Priv (V3 only)}
+    authpass: ${22:# Sets the Authentication Password for SNMPv3 (V3 only)}
+    authproto: ${23:# Which authentication protocol will be used, 0 = MD5, 1 = SHA1 (V3 only)}
+    privpass: ${24:# Sets the Privacy Password for SNMPv3 (V3 only) (V3 only)}
+    privproto: ${25:# Which privacy protocol will be used, 0 = DES, 1 = AES128 (V3 only)}
+  tags:
+    - wti
+    - remote
+    - cpm_snmp_config]]></content>
+  <tabTrigger>wti.remote.cpm_snmp_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set network IPTables parameters in WTI OOB and PDU devices</description>
+</snippet>

@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module starts or stops remote copies on IBM Spectrum Virtualize family storage systems}
+  ibm.spectrum_virtualize.ibm_svc_start_stop_replication:
+    name: ${2:# Specifies a name to assign to the new remote copy relationship or group, or to operate on the existing remote copy}
+    state: ${3:# Starts (C(started)) or stops (C(stopped)) a remote copy relationship}
+    clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${5:# Domain for the Spectrum Virtualize storage system}
+    username: ${6:# REST API username for the Spectrum Virtualize storage system}
+    password: ${7:# REST API password for the Spectrum Virtualize storage system}
+    token: ${8:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    primary: ${9:# Specifies the copy direction by defining which disk becomes the primary (source)}
+    isgroup: ${10:# Specifies that a consistency group has to be started or stopped}
+    clean: ${11:# Specifies that the volume that is to become a secondary is clean}
+    access: ${12:# Instructs the system to allow write access to a consistent secondary volume}
+    force: ${13:# Specifies that the system must process the copy operation even if it causes a temporary loss of consistency during synchronization}
+    validate_certs: ${14:# Validates certification}
+    log_path: ${15:# Path of debug log file}
+  tags:
+    - ibm
+    - spectrum_virtualize
+    - ibm_svc_start_stop_replication]]></content>
+  <tabTrigger>ibm.spectrum_virtualize.ibm_svc_start_stop_replication</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module starts or stops remote copies on IBM Spectrum Virtualize family storage systems</description>
+</snippet>

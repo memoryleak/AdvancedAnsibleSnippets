@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures general settings on a vCenter server}
+  community.vmware.vmware_vcenter_settings:
+    database: ${2:# The database settings for vCenter server}
+    runtime_settings: ${3:# The unique runtime settings for vCenter server}
+    user_directory: ${4:# The user directory settings for the vCenter server installation}
+    mail: ${5:# The settings vCenter server uses to send email alerts}
+    snmp_receivers: ${6:# SNMP trap destinations for vCenter server alerts}
+    timeout_settings: ${7:# The vCenter server connection timeout for normal and long operations}
+    logging_options: ${8:# The level of detail that vCenter server usesfor log files}
+    advanced_settings: ${9:# A dictionary of advanced settings}
+    hostname: ${10:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${11:# The username of the vSphere vCenter or ESXi server}
+    password: ${12:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${13:# Allows connection when SSL certificates are not valid}
+    port: ${14:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${15:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${16:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_vcenter_settings]]></content>
+  <tabTrigger>community.vmware.vmware_vcenter_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures general settings on a vCenter server</description>
+</snippet>

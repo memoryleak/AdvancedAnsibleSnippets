@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure console preferences on OpenManage Enterprise}
+  dellemc.openmanage.ome_application_console_preferences:
+    report_row_limit: ${2:# The maximum number of rows that you can view on OpenManage Enterprise reports}
+    device_health: ${3:# The time after which the health of the devices must be automatically monitored and updated on the OpenManage Enterprise dashboard}
+    discovery_settings: ${4:# The device naming to be used by the OpenManage Enterprise to identify the discovered iDRACs and other devices}
+    server_initiated_discovery: ${5:# Server initiated discovery settings}
+    mx7000_onboarding_preferences: ${6:# Alert-forwarding behavior on chassis when they are onboarded}
+    builtin_appliance_share: ${7:# The external network share that the appliance must access to complete operations}
+    email_sender_settings: ${8:# The email address of the user who is sending an email message}
+    trap_forwarding_format: ${9:# The trap forwarding format}
+    metrics_collection_settings: ${10:# The frequency of the PowerManager extension data maintenance and purging}
+    hostname: ${11:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    username: ${12:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    password: ${13:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${14:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${15:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${16:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${17:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_application_console_preferences]]></content>
+  <tabTrigger>dellemc.openmanage.ome_application_console_preferences</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure console preferences on OpenManage Enterprise</description>
+</snippet>

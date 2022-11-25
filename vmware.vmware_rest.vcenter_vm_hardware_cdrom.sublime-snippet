@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds a virtual CD-ROM device to the virtual machine}
+  vmware.vmware_rest.vcenter_vm_hardware_cdrom:
+    allow_guest_control: ${2:# Flag indicating whether the guest can connect and disconnect the device}
+    backing: ${3:# Physical resource backing for the virtual CD-ROM device}
+    cdrom: ${4:# Virtual CD-ROM device identifier}
+    ide: ${5:# Address for attaching the device to a virtual IDE adapter}
+    label: ${6:# The name of the item}
+    sata: ${7:# Address for attaching the device to a virtual SATA adapter}
+    session_timeout: ${8:# Timeout settings for client session}
+    start_connected: ${9:# Flag indicating whether the virtual device should be connected whenever the virtual machine is powered on}
+    state: ${10:# No description available}
+    type: ${11:# The C(host_bus_adapter_type) defines the valid types of host bus adapters that may be used for attaching a Cdrom to a virtual machine}
+    vcenter_hostname: ${12:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${13:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${14:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${15:# The vSphere vCenter username}
+    vcenter_validate_certs: ${16:# Allows connection when SSL certificates are not valid}
+    vm: ${17:# Virtual machine identifier}
+  tags:
+    - vmware
+    - vmware_rest
+    - vcenter_vm_hardware_cdrom]]></content>
+  <tabTrigger>vmware.vmware_rest.vcenter_vm_hardware_cdrom</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds a virtual CD-ROM device to the virtual machine</description>
+</snippet>

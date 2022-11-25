@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures an availability group listener}
+  lowlydba.sqlserver.ag_listener:
+    ag_name: ${2:# Name of the target availability group}
+    listener_name: ${3:# Name of the Listener to be configured}
+    ip_address: ${4:# IP address(es) of the listener}
+    subnet_ip: ${5:# Subnet IP address(es) of the listener}
+    subnet_mask: ${6:# Sets the subnet IP mask(s) of the availability group listener}
+    port: ${7:# Sets the port number used to communicate with the availability group}
+    dhcp: ${8:# Indicates whether the listener uses DHCP}
+    sql_instance: ${9:# The SQL Server instance to modify}
+    sql_username: ${10:# Username for SQL Authentication}
+    sql_password: ${11:# Password for SQL Authentication}
+    state: ${12:# Whether or not the object should be C(present) or C(absent)}
+  tags:
+    - lowlydba
+    - sqlserver
+    - ag_listener]]></content>
+  <tabTrigger>lowlydba.sqlserver.ag_listener</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures an availability group listener</description>
+</snippet>

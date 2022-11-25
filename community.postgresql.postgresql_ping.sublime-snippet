@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Check remote PostgreSQL server availability}
+  community.postgresql.postgresql_ping:
+    db: ${2:# Name of a database to connect to}
+    session_role: ${3:# Switch to session_role after connecting}
+    trust_input: ${4:# If C(false), check whether a value of I(session_role) is potentially dangerous}
+    login_user: ${5:# The username this module should use to establish its PostgreSQL session}
+    login_password: ${6:# The password this module should use to establish its PostgreSQL session}
+    login_host: ${7:# Host running the database}
+    login_unix_socket: ${8:# Path to a Unix domain socket for local connections}
+    port: ${9:# Database port to connect to}
+    ssl_mode: ${10:# Determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the server}
+    ca_cert: ${11:# Specifies the name of a file containing SSL certificate authority (CA) certificate(s)}
+    connect_params: ${12:# Any additional parameters to be passed to libpg}
+  tags:
+    - community
+    - postgresql
+    - postgresql_ping]]></content>
+  <tabTrigger>community.postgresql.postgresql_ping</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Check remote PostgreSQL server availability</description>
+</snippet>

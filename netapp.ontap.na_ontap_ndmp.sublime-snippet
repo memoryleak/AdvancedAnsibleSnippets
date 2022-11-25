@@ -1,0 +1,44 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP NDMP services configuration}
+  netapp.ontap.na_ontap_ndmp:
+    vserver: ${2:# Name of the vserver}
+    abort_on_disk_error: ${3:# Enable abort on disk error}
+    authtype: ${4:# Authentication type}
+    backup_log_enable: ${5:# Enable backup log}
+    data_port_range: ${6:# Data port range}
+    debug_enable: ${7:# Enable debug}
+    debug_filter: ${8:# Debug filter}
+    dump_detailed_stats: ${9:# Enable logging of VM stats for dump}
+    dump_logical_find: ${10:# Enable logical find for dump}
+    enable: ${11:# Enable NDMP on vserver}
+    fh_dir_retry_interval: ${12:# FH throttle value for dir}
+    fh_node_retry_interval: ${13:# FH throttle value for node}
+    ignore_ctime_enabled: ${14:# Ignore ctime}
+    is_secure_control_connection_enabled: ${15:# Is secure control connection enabled}
+    offset_map_enable: ${16:# Enable offset map}
+    per_qtree_exclude_enable: ${17:# Enable per qtree exclusion}
+    preferred_interface_role: ${18:# Preferred interface role}
+    restore_vm_cache_size: ${19:# Restore VM file cache size}
+    secondary_debug_filter: ${20:# Secondary debug filter}
+    tcpnodelay: ${21:# Enable TCP nodelay}
+    tcpwinsize: ${22:# TCP window size}
+    hostname: ${23:# The hostname or IP address of the ONTAP instance}
+    username: ${24:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${25:# Password for the specified user}
+    cert_filepath: ${26:# path to SSL client cert file (}
+    key_filepath: ${27:# path to SSL client key file}
+    https: ${28:# Enable and disable https}
+    validate_certs: ${29:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${30:# Override the default port (80 or 443) with this port}
+    ontapi: ${31:# The ontap api version to use}
+    use_rest: ${32:# Whether to use REST or ZAPI}
+    feature_flags: ${33:# Enable or disable a new feature}
+    force_ontap_version: ${34:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_ndmp]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_ndmp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP NDMP services configuration</description>
+</snippet>

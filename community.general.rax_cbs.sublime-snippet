@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manipulate Rackspace Cloud Block Storage Volumes}
+  community.general.rax_cbs:
+    description: ${2:# Description to give the volume being created}
+    image: ${3:# Image to use for bootable volumes}
+    meta: ${4:# A hash of metadata to associate with the volume}
+    name: ${5:# Name to give the volume being created}
+    size: ${6:# Size of the volume to create in Gigabytes}
+    snapshot_id: ${7:# The id of the snapshot to create the volume from}
+    state: ${8:# Indicate desired state of the resource}
+    volume_type: ${9:# Type of the volume being created}
+    wait: ${10:# Wait for the volume to be in state C(available) before returning}
+    wait_timeout: ${11:# how long before wait gives up, in seconds}
+    api_key: ${12:# Rackspace API key, overrides I(credentials)}
+    auth_endpoint: ${13:# The URI of the authentication service}
+    credentials: ${14:# File to find the Rackspace credentials in}
+    env: ${15:# Environment as configured in I(~/}
+    identity_type: ${16:# Authentication mechanism to use, such as rackspace or keystone}
+    region: ${17:# Region to create an instance in}
+    tenant_id: ${18:# The tenant ID used for authentication}
+    tenant_name: ${19:# The tenant name used for authentication}
+    username: ${20:# Rackspace username, overrides I(credentials)}
+    validate_certs: ${21:# Whether or not to require SSL validation of API endpoints}
+  tags:
+    - community
+    - general
+    - rax_cbs]]></content>
+  <tabTrigger>community.general.rax_cbs</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manipulate Rackspace Cloud Block Storage Volumes</description>
+</snippet>

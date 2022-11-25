@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sensu checks}
+  sensu.sensu_go.check:
+    command: ${2:# Check command to run}
+    subscriptions: ${3:# List of subscriptions which receive check requests}
+    handlers: ${4:# List of handlers which receive check results}
+    interval: ${5:# Check request interval}
+    cron: ${6:# Schedule check requests using crontab syntax}
+    publish: ${7:# Enables or disables scheduled publication of check requests}
+    timeout: ${8:# Check execution timeout}
+    ttl: ${9:# Amount of time after which a check result is considered stale}
+    stdin: ${10:# Enables writing of serialized JSON data to the check command's stdin}
+    low_flap_threshold: ${11:# Low flap threshold}
+    high_flap_threshold: ${12:# High flap threshold}
+    runtime_assets: ${13:# List of runtime assets required to run the check}
+    check_hooks: ${14:# A mapping of response codes to hooks which will be run by the agent when that code is returned}
+    proxy_entity_name: ${15:# Entity name to associate this check with instead of the agent it ran on}
+    proxy_requests: ${16:# Allows you to assign the check to run for multiple entities according to their entity_attributes}
+    output_metric_format: ${17:# Enable parsing of metrics in the specified format from this check's output}
+    output_metric_handlers: ${18:# List of handlers which receive check results}
+    round_robin: ${19:# An array of environment variables to use with command execution}
+    env_vars: ${20:# A mapping of environment variable names and values to use with command execution}
+    auth: ${21:# Authentication parameters}
+    name: ${22:# The Sensu resource's name}
+    namespace: ${23:# RBAC namespace to operate in}
+    state: ${24:# Target state of the Sensu object}
+    labels: ${25:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
+    annotations: ${26:# Custom metadata fields with fewer restrictions, as key/value pairs}
+    secrets: ${27:# List of secrets that are available to the command}
+  tags:
+    - sensu
+    - sensu_go
+    - check]]></content>
+  <tabTrigger>sensu.sensu_go.check</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sensu checks</description>
+</snippet>

@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures IGMP Vlan parameters}
+  mellanox.onyx.onyx_igmp_vlan:
+    vlan_id: ${2:# VLAN ID, vlan should exist}
+    state: ${3:# IGMP state}
+    mrouter: ${4:# Configure ip igmp snooping mrouter port on vlan}
+    querier: ${5:# Configure the IGMP querier parameters}
+    static_groups: ${6:# List of IGMP static groups}
+    version: ${7:# IGMP snooping operation version on this vlan}
+  tags:
+    - mellanox
+    - onyx
+    - onyx_igmp_vlan]]></content>
+  <tabTrigger>mellanox.onyx.onyx_igmp_vlan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures IGMP Vlan parameters</description>
+</snippet>

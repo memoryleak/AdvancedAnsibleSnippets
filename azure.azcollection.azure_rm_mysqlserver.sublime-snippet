@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage MySQL Server instance}
+  azure.azcollection.azure_rm_mysqlserver:
+    resource_group: ${2:# The name of the resource group that contains the resource}
+    name: ${3:# The name of the server}
+    sku: ${4:# The SKU (pricing tier) of the server}
+    location: ${5:# Resource location}
+    storage_profile: ${6:# Storage Profile properties of a server}
+    version: ${7:# Server version}
+    enforce_ssl: ${8:# Enable SSL enforcement}
+    admin_username: ${9:# The administrator's login name of a server}
+    admin_password: ${10:# The password of the administrator login}
+    create_mode: ${11:# Create mode of SQL Server}
+    restarted: ${12:# Set to C(true) with I(state=present) to restart a running mysql server}
+    state: ${13:# Assert the state of the MySQL Server}
+    ad_user: ${14:# Active Directory username}
+    password: ${15:# Active Directory user password}
+    profile: ${16:# Security profile found in ~/}
+    subscription_id: ${17:# Your Azure subscription Id}
+    client_id: ${18:# Azure client ID}
+    secret: ${19:# Azure client secret}
+    tenant: ${20:# Azure tenant ID}
+    cloud_environment: ${21:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${22:# Azure AD authority url}
+    cert_validation_mode: ${23:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${24:# Controls the source of the credentials to use for authentication}
+    api_profile: ${25:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${26:# Parent argument}
+    log_mode: ${27:# Parent argument}
+    x509_certificate_path: ${28:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${29:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${30:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${31:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_mysqlserver]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_mysqlserver</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage MySQL Server instance</description>
+</snippet>

@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set snmp}
+  inspur.sm.edit_snmp:
+    version: ${2:# SNMP trap version option, 0 - 'v1', 1 - 'v2c', 2 - 'v3', 3 - 'all', 4 - 'customize'}
+    snmp_status: ${3:# NMP read/write status of customize,}
+    community: ${4:# Community of v1/v2c or v1get/v1set/v2cget/v2cset}
+    v1status: ${5:# SNMP V1 enable}
+    v2status: ${6:# SNMP V2 enable}
+    v3status: ${7:# SNMP V3 enable}
+    read_community: ${8:# Read Only Community,Community should between 1 and 16 characters}
+    read_write_community: ${9:# Read And Write Community,Community should between 1 and 16 characters}
+    v3username: ${10:# Set user name of V3 trap or v3get/v3set}
+    auth_protocol: ${11:# Choose authentication of V3 trap or v3get/v3set}
+    auth_password: ${12:# Set auth password of V3 trap or v3get/v3set,}
+    priv_protocol: ${13:# Choose Privacy of V3 trap or v3get/v3set}
+    priv_password: ${14:# Set privacy password of V3 trap or v3get/v3set,}
+    provider: ${15:# A dict object containing connection details}
+    host: ${16:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${17:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${18:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - sm
+    - edit_snmp]]></content>
+  <tabTrigger>inspur.sm.edit_snmp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set snmp</description>
+</snippet>

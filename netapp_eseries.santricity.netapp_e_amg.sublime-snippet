@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series create, remove, and update asynchronous mirror groups}
+  netapp_eseries.santricity.netapp_e_amg:
+    name: ${2:# The name of the async array you wish to target, or create}
+    new_name: ${3:# New async array name}
+    secondaryArrayId: ${4:# The ID of the secondary array to be used in mirroring process}
+    syncIntervalMinutes: ${5:# The synchronization interval in minutes}
+    manualSync: ${6:# Setting this to true will cause other synchronization values to be ignored}
+    recoveryWarnThresholdMinutes: ${7:# Recovery point warning threshold (minutes)}
+    repoUtilizationWarnThreshold: ${8:# Recovery point warning threshold}
+    interfaceType: ${9:# The intended protocol to use if both Fibre and iSCSI are available}
+    syncWarnThresholdMinutes: ${10:# The threshold (in minutes) for notifying the user that periodic synchronization has taken too long to complete}
+    state: ${11:# A C(state) of present will either create or update the async mirror group}
+    api_username: ${12:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_password: ${13:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${14:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    validate_certs: ${15:# Should https certificates be validated?}
+    ssid: ${16:# The ID of the array to manage}
+  tags:
+    - netapp_eseries
+    - santricity
+    - netapp_e_amg]]></content>
+  <tabTrigger>netapp_eseries.santricity.netapp_e_amg</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series create, remove, and update asynchronous mirror groups</description>
+</snippet>

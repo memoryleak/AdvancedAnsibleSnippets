@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:CLI command to add/remove vrouter-ospf}
+  community.network.pn_vrouter_ospf:
+    pn_cliswitch: ${2:# Target switch to run the CLI on}
+    state: ${3:# vrouter-ospf configuration command}
+    pn_netmask: ${4:# OSPF network IP address netmask}
+    pn_ospf_area: ${5:# stub area number for the configuration}
+    pn_network: ${6:# OSPF network IP address}
+    pn_vrouter_name: ${7:# name of service config}
+  tags:
+    - community
+    - network
+    - pn_vrouter_ospf]]></content>
+  <tabTrigger>community.network.pn_vrouter_ospf</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>CLI command to add/remove vrouter-ospf</description>
+</snippet>

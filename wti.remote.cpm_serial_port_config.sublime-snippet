@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set Serial port parameters in WTI OOB and PDU devices}
+  wti.remote.cpm_serial_port_config:
+    cpm_url: ${2:# This is the URL of the WTI device to send the module}
+    cpm_username: ${3:# This is the Username of the WTI device to send the module}
+    cpm_password: ${4:# This is the Password of the WTI device to send the module}
+    use_https: ${5:# Designates to use an https connection or http connection}
+    validate_certs: ${6:# If false, SSL certificates will not be validated}
+    use_proxy: ${7:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+    port: ${8:# This is the port number that is getting the action performed on}
+    portname: ${9:# This is the Name of the Port that is displayed}
+    baud: ${10:# This is the baud rate to assign to the port}
+    handshake: ${11:# This is the handshake to assign to the port, 0=None, 1=XON/XOFF, 2=RTS/CTS, 3=Both}
+    stopbits: ${12:# This is the stop bits to assign to the port, 1=1 Stop Bit, 2=2 Stop Bit}
+    parity: ${13:# This is the parity to assign to the port, 0=7-None, 1=7-Even, 2=7-Odd, 3=8-None, 4=8-Even, 5=8-Odd}
+    mode: ${14:# This is the port mode to assign to the port, 0=Any-to-Any}
+    cmd: ${15:# This is the Admin Mode to assign to the port, 0=Deny, 1=Permit}
+    seq: ${16:# This is the type of Sequence Disconnect to assign to the port, 1=Three Characters (before and after), 2=One Character Only, 3=Off}
+    tout: ${17:# This is the Port Activity Timeout to assign to the port, 0=Off, 1=5 Min, 2=15 Min, 3=30 Min, 4=90 Min, 5=1 Min}
+    echo: ${18:# -This is the command echo parameter to assign to the port, 0=Off, 1=On}
+    break_allow: ${19:# This is if the break character is allowed to be passed through the port, 0=Off, 1=On}
+    logoff: ${20:# This is the logout character to assign to the port}
+  tags:
+    - wti
+    - remote
+    - cpm_serial_port_config]]></content>
+  <tabTrigger>wti.remote.cpm_serial_port_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set Serial port parameters in WTI OOB and PDU devices</description>
+</snippet>

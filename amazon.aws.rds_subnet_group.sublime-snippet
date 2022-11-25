@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:manage RDS database subnet groups}
+  amazon.aws.rds_subnet_group:
+    state: ${2:# Specifies whether the subnet should be present or absent}
+    name: ${3:# Database subnet group identifier}
+    description: ${4:# Database subnet group description}
+    subnets: ${5:# List of subnet IDs that make up the database subnet group}
+    access_key: ${6:# AWS access key ID}
+    secret_key: ${7:# AWS secret access key}
+    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    profile: ${9:# A named AWS profile to use for authentication}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${13:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
+    region: ${15:# The AWS region to use}
+    tags: ${16:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${17:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - rds_subnet_group]]></content>
+  <tabTrigger>amazon.aws.rds_subnet_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>manage RDS database subnet groups</description>
+</snippet>

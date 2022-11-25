@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:wafv2_ip_set}
+  community.aws.wafv2_ip_set:
+    state: ${2:# Whether the rule is present or absent}
+    name: ${3:# The name of the IP set}
+    description: ${4:# Description of the IP set}
+    scope: ${5:# Specifies whether this is for an AWS CloudFront distribution or for a regional application, such as API Gateway or Application LoadBalancer}
+    ip_address_version: ${6:# Specifies whether this is an IPv4 or an IPv6 IP set}
+    addresses: ${7:# Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation}
+    purge_addresses: ${8:# When set to C(no), keep the existing addresses in place}
+    access_key: ${9:# AWS access key ID}
+    secret_key: ${10:# AWS secret access key}
+    session_token: ${11:# AWS STS session token for use with temporary credentials}
+    profile: ${12:# A named AWS profile to use for authentication}
+    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${16:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
+    region: ${18:# The AWS region to use}
+    tags: ${19:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${20:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - community
+    - aws
+    - wafv2_ip_set]]></content>
+  <tabTrigger>community.aws.wafv2_ip_set</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>wafv2_ip_set</description>
+</snippet>

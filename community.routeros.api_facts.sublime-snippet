@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Collect facts from remote devices running MikroTik RouterOS using the API}
+  community.routeros.api_facts:
+    gather_subset: ${2:# When supplied, this argument will restrict the facts collected to a given subset}
+    hostname: ${3:# RouterOS hostname API}
+    username: ${4:# RouterOS login user}
+    password: ${5:# RouterOS user password}
+    timeout: ${6:# Timeout for the request}
+    tls: ${7:# If is set TLS will be used for RouterOS API connection}
+    port: ${8:# RouterOS api port}
+    validate_certs: ${9:# Set to C(false) to skip validation of TLS certificates}
+    validate_cert_hostname: ${10:# Set to C(true) to validate hostnames in certificates}
+    ca_path: ${11:# PEM formatted file that contains a CA certificate to be used for certificate validation}
+    encoding: ${12:# Use the specified encoding when communicating with the RouterOS device}
+  tags:
+    - community
+    - routeros
+    - api_facts]]></content>
+  <tabTrigger>community.routeros.api_facts</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Collect facts from remote devices running MikroTik RouterOS using the API</description>
+</snippet>

@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieve Application Gateway instance facts}
+  azure.azcollection.azure_rm_appgateway_info:
+    name: ${2:# Only show results for a specific application gateway}
+    resource_group: ${3:# Limit results by resource group}
+    ad_user: ${4:# Active Directory username}
+    password: ${5:# Active Directory user password}
+    profile: ${6:# Security profile found in ~/}
+    subscription_id: ${7:# Your Azure subscription Id}
+    client_id: ${8:# Azure client ID}
+    secret: ${9:# Azure client secret}
+    tenant: ${10:# Azure tenant ID}
+    cloud_environment: ${11:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${12:# Azure AD authority url}
+    cert_validation_mode: ${13:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${14:# Controls the source of the credentials to use for authentication}
+    api_profile: ${15:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${16:# Parent argument}
+    log_mode: ${17:# Parent argument}
+    x509_certificate_path: ${18:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${19:# The thumbprint of the private key specified in I(x509_certificate_path)}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_appgateway_info]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_appgateway_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieve Application Gateway instance facts</description>
+</snippet>

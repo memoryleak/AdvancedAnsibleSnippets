@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure VpnSite instance}
+  azure.azcollection.azure_rm_vpnsite:
+    resource_group: ${2:# The resource group name of the VpnSite}
+    location: ${3:# The location of the VpnSite}
+    name: ${4:# The name of the VpnSite}
+    virtual_wan: ${5:# The VirtualWAN to which the vpnSite belongs}
+    device_properties: ${6:# The device properties}
+    ip_address: ${7:# The ip-address for the vpn-site}
+    site_key: ${8:# The key for vpn-site that can be used for connections}
+    address_space: ${9:# The AddressSpace that contains an array of IP address ranges}
+    bgp_properties: ${10:# The set of bgp properties}
+    is_security_site: ${11:# IsSecuritySite flag}
+    vpn_site_links: ${12:# List of all vpn site links}
+    o365_policy: ${13:# Office365 Policy}
+    state: ${14:# Assert the state of the VpnSite}
+    ad_user: ${15:# Active Directory username}
+    password: ${16:# Active Directory user password}
+    profile: ${17:# Security profile found in ~/}
+    subscription_id: ${18:# Your Azure subscription Id}
+    client_id: ${19:# Azure client ID}
+    secret: ${20:# Azure client secret}
+    tenant: ${21:# Azure tenant ID}
+    cloud_environment: ${22:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${23:# Azure AD authority url}
+    cert_validation_mode: ${24:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${25:# Controls the source of the credentials to use for authentication}
+    api_profile: ${26:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${27:# Parent argument}
+    log_mode: ${28:# Parent argument}
+    x509_certificate_path: ${29:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${30:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${31:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${32:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_vpnsite]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_vpnsite</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure VpnSite instance</description>
+</snippet>

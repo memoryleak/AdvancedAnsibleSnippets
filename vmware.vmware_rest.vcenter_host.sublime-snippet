@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add a new standalone host in the vCenter inventory}
+  vmware.vmware_rest.vcenter_host:
+    folder: ${2:# Host and cluster folder in which the new standalone host should be created}
+    force_add: ${3:# Whether host should be added to the vCenter Server even if it is being managed by another vCenter Server}
+    host: ${4:# Identifier of the host to be disconnected}
+    hostname: ${5:# The IP address or DNS resolvable name of the host}
+    password: ${6:# The password for the administrator account on the host}
+    port: ${7:# The port of the host}
+    session_timeout: ${8:# Timeout settings for client session}
+    state: ${9:# No description available}
+    thumbprint: ${10:# The thumbprint of the SSL certificate, which the host is expected to have}
+    thumbprint_verification: ${11:# The C(thumbprint_verification) defines the thumbprint verification schemes for a host's SSL certificate}
+    user_name: ${12:# The administrator account on the host}
+    vcenter_hostname: ${13:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${14:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${15:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${16:# The vSphere vCenter username}
+    vcenter_validate_certs: ${17:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware_rest
+    - vcenter_host]]></content>
+  <tabTrigger>vmware.vmware_rest.vcenter_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add a new standalone host in the vCenter inventory</description>
+</snippet>

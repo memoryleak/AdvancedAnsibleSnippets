@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Server Profile configuration for Cisco Intersight}
+  cisco.intersight.intersight_server_profile:
+    state: ${2:# If C(present), will verify the resource is present and will create if needed}
+    organization: ${3:# The name of the Organization this resource is assigned to}
+    name: ${4:# The name assigned to the Server Profile}
+    target_platform: ${5:# The platform for which the server profile is applicable}
+    tags: ${6:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    description: ${7:# The user-defined description of the Server Profile}
+    assigned_server: ${8:# Managed Obect ID (MOID) of assigned server}
+    boot_order_policy: ${9:# Name of Boot Order Policy to associate with this profile}
+    imc_access_policy: ${10:# Name of IMC Access Policy to associate with this profile}
+    lan_connectivity_policy: ${11:# Name of LAN Connectivity Policy to associate with this profile}
+    local_user_policy: ${12:# Name of Local User Policy to associate with this profile}
+    ntp_policy: ${13:# Name of NTP Policy to associate with this profile}
+    storage_policy: ${14:# Name of Storage Policy to associate with this profile}
+    virtual_media_policy: ${15:# Name of Virtual Media Policy to associate with this profile}
+    api_private_key: ${16:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${17:# URI used to access the Intersight API}
+    api_key_id: ${18:# Public API Key ID associated with the private key}
+    validate_certs: ${19:# Boolean control for verifying the api_uri TLS certificate}
+    use_proxy: ${20:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+  tags:
+    - cisco
+    - intersight
+    - intersight_server_profile]]></content>
+  <tabTrigger>cisco.intersight.intersight_server_profile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Server Profile configuration for Cisco Intersight</description>
+</snippet>

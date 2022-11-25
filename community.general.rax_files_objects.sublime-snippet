@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Upload, download, and delete objects in Rackspace Cloud Files}
+  community.general.rax_files_objects:
+    clear_meta: ${2:# Optionally clear existing metadata when applying metadata to existing objects}
+    container: ${3:# The container to use for file object operations}
+    dest: ${4:# The destination of a C(get) operation; i}
+    expires: ${5:# Used to set an expiration in seconds on an uploaded file or folder}
+    meta: ${6:# Items to set as metadata values on an uploaded file or folder}
+    method: ${7:# The method of operation to be performed: C(put) to upload files, C(get) to download files or C(delete) to remove remote objects in Cloud Files}
+    src: ${8:# Source from which to upload files}
+    structure: ${9:# Used to specify whether to maintain nested directory structure when downloading objects from Cloud Files}
+    type: ${10:# Type of object to do work on}
+    api_key: ${11:# Rackspace API key, overrides I(credentials)}
+    credentials: ${12:# File to find the Rackspace credentials in}
+    env: ${13:# Environment as configured in I(~/}
+    region: ${14:# Region to create an instance in}
+    username: ${15:# Rackspace username, overrides I(credentials)}
+    validate_certs: ${16:# Whether or not to require SSL validation of API endpoints}
+    auth_endpoint: ${17:# The URI of the authentication service}
+    identity_type: ${18:# Authentication mechanism to use, such as rackspace or keystone}
+    tenant_id: ${19:# The tenant ID used for authentication}
+    tenant_name: ${20:# The tenant name used for authentication}
+  tags:
+    - community
+    - general
+    - rax_files_objects]]></content>
+  <tabTrigger>community.general.rax_files_objects</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Upload, download, and delete objects in Rackspace Cloud Files</description>
+</snippet>

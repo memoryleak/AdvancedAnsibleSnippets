@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add, modify & delete services within a consul cluster}
+  community.general.consul:
+    state: ${2:# register or deregister the consul service, defaults to present}
+    service_name: ${3:# Unique name for the service on a node, must be unique per node, required if registering a service}
+    service_id: ${4:# the ID for the service, must be unique per node}
+    host: ${5:# host of the consul agent defaults to localhost}
+    port: ${6:# the port on which the consul agent is running}
+    scheme: ${7:# the protocol scheme on which the consul agent is running}
+    validate_certs: ${8:# whether to verify the TLS certificate of the consul agent}
+    notes: ${9:# Notes to attach to check when registering it}
+    service_port: ${10:# the port on which the service is listening}
+    service_address: ${11:# the address to advertise that the service will be listening on}
+    tags: ${12:# tags that will be attached to the service registration}
+    script: ${13:# the script/command that will be run periodically to check the health of the service}
+    interval: ${14:# the interval at which the service check will be run}
+    check_id: ${15:# an ID for the service check}
+    check_name: ${16:# a name for the service check}
+    ttl: ${17:# checks can be registered with a ttl instead of a I(script) and I(interval) this means that the service will check in with the agent before the ttl expires}
+    tcp: ${18:# Checks can be registered with a TCP port}
+    http: ${19:# checks can be registered with an HTTP endpoint}
+    timeout: ${20:# A custom HTTP check timeout}
+    token: ${21:# the token key identifying an ACL rule set}
+  tags:
+    - community
+    - general
+    - consul]]></content>
+  <tabTrigger>community.general.consul</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add, modify & delete services within a consul cluster</description>
+</snippet>

@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/update or delete AWS CloudWatch 'metric alarms'}
+  amazon.aws.cloudwatch_metric_alarm:
+    state: ${2:# Register or deregister the alarm}
+    name: ${3:# Unique name for the alarm}
+    metric: ${4:# Name of the monitored metric (e}
+    namespace: ${5:# Name of the appropriate namespace (C(AWS/EC2), C(System/Linux), etc}
+    statistic: ${6:# Operation applied to the metric}
+    comparison: ${7:# Determines how the threshold value is compared}
+    threshold: ${8:# Sets the min/max bound for triggering the alarm}
+    period: ${9:# The time (in seconds) between metric evaluations}
+    evaluation_periods: ${10:# The number of times in which the metric is evaluated before final calculation}
+    unit: ${11:# The threshold's unit of measurement}
+    description: ${12:# A longer description of the alarm}
+    dimensions: ${13:# A dictionary describing which metric the alarm is applied to}
+    alarm_actions: ${14:# A list of the names action(s) taken when the alarm is in the C(alarm) status, denoted as Amazon Resource Name(s)}
+    insufficient_data_actions: ${15:# A list of the names of action(s) to take when the alarm is in the C(insufficient_data) status}
+    ok_actions: ${16:# A list of the names of action(s) to take when the alarm is in the C(ok) status, denoted as Amazon Resource Name(s)}
+    treat_missing_data: ${17:# Sets how the alarm handles missing data points}
+    access_key: ${18:# AWS access key ID}
+    secret_key: ${19:# AWS secret access key}
+    session_token: ${20:# AWS STS session token for use with temporary credentials}
+    profile: ${21:# A named AWS profile to use for authentication}
+    endpoint_url: ${22:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${23:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${24:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${25:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${26:# Use a C(botocore}
+    region: ${27:# The AWS region to use}
+  tags:
+    - amazon
+    - aws
+    - cloudwatch_metric_alarm]]></content>
+  <tabTrigger>amazon.aws.cloudwatch_metric_alarm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/update or delete AWS CloudWatch 'metric alarms'</description>
+</snippet>

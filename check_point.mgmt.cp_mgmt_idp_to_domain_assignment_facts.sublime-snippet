@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get idp-to-domain-assignment objects facts on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_idp_to_domain_assignment_facts:
+    assigned_domain: ${2:# Represents the Domain assigned by 'idp-to-domain-assignment', need to be domain name or UID}
+    details_level: ${3:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    limit: ${4:# The maximal number of returned results}
+    offset: ${5:# Number of the results to initially skip}
+    order: ${6:# Sorts the results by search criteria}
+    version: ${7:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_idp_to_domain_assignment_facts]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_idp_to_domain_assignment_facts</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get idp-to-domain-assignment objects facts on Checkpoint over Web Services API</description>
+</snippet>

@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage rabbitMQ queues}
+  community.rabbitmq.rabbitmq_queue:
+    name: ${2:# Name of the queue}
+    state: ${3:# Whether the queue should be present or absent}
+    durable: ${4:# whether queue is durable or not}
+    auto_delete: ${5:# if the queue should delete itself after all queues/queues unbound from it}
+    message_ttl: ${6:# How long a message can live in queue before it is discarded (milliseconds)}
+    auto_expires: ${7:# How long a queue can be unused before it is automatically deleted (milliseconds)}
+    max_length: ${8:# How many messages can the queue contain before it starts rejecting}
+    dead_letter_exchange: ${9:# Optional name of an exchange to which messages will be republished if they}
+    dead_letter_routing_key: ${10:# Optional replacement routing key to use when a message is dead-lettered}
+    max_priority: ${11:# Maximum number of priority levels for the queue to support}
+    arguments: ${12:# extra arguments for queue}
+    login_user: ${13:# RabbitMQ user for connection}
+    login_password: ${14:# RabbitMQ password for connection}
+    login_host: ${15:# RabbitMQ host for connection}
+    login_port: ${16:# RabbitMQ management API port}
+    login_protocol: ${17:# RabbitMQ management API protocol}
+    ca_cert: ${18:# CA certificate to verify SSL connection to management API}
+    client_cert: ${19:# Client certificate to send on SSL connections to management API}
+    client_key: ${20:# Private key matching the client certificate}
+    vhost: ${21:# RabbitMQ virtual host}
+  tags:
+    - community
+    - rabbitmq
+    - rabbitmq_queue]]></content>
+  <tabTrigger>community.rabbitmq.rabbitmq_queue</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage rabbitMQ queues</description>
+</snippet>

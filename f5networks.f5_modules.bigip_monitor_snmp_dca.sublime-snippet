@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages BIG-IP SNMP data collecting agent (DCA) monitors}
+  f5networks.f5_modules.bigip_monitor_snmp_dca:
+    name: ${2:# Monitor name}
+    description: ${3:# Specifies descriptive text that identifies the monitor}
+    parent: ${4:# The parent template of this monitor template}
+    interval: ${5:# Specifies the frequency, in seconds, at which the system issues the monitor check when either the resource is down or the status of the resource is unknown}
+    timeout: ${6:# Specifies the number of seconds the target has in which to respond to the monitor request}
+    time_until_up: ${7:# Specifies the number of seconds to wait after a resource first responds correctly to the monitor before setting the resource to 'up'}
+    community: ${8:# Specifies the community name the system must use to authenticate with the host server through SNMP}
+    version: ${9:# Specifies the version of SNMP the host server uses}
+    agent_type: ${10:# Specifies the SNMP agent running on the monitored server}
+    cpu_coefficient: ${11:# Specifies the coefficient the system uses to calculate the weight of the CPU threshold in the dynamic ratio load balancing algorithm}
+    cpu_threshold: ${12:# Specifies the maximum acceptable CPU usage on the target server}
+    memory_coefficient: ${13:# Specifies the coefficient the system uses to calculate the weight of the memory threshold in the dynamic ratio load balancing algorithm}
+    memory_threshold: ${14:# Specifies the maximum acceptable memory usage on the target server}
+    disk_coefficient: ${15:# Specifies the coefficient the system uses to calculate the weight of the disk threshold in the dynamic ratio load balancing algorithm}
+    disk_threshold: ${16:# Specifies the maximum acceptable disk usage on the target server}
+    partition: ${17:# Device partition to manage resources on}
+    state: ${18:# When C(present), ensures the monitor exists}
+    provider: ${19:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_monitor_snmp_dca]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_monitor_snmp_dca</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages BIG-IP SNMP data collecting agent (DCA) monitors</description>
+</snippet>

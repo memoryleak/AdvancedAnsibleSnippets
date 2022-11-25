@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set Serial port connection/disconnection commands in WTI OOB and PDU devices}
+  wti.remote.cpm_serial_port_action_set:
+    cpm_url: ${2:# This is the URL of the WTI device to send the module}
+    cpm_username: ${3:# This is the Username of the WTI device to send the module}
+    cpm_password: ${4:# This is the Password of the WTI device to send the module}
+    use_https: ${5:# Designates to use an https connection or http connection}
+    validate_certs: ${6:# If false, SSL certificates will not be validated}
+    use_proxy: ${7:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+    port: ${8:# This is the port number that is getting the action performed on}
+    portremote: ${9:# This is the port number that is getting the action performed on}
+    action: ${10:# This is the baud rate to assign to the port}
+  tags:
+    - wti
+    - remote
+    - cpm_serial_port_action_set]]></content>
+  <tabTrigger>wti.remote.cpm_serial_port_action_set</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set Serial port connection/disconnection commands in WTI OOB and PDU devices</description>
+</snippet>

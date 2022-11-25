@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages configuration of an OSPF VPN instance on HUAWEI CloudEngine switches}
+  community.network.ce_ospf_vrf:
+    ospf: ${2:# The ID of the ospf process}
+    route_id: ${3:# Specifies the ospf private route id,}
+    vrf: ${4:# Specifies the vpn instance which use ospf,length is 1 - 31}
+    description: ${5:# Specifies the description information of ospf process}
+    bandwidth: ${6:# Specifies the reference bandwidth used to assign ospf cost}
+    lsaalflag: ${7:# Specifies the mode of timer to calculate interval of arrive LSA}
+    lsaainterval: ${8:# Specifies the interval of arrive LSA when use the general timer}
+    lsaamaxinterval: ${9:# Specifies the max interval of arrive LSA when use the intelligent timer}
+    lsaastartinterval: ${10:# Specifies the start interval of arrive LSA when use the intelligent timer}
+    lsaaholdinterval: ${11:# Specifies the hold interval of arrive LSA when use the intelligent timer}
+    lsaointervalflag: ${12:# Specifies whether cancel the interval of LSA originate or not}
+    lsaointerval: ${13:# Specifies the interval of originate LSA }
+    lsaomaxinterval: ${14:# Specifies the max interval of originate LSA }
+    lsaostartinterval: ${15:# Specifies the start interval of originate LSA }
+    lsaoholdinterval: ${16:# Specifies the hold interval of originate LSA }
+    spfintervaltype: ${17:# Specifies the mode of timer which used to calculate SPF}
+    spfinterval: ${18:# Specifies the interval to calculate SPF when use second level  timer}
+    spfintervalmi: ${19:# Specifies the interval to calculate SPF when use millisecond level  timer}
+    spfmaxinterval: ${20:# Specifies the max interval to calculate SPF when use intelligent timer}
+    spfstartinterval: ${21:# Specifies the start interval to calculate SPF when use intelligent timer}
+    spfholdinterval: ${22:# Specifies the hold interval to calculate SPF when use intelligent timer}
+    state: ${23:# Specify desired state of the resource}
+  tags:
+    - community
+    - network
+    - ce_ospf_vrf]]></content>
+  <tabTrigger>community.network.ce_ospf_vrf</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages configuration of an OSPF VPN instance on HUAWEI CloudEngine switches</description>
+</snippet>

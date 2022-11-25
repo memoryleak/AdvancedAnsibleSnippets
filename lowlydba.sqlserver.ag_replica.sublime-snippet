@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures an availability group replica}
+  lowlydba.sqlserver.ag_replica:
+    sql_instance_replica: ${2:# The SQL Server instance where of the replica to be configured}
+    sql_username_replica: ${3:# Username for SQL Authentication for the secondary replica}
+    sql_password_replica: ${4:# Password for SQL Authentication for the secondary replica}
+    ag_name: ${5:# Name of the Availability Group that will have the new replica joined to it}
+    endpoint: ${6:# By default, this command will attempt to find a DatabaseMirror endpoint}
+    endpoint_url: ${7:# By default, the property C(Fqdn) of C(Get-DbaEndpoint) is used as I(endpoint_url)}
+    backup_priority: ${8:# Sets the backup priority availability group replica}
+    failover_mode: ${9:# Whether the replica have Automatic or Manual failover}
+    availability_mode: ${10:# Whether the replica should be Asynchronous or Synchronous}
+    seeding_mode: ${11:# Default seeding mode for the replica}
+    connection_mode_in_primary_role: ${12:# Which connections can be made to the database when it is in the primary role}
+    connection_mode_in_secondary_role: ${13:# Which connections can be made to the database when it is in the secondary role}
+    read_only_routing_connection_url: ${14:# Sets the read only routing connection url for the availability replica}
+    read_only_routing_list: ${15:# Sets the read only routing ordered list of replica server names to use when redirecting read-only connections through this availability replica}
+    cluster_type: ${16:# Cluster type of the Availability Group}
+    configure_xe_session: ${17:# Configure the AlwaysOn_health extended events session to start automatically as the SSMS wizard would do}
+    session_timeout: ${18:# How many seconds an availability replica waits for a ping response from a connected replica before considering the connection to have failed}
+    sql_instance: ${19:# The SQL Server instance to modify}
+    sql_username: ${20:# Username for SQL Authentication}
+    sql_password: ${21:# Password for SQL Authentication}
+    state: ${22:# Whether or not the object should be C(present) or C(absent)}
+  tags:
+    - lowlydba
+    - sqlserver
+    - ag_replica]]></content>
+  <tabTrigger>lowlydba.sqlserver.ag_replica</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures an availability group replica</description>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage LACP configuration on a Distributed Switch}
+  community.vmware.vmware_dvswitch_lacp:
+    switch: ${2:# The name of the Distributed Switch to manage}
+    support_mode: ${3:# The LACP support mode}
+    link_aggregation_groups: ${4:# Can only be used if C(lacp_support) is set to C(enhanced)}
+    hostname: ${5:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${6:# The username of the vSphere vCenter or ESXi server}
+    password: ${7:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${8:# Allows connection when SSL certificates are not valid}
+    port: ${9:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${10:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${11:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_dvswitch_lacp]]></content>
+  <tabTrigger>community.vmware.vmware_dvswitch_lacp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage LACP configuration on a Distributed Switch</description>
+</snippet>

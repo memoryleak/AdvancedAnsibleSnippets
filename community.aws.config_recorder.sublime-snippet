@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage AWS Config Recorders}
+  community.aws.config_recorder:
+    name: ${2:# The name of the AWS Config resource}
+    state: ${3:# Whether the Config rule should be present or absent}
+    role_arn: ${4:# Amazon Resource Name (ARN) of the IAM role used to describe the AWS resources associated with the account}
+    recording_group: ${5:# Specifies the types of AWS resources for which AWS Config records configuration changes}
+    access_key: ${6:# AWS access key ID}
+    secret_key: ${7:# AWS secret access key}
+    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    profile: ${9:# A named AWS profile to use for authentication}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${13:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
+    region: ${15:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - config_recorder]]></content>
+  <tabTrigger>community.aws.config_recorder</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage AWS Config Recorders</description>
+</snippet>

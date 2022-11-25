@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sensu users}
+  sensu.sensu_go.user:
+    state: ${2:# Desired state of the user}
+    password: ${3:# Password for the user}
+    password_hash: ${4:# Bcrypt password hash for the user}
+    groups: ${5:# List of groups user belongs to}
+    auth: ${6:# Authentication parameters}
+    name: ${7:# The Sensu resource's name}
+  tags:
+    - sensu
+    - sensu_go
+    - user]]></content>
+  <tabTrigger>sensu.sensu_go.user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sensu users</description>
+</snippet>

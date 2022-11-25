@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds or removes mysql hosts from proxysql admin interface}
+  community.proxysql.proxysql_backend_servers:
+    hostgroup_id: ${2:# The hostgroup in which this mysqld instance is included}
+    hostname: ${3:# The ip address at which the mysqld instance can be contacted}
+    port: ${4:# The port at which the mysqld instance can be contacted}
+    status: ${5:# ONLINE - Backend server is fully operational}
+    weight: ${6:# The bigger the weight of a server relative to other weights, the higher the probability of the server being chosen from the hostgroup}
+    compression: ${7:# If the value of I(compression) is greater than 0, new connections to that server will use compression}
+    max_connections: ${8:# The maximum number of connections ProxySQL will open to this backend server}
+    max_replication_lag: ${9:# If greater than 0, ProxySQL will regularly monitor replication lag}
+    use_ssl: ${10:# If I(use_ssl) is set to C(True), connections to this server will be made using SSL connections}
+    max_latency_ms: ${11:# Ping time is monitored regularly}
+    comment: ${12:# Text field that can be used for any purposed defined by the user}
+    state: ${13:# When C(present) - adds the host, when C(absent) - removes the host}
+    save_to_disk: ${14:# Save config to sqlite db on disk to persist the configuration}
+    load_to_runtime: ${15:# Dynamically load config to runtime memory}
+    login_user: ${16:# The username used to authenticate to ProxySQL admin interface}
+    login_password: ${17:# The password used to authenticate to ProxySQL admin interface}
+    login_host: ${18:# The host used to connect to ProxySQL admin interface}
+    login_unix_socket: ${19:# The socket used to connect to ProxySQL admin interface}
+    login_port: ${20:# The port used to connect to ProxySQL admin interface}
+    config_file: ${21:# Specify a config file from which I(login_user) and I(login_password) are to be read}
+  tags:
+    - community
+    - proxysql
+    - proxysql_backend_servers]]></content>
+  <tabTrigger>community.proxysql.proxysql_backend_servers</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds or removes mysql hosts from proxysql admin interface</description>
+</snippet>

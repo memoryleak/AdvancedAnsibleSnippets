@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Update the roles and services of a node}
+  cisco.ise.personas_update_roles_services:
+    ip: ${2:# The IP address of the node to be updated}
+    username: ${3:# The username to log into the node}
+    password: ${4:# The password to log into the node}
+    hostname: ${5:# The hostname of the node}
+    roles: ${6:# The roles to be fulfilled by this node}
+    services: ${7:# The services this node will run}
+    ise_verify: ${8:# Whether or not to verify the identity of the node}
+    ise_version: ${9:# The version of the ISE node}
+    ise_wait_on_rate_limit: ${10:# Whether or not to wait on rate limit}
+  tags:
+    - cisco
+    - ise
+    - personas_update_roles_services]]></content>
+  <tabTrigger>cisco.ise.personas_update_roles_services</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Update the roles and services of a node</description>
+</snippet>

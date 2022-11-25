@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieve information about one or more oVirt/RHV virtual machine network interfaces}
+  ovirt.ovirt.ovirt_nic_info:
+    vm: ${2:# Name of the VM where NIC is attached}
+    template: ${3:# Name of the template where NIC is attached}
+    name: ${4:# Name of the NIC, can be used as glob expression}
+    follow: ${5:# List of linked entities, which should be fetched along with the main entity}
+    fetch_nested: ${6:# If I(yes) the module will fetch additional data from the API}
+    nested_attributes: ${7:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${8:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_nic_info]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_nic_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieve information about one or more oVirt/RHV virtual machine network interfaces</description>
+</snippet>

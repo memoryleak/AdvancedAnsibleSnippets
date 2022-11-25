@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage configuration sections on Extreme Ironware devices}
+  community.network.ironware_config:
+    lines: ${2:# The ordered set of commands that should be configured in the section}
+    parents: ${3:# The ordered set of parents that uniquely identify the section the commands should be checked against}
+    src: ${4:# Specifies the source path to the file that contains the configuration or configuration template to load}
+    before: ${5:# The ordered set of commands to push on to the command stack if a change needs to be made}
+    after: ${6:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
+    match: ${7:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
+    replace: ${8:# Instructs the module on the way to perform the configuration on the device}
+    update: ${9:# The I(update) argument controls how the configuration statements are processed on the remote device}
+    commit: ${10:# This argument specifies the update method to use when applying the configuration changes to the remote node}
+    backup: ${11:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
+    config: ${12:# The C(config) argument allows the playbook designer to supply the base configuration to be used to validate configuration changes necessary}
+    save_when: ${13:# When changes are made to the device running-configuration, the changes are not copied to non-volatile storage by default}
+    backup_options: ${14:# This is a dict object containing configurable options related to backup file path}
+    authorize: ${15:# B(Deprecated)}
+  tags:
+    - community
+    - network
+    - ironware_config]]></content>
+  <tabTrigger>community.network.ironware_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage configuration sections on Extreme Ironware devices</description>
+</snippet>

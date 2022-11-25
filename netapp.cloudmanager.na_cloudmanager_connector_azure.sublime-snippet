@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp Cloud Manager connector for Azure}
+  netapp.cloudmanager.na_cloudmanager_connector_azure:
+    state: ${2:# Whether the specified Cloud Manager connector for Azure should exist or not}
+    name: ${3:# The name of the Cloud Manager connector for Azure to manage}
+    virtual_machine_size: ${4:# The virtual machine type}
+    resource_group: ${5:# The resource group in Azure where the resources will be created}
+    subnet_name: ${6:# The name of the subnet for the virtual machine}
+    location: ${7:# The location where the Cloud Manager Connector will be created}
+    client_id: ${8:# The unique client ID of the Connector}
+    subscription_id: ${9:# The ID of the Azure subscription}
+    company: ${10:# The name of the company of the user}
+    vnet_name: ${11:# The name of the virtual network}
+    vnet_resource_group: ${12:# The resource group in Azure associated with the virtual network}
+    network_security_resource_group: ${13:# The resource group in Azure associated with the security group}
+    network_security_group_name: ${14:# The name of the security group for the deployment}
+    proxy_certificates: ${15:# The proxy certificates, a list of certificate file names}
+    associate_public_ip_address: ${16:# Indicates whether to associate the public IP address to the virtual machine}
+    account_id: ${17:# The NetApp tenancy account ID}
+    proxy_url: ${18:# The proxy URL, if using a proxy to connect to the internet}
+    proxy_user_name: ${19:# The proxy user name, if using a proxy to connect to the internet}
+    proxy_password: ${20:# The proxy password, if using a proxy to connect to the internet}
+    admin_username: ${21:# The user name for the Connector}
+    admin_password: ${22:# The password for the Connector}
+    storage_account: ${23:# The storage account can be created automatically}
+    refresh_token: ${24:# The refresh token for NetApp Cloud Manager API operations}
+    sa_secret_key: ${25:# The service account secret key for NetApp Cloud Manager API operations}
+    sa_client_id: ${26:# The service account secret client ID for NetApp Cloud Manager API operations}
+    environment: ${27:# The environment for NetApp Cloud Manager API operations}
+    feature_flags: ${28:# Enable or disable a new feature}
+  tags:
+    - netapp
+    - cloudmanager
+    - na_cloudmanager_connector_azure]]></content>
+  <tabTrigger>netapp.cloudmanager.na_cloudmanager_connector_azure</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp Cloud Manager connector for Azure</description>
+</snippet>

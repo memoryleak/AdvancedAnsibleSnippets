@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage NetApp Azure Files Snapshot}
+  netapp.azure.azure_rm_netapp_snapshot:
+    name: ${2:# The name of the snapshot}
+    volume_name: ${3:# The name of the volume}
+    pool_name: ${4:# The name of the capacity pool}
+    account_name: ${5:# The name of the NetApp account}
+    location: ${6:# Resource location}
+    state: ${7:# State C(present) will check that the snapshot exists with the requested configuration}
+    ad_user: ${8:# Active Directory username}
+    password: ${9:# Active Directory user password}
+    profile: ${10:# Security profile found in ~/}
+    subscription_id: ${11:# Your Azure subscription Id}
+    client_id: ${12:# Azure client ID}
+    secret: ${13:# Azure client secret}
+    tenant: ${14:# Azure tenant ID}
+    cloud_environment: ${15:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${16:# Azure AD authority url}
+    cert_validation_mode: ${17:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${18:# Controls the source of the credentials to use for authentication}
+    api_profile: ${19:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${20:# Parent argument}
+    log_mode: ${21:# Parent argument}
+    resource_group: ${22:# Name of the resource group}
+  tags:
+    - netapp
+    - azure
+    - azure_rm_netapp_snapshot]]></content>
+  <tabTrigger>netapp.azure.azure_rm_netapp_snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage NetApp Azure Files Snapshot</description>
+</snippet>

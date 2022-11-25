@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/update/delete Zabbix hosts}
+  community.zabbix.zabbix_host:
+    host_name: ${2:# Name of the host in Zabbix}
+    visible_name: ${3:# Visible name of the host in Zabbix}
+    description: ${4:# Description of the host in Zabbix}
+    host_groups: ${5:# List of host groups the host is part of}
+    link_templates: ${6:# List of templates linked to the host}
+    inventory_mode: ${7:# Configure the inventory mode}
+    inventory_zabbix: ${8:# Add Facts for a zabbix inventory (e}
+    status: ${9:# Monitoring status of the host}
+    state: ${10:# State of the host}
+    proxy: ${11:# The name of the Zabbix proxy to be used}
+    interfaces: ${12:# List of interfaces to be created for the host (see example below)}
+    tls_connect: ${13:# Specifies what encryption to use for outgoing connections}
+    tls_accept: ${14:# Specifies what types of connections are allowed for incoming connections}
+    tls_psk_identity: ${15:# It is a unique name by which this specific PSK is referred to by Zabbix components}
+    tls_psk: ${16:# PSK value is a hard to guess string of hexadecimal digits}
+    ca_cert: ${17:# Required certificate issuer}
+    tls_subject: ${18:# Required certificate subject}
+    ipmi_authtype: ${19:# IPMI authentication algorithm}
+    ipmi_privilege: ${20:# IPMI privilege level}
+    ipmi_username: ${21:# IPMI username}
+    ipmi_password: ${22:# IPMI password}
+    force: ${23:# Overwrite the host configuration, even if already present}
+    macros: ${24:# List of user macros to assign to the zabbix host}
+    tags: ${25:# List of host tags to assign to the zabbix host}
+    server_url: ${26:# URL of Zabbix server, with protocol (http or https)}
+    login_user: ${27:# Zabbix user name}
+    login_password: ${28:# Zabbix user password}
+    http_login_user: ${29:# Basic Auth login}
+    http_login_password: ${30:# Basic Auth password}
+    timeout: ${31:# The timeout of API request (seconds)}
+    validate_certs: ${32:# If set to False, SSL certificates will not be validated}
+  tags:
+    - community
+    - zabbix
+    - zabbix_host]]></content>
+  <tabTrigger>community.zabbix.zabbix_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/update/delete Zabbix hosts</description>
+</snippet>

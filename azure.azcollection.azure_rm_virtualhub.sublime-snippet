@@ -1,0 +1,49 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure VirtualHub instance}
+  azure.azcollection.azure_rm_virtualhub:
+    resource_group: ${2:# The resource group name of the VirtualHub}
+    location: ${3:# The location of the VirtualHub}
+    name: ${4:# The name of the VirtualHub}
+    virtual_wan: ${5:# The VirtualWAN to which the VirtualHub belongs}
+    vpn_gateway: ${6:# The VpnGateway associated with this VirtualHub}
+    p2_s_vpn_gateway: ${7:# The P2SVpnGateway associated with this VirtualHub}
+    express_route_gateway: ${8:# The expressRouteGateway associated with this VirtualHub}
+    azure_firewall: ${9:# The azureFirewall associated with this VirtualHub}
+    security_partner_provider: ${10:# The securityPartnerProvider associated with this VirtualHub}
+    address_prefix: ${11:# Address-prefix for this VirtualHub}
+    route_table: ${12:# The routeTable associated with this virtual hub}
+    security_provider_name: ${13:# The Security Provider name}
+    virtual_hub_route_table_v2_s: ${14:# List of all virtual hub route table v2s associated with this VirtualHub}
+    sku: ${15:# The sku of this VirtualHub}
+    bgp_connections: ${16:# List of references to Bgp Connections}
+    ip_configurations: ${17:# List of references to IpConfigurations}
+    virtual_router_asn: ${18:# VirtualRouter ASN}
+    virtual_router_ips: ${19:# VirtualRouter IPs}
+    enable_virtual_router_route_propogation: ${20:# Flag to control route propogation for VirtualRouter hub}
+    state: ${21:# Assert the state of the VirtualHub}
+    ad_user: ${22:# Active Directory username}
+    password: ${23:# Active Directory user password}
+    profile: ${24:# Security profile found in ~/}
+    subscription_id: ${25:# Your Azure subscription Id}
+    client_id: ${26:# Azure client ID}
+    secret: ${27:# Azure client secret}
+    tenant: ${28:# Azure tenant ID}
+    cloud_environment: ${29:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${30:# Azure AD authority url}
+    cert_validation_mode: ${31:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${32:# Controls the source of the credentials to use for authentication}
+    api_profile: ${33:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${34:# Parent argument}
+    log_mode: ${35:# Parent argument}
+    x509_certificate_path: ${36:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${37:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${38:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${39:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_virtualhub]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_virtualhub</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure VirtualHub instance</description>
+</snippet>

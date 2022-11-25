@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages IGMP global configuration}
+  cisco.nxos.nxos_igmp:
+    flush_routes: ${2:# Removes routes when the IGMP process is restarted}
+    enforce_rtr_alert: ${3:# Enables or disables the enforce router alert option check for IGMPv2 and IGMPv3 packets}
+    restart: ${4:# Restarts the igmp process (using an exec config command)}
+    state: ${5:# Manages desired state of the resource}
+  tags:
+    - cisco
+    - nxos
+    - nxos_igmp]]></content>
+  <tabTrigger>cisco.nxos.nxos_igmp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages IGMP global configuration</description>
+</snippet>

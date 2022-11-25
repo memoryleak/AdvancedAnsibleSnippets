@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for Backup Schedule Config}
+  cisco.ise.backup_schedule_config:
+    backupDescription: ${2:# Description of the backup}
+    backupEncryptionKey: ${3:# The encyption key for the backed up file}
+    backupName: ${4:# The backup file will get saved with this name}
+    endDate: ${5:# End date of the scheduled backup job}
+    frequency: ${6:# Backup Schedule Config's frequency}
+    monthDay: ${7:# Day of month you want backup to be performed on when scheduled frequency is MONTHLY}
+    repositoryName: ${8:# Name of the configured repository where the generated backup file will get copied}
+    startDate: ${9:# Start date for scheduling the backup job}
+    status: ${10:# Backup Schedule Config's status}
+    time: ${11:# Time at which backup job get scheduled}
+    weekDay: ${12:# Backup Schedule Config's weekDay}
+    ise_hostname: ${13:# The Identity Services Engine hostname}
+    ise_username: ${14:# The Identity Services Engine username to authenticate}
+    ise_password: ${15:# The Identity Services Engine password to authenticate}
+    ise_verify: ${16:# Flag to enable or disable SSL certificate verification}
+    ise_version: ${17:# Informs the SDK which version of Identity Services Engine to use}
+    ise_wait_on_rate_limit: ${18:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
+    ise_debug: ${19:# Flag for Identity Services Engine SDK to enable debugging}
+    ise_uses_api_gateway: ${20:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
+    ise_uses_csrf_token: ${21:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+  tags:
+    - cisco
+    - ise
+    - backup_schedule_config]]></content>
+  <tabTrigger>cisco.ise.backup_schedule_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for Backup Schedule Config</description>
+</snippet>

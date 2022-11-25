@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages UCS Organizations for UCS Manager}
+  cisco.ucs.ucs_org:
+    state: ${2:# If C(absent), will remove organization}
+    org_name: ${3:# The name of the organization}
+    parent_org_path: ${4:# A forward slash / separated hierarchical path from the root organization to the parent of the organization to be added or updated}
+    description: ${5:# A user-defined description of the organization}
+    delegate_to: ${6:# Where the module will be run}
+    hostname: ${7:# IP address or hostname of Cisco UCS Manager}
+    username: ${8:# Username for Cisco UCS Manager authentication}
+    password: ${9:# Password for Cisco UCS Manager authentication}
+    port: ${10:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    use_ssl: ${11:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    use_proxy: ${12:# If C(no), will not use the proxy as defined by system environment variable}
+    proxy: ${13:# If use_proxy is no, specfies proxy to be used for connection}
+  tags:
+    - cisco
+    - ucs
+    - ucs_org]]></content>
+  <tabTrigger>cisco.ucs.ucs_org</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages UCS Organizations for UCS Manager</description>
+</snippet>

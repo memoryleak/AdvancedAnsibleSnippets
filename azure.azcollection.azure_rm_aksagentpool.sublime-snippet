@@ -1,0 +1,47 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage node pools in Kubernetes kubernetes cluster}
+  azure.azcollection.azure_rm_aksagentpool:
+    resource_group: ${2:# The name of the resource group}
+    cluster_name: ${3:# The name of the kubernetes cluster}
+    name: ${4:# The name of the node agent pool}
+    count: ${5:# Number of agents (VMs) to host docker containers}
+    vm_size: ${6:# Size of agent VMs}
+    os_disk_size_gb: ${7:# OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool}
+    vnet_subnet_id: ${8:# VNet SubnetID specifies the VNet's subnet identifier}
+    availability_zones: ${9:# Availability zones for nodes}
+    os_type: ${10:# OsType to be used to specify os type}
+    orchestrator_version: ${11:# Version of orchestrator specified when creating the managed cluster}
+    type_properties_type: ${12:# AgentPoolType represents types of an agent pool}
+    mode: ${13:# AgentPoolMode represents mode of an agent pool}
+    enable_auto_scaling: ${14:# Whether to enable auto-scaler}
+    max_count: ${15:# Maximum number of nodes for auto-scaling}
+    node_labels: ${16:# Agent pool node labels to be persisted across all nodes in agent pool}
+    min_count: ${17:# Minimum number of nodes for auto-scaling}
+    max_pods: ${18:# Maximum number of pods that can run on a node}
+    state: ${19:# State of the automation runbook}
+    ad_user: ${20:# Active Directory username}
+    password: ${21:# Active Directory user password}
+    profile: ${22:# Security profile found in ~/}
+    subscription_id: ${23:# Your Azure subscription Id}
+    client_id: ${24:# Azure client ID}
+    secret: ${25:# Azure client secret}
+    tenant: ${26:# Azure tenant ID}
+    cloud_environment: ${27:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${28:# Azure AD authority url}
+    cert_validation_mode: ${29:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${30:# Controls the source of the credentials to use for authentication}
+    api_profile: ${31:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${32:# Parent argument}
+    log_mode: ${33:# Parent argument}
+    x509_certificate_path: ${34:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${35:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${36:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${37:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_aksagentpool]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_aksagentpool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage node pools in Kubernetes kubernetes cluster</description>
+</snippet>

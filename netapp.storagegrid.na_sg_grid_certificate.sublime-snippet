@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the Storage API and Grid Management certificates on StorageGRID}
+  netapp.storagegrid.na_sg_grid_certificate:
+    state: ${2:# Whether the specified certificate should be set}
+    type: ${3:# Which certificate to update}
+    server_certificate: ${4:# X}
+    ca_bundle: ${5:# Intermediate CA certificate bundle in concatenated PEM-encoding}
+    private_key: ${6:# Certificate private key in PEM-encoding}
+    auth_token: ${7:# The authorization token for the API request}
+    api_url: ${8:# The url to the StorageGRID Admin Node REST API}
+    validate_certs: ${9:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_certificate]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the Storage API and Grid Management certificates on StorageGRID</description>
+</snippet>

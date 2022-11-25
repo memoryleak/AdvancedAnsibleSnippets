@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Enable or disable HADR}
+  lowlydba.sqlserver.hadr:
+    sql_instance: ${2:# The SQL Server instance to modify}
+    username: ${3:# Username for alternative credential to authenticate with Windows}
+    password: ${4:# Password for alternative credential to authenticate with Windows}
+    enabled: ${5:# Flag to enable or disable the feature}
+    force: ${6:# Restart SQL Server and SQL Agent services automatically}
+    sql_username: ${7:# Username for SQL Authentication}
+    sql_password: ${8:# Password for SQL Authentication}
+  tags:
+    - lowlydba
+    - sqlserver
+    - hadr]]></content>
+  <tabTrigger>lowlydba.sqlserver.hadr</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Enable or disable HADR</description>
+</snippet>

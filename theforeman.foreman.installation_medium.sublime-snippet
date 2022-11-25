@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Installation Media}
+  theforeman.foreman.installation_medium:
+    name: ${2:# The full installation medium name}
+    updated_name: ${3:# New full installation medium name}
+    os_family: ${4:# The OS family the template shall be assigned with}
+    path: ${5:# Path to the installation medium}
+    server_url: ${6:# URL of the Foreman server}
+    username: ${7:# Username accessing the Foreman server}
+    password: ${8:# Password of the user accessing the Foreman server}
+    validate_certs: ${9:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${10:# State of the entity}
+    organizations: ${11:# List of organizations the entity should be assigned to}
+    locations: ${12:# List of locations the entity should be assigned to}
+    operatingsystems: ${13:# List of operating systems the entity should be assigned to}
+  tags:
+    - theforeman
+    - foreman
+    - installation_medium]]></content>
+  <tabTrigger>theforeman.foreman.installation_medium</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Installation Media</description>
+</snippet>

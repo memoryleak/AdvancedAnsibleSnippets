@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Save Netscaler configuration}
+  community.network.netscaler_save_config:
+    nsip: ${2:# The ip address of the netscaler appliance where the nitro API calls will be made}
+    nitro_user: ${3:# The username with which to authenticate to the netscaler node}
+    nitro_pass: ${4:# The password with which to authenticate to the netscaler node}
+    nitro_protocol: ${5:# Which protocol to use when accessing the nitro API objects}
+    validate_certs: ${6:# If C(no), SSL certificates will not be validated}
+    nitro_timeout: ${7:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
+  tags:
+    - community
+    - network
+    - netscaler_save_config]]></content>
+  <tabTrigger>community.network.netscaler_save_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Save Netscaler configuration</description>
+</snippet>

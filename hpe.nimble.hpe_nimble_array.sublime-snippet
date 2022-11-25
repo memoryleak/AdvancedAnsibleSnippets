@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the HPE Nimble Storage array}
+  hpe.nimble.hpe_nimble_array:
+    allow_lower_limits: ${2:# A True setting will allow you to add an array with lower limits to a pool with higher limits}
+    change_name: ${3:# Change the name of the existing array}
+    create_pool: ${4:# Whether to create an associated pool during the array creation}
+    ctrlr_a_support_ip: ${5:# Controller A Support IP Address}
+    ctrlr_b_support_ip: ${6:# Controller B Support IP Address}
+    failover: ${7:# Perform a failover on the specified array}
+    force: ${8:# Forcibly delete the specified array}
+    halt: ${9:# Halt the specified array}
+    name: ${10:# The user-provided name of the array}
+    nic_list: ${11:# List NICs information}
+    pool_description: ${12:# Text description of the pool to be created during array creation}
+    pool_name: ${13:# Name of pool to which this is a member}
+    reboot: ${14:# Reboot the specified array}
+    secondary_mgmt_ip: ${15:# Secondary management IP address for the group}
+    serial: ${16:# Serial number of the array}
+    state: ${17:# The array operation}
+    host: ${18:# HPE Nimble Storage IP address}
+    password: ${19:# HPE Nimble Storage password}
+    username: ${20:# HPE Nimble Storage user name}
+  tags:
+    - hpe
+    - nimble
+    - hpe_nimble_array]]></content>
+  <tabTrigger>hpe.nimble.hpe_nimble_array</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the HPE Nimble Storage array</description>
+</snippet>

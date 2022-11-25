@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update or destroy reverse_proxy frontend entry in Sophos UTM}
+  community.general.utm_proxy_frontend:
+    name: ${2:# The name of the object}
+    add_content_type_header: ${3:# Whether to add the content type header or not}
+    address: ${4:# The reference name of the network/interface_address object}
+    allowed_networks: ${5:# A list of reference names for the allowed networks}
+    certificate: ${6:# The reference name of the ca/host_key_cert object}
+    comment: ${7:# An optional comment to add to the object}
+    disable_compression: ${8:# Whether to enable the compression}
+    domain: ${9:# A list of domain names for the frontend object}
+    exceptions: ${10:# A list of exception ref names (reverse_proxy/exception)}
+    htmlrewrite: ${11:# Whether to enable html rewrite or not}
+    htmlrewrite_cookies: ${12:# Whether to enable html rewrite cookie or not}
+    implicitredirect: ${13:# Whether to enable implicit redirection or not}
+    lbmethod: ${14:# Which loadbalancer method should be used}
+    locations: ${15:# A list of location ref names (reverse_proxy/location)}
+    port: ${16:# The frontend http port}
+    preservehost: ${17:# Whether to preserve host header}
+    profile: ${18:# The reference string of the reverse_proxy/profile}
+    status: ${19:# Whether to activate the frontend entry or not}
+    type: ${20:# Which protocol should be used}
+    xheaders: ${21:# Whether to pass the host header or not}
+    headers: ${22:# A dictionary of additional headers to be sent to POST and PUT requests}
+    utm_host: ${23:# The REST Endpoint of the Sophos UTM}
+    utm_port: ${24:# The port of the REST interface}
+    utm_token: ${25:# The token used to identify at the REST-API}
+    utm_protocol: ${26:# The protocol of the REST Endpoint}
+    validate_certs: ${27:# Whether the REST interface's ssl certificate should be verified or not}
+    state: ${28:# The desired state of the object}
+  tags:
+    - community
+    - general
+    - utm_proxy_frontend]]></content>
+  <tabTrigger>community.general.utm_proxy_frontend</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update or destroy reverse_proxy frontend entry in Sophos UTM</description>
+</snippet>

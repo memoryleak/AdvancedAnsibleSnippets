@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Locks package versions in C(dnf) based systems}
+  community.general.dnf_versionlock:
+    name: ${2:# Package name spec to add or exclude to or delete from the C(locklist) using the format expected by the C(dnf repoquery) command}
+    raw: ${3:# Do not resolve package name specs to NEVRAs to find specific version to lock to}
+    state: ${4:# Whether to add (C(present) or C(excluded)) to or remove (C(absent) or C(clean)) from the C(locklist)}
+  tags:
+    - community
+    - general
+    - dnf_versionlock]]></content>
+  <tabTrigger>community.general.dnf_versionlock</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Locks package versions in C(dnf) based systems</description>
+</snippet>

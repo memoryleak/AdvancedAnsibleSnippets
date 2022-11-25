@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates or terminates OpenNebula instances}
+  community.general.one_vm:
+    api_url: ${2:# URL of the OpenNebula RPC server}
+    api_username: ${3:# Name of the user to login into the OpenNebula RPC server}
+    api_password: ${4:# Password of the user to login into OpenNebula RPC server}
+    template_name: ${5:# Name of VM template to use to create a new instace}
+    template_id: ${6:# ID of a VM template to use to create a new instance}
+    vm_start_on_hold: ${7:# Set to true to put vm on hold while creating}
+    instance_ids: ${8:# A list of instance ids used for states':' C(absent), C(running), C(rebooted), C(poweredoff)}
+    state: ${9:# C(present) - create instances from a template specified with C(template_id)/C(template_name)}
+    hard: ${10:# Reboot, power-off or terminate instances C(hard)}
+    wait: ${11:# Wait for the instance to reach its desired state before returning}
+    wait_timeout: ${12:# How long before wait gives up, in seconds}
+    attributes: ${13:# A dictionary of key/value attributes to add to new instances, or for}
+    labels: ${14:# A list of labels to associate with new instances, or for setting}
+    count_attributes: ${15:# A dictionary of key/value attributes that can only be used with}
+    count_labels: ${16:# A list of labels that can only be used with C(exact_count) to determine}
+    count: ${17:# Number of instances to launch}
+    exact_count: ${18:# Indicates how many instances that match C(count_attributes) and}
+    mode: ${19:# Set permission mode of the instance in octet format, e}
+    owner_id: ${20:# ID of the user which will be set as the owner of the instance}
+    group_id: ${21:# ID of the group which will be set as the group of the instance}
+    memory: ${22:# The size of the memory for new instances (in MB, GB, }
+    disk_size: ${23:# The size of the disk created for new instances (in MB, GB, TB,}
+    cpu: ${24:# Percentage of CPU divided by 100 required for the new instance}
+    vcpu: ${25:# Number of CPUs (cores) new VM will have}
+    networks: ${26:# A list of dictionaries with network parameters}
+    disk_saveas: ${27:# Creates an image from a VM disk}
+    persistent: ${28:# Create a private persistent copy of the template plus any image defined in DISK, and instantiate that copy}
+    datastore_id: ${29:# Name of Datastore to use to create a new instace}
+    datastore_name: ${30:# Name of Datastore to use to create a new instace}
+  tags:
+    - community
+    - general
+    - one_vm]]></content>
+  <tabTrigger>community.general.one_vm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates or terminates OpenNebula instances</description>
+</snippet>

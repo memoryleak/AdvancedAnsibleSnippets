@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about resources}
+  theforeman.foreman.resource_info:
+    resource: ${2:# Resource to search}
+    search: ${3:# Search query to use}
+    params: ${4:# Add parameters to the API call if necessary}
+    organization: ${5:# Scope the searched resource by organization}
+    full_details: ${6:# If C(True) all details about the found resources are returned}
+    server_url: ${7:# URL of the Foreman server}
+    username: ${8:# Username accessing the Foreman server}
+    password: ${9:# Password of the user accessing the Foreman server}
+    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
+  tags:
+    - theforeman
+    - foreman
+    - resource_info]]></content>
+  <tabTrigger>theforeman.foreman.resource_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about resources</description>
+</snippet>

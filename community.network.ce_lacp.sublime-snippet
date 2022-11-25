@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages Eth-Trunk interfaces on HUAWEI CloudEngine switches}
+  community.network.ce_lacp:
+    trunk_id: ${2:# Eth-Trunk interface number}
+    mode: ${3:# Specifies the working mode of an Eth-Trunk interface}
+    preempt_enable: ${4:# Specifies lacp preempt enable of Eth-Trunk lacp}
+    state_flapping: ${5:# Lacp dampening state-flapping}
+    port_id_extension_enable: ${6:# Enable the function of extending the LACP negotiation port number}
+    unexpected_mac_disable: ${7:# Lacp dampening unexpected-mac disable}
+    system_id: ${8:# Link Aggregation Control Protocol System ID,interface Eth-Trunk View}
+    timeout_type: ${9:# Lacp timeout type,that may be 'Fast' or 'Slow'}
+    fast_timeout: ${10:# When lacp timeout type is 'Fast', user-defined time can be a number(3~90)}
+    mixed_rate_link_enable: ${11:# Value of max active linknumber}
+    preempt_delay: ${12:# Value of preemption delay time}
+    collector_delay: ${13:# Value of delay time in units of 10 microseconds}
+    max_active_linknumber: ${14:# Max active linknumber in link aggregation group}
+    select: ${15:# Select priority or speed to preempt}
+    priority: ${16:# The priority of eth-trunk member interface}
+    global_priority: ${17:# Configure lacp priority on system-view}
+    state: ${18:# Manage the state of the resource}
+  tags:
+    - community
+    - network
+    - ce_lacp]]></content>
+  <tabTrigger>community.network.ce_lacp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages Eth-Trunk interfaces on HUAWEI CloudEngine switches</description>
+</snippet>

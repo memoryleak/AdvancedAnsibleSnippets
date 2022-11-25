@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure DNS zones}
+  azure.azcollection.azure_rm_dnszone:
+    resource_group: ${2:# name of resource group}
+    name: ${3:# Name of the DNS zone}
+    state: ${4:# Assert the state of the zone}
+    type: ${5:# The type of this DNS zone (C(public) or C(private))}
+    registration_virtual_networks: ${6:# A list of references to virtual networks that register hostnames in this DNS zone}
+    resolution_virtual_networks: ${7:# A list of references to virtual networks that resolve records in this DNS zone}
+    ad_user: ${8:# Active Directory username}
+    password: ${9:# Active Directory user password}
+    profile: ${10:# Security profile found in ~/}
+    subscription_id: ${11:# Your Azure subscription Id}
+    client_id: ${12:# Azure client ID}
+    secret: ${13:# Azure client secret}
+    tenant: ${14:# Azure tenant ID}
+    cloud_environment: ${15:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${16:# Azure AD authority url}
+    cert_validation_mode: ${17:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${18:# Controls the source of the credentials to use for authentication}
+    api_profile: ${19:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${20:# Parent argument}
+    log_mode: ${21:# Parent argument}
+    x509_certificate_path: ${22:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${23:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${24:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${25:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_dnszone]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_dnszone</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure DNS zones</description>
+</snippet>

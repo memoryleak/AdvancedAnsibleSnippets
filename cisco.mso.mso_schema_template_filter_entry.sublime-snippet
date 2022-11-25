@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage filter entries in schema templates}
+  cisco.mso.mso_schema_template_filter_entry:
+    schema: ${2:# The name of the schema}
+    template: ${3:# The name of the template}
+    filter: ${4:# The name of the filter to manage}
+    filter_description: ${5:# The description of this filter is supported on versions of MSO that are 3}
+    filter_display_name: ${6:# The name as displayed on the MSO web interface}
+    entry: ${7:# The filter entry name to manage}
+    display_name: ${8:# The name as displayed on the MSO web interface}
+    filter_entry_description: ${9:# The description of this filter entry}
+    ethertype: ${10:# The ethernet type to use for this filter entry}
+    ip_protocol: ${11:# The IP protocol to use for this filter entry}
+    tcp_session_rules: ${12:# A list of TCP session rules}
+    source_from: ${13:# The source port range from}
+    source_to: ${14:# The source port range to}
+    destination_from: ${15:# The destination port range from}
+    destination_to: ${16:# The destination port range to}
+    arp_flag: ${17:# The ARP flag to use for this filter entry}
+    stateful: ${18:# Whether this filter entry is stateful}
+    fragments_only: ${19:# Whether this filter entry only matches fragments}
+    state: ${20:# Use C(present) or C(absent) for adding or removing}
+    host: ${21:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    port: ${22:# Port number to be used for the REST connection}
+    username: ${23:# The username to use for authentication}
+    password: ${24:# The password to use for authentication}
+    output_level: ${25:# Influence the output of this MSO module}
+    timeout: ${26:# The socket level timeout in seconds}
+    use_proxy: ${27:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${28:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    validate_certs: ${29:# If C(no), SSL certificates will not be validated}
+    login_domain: ${30:# The login domain name to use for authentication}
+  tags:
+    - cisco
+    - mso
+    - mso_schema_template_filter_entry]]></content>
+  <tabTrigger>cisco.mso.mso_schema_template_filter_entry</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage filter entries in schema templates</description>
+</snippet>

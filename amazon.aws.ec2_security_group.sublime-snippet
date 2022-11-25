@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Maintain an EC2 security group}
+  amazon.aws.ec2_security_group:
+    name: ${2:# Name of the security group}
+    group_id: ${3:# Id of group to delete (works only with absent)}
+    description: ${4:# Description of the security group}
+    vpc_id: ${5:# ID of the VPC to create the group in}
+    rules: ${6:# List of firewall inbound rules to enforce in this group (see example)}
+    rules_egress: ${7:# List of firewall outbound rules to enforce in this group (see example)}
+    state: ${8:# Create or delete a security group}
+    purge_rules: ${9:# Purge existing rules on security group that are not found in rules}
+    purge_rules_egress: ${10:# Purge existing rules_egress on security group that are not found in rules_egress}
+    access_key: ${11:# AWS access key ID}
+    secret_key: ${12:# AWS secret access key}
+    session_token: ${13:# AWS STS session token for use with temporary credentials}
+    profile: ${14:# A named AWS profile to use for authentication}
+    endpoint_url: ${15:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${16:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${18:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${19:# Use a C(botocore}
+    region: ${20:# The AWS region to use}
+    tags: ${21:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${22:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - ec2_security_group]]></content>
+  <tabTrigger>amazon.aws.ec2_security_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Maintain an EC2 security group</description>
+</snippet>

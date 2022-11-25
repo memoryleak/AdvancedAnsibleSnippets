@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages static device groups on OpenManage Enterprise}
+  dellemc.openmanage.ome_groups:
+    state: ${2:# C(present) allows to create or modify a device group}
+    name: ${3:# Name of the device group to be created, modified, or deleted}
+    group_id: ${4:# ID of the device group to be created, modified, or deleted}
+    new_name: ${5:# New name for the existing device group}
+    description: ${6:# Description for the device group}
+    parent_group_name: ${7:# Name of the parent device group under which the device group to be created or modified}
+    parent_group_id: ${8:# ID of the parent device group under which the device group to be created or modified}
+    hostname: ${9:# OpenManage Enterprise IP address or hostname}
+    username: ${10:# OpenManage Enterprise username}
+    password: ${11:# OpenManage Enterprise password}
+    port: ${12:# OpenManage Enterprise HTTPS port}
+    validate_certs: ${13:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${14:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${15:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_groups]]></content>
+  <tabTrigger>dellemc.openmanage.ome_groups</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages static device groups on OpenManage Enterprise</description>
+</snippet>

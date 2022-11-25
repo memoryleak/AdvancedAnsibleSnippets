@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update, and delete an Elastic Beanstalk application}
+  community.aws.elasticbeanstalk_app:
+    app_name: ${2:# Name of the Beanstalk application you wish to manage}
+    description: ${3:# The description of the application}
+    state: ${4:# Whether to ensure the application is present or absent}
+    terminate_by_force: ${5:# When I(terminate_by_force=true), running environments will be terminated before deleting the application}
+    access_key: ${6:# AWS access key ID}
+    secret_key: ${7:# AWS secret access key}
+    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    profile: ${9:# A named AWS profile to use for authentication}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${13:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
+    region: ${15:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - elasticbeanstalk_app]]></content>
+  <tabTrigger>community.aws.elasticbeanstalk_app</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update, and delete an Elastic Beanstalk application</description>
+</snippet>

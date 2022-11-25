@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Run Pester tests on Windows hosts}
+  community.windows.win_pester:
+    path: ${2:# Path to a pester test file or a folder where tests can be found}
+    tags: ${3:# Runs only tests in Describe blocks with specified Tags values}
+    output_file: ${4:# Generates an output test report}
+    output_format: ${5:# Format of the test report to be generated}
+    test_parameters: ${6:# Allows to specify parameters to the test script}
+    version: ${7:# Minimum version of the pester module that has to be available on the remote host}
+  tags:
+    - community
+    - windows
+    - win_pester]]></content>
+  <tabTrigger>community.windows.win_pester</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Run Pester tests on Windows hosts</description>
+</snippet>

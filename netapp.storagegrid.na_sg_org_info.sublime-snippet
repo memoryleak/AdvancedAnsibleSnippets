@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp StorageGRID Org information gatherer}
+  netapp.storagegrid.na_sg_org_info:
+    gather_subset: ${2:# When supplied, this argument will restrict the information collected to a given subset}
+    parameters: ${3:# Allows for any rest option to be passed in}
+    auth_token: ${4:# The authorization token for the API request}
+    api_url: ${5:# The url to the StorageGRID Admin Node REST API}
+    validate_certs: ${6:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_org_info]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_org_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp StorageGRID Org information gatherer</description>
+</snippet>

@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Export technical support logs(TSR) to network share location}
+  dellemc.openmanage.ome_diagnostics:
+    device_ids: ${2:# List of target device IDs}
+    device_service_tags: ${3:# List of target identifier}
+    device_group_name: ${4:# Name of the device group to export C(support_assist_collection) or C(supportassist_collection) logs of all devices within the group}
+    log_type: ${5:# C(application) is applicable for OpenManage Enterprise Modular to export the application log bundle}
+    mask_sensitive_info: ${6:# Select this option to mask the personal identification information such as IPAddress, DNS, alert destination, email, gateway, inet6, MacAddress, netmask etc}
+    log_selectors: ${7:# By default, the SupportAssist logs contain only hardware logs}
+    share_address: ${8:# Network share IP address}
+    share_name: ${9:# Network share path}
+    share_type: ${10:# Network share type}
+    share_user: ${11:# Network share username}
+    share_password: ${12:# Network share password}
+    share_domain: ${13:# Network share domain name}
+    job_wait: ${14:# Whether to wait for the Job completion or not}
+    job_wait_timeout: ${15:# The maximum wait time of I(job_wait) in minutes}
+    test_connection: ${16:# Test the availability of the network share location}
+    lead_chassis_only: ${17:# Extract the logs from Lead chassis only}
+    hostname: ${18:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    username: ${19:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    password: ${20:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${21:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${22:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${23:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${24:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_diagnostics]]></content>
+  <tabTrigger>dellemc.openmanage.ome_diagnostics</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Export technical support logs(TSR) to network share location</description>
+</snippet>

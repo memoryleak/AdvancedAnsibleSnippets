@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about the alarms for the specified metric}
+  amazon.aws.cloudwatch_metric_alarm_info:
+    alarm_names: ${2:# The name of the metric}
+    alarm_name_prefix: ${3:# An alarm name prefix to retrieve information about alarms that have names that start with this prefix}
+    alarm_type: ${4:# Specify this to return metric alarms or composite alarms}
+    children_of_alarm_name: ${5:# If specified returns information about the 'children' alarms of the alarm name specified}
+    parents_of_alarm_name: ${6:# If specified returns information about the 'parent' alarms of the alarm name specified}
+    state_value: ${7:# If specified returns information only about alarms that are currently in the particular state}
+    action_prefix: ${8:# This parameter can be used to filter the results of the operation to only those alarms that use a certain alarm action}
+    access_key: ${9:# AWS access key ID}
+    secret_key: ${10:# AWS secret access key}
+    session_token: ${11:# AWS STS session token for use with temporary credentials}
+    profile: ${12:# A named AWS profile to use for authentication}
+    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${16:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
+    region: ${18:# The AWS region to use}
+  tags:
+    - amazon
+    - aws
+    - cloudwatch_metric_alarm_info]]></content>
+  <tabTrigger>amazon.aws.cloudwatch_metric_alarm_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about the alarms for the specified metric</description>
+</snippet>

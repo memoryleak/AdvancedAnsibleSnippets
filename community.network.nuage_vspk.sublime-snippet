@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Nuage VSP environments}
+  community.network.nuage_vspk:
+    auth: ${2:# Dict with the authentication information required to connect to a Nuage VSP environment}
+    type: ${3:# The type of entity you want to work on (example Enterprise)}
+    id: ${4:# The ID of the entity you want to work on}
+    parent_id: ${5:# The ID of the parent of the entity you want to work on}
+    parent_type: ${6:# The type of parent the ID is specified for (example Enterprise)}
+    state: ${7:# Specifies the desired state of the entity}
+    command: ${8:# Specifies a command to be executed}
+    match_filter: ${9:# A filter used when looking (both in I(command) and I(state) for entities, in the format the Nuage VSP API expects}
+    properties: ${10:# Properties are the key, value pairs of the different properties an entity has}
+    children: ${11:# Can be used to specify a set of child entities}
+  tags:
+    - community
+    - network
+    - nuage_vspk]]></content>
+  <tabTrigger>community.network.nuage_vspk</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Nuage VSP environments</description>
+</snippet>

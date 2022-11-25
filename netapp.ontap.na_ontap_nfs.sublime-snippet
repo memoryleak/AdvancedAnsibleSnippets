@@ -1,0 +1,47 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP NFS status}
+  netapp.ontap.na_ontap_nfs:
+    state: ${2:# Whether NFS should exist or not}
+    service_state: ${3:# Whether the specified NFS should be enabled or disabled}
+    vserver: ${4:# Name of the vserver to use}
+    nfsv3: ${5:# status of NFSv3}
+    nfsv3_fsid_change: ${6:# status of if NFSv3 clients see change in FSID as they traverse filesystems}
+    nfsv4_fsid_change: ${7:# status of if NFSv4 clients see change in FSID as they traverse filesystems}
+    nfsv4: ${8:# status of NFSv4}
+    nfsv41: ${9:# status of NFSv41}
+    nfsv41_pnfs: ${10:# status of NFSv41 pNFS}
+    nfsv4_numeric_ids: ${11:# status of NFSv4 numeric ID's}
+    vstorage_state: ${12:# status of vstorage_state}
+    nfsv4_id_domain: ${13:# Name of the nfsv4_id_domain to use}
+    nfsv40_acl: ${14:# status of NFS v4}
+    nfsv40_read_delegation: ${15:# status for NFS v4}
+    nfsv40_write_delegation: ${16:# status for NFS v4}
+    nfsv41_acl: ${17:# status of NFS v4}
+    nfsv41_read_delegation: ${18:# status for NFS v4}
+    nfsv41_write_delegation: ${19:# status for NFS v4}
+    nfsv40_referrals: ${20:# status for NFS v4}
+    nfsv41_referrals: ${21:# status for NFS v4}
+    tcp: ${22:# Enable TCP (support from ONTAP 9}
+    udp: ${23:# Enable UDP (support from ONTAP 9}
+    showmount: ${24:# Whether SVM allows showmount}
+    tcp_max_xfer_size: ${25:# TCP Maximum Transfer Size (bytes)}
+    hostname: ${26:# The hostname or IP address of the ONTAP instance}
+    username: ${27:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${28:# Password for the specified user}
+    cert_filepath: ${29:# path to SSL client cert file (}
+    key_filepath: ${30:# path to SSL client key file}
+    https: ${31:# Enable and disable https}
+    validate_certs: ${32:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${33:# Override the default port (80 or 443) with this port}
+    ontapi: ${34:# The ontap api version to use}
+    use_rest: ${35:# Whether to use REST or ZAPI}
+    feature_flags: ${36:# Enable or disable a new feature}
+    force_ontap_version: ${37:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_nfs]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_nfs</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP NFS status</description>
+</snippet>

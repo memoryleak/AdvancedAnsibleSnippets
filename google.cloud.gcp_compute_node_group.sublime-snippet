@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates a GCP NodeGroup}
+  google.cloud.gcp_compute_node_group:
+    state: ${2:# Whether the given object should exist in GCP}
+    description: ${3:# An optional textual description of the resource}
+    name: ${4:# Name of the resource}
+    node_template: ${5:# The URL of the node template to which this node group belongs}
+    size: ${6:# The total number of nodes in the node group}
+    maintenance_policy: ${7:# Specifies how to handle instances when a node in the group undergoes maintenance}
+    autoscaling_policy: ${8:# If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups}
+    zone: ${9:# Zone where this node group is located }
+    project: ${10:# The Google Cloud Platform project to use}
+    auth_kind: ${11:# The type of credential used}
+    service_account_contents: ${12:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_file: ${13:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    service_account_email: ${14:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    scopes: ${15:# Array of scopes to be used}
+    env_type: ${16:# Specifies which Ansible environment you're running this module within}
+  tags:
+    - google
+    - cloud
+    - gcp_compute_node_group]]></content>
+  <tabTrigger>google.cloud.gcp_compute_node_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates a GCP NodeGroup</description>
+</snippet>

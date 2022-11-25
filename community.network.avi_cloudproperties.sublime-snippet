@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for setup of CloudProperties Avi RESTful Object}
+  community.network.avi_cloudproperties:
+    state: ${2:# The state that should be applied on the entity}
+    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
+    cc_props: ${5:# Cloudconnector properties}
+    cc_vtypes: ${6:# Cloud types supported by cloudconnector}
+    hyp_props: ${7:# Hypervisor properties}
+    info: ${8:# Properties specific to a cloud type}
+    url: ${9:# Avi controller URL of the object}
+    uuid: ${10:# Unique object identifier of the object}
+    controller: ${11:# IP address or hostname of the controller}
+    username: ${12:# Username used for accessing Avi controller}
+    password: ${13:# Password of Avi user in Avi controller}
+    tenant: ${14:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${15:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${16:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${17:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${18:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${19:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_cloudproperties]]></content>
+  <tabTrigger>community.network.avi_cloudproperties</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for setup of CloudProperties Avi RESTful Object</description>
+</snippet>

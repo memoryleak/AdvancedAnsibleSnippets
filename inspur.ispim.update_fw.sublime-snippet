@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Update firmware}
+  inspur.ispim.update_fw:
+    url: ${2:# Firmware image url}
+    mode: ${3:# (BMC)active mode, Manual or Auto(default)}
+    type: ${4:# Firmware type}
+    over_ride: ${5:# Reserve Configrations,0-reserve, 1-override}
+    has_me: ${6:# (M5-BIOS)update me or not when update bios,only work in INTEL platform,0-no,1-yes}
+    dual_image: ${7:# (M5)update dual image(default) or not}
+    provider: ${8:# A dict object containing connection details}
+    host: ${9:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${10:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${11:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - ispim
+    - update_fw]]></content>
+  <tabTrigger>inspur.ispim.update_fw</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Update firmware</description>
+</snippet>

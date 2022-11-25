@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage system authentication on a BIG-IP}
+  f5networks.f5_modules.bigip_device_auth:
+    type: ${2:# The authentication type to manage with this module}
+    servers: ${3:# Specifies a list of the IPv4 addresses for servers using the Terminal Access Controller Access System (TACACS)+ protocol with which the system communicates to obtain authorization data}
+    secret: ${4:# Secret key used to encrypt and decrypt packets sent or received from the server}
+    service_name: ${5:# Specifies the name of the service the user is requesting to be authorized to use}
+    protocol_name: ${6:# Specifies the protocol associated with the value specified in C(service_name), which is a subset of the associated service being used for client authorization or system accounting}
+    authentication: ${7:# Specifies the process the system employs when sending authentication requests}
+    accounting: ${8:# Specifies how the system returns accounting information, such as which services users access and the amount of network resources they consume, to the TACACS+ server}
+    use_for_auth: ${9:# Specifies whether or not this auth source is put in use on the system}
+    state: ${10:# The state of the authentication configuration on the system}
+    update_secret: ${11:# C(always) will allow updating secrets if the user chooses to do so}
+    provider: ${12:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_device_auth]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_device_auth</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage system authentication on a BIG-IP</description>
+</snippet>

@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Update inventory source(s)}
+  awx.awx.inventory_source_update:
+    name: ${2:# The name or id of the inventory source to update}
+    inventory: ${3:# Name or id of the inventory that contains the inventory source(s) to update}
+    organization: ${4:# Name of the inventory source's inventory's organization}
+    wait: ${5:# Wait for the job to complete}
+    interval: ${6:# The interval to request an update from the controller}
+    timeout: ${7:# If waiting for the job to complete this will abort after this amount of seconds}
+    controller_host: ${8:# URL to your Automation Platform Controller instance}
+    controller_username: ${9:# Username for your controller instance}
+    controller_password: ${10:# Password for your controller instance}
+    controller_oauthtoken: ${11:# The OAuth token to use}
+    validate_certs: ${12:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${13:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - inventory_source_update]]></content>
+  <tabTrigger>awx.awx.inventory_source_update</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Update inventory source(s)</description>
+</snippet>

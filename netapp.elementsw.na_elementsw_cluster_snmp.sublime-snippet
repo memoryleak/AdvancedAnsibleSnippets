@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Element SW Cluster SNMP}
+  netapp.elementsw.na_elementsw_cluster_snmp:
+    state: ${2:# This module enables you to enable SNMP on cluster nodes}
+    snmp_v3_enabled: ${3:# Which version of SNMP has to be enabled}
+    networks: ${4:# List of networks and what type of access they have to the SNMP servers running on the cluster nodes}
+    usm_users: ${5:# List of users and the type of access they have to the SNMP servers running on the cluster nodes}
+    hostname: ${6:# The hostname or IP address of the SolidFire cluster}
+    username: ${7:# Please ensure that the user has the adequate permissions}
+    password: ${8:# Password for the specified user}
+  tags:
+    - netapp
+    - elementsw
+    - na_elementsw_cluster_snmp]]></content>
+  <tabTrigger>netapp.elementsw.na_elementsw_cluster_snmp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Element SW Cluster SNMP</description>
+</snippet>

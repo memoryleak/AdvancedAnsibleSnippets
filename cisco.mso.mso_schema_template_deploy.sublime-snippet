@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Deploy schema templates to sites}
+  cisco.mso.mso_schema_template_deploy:
+    schema: ${2:# The name of the schema}
+    template: ${3:# The name of the template}
+    site: ${4:# The name of the site B(to undeploy)}
+    state: ${5:# Use C(deploy) to deploy schema template}
+    host: ${6:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    port: ${7:# Port number to be used for the REST connection}
+    username: ${8:# The username to use for authentication}
+    password: ${9:# The password to use for authentication}
+    output_level: ${10:# Influence the output of this MSO module}
+    timeout: ${11:# The socket level timeout in seconds}
+    use_proxy: ${12:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${13:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    validate_certs: ${14:# If C(no), SSL certificates will not be validated}
+    login_domain: ${15:# The login domain name to use for authentication}
+  tags:
+    - cisco
+    - mso
+    - mso_schema_template_deploy]]></content>
+  <tabTrigger>cisco.mso.mso_schema_template_deploy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Deploy schema templates to sites</description>
+</snippet>

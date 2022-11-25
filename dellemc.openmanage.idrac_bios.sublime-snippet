@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Modify and clear BIOS attributes, reset BIOS settings and configure boot sources}
+  dellemc.openmanage.idrac_bios:
+    share_name: ${2:# (deprecated)Network share or a local path}
+    share_user: ${3:# (deprecated)Network share user name}
+    share_password: ${4:# (deprecated)Network share user password}
+    share_mnt: ${5:# (deprecated)Local mount path of the network share with read-write permission for ansible user}
+    apply_time: ${6:# Apply time of the I(attributes)}
+    maintenance_window: ${7:# Option to schedule the maintenance window}
+    attributes: ${8:# Dictionary of BIOS attributes and value pair}
+    boot_sources: ${9:# (deprecated)List of boot devices to set the boot sources settings}
+    clear_pending: ${10:# Allows the user to clear all pending BIOS attributes changes}
+    reset_bios: ${11:# Resets the BIOS to default settings and triggers a reboot of host system}
+    reset_type: ${12:# C(force_restart) Forcefully reboot the host system}
+    job_wait: ${13:# Provides the option to wait for job completion}
+    job_wait_timeout: ${14:# The maximum wait time of I(job_wait) in seconds}
+    idrac_ip: ${15:# iDRAC IP Address}
+    idrac_user: ${16:# iDRAC username}
+    idrac_password: ${17:# iDRAC user password}
+    idrac_port: ${18:# iDRAC port}
+    validate_certs: ${19:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${20:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${21:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_bios]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_bios</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Modify and clear BIOS attributes, reset BIOS settings and configure boot sources</description>
+</snippet>

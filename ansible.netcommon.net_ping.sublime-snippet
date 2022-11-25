@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Tests reachability using ping from a network device}
+  ansible.netcommon.net_ping:
+    count: ${2:# Number of packets to send}
+    dest: ${3:# The IP Address or hostname (resolvable by switch) of the remote node}
+    source: ${4:# The source IP Address}
+    state: ${5:# Determines if the expected result is success or fail}
+    vrf: ${6:# The VRF to use for forwarding}
+  tags:
+    - ansible
+    - netcommon
+    - net_ping]]></content>
+  <tabTrigger>ansible.netcommon.net_ping</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Tests reachability using ping from a network device</description>
+</snippet>

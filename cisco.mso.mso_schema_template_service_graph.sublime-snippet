@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Service Graph in schema templates}
+  cisco.mso.mso_schema_template_service_graph:
+    schema: ${2:# The name of the schema}
+    template: ${3:# The name of the template}
+    service_graph: ${4:# The name of the Service Graph to manage}
+    description: ${5:# The description of Service Graph}
+    display_name: ${6:# The name as displayed on the MSO web interface}
+    service_nodes: ${7:# A list of node types to be associated with the Service Graph}
+    filter_after_first_node: ${8:# The filter applied after the first node}
+    state: ${9:# Use C(present) or C(absent) for adding or removing}
+    host: ${10:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    port: ${11:# Port number to be used for the REST connection}
+    username: ${12:# The username to use for authentication}
+    password: ${13:# The password to use for authentication}
+    output_level: ${14:# Influence the output of this MSO module}
+    timeout: ${15:# The socket level timeout in seconds}
+    use_proxy: ${16:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${17:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    validate_certs: ${18:# If C(no), SSL certificates will not be validated}
+    login_domain: ${19:# The login domain name to use for authentication}
+  tags:
+    - cisco
+    - mso
+    - mso_schema_template_service_graph]]></content>
+  <tabTrigger>cisco.mso.mso_schema_template_service_graph</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Service Graph in schema templates</description>
+</snippet>

@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage volume tags on Pure Storage FlashArrays}
+  purestorage.flasharray.purefa_volume_tags:
+    name: ${2:# The name of the volume}
+    namespace: ${3:# The name of tag namespace}
+    copyable: ${4:# Define whether the volume tags are inherited on volume copies}
+    kvp: ${5:# List of key value pairs to assign to the volume}
+    state: ${6:# Define whether the volume tag(s) should exist or not}
+    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
+    api_token: ${8:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_volume_tags]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_volume_tags</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage volume tags on Pure Storage FlashArrays</description>
+</snippet>

@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage network VLAN interfaces in a Pure Storage FlashArray}
+  purestorage.flasharray.purefa_vlan:
+    name: ${2:# Interface name, including controller indentifier}
+    state: ${3:# State of existing interface (on/off)}
+    enabled: ${4:# Define if VLAN interface is enabled or not}
+    address: ${5:# IPv4 or IPv6 address of interface}
+    subnet: ${6:# Name of subnet interface associated with}
+    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
+    api_token: ${8:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_vlan]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_vlan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage network VLAN interfaces in a Pure Storage FlashArray</description>
+</snippet>

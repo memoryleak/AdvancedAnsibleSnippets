@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage MySQL global variables}
+  community.mysql.mysql_variables:
+    variable: ${2:# Variable name to operate}
+    value: ${3:# If set, then sets variable value to this}
+    mode: ${4:# C(global) assigns C(value) to a global system variable which will be changed at runtime but won't persist across server restarts}
+    login_user: ${5:# The username used to authenticate with}
+    login_password: ${6:# The password used to authenticate with}
+    login_host: ${7:# Host running the database}
+    login_port: ${8:# Port of the MySQL server}
+    login_unix_socket: ${9:# The path to a Unix domain socket for local connections}
+    connect_timeout: ${10:# The connection timeout when connecting to the MySQL server}
+    config_file: ${11:# Specify a config file from which user and password are to be read}
+    ca_cert: ${12:# The path to a Certificate Authority (CA) certificate}
+    client_cert: ${13:# The path to a client public key certificate}
+    client_key: ${14:# The path to the client private key}
+    check_hostname: ${15:# Whether to validate the server host name when an SSL connection is required}
+  tags:
+    - community
+    - mysql
+    - mysql_variables]]></content>
+  <tabTrigger>community.mysql.mysql_variables</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage MySQL global variables</description>
+</snippet>

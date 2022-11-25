@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Download and install Windows updates}
+  ansible.windows.win_updates:
+    accept_list: ${2:# A list of update titles or KB numbers that can be used to specify which updates are to be searched or installed}
+    category_names: ${3:# A scalar or list of categories to install updates from}
+    skip_optional: ${4:# Skip optional updates where the update has BrowseOnly set by Microsoft}
+    reboot: ${5:# Ansible will automatically reboot the remote host if it is required and continue to install updates after the reboot}
+    reboot_timeout: ${6:# The time in seconds to wait until the host is back online from a reboot}
+    server_selection: ${7:# Defines the Windows Update source catalog}
+    state: ${8:# Controls whether found updates are downloaded or installed or listed}
+    log_path: ${9:# If set, C(win_updates) will append update progress to the specified file}
+    reject_list: ${10:# A list of update titles or KB numbers that can be used to specify which updates are to be excluded from installation}
+    use_scheduled_task: ${11:# This option is deprecated and no longer does anything since C(v1}
+    _output_path: ${12:# Internal use only}
+    _wait: ${13:# Internal use only}
+  tags:
+    - ansible
+    - windows
+    - win_updates]]></content>
+  <tabTrigger>ansible.windows.win_updates</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Download and install Windows updates</description>
+</snippet>

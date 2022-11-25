@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures the RAID configuration attributes}
+  dellemc.openmanage.dellemc_idrac_storage_volume:
+    state: ${2:# C(create), performs create volume operation}
+    span_depth: ${3:# Number of spans in the RAID configuration}
+    span_length: ${4:# Number of disks in a span}
+    number_dedicated_hot_spare: ${5:# Number of Dedicated Hot Spare}
+    volume_type: ${6:# Provide the the required RAID level}
+    disk_cache_policy: ${7:# Disk Cache Policy}
+    write_cache_policy: ${8:# Write cache policy}
+    read_cache_policy: ${9:# Read cache policy}
+    stripe_size: ${10:# Stripe size value to be provided in multiples of 64 * 1024}
+    controller_id: ${11:# Fully Qualified Device Descriptor (FQDD) of the storage controller, for example 'RAID}
+    media_type: ${12:# Media type}
+    protocol: ${13:# Bus protocol}
+    volume_id: ${14:# Fully Qualified Device Descriptor (FQDD) of the virtual disk, for example 'Disk}
+    volumes: ${15:# A list of virtual disk specific iDRAC attributes}
+    capacity: ${16:# Virtual disk size in GB}
+    raid_reset_config: ${17:# This option represents whether a reset config operation needs to be performed on the RAID controller}
+    raid_init_operation: ${18:# This option represents initialization configuration operation to be performed on the virtual disk}
+    idrac_ip: ${19:# iDRAC IP Address}
+    idrac_user: ${20:# iDRAC username}
+    idrac_password: ${21:# iDRAC user password}
+    idrac_port: ${22:# iDRAC port}
+    validate_certs: ${23:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${24:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${25:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - dellemc_idrac_storage_volume]]></content>
+  <tabTrigger>dellemc.openmanage.dellemc_idrac_storage_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures the RAID configuration attributes</description>
+</snippet>

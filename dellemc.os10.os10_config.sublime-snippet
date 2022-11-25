@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Dell EMC SmartFabric OS10 configuration sections}
+  dellemc.os10.os10_config:
+    lines: ${2:# The ordered set of commands that should be configured in the section}
+    parents: ${3:# The ordered set of parents that uniquely identify the section or hierarchy the commands should be checked against}
+    src: ${4:# Specifies the source path to the file that contains the configuration or configuration template to load}
+    before: ${5:# The ordered set of commands to push on to the command stack if a change needs to be made}
+    after: ${6:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
+    match: ${7:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
+    replace: ${8:# Instructs the module on the way to perform the configuration on the device}
+    update: ${9:# The I(update) argument controls how the configuration statements are processed on the remote device}
+    save: ${10:# The C(save) argument instructs the module to save the running- config to the startup-config at the conclusion of the module running}
+    config: ${11:# The module, by default, will connect to the remote device and retrieve the current running-config to use as a base for comparing against the contents of source}
+    backup: ${12:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
+    backup_options: ${13:# This is a dict object containing configurable options related to backup file path}
+    provider: ${14:# A dict object containing connection details}
+  tags:
+    - dellemc
+    - os10
+    - os10_config]]></content>
+  <tabTrigger>dellemc.os10.os10_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Dell EMC SmartFabric OS10 configuration sections</description>
+</snippet>

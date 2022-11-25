@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for setup of BackupConfiguration Avi RESTful Object}
+  community.network.avi_backupconfiguration:
+    state: ${2:# The state that should be applied on the entity}
+    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
+    aws_access_key: ${5:# Aws access key id}
+    aws_bucket_id: ${6:# Aws bucket}
+    aws_secret_access: ${7:# Aws secret access key}
+    backup_file_prefix: ${8:# Prefix of the exported configuration file}
+    backup_passphrase: ${9:# Passphrase of backup configuration}
+    maximum_backups_stored: ${10:# Rotate the backup files based on this count}
+    name: ${11:# Name of backup configuration}
+    remote_directory: ${12:# Directory at remote destination with write permission for ssh user}
+    remote_hostname: ${13:# Remote destination}
+    save_local: ${14:# Local backup}
+    ssh_user_ref: ${15:# Access credentials for remote destination}
+    tenant_ref: ${16:# It is a reference to an object of type tenant}
+    upload_to_remote_host: ${17:# Remote backup}
+    upload_to_s3: ${18:# Cloud backup}
+    url: ${19:# Avi controller URL of the object}
+    uuid: ${20:# Unique object identifier of the object}
+    controller: ${21:# IP address or hostname of the controller}
+    username: ${22:# Username used for accessing Avi controller}
+    password: ${23:# Password of Avi user in Avi controller}
+    tenant: ${24:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${25:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${26:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${27:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${28:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${29:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_backupconfiguration]]></content>
+  <tabTrigger>community.network.avi_backupconfiguration</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for setup of BackupConfiguration Avi RESTful Object</description>
+</snippet>

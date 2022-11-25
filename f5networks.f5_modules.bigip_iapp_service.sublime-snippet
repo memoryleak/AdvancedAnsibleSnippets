@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages TCL iApp services on a BIG-IP}
+  f5networks.f5_modules.bigip_iapp_service:
+    name: ${2:# The name of the iApp service you want to deploy}
+    template: ${3:# The iApp template from which to instantiate a new service}
+    parameters: ${4:# A hash of all the required template variables for the iApp template}
+    force: ${5:# Forces the updating of an iApp service, even if the parameters to the service have not changed}
+    state: ${6:# When C(present), ensures the iApp service is created and running}
+    partition: ${7:# Device partition to manage resources on}
+    strict_updates: ${8:# Indicates whether the application service is tied to the template, so when the template is updated, the application service changes to reflect the updates}
+    traffic_group: ${9:# The traffic group for the iApp service}
+    metadata: ${10:# Metadata associated with the iApp service}
+    description: ${11:# Description of the iApp service}
+    device_group: ${12:# The device group for the iApp service}
+    provider: ${13:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_iapp_service]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_iapp_service</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages TCL iApp services on a BIG-IP</description>
+</snippet>

@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieves the information of devices inventoried by OpenManage Enterprise}
+  dellemc.openmanage.ome_device_info:
+    fact_subset: ${2:# C(basic_inventory) returns the list of the devices}
+    system_query_options: ${3:# I(system_query_options) applicable for the choices of the fact_subset}
+    hostname: ${4:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    username: ${5:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    password: ${6:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${7:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${8:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${9:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${10:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_device_info]]></content>
+  <tabTrigger>dellemc.openmanage.ome_device_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieves the information of devices inventoried by OpenManage Enterprise</description>
+</snippet>

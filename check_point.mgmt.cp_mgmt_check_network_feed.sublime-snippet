@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Check if a target can reach or parse a network feed; can work with an existing feed object or with a new one (by providing all relevant feed parameters)}
+  check_point.mgmt.cp_mgmt_check_network_feed:
+    targets: ${2:# On what targets to execute this command}
+    network_feed: ${3:# network feed parameters}
+    auto_publish_session: ${4:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${5:# Wait for the task to end}
+    wait_for_task_timeout: ${6:# How many minutes to wait until throwing a timeout error}
+    version: ${7:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_check_network_feed]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_check_network_feed</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Check if a target can reach or parse a network feed; can work with an existing feed object or with a new one (by providing all relevant feed parameters)</description>
+</snippet>

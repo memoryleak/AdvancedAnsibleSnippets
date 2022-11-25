@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Search for entries in a LDAP server}
+  community.general.ldap_search:
+    dn: ${2:# The LDAP DN to search in}
+    scope: ${3:# The LDAP scope to use}
+    filter: ${4:# Used for filtering the LDAP search result}
+    attrs: ${5:# A list of attributes for limiting the result}
+    schema: ${6:# Set to C(true) to return the full attribute schema of entries, not their attribute values}
+    bind_dn: ${7:# A DN to bind with}
+    bind_pw: ${8:# The password to use with I(bind_dn)}
+    referrals_chasing: ${9:# Set the referrals chasing behavior}
+    server_uri: ${10:# The I(server_uri) parameter may be a comma- or whitespace-separated list of URIs containing only the schema, the host, and the port fields}
+    start_tls: ${11:# If true, we'll use the START_TLS LDAP extension}
+    validate_certs: ${12:# If set to C(false), SSL certificates will not be validated}
+    sasl_class: ${13:# The class to use for SASL authentication}
+  tags:
+    - community
+    - general
+    - ldap_search]]></content>
+  <tabTrigger>community.general.ldap_search</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Search for entries in a LDAP server</description>
+</snippet>

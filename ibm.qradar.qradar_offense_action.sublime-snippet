@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Take action on a QRadar Offense}
+  ibm.qradar.qradar_offense_action:
+    id: ${2:# ID of Offense}
+    status: ${3:# One of 'open', 'hidden' or 'closed'}
+    assigned_to: ${4:# Assign to an user, the QRadar username should be provided}
+    closing_reason: ${5:# Assign a predefined closing reason here, by name}
+    closing_reason_id: ${6:# Assign a predefined closing reason here, by id}
+    follow_up: ${7:# Set or unset the flag to follow up on a QRadar Offense}
+    protected: ${8:# Set or unset the flag to protect a QRadar Offense}
+  tags:
+    - ibm
+    - qradar
+    - qradar_offense_action]]></content>
+  <tabTrigger>ibm.qradar.qradar_offense_action</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Take action on a QRadar Offense</description>
+</snippet>

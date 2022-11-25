@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:VM inventory registration operation}
+  community.vmware.vmware_guest_register_operation:
+    datacenter: ${2:# Destination datacenter for the register/unregister operation}
+    cluster: ${3:# Specify a cluster name to register VM}
+    folder: ${4:# Description folder, absolute path of the target folder}
+    name: ${5:# Specify VM name to be registered in the inventory}
+    uuid: ${6:# UUID of the virtual machine to manage if known, this is VMware's unique identifier}
+    esxi_hostname: ${7:# The ESXi hostname where the virtual machine will run}
+    template: ${8:# Whether to register VM as a template}
+    path: ${9:# Specify the path of vmx file}
+    resource_pool: ${10:# Specify a resource pool name to register VM}
+    state: ${11:# Specify the state the virtual machine should be in}
+    hostname: ${12:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${13:# The username of the vSphere vCenter or ESXi server}
+    password: ${14:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${15:# Allows connection when SSL certificates are not valid}
+    port: ${16:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${17:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${18:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_guest_register_operation]]></content>
+  <tabTrigger>community.vmware.vmware_guest_register_operation</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>VM inventory registration operation</description>
+</snippet>

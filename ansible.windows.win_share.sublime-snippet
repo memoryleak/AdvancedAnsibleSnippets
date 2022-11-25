@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Windows shares}
+  ansible.windows.win_share:
+    name: ${2:# Share name}
+    path: ${3:# Share directory}
+    state: ${4:# Specify whether to add C(present) or remove C(absent) the specified share}
+    description: ${5:# Share description}
+    list: ${6:# Specify whether to allow or deny file listing, in case user has no permission on share}
+    read: ${7:# Specify user list that should get read access on share, separated by comma}
+    change: ${8:# Specify user list that should get read and write access on share, separated by comma}
+    full: ${9:# Specify user list that should get full access on share, separated by comma}
+    deny: ${10:# Specify user list that should get no access, regardless of implied access on share, separated by comma}
+    caching_mode: ${11:# Set the CachingMode for this share}
+    encrypt: ${12:# Sets whether to encrypt the traffic to the share or not}
+    rule_action: ${13:# Whether to add or set (replace) access control entries}
+  tags:
+    - ansible
+    - windows
+    - win_share]]></content>
+  <tabTrigger>ansible.windows.win_share</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Windows shares</description>
+</snippet>

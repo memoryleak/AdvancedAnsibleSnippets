@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP vserver nfs kerberos realm}
+  netapp.ontap.na_ontap_kerberos_realm:
+    state: ${2:# Whether the Kerberos realm is present or absent}
+    vserver: ${3:# vserver/svm with kerberos realm configured}
+    realm: ${4:# Kerberos realm name}
+    kdc_vendor: ${5:# The vendor of the Key Distribution Centre (KDC) server}
+    kdc_ip: ${6:# IP address of the Key Distribution Centre (KDC) server}
+    kdc_port: ${7:# TCP port on the KDC to be used for Kerberos communication}
+    clock_skew: ${8:# The clock skew in minutes is the tolerance for accepting tickets with time stamps that do not exactly match the host's system clock}
+    comment: ${9:# Optional comment}
+    admin_server_ip: ${10:# IP address of the host where the Kerberos administration daemon is running}
+    admin_server_port: ${11:# The TCP port on the Kerberos administration server where the Kerberos administration service is running}
+    pw_server_ip: ${12:# IP address of the host where the Kerberos password-changing server is running}
+    pw_server_port: ${13:# The TCP port on the Kerberos password-changing server where the Kerberos password-changing service is running}
+    ad_server_ip: ${14:# IP Address of the Active Directory Domain Controller (DC)}
+    ad_server_name: ${15:# Host name of the Active Directory Domain Controller (DC)}
+    hostname: ${16:# The hostname or IP address of the ONTAP instance}
+    username: ${17:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${18:# Password for the specified user}
+    cert_filepath: ${19:# path to SSL client cert file (}
+    key_filepath: ${20:# path to SSL client key file}
+    https: ${21:# Enable and disable https}
+    validate_certs: ${22:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${23:# Override the default port (80 or 443) with this port}
+    ontapi: ${24:# The ontap api version to use}
+    use_rest: ${25:# Whether to use REST or ZAPI}
+    feature_flags: ${26:# Enable or disable a new feature}
+    force_ontap_version: ${27:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_kerberos_realm]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_kerberos_realm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP vserver nfs kerberos realm</description>
+</snippet>

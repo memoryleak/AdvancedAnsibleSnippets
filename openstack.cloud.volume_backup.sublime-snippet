@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add/Delete Volume backup}
+  openstack.cloud.volume_backup:
+    display_name: ${2:# Name that has to be given to the backup}
+    display_description: ${3:# String describing the backup}
+    state: ${4:# Should the resource be present or absent}
+    volume: ${5:# Name or ID of the volume}
+    snapshot: ${6:# Name or ID of the Snapshot to take backup of}
+    force: ${7:# Indicates whether to backup, even if the volume is attached}
+    metadata: ${8:# Metadata for the backup}
+    incremental: ${9:# The backup mode}
+    cloud: ${10:# Named cloud or cloud config to operate against}
+    auth: ${11:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${12:# Name of the auth plugin to use}
+    region_name: ${13:# Name of the region}
+    wait: ${14:# Should ansible wait until the requested resource is complete}
+    timeout: ${15:# How long should ansible wait for the requested resource}
+    api_timeout: ${16:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${17:# Whether or not SSL API requests should be verified}
+    ca_cert: ${18:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${19:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${20:# A path to a client key to use as part of the SSL transaction}
+    interface: ${21:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${22:# Ignored}
+    sdk_log_path: ${23:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${24:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - volume_backup]]></content>
+  <tabTrigger>openstack.cloud.volume_backup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add/Delete Volume backup</description>
+</snippet>

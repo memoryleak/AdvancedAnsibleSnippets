@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage DNS profiles on a BIG-IP}
+  f5networks.f5_modules.bigip_profile_dns:
+    name: ${2:# Specifies the name of the DNS profile}
+    parent: ${3:# Specifies the profile from which this profile inherits settings}
+    enable_dns_express: ${4:# Specifies whether the DNS Express engine is enabled}
+    enable_zone_transfer: ${5:# Specifies whether the system answers zone transfer requests for a DNS zone created on the system}
+    enable_dnssec: ${6:# Specifies whether the system signs responses with DNSSEC keys and replies to DNSSEC specific queries (for example, DNSKEY query type)}
+    enable_gtm: ${7:# Specifies whether the system uses Global Traffic Manager (now BIG-IP DNS) to manage the response}
+    process_recursion_desired: ${8:# Specifies whether to process client-side DNS packets with Recursion Desired set in the header}
+    use_local_bind: ${9:# Specifies whether the system forwards non-wide IP queries to the local BIND server on the BIG-IP system}
+    enable_dns_firewall: ${10:# Specifies whether the DNS firewall is enabled}
+    enable_cache: ${11:# Specifies whether the system caches DNS responses}
+    cache_name: ${12:# Specifies the user-created cache the system uses to cache DNS responses}
+    unhandled_query_action: ${13:# Specifies the action to take when a query does not match a Wide IP or a DNS Express Zone}
+    partition: ${14:# Device partition to manage resources on}
+    state: ${15:# When C(present), ensures the profile exists}
+    provider: ${16:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_profile_dns]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_profile_dns</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage DNS profiles on a BIG-IP</description>
+</snippet>

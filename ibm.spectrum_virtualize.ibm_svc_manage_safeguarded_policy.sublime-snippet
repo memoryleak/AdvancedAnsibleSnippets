@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages safeguarded policy configuration on IBM Spectrum Virtualize family storage systems}
+  ibm.spectrum_virtualize.ibm_svc_manage_safeguarded_policy:
+    clustername: ${2:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${3:# Domain for the Spectrum Virtualize storage system}
+    username: ${4:# REST API username for the Spectrum Virtualize storage system}
+    password: ${5:# REST API password for the Spectrum Virtualize storage system}
+    token: ${6:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    log_path: ${7:# Path of debug log file}
+    state: ${8:# Creates (C(present)) or deletes (C(absent)) a safeguarded policy}
+    name: ${9:# Specifies the name of safeguarded policy}
+    backupunit: ${10:# Specify the backup unit in mentioned metric}
+    backupinterval: ${11:# Specifies the interval of backup}
+    backupstarttime: ${12:# Specifies the start time of backup in the format YYMMDDHHMM}
+    retentiondays: ${13:# Specifies the retention days for the backup}
+    validate_certs: ${14:# Validates certification}
+  tags:
+    - ibm
+    - spectrum_virtualize
+    - ibm_svc_manage_safeguarded_policy]]></content>
+  <tabTrigger>ibm.spectrum_virtualize.ibm_svc_manage_safeguarded_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages safeguarded policy configuration on IBM Spectrum Virtualize family storage systems</description>
+</snippet>

@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set SMTP information}
+  inspur.ispim.edit_smtp_com:
+    status: ${2:# SMTP Support}
+    server_ip: ${3:# SMTP server IP}
+    server_port: ${4:# SMTP server port,The Identification for retry count configuration(1-65535)}
+    server_secure_port: ${5:# SMTP server sesure port,The Identification for retry count configuration(1-65535)}
+    email: ${6:# Sender email}
+    server_auth: ${7:# SMTP server authentication}
+    server_username: ${8:# SMTP server Username,lenth be 4 to 64 bits,}
+    server_password: ${9:# SMTP server Password,lenth be 4 to 64 bits,cannot contain ' '(space)}
+    ssl_tls_enable: ${10:# SMTP SSLTLS Enable}
+    star_tls_enable: ${11:# SMTP STARTTLS Enable}
+    subject: ${12:# Email theme}
+    host_name: ${13:# Server name}
+    serial_number: ${14:# Serial number}
+    asset_tag: ${15:# product asset label,}
+    event_level: ${16:# Events above this level will be sent}
+    provider: ${17:# A dict object containing connection details}
+    host: ${18:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${19:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${20:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - ispim
+    - edit_smtp_com]]></content>
+  <tabTrigger>inspur.ispim.edit_smtp_com</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set SMTP information</description>
+</snippet>

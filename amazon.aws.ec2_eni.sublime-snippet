@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and optionally attach an Elastic Network Interface (ENI) to an instance}
+  amazon.aws.ec2_eni:
+    eni_id: ${2:# The ID of the ENI (to modify)}
+    instance_id: ${3:# Instance ID that you wish to attach ENI to}
+    private_ip_address: ${4:# Private IP address}
+    subnet_id: ${5:# ID of subnet in which to create the ENI}
+    description: ${6:# Optional description of the ENI}
+    security_groups: ${7:# List of security groups associated with the interface}
+    state: ${8:# Create or delete ENI}
+    device_index: ${9:# The index of the device for the network interface attachment on the instance}
+    attached: ${10:# Specifies if network interface should be attached or detached from instance}
+    force_detach: ${11:# Force detachment of the interface}
+    delete_on_termination: ${12:# Delete the interface when the instance it is attached to is terminated}
+    source_dest_check: ${13:# By default, interfaces perform source/destination checks}
+    secondary_private_ip_addresses: ${14:# A list of IP addresses to assign as secondary IP addresses to the network interface}
+    purge_secondary_private_ip_addresses: ${15:# To be used with I(secondary_private_ip_addresses) to determine whether or not to remove any secondary IP addresses other than those specified}
+    secondary_private_ip_address_count: ${16:# The number of secondary IP addresses to assign to the network interface}
+    allow_reassignment: ${17:# Indicates whether to allow an IP address that is already assigned to another network interface or instance to be reassigned to the specified network interface}
+    name: ${18:# Name for the ENI}
+    access_key: ${19:# AWS access key ID}
+    secret_key: ${20:# AWS secret access key}
+    session_token: ${21:# AWS STS session token for use with temporary credentials}
+    profile: ${22:# A named AWS profile to use for authentication}
+    endpoint_url: ${23:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${24:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${25:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${26:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${27:# Use a C(botocore}
+    region: ${28:# The AWS region to use}
+    tags: ${29:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${30:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - ec2_eni]]></content>
+  <tabTrigger>amazon.aws.ec2_eni</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and optionally attach an Elastic Network Interface (ENI) to an instance</description>
+</snippet>

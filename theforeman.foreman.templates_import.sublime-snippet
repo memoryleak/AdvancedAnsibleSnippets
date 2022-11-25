@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Sync Templates from a repository}
+  theforeman.foreman.templates_import:
+    prefix: ${2:# Adds specified string to beginning of all imported templates that do not yet have that prefix}
+    associate: ${3:# Associate to Operatingsystems, Locations and Organizations based on metadata}
+    verbose: ${4:# Add template reports to the output}
+    force: ${5:# Update templates that are locked}
+    lock: ${6:# Lock imported templates}
+    branch: ${7:# Branch of the I(repo)}
+    repo: ${8:# Filesystem path or repo (with protocol), for example /tmp/dir or git://example}
+    filter: ${9:# Sync only templates with name matching this regular expression, after I(prefix) was applied}
+    negate: ${10:# Negate the filter condition}
+    dirname: ${11:# The directory within Git repo containing the templates}
+    server_url: ${12:# URL of the Foreman server}
+    username: ${13:# Username accessing the Foreman server}
+    password: ${14:# Password of the user accessing the Foreman server}
+    validate_certs: ${15:# Whether or not to verify the TLS certificates of the Foreman server}
+    organizations: ${16:# List of organizations the entity should be assigned to}
+    locations: ${17:# List of locations the entity should be assigned to}
+  tags:
+    - theforeman
+    - foreman
+    - templates_import]]></content>
+  <tabTrigger>theforeman.foreman.templates_import</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Sync Templates from a repository</description>
+</snippet>

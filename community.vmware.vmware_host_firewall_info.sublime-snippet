@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gathers info about an ESXi host's firewall configuration information}
+  community.vmware.vmware_host_firewall_info:
+    cluster_name: ${2:# Name of the cluster from which the ESXi host belong to}
+    esxi_hostname: ${3:# ESXi hostname to gather information from}
+    hostname: ${4:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${5:# The username of the vSphere vCenter or ESXi server}
+    password: ${6:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${7:# Allows connection when SSL certificates are not valid}
+    port: ${8:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${9:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${10:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_host_firewall_info]]></content>
+  <tabTrigger>community.vmware.vmware_host_firewall_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gathers info about an ESXi host's firewall configuration information</description>
+</snippet>

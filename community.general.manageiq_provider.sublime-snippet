@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Management of provider in ManageIQ}
+  community.general.manageiq_provider:
+    state: ${2:# absent - provider should not exist, present - provider should be present, refresh - provider will be refreshed}
+    name: ${3:# The provider's name}
+    type: ${4:# The provider's type}
+    zone: ${5:# The ManageIQ zone name that will manage the provider}
+    provider_region: ${6:# The provider region name to connect to (e}
+    host_default_vnc_port_start: ${7:# The first port in the host VNC range}
+    host_default_vnc_port_end: ${8:# The last port in the host VNC range}
+    subscription: ${9:# Microsoft Azure subscription ID}
+    project: ${10:# Google Compute Engine Project ID}
+    azure_tenant_id: ${11:# Tenant ID}
+    tenant_mapping_enabled: ${12:# Whether to enable mapping of existing tenants}
+    api_version: ${13:# The OpenStack Keystone API version}
+    provider: ${14:# Default endpoint connection information, required if state is true}
+    metrics: ${15:# Metrics endpoint connection information}
+    alerts: ${16:# Alerts endpoint connection information}
+    ssh_keypair: ${17:# SSH key pair used for SSH connections to all hosts in this provider}
+    manageiq_connection: ${18:# ManageIQ connection configuration information}
+  tags:
+    - community
+    - general
+    - manageiq_provider]]></content>
+  <tabTrigger>community.general.manageiq_provider</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Management of provider in ManageIQ</description>
+</snippet>

@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure 1&1 private networking}
+  community.general.oneandone_private_network:
+    state: ${2:# Define a network's state to create, remove, or update}
+    auth_token: ${3:# Authenticating API token provided by 1&1}
+    private_network: ${4:# The identifier (id or name) of the network used with update state}
+    api_url: ${5:# Custom API URL}
+    name: ${6:# Private network name used with present state}
+    description: ${7:# Set a description for the network}
+    datacenter: ${8:# The identifier of the datacenter where the private network will be created}
+    network_address: ${9:# Set a private network space, i}
+    subnet_mask: ${10:# Set the netmask for the private network, i}
+    add_members: ${11:# List of server identifiers (name or id) to be added to the private network}
+    remove_members: ${12:# List of server identifiers (name or id) to be removed from the private network}
+    wait: ${13:# wait for the instance to be in state 'running' before returning}
+    wait_timeout: ${14:# how long before wait gives up, in seconds}
+    wait_interval: ${15:# Defines the number of seconds to wait when using the _wait_for methods}
+  tags:
+    - community
+    - general
+    - oneandone_private_network]]></content>
+  <tabTrigger>community.general.oneandone_private_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure 1&1 private networking</description>
+</snippet>

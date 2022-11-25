@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage IPSec Traffic Selectors on BIG-IP}
+  f5networks.f5_modules.bigip_traffic_selector:
+    name: ${2:# Specifies the name of the traffic selector}
+    destination_address: ${3:# Specifies the host or network IP address to which the application traffic is destined}
+    source_address: ${4:# Specifies the host or network IP address from which the application traffic originates}
+    ipsec_policy: ${5:# Specifies the IPsec policy that tells the BIG-IP system how to handle the packets}
+    order: ${6:# Specifies the order in which traffic is matched, if traffic can be matched to multiple traffic selectors}
+    description: ${7:# Description of the traffic selector}
+    partition: ${8:# Device partition to manage resources on}
+    state: ${9:# When C(present), ensures the resource exists}
+    provider: ${10:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_traffic_selector]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_traffic_selector</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage IPSec Traffic Selectors on BIG-IP</description>
+</snippet>

@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage switch configuration using templates based on condition on devices running Lenovo CNOS}
+  community.network.cnos_conditional_template:
+    commandfile: ${2:# This specifies the path to the CNOS command file which needs to be applied}
+    condition: ${3:# If you specify condition=<flag string> in the inventory file against any device, the template execution is done for that device in case it matches the flag setting for that task}
+    flag: ${4:# If a task needs to be executed, you have to set the flag the same as it is specified in the inventory for that device}
+    outputfile: ${5:# This specifies the file path where the output of each command execution is saved}
+    host: ${6:# This is the variable used to search the hosts file at /etc/ansible/hosts and identify the IP address of the device on which the template is going to be applied}
+    username: ${7:# Configures the username used to authenticate the connection to the remote device}
+    password: ${8:# Configures the password used to authenticate the connection to the remote device}
+    enablePassword: ${9:# Configures the password used to enter Global Configuration command mode on the switch}
+    deviceType: ${10:# This specifies the type of device where the method is executed}
+  tags:
+    - community
+    - network
+    - cnos_conditional_template]]></content>
+  <tabTrigger>community.network.cnos_conditional_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage switch configuration using templates based on condition on devices running Lenovo CNOS</description>
+</snippet>

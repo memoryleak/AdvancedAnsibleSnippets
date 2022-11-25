@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Infoblox NIOS DTC LBDN}
+  infoblox.nios_modules.nios_dtc_lbdn:
+    name: ${2:# Specifies the display name of the DTC LBDN, not DNS related}
+    lb_method: ${3:# Configures the load balancing method}
+    auth_zones: ${4:# List of linked authoritative zones}
+    patterns: ${5:# Specify LBDN wildcards for pattern match}
+    types: ${6:# Specifies the list of resource record types supported by LBDN}
+    pools: ${7:# The pools used for load balancing}
+    ttl: ${8:# The Time To Live (TTL) value for the DTC LBDN}
+    extattrs: ${9:# Allows for the configuration of Extensible Attributes on the instance of the object}
+    comment: ${10:# Configures a text string comment to be associated with the instance of this object}
+    state: ${11:# Configures the intended state of the instance of the object on the NIOS server}
+    provider: ${12:# A dict object containing connection details}
+  tags:
+    - infoblox
+    - nios_modules
+    - nios_dtc_lbdn]]></content>
+  <tabTrigger>infoblox.nios_modules.nios_dtc_lbdn</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Infoblox NIOS DTC LBDN</description>
+</snippet>

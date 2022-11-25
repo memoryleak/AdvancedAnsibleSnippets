@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures BGP on Mellanox ONYX network devices}
+  mellanox.onyx.onyx_bgp:
+    as_number: ${2:# Local AS number}
+    router_id: ${3:# Router IP address}
+    neighbors: ${4:# List of neighbors}
+    networks: ${5:# List of advertised networks}
+    fast_external_fallover: ${6:# will configure fast_external_fallover when it is True}
+    max_paths: ${7:# Maximum bgp paths}
+    ecmp_bestpath: ${8:# Enables ECMP across AS paths}
+    evpn: ${9:# Configure evpn peer-group}
+    vrf: ${10:# vrf name}
+    state: ${11:# BGP state}
+    purge: ${12:# will remove all neighbors when it is True}
+  tags:
+    - mellanox
+    - onyx
+    - onyx_bgp]]></content>
+  <tabTrigger>mellanox.onyx.onyx_bgp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures BGP on Mellanox ONYX network devices</description>
+</snippet>

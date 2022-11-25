@@ -1,0 +1,54 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure api instances}
+  azure.azcollection.azure_rm_apimanagement:
+    resource_group: ${2:# The name of the resource group}
+    service_name: ${3:# The name of the API Management service}
+    api_id: ${4:# API revision identifier}
+    description: ${5:# Description of the API}
+    authentication_settings: ${6:# Collection of authentication settings included into this API}
+    subscription_key_parameter_names: ${7:# Protocols over which API is made available}
+    type: ${8:# Type of API}
+    api_revision: ${9:# Describes the Revision of the Api}
+    api_version: ${10:# Indicates the Version identifier of the API if the API is versioned}
+    is_current: ${11:# Indicates if API revision is current api revision}
+    api_revision_description: ${12:# Description of the Api Revision}
+    api_version_description: ${13:# Description of the Api Version}
+    api_version_set_id: ${14:# A resource identifier for the related ApiVersionSet}
+    subscription_required: ${15:# Specifies whether an API or Product subscription is required for accessing the API}
+    source_api_id: ${16:# API identifier of the source API}
+    display_name: ${17:# API Name to be displayed}
+    service_url: ${18:# Absolute URL of the backend service implementing this API}
+    path: ${19:# Relative URL uniquely identifying this API}
+    protocols: ${20:# Describes on which protocols the operations in this API can be invoked}
+    api_version_set: ${21:# Version set details}
+    value: ${22:# Content value when Importing an API}
+    format: ${23:# Format of the Content in which the API is getting imported}
+    wsdl_selector: ${24:# Criteria to limit import of WSDL to a subset of the document}
+    api_type: ${25:# Type of Api to create}
+    state: ${26:# State of the Api}
+    ad_user: ${27:# Active Directory username}
+    password: ${28:# Active Directory user password}
+    profile: ${29:# Security profile found in ~/}
+    subscription_id: ${30:# Your Azure subscription Id}
+    client_id: ${31:# Azure client ID}
+    secret: ${32:# Azure client secret}
+    tenant: ${33:# Azure tenant ID}
+    cloud_environment: ${34:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${35:# Azure AD authority url}
+    cert_validation_mode: ${36:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${37:# Controls the source of the credentials to use for authentication}
+    api_profile: ${38:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${39:# Parent argument}
+    log_mode: ${40:# Parent argument}
+    x509_certificate_path: ${41:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${42:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${43:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${44:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_apimanagement]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_apimanagement</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure api instances</description>
+</snippet>

@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add or remove PostgreSQL schema}
+  community.postgresql.postgresql_schema:
+    name: ${2:# Name of the schema to add or remove}
+    database: ${3:# Name of the database to connect to and add or remove the schema}
+    owner: ${4:# Name of the role to set as owner of the schema}
+    session_role: ${5:# Switch to session_role after connecting}
+    state: ${6:# The schema state}
+    cascade_drop: ${7:# Drop schema with CASCADE to remove child objects}
+    ssl_mode: ${8:# Determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the server}
+    ca_cert: ${9:# Specifies the name of a file containing SSL certificate authority (CA) certificate(s)}
+    trust_input: ${10:# If C(false), check whether values of parameters I(schema), I(owner), I(session_role) are potentially dangerous}
+    login_user: ${11:# The username this module should use to establish its PostgreSQL session}
+    login_password: ${12:# The password this module should use to establish its PostgreSQL session}
+    login_host: ${13:# Host running the database}
+    login_unix_socket: ${14:# Path to a Unix domain socket for local connections}
+    port: ${15:# Database port to connect to}
+    connect_params: ${16:# Any additional parameters to be passed to libpg}
+  tags:
+    - community
+    - postgresql
+    - postgresql_schema]]></content>
+  <tabTrigger>community.postgresql.postgresql_schema</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add or remove PostgreSQL schema</description>
+</snippet>

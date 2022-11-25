@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller schedules}
+  awx.awx.schedule:
+    rrule: ${2:# A value representing the schedules iCal recurrence rule}
+    name: ${3:# Name of this schedule}
+    new_name: ${4:# Setting this option will change the existing name (looked up via the name field}
+    description: ${5:# Optional description of this schedule}
+    execution_environment: ${6:# Execution Environment applied as a prompt, assuming jot template prompts for execution environment}
+    extra_data: ${7:# Specify C(extra_vars) for the template}
+    forks: ${8:# Forks applied as a prompt, assuming job template prompts for forks}
+    instance_groups: ${9:# List of Instance Groups applied as a prompt, assuming job template prompts for instance groups}
+    inventory: ${10:# Inventory applied as a prompt, assuming job template prompts for inventory}
+    job_slice_count: ${11:# Job Slice Count applied as a prompt, assuming job template prompts for job slice count}
+    labels: ${12:# List of labels applied as a prompt, assuming job template prompts for labels}
+    credentials: ${13:# List of credentials applied as a prompt, assuming job template prompts for credentials}
+    scm_branch: ${14:# Branch to use in job run}
+    timeout: ${15:# Timeout applied as a prompt, assuming job template prompts for timeout}
+    job_type: ${16:# The job type to use for the job template}
+    job_tags: ${17:# Comma separated list of the tags to use for the job template}
+    skip_tags: ${18:# Comma separated list of the tags to skip for the job template}
+    limit: ${19:# A host pattern to further constrain the list of hosts managed or affected by the playbook}
+    diff_mode: ${20:# Enable diff mode for the job template}
+    verbosity: ${21:# Control the output level Ansible produces as the playbook runs}
+    unified_job_template: ${22:# Name of unified job template to schedule}
+    organization: ${23:# The organization the unified job template exists in}
+    enabled: ${24:# Enables processing of this schedule}
+    state: ${25:# Desired state of the resource}
+    controller_host: ${26:# URL to your Automation Platform Controller instance}
+    controller_username: ${27:# Username for your controller instance}
+    controller_password: ${28:# Password for your controller instance}
+    controller_oauthtoken: ${29:# The OAuth token to use}
+    validate_certs: ${30:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${31:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - schedule]]></content>
+  <tabTrigger>awx.awx.schedule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>create, update, or destroy Automation Platform Controller schedules</description>
+</snippet>

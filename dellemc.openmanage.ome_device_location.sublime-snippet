@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure device location settings on OpenManage Enterprise Modular}
+  dellemc.openmanage.ome_device_location:
+    device_id: ${2:# The ID of the chassis for which the settings need to be updated}
+    device_service_tag: ${3:# The service tag of the chassis for which the settings need to be updated}
+    data_center: ${4:# The data center name of the chassis}
+    room: ${5:# The room of the chassis}
+    aisle: ${6:# The aisle of the chassis}
+    rack: ${7:# The rack name of the chassis}
+    rack_slot: ${8:# The rack slot number of the chassis}
+    location: ${9:# The physical location of the chassis}
+    hostname: ${10:# OpenManage Enterprise Modular IP address or hostname}
+    username: ${11:# OpenManage Enterprise Modular username}
+    password: ${12:# OpenManage Enterprise Modular password}
+    port: ${13:# OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${14:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${15:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${16:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_device_location]]></content>
+  <tabTrigger>dellemc.openmanage.ome_device_location</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure device location settings on OpenManage Enterprise Modular</description>
+</snippet>

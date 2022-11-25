@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set bmc system and audit log setting}
+  inspur.sm.edit_log_setting:
+    status: ${2:# System Log Status}
+    type: ${3:# System log type}
+    file_size: ${4:# File Size(3-65535bytes), set when type is local(default 30000)}
+    audit_status: ${5:# Audit Log Status}
+    audit_type: ${6:# Audit log type}
+    rotate_count: ${7:# Rotate Count, set when type is local, 0-delete old files(default), 1-bak old files}
+    server_addr: ${8:# Server Address, set when type is remote}
+    server_port: ${9:# Server Port(0-65535), set when type is remote}
+    protocol_type: ${10:# Protocol Type, set when type is remote}
+    provider: ${11:# A dict object containing connection details}
+    host: ${12:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${13:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${14:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - sm
+    - edit_log_setting]]></content>
+  <tabTrigger>inspur.sm.edit_log_setting</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set bmc system and audit log setting</description>
+</snippet>

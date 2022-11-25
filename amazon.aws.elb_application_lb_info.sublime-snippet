@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about Application Load Balancers in AWS}
+  amazon.aws.elb_application_lb_info:
+    load_balancer_arns: ${2:# The Amazon Resource Names (ARN) of the load balancers}
+    names: ${3:# The names of the load balancers}
+    access_key: ${4:# AWS access key ID}
+    secret_key: ${5:# AWS secret access key}
+    session_token: ${6:# AWS STS session token for use with temporary credentials}
+    profile: ${7:# A named AWS profile to use for authentication}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${9:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${10:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${11:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${12:# Use a C(botocore}
+    region: ${13:# The AWS region to use}
+  tags:
+    - amazon
+    - aws
+    - elb_application_lb_info]]></content>
+  <tabTrigger>amazon.aws.elb_application_lb_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about Application Load Balancers in AWS</description>
+</snippet>

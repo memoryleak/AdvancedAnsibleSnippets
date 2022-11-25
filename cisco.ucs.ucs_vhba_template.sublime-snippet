@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures vHBA templates on Cisco UCS Manager}
+  cisco.ucs.ucs_vhba_template:
+    state: ${2:# If C(present), will verify vHBA templates are present and will create if needed}
+    name: ${3:# The name of the virtual HBA template}
+    description: ${4:# A user-defined description of the template}
+    fabric: ${5:# The Fabric ID field}
+    redundancy_type: ${6:# The Redundancy Type used for template pairing from the Primary or Secondary redundancy template}
+    vsan: ${7:# The VSAN to associate with vHBAs created from this template}
+    template_type: ${8:# The Template Type field}
+    max_data: ${9:# The Max Data Field Size field}
+    wwpn_pool: ${10:# The WWPN pool that a vHBA created from this template uses to derive its WWPN address}
+    qos_policy: ${11:# The QoS policy that is associated with vHBAs created from this template}
+    pin_group: ${12:# The SAN pin group that is associated with vHBAs created from this template}
+    stats_policy: ${13:# The statistics collection policy that is associated with vHBAs created from this template}
+    org_dn: ${14:# Org dn (distinguished name)}
+    hostname: ${15:# IP address or hostname of Cisco UCS Manager}
+    username: ${16:# Username for Cisco UCS Manager authentication}
+    password: ${17:# Password for Cisco UCS Manager authentication}
+    port: ${18:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    use_ssl: ${19:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    use_proxy: ${20:# If C(no), will not use the proxy as defined by system environment variable}
+    proxy: ${21:# If use_proxy is no, specfies proxy to be used for connection}
+  tags:
+    - cisco
+    - ucs
+    - ucs_vhba_template]]></content>
+  <tabTrigger>cisco.ucs.ucs_vhba_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures vHBA templates on Cisco UCS Manager</description>
+</snippet>

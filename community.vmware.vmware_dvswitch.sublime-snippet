@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or remove a Distributed Switch}
+  community.vmware.vmware_dvswitch:
+    datacenter_name: ${2:# The name of the datacenter that will contain the Distributed Switch}
+    switch_name: ${3:# The name of the distribute vSwitch to create or remove}
+    switch_version: ${4:# The version of the Distributed Switch to create}
+    mtu: ${5:# The switch maximum transmission unit}
+    multicast_filtering_mode: ${6:# The multicast filtering mode}
+    uplink_quantity: ${7:# Quantity of uplink per ESXi host added to the Distributed Switch}
+    uplink_prefix: ${8:# The prefix used for the naming of the uplinks}
+    discovery_proto: ${9:# Link discovery protocol between Cisco and Link Layer discovery}
+    discovery_operation: ${10:# Select the discovery operation}
+    contact: ${11:# Dictionary which configures administrator contact name and description for the Distributed Switch}
+    description: ${12:# Description of the Distributed Switch}
+    health_check: ${13:# Dictionary which configures Health Check for the Distributed Switch}
+    network_policy: ${14:# Dictionary which configures the different default security values for portgroups}
+    state: ${15:# If set to C(present) and the Distributed Switch does not exist, the Distributed Switch will be created}
+    folder: ${16:# Destination folder, absolute path to place dvswitch in}
+    net_flow: ${17:# Dictionary which configures the Net Flow for the Distributed Switch}
+    hostname: ${18:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${19:# The username of the vSphere vCenter or ESXi server}
+    password: ${20:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${21:# Allows connection when SSL certificates are not valid}
+    port: ${22:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${23:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${24:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_dvswitch]]></content>
+  <tabTrigger>community.vmware.vmware_dvswitch</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or remove a Distributed Switch</description>
+</snippet>

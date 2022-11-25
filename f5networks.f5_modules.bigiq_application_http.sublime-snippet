@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages BIG-IQ HTTP applications}
+  f5networks.f5_modules.bigiq_application_http:
+    name: ${2:# Name of the new application}
+    description: ${3:# Description of the application}
+    servers: ${4:# A list of servers on which the application is hosted}
+    inbound_virtual: ${5:# Settings to configure the virtual which receives the inbound connection}
+    service_environment: ${6:# Specifies the name of service environment to which the application is deployed}
+    add_analytics: ${7:# Collects statistics of the BIG-IP to which the application is deployed}
+    state: ${8:# The state of the resource on the system}
+    wait: ${9:# If the module should wait for the application to be created, deleted, or updated}
+    provider: ${10:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigiq_application_http]]></content>
+  <tabTrigger>f5networks.f5_modules.bigiq_application_http</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages BIG-IQ HTTP applications</description>
+</snippet>

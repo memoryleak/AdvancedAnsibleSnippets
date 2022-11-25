@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/update/delete Zabbix screens}
+  community.zabbix.zabbix_screen:
+    screens: ${2:# List of screens to be created/updated/deleted (see example)}
+    server_url: ${3:# URL of Zabbix server, with protocol (http or https)}
+    login_user: ${4:# Zabbix user name}
+    login_password: ${5:# Zabbix user password}
+    http_login_user: ${6:# Basic Auth login}
+    http_login_password: ${7:# Basic Auth password}
+    timeout: ${8:# The timeout of API request (seconds)}
+    validate_certs: ${9:# If set to False, SSL certificates will not be validated}
+  tags:
+    - community
+    - zabbix
+    - zabbix_screen]]></content>
+  <tabTrigger>community.zabbix.zabbix_screen</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/update/delete Zabbix screens</description>
+</snippet>

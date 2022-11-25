@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FlashArray File Systems}
+  purestorage.flasharray.purefa_fs:
+    name: ${2:# Name of the file system}
+    state: ${3:# Define whether the file system should exist or not}
+    eradicate: ${4:# Define whether to eradicate the file system on delete or leave in trash}
+    rename: ${5:# Value to rename the specified file system to}
+    move: ${6:# Move a filesystem in and out of a pod}
+    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
+    api_token: ${8:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_fs]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_fs</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FlashArray File Systems</description>
+</snippet>

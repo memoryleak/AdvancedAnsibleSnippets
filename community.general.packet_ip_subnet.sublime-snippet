@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Assign IP subnet to a bare metal server}
+  community.general.packet_ip_subnet:
+    auth_token: ${2:# Packet API token}
+    hostname: ${3:# A hostname of a device to/from which to assign/remove a subnet}
+    device_id: ${4:# UUID of a device to/from which to assign/remove a subnet}
+    project_id: ${5:# UUID of a project of the device to/from which to assign/remove a subnet}
+    device_count: ${6:# The number of devices to retrieve from the project}
+    cidr: ${7:# IPv4 or IPv6 subnet which you want to manage}
+    state: ${8:# Desired state of the IP subnet on the specified device}
+  tags:
+    - community
+    - general
+    - packet_ip_subnet]]></content>
+  <tabTrigger>community.general.packet_ip_subnet</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Assign IP subnet to a bare metal server</description>
+</snippet>

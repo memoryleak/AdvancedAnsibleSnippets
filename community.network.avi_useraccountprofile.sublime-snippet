@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for setup of UserAccountProfile Avi RESTful Object}
+  community.network.avi_useraccountprofile:
+    state: ${2:# The state that should be applied on the entity}
+    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
+    account_lock_timeout: ${5:# Lock timeout period (in minutes)}
+    credentials_timeout_threshold: ${6:# The time period after which credentials expire}
+    max_concurrent_sessions: ${7:# Maximum number of concurrent sessions allowed}
+    max_login_failure_count: ${8:# Number of login attempts before lockout}
+    max_password_history_count: ${9:# Maximum number of passwords to be maintained in the password history}
+    name: ${10:# Name of the object}
+    url: ${11:# Avi controller URL of the object}
+    uuid: ${12:# Unique object identifier of the object}
+    controller: ${13:# IP address or hostname of the controller}
+    username: ${14:# Username used for accessing Avi controller}
+    password: ${15:# Password of Avi user in Avi controller}
+    tenant: ${16:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${17:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${18:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${19:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${20:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${21:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_useraccountprofile]]></content>
+  <tabTrigger>community.network.avi_useraccountprofile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for setup of UserAccountProfile Avi RESTful Object</description>
+</snippet>

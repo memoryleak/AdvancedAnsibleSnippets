@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures PTP on interface}
+  mellanox.onyx.onyx_ptp_interface:
+    name: ${2:# ethernet or vlan interface name that we want to configure PTP on it}
+    state: ${3:# Enable/Disable PTP on Interface}
+    delay_request: ${4:# configure PTP delay request interval, Range 0-5}
+    announce_interval: ${5:# configure PTP announce setting for interval, Range -3-1}
+    announce_timeout: ${6:# configure PTP announce setting for timeout, Range 2-10}
+    sync_interval: ${7:# configure PTP sync interval, Range -7--1}
+  tags:
+    - mellanox
+    - onyx
+    - onyx_ptp_interface]]></content>
+  <tabTrigger>mellanox.onyx.onyx_ptp_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures PTP on interface</description>
+</snippet>

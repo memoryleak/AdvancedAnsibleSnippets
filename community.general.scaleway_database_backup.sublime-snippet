@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Scaleway database backups management module}
+  community.general.scaleway_database_backup:
+    state: ${2:# Indicate desired state of the database backup}
+    region: ${3:# Scaleway region to use (for example C(fr-par))}
+    id: ${4:# UUID used to identify the database backup}
+    name: ${5:# Name used to identify the database backup}
+    database_name: ${6:# Name used to identify the database}
+    instance_id: ${7:# UUID of the instance associated to the database backup}
+    expires_at: ${8:# Expiration datetime of the database backup (ISO 8601 format)}
+    wait: ${9:# Wait for the instance to reach its desired state before returning}
+    wait_timeout: ${10:# Time to wait for the backup to reach the expected state}
+    wait_sleep_time: ${11:# Time to wait before every attempt to check the state of the backup}
+    api_token: ${12:# Scaleway OAuth token}
+    api_url: ${13:# Scaleway API URL}
+    api_timeout: ${14:# HTTP timeout to Scaleway API in seconds}
+    query_parameters: ${15:# List of parameters passed to the query string}
+    validate_certs: ${16:# Validate SSL certs of the Scaleway API}
+  tags:
+    - community
+    - general
+    - scaleway_database_backup]]></content>
+  <tabTrigger>community.general.scaleway_database_backup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Scaleway database backups management module</description>
+</snippet>

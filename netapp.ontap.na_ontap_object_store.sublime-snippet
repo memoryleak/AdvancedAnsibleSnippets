@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP manage object store config}
+  netapp.ontap.na_ontap_object_store:
+    state: ${2:# Whether the specified object store config should exist or not}
+    name: ${3:# The name of the object store config to manage}
+    provider_type: ${4:# The name of the object store config provider}
+    server: ${5:# Fully qualified domain name of the object store config}
+    port: ${6:# Port number of the object store that ONTAP uses when establishing a connection}
+    container: ${7:# Data bucket/container name used in S3 requests}
+    access_key: ${8:# Access key ID for AWS_S3 and SGWS provider types}
+    secret_password: ${9:# Secret access key for AWS_S3 and SGWS provider types}
+    certificate_validation_enabled: ${10:# Is SSL/TLS certificate validation enabled?}
+    ssl_enabled: ${11:# Is SSL enabled?}
+    change_password: ${12:# By default, the secret_password is used on create but ignored if the resource already exists}
+    owner: ${13:# Owner of the target}
+    hostname: ${14:# The hostname or IP address of the ONTAP instance}
+    username: ${15:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${16:# Password for the specified user}
+    cert_filepath: ${17:# path to SSL client cert file (}
+    key_filepath: ${18:# path to SSL client key file}
+    https: ${19:# Enable and disable https}
+    validate_certs: ${20:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${21:# Override the default port (80 or 443) with this port}
+    ontapi: ${22:# The ontap api version to use}
+    use_rest: ${23:# Whether to use REST or ZAPI}
+    feature_flags: ${24:# Enable or disable a new feature}
+    force_ontap_version: ${25:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_object_store]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_object_store</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP manage object store config</description>
+</snippet>

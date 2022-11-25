@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Tests reachability using ping from IOSXR switch}
+  cisco.iosxr.iosxr_ping:
+    count: ${2:# Repeat count the number of packets to send}
+    afi: ${3:# Define echo type ipv4 or ipv6}
+    dest: ${4:# The IP Address or hostname (resolvable by switch) of the remote node}
+    df_bit: ${5:# Set the DF bit in IP-header}
+    sweep: ${6:# Sweep ping}
+    validate: ${7:# Validate return packet}
+    source: ${8:# Source address or source interface}
+    size: ${9:# Datagram size the size of packets to send}
+    state: ${10:# Determines if the expected result is success or fail}
+    vrf: ${11:# The VRF to use for forwarding}
+  tags:
+    - cisco
+    - iosxr
+    - iosxr_ping]]></content>
+  <tabTrigger>cisco.iosxr.iosxr_ping</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Tests reachability using ping from IOSXR switch</description>
+</snippet>

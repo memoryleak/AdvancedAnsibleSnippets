@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set or remove reverse DNS entry for IP}
+  community.hrobot.reverse_dns:
+    ip: ${2:# The IP address to set or remove a reverse DNS entry for}
+    state: ${3:# Whether to set or update (C(present)) or delete (C(absent)) the reverse DNS entry for I(ip)}
+    value: ${4:# The reverse DNS entry for I(ip)}
+    hetzner_user: ${5:# The username for the Robot webservice user}
+    hetzner_password: ${6:# The password for the Robot webservice user}
+  tags:
+    - community
+    - hrobot
+    - reverse_dns]]></content>
+  <tabTrigger>community.hrobot.reverse_dns</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set or remove reverse DNS entry for IP</description>
+</snippet>

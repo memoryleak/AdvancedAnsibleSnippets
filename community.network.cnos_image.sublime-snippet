@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Perform firmware upgrade/download from a remote server on devices running Lenovo CNOS}
+  community.network.cnos_image:
+    protocol: ${2:# This refers to the protocol used by the network device to interact with the remote server from where to download the firmware image}
+    serverip: ${3:# This specifies the IP Address of the remote server from where the software image will be downloaded}
+    imgpath: ${4:# This specifies the full file path of the image located on the remote server}
+    imgtype: ${5:# This specifies the firmware image type to be downloaded}
+    serverusername: ${6:# Specify the username for the server relating to the protocol used}
+    serverpassword: ${7:# Specify the password for the server relating to the protocol used}
+    outputfile: ${8:# This specifies the file path where the output of each command execution is saved}
+    host: ${9:# This is the variable used to search the hosts file at /etc/ansible/hosts and identify the IP address of the device on which the template is going to be applied}
+    username: ${10:# Configures the username used to authenticate the connection to the remote device}
+    password: ${11:# Configures the password used to authenticate the connection to the remote device}
+    enablePassword: ${12:# Configures the password used to enter Global Configuration command mode on the switch}
+    deviceType: ${13:# This specifies the type of device where the method is executed}
+  tags:
+    - community
+    - network
+    - cnos_image]]></content>
+  <tabTrigger>community.network.cnos_image</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Perform firmware upgrade/download from a remote server on devices running Lenovo CNOS</description>
+</snippet>

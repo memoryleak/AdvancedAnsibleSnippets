@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and delete a DigitalOcean database}
+  community.digitalocean.digital_ocean_database:
+    state: ${2:# Indicates the desired state of the target}
+    id: ${3:# A unique ID that can be used to identify and reference a database cluster}
+    name: ${4:# A unique, human-readable name for the database cluster}
+    engine: ${5:# A slug representing the database engine used for the cluster}
+    version: ${6:# A string representing the version of the database engine in use for the cluster}
+    size: ${7:# The slug identifier representing the size of the nodes in the database cluster}
+    region: ${8:# The slug identifier for the region where the database cluster is located}
+    num_nodes: ${9:# The number of nodes in the database cluster}
+    tags: ${10:# An array of tags that have been applied to the database cluster}
+    private_network_uuid: ${11:# A string specifying the UUID of the VPC to which the database cluster is assigned}
+    wait: ${12:# Wait for the database to be online before returning}
+    wait_timeout: ${13:# How long before wait gives up, in seconds, when creating a database}
+    project_name: ${14:# Project to assign the resource to (project name, not UUID)}
+    baseurl: ${15:# DigitalOcean API base url}
+    oauth_token: ${16:# DigitalOcean OAuth token}
+    timeout: ${17:# The timeout in seconds used for polling DigitalOcean's API}
+    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
+  tags:
+    - community
+    - digitalocean
+    - digital_ocean_database]]></content>
+  <tabTrigger>community.digitalocean.digital_ocean_database</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and delete a DigitalOcean database</description>
+</snippet>

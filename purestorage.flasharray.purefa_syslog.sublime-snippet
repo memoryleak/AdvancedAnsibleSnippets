@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Pure Storage FlashArray syslog settings}
+  purestorage.flasharray.purefa_syslog:
+    state: ${2:# Create or delete syslog servers configuration}
+    protocol: ${3:# Protocol which server uses}
+    port: ${4:# Port at which the server is listening}
+    address: ${5:# Syslog server address}
+    name: ${6:# A user-specified name}
+    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
+    api_token: ${8:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_syslog]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_syslog</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Pure Storage FlashArray syslog settings</description>
+</snippet>

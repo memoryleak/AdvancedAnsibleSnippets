@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create logical disk}
+  inspur.ispim.add_ldisk:
+    info: ${2:# Show controller and physical drive info}
+    ctrl_id: ${3:# Raid controller ID}
+    level: ${4:# RAID Level, 0 - RAID0, 1 - RAID1, 5 - RAID5, 6 - RAID6, 10 - RAID10}
+    size: ${5:# Strip Size, 1 - 64k, 2 - 128k, 3 - 256k, 4 - 512k, 5 - 1024k}
+    access: ${6:# Access Policy, 1 - Read Write, 2 - Read Only, 3 - Blocked}
+    r: ${7:# Read Policy, 1 - Read Ahead, 2 - No Read Ahead}
+    w: ${8:# Write Policy, 1 - Write Throgh, 2 - Write Back, 3 - Write caching ok if bad BBU}
+    io: ${9:# IO Policy, 1 - Direct IO, 2 - Cached IO}
+    cache: ${10:# Drive Cache, 1 - Unchanged, 2 - Enabled,3 - Disabled}
+    init: ${11:# Init State, 1 - No Init, 2 - Quick Init, 3 - Full Init}
+    select: ${12:# Select Size, from 1 to 100}
+    slot: ${13:# Slot Num,input multiple slotNumber like 0,1,2}
+    accelerator: ${14:# Driver accelerator, 1 - 1h, 2 - 2h, 3 - 3h}
+    vname: ${15:# Virtual drive name}
+    provider: ${16:# A dict object containing connection details}
+    host: ${17:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${18:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${19:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - ispim
+    - add_ldisk]]></content>
+  <tabTrigger>inspur.ispim.add_ldisk</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create logical disk</description>
+</snippet>

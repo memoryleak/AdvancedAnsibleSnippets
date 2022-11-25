@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage switch configuration using templates on devices running Lenovo CNOS}
+  community.network.cnos_template:
+    commandfile: ${2:# This specifies the path to the CNOS command file which needs to be applied}
+    outputfile: ${3:# This specifies the file path where the output of each command execution is saved}
+    host: ${4:# This is the variable used to search the hosts file at /etc/ansible/hosts and identify the IP address of the device on which the template is going to be applied}
+    username: ${5:# Configures the username used to authenticate the connection to the remote device}
+    password: ${6:# Configures the password used to authenticate the connection to the remote device}
+    enablePassword: ${7:# Configures the password used to enter Global Configuration command mode on the switch}
+    deviceType: ${8:# This specifies the type of device where the method is executed}
+  tags:
+    - community
+    - network
+    - cnos_template]]></content>
+  <tabTrigger>community.network.cnos_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage switch configuration using templates on devices running Lenovo CNOS</description>
+</snippet>

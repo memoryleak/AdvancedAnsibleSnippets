@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages pools on IBM Spectrum Virtualize family storage systems}
+  ibm.spectrum_virtualize.ibm_svc_mdiskgrp:
+    name: ${2:# Specifies the name to assign to the new pool}
+    state: ${3:# Creates (C(present)) or removes (C(absent)) an MDisk group}
+    clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${5:# Domain for the Spectrum Virtualize storage system}
+    username: ${6:# REST API username for the Spectrum Virtualize storage system}
+    password: ${7:# REST API password for the Spectrum Virtualize storage system}
+    token: ${8:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    datareduction: ${9:# Defines use of data reduction pools (DRPs) on the MDisk group}
+    easytier: ${10:# Defines use of easytier with the MDisk group}
+    encrypt: ${11:# Defines use of encryption with the MDisk group}
+    ext: ${12:# Specifies the size of the extents for this group in MB}
+    log_path: ${13:# Path of debug log file}
+    validate_certs: ${14:# Validates certification}
+    parentmdiskgrp: ${15:# Parentmdiskgrp for subpool}
+    safeguarded: ${16:# Specify to create a safeguarded child pool}
+    noquota: ${17:# Specify to create a data reduction child pool}
+    unit: ${18:# Unit for subpool}
+    provisioningpolicy: ${19:# Specify the name of the provisioning policy to map it with the pool}
+    noprovisioningpolicy: ${20:# Specify to unmap provisioning policy from the pool}
+    replicationpoollinkuid: ${21:# Specifies the replication pool unique identifier which should be same as the pool that present in the replication server}
+    resetreplicationpoollinkuid: ${22:# If set, any links between this pool on local system and pools on remote systems will be removed}
+    replication_partner_clusterid: ${23:# Specifies the id or name of the partner cluster which will be used for replication}
+    size: ${24:# Specifies the child pool capacity}
+  tags:
+    - ibm
+    - spectrum_virtualize
+    - ibm_svc_mdiskgrp]]></content>
+  <tabTrigger>ibm.spectrum_virtualize.ibm_svc_mdiskgrp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages pools on IBM Spectrum Virtualize family storage systems</description>
+</snippet>

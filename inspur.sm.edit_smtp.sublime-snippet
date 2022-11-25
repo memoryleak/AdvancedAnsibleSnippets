@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set SMTP information}
+  inspur.sm.edit_smtp:
+    interface: ${2:# LAN Channel,eth0 is shared,eth1 is dedicated}
+    email: ${3:# Sender email}
+    primary_status: ${4:# Primary SMTP Support}
+    primary_ip: ${5:# Primary SMTP server IP}
+    primary_name: ${6:# Primary SMTP server name}
+    primary_port: ${7:# Primary SMTP server port,The Identification for retry count configuration(1-65535)}
+    primary_auth: ${8:# Primary SMTP server authentication}
+    primary_username: ${9:# Primary SMTP server Username,lenth be 4 to 64 bits,}
+    primary_password: ${10:# Primary SMTP server Password,lenth be 4 to 64 bits,cannot contain ' '(space)}
+    secondary_status: ${11:# Secondary SMTP Support}
+    secondary_ip: ${12:# Secondary SMTP server IP}
+    secondary_name: ${13:# Secondary SMTP server name}
+    secondary_port: ${14:# Secondary SMTP server port,The Identification for retry count configuration(1-65535)}
+    secondary_auth: ${15:# S}
+    secondary_username: ${16:# Secondary SMTP server Username,lenth be 4 to 64 bits,}
+    secondary_password: ${17:# Secondary SMTP server Password,lenth be 4 to 64 bits,cannot contain ' '(space)}
+    provider: ${18:# A dict object containing connection details}
+    host: ${19:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${20:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${21:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - sm
+    - edit_smtp]]></content>
+  <tabTrigger>inspur.sm.edit_smtp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set SMTP information</description>
+</snippet>

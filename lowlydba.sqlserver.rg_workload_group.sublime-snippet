@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures a workload group for use by the Resource Governor}
+  lowlydba.sqlserver.rg_workload_group:
+    workload_group: ${2:# Name of the target workload group}
+    resource_pool: ${3:# Name of the resource pool for the workload group}
+    resource_pool_type: ${4:# Specify the type of resource pool}
+    group_max_requests: ${5:# Specifies the maximum number of simultaneous requests that are allowed to execute in the workload group}
+    importance: ${6:# Specifies the relative importance of a request in the workload group}
+    max_dop: ${7:# Specifies the maximum degree of parallelism (MAXDOP) for parallel query execution}
+    request_max_cpu_time: ${8:# Specifies the maximum amount of CPU time, in seconds, that a request can use}
+    request_max_mem_grant_perc: ${9:# Specifies the maximum amount of memory that a single request can take from the pool}
+    request_mem_grant_timeout_sec: ${10:# Specifies the maximum time, in seconds, that a query can wait for a memory grant (work buffer memory) to become available}
+    sql_instance: ${11:# The SQL Server instance to modify}
+    sql_username: ${12:# Username for SQL Authentication}
+    sql_password: ${13:# Password for SQL Authentication}
+    state: ${14:# Whether or not the object should be C(present) or C(absent)}
+  tags:
+    - lowlydba
+    - sqlserver
+    - rg_workload_group]]></content>
+  <tabTrigger>lowlydba.sqlserver.rg_workload_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures a workload group for use by the Resource Governor</description>
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sensu silences}
+  sensu.sensu_go.silence:
+    subscription: ${2:# The name of the subscription the entry should match}
+    check: ${3:# The name of the check the entry should match}
+    begin: ${4:# UNIX time at which silence entry goes into effect}
+    expire: ${5:# Number of seconds until the silence expires}
+    expire_on_resolve: ${6:# If the entry should be deleted when a check begins return OK status (resolves)}
+    reason: ${7:# Reason for silencing}
+    auth: ${8:# Authentication parameters}
+    namespace: ${9:# RBAC namespace to operate in}
+    state: ${10:# Target state of the Sensu object}
+    labels: ${11:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
+    annotations: ${12:# Custom metadata fields with fewer restrictions, as key/value pairs}
+  tags:
+    - sensu
+    - sensu_go
+    - silence]]></content>
+  <tabTrigger>sensu.sensu_go.silence</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sensu silences</description>
+</snippet>

@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/delete a project in Packet host}
+  community.general.packet_project:
+    state: ${2:# Indicate desired state of the target}
+    payment_method: ${3:# Payment method is name of one of the payment methods available to your user}
+    auth_token: ${4:# Packet api token}
+    name: ${5:# Name for/of the project}
+    org_id: ${6:# UUID of the organization to create a project for}
+    id: ${7:# UUID of the project which you want to remove}
+    custom_data: ${8:# Custom data about the project to create}
+  tags:
+    - community
+    - general
+    - packet_project]]></content>
+  <tabTrigger>community.general.packet_project</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/delete a project in Packet host</description>
+</snippet>

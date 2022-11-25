@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Tests reachability using ping from devices running Juniper JUNOS}
+  junipernetworks.junos.junos_ping:
+    dest: ${2:# The IP Address or hostname (resolvable by the device) of the remote node}
+    df_bit: ${3:# Determines whether to set the DF bit}
+    rapid: ${4:# Determines whether to send the packets rapidly}
+    count: ${5:# Number of packets to send to check reachability}
+    source: ${6:# The IP Address to use while sending the ping packet(s)}
+    interface: ${7:# The source interface to use while sending the ping packet(s)}
+    ttl: ${8:# The time-to-live value for the ICMP packet(s)}
+    size: ${9:# Determines the size (in bytes) of the ping packet(s)}
+    interval: ${10:# Determines the interval (in seconds) between consecutive pings}
+    state: ${11:# Determines if the expected result is success or fail}
+  tags:
+    - junipernetworks
+    - junos
+    - junos_ping]]></content>
+  <tabTrigger>junipernetworks.junos.junos_ping</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Tests reachability using ping from devices running Juniper JUNOS</description>
+</snippet>

@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages VRRP interfaces on HUAWEI CloudEngine devices}
+  community.network.ce_vrrp:
+    interface: ${2:# Name of an interface}
+    vrid: ${3:# VRRP backup group ID}
+    virtual_ip: ${4:# Virtual IP address}
+    vrrp_type: ${5:# Type of a VRRP backup group}
+    admin_ignore_if_down: ${6:# mVRRP ignores an interface Down event}
+    admin_vrid: ${7:# Tracked mVRRP ID}
+    admin_interface: ${8:# Tracked mVRRP interface name}
+    admin_flowdown: ${9:# Disable the flowdown function for service VRRP}
+    priority: ${10:# Configured VRRP priority}
+    version: ${11:# VRRP version}
+    advertise_interval: ${12:# Configured interval between sending advertisements, in milliseconds}
+    preempt_timer_delay: ${13:# Preemption delay}
+    gratuitous_arp_interval: ${14:# Interval at which gratuitous ARP packets are sent, in seconds}
+    recover_delay: ${15:# Delay in recovering after an interface goes Up}
+    holding_multiplier: ${16:# The configured holdMultiplier}
+    auth_mode: ${17:# Authentication type used for VRRP packet exchanges between virtual routers}
+    is_plain: ${18:# Select the display mode of an authentication key}
+    auth_key: ${19:# This object is set based on the authentication type}
+    fast_resume: ${20:# mVRRP's fast resume mode}
+    state: ${21:# Specify desired state of the resource}
+  tags:
+    - community
+    - network
+    - ce_vrrp]]></content>
+  <tabTrigger>community.network.ce_vrrp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages VRRP interfaces on HUAWEI CloudEngine devices</description>
+</snippet>

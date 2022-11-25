@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage a target in a target group}
+  community.aws.elb_target:
+    deregister_unused: ${2:# The default behaviour for targets that are unused is to leave them registered}
+    target_az: ${3:# An Availability Zone or C(all)}
+    target_group_arn: ${4:# The Amazon Resource Name (ARN) of the target group}
+    target_group_name: ${5:# The name of the target group}
+    target_id: ${6:# The ID of the target}
+    target_port: ${7:# The port on which the target is listening}
+    target_status: ${8:# Blocks and waits for the target status to equal given value}
+    target_status_timeout: ${9:# Maximum time in seconds to wait for I(target_status) change}
+    state: ${10:# Register or deregister the target}
+    access_key: ${11:# AWS access key ID}
+    secret_key: ${12:# AWS secret access key}
+    session_token: ${13:# AWS STS session token for use with temporary credentials}
+    profile: ${14:# A named AWS profile to use for authentication}
+    endpoint_url: ${15:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${16:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${18:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${19:# Use a C(botocore}
+    region: ${20:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - elb_target]]></content>
+  <tabTrigger>community.aws.elb_target</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage a target in a target group</description>
+</snippet>

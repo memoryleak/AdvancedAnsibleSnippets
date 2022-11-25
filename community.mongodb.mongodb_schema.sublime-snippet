@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages MongoDB Document Schema Validators}
+  community.mongodb.mongodb_schema:
+    db: ${2:# The database to work with}
+    collection: ${3:# The collection to work with}
+    required: ${4:# List of fields that are required}
+    properties: ${5:# Individual property specification}
+    action: ${6:# The validation action for MongoDB to perform when handling invalid documents}
+    level: ${7:# The validation level MongoDB should apply when updating existing documents}
+    replica_set: ${8:# Replicaset name}
+    state: ${9:# The state of the validator}
+    debug: ${10:# Enable additional debugging output}
+    login_user: ${11:# The MongoDB user to login with}
+    login_password: ${12:# The password used to authenticate with}
+    login_database: ${13:# The database where login credentials are stored}
+    login_host: ${14:# The host running MongoDB instance to login to}
+    login_port: ${15:# The MongoDB server port to login to}
+    strict_compatibility: ${16:# Enforce strict requirements for pymongo and MongoDB software versions}
+    ssl: ${17:# Whether to use an SSL connection when connecting to the database}
+    ssl_cert_reqs: ${18:# Specifies whether a certificate is required from the other side of the connection, and whether it will be validated if provided}
+    ssl_ca_certs: ${19:# The ssl_ca_certs option takes a path to a CA file}
+    ssl_crlfile: ${20:# The ssl_crlfile option takes a path to a CRL file}
+    ssl_certfile: ${21:# Present a client certificate using the ssl_certfile option}
+    ssl_keyfile: ${22:# Private key for the client certificate}
+    ssl_pem_passphrase: ${23:# Passphrase to decrypt encrypted private keys}
+    auth_mechanism: ${24:# Authentication type}
+    connection_options: ${25:# Additional connection options}
+  tags:
+    - community
+    - mongodb
+    - mongodb_schema]]></content>
+  <tabTrigger>community.mongodb.mongodb_schema</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages MongoDB Document Schema Validators</description>
+</snippet>

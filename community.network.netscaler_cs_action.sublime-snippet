@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage content switching actions}
+  community.network.netscaler_cs_action:
+    name: ${2:# Name for the content switching action}
+    targetlbvserver: ${3:# Name of the load balancing virtual server to which the content is switched}
+    targetvserver: ${4:# Name of the VPN virtual server to which the content is switched}
+    targetvserverexpr: ${5:# Information about this content switching action}
+    comment: ${6:# Comments associated with this cs action}
+    nsip: ${7:# The ip address of the netscaler appliance where the nitro API calls will be made}
+    nitro_user: ${8:# The username with which to authenticate to the netscaler node}
+    nitro_pass: ${9:# The password with which to authenticate to the netscaler node}
+    nitro_protocol: ${10:# Which protocol to use when accessing the nitro API objects}
+    validate_certs: ${11:# If C(no), SSL certificates will not be validated}
+    nitro_timeout: ${12:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
+    state: ${13:# The state of the resource being configured by the module on the netscaler node}
+    save_config: ${14:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+  tags:
+    - community
+    - network
+    - netscaler_cs_action]]></content>
+  <tabTrigger>community.network.netscaler_cs_action</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage content switching actions</description>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage high availability (HA) group configuration on StorageGRID}
+  netapp.storagegrid.na_sg_grid_ha_group:
+    state: ${2:# Whether the specified HA Group should exist}
+    name: ${3:# Name of the HA Group}
+    ha_group_id: ${4:# HA Group ID}
+    description: ${5:# Description of the HA Group}
+    gateway_cidr: ${6:# CIDR for the gateway IP and VIP subnet}
+    virtual_ips: ${7:# A list of virtual IP addresses}
+    interfaces: ${8:# A set of StorageGRID node interface pairs}
+    auth_token: ${9:# The authorization token for the API request}
+    api_url: ${10:# The url to the StorageGRID Admin Node REST API}
+    validate_certs: ${11:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_ha_group]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_ha_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage high availability (HA) group configuration on StorageGRID</description>
+</snippet>

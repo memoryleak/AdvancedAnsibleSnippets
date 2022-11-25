@@ -1,0 +1,44 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Expose a Service as an OpenShift Route}
+  community.okd.openshift_route:
+    service: ${2:# The name of the service to expose}
+    namespace: ${3:# The namespace of the resource being targeted}
+    labels: ${4:# Specify the labels to apply to the created Route}
+    annotations: ${5:# Specify the Route Annotations}
+    name: ${6:# The desired name of the Route to be created}
+    hostname: ${7:# The hostname for the Route}
+    path: ${8:# The path for the Route}
+    wildcard_policy: ${9:# The wildcard policy for the hostname}
+    port: ${10:# Name or number of the port the Route will route traffic to}
+    tls: ${11:# TLS configuration for the newly created route}
+    termination: ${12:# The termination type of the Route}
+    host: ${13:# Provide a URL for accessing the API}
+    api_key: ${14:# Token used to authenticate with the API}
+    kubeconfig: ${15:# Path to an existing Kubernetes config file}
+    context: ${16:# The name of a context found in the config file}
+    username: ${17:# Provide a username for authenticating with the API}
+    password: ${18:# Provide a password for authenticating with the API}
+    client_cert: ${19:# Path to a certificate used to authenticate with the API}
+    client_key: ${20:# Path to a key file used to authenticate with the API}
+    ca_cert: ${21:# Path to a CA certificate used to authenticate with the API}
+    validate_certs: ${22:# Whether or not to verify the API server's SSL certificates}
+    proxy: ${23:# The URL of an HTTP proxy to use for the connection}
+    no_proxy: ${24:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
+    proxy_headers: ${25:# The Header used for the HTTP proxy}
+    persist_config: ${26:# Whether or not to save the kube config refresh tokens}
+    impersonate_user: ${27:# Username to impersonate for the operation}
+    impersonate_groups: ${28:# Group(s) to impersonate for the operation}
+    wait: ${29:# Whether to wait for certain resource kinds to end up in the desired state}
+    wait_sleep: ${30:# Number of seconds to sleep between checks}
+    wait_timeout: ${31:# How long in seconds to wait for the resource to end up in the desired state}
+    wait_condition: ${32:# Specifies a custom condition on the status to wait for}
+    state: ${33:# Determines if an object should be created, patched, or deleted}
+    force: ${34:# If set to C(yes), and I(state) is C(present), an existing object will be replaced}
+  tags:
+    - community
+    - okd
+    - openshift_route]]></content>
+  <tabTrigger>community.okd.openshift_route</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Expose a Service as an OpenShift Route</description>
+</snippet>

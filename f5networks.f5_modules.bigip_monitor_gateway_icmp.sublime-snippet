@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages F5 BIG-IP LTM gateway ICMP monitors}
+  f5networks.f5_modules.bigip_monitor_gateway_icmp:
+    name: ${2:# Monitor name}
+    parent: ${3:# The parent template of this monitor template}
+    description: ${4:# The description of the monitor}
+    ip: ${5:# IP address part of the IP/port definition}
+    port: ${6:# Port address part of the IP/port definition}
+    interval: ${7:# Specifies, in seconds, the frequency at which the system issues the monitor check when either the resource is down or the status of the resource is unknown}
+    timeout: ${8:# Specifies the number of seconds the target has in which to respond to the monitor request}
+    time_until_up: ${9:# Specifies the number of seconds to wait after a resource first responds correctly to the monitor before setting the resource to 'up'}
+    up_interval: ${10:# Specifies the interval for the system to use to perform the health check when a resource is up}
+    manual_resume: ${11:# Specifies whether the system automatically changes the status of a resource to B(enabled) at the next successful monitor check}
+    adaptive: ${12:# Specifies whether adaptive response time monitoring is enabled for this monitor}
+    allowed_divergence_type: ${13:# When specifying a new monitor, if C(adaptive) is C(yes), the default is C(relative)}
+    allowed_divergence_value: ${14:# When specifying a new monitor, if C(adaptive) is C(yes), and C(type) is C(relative), the default is C(25) percent}
+    adaptive_limit: ${15:# Specifies the absolute number of milliseconds that may not be exceeded by a monitor probe, regardless of C(allowed_divergence) setting, for a probe to be considered successful}
+    sampling_timespan: ${16:# Specifies the length, in seconds, of the probe history window that the system uses to calculate the mean latency and standard deviation of a monitor probe}
+    transparent: ${17:# Specifies whether the monitor operates in transparent mode}
+    partition: ${18:# Device partition to manage resources on}
+    state: ${19:# When C(present), ensures that the monitor exists}
+    provider: ${20:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_monitor_gateway_icmp]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_monitor_gateway_icmp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages F5 BIG-IP LTM gateway ICMP monitors</description>
+</snippet>

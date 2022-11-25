@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/update/delete Zabbix users}
+  community.zabbix.zabbix_user:
+    username: ${2:# Name of the user alias in Zabbix}
+    name: ${3:# Name of the user}
+    surname: ${4:# Surname of the user}
+    usrgrps: ${5:# User groups to add the user to}
+    passwd: ${6:# User's password}
+    override_passwd: ${7:# Override password for the user}
+    lang: ${8:# Language code of the user's language}
+    theme: ${9:# User's theme}
+    autologin: ${10:# Whether to enable auto-login}
+    autologout: ${11:# User session life time in seconds}
+    refresh: ${12:# Automatic refresh period in seconds}
+    rows_per_page: ${13:# Amount of object rows to show per page}
+    after_login_url: ${14:# URL of the page to redirect the user to after logging in}
+    user_medias: ${15:# Set the user's media}
+    type: ${16:# Type of the user}
+    timezone: ${17:# User's time zone}
+    role_name: ${18:# User's role}
+    state: ${19:# State of the user}
+    server_url: ${20:# URL of Zabbix server, with protocol (http or https)}
+    login_user: ${21:# Zabbix user name}
+    login_password: ${22:# Zabbix user password}
+    http_login_user: ${23:# Basic Auth login}
+    http_login_password: ${24:# Basic Auth password}
+    timeout: ${25:# The timeout of API request (seconds)}
+    validate_certs: ${26:# If set to False, SSL certificates will not be validated}
+  tags:
+    - community
+    - zabbix
+    - zabbix_user]]></content>
+  <tabTrigger>community.zabbix.zabbix_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/update/delete Zabbix users</description>
+</snippet>

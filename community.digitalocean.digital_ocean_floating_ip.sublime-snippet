@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage DigitalOcean Floating IPs}
+  community.digitalocean.digital_ocean_floating_ip:
+    state: ${2:# Indicate desired state of the target}
+    ip: ${3:# Public IP address of the Floating IP}
+    region: ${4:# The region that the Floating IP is reserved to}
+    droplet_id: ${5:# The Droplet that the Floating IP has been assigned to}
+    oauth_token: ${6:# DigitalOcean OAuth token}
+    timeout: ${7:# Floating IP creation timeout}
+    validate_certs: ${8:# If set to C(no), the SSL certificates will not be validated}
+    project_name: ${9:# Project to assign the resource to (project name, not UUID)}
+  tags:
+    - community
+    - digitalocean
+    - digital_ocean_floating_ip]]></content>
+  <tabTrigger>community.digitalocean.digital_ocean_floating_ip</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage DigitalOcean Floating IPs</description>
+</snippet>

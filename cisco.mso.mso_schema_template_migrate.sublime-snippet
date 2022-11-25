@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Migrate Bridge Domains (BDs) and EPGs between templates}
+  cisco.mso.mso_schema_template_migrate:
+    schema: ${2:# The name of the schema}
+    template: ${3:# The name of the template}
+    bds: ${4:# The name of the BDs to migrate}
+    epgs: ${5:# The name of the EPGs and the ANP it is in to migrate}
+    target_schema: ${6:# The name of the target_schema}
+    target_template: ${7:# The name of the target_template}
+    state: ${8:# Use C(present) for adding}
+    host: ${9:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    port: ${10:# Port number to be used for the REST connection}
+    username: ${11:# The username to use for authentication}
+    password: ${12:# The password to use for authentication}
+    output_level: ${13:# Influence the output of this MSO module}
+    timeout: ${14:# The socket level timeout in seconds}
+    use_proxy: ${15:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${16:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    validate_certs: ${17:# If C(no), SSL certificates will not be validated}
+    login_domain: ${18:# The login domain name to use for authentication}
+  tags:
+    - cisco
+    - mso
+    - mso_schema_template_migrate]]></content>
+  <tabTrigger>cisco.mso.mso_schema_template_migrate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Migrate Bridge Domains (BDs) and EPGs between templates</description>
+</snippet>

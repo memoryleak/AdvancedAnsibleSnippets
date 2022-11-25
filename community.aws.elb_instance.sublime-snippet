@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:De-registers or registers instances from EC2 ELBs}
+  community.aws.elb_instance:
+    state: ${2:# Register or deregister the instance}
+    instance_id: ${3:# EC2 Instance ID}
+    ec2_elbs: ${4:# List of ELB names}
+    enable_availability_zone: ${5:# Whether to enable the availability zone of the instance on the target ELB if the availability zone has not already been enabled}
+    wait: ${6:# Wait for instance registration or deregistration to complete successfully before returning}
+    wait_timeout: ${7:# Number of seconds to wait for an instance to change state}
+    access_key: ${8:# AWS access key ID}
+    secret_key: ${9:# AWS secret access key}
+    session_token: ${10:# AWS STS session token for use with temporary credentials}
+    profile: ${11:# A named AWS profile to use for authentication}
+    endpoint_url: ${12:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${13:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${14:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${15:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${16:# Use a C(botocore}
+    region: ${17:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - elb_instance]]></content>
+  <tabTrigger>community.aws.elb_instance</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>De-registers or registers instances from EC2 ELBs</description>
+</snippet>

@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure IoT hub}
+  azure.azcollection.azure_rm_iothub:
+    resource_group: ${2:# Name of resource group}
+    name: ${3:# Name of the IoT hub}
+    state: ${4:# State of the IoT hub}
+    location: ${5:# Location of the IoT hub}
+    sku: ${6:# Pricing tier for Azure IoT Hub}
+    unit: ${7:# Units in your IoT Hub}
+    event_endpoint: ${8:# The Event Hub-compatible endpoint property}
+    enable_file_upload_notifications: ${9:# File upload notifications are enabled if set to C(True)}
+    ip_filters: ${10:# Configure rules for rejecting or accepting traffic from specific IPv4 addresses}
+    routing_endpoints: ${11:# Custom endpoints}
+    routes: ${12:# Route device-to-cloud messages to service-facing endpoints}
+    ad_user: ${13:# Active Directory username}
+    password: ${14:# Active Directory user password}
+    profile: ${15:# Security profile found in ~/}
+    subscription_id: ${16:# Your Azure subscription Id}
+    client_id: ${17:# Azure client ID}
+    secret: ${18:# Azure client secret}
+    tenant: ${19:# Azure tenant ID}
+    cloud_environment: ${20:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${21:# Azure AD authority url}
+    cert_validation_mode: ${22:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${23:# Controls the source of the credentials to use for authentication}
+    api_profile: ${24:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${25:# Parent argument}
+    log_mode: ${26:# Parent argument}
+    x509_certificate_path: ${27:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${28:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${29:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${30:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_iothub]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_iothub</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure IoT hub</description>
+</snippet>

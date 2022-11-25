@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Elastic Kubernetes Service (EKS) Clusters}
+  community.aws.eks_cluster:
+    name: ${2:# Name of the EKS cluster}
+    version: ${3:# Kubernetes version}
+    role_arn: ${4:# ARN of IAM role used by the EKS cluster}
+    subnets: ${5:# List of subnet IDs for the Kubernetes cluster}
+    security_groups: ${6:# List of security group names or IDs}
+    state: ${7:# Desired state of the EKS cluster}
+    wait: ${8:# Specifies whether the module waits until the cluster is active or deleted before moving on}
+    wait_timeout: ${9:# The duration in seconds to wait for the cluster to become active}
+    access_key: ${10:# AWS access key ID}
+    secret_key: ${11:# AWS secret access key}
+    session_token: ${12:# AWS STS session token for use with temporary credentials}
+    profile: ${13:# A named AWS profile to use for authentication}
+    endpoint_url: ${14:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${15:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${17:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${18:# Use a C(botocore}
+    region: ${19:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - eks_cluster]]></content>
+  <tabTrigger>community.aws.eks_cluster</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Elastic Kubernetes Service (EKS) Clusters</description>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp StorageGRID manage external DNS servers for the grid}
+  netapp.storagegrid.na_sg_grid_dns:
+    state: ${2:# Whether the specified DNS address should exist or not}
+    dns_servers: ${3:# List of comma separated DNS Addresses to be updated or delete}
+    auth_token: ${4:# The authorization token for the API request}
+    api_url: ${5:# The url to the StorageGRID Admin Node REST API}
+    validate_certs: ${6:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_dns]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_dns</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp StorageGRID manage external DNS servers for the grid</description>
+</snippet>

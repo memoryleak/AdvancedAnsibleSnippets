@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Check or wait for migrations between nodes}
+  community.general.aerospike_migrations:
+    host: ${2:# Which host do we use as seed for info connection}
+    port: ${3:# Which port to connect to Aerospike on (service port)}
+    connect_timeout: ${4:# How long to try to connect before giving up (milliseconds)}
+    consecutive_good_checks: ${5:# How many times should the cluster report 'no migrations' consecutively before returning OK back to ansible?}
+    sleep_between_checks: ${6:# How long to sleep between each check (seconds)}
+    tries_limit: ${7:# How many times do we poll before giving up and failing?}
+    local_only: ${8:# Do you wish to only check for migrations on the local node before returning, or do you want all nodes in the cluster to finish before returning?}
+    min_cluster_size: ${9:# Check will return bad until cluster size is met or until tries is exhausted}
+    fail_on_cluster_change: ${10:# Fail if the cluster key changes if something else is changing the cluster, we may want to fail}
+    migrate_tx_key: ${11:# The metric key used to determine if we have tx migrations remaining}
+    migrate_rx_key: ${12:# The metric key used to determine if we have rx migrations remaining}
+    target_cluster_size: ${13:# When all aerospike builds in the cluster are greater than version 4}
+  tags:
+    - community
+    - general
+    - aerospike_migrations]]></content>
+  <tabTrigger>community.general.aerospike_migrations</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Check or wait for migrations between nodes</description>
+</snippet>

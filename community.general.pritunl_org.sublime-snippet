@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages Pritunl Organizations using the Pritunl API}
+  community.general.pritunl_org:
+    name: ${2:# The name of the organization to manage in Pritunl}
+    force: ${3:# If I(force) is C(true) and I(state) is C(absent), the module will delete the organization, no matter if it contains users or not}
+    state: ${4:# If C(present), the module adds organization I(name) to Pritunl}
+    pritunl_url: ${5:# URL and port of the Pritunl server on which the API is enabled}
+    pritunl_api_token: ${6:# API Token of a Pritunl admin user}
+    pritunl_api_secret: ${7:# API Secret found in Administrators > USERNAME > API Secret}
+    validate_certs: ${8:# If certificates should be validated or not}
+  tags:
+    - community
+    - general
+    - pritunl_org]]></content>
+  <tabTrigger>community.general.pritunl_org</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages Pritunl Organizations using the Pritunl API</description>
+</snippet>

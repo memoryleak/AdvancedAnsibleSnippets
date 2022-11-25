@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series manage iSCSI interface configuration}
+  netapp_eseries.santricity.na_santricity_iscsi_interface:
+    controller: ${2:# The controller that owns the port you want to configure}
+    port: ${3:# The controller iSCSI HIC port to modify}
+    state: ${4:# When enabled, the provided configuration will be utilized}
+    address: ${5:# The IPv4 address to assign to the interface}
+    subnet_mask: ${6:# The subnet mask to utilize for the interface}
+    gateway: ${7:# The IPv4 gateway address to utilize for the interface}
+    config_method: ${8:# The configuration method type to use for this interface}
+    mtu: ${9:# The maximum transmission units (MTU), in bytes}
+    api_username: ${10:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_password: ${11:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${12:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    validate_certs: ${13:# Should https certificates be validated?}
+    ssid: ${14:# The ID of the array to manage}
+  tags:
+    - netapp_eseries
+    - santricity
+    - na_santricity_iscsi_interface]]></content>
+  <tabTrigger>netapp_eseries.santricity.na_santricity_iscsi_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series manage iSCSI interface configuration</description>
+</snippet>

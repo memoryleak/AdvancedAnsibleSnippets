@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, destroy, start, stop, and reboot a 1&1 Host server}
+  community.general.oneandone_server:
+    state: ${2:# Define a server's state to create, remove, start or stop it}
+    auth_token: ${3:# Authenticating API token provided by 1&1}
+    api_url: ${4:# Custom API URL}
+    datacenter: ${5:# The datacenter location}
+    hostname: ${6:# The hostname or ID of the server}
+    description: ${7:# The description of the server}
+    appliance: ${8:# The operating system name or ID for the server}
+    fixed_instance_size: ${9:# The instance size name or ID of the server}
+    vcore: ${10:# The total number of processors}
+    cores_per_processor: ${11:# The number of cores per processor}
+    ram: ${12:# The amount of RAM memory}
+    hdds: ${13:# A list of hard disks with nested 'size' and 'is_main' properties}
+    private_network: ${14:# The private network name or ID}
+    firewall_policy: ${15:# The firewall policy name or ID}
+    load_balancer: ${16:# The load balancer name or ID}
+    monitoring_policy: ${17:# The monitoring policy name or ID}
+    server: ${18:# Server identifier (ID or hostname)}
+    count: ${19:# The number of servers to create}
+    ssh_key: ${20:# User's public SSH key (contents, not path)}
+    server_type: ${21:# The type of server to be built}
+    wait: ${22:# Wait for the server to be in state 'running' before returning}
+    wait_timeout: ${23:# how long before wait gives up, in seconds}
+    wait_interval: ${24:# Defines the number of seconds to wait when using the wait_for methods}
+    auto_increment: ${25:# When creating multiple servers at once, whether to differentiate hostnames by appending a count after them or substituting the count where there is a %02d or %03d in the hostname string}
+  tags:
+    - community
+    - general
+    - oneandone_server]]></content>
+  <tabTrigger>community.general.oneandone_server</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, destroy, start, stop, and reboot a 1&1 Host server</description>
+</snippet>

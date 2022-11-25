@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sensu mutators}
+  sensu.sensu_go.mutator:
+    command: ${2:# The mutator command to be executed by the Sensu backend}
+    timeout: ${3:# The mutator execution duration timeout in seconds (hard stop)}
+    env_vars: ${4:# A mapping of environment variable names and values to use with command execution}
+    runtime_assets: ${5:# List of runtime assets, required to run the mutator I(command)}
+    auth: ${6:# Authentication parameters}
+    name: ${7:# The Sensu resource's name}
+    namespace: ${8:# RBAC namespace to operate in}
+    state: ${9:# Target state of the Sensu object}
+    labels: ${10:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
+    annotations: ${11:# Custom metadata fields with fewer restrictions, as key/value pairs}
+    secrets: ${12:# List of secrets that are available to the command}
+  tags:
+    - sensu
+    - sensu_go
+    - mutator]]></content>
+  <tabTrigger>sensu.sensu_go.mutator</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sensu mutators</description>
+</snippet>

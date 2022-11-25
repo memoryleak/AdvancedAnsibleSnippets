@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FlashArray File System Exports}
+  purestorage.flasharray.purefa_export:
+    name: ${2:# Name of the export}
+    state: ${3:# Define whether the export should exist or not}
+    filesystem: ${4:# Name of the filesystem the export applies to}
+    directory: ${5:# Name of the managed directory in the file system the export applies to}
+    nfs_policy: ${6:# Name of NFS Policy to apply to the export}
+    smb_policy: ${7:# Name of SMB Policy to apply to the export}
+    fa_url: ${8:# FlashArray management IPv4 address or Hostname}
+    api_token: ${9:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_export]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_export</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FlashArray File System Exports</description>
+</snippet>

@@ -1,0 +1,52 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for Selfsigned Certificate Generate}
+  cisco.ise.selfsigned_certificate_generate:
+    admin: ${2:# Use certificate to authenticate the Cisco ISE Admin Portal}
+    allowExtendedValidity: ${3:# Allow generation of self-signed certificate with validity greater than 398 days}
+    allowPortalTagTransferForSameSubject: ${4:# Allow overwriting the portal tag from matching certificate of same subject}
+    allowReplacementOfCertificates: ${5:# Allow Replacement of certificates}
+    allowReplacementOfPortalGroupTag: ${6:# Allow Replacement of Portal Group Tag}
+    allowRoleTransferForSameSubject: ${7:# Allow transfer of roles for certificate with matching subject}
+    allowSanDnsBadName: ${8:# Allow usage of SAN DNS Bad name}
+    allowSanDnsNonResolvable: ${9:# Allow use of non resolvable Common Name or SAN Values}
+    allowWildCardCertificates: ${10:# Allow Wildcard Certificates}
+    certificatePolicies: ${11:# Certificate Policies}
+    digestType: ${12:# Digest to sign with}
+    eap: ${13:# Use certificate for EAP protocols that use SSL/TLS tunneling}
+    expirationTTL: ${14:# Certificate expiration value}
+    expirationTTLUnit: ${15:# Certificate expiration unit}
+    hostName: ${16:# Hostname of the Cisco ISE node in which self-signed certificate should be generated}
+    keyLength: ${17:# Bit size of public key}
+    keyType: ${18:# Algorithm to use for certificate public key creation}
+    name: ${19:# Friendly name of the certificate}
+    portal: ${20:# Use for portal}
+    portalGroupTag: ${21:# Set Group tag}
+    pxgrid: ${22:# Use certificate for the pxGrid Controller}
+    radius: ${23:# Use certificate for the RADSec server}
+    saml: ${24:# Use certificate for SAML Signing}
+    sanDNS: ${25:# Array of SAN (Subject Alternative Name) DNS entries}
+    sanIP: ${26:# Array of SAN IP entries}
+    sanURI: ${27:# Array of SAN URI entries}
+    subjectCity: ${28:# Certificate city or locality (L)}
+    subjectCommonName: ${29:# Certificate common name (CN)}
+    subjectCountry: ${30:# Certificate country (C)}
+    subjectOrg: ${31:# Certificate organization (O)}
+    subjectOrgUnit: ${32:# Certificate organizational unit (OU)}
+    subjectState: ${33:# Certificate state (ST)}
+    ise_hostname: ${34:# The Identity Services Engine hostname}
+    ise_username: ${35:# The Identity Services Engine username to authenticate}
+    ise_password: ${36:# The Identity Services Engine password to authenticate}
+    ise_verify: ${37:# Flag to enable or disable SSL certificate verification}
+    ise_version: ${38:# Informs the SDK which version of Identity Services Engine to use}
+    ise_wait_on_rate_limit: ${39:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
+    ise_debug: ${40:# Flag for Identity Services Engine SDK to enable debugging}
+    ise_uses_api_gateway: ${41:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
+    ise_uses_csrf_token: ${42:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+  tags:
+    - cisco
+    - ise
+    - selfsigned_certificate_generate]]></content>
+  <tabTrigger>cisco.ise.selfsigned_certificate_generate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for Selfsigned Certificate Generate</description>
+</snippet>

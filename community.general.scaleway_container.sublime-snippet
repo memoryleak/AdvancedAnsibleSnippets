@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Scaleway Container management}
+  community.general.scaleway_container:
+    state: ${2:# Indicate desired state of the container}
+    namespace_id: ${3:# Container namespace identifier}
+    region: ${4:# Scaleway region to use (for example C(fr-par))}
+    name: ${5:# Name of the container namespace}
+    description: ${6:# Description of the container namespace}
+    min_scale: ${7:# Minimum number of replicas for the container}
+    max_scale: ${8:# Maximum number of replicas for the container}
+    environment_variables: ${9:# Environment variables of the container namespace}
+    secret_environment_variables: ${10:# Secret environment variables of the container namespace}
+    memory_limit: ${11:# Resources define performance characteristics of your container}
+    container_timeout: ${12:# The length of time your handler can spend processing a request before being stopped}
+    privacy: ${13:# Privacy policies define whether a container can be executed anonymously}
+    registry_image: ${14:# The name of image used for the container}
+    max_concurrency: ${15:# Maximum number of connections per container}
+    protocol: ${16:# Communication protocol of the container}
+    port: ${17:# Listen port used to expose the container}
+    redeploy: ${18:# Redeploy the container if update is required}
+    api_token: ${19:# Scaleway OAuth token}
+    api_url: ${20:# Scaleway API URL}
+    api_timeout: ${21:# HTTP timeout to Scaleway API in seconds}
+    query_parameters: ${22:# List of parameters passed to the query string}
+    validate_certs: ${23:# Validate SSL certs of the Scaleway API}
+    wait: ${24:# Wait for the resource to reach its desired state before returning}
+    wait_timeout: ${25:# Time to wait for the resource to reach the expected state}
+    wait_sleep_time: ${26:# Time to wait before every attempt to check the state of the resource}
+  tags:
+    - community
+    - general
+    - scaleway_container]]></content>
+  <tabTrigger>community.general.scaleway_container</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Scaleway Container management</description>
+</snippet>

@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:manage AWS Network Firewall policies}
+  community.aws.networkfirewall_policy:
+    arn: ${2:# The ARN of the Network Firewall policy}
+    name: ${3:# The name of the Network Firewall policy}
+    state: ${4:# Create or remove the Network Firewall policy}
+    description: ${5:# A description for the Network Firewall policy}
+    stateful_rule_groups: ${6:# A list of names or ARNs of stateful firewall rule groups}
+    stateless_rule_groups: ${7:# A list of names or ARNs of stateless firewall rule groups}
+    stateless_default_actions: ${8:# Actions to take on a packet if it doesn't match any of the stateless rules in the policy}
+    stateless_fragment_default_actions: ${9:# Actions to take on a fragmented UDP packet if it doesn't match any of the stateless rules in the policy}
+    stateful_default_actions: ${10:# Actions to take on a packet if it doesn't match any of the stateful rules in the policy}
+    stateful_rule_order: ${11:# Indicates how to manage the order of stateful rule evaluation for the policy}
+    stateless_custom_actions: ${12:# A list of dictionaries defining custom actions which can be used in I(stateless_default_actions) and I(stateless_fragment_default_actions)}
+    purge_stateless_custom_actions: ${13:# If I(purge_stateless_custom_actions=true), existing custom actions will be purged from the resource to match exactly what is defined by the I(stateless_custom_actions) parameter}
+    wait: ${14:# Whether to wait for the firewall policy to reach the C(ACTIVE) or C(DELETED) state before the module returns}
+    wait_timeout: ${15:# Maximum time, in seconds, to wait for the firewall policy to reach the expected state}
+    access_key: ${16:# AWS access key ID}
+    secret_key: ${17:# AWS secret access key}
+    session_token: ${18:# AWS STS session token for use with temporary credentials}
+    profile: ${19:# A named AWS profile to use for authentication}
+    endpoint_url: ${20:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${21:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${22:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${23:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${24:# Use a C(botocore}
+    region: ${25:# The AWS region to use}
+    tags: ${26:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${27:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - community
+    - aws
+    - networkfirewall_policy]]></content>
+  <tabTrigger>community.aws.networkfirewall_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>manage AWS Network Firewall policies</description>
+</snippet>

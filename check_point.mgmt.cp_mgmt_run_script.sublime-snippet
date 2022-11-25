@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Executes the script on a given list of targets}
+  check_point.mgmt.cp_mgmt_run_script:
+    script_name: ${2:# Script name}
+    script: ${3:# Script body}
+    targets: ${4:# On what targets to execute this command}
+    args: ${5:# Script arguments}
+    comments: ${6:# Comments string}
+    wait_for_task: ${7:# Wait for the task to end}
+    wait_for_task_timeout: ${8:# How many minutes to wait until throwing a timeout error}
+    version: ${9:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_run_script]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_run_script</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Executes the script on a given list of targets</description>
+</snippet>

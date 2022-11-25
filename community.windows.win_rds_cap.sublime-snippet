@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Connection Authorization Policies (CAP) on a Remote Desktop Gateway server}
+  community.windows.win_rds_cap:
+    name: ${2:# Name of the connection authorization policy}
+    state: ${3:# The state of connection authorization policy}
+    auth_method: ${4:# Specifies how the RD Gateway server authenticates users}
+    order: ${5:# Evaluation order of the policy}
+    session_timeout: ${6:# The maximum time, in minutes, that a session can be idle}
+    session_timeout_action: ${7:# The action the server takes when a session times out}
+    idle_timeout: ${8:# Specifies the time interval, in minutes, after which an idle session is disconnected}
+    allow_only_sdrts_servers: ${9:# Specifies whether connections are allowed only to Remote Desktop Session Host servers that enforce Remote Desktop Gateway redirection policy}
+    user_groups: ${10:# A list of user groups that is allowed to connect to the Remote Gateway server}
+    computer_groups: ${11:# A list of computer groups that is allowed to connect to the Remote Gateway server}
+    redirect_clipboard: ${12:# Allow clipboard redirection}
+    redirect_drives: ${13:# Allow disk drive redirection}
+    redirect_printers: ${14:# Allow printers redirection}
+    redirect_serial: ${15:# Allow serial port redirection}
+    redirect_pnp: ${16:# Allow Plug and Play devices redirection}
+  tags:
+    - community
+    - windows
+    - win_rds_cap]]></content>
+  <tabTrigger>community.windows.win_rds_cap</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Connection Authorization Policies (CAP) on a Remote Desktop Gateway server</description>
+</snippet>

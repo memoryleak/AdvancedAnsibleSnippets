@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Windows firewall automation}
+  community.windows.win_firewall_rule:
+    enabled: ${2:# Whether this firewall rule is enabled or disabled}
+    state: ${3:# Should this rule be added or removed}
+    name: ${4:# The rule's display name}
+    group: ${5:# The group name for the rule}
+    direction: ${6:# Whether this rule is for inbound or outbound traffic}
+    action: ${7:# What to do with the items this rule is for}
+    description: ${8:# Description for the firewall rule}
+    localip: ${9:# The local ip address this rule applies to}
+    remoteip: ${10:# The remote ip address/range this rule applies to}
+    localport: ${11:# The local port this rule applies to}
+    remoteport: ${12:# The remote port this rule applies to}
+    program: ${13:# The program this rule applies to}
+    service: ${14:# The service this rule applies to}
+    protocol: ${15:# The protocol this rule applies to}
+    profiles: ${16:# The profile this rule applies to}
+    icmp_type_code: ${17:# The ICMP types and codes for the rule}
+  tags:
+    - community
+    - windows
+    - win_firewall_rule]]></content>
+  <tabTrigger>community.windows.win_firewall_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Windows firewall automation</description>
+</snippet>

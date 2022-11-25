@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage filesystemon Pure Storage FlashBlade`}
+  purestorage.flashblade.purefb_fs:
+    name: ${2:# Filesystem Name}
+    state: ${3:# Create, delete or modifies a filesystem}
+    eradicate: ${4:# Define whether to eradicate the filesystem on delete or leave in trash}
+    size: ${5:# Volume size in M, G, T or P units}
+    nfsv3: ${6:# Define whether to NFSv3 protocol is enabled for the filesystem}
+    nfsv4: ${7:# Define whether to NFSv4}
+    nfs_rules: ${8:# Define the NFS rules in operation}
+    smb: ${9:# Define whether to SMB protocol is enabled for the filesystem}
+    smb_aclmode: ${10:# Specify the ACL mode for the SMB protocol}
+    http: ${11:# Define whether to HTTP/HTTPS protocol is enabled for the filesystem}
+    snapshot: ${12:# Define whether a snapshot directory is enabled for the filesystem}
+    writable: ${13:# Define if a filesystem is writeable}
+    promote: ${14:# Promote/demote a filesystem}
+    fastremove: ${15:# Define whether the fast remove directory is enabled for the filesystem}
+    hard_limit: ${16:# Define whether the capacity for a filesystem is a hard limit}
+    user_quota: ${17:# Default quota in M, G, T or P units for a user under this file system}
+    group_quota: ${18:# Default quota in M, G, T or P units for a group under this file system}
+    policy: ${19:# Filesystem policy to assign to or remove from a filesystem}
+    policy_state: ${20:# Add or delete a policy from a filesystem}
+    delete_link: ${21:# Define if the filesystem can be deleted even if it has a replica link}
+    discard_snaps: ${22:# Allow a filesystem to be demoted}
+    access_control: ${23:# The access control style that is utilized for client actions such as setting file and directory ACLs}
+    safeguard_acls: ${24:# Safeguards ACLs on a filesystem}
+    export_policy: ${25:# Name of NFS export policy to assign to filesystem}
+    fb_url: ${26:# FlashBlade management IP address or Hostname}
+    api_token: ${27:# FlashBlade API token for admin privileged user}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_fs]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_fs</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage filesystemon Pure Storage FlashBlade`</description>
+</snippet>

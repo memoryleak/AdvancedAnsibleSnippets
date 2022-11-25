@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sensu entities}
+  sensu.sensu_go.entity:
+    entity_class: ${2:# Entity class}
+    subscriptions: ${3:# List of subscriptions for the entity}
+    system: ${4:# System information about the entity, such as operating system and platform}
+    last_seen: ${5:# Timestamp the entity was last seen, in seconds since the Unix epoch}
+    deregister: ${6:# If the entity should be removed when it stops sending keepalive messages}
+    deregistration_handler: ${7:# The name of the handler to be called when an entity is deregistered}
+    redact: ${8:# List of items to redact from log messages}
+    user: ${9:# Sensu RBAC username used by the entity}
+    auth: ${10:# Authentication parameters}
+    name: ${11:# The Sensu resource's name}
+    namespace: ${12:# RBAC namespace to operate in}
+    state: ${13:# Target state of the Sensu object}
+    labels: ${14:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
+    annotations: ${15:# Custom metadata fields with fewer restrictions, as key/value pairs}
+  tags:
+    - sensu
+    - sensu_go
+    - entity]]></content>
+  <tabTrigger>sensu.sensu_go.entity</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sensu entities</description>
+</snippet>

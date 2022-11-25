@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages VXLAN Network Virtualization Endpoint (NVE)}
+  cisco.nxos.nxos_vxlan_vtep:
+    interface: ${2:# Interface name for the VXLAN Network Virtualization Endpoint}
+    description: ${3:# Description of the NVE interface}
+    host_reachability: ${4:# Specify mechanism for host reachability advertisement}
+    shutdown: ${5:# Administratively shutdown the NVE interface}
+    source_interface: ${6:# Specify the loopback interface whose IP address should be used for the NVE interface}
+    source_interface_hold_down_time: ${7:# Suppresses advertisement of the NVE loopback address until the overlay has converged}
+    global_mcast_group_L3: ${8:# Global multicast IP prefix for L3 VNIs or the keyword 'default'}
+    global_mcast_group_L2: ${9:# Global multicast IP prefix for L2 VNIs or the keyword 'default'}
+    global_suppress_arp: ${10:# Enables ARP suppression for all VNIs}
+    global_ingress_replication_bgp: ${11:# Configures ingress replication protocol as bgp for all VNIs}
+    state: ${12:# Determines whether the config should be present or not on the device}
+    multisite_border_gateway_interface: ${13:# Specify the loopback interface whose IP address should be used for the NVE Multisite Border-gateway Interface}
+  tags:
+    - cisco
+    - nxos
+    - nxos_vxlan_vtep]]></content>
+  <tabTrigger>cisco.nxos.nxos_vxlan_vtep</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages VXLAN Network Virtualization Endpoint (NVE)</description>
+</snippet>

@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set Virtual Media Instance}
+  inspur.ispim.edit_media_instance:
+    num_fd: ${2:# Select the number of floppy devices that support for Virtual Media redirection}
+    num_cd: ${3:# Select the number of CD/DVD devices that support for Virtual Media redirection}
+    num_hd: ${4:# Select the number of harddisk devices that support for Virtual Media redirection}
+    kvm_num_fd: ${5:# Select the number of Remote KVM floppy devices that support for Virtual Media redirection}
+    kvm_num_cd: ${6:# Select the number of Remote KVM CD/DVD devices that support for virtual Media redirection,}
+    kvm_num_hd: ${7:# Select the number of Remote KVM Hard disk devices to support for Virtual Media redirection}
+    sd_media: ${8:# Check this option to enable SD Media support in BMC}
+    secure_channel: ${9:# Check this option to enable encrypt media recirection packets}
+    power_save_mode: ${10:# Check this option to enable Power Save Mode in BMC}
+    provider: ${11:# A dict object containing connection details}
+    host: ${12:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${13:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${14:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - ispim
+    - edit_media_instance]]></content>
+  <tabTrigger>inspur.ispim.edit_media_instance</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set Virtual Media Instance</description>
+</snippet>

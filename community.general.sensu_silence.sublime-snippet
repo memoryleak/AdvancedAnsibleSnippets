@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sensu silence entries}
+  community.general.sensu_silence:
+    check: ${2:# Specifies the check which the silence entry applies to}
+    creator: ${3:# Specifies the entity responsible for this entry}
+    expire: ${4:# If specified, the silence entry will be automatically cleared after this number of seconds}
+    expire_on_resolve: ${5:# If specified as true, the silence entry will be automatically cleared once the condition it is silencing is resolved}
+    reason: ${6:# If specified, this free-form string is used to provide context or rationale for the reason this silence entry was created}
+    state: ${7:# Specifies to create or clear (delete) a silence entry via the Sensu API}
+    subscription: ${8:# Specifies the subscription which the silence entry applies to}
+    url: ${9:# Specifies the URL of the Sensu monitoring host server}
+  tags:
+    - community
+    - general
+    - sensu_silence]]></content>
+  <tabTrigger>community.general.sensu_silence</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sensu silence entries</description>
+</snippet>

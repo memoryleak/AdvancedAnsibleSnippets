@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Runs commands (remotely) as another (privileged) user}
+  community.windows.win_psexec:
+    command: ${2:# The command line to run through PsExec (limited to 260 characters)}
+    executable: ${3:# The location of the PsExec utility (in case it is not located in your PATH)}
+    hostnames: ${4:# The hostnames to run the command}
+    username: ${5:# The (remote) user to run the command as}
+    password: ${6:# The password for the (remote) user to run the command as}
+    chdir: ${7:# Run the command from this (remote) directory}
+    nobanner: ${8:# Do not display the startup banner and copyright message}
+    noprofile: ${9:# Run the command without loading the account's profile}
+    elevated: ${10:# Run the command with elevated privileges}
+    interactive: ${11:# Run the program so that it interacts with the desktop on the remote system}
+    session: ${12:# Specifies the session ID to use}
+    limited: ${13:# Run the command as limited user (strips the Administrators group and allows only privileges assigned to the Users group)}
+    system: ${14:# Run the remote command in the System account}
+    priority: ${15:# Used to run the command at a different priority}
+    timeout: ${16:# The connection timeout in seconds}
+    wait: ${17:# Wait for the application to terminate}
+  tags:
+    - community
+    - windows
+    - win_psexec]]></content>
+  <tabTrigger>community.windows.win_psexec</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Runs commands (remotely) as another (privileged) user</description>
+</snippet>

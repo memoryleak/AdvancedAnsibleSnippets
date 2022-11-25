@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage S3 buckets in AWS, DigitalOcean, Ceph, Walrus, FakeS3 and StorageGRID}
+  amazon.aws.s3_bucket:
+    force: ${2:# When trying to delete a bucket, delete all keys (including versions and delete markers) in the bucket first (an S3 bucket must be empty for a successful deletion)}
+    name: ${3:# Name of the S3 bucket}
+    policy: ${4:# The JSON policy as a string}
+    ceph: ${5:# Enable API compatibility with Ceph RGW}
+    requester_pays: ${6:# With Requester Pays buckets, the requester instead of the bucket owner pays the cost of the request and the data download from the bucket}
+    state: ${7:# Create or remove the S3 bucket}
+    versioning: ${8:# Whether versioning is enabled or disabled (note that once versioning is enabled, it can only be suspended)}
+    encryption: ${9:# Describes the default server-side encryption to apply to new objects in the bucket}
+    encryption_key_id: ${10:# KMS master key ID to use for the default encryption}
+    bucket_key_enabled: ${11:# Enable S3 Bucket Keys for SSE-KMS on new objects}
+    public_access: ${12:# Configure public access block for S3 bucket}
+    delete_public_access: ${13:# Delete public access block configuration from bucket}
+    object_ownership: ${14:# Allow bucket's ownership controls}
+    delete_object_ownership: ${15:# Delete bucket's ownership controls}
+    acl: ${16:# The canned ACL to apply to the bucket}
+    validate_bucket_name: ${17:# Whether the bucket name should be validated to conform to AWS S3 naming rules}
+    access_key: ${18:# AWS access key ID}
+    secret_key: ${19:# AWS secret access key}
+    session_token: ${20:# AWS STS session token for use with temporary credentials}
+    profile: ${21:# A named AWS profile to use for authentication}
+    endpoint_url: ${22:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${23:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${24:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${25:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${26:# Use a C(botocore}
+    region: ${27:# The AWS region to use}
+    tags: ${28:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${29:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - s3_bucket]]></content>
+  <tabTrigger>amazon.aws.s3_bucket</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage S3 buckets in AWS, DigitalOcean, Ceph, Walrus, FakeS3 and StorageGRID</description>
+</snippet>

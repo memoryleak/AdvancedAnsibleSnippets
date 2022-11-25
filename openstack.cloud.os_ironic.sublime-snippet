@@ -1,0 +1,49 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/Delete Bare Metal Resources from OpenStack}
+  openstack.cloud.os_ironic:
+    state: ${2:# Indicates desired state of the resource}
+    uuid: ${3:# globally unique identifier (UUID) to be given to the resource}
+    name: ${4:# unique name identifier to be given to the resource}
+    driver: ${5:# The name of the Ironic Driver to use with this node}
+    chassis_uuid: ${6:# Associate the node with a pre-defined chassis}
+    ironic_url: ${7:# If noauth mode is utilized, this is required to be set to the endpoint URL for the Ironic API}
+    resource_class: ${8:# The specific resource type to which this node belongs}
+    bios_interface: ${9:# The bios interface for this node, e}
+    boot_interface: ${10:# The boot interface for this node, e}
+    console_interface: ${11:# The console interface for this node, e}
+    deploy_interface: ${12:# The deploy interface for this node, e}
+    inspect_interface: ${13:# The interface used for node inspection, e}
+    management_interface: ${14:# The interface for out-of-band management of this node, e}
+    network_interface: ${15:# The network interface provider to use when describing connections for this node}
+    power_interface: ${16:# The interface used to manage power actions on this node, e}
+    raid_interface: ${17:# Interface used for configuring raid on this node}
+    rescue_interface: ${18:# Interface used for node rescue, e}
+    storage_interface: ${19:# Interface used for attaching and detaching volumes on this node, e}
+    vendor_interface: ${20:# Interface for all vendor-specific actions on this node, e}
+    driver_info: ${21:# Information for this server's driver}
+    nics: ${22:# A list of network interface cards, eg, ' - mac: aa:bb:cc:aa:bb:cc'}
+    properties: ${23:# Definition of the physical characteristics of this server, used for scheduling purposes}
+    skip_update_of_masked_password: ${24:# Allows the code that would assert changes to nodes to skip the update if the change is a single line consisting of the password field}
+    cloud: ${25:# Named cloud or cloud config to operate against}
+    auth: ${26:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${27:# Name of the auth plugin to use}
+    region_name: ${28:# Name of the region}
+    wait: ${29:# Should ansible wait until the requested resource is complete}
+    timeout: ${30:# How long should ansible wait for the requested resource}
+    api_timeout: ${31:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${32:# Whether or not SSL API requests should be verified}
+    ca_cert: ${33:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${34:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${35:# A path to a client key to use as part of the SSL transaction}
+    interface: ${36:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${37:# Ignored}
+    sdk_log_path: ${38:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${39:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - os_ironic]]></content>
+  <tabTrigger>openstack.cloud.os_ironic</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/Delete Bare Metal Resources from OpenStack</description>
+</snippet>

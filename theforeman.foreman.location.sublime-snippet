@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Locations}
+  theforeman.foreman.location:
+    name: ${2:# Name of the Location}
+    parent: ${3:# Title of a parent Location for nesting}
+    organizations: ${4:# List of organizations the location should be assigned to}
+    server_url: ${5:# URL of the Foreman server}
+    username: ${6:# Username accessing the Foreman server}
+    password: ${7:# Password of the user accessing the Foreman server}
+    validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${9:# State of the entity}
+    parameters: ${10:# Entity domain specific host parameters}
+  tags:
+    - theforeman
+    - foreman
+    - location]]></content>
+  <tabTrigger>theforeman.foreman.location</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Locations</description>
+</snippet>

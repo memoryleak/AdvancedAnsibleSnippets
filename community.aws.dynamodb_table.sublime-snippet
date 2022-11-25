@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update or delete AWS Dynamo DB tables}
+  community.aws.dynamodb_table:
+    state: ${2:# Create or delete the table}
+    name: ${3:# Name of the table}
+    hash_key_name: ${4:# Name of the hash key}
+    hash_key_type: ${5:# Type of the hash key}
+    range_key_name: ${6:# Name of the range key}
+    range_key_type: ${7:# Type of the range key}
+    billing_mode: ${8:# Controls whether provisoned pr on-demand tables are created}
+    read_capacity: ${9:# Read throughput capacity (units) to provision}
+    write_capacity: ${10:# Write throughput capacity (units) to provision}
+    indexes: ${11:# list of dictionaries describing indexes to add to the table}
+    table_class: ${12:# The class of the table}
+    wait_timeout: ${13:# How long (in seconds) to wait for creation / update / deletion to complete}
+    wait: ${14:# When I(wait=True) the module will wait for up to I(wait_timeout) seconds for table creation or deletion to complete before returning}
+    access_key: ${15:# AWS access key ID}
+    secret_key: ${16:# AWS secret access key}
+    session_token: ${17:# AWS STS session token for use with temporary credentials}
+    profile: ${18:# A named AWS profile to use for authentication}
+    endpoint_url: ${19:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${20:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${21:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${22:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${23:# Use a C(botocore}
+    region: ${24:# The AWS region to use}
+    tags: ${25:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${26:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - community
+    - aws
+    - dynamodb_table]]></content>
+  <tabTrigger>community.aws.dynamodb_table</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update or delete AWS Dynamo DB tables</description>
+</snippet>

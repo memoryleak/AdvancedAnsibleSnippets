@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Pure Storage FlashBlade Global Admin settings}
+  purestorage.flashblade.purefb_admin:
+    max_login: ${2:# Maximum number of failed logins before account is locked}
+    min_password: ${3:# Minimum user password length}
+    lockout: ${4:# Account lockout duration, in seconds, after max_login exceeded}
+    fb_url: ${5:# FlashBlade management IP address or Hostname}
+    api_token: ${6:# FlashBlade API token for admin privileged user}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_admin]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_admin</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Pure Storage FlashBlade Global Admin settings</description>
+</snippet>

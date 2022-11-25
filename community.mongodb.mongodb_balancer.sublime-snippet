@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages the MongoDB Sharded Cluster Balancer}
+  community.mongodb.mongodb_balancer:
+    autosplit: ${2:# Disable or enable the autosplit flag in the config}
+    chunksize: ${3:# Control the size of chunks in the sharded cluster}
+    state: ${4:# Manage the Balancer for the Cluster}
+    mongos_process: ${5:# Provide a custom name for the mongos process}
+    window: ${6:# Schedule the balancer window}
+    login_user: ${7:# The MongoDB user to login with}
+    login_password: ${8:# The password used to authenticate with}
+    login_database: ${9:# The database where login credentials are stored}
+    login_host: ${10:# The host running MongoDB instance to login to}
+    login_port: ${11:# The MongoDB server port to login to}
+    strict_compatibility: ${12:# Enforce strict requirements for pymongo and MongoDB software versions}
+    ssl: ${13:# Whether to use an SSL connection when connecting to the database}
+    ssl_cert_reqs: ${14:# Specifies whether a certificate is required from the other side of the connection, and whether it will be validated if provided}
+    ssl_ca_certs: ${15:# The ssl_ca_certs option takes a path to a CA file}
+    ssl_crlfile: ${16:# The ssl_crlfile option takes a path to a CRL file}
+    ssl_certfile: ${17:# Present a client certificate using the ssl_certfile option}
+    ssl_keyfile: ${18:# Private key for the client certificate}
+    ssl_pem_passphrase: ${19:# Passphrase to decrypt encrypted private keys}
+    auth_mechanism: ${20:# Authentication type}
+    connection_options: ${21:# Additional connection options}
+  tags:
+    - community
+    - mongodb
+    - mongodb_balancer]]></content>
+  <tabTrigger>community.mongodb.mongodb_balancer</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages the MongoDB Sharded Cluster Balancer</description>
+</snippet>

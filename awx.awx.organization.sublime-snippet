@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller organizations}
+  awx.awx.organization:
+    name: ${2:# Name to use for the organization}
+    new_name: ${3:# Setting this option will change the existing name (looked up via the name field}
+    description: ${4:# The description to use for the organization}
+    default_environment: ${5:# Default Execution Environment to use for jobs owned by the Organization}
+    custom_virtualenv: ${6:# Local absolute file path containing a custom Python virtualenv to use}
+    max_hosts: ${7:# The max hosts allowed in this organizations}
+    state: ${8:# Desired state of the resource}
+    instance_groups: ${9:# list of Instance Groups for this Organization to run on}
+    notification_templates_started: ${10:# list of notifications to send on start}
+    notification_templates_success: ${11:# list of notifications to send on success}
+    notification_templates_error: ${12:# list of notifications to send on error}
+    notification_templates_approvals: ${13:# list of notifications to send on start}
+    galaxy_credentials: ${14:# list of Ansible Galaxy credentials to associate to the organization}
+    controller_host: ${15:# URL to your Automation Platform Controller instance}
+    controller_username: ${16:# Username for your controller instance}
+    controller_password: ${17:# Password for your controller instance}
+    controller_oauthtoken: ${18:# The OAuth token to use}
+    validate_certs: ${19:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${20:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - organization]]></content>
+  <tabTrigger>awx.awx.organization</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>create, update, or destroy Automation Platform Controller organizations</description>
+</snippet>

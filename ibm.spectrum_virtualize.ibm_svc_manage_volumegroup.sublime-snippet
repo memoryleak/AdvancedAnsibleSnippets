@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages volume groups on IBM Spectrum Virtualize family storage systems}
+  ibm.spectrum_virtualize.ibm_svc_manage_volumegroup:
+    name: ${2:# Specifies the name for the volume group}
+    state: ${3:# Creates or updates (C(present)) or removes (C(absent)) a volume group}
+    clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${5:# Domain for the Spectrum Virtualize storage system}
+    username: ${6:# REST API username for the Spectrum Virtualize storage system}
+    password: ${7:# REST API password for the Spectrum Virtualize storage system}
+    token: ${8:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    log_path: ${9:# Path of debug log file}
+    validate_certs: ${10:# Validates certification}
+    ownershipgroup: ${11:# Specifies the name of the ownership group to which the object is being added}
+    noownershipgroup: ${12:# If specified `True`, the object is removed from the ownership group to which it belongs}
+    safeguardpolicyname: ${13:# The name of the Safeguarded policy to be assigned to the volume group}
+    nosafeguardpolicy: ${14:# If specified `True`, removes the Safeguarded policy assigned to the volume group}
+    snapshotpolicy: ${15:# The name of the snapshot policy to be assigned to the volume group}
+    nosnapshotpolicy: ${16:# If specified `True`, removes the snapshot policy assigned to the volume group}
+    snapshotpolicysuspended: ${17:# Specifies whether to suspend (C(yes)) or resume (C(no)) the snapshot policy on this volume group}
+    policystarttime: ${18:# Specifies the time when the first Safeguarded backup is to be taken}
+    type: ${19:# Specifies the type of volume group to be created from the snapshot}
+    snapshot: ${20:# Specifies the name of the snapshot used to prepopulate the new volumes in the new volume group}
+    fromsourcegroup: ${21:# Specifies the parent volume group of the snapshot}
+    pool: ${22:# Specifies the pool name where the target volumes are to be created}
+    iogrp: ${23:# Specifies the I/O group for new volumes}
+    safeguarded: ${24:# If specified, the snapshot policy creates safeguarded snapshots}
+    ignoreuserfcmaps: ${25:# Allows user to create snapshots through the scheduler or manually with `addsnapshot`}
+    replicationpolicy: ${26:# Specifies the name of the replication policy to be assigned to the volume group}
+    noreplicationpolicy: ${27:# If specified `True`, removes the replication policy assigned to the volume group}
+  tags:
+    - ibm
+    - spectrum_virtualize
+    - ibm_svc_manage_volumegroup]]></content>
+  <tabTrigger>ibm.spectrum_virtualize.ibm_svc_manage_volumegroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages volume groups on IBM Spectrum Virtualize family storage systems</description>
+</snippet>

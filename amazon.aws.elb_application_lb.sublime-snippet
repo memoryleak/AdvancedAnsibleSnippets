@@ -1,0 +1,45 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage an Application Load Balancer}
+  amazon.aws.elb_application_lb:
+    access_logs_enabled: ${2:# Whether or not to enable access logs}
+    access_logs_s3_bucket: ${3:# The name of the S3 bucket for the access logs}
+    access_logs_s3_prefix: ${4:# The prefix for the log location in the S3 bucket}
+    deletion_protection: ${5:# Indicates whether deletion protection for the ALB is enabled}
+    http2: ${6:# Indicates whether to enable HTTP2 routing}
+    http_desync_mitigation_mode: ${7:# Determines how the load balancer handles requests that might pose a security risk to an application}
+    http_drop_invalid_header_fields: ${8:# Indicates whether HTTP headers with invalid header fields are removed by the load balancer C(True) or routed to targets C(False)}
+    http_x_amzn_tls_version_and_cipher_suite: ${9:# Indicates whether the two headers are added to the client request before sending it to the target}
+    http_xff_client_port: ${10:# Indicates whether the X-Forwarded-For header should preserve the source port that the client used to connect to the load balancer}
+    idle_timeout: ${11:# The number of seconds to wait before an idle connection is closed}
+    listeners: ${12:# A list of dicts containing listeners to attach to the ALB}
+    name: ${13:# The name of the load balancer}
+    purge_listeners: ${14:# If C(true), existing listeners will be purged from the ALB to match exactly what is defined by I(listeners) parameter}
+    subnets: ${15:# A list of the IDs of the subnets to attach to the load balancer}
+    security_groups: ${16:# A list of the names or IDs of the security groups to assign to the load balancer}
+    scheme: ${17:# Internet-facing or internal load balancer}
+    state: ${18:# Create or destroy the load balancer}
+    wait: ${19:# Wait for the load balancer to have a state of 'active' before completing}
+    wait_timeout: ${20:# The time in seconds to use in conjunction with I(wait)}
+    purge_rules: ${21:# When set to C(no), keep the existing load balancer rules in place}
+    ip_address_type: ${22:# Sets the type of IP addresses used by the subnets of the specified Application Load Balancer}
+    waf_fail_open: ${23:# Indicates whether to allow a AWS WAF-enabled load balancer to route requests to targets if it is unable to forward the request to AWS WAF}
+    access_key: ${24:# AWS access key ID}
+    secret_key: ${25:# AWS secret access key}
+    session_token: ${26:# AWS STS session token for use with temporary credentials}
+    profile: ${27:# A named AWS profile to use for authentication}
+    endpoint_url: ${28:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${29:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${30:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${31:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${32:# Use a C(botocore}
+    region: ${33:# The AWS region to use}
+    tags: ${34:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${35:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - elb_application_lb]]></content>
+  <tabTrigger>amazon.aws.elb_application_lb</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage an Application Load Balancer</description>
+</snippet>

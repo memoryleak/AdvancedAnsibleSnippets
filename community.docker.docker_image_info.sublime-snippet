@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Inspect docker images}
+  community.docker.docker_image_info:
+    name: ${2:# An image name or a list of image names}
+    docker_host: ${3:# The URL or Unix socket path used to connect to the Docker API}
+    tls_hostname: ${4:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    api_version: ${5:# The version of the Docker API running on the Docker Host}
+    timeout: ${6:# The maximum amount of time in seconds to wait on a response from the API}
+    ca_cert: ${7:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${8:# Path to the client's TLS certificate file}
+    client_key: ${9:# Path to the client's TLS key file}
+    ssl_version: ${10:# Provide a valid SSL version number}
+    tls: ${11:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    use_ssh_client: ${12:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${13:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    debug: ${14:# Debug mode}
+  tags:
+    - community
+    - docker
+    - docker_image_info]]></content>
+  <tabTrigger>community.docker.docker_image_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Inspect docker images</description>
+</snippet>

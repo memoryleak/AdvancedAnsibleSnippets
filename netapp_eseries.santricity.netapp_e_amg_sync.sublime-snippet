@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series conduct synchronization actions on asynchronous mirror groups}
+  netapp_eseries.santricity.netapp_e_amg_sync:
+    api_username: ${2:# The username to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    api_password: ${3:# The password to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    api_url: ${4:# The url to the SANtricity WebServices Proxy or embedded REST API}
+    validate_certs: ${5:# Should https certificates be validated?}
+    ssid: ${6:# The ID of the storage array containing the AMG you wish to target}
+    name: ${7:# The name of the async mirror group you wish to target}
+    state: ${8:# The synchronization action you'd like to take}
+    delete_recovery_point: ${9:# Indicates whether the failures point can be deleted on the secondary if necessary to achieve the synchronization}
+  tags:
+    - netapp_eseries
+    - santricity
+    - netapp_e_amg_sync]]></content>
+  <tabTrigger>netapp_eseries.santricity.netapp_e_amg_sync</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series conduct synchronization actions on asynchronous mirror groups</description>
+</snippet>

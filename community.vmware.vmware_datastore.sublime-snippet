@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Datastores}
+  community.vmware.vmware_datastore:
+    name: ${2:# Name of the datastore}
+    datacenter: ${3:# Datacenter to search for the datastores}
+    storage_io_control: ${4:# Specify datastore typ}
+    congestion_threshold_percentage: ${5:# Storage I/O congestion threshold in percentage of peak throughput}
+    congestion_threshold_manual: ${6:# Storage I/O congestion threshold in ms}
+    statistic_collection: ${7:# Include I/O statistics for SDRS}
+    hostname: ${8:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${9:# The username of the vSphere vCenter or ESXi server}
+    password: ${10:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${11:# Allows connection when SSL certificates are not valid}
+    port: ${12:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${13:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${14:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_datastore]]></content>
+  <tabTrigger>community.vmware.vmware_datastore</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Datastores</description>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages the RADIUS server configuration of the device}
+  f5networks.f5_modules.bigip_device_auth_radius_server:
+    name: ${2:# Specifies the name of the RADIUS server to manage}
+    description: ${3:# The description of the RADIUS server}
+    ip: ${4:# The IP address of the server}
+    port: ${5:# The port of the server}
+    secret: ${6:# Specifies the secret used for accessing RADIUS server}
+    timeout: ${7:# Specifies the timeout value in seconds}
+    partition: ${8:# Device partition to manage resources on}
+    state: ${9:# When C(state) is C(present), ensures the RADIUS server exists}
+    update_secret: ${10:# C(always) will update passwords if the C(secret) is specified}
+    provider: ${11:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_device_auth_radius_server]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_device_auth_radius_server</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages the RADIUS server configuration of the device</description>
+</snippet>

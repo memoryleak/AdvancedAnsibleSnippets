@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage QKviews on the device}
+  f5networks.f5_modules.bigip_qkview:
+    filename: ${2:# Name of the QKview file to create on the remote BIG-IP}
+    dest: ${3:# Destination on your local filesystem where you want to save the QKview}
+    asm_request_log: ${4:# When C(true), includes ASM request log data}
+    max_file_size: ${5:# Maximum file size of the QKview file, in bytes}
+    complete_information: ${6:# Include complete (all applicable) information in the QKview}
+    exclude_core: ${7:# Exclude core files from the QKview}
+    exclude: ${8:# Exclude various file from the QKview}
+    force: ${9:# If C(no), the file will only be transferred if the destination does not exist}
+    only_create_file: ${10:# If C(yes), the file is created on the device and not downloaded}
+    provider: ${11:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_qkview]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_qkview</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage QKviews on the device</description>
+</snippet>

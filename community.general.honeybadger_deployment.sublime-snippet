@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Notify Honeybadger}
+  community.general.honeybadger_deployment:
+    token: ${2:# API token}
+    environment: ${3:# The environment name, typically 'production', 'staging', etc}
+    user: ${4:# The username of the person doing the deployment}
+    repo: ${5:# URL of the project repository}
+    revision: ${6:# A hash, number, tag, or other identifier showing what revision was deployed}
+    url: ${7:# Optional URL to submit the notification to}
+    validate_certs: ${8:# If C(false), SSL certificates for the target url will not be validated}
+  tags:
+    - community
+    - general
+    - honeybadger_deployment]]></content>
+  <tabTrigger>community.general.honeybadger_deployment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Notify Honeybadger</description>
+</snippet>

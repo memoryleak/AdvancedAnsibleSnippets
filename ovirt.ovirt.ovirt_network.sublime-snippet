@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage logical networks in oVirt/RHV}
+  ovirt.ovirt.ovirt_network:
+    id: ${2:# ID of the network to manage}
+    name: ${3:# Name of the network to manage}
+    state: ${4:# Should the network be present or absent}
+    data_center: ${5:# Datacenter name where network reside}
+    description: ${6:# Description of the network}
+    comment: ${7:# Comment of the network}
+    vlan_tag: ${8:# Specify VLAN tag}
+    external_provider: ${9:# Name of external network provider}
+    vm_network: ${10:# If I(True) network will be marked as network for VM}
+    mtu: ${11:# Maximum transmission unit (MTU) of the network}
+    clusters: ${12:# List of dictionaries describing how the network is managed in specific cluster}
+    label: ${13:# Name of the label to assign to the network}
+    wait: ${14:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${15:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${16:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${17:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${18:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${19:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_network]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage logical networks in oVirt/RHV</description>
+</snippet>

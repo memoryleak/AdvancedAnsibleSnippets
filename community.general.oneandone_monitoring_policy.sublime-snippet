@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure 1&1 monitoring policy}
+  community.general.oneandone_monitoring_policy:
+    state: ${2:# Define a monitoring policy's state to create, remove, update}
+    auth_token: ${3:# Authenticating API token provided by 1&1}
+    api_url: ${4:# Custom API URL}
+    name: ${5:# Monitoring policy name used with present state}
+    monitoring_policy: ${6:# The identifier (id or name) of the monitoring policy used with update state}
+    agent: ${7:# Set true for using agent}
+    email: ${8:# User's email}
+    description: ${9:# Monitoring policy description}
+    thresholds: ${10:# Monitoring policy thresholds}
+    ports: ${11:# Array of ports that will be monitoring}
+    processes: ${12:# Array of processes that will be monitoring}
+    add_ports: ${13:# Ports to add to the monitoring policy}
+    add_processes: ${14:# Processes to add to the monitoring policy}
+    add_servers: ${15:# Servers to add to the monitoring policy}
+    remove_ports: ${16:# Ports to remove from the monitoring policy}
+    remove_processes: ${17:# Processes to remove from the monitoring policy}
+    remove_servers: ${18:# Servers to remove from the monitoring policy}
+    update_ports: ${19:# Ports to be updated on the monitoring policy}
+    update_processes: ${20:# Processes to be updated on the monitoring policy}
+    wait: ${21:# wait for the instance to be in state 'running' before returning}
+    wait_timeout: ${22:# how long before wait gives up, in seconds}
+    wait_interval: ${23:# Defines the number of seconds to wait when using the _wait_for methods}
+  tags:
+    - community
+    - general
+    - oneandone_monitoring_policy]]></content>
+  <tabTrigger>community.general.oneandone_monitoring_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure 1&1 monitoring policy</description>
+</snippet>

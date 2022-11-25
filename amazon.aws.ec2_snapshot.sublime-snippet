@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates a snapshot from an existing volume}
+  amazon.aws.ec2_snapshot:
+    volume_id: ${2:# Volume from which to take the snapshot}
+    description: ${3:# Description to be applied to the snapshot}
+    instance_id: ${4:# Instance that has the required volume to snapshot mounted}
+    device_name: ${5:# Device name of a mounted volume to be snapshotted}
+    snapshot_tags: ${6:# A dictionary of tags to add to the snapshot}
+    wait: ${7:# Wait for the snapshot to be ready}
+    wait_timeout: ${8:# How long before wait gives up, in seconds}
+    state: ${9:# Whether to add or create a snapshot}
+    snapshot_id: ${10:# Snapshot id to remove}
+    last_snapshot_min_age: ${11:# If the volume's most recent snapshot has started less than I(last_snapshot_min_age) minutes ago, a new snapshot will not be created}
+    access_key: ${12:# AWS access key ID}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    profile: ${15:# A named AWS profile to use for authentication}
+    endpoint_url: ${16:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${17:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${19:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${20:# Use a C(botocore}
+    region: ${21:# The AWS region to use}
+  tags:
+    - amazon
+    - aws
+    - ec2_snapshot]]></content>
+  <tabTrigger>amazon.aws.ec2_snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates a snapshot from an existing volume</description>
+</snippet>

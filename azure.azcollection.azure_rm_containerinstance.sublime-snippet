@@ -1,0 +1,44 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage an Azure Container Instance}
+  azure.azcollection.azure_rm_containerinstance:
+    resource_group: ${2:# Name of resource group}
+    name: ${3:# The name of the container group}
+    os_type: ${4:# The OS type of containers}
+    state: ${5:# Assert the state of the container instance}
+    ip_address: ${6:# The IP address type of the container group}
+    dns_name_label: ${7:# The Dns name label for the IP}
+    ports: ${8:# List of ports exposed within the container group}
+    location: ${9:# Valid azure location}
+    registry_login_server: ${10:# The container image registry login server}
+    registry_username: ${11:# The username to log in container image registry server}
+    registry_password: ${12:# The password to log in container image registry server}
+    containers: ${13:# List of containers}
+    restart_policy: ${14:# Restart policy for all containers within the container group}
+    volumes: ${15:# List of Volumes that can be mounted by containers in this container group}
+    force_update: ${16:# Force update of existing container instance}
+    ad_user: ${17:# Active Directory username}
+    password: ${18:# Active Directory user password}
+    profile: ${19:# Security profile found in ~/}
+    subscription_id: ${20:# Your Azure subscription Id}
+    client_id: ${21:# Azure client ID}
+    secret: ${22:# Azure client secret}
+    tenant: ${23:# Azure tenant ID}
+    cloud_environment: ${24:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${25:# Azure AD authority url}
+    cert_validation_mode: ${26:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${27:# Controls the source of the credentials to use for authentication}
+    api_profile: ${28:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${29:# Parent argument}
+    log_mode: ${30:# Parent argument}
+    x509_certificate_path: ${31:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${32:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${33:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${34:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_containerinstance]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_containerinstance</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage an Azure Container Instance</description>
+</snippet>

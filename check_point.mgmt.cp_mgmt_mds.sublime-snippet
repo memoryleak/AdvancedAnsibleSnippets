@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages mds objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_mds:
+    name: ${2:# Object name}
+    ip_address: ${3:# IPv4 or IPv6 address}
+    ipv4_address: ${4:# IPv4 address}
+    ipv6_address: ${5:# IPv6 address}
+    hardware: ${6:# Hardware name}
+    os: ${7:# Operating system name}
+    version: ${8:# System version}
+    one_time_password: ${9:# Secure internal connection one time password}
+    server_type: ${10:# Type of the management server}
+    ip_pool_first: ${11:# First IP address in the range}
+    ipv4_pool_first: ${12:# First IPv4 address in the range}
+    ipv6_pool_first: ${13:# First IPv6 address in the range}
+    ip_pool_last: ${14:# Last IP address in the range}
+    ipv4_pool_last: ${15:# Last IPv4 address in the range}
+    ipv6_pool_last: ${16:# Last IPv6 address in the range}
+    tags: ${17:# Collection of tag identifiers}
+    color: ${18:# Color of the object}
+    comments: ${19:# Comments string}
+    details_level: ${20:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_warnings: ${21:# Apply changes ignoring warnings}
+    ignore_errors: ${22:# Apply changes ignoring errors}
+    state: ${23:# State of the access rule (present or absent)}
+    auto_publish_session: ${24:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${25:# Wait for the task to end}
+    wait_for_task_timeout: ${26:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_mds]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_mds</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages mds objects on Checkpoint over Web Services API</description>
+</snippet>

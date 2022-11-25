@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages address-range objects on Check Point over Web Services API}
+  check_point.mgmt.cp_mgmt_address_range:
+    name: ${2:# Object name}
+    ip_address_first: ${3:# First IP address in the range}
+    ipv4_address_first: ${4:# First IPv4 address in the range}
+    ipv6_address_first: ${5:# First IPv6 address in the range}
+    ip_address_last: ${6:# Last IP address in the range}
+    ipv4_address_last: ${7:# Last IPv4 address in the range}
+    ipv6_address_last: ${8:# Last IPv6 address in the range}
+    nat_settings: ${9:# NAT settings}
+    tags: ${10:# Collection of tag identifiers}
+    color: ${11:# Color of the object}
+    comments: ${12:# Comments string}
+    details_level: ${13:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    groups: ${14:# Collection of group identifiers}
+    ignore_warnings: ${15:# Apply changes ignoring warnings}
+    ignore_errors: ${16:# Apply changes ignoring errors}
+    state: ${17:# State of the access rule (present or absent)}
+    auto_publish_session: ${18:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${19:# Wait for the task to end}
+    wait_for_task_timeout: ${20:# How many minutes to wait until throwing a timeout error}
+    version: ${21:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_address_range]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_address_range</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages address-range objects on Check Point over Web Services API</description>
+</snippet>

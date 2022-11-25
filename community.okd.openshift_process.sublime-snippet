@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Process an OpenShift template}
+  community.okd.openshift_process:
+    name: ${2:# The name of the Template to process}
+    namespace: ${3:# The namespace that the template can be found in}
+    namespace_target: ${4:# The namespace that resources should be created, updated, or deleted in}
+    parameters: ${5:# A set of key: value pairs that will be used to set/override values in the Template}
+    parameter_file: ${6:# A path to a file containing template parameter values to override/set values in the Template}
+    state: ${7:# Determines what to do with the rendered Template}
+    host: ${8:# Provide a URL for accessing the API}
+    api_key: ${9:# Token used to authenticate with the API}
+    kubeconfig: ${10:# Path to an existing Kubernetes config file}
+    context: ${11:# The name of a context found in the config file}
+    username: ${12:# Provide a username for authenticating with the API}
+    password: ${13:# Provide a password for authenticating with the API}
+    client_cert: ${14:# Path to a certificate used to authenticate with the API}
+    client_key: ${15:# Path to a key file used to authenticate with the API}
+    ca_cert: ${16:# Path to a CA certificate used to authenticate with the API}
+    validate_certs: ${17:# Whether or not to verify the API server's SSL certificates}
+    proxy: ${18:# The URL of an HTTP proxy to use for the connection}
+    no_proxy: ${19:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
+    proxy_headers: ${20:# The Header used for the HTTP proxy}
+    persist_config: ${21:# Whether or not to save the kube config refresh tokens}
+    impersonate_user: ${22:# Username to impersonate for the operation}
+    impersonate_groups: ${23:# Group(s) to impersonate for the operation}
+    wait: ${24:# Whether to wait for certain resource kinds to end up in the desired state}
+    wait_sleep: ${25:# Number of seconds to sleep between checks}
+    wait_timeout: ${26:# How long in seconds to wait for the resource to end up in the desired state}
+    wait_condition: ${27:# Specifies a custom condition on the status to wait for}
+    resource_definition: ${28:# Provide a valid YAML definition (either as a string, list, or dict) for an object when creating or updating}
+    src: ${29:# Provide a path to a file containing a valid YAML definition of an object or objects to be created or updated}
+  tags:
+    - community
+    - okd
+    - openshift_process]]></content>
+  <tabTrigger>community.okd.openshift_process</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Process an OpenShift template</description>
+</snippet>

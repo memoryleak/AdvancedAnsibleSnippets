@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Firmware update from a repository on a network share (CIFS, NFS, HTTP, HTTPS, FTP)}
+  dellemc.openmanage.idrac_firmware:
+    share_name: ${2:# Network share path of update repository}
+    share_user: ${3:# Network share user in the format 'user@domain' or 'domain\\\\user' if user is part of a domain else 'user'}
+    share_password: ${4:# Network share user password}
+    share_mnt: ${5:# Local mount path of the network share with read-write permission for ansible user}
+    job_wait: ${6:# Whether to wait for job completion or not}
+    catalog_file_name: ${7:# Catalog file name relative to the I(share_name)}
+    ignore_cert_warning: ${8:# Specifies if certificate warnings are ignored when HTTPS share is used}
+    apply_update: ${9:# If I(apply_update) is set to C(True), then the packages are applied}
+    reboot: ${10:# Provides the option to apply the update packages immediately or in the next reboot}
+    idrac_ip: ${11:# iDRAC IP Address}
+    idrac_user: ${12:# iDRAC username}
+    idrac_password: ${13:# iDRAC user password}
+    idrac_port: ${14:# iDRAC port}
+    validate_certs: ${15:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${16:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${17:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_firmware]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_firmware</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Firmware update from a repository on a network share (CIFS, NFS, HTTP, HTTPS, FTP)</description>
+</snippet>

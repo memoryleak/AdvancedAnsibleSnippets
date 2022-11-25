@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Infoblox NIOS MX records}
+  infoblox.nios_modules.nios_mx_record:
+    name: ${2:# Specifies the fully qualified hostname to add or remove from the system}
+    view: ${3:# Sets the DNS view to associate this a record with}
+    mail_exchanger: ${4:# Configures the mail exchanger FQDN for this MX record}
+    preference: ${5:# Configures the preference (0-65535) for this MX record}
+    ttl: ${6:# Configures the TTL to be associated with this host record}
+    extattrs: ${7:# Allows for the configuration of Extensible Attributes on the instance of the object}
+    comment: ${8:# Configures a text string comment to be associated with the instance of this object}
+    state: ${9:# Configures the intended state of the instance of the object on the NIOS server}
+    provider: ${10:# A dict object containing connection details}
+  tags:
+    - infoblox
+    - nios_modules
+    - nios_mx_record]]></content>
+  <tabTrigger>infoblox.nios_modules.nios_mx_record</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Infoblox NIOS MX records</description>
+</snippet>

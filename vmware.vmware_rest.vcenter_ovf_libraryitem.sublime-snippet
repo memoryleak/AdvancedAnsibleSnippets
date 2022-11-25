@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates a library item in content library from a virtual machine or virtual appliance}
+  vmware.vmware_rest.vcenter_ovf_libraryitem:
+    client_token: ${2:# Client-generated token used to retry a request if the client fails to get a response from the server}
+    create_spec: ${3:# Information used to create the OVF package from the source virtual machine or virtual appliance}
+    deployment_spec: ${4:# Specification of how the OVF package should be deployed to the target}
+    ovf_library_item_id: ${5:# Identifier of the content library item containing the OVF package to be deployed}
+    session_timeout: ${6:# Timeout settings for client session}
+    source: ${7:# Identifier of the virtual machine or virtual appliance to use as the source}
+    state: ${8:# No description available}
+    target: ${9:# Specification of the target content library and library item}
+    vcenter_hostname: ${10:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${11:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${12:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${13:# The vSphere vCenter username}
+    vcenter_validate_certs: ${14:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware_rest
+    - vcenter_ovf_libraryitem]]></content>
+  <tabTrigger>vmware.vmware_rest.vcenter_ovf_libraryitem</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates a library item in content library from a virtual machine or virtual appliance</description>
+</snippet>

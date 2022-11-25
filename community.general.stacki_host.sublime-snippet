@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add or remove host to stacki front-end}
+  community.general.stacki_host:
+    name: ${2:# Name of the host to be added to Stacki}
+    stacki_user: ${3:# Username for authenticating with Stacki API, but if not specified, the environment variable C(stacki_user) is used instead}
+    stacki_password: ${4:# Password for authenticating with Stacki API, but if not specified, the environment variable C(stacki_password) is used instead}
+    stacki_endpoint: ${5:# URL for the Stacki API Endpoint}
+    prim_intf_mac: ${6:# MAC Address for the primary PXE boot network interface}
+    prim_intf_ip: ${7:# IP Address for the primary network interface}
+    prim_intf: ${8:# Name of the primary network interface}
+    force_install: ${9:# Set value to C(true) to force node into install state if it already exists in stacki}
+    state: ${10:# Set value to the desired state for the specified host}
+    appliance: ${11:# Applicance to be used in host creation}
+    rack: ${12:# Rack to be used in host creation}
+    rank: ${13:# Rank to be used in host creation}
+    network: ${14:# Network to be configured in the host}
+  tags:
+    - community
+    - general
+    - stacki_host]]></content>
+  <tabTrigger>community.general.stacki_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add or remove host to stacki front-end</description>
+</snippet>

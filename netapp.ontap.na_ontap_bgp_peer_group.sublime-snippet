@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP module to create, modify or delete bgp peer group}
+  netapp.ontap.na_ontap_bgp_peer_group:
+    state: ${2:# Create or delete BGP peer group}
+    name: ${3:# Name of the BGP peer group}
+    from_name: ${4:# Name of the existing BGP peer group to be renamed to C(name)}
+    ipspace: ${5:# IPSpace name, cannot be modified after creation}
+    local: ${6:# Information describing the local interface that is being used to peer with a router using BGP}
+    peer: ${7:# Information describing the router to peer with}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    username: ${9:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${10:# Password for the specified user}
+    cert_filepath: ${11:# path to SSL client cert file (}
+    key_filepath: ${12:# path to SSL client key file}
+    https: ${13:# Enable and disable https}
+    validate_certs: ${14:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${15:# Override the default port (80 or 443) with this port}
+    ontapi: ${16:# The ontap api version to use}
+    use_rest: ${17:# Whether to use REST or ZAPI}
+    feature_flags: ${18:# Enable or disable a new feature}
+    force_ontap_version: ${19:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_bgp_peer_group]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_bgp_peer_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP module to create, modify or delete bgp peer group</description>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage zones in Icinga2}
+  t_systems_mms.icinga_director.icinga_zone:
+    state: ${2:# Apply feature state}
+    object_name: ${3:# Icinga object name for this zone}
+    is_global: ${4:# Whether configuration files for this zone should be synced to all endpoints}
+    parent: ${5:# The name of the parent zone}
+    append: ${6:# Do not overwrite the whole object but instead append the defined properties}
+    url: ${7:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    force: ${8:# If C(yes) do not get a cached copy}
+    http_agent: ${9:# Header to identify as, generally appears in web server logs}
+    use_proxy: ${10:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${11:# If C(no), SSL certificates will not be validated}
+    url_username: ${12:# The username for use in HTTP basic authentication}
+    url_password: ${13:# The password for use in HTTP basic authentication}
+    force_basic_auth: ${14:# Credentials specified with I(url_username) and I(url_password) should be passed in HTTP Header}
+    client_cert: ${15:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${16:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    use_gssapi: ${17:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+  tags:
+    - t_systems_mms
+    - icinga_director
+    - icinga_zone]]></content>
+  <tabTrigger>t_systems_mms.icinga_director.icinga_zone</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage zones in Icinga2</description>
+</snippet>

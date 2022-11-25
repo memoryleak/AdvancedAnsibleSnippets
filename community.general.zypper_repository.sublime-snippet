@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add and remove Zypper repositories}
+  community.general.zypper_repository:
+    name: ${2:# A name for the repository}
+    repo: ${3:# URI of the repository or }
+    state: ${4:# A source string state}
+    description: ${5:# A description of the repository}
+    disable_gpg_check: ${6:# Whether to disable GPG signature checking of all packages}
+    autorefresh: ${7:# Enable autorefresh of the repository}
+    priority: ${8:# Set priority of repository}
+    overwrite_multiple: ${9:# Overwrite multiple repository entries, if repositories with both name and URL already exist}
+    auto_import_keys: ${10:# Automatically import the gpg signing key of the new or changed repository}
+    runrefresh: ${11:# Refresh the package list of the given repository}
+    enabled: ${12:# Set repository to enabled (or disabled)}
+  tags:
+    - community
+    - general
+    - zypper_repository]]></content>
+  <tabTrigger>community.general.zypper_repository</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add and remove Zypper repositories</description>
+</snippet>

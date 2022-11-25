@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, Delete and Modify a User on Infinibox}
+  infinidat.infinibox.infini_user:
+    user_name: ${2:# The new user's Name}
+    user_email: ${3:# The new user's Email address}
+    user_password: ${4:# The new user's password}
+    user_role: ${5:# The user's role}
+    user_enabled: ${6:# Specify whether to enable the user}
+    user_pool: ${7:# Use with role==pool_admin}
+    state: ${8:# Creates/Modifies user when present or removes when absent}
+    system: ${9:# Infinibox Hostname or IPv4 Address}
+    user: ${10:# Infinibox User username with sufficient priveledges ( see notes )}
+    password: ${11:# Infinibox User password}
+  tags:
+    - infinidat
+    - infinibox
+    - infini_user]]></content>
+  <tabTrigger>infinidat.infinibox.infini_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, Delete and Modify a User on Infinibox</description>
+</snippet>

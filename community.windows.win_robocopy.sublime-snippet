@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Synchronizes the contents of two directories using Robocopy}
+  community.windows.win_robocopy:
+    src: ${2:# Source file/directory to sync}
+    dest: ${3:# Destination file/directory to sync (Will receive contents of src)}
+    recurse: ${4:# Includes all subdirectories (Toggles the C(/e) flag to RoboCopy)}
+    purge: ${5:# Deletes any files/directories found in the destination that do not exist in the source}
+    flags: ${6:# Directly supply Robocopy flags}
+  tags:
+    - community
+    - windows
+    - win_robocopy]]></content>
+  <tabTrigger>community.windows.win_robocopy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Synchronizes the contents of two directories using Robocopy</description>
+</snippet>

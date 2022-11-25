@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage storage connections in oVirt}
+  ovirt.ovirt.ovirt_storage_connection:
+    id: ${2:# Id of the storage connection to manage}
+    state: ${3:# Should the storage connection be present or absent}
+    storage: ${4:# Name of the storage domain to be used with storage connection}
+    address: ${5:# Address of the storage server}
+    path: ${6:# Path of the mount point of the storage}
+    nfs_version: ${7:# NFS version}
+    nfs_timeout: ${8:# The time in tenths of a second to wait for a response before retrying NFS requests}
+    nfs_retrans: ${9:# The number of times to retry a request before attempting further recovery actions}
+    mount_options: ${10:# Option which will be passed when mounting storage}
+    password: ${11:# A CHAP password for logging into a target}
+    username: ${12:# A CHAP username for logging into a target}
+    port: ${13:# Port of the iSCSI storage server}
+    target: ${14:# The target IQN for the storage device}
+    type: ${15:# Storage type}
+    vfs_type: ${16:# Virtual File System type}
+    force: ${17:# This parameter is relevant only when updating a connection}
+    wait: ${18:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${19:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${20:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${21:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${22:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${23:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_storage_connection]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_storage_connection</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage storage connections in oVirt</description>
+</snippet>

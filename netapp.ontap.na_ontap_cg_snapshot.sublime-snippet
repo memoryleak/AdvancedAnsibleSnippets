@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP manage consistency group snapshot}
+  netapp.ontap.na_ontap_cg_snapshot:
+    state: ${2:# If you want to create a snapshot}
+    vserver: ${3:# Name of the vserver}
+    volumes: ${4:# A list of volumes in this filer that is part of this CG operation}
+    snapshot: ${5:# The provided name of the snapshot that is created in each volume}
+    timeout: ${6:# Timeout selector}
+    snapmirror_label: ${7:# A human readable SnapMirror label to be attached with the consistency group snapshot copies}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    username: ${9:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${10:# Password for the specified user}
+    cert_filepath: ${11:# path to SSL client cert file (}
+    key_filepath: ${12:# path to SSL client key file}
+    https: ${13:# Enable and disable https}
+    validate_certs: ${14:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${15:# Override the default port (80 or 443) with this port}
+    ontapi: ${16:# The ontap api version to use}
+    use_rest: ${17:# Whether to use REST or ZAPI}
+    feature_flags: ${18:# Enable or disable a new feature}
+    force_ontap_version: ${19:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_cg_snapshot]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_cg_snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP manage consistency group snapshot</description>
+</snippet>

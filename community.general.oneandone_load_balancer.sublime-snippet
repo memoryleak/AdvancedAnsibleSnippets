@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure 1&1 load balancer}
+  community.general.oneandone_load_balancer:
+    state: ${2:# Define a load balancer state to create, remove, or update}
+    auth_token: ${3:# Authenticating API token provided by 1&1}
+    load_balancer: ${4:# The identifier (id or name) of the load balancer used with update state}
+    api_url: ${5:# Custom API URL}
+    name: ${6:# Load balancer name used with present state}
+    health_check_test: ${7:# Type of the health check}
+    health_check_interval: ${8:# Health check period in seconds}
+    health_check_path: ${9:# Url to call for checking}
+    health_check_parse: ${10:# Regular expression to check}
+    persistence: ${11:# Persistence}
+    persistence_time: ${12:# Persistence time in seconds}
+    method: ${13:# Balancing procedure}
+    datacenter: ${14:# ID or country code of the datacenter where the load balancer will be created}
+    rules: ${15:# A list of rule objects that will be set for the load balancer}
+    description: ${16:# Description of the load balancer}
+    add_server_ips: ${17:# A list of server identifiers (id or name) to be assigned to a load balancer}
+    remove_server_ips: ${18:# A list of server IP ids to be unassigned from a load balancer}
+    add_rules: ${19:# A list of rules that will be added to an existing load balancer}
+    remove_rules: ${20:# A list of rule ids that will be removed from an existing load balancer}
+    wait: ${21:# wait for the instance to be in state 'running' before returning}
+    wait_timeout: ${22:# how long before wait gives up, in seconds}
+    wait_interval: ${23:# Defines the number of seconds to wait when using the _wait_for methods}
+  tags:
+    - community
+    - general
+    - oneandone_load_balancer]]></content>
+  <tabTrigger>community.general.oneandone_load_balancer</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure 1&1 load balancer</description>
+</snippet>

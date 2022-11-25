@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds or removes Red Hat software channels}
+  community.general.rhn_channel:
+    name: ${2:# Name of the software channel}
+    sysname: ${3:# Name of the system as it is known in RHN/Satellite}
+    state: ${4:# Whether the channel should be present or not, taking action if the state is different from what is stated}
+    url: ${5:# The full URL to the RHN/Satellite API}
+    user: ${6:# RHN/Satellite login}
+    password: ${7:# RHN/Satellite password}
+    validate_certs: ${8:# If C(False), SSL certificates will not be validated}
+  tags:
+    - community
+    - general
+    - rhn_channel]]></content>
+  <tabTrigger>community.general.rhn_channel</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds or removes Red Hat software channels</description>
+</snippet>

@@ -1,0 +1,49 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure Database Account instance}
+  azure.azcollection.azure_rm_cosmosdbaccount:
+    resource_group: ${2:# Name of an Azure resource group}
+    name: ${3:# Cosmos DB database account name}
+    location: ${4:# The location of the resource group to which the resource belongs}
+    kind: ${5:# Indicates the type of database account}
+    consistency_policy: ${6:# The consistency policy for the Cosmos DB account}
+    geo_rep_locations: ${7:# An array that contains the georeplication locations enabled for the Cosmos DB account}
+    database_account_offer_type: ${8:# Database account offer type, for example I(Standard)}
+    enable_free_tier: ${9:# If enabled the account is free-tier}
+    ip_range_filter: ${10:# (deprecated) Cosmos DB Firewall support}
+    ip_rules: ${11:# The IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs}
+    is_virtual_network_filter_enabled: ${12:# Flag to indicate whether to enable/disable Virtual Network ACL rules}
+    enable_automatic_failover: ${13:# Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage}
+    enable_cassandra: ${14:# Enable Cassandra}
+    enable_table: ${15:# Enable Table}
+    enable_gremlin: ${16:# Enable Gremlin}
+    mongo_version: ${17:# Server version for the MongoDB account, such as c(3}
+    public_network_access: ${18:# Enables or disables public network access to server}
+    virtual_network_rules: ${19:# List of Virtual Network ACL rules configured for the Cosmos DB account}
+    enable_multiple_write_locations: ${20:# Enables the account to write in multiple locations}
+    state: ${21:# Assert the state of the Database Account}
+    ad_user: ${22:# Active Directory username}
+    password: ${23:# Active Directory user password}
+    profile: ${24:# Security profile found in ~/}
+    subscription_id: ${25:# Your Azure subscription Id}
+    client_id: ${26:# Azure client ID}
+    secret: ${27:# Azure client secret}
+    tenant: ${28:# Azure tenant ID}
+    cloud_environment: ${29:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${30:# Azure AD authority url}
+    cert_validation_mode: ${31:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${32:# Controls the source of the credentials to use for authentication}
+    api_profile: ${33:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${34:# Parent argument}
+    log_mode: ${35:# Parent argument}
+    x509_certificate_path: ${36:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${37:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${38:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${39:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_cosmosdbaccount]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_cosmosdbaccount</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure Database Account instance</description>
+</snippet>

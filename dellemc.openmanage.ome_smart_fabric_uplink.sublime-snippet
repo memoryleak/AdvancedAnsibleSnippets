@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, modify or delete a uplink for a fabric on OpenManage Enterprise Modular}
+  dellemc.openmanage.ome_smart_fabric_uplink:
+    state: ${2:# C(present) - Creates a new uplink with the provided I(name)}
+    fabric_name: ${3:# Provide the I(fabric_name) of the fabric for which the uplink is to be configured}
+    name: ${4:# Provide the I(name) of the uplink to be created, modified or deleted}
+    new_name: ${5:# Provide the new I(new_name) for the uplink}
+    description: ${6:# Provide a short description for the uplink to be created or modified}
+    uplink_type: ${7:# Specify the uplink type}
+    ufd_enable: ${8:# Add or Remove the uplink to the Uplink Failure Detection (UFD) group}
+    primary_switch_service_tag: ${9:# Service tag of the primary switch}
+    primary_switch_ports: ${10:# The IOM slots to be connected to the primary switch}
+    secondary_switch_service_tag: ${11:# Service tag of the secondary switch}
+    secondary_switch_ports: ${12:# The IOM slots to be connected to the secondary switch}
+    tagged_networks: ${13:# VLANs to be associated with the uplink I(name)}
+    untagged_network: ${14:# Specify the name of the VLAN to be added as untagged to the uplink}
+    hostname: ${15:# OpenManage Enterprise Modular IP address or hostname}
+    username: ${16:# OpenManage Enterprise Modular username}
+    password: ${17:# OpenManage Enterprise Modular password}
+    port: ${18:# OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${19:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${20:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${21:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_smart_fabric_uplink]]></content>
+  <tabTrigger>dellemc.openmanage.ome_smart_fabric_uplink</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, modify or delete a uplink for a fabric on OpenManage Enterprise Modular</description>
+</snippet>

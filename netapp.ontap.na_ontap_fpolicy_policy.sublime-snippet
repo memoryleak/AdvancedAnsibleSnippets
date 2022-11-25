@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP - Create, delete or modify an FPolicy policy}
+  netapp.ontap.na_ontap_fpolicy_policy:
+    state: ${2:# Whether the fPolicy policy should exist or not}
+    vserver: ${3:# the name of the vserver to create the policy on}
+    name: ${4:# Name of the policy}
+    allow_privileged_access: ${5:# Specifies if privileged access should be given to FPolicy servers registered for the policy}
+    engine: ${6:# Name of the Engine}
+    events: ${7:# Events for file access monitoring}
+    is_mandatory: ${8:# Specifies the action to take on a file access event in the case when all primary and secondary servers are down or no response is received from the}
+    is_passthrough_read_enabled: ${9:# Specifies if passthrough-read should be allowed to FPolicy servers registered for the policy}
+    privileged_user_name: ${10:# User name for privileged access}
+    hostname: ${11:# The hostname or IP address of the ONTAP instance}
+    username: ${12:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${13:# Password for the specified user}
+    cert_filepath: ${14:# path to SSL client cert file (}
+    key_filepath: ${15:# path to SSL client key file}
+    https: ${16:# Enable and disable https}
+    validate_certs: ${17:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${18:# Override the default port (80 or 443) with this port}
+    ontapi: ${19:# The ontap api version to use}
+    use_rest: ${20:# Whether to use REST or ZAPI}
+    feature_flags: ${21:# Enable or disable a new feature}
+    force_ontap_version: ${22:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_fpolicy_policy]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_fpolicy_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP - Create, delete or modify an FPolicy policy</description>
+</snippet>

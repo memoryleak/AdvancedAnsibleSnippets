@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage External User Groups}
+  theforeman.foreman.external_usergroup:
+    name: ${2:# Name of the group}
+    usergroup: ${3:# Name of the linked usergroup}
+    auth_source: ${4:# Name of the authentication source to be used for this group}
+    server_url: ${5:# URL of the Foreman server}
+    username: ${6:# Username accessing the Foreman server}
+    password: ${7:# Password of the user accessing the Foreman server}
+    validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${9:# State of the entity}
+  tags:
+    - theforeman
+    - foreman
+    - external_usergroup]]></content>
+  <tabTrigger>theforeman.foreman.external_usergroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage External User Groups</description>
+</snippet>

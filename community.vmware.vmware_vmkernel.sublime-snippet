@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages a VMware VMkernel Adapter of an ESXi host}
+  community.vmware.vmware_vmkernel:
+    vswitch_name: ${2:# The name of the vSwitch where to add the VMKernel interface}
+    dvswitch_name: ${3:# The name of the vSphere Distributed Switch (vDS) where to add the VMKernel interface}
+    portgroup_name: ${4:# The name of the port group for the VMKernel interface}
+    network: ${5:# A dictionary of network details}
+    mtu: ${6:# The MTU for the VMKernel interface}
+    device: ${7:# Search VMkernel adapter by device name}
+    enable_vsan: ${8:# Enable VSAN traffic on the VMKernel adapter}
+    enable_vmotion: ${9:# Enable vMotion traffic on the VMKernel adapter}
+    enable_mgmt: ${10:# Enable Management traffic on the VMKernel adapter}
+    enable_ft: ${11:# Enable Fault Tolerance traffic on the VMKernel adapter}
+    enable_provisioning: ${12:# Enable Provisioning traffic on the VMKernel adapter}
+    enable_replication: ${13:# Enable vSphere Replication traffic on the VMKernel adapter}
+    enable_replication_nfc: ${14:# Enable vSphere Replication NFC traffic on the VMKernel adapter}
+    state: ${15:# If set to C(present), the VMKernel adapter will be created with the given specifications}
+    esxi_hostname: ${16:# Name of ESXi host to which VMKernel is to be managed}
+    hostname: ${17:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${18:# The username of the vSphere vCenter or ESXi server}
+    password: ${19:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${20:# Allows connection when SSL certificates are not valid}
+    port: ${21:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${22:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${23:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_vmkernel]]></content>
+  <tabTrigger>community.vmware.vmware_vmkernel</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages a VMware VMkernel Adapter of an ESXi host</description>
+</snippet>

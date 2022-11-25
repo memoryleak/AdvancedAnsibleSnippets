@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage static IP routes on Ruckus ICX 7000 series switches}
+  community.network.icx_static_route:
+    prefix: ${2:# Network prefix of the static route}
+    mask: ${3:# Network prefix mask of the static route}
+    next_hop: ${4:# Next hop IP of the static route}
+    admin_distance: ${5:# Admin distance of the static route}
+    aggregate: ${6:# List of static route definitions}
+    purge: ${7:# Purge routes not defined in the I(aggregate) parameter}
+    state: ${8:# State of the static route configuration}
+    check_running_config: ${9:# Check running configuration}
+  tags:
+    - community
+    - network
+    - icx_static_route]]></content>
+  <tabTrigger>community.network.icx_static_route</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage static IP routes on Ruckus ICX 7000 series switches</description>
+</snippet>

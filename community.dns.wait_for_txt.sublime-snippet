@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Wait for TXT entries to be available on all authoritative nameservers}
+  community.dns.wait_for_txt:
+    records: ${2:# A list of DNS names with TXT entries to look out for}
+    query_retry: ${3:# Number of retries for DNS query timeouts}
+    query_timeout: ${4:# Timeout per DNS query in seconds}
+    timeout: ${5:# Global timeout for waiting for all records in seconds}
+    max_sleep: ${6:# Maximal amount of seconds to sleep between two rounds of probing the TXT records}
+    always_ask_default_resolver: ${7:# When set to C(true) (default), will use the default resolver to find the authoritative nameservers of a subzone}
+  tags:
+    - community
+    - dns
+    - wait_for_txt]]></content>
+  <tabTrigger>community.dns.wait_for_txt</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Wait for TXT entries to be available on all authoritative nameservers</description>
+</snippet>

@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:CLI command to add/remove vrouter-ospf6}
+  community.network.pn_vrouter_ospf6:
+    pn_cliswitch: ${2:# Target switch to run the CLI on}
+    state: ${3:# State the action to perform}
+    pn_ospf6_area: ${4:# area id for this interface in IPv4 address format}
+    pn_nic: ${5:# OSPF6 control for this interface}
+    pn_vrouter_name: ${6:# name of service config}
+  tags:
+    - community
+    - network
+    - pn_vrouter_ospf6]]></content>
+  <tabTrigger>community.network.pn_vrouter_ospf6</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>CLI command to add/remove vrouter-ospf6</description>
+</snippet>

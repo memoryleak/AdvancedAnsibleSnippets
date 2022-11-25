@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure server interface profiles}
+  dellemc.openmanage.ome_server_interface_profiles:
+    device_id: ${2:# Device id of the Server under chassis fabric}
+    device_service_tag: ${3:# Service tag of the Server under chassis fabric}
+    nic_teaming: ${4:# NIC teaming options}
+    nic_configuration: ${5:# NIC configuration for the Servers to be applied}
+    job_wait: ${6:# Provides the option to wait for job completion}
+    job_wait_timeout: ${7:# The maximum wait time of I(job_wait) in seconds}
+    hostname: ${8:# OpenManage Enterprise Modular IP address or hostname}
+    username: ${9:# OpenManage Enterprise Modular username}
+    password: ${10:# OpenManage Enterprise Modular password}
+    port: ${11:# OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${12:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${13:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${14:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_server_interface_profiles]]></content>
+  <tabTrigger>dellemc.openmanage.ome_server_interface_profiles</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure server interface profiles</description>
+</snippet>

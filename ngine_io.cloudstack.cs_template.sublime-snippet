@@ -1,0 +1,48 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages templates on Apache CloudStack based clouds}
+  ngine_io.cloudstack.cs_template:
+    name: ${2:# Name of the template}
+    url: ${3:# URL of where the template is hosted on I(state=present)}
+    vm: ${4:# VM name the template will be created from its volume or alternatively from a snapshot}
+    snapshot: ${5:# Name of the snapshot, created from the VM ROOT volume, the template will be created from}
+    os_type: ${6:# OS type that best represents the OS of this template}
+    checksum: ${7:# The MD5 checksum value of this template}
+    is_public: ${8:# Register the template to be publicly available to all users}
+    is_featured: ${9:# Register the template to be featured}
+    is_dynamically_scalable: ${10:# Register the template having XS/VMware tools installed in order to support dynamic scaling of VM CPU/memory}
+    cross_zones: ${11:# Whether the template should be synced or removed across zones}
+    mode: ${12:# Mode for the template extraction}
+    domain: ${13:# Domain the template, snapshot or VM is related to}
+    account: ${14:# Account the template, snapshot or VM is related to}
+    project: ${15:# Name of the project the template to be registered in}
+    zone: ${16:# Name of the zone you wish the template to be registered or deleted from}
+    template_filter: ${17:# Name of the filter used to search for the template}
+    template_find_options: ${18:# Options to find a template uniquely}
+    hypervisor: ${19:# Name the hypervisor to be used for creating the new template}
+    requires_hvm: ${20:# Whether the template requires HVM or not}
+    password_enabled: ${21:# Enable template password reset support}
+    template_tag: ${22:# The tag for this template}
+    sshkey_enabled: ${23:# True if the template supports the sshkey upload feature}
+    is_routing: ${24:# Sets the template type to routing, i}
+    format: ${25:# The format for the template}
+    is_extractable: ${26:# Allows the template or its derivatives to be extractable}
+    details: ${27:# Template details in key/value pairs}
+    bits: ${28:# 32 or 64 bits support}
+    display_text: ${29:# Display text of the template}
+    state: ${30:# State of the template}
+    poll_async: ${31:# Poll async jobs until job has finished}
+    tags: ${32:# List of tags}
+    api_key: ${33:# API key of the CloudStack API}
+    api_secret: ${34:# Secret key of the CloudStack API}
+    api_url: ${35:# URL of the CloudStack API e}
+    api_http_method: ${36:# HTTP method used to query the API endpoint}
+    api_timeout: ${37:# HTTP timeout in seconds}
+    api_verify_ssl_cert: ${38:# Verify CA authority cert file}
+  tags:
+    - ngine_io
+    - cloudstack
+    - cs_template]]></content>
+  <tabTrigger>ngine_io.cloudstack.cs_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages templates on Apache CloudStack based clouds</description>
+</snippet>

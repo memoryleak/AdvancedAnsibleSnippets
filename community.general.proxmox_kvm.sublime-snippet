@@ -1,0 +1,97 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Management of Qemu(KVM) Virtual Machines in Proxmox VE cluster}
+  community.general.proxmox_kvm:
+    acpi: ${2:# Specify if ACPI should be enabled/disabled}
+    agent: ${3:# Specify if the QEMU Guest Agent should be enabled/disabled}
+    args: ${4:# Pass arbitrary arguments to kvm}
+    autostart: ${5:# Specify if the VM should be automatically restarted after crash (currently ignored in PVE API)}
+    balloon: ${6:# Specify the amount of RAM for the VM in MB}
+    bios: ${7:# Specify the BIOS implementation}
+    boot: ${8:# Specify the boot order -> boot on floppy C(a), hard disk C(c), CD-ROM C(d), or network C(n)}
+    bootdisk: ${9:# Enable booting from specified disk}
+    cicustom: ${10:# cloud-init: Specify custom files to replace the automatically generated ones at start}
+    cipassword: ${11:# cloud-init: password of default user to create}
+    citype: ${12:# cloud-init: Specifies the cloud-init configuration format}
+    ciuser: ${13:# cloud-init: username of default user to create}
+    clone: ${14:# Name of VM to be cloned}
+    cores: ${15:# Specify number of cores per socket}
+    cpu: ${16:# Specify emulated CPU type}
+    cpulimit: ${17:# Specify if CPU usage will be limited}
+    cpuunits: ${18:# Specify CPU weight for a VM}
+    delete: ${19:# Specify a list of settings you want to delete}
+    description: ${20:# Specify the description for the VM}
+    digest: ${21:# Specify if to prevent changes if current configuration file has different SHA1 digest}
+    efidisk0: ${22:# Specify a hash/dictionary of EFI disk options}
+    force: ${23:# Allow to force stop VM}
+    format: ${24:# Target drive's backing file's data format}
+    freeze: ${25:# Specify if PVE should freeze CPU at startup (use 'c' monitor command to start execution)}
+    full: ${26:# Create a full copy of all disk}
+    hostpci: ${27:# Specify a hash/dictionary of map host pci devices into guest}
+    hotplug: ${28:# Selectively enable hotplug features}
+    hugepages: ${29:# Enable/disable hugepages memory}
+    ide: ${30:# A hash/dictionary of volume used as IDE hard disk or CD-ROM}
+    ipconfig: ${31:# cloud-init: Set the IP configuration}
+    keyboard: ${32:# Sets the keyboard layout for VNC server}
+    kvm: ${33:# Enable/disable KVM hardware virtualization}
+    localtime: ${34:# Sets the real time clock to local time}
+    lock: ${35:# Lock/unlock the VM}
+    machine: ${36:# Specifies the Qemu machine type}
+    memory: ${37:# Memory size in MB for instance}
+    migrate_downtime: ${38:# Sets maximum tolerated downtime (in seconds) for migrations}
+    migrate_speed: ${39:# Sets maximum speed (in MB/s) for migrations}
+    name: ${40:# Specifies the VM name}
+    nameservers: ${41:# cloud-init: DNS server IP address(es)}
+    net: ${42:# A hash/dictionary of network interfaces for the VM}
+    newid: ${43:# VMID for the clone}
+    numa: ${44:# A hash/dictionaries of NUMA topology}
+    numa_enabled: ${45:# Enables NUMA}
+    onboot: ${46:# Specifies whether a VM will be started during system bootup}
+    ostype: ${47:# Specifies guest operating system}
+    parallel: ${48:# A hash/dictionary of map host parallel devices}
+    protection: ${49:# Enable/disable the protection flag of the VM}
+    reboot: ${50:# Allow reboot}
+    revert: ${51:# Revert a pending change}
+    sata: ${52:# A hash/dictionary of volume used as sata hard disk or CD-ROM}
+    scsi: ${53:# A hash/dictionary of volume used as SCSI hard disk or CD-ROM}
+    scsihw: ${54:# Specifies the SCSI controller model}
+    searchdomains: ${55:# cloud-init: Sets DNS search domain(s)}
+    serial: ${56:# A hash/dictionary of serial device to create inside the VM}
+    shares: ${57:# Rets amount of memory shares for auto-ballooning}
+    skiplock: ${58:# Ignore locks}
+    smbios: ${59:# Specifies SMBIOS type 1 fields}
+    snapname: ${60:# The name of the snapshot}
+    sockets: ${61:# Sets the number of CPU sockets}
+    sshkeys: ${62:# cloud-init: SSH key to assign to the default user}
+    startdate: ${63:# Sets the initial date of the real time clock}
+    startup: ${64:# Startup and shutdown behavior}
+    state: ${65:# Indicates desired state of the instance}
+    storage: ${66:# Target storage for full clone}
+    tablet: ${67:# Enables/disables the USB tablet device}
+    tags: ${68:# List of tags to apply to the VM instance}
+    target: ${69:# Target node}
+    tdf: ${70:# Enables/disables time drift fix}
+    template: ${71:# Enables/disables the template}
+    timeout: ${72:# Timeout for operations}
+    update: ${73:# If C(true), the VM will be updated with new value}
+    vcpus: ${74:# Sets number of hotplugged vcpus}
+    vga: ${75:# Select VGA type}
+    virtio: ${76:# A hash/dictionary of volume used as VIRTIO hard disk}
+    watchdog: ${77:# Creates a virtual hardware watchdog device}
+    proxmox_default_behavior: ${78:# As of community}
+    api_host: ${79:# Specify the target host of the Proxmox VE cluster}
+    api_user: ${80:# Specify the user to authenticate with}
+    api_password: ${81:# Specify the password to authenticate with}
+    api_token_id: ${82:# Specify the token ID}
+    api_token_secret: ${83:# Specify the token secret}
+    validate_certs: ${84:# If C(false), SSL certificates will not be validated}
+    vmid: ${85:# Specifies the instance ID}
+    node: ${86:# Proxmox VE node on which to operate}
+    pool: ${87:# Add the new VM to the specified pool}
+  tags:
+    - community
+    - general
+    - proxmox_kvm]]></content>
+  <tabTrigger>community.general.proxmox_kvm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Management of Qemu(KVM) Virtual Machines in Proxmox VE cluster</description>
+</snippet>

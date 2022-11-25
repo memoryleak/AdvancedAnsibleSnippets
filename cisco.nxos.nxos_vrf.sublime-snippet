@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages global VRF configuration}
+  cisco.nxos.nxos_vrf:
+    name: ${2:# Name of VRF to be managed}
+    admin_state: ${3:# Administrative state of the VRF}
+    vni: ${4:# Specify virtual network identifier}
+    rd: ${5:# VPN Route Distinguisher (RD)}
+    interfaces: ${6:# List of interfaces to check the VRF has been configured correctly or keyword 'default'}
+    associated_interfaces: ${7:# This is a intent option and checks the operational state of the for given vrf C(name) for associated interfaces}
+    aggregate: ${8:# List of VRFs definitions}
+    purge: ${9:# Purge VRFs not defined in the I(aggregate) parameter}
+    state: ${10:# Manages desired state of the resource}
+    description: ${11:# Description of the VRF or keyword 'default'}
+    delay: ${12:# Time in seconds to wait before checking for the operational state on remote device}
+  tags:
+    - cisco
+    - nxos
+    - nxos_vrf]]></content>
+  <tabTrigger>cisco.nxos.nxos_vrf</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages global VRF configuration</description>
+</snippet>

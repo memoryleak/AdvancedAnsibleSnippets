@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Register a node to the primary}
+  cisco.ise.personas_register_node:
+    primary_ip: ${2:# The IP address of the primary node}
+    primary_username: ${3:# The username for the primary node}
+    primary_password: ${4:# The password for the primary node}
+    fqdn: ${5:# The fully qualified domain name of the node}
+    username: ${6:# The username to log into the node}
+    password: ${7:# The password to log into the node}
+    roles: ${8:# The roles to be fulfilled by this node}
+    services: ${9:# The services this node will run}
+    ise_verify: ${10:# Whether or not to verify the identity of the node}
+    ise_version: ${11:# The version of the ISE node}
+    ise_wait_on_rate_limit: ${12:# Whether or not to wait on rate limit}
+  tags:
+    - cisco
+    - ise
+    - personas_register_node]]></content>
+  <tabTrigger>cisco.ise.personas_register_node</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Register a node to the primary</description>
+</snippet>

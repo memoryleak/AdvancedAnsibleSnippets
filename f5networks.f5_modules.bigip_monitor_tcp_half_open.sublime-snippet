@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages F5 BIG-IP LTM TCP half-open monitors}
+  f5networks.f5_modules.bigip_monitor_tcp_half_open:
+    name: ${2:# Monitor name}
+    parent: ${3:# The parent template of this monitor template}
+    description: ${4:# The description of the monitor}
+    ip: ${5:# IP address part of the IP/port definition}
+    port: ${6:# Port address part of the IP/port definition}
+    interval: ${7:# The interval specifying how frequently the monitor instance of this template will run}
+    timeout: ${8:# The number of seconds in which the node or service must respond to the monitor request}
+    time_until_up: ${9:# Specifies the amount of time in seconds after the first successful response before a node will be marked up}
+    partition: ${10:# Device partition to manage resources on}
+    state: ${11:# When C(present), ensures the monitor exists}
+    provider: ${12:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_monitor_tcp_half_open]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_monitor_tcp_half_open</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages F5 BIG-IP LTM TCP half-open monitors</description>
+</snippet>

@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage network interfaces in a Pure Storage FlashArray}
+  purestorage.flasharray.purefa_network:
+    name: ${2:# Interface name (physical or virtual)}
+    state: ${3:# State of existing interface (on/off)}
+    address: ${4:# IPv4 or IPv6 address of interface in CIDR notation}
+    gateway: ${5:# IPv4 or IPv6 address of interface gateway}
+    mtu: ${6:# MTU size of the interface}
+    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
+    api_token: ${8:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_network]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage network interfaces in a Pure Storage FlashArray</description>
+</snippet>

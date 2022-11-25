@@ -1,0 +1,46 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure SIG Image instance}
+  azure.azcollection.azure_rm_galleryimage:
+    resource_group: ${2:# The name of the resource group}
+    gallery_name: ${3:# The name of the Shared Image Gallery in which the Image Definition is to be created}
+    name: ${4:# The name of the gallery Image Definition to be created or updated}
+    location: ${5:# Resource location}
+    description: ${6:# The description of this gallery Image Definition resource}
+    eula: ${7:# The Eula agreement for the gallery Image Definition}
+    privacy_statement_uri: ${8:# The privacy statement uri}
+    release_note_uri: ${9:# The release note uri}
+    os_type: ${10:# This property allows you to specify the type of the OS that is included in the disk when creating a VM from a managed image}
+    os_state: ${11:# The allowed values for OS State are C(generalized)}
+    hypervgeneration: ${12:# This property allows you to specify the Hyper V Version of the Virtual Machines}
+    end_of_life_date: ${13:# The end of life date of the gallery Image Definition}
+    identifier: ${14:# Image identifier}
+    recommended: ${15:# Recommended parameter values}
+    disallowed: ${16:# Disallowed parameter values}
+    purchase_plan: ${17:# Purchase plan}
+    state: ${18:# Assert the state of the GalleryImage}
+    ad_user: ${19:# Active Directory username}
+    password: ${20:# Active Directory user password}
+    profile: ${21:# Security profile found in ~/}
+    subscription_id: ${22:# Your Azure subscription Id}
+    client_id: ${23:# Azure client ID}
+    secret: ${24:# Azure client secret}
+    tenant: ${25:# Azure tenant ID}
+    cloud_environment: ${26:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${27:# Azure AD authority url}
+    cert_validation_mode: ${28:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${29:# Controls the source of the credentials to use for authentication}
+    api_profile: ${30:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${31:# Parent argument}
+    log_mode: ${32:# Parent argument}
+    x509_certificate_path: ${33:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${34:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${35:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${36:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_galleryimage]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_galleryimage</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure SIG Image instance</description>
+</snippet>

@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and remove a bcf switch}
+  community.network.bcf_switch:
+    name: ${2:# The name of the switch}
+    fabric_role: ${3:# Fabric role of the switch}
+    leaf_group: ${4:# The leaf group of the switch if the switch is a leaf}
+    mac: ${5:# The MAC address of the switch}
+    state: ${6:# Whether the switch should be present or absent}
+    controller: ${7:# The controller IP address}
+    validate_certs: ${8:# If C(false), SSL certificates will not be validated}
+    access_token: ${9:# Big Cloud Fabric access token}
+  tags:
+    - community
+    - network
+    - bcf_switch]]></content>
+  <tabTrigger>community.network.bcf_switch</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and remove a bcf switch</description>
+</snippet>

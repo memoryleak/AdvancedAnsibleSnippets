@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages SMTP settings on the BIG-IP}
+  f5networks.f5_modules.bigip_smtp:
+    name: ${2:# Specifies the name of the SMTP server configuration}
+    partition: ${3:# Device partition to manage resources on}
+    smtp_server: ${4:# SMTP server host name in the format of a fully qualified domain name}
+    smtp_server_port: ${5:# Specifies the SMTP port number}
+    local_host_name: ${6:# Hostname used in SMTP headers in the format of a fully qualified domain name}
+    from_address: ${7:# Email address from which the email is being sent}
+    encryption: ${8:# Specifies whether the SMTP server requires an encrypted connection in order to send mail}
+    authentication: ${9:# Credentials can be set on an SMTP server's configuration even if that authentication is not used (for example, staging configs or emergency changes)}
+    smtp_server_username: ${10:# User name the SMTP server requires when validating a user}
+    smtp_server_password: ${11:# Password the SMTP server requires when validating a user}
+    state: ${12:# When C(present), ensures the SMTP configuration exists}
+    update_password: ${13:# Passwords are stored encrypted, so the module cannot know if the supplied C(smtp_server_password) is the same or different than the existing password}
+    provider: ${14:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_smtp]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_smtp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages SMTP settings on the BIG-IP</description>
+</snippet>

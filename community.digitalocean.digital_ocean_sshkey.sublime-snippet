@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage DigitalOcean SSH keys}
+  community.digitalocean.digital_ocean_sshkey:
+    state: ${2:# Indicate desired state of the target}
+    fingerprint: ${3:# This is a unique identifier for the SSH key used to delete a key}
+    name: ${4:# The name for the SSH key}
+    ssh_pub_key: ${5:# The Public SSH key to add}
+    baseurl: ${6:# DigitalOcean API base url}
+    oauth_token: ${7:# DigitalOcean OAuth token}
+    timeout: ${8:# The timeout in seconds used for polling DigitalOcean's API}
+    validate_certs: ${9:# If set to C(no), the SSL certificates will not be validated}
+  tags:
+    - community
+    - digitalocean
+    - digital_ocean_sshkey]]></content>
+  <tabTrigger>community.digitalocean.digital_ocean_sshkey</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage DigitalOcean SSH keys</description>
+</snippet>

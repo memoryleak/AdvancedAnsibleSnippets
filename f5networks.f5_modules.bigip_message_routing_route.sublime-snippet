@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages static routes for routing message protocol messages}
+  f5networks.f5_modules.bigip_message_routing_route:
+    name: ${2:# Specifies the name of the static route}
+    description: ${3:# The user-defined description of the static route}
+    type: ${4:# Parameter used to specify the type of the route to manage}
+    src_address: ${5:# Specifies the source address of the route}
+    dst_address: ${6:# Specifies the destination address of the route}
+    peer_selection_mode: ${7:# Specifies the method to use when selecting a peer from the provided list of C(peers)}
+    peers: ${8:# Specifies a list of ltm messagerouting-peer objects}
+    partition: ${9:# Device partition to create route object on}
+    state: ${10:# When C(present), ensures the route exists}
+    provider: ${11:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_message_routing_route]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_message_routing_route</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages static routes for routing message protocol messages</description>
+</snippet>

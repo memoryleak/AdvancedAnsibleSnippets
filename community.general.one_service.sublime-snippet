@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Deploy and manage OpenNebula services}
+  community.general.one_service:
+    api_url: ${2:# URL of the OpenNebula OneFlow API server}
+    api_username: ${3:# Name of the user to login into the OpenNebula OneFlow API server}
+    api_password: ${4:# Password of the user to login into OpenNebula OneFlow API server}
+    template_name: ${5:# Name of service template to use to create a new instance of a service}
+    template_id: ${6:# ID of a service template to use to create a new instance of a service}
+    service_id: ${7:# ID of a service instance that you would like to manage}
+    service_name: ${8:# Name of a service instance that you would like to manage}
+    unique: ${9:# Setting I(unique=true) will make sure that there is only one service instance running with a name set with C(service_name) when instantiating a service from a template specified with I(template_id) or I(template_name)}
+    state: ${10:# C(present) - instantiate a service from a template specified with I(template_id) or I(template_name)}
+    mode: ${11:# Set permission mode of a service instance in octet format, e}
+    owner_id: ${12:# ID of the user which will be set as the owner of the service}
+    group_id: ${13:# ID of the group which will be set as the group of the service}
+    wait: ${14:# Wait for the instance to reach RUNNING state after DEPLOYING or COOLDOWN state after SCALING}
+    wait_timeout: ${15:# How long before wait gives up, in seconds}
+    custom_attrs: ${16:# Dictionary of key/value custom attributes which will be used when instantiating a new service}
+    role: ${17:# Name of the role whose cardinality should be changed}
+    cardinality: ${18:# Number of VMs for the specified role}
+    force: ${19:# Force the new cardinality even if it is outside the limits}
+  tags:
+    - community
+    - general
+    - one_service]]></content>
+  <tabTrigger>community.general.one_service</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Deploy and manage OpenNebula services</description>
+</snippet>

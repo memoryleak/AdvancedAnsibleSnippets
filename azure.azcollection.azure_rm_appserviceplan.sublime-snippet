@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage App Service Plan}
+  azure.azcollection.azure_rm_appserviceplan:
+    resource_group: ${2:# Name of the resource group to which the resource belongs}
+    name: ${3:# Unique name of the app service plan to create or update}
+    location: ${4:# Resource location}
+    sku: ${5:# The pricing tiers, e}
+    is_linux: ${6:# Describe whether to host webapp on Linux worker}
+    number_of_workers: ${7:# Describe number of workers to be allocated}
+    state: ${8:# Assert the state of the app service plan}
+    ad_user: ${9:# Active Directory username}
+    password: ${10:# Active Directory user password}
+    profile: ${11:# Security profile found in ~/}
+    subscription_id: ${12:# Your Azure subscription Id}
+    client_id: ${13:# Azure client ID}
+    secret: ${14:# Azure client secret}
+    tenant: ${15:# Azure tenant ID}
+    cloud_environment: ${16:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${17:# Azure AD authority url}
+    cert_validation_mode: ${18:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${19:# Controls the source of the credentials to use for authentication}
+    api_profile: ${20:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${21:# Parent argument}
+    log_mode: ${22:# Parent argument}
+    x509_certificate_path: ${23:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${24:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${25:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${26:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_appserviceplan]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_appserviceplan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage App Service Plan</description>
+</snippet>

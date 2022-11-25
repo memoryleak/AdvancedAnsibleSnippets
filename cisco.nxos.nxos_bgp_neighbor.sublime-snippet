@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:(deprecated, removed after 2023-01-27) Manages BGP neighbors configurations}
+  cisco.nxos.nxos_bgp_neighbor:
+    asn: ${2:# BGP autonomous system number}
+    vrf: ${3:# Name of the VRF}
+    neighbor: ${4:# Neighbor Identifier}
+    description: ${5:# Description of the neighbor}
+    bfd: ${6:# Enables/Disables BFD for a given neighbor}
+    connected_check: ${7:# Configure whether or not to check for directly connected peer}
+    capability_negotiation: ${8:# Configure whether or not to negotiate capability with this neighbor}
+    dynamic_capability: ${9:# Configure whether or not to enable dynamic capability}
+    ebgp_multihop: ${10:# Specify multihop TTL for a remote peer}
+    local_as: ${11:# Specify the local-as number for the eBGP neighbor}
+    log_neighbor_changes: ${12:# Specify whether or not to enable log messages for neighbor up/down event}
+    low_memory_exempt: ${13:# Specify whether or not to shut down this neighbor under memory pressure}
+    maximum_peers: ${14:# Specify Maximum number of peers for this neighbor prefix Valid values are between 1 and 1000, or 'default', which does not impose the limit}
+    pwd: ${15:# Specify the password for neighbor}
+    pwd_type: ${16:# Specify the encryption type the password will use}
+    remote_as: ${17:# Specify Autonomous System Number of the neighbor}
+    remove_private_as: ${18:# Specify the config to remove private AS number from outbound updates}
+    shutdown: ${19:# Configure to administratively shutdown this neighbor}
+    suppress_4_byte_as: ${20:# Configure to suppress 4-byte AS Capability}
+    timers_keepalive: ${21:# Specify keepalive timer value}
+    timers_holdtime: ${22:# Specify holdtime timer value}
+    transport_passive_only: ${23:# Specify whether or not to only allow passive connection setup}
+    update_source: ${24:# Specify source interface of BGP session and updates}
+    state: ${25:# Determines whether the config should be present or not on the device}
+    peer_type: ${26:# Specify the peer type for BGP session}
+  tags:
+    - cisco
+    - nxos
+    - nxos_bgp_neighbor]]></content>
+  <tabTrigger>cisco.nxos.nxos_bgp_neighbor</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>(deprecated, removed after 2023-01-27) Manages BGP neighbors configurations</description>
+</snippet>

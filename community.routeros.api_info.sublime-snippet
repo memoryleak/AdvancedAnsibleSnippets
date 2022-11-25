@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieve information from API}
+  community.routeros.api_info:
+    path: ${2:# Path to query}
+    unfiltered: ${3:# Whether to output all fields, and not just the ones supported as input for M(community}
+    handle_disabled: ${4:# How to handle unset values}
+    hide_defaults: ${5:# Whether to hide default values}
+    include_dynamic: ${6:# Whether to include dynamic values}
+    hostname: ${7:# RouterOS hostname API}
+    username: ${8:# RouterOS login user}
+    password: ${9:# RouterOS user password}
+    timeout: ${10:# Timeout for the request}
+    tls: ${11:# If is set TLS will be used for RouterOS API connection}
+    port: ${12:# RouterOS api port}
+    validate_certs: ${13:# Set to C(false) to skip validation of TLS certificates}
+    validate_cert_hostname: ${14:# Set to C(true) to validate hostnames in certificates}
+    ca_path: ${15:# PEM formatted file that contains a CA certificate to be used for certificate validation}
+    encoding: ${16:# Use the specified encoding when communicating with the RouterOS device}
+  tags:
+    - community
+    - routeros
+    - api_info]]></content>
+  <tabTrigger>community.routeros.api_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieve information from API</description>
+</snippet>

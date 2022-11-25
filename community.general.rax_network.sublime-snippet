@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create / delete an isolated network in Rackspace Public Cloud}
+  community.general.rax_network:
+    state: ${2:# Indicate desired state of the resource}
+    label: ${3:# Label (name) to give the network}
+    cidr: ${4:# cidr of the network being created}
+    api_key: ${5:# Rackspace API key, overrides I(credentials)}
+    auth_endpoint: ${6:# The URI of the authentication service}
+    credentials: ${7:# File to find the Rackspace credentials in}
+    env: ${8:# Environment as configured in I(~/}
+    identity_type: ${9:# Authentication mechanism to use, such as rackspace or keystone}
+    region: ${10:# Region to create an instance in}
+    tenant_id: ${11:# The tenant ID used for authentication}
+    tenant_name: ${12:# The tenant name used for authentication}
+    username: ${13:# Rackspace username, overrides I(credentials)}
+    validate_certs: ${14:# Whether or not to require SSL validation of API endpoints}
+  tags:
+    - community
+    - general
+    - rax_network]]></content>
+  <tabTrigger>community.general.rax_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create / delete an isolated network in Rackspace Public Cloud</description>
+</snippet>

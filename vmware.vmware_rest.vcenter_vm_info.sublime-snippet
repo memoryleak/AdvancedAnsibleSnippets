@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Returns information about a virtual machine}
+  vmware.vmware_rest.vcenter_vm_info:
+    clusters: ${2:# Clusters that must contain the virtual machine for the virtual machine to match the filter}
+    datacenters: ${3:# Datacenters that must contain the virtual machine for the virtual machine to match the filter}
+    folders: ${4:# Folders that must contain the virtual machine for the virtual machine to match the filter}
+    hosts: ${5:# Hosts that must contain the virtual machine for the virtual machine to match the filter}
+    names: ${6:# Names that virtual machines must have to match the filter (see {@link Info#name})}
+    power_states: ${7:# Power states that a virtual machine must be in to match the filter (see {@link I(info)#state}}
+    resource_pools: ${8:# Resource pools that must contain the virtual machine for the virtual machine to match the filter}
+    session_timeout: ${9:# Timeout settings for client session}
+    vcenter_hostname: ${10:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${11:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${12:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${13:# The vSphere vCenter username}
+    vcenter_validate_certs: ${14:# Allows connection when SSL certificates are not valid}
+    vm: ${15:# Virtual machine identifier}
+    vms: ${16:# Identifiers of virtual machines that can match the filter}
+  tags:
+    - vmware
+    - vmware_rest
+    - vcenter_vm_info]]></content>
+  <tabTrigger>vmware.vmware_rest.vcenter_vm_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Returns information about a virtual machine</description>
+</snippet>

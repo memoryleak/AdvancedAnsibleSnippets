@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gathers info DVS portgroup configurations}
+  community.vmware.vmware_dvs_portgroup_info:
+    datacenter: ${2:# Name of the datacenter}
+    dvswitch: ${3:# Name of a dvswitch to look for}
+    show_mac_learning: ${4:# Show or hide MAC learning information of the DVS portgroup}
+    show_network_policy: ${5:# Show or hide network policies of DVS portgroup}
+    show_port_policy: ${6:# Show or hide port policies of DVS portgroup}
+    show_teaming_policy: ${7:# Show or hide teaming policies of DVS portgroup}
+    show_uplinks: ${8:# Show or hide uplinks of DVS portgroup}
+    show_vlan_info: ${9:# Show or hide vlan information of the DVS portgroup}
+    hostname: ${10:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${11:# The username of the vSphere vCenter or ESXi server}
+    password: ${12:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${13:# Allows connection when SSL certificates are not valid}
+    port: ${14:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${15:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${16:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_dvs_portgroup_info]]></content>
+  <tabTrigger>community.vmware.vmware_dvs_portgroup_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gathers info DVS portgroup configurations</description>
+</snippet>

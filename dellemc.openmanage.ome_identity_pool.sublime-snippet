@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages identity pool settings on OpenManage Enterprise}
+  dellemc.openmanage.ome_identity_pool:
+    state: ${2:# C(present) modifies an existing identity pool}
+    pool_name: ${3:# This option is mandatory for I(state) when creating, modifying and deleting an identity pool}
+    new_pool_name: ${4:# After creating an identity pool, I(pool_name) can be changed to I(new_pool_name)}
+    pool_description: ${5:# Description of the identity pool}
+    ethernet_settings: ${6:# Applicable for creating and modifying an identity pool using Ethernet settings}
+    fcoe_settings: ${7:# Applicable for creating and modifying an identity pool using FCoE settings}
+    iscsi_settings: ${8:# Applicable for creating and modifying an identity pool using ISCSI settings}
+    fc_settings: ${9:# Applicable for creating and modifying an identity pool using fibre channel(FC) settings}
+    hostname: ${10:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    username: ${11:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    password: ${12:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${13:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${14:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${15:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${16:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_identity_pool]]></content>
+  <tabTrigger>dellemc.openmanage.ome_identity_pool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages identity pool settings on OpenManage Enterprise</description>
+</snippet>

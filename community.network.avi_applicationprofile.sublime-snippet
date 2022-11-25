@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for setup of ApplicationProfile Avi RESTful Object}
+  community.network.avi_applicationprofile:
+    state: ${2:# The state that should be applied on the entity}
+    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
+    cloud_config_cksum: ${5:# Checksum of application profiles}
+    created_by: ${6:# Name of the application profile creator}
+    description: ${7:# User defined description for the object}
+    dns_service_profile: ${8:# Specifies various dns service related controls for virtual service}
+    dos_rl_profile: ${9:# Specifies various security related controls for virtual service}
+    http_profile: ${10:# Specifies the http application proxy profile parameters}
+    name: ${11:# The name of the application profile}
+    preserve_client_ip: ${12:# Specifies if client ip needs to be preserved for backend connection}
+    preserve_client_port: ${13:# Specifies if we need to preserve client port while preserving client ip for backend connections}
+    sip_service_profile: ${14:# Specifies various sip service related controls for virtual service}
+    tcp_app_profile: ${15:# Specifies the tcp application proxy profile parameters}
+    tenant_ref: ${16:# It is a reference to an object of type tenant}
+    type: ${17:# Specifies which application layer proxy is enabled for the virtual service}
+    url: ${18:# Avi controller URL of the object}
+    uuid: ${19:# Uuid of the application profile}
+    controller: ${20:# IP address or hostname of the controller}
+    username: ${21:# Username used for accessing Avi controller}
+    password: ${22:# Password of Avi user in Avi controller}
+    tenant: ${23:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${24:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${25:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${26:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${27:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${28:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_applicationprofile]]></content>
+  <tabTrigger>community.network.avi_applicationprofile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for setup of ApplicationProfile Avi RESTful Object</description>
+</snippet>

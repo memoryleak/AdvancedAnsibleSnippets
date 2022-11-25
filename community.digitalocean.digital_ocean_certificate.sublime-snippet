@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage certificates in DigitalOcean}
+  community.digitalocean.digital_ocean_certificate:
+    name: ${2:# The name of the certificate}
+    private_key: ${3:# A PEM-formatted private key content of SSL Certificate}
+    leaf_certificate: ${4:# A PEM-formatted public SSL Certificate}
+    certificate_chain: ${5:# The full PEM-formatted trust chain between the certificate authority's certificate and your domain's SSL certificate}
+    state: ${6:# Whether the certificate should be present or absent}
+    baseurl: ${7:# DigitalOcean API base url}
+    oauth_token: ${8:# DigitalOcean OAuth token}
+    timeout: ${9:# The timeout in seconds used for polling DigitalOcean's API}
+    validate_certs: ${10:# If set to C(no), the SSL certificates will not be validated}
+  tags:
+    - community
+    - digitalocean
+    - digital_ocean_certificate]]></content>
+  <tabTrigger>community.digitalocean.digital_ocean_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage certificates in DigitalOcean</description>
+</snippet>

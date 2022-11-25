@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add Sensu assets from Bonsai}
+  sensu.sensu_go.bonsai_asset:
+    version: ${2:# Version number of the asset to install}
+    rename: ${3:# The name that will be used when adding the asset to Sensu}
+    on_remote: ${4:# If set to C(true), module will download asset defnition on remote host}
+    auth: ${5:# Authentication parameters}
+    name: ${6:# The Sensu resource's name}
+    namespace: ${7:# RBAC namespace to operate in}
+    labels: ${8:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
+    annotations: ${9:# Custom metadata fields with fewer restrictions, as key/value pairs}
+  tags:
+    - sensu
+    - sensu_go
+    - bonsai_asset]]></content>
+  <tabTrigger>sensu.sensu_go.bonsai_asset</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add Sensu assets from Bonsai</description>
+</snippet>

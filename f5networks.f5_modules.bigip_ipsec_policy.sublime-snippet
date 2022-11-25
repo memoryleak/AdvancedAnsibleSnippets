@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage IPSec policies on a BIG-IP}
+  f5networks.f5_modules.bigip_ipsec_policy:
+    name: ${2:# Specifies the name of the IPSec policy}
+    description: ${3:# Description of the policy}
+    protocol: ${4:# Specifies the IPsec protocol}
+    mode: ${5:# Specifies the processing mode}
+    tunnel_local_address: ${6:# Specifies the local endpoint IP address of the IPsec tunnel}
+    tunnel_remote_address: ${7:# Specifies the remote endpoint IP address of the IPsec tunnel}
+    encrypt_algorithm: ${8:# Specifies the algorithm to use for IKE encryption}
+    route_domain: ${9:# Specifies the route domain, when C(interface) is selected for the C(mode) setting}
+    auth_algorithm: ${10:# Specifies the algorithm to use for IKE authentication}
+    ipcomp: ${11:# Specifies whether to use IPComp encapsulation}
+    lifetime: ${12:# Specifies the length of time before the IKE security association expires, in minutes}
+    kb_lifetime: ${13:# Specifies the length of time before the IKE security association, in kilobytes}
+    perfect_forward_secrecy: ${14:# Specifies the Diffie-Hellman group to use for IKE Phase 2 negotiation}
+    ipv4_interface: ${15:# When C(mode) is C(interface), indicates if the IPv4 C(any) address should be used}
+    partition: ${16:# Device partition to manage resources on}
+    state: ${17:# When C(present), ensures the resource exists}
+    provider: ${18:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_ipsec_policy]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_ipsec_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage IPSec policies on a BIG-IP</description>
+</snippet>

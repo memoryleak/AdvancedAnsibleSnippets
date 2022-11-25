@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Modify Automation Platform Controller settings}
+  awx.awx.tower_settings:
+    name: ${2:# Name of setting to modify}
+    value: ${3:# Value to be modified for given setting}
+    settings: ${4:# A data structure to be sent into the settings endpoint}
+    controller_host: ${5:# URL to your Automation Platform Controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    controller_password: ${7:# Password for your controller instance}
+    controller_oauthtoken: ${8:# The OAuth token to use}
+    validate_certs: ${9:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${10:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - tower_settings]]></content>
+  <tabTrigger>awx.awx.tower_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Modify Automation Platform Controller settings</description>
+</snippet>

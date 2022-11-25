@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages service-dce-rpc objects on Check Point over Web Services API}
+  check_point.mgmt.cp_mgmt_service_dce_rpc:
+    name: ${2:# Object name}
+    interface_uuid: ${3:# Network interface UUID}
+    keep_connections_open_after_policy_installation: ${4:# Keep connections open after policy has been installed even if they are not allowed under the new policy}
+    tags: ${5:# Collection of tag identifiers}
+    color: ${6:# Color of the object}
+    comments: ${7:# Comments string}
+    details_level: ${8:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    groups: ${9:# Collection of group identifiers}
+    ignore_warnings: ${10:# Apply changes ignoring warnings}
+    ignore_errors: ${11:# Apply changes ignoring errors}
+    state: ${12:# State of the access rule (present or absent)}
+    auto_publish_session: ${13:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${14:# Wait for the task to end}
+    wait_for_task_timeout: ${15:# How many minutes to wait until throwing a timeout error}
+    version: ${16:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_service_dce_rpc]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_service_dce_rpc</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages service-dce-rpc objects on Check Point over Web Services API</description>
+</snippet>

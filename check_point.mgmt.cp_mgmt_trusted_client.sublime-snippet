@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages trusted-client objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_trusted_client:
+    name: ${2:# Object name}
+    ip_address: ${3:# IPv4 or IPv6 address}
+    ipv4_address: ${4:# IPv4 address}
+    ipv6_address: ${5:# IPv6 address}
+    domains_assignment: ${6:# Domains to be added to this profile}
+    ip_address_first: ${7:# First IP address in the range}
+    ipv4_address_first: ${8:# First IPv4 address in the range}
+    ipv6_address_first: ${9:# First IPv6 address in the range}
+    ip_address_last: ${10:# Last IP address in the range}
+    ipv4_address_last: ${11:# Last IPv4 address in the range}
+    ipv6_address_last: ${12:# Last IPv6 address in the range}
+    mask_length: ${13:# IPv4 or IPv6 mask length}
+    mask_length4: ${14:# IPv4 mask length}
+    mask_length6: ${15:# IPv6 mask length}
+    multi_domain_server_trusted_client: ${16:# Let this trusted client connect to all Multi-Domain Servers in the deployment}
+    tags: ${17:# Collection of tag identifiers}
+    type: ${18:# Trusted client type}
+    wild_card: ${19:# IP wild card (e}
+    color: ${20:# Color of the object}
+    comments: ${21:# Comments string}
+    details_level: ${22:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_warnings: ${23:# Apply changes ignoring warnings}
+    ignore_errors: ${24:# Apply changes ignoring errors}
+    state: ${25:# State of the access rule (present or absent)}
+    auto_publish_session: ${26:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${27:# Wait for the task to end}
+    wait_for_task_timeout: ${28:# How many minutes to wait until throwing a timeout error}
+    version: ${29:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_trusted_client]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_trusted_client</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages trusted-client objects on Checkpoint over Web Services API</description>
+</snippet>

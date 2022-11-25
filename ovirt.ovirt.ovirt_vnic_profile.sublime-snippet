@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage vNIC profile of network in oVirt/RHV}
+  ovirt.ovirt.ovirt_vnic_profile:
+    name: ${2:# A human-readable name in plain text}
+    state: ${3:# Should the vNIC be absent/present}
+    description: ${4:# A human-readable description in plain text}
+    data_center: ${5:# Datacenter name where network reside}
+    network: ${6:# Name of network to which is vNIC attached}
+    network_filter: ${7:# The network filter enables to filter packets send to/from the VM's nic according to defined rules}
+    custom_properties: ${8:# Custom properties applied to the vNIC profile}
+    qos: ${9:# Quality of Service attributes regulate inbound and outbound network traffic of the NIC}
+    port_mirroring: ${10:# Enables port mirroring}
+    pass_through: ${11:# Enables passthrough to an SR-IOV-enabled host NIC}
+    migratable: ${12:# Marks whether pass_through NIC is migratable or not}
+    wait: ${13:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${14:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${15:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${16:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${17:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${18:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_vnic_profile]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_vnic_profile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage vNIC profile of network in oVirt/RHV</description>
+</snippet>

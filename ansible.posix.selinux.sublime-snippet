@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Change policy and state of SELinux}
+  ansible.posix.selinux:
+    policy: ${2:# The name of the SELinux policy to use (e}
+    state: ${3:# The SELinux mode}
+    update_kernel_param: ${4:# If set to I(true), will update also the kernel boot parameters when disabling/enabling SELinux}
+    configfile: ${5:# The path to the SELinux configuration file, if non-standard}
+  tags:
+    - ansible
+    - posix
+    - selinux]]></content>
+  <tabTrigger>ansible.posix.selinux</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Change policy and state of SELinux</description>
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Export certificate into primary node}
+  cisco.ise.personas_export_certs:
+    primary_ip: ${2:# The IP address of the primary node}
+    primary_username: ${3:# The username for the primary node}
+    primary_password: ${4:# The password for the primary node}
+    name: ${5:# The name of the node for which the certificate will be exported}
+    ip: ${6:# The IP address of the node for which the certificate will be exported}
+    hostname: ${7:# The hostname for the node for which the certificate will be exported}
+    username: ${8:# The username for the node for which the certificate will be exported}
+    password: ${9:# The password for the node for which the certificate will be exported}
+    ise_verify: ${10:# Whether or not to verify the identity of the node}
+    ise_version: ${11:# The version of the ISE node}
+    ise_wait_on_rate_limit: ${12:# Whether or not to wait on rate limit}
+  tags:
+    - cisco
+    - ise
+    - personas_export_certs]]></content>
+  <tabTrigger>cisco.ise.personas_export_certs</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Export certificate into primary node</description>
+</snippet>

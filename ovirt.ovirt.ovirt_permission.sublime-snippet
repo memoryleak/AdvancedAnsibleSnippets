@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage permissions of users/groups in oVirt/RHV}
+  ovirt.ovirt.ovirt_permission:
+    role: ${2:# Name of the role to be assigned to user/group on specific object}
+    state: ${3:# Should the permission be present/absent}
+    object_id: ${4:# ID of the object where the permissions should be managed}
+    object_name: ${5:# Name of the object where the permissions should be managed}
+    object_type: ${6:# The object where the permissions should be managed}
+    user_name: ${7:# Username of the user to manage}
+    group_name: ${8:# Name of the group to manage}
+    authz_name: ${9:# Authorization provider of the user/group}
+    namespace: ${10:# Namespace of the authorization provider, where user/group resides}
+    quota_name: ${11:# Name of the quota to assign permission}
+    wait: ${12:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${13:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${14:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${15:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${16:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${17:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_permission]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_permission</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage permissions of users/groups in oVirt/RHV</description>
+</snippet>

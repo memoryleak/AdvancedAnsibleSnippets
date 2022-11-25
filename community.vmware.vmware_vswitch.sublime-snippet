@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage a VMware Standard Switch to an ESXi host}
+  community.vmware.vmware_vswitch:
+    switch: ${2:# vSwitch name to add}
+    nics: ${3:# A list of vmnic names or vmnic name to attach to vSwitch}
+    number_of_ports: ${4:# Number of port to configure on vSwitch}
+    mtu: ${5:# MTU to configure on vSwitch}
+    state: ${6:# Add or remove the switch}
+    esxi_hostname: ${7:# Manage the vSwitch using this ESXi host system}
+    security: ${8:# Network policy specifies layer 2 security settings for a portgroup such as promiscuous mode, where guest adapter listens to all the packets, MAC address changes and forged transmits}
+    teaming: ${9:# Dictionary which configures the different teaming values for portgroup}
+    traffic_shaping: ${10:# Dictionary which configures traffic shaping for the switch}
+    hostname: ${11:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${12:# The username of the vSphere vCenter or ESXi server}
+    password: ${13:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${14:# Allows connection when SSL certificates are not valid}
+    port: ${15:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${16:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${17:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_vswitch]]></content>
+  <tabTrigger>community.vmware.vmware_vswitch</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage a VMware Standard Switch to an ESXi host</description>
+</snippet>

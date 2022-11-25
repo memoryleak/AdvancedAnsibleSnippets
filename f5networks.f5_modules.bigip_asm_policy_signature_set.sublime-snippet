@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages Signature Sets on an ASM policy}
+  f5networks.f5_modules.bigip_asm_policy_signature_set:
+    name: ${2:# Specifies the name of the signature sets to apply on, or remove from, the ASM policy}
+    policy_name: ${3:# Specifies the name of an existing ASM policy to add or remove signature sets to}
+    alarm: ${4:# Specifies if the security policy logs the request data in the Statistics screen when a request matches a signature that is included in the signature set}
+    block: ${5:# Effective when the security policy enforcement mode is Blocking}
+    learn: ${6:# Specifies if the security policy learns all requests that match a signature that is included in the signature set}
+    state: ${7:# When C(present), ensures the resource exists}
+    partition: ${8:# This parameter is only used when identifying an ASM policy}
+    provider: ${9:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_asm_policy_signature_set]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_asm_policy_signature_set</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages Signature Sets on an ASM policy</description>
+</snippet>

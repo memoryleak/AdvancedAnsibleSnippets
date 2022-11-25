@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage volumes in Pure Storage Fusion}
+  purestorage.fusion.fusion_volume:
+    name: ${2:# The name of the volume}
+    display_name: ${3:# The human name of the volume}
+    state: ${4:# Define whether the volume should exist or not}
+    tenant: ${5:# The name of the tenant}
+    tenant_space: ${6:# The name of the tenant space}
+    eradicate: ${7:# Define whether to eradicate the volume on delete or leave in trash}
+    size: ${8:# Volume size in M, G, T or P units}
+    storage_class: ${9:# The name of the storage class}
+    placement_group: ${10:# The name of the plcement group}
+    protection_policy: ${11:# The name of the protection policy}
+    hosts: ${12:# A list of host access policies to connect the volume to}
+    rename: ${13:# New name for volume}
+    key_file: ${14:# Path to the private key file}
+    app_id: ${15:# Application ID from Pure1 Registration page}
+  tags:
+    - purestorage
+    - fusion
+    - fusion_volume]]></content>
+  <tabTrigger>purestorage.fusion.fusion_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage volumes in Pure Storage Fusion</description>
+</snippet>

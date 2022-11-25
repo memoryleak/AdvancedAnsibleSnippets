@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:create, update, or destroy Execution Environments in Automation Platform Controller}
+  awx.awx.tower_execution_environment:
+    name: ${2:# Name to use for the execution environment}
+    new_name: ${3:# Setting this option will change the existing name (looked up via the name field}
+    image: ${4:# The fully qualified url of the container image}
+    description: ${5:# Description to use for the execution environment}
+    organization: ${6:# The organization the execution environment belongs to}
+    credential: ${7:# Name of the credential to use for the execution environment}
+    state: ${8:# Desired state of the resource}
+    pull: ${9:# determine image pull behavior}
+    controller_host: ${10:# URL to your Automation Platform Controller instance}
+    controller_username: ${11:# Username for your controller instance}
+    controller_password: ${12:# Password for your controller instance}
+    controller_oauthtoken: ${13:# The OAuth token to use}
+    validate_certs: ${14:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${15:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - tower_execution_environment]]></content>
+  <tabTrigger>awx.awx.tower_execution_environment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>create, update, or destroy Execution Environments in Automation Platform Controller</description>
+</snippet>

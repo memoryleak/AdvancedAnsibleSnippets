@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/delete Zabbix host groups}
+  community.zabbix.zabbix_group:
+    state: ${2:# Create or delete host group}
+    host_groups: ${3:# List of host groups to create or delete}
+    server_url: ${4:# URL of Zabbix server, with protocol (http or https)}
+    login_user: ${5:# Zabbix user name}
+    login_password: ${6:# Zabbix user password}
+    http_login_user: ${7:# Basic Auth login}
+    http_login_password: ${8:# Basic Auth password}
+    timeout: ${9:# The timeout of API request (seconds)}
+    validate_certs: ${10:# If set to False, SSL certificates will not be validated}
+  tags:
+    - community
+    - zabbix
+    - zabbix_group]]></content>
+  <tabTrigger>community.zabbix.zabbix_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/delete Zabbix host groups</description>
+</snippet>

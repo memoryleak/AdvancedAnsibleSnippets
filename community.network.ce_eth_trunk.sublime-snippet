@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages Eth-Trunk interfaces on HUAWEI CloudEngine switches}
+  community.network.ce_eth_trunk:
+    trunk_id: ${2:# Eth-Trunk interface number}
+    mode: ${3:# Specifies the working mode of an Eth-Trunk interface}
+    min_links: ${4:# Specifies the minimum number of Eth-Trunk member links in the Up state}
+    hash_type: ${5:# Hash algorithm used for load balancing among Eth-Trunk member interfaces}
+    members: ${6:# List of interfaces that will be managed in a given Eth-Trunk}
+    force: ${7:# When true it forces Eth-Trunk members to match what is declared in the members param}
+    state: ${8:# Manage the state of the resource}
+  tags:
+    - community
+    - network
+    - ce_eth_trunk]]></content>
+  <tabTrigger>community.network.ce_eth_trunk</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages Eth-Trunk interfaces on HUAWEI CloudEngine switches</description>
+</snippet>

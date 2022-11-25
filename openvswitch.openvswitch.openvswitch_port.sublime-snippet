@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Open vSwitch ports}
+  openvswitch.openvswitch.openvswitch_port:
+    bridge: ${2:# Name of bridge to manage}
+    port: ${3:# Name of port to manage on the bridge}
+    tag: ${4:# VLAN tag for this port}
+    state: ${5:# Whether the port should exist}
+    timeout: ${6:# How long to wait for ovs-vswitchd to respond}
+    external_ids: ${7:# Dictionary of external_ids applied to a port}
+    set: ${8:# Set multiple properties on a port}
+    database_socket: ${9:# Path/ip to datbase socket to use}
+  tags:
+    - openvswitch
+    - openvswitch
+    - openvswitch_port]]></content>
+  <tabTrigger>openvswitch.openvswitch.openvswitch_port</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Open vSwitch ports</description>
+</snippet>

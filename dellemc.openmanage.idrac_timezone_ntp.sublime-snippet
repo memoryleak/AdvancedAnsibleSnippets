@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures time zone and NTP on iDRAC}
+  dellemc.openmanage.idrac_timezone_ntp:
+    setup_idrac_timezone: ${2:# Allows to configure time zone on iDRAC}
+    enable_ntp: ${3:# Allows to enable or disable NTP on iDRAC}
+    ntp_server_1: ${4:# The IP address of the NTP server 1}
+    ntp_server_2: ${5:# The IP address of the NTP server 2}
+    ntp_server_3: ${6:# The IP address of the NTP server 3}
+    share_name: ${7:# (deprecated)Network share or a local path}
+    share_user: ${8:# (deprecated)Network share user name}
+    share_password: ${9:# (deprecated)Network share user password}
+    share_mnt: ${10:# (deprecated)Local mount path of the network share with read-write permission for ansible user}
+    idrac_ip: ${11:# iDRAC IP Address}
+    idrac_user: ${12:# iDRAC username}
+    idrac_password: ${13:# iDRAC user password}
+    idrac_port: ${14:# iDRAC port}
+    validate_certs: ${15:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${16:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${17:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_timezone_ntp]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_timezone_ntp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures time zone and NTP on iDRAC</description>
+</snippet>

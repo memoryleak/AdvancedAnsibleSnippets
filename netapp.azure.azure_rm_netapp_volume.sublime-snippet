@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage NetApp Azure Files Volume}
+  netapp.azure.azure_rm_netapp_volume:
+    name: ${2:# The name of the volume}
+    file_path: ${3:# A unique file path for the volume}
+    pool_name: ${4:# The name of the capacity pool}
+    account_name: ${5:# The name of the NetApp account}
+    location: ${6:# Resource location}
+    subnet_name: ${7:# Azure resource name for a delegated subnet}
+    virtual_network: ${8:# The name of the virtual network required for the subnet to create a volume}
+    service_level: ${9:# The service level of the file system}
+    vnet_resource_group_for_subnet: ${10:# Only required if virtual_network to be used is of different resource_group}
+    size: ${11:# Provisioned size of the volume (in GiB)}
+    protocol_types: ${12:# Protocol types - NFSv3, NFSv4}
+    state: ${13:# State C(present) will check that the volume exists with the requested configuration}
+    feature_flags: ${14:# Enable or disable a new feature}
+    ad_user: ${15:# Active Directory username}
+    password: ${16:# Active Directory user password}
+    profile: ${17:# Security profile found in ~/}
+    subscription_id: ${18:# Your Azure subscription Id}
+    client_id: ${19:# Azure client ID}
+    secret: ${20:# Azure client secret}
+    tenant: ${21:# Azure tenant ID}
+    cloud_environment: ${22:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${23:# Azure AD authority url}
+    cert_validation_mode: ${24:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${25:# Controls the source of the credentials to use for authentication}
+    api_profile: ${26:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${27:# Parent argument}
+    log_mode: ${28:# Parent argument}
+    tags: ${29:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${30:# Use to control if tags field is canonical or just appends to existing tags}
+    resource_group: ${31:# Name of the resource group}
+  tags:
+    - netapp
+    - azure
+    - azure_rm_netapp_volume]]></content>
+  <tabTrigger>netapp.azure.azure_rm_netapp_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage NetApp Azure Files Volume</description>
+</snippet>

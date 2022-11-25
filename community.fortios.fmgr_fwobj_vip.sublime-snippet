@@ -1,0 +1,183 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages Virtual IPs objects in FortiManager}
+  community.fortios.fmgr_fwobj_vip:
+    adom: ${2:# The ADOM the configuration should belong to}
+    mode: ${3:# Sets one of three modes for managing the object}
+    websphere_server: ${4:# Enable to add an HTTP header to indicate SSL offloading for a WebSphere server}
+    weblogic_server: ${5:# Enable to add an HTTP header to indicate SSL offloading for a WebLogic server}
+    type: ${6:# Configure a static NAT, load balance, server load balance, DNS translation, or FQDN VIP}
+    ssl_server_session_state_type: ${7:# How to expire SSL sessions for the segment of the SSL connection between the server and the FortiGate}
+    ssl_server_session_state_timeout: ${8:# Number of minutes to keep FortiGate to Server SSL session state}
+    ssl_server_session_state_max: ${9:# Maximum number of FortiGate to Server SSL session states to keep}
+    ssl_server_min_version: ${10:# Lowest SSL/TLS version acceptable from a server}
+    ssl_server_max_version: ${11:# Highest SSL/TLS version acceptable from a server}
+    ssl_server_algorithm: ${12:# Permitted encryption algorithms for the server side of SSL full mode sessions according to encryption strength}
+    ssl_send_empty_frags: ${13:# Enable/disable sending empty fragments to avoid CBC IV attacks (SSL 3}
+    ssl_pfs: ${14:# Select the cipher suites that can be used for SSL perfect forward secrecy (PFS)}
+    ssl_mode: ${15:# Apply SSL offloading mode}
+    ssl_min_version: ${16:# Lowest SSL/TLS version acceptable from a client}
+    ssl_max_version: ${17:# Highest SSL/TLS version acceptable from a client}
+    ssl_http_match_host: ${18:# Enable/disable HTTP host matching for location conversion}
+    ssl_http_location_conversion: ${19:# Enable to replace HTTP with HTTPS in the reply's Location HTTP header field}
+    ssl_hsts_include_subdomains: ${20:# Indicate that HSTS header applies to all subdomains}
+    ssl_hsts_age: ${21:# Number of seconds the client should honour the HSTS setting}
+    ssl_hsts: ${22:# Enable/disable including HSTS header in response}
+    ssl_hpkp_report_uri: ${23:# URL to report HPKP violations to}
+    ssl_hpkp_primary: ${24:# Certificate to generate primary HPKP pin from}
+    ssl_hpkp_include_subdomains: ${25:# Indicate that HPKP header applies to all subdomains}
+    ssl_hpkp_backup: ${26:# Certificate to generate backup HPKP pin from}
+    ssl_hpkp_age: ${27:# Number of seconds the client should honour the HPKP setting}
+    ssl_hpkp: ${28:# Enable/disable including HPKP header in response}
+    ssl_dh_bits: ${29:# Number of bits to use in the Diffie-Hellman exchange for RSA encryption of SSL sessions}
+    ssl_client_session_state_type: ${30:# How to expire SSL sessions for the segment of the SSL connection between the client and the FortiGate}
+    ssl_client_session_state_timeout: ${31:# Number of minutes to keep client to FortiGate SSL session state}
+    ssl_client_session_state_max: ${32:# Maximum number of client to FortiGate SSL session states to keep}
+    ssl_client_renegotiation: ${33:# Allow, deny, or require secure renegotiation of client sessions to comply with RFC 5746}
+    ssl_client_fallback: ${34:# Enable/disable support for preventing Downgrade Attacks on client connections (RFC 7507)}
+    ssl_certificate: ${35:# The name of the SSL certificate to use for SSL acceleration}
+    ssl_algorithm: ${36:# Permitted encryption algorithms for SSL sessions according to encryption strength}
+    srcintf_filter: ${37:# Interfaces to which the VIP applies}
+    src_filter: ${38:# Source address filter}
+    service: ${39:# Service name}
+    server_type: ${40:# Protocol to be load balanced by the virtual server (also called the server load balance virtual IP)}
+    protocol: ${41:# Protocol to use when forwarding packets}
+    portmapping_type: ${42:# Port mapping type}
+    portforward: ${43:# Enable/disable port forwarding}
+    persistence: ${44:# Configure how to make sure that clients connect to the same server every time they make a request that is part}
+    outlook_web_access: ${45:# Enable to add the Front-End-Https header for Microsoft Outlook Web Access}
+    nat_source_vip: ${46:# Enable to prevent unintended servers from using a virtual IP}
+    name: ${47:# Virtual IP name}
+    monitor: ${48:# Name of the health check monitor to use when polling to determine a virtual server's connectivity status}
+    max_embryonic_connections: ${49:# Maximum number of incomplete connections}
+    mappedport: ${50:# Port number range on the destination network to which the external port number range is mapped}
+    mappedip: ${51:# IP address or address range on the destination network to which the external IP address is mapped}
+    mapped_addr: ${52:# Mapped FQDN address name}
+    ldb_method: ${53:# Method used to distribute sessions to real servers}
+    https_cookie_secure: ${54:# Enable/disable verification that inserted HTTPS cookies are secure}
+    http_multiplex: ${55:# Enable/disable HTTP multiplexing}
+    http_ip_header_name: ${56:# For HTTP multiplexing, enter a custom HTTPS header name}
+    http_ip_header: ${57:# For HTTP multiplexing, enable to add the original client IP address in the XForwarded-For HTTP header}
+    http_cookie_share: ${58:# Control sharing of cookies across virtual servers}
+    http_cookie_path: ${59:# Limit HTTP cookie persistence to the specified path}
+    http_cookie_generation: ${60:# Generation of HTTP cookie to be accepted}
+    http_cookie_domain_from_host: ${61:# Enable/disable use of HTTP cookie domain from host field in HTTP}
+    http_cookie_domain: ${62:# Domain that HTTP cookie persistence should apply to}
+    http_cookie_age: ${63:# Time in minutes that client web browsers should keep a cookie}
+    gratuitous_arp_interval: ${64:# Enable to have the VIP send gratuitous ARPs}
+    extport: ${65:# Incoming port number range that you want to map to a port number range on the destination network}
+    extip: ${66:# IP address or address range on the external interface that you want to map to an address or address range on t}
+    extintf: ${67:# Interface connected to the source network that receives the packets that will be forwarded to the destination}
+    extaddr: ${68:# External FQDN address name}
+    dns_mapping_ttl: ${69:# DNS mapping TTL (Set to zero to use TTL in DNS response, default = 0)}
+    comment: ${70:# Comment}
+    color: ${71:# Color of icon on the GUI}
+    arp_reply: ${72:# Enable to respond to ARP requests for this virtual IP address}
+    dynamic_mapping: ${73:# EXPERTS ONLY! KNOWLEDGE OF FMGR JSON API IS REQUIRED!}
+    dynamic_mapping_arp_reply: ${74:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_color: ${75:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_comment: ${76:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_dns_mapping_ttl: ${77:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_extaddr: ${78:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_extintf: ${79:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_extip: ${80:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_extport: ${81:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_gratuitous_arp_interval: ${82:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_http_cookie_age: ${83:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_http_cookie_domain: ${84:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_http_cookie_domain_from_host: ${85:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_http_cookie_generation: ${86:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_http_cookie_path: ${87:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_http_cookie_share: ${88:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_http_ip_header: ${89:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_http_ip_header_name: ${90:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_http_multiplex: ${91:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_https_cookie_secure: ${92:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ldb_method: ${93:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_mapped_addr: ${94:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_mappedip: ${95:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_mappedport: ${96:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_max_embryonic_connections: ${97:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_monitor: ${98:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_nat_source_vip: ${99:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_outlook_web_access: ${100:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_persistence: ${101:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_portforward: ${102:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_portmapping_type: ${103:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_protocol: ${104:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_server_type: ${105:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_service: ${106:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_src_filter: ${107:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_srcintf_filter: ${108:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_algorithm: ${109:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_certificate: ${110:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_client_fallback: ${111:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_client_renegotiation: ${112:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_client_session_state_max: ${113:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_client_session_state_timeout: ${114:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_client_session_state_type: ${115:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_dh_bits: ${116:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_hpkp: ${117:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_hpkp_age: ${118:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_hpkp_backup: ${119:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_hpkp_include_subdomains: ${120:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_hpkp_primary: ${121:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_hpkp_report_uri: ${122:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_hsts: ${123:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_hsts_age: ${124:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_hsts_include_subdomains: ${125:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_http_location_conversion: ${126:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_http_match_host: ${127:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_max_version: ${128:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_min_version: ${129:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_mode: ${130:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_pfs: ${131:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_send_empty_frags: ${132:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_server_algorithm: ${133:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_server_max_version: ${134:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_server_min_version: ${135:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_server_session_state_max: ${136:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_server_session_state_timeout: ${137:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_server_session_state_type: ${138:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_type: ${139:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_weblogic_server: ${140:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_websphere_server: ${141:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_realservers_client_ip: ${142:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_realservers_healthcheck: ${143:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_realservers_holddown_interval: ${144:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_realservers_http_host: ${145:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_realservers_ip: ${146:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_realservers_max_connections: ${147:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_realservers_monitor: ${148:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_realservers_port: ${149:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_realservers_seq: ${150:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_realservers_status: ${151:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_realservers_weight: ${152:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_cipher_suites_cipher: ${153:# Dynamic Mapping Version of Suffixed Option Name}
+    dynamic_mapping_ssl_cipher_suites_versions: ${154:# Dynamic Mapping Version of Suffixed Option Name}
+    realservers: ${155:# EXPERTS ONLY! KNOWLEDGE OF FMGR JSON API IS REQUIRED!}
+    realservers_client_ip: ${156:# Only clients in this IP range can connect to this real server}
+    realservers_healthcheck: ${157:# Enable to check the responsiveness of the real server before forwarding traffic}
+    realservers_holddown_interval: ${158:# Time in seconds that the health check monitor monitors an unresponsive server that should be active}
+    realservers_http_host: ${159:# HTTP server domain name in HTTP header}
+    realservers_ip: ${160:# IP address of the real server}
+    realservers_max_connections: ${161:# Max number of active connections that can be directed to the real server}
+    realservers_monitor: ${162:# Name of the health check monitor to use when polling to determine a virtual server's connectivity status}
+    realservers_port: ${163:# Port for communicating with the real server}
+    realservers_seq: ${164:# Real Server Sequence Number}
+    realservers_status: ${165:# Set the status of the real server to active so that it can accept traffic}
+    realservers_weight: ${166:# Weight of the real server}
+    ssl_cipher_suites: ${167:# EXPERTS ONLY! KNOWLEDGE OF FMGR JSON API IS REQUIRED!}
+    ssl_cipher_suites_cipher: ${168:# Cipher suite name}
+    ssl_cipher_suites_versions: ${169:# SSL/TLS versions that the cipher suite can be used with}
+    ssl_server_cipher_suites: ${170:# EXPERTS ONLY! KNOWLEDGE OF FMGR JSON API IS REQUIRED!}
+    ssl_server_cipher_suites_cipher: ${171:# Cipher suite name}
+    ssl_server_cipher_suites_priority: ${172:# SSL/TLS cipher suites priority}
+    ssl_server_cipher_suites_versions: ${173:# SSL/TLS versions that the cipher suite can be used with}
+  tags:
+    - community
+    - fortios
+    - fmgr_fwobj_vip]]></content>
+  <tabTrigger>community.fortios.fmgr_fwobj_vip</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages Virtual IPs objects in FortiManager</description>
+</snippet>

@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates or removes IP addresses from NetBox}
+  netbox.netbox.netbox_ip_address:
+    data: ${2:# Defines the IP address configuration}
+    state: ${3:# Use C(present), C(new) or C(absent) for adding, force adding or removing}
+    netbox_url: ${4:# The URL of the NetBox instance}
+    netbox_token: ${5:# The NetBox API token}
+    query_params: ${6:# This can be used to override the specified values in ALLOWED_QUERY_PARAMS that are defined}
+    validate_certs: ${7:# If C(no), SSL certificates will not be validated}
+    cert: ${8:# Certificate path}
+  tags:
+    - netbox
+    - netbox
+    - netbox_ip_address]]></content>
+  <tabTrigger>netbox.netbox.netbox_ip_address</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates or removes IP addresses from NetBox</description>
+</snippet>

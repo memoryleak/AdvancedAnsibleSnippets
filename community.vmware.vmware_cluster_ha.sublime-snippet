@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage High Availability (HA) on VMware vSphere clusters}
+  community.vmware.vmware_cluster_ha:
+    cluster_name: ${2:# The name of the cluster to be managed}
+    datacenter: ${3:# The name of the datacenter}
+    enable: ${4:# Whether to enable HA}
+    ha_host_monitoring: ${5:# Whether HA restarts virtual machines after a host fails}
+    ha_vm_monitoring: ${6:# State of virtual machine health monitoring service}
+    host_isolation_response: ${7:# Indicates whether or VMs should be powered off if a host determines that it is isolated from the rest of the compute resource}
+    slot_based_admission_control: ${8:# Configure slot based admission control policy}
+    reservation_based_admission_control: ${9:# Configure reservation based admission control policy}
+    failover_host_admission_control: ${10:# Configure dedicated failover hosts}
+    ha_vm_failure_interval: ${11:# The number of seconds after which virtual machine is declared as failed if no heartbeat has been received}
+    ha_vm_min_up_time: ${12:# The number of seconds for the virtual machine's heartbeats to stabilize after the virtual machine has been powered on}
+    ha_vm_max_failures: ${13:# Maximum number of failures and automated resets allowed during the time that C(ha_vm_max_failure_window) specifies}
+    ha_vm_max_failure_window: ${14:# The number of seconds for the window during which up to C(ha_vm_max_failures) resets can occur before automated responses stop}
+    ha_restart_priority: ${15:# Priority HA gives to a virtual machine if sufficient capacity is not available to power on all failed virtual machines}
+    advanced_settings: ${16:# A dictionary of advanced HA settings}
+    apd_response: ${17:# VM storage protection setting for storage failures categorized as All Paths Down (APD)}
+    apd_delay: ${18:# The response recovery delay time in sec for storage failures categorized as All Paths Down (APD)}
+    apd_reaction: ${19:# VM response recovery reaction for storage failures categorized as All Paths Down (APD)}
+    pdl_response: ${20:# VM storage protection setting for storage failures categorized as Permenant Device Loss (PDL)}
+    hostname: ${21:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${22:# The username of the vSphere vCenter or ESXi server}
+    password: ${23:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${24:# Allows connection when SSL certificates are not valid}
+    port: ${25:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${26:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${27:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_cluster_ha]]></content>
+  <tabTrigger>community.vmware.vmware_cluster_ha</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage High Availability (HA) on VMware vSphere clusters</description>
+</snippet>

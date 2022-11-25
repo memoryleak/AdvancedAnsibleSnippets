@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the SSHD settings of a BIG-IP}
+  f5networks.f5_modules.bigip_device_sshd:
+    allow: ${2:# If you have enabled SSH access, specifies the IP address or address range for other systems that can use SSH to communicate with this system}
+    banner: ${3:# Whether to enable the banner or not}
+    banner_text: ${4:# Specifies the text to include on the pre-login banner, which displays when a user attempts to login to the system using SSH}
+    inactivity_timeout: ${5:# Specifies the number of seconds before inactivity causes an SSH session to log out}
+    log_level: ${6:# Specifies the minimum SSHD message level to include in the system log}
+    login: ${7:# When checked C(enabled), specifies the system accepts SSH communication}
+    port: ${8:# Port on which you want the SSH daemon to run}
+    provider: ${9:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_device_sshd]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_device_sshd</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the SSHD settings of a BIG-IP</description>
+</snippet>

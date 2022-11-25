@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Lists security groups}
+  openstack.cloud.security_group_info:
+    description: ${2:# Description of the security group}
+    name: ${3:# Name or id of the security group}
+    project_id: ${4:# Specifies the project id as filter criteria}
+    revision_number: ${5:# Filter the list result by the revision number of the}
+    tags: ${6:# A list of tags to filter the list result by}
+    any_tags: ${7:# A list of tags to filter the list result by}
+    not_tags: ${8:# A list of tags to filter the list result by}
+    not_any_tags: ${9:# A list of tags to filter the list result by}
+    cloud: ${10:# Named cloud or cloud config to operate against}
+    auth: ${11:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${12:# Name of the auth plugin to use}
+    region_name: ${13:# Name of the region}
+    wait: ${14:# Should ansible wait until the requested resource is complete}
+    timeout: ${15:# How long should ansible wait for the requested resource}
+    api_timeout: ${16:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${17:# Whether or not SSL API requests should be verified}
+    ca_cert: ${18:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${19:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${20:# A path to a client key to use as part of the SSL transaction}
+    interface: ${21:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${22:# Ignored}
+    sdk_log_path: ${23:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${24:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - security_group_info]]></content>
+  <tabTrigger>openstack.cloud.security_group_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Lists security groups</description>
+</snippet>

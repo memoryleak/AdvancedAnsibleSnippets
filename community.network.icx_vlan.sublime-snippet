@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage VLANs on Ruckus ICX 7000 series switches}
+  community.network.icx_vlan:
+    name: ${2:# Name of the VLAN}
+    vlan_id: ${3:# ID of the VLAN}
+    interfaces: ${4:# List of ethernet ports or LAGS to be added as access(untagged) ports to the vlan}
+    tagged: ${5:# List of ethernet ports or LAGS to be added as trunk(tagged) ports to the vlan}
+    ip_dhcp_snooping: ${6:# Enables DHCP snooping on a VLAN}
+    ip_arp_inspection: ${7:# Enables dynamic ARP inspection on a VLAN}
+    associated_interfaces: ${8:# This is a intent option and checks the operational state of the for given vlan C(name) for associated interfaces}
+    associated_tagged: ${9:# This is a intent option and checks the operational state of  given vlan C(name) for associated tagged ports and lags}
+    delay: ${10:# Delay the play should wait to check for declarative intent params values}
+    stp: ${11:# Enable spanning-tree 802-1w/rstp for this vlan}
+    aggregate: ${12:# List of VLANs definitions}
+    purge: ${13:# Purge VLANs not defined in the I(aggregate) parameter}
+    state: ${14:# State of the VLAN configuration}
+    check_running_config: ${15:# Check running configuration}
+  tags:
+    - community
+    - network
+    - icx_vlan]]></content>
+  <tabTrigger>community.network.icx_vlan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage VLANs on Ruckus ICX 7000 series switches</description>
+</snippet>

@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Rundeck projects}
+  community.general.rundeck_project:
+    state: ${2:# Create or remove Rundeck project}
+    name: ${3:# Sets the project name}
+    url: ${4:# Sets the rundeck instance URL}
+    api_version: ${5:# Sets the API version used by module}
+    token: ${6:# Sets the token to authenticate against Rundeck API}
+    client_cert: ${7:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${8:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    force: ${9:# If C(yes) do not get a cached copy}
+    force_basic_auth: ${10:# Credentials specified with I(url_username) and I(url_password) should be passed in HTTP Header}
+    http_agent: ${11:# Header to identify as, generally appears in web server logs}
+    url_password: ${12:# The password for use in HTTP basic authentication}
+    url_username: ${13:# The username for use in HTTP basic authentication}
+    use_proxy: ${14:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${15:# If C(no), SSL certificates will not be validated}
+    use_gssapi: ${16:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+  tags:
+    - community
+    - general
+    - rundeck_project]]></content>
+  <tabTrigger>community.general.rundeck_project</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Rundeck projects</description>
+</snippet>

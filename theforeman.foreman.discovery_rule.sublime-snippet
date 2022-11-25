@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Host Discovery Rules}
+  theforeman.foreman.discovery_rule:
+    name: ${2:# Name of the Discovery Rule}
+    search: ${3:# Expression to match newly discovered hosts with}
+    hostgroup: ${4:# Hostgroup to assign hosts to}
+    hostname: ${5:# Hostname to assign to discovered host(s)}
+    enabled: ${6:# Enable or disable the rule}
+    priority: ${7:# Priority of the rule}
+    max_count: ${8:# Maximum amount of hosts to provision with the rule}
+    server_url: ${9:# URL of the Foreman server}
+    username: ${10:# Username accessing the Foreman server}
+    password: ${11:# Password of the user accessing the Foreman server}
+    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${13:# State of the entity}
+    organizations: ${14:# List of organizations the entity should be assigned to}
+    locations: ${15:# List of locations the entity should be assigned to}
+  tags:
+    - theforeman
+    - foreman
+    - discovery_rule]]></content>
+  <tabTrigger>theforeman.foreman.discovery_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Host Discovery Rules</description>
+</snippet>

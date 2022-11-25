@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for Sda Port Assignment For User Device}
+  cisco.dnac.sda_port_assignment_for_user_device:
+    authenticateTemplateName: ${2:# Authenticate TemplateName associated with siteNameHierarchy}
+    dataIpAddressPoolName: ${3:# Ip Pool Name, that is assigned to virtual network with traffic type as DATA(can't be empty if voiceIpAddressPoolName is empty)}
+    deviceManagementIpAddress: ${4:# DeviceManagementIpAddress query parameter}
+    interfaceDescription: ${5:# User defined text message for this port}
+    interfaceName: ${6:# InterfaceName query parameter}
+    scalableGroupName: ${7:# Scalable Group name associated with VN}
+    siteNameHierarchy: ${8:# Complete Path of SD-Access Fabric Site}
+    voiceIpAddressPoolName: ${9:# Ip Pool Name, that is assigned to virtual network with traffic type as VOICE(can't be empty if dataIpAddressPoolName is empty)}
+    dnac_host: ${10:# The Cisco DNA Center hostname}
+    dnac_port: ${11:# The Cisco DNA Center port}
+    dnac_username: ${12:# The Cisco DNA Center username to authenticate}
+    dnac_password: ${13:# The Cisco DNA Center password to authenticate}
+    dnac_verify: ${14:# Flag to enable or disable SSL certificate verification}
+    dnac_version: ${15:# Informs the SDK which version of Cisco DNA Center to use}
+    dnac_debug: ${16:# Flag for Cisco DNA Center SDK to enable debugging}
+    validate_response_schema: ${17:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
+  tags:
+    - cisco
+    - dnac
+    - sda_port_assignment_for_user_device]]></content>
+  <tabTrigger>cisco.dnac.sda_port_assignment_for_user_device</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for Sda Port Assignment For User Device</description>
+</snippet>

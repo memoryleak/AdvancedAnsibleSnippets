@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add or remove device(s) from a static device group on OpenManage Enterprise}
+  dellemc.openmanage.ome_device_group:
+    state: ${2:# C(present) allows to add the device(s) to a static device group}
+    name: ${3:# Name of the static group}
+    group_id: ${4:# ID of the static device}
+    device_ids: ${5:# List of ID(s) of the device(s) to be added or removed from the device group}
+    device_service_tags: ${6:# List of service tag(s) of the device(s) to be added or removed from the device group}
+    ip_addresses: ${7:# List of IPs of the device(s) to be added or removed from the device group}
+    hostname: ${8:# OpenManage Enterprise IP address or hostname}
+    username: ${9:# OpenManage Enterprise username}
+    password: ${10:# OpenManage Enterprise password}
+    port: ${11:# OpenManage Enterprise HTTPS port}
+    validate_certs: ${12:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${13:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${14:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_device_group]]></content>
+  <tabTrigger>dellemc.openmanage.ome_device_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add or remove device(s) from a static device group on OpenManage Enterprise</description>
+</snippet>

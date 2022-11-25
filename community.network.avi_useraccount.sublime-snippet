@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Avi UserAccount Module}
+  community.network.avi_useraccount:
+    old_password: ${2:# Old password for update password or default password for bootstrap}
+    force_change: ${3:# If specifically set to true then old password is tried first for controller and then the new password is tried}
+    controller: ${4:# IP address or hostname of the controller}
+    username: ${5:# Username used for accessing Avi controller}
+    password: ${6:# Password of Avi user in Avi controller}
+    tenant: ${7:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${8:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${9:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${10:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${11:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${12:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_useraccount]]></content>
+  <tabTrigger>community.network.avi_useraccount</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Avi UserAccount Module</description>
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage system objects in Cobbler}
+  community.general.cobbler_system:
+    host: ${2:# The name or IP address of the Cobbler system}
+    port: ${3:# Port number to be used for REST connection}
+    username: ${4:# The username to log in to Cobbler}
+    password: ${5:# The password to log in to Cobbler}
+    use_ssl: ${6:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    validate_certs: ${7:# If C(false), SSL certificates will not be validated}
+    name: ${8:# The system name to manage}
+    properties: ${9:# A dictionary with system properties}
+    interfaces: ${10:# A list of dictionaries containing interface options}
+    sync: ${11:# Sync on changes}
+    state: ${12:# Whether the system should be present, absent or a query is made}
+  tags:
+    - community
+    - general
+    - cobbler_system]]></content>
+  <tabTrigger>community.general.cobbler_system</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage system objects in Cobbler</description>
+</snippet>

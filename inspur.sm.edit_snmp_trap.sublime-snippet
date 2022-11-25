@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set snmp trap}
+  inspur.sm.edit_snmp_trap:
+    version: ${2:# SNMP trap version}
+    event_severity: ${3:# Event Severity}
+    community: ${4:# Community of v1/v2c}
+    host_id: ${5:# Host id}
+    v3username: ${6:# Set user name of V3 trap}
+    engine_id: ${7:# Set Engine ID of V3 trap, engine ID is a string of 10 to 48 hex characters, must even, can set NULL}
+    auth_protocol: ${8:# Choose authentication}
+    auth_password: ${9:# Set auth password of V3 trap, password is a string of 8 to 16 alpha-numeric characters}
+    priv_protocol: ${10:# Choose Privacy}
+    priv_password: ${11:# Set privacy password of V3 trap, password is a string of 8 to 16 alpha-numeric characters}
+    system_name: ${12:# Set system name, can set NULL}
+    system_id: ${13:# Set system ID, can set NULL}
+    location: ${14:# Set host Location, can set NULL}
+    contact: ${15:# Set contact, can set NULL}
+    os: ${16:# Set host OS, can set NULL}
+    trap_port: ${17:# Set SNMP trap Port(1-65535)}
+    provider: ${18:# A dict object containing connection details}
+    host: ${19:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${20:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${21:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - sm
+    - edit_snmp_trap]]></content>
+  <tabTrigger>inspur.sm.edit_snmp_trap</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set snmp trap</description>
+</snippet>

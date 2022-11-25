@@ -1,0 +1,62 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage clusters in oVirt/RHV}
+  ovirt.ovirt.ovirt_cluster:
+    id: ${2:# ID of the cluster to manage}
+    name: ${3:# Name of the cluster to manage}
+    state: ${4:# Should the cluster be present or absent}
+    data_center: ${5:# Datacenter name where cluster reside}
+    description: ${6:# Description of the cluster}
+    comment: ${7:# Comment of the cluster}
+    network: ${8:# Management network of cluster to access cluster hosts}
+    ballooning: ${9:# If I(True) enable memory balloon optimization}
+    virt: ${10:# If I(True), hosts in this cluster will be used to run virtual machines}
+    gluster: ${11:# If I(True), hosts in this cluster will be used as Gluster Storage server nodes, and not for running virtual machines}
+    threads_as_cores: ${12:# If I(True) the exposed host threads would be treated as cores which can be utilized by virtual machines}
+    ksm: ${13:# I I(True) MoM enables to run Kernel Same-page Merging I(KSM) when necessary and when it can yield a memory saving benefit that outweighs its CPU cost}
+    ksm_numa: ${14:# If I(True) enables KSM C(ksm) for best performance inside NUMA nodes}
+    ha_reservation: ${15:# If I(True) enables the oVirt/RHV to monitor cluster capacity for highly available virtual machines}
+    trusted_service: ${16:# If I(True) enables integration with an OpenAttestation server}
+    vm_reason: ${17:# If I(True) enables an optional reason field when a virtual machine is shut down from the Manager, allowing the administrator to provide an explanation for the maintenance}
+    host_reason: ${18:# If I(True) enables an optional reason field when a host is placed into maintenance mode from the Manager, allowing the administrator to provide an explanation for the maintenance}
+    memory_policy: ${19:# I(disabled) - Disables memory page sharing}
+    rng_sources: ${20:# List that specify the random number generator devices that all hosts in the cluster will use}
+    spice_proxy: ${21:# The proxy by which the SPICE client will connect to virtual machines}
+    fence_enabled: ${22:# If I(True) enables fencing on the cluster}
+    fence_skip_if_gluster_bricks_up: ${23:# A flag indicating if fencing should be skipped if Gluster bricks are up and running in the host being fenced}
+    fence_skip_if_gluster_quorum_not_met: ${24:# A flag indicating if fencing should be skipped if Gluster bricks are up and running and Gluster quorum will not be met without those bricks}
+    fence_skip_if_sd_active: ${25:# If I(True) any hosts in the cluster that are Non Responsive and still connected to storage will not be fenced}
+    fence_skip_if_connectivity_broken: ${26:# If I(True) fencing will be temporarily disabled if the percentage of hosts in the cluster that are experiencing connectivity issues is greater than or equal to the defined threshold}
+    fence_connectivity_threshold: ${27:# The threshold used by C(fence_skip_if_connectivity_broken)}
+    resilience_policy: ${28:# The resilience policy defines how the virtual machines are prioritized in the migration}
+    migration_bandwidth: ${29:# The bandwidth settings define the maximum bandwidth of both outgoing and incoming migrations per host}
+    migration_bandwidth_limit: ${30:# Set the I(custom) migration bandwidth limit}
+    migration_auto_converge: ${31:# If I(True) auto-convergence is used during live migration of virtual machines}
+    migration_compressed: ${32:# If I(True) compression is used during live migration of the virtual machine}
+    migration_encrypted: ${33:# If I(True) encryption is used during live migration of the virtual machine}
+    migration_policy: ${34:# A migration policy defines the conditions for live migrating virtual machines in the event of host failure}
+    serial_policy: ${35:# Specify a serial number policy for the virtual machines in the cluster}
+    serial_policy_value: ${36:# Allows you to specify a custom serial number}
+    scheduling_policy: ${37:# Name of the scheduling policy to be used for cluster}
+    scheduling_policy_properties: ${38:# Custom scheduling policy properties of the cluster}
+    cpu_arch: ${39:# CPU architecture of cluster}
+    cpu_type: ${40:# CPU codename}
+    switch_type: ${41:# Type of switch to be used by all networks in given cluster}
+    compatibility_version: ${42:# The compatibility version of the cluster}
+    mac_pool: ${43:# MAC pool to be used by this cluster}
+    external_network_providers: ${44:# List of references to the external network providers available in the cluster}
+    firewall_type: ${45:# The type of firewall to be used on hosts in this cluster}
+    gluster_tuned_profile: ${46:# The name of the U(https://fedorahosted}
+    wait: ${47:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${48:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${49:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${50:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${51:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${52:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_cluster]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_cluster</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage clusters in oVirt/RHV</description>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Roles}
+  theforeman.foreman.role:
+    name: ${2:# The name of the role}
+    description: ${3:# Description of the role}
+    filters: ${4:# Filters with permissions for this role}
+    server_url: ${5:# URL of the Foreman server}
+    username: ${6:# Username accessing the Foreman server}
+    password: ${7:# Password of the user accessing the Foreman server}
+    validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${9:# State of the entity}
+    organizations: ${10:# List of organizations the entity should be assigned to}
+    locations: ${11:# List of locations the entity should be assigned to}
+  tags:
+    - theforeman
+    - foreman
+    - role]]></content>
+  <tabTrigger>theforeman.foreman.role</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Roles</description>
+</snippet>

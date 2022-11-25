@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure VSAN clustering on an ESXi host}
+  community.vmware.vmware_vsan_cluster:
+    cluster_uuid: ${2:# Desired cluster UUID}
+    hostname: ${3:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${4:# The username of the vSphere vCenter or ESXi server}
+    password: ${5:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${6:# Allows connection when SSL certificates are not valid}
+    port: ${7:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${8:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${9:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_vsan_cluster]]></content>
+  <tabTrigger>community.vmware.vmware_vsan_cluster</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure VSAN clustering on an ESXi host</description>
+</snippet>

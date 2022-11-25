@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage packages on SUSE and openSUSE}
+  community.general.zypper:
+    name: ${2:# Package name C(name) or package specifier or a list of either}
+    state: ${3:# C(present) will make sure the package is installed}
+    type: ${4:# The type of package to be operated on}
+    extra_args_precommand: ${5:# Add additional global target options to C(zypper)}
+    disable_gpg_check: ${6:# Whether to disable to GPG signature checking of the package signature being installed}
+    disable_recommends: ${7:# Corresponds to the C(--no-recommends) option for I(zypper)}
+    force: ${8:# Adds C(--force) option to I(zypper)}
+    force_resolution: ${9:# Adds C(--force-resolution) option to I(zypper)}
+    update_cache: ${10:# Run the equivalent of C(zypper refresh) before the operation}
+    oldpackage: ${11:# Adds C(--oldpackage) option to I(zypper)}
+    extra_args: ${12:# Add additional options to C(zypper) command}
+    allow_vendor_change: ${13:# Adds C(--allow_vendor_change) option to I(zypper) dist-upgrade command}
+    replacefiles: ${14:# Adds C(--replacefiles) option to I(zypper) install/update command}
+    clean_deps: ${15:# Adds C(--clean-deps) option to I(zypper) remove command}
+  tags:
+    - community
+    - general
+    - zypper]]></content>
+  <tabTrigger>community.general.zypper</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage packages on SUSE and openSUSE</description>
+</snippet>

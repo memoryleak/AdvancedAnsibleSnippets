@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage notification templates in Icinga2}
+  t_systems_mms.icinga_director.icinga_notification_template:
+    state: ${2:# Apply feature state}
+    object_name: ${3:# Name of the notification template}
+    notification_interval: ${4:# The notification interval (in seconds)}
+    types: ${5:# The state transition types you want to get notifications for}
+    states: ${6:# The host or service states you want to get notifications for}
+    times_begin: ${7:# First notification delay}
+    times_end: ${8:# Last notification}
+    zone: ${9:# Set the zone}
+    period: ${10:# The name of a time period which determines when this notification should be triggered}
+    command: ${11:# Check command definition}
+    users: ${12:# Users that should be notified by this notification}
+    user_groups: ${13:# User Groups that should be notified by this notification}
+    append: ${14:# Do not overwrite the whole object but instead append the defined properties}
+    url: ${15:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    force: ${16:# If C(yes) do not get a cached copy}
+    http_agent: ${17:# Header to identify as, generally appears in web server logs}
+    use_proxy: ${18:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${19:# If C(no), SSL certificates will not be validated}
+    url_username: ${20:# The username for use in HTTP basic authentication}
+    url_password: ${21:# The password for use in HTTP basic authentication}
+    force_basic_auth: ${22:# Credentials specified with I(url_username) and I(url_password) should be passed in HTTP Header}
+    client_cert: ${23:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${24:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    use_gssapi: ${25:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+  tags:
+    - t_systems_mms
+    - icinga_director
+    - icinga_notification_template]]></content>
+  <tabTrigger>t_systems_mms.icinga_director.icinga_notification_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage notification templates in Icinga2</description>
+</snippet>

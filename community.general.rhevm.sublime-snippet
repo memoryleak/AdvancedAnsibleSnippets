@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:RHEV/oVirt automation}
+  community.general.rhevm:
+    user: ${2:# The user to authenticate with}
+    password: ${3:# The password for user authentication}
+    server: ${4:# The name/IP of your RHEV-m/oVirt instance}
+    port: ${5:# The port on which the API is reachable}
+    insecure_api: ${6:# A boolean switch to make a secure or insecure connection to the server}
+    name: ${7:# The name of the VM}
+    cluster: ${8:# The RHEV/oVirt cluster in which you want you VM to start}
+    datacenter: ${9:# The RHEV/oVirt datacenter in which you want you VM to start}
+    state: ${10:# This serves to create/remove/update or powermanage your VM}
+    image: ${11:# The template to use for the VM}
+    type: ${12:# To define if the VM is a server or desktop}
+    vmhost: ${13:# The host you wish your VM to run on}
+    vmcpu: ${14:# The number of CPUs you want in your VM}
+    cpu_share: ${15:# This parameter is used to configure the CPU share}
+    vmmem: ${16:# The amount of memory you want your VM to use (in GB)}
+    osver: ${17:# The operating system option in RHEV/oVirt}
+    mempol: ${18:# The minimum amount of memory you wish to reserve for this system}
+    vm_ha: ${19:# To make your VM High Available}
+    disks: ${20:# This option uses complex arguments and is a list of disks with the options name, size and domain}
+    ifaces: ${21:# This option uses complex arguments and is a list of interfaces with the options name and vlan}
+    boot_order: ${22:# This option uses complex arguments and is a list of items that specify the bootorder}
+    del_prot: ${23:# This option sets the delete protection checkbox}
+    cd_drive: ${24:# The CD you wish to have mounted on the VM when I(state = 'CD')}
+    timeout: ${25:# The timeout you wish to define for power actions}
+  tags:
+    - community
+    - general
+    - rhevm]]></content>
+  <tabTrigger>community.general.rhevm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>RHEV/oVirt automation</description>
+</snippet>

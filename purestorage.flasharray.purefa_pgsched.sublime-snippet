@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage protection groups replication schedules on Pure Storage FlashArrays}
+  purestorage.flasharray.purefa_pgsched:
+    name: ${2:# The name of the protection group}
+    state: ${3:# Define whether to set or delete the protection group schedule}
+    schedule: ${4:# Which schedule to change}
+    enabled: ${5:# Enable the schedule being configured}
+    replicate_at: ${6:# Specifies the preferred time as HH:MM:SS, using 24-hour clock, at which to generate snapshots}
+    blackout_start: ${7:# Specifies the time at which to suspend replication}
+    blackout_end: ${8:# Specifies the time at which to restart replication}
+    replicate_frequency: ${9:# Specifies the replication frequency in seconds}
+    snap_at: ${10:# Specifies the preferred time as HH:MM:SS, using 24-hour clock, at which to generate snapshots}
+    snap_frequency: ${11:# Specifies the snapshot frequency in seconds}
+    days: ${12:# Specifies the number of days to keep the I(per_day) snapshots beyond the I(all_for) period before they are eradicated}
+    all_for: ${13:# Specifies the length of time, in seconds, to keep the snapshots on the source array before they are eradicated}
+    per_day: ${14:# Specifies the number of I(per_day) snapshots to keep beyond the I(all_for) period}
+    target_all_for: ${15:# Specifies the length of time, in seconds, to keep the replicated snapshots on the targets}
+    target_per_day: ${16:# Specifies the number of I(per_day) replicated snapshots to keep beyond the I(target_all_for) period}
+    target_days: ${17:# Specifies the number of days to keep the I(target_per_day) replicated snapshots beyond the I(target_all_for) period before they are eradicated}
+    fa_url: ${18:# FlashArray management IPv4 address or Hostname}
+    api_token: ${19:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_pgsched]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_pgsched</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage protection groups replication schedules on Pure Storage FlashArrays</description>
+</snippet>

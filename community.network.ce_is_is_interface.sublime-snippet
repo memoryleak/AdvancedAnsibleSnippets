@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages isis interface configuration on HUAWEI CloudEngine devices}
+  community.network.ce_is_is_interface:
+    instance_id: ${2:# Specifies the id of a isis process}
+    ifname: ${3:# A L3 interface}
+    leveltype: ${4:# level type for three types}
+    level1dispriority: ${5:# the dispriority of the level1}
+    level2dispriority: ${6:# the dispriority of the level1}
+    silentenable: ${7:# enable the interface can send isis message}
+    silentcost: ${8:# Specifies whether the routing cost of the silent interface is 0}
+    typep2penable: ${9:# Simulate the network type of the interface as P2P}
+    snpacheck: ${10:# Enable SNPA check for LSPs and SNPs}
+    p2pnegotiationmode: ${11:# Set the P2P neighbor negotiation type}
+    p2ppeeripignore: ${12:# When the P2P hello packet is received, no IP address check is performed}
+    ppposicpcheckenable: ${13:# Interface for setting PPP link protocol to check OSICP negotiation status}
+    level1cost: ${14:# Specifies the link cost of the interface when performing Level-1 SPF calculation}
+    level2cost: ${15:# Specifies the link cost of the interface when performing Level-2 SPF calculation}
+    bfdstaticen: ${16:# Configure static BFD on a specific interface enabled with ISIS}
+    bfdblocken: ${17:# Blocking interfaces to dynamically create BFD features}
+    state: ${18:# Determines whether the config should be present or not on the device}
+  tags:
+    - community
+    - network
+    - ce_is_is_interface]]></content>
+  <tabTrigger>community.network.ce_is_is_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages isis interface configuration on HUAWEI CloudEngine devices</description>
+</snippet>

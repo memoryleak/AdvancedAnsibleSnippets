@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Quick Deploy settings on OpenManage Enterprise Modular}
+  dellemc.openmanage.ome_device_quick_deploy:
+    device_id: ${2:# The ID of the chassis for which the Quick Deploy settings to be deployed}
+    device_service_tag: ${3:# The service tag of the chassis for which the Quick Deploy settings to be deployed}
+    setting_type: ${4:# The type of the Quick Deploy settings to be applied}
+    job_wait: ${5:# Determines whether to wait for the job completion or not}
+    job_wait_timeout: ${6:# The maximum wait time of I(job_wait) in seconds}
+    quick_deploy_options: ${7:# The Quick Deploy settings for server and IOM quick deploy}
+    hostname: ${8:# OpenManage Enterprise Modular IP address or hostname}
+    username: ${9:# OpenManage Enterprise Modular username}
+    password: ${10:# OpenManage Enterprise Modular password}
+    port: ${11:# OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${12:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${13:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${14:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_device_quick_deploy]]></content>
+  <tabTrigger>dellemc.openmanage.ome_device_quick_deploy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Quick Deploy settings on OpenManage Enterprise Modular</description>
+</snippet>

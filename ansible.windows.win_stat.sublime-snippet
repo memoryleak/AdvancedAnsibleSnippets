@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get information about Windows files}
+  ansible.windows.win_stat:
+    path: ${2:# The full path of the file/object to get the facts of; both forward and back slashes are accepted}
+    get_checksum: ${3:# Whether to return a checksum of the file (default sha1)}
+    get_size: ${4:# Whether to return the size of a file or directory}
+    checksum_algorithm: ${5:# Algorithm to determine checksum of file}
+    follow: ${6:# Whether to follow symlinks or junction points}
+  tags:
+    - ansible
+    - windows
+    - win_stat]]></content>
+  <tabTrigger>ansible.windows.win_stat</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get information about Windows files</description>
+</snippet>

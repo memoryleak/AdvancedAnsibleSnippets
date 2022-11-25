@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update, and delete DigitalOcean CDN Endpoints}
+  community.digitalocean.digital_ocean_cdn_endpoints:
+    state: ${2:# The usual, C(present) to create, C(absent) to destroy}
+    origin: ${3:# The fully qualified domain name (FQDN) for the origin server which provides the content for the CDN}
+    ttl: ${4:# The amount of time the content is cached by the CDN's edge servers in seconds}
+    certificate_id: ${5:# The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided}
+    custom_domain: ${6:# The fully qualified domain name (FQDN) of the custom subdomain used with the CDN endpoint}
+    baseurl: ${7:# DigitalOcean API base url}
+    oauth_token: ${8:# DigitalOcean OAuth token}
+    timeout: ${9:# The timeout in seconds used for polling DigitalOcean's API}
+    validate_certs: ${10:# If set to C(no), the SSL certificates will not be validated}
+  tags:
+    - community
+    - digitalocean
+    - digital_ocean_cdn_endpoints]]></content>
+  <tabTrigger>community.digitalocean.digital_ocean_cdn_endpoints</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update, and delete DigitalOcean CDN Endpoints</description>
+</snippet>

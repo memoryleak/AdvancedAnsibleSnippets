@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage VMware protocol-endpoints on Pure Storage FlashArrays}
+  purestorage.flasharray.purefa_endpoint:
+    name: ${2:# The name of the endpoint}
+    state: ${3:# Define whether the endpoint should exist or not}
+    eradicate: ${4:# Define whether to eradicate the endpoint on delete or leave in trash}
+    rename: ${5:# Value to rename the specified endpoint to}
+    host: ${6:# name of host to attach endpoint to}
+    hgroup: ${7:# name of hostgroup to attach endpoint to}
+    fa_url: ${8:# FlashArray management IPv4 address or Hostname}
+    api_token: ${9:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_endpoint]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_endpoint</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage VMware protocol-endpoints on Pure Storage FlashArrays</description>
+</snippet>

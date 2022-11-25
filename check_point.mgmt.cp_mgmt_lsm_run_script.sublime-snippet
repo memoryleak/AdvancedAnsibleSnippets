@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Executes the lsm-run-script on a given list of targets}
+  check_point.mgmt.cp_mgmt_lsm_run_script:
+    script_base64: ${2:# The entire content of the script encoded in Base64}
+    script: ${3:# The entire content of the script}
+    targets: ${4:# On what targets to execute this command}
+    wait_for_task: ${5:# Wait for the task to end}
+    wait_for_task_timeout: ${6:# How many minutes to wait until throwing a timeout error}
+    version: ${7:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_lsm_run_script]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_lsm_run_script</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Executes the lsm-run-script on a given list of targets</description>
+</snippet>

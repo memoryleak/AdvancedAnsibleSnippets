@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Formats an existing volume or a new volume on an existing partition on Windows}
+  community.windows.win_format:
+    drive_letter: ${2:# Used to specify the drive letter of the volume to be formatted}
+    path: ${3:# Used to specify the path to the volume to be formatted}
+    label: ${4:# Used to specify the label of the volume to be formatted}
+    new_label: ${5:# Used to specify the new file system label of the formatted volume}
+    file_system: ${6:# Used to specify the file system to be used when formatting the target volume}
+    allocation_unit_size: ${7:# Specifies the cluster size to use when formatting the volume}
+    large_frs: ${8:# Specifies that large File Record System (FRS) should be used}
+    compress: ${9:# Enable compression on the resulting NTFS volume}
+    integrity_streams: ${10:# Enable integrity streams on the resulting ReFS volume}
+    full: ${11:# A full format writes to every sector of the disk, takes much longer to perform than the default (quick) format, and is not recommended on storage that is thinly provisioned}
+    force: ${12:# Specify if formatting should be forced for volumes that are not created from new partitions or if the source and target file system are different}
+  tags:
+    - community
+    - windows
+    - win_format]]></content>
+  <tabTrigger>community.windows.win_format</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Formats an existing volume or a new volume on an existing partition on Windows</description>
+</snippet>

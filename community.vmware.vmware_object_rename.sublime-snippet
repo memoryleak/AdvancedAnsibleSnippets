@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Renames VMware objects}
+  community.vmware.vmware_object_rename:
+    object_type: ${2:# Type of object to work with}
+    object_name: ${3:# Name of the object to work with}
+    object_moid: ${4:# Managed object id of the VMware object to work with}
+    new_name: ${5:# New name for VMware object}
+    hostname: ${6:# The hostname or IP address of the vSphere vCenter server}
+    username: ${7:# The username of the vSphere vCenter server}
+    password: ${8:# The password of the vSphere vCenter server}
+    validate_certs: ${9:# Allows connection when SSL certificates are not valid}
+    port: ${10:# The port number of the vSphere vCenter}
+    protocol: ${11:# The connection to protocol}
+    proxy_host: ${12:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_object_rename]]></content>
+  <tabTrigger>community.vmware.vmware_object_rename</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Renames VMware objects</description>
+</snippet>

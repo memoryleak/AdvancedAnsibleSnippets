@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about VMWare Content Library}
+  community.vmware.vmware_content_library_info:
+    library_id: ${2:# content library id for which details needs to be fetched}
+    hostname: ${3:# The hostname or IP address of the vSphere vCenter server}
+    username: ${4:# The username of the vSphere vCenter server}
+    password: ${5:# The password of the vSphere vCenter server}
+    validate_certs: ${6:# Allows connection when SSL certificates are not valid}
+    port: ${7:# The port number of the vSphere vCenter}
+    protocol: ${8:# The connection to protocol}
+    proxy_host: ${9:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${10:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_content_library_info]]></content>
+  <tabTrigger>community.vmware.vmware_content_library_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about VMWare Content Library</description>
+</snippet>

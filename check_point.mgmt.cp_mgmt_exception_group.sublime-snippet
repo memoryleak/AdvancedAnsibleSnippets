@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages exception-group objects on Check Point over Web Services API}
+  check_point.mgmt.cp_mgmt_exception_group:
+    name: ${2:# Object name}
+    applied_profile: ${3:# The threat profile to apply this group to in the case of apply-on threat-rules-with-specific-profile}
+    applied_threat_rules: ${4:# The threat rules to apply this group on in the case of apply-on manually-select-threat-rules}
+    apply_on: ${5:# An exception group can be set to apply on all threat rules, all threat rules which have a specific profile, or those rules manually chosen by the user}
+    tags: ${6:# Collection of tag identifiers}
+    color: ${7:# Color of the object}
+    comments: ${8:# Comments string}
+    details_level: ${9:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_warnings: ${10:# Apply changes ignoring warnings}
+    ignore_errors: ${11:# Apply changes ignoring errors}
+    state: ${12:# State of the access rule (present or absent)}
+    auto_publish_session: ${13:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${14:# Wait for the task to end}
+    wait_for_task_timeout: ${15:# How many minutes to wait until throwing a timeout error}
+    version: ${16:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_exception_group]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_exception_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages exception-group objects on Check Point over Web Services API</description>
+</snippet>

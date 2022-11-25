@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP service processor network}
+  netapp.ontap.na_ontap_service_processor_network:
+    state: ${2:# Whether the specified service processor network should exist or not}
+    address_type: ${3:# Specify address class}
+    is_enabled: ${4:# Specify whether to enable or disable the service processor network}
+    node: ${5:# The node where the service processor network should be enabled}
+    dhcp: ${6:# Specify dhcp type}
+    gateway_ip_address: ${7:# Specify the gateway ip}
+    ip_address: ${8:# Specify the service processor ip address}
+    netmask: ${9:# Specify the service processor netmask}
+    prefix_length: ${10:# Specify the service processor prefix_length}
+    wait_for_completion: ${11:# Set this parameter to 'true' for synchronous execution (wait until SP status is successfully updated)}
+    hostname: ${12:# The hostname or IP address of the ONTAP instance}
+    username: ${13:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${14:# Password for the specified user}
+    cert_filepath: ${15:# path to SSL client cert file (}
+    key_filepath: ${16:# path to SSL client key file}
+    https: ${17:# Enable and disable https}
+    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${19:# Override the default port (80 or 443) with this port}
+    ontapi: ${20:# The ontap api version to use}
+    use_rest: ${21:# Whether to use REST or ZAPI}
+    feature_flags: ${22:# Enable or disable a new feature}
+    force_ontap_version: ${23:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_service_processor_network]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_service_processor_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP service processor network</description>
+</snippet>

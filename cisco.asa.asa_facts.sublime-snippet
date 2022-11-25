@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Collect facts from remote devices running Cisco ASA}
+  cisco.asa.asa_facts:
+    gather_subset: ${2:# When supplied, this argument restricts the facts collected to a given subset}
+    gather_network_resources: ${3:# When supplied, this argument will restrict the facts collected to a given subset}
+    context: ${4:# Specifies which context to target if you are running in the ASA in multiple context mode}
+    passwords: ${5:# Saves running-config passwords in clear-text when set to True}
+  tags:
+    - cisco
+    - asa
+    - asa_facts]]></content>
+  <tabTrigger>cisco.asa.asa_facts</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Collect facts from remote devices running Cisco ASA</description>
+</snippet>

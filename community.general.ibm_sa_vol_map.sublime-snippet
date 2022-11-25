@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Handles volume mapping on IBM Spectrum Accelerate Family storage systems}
+  community.general.ibm_sa_vol_map:
+    vol: ${2:# Volume name}
+    state: ${3:# When the state is present the volume is mapped}
+    cluster: ${4:# Maps the volume to a cluster}
+    host: ${5:# Maps the volume to a host}
+    lun: ${6:# The LUN identifier}
+    override: ${7:# Overrides the existing volume mapping}
+    username: ${8:# Management user on the spectrum accelerate storage system}
+    password: ${9:# Password for username on the spectrum accelerate storage system}
+    endpoints: ${10:# The hostname or management IP of Spectrum Accelerate storage system}
+  tags:
+    - community
+    - general
+    - ibm_sa_vol_map]]></content>
+  <tabTrigger>community.general.ibm_sa_vol_map</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Handles volume mapping on IBM Spectrum Accelerate Family storage systems</description>
+</snippet>

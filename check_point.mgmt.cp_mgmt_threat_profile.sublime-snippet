@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages threat-profile objects on Check Point over Web Services API}
+  check_point.mgmt.cp_mgmt_threat_profile:
+    name: ${2:# Object name}
+    active_protections_performance_impact: ${3:# Protections with this performance impact only will be activated in the profile}
+    active_protections_severity: ${4:# Protections with this severity only will be activated in the profile}
+    confidence_level_high: ${5:# Action for protections with high confidence level}
+    confidence_level_low: ${6:# Action for protections with low confidence level}
+    confidence_level_medium: ${7:# Action for protections with medium confidence level}
+    indicator_overrides: ${8:# Indicators whose action will be overridden in this profile}
+    ips_settings: ${9:# IPS blade settings}
+    malicious_mail_policy_settings: ${10:# Malicious Mail Policy for MTA Gateways}
+    overrides: ${11:# Overrides per profile for this protection}
+    tags: ${12:# Collection of tag identifiers}
+    use_indicators: ${13:# Indicates whether the profile should make use of indicators}
+    anti_bot: ${14:# Is Anti-Bot blade activated}
+    anti_virus: ${15:# Is Anti-Virus blade activated}
+    ips: ${16:# Is IPS blade activated}
+    threat_emulation: ${17:# Is Threat Emulation blade activated}
+    activate_protections_by_extended_attributes: ${18:# Activate protections by these extended attributes}
+    deactivate_protections_by_extended_attributes: ${19:# Deactivate protections by these extended attributes}
+    use_extended_attributes: ${20:# Whether to activate/deactivate IPS protections according to the extended attributes}
+    color: ${21:# Color of the object}
+    comments: ${22:# Comments string}
+    details_level: ${23:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_warnings: ${24:# Apply changes ignoring warnings}
+    ignore_errors: ${25:# Apply changes ignoring errors}
+    state: ${26:# State of the access rule (present or absent)}
+    auto_publish_session: ${27:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${28:# Wait for the task to end}
+    wait_for_task_timeout: ${29:# How many minutes to wait until throwing a timeout error}
+    version: ${30:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_threat_profile]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_threat_profile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages threat-profile objects on Check Point over Web Services API</description>
+</snippet>

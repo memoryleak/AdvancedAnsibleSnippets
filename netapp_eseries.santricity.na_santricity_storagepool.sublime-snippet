@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series manage volume groups and disk pools}
+  netapp_eseries.santricity.na_santricity_storagepool:
+    state: ${2:# Whether the specified storage pool should exist or not}
+    name: ${3:# The name of the storage pool to manage}
+    criteria_drive_count: ${4:# The number of disks to use for building the storage pool}
+    criteria_min_usable_capacity: ${5:# The minimum size of the storage pool (in size_unit)}
+    criteria_drive_type: ${6:# The type of disk (hdd or ssd) to use when searching for candidates to use}
+    criteria_size_unit: ${7:# The unit used to interpret size parameters}
+    criteria_drive_min_size: ${8:# The minimum individual drive size (in size_unit) to consider when choosing drives for the storage pool}
+    criteria_drive_max_size: ${9:# The maximum individual drive size (in size_unit) to consider when choosing drives for the storage pool}
+    criteria_drive_interface_type: ${10:# The interface type to use when selecting drives for the storage pool}
+    criteria_drive_require_da: ${11:# Ensures the storage pool will be created with only data assurance (DA) capable drives}
+    criteria_drive_require_fde: ${12:# Whether full disk encryption ability is required for drives to be added to the storage pool}
+    usable_drives: ${13:# Ordered comma-separated list of tray/drive slots to be selected for drive candidates (drives that are used will be skipped)}
+    raid_level: ${14:# The RAID level of the storage pool to be created}
+    secure_pool: ${15:# Enables security at rest feature on the storage pool}
+    reserve_drive_count: ${16:# Set the number of drives reserved by the storage pool for reconstruction operations}
+    remove_volumes: ${17:# Prior to removing a storage pool, delete all volumes in the pool}
+    erase_secured_drives: ${18:# If I(state=='absent') then all storage pool drives will be erase}
+    ddp_critical_threshold_pct: ${19:# Issues a critical alert when threshold of storage has been allocated}
+    ddp_warning_threshold_pct: ${20:# Issues a warning alert when threshold of storage has been allocated}
+    api_username: ${21:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_password: ${22:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${23:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    validate_certs: ${24:# Should https certificates be validated?}
+    ssid: ${25:# The ID of the array to manage}
+  tags:
+    - netapp_eseries
+    - santricity
+    - na_santricity_storagepool]]></content>
+  <tabTrigger>netapp_eseries.santricity.na_santricity_storagepool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series manage volume groups and disk pools</description>
+</snippet>

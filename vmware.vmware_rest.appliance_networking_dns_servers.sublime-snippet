@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set the DNS server configuration}
+  vmware.vmware_rest.appliance_networking_dns_servers:
+    mode: ${2:# C(dns_server_mode) Describes DNS Server source (DHCP,static) Required with I(state=['set'])}
+    server: ${3:# DNS server}
+    servers: ${4:# List of the currently used DNS servers}
+    session_timeout: ${5:# Timeout settings for client session}
+    state: ${6:# No description available}
+    vcenter_hostname: ${7:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${8:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${9:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${10:# The vSphere vCenter username}
+    vcenter_validate_certs: ${11:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware_rest
+    - appliance_networking_dns_servers]]></content>
+  <tabTrigger>vmware.vmware_rest.appliance_networking_dns_servers</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set the DNS server configuration</description>
+</snippet>

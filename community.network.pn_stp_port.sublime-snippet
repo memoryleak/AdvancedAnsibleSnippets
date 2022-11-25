@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:CLI command to modify stp-port}
+  community.network.pn_stp_port:
+    pn_cliswitch: ${2:# Target switch to run the CLI on}
+    state: ${3:# State the action to perform}
+    pn_priority: ${4:# STP port priority from 0 to 240}
+    pn_cost: ${5:# STP port cost from 1 to 200000000}
+    pn_root_guard: ${6:# STP port Root guard}
+    pn_filter: ${7:# STP port filters BPDUs}
+    pn_edge: ${8:# STP port is an edge port}
+    pn_bpdu_guard: ${9:# STP port BPDU guard}
+    pn_port: ${10:# STP port}
+    pn_block: ${11:# Specify if a STP port blocks BPDUs}
+  tags:
+    - community
+    - network
+    - pn_stp_port]]></content>
+  <tabTrigger>community.network.pn_stp_port</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>CLI command to modify stp-port</description>
+</snippet>

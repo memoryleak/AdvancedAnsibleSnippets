@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Enables/disables a module of the Apache2 webserver}
+  community.general.apache2_module:
+    name: ${2:# Name of the module to enable/disable as given to C(a2enmod/a2dismod)}
+    identifier: ${3:# Identifier of the module as listed by C(apache2ctl -M)}
+    force: ${4:# Force disabling of default modules and override Debian warnings}
+    state: ${5:# Desired state of the module}
+    ignore_configcheck: ${6:# Ignore configuration checks about inconsistent module configuration}
+  tags:
+    - community
+    - general
+    - apache2_module]]></content>
+  <tabTrigger>community.general.apache2_module</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Enables/disables a module of the Apache2 webserver</description>
+</snippet>

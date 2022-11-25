@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the generic message parser profile}
+  f5networks.f5_modules.bigip_message_routing_protocol:
+    name: ${2:# Specifies the name of the generic parser profile}
+    description: ${3:# The user-defined description of the generic parser profile}
+    parent: ${4:# The parent template of this parser profile}
+    disable_parser: ${5:# When C(yes), the generic message parser is disabled, ignoring all incoming packets and not directly send message data}
+    max_egress_buffer: ${6:# Specifies the maximum size of the send buffer in bytes}
+    max_msg_size: ${7:# Specifies the maximum size of a received message}
+    msg_terminator: ${8:# The string of characters used to terminate a message}
+    no_response: ${9:# When set, matching of responses to requests is disabled}
+    partition: ${10:# Device partition to create route object on}
+    state: ${11:# When C(present), ensures the route exists}
+    provider: ${12:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_message_routing_protocol]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_message_routing_protocol</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the generic message parser profile</description>
+</snippet>

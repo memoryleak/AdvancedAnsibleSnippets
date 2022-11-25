@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Notify Rollbar about app deployments}
+  community.general.rollbar_deployment:
+    token: ${2:# Your project access token}
+    environment: ${3:# Name of the environment being deployed, e}
+    revision: ${4:# Revision number/sha being deployed}
+    user: ${5:# User who deployed}
+    rollbar_user: ${6:# Rollbar username of the user who deployed}
+    comment: ${7:# Deploy comment (e}
+    url: ${8:# Optional URL to submit the notification to}
+    validate_certs: ${9:# If C(false), SSL certificates for the target url will not be validated}
+  tags:
+    - community
+    - general
+    - rollbar_deployment]]></content>
+  <tabTrigger>community.general.rollbar_deployment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Notify Rollbar about app deployments</description>
+</snippet>

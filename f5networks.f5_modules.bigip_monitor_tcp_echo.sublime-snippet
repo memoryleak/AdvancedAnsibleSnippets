@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages F5 BIG-IP LTM TCP echo monitors}
+  f5networks.f5_modules.bigip_monitor_tcp_echo:
+    name: ${2:# Monitor name}
+    parent: ${3:# The parent template of this monitor template}
+    description: ${4:# The description of the monitor}
+    ip: ${5:# IP address part of the IP/port definition}
+    interval: ${6:# The interval specifying how frequently the monitor instance of this template will run}
+    timeout: ${7:# The number of seconds in which the node or service must respond to the monitor request}
+    time_until_up: ${8:# Specifies the amount of time in seconds after the first successful response before a node will be marked up}
+    partition: ${9:# Device partition to manage resources on}
+    state: ${10:# When C(present), ensures the monitor exists}
+    provider: ${11:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_monitor_tcp_echo]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_monitor_tcp_echo</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages F5 BIG-IP LTM TCP echo monitors</description>
+</snippet>

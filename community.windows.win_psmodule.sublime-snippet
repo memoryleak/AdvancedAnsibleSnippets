@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds or removes a Windows PowerShell module}
+  community.windows.win_psmodule:
+    name: ${2:# Name of the Windows PowerShell module that has to be installed}
+    state: ${3:# If C(present) a new module is installed}
+    required_version: ${4:# The exact version of the PowerShell module that has to be installed}
+    minimum_version: ${5:# The minimum version of the PowerShell module that has to be installed}
+    maximum_version: ${6:# The maximum version of the PowerShell module that has to be installed}
+    allow_clobber: ${7:# If C(yes) allows install modules that contains commands those have the same names as commands that already exists}
+    skip_publisher_check: ${8:# If C(yes), allows you to install a different version of a module that already exists on your computer in the case when a different one is not digitally signed by a trusted publisher and the newest existing module is digitally signed by a trusted publisher}
+    allow_prerelease: ${9:# If C(yes) installs modules marked as prereleases}
+    repository: ${10:# Name of the custom repository to use}
+    username: ${11:# Username to authenticate against private repository}
+    password: ${12:# Password to authenticate against private repository}
+    accept_license: ${13:# Accepts the module's license}
+    url: ${14:# URL of the custom repository to register}
+  tags:
+    - community
+    - windows
+    - win_psmodule]]></content>
+  <tabTrigger>community.windows.win_psmodule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds or removes a Windows PowerShell module</description>
+</snippet>

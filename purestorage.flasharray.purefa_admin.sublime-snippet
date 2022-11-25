@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Pure Storage FlashArray Global Admin settings}
+  purestorage.flasharray.purefa_admin:
+    sso: ${2:# Enable or disable the array Signle Sign-On from Pure1 Manage}
+    max_login: ${3:# Maximum number of failed logins before account is locked}
+    min_password: ${4:# Minimum user password length}
+    lockout: ${5:# Account lockout duration, in seconds, after max_login exceeded}
+    fa_url: ${6:# FlashArray management IPv4 address or Hostname}
+    api_token: ${7:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_admin]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_admin</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Pure Storage FlashArray Global Admin settings</description>
+</snippet>

@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages EVPN VXLAN Network Identifier (VNI) on HUAWEI CloudEngine switches}
+  community.network.ce_evpn_bd_vni:
+    bridge_domain_id: ${2:# Specify an existed bridge domain (BD)}
+    evpn: ${3:# Create or delete an EVPN instance for a VXLAN in BD view}
+    route_distinguisher: ${4:# Configures a route distinguisher (RD) for a BD EVPN instance}
+    vpn_target_both: ${5:# Add VPN targets to both the import and export VPN target lists of a BD EVPN instance}
+    vpn_target_import: ${6:# Add VPN targets to the import VPN target list of a BD EVPN instance}
+    vpn_target_export: ${7:# Add VPN targets to the export VPN target list of a BD EVPN instance}
+    state: ${8:# Manage the state of the resource}
+  tags:
+    - community
+    - network
+    - ce_evpn_bd_vni]]></content>
+  <tabTrigger>community.network.ce_evpn_bd_vni</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages EVPN VXLAN Network Identifier (VNI) on HUAWEI CloudEngine switches</description>
+</snippet>

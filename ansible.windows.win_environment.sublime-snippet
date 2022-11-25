@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Modify environment variables on windows hosts}
+  ansible.windows.win_environment:
+    state: ${2:# Set to C(present) to ensure environment variable is set}
+    name: ${3:# The name of the environment variable}
+    value: ${4:# The value to store in the environment variable}
+    variables: ${5:# A dictionary where multiple environment variables can be defined at once}
+    level: ${6:# The level at which to set the environment variable}
+  tags:
+    - ansible
+    - windows
+    - win_environment]]></content>
+  <tabTrigger>ansible.windows.win_environment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Modify environment variables on windows hosts</description>
+</snippet>

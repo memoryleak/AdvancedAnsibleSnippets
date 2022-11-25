@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add API key for administrator, to enable login with it}
+  check_point.mgmt.cp_mgmt_add_api_key:
+    admin_uid: ${2:# Administrator uid to generate API key for}
+    admin_name: ${3:# Administrator name to generate API key for}
+    wait_for_task: ${4:# Wait for the task to end}
+    wait_for_task_timeout: ${5:# How many minutes to wait until throwing a timeout error}
+    version: ${6:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_add_api_key]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_add_api_key</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add API key for administrator, to enable login with it</description>
+</snippet>

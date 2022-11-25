@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates a directory in the guest operating system}
+  vmware.vmware_rest.vcenter_vm_guest_filesystem_directories:
+    create_parents: ${2:# Whether any parent directories should be created}
+    credentials: ${3:# The guest authentication data}
+    new_path: ${4:# The complete path to where the directory is moved or its new name}
+    parent_path: ${5:# The complete path to the directory in which to create the new directory}
+    path: ${6:# The complete path to the directory to be created}
+    prefix: ${7:# The prefix to be given to the new temporary directory}
+    recursive: ${8:# If true, all files and subdirectories are also deleted}
+    session_timeout: ${9:# Timeout settings for client session}
+    state: ${10:# No description available}
+    suffix: ${11:# The suffix to be given to the new temporary directory}
+    vcenter_hostname: ${12:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${13:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${14:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${15:# The vSphere vCenter username}
+    vcenter_validate_certs: ${16:# Allows connection when SSL certificates are not valid}
+    vm: ${17:# Virtual Machine to perform the operation on}
+  tags:
+    - vmware
+    - vmware_rest
+    - vcenter_vm_guest_filesystem_directories]]></content>
+  <tabTrigger>vmware.vmware_rest.vcenter_vm_guest_filesystem_directories</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates a directory in the guest operating system</description>
+</snippet>

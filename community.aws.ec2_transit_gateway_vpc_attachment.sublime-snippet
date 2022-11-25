@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and delete AWS Transit Gateway VPC attachments}
+  community.aws.ec2_transit_gateway_vpc_attachment:
+    transit_gateway: ${2:# The ID of the Transit Gateway that the attachment belongs to}
+    id: ${3:# The ID of the Transit Gateway Attachment}
+    name: ${4:# The C(Name) tag of the Transit Gateway attachment}
+    state: ${5:# Create or remove the Transit Gateway attachment}
+    subnets: ${6:# The ID of the subnets in which to create the transit gateway VPC attachment}
+    purge_subnets: ${7:# If I(purge_subnets=true), existing subnets will be removed from the attachment as necessary to match exactly what is defined by I(subnets)}
+    dns_support: ${8:# Whether DNS support is enabled}
+    ipv6_support: ${9:# Whether IPv6 support is enabled}
+    appliance_mode_support: ${10:# Whether the attachment is configured for appliance mode}
+    wait: ${11:# Whether to wait for the Transit Gateway attachment to reach the C(Available) or C(Deleted) state before the module returns}
+    wait_timeout: ${12:# Maximum time, in seconds, to wait for the Transit Gateway attachment to reach the expected state}
+    access_key: ${13:# AWS access key ID}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    profile: ${16:# A named AWS profile to use for authentication}
+    endpoint_url: ${17:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${18:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${19:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${20:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${21:# Use a C(botocore}
+    region: ${22:# The AWS region to use}
+    tags: ${23:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${24:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - community
+    - aws
+    - ec2_transit_gateway_vpc_attachment]]></content>
+  <tabTrigger>community.aws.ec2_transit_gateway_vpc_attachment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and delete AWS Transit Gateway VPC attachments</description>
+</snippet>

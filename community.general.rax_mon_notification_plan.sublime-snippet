@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or delete a Rackspace Cloud Monitoring notification plan}
+  community.general.rax_mon_notification_plan:
+    state: ${2:# Ensure that the notification plan with this C(label) exists or does not exist}
+    label: ${3:# Defines a friendly name for this notification plan}
+    critical_state: ${4:# Notification list to use when the alarm state is CRITICAL}
+    warning_state: ${5:# Notification list to use when the alarm state is WARNING}
+    ok_state: ${6:# Notification list to use when the alarm state is OK}
+    api_key: ${7:# Rackspace API key, overrides I(credentials)}
+    auth_endpoint: ${8:# The URI of the authentication service}
+    credentials: ${9:# File to find the Rackspace credentials in}
+    env: ${10:# Environment as configured in I(~/}
+    identity_type: ${11:# Authentication mechanism to use, such as rackspace or keystone}
+    region: ${12:# Region to create an instance in}
+    tenant_id: ${13:# The tenant ID used for authentication}
+    tenant_name: ${14:# The tenant name used for authentication}
+    username: ${15:# Rackspace username, overrides I(credentials)}
+    validate_certs: ${16:# Whether or not to require SSL validation of API endpoints}
+  tags:
+    - community
+    - general
+    - rax_mon_notification_plan]]></content>
+  <tabTrigger>community.general.rax_mon_notification_plan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or delete a Rackspace Cloud Monitoring notification plan</description>
+</snippet>

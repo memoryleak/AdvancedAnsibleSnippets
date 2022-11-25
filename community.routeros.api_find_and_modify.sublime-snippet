@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Find and modify information using the API}
+  community.routeros.api_find_and_modify:
+    path: ${2:# Path to query}
+    find: ${3:# Fields to search for}
+    values: ${4:# On all entries matching the conditions in I(find), set the keys of this option to the values specified here}
+    require_matches_min: ${5:# Make sure that there are no less matches than this number}
+    require_matches_max: ${6:# Make sure that there are no more matches than this number}
+    allow_no_matches: ${7:# Whether to allow that no match is found}
+    hostname: ${8:# RouterOS hostname API}
+    username: ${9:# RouterOS login user}
+    password: ${10:# RouterOS user password}
+    timeout: ${11:# Timeout for the request}
+    tls: ${12:# If is set TLS will be used for RouterOS API connection}
+    port: ${13:# RouterOS api port}
+    validate_certs: ${14:# Set to C(false) to skip validation of TLS certificates}
+    validate_cert_hostname: ${15:# Set to C(true) to validate hostnames in certificates}
+    ca_path: ${16:# PEM formatted file that contains a CA certificate to be used for certificate validation}
+    encoding: ${17:# Use the specified encoding when communicating with the RouterOS device}
+  tags:
+    - community
+    - routeros
+    - api_find_and_modify]]></content>
+  <tabTrigger>community.routeros.api_find_and_modify</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Find and modify information using the API</description>
+</snippet>

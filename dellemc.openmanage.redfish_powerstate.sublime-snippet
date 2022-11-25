@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage device power state}
+  dellemc.openmanage.redfish_powerstate:
+    resource_id: ${2:# The unique identifier of the device being managed}
+    reset_type: ${3:# This option resets the device}
+    baseuri: ${4:# IP address of the target out-of-band controller}
+    username: ${5:# Username of the target out-of-band controller}
+    password: ${6:# Password of the target out-of-band controller}
+    validate_certs: ${7:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${8:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${9:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - redfish_powerstate]]></content>
+  <tabTrigger>dellemc.openmanage.redfish_powerstate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage device power state</description>
+</snippet>

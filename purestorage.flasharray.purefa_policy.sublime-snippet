@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FlashArray File System Policies}
+  purestorage.flasharray.purefa_policy:
+    name: ${2:# Name of the policy}
+    state: ${3:# Define whether the policy should exist or not}
+    policy: ${4:# The type of policy to use}
+    enabled: ${5:# Define if policy is enabled or not}
+    smb_anon_allowed: ${6:# Specifies whether access to information is allowed for anonymous users}
+    client: ${7:# Specifies which SMB or NFS clients are given access}
+    smb_encrypt: ${8:# Specifies whether the remote client is required to use SMB encryption}
+    nfs_access: ${9:# Specifies access control for the export}
+    nfs_permission: ${10:# Specifies which read-write client access permissions are allowed for the export}
+    user_mapping: ${11:# Defines if user mapping is enabled}
+    snap_at: ${12:# Specifies the number of hours since midnight at which to take a snapshot or the hour including AM/PM}
+    snap_every: ${13:# Specifies the interval between snapshots, in minutes}
+    snap_keep_for: ${14:# Specifies the period that snapshots are retained before they are eradicated, in minutes}
+    snap_client_name: ${15:# The customizable portion of the client visible snapshot name}
+    snap_suffix: ${16:# The snapshot suffix name}
+    rename: ${17:# New name of policy}
+    directory: ${18:# Directories to have the quota rule applied to}
+    quota_limit: ${19:# Logical space limit of the share in M, G, T or P units}
+    quota_notifications: ${20:# Targets to notify when usage approaches the quota limit}
+    quota_enforced: ${21:# Defines if the directory quota is enforced}
+    ignore_usage: ${22:# Flag used to override checks for quota management operations}
+    anonuid: ${23:# The ID to which any users whose UID is affected by I(access) of I(root_squash) or I(all-squash) will be mapped to}
+    anongid: ${24:# The ID to which any users whose GID is affected by I(access) of I(root_squash) or I(all-squash) will be mapped to}
+    fa_url: ${25:# FlashArray management IPv4 address or Hostname}
+    api_token: ${26:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_policy]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FlashArray File System Policies</description>
+</snippet>

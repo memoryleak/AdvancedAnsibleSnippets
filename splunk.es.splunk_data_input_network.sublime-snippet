@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Splunk Data Inputs of type TCP or UDP}
+  splunk.es.splunk_data_input_network:
+    protocol: ${2:# Choose between tcp or udp}
+    connection_host: ${3:# Set the host for the remote server that is sending data}
+    state: ${4:# Enable, disable, create, or destroy}
+    datatype: ${5:# Forwarders can transmit three types of data: raw, unparsed, or parsed}
+    host: ${6:# Host from which the indexer gets data}
+    index: ${7:# default Index to store generated events}
+    name: ${8:# The input port which receives raw data}
+    queue: ${9:# Specifies where the input processor should deposit the events it reads}
+    rawTcpDoneTimeout: ${10:# Specifies in seconds the timeout value for adding a Done-key}
+    restrictToHost: ${11:# Allows for restricting this input to only accept data from the host specified here}
+    ssl: ${12:# Enable or disble ssl for the data stream}
+    source: ${13:# Sets the source key/field for events from this input}
+    sourcetype: ${14:# Set the source type for events from this input}
+  tags:
+    - splunk
+    - es
+    - splunk_data_input_network]]></content>
+  <tabTrigger>splunk.es.splunk_data_input_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Splunk Data Inputs of type TCP or UDP</description>
+</snippet>

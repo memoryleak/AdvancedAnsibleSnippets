@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage protection group snapshots on Pure Storage FlashArrays}
+  purestorage.flasharray.purefa_pgsnap:
+    name: ${2:# The name of the source protection group}
+    suffix: ${3:# Suffix of snapshot name}
+    state: ${4:# Define whether the protection group snapshot should exist or not}
+    eradicate: ${5:# Define whether to eradicate the snapshot on delete or leave in trash}
+    restore: ${6:# Restore a specific volume from a protection group snapshot}
+    overwrite: ${7:# Define whether to overwrite the target volume if it already exists}
+    target: ${8:# Volume to restore a specified volume to}
+    offload: ${9:# Name of offload target on which the snapshot exists}
+    now: ${10:# Whether to initiate a snapshot of the protection group immeadiately}
+    apply_retention: ${11:# Apply retention schedule settings to the snapshot}
+    remote: ${12:# Force immeadiate snapshot to remote targets}
+    fa_url: ${13:# FlashArray management IPv4 address or Hostname}
+    api_token: ${14:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_pgsnap]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_pgsnap</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage protection group snapshots on Pure Storage FlashArrays</description>
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages F5 BIG-IP GTM BIG-IP monitors}
+  f5networks.f5_modules.bigip_gtm_monitor_bigip:
+    name: ${2:# Name of the monitor}
+    parent: ${3:# The parent template of this monitor template}
+    ip: ${4:# IP address part of the IP/port definition}
+    port: ${5:# Port address part of the IP/port definition}
+    interval: ${6:# Specifies, in seconds, the frequency at which the system issues the monitor check when either the resource is down or the status of the resource is unknown}
+    timeout: ${7:# Specifies the number of seconds the target has in which to respond to the monitor request}
+    ignore_down_response: ${8:# Specifies the monitor allows more than one probe attempt per interval}
+    aggregate_dynamic_ratios: ${9:# Specifies how the system combines the module values to create the proportion (score) for the load balancing operation}
+    partition: ${10:# Device partition to manage resources on}
+    state: ${11:# When C(present), ensures the monitor exists}
+    provider: ${12:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_gtm_monitor_bigip]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_gtm_monitor_bigip</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages F5 BIG-IP GTM BIG-IP monitors</description>
+</snippet>

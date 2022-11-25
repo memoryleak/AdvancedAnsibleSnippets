@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Track a code or infrastructure change as a PagerDuty change event}
+  community.general.pagerduty_change:
+    integration_key: ${2:# The integration key that identifies the service the change was made to}
+    summary: ${3:# A short description of the change that occurred}
+    source: ${4:# The source of the change event}
+    user: ${5:# The name of the user or process that triggered this deployment}
+    repo: ${6:# The URL of the project repository}
+    revision: ${7:# An identifier of the revision being deployed, typically a number or SHA from a version control system}
+    environment: ${8:# The environment name, typically C(production), C(staging), etc}
+    link_url: ${9:# A URL where more information about the deployment can be obtained}
+    link_text: ${10:# Descriptive text for a URL where more information about the deployment can be obtained}
+    url: ${11:# URL to submit the change event to}
+    validate_certs: ${12:# If C(false), SSL certificates for the target URL will not be validated}
+  tags:
+    - community
+    - general
+    - pagerduty_change]]></content>
+  <tabTrigger>community.general.pagerduty_change</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Track a code or infrastructure change as a PagerDuty change event</description>
+</snippet>

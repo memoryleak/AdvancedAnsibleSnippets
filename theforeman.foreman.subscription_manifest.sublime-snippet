@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Subscription Manifests}
+  theforeman.foreman.subscription_manifest:
+    manifest_path: ${2:# Path to the manifest zip file}
+    state: ${3:# The state of the manifest}
+    repository_url: ${4:# URL to retrieve content from}
+    server_url: ${5:# URL of the Foreman server}
+    username: ${6:# Username accessing the Foreman server}
+    password: ${7:# Password of the user accessing the Foreman server}
+    validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
+    organization: ${9:# Organization that the entity is in}
+  tags:
+    - theforeman
+    - foreman
+    - subscription_manifest]]></content>
+  <tabTrigger>theforeman.foreman.subscription_manifest</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Subscription Manifests</description>
+</snippet>

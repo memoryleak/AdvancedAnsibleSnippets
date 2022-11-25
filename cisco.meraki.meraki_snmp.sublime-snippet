@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage organizations in the Meraki cloud}
+  cisco.meraki.meraki_snmp:
+    state: ${2:# Specifies whether SNMP information should be queried or modified}
+    v2c_enabled: ${3:# Specifies whether SNMPv2c is enabled}
+    v3_enabled: ${4:# Specifies whether SNMPv3 is enabled}
+    v3_auth_mode: ${5:# Sets authentication mode for SNMPv3}
+    v3_auth_pass: ${6:# Authentication password for SNMPv3}
+    v3_priv_mode: ${7:# Specifies privacy mode for SNMPv3}
+    v3_priv_pass: ${8:# Privacy password for SNMPv3}
+    peer_ips: ${9:# List of IP addresses which can perform SNMP queries}
+    net_name: ${10:# Name of network}
+    net_id: ${11:# ID of network}
+    access: ${12:# Type of SNMP access}
+    community_string: ${13:# SNMP community string}
+    users: ${14:# Information about users with access to SNMP}
+    auth_key: ${15:# Authentication key provided by the dashboard}
+    host: ${16:# Hostname for Meraki dashboard}
+    use_proxy: ${17:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${18:# If C(no), it will use HTTP}
+    output_format: ${19:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${20:# Set amount of debug output during module execution}
+    timeout: ${21:# Time to timeout for HTTP requests}
+    validate_certs: ${22:# Whether to validate HTTP certificates}
+    org_name: ${23:# Name of organization}
+    org_id: ${24:# ID of organization}
+    rate_limit_retry_time: ${25:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${26:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_snmp]]></content>
+  <tabTrigger>cisco.meraki.meraki_snmp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage organizations in the Meraki cloud</description>
+</snippet>

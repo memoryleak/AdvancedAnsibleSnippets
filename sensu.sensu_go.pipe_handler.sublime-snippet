@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sensu pipe handler}
+  sensu.sensu_go.pipe_handler:
+    command: ${2:# The handler command to be executed}
+    filters: ${3:# List of filters to use when determining whether to pass the check result to this handler}
+    mutator: ${4:# Mutator to call for transforming the check result before passing it to this handler}
+    timeout: ${5:# Timeout for handler execution}
+    env_vars: ${6:# A mapping of environment variable names and values to use with command execution}
+    runtime_assets: ${7:# List of runtime assets to required to run the handler C(command)}
+    auth: ${8:# Authentication parameters}
+    name: ${9:# The Sensu resource's name}
+    namespace: ${10:# RBAC namespace to operate in}
+    state: ${11:# Target state of the Sensu object}
+    labels: ${12:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
+    annotations: ${13:# Custom metadata fields with fewer restrictions, as key/value pairs}
+    secrets: ${14:# List of secrets that are available to the command}
+  tags:
+    - sensu
+    - sensu_go
+    - pipe_handler]]></content>
+  <tabTrigger>sensu.sensu_go.pipe_handler</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sensu pipe handler</description>
+</snippet>

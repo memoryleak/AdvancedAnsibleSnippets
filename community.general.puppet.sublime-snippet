@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Runs puppet}
+  community.general.puppet:
+    timeout: ${2:# How long to wait for I(puppet) to finish}
+    puppetmaster: ${3:# The hostname of the puppetmaster to contact}
+    modulepath: ${4:# Path to an alternate location for puppet modules}
+    manifest: ${5:# Path to the manifest file to run puppet apply on}
+    noop: ${6:# Override puppet}
+    facts: ${7:# A dict of values to pass in as persistent external facter facts}
+    facter_basename: ${8:# Basename of the facter output file}
+    environment: ${9:# Puppet environment to be used}
+    confdir: ${10:# Path to the directory containing the puppet}
+    logdest: ${11:# Where the puppet logs should go, if puppet apply is being used}
+    certname: ${12:# The name to use when handling certificates}
+    tags: ${13:# A list of puppet tags to be used}
+    execute: ${14:# Execute a specific piece of Puppet code}
+    use_srv_records: ${15:# Toggles use_srv_records flag}
+    summarize: ${16:# Whether to print a transaction summary}
+    verbose: ${17:# Print extra information}
+    debug: ${18:# Enable full debugging}
+    show_diff: ${19:# Whether to print file changes details}
+  tags:
+    - community
+    - general
+    - puppet]]></content>
+  <tabTrigger>community.general.puppet</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Runs puppet</description>
+</snippet>

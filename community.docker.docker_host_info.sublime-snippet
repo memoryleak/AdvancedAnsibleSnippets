@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieves facts about docker host and lists of objects of the services}
+  community.docker.docker_host_info:
+    containers: ${2:# Whether to list containers}
+    containers_filters: ${3:# A dictionary of filter values used for selecting containers to list}
+    images: ${4:# Whether to list images}
+    images_filters: ${5:# A dictionary of filter values used for selecting images to list}
+    networks: ${6:# Whether to list networks}
+    networks_filters: ${7:# A dictionary of filter values used for selecting networks to list}
+    volumes: ${8:# Whether to list volumes}
+    volumes_filters: ${9:# A dictionary of filter values used for selecting volumes to list}
+    disk_usage: ${10:# Summary information on used disk space by all Docker layers}
+    verbose_output: ${11:# When set to C(true) and I(networks), I(volumes), I(images), I(containers) or I(disk_usage) is set to C(true) then output will contain verbose information about objects matching the full output of API method}
+    docker_host: ${12:# The URL or Unix socket path used to connect to the Docker API}
+    tls_hostname: ${13:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    api_version: ${14:# The version of the Docker API running on the Docker Host}
+    timeout: ${15:# The maximum amount of time in seconds to wait on a response from the API}
+    ca_cert: ${16:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${17:# Path to the client's TLS certificate file}
+    client_key: ${18:# Path to the client's TLS key file}
+    ssl_version: ${19:# Provide a valid SSL version number}
+    tls: ${20:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    use_ssh_client: ${21:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${22:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    debug: ${23:# Debug mode}
+  tags:
+    - community
+    - docker
+    - docker_host_info]]></content>
+  <tabTrigger>community.docker.docker_host_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieves facts about docker host and lists of objects of the services</description>
+</snippet>

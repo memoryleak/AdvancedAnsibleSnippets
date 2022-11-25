@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Edit Meraki MX content filtering policies}
+  cisco.meraki.meraki_mx_content_filtering:
+    auth_key: ${2:# Authentication key provided by the dashboard}
+    net_name: ${3:# Name of a network}
+    net_id: ${4:# ID number of a network}
+    state: ${5:# States that a policy should be created or modified}
+    allowed_urls: ${6:# List of URL patterns which should be allowed}
+    blocked_urls: ${7:# List of URL patterns which should be blocked}
+    blocked_categories: ${8:# List of content categories which should be blocked}
+    category_list_size: ${9:# Determines whether a network filters fo rall URLs in a category or only the list of top blocked sites}
+    subset: ${10:# Display only certain facts}
+    host: ${11:# Hostname for Meraki dashboard}
+    use_proxy: ${12:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${13:# If C(no), it will use HTTP}
+    output_format: ${14:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${15:# Set amount of debug output during module execution}
+    timeout: ${16:# Time to timeout for HTTP requests}
+    validate_certs: ${17:# Whether to validate HTTP certificates}
+    org_name: ${18:# Name of organization}
+    org_id: ${19:# ID of organization}
+    rate_limit_retry_time: ${20:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${21:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_mx_content_filtering]]></content>
+  <tabTrigger>cisco.meraki.meraki_mx_content_filtering</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Edit Meraki MX content filtering policies</description>
+</snippet>

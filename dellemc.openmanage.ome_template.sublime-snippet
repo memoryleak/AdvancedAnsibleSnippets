@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, modify, deploy, delete, export, import and clone a template on OpenManage Enterprise}
+  dellemc.openmanage.ome_template:
+    command: ${2:# C(create) creates a new template}
+    template_id: ${3:# ID of the existing template}
+    template_name: ${4:# Name of the existing template}
+    device_id: ${5:# Specify the list of targeted device ID(s) when I(command) is C(deploy)}
+    device_service_tag: ${6:# Specify the list of targeted device service tags when I (command) is C(deploy)}
+    device_group_names: ${7:# Specify the list of groups when I (command) is C(deploy)}
+    template_view_type: ${8:# Select the type of view of the OME template}
+    attributes: ${9:# Payload data for the template operations}
+    hostname: ${10:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    username: ${11:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    password: ${12:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${13:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${14:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${15:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${16:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_template]]></content>
+  <tabTrigger>dellemc.openmanage.ome_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, modify, deploy, delete, export, import and clone a template on OpenManage Enterprise</description>
+</snippet>

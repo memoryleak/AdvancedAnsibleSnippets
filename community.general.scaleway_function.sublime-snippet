@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Scaleway Function management}
+  community.general.scaleway_function:
+    state: ${2:# Indicate desired state of the function}
+    namespace_id: ${3:# Function namespace identifier}
+    region: ${4:# Scaleway region to use (for example C(fr-par))}
+    name: ${5:# Name of the function}
+    description: ${6:# Description of the function}
+    min_scale: ${7:# Minimum number of replicas for the function}
+    max_scale: ${8:# Maximum number of replicas for the function}
+    environment_variables: ${9:# Environment variables of the function}
+    secret_environment_variables: ${10:# Secret environment variables of the function}
+    runtime: ${11:# Runtime of the function}
+    memory_limit: ${12:# Resources define performance characteristics of your function}
+    function_timeout: ${13:# The length of time your handler can spend processing a request before being stopped}
+    handler: ${14:# The C(module-name}
+    privacy: ${15:# Privacy policies define whether a function can be executed anonymously}
+    redeploy: ${16:# Redeploy the function if update is required}
+    api_token: ${17:# Scaleway OAuth token}
+    api_url: ${18:# Scaleway API URL}
+    api_timeout: ${19:# HTTP timeout to Scaleway API in seconds}
+    query_parameters: ${20:# List of parameters passed to the query string}
+    validate_certs: ${21:# Validate SSL certs of the Scaleway API}
+    wait: ${22:# Wait for the resource to reach its desired state before returning}
+    wait_timeout: ${23:# Time to wait for the resource to reach the expected state}
+    wait_sleep_time: ${24:# Time to wait before every attempt to check the state of the resource}
+  tags:
+    - community
+    - general
+    - scaleway_function]]></content>
+  <tabTrigger>community.general.scaleway_function</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Scaleway Function management</description>
+</snippet>

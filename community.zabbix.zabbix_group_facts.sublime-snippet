@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about Zabbix hostgroup}
+  community.zabbix.zabbix_group_facts:
+    hostgroup_name: ${2:# Name of the hostgroup in Zabbix}
+    server_url: ${3:# URL of Zabbix server, with protocol (http or https)}
+    login_user: ${4:# Zabbix user name}
+    login_password: ${5:# Zabbix user password}
+    http_login_user: ${6:# Basic Auth login}
+    http_login_password: ${7:# Basic Auth password}
+    timeout: ${8:# The timeout of API request (seconds)}
+    validate_certs: ${9:# If set to False, SSL certificates will not be validated}
+  tags:
+    - community
+    - zabbix
+    - zabbix_group_facts]]></content>
+  <tabTrigger>community.zabbix.zabbix_group_facts</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about Zabbix hostgroup</description>
+</snippet>

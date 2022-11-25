@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Products}
+  theforeman.foreman.product:
+    name: ${2:# Name of the product}
+    label: ${3:# Label to show the user}
+    gpg_key: ${4:# Content GPG key name attached to this product}
+    ssl_ca_cert: ${5:# Content SSL CA certificate name attached to this product}
+    ssl_client_cert: ${6:# Content SSL client certificate name attached to this product}
+    ssl_client_key: ${7:# Content SSL client private key name attached to this product}
+    sync_plan: ${8:# Sync plan name attached to this product}
+    description: ${9:# Possibly long description to show the user in detail view}
+    server_url: ${10:# URL of the Foreman server}
+    username: ${11:# Username accessing the Foreman server}
+    password: ${12:# Password of the user accessing the Foreman server}
+    validate_certs: ${13:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${14:# State of the entity}
+    organization: ${15:# Organization that the entity is in}
+  tags:
+    - theforeman
+    - foreman
+    - product]]></content>
+  <tabTrigger>theforeman.foreman.product</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Products</description>
+</snippet>

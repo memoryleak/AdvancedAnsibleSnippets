@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about EC2 Auto Scaling Group (ASG) Instance Refreshes in AWS}
+  community.aws.autoscaling_instance_refresh_info:
+    name: ${2:# The name of the Auto Scaling group}
+    ids: ${3:# One or more instance refresh IDs}
+    next_token: ${4:# The token for the next set of items to return}
+    max_records: ${5:# The maximum number of items to return with this call}
+    access_key: ${6:# AWS access key ID}
+    secret_key: ${7:# AWS secret access key}
+    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    profile: ${9:# A named AWS profile to use for authentication}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${13:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
+    region: ${15:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - autoscaling_instance_refresh_info]]></content>
+  <tabTrigger>community.aws.autoscaling_instance_refresh_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about EC2 Auto Scaling Group (ASG) Instance Refreshes in AWS</description>
+</snippet>

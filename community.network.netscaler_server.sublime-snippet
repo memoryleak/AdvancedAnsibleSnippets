@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage server configuration}
+  community.network.netscaler_server:
+    name: ${2:# Name for the server}
+    ipaddress: ${3:# IPv4 or IPv6 address of the server}
+    domain: ${4:# Domain name of the server}
+    translationip: ${5:# IP address used to transform the server's DNS-resolved IP address}
+    translationmask: ${6:# The netmask of the translation ip}
+    domainresolveretry: ${7:# Time, in seconds, for which the NetScaler appliance must wait, after DNS resolution fails, before sending the next DNS query to resolve the domain name}
+    ipv6address: ${8:# Support IPv6 addressing mode}
+    comment: ${9:# Any information about the server}
+    td: ${10:# Integer value that uniquely identifies the traffic domain in which you want to configure the entity}
+    graceful: ${11:# Shut down gracefully, without accepting any new connections, and disabling each service when all of its connections are closed}
+    delay: ${12:# Time, in seconds, after which all the services configured on the server are disabled}
+    disabled: ${13:# When set to C(true) the server state will be set to C(disabled)}
+    nsip: ${14:# The ip address of the netscaler appliance where the nitro API calls will be made}
+    nitro_user: ${15:# The username with which to authenticate to the netscaler node}
+    nitro_pass: ${16:# The password with which to authenticate to the netscaler node}
+    nitro_protocol: ${17:# Which protocol to use when accessing the nitro API objects}
+    validate_certs: ${18:# If C(no), SSL certificates will not be validated}
+    nitro_timeout: ${19:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
+    state: ${20:# The state of the resource being configured by the module on the netscaler node}
+    save_config: ${21:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+  tags:
+    - community
+    - network
+    - netscaler_server]]></content>
+  <tabTrigger>community.network.netscaler_server</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage server configuration</description>
+</snippet>

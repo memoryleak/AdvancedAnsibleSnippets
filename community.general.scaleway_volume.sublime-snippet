@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Scaleway volumes management module}
+  community.general.scaleway_volume:
+    state: ${2:# Indicate desired state of the volume}
+    region: ${3:# Scaleway region to use (for example par1)}
+    name: ${4:# Name used to identify the volume}
+    project: ${5:# Scaleway project ID to which volume belongs}
+    organization: ${6:# ScaleWay organization ID to which volume belongs}
+    size: ${7:# Size of the volume in bytes}
+    volume_type: ${8:# Type of the volume (for example 'l_ssd')}
+    api_token: ${9:# Scaleway OAuth token}
+    api_url: ${10:# Scaleway API URL}
+    api_timeout: ${11:# HTTP timeout to Scaleway API in seconds}
+    query_parameters: ${12:# List of parameters passed to the query string}
+    validate_certs: ${13:# Validate SSL certs of the Scaleway API}
+  tags:
+    - community
+    - general
+    - scaleway_volume]]></content>
+  <tabTrigger>community.general.scaleway_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Scaleway volumes management module</description>
+</snippet>

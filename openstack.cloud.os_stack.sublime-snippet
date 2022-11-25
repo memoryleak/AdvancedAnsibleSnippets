@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add/Remove Heat Stack}
+  openstack.cloud.os_stack:
+    state: ${2:# Indicate desired state of the resource}
+    name: ${3:# Name of the stack that should be created, name could be char and digit, no space}
+    tag: ${4:# Tag for the stack that should be created, name could be char and digit, no space}
+    template: ${5:# Path of the template file to use for the stack creation}
+    environment: ${6:# List of environment files that should be used for the stack creation}
+    parameters: ${7:# Dictionary of parameters for the stack creation}
+    rollback: ${8:# Rollback stack creation}
+    timeout: ${9:# Maximum number of seconds to wait for the stack creation}
+    cloud: ${10:# Named cloud or cloud config to operate against}
+    auth: ${11:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${12:# Name of the auth plugin to use}
+    region_name: ${13:# Name of the region}
+    wait: ${14:# Should ansible wait until the requested resource is complete}
+    api_timeout: ${15:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${16:# Whether or not SSL API requests should be verified}
+    ca_cert: ${17:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${18:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${19:# A path to a client key to use as part of the SSL transaction}
+    interface: ${20:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${21:# Ignored}
+    sdk_log_path: ${22:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${23:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - os_stack]]></content>
+  <tabTrigger>openstack.cloud.os_stack</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add/Remove Heat Stack</description>
+</snippet>

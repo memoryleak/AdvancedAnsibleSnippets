@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage dns zones on a univention corporate server}
+  community.general.udm_dns_zone:
+    state: ${2:# Whether the dns zone is present or not}
+    type: ${3:# Define if the zone is a forward or reverse DNS zone}
+    zone: ${4:# DNS zone name, e}
+    nameserver: ${5:# List of appropriate name servers}
+    interfaces: ${6:# List of interface IP addresses, on which the server should response this zone}
+    refresh: ${7:# Interval before the zone should be refreshed}
+    retry: ${8:# Interval that should elapse before a failed refresh should be retried}
+    expire: ${9:# Specifies the upper limit on the time interval that can elapse before the zone is no longer authoritative}
+    ttl: ${10:# Minimum TTL field that should be exported with any RR from this zone}
+    contact: ${11:# Contact person in the SOA record}
+    mx: ${12:# List of MX servers}
+  tags:
+    - community
+    - general
+    - udm_dns_zone]]></content>
+  <tabTrigger>community.general.udm_dns_zone</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage dns zones on a univention corporate server</description>
+</snippet>

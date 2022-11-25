@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieves baseline compliance details on OpenManage Enterprise}
+  dellemc.openmanage.ome_firmware_baseline_compliance_info:
+    baseline_name: ${2:# Name of the baseline, for which the device compliance report is generated}
+    device_ids: ${3:# A list of unique identifier for device based compliance report}
+    device_service_tags: ${4:# A list of service tags for device based compliance report}
+    device_group_names: ${5:# A list of group names for device based compliance report}
+    hostname: ${6:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    username: ${7:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    password: ${8:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${9:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    validate_certs: ${10:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${11:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${12:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_firmware_baseline_compliance_info]]></content>
+  <tabTrigger>dellemc.openmanage.ome_firmware_baseline_compliance_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieves baseline compliance details on OpenManage Enterprise</description>
+</snippet>

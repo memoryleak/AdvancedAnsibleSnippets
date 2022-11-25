@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or remove a Port Mirroring session}
+  community.vmware.vmware_vspan_session:
+    switch: ${2:# The name of the distributed vSwitch on which to add or remove the mirroring session}
+    name: ${3:# Name of the session}
+    state: ${4:# Create or remove the session}
+    session_type: ${5:# Select the mirroring type}
+    enabled: ${6:# Whether the session is enabled}
+    description: ${7:# The description for the session}
+    source_port_transmitted: ${8:# Source port for which transmitted packets are mirrored}
+    source_port_received: ${9:# Source port for which received packets are mirrored}
+    destination_port: ${10:# Destination port that received the mirrored packets}
+    encapsulation_vlan_id: ${11:# VLAN ID used to encapsulate the mirrored traffic}
+    strip_original_vlan: ${12:# Whether to strip the original VLAN tag}
+    mirrored_packet_length: ${13:# An integer that describes how much of each frame to mirror}
+    normal_traffic_allowed: ${14:# Whether or not destination ports can send and receive 'normal' traffic}
+    sampling_rate: ${15:# Sampling rate of the session}
+    source_vm_transmitted: ${16:# With this parameter it is possible, to add a NIC of a VM to a port mirroring session}
+    source_vm_received: ${17:# With this parameter it is possible, to add a NIC of a VM to a port mirroring session}
+    destination_vm: ${18:# With this parameter it is possible, to add a NIC of a VM to a port mirroring session}
+    hostname: ${19:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${20:# The username of the vSphere vCenter or ESXi server}
+    password: ${21:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${22:# Allows connection when SSL certificates are not valid}
+    port: ${23:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${24:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${25:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_vspan_session]]></content>
+  <tabTrigger>community.vmware.vmware_vspan_session</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or remove a Port Mirroring session</description>
+</snippet>

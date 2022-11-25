@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage external EPGs in schema templates}
+  cisco.mso.mso_schema_template_externalepg:
+    schema: ${2:# The name of the schema}
+    template: ${3:# The name of the template}
+    external_epg: ${4:# The name of the external EPG to manage}
+    description: ${5:# The description of external EPG is supported on versions of MSO that are 3}
+    type: ${6:# The type of external epg}
+    display_name: ${7:# The name as displayed on the MSO web interface}
+    vrf: ${8:# The VRF associated with the external epg}
+    l3out: ${9:# The L3Out associated with the external epg}
+    anp: ${10:# The anp associated with the external epg}
+    preferred_group: ${11:# Preferred Group is enabled for this External EPG or not}
+    state: ${12:# Use C(present) or C(absent) for adding or removing}
+    host: ${13:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    port: ${14:# Port number to be used for the REST connection}
+    username: ${15:# The username to use for authentication}
+    password: ${16:# The password to use for authentication}
+    output_level: ${17:# Influence the output of this MSO module}
+    timeout: ${18:# The socket level timeout in seconds}
+    use_proxy: ${19:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${20:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    validate_certs: ${21:# If C(no), SSL certificates will not be validated}
+    login_domain: ${22:# The login domain name to use for authentication}
+  tags:
+    - cisco
+    - mso
+    - mso_schema_template_externalepg]]></content>
+  <tabTrigger>cisco.mso.mso_schema_template_externalepg</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage external EPGs in schema templates</description>
+</snippet>

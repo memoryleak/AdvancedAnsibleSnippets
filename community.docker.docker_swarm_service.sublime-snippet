@@ -1,0 +1,65 @@
+<snippet>
+  <content><![CDATA[- name: ${1:docker swarm service}
+  community.docker.docker_swarm_service:
+    args: ${2:# List arguments to be passed to the container}
+    command: ${3:# Command to execute when the container starts}
+    configs: ${4:# List of dictionaries describing the service configs}
+    container_labels: ${5:# Dictionary of key value pairs}
+    dns: ${6:# List of custom DNS servers}
+    dns_search: ${7:# List of custom DNS search domains}
+    dns_options: ${8:# List of custom DNS options}
+    endpoint_mode: ${9:# Service endpoint mode}
+    env: ${10:# List or dictionary of the service environment variables}
+    env_files: ${11:# List of paths to files, present on the target, containing environment variables C(FOO=BAR)}
+    force_update: ${12:# Force update even if no changes require it}
+    groups: ${13:# List of additional group names and/or IDs that the container process will run as}
+    healthcheck: ${14:# Configure a check that is run to determine whether or not containers for this service are 'healthy'}
+    hostname: ${15:# Container hostname}
+    hosts: ${16:# Dict of host-to-IP mappings, where each host name is a key in the dictionary}
+    image: ${17:# Service image path and tag}
+    init: ${18:# Use an init inside each service container to forward signals and reap processes}
+    labels: ${19:# Dictionary of key value pairs}
+    limits: ${20:# Configures service resource limits}
+    logging: ${21:# Logging configuration for the service}
+    mode: ${22:# Service replication mode}
+    mounts: ${23:# List of dictionaries describing the service mounts}
+    name: ${24:# Service name}
+    networks: ${25:# List of the service networks names or dictionaries}
+    placement: ${26:# Configures service placement preferences and constraints}
+    publish: ${27:# List of dictionaries describing the service published ports}
+    read_only: ${28:# Mount the containers root filesystem as read only}
+    replicas: ${29:# Number of containers instantiated in the service}
+    reservations: ${30:# Configures service resource reservations}
+    resolve_image: ${31:# If the current image digest should be resolved from registry and updated if changed}
+    restart_config: ${32:# Configures if and how to restart containers when they exit}
+    rollback_config: ${33:# Configures how the service should be rolled back in case of a failing update}
+    secrets: ${34:# List of dictionaries describing the service secrets}
+    state: ${35:# C(absent) - A service matching the specified name will be removed and have its tasks stopped}
+    stop_grace_period: ${36:# Time to wait before force killing a container}
+    stop_signal: ${37:# Override default signal used to stop the container}
+    tty: ${38:# Allocate a pseudo-TTY}
+    update_config: ${39:# Configures how the service should be updated}
+    user: ${40:# Sets the username or UID used for the specified command}
+    working_dir: ${41:# Path to the working directory}
+    cap_add: ${42:# List of capabilities to add to the container}
+    cap_drop: ${43:# List of capabilities to drop from the container}
+    docker_host: ${44:# The URL or Unix socket path used to connect to the Docker API}
+    tls_hostname: ${45:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    api_version: ${46:# The version of the Docker API running on the Docker Host}
+    timeout: ${47:# The maximum amount of time in seconds to wait on a response from the API}
+    ca_cert: ${48:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${49:# Path to the client's TLS certificate file}
+    client_key: ${50:# Path to the client's TLS key file}
+    ssl_version: ${51:# Provide a valid SSL version number}
+    tls: ${52:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    use_ssh_client: ${53:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${54:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    debug: ${55:# Debug mode}
+  tags:
+    - community
+    - docker
+    - docker_swarm_service]]></content>
+  <tabTrigger>community.docker.docker_swarm_service</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>docker swarm service</description>
+</snippet>

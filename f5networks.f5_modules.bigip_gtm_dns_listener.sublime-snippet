@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures the BIG-IP DNS system to answer TCP or UDP DNS requests}
+  f5networks.f5_modules.bigip_gtm_dns_listener:
+    name: ${2:# Specifies the name of the DNS Listener}
+    description: ${3:# Provides a brief description for DNS Listener}
+    address: ${4:# Specifies the IP address on which the system listens}
+    mask: ${5:# Specifies the netmask for a network Listener only}
+    enabled_vlans: ${6:# List of VLANs to be enabled}
+    disabled_vlans: ${7:# List of VLANs to be disabled}
+    pool: ${8:# Specifies a default pool to which the Listener automatically directs traffic}
+    port: ${9:# Specifies the port on which the Listener listens for connections}
+    source_port: ${10:# Specifies whether the system preserves the source port of the connection}
+    translate_address: ${11:# Enables or disables address translation for the Listener}
+    translate_port: ${12:# Enables or disables port translation}
+    irules: ${13:# Specifies list of iRules to run on the Listener}
+    advertise: ${14:# Specifies whether this Listener's address is advertised to surrounding routers}
+    auto_lasthop: ${15:# Specifies whether to automatically map the last hop for pools or not}
+    last_hop_pool: ${16:# Specifies the name of the last hop pool that you want the Listener to use to direct reply traffic to the last hop router}
+    fallback_persistence: ${17:# Specifies a fallback persistence profile for the Listener to use when the default persistence profile is not available}
+    ip_protocol: ${18:# Specifies the protocol on which this Listener receives network traffic}
+    partition: ${19:# Device partition to manage resources on}
+    state: ${20:# DNS Listener state}
+    provider: ${21:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_gtm_dns_listener]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_gtm_dns_listener</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures the BIG-IP DNS system to answer TCP or UDP DNS requests</description>
+</snippet>

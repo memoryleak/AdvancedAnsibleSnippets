@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage shortcuts on Windows}
+  community.windows.win_shortcut:
+    src: ${2:# Executable or URL the shortcut points to}
+    description: ${3:# Description for the shortcut}
+    dest: ${4:# Destination file for the shortcuting file}
+    arguments: ${5:# Additional arguments for the executable defined in C(src)}
+    directory: ${6:# Working directory for executable defined in C(src)}
+    icon: ${7:# Icon used for the shortcut}
+    hotkey: ${8:# Key combination for the shortcut}
+    windowstyle: ${9:# Influences how the application is displayed when it is launched}
+    state: ${10:# When C(absent), removes the shortcut if it exists}
+    run_as_admin: ${11:# When C(src) is an executable, this can control whether the shortcut will be opened as an administrator or not}
+  tags:
+    - community
+    - windows
+    - win_shortcut]]></content>
+  <tabTrigger>community.windows.win_shortcut</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage shortcuts on Windows</description>
+</snippet>

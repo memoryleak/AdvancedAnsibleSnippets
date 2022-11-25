@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure virtual network gateways}
+  azure.azcollection.azure_rm_virtualnetworkgateway:
+    resource_group: ${2:# Name of a resource group where VPN Gateway exists or will be created}
+    name: ${3:# Name of VPN Gateway}
+    state: ${4:# State of the VPN Gateway}
+    location: ${5:# Valid Azure location}
+    virtual_network: ${6:# An existing virtual network with which the VPN Gateway will be associated}
+    ip_configurations: ${7:# List of IP configurations}
+    gateway_type: ${8:# The type of this virtual network gateway}
+    vpn_type: ${9:# The type of this virtual private network}
+    enable_bgp: ${10:# Whether BGP is enabled for this virtual network gateway or not}
+    sku: ${11:# The reference of the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway}
+    vpn_gateway_generation: ${12:# The generation for this VirtualNetworkGateway}
+    bgp_settings: ${13:# Virtual network gateway's BGP speaker settings}
+    ad_user: ${14:# Active Directory username}
+    password: ${15:# Active Directory user password}
+    profile: ${16:# Security profile found in ~/}
+    subscription_id: ${17:# Your Azure subscription Id}
+    client_id: ${18:# Azure client ID}
+    secret: ${19:# Azure client secret}
+    tenant: ${20:# Azure tenant ID}
+    cloud_environment: ${21:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${22:# Azure AD authority url}
+    cert_validation_mode: ${23:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${24:# Controls the source of the credentials to use for authentication}
+    api_profile: ${25:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${26:# Parent argument}
+    log_mode: ${27:# Parent argument}
+    x509_certificate_path: ${28:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${29:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${30:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${31:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_virtualnetworkgateway]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_virtualnetworkgateway</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure virtual network gateways</description>
+</snippet>

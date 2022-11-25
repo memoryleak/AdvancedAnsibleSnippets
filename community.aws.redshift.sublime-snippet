@@ -1,0 +1,50 @@
+<snippet>
+  <content><![CDATA[- name: ${1:create, delete, or modify an Amazon Redshift instance}
+  community.aws.redshift:
+    command: ${2:# Specifies the action to take}
+    identifier: ${3:# Redshift cluster identifier}
+    node_type: ${4:# The node type of the cluster}
+    username: ${5:# Master database username}
+    password: ${6:# Master database password}
+    cluster_type: ${7:# The type of cluster}
+    db_name: ${8:# Name of the database}
+    availability_zone: ${9:# Availability zone in which to launch cluster}
+    number_of_nodes: ${10:# Number of nodes}
+    cluster_subnet_group_name: ${11:# Which subnet to place the cluster}
+    cluster_security_groups: ${12:# In which security group the cluster belongs}
+    vpc_security_group_ids: ${13:# VPC security group}
+    skip_final_cluster_snapshot: ${14:# Skip a final snapshot before deleting the cluster}
+    final_cluster_snapshot_identifier: ${15:# Identifier of the final snapshot to be created before deleting the cluster}
+    preferred_maintenance_window: ${16:# Maintenance window in format of C(ddd:hh24:mi-ddd:hh24:mi)}
+    cluster_parameter_group_name: ${17:# Name of the cluster parameter group}
+    automated_snapshot_retention_period: ${18:# The number of days that automated snapshots are retained}
+    port: ${19:# Which port the cluster is listening on}
+    cluster_version: ${20:# Which version the cluster should have}
+    allow_version_upgrade: ${21:# When I(allow_version_upgrade=true) the cluster may be automatically upgraded during the maintenance window}
+    publicly_accessible: ${22:# If the cluster is accessible publicly or not}
+    encrypted: ${23:# If the cluster is encrypted or not}
+    elastic_ip: ${24:# An Elastic IP to use for the cluster}
+    new_cluster_identifier: ${25:# Only used when command=modify}
+    wait: ${26:# When I(command=create), I(command=modify) or I(command=restore) then wait for the database to enter the 'available' state}
+    wait_timeout: ${27:# When I(wait=true) defines how long in seconds before giving up}
+    enhanced_vpc_routing: ${28:# Whether the cluster should have enhanced VPC routing enabled}
+    access_key: ${29:# AWS access key ID}
+    secret_key: ${30:# AWS secret access key}
+    session_token: ${31:# AWS STS session token for use with temporary credentials}
+    profile: ${32:# A named AWS profile to use for authentication}
+    endpoint_url: ${33:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${34:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${35:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${36:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${37:# Use a C(botocore}
+    region: ${38:# The AWS region to use}
+    tags: ${39:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${40:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - community
+    - aws
+    - redshift]]></content>
+  <tabTrigger>community.aws.redshift</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>create, delete, or modify an Amazon Redshift instance</description>
+</snippet>

@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Enable or disable the syslog on iDRAC}
+  dellemc.openmanage.idrac_syslog:
+    syslog: ${2:# Enables or disables an iDRAC syslog}
+    idrac_ip: ${3:# iDRAC IP Address}
+    idrac_user: ${4:# iDRAC username}
+    idrac_password: ${5:# iDRAC user password}
+    idrac_port: ${6:# iDRAC port}
+    validate_certs: ${7:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${8:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${9:# The socket level timeout in seconds}
+    share_name: ${10:# Network share or a local path}
+    share_user: ${11:# Network share user name}
+    share_password: ${12:# Network share user password}
+    share_mnt: ${13:# Local mount path of the network share with read-write permission for ansible user}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_syslog]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_syslog</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Enable or disable the syslog on iDRAC</description>
+</snippet>

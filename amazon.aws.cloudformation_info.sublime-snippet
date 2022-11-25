@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Obtain information about an AWS CloudFormation stack}
+  amazon.aws.cloudformation_info:
+    stack_name: ${2:# The name or id of the CloudFormation stack}
+    all_facts: ${3:# Get all stack information for the stack}
+    stack_events: ${4:# Get stack events for the stack}
+    stack_template: ${5:# Get stack template body for the stack}
+    stack_resources: ${6:# Get stack resources for the stack}
+    stack_policy: ${7:# Get stack policy for the stack}
+    stack_change_sets: ${8:# Get stack change sets for the stack}
+    access_key: ${9:# AWS access key ID}
+    secret_key: ${10:# AWS secret access key}
+    session_token: ${11:# AWS STS session token for use with temporary credentials}
+    profile: ${12:# A named AWS profile to use for authentication}
+    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${16:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
+    region: ${18:# The AWS region to use}
+  tags:
+    - amazon
+    - aws
+    - cloudformation_info]]></content>
+  <tabTrigger>amazon.aws.cloudformation_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Obtain information about an AWS CloudFormation stack</description>
+</snippet>

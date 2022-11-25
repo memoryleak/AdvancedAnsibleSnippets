@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage a datastore on ESXi host}
+  community.vmware.vmware_host_datastore:
+    datastore_name: ${2:# Name of the datastore to add/remove}
+    datastore_type: ${3:# Type of the datastore to configure (nfs/nfs41/vmfs)}
+    nfs_server: ${4:# NFS host serving nfs datastore}
+    nfs_path: ${5:# Resource path on NFS host}
+    nfs_ro: ${6:# ReadOnly or ReadWrite mount}
+    vmfs_device_name: ${7:# Name of the device to be used as VMFS datastore}
+    vmfs_version: ${8:# VMFS version to use for datastore creation}
+    esxi_hostname: ${9:# ESXi hostname to manage the datastore}
+    auto_expand: ${10:# Expand a datastore capacity to full if it has free capacity}
+    state: ${11:# present: Mount datastore on host if datastore is absent else do nothing}
+    hostname: ${12:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${13:# The username of the vSphere vCenter or ESXi server}
+    password: ${14:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${15:# Allows connection when SSL certificates are not valid}
+    port: ${16:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${17:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${18:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_host_datastore]]></content>
+  <tabTrigger>community.vmware.vmware_host_datastore</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage a datastore on ESXi host</description>
+</snippet>

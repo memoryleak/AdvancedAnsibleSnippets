@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds an audit rule to files, folders, or registry keys}
+  community.windows.win_audit_rule:
+    path: ${2:# Path to the file, folder, or registry key}
+    user: ${3:# The user or group to adjust rules for}
+    rights: ${4:# Comma separated list of the rights desired}
+    inheritance_flags: ${5:# Defines what objects inside of a folder or registry key will inherit the settings}
+    propagation_flags: ${6:# Propagation flag on the audit rules}
+    audit_flags: ${7:# Defines whether to log on failure, success, or both}
+    state: ${8:# Whether the rule should be C(present) or C(absent)}
+  tags:
+    - community
+    - windows
+    - win_audit_rule]]></content>
+  <tabTrigger>community.windows.win_audit_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds an audit rule to files, folders, or registry keys</description>
+</snippet>

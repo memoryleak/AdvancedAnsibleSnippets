@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage utility license assignment on BIG-IPs from a BIG-IQ}
+  f5networks.f5_modules.bigiq_utility_license_assignment:
+    unit_of_measure: ${2:# Sets the rate at which this license usage is billed}
+    key: ${3:# The registration key from which you want choose an offering}
+    offering: ${4:# Name of the license offering to assign to the device}
+    device: ${5:# When C(managed) is C(no), specifies the address, or hostname, where the BIG-IQ can reach the remote device to register}
+    managed: ${6:# Whether the specified device is a managed or un-managed device}
+    device_port: ${7:# Specifies the port of the remote device to connect to}
+    device_username: ${8:# The username used to connect to the remote device}
+    device_password: ${9:# The password of the C(device_username)}
+    state: ${10:# When C(present), ensures the device is assigned the specified license}
+    provider: ${11:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigiq_utility_license_assignment]]></content>
+  <tabTrigger>f5networks.f5_modules.bigiq_utility_license_assignment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage utility license assignment on BIG-IPs from a BIG-IQ</description>
+</snippet>

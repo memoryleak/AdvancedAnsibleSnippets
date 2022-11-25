@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Uninstalls the software package from target machines}
+  check_point.mgmt.cp_mgmt_uninstall_software_package:
+    name: ${2:# The name of the software package}
+    targets: ${3:# On what targets to execute this command}
+    cluster_installation_settings: ${4:# Installation settings for cluster}
+    concurrency_limit: ${5:# The number of targets, on which the same package is installed at the same time}
+    wait_for_task: ${6:# Wait for the task to end}
+    wait_for_task_timeout: ${7:# How many minutes to wait until throwing a timeout error}
+    version: ${8:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_uninstall_software_package]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_uninstall_software_package</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Uninstalls the software package from target machines</description>
+</snippet>

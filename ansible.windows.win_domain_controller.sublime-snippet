@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage domain controller/member server state for a Windows host}
+  ansible.windows.win_domain_controller:
+    dns_domain_name: ${2:# When C(state) is C(domain_controller), the DNS name of the domain for which the targeted Windows host should be a DC}
+    domain_admin_user: ${3:# Username of a domain admin for the target domain (necessary to promote or demote a domain controller)}
+    domain_admin_password: ${4:# Password for the specified C(domain_admin_user)}
+    safe_mode_password: ${5:# Safe mode password for the domain controller (required when C(state) is C(domain_controller))}
+    local_admin_password: ${6:# Password to be assigned to the local C(Administrator) user (required when C(state) is C(member_server))}
+    read_only: ${7:# Whether to install the domain controller as a read only replica for an existing domain}
+    site_name: ${8:# Specifies the name of an existing site where you can place the new domain controller}
+    state: ${9:# Whether the target host should be a domain controller or a member server}
+    database_path: ${10:# The path to a directory on a fixed disk of the Windows host where the domain database will be created}
+    domain_log_path: ${11:# Specified the fully qualified, non-UNC path to a directory on a fixed disk of the local computer that will contain the domain log files}
+    sysvol_path: ${12:# The path to a directory on a fixed disk of the Windows host where the Sysvol folder will be created}
+    install_media_path: ${13:# The path to a directory on a fixed disk of the Windows host where the Install From Media C(IFC) data will be used}
+    install_dns: ${14:# Whether to install the DNS service when creating the domain controller}
+    log_path: ${15:# The path to log any debug information when running the module}
+  tags:
+    - ansible
+    - windows
+    - win_domain_controller]]></content>
+  <tabTrigger>ansible.windows.win_domain_controller</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage domain controller/member server state for a Windows host</description>
+</snippet>

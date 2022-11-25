@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get and Set Plug Parameters on WTI OOB and PDU power devices}
+  wti.remote.cpm_plugconfig:
+    cpm_action: ${2:# This is the Action to send the module}
+    cpm_url: ${3:# This is the URL of the WTI device to send the module}
+    cpm_username: ${4:# This is the Username of the WTI device to send the module}
+    cpm_password: ${5:# This is the Password of the WTI device to send the module}
+    use_https: ${6:# Designates to use an https connection or http connection}
+    validate_certs: ${7:# If false, SSL certificates will not be validated}
+    use_proxy: ${8:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+    plug_id: ${9:# This is the plug number that is to be manipulated}
+    plug_name: ${10:# The new name of the Plug}
+    plug_bootdelay: ${11:# On a reboot command, this is the time when a plug will turn on power, after it has been turned off}
+    plug_default: ${12:# What the Plugs default state is when the device starts}
+    plug_bootpriority: ${13:# Prioritizes which plug gets its state changed first}
+  tags:
+    - wti
+    - remote
+    - cpm_plugconfig]]></content>
+  <tabTrigger>wti.remote.cpm_plugconfig</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get and Set Plug Parameters on WTI OOB and PDU power devices</description>
+</snippet>

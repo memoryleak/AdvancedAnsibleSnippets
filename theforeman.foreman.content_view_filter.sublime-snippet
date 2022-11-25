@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Content View Filters}
+  theforeman.foreman.content_view_filter:
+    architecture: ${2:# package architecture}
+    name: ${3:# Name of the Content View Filter}
+    description: ${4:# Description of the Content View Filter}
+    content_view: ${5:# Name of the content view}
+    filter_state: ${6:# State of the content view filter}
+    repositories: ${7:# List of repositories that include name and product}
+    rule_state: ${8:# State of the content view filter rule}
+    filter_type: ${9:# Content view filter type}
+    rule_name: ${10:# Content view filter rule name or package name}
+    date_type: ${11:# Search using the 'Issued On' or 'Updated On'}
+    end_date: ${12:# erratum end date (YYYY-MM-DD)}
+    start_date: ${13:# erratum start date (YYYY-MM-DD)}
+    errata_id: ${14:# erratum id}
+    max_version: ${15:# package maximum version}
+    min_version: ${16:# package minimum version}
+    types: ${17:# erratum types (enhancement, bugfix, security)}
+    version: ${18:# package version}
+    inclusion: ${19:# Create an include filter}
+    original_packages: ${20:# Include all RPMs with no errata}
+    server_url: ${21:# URL of the Foreman server}
+    username: ${22:# Username accessing the Foreman server}
+    password: ${23:# Password of the user accessing the Foreman server}
+    validate_certs: ${24:# Whether or not to verify the TLS certificates of the Foreman server}
+    organization: ${25:# Organization that the entity is in}
+  tags:
+    - theforeman
+    - foreman
+    - content_view_filter]]></content>
+  <tabTrigger>theforeman.foreman.content_view_filter</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Content View Filters</description>
+</snippet>

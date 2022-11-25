@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures Vxlan}
+  mellanox.onyx.onyx_vxlan:
+    nve_id: ${2:# nve interface ID}
+    loopback_id: ${3:# loopback interface ID}
+    bgp: ${4:# configure bgp on nve interface}
+    mlag_tunnel_ip: ${5:# vxlan Mlag tunnel IP}
+    vni_vlan_list: ${6:# Each item in the list has two attributes vlan_id, vni_id}
+    arp_suppression: ${7:# A flag telling if to configure arp suppression}
+  tags:
+    - mellanox
+    - onyx
+    - onyx_vxlan]]></content>
+  <tabTrigger>mellanox.onyx.onyx_vxlan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures Vxlan</description>
+</snippet>

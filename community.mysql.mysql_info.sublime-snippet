@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about MySQL servers}
+  community.mysql.mysql_info:
+    filter: ${2:# Limit the collected information by comma separated string or YAML list}
+    login_db: ${3:# Database name to connect to}
+    exclude_fields: ${4:# List of fields which are not needed to collect}
+    return_empty_dbs: ${5:# Includes names of empty databases to returned dictionary}
+    login_user: ${6:# The username used to authenticate with}
+    login_password: ${7:# The password used to authenticate with}
+    login_host: ${8:# Host running the database}
+    login_port: ${9:# Port of the MySQL server}
+    login_unix_socket: ${10:# The path to a Unix domain socket for local connections}
+    connect_timeout: ${11:# The connection timeout when connecting to the MySQL server}
+    config_file: ${12:# Specify a config file from which user and password are to be read}
+    ca_cert: ${13:# The path to a Certificate Authority (CA) certificate}
+    client_cert: ${14:# The path to a client public key certificate}
+    client_key: ${15:# The path to the client private key}
+    check_hostname: ${16:# Whether to validate the server host name when an SSL connection is required}
+  tags:
+    - community
+    - mysql
+    - mysql_info]]></content>
+  <tabTrigger>community.mysql.mysql_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about MySQL servers</description>
+</snippet>

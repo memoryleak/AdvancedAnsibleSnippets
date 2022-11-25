@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Upload content to a repository}
+  theforeman.foreman.content_upload:
+    src: ${2:# File (on the remote/target machine) to upload}
+    repository: ${3:# Repository to upload file in to}
+    product: ${4:# Product to which the repository lives in}
+    ostree_repository_name: ${5:# Name of repository within the OSTree archive}
+    server_url: ${6:# URL of the Foreman server}
+    username: ${7:# Username accessing the Foreman server}
+    password: ${8:# Password of the user accessing the Foreman server}
+    validate_certs: ${9:# Whether or not to verify the TLS certificates of the Foreman server}
+    organization: ${10:# Organization that the entity is in}
+  tags:
+    - theforeman
+    - foreman
+    - content_upload]]></content>
+  <tabTrigger>theforeman.foreman.content_upload</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Upload content to a repository</description>
+</snippet>

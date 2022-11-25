@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set Identity Provider assignment to domain, to allow administrator login to that domain using that identity provider, if there is no Identity Provider assigned to the domain the 'idp-default-assignment' will be used}
+  check_point.mgmt.cp_mgmt_set_idp_to_domain_assignment:
+    assigned_domain: ${2:# Represents the Domain assigned by 'idp-to-domain-assignment', need to be domain name or UID}
+    identity_provider: ${3:# Represents the Identity Provider to be used for Login by this assignment}
+    using_default: ${4:# Is this assignment override by 'idp-default-assignment'}
+    details_level: ${5:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_warnings: ${6:# Apply changes ignoring warnings}
+    ignore_errors: ${7:# Apply changes ignoring errors}
+    auto_publish_session: ${8:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${9:# Wait for the task to end}
+    wait_for_task_timeout: ${10:# How many minutes to wait until throwing a timeout error}
+    version: ${11:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_set_idp_to_domain_assignment]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_set_idp_to_domain_assignment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set Identity Provider assignment to domain, to allow administrator login to that domain using that identity provider, if there is no Identity Provider assigned to the domain the 'idp-default-assignment' will be used</description>
+</snippet>

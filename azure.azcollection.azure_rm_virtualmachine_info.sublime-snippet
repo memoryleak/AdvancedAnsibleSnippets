@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get virtual machine facts}
+  azure.azcollection.azure_rm_virtualmachine_info:
+    resource_group: ${2:# Name of the resource group containing the virtual machines (required when filtering by vm name)}
+    name: ${3:# Name of the virtual machine}
+    tags: ${4:# Limit results by providing a list of tags}
+    ad_user: ${5:# Active Directory username}
+    password: ${6:# Active Directory user password}
+    profile: ${7:# Security profile found in ~/}
+    subscription_id: ${8:# Your Azure subscription Id}
+    client_id: ${9:# Azure client ID}
+    secret: ${10:# Azure client secret}
+    tenant: ${11:# Azure tenant ID}
+    cloud_environment: ${12:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${13:# Azure AD authority url}
+    cert_validation_mode: ${14:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${15:# Controls the source of the credentials to use for authentication}
+    api_profile: ${16:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${17:# Parent argument}
+    log_mode: ${18:# Parent argument}
+    x509_certificate_path: ${19:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${20:# The thumbprint of the private key specified in I(x509_certificate_path)}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_virtualmachine_info]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_virtualmachine_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get virtual machine facts</description>
+</snippet>

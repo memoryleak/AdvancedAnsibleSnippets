@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Pure Storage FlashBlade alert email settings}
+  purestorage.flashblade.purefb_alert:
+    state: ${2:# Create or delete alert email}
+    address: ${3:# Email address (valid format required)}
+    enabled: ${4:# Set specified email address to be enabled or disabled}
+    severity: ${5:# The minimum severity that an alert must have in order for emails to be sent to the array's alert watchers}
+    fb_url: ${6:# FlashBlade management IP address or Hostname}
+    api_token: ${7:# FlashBlade API token for admin privileged user}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_alert]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_alert</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Pure Storage FlashBlade alert email settings</description>
+</snippet>

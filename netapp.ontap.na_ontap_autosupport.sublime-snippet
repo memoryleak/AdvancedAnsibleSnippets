@@ -1,0 +1,45 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP autosupport}
+  netapp.ontap.na_ontap_autosupport:
+    state: ${2:# Specifies whether the AutoSupport daemon is present or absent}
+    node_name: ${3:# The name of the filer that owns the AutoSupport Configuration}
+    transport: ${4:# The name of the transport protocol used to deliver AutoSupport messages}
+    noteto: ${5:# Specifies up to five recipients of short AutoSupport e-mail messages}
+    post_url: ${6:# The URL used to deliver AutoSupport messages via HTTP POST}
+    mail_hosts: ${7:# List of mail server(s) used to deliver AutoSupport messages via SMTP}
+    support: ${8:# Specifies whether AutoSupport notification to technical support is enabled}
+    from_address: ${9:# specify the e-mail address from which the node sends AutoSupport messages}
+    partner_addresses: ${10:# Specifies up to five partner vendor recipients of full AutoSupport e-mail messages}
+    to_addresses: ${11:# Specifies up to five recipients of full AutoSupport e-mail messages}
+    proxy_url: ${12:# specify an HTTP or HTTPS proxy if the 'transport' parameter is set to HTTP or HTTPS and your organization uses a proxy}
+    hostname_in_subject: ${13:# Specify whether the hostname of the node is included in the subject line of the AutoSupport message}
+    nht_data_enabled: ${14:# Specify whether the disk health data is collected as part of the AutoSupport data}
+    perf_data_enabled: ${15:# Specify whether the performance data is collected as part of the AutoSupport data}
+    retry_count: ${16:# Specify the maximum number of delivery attempts for an AutoSupport message}
+    reminder_enabled: ${17:# Specify whether AutoSupport reminders are enabled or disabled}
+    max_http_size: ${18:# Specify delivery size limit for the HTTP transport protocol (in bytes)}
+    max_smtp_size: ${19:# Specify delivery size limit for the SMTP transport protocol (in bytes)}
+    private_data_removed: ${20:# Specify the removal of customer-supplied data}
+    local_collection_enabled: ${21:# Specify whether collection of AutoSupport data when the AutoSupport daemon is disabled}
+    ondemand_enabled: ${22:# Specify whether the AutoSupport OnDemand Download feature is enabled}
+    validate_digital_certificate: ${23:# When set to true each node will validate the digital certificates that it receives}
+    hostname: ${24:# The hostname or IP address of the ONTAP instance}
+    username: ${25:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${26:# Password for the specified user}
+    cert_filepath: ${27:# path to SSL client cert file (}
+    key_filepath: ${28:# path to SSL client key file}
+    https: ${29:# Enable and disable https}
+    validate_certs: ${30:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${31:# Override the default port (80 or 443) with this port}
+    ontapi: ${32:# The ontap api version to use}
+    use_rest: ${33:# Whether to use REST or ZAPI}
+    feature_flags: ${34:# Enable or disable a new feature}
+    force_ontap_version: ${35:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_autosupport]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_autosupport</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP autosupport</description>
+</snippet>

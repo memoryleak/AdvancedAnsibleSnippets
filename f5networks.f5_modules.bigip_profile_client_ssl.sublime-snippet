@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages client SSL profiles on a BIG-IP}
+  f5networks.f5_modules.bigip_profile_client_ssl:
+    name: ${2:# Specifies the name of the profile}
+    parent: ${3:# The parent template of this monitor template}
+    ciphers: ${4:# Specifies the list of ciphers the system supports}
+    cipher_group: ${5:# Specifies the cipher group to assign to this profile}
+    cert_key_chain: ${6:# One or more certificates and keys to associate with the SSL profile}
+    partition: ${7:# Device partition to manage resources on}
+    options: ${8:# Options the system uses for SSL processing in the form of a list}
+    secure_renegotiation: ${9:# Specifies the method of secure renegotiations for SSL connections}
+    allow_non_ssl: ${10:# Enables or disables acceptance of non-SSL connections}
+    server_name: ${11:# Specifies the fully qualified DNS hostname of the server used in Server Name Indication communications}
+    sni_default: ${12:# Indicates the system uses this profile as the default SSL profile when there is no match to the server name, or when the client provides no SNI extension support}
+    sni_require: ${13:# Requires the network peers also provide SNI support}
+    strict_resume: ${14:# Enables or disables the resumption of SSL sessions after an unclean shutdown}
+    client_certificate: ${15:# Specifies the way the system handles client certificates}
+    client_auth_frequency: ${16:# Specifies the frequency of client authentication for an SSL session}
+    renegotiation: ${17:# Enables or disables SSL renegotiation}
+    retain_certificate: ${18:# When C(yes), the client certificate is retained in SSL session}
+    cert_auth_depth: ${19:# Specifies the maximum number of certificates to be traversed in a client certificate chain}
+    trusted_cert_authority: ${20:# Specifies a client CA the system trusts}
+    advertised_cert_authority: ${21:# Specifies the CAs the system advertises to clients is being trusted by the profile}
+    client_auth_crl: ${22:# Specifies the name of a file containing a list of revoked client certificates}
+    allow_expired_crl: ${23:# Instructs the system to use the specified CRL file even if it has expired}
+    cache_size: ${24:# Specifies the number of sessions in the SSL session cache}
+    cache_timeout: ${25:# Specifies the timeout value in seconds of the SSL session cache entries}
+    state: ${26:# When C(present), ensures the profile exists}
+    provider: ${27:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_profile_client_ssl]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_profile_client_ssl</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages client SSL profiles on a BIG-IP</description>
+</snippet>

@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Extreme Networks EXOS configuration sections}
+  community.network.exos_config:
+    lines: ${2:# The ordered set of commands that should be configured in the section}
+    src: ${3:# Specifies the source path to the file that contains the configuration or configuration template to load}
+    before: ${4:# The ordered set of commands to push on to the command stack if a change needs to be made}
+    after: ${5:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
+    match: ${6:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
+    replace: ${7:# Instructs the module on the way to perform the configuration on the device}
+    backup: ${8:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
+    running_config: ${9:# The module, by default, will connect to the remote device and retrieve the current running-config to use as a base for comparing against the contents of source}
+    defaults: ${10:# This argument specifies whether or not to collect all defaults when getting the remote device running config}
+    save_when: ${11:# When changes are made to the device running-configuration, the changes are not copied to non-volatile storage by default}
+    diff_against: ${12:# When using the C(ansible-playbook --diff) command line argument the module can generate diffs against different sources}
+    diff_ignore_lines: ${13:# Use this argument to specify one or more lines that should be ignored during the diff}
+    intended_config: ${14:# The C(intended_config) provides the master configuration that the node should conform to and is used to check the final running-config against}
+    backup_options: ${15:# This is a dict object containing configurable options related to backup file path}
+  tags:
+    - community
+    - network
+    - exos_config]]></content>
+  <tabTrigger>community.network.exos_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Extreme Networks EXOS configuration sections</description>
+</snippet>

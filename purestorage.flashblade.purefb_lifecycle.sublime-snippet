@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FlashBlade object lifecycles}
+  purestorage.flashblade.purefb_lifecycle:
+    state: ${2:# Create or delete lifecycle rule}
+    bucket: ${3:# Bucket the lifecycle rule applies to}
+    name: ${4:# Name of the lifecycle rule}
+    enabled: ${5:# State of lifecycle rule}
+    keep_previous_for: ${6:# Time after which previous versions will be marked expired}
+    keep_current_for: ${7:# Time after which current versions will be marked expired}
+    keep_current_until: ${8:# Date after which current versions will be marked expired}
+    abort_uploads_after: ${9:# Duration of time after which incomplete multipart uploads will be aborted}
+    prefix: ${10:# Object key prefix identifying one or more objects in the bucket}
+    fb_url: ${11:# FlashBlade management IP address or Hostname}
+    api_token: ${12:# FlashBlade API token for admin privileged user}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_lifecycle]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_lifecycle</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FlashBlade object lifecycles</description>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Waits for a condition before continuing}
+  ansible.windows.win_wait_for:
+    connect_timeout: ${2:# The maximum number of seconds to wait for a connection to happen before closing and retrying}
+    delay: ${3:# The number of seconds to wait before starting to poll}
+    exclude_hosts: ${4:# The list of hosts or IPs to ignore when looking for active TCP connections when C(state=drained)}
+    host: ${5:# A resolvable hostname or IP address to wait for}
+    path: ${6:# The path to a file on the filesystem to check}
+    port: ${7:# The port number to poll on C(host)}
+    regex: ${8:# Can be used to match a string in a file}
+    sleep: ${9:# Number of seconds to sleep between checks}
+    state: ${10:# When checking a port, C(started) will ensure the port is open, C(stopped) will check that is it closed and C(drained) will check for active connections}
+    timeout: ${11:# The maximum number of seconds to wait for}
+  tags:
+    - ansible
+    - windows
+    - win_wait_for]]></content>
+  <tabTrigger>ansible.windows.win_wait_for</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Waits for a condition before continuing</description>
+</snippet>

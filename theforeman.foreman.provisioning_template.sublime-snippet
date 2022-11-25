@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Provisioning Templates}
+  theforeman.foreman.provisioning_template:
+    audit_comment: ${2:# Content of the audit comment field}
+    kind: ${3:# The provisioning template kind}
+    template: ${4:# The content of the provisioning template}
+    file_name: ${5:# The path of a template file, that shall be imported}
+    locked: ${6:# Determines whether the template shall be locked}
+    name: ${7:# The name of the Provisioning Template}
+    updated_name: ${8:# New provisioning template name}
+    server_url: ${9:# URL of the Foreman server}
+    username: ${10:# Username accessing the Foreman server}
+    password: ${11:# Password of the user accessing the Foreman server}
+    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${13:# State of the entity}
+    organizations: ${14:# List of organizations the entity should be assigned to}
+    locations: ${15:# List of locations the entity should be assigned to}
+    operatingsystems: ${16:# List of operating systems the entity should be assigned to}
+  tags:
+    - theforeman
+    - foreman
+    - provisioning_template]]></content>
+  <tabTrigger>theforeman.foreman.provisioning_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Provisioning Templates</description>
+</snippet>

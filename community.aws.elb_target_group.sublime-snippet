@@ -1,0 +1,51 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage a target group for an Application or Network load balancer}
+  community.aws.elb_target_group:
+    deregistration_delay_timeout: ${2:# The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused}
+    deregistration_connection_termination: ${3:# Indicates whether the load balancer terminates connections at the end of the deregistration timeout}
+    health_check_protocol: ${4:# The protocol the load balancer uses when performing health checks on targets}
+    health_check_port: ${5:# The port the load balancer uses when performing health checks on targets}
+    health_check_path: ${6:# The ping path that is the destination on the targets for health checks}
+    health_check_interval: ${7:# The approximate amount of time, in seconds, between health checks of an individual target}
+    health_check_timeout: ${8:# The amount of time, in seconds, during which no response from a target means a failed health check}
+    healthy_threshold_count: ${9:# The number of consecutive health checks successes required before considering an unhealthy target healthy}
+    modify_targets: ${10:# Whether or not to alter existing targets in the group to match what is passed with the module}
+    name: ${11:# The name of the target group}
+    port: ${12:# The port on which the targets receive traffic}
+    protocol: ${13:# The protocol to use for routing traffic to the targets}
+    state: ${14:# Create or destroy the target group}
+    stickiness_enabled: ${15:# Indicates whether sticky sessions are enabled}
+    stickiness_lb_cookie_duration: ${16:# The time period, in seconds, during which requests from a client should be routed to the same target}
+    stickiness_app_cookie_duration: ${17:# The time period, in seconds, during which requests from a client should be routed to the same target}
+    stickiness_app_cookie_name: ${18:# The name of the application cookie}
+    stickiness_type: ${19:# The type of sticky sessions}
+    load_balancing_algorithm_type: ${20:# The type of load balancing algorithm to use}
+    successful_response_codes: ${21:# The HTTP codes to use when checking for a successful response from a target}
+    target_type: ${22:# The type of target that you must specify when registering targets with this target group}
+    targets: ${23:# A list of targets to assign to the target group}
+    unhealthy_threshold_count: ${24:# The number of consecutive health check failures required before considering a target unhealthy}
+    vpc_id: ${25:# The identifier of the virtual private cloud (VPC)}
+    preserve_client_ip_enabled: ${26:# Indicates whether client IP preservation is enabled}
+    proxy_protocol_v2_enabled: ${27:# Indicates whether Proxy Protocol version 2 is enabled}
+    wait: ${28:# Whether or not to wait for the target group}
+    wait_timeout: ${29:# The time to wait for the target group}
+    access_key: ${30:# AWS access key ID}
+    secret_key: ${31:# AWS secret access key}
+    session_token: ${32:# AWS STS session token for use with temporary credentials}
+    profile: ${33:# A named AWS profile to use for authentication}
+    endpoint_url: ${34:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${35:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${36:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${37:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${38:# Use a C(botocore}
+    region: ${39:# The AWS region to use}
+    tags: ${40:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${41:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - community
+    - aws
+    - elb_target_group]]></content>
+  <tabTrigger>community.aws.elb_target_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage a target group for an Application or Network load balancer</description>
+</snippet>

@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or cancel a virtual instance in SoftLayer}
+  community.general.sl_vm:
+    instance_id: ${2:# Instance Id of the virtual instance to perform action option}
+    hostname: ${3:# Hostname to be provided to a virtual instance}
+    domain: ${4:# Domain name to be provided to a virtual instance}
+    datacenter: ${5:# Datacenter for the virtual instance to be deployed}
+    tags: ${6:# Tag or list of tags to be provided to a virtual instance}
+    hourly: ${7:# Flag to determine if the instance should be hourly billed}
+    private: ${8:# Flag to determine if the instance should be private only}
+    dedicated: ${9:# Flag to determine if the instance should be deployed in dedicated space}
+    local_disk: ${10:# Flag to determine if local disk should be used for the new instance}
+    cpus: ${11:# Count of cpus to be assigned to new virtual instance}
+    memory: ${12:# Amount of memory to be assigned to new virtual instance}
+    flavor: ${13:# Specify which SoftLayer flavor template to use instead of cpus and memory}
+    disks: ${14:# List of disk sizes to be assigned to new virtual instance}
+    os_code: ${15:# OS Code to be used for new virtual instance}
+    image_id: ${16:# Image Template to be used for new virtual instance}
+    nic_speed: ${17:# NIC Speed to be assigned to new virtual instance}
+    public_vlan: ${18:# VLAN by its Id to be assigned to the public NIC}
+    private_vlan: ${19:# VLAN by its Id to be assigned to the private NIC}
+    ssh_keys: ${20:# List of ssh keys by their Id to be assigned to a virtual instance}
+    post_uri: ${21:# URL of a post provisioning script to be loaded and executed on virtual instance}
+    state: ${22:# Create, or cancel a virtual instance}
+    wait: ${23:# Flag used to wait for active status before returning}
+    wait_time: ${24:# Time in seconds before wait returns}
+  tags:
+    - community
+    - general
+    - sl_vm]]></content>
+  <tabTrigger>community.general.sl_vm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or cancel a virtual instance in SoftLayer</description>
+</snippet>

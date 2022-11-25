@@ -1,0 +1,105 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage load balancing vserver configuration}
+  community.network.netscaler_lb_vserver:
+    name: ${2:# Name for the virtual server}
+    servicetype: ${3:# Protocol used by the service (also called the service type)}
+    ipv46: ${4:# IPv4 or IPv6 address to assign to the virtual server}
+    ippattern: ${5:# IP address pattern, in dotted decimal notation, for identifying packets to be accepted by the virtual server}
+    ipmask: ${6:# IP mask, in dotted decimal notation, for the IP Pattern parameter}
+    port: ${7:# Port number for the virtual server}
+    range: ${8:# Number of IP addresses that the appliance must generate and assign to the virtual server}
+    persistencetype: ${9:# Type of persistence for the virtual server}
+    timeout: ${10:# Time period for which a persistence session is in effect}
+    persistencebackup: ${11:# Backup persistence type for the virtual server}
+    backuppersistencetimeout: ${12:# Time period for which backup persistence is in effect}
+    lbmethod: ${13:# Load balancing method}
+    hashlength: ${14:# Number of bytes to consider for the hash value used in the URLHASH and DOMAINHASH load balancing methods}
+    netmask: ${15:# IPv4 subnet mask to apply to the destination IP address or source IP address when the load balancing method is C(DESTINATIONIPHASH) or C(SOURCEIPHASH)}
+    v6netmasklen: ${16:# Number of bits to consider in an IPv6 destination or source IP address, for creating the hash that is required by the C(DESTINATIONIPHASH) and C(SOURCEIPHASH) load balancing methods}
+    backuplbmethod: ${17:# Backup load balancing method}
+    cookiename: ${18:# Use this parameter to specify the cookie name for C(COOKIE) persistence type}
+    listenpolicy: ${19:# Default syntax expression identifying traffic accepted by the virtual server}
+    listenpriority: ${20:# Integer specifying the priority of the listen policy}
+    resrule: ${21:# Default syntax expression specifying which part of a server's response to use for creating rule based persistence sessions (persistence type RULE)}
+    persistmask: ${22:# Persistence mask for IP based persistence types, for IPv4 virtual servers}
+    v6persistmasklen: ${23:# Persistence mask for IP based persistence types, for IPv6 virtual servers}
+    rtspnat: ${24:# Use network address translation (NAT) for RTSP data connections}
+    m: ${25:# Redirection mode for load balancing}
+    tosid: ${26:# TOS ID of the virtual server}
+    datalength: ${27:# Length of the token to be extracted from the data segment of an incoming packet, for use in the token method of load balancing}
+    dataoffset: ${28:# Offset to be considered when extracting a token from the TCP payload}
+    sessionless: ${29:# Perform load balancing on a per-packet basis, without establishing sessions}
+    connfailover: ${30:# Mode in which the connection failover feature must operate for the virtual server}
+    redirurl: ${31:# URL to which to redirect traffic if the virtual server becomes unavailable}
+    cacheable: ${32:# Route cacheable requests to a cache redirection virtual server}
+    clttimeout: ${33:# Idle time, in seconds, after which a client connection is terminated}
+    somethod: ${34:# Type of threshold that, when exceeded, triggers spillover}
+    sopersistence: ${35:# If spillover occurs, maintain source IP address based persistence for both primary and backup virtual servers}
+    sopersistencetimeout: ${36:# Timeout for spillover persistence, in minutes}
+    healththreshold: ${37:# Threshold in percent of active services below which vserver state is made down}
+    sothreshold: ${38:# Threshold at which spillover occurs}
+    sobackupaction: ${39:# Action to be performed if spillover is to take effect, but no backup chain to spillover is usable or exists}
+    redirectportrewrite: ${40:# Rewrite the port and change the protocol to ensure successful HTTP redirects from services}
+    downstateflush: ${41:# Flush all active transactions associated with a virtual server whose state transitions from UP to DOWN}
+    disableprimaryondown: ${42:# If the primary virtual server goes down, do not allow it to return to primary status until manually enabled}
+    insertvserveripport: ${43:# Insert an HTTP header, whose value is the IP address and port number of the virtual server, before forwarding a request to the server}
+    vipheader: ${44:# Name for the inserted header}
+    authenticationhost: ${45:# Fully qualified domain name (FQDN) of the authentication virtual server to which the user must be redirected for authentication}
+    authentication: ${46:# Enable or disable user authentication}
+    authn401: ${47:# Enable or disable user authentication with HTTP 401 responses}
+    authnvsname: ${48:# Name of an authentication virtual server with which to authenticate users}
+    push: ${49:# Process traffic with the push virtual server that is bound to this load balancing virtual server}
+    pushvserver: ${50:# Name of the load balancing virtual server, of type PUSH or SSL_PUSH, to which the server pushes updates received on the load balancing virtual server that you are configuring}
+    pushlabel: ${51:# Expression for extracting a label from the server's response}
+    pushmulticlients: ${52:# Allow multiple Web 2}
+    tcpprofilename: ${53:# Name of the TCP profile whose settings are to be applied to the virtual server}
+    httpprofilename: ${54:# Name of the HTTP profile whose settings are to be applied to the virtual server}
+    dbprofilename: ${55:# Name of the DB profile whose settings are to be applied to the virtual server}
+    comment: ${56:# Any comments that you might want to associate with the virtual server}
+    l2conn: ${57:# Use Layer 2 parameters (channel number, MAC address, and VLAN ID) in addition to the 4-tuple (<source IP>:<source port>::<destination IP>:<destination port>) that is used to identify a connection}
+    oracleserverversion: ${58:# Oracle server version}
+    mssqlserverversion: ${59:# For a load balancing virtual server of type C(MSSQL), the Microsoft SQL Server version}
+    mysqlprotocolversion: ${60:# MySQL protocol version that the virtual server advertises to clients}
+    mysqlserverversion: ${61:# MySQL server version string that the virtual server advertises to clients}
+    mysqlcharacterset: ${62:# Character set that the virtual server advertises to clients}
+    mysqlservercapabilities: ${63:# Server capabilities that the virtual server advertises to clients}
+    appflowlog: ${64:# Apply AppFlow logging to the virtual server}
+    netprofile: ${65:# Name of the network profile to associate with the virtual server}
+    icmpvsrresponse: ${66:# How the NetScaler appliance responds to ping requests received for an IP address that is common to one or more virtual servers}
+    rhistate: ${67:# Route Health Injection (RHI) functionality of the NetSaler appliance for advertising the route of the VIP address associated with the virtual server}
+    newservicerequest: ${68:# Number of requests, or percentage of the load on existing services, by which to increase the load on a new service at each interval in slow-start mode}
+    newservicerequestunit: ${69:# Units in which to increment load at each interval in slow-start mode}
+    newservicerequestincrementinterval: ${70:# Interval, in seconds, between successive increments in the load on a new service or a service whose state has just changed from DOWN to UP}
+    minautoscalemembers: ${71:# Minimum number of members expected to be present when vserver is used in Autoscale}
+    maxautoscalemembers: ${72:# Maximum number of members expected to be present when vserver is used in Autoscale}
+    persistavpno: ${73:# Persist AVP number for Diameter Persistency}
+    skippersistency: ${74:# This argument decides the behavior incase the service which is selected from an existing persistence session has reached threshold}
+    td: ${75:# Integer value that uniquely identifies the traffic domain in which you want to configure the entity}
+    authnprofile: ${76:# Name of the authentication profile to be used when authentication is turned on}
+    macmoderetainvlan: ${77:# This option is used to retain vlan information of incoming packet when macmode is enabled}
+    dbslb: ${78:# Enable database specific load balancing for MySQL and MSSQL service types}
+    dns64: ${79:# This argument is for enabling/disabling the C(dns64) on lbvserver}
+    bypassaaaa: ${80:# If this option is enabled while resolving DNS64 query AAAA queries are not sent to back end dns server}
+    recursionavailable: ${81:# When set to YES, this option causes the DNS replies from this vserver to have the RA bit turned on}
+    processlocal: ${82:# By turning on this option packets destined to a vserver in a cluster will not under go any steering}
+    dnsprofilename: ${83:# Name of the DNS profile to be associated with the VServer}
+    servicebindings: ${84:# List of services along with the weights that are load balanced}
+    servicegroupbindings: ${85:# List of service groups along with the weights that are load balanced}
+    ssl_certkey: ${86:# The name of the ssl certificate that is bound to this service}
+    disabled: ${87:# When set to C(yes) the lb vserver will be disabled}
+    nsip: ${88:# The ip address of the netscaler appliance where the nitro API calls will be made}
+    nitro_user: ${89:# The username with which to authenticate to the netscaler node}
+    nitro_pass: ${90:# The password with which to authenticate to the netscaler node}
+    nitro_protocol: ${91:# Which protocol to use when accessing the nitro API objects}
+    validate_certs: ${92:# If C(no), SSL certificates will not be validated}
+    nitro_timeout: ${93:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
+    state: ${94:# The state of the resource being configured by the module on the netscaler node}
+    save_config: ${95:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+  tags:
+    - community
+    - network
+    - netscaler_lb_vserver]]></content>
+  <tabTrigger>community.network.netscaler_lb_vserver</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage load balancing vserver configuration</description>
+</snippet>

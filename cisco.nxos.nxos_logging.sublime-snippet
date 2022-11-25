@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage logging on network devices}
+  cisco.nxos.nxos_logging:
+    dest: ${2:# Destination of the logs}
+    remote_server: ${3:# Hostname or IP Address for remote logging (when dest is 'server')}
+    use_vrf: ${4:# VRF to be used while configuring remote logging (when dest is 'server')}
+    interface: ${5:# Interface to be used while configuring source-interface for logging (e}
+    name: ${6:# If value of C(dest) is I(logfile) it indicates file-name}
+    facility: ${7:# Facility name for logging}
+    dest_level: ${8:# Set logging severity levels}
+    facility_level: ${9:# Set logging severity levels for facility based log messages}
+    aggregate: ${10:# List of logging definitions}
+    state: ${11:# State of the logging configuration}
+    event: ${12:# Link/trunk enable/default interface configuration logging}
+    interface_message: ${13:# Add interface description to interface syslogs}
+    file_size: ${14:# Set logfile size}
+    facility_link_status: ${15:# Set logging facility ethpm link status}
+    timestamp: ${16:# Set logging timestamp format}
+    purge: ${17:# Remove any switch logging configuration that does not match what has been configured Not supported for ansible_connection local}
+  tags:
+    - cisco
+    - nxos
+    - nxos_logging]]></content>
+  <tabTrigger>cisco.nxos.nxos_logging</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage logging on network devices</description>
+</snippet>

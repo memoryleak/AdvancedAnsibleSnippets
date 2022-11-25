@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get event log information}
+  inspur.sm.event_log_info:
+    log_time: ${2:# Get logs after the specified date, time should be YYYY-MM-DDTHH:MM+HH:MM, like 2019-06-27T12:30+08:00}
+    count: ${3:# Get the most recent log of a specified number}
+    event_file: ${4:# Store logs to a file}
+    provider: ${5:# A dict object containing connection details}
+    host: ${6:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${7:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${8:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - sm
+    - event_log_info]]></content>
+  <tabTrigger>inspur.sm.event_log_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get event log information</description>
+</snippet>

@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:List content exports}
+  theforeman.foreman.content_export_info:
+    id: ${2:# Export history identifier}
+    content_view_version: ${3:# Content view version}
+    content_view: ${4:# Content view name}
+    destination_server: ${5:# Destination server name}
+    type: ${6:# Specify complete or incremental exports}
+    server_url: ${7:# URL of the Foreman server}
+    username: ${8:# Username accessing the Foreman server}
+    password: ${9:# Password of the user accessing the Foreman server}
+    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
+    organization: ${11:# Name of the Organization to scope the search for}
+    location: ${12:# Label of the Location to scope the search for}
+    search: ${13:# Search query to use}
+  tags:
+    - theforeman
+    - foreman
+    - content_export_info]]></content>
+  <tabTrigger>theforeman.foreman.content_export_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>List content exports</description>
+</snippet>

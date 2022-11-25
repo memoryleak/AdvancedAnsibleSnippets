@@ -1,0 +1,43 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure Service Bus}
+  azure.azcollection.azure_rm_servicebustopic:
+    resource_group: ${2:# Name of resource group}
+    name: ${3:# Name of the topic}
+    namespace: ${4:# Servicebus namespace name}
+    state: ${5:# Assert the state of the topic}
+    auto_delete_on_idle_in_seconds: ${6:# Time idle interval after which a topic is automatically deleted}
+    default_message_time_to_live_seconds: ${7:# Default message timespan to live value}
+    enable_batched_operations: ${8:# Value that indicates whether server-side batched operations are enabled}
+    enable_express: ${9:# Value that indicates whether Express Entities are enabled}
+    enable_partitioning: ${10:# A value that indicates whether the topic is to be partitioned across multiple message brokers}
+    max_size_in_mb: ${11:# The maximum size of the topic in megabytes, which is the size of memory allocated for the topic}
+    requires_duplicate_detection: ${12:# A value indicating if this topic requires duplicate detection}
+    duplicate_detection_time_in_seconds: ${13:# TimeSpan structure that defines the duration of the duplicate detection history}
+    support_ordering: ${14:# Value that indicates whether the topic supports ordering}
+    status: ${15:# Status of the entity}
+    ad_user: ${16:# Active Directory username}
+    password: ${17:# Active Directory user password}
+    profile: ${18:# Security profile found in ~/}
+    subscription_id: ${19:# Your Azure subscription Id}
+    client_id: ${20:# Azure client ID}
+    secret: ${21:# Azure client secret}
+    tenant: ${22:# Azure tenant ID}
+    cloud_environment: ${23:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${24:# Azure AD authority url}
+    cert_validation_mode: ${25:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${26:# Controls the source of the credentials to use for authentication}
+    api_profile: ${27:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${28:# Parent argument}
+    log_mode: ${29:# Parent argument}
+    x509_certificate_path: ${30:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${31:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${32:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${33:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_servicebustopic]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_servicebustopic</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure Service Bus</description>
+</snippet>

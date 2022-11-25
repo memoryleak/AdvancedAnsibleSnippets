@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update or destroy an aaa group object in Sophos UTM}
+  community.general.utm_aaa_group:
+    name: ${2:# The name of the object}
+    adirectory_groups: ${3:# List of adirectory group strings}
+    adirectory_groups_sids: ${4:# Dictionary of group sids}
+    backend_match: ${5:# The backend for the group}
+    comment: ${6:# Comment that describes the AAA group}
+    dynamic: ${7:# Group type}
+    edirectory_groups: ${8:# List of edirectory group strings}
+    ipsec_dn: ${9:# The ipsec dn string}
+    ldap_attribute: ${10:# The ldap attribute to check against}
+    ldap_attribute_value: ${11:# The ldap attribute value to check against}
+    members: ${12:# A list of user ref names (aaa/user)}
+    network: ${13:# The network reference name}
+    radius_groups: ${14:# A list of radius group strings}
+    tacacs_groups: ${15:# A list of tacacs group strings}
+    headers: ${16:# A dictionary of additional headers to be sent to POST and PUT requests}
+    utm_host: ${17:# The REST Endpoint of the Sophos UTM}
+    utm_port: ${18:# The port of the REST interface}
+    utm_token: ${19:# The token used to identify at the REST-API}
+    utm_protocol: ${20:# The protocol of the REST Endpoint}
+    validate_certs: ${21:# Whether the REST interface's ssl certificate should be verified or not}
+    state: ${22:# The desired state of the object}
+  tags:
+    - community
+    - general
+    - utm_aaa_group]]></content>
+  <tabTrigger>community.general.utm_aaa_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update or destroy an aaa group object in Sophos UTM</description>
+</snippet>

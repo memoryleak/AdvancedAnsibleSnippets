@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures vNIC order for service profiles and templates on Cisco UCS Manager}
+  cisco.ucs.ucs_sp_vnic_order:
+    sp_name: ${2:# DN of the service profile}
+    vnics: ${3:# List of vNIC order properties}
+    org_dn: ${4:# root org dn}
+    hostname: ${5:# IP address or hostname of Cisco UCS Manager}
+    username: ${6:# Username for Cisco UCS Manager authentication}
+    password: ${7:# Password for Cisco UCS Manager authentication}
+    port: ${8:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    use_ssl: ${9:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    use_proxy: ${10:# If C(no), will not use the proxy as defined by system environment variable}
+    proxy: ${11:# If use_proxy is no, specfies proxy to be used for connection}
+  tags:
+    - cisco
+    - ucs
+    - ucs_sp_vnic_order]]></content>
+  <tabTrigger>cisco.ucs.ucs_sp_vnic_order</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures vNIC order for service profiles and templates on Cisco UCS Manager</description>
+</snippet>

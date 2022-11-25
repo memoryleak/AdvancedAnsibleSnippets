@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure Service Bus SAS policy}
+  azure.azcollection.azure_rm_servicebussaspolicy:
+    resource_group: ${2:# Name of resource group}
+    name: ${3:# Name of the SAS policy}
+    state: ${4:# Assert the state of the route}
+    namespace: ${5:# Manage SAS policy for a namespace without C(queue) or C(topic) set}
+    queue: ${6:# Type of the messaging queue}
+    topic: ${7:# Name of the messaging topic}
+    regenerate_primary_key: ${8:# Regenerate the SAS policy primary key}
+    regenerate_secondary_key: ${9:# Regenerate the SAS policy secondary key}
+    rights: ${10:# Claim rights of the SAS policy}
+    ad_user: ${11:# Active Directory username}
+    password: ${12:# Active Directory user password}
+    profile: ${13:# Security profile found in ~/}
+    subscription_id: ${14:# Your Azure subscription Id}
+    client_id: ${15:# Azure client ID}
+    secret: ${16:# Azure client secret}
+    tenant: ${17:# Azure tenant ID}
+    cloud_environment: ${18:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${19:# Azure AD authority url}
+    cert_validation_mode: ${20:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${21:# Controls the source of the credentials to use for authentication}
+    api_profile: ${22:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${23:# Parent argument}
+    log_mode: ${24:# Parent argument}
+    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${27:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${28:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_servicebussaspolicy]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_servicebussaspolicy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure Service Bus SAS policy</description>
+</snippet>

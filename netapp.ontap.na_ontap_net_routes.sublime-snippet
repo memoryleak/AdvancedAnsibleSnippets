@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP network routes}
+  netapp.ontap.na_ontap_net_routes:
+    state: ${2:# Whether you want to create or delete a network route}
+    vserver: ${3:# The name of the vserver}
+    destination: ${4:# Specify the route destination}
+    gateway: ${5:# Specify the route gateway}
+    metric: ${6:# Specify the route metric}
+    from_destination: ${7:# Specify the route destination that should be changed}
+    from_gateway: ${8:# Specify the route gateway that should be changed}
+    from_metric: ${9:# Specify the route metric that should be changed}
+    hostname: ${10:# The hostname or IP address of the ONTAP instance}
+    username: ${11:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${12:# Password for the specified user}
+    cert_filepath: ${13:# path to SSL client cert file (}
+    key_filepath: ${14:# path to SSL client key file}
+    https: ${15:# Enable and disable https}
+    validate_certs: ${16:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${17:# Override the default port (80 or 443) with this port}
+    ontapi: ${18:# The ontap api version to use}
+    use_rest: ${19:# Whether to use REST or ZAPI}
+    feature_flags: ${20:# Enable or disable a new feature}
+    force_ontap_version: ${21:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_net_routes]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_net_routes</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP network routes</description>
+</snippet>

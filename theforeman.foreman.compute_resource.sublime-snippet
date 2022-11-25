@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Compute Resources}
+  theforeman.foreman.compute_resource:
+    name: ${2:# compute resource name}
+    updated_name: ${3:# new compute resource name}
+    description: ${4:# compute resource description}
+    provider: ${5:# Compute resource provider}
+    provider_params: ${6:# Parameter specific to compute resource provider}
+    server_url: ${7:# URL of the Foreman server}
+    username: ${8:# Username accessing the Foreman server}
+    password: ${9:# Password of the user accessing the Foreman server}
+    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${11:# State of the entity}
+    organizations: ${12:# List of organizations the entity should be assigned to}
+    locations: ${13:# List of locations the entity should be assigned to}
+  tags:
+    - theforeman
+    - foreman
+    - compute_resource]]></content>
+  <tabTrigger>theforeman.foreman.compute_resource</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Compute Resources</description>
+</snippet>

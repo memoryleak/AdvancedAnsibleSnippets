@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage an AWS Glue connection}
+  community.aws.glue_connection:
+    availability_zone: ${2:# Availability Zone used by the connection}
+    catalog_id: ${3:# The ID of the Data Catalog in which to create the connection}
+    connection_properties: ${4:# A dict of key-value pairs used as parameters for this connection}
+    connection_type: ${5:# The type of the connection}
+    description: ${6:# The description of the connection}
+    match_criteria: ${7:# A list of UTF-8 strings that specify the criteria that you can use in selecting this connection}
+    name: ${8:# The name of the connection}
+    security_groups: ${9:# A list of security groups to be used by the connection}
+    state: ${10:# Create or delete the AWS Glue connection}
+    subnet_id: ${11:# The subnet ID used by the connection}
+    access_key: ${12:# AWS access key ID}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    profile: ${15:# A named AWS profile to use for authentication}
+    endpoint_url: ${16:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${17:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${19:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${20:# Use a C(botocore}
+    region: ${21:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - glue_connection]]></content>
+  <tabTrigger>community.aws.glue_connection</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage an AWS Glue connection</description>
+</snippet>

@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set fan information}
+  inspur.sm.edit_fan:
+    mode: ${2:# Control mode, Manual or Automatic ,Manual must be used with fans_peed}
+    id: ${3:# fan id 255 is for all fans,0~n}
+    fan_speed: ${4:# fan speed (duty ratio), range in 1 - 100}
+    provider: ${5:# A dict object containing connection details}
+    host: ${6:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${7:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${8:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - sm
+    - edit_fan]]></content>
+  <tabTrigger>inspur.sm.edit_fan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set fan information</description>
+</snippet>

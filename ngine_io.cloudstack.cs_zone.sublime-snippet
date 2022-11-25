@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages zones on Apache CloudStack based clouds}
+  ngine_io.cloudstack.cs_zone:
+    name: ${2:# Name of the zone}
+    id: ${3:# uuid of the existing zone}
+    state: ${4:# State of the zone}
+    domain: ${5:# Domain the zone is related to}
+    network_domain: ${6:# Network domain for the zone}
+    network_type: ${7:# Network type of the zone}
+    dns1: ${8:# First DNS for the zone}
+    dns2: ${9:# Second DNS for the zone}
+    internal_dns1: ${10:# First internal DNS for the zone}
+    internal_dns2: ${11:# Second internal DNS for the zone}
+    dns1_ipv6: ${12:# First DNS for IPv6 for the zone}
+    dns2_ipv6: ${13:# Second DNS for IPv6 for the zone}
+    guest_cidr_address: ${14:# Guest CIDR address for the zone}
+    dhcp_provider: ${15:# DHCP provider for the Zone}
+    local_storage_enabled: ${16:# Whether to enable local storage for the zone or not}
+    securitygroups_enabled: ${17:# Whether the zone is security group enabled or not}
+    api_key: ${18:# API key of the CloudStack API}
+    api_secret: ${19:# Secret key of the CloudStack API}
+    api_url: ${20:# URL of the CloudStack API e}
+    api_http_method: ${21:# HTTP method used to query the API endpoint}
+    api_timeout: ${22:# HTTP timeout in seconds}
+    api_verify_ssl_cert: ${23:# Verify CA authority cert file}
+  tags:
+    - ngine_io
+    - cloudstack
+    - cs_zone]]></content>
+  <tabTrigger>ngine_io.cloudstack.cs_zone</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages zones on Apache CloudStack based clouds</description>
+</snippet>

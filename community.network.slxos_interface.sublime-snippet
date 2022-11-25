@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Interfaces on Extreme SLX-OS network devices}
+  community.network.slxos_interface:
+    name: ${2:# Name of the Interface}
+    description: ${3:# Description of Interface}
+    enabled: ${4:# Interface link status}
+    speed: ${5:# Interface link speed}
+    mtu: ${6:# Maximum size of transmit packet}
+    tx_rate: ${7:# Transmit rate in bits per second (bps)}
+    rx_rate: ${8:# Receiver rate in bits per second (bps)}
+    neighbors: ${9:# Check the operational state of given interface C(name) for LLDP neighbor}
+    aggregate: ${10:# List of Interfaces definitions}
+    delay: ${11:# Time in seconds to wait before checking for the operational state on remote device}
+    state: ${12:# State of the Interface configuration, C(up) means present and operationally up and C(down) means present and operationally C(down)}
+  tags:
+    - community
+    - network
+    - slxos_interface]]></content>
+  <tabTrigger>community.network.slxos_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Interfaces on Extreme SLX-OS network devices</description>
+</snippet>

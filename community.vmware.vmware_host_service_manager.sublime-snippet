@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage services on a given ESXi host}
+  community.vmware.vmware_host_service_manager:
+    cluster_name: ${2:# Name of the cluster}
+    esxi_hostname: ${3:# ESXi hostname}
+    state: ${4:# Desired state of service}
+    service_policy: ${5:# Set of valid service policy strings}
+    service_name: ${6:# Name of Service to be managed}
+    hostname: ${7:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${8:# The username of the vSphere vCenter or ESXi server}
+    password: ${9:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${10:# Allows connection when SSL certificates are not valid}
+    port: ${11:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${12:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_host_service_manager]]></content>
+  <tabTrigger>community.vmware.vmware_host_service_manager</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage services on a given ESXi host</description>
+</snippet>

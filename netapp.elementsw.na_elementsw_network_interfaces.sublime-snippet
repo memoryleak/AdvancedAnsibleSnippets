@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp Element Software Configure Node Network Interfaces}
+  netapp.elementsw.na_elementsw_network_interfaces:
+    method: ${2:# deprecated, this option would trigger a 'updated failed' error}
+    ip_address_1g: ${3:# deprecated, use bond_1g option}
+    ip_address_10g: ${4:# deprecated, use bond_10g option}
+    subnet_1g: ${5:# deprecated, use bond_1g option}
+    subnet_10g: ${6:# deprecated, use bond_10g option}
+    gateway_address_1g: ${7:# deprecated, use bond_1g option}
+    gateway_address_10g: ${8:# deprecated, use bond_10g option}
+    mtu_1g: ${9:# deprecated, use bond_1g option}
+    mtu_10g: ${10:# deprecated, use bond_10g option}
+    dns_nameservers: ${11:# deprecated, use bond_1g and bond_10g options}
+    dns_search_domains: ${12:# deprecated, use bond_1g and bond_10g options}
+    bond_mode_1g: ${13:# deprecated, use bond_1g option}
+    bond_mode_10g: ${14:# deprecated, use bond_10g option}
+    lacp_1g: ${15:# deprecated, use bond_1g option}
+    lacp_10g: ${16:# deprecated, use bond_10g option}
+    virtual_network_tag: ${17:# deprecated, use bond_1g and bond_10g options}
+    bond_1g: ${18:# settings for the Bond1G interface}
+    bond_10g: ${19:# settings for the Bond10G interface}
+    hostname: ${20:# The hostname or IP address of the SolidFire cluster}
+    username: ${21:# Please ensure that the user has the adequate permissions}
+    password: ${22:# Password for the specified user}
+  tags:
+    - netapp
+    - elementsw
+    - na_elementsw_network_interfaces]]></content>
+  <tabTrigger>netapp.elementsw.na_elementsw_network_interfaces</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp Element Software Configure Node Network Interfaces</description>
+</snippet>

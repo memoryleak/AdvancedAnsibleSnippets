@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds a virtual SATA adapter to the virtual machine}
+  vmware.vmware_rest.vcenter_vm_hardware_adapter_sata:
+    adapter: ${2:# Virtual SATA adapter identifier}
+    bus: ${3:# SATA bus number}
+    label: ${4:# The name of the item}
+    pci_slot_number: ${5:# Address of the SATA adapter on the PCI bus}
+    session_timeout: ${6:# Timeout settings for client session}
+    state: ${7:# No description available}
+    type: ${8:# The C(type) defines the valid emulation types for a virtual SATA adapter}
+    vcenter_hostname: ${9:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${10:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${11:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${12:# The vSphere vCenter username}
+    vcenter_validate_certs: ${13:# Allows connection when SSL certificates are not valid}
+    vm: ${14:# Virtual machine identifier}
+  tags:
+    - vmware
+    - vmware_rest
+    - vcenter_vm_hardware_adapter_sata]]></content>
+  <tabTrigger>vmware.vmware_rest.vcenter_vm_hardware_adapter_sata</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds a virtual SATA adapter to the virtual machine</description>
+</snippet>

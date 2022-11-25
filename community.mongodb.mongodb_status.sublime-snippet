@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Validates the status of the replicaset}
+  community.mongodb.mongodb_status:
+    replica_set: ${2:# Replicaset name}
+    poll: ${3:# The maximum number of times to query for the replicaset status before the set converges or we fail}
+    interval: ${4:# The number of seconds to wait between polling executions}
+    validate: ${5:# The type of validate to perform on the replicaset}
+    login_user: ${6:# The MongoDB user to login with}
+    login_password: ${7:# The password used to authenticate with}
+    login_database: ${8:# The database where login credentials are stored}
+    login_host: ${9:# The host running MongoDB instance to login to}
+    login_port: ${10:# The MongoDB server port to login to}
+    strict_compatibility: ${11:# Enforce strict requirements for pymongo and MongoDB software versions}
+    ssl: ${12:# Whether to use an SSL connection when connecting to the database}
+    ssl_cert_reqs: ${13:# Specifies whether a certificate is required from the other side of the connection, and whether it will be validated if provided}
+    ssl_ca_certs: ${14:# The ssl_ca_certs option takes a path to a CA file}
+    ssl_crlfile: ${15:# The ssl_crlfile option takes a path to a CRL file}
+    ssl_certfile: ${16:# Present a client certificate using the ssl_certfile option}
+    ssl_keyfile: ${17:# Private key for the client certificate}
+    ssl_pem_passphrase: ${18:# Passphrase to decrypt encrypted private keys}
+    auth_mechanism: ${19:# Authentication type}
+    connection_options: ${20:# Additional connection options}
+  tags:
+    - community
+    - mongodb
+    - mongodb_status]]></content>
+  <tabTrigger>community.mongodb.mongodb_status</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Validates the status of the replicaset</description>
+</snippet>

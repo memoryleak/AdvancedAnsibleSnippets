@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages VLAN IP ranges on Apache CloudStack based clouds}
+  ngine_io.cloudstack.cs_vlan_ip_range:
+    network: ${2:# The network name or id}
+    physical_network: ${3:# The physical network name or id}
+    start_ip: ${4:# The beginning IPv4 address in the VLAN IP range}
+    end_ip: ${5:# The ending IPv4 address in the VLAN IP range}
+    gateway: ${6:# The gateway of the VLAN IP range}
+    netmask: ${7:# The netmask of the VLAN IP range}
+    start_ipv6: ${8:# The beginning IPv6 address in the IPv6 network range}
+    end_ipv6: ${9:# The ending IPv6 address in the IPv6 network range}
+    gateway_ipv6: ${10:# The gateway of the IPv6 network}
+    cidr_ipv6: ${11:# The CIDR of IPv6 network, must be at least /64}
+    vlan: ${12:# The ID or VID of the network}
+    pod: ${13:# Name of the pod}
+    state: ${14:# State of the network ip range}
+    zone: ${15:# The Zone ID of the VLAN IP range}
+    domain: ${16:# Domain of the account owning the VLAN}
+    account: ${17:# Account who owns the VLAN}
+    project: ${18:# Project who owns the VLAN}
+    for_virtual_network: ${19:# C(yes) if VLAN is of Virtual type, C(no) if Direct}
+    for_system_vms: ${20:# C(yes) if IP range is set to system vms, C(no) if not}
+    api_key: ${21:# API key of the CloudStack API}
+    api_secret: ${22:# Secret key of the CloudStack API}
+    api_url: ${23:# URL of the CloudStack API e}
+    api_http_method: ${24:# HTTP method used to query the API endpoint}
+    api_timeout: ${25:# HTTP timeout in seconds}
+    api_verify_ssl_cert: ${26:# Verify CA authority cert file}
+  tags:
+    - ngine_io
+    - cloudstack
+    - cs_vlan_ip_range]]></content>
+  <tabTrigger>ngine_io.cloudstack.cs_vlan_ip_range</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages VLAN IP ranges on Apache CloudStack based clouds</description>
+</snippet>

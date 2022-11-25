@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Webhook instance}
+  azure.azcollection.azure_rm_containerregistrywebhook:
+    resource_group: ${2:# The name of the resource group to which the container registry belongs}
+    registry_name: ${3:# The name of the container registry}
+    webhook_name: ${4:# The name of the webhook}
+    location: ${5:# Resource location}
+    service_uri: ${6:# The service URI for the webhook to post notifications}
+    custom_headers: ${7:# Custom headers that will be added to the webhook notifications}
+    status: ${8:# The status of the webhook at the time the operation was called}
+    scope: ${9:# The scope of repositories where the event can be triggered}
+    actions: ${10:# The list of actions that trigger the webhook to post notifications}
+    ad_user: ${11:# Active Directory username}
+    password: ${12:# Active Directory user password}
+    profile: ${13:# Security profile found in ~/}
+    subscription_id: ${14:# Your Azure subscription Id}
+    client_id: ${15:# Azure client ID}
+    secret: ${16:# Azure client secret}
+    tenant: ${17:# Azure tenant ID}
+    cloud_environment: ${18:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${19:# Azure AD authority url}
+    cert_validation_mode: ${20:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${21:# Controls the source of the credentials to use for authentication}
+    api_profile: ${22:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${23:# Parent argument}
+    log_mode: ${24:# Parent argument}
+    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_containerregistrywebhook]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_containerregistrywebhook</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Webhook instance</description>
+</snippet>

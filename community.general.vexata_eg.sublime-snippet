@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage export groups on Vexata VX100 storage arrays}
+  community.general.vexata_eg:
+    name: ${2:# Export group name}
+    state: ${3:# Creates export group when present or delete when absent}
+    vg: ${4:# Volume group name}
+    ig: ${5:# Initiator group name}
+    pg: ${6:# Port group name}
+    array: ${7:# Vexata VX100 array hostname or IPv4 Address}
+    user: ${8:# Vexata API user with administrative privileges}
+    password: ${9:# Vexata API user password}
+    validate_certs: ${10:# Allows connection when SSL certificates are not valid}
+  tags:
+    - community
+    - general
+    - vexata_eg]]></content>
+  <tabTrigger>community.general.vexata_eg</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage export groups on Vexata VX100 storage arrays</description>
+</snippet>

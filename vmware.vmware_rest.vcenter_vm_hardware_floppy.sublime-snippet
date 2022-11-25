@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds a virtual floppy drive to the virtual machine}
+  vmware.vmware_rest.vcenter_vm_hardware_floppy:
+    allow_guest_control: ${2:# Flag indicating whether the guest can connect and disconnect the device}
+    backing: ${3:# Physical resource backing for the virtual floppy drive}
+    floppy: ${4:# Virtual floppy drive identifier}
+    label: ${5:# The name of the item}
+    session_timeout: ${6:# Timeout settings for client session}
+    start_connected: ${7:# Flag indicating whether the virtual device should be connected whenever the virtual machine is powered on}
+    state: ${8:# No description available}
+    vcenter_hostname: ${9:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${10:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${11:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${12:# The vSphere vCenter username}
+    vcenter_validate_certs: ${13:# Allows connection when SSL certificates are not valid}
+    vm: ${14:# Virtual machine identifier}
+  tags:
+    - vmware
+    - vmware_rest
+    - vcenter_vm_hardware_floppy]]></content>
+  <tabTrigger>vmware.vmware_rest.vcenter_vm_hardware_floppy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds a virtual floppy drive to the virtual machine</description>
+</snippet>

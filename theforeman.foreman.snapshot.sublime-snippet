@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Snapshots}
+  theforeman.foreman.snapshot:
+    name: ${2:# Name of Snapshot}
+    description: ${3:# Description of Snapshot}
+    host: ${4:# Name of related Host}
+    include_ram: ${5:# Option to add RAM (only available for VMWare compute-resource)}
+    state: ${6:# State of Snapshot}
+    server_url: ${7:# URL of the Foreman server}
+    username: ${8:# Username accessing the Foreman server}
+    password: ${9:# Password of the user accessing the Foreman server}
+    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
+  tags:
+    - theforeman
+    - foreman
+    - snapshot]]></content>
+  <tabTrigger>theforeman.foreman.snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Snapshots</description>
+</snippet>

@@ -1,0 +1,46 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP manage aggregates}
+  netapp.ontap.na_ontap_aggregate:
+    state: ${2:# Whether the specified aggregate should exist or not}
+    service_state: ${3:# Whether the specified aggregate should be enabled or disabled}
+    name: ${4:# The name of the aggregate to manage}
+    from_name: ${5:# Name of the aggregate to be renamed}
+    nodes: ${6:# Node(s) for the aggregate to be created on}
+    disk_type: ${7:# Type of disk to use to build aggregate}
+    disk_class: ${8:# Class of disk to use to build aggregate}
+    disk_count: ${9:# Number of disks to place into the aggregate, including parity disks}
+    disk_size: ${10:# Disk size to use in 4K block size}
+    disk_size_with_unit: ${11:# Disk size to use in the specified unit}
+    raid_size: ${12:# Sets the maximum number of drives per raid group}
+    raid_type: ${13:# Specifies the type of RAID groups to use in the new aggregate}
+    unmount_volumes: ${14:# If set to 'TRUE', this option specifies that all of the volumes hosted by the given aggregate are to be unmounted before the offline operation is executed}
+    disks: ${15:# Specific list of disks to use for the new aggregate}
+    is_mirrored: ${16:# Specifies that the new aggregate be mirrored (have two plexes)}
+    mirror_disks: ${17:# List of mirror disks to use}
+    spare_pool: ${18:# Specifies the spare pool from which to select spare disks to use in creation of a new aggregate}
+    wait_for_online: ${19:# Set this parameter to 'true' for synchronous execution during create (wait until aggregate status is online)}
+    time_out: ${20:# time to wait for aggregate creation in seconds}
+    object_store_name: ${21:# Name of the object store configuration attached to the aggregate}
+    snaplock_type: ${22:# Type of snaplock for the aggregate being created}
+    ignore_pool_checks: ${23:# only valid when I(disks) option is used}
+    encryption: ${24:# whether to enable software encryption}
+    hostname: ${25:# The hostname or IP address of the ONTAP instance}
+    username: ${26:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${27:# Password for the specified user}
+    cert_filepath: ${28:# path to SSL client cert file (}
+    key_filepath: ${29:# path to SSL client key file}
+    https: ${30:# Enable and disable https}
+    validate_certs: ${31:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${32:# Override the default port (80 or 443) with this port}
+    ontapi: ${33:# The ontap api version to use}
+    use_rest: ${34:# Whether to use REST or ZAPI}
+    feature_flags: ${35:# Enable or disable a new feature}
+    force_ontap_version: ${36:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_aggregate]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_aggregate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP manage aggregates</description>
+</snippet>

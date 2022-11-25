@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, Delete shared loadbalancers in CenturyLink Cloud}
+  community.general.clc_loadbalancer:
+    name: ${2:# The name of the loadbalancer}
+    description: ${3:# A description for the loadbalancer}
+    alias: ${4:# The alias of your CLC Account}
+    location: ${5:# The location of the datacenter where the load balancer resides in}
+    method: ${6:# -The balancing method for the load balancer pool}
+    persistence: ${7:# The persistence method for the load balancer}
+    port: ${8:# Port to configure on the public-facing side of the load balancer pool}
+    nodes: ${9:# A list of nodes that needs to be added to the load balancer pool}
+    status: ${10:# The status of the loadbalancer}
+    state: ${11:# Whether to create or delete the load balancer pool}
+  tags:
+    - community
+    - general
+    - clc_loadbalancer]]></content>
+  <tabTrigger>community.general.clc_loadbalancer</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, Delete shared loadbalancers in CenturyLink Cloud</description>
+</snippet>

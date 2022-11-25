@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Bridge Domains (BDs) in schema templates}
+  cisco.mso.mso_schema_template_bd:
+    schema: ${2:# The name of the schema}
+    template: ${3:# The name of the template}
+    bd: ${4:# The name of the BD to manage}
+    display_name: ${5:# The name as displayed on the MSO web interface}
+    description: ${6:# The description of BD is supported on versions of MSO that are 3}
+    vrf: ${7:# The VRF associated to this BD}
+    dhcp_policy: ${8:# The DHCP Policy}
+    dhcp_policies: ${9:# A list DHCP Policies to be assciated with the BD}
+    subnets: ${10:# The subnets associated to this BD}
+    intersite_bum_traffic: ${11:# Whether to allow intersite BUM traffic}
+    optimize_wan_bandwidth: ${12:# Whether to optimize WAN bandwidth}
+    layer2_stretch: ${13:# Whether to enable L2 stretch}
+    layer2_unknown_unicast: ${14:# Layer2 unknown unicast}
+    layer3_multicast: ${15:# Whether to enable L3 multicast}
+    unknown_multicast_flooding: ${16:# Unknown Multicast Flooding can either be Flood or Optimized Flooding}
+    multi_destination_flooding: ${17:# Multi-Destination Flooding can either be Flood in BD, Drop or Flood in Encapsulation}
+    ipv6_unknown_multicast_flooding: ${18:# IPv6 Unknown Multicast Flooding can either be Flood or Optimized Flooding}
+    arp_flooding: ${19:# ARP Flooding}
+    virtual_mac_address: ${20:# Virtual MAC Address}
+    unicast_routing: ${21:# Unicast Routing}
+    state: ${22:# Use C(present) or C(absent) for adding or removing}
+    host: ${23:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    port: ${24:# Port number to be used for the REST connection}
+    username: ${25:# The username to use for authentication}
+    password: ${26:# The password to use for authentication}
+    output_level: ${27:# Influence the output of this MSO module}
+    timeout: ${28:# The socket level timeout in seconds}
+    use_proxy: ${29:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${30:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    validate_certs: ${31:# If C(no), SSL certificates will not be validated}
+    login_domain: ${32:# The login domain name to use for authentication}
+  tags:
+    - cisco
+    - mso
+    - mso_schema_template_bd]]></content>
+  <tabTrigger>cisco.mso.mso_schema_template_bd</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Bridge Domains (BDs) in schema templates</description>
+</snippet>

@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage organizations in the Meraki cloud}
+  cisco.meraki.meraki_organization:
+    state: ${2:# Create or modify an organization}
+    clone: ${3:# Organization to clone to a new organization}
+    org_name: ${4:# Name of organization}
+    org_id: ${5:# ID of organization}
+    delete_confirm: ${6:# ID of organization required for confirmation before deletion}
+    auth_key: ${7:# Authentication key provided by the dashboard}
+    host: ${8:# Hostname for Meraki dashboard}
+    use_proxy: ${9:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${10:# If C(no), it will use HTTP}
+    output_format: ${11:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${12:# Set amount of debug output during module execution}
+    timeout: ${13:# Time to timeout for HTTP requests}
+    validate_certs: ${14:# Whether to validate HTTP certificates}
+    rate_limit_retry_time: ${15:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${16:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_organization]]></content>
+  <tabTrigger>cisco.meraki.meraki_organization</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage organizations in the Meraki cloud</description>
+</snippet>

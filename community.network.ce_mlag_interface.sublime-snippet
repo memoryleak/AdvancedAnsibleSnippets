@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages MLAG interfaces on HUAWEI CloudEngine switches}
+  community.network.ce_mlag_interface:
+    eth_trunk_id: ${2:# Name of the local M-LAG interface}
+    dfs_group_id: ${3:# ID of a DFS group}
+    mlag_id: ${4:# ID of the M-LAG}
+    mlag_system_id: ${5:# M-LAG global LACP system MAC address}
+    mlag_priority_id: ${6:# M-LAG global LACP system priority}
+    interface: ${7:# Name of the interface that enters the Error-Down state when the peer-link fails}
+    mlag_error_down: ${8:# Configure the interface on the slave device to enter the Error-Down state}
+    state: ${9:# Specify desired state of the resource}
+  tags:
+    - community
+    - network
+    - ce_mlag_interface]]></content>
+  <tabTrigger>community.network.ce_mlag_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages MLAG interfaces on HUAWEI CloudEngine switches</description>
+</snippet>

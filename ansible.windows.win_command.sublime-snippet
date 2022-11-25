@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Executes a command on a remote Windows node}
+  ansible.windows.win_command:
+    _raw_params: ${2:# The C(win_command) module takes a free form command to run}
+    cmd: ${3:# The command and arguments to run}
+    argv: ${4:# A list that contains the executable and arguments to run}
+    creates: ${5:# A path or path filter pattern; when the referenced path exists on the target host, the task will be skipped}
+    removes: ${6:# A path or path filter pattern; when the referenced path B(does not) exist on the target host, the task will be skipped}
+    chdir: ${7:# Set the specified path as the current working directory before executing a command}
+    stdin: ${8:# Set the stdin of the command directly to the specified value}
+    output_encoding_override: ${9:# This option overrides the encoding of stdout/stderr output}
+  tags:
+    - ansible
+    - windows
+    - win_command]]></content>
+  <tabTrigger>ansible.windows.win_command</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Executes a command on a remote Windows node</description>
+</snippet>

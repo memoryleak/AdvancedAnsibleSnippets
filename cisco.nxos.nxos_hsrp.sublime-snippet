@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages HSRP configuration on NX-OS switches}
+  cisco.nxos.nxos_hsrp:
+    group: ${2:# HSRP group number}
+    interface: ${3:# Full name of interface that is being managed for HSRP}
+    version: ${4:# HSRP version}
+    priority: ${5:# HSRP priority or keyword 'default'}
+    preempt: ${6:# Enable/Disable preempt}
+    vip: ${7:# HSRP virtual IP address or keyword 'default'}
+    auth_string: ${8:# Authentication string}
+    auth_type: ${9:# Authentication type}
+    state: ${10:# Specify desired state of the resource}
+  tags:
+    - cisco
+    - nxos
+    - nxos_hsrp]]></content>
+  <tabTrigger>cisco.nxos.nxos_hsrp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages HSRP configuration on NX-OS switches</description>
+</snippet>

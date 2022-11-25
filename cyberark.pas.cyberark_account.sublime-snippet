@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for CyberArk Account object creation, deletion, and modification using PAS Web Services SDK}
+  cyberark.pas.cyberark_account:
+    state: ${2:# Assert the desired state of the account C(present) to creat or update and account object}
+    logging_level: ${3:# Parameter used to define the level of troubleshooting output to the C(logging_file) value}
+    logging_file: ${4:# Setting the log file name and location for troubleshooting logs}
+    api_base_url: ${5:# A string containing the base URL of the server hosting CyberArk's Privileged Account Security Web Services SDK}
+    validate_certs: ${6:# If C(false), SSL certificate chain will not be validated}
+    cyberark_session: ${7:# Dictionary set by a CyberArk authentication containing the different values to perform actions on a logged-on CyberArk session, please see M(cyberark_authentication) module for an example of cyberark_session}
+    identified_by: ${8:# When an API call is made to Get Accounts, often times the default parameters passed will identify more than one account}
+    safe: ${9:# The safe in the Vault where the privileged account is to be located}
+    platform_id: ${10:# The PolicyID of the Platform that is to be managing the account}
+    address: ${11:# The address of the endpoint where the privileged account is located}
+    name: ${12:# The ObjectID of the account}
+    secret_type: ${13:# The value that identifies what type of account it will be}
+    secret: ${14:# The initial password for the creation of the account}
+    new_secret: ${15:# The new secret/password to be stored in CyberArk Vault}
+    username: ${16:# The username associated with the account}
+    secret_management: ${17:# Set of parameters associated with the management of the credential}
+    remote_machines_access: ${18:# Set of parameters for defining PSM endpoint access targets}
+    platform_account_properties: ${19:# Object containing key-value pairs to associate with the account, as defined by the account platform}
+  tags:
+    - cyberark
+    - pas
+    - cyberark_account]]></content>
+  <tabTrigger>cyberark.pas.cyberark_account</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for CyberArk Account object creation, deletion, and modification using PAS Web Services SDK</description>
+</snippet>

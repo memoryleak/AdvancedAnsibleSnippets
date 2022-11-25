@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages LLDP configuration on HUAWEI CloudEngine switches}
+  community.network.ce_lldp:
+    lldpenable: ${2:# Set global LLDP enable state}
+    mdnstatus: ${3:# Set global MDN enable state}
+    interval: ${4:# Frequency at which LLDP advertisements are sent (in seconds)}
+    hold_multiplier: ${5:# Time multiplier for device information in neighbor devices}
+    restart_delay: ${6:# Specifies the delay time of the interface LLDP module from disabled state to re enable}
+    transmit_delay: ${7:# Delay time for sending LLDP messages}
+    notification_interval: ${8:# Suppression time for sending LLDP alarm}
+    fast_count: ${9:# The number of LLDP messages sent to the neighbor nodes by the specified device}
+    mdn_notification_interval: ${10:# Delay time for sending MDN neighbor information change alarm}
+    management_address: ${11:# The management IP address of LLDP}
+    bind_name: ${12:# Binding interface name}
+    state: ${13:# Manage the state of the resource}
+  tags:
+    - community
+    - network
+    - ce_lldp]]></content>
+  <tabTrigger>community.network.ce_lldp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages LLDP configuration on HUAWEI CloudEngine switches</description>
+</snippet>

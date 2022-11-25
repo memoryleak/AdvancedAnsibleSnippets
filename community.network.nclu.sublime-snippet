@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure network interfaces using NCLU}
+  community.network.nclu:
+    commands: ${2:# A list of strings containing the net commands to run}
+    template: ${3:# A single, multi-line string with jinja2 formatting}
+    commit: ${4:# When true, performs a 'net commit' at the end of the block}
+    abort: ${5:# Boolean}
+    atomic: ${6:# When true, equivalent to both I(commit) and I(abort) being true}
+    description: ${7:# Commit description that will be recorded to the commit log if I(commit) or I(atomic) are true}
+  tags:
+    - community
+    - network
+    - nclu]]></content>
+  <tabTrigger>community.network.nclu</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure network interfaces using NCLU</description>
+</snippet>

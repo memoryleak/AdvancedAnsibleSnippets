@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Management of tenants in ManageIQ}
+  community.general.manageiq_tenant:
+    state: ${2:# absent - tenant should not exist, present - tenant should be}
+    name: ${3:# The tenant name}
+    description: ${4:# The tenant description}
+    parent_id: ${5:# The id of the parent tenant}
+    parent: ${6:# The name of the parent tenant}
+    quotas: ${7:# The tenant quotas}
+    manageiq_connection: ${8:# ManageIQ connection configuration information}
+  tags:
+    - community
+    - general
+    - manageiq_tenant]]></content>
+  <tabTrigger>community.general.manageiq_tenant</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Management of tenants in ManageIQ</description>
+</snippet>

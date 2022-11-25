@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages gateway for the VXLAN network on HUAWEI CloudEngine devices}
+  community.network.ce_vxlan_gateway:
+    dfs_id: ${2:# Specifies the ID of a DFS group}
+    dfs_source_ip: ${3:# Specifies the IPv4 address bound to a DFS group}
+    dfs_source_vpn: ${4:# Specifies the name of a VPN instance bound to a DFS group}
+    dfs_udp_port: ${5:# Specifies the UDP port number of the DFS group}
+    dfs_all_active: ${6:# Creates all-active gateways}
+    dfs_peer_ip: ${7:# Configure the IP address of an all-active gateway peer}
+    dfs_peer_vpn: ${8:# Specifies the name of the VPN instance that is associated with all-active gateway peer}
+    vpn_instance: ${9:# Specifies the name of a VPN instance}
+    vpn_vni: ${10:# Specifies a VNI ID}
+    vbdif_name: ${11:# Full name of VBDIF interface, i}
+    vbdif_bind_vpn: ${12:# Specifies the name of the VPN instance that is associated with the interface}
+    vbdif_mac: ${13:# Specifies a MAC address for a VBDIF interface}
+    arp_distribute_gateway: ${14:# Enable the distributed gateway function on VBDIF interface}
+    arp_direct_route: ${15:# Enable VLINK direct route on VBDIF interface}
+    state: ${16:# Determines whether the config should be present or not on the device}
+  tags:
+    - community
+    - network
+    - ce_vxlan_gateway]]></content>
+  <tabTrigger>community.network.ce_vxlan_gateway</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages gateway for the VXLAN network on HUAWEI CloudEngine devices</description>
+</snippet>

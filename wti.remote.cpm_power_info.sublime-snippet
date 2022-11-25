@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get the Power Information of a WTI device}
+  wti.remote.cpm_power_info:
+    cpm_url: ${2:# This is the URL of the WTI device to send the module}
+    cpm_username: ${3:# This is the Username of the WTI device to send the module}
+    cpm_password: ${4:# This is the Password of the WTI device to send the module}
+    cpm_startdate: ${5:# Start date of the range to look for power data}
+    cpm_enddate: ${6:# End date of the range to look for power data}
+    use_https: ${7:# Designates to use an https connection or http connection}
+    validate_certs: ${8:# If false, SSL certificates will not be validated}
+    use_proxy: ${9:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+  tags:
+    - wti
+    - remote
+    - cpm_power_info]]></content>
+  <tabTrigger>wti.remote.cpm_power_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get the Power Information of a WTI device</description>
+</snippet>

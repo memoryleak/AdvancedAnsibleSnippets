@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Deploys a VMware virtual machine from an OVF or OVA file}
+  community.vmware.vmware_deploy_ovf:
+    allow_duplicates: ${2:# Whether or not to allow duplicate VM names}
+    datacenter: ${3:# Datacenter to deploy to}
+    cluster: ${4:# Cluster to deploy to}
+    esxi_hostname: ${5:# The ESXi hostname where the virtual machine will run}
+    datastore: ${6:# Datastore to deploy to}
+    deployment_option: ${7:# The key of the chosen deployment option}
+    disk_provisioning: ${8:# Disk provisioning type}
+    fail_on_spec_warnings: ${9:# Cause the module to treat OVF Import Spec warnings as errors}
+    folder: ${10:# Absolute path of folder to place the virtual machine}
+    inject_ovf_env: ${11:# Force the given properties to be inserted into an OVF Environment and injected through VMware Tools}
+    name: ${12:# Name of the VM to work with}
+    networks: ${13:# C(key: value) mapping of OVF network name, to the vCenter network name}
+    ovf: ${14:# Path to OVF or OVA file to deploy}
+    power_on: ${15:# Whether or not to power on the virtual machine after creation}
+    properties: ${16:# The assignment of values to the properties found in the OVF as key value pairs}
+    resource_pool: ${17:# Resource Pool to deploy to}
+    wait: ${18:# Wait for the host to power on}
+    wait_for_ip_address: ${19:# Wait until vCenter detects an IP address for the VM}
+    hostname: ${20:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${21:# The username of the vSphere vCenter or ESXi server}
+    password: ${22:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${23:# Allows connection when SSL certificates are not valid}
+    port: ${24:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${25:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${26:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_deploy_ovf]]></content>
+  <tabTrigger>community.vmware.vmware_deploy_ovf</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Deploys a VMware virtual machine from an OVF or OVA file</description>
+</snippet>

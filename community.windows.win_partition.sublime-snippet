@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates, changes and removes partitions on Windows Server}
+  community.windows.win_partition:
+    state: ${2:# Used to specify the state of the partition}
+    drive_letter: ${3:# Used for accessing partitions if I(disk_number) and I(partition_number) are not provided}
+    disk_number: ${4:# Disk number is mandatory for creating new partitions}
+    partition_number: ${5:# Used in conjunction with I(disk_number) to uniquely identify a partition}
+    partition_size: ${6:# Specify size of the partition in B, KB, KiB, MB, MiB, GB, GiB, TB or TiB}
+    read_only: ${7:# Make the partition read only, restricting changes from being made to the partition}
+    active: ${8:# Specifies if the partition is active and can be used to start the system}
+    hidden: ${9:# Hides the target partition, making it undetectable by the mount manager}
+    offline: ${10:# Sets the partition offline}
+    mbr_type: ${11:# Specify the partition's MBR type if the disk's partition style is MBR}
+    gpt_type: ${12:# Specify the partition's GPT type if the disk's partition style is GPT}
+  tags:
+    - community
+    - windows
+    - win_partition]]></content>
+  <tabTrigger>community.windows.win_partition</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates, changes and removes partitions on Windows Server</description>
+</snippet>

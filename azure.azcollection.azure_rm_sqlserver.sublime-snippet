@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage SQL Server instance}
+  azure.azcollection.azure_rm_sqlserver:
+    resource_group: ${2:# The name of the resource group that contains the resource}
+    name: ${3:# The name of the server}
+    location: ${4:# Resource location}
+    admin_username: ${5:# Username of the SQL administrator account for server}
+    admin_password: ${6:# Password of the SQL administrator account for server (required for server creation)}
+    version: ${7:# The version of the server}
+    identity: ${8:# The identity type}
+    minimal_tls_version: ${9:# Require clients to use a specified TLS version}
+    public_network_access: ${10:# Whether or not public endpoint access is allowed for the server}
+    restrict_outbound_network_access: ${11:# Whether or not to restrict outbound network access for this server}
+    change_admin_password: ${12:# Whether or not the c(admin_password) should be updated for an existing server}
+    administrators: ${13:# The Azure Active Directory identity of the server}
+    state: ${14:# State of the SQL server}
+    ad_user: ${15:# Active Directory username}
+    password: ${16:# Active Directory user password}
+    profile: ${17:# Security profile found in ~/}
+    subscription_id: ${18:# Your Azure subscription Id}
+    client_id: ${19:# Azure client ID}
+    secret: ${20:# Azure client secret}
+    tenant: ${21:# Azure tenant ID}
+    cloud_environment: ${22:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${23:# Azure AD authority url}
+    cert_validation_mode: ${24:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${25:# Controls the source of the credentials to use for authentication}
+    api_profile: ${26:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${27:# Parent argument}
+    log_mode: ${28:# Parent argument}
+    x509_certificate_path: ${29:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${30:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${31:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${32:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_sqlserver]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_sqlserver</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage SQL Server instance</description>
+</snippet>

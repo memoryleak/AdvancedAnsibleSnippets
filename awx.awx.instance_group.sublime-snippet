@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller instance groups}
+  awx.awx.instance_group:
+    name: ${2:# Name of this instance group}
+    new_name: ${3:# Setting this option will change the existing name (looked up via the name field}
+    credential: ${4:# Credential to authenticate with Kubernetes or OpenShift}
+    is_container_group: ${5:# Signifies that this InstanceGroup should act as a ContainerGroup}
+    policy_instance_percentage: ${6:# Minimum percentage of all instances that will be automatically assigned to this group when new instances come online}
+    policy_instance_minimum: ${7:# Static minimum number of Instances that will be automatically assign to this group when new instances come online}
+    policy_instance_list: ${8:# List of exact-match Instances that will be assigned to this group}
+    pod_spec_override: ${9:# A custom Kubernetes or OpenShift Pod specification}
+    instances: ${10:# The instances associated with this instance_group}
+    state: ${11:# Desired state of the resource}
+    controller_host: ${12:# URL to your Automation Platform Controller instance}
+    controller_username: ${13:# Username for your controller instance}
+    controller_password: ${14:# Password for your controller instance}
+    controller_oauthtoken: ${15:# The OAuth token to use}
+    validate_certs: ${16:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${17:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - instance_group]]></content>
+  <tabTrigger>awx.awx.instance_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>create, update, or destroy Automation Platform Controller instance groups</description>
+</snippet>

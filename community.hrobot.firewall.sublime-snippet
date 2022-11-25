@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Hetzner's dedicated server firewall}
+  community.hrobot.firewall:
+    server_ip: ${2:# The server's main IP address}
+    port: ${3:# Switch port of firewall}
+    state: ${4:# Status of the firewall}
+    allowlist_hos: ${5:# Whether Hetzner services have access}
+    rules: ${6:# Firewall rules}
+    update_timeout: ${7:# Timeout to use when configuring the firewall}
+    wait_for_configured: ${8:# Whether to wait until the firewall has been successfully configured before determining what to do, and before returning from the module}
+    wait_delay: ${9:# Delay to wait (in seconds) before checking again whether the firewall has been configured}
+    timeout: ${10:# Timeout (in seconds) for waiting for firewall to be configured}
+    hetzner_user: ${11:# The username for the Robot webservice user}
+    hetzner_password: ${12:# The password for the Robot webservice user}
+  tags:
+    - community
+    - hrobot
+    - firewall]]></content>
+  <tabTrigger>community.hrobot.firewall</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Hetzner's dedicated server firewall</description>
+</snippet>

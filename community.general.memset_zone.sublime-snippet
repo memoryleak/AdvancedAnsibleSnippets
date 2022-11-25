@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates and deletes Memset DNS zones}
+  community.general.memset_zone:
+    state: ${2:# Indicates desired state of resource}
+    api_key: ${3:# The API key obtained from the Memset control panel}
+    name: ${4:# The zone nickname; usually the same as the main domain}
+    ttl: ${5:# The default TTL for all records created in the zone}
+    force: ${6:# Forces deletion of a zone and all zone domains/zone records it contains}
+  tags:
+    - community
+    - general
+    - memset_zone]]></content>
+  <tabTrigger>community.general.memset_zone</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates and deletes Memset DNS zones</description>
+</snippet>

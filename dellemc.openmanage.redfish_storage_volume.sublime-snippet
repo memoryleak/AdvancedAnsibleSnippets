@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages the storage volume configuration}
+  dellemc.openmanage.redfish_storage_volume:
+    controller_id: ${2:# Fully Qualified Device Descriptor (FQDD) of the storage controller}
+    volume_id: ${3:# FQDD of existing volume}
+    state: ${4:# C(present) creates a storage volume for the specified I (controller_id), or modifies the storage volume for the specified I (volume_id)}
+    command: ${5:# C(initialize) initializes an existing storage volume for a specified I(volume_id)}
+    volume_type: ${6:# One of the following volume types must be selected to create a volume}
+    name: ${7:# Name of the volume to be created}
+    drives: ${8:# FQDD of the Physical disks}
+    block_size_bytes: ${9:# Block size in bytes}
+    capacity_bytes: ${10:# Volume size in bytes}
+    optimum_io_size_bytes: ${11:# Stripe size value must be in multiples of 64 * 1024}
+    encryption_types: ${12:# The following encryption types can be selected}
+    encrypted: ${13:# Indicates whether volume is currently utilizing encryption or not}
+    oem: ${14:# Includes OEM extended payloads}
+    initialize_type: ${15:# Initialization type of existing volume}
+    baseuri: ${16:# IP address of the target out-of-band controller}
+    username: ${17:# Username of the target out-of-band controller}
+    password: ${18:# Password of the target out-of-band controller}
+    validate_certs: ${19:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${20:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${21:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - redfish_storage_volume]]></content>
+  <tabTrigger>dellemc.openmanage.redfish_storage_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages the storage volume configuration</description>
+</snippet>

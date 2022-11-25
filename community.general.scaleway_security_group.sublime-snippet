@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Scaleway Security Group management module}
+  community.general.scaleway_security_group:
+    state: ${2:# Indicate desired state of the Security Group}
+    organization: ${3:# Organization identifier}
+    region: ${4:# Scaleway region to use (for example C(par1))}
+    name: ${5:# Name of the Security Group}
+    description: ${6:# Description of the Security Group}
+    stateful: ${7:# Create a stateful security group which allows established connections in and out}
+    inbound_default_policy: ${8:# Default policy for incoming traffic}
+    outbound_default_policy: ${9:# Default policy for outcoming traffic}
+    organization_default: ${10:# Create security group to be the default one}
+    api_token: ${11:# Scaleway OAuth token}
+    api_url: ${12:# Scaleway API URL}
+    api_timeout: ${13:# HTTP timeout to Scaleway API in seconds}
+    query_parameters: ${14:# List of parameters passed to the query string}
+    validate_certs: ${15:# Validate SSL certs of the Scaleway API}
+  tags:
+    - community
+    - general
+    - scaleway_security_group]]></content>
+  <tabTrigger>community.general.scaleway_security_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Scaleway Security Group management module</description>
+</snippet>

@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Operating Systems}
+  theforeman.foreman.operatingsystem:
+    name: ${2:# Name of the Operating System}
+    updated_name: ${3:# New operating system name}
+    release_name: ${4:# Release name of the operating system (recommended for debian)}
+    description: ${5:# Description of the Operating System}
+    os_family: ${6:# Distribution family of the Operating System}
+    major: ${7:# major version of the Operating System}
+    minor: ${8:# minor version of the Operating System}
+    architectures: ${9:# architectures, the operating system can be installed on}
+    media: ${10:# list of installation media}
+    ptables: ${11:# list of partitioning tables}
+    provisioning_templates: ${12:# List of provisioning templates that are associated with the operating system}
+    password_hash: ${13:# hashing algorithm for passwd}
+    parameters: ${14:# Operating System specific host parameters}
+    server_url: ${15:# URL of the Foreman server}
+    username: ${16:# Username accessing the Foreman server}
+    password: ${17:# Password of the user accessing the Foreman server}
+    validate_certs: ${18:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${19:# State of the entity}
+  tags:
+    - theforeman
+    - foreman
+    - operatingsystem]]></content>
+  <tabTrigger>theforeman.foreman.operatingsystem</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Operating Systems</description>
+</snippet>

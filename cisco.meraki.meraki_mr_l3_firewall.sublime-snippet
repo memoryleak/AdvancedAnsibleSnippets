@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage MR access point layer 3 firewalls in the Meraki cloud}
+  cisco.meraki.meraki_mr_l3_firewall:
+    state: ${2:# Create or modify an organization}
+    net_name: ${3:# Name of network containing access points}
+    net_id: ${4:# ID of network containing access points}
+    number: ${5:# Number of SSID to apply firewall rule to}
+    ssid_name: ${6:# Name of SSID to apply firewall rule to}
+    allow_lan_access: ${7:# Sets whether devices can talk to other devices on the same LAN}
+    rules: ${8:# List of firewall rules}
+    auth_key: ${9:# Authentication key provided by the dashboard}
+    host: ${10:# Hostname for Meraki dashboard}
+    use_proxy: ${11:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${12:# If C(no), it will use HTTP}
+    output_format: ${13:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${14:# Set amount of debug output during module execution}
+    timeout: ${15:# Time to timeout for HTTP requests}
+    validate_certs: ${16:# Whether to validate HTTP certificates}
+    org_name: ${17:# Name of organization}
+    org_id: ${18:# ID of organization}
+    rate_limit_retry_time: ${19:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${20:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_mr_l3_firewall]]></content>
+  <tabTrigger>cisco.meraki.meraki_mr_l3_firewall</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage MR access point layer 3 firewalls in the Meraki cloud</description>
+</snippet>

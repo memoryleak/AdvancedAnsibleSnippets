@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure AIX LVM logical volumes}
+  community.general.aix_lvol:
+    vg: ${2:# The volume group this logical volume is part of}
+    lv: ${3:# The name of the logical volume}
+    lv_type: ${4:# The type of the logical volume}
+    size: ${5:# The size of the logical volume with one of the [MGT] units}
+    copies: ${6:# The number of copies of the logical volume}
+    policy: ${7:# Sets the interphysical volume allocation policy}
+    state: ${8:# Control if the logical volume exists}
+    opts: ${9:# Free-form options to be passed to the mklv command}
+    pvs: ${10:# A list of physical volumes e}
+  tags:
+    - community
+    - general
+    - aix_lvol]]></content>
+  <tabTrigger>community.general.aix_lvol</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure AIX LVM logical volumes</description>
+</snippet>

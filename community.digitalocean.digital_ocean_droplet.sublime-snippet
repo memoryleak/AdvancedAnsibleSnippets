@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and delete a DigitalOcean droplet}
+  community.digitalocean.digital_ocean_droplet:
+    state: ${2:# Indicate desired state of the target}
+    id: ${3:# The Droplet ID you want to operate on}
+    name: ${4:# This is the name of the Droplet}
+    unique_name: ${5:# Require unique hostnames}
+    size: ${6:# This is the slug of the size you would like the Droplet created with}
+    image: ${7:# This is the slug of the image you would like the Droplet created with}
+    region: ${8:# This is the slug of the region you would like your Droplet to be created in}
+    ssh_keys: ${9:# Array of SSH key fingerprints that you would like to be added to the Droplet}
+    firewall: ${10:# Array of firewall names to apply to the Droplet}
+    private_networking: ${11:# Add an additional, private network interface to the Droplet (for inter-Droplet communication)}
+    vpc_uuid: ${12:# A string specifying the UUID of the VPC to which the Droplet will be assigned}
+    user_data: ${13:# Opaque blob of data which is made available to the Droplet}
+    ipv6: ${14:# Enable IPv6 for the Droplet}
+    wait: ${15:# Wait for the Droplet to be active before returning}
+    wait_timeout: ${16:# How long before C(wait) gives up, in seconds, when creating a Droplet}
+    backups: ${17:# Indicates whether automated backups should be enabled}
+    monitoring: ${18:# Indicates whether to install the DigitalOcean agent for monitoring}
+    tags: ${19:# A list of tag names as strings to apply to the Droplet after it is created}
+    volumes: ${20:# A list including the unique string identifier for each Block Storage volume to be attached to the Droplet}
+    resize_disk: ${21:# Whether to increase disk size on resize}
+    project_name: ${22:# Project to assign the resource to (project name, not UUID)}
+    sleep_interval: ${23:# How long to C(sleep) in between action and status checks}
+    baseurl: ${24:# DigitalOcean API base url}
+    oauth_token: ${25:# DigitalOcean OAuth token}
+    timeout: ${26:# The timeout in seconds used for polling DigitalOcean's API}
+    validate_certs: ${27:# If set to C(no), the SSL certificates will not be validated}
+  tags:
+    - community
+    - digitalocean
+    - digital_ocean_droplet]]></content>
+  <tabTrigger>community.digitalocean.digital_ocean_droplet</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and delete a DigitalOcean droplet</description>
+</snippet>

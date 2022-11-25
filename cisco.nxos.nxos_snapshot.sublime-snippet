@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage snapshots of the running states of selected features}
+  cisco.nxos.nxos_snapshot:
+    action: ${2:# Define what snapshot action the module would perform}
+    snapshot_name: ${3:# Snapshot name, to be used when C(action=create) or C(action=delete)}
+    description: ${4:# Snapshot description to be used when C(action=create)}
+    snapshot1: ${5:# First snapshot to be used when C(action=compare)}
+    snapshot2: ${6:# Second snapshot to be used when C(action=compare)}
+    comparison_results_file: ${7:# Name of the file where snapshots comparison will be stored when C(action=compare)}
+    compare_option: ${8:# Snapshot options to be used when C(action=compare)}
+    section: ${9:# Used to name the show command output, to be used when C(action=add)}
+    show_command: ${10:# Specify a new show command, to be used when C(action=add)}
+    row_id: ${11:# Specifies the tag of each row entry of the show command's XML output, to be used when C(action=add)}
+    element_key1: ${12:# Specify the tags used to distinguish among row entries, to be used when C(action=add)}
+    element_key2: ${13:# Specify the tags used to distinguish among row entries, to be used when C(action=add)}
+    save_snapshot_locally: ${14:# Specify to locally store a new created snapshot, to be used when C(action=create)}
+    path: ${15:# Specify the path of the file where new created snapshot or snapshots comparison will be stored, to be used when C(action=create) and C(save_snapshot_locally=true) or C(action=compare)}
+  tags:
+    - cisco
+    - nxos
+    - nxos_snapshot]]></content>
+  <tabTrigger>cisco.nxos.nxos_snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage snapshots of the running states of selected features</description>
+</snippet>

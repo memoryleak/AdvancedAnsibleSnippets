@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure Traffic Manager endpoint}
+  azure.azcollection.azure_rm_trafficmanagerendpoint:
+    resource_group: ${2:# Name of a resource group where the Traffic Manager endpoint exists or will be created}
+    name: ${3:# The name of the endpoint}
+    profile_name: ${4:# Name of Traffic Manager profile where this endpoints attaches to}
+    type: ${5:# The type of the endpoint}
+    target_resource_id: ${6:# The Azure Resource URI of the of the endpoint}
+    target: ${7:# The fully-qualified DNS name of the endpoint}
+    enabled: ${8:# The status of the endpoint}
+    weight: ${9:# The weight of this endpoint when traffic manager profile has routing_method of C(weighted)}
+    priority: ${10:# The priority of this endpoint when traffic manager profile has routing_method of I(priority)}
+    location: ${11:# Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method}
+    min_child_endpoints: ${12:# The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available}
+    geo_mapping: ${13:# The list of countries/regions mapped to this endpoint when traffic manager profile has routing_method of C(geographic)}
+    state: ${14:# Assert the state of the Traffic Manager endpoint}
+    ad_user: ${15:# Active Directory username}
+    password: ${16:# Active Directory user password}
+    profile: ${17:# Security profile found in ~/}
+    subscription_id: ${18:# Your Azure subscription Id}
+    client_id: ${19:# Azure client ID}
+    secret: ${20:# Azure client secret}
+    tenant: ${21:# Azure tenant ID}
+    cloud_environment: ${22:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${23:# Azure AD authority url}
+    cert_validation_mode: ${24:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${25:# Controls the source of the credentials to use for authentication}
+    api_profile: ${26:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${27:# Parent argument}
+    log_mode: ${28:# Parent argument}
+    x509_certificate_path: ${29:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${30:# The thumbprint of the private key specified in I(x509_certificate_path)}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_trafficmanagerendpoint]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_trafficmanagerendpoint</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure Traffic Manager endpoint</description>
+</snippet>

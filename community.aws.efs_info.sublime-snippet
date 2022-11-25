@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get information about Amazon EFS file systems}
+  community.aws.efs_info:
+    name: ${2:# Creation Token of Amazon EFS file system}
+    id: ${3:# ID of Amazon EFS}
+    tags: ${4:# List of tags of Amazon EFS}
+    targets: ${5:# List of targets on which to filter the returned results}
+    access_key: ${6:# AWS access key ID}
+    secret_key: ${7:# AWS secret access key}
+    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    profile: ${9:# A named AWS profile to use for authentication}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${13:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
+    region: ${15:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - efs_info]]></content>
+  <tabTrigger>community.aws.efs_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get information about Amazon EFS file systems</description>
+</snippet>

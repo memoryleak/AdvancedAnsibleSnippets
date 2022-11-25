@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage BIG-IP AFM schedule configurations}
+  f5networks.f5_modules.bigip_firewall_schedule:
+    name: ${2:# Specifies the name of the AFM schedule configuration}
+    description: ${3:# Specifies the user defined description text}
+    daily_hour_end: ${4:# Specifies the time of day the rule will stop being used}
+    daily_hour_start: ${5:# Specifies the time of day the rule will start to be in use}
+    date_valid_end: ${6:# Specifies the end date/time this schedule will apply to the rule}
+    date_valid_start: ${7:# Specifies the start date/time this schedule will apply to the rule}
+    days_of_week: ${8:# Specifies which days of the week the rule will be applied}
+    state: ${9:# When C(present), ensures the resource exists}
+    partition: ${10:# Device partition to manage resources on}
+    provider: ${11:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_firewall_schedule]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_firewall_schedule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage BIG-IP AFM schedule configurations</description>
+</snippet>

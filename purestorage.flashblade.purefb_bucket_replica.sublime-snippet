@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage bucket replica links between Pure Storage FlashBlades}
+  purestorage.flashblade.purefb_bucket_replica:
+    name: ${2:# Local Bucket Name}
+    state: ${3:# Creates or modifies a bucket replica link}
+    target: ${4:# Remote array or target name to create replica on}
+    target_bucket: ${5:# Name of target bucket name}
+    paused: ${6:# State of the bucket replica link}
+    credential: ${7:# Name of remote credential name to use}
+    fb_url: ${8:# FlashBlade management IP address or Hostname}
+    api_token: ${9:# FlashBlade API token for admin privileged user}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_bucket_replica]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_bucket_replica</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage bucket replica links between Pure Storage FlashBlades</description>
+</snippet>

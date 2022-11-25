@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages host objects on Check Point over Web Services API}
+  check_point.mgmt.cp_mgmt_host:
+    name: ${2:# Object name}
+    ip_address: ${3:# IPv4 or IPv6 address}
+    ipv4_address: ${4:# IPv4 address}
+    ipv6_address: ${5:# IPv6 address}
+    interfaces: ${6:# Host interfaces}
+    nat_settings: ${7:# NAT settings}
+    tags: ${8:# Collection of tag identifiers}
+    host_servers: ${9:# Servers Configuration}
+    color: ${10:# Color of the object}
+    comments: ${11:# Comments string}
+    details_level: ${12:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    groups: ${13:# Collection of group identifiers}
+    ignore_warnings: ${14:# Apply changes ignoring warnings}
+    ignore_errors: ${15:# Apply changes ignoring errors}
+    state: ${16:# State of the access rule (present or absent)}
+    auto_publish_session: ${17:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${18:# Wait for the task to end}
+    wait_for_task_timeout: ${19:# How many minutes to wait until throwing a timeout error}
+    version: ${20:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_host]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages host objects on Check Point over Web Services API</description>
+</snippet>

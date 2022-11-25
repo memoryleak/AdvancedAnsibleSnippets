@@ -1,0 +1,47 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure storage accounts}
+  azure.azcollection.azure_rm_storageaccount:
+    resource_group: ${2:# Name of the resource group to use}
+    name: ${3:# Name of the storage account to update or create}
+    state: ${4:# State of the storage account}
+    location: ${5:# Valid Azure location}
+    account_type: ${6:# Type of storage account}
+    custom_domain: ${7:# User domain assigned to the storage account}
+    kind: ${8:# The kind of storage}
+    is_hns_enabled: ${9:# Account HierarchicalNamespace enabled if sets to true}
+    access_tier: ${10:# The access tier for this storage account}
+    force_delete_nonempty: ${11:# Attempt deletion if resource already exists and cannot be updated}
+    https_only: ${12:# Allows https traffic only to storage service when set to C(True)}
+    minimum_tls_version: ${13:# The minimum required version of Transport Layer Security (TLS) for requests to a storage account}
+    public_network_access: ${14:# Allow or disallow public network access to Storage Account}
+    allow_blob_public_access: ${15:# Allows blob containers in account to be set for anonymous public access}
+    network_acls: ${16:# Manages the Firewall and virtual networks settings of the storage account}
+    blob_cors: ${17:# Specifies CORS rules for the Blob service}
+    static_website: ${18:# Manage static website configuration for the storage account}
+    encryption: ${19:# The encryption settings on the storage account}
+    ad_user: ${20:# Active Directory username}
+    password: ${21:# Active Directory user password}
+    profile: ${22:# Security profile found in ~/}
+    subscription_id: ${23:# Your Azure subscription Id}
+    client_id: ${24:# Azure client ID}
+    secret: ${25:# Azure client secret}
+    tenant: ${26:# Azure tenant ID}
+    cloud_environment: ${27:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${28:# Azure AD authority url}
+    cert_validation_mode: ${29:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${30:# Controls the source of the credentials to use for authentication}
+    api_profile: ${31:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${32:# Parent argument}
+    log_mode: ${33:# Parent argument}
+    x509_certificate_path: ${34:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${35:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${36:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${37:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_storageaccount]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_storageaccount</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure storage accounts</description>
+</snippet>

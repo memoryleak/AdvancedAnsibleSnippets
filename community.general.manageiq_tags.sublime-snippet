@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Management of resource tags in ManageIQ}
+  community.general.manageiq_tags:
+    state: ${2:# C(absent) - tags should not exist}
+    tags: ${3:# C(tags) - list of dictionaries, each includes C(name) and c(category) keys}
+    resource_type: ${4:# The relevant resource type in manageiq}
+    resource_name: ${5:# The name of the resource at which tags will be controlled}
+    resource_id: ${6:# The ID of the resource at which tags will be controlled}
+    manageiq_connection: ${7:# ManageIQ connection configuration information}
+  tags:
+    - community
+    - general
+    - manageiq_tags]]></content>
+  <tabTrigger>community.general.manageiq_tags</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Management of resource tags in ManageIQ</description>
+</snippet>

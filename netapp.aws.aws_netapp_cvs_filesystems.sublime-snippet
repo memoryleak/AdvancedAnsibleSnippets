@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp AWS Cloud Volumes Service Manage FileSystem}
+  netapp.aws.aws_netapp_cvs_filesystems:
+    state: ${2:# Whether the specified fileSystem should exist or not}
+    region: ${3:# The region to which the filesystem belongs to}
+    creationToken: ${4:# Name of the filesystem}
+    quotaInBytes: ${5:# Size of the filesystem}
+    serviceLevel: ${6:# Service Level of a filesystem}
+    exportPolicy: ${7:# The policy rules to export the filesystem}
+    api_key: ${8:# The access key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API}
+    secret_key: ${9:# The secret_key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API}
+    api_url: ${10:# The url to the AWSCVS Web Services Proxy or Embedded Web Services API}
+    validate_certs: ${11:# Should https certificates be validated?}
+    feature_flags: ${12:# Enable or disable a new feature}
+  tags:
+    - netapp
+    - aws
+    - aws_netapp_cvs_filesystems]]></content>
+  <tabTrigger>netapp.aws.aws_netapp_cvs_filesystems</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp AWS Cloud Volumes Service Manage FileSystem</description>
+</snippet>

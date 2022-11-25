@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sensu OIDC authentication provider}
+  sensu.sensu_go.oidc_auth_provider:
+    additional_scopes: ${2:# Scopes to include in the claims}
+    client_id: ${3:# The OIDC provider application Client ID}
+    client_secret: ${4:# The OIDC provider application Client Secret}
+    disable_offline_access: ${5:# If C(true), the OIDC provider cannot include the offline_access scope in the authentication request}
+    redirect_uri: ${6:# Redirect URL to provide to the OIDC provider}
+    server: ${7:# The location of the OIDC server you wish to authenticate against}
+    groups_claim: ${8:# The claim to use to form the associated RBAC groups}
+    groups_prefix: ${9:# The prefix added to all OIDC groups}
+    username_claim: ${10:# The claim to use to form the final RBAC user name}
+    username_prefix: ${11:# The prefix added to all OIDC usernames}
+    auth: ${12:# Authentication parameters}
+    name: ${13:# The Sensu resource's name}
+    state: ${14:# Target state of the Sensu object}
+  tags:
+    - sensu
+    - sensu_go
+    - oidc_auth_provider]]></content>
+  <tabTrigger>sensu.sensu_go.oidc_auth_provider</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sensu OIDC authentication provider</description>
+</snippet>

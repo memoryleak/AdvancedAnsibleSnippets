@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Installs packages on remote devices running Junos}
+  junipernetworks.junos.junos_package:
+    src: ${2:# The I(src) argument specifies the path to the source package to be installed on the remote device in the advent of a version mismatch}
+    version: ${3:# The I(version) argument can be used to explicitly specify the version of the package that should be installed on the remote device}
+    reboot: ${4:# In order for a package to take effect, the remote device must be restarted}
+    no_copy: ${5:# The I(no_copy) argument is responsible for instructing the remote device on where to install the package from}
+    validate: ${6:# The I(validate) argument is responsible for instructing the remote device to skip checking the current device configuration compatibility with the package being installed}
+    force: ${7:# The I(force) argument instructs the module to bypass the package version check and install the packaged identified in I(src) on the remote device}
+    force_host: ${8:# The I(force_host) argument controls the way software package or bundle is added on remote JUNOS host and is applicable for JUNOS QFX5100 device}
+    issu: ${9:# The I(issu) argument is a boolean flag when set to C(True) allows unified in-service software upgrade (ISSU) feature which enables you to upgrade between two different Junos OS releases with no disruption on the control plane and with minimal disruption of traffic}
+    ssh_private_key_file: ${10:# The C(ssh_private_key_file) argument is path to the SSH private key file}
+    ssh_config: ${11:# The C(ssh_config) argument is path to the SSH configuration file}
+  tags:
+    - junipernetworks
+    - junos
+    - junos_package]]></content>
+  <tabTrigger>junipernetworks.junos.junos_package</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Installs packages on remote devices running Junos</description>
+</snippet>

@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage macOS services}
+  community.general.launchd:
+    name: ${2:# Name of the service}
+    state: ${3:# C(started)/C(stopped) are idempotent actions that will not run commands unless necessary}
+    enabled: ${4:# Whether the service should start on boot}
+    force_stop: ${5:# Whether the service should not be restarted automatically by launchd}
+  tags:
+    - community
+    - general
+    - launchd]]></content>
+  <tabTrigger>community.general.launchd</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage macOS services</description>
+</snippet>

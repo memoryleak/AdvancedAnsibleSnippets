@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds or removes schedules from proxysql admin interface}
+  community.proxysql.proxysql_scheduler:
+    active: ${2:# A schedule with I(active) set to C(False) will be tracked in the database, but will be never loaded in the in-memory data structures}
+    interval_ms: ${3:# How often (in millisecond) the job will be started}
+    filename: ${4:# Full path of the executable to be executed}
+    arg1: ${5:# Argument that can be passed to the job}
+    arg2: ${6:# Argument that can be passed to the job}
+    arg3: ${7:# Argument that can be passed to the job}
+    arg4: ${8:# Argument that can be passed to the job}
+    arg5: ${9:# Argument that can be passed to the job}
+    comment: ${10:# Text field that can be used for any purposed defined by the user}
+    state: ${11:# When C(present) - adds the schedule, when C(absent) - removes the schedule}
+    force_delete: ${12:# By default we avoid deleting more than one schedule in a single batch, however if you need this behaviour and you are not concerned about the schedules deleted, you can set I(force_delete) to C(True)}
+    save_to_disk: ${13:# Save config to sqlite db on disk to persist the configuration}
+    load_to_runtime: ${14:# Dynamically load config to runtime memory}
+    login_user: ${15:# The username used to authenticate to ProxySQL admin interface}
+    login_password: ${16:# The password used to authenticate to ProxySQL admin interface}
+    login_host: ${17:# The host used to connect to ProxySQL admin interface}
+    login_unix_socket: ${18:# The socket used to connect to ProxySQL admin interface}
+    login_port: ${19:# The port used to connect to ProxySQL admin interface}
+    config_file: ${20:# Specify a config file from which I(login_user) and I(login_password) are to be read}
+  tags:
+    - community
+    - proxysql
+    - proxysql_scheduler]]></content>
+  <tabTrigger>community.proxysql.proxysql_scheduler</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds or removes schedules from proxysql admin interface</description>
+</snippet>

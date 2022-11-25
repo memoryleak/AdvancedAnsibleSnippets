@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp StorageGRID manage accounts}
+  netapp.storagegrid.na_sg_grid_account:
+    state: ${2:# Whether the specified account should exist or not}
+    name: ${3:# Name of the tenant}
+    account_id: ${4:# Account Id of the tenant}
+    protocol: ${5:# Object Storage protocol used by the tenancy}
+    management: ${6:# Whether the tenant can login to the StorageGRID tenant portal}
+    use_own_identity_source: ${7:# Whether the tenant account should configure its own identity source}
+    allow_platform_services: ${8:# Allows tenant to use platform services features such as CloudMirror}
+    root_access_group: ${9:# Existing federated group to have initial Root Access permissions for the tenant}
+    quota_size: ${10:# Quota to apply to the tenant specified in I(quota_size_unit)}
+    quota_size_unit: ${11:# The unit used to interpret the size parameter}
+    password: ${12:# Root password for tenant account}
+    update_password: ${13:# Choose when to update the password}
+    auth_token: ${14:# The authorization token for the API request}
+    api_url: ${15:# The url to the StorageGRID Admin Node REST API}
+    validate_certs: ${16:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_account]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_account</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp StorageGRID manage accounts</description>
+</snippet>

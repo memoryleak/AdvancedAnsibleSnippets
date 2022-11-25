@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages AAA server host configuration on HUAWEI CloudEngine switches}
+  community.network.ce_aaa_server_host:
+    state: ${2:# Specify desired state of the resource}
+    local_user_name: ${3:# Name of a local user}
+    local_password: ${4:# Login password of a user}
+    local_service_type: ${5:# The type of local user login through, such as ftp ssh snmp telnet}
+    local_ftp_dir: ${6:# FTP user directory}
+    local_user_level: ${7:# Login level of a local user}
+    local_user_group: ${8:# Name of the user group where the user belongs}
+    radius_group_name: ${9:# RADIUS server group's name}
+    radius_server_type: ${10:# Type of Radius Server}
+    radius_server_ip: ${11:# IPv4 address of configured server}
+    radius_server_ipv6: ${12:# IPv6 address of configured server}
+    radius_server_port: ${13:# Configured server port for a particular server}
+    radius_server_mode: ${14:# Configured primary or secondary server for a particular server}
+    radius_vpn_name: ${15:# Set VPN instance}
+    radius_server_name: ${16:# Hostname of configured server}
+    hwtacacs_template: ${17:# Name of a HWTACACS template}
+    hwtacacs_server_ip: ${18:# Server IPv4 address}
+    hwtacacs_server_ipv6: ${19:# Server IPv6 address}
+    hwtacacs_server_type: ${20:# Hwtacacs server type}
+    hwtacacs_is_secondary_server: ${21:# Whether the server is secondary}
+    hwtacacs_vpn_name: ${22:# VPN instance name}
+    hwtacacs_is_public_net: ${23:# Set the public-net}
+    hwtacacs_server_host_name: ${24:# Hwtacacs server host name}
+  tags:
+    - community
+    - network
+    - ce_aaa_server_host]]></content>
+  <tabTrigger>community.network.ce_aaa_server_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages AAA server host configuration on HUAWEI CloudEngine switches</description>
+</snippet>

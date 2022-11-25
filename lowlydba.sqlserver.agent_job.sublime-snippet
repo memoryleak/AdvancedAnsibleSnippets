@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures a SQL Agent job}
+  lowlydba.sqlserver.agent_job:
+    job: ${2:# The name of the target SQL Agent job}
+    description: ${3:# Description for the SQL Agent job}
+    category: ${4:# Category for the target SQL Agent job}
+    enabled: ${5:# Whether the SQL Agent job should be enabled or disabled}
+    owner_login: ${6:# The owning login for the database}
+    start_step_id: ${7:# What step number the job should begin with when run}
+    schedule: ${8:# The name of the schedule the job should be associated with}
+    force: ${9:# If I(force=true), any job categories will be created if they don't exist already}
+    sql_instance: ${10:# The SQL Server instance to modify}
+    sql_username: ${11:# Username for SQL Authentication}
+    sql_password: ${12:# Password for SQL Authentication}
+    state: ${13:# Whether or not the object should be C(present) or C(absent)}
+  tags:
+    - lowlydba
+    - sqlserver
+    - agent_job]]></content>
+  <tabTrigger>lowlydba.sqlserver.agent_job</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures a SQL Agent job</description>
+</snippet>

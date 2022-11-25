@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage notifications in Icinga2}
+  t_systems_mms.icinga_director.icinga_notification:
+    state: ${2:# Apply feature state}
+    object_name: ${3:# Name of the notification}
+    notification_interval: ${4:# The notification interval (in seconds)}
+    types: ${5:# The state transition types you want to get notifications for}
+    users: ${6:# Users that should be notified by this notification}
+    states: ${7:# The host or service states you want to get notifications for}
+    apply_to: ${8:# Whether this notification should affect hosts or services}
+    assign_filter: ${9:# The filter where the notification will take effect}
+    imports: ${10:# Importable templates, add as many as you want}
+    disabled: ${11:# Disabled objects will not be deployed}
+    vars: ${12:# Custom properties of the notification}
+    period: ${13:# The name of a time period which determines when this notification should be triggered}
+    times_begin: ${14:# First notification delay}
+    times_end: ${15:# Last notification}
+    user_groups: ${16:# User Groups that should be notified by this notification}
+    append: ${17:# Do not overwrite the whole object but instead append the defined properties}
+    url: ${18:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    force: ${19:# If C(yes) do not get a cached copy}
+    http_agent: ${20:# Header to identify as, generally appears in web server logs}
+    use_proxy: ${21:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${22:# If C(no), SSL certificates will not be validated}
+    url_username: ${23:# The username for use in HTTP basic authentication}
+    url_password: ${24:# The password for use in HTTP basic authentication}
+    force_basic_auth: ${25:# Credentials specified with I(url_username) and I(url_password) should be passed in HTTP Header}
+    client_cert: ${26:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${27:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    use_gssapi: ${28:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+  tags:
+    - t_systems_mms
+    - icinga_director
+    - icinga_notification]]></content>
+  <tabTrigger>t_systems_mms.icinga_director.icinga_notification</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage notifications in Icinga2</description>
+</snippet>

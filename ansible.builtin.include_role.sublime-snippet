@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Load and execute a role}
+  ansible.builtin.include_role:
+    apply: ${2:# Accepts a hash of task keywords (e}
+    name: ${3:# The name of the role to be executed}
+    tasks_from: ${4:# File to load from a role's C(tasks/) directory}
+    vars_from: ${5:# File to load from a role's C(vars/) directory}
+    defaults_from: ${6:# File to load from a role's C(defaults/) directory}
+    allow_duplicates: ${7:# Overrides the role's metadata setting to allow using a role more than once with the same parameters}
+    public: ${8:# This option dictates whether the role's C(vars) and C(defaults) are exposed to the play}
+    handlers_from: ${9:# File to load from a role's C(handlers/) directory}
+    rolespec_validate: ${10:# Perform role argument spec validation if an argument spec is defined}
+  tags:
+    - ansible
+    - builtin
+    - include_role]]></content>
+  <tabTrigger>ansible.builtin.include_role</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Load and execute a role</description>
+</snippet>

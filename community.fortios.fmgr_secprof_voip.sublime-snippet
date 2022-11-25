@@ -1,0 +1,119 @@
+<snippet>
+  <content><![CDATA[- name: ${1:VOIP security profiles in FMG}
+  community.fortios.fmgr_secprof_voip:
+    adom: ${2:# The ADOM the configuration should belong to}
+    mode: ${3:# Sets one of three modes for managing the object}
+    name: ${4:# Profile name}
+    comment: ${5:# Comment}
+    sccp: ${6:# EXPERTS ONLY! KNOWLEDGE OF FMGR JSON API IS REQUIRED!}
+    sccp_block_mcast: ${7:# Enable/disable block multicast RTP connections}
+    sccp_log_call_summary: ${8:# Enable/disable log summary of SCCP calls}
+    sccp_log_violations: ${9:# Enable/disable logging of SCCP violations}
+    sccp_max_calls: ${10:# Maximum calls per minute per SCCP client (max 65535)}
+    sccp_status: ${11:# Enable/disable SCCP}
+    sccp_verify_header: ${12:# Enable/disable verify SCCP header content}
+    sip: ${13:# EXPERTS ONLY! KNOWLEDGE OF FMGR JSON API IS REQUIRED!}
+    sip_ack_rate: ${14:# ACK request rate limit (per second, per policy)}
+    sip_block_ack: ${15:# Enable/disable block ACK requests}
+    sip_block_bye: ${16:# Enable/disable block BYE requests}
+    sip_block_cancel: ${17:# Enable/disable block CANCEL requests}
+    sip_block_geo_red_options: ${18:# Enable/disable block OPTIONS requests, but OPTIONS requests still notify for redundancy}
+    sip_block_info: ${19:# Enable/disable block INFO requests}
+    sip_block_invite: ${20:# Enable/disable block INVITE requests}
+    sip_block_long_lines: ${21:# Enable/disable block requests with headers exceeding max-line-length}
+    sip_block_message: ${22:# Enable/disable block MESSAGE requests}
+    sip_block_notify: ${23:# Enable/disable block NOTIFY requests}
+    sip_block_options: ${24:# Enable/disable block OPTIONS requests and no OPTIONS as notifying message for redundancy either}
+    sip_block_prack: ${25:# Enable/disable block prack requests}
+    sip_block_publish: ${26:# Enable/disable block PUBLISH requests}
+    sip_block_refer: ${27:# Enable/disable block REFER requests}
+    sip_block_register: ${28:# Enable/disable block REGISTER requests}
+    sip_block_subscribe: ${29:# Enable/disable block SUBSCRIBE requests}
+    sip_block_unknown: ${30:# Block unrecognized SIP requests (enabled by default)}
+    sip_block_update: ${31:# Enable/disable block UPDATE requests}
+    sip_bye_rate: ${32:# BYE request rate limit (per second, per policy)}
+    sip_call_keepalive: ${33:# Continue tracking calls with no RTP for this many minutes}
+    sip_cancel_rate: ${34:# CANCEL request rate limit (per second, per policy)}
+    sip_contact_fixup: ${35:# Fixup contact anyway even if contact's IP|port doesn't match session's IP|port}
+    sip_hnt_restrict_source_ip: ${36:# Enable/disable restrict RTP source IP to be the same as SIP source IP when HNT is enabled}
+    sip_hosted_nat_traversal: ${37:# Hosted NAT Traversal (HNT)}
+    sip_info_rate: ${38:# INFO request rate limit (per second, per policy)}
+    sip_invite_rate: ${39:# INVITE request rate limit (per second, per policy)}
+    sip_ips_rtp: ${40:# Enable/disable allow IPS on RTP}
+    sip_log_call_summary: ${41:# Enable/disable logging of SIP call summary}
+    sip_log_violations: ${42:# Enable/disable logging of SIP violations}
+    sip_malformed_header_allow: ${43:# Action for malformed Allow header}
+    sip_malformed_header_call_id: ${44:# Action for malformed Call-ID header}
+    sip_malformed_header_contact: ${45:# Action for malformed Contact header}
+    sip_malformed_header_content_length: ${46:# Action for malformed Content-Length header}
+    sip_malformed_header_content_type: ${47:# Action for malformed Content-Type header}
+    sip_malformed_header_cseq: ${48:# Action for malformed CSeq header}
+    sip_malformed_header_expires: ${49:# Action for malformed Expires header}
+    sip_malformed_header_from: ${50:# Action for malformed From header}
+    sip_malformed_header_max_forwards: ${51:# Action for malformed Max-Forwards header}
+    sip_malformed_header_p_asserted_identity: ${52:# Action for malformed P-Asserted-Identity header}
+    sip_malformed_header_rack: ${53:# Action for malformed RAck header}
+    sip_malformed_header_record_route: ${54:# Action for malformed Record-Route header}
+    sip_malformed_header_route: ${55:# Action for malformed Route header}
+    sip_malformed_header_rseq: ${56:# Action for malformed RSeq header}
+    sip_malformed_header_sdp_a: ${57:# Action for malformed SDP a line}
+    sip_malformed_header_sdp_b: ${58:# Action for malformed SDP b line}
+    sip_malformed_header_sdp_c: ${59:# Action for malformed SDP c line}
+    sip_malformed_header_sdp_i: ${60:# Action for malformed SDP i line}
+    sip_malformed_header_sdp_k: ${61:# Action for malformed SDP k line}
+    sip_malformed_header_sdp_m: ${62:# Action for malformed SDP m line}
+    sip_malformed_header_sdp_o: ${63:# Action for malformed SDP o line}
+    sip_malformed_header_sdp_r: ${64:# Action for malformed SDP r line}
+    sip_malformed_header_sdp_s: ${65:# Action for malformed SDP s line}
+    sip_malformed_header_sdp_t: ${66:# Action for malformed SDP t line}
+    sip_malformed_header_sdp_v: ${67:# Action for malformed SDP v line}
+    sip_malformed_header_sdp_z: ${68:# Action for malformed SDP z line}
+    sip_malformed_header_to: ${69:# Action for malformed To header}
+    sip_malformed_header_via: ${70:# Action for malformed VIA header}
+    sip_malformed_request_line: ${71:# Action for malformed request line}
+    sip_max_body_length: ${72:# Maximum SIP message body length (0 meaning no limit)}
+    sip_max_dialogs: ${73:# Maximum number of concurrent calls/dialogs (per policy)}
+    sip_max_idle_dialogs: ${74:# Maximum number established but idle dialogs to retain (per policy)}
+    sip_max_line_length: ${75:# Maximum SIP header line length (78-4096)}
+    sip_message_rate: ${76:# MESSAGE request rate limit (per second, per policy)}
+    sip_nat_trace: ${77:# Enable/disable preservation of original IP in SDP i line}
+    sip_no_sdp_fixup: ${78:# Enable/disable no SDP fix-up}
+    sip_notify_rate: ${79:# NOTIFY request rate limit (per second, per policy)}
+    sip_open_contact_pinhole: ${80:# Enable/disable open pinhole for non-REGISTER Contact port}
+    sip_open_record_route_pinhole: ${81:# Enable/disable open pinhole for Record-Route port}
+    sip_open_register_pinhole: ${82:# Enable/disable open pinhole for REGISTER Contact port}
+    sip_open_via_pinhole: ${83:# Enable/disable open pinhole for Via port}
+    sip_options_rate: ${84:# OPTIONS request rate limit (per second, per policy)}
+    sip_prack_rate: ${85:# PRACK request rate limit (per second, per policy)}
+    sip_preserve_override: ${86:# Override i line to preserve original IPS (default| append)}
+    sip_provisional_invite_expiry_time: ${87:# Expiry time for provisional INVITE (10 - 3600 sec)}
+    sip_publish_rate: ${88:# PUBLISH request rate limit (per second, per policy)}
+    sip_refer_rate: ${89:# REFER request rate limit (per second, per policy)}
+    sip_register_contact_trace: ${90:# Enable/disable trace original IP/port within the contact header of REGISTER requests}
+    sip_register_rate: ${91:# REGISTER request rate limit (per second, per policy)}
+    sip_rfc2543_branch: ${92:# Enable/disable support via branch compliant with RFC 2543}
+    sip_rtp: ${93:# Enable/disable create pinholes for RTP traffic to traverse firewall}
+    sip_ssl_algorithm: ${94:# Relative strength of encryption algorithms accepted in negotiation}
+    sip_ssl_auth_client: ${95:# Require a client certificate and authenticate it with the peer/peergrp}
+    sip_ssl_auth_server: ${96:# Authenticate the server's certificate with the peer/peergrp}
+    sip_ssl_client_certificate: ${97:# Name of Certificate to offer to server if requested}
+    sip_ssl_client_renegotiation: ${98:# Allow/block client renegotiation by server}
+    sip_ssl_max_version: ${99:# Highest SSL/TLS version to negotiate}
+    sip_ssl_min_version: ${100:# Lowest SSL/TLS version to negotiate}
+    sip_ssl_mode: ${101:# SSL/TLS mode for encryption &amp; decryption of traffic}
+    sip_ssl_pfs: ${102:# SSL Perfect Forward Secrecy}
+    sip_ssl_send_empty_frags: ${103:# Send empty fragments to avoid attack on CBC IV (SSL 3}
+    sip_ssl_server_certificate: ${104:# Name of Certificate return to the client in every SSL connection}
+    sip_status: ${105:# Enable/disable SIP}
+    sip_strict_register: ${106:# Enable/disable only allow the registrar to connect}
+    sip_subscribe_rate: ${107:# SUBSCRIBE request rate limit (per second, per policy)}
+    sip_unknown_header: ${108:# Action for unknown SIP header}
+    sip_update_rate: ${109:# UPDATE request rate limit (per second, per policy)}
+  tags:
+    - community
+    - fortios
+    - fmgr_secprof_voip]]></content>
+  <tabTrigger>community.fortios.fmgr_secprof_voip</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>VOIP security profiles in FMG</description>
+</snippet>

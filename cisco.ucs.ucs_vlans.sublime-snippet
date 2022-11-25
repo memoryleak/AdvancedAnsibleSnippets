@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures VLANs on Cisco UCS Manager}
+  cisco.ucs.ucs_vlans:
+    state: ${2:# If C(present), will verify VLANs are present and will create if needed}
+    name: ${3:# The name assigned to the VLAN}
+    multicast_policy: ${4:# The multicast policy associated with this VLAN}
+    fabric: ${5:# The fabric configuration of the VLAN}
+    id: ${6:# The unique string identifier assigned to the VLAN}
+    sharing: ${7:# The Sharing Type field}
+    native: ${8:# Designates the VLAN as a native VLAN}
+    hostname: ${9:# IP address or hostname of Cisco UCS Manager}
+    username: ${10:# Username for Cisco UCS Manager authentication}
+    password: ${11:# Password for Cisco UCS Manager authentication}
+    port: ${12:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    use_ssl: ${13:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    use_proxy: ${14:# If C(no), will not use the proxy as defined by system environment variable}
+    proxy: ${15:# If use_proxy is no, specfies proxy to be used for connection}
+  tags:
+    - cisco
+    - ucs
+    - ucs_vlans]]></content>
+  <tabTrigger>cisco.ucs.ucs_vlans</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures VLANs on Cisco UCS Manager</description>
+</snippet>

@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set IPv6 network configuration for specific interface}
+  vmware.vmware_rest.appliance_networking_interfaces_ipv6:
+    addresses: ${2:# The list of addresses to be statically assigned}
+    autoconf: ${3:# An address will be assigned by Stateless Address Autoconfiguration (SLAAC)}
+    default_gateway: ${4:# The default gateway for static IP address assignment}
+    dhcp: ${5:# An address will be assigned by a DHCP server}
+    interface_name: ${6:# Network interface to update, for example, 'nic0'}
+    session_timeout: ${7:# Timeout settings for client session}
+    state: ${8:# No description available}
+    vcenter_hostname: ${9:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${10:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${11:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${12:# The vSphere vCenter username}
+    vcenter_validate_certs: ${13:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware_rest
+    - appliance_networking_interfaces_ipv6]]></content>
+  <tabTrigger>vmware.vmware_rest.appliance_networking_interfaces_ipv6</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set IPv6 network configuration for specific interface</description>
+</snippet>

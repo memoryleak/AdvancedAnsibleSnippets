@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create user}
+  inspur.sm.add_user:
+    uname: ${2:# User name of new user}
+    upass: ${3:# User password of new user}
+    role_id: ${4:# user group, default user group,'Administrator', 'Operator', 'Commonuser','OEM','NoAccess',}
+    priv: ${5:# User access, select one or more from None/KVM/VMM/SOL}
+    provider: ${6:# A dict object containing connection details}
+    host: ${7:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${8:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${9:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - sm
+    - add_user]]></content>
+  <tabTrigger>inspur.sm.add_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create user</description>
+</snippet>

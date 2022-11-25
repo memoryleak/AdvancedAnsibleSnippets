@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieves AWS VPC endpoint service details}
+  amazon.aws.ec2_vpc_endpoint_service_info:
+    filters: ${2:# A dict of filters to apply}
+    service_names: ${3:# A list of service names which can be used to narrow the search results}
+    access_key: ${4:# AWS access key ID}
+    secret_key: ${5:# AWS secret access key}
+    session_token: ${6:# AWS STS session token for use with temporary credentials}
+    profile: ${7:# A named AWS profile to use for authentication}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${9:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${10:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${11:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${12:# Use a C(botocore}
+    region: ${13:# The AWS region to use}
+  tags:
+    - amazon
+    - aws
+    - ec2_vpc_endpoint_service_info]]></content>
+  <tabTrigger>amazon.aws.ec2_vpc_endpoint_service_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieves AWS VPC endpoint service details</description>
+</snippet>

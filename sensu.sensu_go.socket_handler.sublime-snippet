@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sensu TCP/UDP handler}
+  sensu.sensu_go.socket_handler:
+    type: ${2:# The handler type}
+    filters: ${3:# List of filters to use when determining whether to pass the check result to this handler}
+    mutator: ${4:# Mutator to call for transforming the check result before passing it to this handler}
+    timeout: ${5:# Timeout for handler execution}
+    host: ${6:# The socket host address (IP or hostname) to connect to}
+    port: ${7:# The socket port to connect to}
+    auth: ${8:# Authentication parameters}
+    name: ${9:# The Sensu resource's name}
+    namespace: ${10:# RBAC namespace to operate in}
+    state: ${11:# Target state of the Sensu object}
+    labels: ${12:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
+    annotations: ${13:# Custom metadata fields with fewer restrictions, as key/value pairs}
+  tags:
+    - sensu
+    - sensu_go
+    - socket_handler]]></content>
+  <tabTrigger>sensu.sensu_go.socket_handler</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sensu TCP/UDP handler</description>
+</snippet>

@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages virtual machines running on Citrix Hypervisor/XenServer host or pool}
+  community.general.xenserver_guest:
+    state: ${2:# Specify the state VM should be in}
+    name: ${3:# Name of the VM to work with}
+    name_desc: ${4:# VM description}
+    uuid: ${5:# UUID of the VM to manage if known}
+    template: ${6:# Name of a template, an existing VM (must be shut down) or a snapshot that should be used to create VM}
+    template_uuid: ${7:# UUID of a template, an existing VM or a snapshot that should be used to create VM}
+    is_template: ${8:# Convert VM to template}
+    folder: ${9:# Destination folder for VM}
+    hardware: ${10:# Manage VM's hardware parameters}
+    disks: ${11:# A list of disks to add to VM}
+    cdrom: ${12:# A CD-ROM configuration for the VM}
+    networks: ${13:# A list of networks (in the order of the NICs)}
+    home_server: ${14:# Name of a XenServer host that will be a Home Server for the VM}
+    custom_params: ${15:# Define a list of custom VM params to set on VM}
+    wait_for_ip_address: ${16:# Wait until XenServer detects an IP address for the VM}
+    state_change_timeout: ${17:# By default, module will wait indefinitely for VM to accquire an IP address if I(wait_for_ip_address): C(true)}
+    linked_clone: ${18:# Whether to create a Linked Clone from the template, existing VM or snapshot}
+    force: ${19:# Ignore warnings and complete the actions}
+    hostname: ${20:# The hostname or IP address of the XenServer host or XenServer pool master}
+    username: ${21:# The username to use for connecting to XenServer}
+    password: ${22:# The password to use for connecting to XenServer}
+    validate_certs: ${23:# Allows connection when SSL certificates are not valid}
+  tags:
+    - community
+    - general
+    - xenserver_guest]]></content>
+  <tabTrigger>community.general.xenserver_guest</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages virtual machines running on Citrix Hypervisor/XenServer host or pool</description>
+</snippet>

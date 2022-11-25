@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage LDAP Authentication Sources}
+  theforeman.foreman.auth_source_ldap:
+    name: ${2:# The name of the LDAP authentication source}
+    host: ${3:# The hostname of the LDAP server}
+    port: ${4:# The port number of the LDAP server}
+    account: ${5:# Account name to use when accessing the LDAP server}
+    account_password: ${6:# Account password to use when accessing the LDAP server}
+    base_dn: ${7:# The base DN to use when searching}
+    attr_login: ${8:# Attribute containing login ID}
+    attr_firstname: ${9:# Attribute containing first name}
+    attr_lastname: ${10:# Attribute containing last name}
+    attr_mail: ${11:# Attribute containing email address}
+    attr_photo: ${12:# Attribute containing user photo}
+    onthefly_register: ${13:# Whether or not to register users on the fly}
+    usergroup_sync: ${14:# Whether or not to sync external user groups on login}
+    tls: ${15:# Whether or not to use TLS when contacting the LDAP server}
+    groups_base: ${16:# Base DN where groups reside}
+    use_netgroups: ${17:# Whether to use NIS netgroups instead of posix groups, not valid for I(server_type=active_directory)}
+    server_type: ${18:# Type of the LDAP server}
+    ldap_filter: ${19:# Filter to apply to LDAP searches}
+    server_url: ${20:# URL of the Foreman server}
+    username: ${21:# Username accessing the Foreman server}
+    password: ${22:# Password of the user accessing the Foreman server}
+    validate_certs: ${23:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${24:# State of the entity}
+    organizations: ${25:# List of organizations the entity should be assigned to}
+    locations: ${26:# List of locations the entity should be assigned to}
+  tags:
+    - theforeman
+    - foreman
+    - auth_source_ldap]]></content>
+  <tabTrigger>theforeman.foreman.auth_source_ldap</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage LDAP Authentication Sources</description>
+</snippet>

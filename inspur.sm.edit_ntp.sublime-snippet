@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set NTP}
+  inspur.sm.edit_ntp:
+    auto_date: ${2:# Date auto synchronize}
+    ntp_time: ${3:# NTP time(YYYYmmddHHMMSS)}
+    time_zone: ${4:# UTC time zone,chose from {-12, -11}
+    server1: ${5:# NTP Server1(ipv4 or ipv6 or domain name), set when auto_dateis enable}
+    server2: ${6:# NTP Server2(ipv4 or ipv6 or domain name), set when auto_date is enable}
+    server3: ${7:# NTP Server3(ipv4 or ipv6 or domain name), set when auto_date is enable}
+    server4: ${8:# NTP Server1(ipv4 or ipv6 or domain name), set when auto_dateis enable}
+    server5: ${9:# NTP Server2(ipv4 or ipv6 or domain name), set when auto_date is enable}
+    server6: ${10:# NTP Server3(ipv4 or ipv6 or domain name), set when auto_date is enable}
+    syn_cycle: ${11:# NTP syn cycle(minute),sync cycle(5-1440)}
+    max_variety: ${12:# NTP Maximum jump time(minute),max variety(1-60)}
+    provider: ${13:# A dict object containing connection details}
+    host: ${14:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${15:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${16:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - sm
+    - edit_ntp]]></content>
+  <tabTrigger>inspur.sm.edit_ntp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set NTP</description>
+</snippet>

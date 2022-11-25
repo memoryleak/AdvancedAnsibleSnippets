@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Publish a message to a RabbitMQ queue}
+  community.rabbitmq.rabbitmq_publish:
+    url: ${2:# An URL connection string to connect to the RabbitMQ server}
+    proto: ${3:# The protocol to use}
+    host: ${4:# The RabbitMQ server hostname or IP}
+    port: ${5:# The RabbitMQ server port}
+    username: ${6:# The RabbitMQ username}
+    password: ${7:# The RabbitMQ password}
+    vhost: ${8:# The virtual host to target}
+    queue: ${9:# The queue to publish a message to}
+    exchange: ${10:# The exchange to publish a message to}
+    routing_key: ${11:# The routing key}
+    body: ${12:# The body of the message}
+    src: ${13:# A file to upload to the queue}
+    content_type: ${14:# The content type of the body}
+    durable: ${15:# Set the queue to be durable}
+    exclusive: ${16:# Set the queue to be exclusive}
+    auto_delete: ${17:# Set the queue to auto delete}
+    headers: ${18:# A dictionary of headers to post with the message}
+    cafile: ${19:# CA file used during connection to the RabbitMQ server over SSL}
+    certfile: ${20:# Client certificate to establish SSL connection}
+    keyfile: ${21:# Client key to establish SSL connection}
+  tags:
+    - community
+    - rabbitmq
+    - rabbitmq_publish]]></content>
+  <tabTrigger>community.rabbitmq.rabbitmq_publish</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Publish a message to a RabbitMQ queue</description>
+</snippet>

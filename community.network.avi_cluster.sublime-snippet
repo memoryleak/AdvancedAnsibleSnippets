@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for setup of Cluster Avi RESTful Object}
+  community.network.avi_cluster:
+    state: ${2:# The state that should be applied on the entity}
+    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
+    name: ${5:# Name of the object}
+    nodes: ${6:# List of clusternode}
+    rejoin_nodes_automatically: ${7:# Re-join cluster nodes automatically in the event one of the node is reset to factory}
+    tenant_ref: ${8:# It is a reference to an object of type tenant}
+    url: ${9:# Avi controller URL of the object}
+    uuid: ${10:# Unique object identifier of the object}
+    virtual_ip: ${11:# A virtual ip address}
+    controller: ${12:# IP address or hostname of the controller}
+    username: ${13:# Username used for accessing Avi controller}
+    password: ${14:# Password of Avi user in Avi controller}
+    tenant: ${15:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${16:# UUID of tenant used for all Avi API calls and context of object}
+    api_version: ${17:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${18:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    api_context: ${19:# Avi API context that includes current session ID and CSRF Token}
+    avi_disable_session_cache_as_fact: ${20:# It disables avi session information to be cached as a fact}
+  tags:
+    - community
+    - network
+    - avi_cluster]]></content>
+  <tabTrigger>community.network.avi_cluster</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for setup of Cluster Avi RESTful Object</description>
+</snippet>

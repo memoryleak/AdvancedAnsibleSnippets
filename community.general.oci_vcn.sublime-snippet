@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Virtual Cloud Networks(VCN) in OCI}
+  community.general.oci_vcn:
+    cidr_block: ${2:# The CIDR IP address block of the VCN}
+    compartment_id: ${3:# The OCID of the compartment to contain the VCN}
+    display_name: ${4:# A user-friendly name}
+    dns_label: ${5:# A DNS label for the VCN, used in conjunction with the VNIC's hostname and subnet's DNS label to form a fully qualified domain name (FQDN) for each VNIC within this subnet (for example, bminstance-1}
+    state: ${6:# Create or update a VCN with I(state=present)}
+    vcn_id: ${7:# The OCID of the VCN}
+    config_file_location: ${8:# Path to configuration file}
+    config_profile_name: ${9:# The profile to load from the config file referenced by C(config_file_location)}
+    api_user: ${10:# The OCID of the user, on whose behalf, OCI APIs are invoked}
+    api_user_fingerprint: ${11:# Fingerprint for the key pair being used}
+    api_user_key_file: ${12:# Full path and filename of the private key (in PEM format)}
+    api_user_key_pass_phrase: ${13:# Passphrase used by the key referenced in C(api_user_key_file), if it is encrypted}
+    auth_type: ${14:# The type of authentication to use for making API requests}
+    tenancy: ${15:# OCID of your tenancy}
+    region: ${16:# The Oracle Cloud Infrastructure region to use for all OCI API requests}
+    force_create: ${17:# Whether to attempt non-idempotent creation of a resource}
+    key_by: ${18:# The list of comma-separated attributes of this resource which should be used to uniquely identify an instance of the resource}
+    wait: ${19:# Whether to wait for create or delete operation to complete}
+    wait_timeout: ${20:# Time, in seconds, to wait when I(wait=true)}
+    wait_until: ${21:# The lifecycle state to wait for the resource to transition into when I(wait=true)}
+    defined_tags: ${22:# Defined tags for this resource}
+    freeform_tags: ${23:# Free-form tags for this resource}
+  tags:
+    - community
+    - general
+    - oci_vcn]]></content>
+  <tabTrigger>community.general.oci_vcn</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Virtual Cloud Networks(VCN) in OCI</description>
+</snippet>

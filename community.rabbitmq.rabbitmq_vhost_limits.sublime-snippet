@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the state of virtual host limits in RabbitMQ}
+  community.rabbitmq.rabbitmq_vhost_limits:
+    max_connections: ${2:# Max number of concurrent client connections}
+    max_queues: ${3:# Max number of queues}
+    node: ${4:# Name of the RabbitMQ Erlang node to manage}
+    state: ${5:# Specify whether the limits are to be set or cleared}
+    vhost: ${6:# Name of the virtual host to manage}
+  tags:
+    - community
+    - rabbitmq
+    - rabbitmq_vhost_limits]]></content>
+  <tabTrigger>community.rabbitmq.rabbitmq_vhost_limits</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the state of virtual host limits in RabbitMQ</description>
+</snippet>

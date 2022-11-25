@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages power states of virtual machines running on Citrix Hypervisor/XenServer host or pool}
+  community.general.xenserver_guest_powerstate:
+    state: ${2:# Specify the state VM should be in}
+    name: ${3:# Name of the VM to manage}
+    uuid: ${4:# UUID of the VM to manage if known}
+    wait_for_ip_address: ${5:# Wait until XenServer detects an IP address for the VM}
+    state_change_timeout: ${6:# By default, module will wait indefinitely for VM to change state or acquire an IP address if C(wait_for_ip_address: true)}
+    hostname: ${7:# The hostname or IP address of the XenServer host or XenServer pool master}
+    username: ${8:# The username to use for connecting to XenServer}
+    password: ${9:# The password to use for connecting to XenServer}
+    validate_certs: ${10:# Allows connection when SSL certificates are not valid}
+  tags:
+    - community
+    - general
+    - xenserver_guest_powerstate]]></content>
+  <tabTrigger>community.general.xenserver_guest_powerstate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages power states of virtual machines running on Citrix Hypervisor/XenServer host or pool</description>
+</snippet>

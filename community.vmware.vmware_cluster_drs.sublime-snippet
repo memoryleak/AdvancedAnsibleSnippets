@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Distributed Resource Scheduler (DRS) on VMware vSphere clusters}
+  community.vmware.vmware_cluster_drs:
+    cluster_name: ${2:# The name of the cluster to be managed}
+    datacenter: ${3:# The name of the datacenter}
+    enable: ${4:# Whether to enable DRS}
+    drs_enable_vm_behavior_overrides: ${5:# Whether DRS Behavior overrides for individual virtual machines are enabled}
+    drs_default_vm_behavior: ${6:# Specifies the cluster-wide default DRS behavior for virtual machines}
+    drs_vmotion_rate: ${7:# Threshold for generated ClusterRecommendations}
+    advanced_settings: ${8:# A dictionary of advanced DRS settings}
+    hostname: ${9:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${10:# The username of the vSphere vCenter or ESXi server}
+    password: ${11:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${12:# Allows connection when SSL certificates are not valid}
+    port: ${13:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${14:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${15:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_cluster_drs]]></content>
+  <tabTrigger>community.vmware.vmware_cluster_drs</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Distributed Resource Scheduler (DRS) on VMware vSphere clusters</description>
+</snippet>

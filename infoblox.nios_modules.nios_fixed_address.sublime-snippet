@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Infoblox NIOS DHCP Fixed Address}
+  infoblox.nios_modules.nios_fixed_address:
+    name: ${2:# Specifies the hostname with which fixed DHCP ip-address is stored for respective mac}
+    ipaddr: ${3:# IPV4/V6 address of the fixed address}
+    mac: ${4:# The MAC address of the IPv4 interface}
+    duid: ${5:# The DUID address of the IPv6 interface}
+    network: ${6:# Specifies the network range in which ipaddr exists}
+    network_view: ${7:# Configures the name of the network view to associate with this configured instance}
+    options: ${8:# Configures the set of DHCP options to be included as part of the configured network instance}
+    extattrs: ${9:# Allows for the configuration of Extensible Attributes on the instance of the object}
+    comment: ${10:# Configures a text string comment to be associated with the instance of this object}
+    state: ${11:# Configures the intended state of the instance of the object on the NIOS server}
+    provider: ${12:# A dict object containing connection details}
+  tags:
+    - infoblox
+    - nios_modules
+    - nios_fixed_address]]></content>
+  <tabTrigger>infoblox.nios_modules.nios_fixed_address</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Infoblox NIOS DHCP Fixed Address</description>
+</snippet>

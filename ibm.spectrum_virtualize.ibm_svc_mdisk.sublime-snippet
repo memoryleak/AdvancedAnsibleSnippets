@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages MDisks on IBM Spectrum Virtualize family storage systems}
+  ibm.spectrum_virtualize.ibm_svc_mdisk:
+    name: ${2:# The MDisk name}
+    state: ${3:# Creates (C(present)) or removes (C(absent)) the MDisk}
+    clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${5:# Domain for the Spectrum Virtualize storage system}
+    username: ${6:# REST API username for the Spectrum Virtualize storage system}
+    password: ${7:# REST API password for the Spectrum Virtualize storage system}
+    token: ${8:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    drive: ${9:# Drive(s) to use as members of the RAID array}
+    mdiskgrp: ${10:# The storage pool (mdiskgrp) to which you want to add the MDisk}
+    log_path: ${11:# Path of debug log file}
+    validate_certs: ${12:# Validates certification}
+    level: ${13:# Specifies the RAID level}
+    encrypt: ${14:# Defines use of encryption with the MDisk group}
+  tags:
+    - ibm
+    - spectrum_virtualize
+    - ibm_svc_mdisk]]></content>
+  <tabTrigger>ibm.spectrum_virtualize.ibm_svc_mdisk</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages MDisks on IBM Spectrum Virtualize family storage systems</description>
+</snippet>

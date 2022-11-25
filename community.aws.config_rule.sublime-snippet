@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage AWS Config rule resources}
+  community.aws.config_rule:
+    name: ${2:# The name of the AWS Config resource}
+    state: ${3:# Whether the Config rule should be present or absent}
+    description: ${4:# The description that you provide for the AWS Config rule}
+    scope: ${5:# Defines which resources can trigger an evaluation for the rule}
+    source: ${6:# Provides the rule owner (AWS or customer), the rule identifier, and the notifications that cause the function to evaluate your AWS resources}
+    input_parameters: ${7:# A string, in JSON format, that is passed to the AWS Config rule Lambda function}
+    execution_frequency: ${8:# The maximum frequency with which AWS Config runs evaluations for a rule}
+    access_key: ${9:# AWS access key ID}
+    secret_key: ${10:# AWS secret access key}
+    session_token: ${11:# AWS STS session token for use with temporary credentials}
+    profile: ${12:# A named AWS profile to use for authentication}
+    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${16:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
+    region: ${18:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - config_rule]]></content>
+  <tabTrigger>community.aws.config_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage AWS Config rule resources</description>
+</snippet>

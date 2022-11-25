@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Element SW Cluster}
+  netapp.elementsw.na_elementsw_cluster_config:
+    modify_cluster_full_threshold: ${2:# The capacity level at which the cluster generates an event}
+    encryption_at_rest: ${3:# enable or disable the Advanced Encryption Standard (AES) 256-bit encryption at rest on the cluster}
+    set_ntp_info: ${4:# configure NTP on cluster node}
+    enable_virtual_volumes: ${5:# Enable the NetApp SolidFire VVols cluster feature}
+    hostname: ${6:# The hostname or IP address of the SolidFire cluster}
+    username: ${7:# Please ensure that the user has the adequate permissions}
+    password: ${8:# Password for the specified user}
+  tags:
+    - netapp
+    - elementsw
+    - na_elementsw_cluster_config]]></content>
+  <tabTrigger>netapp.elementsw.na_elementsw_cluster_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Element SW Cluster</description>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Windows Server DNS records}
+  community.windows.win_dns_record:
+    name: ${2:# The name of the record}
+    port: ${3:# The port number of the record}
+    priority: ${4:# The priority number for each service in SRV record}
+    state: ${5:# Whether the record should exist or not}
+    ttl: ${6:# The 'time to live' of the record, in seconds}
+    type: ${7:# The type of DNS record to manage}
+    value: ${8:# The value(s) to specify}
+    weight: ${9:# Weightage given to each service record in SRV record}
+    zone: ${10:# The name of the zone to manage (eg C(example}
+    computer_name: ${11:# Specifies a DNS server}
+  tags:
+    - community
+    - windows
+    - win_dns_record]]></content>
+  <tabTrigger>community.windows.win_dns_record</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Windows Server DNS records</description>
+</snippet>

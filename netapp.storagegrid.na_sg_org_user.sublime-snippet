@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp StorageGRID manage users within a tenancy}
+  netapp.storagegrid.na_sg_org_user:
+    state: ${2:# Whether the specified user should exist or not}
+    full_name: ${3:# Full Name of the user}
+    unique_name: ${4:# Unique Name for the user}
+    member_of: ${5:# List of unique_groups that the user is a member of}
+    password: ${6:# Set a password for a local user}
+    update_password: ${7:# Choose when to update the password}
+    disable: ${8:# Disable the user from signing in}
+    auth_token: ${9:# The authorization token for the API request}
+    api_url: ${10:# The url to the StorageGRID Admin Node REST API}
+    validate_certs: ${11:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_org_user]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_org_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp StorageGRID manage users within a tenancy</description>
+</snippet>

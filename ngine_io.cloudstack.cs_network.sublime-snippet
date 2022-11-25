@@ -1,0 +1,43 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages networks on Apache CloudStack based clouds}
+  ngine_io.cloudstack.cs_network:
+    name: ${2:# Name (case sensitive) of the network}
+    display_text: ${3:# Display text of the network}
+    network_offering: ${4:# Name of the offering for the network}
+    start_ip: ${5:# The beginning IPv4 address of the network belongs to}
+    end_ip: ${6:# The ending IPv4 address of the network belongs to}
+    gateway: ${7:# The gateway of the network}
+    netmask: ${8:# The netmask of the network}
+    start_ipv6: ${9:# The beginning IPv6 address of the network belongs to}
+    end_ipv6: ${10:# The ending IPv6 address of the network belongs to}
+    cidr_ipv6: ${11:# CIDR of IPv6 network, must be at least /64}
+    gateway_ipv6: ${12:# The gateway of the IPv6 network}
+    vlan: ${13:# The ID or VID of the network}
+    vpc: ${14:# Name of the VPC of the network}
+    isolated_pvlan: ${15:# The isolated private VLAN for this network}
+    clean_up: ${16:# Cleanup old network elements}
+    acl_type: ${17:# Access control type for the network}
+    acl: ${18:# The name of the access control list for the VPC network tier}
+    subdomain_access: ${19:# Defines whether to allow subdomains to use networks dedicated to their parent domain(s)}
+    network_domain: ${20:# The network domain}
+    state: ${21:# State of the network}
+    zone: ${22:# Name of the zone in which the network should be deployed}
+    project: ${23:# Name of the project the network to be deployed in}
+    domain: ${24:# Domain the network is related to}
+    account: ${25:# Account the network is related to}
+    poll_async: ${26:# Poll async jobs until job has finished}
+    tags: ${27:# List of tags}
+    api_key: ${28:# API key of the CloudStack API}
+    api_secret: ${29:# Secret key of the CloudStack API}
+    api_url: ${30:# URL of the CloudStack API e}
+    api_http_method: ${31:# HTTP method used to query the API endpoint}
+    api_timeout: ${32:# HTTP timeout in seconds}
+    api_verify_ssl_cert: ${33:# Verify CA authority cert file}
+  tags:
+    - ngine_io
+    - cloudstack
+    - cs_network]]></content>
+  <tabTrigger>ngine_io.cloudstack.cs_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages networks on Apache CloudStack based clouds</description>
+</snippet>

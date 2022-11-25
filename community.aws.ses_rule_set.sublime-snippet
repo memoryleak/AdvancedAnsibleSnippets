@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages SES inbound receipt rule sets}
+  community.aws.ses_rule_set:
+    name: ${2:# The name of the receipt rule set}
+    state: ${3:# Whether to create (or update) or destroy the receipt rule set}
+    active: ${4:# Whether or not this rule set should be the active rule set}
+    force: ${5:# When deleting a rule set, deactivate it first (AWS prevents deletion of the active rule set)}
+    access_key: ${6:# AWS access key ID}
+    secret_key: ${7:# AWS secret access key}
+    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    profile: ${9:# A named AWS profile to use for authentication}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${13:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
+    region: ${15:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - ses_rule_set]]></content>
+  <tabTrigger>community.aws.ses_rule_set</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages SES inbound receipt rule sets</description>
+</snippet>

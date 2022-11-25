@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Allows administration of Keycloak groups via Keycloak API}
+  community.general.keycloak_group:
+    state: ${2:# State of the group}
+    name: ${3:# Name of the group}
+    realm: ${4:# They Keycloak realm under which this group resides}
+    id: ${5:# The unique identifier for this group}
+    attributes: ${6:# A dict of key/value pairs to set as custom attributes for the group}
+    auth_keycloak_url: ${7:# URL to the Keycloak instance}
+    auth_client_id: ${8:# OpenID Connect I(client_id) to authenticate to the API with}
+    auth_realm: ${9:# Keycloak realm name to authenticate to for API access}
+    auth_client_secret: ${10:# Client Secret to use in conjunction with I(auth_client_id) (if required)}
+    auth_username: ${11:# Username to authenticate for API access with}
+    auth_password: ${12:# Password to authenticate for API access with}
+    token: ${13:# Authentication token for Keycloak API}
+    validate_certs: ${14:# Verify TLS certificates (do not disable this in production)}
+    connection_timeout: ${15:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    http_agent: ${16:# Configures the HTTP User-Agent header}
+  tags:
+    - community
+    - general
+    - keycloak_group]]></content>
+  <tabTrigger>community.general.keycloak_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Allows administration of Keycloak groups via Keycloak API</description>
+</snippet>

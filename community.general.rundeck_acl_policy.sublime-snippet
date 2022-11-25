@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Rundeck ACL policies}
+  community.general.rundeck_acl_policy:
+    state: ${2:# Create or remove Rundeck project}
+    name: ${3:# Sets the project name}
+    url: ${4:# Sets the rundeck instance URL}
+    api_version: ${5:# Sets the API version used by module}
+    token: ${6:# Sets the token to authenticate against Rundeck API}
+    project: ${7:# Sets the project which receive the ACL policy}
+    policy: ${8:# Sets the ACL policy content}
+    client_cert: ${9:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${10:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    force: ${11:# If C(yes) do not get a cached copy}
+    force_basic_auth: ${12:# Credentials specified with I(url_username) and I(url_password) should be passed in HTTP Header}
+    http_agent: ${13:# Header to identify as, generally appears in web server logs}
+    url_password: ${14:# The password for use in HTTP basic authentication}
+    url_username: ${15:# The username for use in HTTP basic authentication}
+    use_proxy: ${16:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${17:# If C(no), SSL certificates will not be validated}
+    use_gssapi: ${18:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+  tags:
+    - community
+    - general
+    - rundeck_acl_policy]]></content>
+  <tabTrigger>community.general.rundeck_acl_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Rundeck ACL policies</description>
+</snippet>

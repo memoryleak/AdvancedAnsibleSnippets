@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages IGMP interface configuration}
+  cisco.nxos.nxos_igmp_interface:
+    interface: ${2:# The full interface name for IGMP configuration}
+    version: ${3:# IGMP version}
+    startup_query_interval: ${4:# Query interval used when the IGMP process starts up}
+    startup_query_count: ${5:# Query count used when the IGMP process starts up}
+    robustness: ${6:# Sets the robustness variable}
+    querier_timeout: ${7:# Sets the querier timeout that the software uses when deciding to take over as the querier}
+    query_mrt: ${8:# Sets the response time advertised in IGMP queries}
+    query_interval: ${9:# Sets the frequency at which the software sends IGMP host query messages}
+    last_member_qrt: ${10:# Sets the query interval waited after sending membership reports before the software deletes the group state}
+    last_member_query_count: ${11:# Sets the number of times that the software sends an IGMP query in response to a host leave message}
+    group_timeout: ${12:# Sets the group membership timeout for IGMPv2}
+    report_llg: ${13:# Configures report-link-local-groups}
+    immediate_leave: ${14:# Enables the device to remove the group entry from the multicast routing table immediately upon receiving a leave message for the group}
+    oif_routemap: ${15:# Configure a routemap for static outgoing interface (OIF) or keyword 'default'}
+    oif_ps: ${16:# Configure prefixes and sources for static outgoing interface (OIF)}
+    restart: ${17:# Restart IGMP}
+    state: ${18:# Manages desired state of the resource}
+  tags:
+    - cisco
+    - nxos
+    - nxos_igmp_interface]]></content>
+  <tabTrigger>cisco.nxos.nxos_igmp_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages IGMP interface configuration</description>
+</snippet>

@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage packages using chocolatey}
+  chocolatey.chocolatey.win_chocolatey:
+    allow_empty_checksums: ${2:# Allow empty checksums to be used for downloaded resource from non-secure locations}
+    allow_multiple: ${3:# Allow the installation of multiple packages when I(version) is specified}
+    allow_prerelease: ${4:# Allow the installation of pre-release packages}
+    architecture: ${5:# Force Chocolatey to install the package of a specific process architecture}
+    bootstrap_script: ${6:# Specify the bootstrap script URL that can be used to install Chocolatey if it is not already present on the system}
+    force: ${7:# Forces the install of a package, even if it already is installed}
+    ignore_checksums: ${8:# Ignore the checksums provided by the package}
+    ignore_dependencies: ${9:# Ignore dependencies, only install/upgrade the package itself}
+    remove_dependencies: ${10:# Remove a package's dependencies on uninstall}
+    install_args: ${11:# Arguments to pass to the native installer}
+    name: ${12:# Name of the package(s) to be installed}
+    override_args: ${13:# Override arguments of native installer with arguments provided by user}
+    package_params: ${14:# Parameters to pass to the package}
+    choco_args: ${15:# Additional parameters to pass to choco}
+    pinned: ${16:# Whether to pin the Chocolatey package or not}
+    proxy_url: ${17:# Proxy URL used to install chocolatey and the package}
+    proxy_username: ${18:# Proxy username used to install Chocolatey and the package}
+    proxy_password: ${19:# Proxy password used to install Chocolatey and the package}
+    skip_scripts: ${20:# Do not run I(chocolateyInstall}
+    source: ${21:# Specify the source to retrieve the package from}
+    source_username: ${22:# A username to use with I(source) when accessing a feed that requires authentication}
+    source_password: ${23:# The password for I(source_username)}
+    state: ${24:# State of the package on the system}
+    timeout: ${25:# The time to allow chocolatey to finish before timing out}
+    validate_certs: ${26:# Used when downloading the Chocolatey install script if Chocolatey is not already installed, this does not affect the Chocolatey package install process}
+    version: ${27:# Specific version of the package to be installed}
+  tags:
+    - chocolatey
+    - chocolatey
+    - win_chocolatey]]></content>
+  <tabTrigger>chocolatey.chocolatey.win_chocolatey</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage packages using chocolatey</description>
+</snippet>

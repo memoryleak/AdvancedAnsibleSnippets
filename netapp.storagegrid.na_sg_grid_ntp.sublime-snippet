@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp StorageGRID manage external NTP servers for the grid}
+  netapp.storagegrid.na_sg_grid_ntp:
+    state: ${2:# Whether the specified user should exist or not}
+    ntp_servers: ${3:# List of comma separated NTP server address}
+    passphrase: ${4:# passphrase for GRID}
+    auth_token: ${5:# The authorization token for the API request}
+    api_url: ${6:# The url to the StorageGRID Admin Node REST API}
+    validate_certs: ${7:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_ntp]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_ntp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp StorageGRID manage external NTP servers for the grid</description>
+</snippet>

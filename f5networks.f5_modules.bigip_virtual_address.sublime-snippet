@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage LTM virtual addresses on a BIG-IP}
+  f5networks.f5_modules.bigip_virtual_address:
+    name: ${2:# Name of the virtual address}
+    address: ${3:# Specifies the virtual address}
+    netmask: ${4:# Specifies the netmask of the provided virtual address}
+    connection_limit: ${5:# Specifies the number of concurrent connections the system allows on this virtual address}
+    arp: ${6:# Specifies whether the system accepts ARP requests}
+    auto_delete: ${7:# Specifies whether the system automatically deletes the virtual address with the deletion of the last associated virtual server}
+    icmp_echo: ${8:# Specifies how the system sends responses to (ICMP) echo requests on a per-virtual address basis for enabling route advertisement}
+    state: ${9:# The virtual address state}
+    availability_calculation: ${10:# Specifies which routes of the virtual address the system advertises}
+    route_advertisement: ${11:# Specifies whether the system uses route advertisement for this virtual address}
+    partition: ${12:# Device partition to manage resources on}
+    traffic_group: ${13:# The traffic group for the virtual address}
+    route_domain: ${14:# The route domain of the C(address) you want to use}
+    spanning: ${15:# Enables all BIG-IP systems in a device group to listen for and process traffic on the same virtual address}
+    provider: ${16:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_virtual_address]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_virtual_address</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage LTM virtual addresses on a BIG-IP</description>
+</snippet>

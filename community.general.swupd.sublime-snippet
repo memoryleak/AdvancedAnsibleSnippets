@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages updates and bundles in ClearLinux systems}
+  community.general.swupd:
+    contenturl: ${2:# URL pointing to the contents of available bundles}
+    format: ${3:# The format suffix for version file downloads}
+    manifest: ${4:# The manifest contains information about the bundles at certain version of the OS}
+    name: ${5:# Name of the (I)bundle to install or remove}
+    state: ${6:# Indicates the desired (I)bundle state}
+    update: ${7:# Updates the OS to the latest version}
+    url: ${8:# Overrides both I(contenturl) and I(versionurl)}
+    verify: ${9:# Verify content for OS version}
+    versionurl: ${10:# URL for version string download}
+  tags:
+    - community
+    - general
+    - swupd]]></content>
+  <tabTrigger>community.general.swupd</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages updates and bundles in ClearLinux systems</description>
+</snippet>

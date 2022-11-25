@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FlashArray File System Directories}
+  purestorage.flasharray.purefa_directory:
+    name: ${2:# Name of the directory}
+    state: ${3:# Define whether the directory should exist or not}
+    filesystem: ${4:# Name of the filesystem the directory links to}
+    path: ${5:# Path of the managed directory in the file system}
+    rename: ${6:# Value to rename the specified directory to}
+    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
+    api_token: ${8:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_directory]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_directory</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FlashArray File System Directories</description>
+</snippet>

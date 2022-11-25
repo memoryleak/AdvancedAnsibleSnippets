@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and manage cloud servers on the Hetzner Cloud}
+  hetzner.hcloud.hcloud_server:
+    id: ${2:# The ID of the Hetzner Cloud server to manage}
+    name: ${3:# The Name of the Hetzner Cloud server to manage}
+    server_type: ${4:# The Server Type of the Hetzner Cloud server to manage}
+    ssh_keys: ${5:# List of SSH key names}
+    volumes: ${6:# List of Volumes IDs that should be attached to the server on server creation}
+    firewalls: ${7:# List of Firewall IDs that should be attached to the server on server creation}
+    image: ${8:# Image the server should be created from}
+    location: ${9:# Location of Server}
+    datacenter: ${10:# Datacenter of Server}
+    backups: ${11:# Enable or disable Backups for the given Server}
+    upgrade_disk: ${12:# Resize the disk size, when resizing a server}
+    enable_ipv4: ${13:# Enables the public ipv4 address}
+    enable_ipv6: ${14:# Enables the public ipv6 address}
+    ipv4: ${15:# ID of the ipv4 Primary IP to use}
+    ipv6: ${16:# ID of the ipv6 Primary IP to use}
+    force_upgrade: ${17:# Deprecated}
+    force: ${18:# Force the update of the server}
+    allow_deprecated_image: ${19:# Allows the creation of servers with deprecated images}
+    user_data: ${20:# User Data to be passed to the server on creation}
+    rescue_mode: ${21:# Add the Hetzner rescue system type you want the server to be booted into}
+    labels: ${22:# User-defined labels (key-value pairs)}
+    delete_protection: ${23:# Protect the Server for deletion}
+    rebuild_protection: ${24:# Protect the Server for rebuild}
+    placement_group: ${25:# Placement Group of the server}
+    state: ${26:# State of the server}
+    api_token: ${27:# This is the API Token for the Hetzner Cloud}
+    endpoint: ${28:# This is the API Endpoint for the Hetzner Cloud}
+  tags:
+    - hetzner
+    - hcloud
+    - hcloud_server]]></content>
+  <tabTrigger>hetzner.hcloud.hcloud_server</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and manage cloud servers on the Hetzner Cloud</description>
+</snippet>

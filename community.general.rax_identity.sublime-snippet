@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Load Rackspace Cloud Identity}
+  community.general.rax_identity:
+    state: ${2:# Indicate desired state of the resource}
+    api_key: ${3:# Rackspace API key, overrides I(credentials)}
+    auth_endpoint: ${4:# The URI of the authentication service}
+    credentials: ${5:# File to find the Rackspace credentials in}
+    env: ${6:# Environment as configured in I(~/}
+    identity_type: ${7:# Authentication mechanism to use, such as rackspace or keystone}
+    region: ${8:# Region to create an instance in}
+    tenant_id: ${9:# The tenant ID used for authentication}
+    tenant_name: ${10:# The tenant name used for authentication}
+    username: ${11:# Rackspace username, overrides I(credentials)}
+    validate_certs: ${12:# Whether or not to require SSL validation of API endpoints}
+  tags:
+    - community
+    - general
+    - rax_identity]]></content>
+  <tabTrigger>community.general.rax_identity</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Load Rackspace Cloud Identity</description>
+</snippet>

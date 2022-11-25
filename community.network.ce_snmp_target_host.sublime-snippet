@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages SNMP target host configuration on HUAWEI CloudEngine switches}
+  community.network.ce_snmp_target_host:
+    version: ${2:# Version(s) Supported by SNMP Engine}
+    connect_port: ${3:# Udp port used by SNMP agent to connect the Network management}
+    host_name: ${4:# Unique name to identify target host entry}
+    address: ${5:# Network Address}
+    notify_type: ${6:# To configure notify type as trap or inform}
+    vpn_name: ${7:# VPN instance Name}
+    recv_port: ${8:# UDP Port number used by network management to receive alarm messages}
+    security_model: ${9:# Security Model}
+    security_name: ${10:# Security Name}
+    security_name_v3: ${11:# Security Name V3}
+    security_level: ${12:# Security level indicating whether to use authentication and encryption}
+    is_public_net: ${13:# To enable or disable Public Net-manager for target Host}
+    interface_name: ${14:# Name of the interface to send the trap message}
+  tags:
+    - community
+    - network
+    - ce_snmp_target_host]]></content>
+  <tabTrigger>community.network.ce_snmp_target_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages SNMP target host configuration on HUAWEI CloudEngine switches</description>
+</snippet>

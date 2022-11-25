@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Perform various KMS key management tasks}
+  amazon.aws.kms_key:
+    alias: ${2:# An alias for a key}
+    key_id: ${3:# Key ID or ARN of the key}
+    enable_key_rotation: ${4:# Whether the key should be automatically rotated every year}
+    state: ${5:# Whether a key should be present or absent}
+    enabled: ${6:# Whether or not a key is enabled}
+    description: ${7:# A description of the CMK}
+    pending_window: ${8:# The number of days between requesting deletion of the CMK and when it will actually be deleted}
+    purge_grants: ${9:# Whether the I(grants) argument should cause grants not in the list to be removed}
+    grants: ${10:# A list of grants to apply to the key}
+    policy: ${11:# policy to apply to the KMS key}
+    key_spec: ${12:# Specifies the type of KMS key to create}
+    key_usage: ${13:# Determines the cryptographic operations for which you can use the KMS key}
+    access_key: ${14:# AWS access key ID}
+    secret_key: ${15:# AWS secret access key}
+    session_token: ${16:# AWS STS session token for use with temporary credentials}
+    profile: ${17:# A named AWS profile to use for authentication}
+    endpoint_url: ${18:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${19:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${20:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${21:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${22:# Use a C(botocore}
+    region: ${23:# The AWS region to use}
+    tags: ${24:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${25:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - kms_key]]></content>
+  <tabTrigger>amazon.aws.kms_key</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Perform various KMS key management tasks</description>
+</snippet>

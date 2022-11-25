@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage DNS zones on BIG-IP}
+  f5networks.f5_modules.bigip_dns_zone:
+    name: ${2:# Specifies the name of the DNS zone}
+    dns_express: ${3:# DNS express related settings}
+    nameservers: ${4:# Specifies the DNS nameservers to which the system sends NOTIFY messages}
+    tsig_server_key: ${5:# Specifies the TSIG key the system uses to authenticate the back-end DNS authoritative server that sends AXFR zone transfers to the BIG-IP system}
+    state: ${6:# When C(present), ensures the resource exists}
+    partition: ${7:# Device partition to manage resources on}
+    provider: ${8:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_dns_zone]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_dns_zone</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage DNS zones on BIG-IP</description>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Find VLANs on Cisco UCS Manager}
+  cisco.ucs.ucs_vlan_find:
+    pattern: ${2:# Regex pattern to find within the name property of the fabricVlan class}
+    fabric: ${3:# The fabric configuration of the VLAN}
+    vlanid: ${4:# The unique string identifier assigned to the VLAN}
+    hostname: ${5:# IP address or hostname of Cisco UCS Manager}
+    username: ${6:# Username for Cisco UCS Manager authentication}
+    password: ${7:# Password for Cisco UCS Manager authentication}
+    port: ${8:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    use_ssl: ${9:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    use_proxy: ${10:# If C(no), will not use the proxy as defined by system environment variable}
+    proxy: ${11:# If use_proxy is no, specfies proxy to be used for connection}
+  tags:
+    - cisco
+    - ucs
+    - ucs_vlan_find]]></content>
+  <tabTrigger>cisco.ucs.ucs_vlan_find</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Find VLANs on Cisco UCS Manager</description>
+</snippet>

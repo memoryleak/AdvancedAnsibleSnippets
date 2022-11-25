@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage instances in AWS Lightsail}
+  community.aws.lightsail:
+    state: ${2:# Indicate desired state of the target}
+    name: ${3:# Name of the instance}
+    zone: ${4:# AWS availability zone in which to launch the instance}
+    blueprint_id: ${5:# ID of the instance blueprint image}
+    bundle_id: ${6:# Bundle of specification info for the instance}
+    user_data: ${7:# Launch script that can configure the instance with additional data}
+    key_pair_name: ${8:# Name of the key pair to use with the instance}
+    wait: ${9:# Wait for the instance to be in state 'running' before returning}
+    wait_timeout: ${10:# How long before I(wait) gives up, in seconds}
+    access_key: ${11:# AWS access key ID}
+    secret_key: ${12:# AWS secret access key}
+    session_token: ${13:# AWS STS session token for use with temporary credentials}
+    profile: ${14:# A named AWS profile to use for authentication}
+    endpoint_url: ${15:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${16:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${18:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${19:# Use a C(botocore}
+    region: ${20:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - lightsail]]></content>
+  <tabTrigger>community.aws.lightsail</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage instances in AWS Lightsail</description>
+</snippet>

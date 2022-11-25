@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Interface on Ruckus ICX 7000 series switches}
+  community.network.icx_interface:
+    name: ${2:# Name of the Interface}
+    description: ${3:# Name of the description}
+    enabled: ${4:# Interface link status}
+    speed: ${5:# Interface link speed/duplex}
+    stp: ${6:# enable/disable stp for the interface}
+    tx_rate: ${7:# Transmit rate in bits per second (bps)}
+    rx_rate: ${8:# Receiver rate in bits per second (bps)}
+    neighbors: ${9:# Check the operational state of given interface C(name) for CDP/LLDP neighbor}
+    delay: ${10:# Time in seconds to wait before checking for the operational state on remote device}
+    state: ${11:# State of the Interface configuration, C(up) means present and operationally up and C(down) means present and operationally C(down)}
+    power: ${12:# Inline power on Power over Ethernet (PoE) ports}
+    aggregate: ${13:# List of Interfaces definitions}
+    check_running_config: ${14:# Check running configuration}
+  tags:
+    - community
+    - network
+    - icx_interface]]></content>
+  <tabTrigger>community.network.icx_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Interface on Ruckus ICX 7000 series switches</description>
+</snippet>

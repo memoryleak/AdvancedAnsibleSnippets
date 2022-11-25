@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Efficiently upload multiple files to S3}
+  community.aws.s3_sync:
+    mode: ${2:# sync direction}
+    file_change_strategy: ${3:# Difference determination method to allow changes-only syncing}
+    bucket: ${4:# Bucket name}
+    key_prefix: ${5:# In addition to file path, prepend s3 path with this prefix}
+    file_root: ${6:# File/directory path for synchronization}
+    permission: ${7:# Canned ACL to apply to synced files}
+    mime_map: ${8:# Dict entry from extension to MIME type}
+    include: ${9:# Shell pattern-style file matching}
+    exclude: ${10:# Shell pattern-style file matching}
+    cache_control: ${11:# Cache-Control header set on uploaded objects}
+    storage_class: ${12:# Storage class to be associated to each object added to the S3 bucket}
+    delete: ${13:# Remove remote files that exist in bucket but are not present in the file root}
+    access_key: ${14:# AWS access key ID}
+    secret_key: ${15:# AWS secret access key}
+    session_token: ${16:# AWS STS session token for use with temporary credentials}
+    profile: ${17:# A named AWS profile to use for authentication}
+    endpoint_url: ${18:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${19:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${20:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${21:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${22:# Use a C(botocore}
+    region: ${23:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - s3_sync]]></content>
+  <tabTrigger>community.aws.s3_sync</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Efficiently upload multiple files to S3</description>
+</snippet>

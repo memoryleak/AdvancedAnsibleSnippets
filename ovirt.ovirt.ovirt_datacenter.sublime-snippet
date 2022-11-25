@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage data centers in oVirt/RHV}
+  ovirt.ovirt.ovirt_datacenter:
+    id: ${2:# ID of the datacenter to manage}
+    name: ${3:# Name of the data center to manage}
+    state: ${4:# Should the data center be present or absent}
+    description: ${5:# Description of the data center}
+    comment: ${6:# Comment of the data center}
+    local: ${7:# I(True) if the data center should be local, I(False) if should be shared}
+    compatibility_version: ${8:# Compatibility version of the data center}
+    quota_mode: ${9:# Quota mode of the data center}
+    mac_pool: ${10:# MAC pool to be used by this datacenter}
+    force: ${11:# This parameter can be used only when removing a data center}
+    iscsi_bonds: ${12:# List of iscsi bonds, which should be created in datacenter}
+    wait: ${13:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${14:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${15:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${16:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${17:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${18:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_datacenter]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_datacenter</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage data centers in oVirt/RHV</description>
+</snippet>

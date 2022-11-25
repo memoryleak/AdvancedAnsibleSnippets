@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add, remove, or move an ESXi host to, from, or within vCenter}
+  community.vmware.vmware_host:
+    datacenter_name: ${2:# Name of the datacenter to add the host}
+    cluster_name: ${3:# Name of the cluster to add the host}
+    folder: ${4:# Name of the folder under which host to add}
+    add_connected: ${5:# If set to C(True), then the host should be connected as soon as it is added}
+    esxi_hostname: ${6:# ESXi hostname to manage}
+    esxi_username: ${7:# ESXi username}
+    esxi_password: ${8:# ESXi password}
+    state: ${9:# If set to C(present), add the host if host is absent}
+    esxi_ssl_thumbprint: ${10:# Specifying the hostsystem certificate's thumbprint}
+    fetch_ssl_thumbprint: ${11:# Fetch the thumbprint of the host's SSL certificate}
+    force_connection: ${12:# Force the connection if the host is already being managed by another vCenter server}
+    reconnect_disconnected: ${13:# Reconnect disconnected hosts}
+    hostname: ${14:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${15:# The username of the vSphere vCenter or ESXi server}
+    password: ${16:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${17:# Allows connection when SSL certificates are not valid}
+    port: ${18:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${19:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${20:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_host]]></content>
+  <tabTrigger>community.vmware.vmware_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add, remove, or move an ESXi host to, from, or within vCenter</description>
+</snippet>

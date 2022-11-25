@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage IAM server certificates for use on ELBs and CloudFront}
+  community.aws.iam_server_certificate:
+    name: ${2:# Name of certificate to add, update or remove}
+    new_name: ${3:# When I(state=present), this will update the name of the cert}
+    new_path: ${4:# When I(state=present), this will update the path of the cert}
+    state: ${5:# Whether to create (or update) or delete the certificate}
+    path: ${6:# When creating or updating, specify the desired path of the certificate}
+    cert_chain: ${7:# The content of the CA certificate chain in PEM encoded format}
+    cert: ${8:# The content of the certificate body in PEM encoded format}
+    key: ${9:# The content of the private key in PEM encoded format}
+    dup_ok: ${10:# By default the module will not upload a certificate that is already uploaded into AWS}
+    access_key: ${11:# AWS access key ID}
+    secret_key: ${12:# AWS secret access key}
+    session_token: ${13:# AWS STS session token for use with temporary credentials}
+    profile: ${14:# A named AWS profile to use for authentication}
+    endpoint_url: ${15:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${16:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${18:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${19:# Use a C(botocore}
+    region: ${20:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - iam_server_certificate]]></content>
+  <tabTrigger>community.aws.iam_server_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage IAM server certificates for use on ELBs and CloudFront</description>
+</snippet>

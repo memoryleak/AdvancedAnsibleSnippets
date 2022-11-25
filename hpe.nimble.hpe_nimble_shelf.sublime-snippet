@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the HPE Nimble Storage shelves}
+  hpe.nimble.hpe_nimble_shelf:
+    accept_dedupe_impact: ${2:# Accept the reduction or elimination of deduplication capability on the system as a result of activating a shelf that does not meet the necessary deduplication requirements}
+    accept_foreign: ${3:# Accept the removal of data on the shelf disks and activate foreign shelf}
+    activated: ${4:# Activated state for shelf or disk set means it is available to store date on}
+    driveset: ${5:# Driveset to activate}
+    force: ${6:# Forcibly activate shelf}
+    last_request: ${7:# Indicates this is the last request in a series of shelf add requests}
+    state: ${8:# The shelf operation}
+    shelf_serial: ${9:# Serial number of shelf}
+    host: ${10:# HPE Nimble Storage IP address}
+    password: ${11:# HPE Nimble Storage password}
+    username: ${12:# HPE Nimble Storage user name}
+  tags:
+    - hpe
+    - nimble
+    - hpe_nimble_shelf]]></content>
+  <tabTrigger>hpe.nimble.hpe_nimble_shelf</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the HPE Nimble Storage shelves</description>
+</snippet>

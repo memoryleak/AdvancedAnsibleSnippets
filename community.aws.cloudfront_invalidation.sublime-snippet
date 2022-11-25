@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:create invalidations for AWS CloudFront distributions}
+  community.aws.cloudfront_invalidation:
+    distribution_id: ${2:# The ID of the CloudFront distribution to invalidate paths for}
+    alias: ${3:# The alias of the CloudFront distribution to invalidate paths for}
+    caller_reference: ${4:# A unique reference identifier for the invalidation paths}
+    target_paths: ${5:# A list of paths on the distribution to invalidate}
+    access_key: ${6:# AWS access key ID}
+    secret_key: ${7:# AWS secret access key}
+    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    profile: ${9:# A named AWS profile to use for authentication}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${13:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
+    region: ${15:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - cloudfront_invalidation]]></content>
+  <tabTrigger>community.aws.cloudfront_invalidation</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>create invalidations for AWS CloudFront distributions</description>
+</snippet>

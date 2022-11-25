@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieve information about one or more OpenStack domains}
+  openstack.cloud.os_keystone_domain_info:
+    name: ${2:# Name or ID of the domain}
+    filters: ${3:# A dictionary of meta data to use for filtering}
+    cloud: ${4:# Named cloud or cloud config to operate against}
+    auth: ${5:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${6:# Name of the auth plugin to use}
+    region_name: ${7:# Name of the region}
+    wait: ${8:# Should ansible wait until the requested resource is complete}
+    timeout: ${9:# How long should ansible wait for the requested resource}
+    api_timeout: ${10:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${11:# Whether or not SSL API requests should be verified}
+    ca_cert: ${12:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${13:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${14:# A path to a client key to use as part of the SSL transaction}
+    interface: ${15:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${16:# Ignored}
+    sdk_log_path: ${17:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${18:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - os_keystone_domain_info]]></content>
+  <tabTrigger>openstack.cloud.os_keystone_domain_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieve information about one or more OpenStack domains</description>
+</snippet>

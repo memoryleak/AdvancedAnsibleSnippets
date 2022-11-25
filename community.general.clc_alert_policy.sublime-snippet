@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or Delete Alert Policies at CenturyLink Cloud}
+  community.general.clc_alert_policy:
+    alias: ${2:# The alias of your CLC Account}
+    name: ${3:# The name of the alert policy}
+    id: ${4:# The alert policy id}
+    alert_recipients: ${5:# A list of recipient email ids to notify the alert}
+    metric: ${6:# The metric on which to measure the condition that will trigger the alert}
+    duration: ${7:# The length of time in minutes that the condition must exceed the threshold}
+    threshold: ${8:# The threshold that will trigger the alert when the metric equals or exceeds it}
+    state: ${9:# Whether to create or delete the policy}
+  tags:
+    - community
+    - general
+    - clc_alert_policy]]></content>
+  <tabTrigger>community.general.clc_alert_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or Delete Alert Policies at CenturyLink Cloud</description>
+</snippet>

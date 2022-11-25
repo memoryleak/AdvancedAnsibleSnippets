@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage tags in oVirt/RHV}
+  ovirt.ovirt.ovirt_tag:
+    id: ${2:# ID of the tag to manage}
+    name: ${3:# Name of the tag to manage}
+    state: ${4:# Should the tag be present/absent/attached/detached}
+    description: ${5:# Description of the tag to manage}
+    parent: ${6:# Name of the parent tag}
+    vms: ${7:# List of the VMs names, which should have assigned this tag}
+    hosts: ${8:# List of the hosts names, which should have assigned this tag}
+    wait: ${9:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${10:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${11:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${12:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${13:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${14:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_tag]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_tag</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage tags in oVirt/RHV</description>
+</snippet>

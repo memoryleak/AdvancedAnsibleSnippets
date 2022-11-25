@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage services on OpenWrt}
+  community.general.openwrt_init:
+    name: ${2:# Name of the service}
+    state: ${3:# C(started)/C(stopped) are idempotent actions that will not run commands unless necessary}
+    enabled: ${4:# Whether the service should start on boot}
+    pattern: ${5:# If the service does not respond to the 'running' command, name a substring to look for as would be found in the output of the I(ps) command as a stand-in for a 'running' result}
+  tags:
+    - community
+    - general
+    - openwrt_init]]></content>
+  <tabTrigger>community.general.openwrt_init</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage services on OpenWrt</description>
+</snippet>

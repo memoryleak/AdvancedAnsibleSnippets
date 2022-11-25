@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage datacenter quotas in oVirt/RHV}
+  ovirt.ovirt.ovirt_quota:
+    id: ${2:# ID of the quota to manage}
+    name: ${3:# Name of the quota to manage}
+    state: ${4:# Should the quota be present/absent}
+    data_center: ${5:# Name of the datacenter where quota should be managed}
+    description: ${6:# Description of the quota to manage}
+    cluster_threshold: ${7:# Cluster threshold(soft limit) defined in percentage (0-100)}
+    cluster_grace: ${8:# Cluster grace(hard limit) defined in percentage (1-100)}
+    storage_threshold: ${9:# Storage threshold(soft limit) defined in percentage (0-100)}
+    storage_grace: ${10:# Storage grace(hard limit) defined in percentage (1-100)}
+    clusters: ${11:# List of dictionary of cluster limits, which is valid to specific cluster}
+    storages: ${12:# List of dictionary of storage limits, which is valid to specific storage}
+    wait: ${13:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${14:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${15:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${16:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${17:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${18:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_quota]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_quota</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage datacenter quotas in oVirt/RHV</description>
+</snippet>

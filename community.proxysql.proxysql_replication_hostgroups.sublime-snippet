@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages replication hostgroups using the proxysql admin interface}
+  community.proxysql.proxysql_replication_hostgroups:
+    writer_hostgroup: ${2:# Id of the writer hostgroup}
+    reader_hostgroup: ${3:# Id of the reader hostgroup}
+    comment: ${4:# Text field that can be used for any purposes defined by the user}
+    state: ${5:# When C(present) - adds the replication hostgroup, when C(absent) - removes the replication hostgroup}
+    check_type: ${6:# Which check type to use when detecting that the node is a standby}
+    save_to_disk: ${7:# Save config to sqlite db on disk to persist the configuration}
+    load_to_runtime: ${8:# Dynamically load config to runtime memory}
+    login_user: ${9:# The username used to authenticate to ProxySQL admin interface}
+    login_password: ${10:# The password used to authenticate to ProxySQL admin interface}
+    login_host: ${11:# The host used to connect to ProxySQL admin interface}
+    login_unix_socket: ${12:# The socket used to connect to ProxySQL admin interface}
+    login_port: ${13:# The port used to connect to ProxySQL admin interface}
+    config_file: ${14:# Specify a config file from which I(login_user) and I(login_password) are to be read}
+  tags:
+    - community
+    - proxysql
+    - proxysql_replication_hostgroups]]></content>
+  <tabTrigger>community.proxysql.proxysql_replication_hostgroups</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages replication hostgroups using the proxysql admin interface</description>
+</snippet>

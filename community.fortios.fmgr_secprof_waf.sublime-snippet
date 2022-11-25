@@ -1,0 +1,136 @@
+<snippet>
+  <content><![CDATA[- name: ${1:FortiManager web application firewall security profile}
+  community.fortios.fmgr_secprof_waf:
+    adom: ${2:# The ADOM the configuration should belong to}
+    mode: ${3:# Sets one of three modes for managing the object}
+    name: ${4:# WAF Profile name}
+    external: ${5:# Disable/Enable external HTTP Inspection}
+    extended_log: ${6:# Enable/disable extended logging}
+    comment: ${7:# Comment}
+    address_list: ${8:# EXPERTS ONLY! KNOWLEDGE OF FMGR JSON API IS REQUIRED!}
+    address_list_blocked_address: ${9:# Blocked address}
+    address_list_blocked_log: ${10:# Enable/disable logging on blocked addresses}
+    address_list_severity: ${11:# Severity}
+    address_list_status: ${12:# Status}
+    address_list_trusted_address: ${13:# Trusted address}
+    constraint: ${14:# EXPERTS ONLY! KNOWLEDGE OF FMGR JSON API IS REQUIRED!}
+    constraint_content_length_action: ${15:# Action}
+    constraint_content_length_length: ${16:# Length of HTTP content in bytes (0 to 2147483647)}
+    constraint_content_length_log: ${17:# Enable/disable logging}
+    constraint_content_length_severity: ${18:# Severity}
+    constraint_content_length_status: ${19:# Enable/disable the constraint}
+    constraint_exception_address: ${20:# Host address}
+    constraint_exception_content_length: ${21:# HTTP content length in request}
+    constraint_exception_header_length: ${22:# HTTP header length in request}
+    constraint_exception_hostname: ${23:# Enable/disable hostname check}
+    constraint_exception_line_length: ${24:# HTTP line length in request}
+    constraint_exception_malformed: ${25:# Enable/disable malformed HTTP request check}
+    constraint_exception_max_cookie: ${26:# Maximum number of cookies in HTTP request}
+    constraint_exception_max_header_line: ${27:# Maximum number of HTTP header line}
+    constraint_exception_max_range_segment: ${28:# Maximum number of range segments in HTTP range line}
+    constraint_exception_max_url_param: ${29:# Maximum number of parameters in URL}
+    constraint_exception_method: ${30:# Enable/disable HTTP method check}
+    constraint_exception_param_length: ${31:# Maximum length of parameter in URL, HTTP POST request or HTTP body}
+    constraint_exception_pattern: ${32:# URL pattern}
+    constraint_exception_regex: ${33:# Enable/disable regular expression based pattern match}
+    constraint_exception_url_param_length: ${34:# Maximum length of parameter in URL}
+    constraint_exception_version: ${35:# Enable/disable HTTP version check}
+    constraint_header_length_action: ${36:# Action}
+    constraint_header_length_length: ${37:# Length of HTTP header in bytes (0 to 2147483647)}
+    constraint_header_length_log: ${38:# Enable/disable logging}
+    constraint_header_length_severity: ${39:# Severity}
+    constraint_header_length_status: ${40:# Enable/disable the constraint}
+    constraint_hostname_action: ${41:# Action for a hostname constraint}
+    constraint_hostname_log: ${42:# Enable/disable logging}
+    constraint_hostname_severity: ${43:# Severity}
+    constraint_hostname_status: ${44:# Enable/disable the constraint}
+    constraint_line_length_action: ${45:# Action}
+    constraint_line_length_length: ${46:# Length of HTTP line in bytes (0 to 2147483647)}
+    constraint_line_length_log: ${47:# Enable/disable logging}
+    constraint_line_length_severity: ${48:# Severity}
+    constraint_line_length_status: ${49:# Enable/disable the constraint}
+    constraint_malformed_action: ${50:# Action}
+    constraint_malformed_log: ${51:# Enable/disable logging}
+    constraint_malformed_severity: ${52:# Severity}
+    constraint_malformed_status: ${53:# Enable/disable the constraint}
+    constraint_max_cookie_action: ${54:# Action}
+    constraint_max_cookie_log: ${55:# Enable/disable logging}
+    constraint_max_cookie_max_cookie: ${56:# Maximum number of cookies in HTTP request (0 to 2147483647)}
+    constraint_max_cookie_severity: ${57:# Severity}
+    constraint_max_cookie_status: ${58:# Enable/disable the constraint}
+    constraint_max_header_line_action: ${59:# Action}
+    constraint_max_header_line_log: ${60:# Enable/disable logging}
+    constraint_max_header_line_max_header_line: ${61:# Maximum number HTTP header lines (0 to 2147483647)}
+    constraint_max_header_line_severity: ${62:# Severity}
+    constraint_max_header_line_status: ${63:# Enable/disable the constraint}
+    constraint_max_range_segment_action: ${64:# Action}
+    constraint_max_range_segment_log: ${65:# Enable/disable logging}
+    constraint_max_range_segment_max_range_segment: ${66:# Maximum number of range segments in HTTP range line (0 to 2147483647)}
+    constraint_max_range_segment_severity: ${67:# Severity}
+    constraint_max_range_segment_status: ${68:# Enable/disable the constraint}
+    constraint_max_url_param_action: ${69:# Action}
+    constraint_max_url_param_log: ${70:# Enable/disable logging}
+    constraint_max_url_param_max_url_param: ${71:# Maximum number of parameters in URL (0 to 2147483647)}
+    constraint_max_url_param_severity: ${72:# Severity}
+    constraint_max_url_param_status: ${73:# Enable/disable the constraint}
+    constraint_method_action: ${74:# Action}
+    constraint_method_log: ${75:# Enable/disable logging}
+    constraint_method_severity: ${76:# Severity}
+    constraint_method_status: ${77:# Enable/disable the constraint}
+    constraint_param_length_action: ${78:# Action}
+    constraint_param_length_length: ${79:# Maximum length of parameter in URL, HTTP POST request or HTTP body in bytes (0 to 2147483647)}
+    constraint_param_length_log: ${80:# Enable/disable logging}
+    constraint_param_length_severity: ${81:# Severity}
+    constraint_param_length_status: ${82:# Enable/disable the constraint}
+    constraint_url_param_length_action: ${83:# Action}
+    constraint_url_param_length_length: ${84:# Maximum length of URL parameter in bytes (0 to 2147483647)}
+    constraint_url_param_length_log: ${85:# Enable/disable logging}
+    constraint_url_param_length_severity: ${86:# Severity}
+    constraint_url_param_length_status: ${87:# Enable/disable the constraint}
+    constraint_version_action: ${88:# Action}
+    constraint_version_log: ${89:# Enable/disable logging}
+    constraint_version_severity: ${90:# Severity}
+    constraint_version_status: ${91:# Enable/disable the constraint}
+    method: ${92:# EXPERTS ONLY! KNOWLEDGE OF FMGR JSON API IS REQUIRED!}
+    method_default_allowed_methods: ${93:# Methods}
+    method_log: ${94:# Enable/disable logging}
+    method_severity: ${95:# Severity}
+    method_status: ${96:# Status}
+    method_method_policy_address: ${97:# Host address}
+    method_method_policy_allowed_methods: ${98:# Allowed Methods}
+    method_method_policy_pattern: ${99:# URL pattern}
+    method_method_policy_regex: ${100:# Enable/disable regular expression based pattern match}
+    signature: ${101:# EXPERTS ONLY! KNOWLEDGE OF FMGR JSON API IS REQUIRED!}
+    signature_credit_card_detection_threshold: ${102:# The minimum number of Credit cards to detect violation}
+    signature_disabled_signature: ${103:# Disabled signatures}
+    signature_disabled_sub_class: ${104:# Disabled signature subclasses}
+    signature_custom_signature_action: ${105:# Action}
+    signature_custom_signature_case_sensitivity: ${106:# Case sensitivity in pattern}
+    signature_custom_signature_direction: ${107:# Traffic direction}
+    signature_custom_signature_log: ${108:# Enable/disable logging}
+    signature_custom_signature_name: ${109:# Signature name}
+    signature_custom_signature_pattern: ${110:# Match pattern}
+    signature_custom_signature_severity: ${111:# Severity}
+    signature_custom_signature_status: ${112:# Status}
+    signature_custom_signature_target: ${113:# Match HTTP target}
+    signature_main_class_action: ${114:# Action}
+    signature_main_class_log: ${115:# Enable/disable logging}
+    signature_main_class_severity: ${116:# Severity}
+    signature_main_class_status: ${117:# Status}
+    url_access: ${118:# EXPERTS ONLY! KNOWLEDGE OF FMGR JSON API IS REQUIRED!}
+    url_access_action: ${119:# Action}
+    url_access_address: ${120:# Host address}
+    url_access_log: ${121:# Enable/disable logging}
+    url_access_severity: ${122:# Severity}
+    url_access_access_pattern_negate: ${123:# Enable/disable match negation}
+    url_access_access_pattern_pattern: ${124:# URL pattern}
+    url_access_access_pattern_regex: ${125:# Enable/disable regular expression based pattern match}
+    url_access_access_pattern_srcaddr: ${126:# Source address}
+  tags:
+    - community
+    - fortios
+    - fmgr_secprof_waf]]></content>
+  <tabTrigger>community.fortios.fmgr_secprof_waf</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>FortiManager web application firewall security profile</description>
+</snippet>

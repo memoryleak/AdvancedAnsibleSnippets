@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manipulate Rackspace Cloud Files Containers}
+  community.general.rax_files:
+    clear_meta: ${2:# Optionally clear existing metadata when applying metadata to existing containers}
+    container: ${3:# The container to use for container or metadata operations}
+    meta: ${4:# A hash of items to set as metadata values on a container}
+    private: ${5:# Used to set a container as private, removing it from the CDN}
+    public: ${6:# Used to set a container as public, available via the Cloud Files CDN}
+    region: ${7:# Region to create an instance in}
+    state: ${8:# Indicate desired state of the resource}
+    ttl: ${9:# In seconds, set a container-wide TTL for all objects cached on CDN edge nodes}
+    type: ${10:# Type of object to do work on, i}
+    web_error: ${11:# Sets an object to be presented as the HTTP error page when accessed by the CDN URL}
+    web_index: ${12:# Sets an object to be presented as the HTTP index page when accessed by the CDN URL}
+    api_key: ${13:# Rackspace API key, overrides I(credentials)}
+    credentials: ${14:# File to find the Rackspace credentials in}
+    env: ${15:# Environment as configured in I(~/}
+    username: ${16:# Rackspace username, overrides I(credentials)}
+    validate_certs: ${17:# Whether or not to require SSL validation of API endpoints}
+    auth_endpoint: ${18:# The URI of the authentication service}
+    identity_type: ${19:# Authentication mechanism to use, such as rackspace or keystone}
+    tenant_id: ${20:# The tenant ID used for authentication}
+    tenant_name: ${21:# The tenant name used for authentication}
+  tags:
+    - community
+    - general
+    - rax_files]]></content>
+  <tabTrigger>community.general.rax_files</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manipulate Rackspace Cloud Files Containers</description>
+</snippet>

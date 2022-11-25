@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures MAC address pools on Cisco UCS Manager}
+  cisco.ucs.ucs_mac_pool:
+    state: ${2:# If C(present), will verify MAC pool is present and will create if needed}
+    name: ${3:# The name of the MAC pool}
+    description: ${4:# A description of the MAC pool}
+    order: ${5:# The Assignment Order field}
+    first_addr: ${6:# The first MAC address in the block of addresses}
+    last_addr: ${7:# The last MAC address in the block of addresses}
+    org_dn: ${8:# The distinguished name (dn) of the organization where the resource is assigned}
+    hostname: ${9:# IP address or hostname of Cisco UCS Manager}
+    username: ${10:# Username for Cisco UCS Manager authentication}
+    password: ${11:# Password for Cisco UCS Manager authentication}
+    port: ${12:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    use_ssl: ${13:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    use_proxy: ${14:# If C(no), will not use the proxy as defined by system environment variable}
+    proxy: ${15:# If use_proxy is no, specfies proxy to be used for connection}
+  tags:
+    - cisco
+    - ucs
+    - ucs_mac_pool]]></content>
+  <tabTrigger>cisco.ucs.ucs_mac_pool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures MAC address pools on Cisco UCS Manager</description>
+</snippet>

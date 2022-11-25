@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages virtual machines supported by libvirt}
+  community.libvirt.virt:
+    uri: ${2:# Libvirt connection uri}
+    xml: ${3:# XML document used with the define command}
+    name: ${4:# name of the guest VM being managed}
+    autostart: ${5:# Start VM at host startup}
+    state: ${6:# Note that there may be some lag for state requests like C(shutdown) since these refer only to VM states}
+    command: ${7:# In addition to state management, various non-idempotent commands are available}
+  tags:
+    - community
+    - libvirt
+    - virt]]></content>
+  <tabTrigger>community.libvirt.virt</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages virtual machines supported by libvirt</description>
+</snippet>

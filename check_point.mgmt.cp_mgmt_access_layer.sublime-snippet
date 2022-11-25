@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages access-layer objects on Check Point over Web Services API}
+  check_point.mgmt.cp_mgmt_access_layer:
+    name: ${2:# Object name}
+    add_default_rule: ${3:# Indicates whether to include a cleanup rule in the new layer}
+    applications_and_url_filtering: ${4:# Whether to enable Applications & URL Filtering blade on the layer}
+    content_awareness: ${5:# Whether to enable Content Awareness blade on the layer}
+    detect_using_x_forward_for: ${6:# Whether to use X-Forward-For HTTP header, which is added by the  proxy server to keep track of the original source IP}
+    firewall: ${7:# Whether to enable Firewall blade on the layer}
+    implicit_cleanup_action: ${8:# The default 'catch-all' action for traffic that does not match any explicit or implied rules in the layer}
+    mobile_access: ${9:# Whether to enable Mobile Access blade on the layer}
+    shared: ${10:# Whether this layer is shared}
+    tags: ${11:# Collection of tag identifiers}
+    color: ${12:# Color of the object}
+    comments: ${13:# Comments string}
+    details_level: ${14:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_warnings: ${15:# Apply changes ignoring warnings}
+    ignore_errors: ${16:# Apply changes ignoring errors}
+    state: ${17:# State of the access rule (present or absent)}
+    auto_publish_session: ${18:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${19:# Wait for the task to end}
+    wait_for_task_timeout: ${20:# How many minutes to wait until throwing a timeout error}
+    version: ${21:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_access_layer]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_access_layer</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages access-layer objects on Check Point over Web Services API</description>
+</snippet>

@@ -1,0 +1,44 @@
+<snippet>
+  <content><![CDATA[- name: ${1:(deprecated, removed after 2023-02-24) Manages BGP Address-family configuration}
+  cisco.nxos.nxos_bgp_af:
+    asn: ${2:# BGP autonomous system number}
+    vrf: ${3:# Name of the VRF}
+    afi: ${4:# Address Family Identifier}
+    safi: ${5:# Sub Address Family Identifier}
+    additional_paths_install: ${6:# Install a backup path into the forwarding table and provide prefix independent convergence (PIC) in case of a PE-CE link failure}
+    additional_paths_receive: ${7:# Enables the receive capability of additional paths for all of the neighbors under this address family for which the capability has not been disabled}
+    additional_paths_selection: ${8:# Configures the capability of selecting additional paths for a prefix}
+    additional_paths_send: ${9:# Enables the send capability of additional paths for all of the neighbors under this address family for which the capability has not been disabled}
+    advertise_l2vpn_evpn: ${10:# Advertise evpn routes}
+    client_to_client: ${11:# Configure client-to-client route reflection}
+    dampen_igp_metric: ${12:# Specify dampen value for IGP metric-related changes, in seconds}
+    dampening_state: ${13:# Enable/disable route-flap dampening}
+    dampening_half_time: ${14:# Specify decay half-life in minutes for route-flap dampening}
+    dampening_max_suppress_time: ${15:# Specify max suppress time for route-flap dampening stable route}
+    dampening_reuse_time: ${16:# Specify route reuse time for route-flap dampening}
+    dampening_routemap: ${17:# Specify route-map for route-flap dampening}
+    dampening_suppress_time: ${18:# Specify route suppress time for route-flap dampening}
+    default_information_originate: ${19:# Default information originate}
+    default_metric: ${20:# Sets default metrics for routes redistributed into BGP}
+    distance_ebgp: ${21:# Sets the administrative distance for eBGP routes}
+    distance_ibgp: ${22:# Sets the administrative distance for iBGP routes}
+    distance_local: ${23:# Sets the administrative distance for local BGP routes}
+    inject_map: ${24:# An array of route-map names which will specify prefixes to inject}
+    maximum_paths: ${25:# Configures the maximum number of equal-cost paths for load sharing}
+    maximum_paths_ibgp: ${26:# Configures the maximum number of ibgp equal-cost paths for load sharing}
+    networks: ${27:# Networks to configure}
+    next_hop_route_map: ${28:# Configure a route-map for valid nexthops}
+    redistribute: ${29:# A list of redistribute directives}
+    suppress_inactive: ${30:# Advertises only active routes to peers}
+    table_map: ${31:# Apply table-map to filter routes downloaded into URIB}
+    table_map_filter: ${32:# Filters routes rejected by the route-map and does not download them to the RIB}
+    state: ${33:# Determines whether the config should be present or not on the device}
+    retain_route_target: ${34:# Retains all of the routes or the routes which are part of configured route-map}
+  tags:
+    - cisco
+    - nxos
+    - nxos_bgp_af]]></content>
+  <tabTrigger>cisco.nxos.nxos_bgp_af</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>(deprecated, removed after 2023-02-24) Manages BGP Address-family configuration</description>
+</snippet>

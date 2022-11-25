@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Use Azure KeyVault keys}
+  azure.azcollection.azure_rm_keyvaultkey:
+    keyvault_uri: ${2:# URI of the keyvault endpoint}
+    key_name: ${3:# Name of the keyvault key}
+    key_type: ${4:# The type of key to create}
+    key_size: ${5:# The key size in bits}
+    key_attributes: ${6:# The attributes of a key managed by the key vault service}
+    curve: ${7:# Elliptic curve name}
+    byok_file: ${8:# BYOK file}
+    pem_file: ${9:# PEM file}
+    pem_password: ${10:# PEM password}
+    state: ${11:# Assert the state of the key}
+    ad_user: ${12:# Active Directory username}
+    password: ${13:# Active Directory user password}
+    profile: ${14:# Security profile found in ~/}
+    subscription_id: ${15:# Your Azure subscription Id}
+    client_id: ${16:# Azure client ID}
+    secret: ${17:# Azure client secret}
+    tenant: ${18:# Azure tenant ID}
+    cloud_environment: ${19:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${20:# Azure AD authority url}
+    cert_validation_mode: ${21:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${22:# Controls the source of the credentials to use for authentication}
+    api_profile: ${23:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${24:# Parent argument}
+    log_mode: ${25:# Parent argument}
+    x509_certificate_path: ${26:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${27:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${28:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${29:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_keyvaultkey]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_keyvaultkey</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Use Azure KeyVault keys</description>
+</snippet>

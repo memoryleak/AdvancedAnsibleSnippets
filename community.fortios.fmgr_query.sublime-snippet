@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Query FortiManager data objects for use in Ansible workflows}
+  community.fortios.fmgr_query:
+    adom: ${2:# The ADOM the configuration should belong to}
+    object: ${3:# The data object we wish to query (device, package, rule, etc)}
+    custom_endpoint: ${4:# ADVANCED USERS ONLY! REQUIRES KNOWLEDGE OF FMGR JSON API!}
+    custom_dict: ${5:# ADVANCED USERS ONLY! REQUIRES KNOWLEDGE OF FMGR JSON API!}
+    device_ip: ${6:# The IP of the device you want to query}
+    device_unique_name: ${7:# The desired 'friendly' name of the device you want to query}
+    device_serial: ${8:# The serial number of the device you want to query}
+    task_id: ${9:# The ID of the task you wish to query status on}
+    nodes: ${10:# A LIST of firewalls in the cluster you want to verify i}
+  tags:
+    - community
+    - fortios
+    - fmgr_query]]></content>
+  <tabTrigger>community.fortios.fmgr_query</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Query FortiManager data objects for use in Ansible workflows</description>
+</snippet>

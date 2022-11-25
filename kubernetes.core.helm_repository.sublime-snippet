@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Helm repositories}
+  kubernetes.core.helm_repository:
+    binary_path: ${2:# The path of a helm binary to use}
+    repo_name: ${3:# Chart repository name}
+    repo_url: ${4:# Chart repository url}
+    repo_username: ${5:# Chart repository username for repository with basic auth}
+    repo_password: ${6:# Chart repository password for repository with basic auth}
+    repo_state: ${7:# Desired state of repository}
+    pass_credentials: ${8:# Pass credentials to all domains}
+    host: ${9:# Provide a URL for accessing the API}
+    api_key: ${10:# Token used to authenticate with the API}
+    validate_certs: ${11:# Whether or not to verify the API server's SSL certificates}
+    ca_cert: ${12:# Path to a CA certificate used to authenticate with the API}
+  tags:
+    - kubernetes
+    - core
+    - helm_repository]]></content>
+  <tabTrigger>kubernetes.core.helm_repository</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Helm repositories</description>
+</snippet>

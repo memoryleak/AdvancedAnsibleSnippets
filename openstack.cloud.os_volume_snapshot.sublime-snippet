@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/Delete Cinder Volume Snapshots}
+  openstack.cloud.os_volume_snapshot:
+    display_name: ${2:# Name of the snapshot}
+    display_description: ${3:# String describing the snapshot}
+    volume: ${4:# The volume name or id to create/delete the snapshot}
+    force: ${5:# Allows or disallows snapshot of a volume to be created when the volume is attached to an instance}
+    state: ${6:# Should the resource be present or absent}
+    cloud: ${7:# Named cloud or cloud config to operate against}
+    auth: ${8:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${9:# Name of the auth plugin to use}
+    region_name: ${10:# Name of the region}
+    wait: ${11:# Should ansible wait until the requested resource is complete}
+    timeout: ${12:# How long should ansible wait for the requested resource}
+    api_timeout: ${13:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${14:# Whether or not SSL API requests should be verified}
+    ca_cert: ${15:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${16:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${17:# A path to a client key to use as part of the SSL transaction}
+    interface: ${18:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${19:# Ignored}
+    sdk_log_path: ${20:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${21:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - os_volume_snapshot]]></content>
+  <tabTrigger>openstack.cloud.os_volume_snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/Delete Cinder Volume Snapshots</description>
+</snippet>

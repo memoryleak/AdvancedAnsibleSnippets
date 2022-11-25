@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:create, delete and modify AWS Network Firewall rule groups}
+  community.aws.networkfirewall_rule_group:
+    arn: ${2:# The ARN of the Network Firewall rule group}
+    name: ${3:# The name of the Network Firewall rule group}
+    rule_type: ${4:# Indicates whether the rule group is stateless or stateful}
+    state: ${5:# Create or remove the Network Firewall rule group}
+    capacity: ${6:# The maximum operating resources that this rule group can use}
+    rule_order: ${7:# Indicates how to manage the order of the rule evaluation for the rule group}
+    description: ${8:# A description of the AWS Network Firewall rule group}
+    ip_variables: ${9:# A dictionary mapping variable names to a list of IP addresses and address ranges, in CIDR notation}
+    purge_ip_variables: ${10:# Whether to purge variable names not mentioned in the I(ip_variables) dictionary}
+    port_variables: ${11:# A dictionary mapping variable names to a list of ports}
+    purge_port_variables: ${12:# Whether to purge variable names not mentioned in the I(port_variables) dictionary}
+    rule_strings: ${13:# Rules in Suricata format}
+    domain_list: ${14:# Inspection criteria for a domain list rule group}
+    rule_list: ${15:# Inspection criteria to be used for a 5-tuple based rule group}
+    wait: ${16:# Whether to wait for the firewall rule group to reach the C(ACTIVE) or C(DELETED) state before the module returns}
+    wait_timeout: ${17:# Maximum time, in seconds, to wait for the firewall rule group to reach the expected state}
+    access_key: ${18:# AWS access key ID}
+    secret_key: ${19:# AWS secret access key}
+    session_token: ${20:# AWS STS session token for use with temporary credentials}
+    profile: ${21:# A named AWS profile to use for authentication}
+    endpoint_url: ${22:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${23:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${24:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${25:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${26:# Use a C(botocore}
+    region: ${27:# The AWS region to use}
+    tags: ${28:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${29:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - community
+    - aws
+    - networkfirewall_rule_group]]></content>
+  <tabTrigger>community.aws.networkfirewall_rule_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>create, delete and modify AWS Network Firewall rule groups</description>
+</snippet>

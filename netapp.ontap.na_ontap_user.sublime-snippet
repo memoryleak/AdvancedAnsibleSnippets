@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP user configuration and management}
+  netapp.ontap.na_ontap_user:
+    state: ${2:# Whether the specified user should exist or not}
+    name: ${3:# The name of the user to manage}
+    application_strs: ${4:# List of applications to grant access to}
+    application_dicts: ${5:# List of applications to grant access to}
+    authentication_method: ${6:# Authentication method for the application}
+    set_password: ${7:# Password for the user account}
+    role_name: ${8:# The name of the role}
+    lock_user: ${9:# Whether the specified user account is locked}
+    vserver: ${10:# The name of the vserver to use}
+    authentication_protocol: ${11:# Authentication protocol for the snmp user}
+    authentication_password: ${12:# Password for the authentication protocol}
+    engine_id: ${13:# Authoritative entity's EngineID for the SNMPv3 user}
+    privacy_protocol: ${14:# Privacy protocol for the snmp user}
+    privacy_password: ${15:# Password for the privacy protocol}
+    remote_switch_ipaddress: ${16:# This optionally specifies the IP Address of the remote switch}
+    replace_existing_apps_and_methods: ${17:# If the user already exists, the current applications and authentications methods are replaced when state=present}
+    hostname: ${18:# The hostname or IP address of the ONTAP instance}
+    username: ${19:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${20:# Password for the specified user}
+    cert_filepath: ${21:# path to SSL client cert file (}
+    key_filepath: ${22:# path to SSL client key file}
+    https: ${23:# Enable and disable https}
+    validate_certs: ${24:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${25:# Override the default port (80 or 443) with this port}
+    ontapi: ${26:# The ontap api version to use}
+    use_rest: ${27:# Whether to use REST or ZAPI}
+    feature_flags: ${28:# Enable or disable a new feature}
+    force_ontap_version: ${29:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_user]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP user configuration and management</description>
+</snippet>

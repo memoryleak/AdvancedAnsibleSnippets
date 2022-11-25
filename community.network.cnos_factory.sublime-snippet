@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Reset the switch startup configuration to default (factory) on devices running Lenovo CNOS}
+  community.network.cnos_factory:
+    outputfile: ${2:# This specifies the file path where the output of each command execution is saved}
+    host: ${3:# This is the variable used to search the hosts file at /etc/ansible/hosts and identify the IP address of the device on which the template is going to be applied}
+    username: ${4:# Configures the username used to authenticate the connection to the remote device}
+    password: ${5:# Configures the password used to authenticate the connection to the remote device}
+    enablePassword: ${6:# Configures the password used to enter Global Configuration command mode on the switch}
+    deviceType: ${7:# This specifies the type of device where the method is executed}
+  tags:
+    - community
+    - network
+    - cnos_factory]]></content>
+  <tabTrigger>community.network.cnos_factory</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Reset the switch startup configuration to default (factory) on devices running Lenovo CNOS</description>
+</snippet>

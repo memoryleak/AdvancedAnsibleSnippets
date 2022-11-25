@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds or removes a user from a MongoDB database}
+  community.mongodb.mongodb_user:
+    replica_set: ${2:# Replica set to connect to (automatically connects to primary for writes)}
+    database: ${3:# The name of the database to add/remove the user from}
+    name: ${4:# The name of the user to add or remove}
+    password: ${5:# The password to use for the user}
+    roles: ${6:# The database user roles valid values could either be one or more of the following strings: 'read', 'readWrite', 'dbAdmin', 'userAdmin', 'clusterAdmin', 'readAnyDatabase', 'readWriteAnyDatabase', 'userAdminAnyDatabase', 'dbAdminAnyDatabase'
+}
+    state: ${7:# The database user state}
+    update_password: ${8:# C(always) will always update passwords and cause the module to return changed}
+    create_for_localhost_exception: ${9:# This is parmeter is only useful for handling special treatment around the localhost exception}
+    login_user: ${10:# The MongoDB user to login with}
+    login_password: ${11:# The password used to authenticate with}
+    login_database: ${12:# The database where login credentials are stored}
+    login_host: ${13:# The host running MongoDB instance to login to}
+    login_port: ${14:# The MongoDB server port to login to}
+    strict_compatibility: ${15:# Enforce strict requirements for pymongo and MongoDB software versions}
+    ssl: ${16:# Whether to use an SSL connection when connecting to the database}
+    ssl_cert_reqs: ${17:# Specifies whether a certificate is required from the other side of the connection, and whether it will be validated if provided}
+    ssl_ca_certs: ${18:# The ssl_ca_certs option takes a path to a CA file}
+    ssl_crlfile: ${19:# The ssl_crlfile option takes a path to a CRL file}
+    ssl_certfile: ${20:# Present a client certificate using the ssl_certfile option}
+    ssl_keyfile: ${21:# Private key for the client certificate}
+    ssl_pem_passphrase: ${22:# Passphrase to decrypt encrypted private keys}
+    auth_mechanism: ${23:# Authentication type}
+    connection_options: ${24:# Additional connection options}
+  tags:
+    - community
+    - mongodb
+    - mongodb_user]]></content>
+  <tabTrigger>community.mongodb.mongodb_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds or removes a user from a MongoDB database</description>
+</snippet>

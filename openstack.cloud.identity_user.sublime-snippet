@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage OpenStack Identity Users}
+  openstack.cloud.identity_user:
+    name: ${2:# Username for the user}
+    password: ${3:# Password for the user}
+    update_password: ${4:# C(always) will attempt to update password}
+    email: ${5:# Email address for the user}
+    description: ${6:# Description about the user}
+    default_project: ${7:# Project name or ID that the user should be associated with by default}
+    domain: ${8:# Domain to create the user in if the cloud supports domains}
+    enabled: ${9:# Is the user enabled}
+    state: ${10:# Should the resource be present or absent}
+    cloud: ${11:# Named cloud or cloud config to operate against}
+    auth: ${12:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${13:# Name of the auth plugin to use}
+    region_name: ${14:# Name of the region}
+    wait: ${15:# Should ansible wait until the requested resource is complete}
+    timeout: ${16:# How long should ansible wait for the requested resource}
+    api_timeout: ${17:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${18:# Whether or not SSL API requests should be verified}
+    ca_cert: ${19:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${20:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${21:# A path to a client key to use as part of the SSL transaction}
+    interface: ${22:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${23:# Ignored}
+    sdk_log_path: ${24:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${25:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - identity_user]]></content>
+  <tabTrigger>openstack.cloud.identity_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage OpenStack Identity Users</description>
+</snippet>

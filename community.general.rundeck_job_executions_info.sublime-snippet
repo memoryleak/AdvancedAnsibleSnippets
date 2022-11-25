@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Query executions for a Rundeck job}
+  community.general.rundeck_job_executions_info:
+    job_id: ${2:# The job unique ID}
+    status: ${3:# The job status to filter}
+    max: ${4:# Max results to return}
+    offset: ${5:# The start point to return the results}
+    url: ${6:# Rundeck instance URL}
+    api_version: ${7:# Rundeck API version to be used}
+    api_token: ${8:# Rundeck User API Token}
+    force: ${9:# If C(yes) do not get a cached copy}
+    http_agent: ${10:# Header to identify as, generally appears in web server logs}
+    use_proxy: ${11:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${12:# If C(no), SSL certificates will not be validated}
+    url_username: ${13:# The username for use in HTTP basic authentication}
+    url_password: ${14:# The password for use in HTTP basic authentication}
+    force_basic_auth: ${15:# Credentials specified with I(url_username) and I(url_password) should be passed in HTTP Header}
+    client_cert: ${16:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${17:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    use_gssapi: ${18:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+  tags:
+    - community
+    - general
+    - rundeck_job_executions_info]]></content>
+  <tabTrigger>community.general.rundeck_job_executions_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Query executions for a Rundeck job</description>
+</snippet>

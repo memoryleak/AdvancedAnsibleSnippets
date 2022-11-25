@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage main settings of a Remote Desktop Gateway server}
+  community.windows.win_rds_settings:
+    certificate_hash: ${2:# Certificate hash (thumbprint) for the Remote Desktop Gateway server}
+    max_connections: ${3:# The maximum number of connections allowed}
+    ssl_bridging: ${4:# Specifies whether to use SSL Bridging}
+    enable_only_messaging_capable_clients: ${5:# If enabled, only clients that support logon messages and administrator messages can connect}
+  tags:
+    - community
+    - windows
+    - win_rds_settings]]></content>
+  <tabTrigger>community.windows.win_rds_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage main settings of a Remote Desktop Gateway server</description>
+</snippet>

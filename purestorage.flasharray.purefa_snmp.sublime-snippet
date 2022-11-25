@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure FlashArray SNMP Managers}
+  purestorage.flasharray.purefa_snmp:
+    name: ${2:# Name of SNMP Manager}
+    state: ${3:# Create or delete SNMP manager}
+    auth_passphrase: ${4:# SNMPv3 only}
+    auth_protocol: ${5:# SNMP v3 only}
+    community: ${6:# SNMP v2c only}
+    host: ${7:# IPv4 or IPv6 address or FQDN to send trap messages to}
+    user: ${8:# SNMP v3 only}
+    version: ${9:# Version of SNMP protocol to use for the manager}
+    notification: ${10:# Action to perform on event}
+    privacy_passphrase: ${11:# SNMPv3 only}
+    privacy_protocol: ${12:# SNMP v3 only}
+    fa_url: ${13:# FlashArray management IPv4 address or Hostname}
+    api_token: ${14:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_snmp]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_snmp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure FlashArray SNMP Managers</description>
+</snippet>

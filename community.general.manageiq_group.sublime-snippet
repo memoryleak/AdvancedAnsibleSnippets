@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Management of groups in ManageIQ}
+  community.general.manageiq_group:
+    state: ${2:# absent - group should not exist, present - group should be}
+    description: ${3:# The group description}
+    role_id: ${4:# The the group role id}
+    role: ${5:# The the group role name}
+    tenant_id: ${6:# The tenant for the group identified by the tenant id}
+    tenant: ${7:# The tenant for the group identified by the tenant name}
+    managed_filters: ${8:# The tag values per category}
+    managed_filters_merge_mode: ${9:# In merge mode existing categories are kept or updated, new categories are added}
+    belongsto_filters: ${10:# A list of strings with a reference to the allowed host, cluster or folder}
+    belongsto_filters_merge_mode: ${11:# In merge mode existing settings are merged with the supplied C(belongsto_filters)}
+    manageiq_connection: ${12:# ManageIQ connection configuration information}
+  tags:
+    - community
+    - general
+    - manageiq_group]]></content>
+  <tabTrigger>community.general.manageiq_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Management of groups in ManageIQ</description>
+</snippet>

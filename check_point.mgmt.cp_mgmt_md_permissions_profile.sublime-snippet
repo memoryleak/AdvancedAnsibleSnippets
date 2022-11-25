@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages md-permissions-profile objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_md_permissions_profile:
+    name: ${2:# Object name}
+    permission_level: ${3:# The level of the Multi Domain Permissions Profile}
+    mds_provisioning: ${4:# Create and manage Multi-Domain Servers and Multi-Domain Log Servers}
+    manage_admins: ${5:# Create and manage Multi-Domain Security Management administrators with the same or lower permission level}
+    manage_sessions: ${6:# Connect/disconnect Domain sessions, publish changes, and delete other administrator sessions}
+    management_api_login: ${7:# Permission to log in to the Security Management Server and run API commands using these tools, mgmt_cli (Linux and Windows binaries), Gaia CLI (clish) and Web Services (REST)}
+    cme_operations: ${8:# Permission to read / edit the Cloud Management Extension (CME) configuration}
+    global_vpn_management: ${9:# Lets the administrator select Enable global use for a Security Gateway shown in the MDS Gateways & Servers view}
+    manage_global_assignments: ${10:# Controls the ability to create, edit and delete global assignment and not the ability to reassign, which is set according to the specific Domain's permission profile}
+    enable_default_profile_for_global_domains: ${11:# Enable the option to specify a default profile for all global domains}
+    default_profile_global_domains: ${12:# Name or UID of the required default profile for all global domains}
+    view_global_objects_in_domain: ${13:# Lets an administrator with no global objects permissions view the global objects in the domain}
+    enable_default_profile_for_local_domains: ${14:# Enable the option to specify a default profile for all local domains}
+    default_profile_local_domains: ${15:# Name or UID of the required default profile for all local domains}
+    tags: ${16:# Collection of tag identifiers}
+    color: ${17:# Color of the object}
+    comments: ${18:# Comments string}
+    details_level: ${19:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${20:# Indicates which domains to process the commands on}
+    ignore_warnings: ${21:# Apply changes ignoring warnings}
+    ignore_errors: ${22:# Apply changes ignoring errors}
+    state: ${23:# State of the access rule (present or absent)}
+    auto_publish_session: ${24:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${25:# Wait for the task to end}
+    wait_for_task_timeout: ${26:# How many minutes to wait until throwing a timeout error}
+    version: ${27:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_md_permissions_profile]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_md_permissions_profile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages md-permissions-profile objects on Checkpoint over Web Services API</description>
+</snippet>

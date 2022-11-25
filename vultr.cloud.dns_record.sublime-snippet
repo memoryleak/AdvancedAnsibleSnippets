@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages DNS records on Vultr}
+  vultr.cloud.dns_record:
+    name: ${2:# The record name}
+    domain: ${3:# The domain the record is related to}
+    type: ${4:# Type of the record}
+    data: ${5:# Data of the record}
+    ttl: ${6:# TTL of the record}
+    priority: ${7:# Priority of the record}
+    multiple: ${8:# Whether to use more than one record with similar I(name) including no name and I(type)}
+    state: ${9:# State of the DNS record}
+    api_key: ${10:# API key of the Vultr API}
+    api_timeout: ${11:# HTTP timeout to Vultr API}
+    api_retries: ${12:# Amount of retries in case of the Vultr API retuns an HTTP 503 code}
+    api_retry_max_delay: ${13:# Retry backoff delay in seconds is exponential up to this max}
+    api_endpoint: ${14:# URL to API endpint (without trailing slash)}
+    validate_certs: ${15:# Validate SSL certs of the Vultr API}
+  tags:
+    - vultr
+    - cloud
+    - dns_record]]></content>
+  <tabTrigger>vultr.cloud.dns_record</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages DNS records on Vultr</description>
+</snippet>

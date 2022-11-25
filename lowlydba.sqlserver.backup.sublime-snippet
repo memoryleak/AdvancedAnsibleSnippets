@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Performs a backup operation}
+  lowlydba.sqlserver.backup:
+    database: ${2:# The database to process}
+    path: ${3:# Path in which to place the backup files}
+    file_path: ${4:# The name of the file to backup to}
+    increment_prefix: ${5:# If set, this will prefix backup files with an incrementing integer (ie; C(1-), C(2-))}
+    replace_in_name: ${6:# If set, the following list of strings will be replaced in the FilePath and Path strings}
+    copy_only: ${7:# The backup will be CopyOnly}
+    type: ${8:# The type of backup to perform}
+    create_folder: ${9:# If set, database is backed up to its own subfolder within the path}
+    file_count: ${10:# The number of striped files to create the backup with}
+    compress: ${11:# If set, use compression when creating the backup if it is supported by the version and edition}
+    checksum: ${12:# If set, the backup checksum will be calculated}
+    verify: ${13:# If set, the backup will be verified via C(RESTORE VERIFYONLY)}
+    max_transfer_size: ${14:# Sets the size of the unit of transfer}
+    block_size: ${15:# Specifies block size to use}
+    buffer_count: ${16:# Number of I/O buffers to use}
+    azure_base_url: ${17:# The URL to the base container of an Azure Storage account to write backups to}
+    azure_credential: ${18:# The name of the credential on the SQL instance that can write to the I(azure_base_url), only needed if using Storage access keys If using SAS credentials, the command will look for a credential with a name matching the I(azure_base_url)}
+    no_recovery: ${19:# If set, performs a tail log backup}
+    build_path: ${20:# By default this command will not attempt to create missing paths, this switch will change the behaviour so that it will}
+    with_format: ${21:# Formats the media as the first step of the backup operation}
+    initialize: ${22:# Initializes the media as part of the backup operation}
+    timestamp_format: ${23:# By default the command timestamps backups using the format C(yyyyMMddHHmm)}
+    ignore_file_checks: ${24:# If set, stops the function from checking path validity}
+    encryption_algorithm: ${25:# Specifies the Encryption Algorithm to used}
+    encryption_certificate: ${26:# The name of the certificate to be used to encrypt the backups}
+    sql_instance: ${27:# The SQL Server instance to modify}
+    sql_username: ${28:# Username for SQL Authentication}
+    sql_password: ${29:# Password for SQL Authentication}
+  tags:
+    - lowlydba
+    - sqlserver
+    - backup]]></content>
+  <tabTrigger>lowlydba.sqlserver.backup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Performs a backup operation</description>
+</snippet>

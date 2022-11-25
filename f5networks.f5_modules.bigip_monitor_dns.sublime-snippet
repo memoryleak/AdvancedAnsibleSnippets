@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage DNS monitors on a BIG-IP}
+  f5networks.f5_modules.bigip_monitor_dns:
+    name: ${2:# Specifies the name of the monitor}
+    parent: ${3:# The parent template of this monitor template}
+    description: ${4:# The description of the monitor}
+    interval: ${5:# The interval specifying how frequently the monitor instance of this template will run}
+    up_interval: ${6:# Specifies the interval for the system to use to perform the health check when a resource is up}
+    timeout: ${7:# The number of seconds in which the node or service must respond to the monitor request}
+    transparent: ${8:# Specifies whether the monitor operates in transparent mode}
+    reverse: ${9:# Specifies whether the monitor operates in reverse mode}
+    receive: ${10:# Specifies the IP address the monitor uses from the resource record sections of the DNS response}
+    time_until_up: ${11:# Specifies the amount of time in seconds after the first successful response before a node will be marked up}
+    manual_resume: ${12:# Specifies whether the system automatically changes the status of a resource to B(enabled) at the next successful monitor check}
+    ip: ${13:# IP address part of the IP/port definition}
+    port: ${14:# Port address part of the IP/port definition}
+    query_name: ${15:# Specifies a query name for the monitor to use in a DNS query}
+    query_type: ${16:# Specifies the type of DNS query the monitor sends}
+    answer_section_contains: ${17:# Specifies the type of DNS query the monitor sends}
+    accept_rcode: ${18:# Specifies the RCODE required in the response for an up status}
+    adaptive: ${19:# Specifies whether adaptive response time monitoring is enabled for this monitor}
+    allowed_divergence_type: ${20:# When specifying a new monitor, if C(adaptive) is C(yes), the default is C(relative)}
+    allowed_divergence_value: ${21:# When specifying a new monitor, if C(adaptive) is C(yes), and C(type) is C(relative), the default is C(25) percent}
+    adaptive_limit: ${22:# Specifies the absolute number of milliseconds that may not be exceeded by a monitor probe, regardless of C(allowed_divergence) setting, for a probe to be considered successful}
+    sampling_timespan: ${23:# Specifies the length, in seconds, of the probe history window the system uses to calculate the mean latency and standard deviation of a monitor probe}
+    partition: ${24:# Device partition to manage resources on}
+    state: ${25:# When C(present), ensures the monitor exists}
+    provider: ${26:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_monitor_dns]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_monitor_dns</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage DNS monitors on a BIG-IP</description>
+</snippet>

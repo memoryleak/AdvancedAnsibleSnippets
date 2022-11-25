@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Images}
+  theforeman.foreman.image:
+    name: ${2:# Image name}
+    compute_resource: ${3:# Compute resource the image is assigned to}
+    uuid: ${4:# UUID or Marketplace URN of the operatingsystem image}
+    image_username: ${5:# Username that is used to login into the operating system}
+    image_password: ${6:# Password that is used to login into the operating system}
+    operatingsystem: ${7:# Operating systems are looked up by their title which is composed as '<name> <major>}
+    architecture: ${8:# architecture of the image}
+    user_data: ${9:# Image supports user_data}
+    server_url: ${10:# URL of the Foreman server}
+    username: ${11:# Username accessing the Foreman server}
+    password: ${12:# Password of the user accessing the Foreman server}
+    validate_certs: ${13:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${14:# State of the entity}
+  tags:
+    - theforeman
+    - foreman
+    - image]]></content>
+  <tabTrigger>theforeman.foreman.image</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Images</description>
+</snippet>

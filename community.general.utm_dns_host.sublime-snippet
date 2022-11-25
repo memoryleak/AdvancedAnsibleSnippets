@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update or destroy dns entry in Sophos UTM}
+  community.general.utm_dns_host:
+    name: ${2:# The name of the object}
+    address: ${3:# The IPV4 Address of the entry}
+    address6: ${4:# The IPV6 Address of the entry}
+    comment: ${5:# An optional comment to add to the dns host object}
+    hostname: ${6:# The hostname for the dns host object}
+    interface: ${7:# The reference name of the interface to use}
+    resolved: ${8:# whether the hostname's ipv4 address is already resolved or not}
+    resolved6: ${9:# whether the hostname's ipv6 address is already resolved or not}
+    timeout: ${10:# the timeout for the utm to resolve the ip address for the hostname again}
+    headers: ${11:# A dictionary of additional headers to be sent to POST and PUT requests}
+    utm_host: ${12:# The REST Endpoint of the Sophos UTM}
+    utm_port: ${13:# The port of the REST interface}
+    utm_token: ${14:# The token used to identify at the REST-API}
+    utm_protocol: ${15:# The protocol of the REST Endpoint}
+    validate_certs: ${16:# Whether the REST interface's ssl certificate should be verified or not}
+    state: ${17:# The desired state of the object}
+  tags:
+    - community
+    - general
+    - utm_dns_host]]></content>
+  <tabTrigger>community.general.utm_dns_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update or destroy dns entry in Sophos UTM</description>
+</snippet>

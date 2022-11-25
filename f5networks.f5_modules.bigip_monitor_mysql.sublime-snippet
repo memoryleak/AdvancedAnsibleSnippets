@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages BIG-IP MySQL monitors}
+  f5networks.f5_modules.bigip_monitor_mysql:
+    name: ${2:# Monitor name}
+    app_service: ${3:# The iApp service to be associated with this profile}
+    description: ${4:# Specifies descriptive text that identifies the monitor}
+    parent: ${5:# The parent template of this monitor template}
+    count: ${6:# Specifies the number of monitor probes after which the connection to the database is terminated}
+    database: ${7:# Specifies the name of the database that the monitor tries to access}
+    debug: ${8:# Specifies whether the monitor sends error messages and additional information to a log file created and labeled specifically for this monitor}
+    ip: ${9:# IP address part of the IP/port definition}
+    port: ${10:# Port address part of the IP/port definition}
+    target_password: ${11:# Specifies the password if the monitored target requires authentication}
+    target_username: ${12:# Specifies the user name if the monitored target requires authentication}
+    partition: ${13:# Device partition to manage resources on}
+    interval: ${14:# Specifies the frequency at which the system issues the monitor check}
+    timeout: ${15:# Specifies the number of seconds the target has in which to respond to the monitor request}
+    time_until_up: ${16:# Specifies the number of seconds to wait after a resource first responds correctly to the monitor before setting the resource to 'up'}
+    up_interval: ${17:# Specifies the interval for the system to use to perform the health check when a resource is up}
+    manual_resume: ${18:# Specifies whether the system automatically changes the status of a resource to B(enabled) at the next successful monitor check}
+    recv: ${19:# Specifies the text string the monitor looks for in the returned resource}
+    recv_column: ${20:# Specifies the column in the database where the system expects the specified Receive String to be located}
+    recv_row: ${21:# Specifies the row in the database where the system expects the specified Receive String to be located}
+    send: ${22:# Specifies the SQL query the monitor sends to the target object}
+    update_password: ${23:# C(always) will update passwords if the C(target_password) is specified}
+    state: ${24:# When C(present), ensures the monitor exists}
+    provider: ${25:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_monitor_mysql]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_monitor_mysql</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages BIG-IP MySQL monitors</description>
+</snippet>

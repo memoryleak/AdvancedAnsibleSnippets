@@ -1,0 +1,43 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Switch Access Policies in the Meraki cloud}
+  cisco.meraki.meraki_ms_access_policies:
+    state: ${2:# Specifies whether SNMP information should be queried or modified}
+    number: ${3:# Number of the access_policy}
+    name: ${4:# Name of Access Policy}
+    net_id: ${5:# ID of network}
+    org_id: ${6:# ID of organization associated to a network}
+    net_name: ${7:# Name of a network}
+    auth_method: ${8:# Set authentication method in the policy}
+    guest_vlan: ${9:# Guest Vlan}
+    access_policy_type: ${10:# Set type of the access policy}
+    systems_management_enrollment: ${11:# Set if the Systems Management Enrollemnt is enabled or disabled}
+    radius_servers: ${12:# List of RADIUS servers}
+    radius_testing: ${13:# Set status of testing a radius}
+    voice_vlan_clients: ${14:# If is enabled that means Voice VLAN client require authentication}
+    radius_coa_enabled: ${15:# Enable or disable RADIUS CoA (Change of Authorization)}
+    radius_accounting_enabled: ${16:# Enable or disable RADIUS accounting}
+    radius_accounting_servers: ${17:# List of RADIUS servers for RADIUS accounting}
+    host_mode: ${18:# Choose the Host Mode for the access policy}
+    data_vlan_id: ${19:# Set a Data VLAN ID for Critical Auth VLAN}
+    voice_vlan_id: ${20:# Set a Voice VLAN ID for Critical Auth VLAN}
+    suspend_port_bounce: ${21:# Enable or disable the Suspend Port Bounce when RADIUS servers are unreachable}
+    radius_attribute_group_policy_name: ${22:# Enable that attribute for a RADIUS}
+    auth_key: ${23:# Authentication key provided by the dashboard}
+    host: ${24:# Hostname for Meraki dashboard}
+    use_proxy: ${25:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${26:# If C(no), it will use HTTP}
+    output_format: ${27:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${28:# Set amount of debug output during module execution}
+    timeout: ${29:# Time to timeout for HTTP requests}
+    validate_certs: ${30:# Whether to validate HTTP certificates}
+    org_name: ${31:# Name of organization}
+    rate_limit_retry_time: ${32:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${33:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_ms_access_policies]]></content>
+  <tabTrigger>cisco.meraki.meraki_ms_access_policies</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Switch Access Policies in the Meraki cloud</description>
+</snippet>

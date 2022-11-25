@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage MX appliance firewall rules for site-to-site VPNs}
+  cisco.meraki.meraki_mx_site_to_site_firewall:
+    state: ${2:# Create or modify an organization}
+    rules: ${3:# List of firewall rules}
+    syslog_default_rule: ${4:# Whether to log hits against the default firewall rule}
+    auth_key: ${5:# Authentication key provided by the dashboard}
+    host: ${6:# Hostname for Meraki dashboard}
+    use_proxy: ${7:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${8:# If C(no), it will use HTTP}
+    output_format: ${9:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${10:# Set amount of debug output during module execution}
+    timeout: ${11:# Time to timeout for HTTP requests}
+    validate_certs: ${12:# Whether to validate HTTP certificates}
+    org_name: ${13:# Name of organization}
+    org_id: ${14:# ID of organization}
+    rate_limit_retry_time: ${15:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${16:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_mx_site_to_site_firewall]]></content>
+  <tabTrigger>cisco.meraki.meraki_mx_site_to_site_firewall</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage MX appliance firewall rules for site-to-site VPNs</description>
+</snippet>

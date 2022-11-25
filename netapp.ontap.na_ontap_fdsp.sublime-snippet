@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP create or delete a file directory security policy}
+  netapp.ontap.na_ontap_fdsp:
+    state: ${2:# Whether the specified policy should exist or not}
+    name: ${3:# Specifies the name of the policy}
+    vserver: ${4:# Specifies the vserver for the security policy}
+    hostname: ${5:# The hostname or IP address of the ONTAP instance}
+    username: ${6:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${7:# Password for the specified user}
+    cert_filepath: ${8:# path to SSL client cert file (}
+    key_filepath: ${9:# path to SSL client key file}
+    https: ${10:# Enable and disable https}
+    validate_certs: ${11:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${12:# Override the default port (80 or 443) with this port}
+    ontapi: ${13:# The ontap api version to use}
+    use_rest: ${14:# Whether to use REST or ZAPI}
+    feature_flags: ${15:# Enable or disable a new feature}
+    force_ontap_version: ${16:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_fdsp]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_fdsp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP create or delete a file directory security policy</description>
+</snippet>

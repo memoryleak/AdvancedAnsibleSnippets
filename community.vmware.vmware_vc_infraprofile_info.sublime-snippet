@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:List and Export VMware vCenter infra profile configs}
+  community.vmware.vmware_vc_infraprofile_info:
+    decryption_key: ${2:# decryption_key argument for while doing import profile task as of now its not taken into account form API team}
+    encryption_key: ${3:# encryption_key argument for while doing import profile task as of now its not taken into account form API team}
+    api: ${4:# API which needs to be executed}
+    config_path: ${5:# Config file path which contains infra profile config JSON data, supports both relative and absolute path}
+    profiles: ${6:# A list of profile names to be exported, imported, and validated}
+    description: ${7:# Description of about encryption or decryption key}
+    hostname: ${8:# The hostname or IP address of the vSphere vCenter server}
+    username: ${9:# The username of the vSphere vCenter server}
+    password: ${10:# The password of the vSphere vCenter server}
+    validate_certs: ${11:# Allows connection when SSL certificates are not valid}
+    port: ${12:# The port number of the vSphere vCenter}
+    protocol: ${13:# The connection to protocol}
+    proxy_host: ${14:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${15:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_vc_infraprofile_info]]></content>
+  <tabTrigger>community.vmware.vmware_vc_infraprofile_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>List and Export VMware vCenter infra profile configs</description>
+</snippet>

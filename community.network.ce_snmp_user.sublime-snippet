@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages SNMP user configuration on HUAWEI CloudEngine switches}
+  community.network.ce_snmp_user:
+    acl_number: ${2:# Access control list number}
+    usm_user_name: ${3:# Unique name to identify the USM user}
+    aaa_local_user: ${4:# Unique name to identify the local user}
+    remote_engine_id: ${5:# Remote engine id of the USM user}
+    user_group: ${6:# Name of the group where user belongs to}
+    auth_protocol: ${7:# Authentication protocol}
+    auth_key: ${8:# The authentication password}
+    priv_protocol: ${9:# Encryption protocol}
+    priv_key: ${10:# The encryption password}
+  tags:
+    - community
+    - network
+    - ce_snmp_user]]></content>
+  <tabTrigger>community.network.ce_snmp_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages SNMP user configuration on HUAWEI CloudEngine switches</description>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create a VMware portgroup}
+  community.vmware.vmware_portgroup:
+    switch: ${2:# vSwitch to modify}
+    portgroup: ${3:# Portgroup name to add}
+    vlan_id: ${4:# VLAN ID to assign to portgroup}
+    security: ${5:# Network policy specifies layer 2 security settings for a portgroup such as promiscuous mode, where guest adapter listens to all the packets, MAC address changes and forged transmits}
+    teaming: ${6:# Dictionary which configures the different teaming values for portgroup}
+    traffic_shaping: ${7:# Dictionary which configures traffic shaping for the switch}
+    cluster_name: ${8:# Name of cluster name for host membership}
+    hosts: ${9:# List of name of host or hosts on which portgroup needs to be added}
+    state: ${10:# Determines if the portgroup should be present or not}
+    hostname: ${11:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${12:# The username of the vSphere vCenter or ESXi server}
+    password: ${13:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${14:# Allows connection when SSL certificates are not valid}
+    port: ${15:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${16:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${17:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_portgroup]]></content>
+  <tabTrigger>community.vmware.vmware_portgroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create a VMware portgroup</description>
+</snippet>

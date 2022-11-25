@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add/Delete a member for a pool in load balancer from OpenStack Cloud}
+  openstack.cloud.os_member:
+    name: ${2:# Name that has to be given to the member}
+    state: ${3:# Should the resource be present or absent}
+    pool: ${4:# The name or id of the pool that this member belongs to}
+    protocol_port: ${5:# The protocol port number for the member}
+    address: ${6:# The IP address of the member}
+    subnet_id: ${7:# The subnet ID the member service is accessible from}
+    wait: ${8:# If the module should wait for the load balancer to be ACTIVE}
+    timeout: ${9:# The amount of time the module should wait for the load balancer to get into ACTIVE state}
+    monitor_address: ${10:# IP address used to monitor this member}
+    monitor_port: ${11:# Port used to monitor this member}
+    cloud: ${12:# Named cloud or cloud config to operate against}
+    auth: ${13:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${14:# Name of the auth plugin to use}
+    region_name: ${15:# Name of the region}
+    api_timeout: ${16:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${17:# Whether or not SSL API requests should be verified}
+    ca_cert: ${18:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${19:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${20:# A path to a client key to use as part of the SSL transaction}
+    interface: ${21:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${22:# Ignored}
+    sdk_log_path: ${23:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${24:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - os_member]]></content>
+  <tabTrigger>openstack.cloud.os_member</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add/Delete a member for a pool in load balancer from OpenStack Cloud</description>
+</snippet>

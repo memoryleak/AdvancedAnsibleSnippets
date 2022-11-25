@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set network IPTables parameters in WTI OOB and PDU devices}
+  wti.remote.cpm_iptables_config:
+    cpm_url: ${2:# This is the URL of the WTI device to send the module}
+    cpm_username: ${3:# This is the Username of the WTI device to send the module}
+    cpm_password: ${4:# This is the Password of the WTI device to send the module}
+    use_https: ${5:# Designates to use an https connection or http connection}
+    validate_certs: ${6:# If false, SSL certificates will not be validated}
+    use_proxy: ${7:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+    protocol: ${8:# The protocol that the iptables entry should be applied}
+    index: ${9:# Index in which command should be inserted}
+    command: ${10:# Actual iptables command to send to the WTI device}
+    clear: ${11:# Removes all the iptables for the protocol being defined before setting the newly defined entry}
+  tags:
+    - wti
+    - remote
+    - cpm_iptables_config]]></content>
+  <tabTrigger>wti.remote.cpm_iptables_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set network IPTables parameters in WTI OOB and PDU devices</description>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates a resource of Vpc/Port in Huawei Cloud}
+  community.general.hwc_vpc_port:
+    state: ${2:# Whether the given object should exist in Huawei Cloud}
+    timeouts: ${3:# The timeouts for each operations}
+    subnet_id: ${4:# Specifies the ID of the subnet to which the port belongs}
+    admin_state_up: ${5:# Specifies the administrative state of the port}
+    allowed_address_pairs: ${6:# Specifies a set of zero or more allowed address pairs}
+    extra_dhcp_opts: ${7:# Specifies the extended option of DHCP}
+    ip_address: ${8:# Specifies the port IP address}
+    name: ${9:# Specifies the port name}
+    security_groups: ${10:# Specifies the ID of the security group}
+    identity_endpoint: ${11:# The Identity authentication URL}
+    user: ${12:# The user name to login with (currently only user names are supported, and not user IDs)}
+    password: ${13:# The password to login with}
+    domain: ${14:# The name of the Domain to scope to (Identity v3)}
+    project: ${15:# The name of the Tenant (Identity v2) or Project (Identity v3)}
+    region: ${16:# The region to which the project belongs}
+    id: ${17:# The id of resource to be managed}
+  tags:
+    - community
+    - general
+    - hwc_vpc_port]]></content>
+  <tabTrigger>community.general.hwc_vpc_port</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates a resource of Vpc/Port in Huawei Cloud</description>
+</snippet>

@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Copies files to remote locations on windows hosts}
+  ansible.windows.win_copy:
+    content: ${2:# When used instead of C(src), sets the contents of a file directly to the specified value}
+    decrypt: ${3:# This option controls the autodecryption of source files using vault}
+    dest: ${4:# Remote absolute path where the file should be copied to}
+    backup: ${5:# Determine whether a backup should be created}
+    force: ${6:# If set to C(yes), the file will only be transferred if the content is different than destination}
+    local_follow: ${7:# This flag indicates that filesystem links in the source tree, if they exist, should be followed}
+    remote_src: ${8:# If C(no), it will search for src at originating/controller machine}
+    src: ${9:# Local path to a file to copy to the remote server; can be absolute or relative}
+  tags:
+    - ansible
+    - windows
+    - win_copy]]></content>
+  <tabTrigger>ansible.windows.win_copy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Copies files to remote locations on windows hosts</description>
+</snippet>

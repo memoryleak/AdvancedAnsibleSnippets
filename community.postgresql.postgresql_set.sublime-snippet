@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Change a PostgreSQL server configuration parameter}
+  community.postgresql.postgresql_set:
+    name: ${2:# Name of PostgreSQL server parameter}
+    value: ${3:# Parameter value to set}
+    reset: ${4:# Restore parameter to initial state (boot_val)}
+    session_role: ${5:# Switch to session_role after connecting}
+    db: ${6:# Name of database to connect}
+    trust_input: ${7:# If C(false), check whether values of parameters are potentially dangerous}
+    login_user: ${8:# The username this module should use to establish its PostgreSQL session}
+    login_password: ${9:# The password this module should use to establish its PostgreSQL session}
+    login_host: ${10:# Host running the database}
+    login_unix_socket: ${11:# Path to a Unix domain socket for local connections}
+    port: ${12:# Database port to connect to}
+    ssl_mode: ${13:# Determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the server}
+    ca_cert: ${14:# Specifies the name of a file containing SSL certificate authority (CA) certificate(s)}
+    connect_params: ${15:# Any additional parameters to be passed to libpg}
+  tags:
+    - community
+    - postgresql
+    - postgresql_set]]></content>
+  <tabTrigger>community.postgresql.postgresql_set</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Change a PostgreSQL server configuration parameter</description>
+</snippet>

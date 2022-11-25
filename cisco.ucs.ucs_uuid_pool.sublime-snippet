@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures server UUID pools on Cisco UCS Manager}
+  cisco.ucs.ucs_uuid_pool:
+    state: ${2:# If C(present), will verify UUID pool is present and will create if needed}
+    name: ${3:# The name of the UUID pool}
+    description: ${4:# The user-defined description of the UUID pool}
+    prefix: ${5:# UUID prefix used for the range of server UUIDs}
+    order: ${6:# The Assignment Order field}
+    first_uuid: ${7:# The first UUID in the block of UUIDs}
+    last_uuid: ${8:# The last UUID in the block of UUIDs}
+    org_dn: ${9:# The distinguished name (dn) of the organization where the resource is assigned}
+    hostname: ${10:# IP address or hostname of Cisco UCS Manager}
+    username: ${11:# Username for Cisco UCS Manager authentication}
+    password: ${12:# Password for Cisco UCS Manager authentication}
+    port: ${13:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    use_ssl: ${14:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    use_proxy: ${15:# If C(no), will not use the proxy as defined by system environment variable}
+    proxy: ${16:# If use_proxy is no, specfies proxy to be used for connection}
+  tags:
+    - cisco
+    - ucs
+    - ucs_uuid_pool]]></content>
+  <tabTrigger>cisco.ucs.ucs_uuid_pool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures server UUID pools on Cisco UCS Manager</description>
+</snippet>

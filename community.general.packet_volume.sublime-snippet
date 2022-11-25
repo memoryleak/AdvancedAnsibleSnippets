@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/delete a volume in Packet host}
+  community.general.packet_volume:
+    state: ${2:# Desired state of the volume}
+    project_id: ${3:# ID of project of the device}
+    auth_token: ${4:# Packet API token}
+    name: ${5:# Selector for API-generated name of the volume}
+    description: ${6:# User-defined description attribute for Packet volume}
+    id: ${7:# UUID of a volume}
+    plan: ${8:# storage_1 for standard tier, storage_2 for premium (performance) tier}
+    facility: ${9:# Location of the volume}
+    size: ${10:# Size of the volume in gigabytes}
+    locked: ${11:# Create new volume locked}
+    billing_cycle: ${12:# Billing cycle for new volume}
+    snapshot_policy: ${13:# Snapshot policy for new volume}
+  tags:
+    - community
+    - general
+    - packet_volume]]></content>
+  <tabTrigger>community.general.packet_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/delete a volume in Packet host</description>
+</snippet>

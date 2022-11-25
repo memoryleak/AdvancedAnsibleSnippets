@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages volume mapping on IBM Spectrum Virtualize family storage systems}
+  ibm.spectrum_virtualize.ibm_svc_vol_map:
+    volname: ${2:# Specifies the volume name for host or hostcluster mapping}
+    host: ${3:# Specifies the host name for host mapping}
+    hostcluster: ${4:# Specifies the name of the host cluster for host mapping}
+    scsi: ${5:# Specifies the SCSI logical unit number (LUN) ID to assign to a volume on the specified host or host cluster}
+    state: ${6:# Creates (C(present)) or removes (C(absent)) a volume mapping}
+    clustername: ${7:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${8:# Domain for the Spectrum Virtualize storage system}
+    username: ${9:# REST API username for the Spectrum Virtualize storage system}
+    password: ${10:# REST API password for the Spectrum Virtualize storage system}
+    token: ${11:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    log_path: ${12:# Path of debug log file}
+    validate_certs: ${13:# Validates certification}
+  tags:
+    - ibm
+    - spectrum_virtualize
+    - ibm_svc_vol_map]]></content>
+  <tabTrigger>ibm.spectrum_virtualize.ibm_svc_vol_map</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages volume mapping on IBM Spectrum Virtualize family storage systems</description>
+</snippet>

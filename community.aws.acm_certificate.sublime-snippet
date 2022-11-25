@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Upload and delete certificates in the AWS Certificate Manager service}
+  community.aws.acm_certificate:
+    certificate: ${2:# The body of the PEM encoded public certificate}
+    certificate_arn: ${3:# The ARN of a certificate in ACM to modify or delete}
+    certificate_chain: ${4:# The body of the PEM encoded chain for your certificate}
+    domain_name: ${5:# The domain name of the certificate}
+    name_tag: ${6:# The unique identifier for tagging resources using AWS tags, with key I(Name)}
+    private_key: ${7:# The body of the PEM encoded private key}
+    state: ${8:# If I(state=present), the specified public certificate and private key will be uploaded, with I(Name) tag equal to I(name_tag)}
+    access_key: ${9:# AWS access key ID}
+    secret_key: ${10:# AWS secret access key}
+    session_token: ${11:# AWS STS session token for use with temporary credentials}
+    profile: ${12:# A named AWS profile to use for authentication}
+    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${16:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
+    region: ${18:# The AWS region to use}
+    tags: ${19:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${20:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - community
+    - aws
+    - acm_certificate]]></content>
+  <tabTrigger>community.aws.acm_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Upload and delete certificates in the AWS Certificate Manager service</description>
+</snippet>

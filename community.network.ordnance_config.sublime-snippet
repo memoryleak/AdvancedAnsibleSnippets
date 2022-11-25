@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Ordnance configuration sections}
+  community.network.ordnance_config:
+    lines: ${2:# The ordered set of commands that should be configured in the section}
+    parents: ${3:# The ordered set of parents that uniquely identify the section or hierarchy the commands should be checked against}
+    src: ${4:# Specifies the source path to the file that contains the configuration or configuration template to load}
+    before: ${5:# The ordered set of commands to push on to the command stack if a change needs to be made}
+    after: ${6:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
+    match: ${7:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
+    replace: ${8:# Instructs the module on the way to perform the configuration on the device}
+    multiline_delimiter: ${9:# This argument is used when pushing a multiline configuration element to the Ordnance router}
+    backup: ${10:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
+    config: ${11:# The C(config) argument allows the playbook designer to supply the base configuration to be used to validate configuration changes necessary}
+    defaults: ${12:# This argument specifies whether or not to collect all defaults when getting the remote device running config}
+    save: ${13:# The C(save) argument instructs the module to save the running- config to the startup-config at the conclusion of the module running}
+  tags:
+    - community
+    - network
+    - ordnance_config]]></content>
+  <tabTrigger>community.network.ordnance_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Ordnance configuration sections</description>
+</snippet>

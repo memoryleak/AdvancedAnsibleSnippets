@@ -1,0 +1,60 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage posix users on a univention corporate server}
+  community.general.udm_user:
+    state: ${2:# Whether the user is present or not}
+    username: ${3:# User name}
+    firstname: ${4:# First name}
+    lastname: ${5:# Last name}
+    password: ${6:# Password}
+    birthday: ${7:# Birthday}
+    city: ${8:# City of users business address}
+    country: ${9:# Country of users business address}
+    department_number: ${10:# Department number of users business address}
+    description: ${11:# Description (not gecos)}
+    display_name: ${12:# Display name (not gecos)}
+    email: ${13:# A list of e-mail addresses}
+    employee_number: ${14:# Employee number}
+    employee_type: ${15:# Employee type}
+    gecos: ${16:# GECOS}
+    groups: ${17:# POSIX groups, the LDAP DNs of the groups will be found with the LDAP filter for each group as $GROUP: C((&(objectClass=posixGroup)(cn=$GROUP)))}
+    home_share: ${18:# Home NFS share}
+    home_share_path: ${19:# Path to home NFS share, inside the homeShare}
+    home_telephone_number: ${20:# List of private telephone numbers}
+    homedrive: ${21:# Windows home drive, e}
+    mail_alternative_address: ${22:# List of alternative e-mail addresses}
+    mail_home_server: ${23:# FQDN of mail server}
+    mail_primary_address: ${24:# Primary e-mail address}
+    mobile_telephone_number: ${25:# Mobile phone number}
+    organisation: ${26:# Organisation}
+    overridePWHistory: ${27:# Override password history}
+    overridePWLength: ${28:# Override password check}
+    pager_telephonenumber: ${29:# List of pager telephone numbers}
+    phone: ${30:# List of telephone numbers}
+    postcode: ${31:# Postal code of users business address}
+    primary_group: ${32:# Primary group}
+    profilepath: ${33:# Windows profile directory}
+    pwd_change_next_login: ${34:# Change password on next login}
+    room_number: ${35:# Room number of users business address}
+    samba_privileges: ${36:# Samba privilege, like allow printer administration, do domain join}
+    samba_user_workstations: ${37:# Allow the authentication only on this Microsoft Windows host}
+    sambahome: ${38:# Windows home path, e}
+    scriptpath: ${39:# Windows logon script}
+    secretary: ${40:# A list of superiors as LDAP DNs}
+    serviceprovider: ${41:# Enable user for the following service providers}
+    shell: ${42:# Login shell}
+    street: ${43:# Street of users business address}
+    title: ${44:# Title, e}
+    unixhome: ${45:# Unix home directory}
+    userexpiry: ${46:# Account expiry date, e}
+    position: ${47:# Define the whole position of users object inside the LDAP tree, e}
+    update_password: ${48:# C(always) will update passwords if they differ}
+    ou: ${49:# Organizational Unit inside the LDAP Base DN, e}
+    subpath: ${50:# LDAP subpath inside the organizational unit, e}
+  tags:
+    - community
+    - general
+    - udm_user]]></content>
+  <tabTrigger>community.general.udm_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage posix users on a univention corporate server</description>
+</snippet>

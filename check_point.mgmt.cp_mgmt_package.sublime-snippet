@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages package objects on Check Point over Web Services API}
+  check_point.mgmt.cp_mgmt_package:
+    name: ${2:# Object name}
+    access: ${3:# True - enables, False - disables access & NAT policies, empty - nothing is changed}
+    desktop_security: ${4:# True - enables, False - disables Desktop security policy, empty - nothing is changed}
+    installation_targets: ${5:# Which Gateways identified by the name or UID to install the policy on}
+    qos: ${6:# True - enables, False - disables QoS policy, empty - nothing is changed}
+    qos_policy_type: ${7:# QoS policy type}
+    tags: ${8:# Collection of tag identifiers}
+    threat_prevention: ${9:# True - enables, False - disables Threat policy, empty - nothing is changed}
+    vpn_traditional_mode: ${10:# True - enables, False - disables VPN traditional mode, empty - nothing is changed}
+    color: ${11:# Color of the object}
+    comments: ${12:# Comments string}
+    details_level: ${13:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_warnings: ${14:# Apply changes ignoring warnings}
+    ignore_errors: ${15:# Apply changes ignoring errors}
+    access_layers: ${16:# Access policy layers}
+    threat_layers: ${17:# Threat policy layers}
+    state: ${18:# State of the access rule (present or absent)}
+    auto_publish_session: ${19:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${20:# Wait for the task to end}
+    wait_for_task_timeout: ${21:# How many minutes to wait until throwing a timeout error}
+    version: ${22:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_package]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_package</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages package objects on Check Point over Web Services API</description>
+</snippet>

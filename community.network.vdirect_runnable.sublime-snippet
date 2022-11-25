@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Runs templates and workflow actions in Radware vDirect server}
+  community.network.vdirect_runnable:
+    vdirect_ip: ${2:# Primary vDirect server IP address, may be set as C(VDIRECT_IP) environment variable}
+    vdirect_user: ${3:# vDirect server username, may be set as C(VDIRECT_USER) environment variable}
+    vdirect_password: ${4:# vDirect server password, may be set as C(VDIRECT_PASSWORD) environment variable}
+    vdirect_secondary_ip: ${5:# Secondary vDirect server IP address, may be set as C(VDIRECT_SECONDARY_IP) environment variable}
+    vdirect_wait: ${6:# Wait for async operation to complete, may be set as C(VDIRECT_WAIT) environment variable}
+    vdirect_https_port: ${7:# vDirect server HTTPS port number, may be set as C(VDIRECT_HTTPS_PORT) environment variable}
+    vdirect_http_port: ${8:# vDirect server HTTP port number, may be set as C(VDIRECT_HTTP_PORT) environment variable}
+    vdirect_timeout: ${9:# Amount of time to wait for async operation completion [seconds],}
+    vdirect_use_ssl: ${10:# If C(no), an HTTP connection will be used instead of the default HTTPS connection,}
+    validate_certs: ${11:# If C(no), SSL certificates will not be validated,}
+    runnable_type: ${12:# vDirect runnable type}
+    runnable_name: ${13:# vDirect runnable name to run}
+    action_name: ${14:# Workflow action name to run}
+    parameters: ${15:# Action parameters dictionary}
+  tags:
+    - community
+    - network
+    - vdirect_runnable]]></content>
+  <tabTrigger>community.network.vdirect_runnable</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Runs templates and workflow actions in Radware vDirect server</description>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Cancel an Ad Hoc Command}
+  awx.awx.tower_ad_hoc_command_cancel:
+    command_id: ${2:# ID of the command to cancel}
+    fail_if_not_running: ${3:# Fail loudly if the I(command_id) can not be canceled}
+    interval: ${4:# The interval in seconds, to request an update from }
+    timeout: ${5:# Maximum time in seconds to wait for a job to finish}
+    controller_host: ${6:# URL to your Automation Platform Controller instance}
+    controller_username: ${7:# Username for your controller instance}
+    controller_password: ${8:# Password for your controller instance}
+    controller_oauthtoken: ${9:# The OAuth token to use}
+    validate_certs: ${10:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${11:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - tower_ad_hoc_command_cancel]]></content>
+  <tabTrigger>awx.awx.tower_ad_hoc_command_cancel</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Cancel an Ad Hoc Command</description>
+</snippet>

@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP manage policy group in Quality of Service}
+  netapp.ontap.na_ontap_qos_policy_group:
+    state: ${2:# Whether the specified policy group should exist or not}
+    name: ${3:# The name of the policy group to manage}
+    vserver: ${4:# Name of the vserver to use}
+    from_name: ${5:# Name of the existing policy group to be renamed to name}
+    max_throughput: ${6:# Maximum throughput defined by this policy}
+    min_throughput: ${7:# Minimum throughput defined by this policy}
+    is_shared: ${8:# Whether the SLOs of the policy group are shared between the workloads or if the SLOs are applied separately to each workload}
+    force: ${9:# Setting to 'true' forces the deletion of the workloads associated with the policy group along with the policy group}
+    fixed_qos_options: ${10:# Set Minimum and Maximum throughput defined by this policy}
+    adaptive_qos_options: ${11:# Adaptive QoS policy-groups define measurable service level objectives (SLOs) that adjust based on the storage object used space and the storage object allocated space}
+    hostname: ${12:# The hostname or IP address of the ONTAP instance}
+    username: ${13:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${14:# Password for the specified user}
+    cert_filepath: ${15:# path to SSL client cert file (}
+    key_filepath: ${16:# path to SSL client key file}
+    https: ${17:# Enable and disable https}
+    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${19:# Override the default port (80 or 443) with this port}
+    ontapi: ${20:# The ontap api version to use}
+    use_rest: ${21:# Whether to use REST or ZAPI}
+    feature_flags: ${22:# Enable or disable a new feature}
+    force_ontap_version: ${23:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_qos_policy_group]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_qos_policy_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP manage policy group in Quality of Service</description>
+</snippet>

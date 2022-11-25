@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Distributed Power Management (DPM) on VMware vSphere clusters}
+  community.vmware.vmware_cluster_dpm:
+    cluster_name: ${2:# The name of the cluster to be managed}
+    datacenter: ${3:# The name of the datacenter}
+    enable_dpm: ${4:# Whether to enable DPM}
+    default_dpm_behaviour: ${5:# Whether dpm should be automated or manual}
+    host_power_action_rate: ${6:# specify host power action rate}
+    hostname: ${7:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${8:# The username of the vSphere vCenter or ESXi server}
+    password: ${9:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${10:# Allows connection when SSL certificates are not valid}
+    port: ${11:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${12:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_cluster_dpm]]></content>
+  <tabTrigger>community.vmware.vmware_cluster_dpm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Distributed Power Management (DPM) on VMware vSphere clusters</description>
+</snippet>

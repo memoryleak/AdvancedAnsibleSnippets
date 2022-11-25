@@ -1,0 +1,53 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP LIF configuration}
+  netapp.ontap.na_ontap_interface:
+    state: ${2:# Whether the specified interface should exist or not}
+    interface_name: ${3:# Specifies the logical interface (LIF) name}
+    home_node: ${4:# Specifies the LIF's home node}
+    current_node: ${5:# Specifies the LIF's current node}
+    home_port: ${6:# Specifies the LIF's home port}
+    current_port: ${7:# Specifies the LIF's current port}
+    role: ${8:# Specifies the role of the LIF}
+    address: ${9:# Specifies the LIF's IP address}
+    netmask: ${10:# Specifies the LIF's netmask}
+    is_ipv4_link_local: ${11:# Specifies the LIF's are to acquire a ipv4 link local address}
+    vserver: ${12:# The name of the vserver to use}
+    firewall_policy: ${13:# Specifies the firewall policy for the LIF}
+    failover_policy: ${14:# Specifies the failover policy for the LIF}
+    failover_scope: ${15:# Specifies the failover scope for the LIF}
+    failover_group: ${16:# Specifies the failover group for the LIF}
+    subnet_name: ${17:# Subnet where the interface address is allocated from}
+    admin_status: ${18:# Specifies the administrative status of the LIF}
+    is_auto_revert: ${19:# If true, data LIF will revert to its home node under certain circumstances such as startup,}
+    force_subnet_association: ${20:# Set this to true to acquire the address from the named subnet and assign the subnet to the LIF}
+    protocols: ${21:# Specifies the list of data protocols configured on the LIF}
+    data_protocol: ${22:# The data protocol for which the FC interface is configured}
+    dns_domain_name: ${23:# Specifies the unique, fully qualified domain name of the DNS zone of this LIF}
+    listen_for_dns_query: ${24:# If True, this IP address will listen for DNS queries for the dnszone specified}
+    is_dns_update_enabled: ${25:# Specifies if DNS update is enabled for this LIF}
+    service_policy: ${26:# Starting with ONTAP 9}
+    from_name: ${27:# name of the interface to be renamed}
+    interface_type: ${28:# type of the interface}
+    ipspace: ${29:# IPspace name is required with REST for cluster-scoped interfaces}
+    broadcast_domain: ${30:# broadcast_domain name can be used to specify the location on an IP interface with REST, as an alternative to node or port}
+    ignore_zapi_options: ${31:# ignore unsupported options that should not be relevant}
+    hostname: ${32:# The hostname or IP address of the ONTAP instance}
+    username: ${33:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${34:# Password for the specified user}
+    cert_filepath: ${35:# path to SSL client cert file (}
+    key_filepath: ${36:# path to SSL client key file}
+    https: ${37:# Enable and disable https}
+    validate_certs: ${38:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${39:# Override the default port (80 or 443) with this port}
+    ontapi: ${40:# The ontap api version to use}
+    use_rest: ${41:# Whether to use REST or ZAPI}
+    feature_flags: ${42:# Enable or disable a new feature}
+    force_ontap_version: ${43:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_interface]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP LIF configuration</description>
+</snippet>

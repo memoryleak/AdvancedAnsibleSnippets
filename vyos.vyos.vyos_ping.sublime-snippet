@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Tests reachability using ping from VyOS network devices}
+  vyos.vyos.vyos_ping:
+    dest: ${2:# The IP Address or hostname (resolvable by the device) of the remote node}
+    count: ${3:# Number of packets to send to check reachability}
+    source: ${4:# The source interface or IP Address to use while sending the ping packet(s)}
+    ttl: ${5:# The time-to-live value for the ICMP packet(s)}
+    size: ${6:# Determines the size (in bytes) of the ping packet(s)}
+    interval: ${7:# Determines the interval (in seconds) between consecutive pings}
+    state: ${8:# Determines if the expected result is success or fail}
+  tags:
+    - vyos
+    - vyos
+    - vyos_ping]]></content>
+  <tabTrigger>vyos.vyos.vyos_ping</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Tests reachability using ping from VyOS network devices</description>
+</snippet>

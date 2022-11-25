@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages threat-rule objects on Check Point over Web Services API}
+  check_point.mgmt.cp_mgmt_threat_rule:
+    position: ${2:# Position in the rulebase}
+    layer: ${3:# Layer that the rule belongs to identified by the name or UID}
+    name: ${4:# Object name}
+    action: ${5:# Action-the enforced profile}
+    destination: ${6:# Collection of Network objects identified by the name or UID}
+    destination_negate: ${7:# True if negate is set for destination}
+    enabled: ${8:# Enable/Disable the rule}
+    install_on: ${9:# Which Gateways identified by the name or UID to install the policy on}
+    protected_scope: ${10:# Collection of objects defining Protected Scope identified by the name or UID}
+    protected_scope_negate: ${11:# True if negate is set for Protected Scope}
+    service: ${12:# Collection of Network objects identified by the name or UID}
+    service_negate: ${13:# True if negate is set for Service}
+    source: ${14:# Collection of Network objects identified by the name or UID}
+    source_negate: ${15:# True if negate is set for source}
+    track: ${16:# Packet tracking}
+    track_settings: ${17:# Threat rule track settings}
+    comments: ${18:# Comments string}
+    details_level: ${19:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_warnings: ${20:# Apply changes ignoring warnings}
+    ignore_errors: ${21:# Apply changes ignoring errors}
+    state: ${22:# State of the access rule (present or absent)}
+    auto_publish_session: ${23:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${24:# Wait for the task to end}
+    wait_for_task_timeout: ${25:# How many minutes to wait until throwing a timeout error}
+    version: ${26:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_threat_rule]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_threat_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages threat-rule objects on Check Point over Web Services API</description>
+</snippet>

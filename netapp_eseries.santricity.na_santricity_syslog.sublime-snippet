@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series manage syslog settings}
+  netapp_eseries.santricity.na_santricity_syslog:
+    state: ${2:# Add or remove the syslog server configuration for E-Series storage array}
+    address: ${3:# The syslog server's IPv4 address or a fully qualified hostname}
+    port: ${4:# This is the port the syslog server is using}
+    protocol: ${5:# This is the transmission protocol the syslog server's using to receive syslog messages}
+    components: ${6:# The e-series logging components define the specific logs to transfer to the syslog server}
+    test: ${7:# This forces a test syslog message to be sent to the stated syslog server}
+    api_username: ${8:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_password: ${9:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${10:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    validate_certs: ${11:# Should https certificates be validated?}
+    ssid: ${12:# The ID of the array to manage}
+  tags:
+    - netapp_eseries
+    - santricity
+    - na_santricity_syslog]]></content>
+  <tabTrigger>netapp_eseries.santricity.na_santricity_syslog</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series manage syslog settings</description>
+</snippet>

@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage BIG-IP physical interfaces}
+  f5networks.f5_modules.bigip_interface:
+    name: ${2:# Specifies the name of the interface to manage}
+    description: ${3:# User defined description}
+    enabled: ${4:# Specifies the current status of the interface}
+    bundle: ${5:# Enables or disables bundle capability}
+    bundle_speed: ${6:# Sets the bundle speed, which is applicable only when the bundle is C(yes)}
+    force_gigabit_fiber: ${7:# Enables or disables forcing of gigabit fiber media}
+    prefer_port: ${8:# Indicates which side of a combo port the interface uses, if both sides have the potential for an external link}
+    media_fixed: ${9:# Specifies the settings for a fixed (non-pluggable) interface}
+    media_sfp: ${10:# Specifies the settings for an SFP (pluggable) interface}
+    flow_control: ${11:# Specifies how the system controls the sending of PAUSE frames}
+    forward_error_correction: ${12:# Enables or disables IEEE 802}
+    port_fwd_mode: ${13:# Specifies the operation mode}
+    lldp_admin: ${14:# Specifies LLDP settings on an interface level}
+    lldp_tlvmap: ${15:# Specifies the content of an LLDP message being sent or received}
+    stp: ${16:# Enables or disables STP}
+    stp_auto_edge_port: ${17:# Sets STP automatic edge port detection for the interface}
+    stp_edge_port: ${18:# Specifies whether the interface connects to an end station instead of another spanning tree bridge}
+    stp_link_type: ${19:# Specifies the STP link type for the interface}
+    sflow: ${20:# Specifies sFlow settings for the interface}
+    provider: ${21:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_interface]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage BIG-IP physical interfaces</description>
+</snippet>

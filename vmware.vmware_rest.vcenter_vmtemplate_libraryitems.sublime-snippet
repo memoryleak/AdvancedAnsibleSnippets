@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates a library item in content library from a virtual machine}
+  vmware.vmware_rest.vcenter_vmtemplate_libraryitems:
+    description: ${2:# Description of the deployed virtual machine}
+    disk_storage: ${3:# Storage specification for the virtual machine template's disks}
+    disk_storage_overrides: ${4:# Storage specification for individual disks in the deployed virtual machine}
+    guest_customization: ${5:# Guest customization spec to apply to the deployed virtual machine}
+    hardware_customization: ${6:# Hardware customization spec which specifies updates to the deployed virtual machine}
+    library: ${7:# Identifier of the library in which the new library item should be created}
+    name: ${8:# Name of the deployed virtual machine}
+    placement: ${9:# Information used to place the virtual machine template}
+    powered_on: ${10:# Specifies whether the deployed virtual machine should be powered on after deployment}
+    session_timeout: ${11:# Timeout settings for client session}
+    source_vm: ${12:# Identifier of the source virtual machine to create the library item from}
+    state: ${13:# No description available}
+    template_library_item: ${14:# identifier of the content library item containing the source virtual machine template to be deployed}
+    vcenter_hostname: ${15:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${16:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${17:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${18:# The vSphere vCenter username}
+    vcenter_validate_certs: ${19:# Allows connection when SSL certificates are not valid}
+    vm_home_storage: ${20:# Storage location for the virtual machine template's configuration and log files}
+  tags:
+    - vmware
+    - vmware_rest
+    - vcenter_vmtemplate_libraryitems]]></content>
+  <tabTrigger>vmware.vmware_rest.vcenter_vmtemplate_libraryitems</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates a library item in content library from a virtual machine</description>
+</snippet>

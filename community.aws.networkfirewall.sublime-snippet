@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:manage AWS Network Firewall firewalls}
+  community.aws.networkfirewall:
+    arn: ${2:# The ARN of the firewall}
+    name: ${3:# The name of the firewall}
+    state: ${4:# Create or remove the firewall}
+    description: ${5:# A description for the firewall}
+    delete_protection: ${6:# When I(delete_protection=True), the firewall is protected from deletion}
+    policy_change_protection: ${7:# When I(policy_change_protection=True), the firewall is protected from changes to which policy is attached to the firewall}
+    subnet_change_protection: ${8:# When I(subnet_change_protection=True), the firewall is protected from changes to which subnets is attached to the firewall}
+    wait: ${9:# On creation, whether to wait for the firewall to reach the C(READY) state}
+    wait_timeout: ${10:# Maximum time, in seconds, to wait for the firewall to reach the expected state}
+    subnets: ${11:# The ID of the subnets to which the firewall will be associated}
+    purge_subnets: ${12:# If I(purge_subnets=true), existing subnets will be removed from the firewall as necessary to match exactly what is defined by I(subnets)}
+    policy: ${13:# The ARN of the Network Firewall policy to use for the firewall}
+    access_key: ${14:# AWS access key ID}
+    secret_key: ${15:# AWS secret access key}
+    session_token: ${16:# AWS STS session token for use with temporary credentials}
+    profile: ${17:# A named AWS profile to use for authentication}
+    endpoint_url: ${18:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${19:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${20:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${21:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${22:# Use a C(botocore}
+    region: ${23:# The AWS region to use}
+    tags: ${24:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${25:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - community
+    - aws
+    - networkfirewall]]></content>
+  <tabTrigger>community.aws.networkfirewall</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>manage AWS Network Firewall firewalls</description>
+</snippet>

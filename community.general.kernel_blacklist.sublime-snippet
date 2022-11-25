@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Blacklist kernel modules}
+  community.general.kernel_blacklist:
+    name: ${2:# Name of kernel module to black- or whitelist}
+    state: ${3:# Whether the module should be present in the blacklist or absent}
+    blacklist_file: ${4:# If specified, use this blacklist file instead of C(/etc/modprobe}
+  tags:
+    - community
+    - general
+    - kernel_blacklist]]></content>
+  <tabTrigger>community.general.kernel_blacklist</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Blacklist kernel modules</description>
+</snippet>

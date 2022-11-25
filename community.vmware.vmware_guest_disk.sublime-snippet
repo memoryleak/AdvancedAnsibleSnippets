@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage disks related to virtual machine in given vCenter infrastructure}
+  community.vmware.vmware_guest_disk:
+    name: ${2:# Name of the virtual machine}
+    uuid: ${3:# UUID of the instance to gather facts if known, this is VMware's unique identifier}
+    moid: ${4:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    folder: ${5:# Destination folder, absolute or relative path to find an existing guest}
+    datacenter: ${6:# The datacenter name to which virtual machine belongs to}
+    use_instance_uuid: ${7:# Whether to use the VMware instance UUID rather than the BIOS UUID}
+    disk: ${8:# A list of disks to add or remove}
+    hostname: ${9:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${10:# The username of the vSphere vCenter or ESXi server}
+    password: ${11:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${12:# Allows connection when SSL certificates are not valid}
+    port: ${13:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${14:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${15:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_guest_disk]]></content>
+  <tabTrigger>community.vmware.vmware_guest_disk</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage disks related to virtual machine in given vCenter infrastructure</description>
+</snippet>

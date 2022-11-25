@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Completes the lifecycle action of an instance}
+  community.aws.autoscaling_complete_lifecycle_action:
+    asg_name: ${2:# The name of the Auto Scaling Group which the instance belongs to}
+    lifecycle_hook_name: ${3:# The name of the lifecycle hook to complete}
+    lifecycle_action_result: ${4:# The action for the lifecycle hook to take}
+    instance_id: ${5:# The ID of the instance}
+    access_key: ${6:# AWS access key ID}
+    secret_key: ${7:# AWS secret access key}
+    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    profile: ${9:# A named AWS profile to use for authentication}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${13:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
+    region: ${15:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - autoscaling_complete_lifecycle_action]]></content>
+  <tabTrigger>community.aws.autoscaling_complete_lifecycle_action</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Completes the lifecycle action of an instance</description>
+</snippet>

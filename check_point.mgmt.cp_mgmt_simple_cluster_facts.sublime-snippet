@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get simple-cluster objects facts on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_simple_cluster_facts:
+    name: ${2:# Object name}
+    limit_interfaces: ${3:# Limit number of interfaces to show}
+    show_portals_certificate: ${4:# Indicates whether to show the portals certificate value in the reply}
+    details_level: ${5:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    filter: ${6:# Search expression to filter objects by}
+    limit: ${7:# The maximal number of returned results}
+    offset: ${8:# Number of the results to initially skip}
+    order: ${9:# Sorts the results by search criteria}
+    show_membership: ${10:# Indicates whether to calculate and show 'groups' field for every object in reply}
+    domains_to_process: ${11:# Indicates which domains to process the commands on}
+    version: ${12:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_simple_cluster_facts]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_simple_cluster_facts</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get simple-cluster objects facts on Checkpoint over Web Services API</description>
+</snippet>

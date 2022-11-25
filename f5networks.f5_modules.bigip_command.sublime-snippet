@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Run TMSH and BASH commands on F5 devices}
+  f5networks.f5_modules.bigip_command:
+    commands: ${2:# The commands to send to the remote BIG-IP device over the configured provider}
+    wait_for: ${3:# Specifies what to evaluate from the output of the command and what conditionals to apply}
+    match: ${4:# The I(match) argument is used in conjunction with the I(wait_for) argument to specify the match policy}
+    retries: ${5:# Specifies the number of retries a command should be tried before it is considered failed}
+    interval: ${6:# Configures the interval in seconds to wait between retries of the command}
+    warn: ${7:# Whether the module should raise warnings related to command idempotency or not}
+    chdir: ${8:# Change into this directory before running the command}
+    provider: ${9:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_command]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_command</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Run TMSH and BASH commands on F5 devices</description>
+</snippet>

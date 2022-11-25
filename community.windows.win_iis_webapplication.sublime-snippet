@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures IIS web applications}
+  community.windows.win_iis_webapplication:
+    name: ${2:# Name of the web application}
+    site: ${3:# Name of the site on which the application is created}
+    state: ${4:# State of the web application}
+    physical_path: ${5:# The physical path on the remote host to use for the new application}
+    application_pool: ${6:# The application pool in which the new site executes}
+    connect_as: ${7:# The type of authentication to use for this application}
+    username: ${8:# Specifies the user name of an account that can access configuration files and content for this application}
+    password: ${9:# The password associated with I(username)}
+  tags:
+    - community
+    - windows
+    - win_iis_webapplication]]></content>
+  <tabTrigger>community.windows.win_iis_webapplication</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures IIS web applications</description>
+</snippet>

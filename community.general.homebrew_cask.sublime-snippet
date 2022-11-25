@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Install and uninstall homebrew casks}
+  community.general.homebrew_cask:
+    name: ${2:# Name of cask to install or remove}
+    path: ${3:# ':' separated list of paths to search for 'brew' executable}
+    state: ${4:# State of the cask}
+    sudo_password: ${5:# The sudo password to be passed to SUDO_ASKPASS}
+    update_homebrew: ${6:# Update homebrew itself first}
+    install_options: ${7:# Options flags to install a package}
+    accept_external_apps: ${8:# Allow external apps}
+    upgrade_all: ${9:# Upgrade all casks}
+    greedy: ${10:# Upgrade casks that auto update}
+  tags:
+    - community
+    - general
+    - homebrew_cask]]></content>
+  <tabTrigger>community.general.homebrew_cask</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Install and uninstall homebrew casks</description>
+</snippet>

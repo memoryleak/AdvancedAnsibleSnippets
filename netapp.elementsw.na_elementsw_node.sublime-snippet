@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp Element Software Node Operation}
+  netapp.elementsw.na_elementsw_node:
+    state: ${2:# Element Software Storage Node operation state}
+    node_ids: ${3:# List of IDs or Names or IP Addresses of nodes to add or remove}
+    cluster_name: ${4:# If set, the current node configuration is updated with this name before adding the node to the cluster}
+    preset_only: ${5:# If true and state is 'present', set the cluster name for each node in node_ids, but do not add the nodes}
+    hostname: ${6:# The hostname or IP address of the SolidFire cluster}
+    username: ${7:# Please ensure that the user has the adequate permissions}
+    password: ${8:# Password for the specified user}
+  tags:
+    - netapp
+    - elementsw
+    - na_elementsw_node]]></content>
+  <tabTrigger>netapp.elementsw.na_elementsw_node</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp Element Software Node Operation</description>
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp Element Software Create Volume Clone}
+  netapp.elementsw.na_elementsw_volume_clone:
+    name: ${2:# The name of the clone}
+    src_volume_id: ${3:# The id of the src volume to clone}
+    src_snapshot_id: ${4:# The id of the snapshot to clone}
+    account_id: ${5:# Account ID for the owner of this cloned volume}
+    attributes: ${6:# A YAML dictionary of attributes that you would like to apply on this cloned volume}
+    size: ${7:# The size of the cloned volume in (size_unit)}
+    size_unit: ${8:# The unit used to interpret the size parameter}
+    access: ${9:# Access allowed for the volume}
+    hostname: ${10:# The hostname or IP address of the SolidFire cluster}
+    username: ${11:# Please ensure that the user has the adequate permissions}
+    password: ${12:# Password for the specified user}
+  tags:
+    - netapp
+    - elementsw
+    - na_elementsw_volume_clone]]></content>
+  <tabTrigger>netapp.elementsw.na_elementsw_volume_clone</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp Element Software Create Volume Clone</description>
+</snippet>

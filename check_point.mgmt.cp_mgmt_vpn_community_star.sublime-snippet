@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages vpn-community-star objects on Check Point over Web Services API}
+  check_point.mgmt.cp_mgmt_vpn_community_star:
+    name: ${2:# Object name}
+    center_gateways: ${3:# Collection of Gateway objects representing center gateways identified by the name or UID}
+    encryption_method: ${4:# The encryption method to be used}
+    encryption_suite: ${5:# The encryption suite to be used}
+    ike_phase_1: ${6:# Ike Phase 1 settings}
+    ike_phase_2: ${7:# Ike Phase 2 settings}
+    mesh_center_gateways: ${8:# Indicates whether the meshed community is in center}
+    satellite_gateways: ${9:# Collection of Gateway objects representing satellite gateways identified by the name or UID}
+    shared_secrets: ${10:# Shared secrets for external gateways}
+    tags: ${11:# Collection of tag identifiers}
+    use_shared_secret: ${12:# Indicates whether the shared secret should be used for all external gateways}
+    color: ${13:# Color of the object}
+    comments: ${14:# Comments string}
+    details_level: ${15:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_warnings: ${16:# Apply changes ignoring warnings}
+    ignore_errors: ${17:# Apply changes ignoring errors}
+    state: ${18:# State of the access rule (present or absent)}
+    auto_publish_session: ${19:# Publish the current session if changes have been performed after task completes}
+    wait_for_task: ${20:# Wait for the task to end}
+    wait_for_task_timeout: ${21:# How many minutes to wait until throwing a timeout error}
+    version: ${22:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_vpn_community_star]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_vpn_community_star</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages vpn-community-star objects on Check Point over Web Services API</description>
+</snippet>

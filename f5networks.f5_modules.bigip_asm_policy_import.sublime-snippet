@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage BIG-IP ASM policy imports}
+  f5networks.f5_modules.bigip_asm_policy_import:
+    name: ${2:# The ASM policy to create or override}
+    policy_type: ${3:# The type of the policy to import}
+    retain_inheritance_settings: ${4:# Indicates if an imported security type policy should retain settings when attached to parent policy}
+    parent_policy: ${5:# The parent policy to which the newly imported policy should be attached as child}
+    base64: ${6:# Indicates if the imported policy string is encoded in Base64}
+    inline: ${7:# When specified, the ASM policy is created from a provided string}
+    encoding: ${8:# Specifies the desired application language of the imported policy}
+    source: ${9:# Full path to a policy file to be imported into the BIG-IP ASM}
+    force: ${10:# When set to C(yes), any existing policy with the same name will be overwritten by the new import}
+    partition: ${11:# Device partition on which to create the policy}
+    provider: ${12:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_asm_policy_import]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_asm_policy_import</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage BIG-IP ASM policy imports</description>
+</snippet>

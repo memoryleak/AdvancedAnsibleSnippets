@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series manage global settings configuration}
+  netapp_eseries.santricity.na_santricity_global:
+    name: ${2:# Set the name of the E-Series storage-system}
+    cache_block_size: ${3:# Size of the cache's block size}
+    cache_flush_threshold: ${4:# This is the percentage threshold of the amount of unwritten data that is allowed to remain on the storage array's cache before flushing}
+    default_host_type: ${5:# Default host type for the storage system}
+    automatic_load_balancing: ${6:# Enable automatic load balancing to allow incoming traffic from the hosts to be dynamically managed and balanced across both controllers}
+    host_connectivity_reporting: ${7:# Enable host connectivity reporting to allow host connections to be monitored for connection and multipath driver problems}
+    login_banner_message: ${8:# Text message that appears prior to the login page}
+    controller_shelf_id: ${9:# This is the identifier for the drive enclosure containing the controllers}
+    api_username: ${10:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_password: ${11:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${12:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    validate_certs: ${13:# Should https certificates be validated?}
+    ssid: ${14:# The ID of the array to manage}
+  tags:
+    - netapp_eseries
+    - santricity
+    - na_santricity_global]]></content>
+  <tabTrigger>netapp_eseries.santricity.na_santricity_global</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series manage global settings configuration</description>
+</snippet>

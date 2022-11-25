@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series manage remote server certificates}
+  netapp_eseries.santricity.na_santricity_client_certificate:
+    certificates: ${2:# List of certificate files}
+    remove_unspecified_user_certificates: ${3:# Whether to remove user install client certificates that are not specified in I(certificates)}
+    reload_certificates: ${4:# Whether to reload certificates when certificates have been added or removed}
+    api_username: ${5:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_password: ${6:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${7:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    validate_certs: ${8:# Should https certificates be validated?}
+    ssid: ${9:# The ID of the array to manage}
+  tags:
+    - netapp_eseries
+    - santricity
+    - na_santricity_client_certificate]]></content>
+  <tabTrigger>netapp_eseries.santricity.na_santricity_client_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series manage remote server certificates</description>
+</snippet>

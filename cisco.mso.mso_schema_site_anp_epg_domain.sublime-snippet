@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage site-local EPG domains in schema template}
+  cisco.mso.mso_schema_site_anp_epg_domain:
+    schema: ${2:# The name of the schema}
+    site: ${3:# The name of the site}
+    template: ${4:# The name of the template}
+    anp: ${5:# The name of the ANP}
+    epg: ${6:# The name of the EPG}
+    domain_association_type: ${7:# The type of domain to associate}
+    domain_profile: ${8:# The domain profile name}
+    deployment_immediacy: ${9:# The deployment immediacy of the domain}
+    resolution_immediacy: ${10:# Determines when the policies should be resolved and available}
+    micro_seg_vlan_type: ${11:# Virtual LAN type for microsegmentation}
+    micro_seg_vlan: ${12:# Virtual LAN for microsegmentation}
+    port_encap_vlan_type: ${13:# Virtual LAN type for port encap}
+    port_encap_vlan: ${14:# Virtual LAN type for port encap}
+    vlan_encap_mode: ${15:# Which VLAN enacap mode to use}
+    allow_micro_segmentation: ${16:# Specifies microsegmentation is enabled or not}
+    switch_type: ${17:# Which switch type to use with this domain association}
+    switching_mode: ${18:# Which switching mode to use with this domain association}
+    enhanced_lagpolicy_name: ${19:# EPG enhanced lagpolicy name}
+    enhanced_lagpolicy_dn: ${20:# Distinguished name of EPG lagpolicy}
+    state: ${21:# Use C(present) or C(absent) for adding or removing}
+    host: ${22:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    port: ${23:# Port number to be used for the REST connection}
+    username: ${24:# The username to use for authentication}
+    password: ${25:# The password to use for authentication}
+    output_level: ${26:# Influence the output of this MSO module}
+    timeout: ${27:# The socket level timeout in seconds}
+    use_proxy: ${28:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${29:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    validate_certs: ${30:# If C(no), SSL certificates will not be validated}
+    login_domain: ${31:# The login domain name to use for authentication}
+  tags:
+    - cisco
+    - mso
+    - mso_schema_site_anp_epg_domain]]></content>
+  <tabTrigger>cisco.mso.mso_schema_site_anp_epg_domain</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage site-local EPG domains in schema template</description>
+</snippet>

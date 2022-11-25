@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure Monitor log profile}
+  azure.azcollection.azure_rm_monitorlogprofile:
+    name: ${2:# Unique name of the log profile to create or update}
+    location: ${3:# Resource location}
+    locations: ${4:# List of regions for which Activity Log events should be stored}
+    categories: ${5:# List of categories of logs}
+    retention_policy: ${6:# Retention policy for events in the log}
+    service_bus_rule_id: ${7:# The service bus rule  ID of the service bus namespace in which you would like to have Event Hubs created for streaming in the Activity Log}
+    storage_account: ${8:# The storage account to which send the Activity Log}
+    state: ${9:# Assert the state of the log profile}
+    ad_user: ${10:# Active Directory username}
+    password: ${11:# Active Directory user password}
+    profile: ${12:# Security profile found in ~/}
+    subscription_id: ${13:# Your Azure subscription Id}
+    client_id: ${14:# Azure client ID}
+    secret: ${15:# Azure client secret}
+    tenant: ${16:# Azure tenant ID}
+    cloud_environment: ${17:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${18:# Azure AD authority url}
+    cert_validation_mode: ${19:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${20:# Controls the source of the credentials to use for authentication}
+    api_profile: ${21:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${22:# Parent argument}
+    log_mode: ${23:# Parent argument}
+    x509_certificate_path: ${24:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${25:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${26:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${27:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_monitorlogprofile]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_monitorlogprofile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure Monitor log profile</description>
+</snippet>

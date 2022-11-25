@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:CLI command to create/delete vtep}
+  community.network.pn_vtep:
+    pn_cliswitch: ${2:# Target switch to run the CLI on}
+    state: ${3:# vtep configuration command}
+    pn_name: ${4:# vtep name}
+    pn_ip: ${5:# Primary IP address}
+    pn_vrouter_name: ${6:# name of the vrouter service}
+    pn_virtual_ip: ${7:# Virtual/Secondary IP address}
+    pn_location: ${8:# switch name}
+    pn_switch_in_cluster: ${9:# Tells whether switch in cluster or not}
+  tags:
+    - community
+    - network
+    - pn_vtep]]></content>
+  <tabTrigger>community.network.pn_vtep</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>CLI command to create/delete vtep</description>
+</snippet>

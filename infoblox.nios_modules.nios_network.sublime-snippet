@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Infoblox NIOS network object}
+  infoblox.nios_modules.nios_network:
+    network: ${2:# Specifies the network to add or remove from the system}
+    network_view: ${3:# Configures the name of the network view to associate with this configured instance}
+    options: ${4:# Configures the set of DHCP options to be included as part of the configured network instance}
+    template: ${5:# If set on creation, the network is created according to the values specified in the selected template}
+    extattrs: ${6:# Allows for the configuration of Extensible Attributes on the instance of the object}
+    comment: ${7:# Configures a text string comment to be associated with the instance of this object}
+    container: ${8:# If set to true it'll create the network container to be added or removed from the system}
+    state: ${9:# Configures the intended state of the instance of the object on the NIOS server}
+    provider: ${10:# A dict object containing connection details}
+  tags:
+    - infoblox
+    - nios_modules
+    - nios_network]]></content>
+  <tabTrigger>infoblox.nios_modules.nios_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Infoblox NIOS network object</description>
+</snippet>

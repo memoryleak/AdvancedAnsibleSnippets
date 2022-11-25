@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or delete an event in oVirt/RHV}
+  ovirt.ovirt.ovirt_event:
+    state: ${2:# Should the event be present/absent}
+    description: ${3:# Message for the event}
+    severity: ${4:# Severity of the event}
+    origin: ${5:# Originator of the event}
+    custom_id: ${6:# Custom ID for the event}
+    id: ${7:# The event ID in the oVirt/RHV audit_log table}
+    correlation_id: ${8:# The event correlation identifier}
+    cluster: ${9:# The id of the cluster associated with this event}
+    data_center: ${10:# The id of the data center associated with this event}
+    host: ${11:# The id of the host associated with this event}
+    storage_domain: ${12:# The id of the storage domain associated with this event}
+    template: ${13:# The id of the template associated with this event}
+    user: ${14:# The id of the user associated with this event}
+    vm: ${15:# The id of the VM associated with this event}
+    wait: ${16:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${17:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${18:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${19:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${20:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${21:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_event]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_event</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or delete an event in oVirt/RHV</description>
+</snippet>

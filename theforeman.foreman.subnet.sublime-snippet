@@ -1,0 +1,46 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Subnets}
+  theforeman.foreman.subnet:
+    name: ${2:# Subnet name}
+    description: ${3:# Description of the subnet}
+    updated_name: ${4:# New subnet name}
+    network_type: ${5:# Subnet type}
+    dns_primary: ${6:# Primary DNS server for this subnet}
+    dns_secondary: ${7:# Secondary DNS server for this subnet}
+    domains: ${8:# List of DNS domains the subnet should assigned to}
+    gateway: ${9:# Subnet gateway IP address}
+    network: ${10:# Subnet IP address}
+    cidr: ${11:# CIDR prefix length; Required if I(network_type=IPv4) and no I(mask) provided}
+    mask: ${12:# Subnet netmask}
+    from_ip: ${13:# First IP address of the host IP allocation pool}
+    to_ip: ${14:# Last IP address of the host IP allocation pool}
+    boot_mode: ${15:# Boot mode used by hosts in this subnet}
+    ipam: ${16:# IPAM mode for this subnet}
+    dhcp_proxy: ${17:# DHCP Smart proxy for this subnet}
+    httpboot_proxy: ${18:# HTTP Boot Smart proxy for this subnet}
+    tftp_proxy: ${19:# TFTP Smart proxy for this subnet}
+    discovery_proxy: ${20:# Discovery Smart proxy for this subnet}
+    dns_proxy: ${21:# Reverse DNS Smart proxy for this subnet}
+    template_proxy: ${22:# Template Smart proxy for this subnet}
+    bmc_proxy: ${23:# BMC Smart proxy for this subnet}
+    remote_execution_proxies: ${24:# Remote execution Smart proxies for this subnet}
+    externalipam_proxy: ${25:# External IPAM proxy for this subnet}
+    externalipam_group: ${26:# External IPAM group for this subnet}
+    vlanid: ${27:# VLAN ID}
+    mtu: ${28:# MTU}
+    parameters: ${29:# Subnet specific host parameters}
+    server_url: ${30:# URL of the Foreman server}
+    username: ${31:# Username accessing the Foreman server}
+    password: ${32:# Password of the user accessing the Foreman server}
+    validate_certs: ${33:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${34:# State of the entity}
+    organizations: ${35:# List of organizations the entity should be assigned to}
+    locations: ${36:# List of locations the entity should be assigned to}
+  tags:
+    - theforeman
+    - foreman
+    - subnet]]></content>
+  <tabTrigger>theforeman.foreman.subnet</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Subnets</description>
+</snippet>

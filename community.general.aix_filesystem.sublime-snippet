@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure LVM and NFS file systems for AIX}
+  community.general.aix_filesystem:
+    account_subsystem: ${2:# Specifies whether the file system is to be processed by the accounting subsystem}
+    attributes: ${3:# Specifies attributes for files system separated by comma}
+    auto_mount: ${4:# File system is automatically mounted at system restart}
+    device: ${5:# Logical volume (LV) device name or remote export device to create a NFS file system}
+    fs_type: ${6:# Specifies the virtual file system type}
+    permissions: ${7:# Set file system permissions}
+    mount_group: ${8:# Specifies the mount group}
+    filesystem: ${9:# Specifies the mount point, which is the directory where the file system will be mounted}
+    nfs_server: ${10:# Specifies a Network File System (NFS) server}
+    rm_mount_point: ${11:# Removes the mount point directory when used with state C(absent)}
+    size: ${12:# Specifies the file system size}
+    state: ${13:# Controls the file system state}
+    vg: ${14:# Specifies an existing volume group (VG)}
+  tags:
+    - community
+    - general
+    - aix_filesystem]]></content>
+  <tabTrigger>community.general.aix_filesystem</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure LVM and NFS file systems for AIX</description>
+</snippet>

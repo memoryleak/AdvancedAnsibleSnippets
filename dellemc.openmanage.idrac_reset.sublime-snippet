@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Reset iDRAC}
+  dellemc.openmanage.idrac_reset:
+    idrac_ip: ${2:# iDRAC IP Address}
+    idrac_user: ${3:# iDRAC username}
+    idrac_password: ${4:# iDRAC user password}
+    idrac_port: ${5:# iDRAC port}
+    validate_certs: ${6:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${7:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${8:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_reset]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_reset</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Reset iDRAC</description>
+</snippet>

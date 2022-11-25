@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage SCAP content}
+  theforeman.foreman.scap_content:
+    title: ${2:# Title of SCAP content}
+    updated_title: ${3:# New SCAP content title}
+    server_url: ${4:# URL of the Foreman server}
+    username: ${5:# Username accessing the Foreman server}
+    password: ${6:# Password of the user accessing the Foreman server}
+    validate_certs: ${7:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${8:# State of the entity}
+    organizations: ${9:# List of organizations the entity should be assigned to}
+    locations: ${10:# List of locations the entity should be assigned to}
+    scap_file: ${11:# File containing XML DataStream content}
+    original_filename: ${12:# Original file name of the XML file}
+  tags:
+    - theforeman
+    - foreman
+    - scap_content]]></content>
+  <tabTrigger>theforeman.foreman.scap_content</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage SCAP content</description>
+</snippet>

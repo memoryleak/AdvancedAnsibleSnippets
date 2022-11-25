@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage rabbitMQ bindings}
+  community.rabbitmq.rabbitmq_binding:
+    state: ${2:# Whether the bindings should be present or absent}
+    name: ${3:# source exchange to create binding on}
+    destination: ${4:# destination exchange or queue for the binding}
+    destination_type: ${5:# Either queue or exchange}
+    routing_key: ${6:# routing key for the binding}
+    arguments: ${7:# extra arguments for exchange}
+    login_user: ${8:# RabbitMQ user for connection}
+    login_password: ${9:# RabbitMQ password for connection}
+    login_host: ${10:# RabbitMQ host for connection}
+    login_port: ${11:# RabbitMQ management API port}
+    login_protocol: ${12:# RabbitMQ management API protocol}
+    ca_cert: ${13:# CA certificate to verify SSL connection to management API}
+    client_cert: ${14:# Client certificate to send on SSL connections to management API}
+    client_key: ${15:# Private key matching the client certificate}
+    vhost: ${16:# RabbitMQ virtual host}
+  tags:
+    - community
+    - rabbitmq
+    - rabbitmq_binding]]></content>
+  <tabTrigger>community.rabbitmq.rabbitmq_binding</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage rabbitMQ bindings</description>
+</snippet>

@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for System Certificate Import}
+  cisco.ise.system_certificate_import:
+    admin: ${2:# Use certificate to authenticate the Cisco ISE Admin Portal}
+    allowExtendedValidity: ${3:# Allow import of certificates with validity greater than 398 days (required)}
+    allowOutOfDateCert: ${4:# Allow out of date certificates (required)}
+    allowPortalTagTransferForSameSubject: ${5:# Allow overwriting the portal tag from matching certificate of same subject}
+    allowReplacementOfCertificates: ${6:# Allow Replacement of certificates (required)}
+    allowReplacementOfPortalGroupTag: ${7:# Allow Replacement of Portal Group Tag (required)}
+    allowRoleTransferForSameSubject: ${8:# Allow transfer of roles for certificate with matching subject}
+    allowSHA1Certificates: ${9:# Allow SHA1 based certificates (required)}
+    allowWildCardCertificates: ${10:# Allow Wildcard certificates}
+    data: ${11:# Certificate Content (required)}
+    eap: ${12:# Use certificate for EAP protocols that use SSL/TLS tunneling}
+    ims: ${13:# Use certificate for the Cisco ISE Messaging Service}
+    name: ${14:# Name of the certificate}
+    password: ${15:# Certificate Password (required)}
+    portal: ${16:# Use for portal}
+    portalGroupTag: ${17:# Set Group tag}
+    privateKeyData: ${18:# Private Key data (required)}
+    pxgrid: ${19:# Use certificate for the pxGrid Controller}
+    radius: ${20:# Use certificate for the RADSec server}
+    saml: ${21:# Use certificate for SAML Signing}
+    validateCertificateExtensions: ${22:# Validate certificate extensions}
+    ise_hostname: ${23:# The Identity Services Engine hostname}
+    ise_username: ${24:# The Identity Services Engine username to authenticate}
+    ise_password: ${25:# The Identity Services Engine password to authenticate}
+    ise_verify: ${26:# Flag to enable or disable SSL certificate verification}
+    ise_version: ${27:# Informs the SDK which version of Identity Services Engine to use}
+    ise_wait_on_rate_limit: ${28:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
+    ise_debug: ${29:# Flag for Identity Services Engine SDK to enable debugging}
+    ise_uses_api_gateway: ${30:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
+    ise_uses_csrf_token: ${31:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+  tags:
+    - cisco
+    - ise
+    - system_certificate_import]]></content>
+  <tabTrigger>cisco.ise.system_certificate_import</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for System Certificate Import</description>
+</snippet>

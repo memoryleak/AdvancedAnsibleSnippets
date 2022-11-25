@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp Element Software Manage VLAN}
+  netapp.elementsw.na_elementsw_vlan:
+    state: ${2:# Whether the specified vlan should exist or not}
+    vlan_tag: ${3:# Virtual Network Tag}
+    name: ${4:# User defined name for the new VLAN}
+    svip: ${5:# Storage virtual IP which is unique}
+    address_blocks: ${6:# List of address blocks for the VLAN}
+    netmask: ${7:# Netmask for the VLAN}
+    gateway: ${8:# Gateway for the VLAN}
+    namespace: ${9:# Enable or disable namespaces}
+    attributes: ${10:# Dictionary of attributes with name and value for each attribute}
+    hostname: ${11:# The hostname or IP address of the SolidFire cluster}
+    username: ${12:# Please ensure that the user has the adequate permissions}
+    password: ${13:# Password for the specified user}
+  tags:
+    - netapp
+    - elementsw
+    - na_elementsw_vlan]]></content>
+  <tabTrigger>netapp.elementsw.na_elementsw_vlan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp Element Software Manage VLAN</description>
+</snippet>

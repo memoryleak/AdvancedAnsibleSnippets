@@ -1,0 +1,43 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add/Update/Delete ports from an OpenStack cloud}
+  openstack.cloud.port:
+    network: ${2:# Network ID or name this port belongs to}
+    name: ${3:# Name that has to be given to the port}
+    fixed_ips: ${4:# Desired IP and/or subnet for this port}
+    admin_state_up: ${5:# Sets admin state}
+    mac_address: ${6:# MAC address of this port}
+    security_groups: ${7:# Security group(s) ID(s) or name(s) associated with the port (comma separated string or YAML list)}
+    no_security_groups: ${8:# Do not associate a security group with this port}
+    allowed_address_pairs: ${9:# Allowed address pairs list}
+    extra_dhcp_opts: ${10:# Extra dhcp options to be assigned to this port}
+    device_owner: ${11:# The ID of the entity that uses this port}
+    device_id: ${12:# Device ID of device using this port}
+    state: ${13:# Should the resource be present or absent}
+    vnic_type: ${14:# The type of the port that should be created}
+    port_security_enabled: ${15:# Whether to enable or disable the port security on the network}
+    binding_profile: ${16:# Binding profile dict that the port should be created with}
+    dns_name: ${17:# The dns name of the port ( only with dns-integration enabled )}
+    dns_domain: ${18:# The dns domain of the port ( only with dns-integration enabled )}
+    cloud: ${19:# Named cloud or cloud config to operate against}
+    auth: ${20:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${21:# Name of the auth plugin to use}
+    region_name: ${22:# Name of the region}
+    wait: ${23:# Should ansible wait until the requested resource is complete}
+    timeout: ${24:# How long should ansible wait for the requested resource}
+    api_timeout: ${25:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${26:# Whether or not SSL API requests should be verified}
+    ca_cert: ${27:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${28:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${29:# A path to a client key to use as part of the SSL transaction}
+    interface: ${30:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${31:# Ignored}
+    sdk_log_path: ${32:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${33:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - port]]></content>
+  <tabTrigger>openstack.cloud.port</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add/Update/Delete ports from an OpenStack cloud</description>
+</snippet>

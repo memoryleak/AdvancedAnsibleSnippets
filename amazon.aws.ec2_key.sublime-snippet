@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or delete an EC2 key pair}
+  amazon.aws.ec2_key:
+    name: ${2:# Name of the key pair}
+    key_material: ${3:# Public key material}
+    force: ${4:# Force overwrite of already existing key pair if key has changed}
+    state: ${5:# Create or delete keypair}
+    key_type: ${6:# The type of key pair to create}
+    access_key: ${7:# AWS access key ID}
+    secret_key: ${8:# AWS secret access key}
+    session_token: ${9:# AWS STS session token for use with temporary credentials}
+    profile: ${10:# A named AWS profile to use for authentication}
+    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${12:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${13:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${14:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${15:# Use a C(botocore}
+    region: ${16:# The AWS region to use}
+    tags: ${17:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${18:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+  tags:
+    - amazon
+    - aws
+    - ec2_key]]></content>
+  <tabTrigger>amazon.aws.ec2_key</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or delete an EC2 key pair</description>
+</snippet>

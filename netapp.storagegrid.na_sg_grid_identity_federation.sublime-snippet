@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp StorageGRID manage Grid identity federation}
+  netapp.storagegrid.na_sg_grid_identity_federation:
+    state: ${2:# Whether identity federation should be enabled or not}
+    username: ${3:# The username to bind to the LDAP server}
+    password: ${4:# The password associated with the username}
+    hostname: ${5:# The hostname or IP address of the LDAP server}
+    port: ${6:# The port used to connect to the LDAP server}
+    base_group_dn: ${7:# The Distinguished Name of the LDAP subtree to search for groups}
+    base_user_dn: ${8:# The Distinguished Name of the LDAP subtree to search for users}
+    ldap_service_type: ${9:# The type of LDAP server}
+    type: ${10:# The type of identity source}
+    ldap_user_id_attribute: ${11:# The LDAP attribute which contains the unique user name of a user}
+    ldap_user_uuid_attribute: ${12:# The LDAP attribute which contains the permanent unique identity of a user}
+    ldap_group_id_attribute: ${13:# The LDAP attribute which contains the group for a user}
+    ldap_group_uuid_attribute: ${14:# The LDAP attribute which contains the group's permanent unique identity}
+    tls: ${15:# Whether Transport Layer Security is used to connect to the LDAP server}
+    ca_cert: ${16:# Custom certificate used to connect to the LDAP server}
+    auth_token: ${17:# The authorization token for the API request}
+    api_url: ${18:# The url to the StorageGRID Admin Node REST API}
+    validate_certs: ${19:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_identity_federation]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_identity_federation</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp StorageGRID manage Grid identity federation</description>
+</snippet>

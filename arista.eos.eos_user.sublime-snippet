@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the collection of local users on EOS devices}
+  arista.eos.eos_user:
+    aggregate: ${2:# The set of username objects to be configured on the remote Arista EOS device}
+    name: ${3:# The username to be configured on the remote Arista EOS device}
+    configured_password: ${4:# The password to be configured on the remote Arista EOS device}
+    update_password: ${5:# Since passwords are encrypted in the device running config, this argument will instruct the module when to change the password}
+    privilege: ${6:# The C(privilege) argument configures the privilege level of the user when logged into the system}
+    role: ${7:# Configures the role for the username in the device running configuration}
+    sshkey: ${8:# Specifies the SSH public key to configure for the given username}
+    nopassword: ${9:# Defines the username without assigning a password}
+    purge: ${10:# Instructs the module to consider the resource definition absolute}
+    state: ${11:# Configures the state of the username definition as it relates to the device operational configuration}
+  tags:
+    - arista
+    - eos
+    - eos_user]]></content>
+  <tabTrigger>arista.eos.eos_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the collection of local users on EOS devices</description>
+</snippet>

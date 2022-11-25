@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get the status of a Lifecycle Controller job}
+  dellemc.openmanage.idrac_lifecycle_controller_job_status_info:
+    job_id: ${2:# JOB ID in the format 'JID_123456789012'}
+    idrac_ip: ${3:# iDRAC IP Address}
+    idrac_user: ${4:# iDRAC username}
+    idrac_password: ${5:# iDRAC user password}
+    idrac_port: ${6:# iDRAC port}
+    validate_certs: ${7:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${8:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${9:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_lifecycle_controller_job_status_info]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_lifecycle_controller_job_status_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get the status of a Lifecycle Controller job</description>
+</snippet>

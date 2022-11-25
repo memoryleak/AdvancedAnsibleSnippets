@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp StorageGRID manage groups within a tenancy}
+  netapp.storagegrid.na_sg_org_group:
+    state: ${2:# Whether the specified group should exist or not}
+    unique_name: ${3:# Unique Name for the group}
+    display_name: ${4:# Name of the group}
+    management_policy: ${5:# Management access controls granted to the group within the tenancy}
+    s3_policy: ${6:# StorageGRID S3 Group Policy}
+    auth_token: ${7:# The authorization token for the API request}
+    api_url: ${8:# The url to the StorageGRID Admin Node REST API}
+    validate_certs: ${9:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_org_group]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_org_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp StorageGRID manage groups within a tenancy</description>
+</snippet>

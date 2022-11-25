@@ -1,0 +1,48 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module to manage Instance Types in oVirt/RHV}
+  ovirt.ovirt.ovirt_instance_type:
+    name: ${2:# Name of the Instance Type to manage}
+    id: ${3:# ID of the Instance Type to manage}
+    state: ${4:# Should the Instance Type be present/absent}
+    memory: ${5:# Amount of memory of the Instance Type}
+    memory_guaranteed: ${6:# Amount of minimal guaranteed memory of the Instance Type}
+    nics: ${7:# List of NICs, which should be attached to Virtual Machine}
+    memory_max: ${8:# Upper bound of instance type memory up to which memory hot-plug can be performed}
+    cpu_cores: ${9:# Number of virtual CPUs cores of the Instance Type}
+    cpu_sockets: ${10:# Number of virtual CPUs sockets of the Instance Type}
+    cpu_threads: ${11:# Number of virtual CPUs sockets of the Instance Type}
+    operating_system: ${12:# Operating system of the Instance Type, for example 'rhel_8x64'}
+    boot_devices: ${13:# List of boot devices which should be used to boot}
+    serial_console: ${14:# I(True) enable VirtIO serial console, I(False) to disable it}
+    usb_support: ${15:# I(True) enable USB support, I(False) to disable it}
+    high_availability: ${16:# If I(yes) Instance Type will be set as highly available}
+    high_availability_priority: ${17:# Indicates the priority of the instance type inside the run and migration queues}
+    watchdog: ${18:# Assign watchdog device for the instance type}
+    host: ${19:# Specify host where Instance Type should be running}
+    graphical_console: ${20:# Assign graphical console to the instance type}
+    description: ${21:# Description of the instance type}
+    cpu_mode: ${22:# CPU mode of the instance type}
+    rng_device: ${23:# Random number generator (RNG)}
+    rng_bytes: ${24:# Number of bytes allowed to consume per period}
+    rng_period: ${25:# Duration of one period in milliseconds}
+    placement_policy: ${26:# The configuration of the instance type's placement policy}
+    cpu_pinning: ${27:# CPU Pinning topology to map instance type CPU to host CPU}
+    soundcard_enabled: ${28:# If I(true), the sound card is added to the instance type}
+    smartcard_enabled: ${29:# If I(true), use smart card authentication}
+    virtio_scsi: ${30:# If I(true), virtio scsi will be enabled}
+    io_threads: ${31:# Number of IO threads used by instance type}
+    ballooning_enabled: ${32:# If I(true), use memory ballooning}
+    wait: ${33:# C(yes) if the module should wait for the entity to get into desired state}
+    fetch_nested: ${34:# If I(True) the module will fetch additional data from the API}
+    nested_attributes: ${35:# Specifies list of the attributes which should be fetched from the API}
+    auth: ${36:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    timeout: ${37:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    poll_interval: ${38:# Number of the seconds the module waits until another poll request on entity status is sent}
+  tags:
+    - ovirt
+    - ovirt
+    - ovirt_instance_type]]></content>
+  <tabTrigger>ovirt.ovirt.ovirt_instance_type</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module to manage Instance Types in oVirt/RHV</description>
+</snippet>

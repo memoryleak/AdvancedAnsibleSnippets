@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or delete an AWS CodeBuild project}
+  community.aws.codebuild_project:
+    name: ${2:# Name of the CodeBuild project}
+    description: ${3:# Descriptive text of the CodeBuild project}
+    source: ${4:# Configure service and location for the build input source}
+    artifacts: ${5:# Information about the build output artifacts for the build project}
+    cache: ${6:# Caching params to speed up following builds}
+    environment: ${7:# Information about the build environment for the build project}
+    service_role: ${8:# The ARN of the AWS IAM role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account}
+    timeout_in_minutes: ${9:# How long CodeBuild should wait until timing out any build that has not been marked as completed}
+    encryption_key: ${10:# The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build output artifacts}
+    tags: ${11:# A set of tags for the build project}
+    vpc_config: ${12:# The VPC config enables AWS CodeBuild to access resources in an Amazon VPC}
+    state: ${13:# Create or remove CodeBuild project}
+    resource_tags: ${14:# A dictionary representing the tags to be applied to the build project}
+    purge_tags: ${15:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    access_key: ${16:# AWS access key ID}
+    secret_key: ${17:# AWS secret access key}
+    session_token: ${18:# AWS STS session token for use with temporary credentials}
+    profile: ${19:# A named AWS profile to use for authentication}
+    endpoint_url: ${20:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${21:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${22:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${23:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${24:# Use a C(botocore}
+    region: ${25:# The AWS region to use}
+  tags:
+    - community
+    - aws
+    - codebuild_project]]></content>
+  <tabTrigger>community.aws.codebuild_project</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or delete an AWS CodeBuild project</description>
+</snippet>

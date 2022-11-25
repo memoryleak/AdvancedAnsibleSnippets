@@ -1,0 +1,46 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create / delete an instance in Rackspace Public Cloud}
+  community.general.rax:
+    auto_increment: ${2:# Whether or not to increment a single number with the name of the created servers}
+    boot_from_volume: ${3:# Whether or not to boot the instance from a Cloud Block Storage volume}
+    boot_volume: ${4:# Cloud Block Storage ID or Name to use as the boot volume of the instance}
+    boot_volume_size: ${5:# Size of the volume to create in Gigabytes}
+    boot_volume_terminate: ${6:# Whether the I(boot_volume) or newly created volume from I(image) will be terminated when the server is terminated}
+    config_drive: ${7:# Attach read-only configuration drive to server as label config-2}
+    count: ${8:# number of instances to launch}
+    count_offset: ${9:# number count to start at}
+    disk_config: ${10:# Disk partitioning strategy}
+    exact_count: ${11:# Explicitly ensure an exact count of instances, used with state=active/present}
+    extra_client_args: ${12:# A hash of key/value pairs to be used when creating the cloudservers client}
+    extra_create_args: ${13:# A hash of key/value pairs to be used when creating a new server}
+    files: ${14:# Files to insert into the instance}
+    flavor: ${15:# flavor to use for the instance}
+    group: ${16:# host group to assign to server, is also used for idempotent operations to ensure a specific number of instances}
+    image: ${17:# image to use for the instance}
+    instance_ids: ${18:# list of instance ids, currently only used when state='absent' to remove instances}
+    key_name: ${19:# key pair to use on the instance}
+    meta: ${20:# A hash of metadata to associate with the instance}
+    name: ${21:# Name to give the instance}
+    networks: ${22:# The network to attach to the instances}
+    state: ${23:# Indicate desired state of the resource}
+    user_data: ${24:# Data to be uploaded to the servers config drive}
+    wait: ${25:# wait for the instance to be in state 'running' before returning}
+    wait_timeout: ${26:# how long before wait gives up, in seconds}
+    api_key: ${27:# Rackspace API key, overrides I(credentials)}
+    auth_endpoint: ${28:# The URI of the authentication service}
+    credentials: ${29:# File to find the Rackspace credentials in}
+    env: ${30:# Environment as configured in I(~/}
+    identity_type: ${31:# Authentication mechanism to use, such as rackspace or keystone}
+    region: ${32:# Region to create an instance in}
+    tenant_id: ${33:# The tenant ID used for authentication}
+    tenant_name: ${34:# The tenant name used for authentication}
+    username: ${35:# Rackspace username, overrides I(credentials)}
+    validate_certs: ${36:# Whether or not to require SSL validation of API endpoints}
+  tags:
+    - community
+    - general
+    - rax]]></content>
+  <tabTrigger>community.general.rax</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create / delete an instance in Rackspace Public Cloud</description>
+</snippet>

@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP iSCSI or FC igroup configuration}
+  netapp.ontap.na_ontap_igroup:
+    state: ${2:# Whether the specified Igroup should exist or not}
+    name: ${3:# The name of the igroup to manage}
+    initiator_group_type: ${4:# Type of the initiator group}
+    from_name: ${5:# Name of igroup to rename to name}
+    os_type: ${6:# OS type of the initiators within the group}
+    igroups: ${7:# List of igroups to be mapped to the igroup}
+    initiator_names: ${8:# List of initiators to be mapped to the igroup}
+    initiator_objects: ${9:# List of initiators to be mapped to the igroup, with an optional comment field}
+    bind_portset: ${10:# Name of a current portset to bind to the newly created igroup}
+    force_remove_initiator: ${11:# Forcibly remove the initiator even if there are existing LUNs mapped to this initiator group}
+    vserver: ${12:# The name of the vserver to use}
+    hostname: ${13:# The hostname or IP address of the ONTAP instance}
+    username: ${14:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${15:# Password for the specified user}
+    cert_filepath: ${16:# path to SSL client cert file (}
+    key_filepath: ${17:# path to SSL client key file}
+    https: ${18:# Enable and disable https}
+    validate_certs: ${19:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${20:# Override the default port (80 or 443) with this port}
+    ontapi: ${21:# The ontap api version to use}
+    use_rest: ${22:# Whether to use REST or ZAPI}
+    feature_flags: ${23:# Enable or disable a new feature}
+    force_ontap_version: ${24:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_igroup]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_igroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP iSCSI or FC igroup configuration</description>
+</snippet>

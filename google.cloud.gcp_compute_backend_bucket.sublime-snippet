@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates a GCP BackendBucket}
+  google.cloud.gcp_compute_backend_bucket:
+    state: ${2:# Whether the given object should exist in GCP}
+    bucket_name: ${3:# Cloud Storage bucket name}
+    cdn_policy: ${4:# Cloud CDN configuration for this Backend Bucket}
+    description: ${5:# An optional textual description of the resource; provided by the client when the resource is created}
+    enable_cdn: ${6:# If true, enable Cloud CDN for this BackendBucket}
+    name: ${7:# Name of the resource}
+    project: ${8:# The Google Cloud Platform project to use}
+    auth_kind: ${9:# The type of credential used}
+    service_account_contents: ${10:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_file: ${11:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    service_account_email: ${12:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    scopes: ${13:# Array of scopes to be used}
+    env_type: ${14:# Specifies which Ansible environment you're running this module within}
+  tags:
+    - google
+    - cloud
+    - gcp_compute_backend_bucket]]></content>
+  <tabTrigger>google.cloud.gcp_compute_backend_bucket</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates a GCP BackendBucket</description>
+</snippet>

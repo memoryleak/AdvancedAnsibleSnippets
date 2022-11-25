@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series manage firmware}
+  netapp_eseries.santricity.netapp_e_firmware:
+    nvsram: ${2:# Path to the NVSRAM file}
+    firmware: ${3:# Path to the firmware file}
+    wait_for_completion: ${4:# This flag will cause module to wait for any upgrade actions to complete}
+    ignore_health_check: ${5:# This flag will force firmware to be activated in spite of the health check}
+    api_username: ${6:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_password: ${7:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${8:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    validate_certs: ${9:# Should https certificates be validated?}
+    ssid: ${10:# The ID of the array to manage}
+  tags:
+    - netapp_eseries
+    - santricity
+    - netapp_e_firmware]]></content>
+  <tabTrigger>netapp_eseries.santricity.netapp_e_firmware</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series manage firmware</description>
+</snippet>

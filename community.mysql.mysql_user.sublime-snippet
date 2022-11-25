@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds or removes a user from a MySQL database}
+  community.mysql.mysql_user:
+    name: ${2:# Name of the user (role) to add or remove}
+    password: ${3:# Set the user's password}
+    encrypted: ${4:# Indicate that the 'password' field is a `mysql_native_password` hash}
+    host: ${5:# The 'host' part of the MySQL username}
+    host_all: ${6:# Override the host option, making ansible apply changes to all hostnames for a given user}
+    priv: ${7:# MySQL privileges string in the format: C(db}
+    append_privs: ${8:# Append the privileges defined by priv to the existing ones for this user instead of overwriting existing ones}
+    subtract_privs: ${9:# Revoke the privileges defined by the I(priv) option and keep other existing privileges}
+    tls_requires: ${10:# Set requirement for secure transport as a dictionary of requirements (see the examples)}
+    sql_log_bin: ${11:# Whether binary logging should be enabled or disabled for the connection}
+    force_context: ${12:# Sets the С(mysql) system database as context for the executed statements (it will be used as a database to connect to)}
+    state: ${13:# Whether the user should exist}
+    check_implicit_admin: ${14:# Check if mysql allows login as root/nopassword before trying supplied credentials}
+    update_password: ${15:# C(always) will update passwords if they differ}
+    plugin: ${16:# User's plugin to authenticate (``CREATE USER user IDENTIFIED WITH plugin``)}
+    plugin_hash_string: ${17:# User's plugin hash string (``CREATE USER user IDENTIFIED WITH plugin AS plugin_hash_string``)}
+    plugin_auth_string: ${18:# User's plugin auth_string (``CREATE USER user IDENTIFIED WITH plugin BY plugin_auth_string``)}
+    resource_limits: ${19:# Limit the user for certain server resources}
+    login_user: ${20:# The username used to authenticate with}
+    login_password: ${21:# The password used to authenticate with}
+    login_host: ${22:# Host running the database}
+    login_port: ${23:# Port of the MySQL server}
+    login_unix_socket: ${24:# The path to a Unix domain socket for local connections}
+    connect_timeout: ${25:# The connection timeout when connecting to the MySQL server}
+    config_file: ${26:# Specify a config file from which user and password are to be read}
+    ca_cert: ${27:# The path to a Certificate Authority (CA) certificate}
+    client_cert: ${28:# The path to a client public key certificate}
+    client_key: ${29:# The path to the client private key}
+    check_hostname: ${30:# Whether to validate the server host name when an SSL connection is required}
+  tags:
+    - community
+    - mysql
+    - mysql_user]]></content>
+  <tabTrigger>community.mysql.mysql_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds or removes a user from a MySQL database</description>
+</snippet>

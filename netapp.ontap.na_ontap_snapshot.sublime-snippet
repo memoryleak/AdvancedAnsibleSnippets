@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP manage Snapshots}
+  netapp.ontap.na_ontap_snapshot:
+    state: ${2:# If you want to create/modify a snapshot, or delete it}
+    snapshot: ${3:# Name of the snapshot to be managed}
+    from_name: ${4:# Name of the existing snapshot to be renamed to}
+    volume: ${5:# Name of the volume on which the snapshot is to be created}
+    async_bool: ${6:# If true, the snapshot is to be created asynchronously}
+    comment: ${7:# A human readable comment attached with the snapshot}
+    snapmirror_label: ${8:# A human readable SnapMirror Label attached with the snapshot}
+    ignore_owners: ${9:# if this field is true, snapshot will be deleted even if some other processes are accessing it}
+    snapshot_instance_uuid: ${10:# The 128 bit unique snapshot identifier expressed in the form of UUID}
+    vserver: ${11:# The Vserver name}
+    expiry_time: ${12:# Snapshot expire time, only available with REST}
+    hostname: ${13:# The hostname or IP address of the ONTAP instance}
+    username: ${14:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${15:# Password for the specified user}
+    cert_filepath: ${16:# path to SSL client cert file (}
+    key_filepath: ${17:# path to SSL client key file}
+    https: ${18:# Enable and disable https}
+    validate_certs: ${19:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${20:# Override the default port (80 or 443) with this port}
+    ontapi: ${21:# The ontap api version to use}
+    use_rest: ${22:# Whether to use REST or ZAPI}
+    feature_flags: ${23:# Enable or disable a new feature}
+    force_ontap_version: ${24:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_snapshot]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP manage Snapshots</description>
+</snippet>

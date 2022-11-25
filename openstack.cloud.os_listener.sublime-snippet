@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add/Delete a listener for a load balancer from OpenStack Cloud}
+  openstack.cloud.os_listener:
+    name: ${2:# Name that has to be given to the listener}
+    state: ${3:# Should the resource be present or absent}
+    loadbalancer: ${4:# The name or id of the load balancer that this listener belongs to}
+    protocol: ${5:# The protocol for the listener}
+    protocol_port: ${6:# The protocol port number for the listener}
+    timeout_client_data: ${7:# Client inactivity timeout in milliseconds}
+    timeout_member_data: ${8:# Member inactivity timeout in milliseconds}
+    wait: ${9:# If the module should wait for the load balancer to be ACTIVE}
+    timeout: ${10:# The amount of time the module should wait for the load balancer to get into ACTIVE state}
+    cloud: ${11:# Named cloud or cloud config to operate against}
+    auth: ${12:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${13:# Name of the auth plugin to use}
+    region_name: ${14:# Name of the region}
+    api_timeout: ${15:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${16:# Whether or not SSL API requests should be verified}
+    ca_cert: ${17:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${18:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${19:# A path to a client key to use as part of the SSL transaction}
+    interface: ${20:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${21:# Ignored}
+    sdk_log_path: ${22:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${23:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - os_listener]]></content>
+  <tabTrigger>openstack.cloud.os_listener</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add/Delete a listener for a load balancer from OpenStack Cloud</description>
+</snippet>

@@ -1,0 +1,48 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure network interfaces}
+  azure.azcollection.azure_rm_networkinterface:
+    resource_group: ${2:# Name of a resource group where the network interface exists or will be created}
+    name: ${3:# Name of the network interface}
+    state: ${4:# Assert the state of the network interface}
+    location: ${5:# Valid Azure location}
+    virtual_network: ${6:# An existing virtual network with which the network interface will be associated}
+    subnet_name: ${7:# Name of an existing subnet within the specified virtual network}
+    os_type: ${8:# Determines any rules to be added to a default security group}
+    private_ip_address: ${9:# (Deprecate) Valid IPv4 address that falls within the specified subnet}
+    private_ip_allocation_method: ${10:# (Deprecate) Whether or not the assigned IP address is permanent}
+    public_ip: ${11:# (Deprecate) When creating a network interface, if no public IP address name is provided a default public IP address will be created}
+    public_ip_address_name: ${12:# (Deprecate) Name of an existing public IP address object to associate with the security group}
+    public_ip_allocation_method: ${13:# (Deprecate) If a I(public_ip_address_name) is not provided, a default public IP address will be created}
+    ip_configurations: ${14:# List of IP configurations}
+    enable_accelerated_networking: ${15:# Whether the network interface should be created with the accelerated networking feature or not}
+    create_with_security_group: ${16:# Whether a security group should be be created with the NIC}
+    security_group: ${17:# An existing security group with which to associate the network interface}
+    open_ports: ${18:# When a default security group is created for a Linux host a rule will be added allowing inbound TCP connections to the default SSH port C(22), and for a Windows host rules will be added allowing inbound access to RDP ports C(3389) and C(5986)}
+    enable_ip_forwarding: ${19:# Whether to enable IP forwarding}
+    dns_servers: ${20:# Which DNS servers should the NIC lookup}
+    ad_user: ${21:# Active Directory username}
+    password: ${22:# Active Directory user password}
+    profile: ${23:# Security profile found in ~/}
+    subscription_id: ${24:# Your Azure subscription Id}
+    client_id: ${25:# Azure client ID}
+    secret: ${26:# Azure client secret}
+    tenant: ${27:# Azure tenant ID}
+    cloud_environment: ${28:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${29:# Azure AD authority url}
+    cert_validation_mode: ${30:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${31:# Controls the source of the credentials to use for authentication}
+    api_profile: ${32:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${33:# Parent argument}
+    log_mode: ${34:# Parent argument}
+    x509_certificate_path: ${35:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${36:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${37:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${38:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_networkinterface]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_networkinterface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure network interfaces</description>
+</snippet>

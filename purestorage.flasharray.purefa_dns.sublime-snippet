@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure FlashArray DNS settings}
+  purestorage.flasharray.purefa_dns:
+    name: ${2:# Name of the DNS configuration}
+    state: ${3:# Set or delete directory service configuration}
+    domain: ${4:# Domain suffix to be appended when perofrming DNS lookups}
+    nameservers: ${5:# List of up to 3 unique DNS server IP addresses}
+    service: ${6:# Type of ser vice the DNS will work with}
+    source: ${7:# A virtual network interface (vif)}
+    fa_url: ${8:# FlashArray management IPv4 address or Hostname}
+    api_token: ${9:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_dns]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_dns</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure FlashArray DNS settings</description>
+</snippet>

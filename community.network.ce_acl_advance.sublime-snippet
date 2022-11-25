@@ -1,0 +1,50 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages advanced ACL configuration on HUAWEI CloudEngine switches}
+  community.network.ce_acl_advance:
+    state: ${2:# Specify desired state of the resource}
+    acl_name: ${3:# ACL number or name}
+    acl_num: ${4:# ACL number}
+    acl_step: ${5:# ACL step}
+    acl_description: ${6:# ACL description}
+    rule_name: ${7:# Name of a basic ACL rule}
+    rule_id: ${8:# ID of a basic ACL rule in configuration mode}
+    rule_action: ${9:# Matching mode of basic ACL rules}
+    protocol: ${10:# Protocol type}
+    source_ip: ${11:# Source IP address}
+    src_mask: ${12:# Source IP address mask}
+    src_pool_name: ${13:# Name of a source pool}
+    dest_ip: ${14:# Destination IP address}
+    dest_mask: ${15:# Destination IP address mask}
+    dest_pool_name: ${16:# Name of a destination pool}
+    src_port_op: ${17:# Range type of the source port}
+    src_port_begin: ${18:# Start port number of the source port}
+    src_port_end: ${19:# End port number of the source port}
+    src_port_pool_name: ${20:# Name of a source port pool}
+    dest_port_op: ${21:# Range type of the destination port}
+    dest_port_begin: ${22:# Start port number of the destination port}
+    dest_port_end: ${23:# End port number of the destination port}
+    dest_port_pool_name: ${24:# Name of a destination port pool}
+    frag_type: ${25:# Type of packet fragmentation}
+    precedence: ${26:# Data packets can be filtered based on the priority field}
+    tos: ${27:# ToS value on which data packet filtering is based}
+    dscp: ${28:# Differentiated Services Code Point}
+    icmp_name: ${29:# ICMP name}
+    icmp_type: ${30:# ICMP type}
+    icmp_code: ${31:# ICMP message code}
+    ttl_expired: ${32:# Whether TTL Expired is matched, with the TTL value of 1}
+    vrf_name: ${33:# VPN instance name}
+    syn_flag: ${34:# TCP flag value}
+    tcp_flag_mask: ${35:# TCP flag mask value}
+    established: ${36:# Match established connections}
+    time_range: ${37:# Name of a time range in which an ACL rule takes effect}
+    rule_description: ${38:# Description about an ACL rule}
+    igmp_type: ${39:# Internet Group Management Protocol}
+    log_flag: ${40:# Flag of logging matched data packets}
+  tags:
+    - community
+    - network
+    - ce_acl_advance]]></content>
+  <tabTrigger>community.network.ce_acl_advance</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages advanced ACL configuration on HUAWEI CloudEngine switches</description>
+</snippet>

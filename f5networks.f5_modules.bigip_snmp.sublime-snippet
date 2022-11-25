@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manipulate general SNMP settings on a BIG-IP}
+  f5networks.f5_modules.bigip_snmp:
+    allowed_addresses: ${2:# Configures the IP addresses of the SNMP clients from which the snmpd daemon accepts requests}
+    contact: ${3:# Specifies the name of the person who administers the SNMP service for this system}
+    agent_status_traps: ${4:# When C(enabled), ensures the system sends a trap whenever the SNMP agent starts running or stops running}
+    agent_authentication_traps: ${5:# When C(enabled), ensures the system sends authentication warning traps to the trap destinations}
+    device_warning_traps: ${6:# When C(enabled), ensures the system sends device warning traps to the trap destinations}
+    location: ${7:# Specifies the description of this system's physical location}
+    provider: ${8:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_snmp]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_snmp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manipulate general SNMP settings on a BIG-IP</description>
+</snippet>

@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add and Delete fiber channel and iSCSI ports to a host on Infinibox}
+  infinidat.infinibox.infini_port:
+    host: ${2:# Host Name}
+    state: ${3:# Creates mapping when present, removes when absent, or provides details of a mapping when stat}
+    wwns: ${4:# List of wwns of the host}
+    iqns: ${5:# List of iqns of the host}
+    system: ${6:# Infinibox Hostname or IPv4 Address}
+    user: ${7:# Infinibox User username with sufficient priveledges ( see notes )}
+    password: ${8:# Infinibox User password}
+  tags:
+    - infinidat
+    - infinibox
+    - infini_port]]></content>
+  <tabTrigger>infinidat.infinibox.infini_port</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add and Delete fiber channel and iSCSI ports to a host on Infinibox</description>
+</snippet>

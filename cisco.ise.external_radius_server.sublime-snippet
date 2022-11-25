@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for External RADIUS Server}
+  cisco.ise.external_radius_server:
+    accountingPort: ${2:# Valid Range 1 to 65535}
+    authenticationPort: ${3:# Valid Range 1 to 65535}
+    authenticatorKey: ${4:# The authenticatorKey is required only if enableKeyWrap is true, otherwise it must be ignored or empty}
+    description: ${5:# External RADIUS Server's description}
+    enableKeyWrap: ${6:# KeyWrap may only be enabled if it is supported on the device}
+    encryptionKey: ${7:# The encryptionKey is required only if enableKeyWrap is true, otherwise it must be ignored or empty}
+    hostIP: ${8:# The IP of the host - must be a valid IPV4 address}
+    id: ${9:# External RADIUS Server's id}
+    keyInputFormat: ${10:# Specifies the format of the input for fields 'encryptionKey' and 'authenticatorKey'}
+    name: ${11:# Resource Name}
+    proxyTimeout: ${12:# Valid Range 1 to 600}
+    retries: ${13:# Valid Range 1 to 9}
+    sharedSecret: ${14:# Shared secret maximum length is 128 characters}
+    timeout: ${15:# Valid Range 1 to 120}
+    ise_hostname: ${16:# The Identity Services Engine hostname}
+    ise_username: ${17:# The Identity Services Engine username to authenticate}
+    ise_password: ${18:# The Identity Services Engine password to authenticate}
+    ise_verify: ${19:# Flag to enable or disable SSL certificate verification}
+    ise_version: ${20:# Informs the SDK which version of Identity Services Engine to use}
+    ise_wait_on_rate_limit: ${21:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
+    ise_debug: ${22:# Flag for Identity Services Engine SDK to enable debugging}
+    ise_uses_api_gateway: ${23:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
+    ise_uses_csrf_token: ${24:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+  tags:
+    - cisco
+    - ise
+    - external_radius_server]]></content>
+  <tabTrigger>cisco.ise.external_radius_server</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for External RADIUS Server</description>
+</snippet>

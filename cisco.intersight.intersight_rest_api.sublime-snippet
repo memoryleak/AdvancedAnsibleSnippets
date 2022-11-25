@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:REST API configuration for Cisco Intersight}
+  cisco.intersight.intersight_rest_api:
+    resource_path: ${2:# Resource URI being configured related to api_uri}
+    query_params: ${3:# Query parameters for the Intersight API query languange}
+    update_method: ${4:# The HTTP method used for update operations}
+    api_body: ${5:# The paylod for API requests used to modify resources}
+    return_list: ${6:# If C(yes), will return a list of API results in the api_response}
+    state: ${7:# If C(present), will verify the resource is present and will create if needed}
+    api_private_key: ${8:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${9:# URI used to access the Intersight API}
+    api_key_id: ${10:# Public API Key ID associated with the private key}
+    validate_certs: ${11:# Boolean control for verifying the api_uri TLS certificate}
+    use_proxy: ${12:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+  tags:
+    - cisco
+    - intersight
+    - intersight_rest_api]]></content>
+  <tabTrigger>cisco.intersight.intersight_rest_api</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>REST API configuration for Cisco Intersight</description>
+</snippet>

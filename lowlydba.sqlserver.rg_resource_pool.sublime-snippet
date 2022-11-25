@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures a resource pool for use by the Resource Governor}
+  lowlydba.sqlserver.rg_resource_pool:
+    resource_pool: ${2:# Name of the target resource pool}
+    type: ${3:# Specify the type of resource pool}
+    max_cpu_perc: ${4:# Maximum CPU Percentage able to be used by queries in this resource pool}
+    min_cpu_perc: ${5:# Minimum CPU Percentage able to be used by queries in this resource pool}
+    cap_cpu_perc: ${6:# Cap CPU Percentage able to be used by queries in this resource pool}
+    max_mem_perc: ${7:# Maximum Memory Percentage able to be used by queries in this resource pool}
+    min_mem_perc: ${8:# Minimum Memory Percentage able to be used by queries in this resource pool}
+    max_iops_per_vol: ${9:# Maximum IOPS/volume able to be used by queries in this resource pool}
+    min_iops_per_vol: ${10:# Minimum IOPS/volume able to be used by queries in this resource pool}
+    sql_instance: ${11:# The SQL Server instance to modify}
+    sql_username: ${12:# Username for SQL Authentication}
+    sql_password: ${13:# Password for SQL Authentication}
+    state: ${14:# Whether or not the object should be C(present) or C(absent)}
+  tags:
+    - lowlydba
+    - sqlserver
+    - rg_resource_pool]]></content>
+  <tabTrigger>lowlydba.sqlserver.rg_resource_pool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures a resource pool for use by the Resource Governor</description>
+</snippet>

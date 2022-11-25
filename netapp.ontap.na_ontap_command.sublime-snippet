@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP Run any cli command, the username provided needs to have console login permission}
+  netapp.ontap.na_ontap_command:
+    command: ${2:# a comma separated list containing the command and arguments}
+    privilege: ${3:# privilege level at which to run the command}
+    return_dict: ${4:# Returns a parsesable dictionary instead of raw XML output}
+    vserver: ${5:# If running as vserver admin, you must give a I(vserver) or module will fail}
+    include_lines: ${6:# applied only when I(return_dict) is true}
+    exclude_lines: ${7:# applied only when I(return_dict) is true}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    username: ${9:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${10:# Password for the specified user}
+    cert_filepath: ${11:# path to SSL client cert file (}
+    key_filepath: ${12:# path to SSL client key file}
+    https: ${13:# Enable and disable https}
+    validate_certs: ${14:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${15:# Override the default port (80 or 443) with this port}
+    ontapi: ${16:# The ontap api version to use}
+    use_rest: ${17:# This module only support ZAPI and will can not be swtich to REST}
+    feature_flags: ${18:# Enable or disable a new feature}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_command]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_command</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP Run any cli command, the username provided needs to have console login permission</description>
+</snippet>

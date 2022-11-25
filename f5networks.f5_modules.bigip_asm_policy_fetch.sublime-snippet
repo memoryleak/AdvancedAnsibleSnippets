@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Exports the ASM policy from remote nodes}
+  f5networks.f5_modules.bigip_asm_policy_fetch:
+    name: ${2:# The name of the policy exported to create a file on the remote device for downloading}
+    dest: ${3:# A directory to save the policy file into}
+    file: ${4:# The name of the file to be created on the remote device for downloading}
+    inline: ${5:# If C(yes), the ASM policy is exported C(inline) as a string instead of a file}
+    compact: ${6:# If C(yes), only the ASM policy custom settings is exported}
+    base64: ${7:# If C(yes), the returned C(inline) ASM policy content is Base64 encoded}
+    binary: ${8:# If C(yes), the exported ASM policy is in binary format}
+    force: ${9:# If C(no), the file will only be transferred if it does not exist in the the destination}
+    partition: ${10:# Device partition which contains the ASM policy to export}
+    provider: ${11:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_asm_policy_fetch]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_asm_policy_fetch</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Exports the ASM policy from remote nodes</description>
+</snippet>

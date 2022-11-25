@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Scaleway compute management module}
+  community.general.scaleway_compute:
+    public_ip: ${2:# Manage public IP on a Scaleway server}
+    enable_ipv6: ${3:# Enable public IPv6 connectivity on the instance}
+    image: ${4:# Image identifier used to start the instance with}
+    name: ${5:# Name of the instance}
+    organization: ${6:# Organization identifier}
+    project: ${7:# Project identifier}
+    state: ${8:# Indicate desired state of the instance}
+    tags: ${9:# List of tags to apply to the instance (5 max)}
+    region: ${10:# Scaleway compute zone}
+    commercial_type: ${11:# Commercial name of the compute node}
+    wait: ${12:# Wait for the instance to reach its desired state before returning}
+    wait_timeout: ${13:# Time to wait for the server to reach the expected state}
+    wait_sleep_time: ${14:# Time to wait before every attempt to check the state of the server}
+    security_group: ${15:# Security group unique identifier}
+    api_token: ${16:# Scaleway OAuth token}
+    api_url: ${17:# Scaleway API URL}
+    api_timeout: ${18:# HTTP timeout to Scaleway API in seconds}
+    query_parameters: ${19:# List of parameters passed to the query string}
+    validate_certs: ${20:# Validate SSL certs of the Scaleway API}
+  tags:
+    - community
+    - general
+    - scaleway_compute]]></content>
+  <tabTrigger>community.general.scaleway_compute</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Scaleway compute management module</description>
+</snippet>

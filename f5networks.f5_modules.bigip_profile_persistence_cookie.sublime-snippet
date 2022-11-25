@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage cookie persistence profiles on BIG-IP}
+  f5networks.f5_modules.bigip_profile_persistence_cookie:
+    name: ${2:# Specifies the name of the profile}
+    description: ${3:# Description of the profile}
+    parent: ${4:# Specifies the profile from which this profile inherits settings}
+    cookie_method: ${5:# Specifies the type of cookie processing the system uses}
+    cookie_name: ${6:# Specifies a unique name for the cookie}
+    http_only: ${7:# Specifies whether the httponly attribute should be enabled or disabled for the inserted cookies}
+    match_across_services: ${8:# When C(yes), specifies all persistent connections from a client IP address that go to the same virtual IP address also go to the same node}
+    match_across_virtuals: ${9:# When C(yes), specifies all persistent connections from the same client IP address go to the same node}
+    match_across_pools: ${10:# When C(yes), specifies the system can use any pool that contains this persistence record}
+    cookie_encryption: ${11:# Specifies the way in which the cookie encryption format is used}
+    override_connection_limit: ${12:# When C(yes), specifies the system allows you to specify that pool member connection limits will be overridden for persisted clients}
+    encrypt_cookie_pool_name: ${13:# Specifies whether the pool-name in the inserted BIG-IP default cookie should be encrypted}
+    always_send: ${14:# Sends the cookie persistence entry on every reply, even if the entry has previously been supplied to the client}
+    secure: ${15:# Specifies whether the secure attribute should be enabled or disabled for the inserted cookies}
+    encryption_passphrase: ${16:# Specifies a passphrase to be used for cookie encryption}
+    update_password: ${17:# C(always) will allow updating passphrases if the user chooses to do so}
+    expiration: ${18:# Specifies the expiration time of the cookie}
+    partition: ${19:# Device partition to manage resources on}
+    state: ${20:# When C(present), ensures the profile exists}
+    provider: ${21:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_profile_persistence_cookie]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_profile_persistence_cookie</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage cookie persistence profiles on BIG-IP</description>
+</snippet>

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series manage array host groups}
+  netapp_eseries.santricity.netapp_e_hostgroup:
+    state: ${2:# Whether the specified host group should exist or not}
+    name: ${3:# Name of the host group to manage}
+    new_name: ${4:# Specify this when you need to update the name of a host group}
+    id: ${5:# Host reference identifier for the host group to manage}
+    hosts: ${6:# List of host names/labels to add to the group}
+    api_username: ${7:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_password: ${8:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${9:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    validate_certs: ${10:# Should https certificates be validated?}
+    ssid: ${11:# The ID of the array to manage}
+  tags:
+    - netapp_eseries
+    - santricity
+    - netapp_e_hostgroup]]></content>
+  <tabTrigger>netapp_eseries.santricity.netapp_e_hostgroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series manage array host groups</description>
+</snippet>

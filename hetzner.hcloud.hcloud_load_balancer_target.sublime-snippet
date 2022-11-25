@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Hetzner Cloud Load Balancer targets}
+  hetzner.hcloud.hcloud_load_balancer_target:
+    type: ${2:# The type of the target}
+    load_balancer: ${3:# The name of the Hetzner Cloud Load Balancer}
+    server: ${4:# The name of the Hetzner Cloud Server}
+    label_selector: ${5:# A Label Selector that will be used to determine the targets dynamically}
+    ip: ${6:# An IP from a Hetzner Dedicated Server, needs to belongs to the same user as the project}
+    use_private_ip: ${7:# Route the traffic over the private IP of the Load Balancer through a Hetzner Cloud Network}
+    state: ${8:# State of the load_balancer_network}
+    api_token: ${9:# This is the API Token for the Hetzner Cloud}
+    endpoint: ${10:# This is the API Endpoint for the Hetzner Cloud}
+  tags:
+    - hetzner
+    - hcloud
+    - hcloud_load_balancer_target]]></content>
+  <tabTrigger>hetzner.hcloud.hcloud_load_balancer_target</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Hetzner Cloud Load Balancer targets</description>
+</snippet>

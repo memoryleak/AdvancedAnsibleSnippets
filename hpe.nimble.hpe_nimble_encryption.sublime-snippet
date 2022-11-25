@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the HPE Nimble Storage encryption}
+  hpe.nimble.hpe_nimble_encryption:
+    active: ${2:# Whether the master key is active or not}
+    age: ${3:# Minimum age (in hours) of inactive encryption keys to be purged}
+    encryption_config: ${4:# How encryption is configured for this group}
+    group_encrypt: ${5:# Flag for setting group encryption}
+    name: ${6:# Name of the master key}
+    passphrase: ${7:# Passphrase used to protect the master key, required during creation, enabling/disabling the key and change the passphrase to a new value}
+    purge_inactive: ${8:# Purges encryption keys that have been inactive for the age or longer}
+    new_passphrase: ${9:# When changing the passphrase, this attribute specifies the new value of the passphrase}
+    state: ${10:# The encryption operation}
+    host: ${11:# HPE Nimble Storage IP address}
+    password: ${12:# HPE Nimble Storage password}
+    username: ${13:# HPE Nimble Storage user name}
+  tags:
+    - hpe
+    - nimble
+    - hpe_nimble_encryption]]></content>
+  <tabTrigger>hpe.nimble.hpe_nimble_encryption</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the HPE Nimble Storage encryption</description>
+</snippet>

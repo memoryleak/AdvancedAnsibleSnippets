@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage User Groups}
+  theforeman.foreman.usergroup:
+    name: ${2:# Name of the group}
+    updated_name: ${3:# New user group name}
+    admin: ${4:# Whether or not the users in this group are administrators}
+    roles: ${5:# List of roles assigned to the group}
+    users: ${6:# List of users assigned to the group}
+    usergroups: ${7:# List of other groups assigned to the group}
+    server_url: ${8:# URL of the Foreman server}
+    username: ${9:# Username accessing the Foreman server}
+    password: ${10:# Password of the user accessing the Foreman server}
+    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${12:# State of the entity}
+  tags:
+    - theforeman
+    - foreman
+    - usergroup]]></content>
+  <tabTrigger>theforeman.foreman.usergroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage User Groups</description>
+</snippet>

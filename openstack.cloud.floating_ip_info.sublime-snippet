@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get information about floating ips}
+  openstack.cloud.floating_ip_info:
+    description: ${2:# The description of a floating IP}
+    fixed_ip_address: ${3:# The fixed IP address associated with a floating IP address}
+    floating_ip_address: ${4:# The IP address of a floating IP}
+    floating_network: ${5:# The name or id of the network associated with a floating IP}
+    port: ${6:# The name or id of the port to which a floating IP is associated}
+    project_id: ${7:# The ID of the project a floating IP is associated with}
+    router: ${8:# The name or id of an associated router}
+    status: ${9:# The status of a floating IP, which can be ``ACTIVE``or ``DOWN``}
+    cloud: ${10:# Named cloud or cloud config to operate against}
+    auth: ${11:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${12:# Name of the auth plugin to use}
+    region_name: ${13:# Name of the region}
+    wait: ${14:# Should ansible wait until the requested resource is complete}
+    timeout: ${15:# How long should ansible wait for the requested resource}
+    api_timeout: ${16:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${17:# Whether or not SSL API requests should be verified}
+    ca_cert: ${18:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${19:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${20:# A path to a client key to use as part of the SSL transaction}
+    interface: ${21:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${22:# Ignored}
+    sdk_log_path: ${23:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${24:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - floating_ip_info]]></content>
+  <tabTrigger>openstack.cloud.floating_ip_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get information about floating ips</description>
+</snippet>

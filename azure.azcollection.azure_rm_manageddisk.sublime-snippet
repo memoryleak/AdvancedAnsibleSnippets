@@ -1,0 +1,45 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure Manage Disks}
+  azure.azcollection.azure_rm_manageddisk:
+    resource_group: ${2:# Name of a resource group where the managed disk exists or will be created}
+    name: ${3:# Name of the managed disk}
+    state: ${4:# Assert the state of the managed disk}
+    location: ${5:# Valid Azure location}
+    storage_account_type: ${6:# Type of storage for the managed disk}
+    create_option: ${7:# C(import) from a VHD file in I(source_uri) and C(copy) from previous managed disk I(source_uri)}
+    storage_account_id: ${8:# The full path to the storage account the image is to be imported from}
+    source_uri: ${9:# URI to a valid VHD file to be used or the resource ID of the managed disk to copy}
+    os_type: ${10:# Type of Operating System}
+    disk_size_gb: ${11:# Size in GB of the managed disk to be created}
+    managed_by: ${12:# Name of an existing virtual machine with which the disk is or will be associated, this VM should be in the same resource group}
+    managed_by_extended: ${13:# List of name and resource group of the VMs that have the disk attached}
+    max_shares: ${14:# The maximum number of VMs that can attach to the disk at the same time}
+    attach_caching: ${15:# Disk caching policy controlled by VM}
+    zone: ${16:# The Azure managed disk's zone}
+    lun: ${17:# The logical unit number for data disk}
+    ad_user: ${18:# Active Directory username}
+    password: ${19:# Active Directory user password}
+    profile: ${20:# Security profile found in ~/}
+    subscription_id: ${21:# Your Azure subscription Id}
+    client_id: ${22:# Azure client ID}
+    secret: ${23:# Azure client secret}
+    tenant: ${24:# Azure tenant ID}
+    cloud_environment: ${25:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${26:# Azure AD authority url}
+    cert_validation_mode: ${27:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${28:# Controls the source of the credentials to use for authentication}
+    api_profile: ${29:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${30:# Parent argument}
+    log_mode: ${31:# Parent argument}
+    x509_certificate_path: ${32:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${33:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${34:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${35:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_manageddisk]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_manageddisk</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure Manage Disks</description>
+</snippet>

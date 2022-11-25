@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Client Certificates on StorageGRID}
+  netapp.storagegrid.na_sg_grid_client_certificate:
+    state: ${2:# Whether the specified certificate should exist}
+    certificate_id: ${3:# ID of the client certificate}
+    display_name: ${4:# A display name for the client certificate configuration}
+    public_key: ${5:# X}
+    allow_prometheus: ${6:# Whether the external monitoring tool can access Prometheus metrics}
+    auth_token: ${7:# The authorization token for the API request}
+    api_url: ${8:# The url to the StorageGRID Admin Node REST API}
+    validate_certs: ${9:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_client_certificate]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_client_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Client Certificates on StorageGRID</description>
+</snippet>

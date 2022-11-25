@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage NAT rules in Meraki cloud}
+  cisco.meraki.meraki_mx_nat:
+    state: ${2:# Create or modify an organization}
+    net_name: ${3:# Name of a network}
+    net_id: ${4:# ID number of a network}
+    org_id: ${5:# ID of organization associated to a network}
+    subset: ${6:# Specifies which NAT components to query}
+    one_to_one: ${7:# List of 1:1 NAT rules}
+    one_to_many: ${8:# List of 1:many NAT rules}
+    port_forwarding: ${9:# List of port forwarding rules}
+    auth_key: ${10:# Authentication key provided by the dashboard}
+    host: ${11:# Hostname for Meraki dashboard}
+    use_proxy: ${12:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${13:# If C(no), it will use HTTP}
+    output_format: ${14:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${15:# Set amount of debug output during module execution}
+    timeout: ${16:# Time to timeout for HTTP requests}
+    validate_certs: ${17:# Whether to validate HTTP certificates}
+    org_name: ${18:# Name of organization}
+    rate_limit_retry_time: ${19:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${20:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_mx_nat]]></content>
+  <tabTrigger>cisco.meraki.meraki_mx_nat</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage NAT rules in Meraki cloud</description>
+</snippet>

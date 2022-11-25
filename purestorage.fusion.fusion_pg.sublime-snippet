@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage placement groups in Pure Storage Fusion}
+  purestorage.fusion.fusion_pg:
+    name: ${2:# The name of the placement group}
+    display_name: ${3:# The human name of the placement group}
+    state: ${4:# Define whether the placement group should exist or not}
+    tenant: ${5:# The name of the tenant}
+    tenant_space: ${6:# The name of the tenant space}
+    availability_zone: ${7:# The name of the availability zone to create the placement group in}
+    placement_engine: ${8:# For workload placement recommendations from Pure1 Meta, use C(pure1meta)}
+    key_file: ${9:# Path to the private key file}
+    app_id: ${10:# Application ID from Pure1 Registration page}
+  tags:
+    - purestorage
+    - fusion
+    - fusion_pg]]></content>
+  <tabTrigger>purestorage.fusion.fusion_pg</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage placement groups in Pure Storage Fusion</description>
+</snippet>

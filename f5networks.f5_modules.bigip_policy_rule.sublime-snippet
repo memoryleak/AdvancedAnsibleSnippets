@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage LTM policy rules on a BIG-IP}
+  f5networks.f5_modules.bigip_policy_rule:
+    name: ${2:# The name of the rule}
+    policy: ${3:# The name of the policy you want to associate this rule with}
+    replace_with: ${4:# Specifies if the C(conditions)/C(actions) given by the user should overwrite what exists on the device}
+    rule_order: ${5:# Specifies a number that indicates the order of this rule relative to other rules in the policy}
+    description: ${6:# Description of the policy rule}
+    actions: ${7:# The actions you want the policy rule to perform}
+    conditions: ${8:# A list of attributes that describe the condition}
+    state: ${9:# When C(present), ensures the key is uploaded to the device}
+    partition: ${10:# Device partition to manage resources on}
+    provider: ${11:# A dict object containing connection details}
+  tags:
+    - f5networks
+    - f5_modules
+    - bigip_policy_rule]]></content>
+  <tabTrigger>f5networks.f5_modules.bigip_policy_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage LTM policy rules on a BIG-IP</description>
+</snippet>

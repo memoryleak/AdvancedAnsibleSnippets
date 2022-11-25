@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage DNS records on Rackspace Cloud DNS}
+  community.general.rax_dns_record:
+    comment: ${2:# Brief description of the domain}
+    data: ${3:# IP address for A/AAAA record, FQDN for CNAME/MX/NS, or text data for SRV/TXT}
+    domain: ${4:# Domain name to create the record in}
+    loadbalancer: ${5:# Load Balancer ID to create a PTR record for}
+    name: ${6:# FQDN record name to create}
+    overwrite: ${7:# Add new records if data doesn't match, instead of updating existing record with matching name}
+    priority: ${8:# Required for MX and SRV records, but forbidden for other record types}
+    server: ${9:# Server ID to create a PTR record for}
+    state: ${10:# Indicate desired state of the resource}
+    ttl: ${11:# Time to live of record in seconds}
+    type: ${12:# DNS record type}
+    api_key: ${13:# Rackspace API key, overrides I(credentials)}
+    credentials: ${14:# File to find the Rackspace credentials in}
+    env: ${15:# Environment as configured in I(~/}
+    region: ${16:# Region to create an instance in}
+    username: ${17:# Rackspace username, overrides I(credentials)}
+    validate_certs: ${18:# Whether or not to require SSL validation of API endpoints}
+    auth_endpoint: ${19:# The URI of the authentication service}
+    identity_type: ${20:# Authentication mechanism to use, such as rackspace or keystone}
+    tenant_id: ${21:# The tenant ID used for authentication}
+    tenant_name: ${22:# The tenant name used for authentication}
+  tags:
+    - community
+    - general
+    - rax_dns_record]]></content>
+  <tabTrigger>community.general.rax_dns_record</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage DNS records on Rackspace Cloud DNS</description>
+</snippet>

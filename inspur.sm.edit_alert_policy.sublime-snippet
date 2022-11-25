@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set alert policy}
+  inspur.sm.edit_alert_policy:
+    id: ${2:# Alert id}
+    status: ${3:# Alert policy status}
+    type: ${4:# Alert Type}
+    destination: ${5:# Alert destination,when type is snmp,fill in IP;}
+    channel: ${6:# LAN Channel}
+    trap_port: ${7:# SNMP trap port(1-65535)}
+    provider: ${8:# A dict object containing connection details}
+    host: ${9:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${10:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${11:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - sm
+    - edit_alert_policy]]></content>
+  <tabTrigger>inspur.sm.edit_alert_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set alert policy</description>
+</snippet>

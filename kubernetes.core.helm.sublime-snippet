@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages Kubernetes packages with the Helm package manager}
+  kubernetes.core.helm:
+    chart_ref: ${2:# chart_reference on chart repository}
+    chart_repo_url: ${3:# Chart repository URL where to locate the requested chart}
+    chart_version: ${4:# Chart version to install}
+    release_name: ${5:# Release name to manage}
+    release_namespace: ${6:# Kubernetes namespace where the chart should be installed}
+    release_state: ${7:# Desirated state of release}
+    release_values: ${8:# Value to pass to chart}
+    values_files: ${9:# Value files to pass to chart}
+    update_repo_cache: ${10:# Run C(helm repo update) before the operation}
+    disable_hook: ${11:# Helm option to disable hook on install/upgrade/delete}
+    force: ${12:# Helm option to force reinstall, ignore on new install}
+    purge: ${13:# Remove the release from the store and make its name free for later use}
+    wait: ${14:# When I(release_state) is set to C(present), wait until all Pods, PVCs, Services, and minimum number of Pods of a Deployment are in a ready state before marking the release as successful}
+    wait_timeout: ${15:# Timeout when wait option is enabled (helm2 is a number of seconds, helm3 is a duration)}
+    timeout: ${16:# A Go duration (described here I(https://pkg}
+    atomic: ${17:# If set, the installation process deletes the installation on failure}
+    create_namespace: ${18:# Create the release namespace if not present}
+    replace: ${19:# Reuse the given name, only if that name is a deleted release which remains in the history}
+    skip_crds: ${20:# Skip custom resource definitions when installing or upgrading}
+    history_max: ${21:# Limit the maximum number of revisions saved per release}
+    binary_path: ${22:# The path of a helm binary to use}
+    context: ${23:# Helm option to specify which kubeconfig context to use}
+    kubeconfig: ${24:# Helm option to specify kubeconfig path to use}
+    host: ${25:# Provide a URL for accessing the API}
+    api_key: ${26:# Token used to authenticate with the API}
+    validate_certs: ${27:# Whether or not to verify the API server's SSL certificates}
+    ca_cert: ${28:# Path to a CA certificate used to authenticate with the API}
+  tags:
+    - kubernetes
+    - core
+    - helm]]></content>
+  <tabTrigger>kubernetes.core.helm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages Kubernetes packages with the Helm package manager</description>
+</snippet>

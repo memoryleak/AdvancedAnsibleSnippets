@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:CLI command to create/modify/delete admin-syslog}
+  community.network.pn_admin_syslog:
+    pn_cliswitch: ${2:# Target switch to run the CLI on}
+    state: ${3:# State the action to perform}
+    pn_scope: ${4:# Scope of the system log}
+    pn_host: ${5:# Hostname to log system events}
+    pn_port: ${6:# Host port}
+    pn_transport: ${7:# Transport for log events - tcp/tls or udp}
+    pn_message_format: ${8:# message-format for log events - structured or legacy}
+    pn_name: ${9:# name of the system log}
+  tags:
+    - community
+    - network
+    - pn_admin_syslog]]></content>
+  <tabTrigger>community.network.pn_admin_syslog</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>CLI command to create/modify/delete admin-syslog</description>
+</snippet>

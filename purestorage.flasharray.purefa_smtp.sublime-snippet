@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure FlashArray SMTP settings}
+  purestorage.flasharray.purefa_smtp:
+    state: ${2:# Set or delete SMTP configuration}
+    password: ${3:# The SMTP password}
+    user: ${4:# The SMTP username}
+    relay_host: ${5:# IPv4 or IPv6 address or FQDN}
+    sender_domain: ${6:# Domain name}
+    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
+    api_token: ${8:# FlashArray API token for admin privileged user}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_smtp]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_smtp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure FlashArray SMTP settings</description>
+</snippet>

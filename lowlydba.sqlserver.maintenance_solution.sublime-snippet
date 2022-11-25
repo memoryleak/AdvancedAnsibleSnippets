@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Install/update Maintenance Solution by Ola Hallengren}
+  lowlydba.sqlserver.maintenance_solution:
+    backup_location: ${2:# Location of the backup root directory}
+    cleanup_time: ${3:# Time in hours, after which backup files are deleted}
+    output_file_dir: ${4:# Specify the output file directory where the Maintenance Solution will write to}
+    replace_existing: ${5:# If this switch is enabled, objects already present in the target database will be dropped and recreated}
+    log_to_table: ${6:# If this switch is enabled, the Maintenance Solution will be configured to log commands to a table}
+    solution: ${7:# Specifies which portion of the Maintenance Solution to install}
+    install_jobs: ${8:# If this switch is enabled, the corresponding SQL Agent Jobs will be created}
+    install_parallel: ${9:# If this switch is enabled, the C(Queue) and C(QueueDatabase) tables are created, for use when C(@DatabasesInParallel = 'Y') are set in the jobs}
+    local_file: ${10:# Specifies the path to a local file to install Ola's solution from}
+    database: ${11:# Name of the target database}
+    force: ${12:# If this switch is enabled, the Maintenance Solution will be downloaded from the internet even if previously cached}
+    sql_instance: ${13:# The SQL Server instance to modify}
+    sql_username: ${14:# Username for SQL Authentication}
+    sql_password: ${15:# Password for SQL Authentication}
+  tags:
+    - lowlydba
+    - sqlserver
+    - maintenance_solution]]></content>
+  <tabTrigger>lowlydba.sqlserver.maintenance_solution</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Install/update Maintenance Solution by Ola Hallengren</description>
+</snippet>

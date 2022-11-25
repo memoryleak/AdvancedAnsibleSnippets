@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Boot system using specific media through HP iLO interface}
+  community.general.hpilo_boot:
+    host: ${2:# The HP iLO hostname/address that is linked to the physical system}
+    login: ${3:# The login name to authenticate to the HP iLO interface}
+    password: ${4:# The password to authenticate to the HP iLO interface}
+    media: ${5:# The boot media to boot the system from}
+    image: ${6:# The URL of a cdrom, floppy or usb boot media image}
+    state: ${7:# The state of the boot media}
+    force: ${8:# Whether to force a reboot (even when the system is already booted)}
+    ssl_version: ${9:# Change the ssl_version used}
+  tags:
+    - community
+    - general
+    - hpilo_boot]]></content>
+  <tabTrigger>community.general.hpilo_boot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Boot system using specific media through HP iLO interface</description>
+</snippet>

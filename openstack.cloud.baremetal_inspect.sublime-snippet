@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Explicitly triggers baremetal node introspection in ironic}
+  openstack.cloud.baremetal_inspect:
+    mac: ${2:# unique mac address that is used to attempt to identify the host}
+    uuid: ${3:# globally unique identifier (UUID) to identify the host}
+    name: ${4:# unique name identifier to identify the host in Ironic}
+    ironic_url: ${5:# If noauth mode is utilized, this is required to be set to the endpoint URL for the Ironic API}
+    timeout: ${6:# A timeout in seconds to tell the role to wait for the node to complete introspection if wait is set to True}
+    cloud: ${7:# Named cloud or cloud config to operate against}
+    auth: ${8:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${9:# Name of the auth plugin to use}
+    region_name: ${10:# Name of the region}
+    wait: ${11:# Should ansible wait until the requested resource is complete}
+    api_timeout: ${12:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${13:# Whether or not SSL API requests should be verified}
+    ca_cert: ${14:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${15:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${16:# A path to a client key to use as part of the SSL transaction}
+    interface: ${17:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${18:# Ignored}
+    sdk_log_path: ${19:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${20:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - baremetal_inspect]]></content>
+  <tabTrigger>openstack.cloud.baremetal_inspect</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Explicitly triggers baremetal node introspection in ironic</description>
+</snippet>

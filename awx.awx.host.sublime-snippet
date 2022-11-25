@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller host}
+  awx.awx.host:
+    name: ${2:# The name to use for the host}
+    new_name: ${3:# To use when changing a hosts's name}
+    description: ${4:# The description to use for the host}
+    inventory: ${5:# Inventory the host should be made a member of}
+    enabled: ${6:# If the host should be enabled}
+    variables: ${7:# Variables to use for the host}
+    state: ${8:# Desired state of the resource}
+    controller_host: ${9:# URL to your Automation Platform Controller instance}
+    controller_username: ${10:# Username for your controller instance}
+    controller_password: ${11:# Password for your controller instance}
+    controller_oauthtoken: ${12:# The OAuth token to use}
+    validate_certs: ${13:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${14:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - host]]></content>
+  <tabTrigger>awx.awx.host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>create, update, or destroy Automation Platform Controller host</description>
+</snippet>

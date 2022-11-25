@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages subnets on the cloudscale}
+  cloudscale_ch.cloud.subnet:
+    uuid: ${2:# UUID of the subnet}
+    cidr: ${3:# The cidr of the subnet}
+    network: ${4:# The name of the network the subnet is related to}
+    gateway_address: ${5:# The gateway address of the subnet}
+    dns_servers: ${6:# A list of DNS resolver IP addresses, that act as DNS servers}
+    reset: ${7:# Resets I(gateway_address) and I(dns_servers) to default values by the API}
+    state: ${8:# State of the subnet}
+    tags: ${9:# Tags associated with the subnet}
+    api_url: ${10:# cloudscale}
+    api_token: ${11:# cloudscale}
+    api_timeout: ${12:# Timeout in seconds for calls to the cloudscale}
+  tags:
+    - cloudscale_ch
+    - cloud
+    - subnet]]></content>
+  <tabTrigger>cloudscale_ch.cloud.subnet</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages subnets on the cloudscale</description>
+</snippet>

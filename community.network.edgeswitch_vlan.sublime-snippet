@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage VLANs on Ubiquiti Edgeswitch network devices}
+  community.network.edgeswitch_vlan:
+    name: ${2:# Name of the VLAN}
+    vlan_id: ${3:# ID of the VLAN}
+    tagged_interfaces: ${4:# List of interfaces that should accept and transmit tagged frames for the VLAN}
+    untagged_interfaces: ${5:# List of interfaces that should accept untagged frames and transmit them tagged for the VLAN}
+    excluded_interfaces: ${6:# List of interfaces that should be excluded of the VLAN}
+    auto_tag: ${7:# Each of the switch interfaces will be set to accept and transmit untagged frames for I(vlan_id) unless defined in I(*_interfaces)}
+    auto_untag: ${8:# Each of the switch interfaces will be set to accept untagged frames and transmit them tagged for I(vlan_id) unless defined in I(*_interfaces)}
+    auto_exclude: ${9:# Each of the switch interfaces will be excluded from I(vlan_id) unless defined in I(*_interfaces)}
+    aggregate: ${10:# List of VLANs definitions}
+    purge: ${11:# Purge VLANs not defined in the I(aggregate) parameter}
+    state: ${12:# action on the VLAN configuration}
+  tags:
+    - community
+    - network
+    - edgeswitch_vlan]]></content>
+  <tabTrigger>community.network.edgeswitch_vlan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage VLANs on Ubiquiti Edgeswitch network devices</description>
+</snippet>

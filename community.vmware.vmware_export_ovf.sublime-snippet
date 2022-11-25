@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Exports a VMware virtual machine to an OVF file, device files and a manifest file}
+  community.vmware.vmware_export_ovf:
+    name: ${2:# Name of the virtual machine to export}
+    uuid: ${3:# Uuid of the virtual machine to export}
+    moid: ${4:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    datacenter: ${5:# Datacenter name of the virtual machine to export}
+    folder: ${6:# Destination folder, absolute path to find the specified guest}
+    export_dir: ${7:# Absolute path to place the exported files on the server running this task, must have write permission}
+    export_with_images: ${8:# Export an ISO image of the media mounted on the CD/DVD Drive within the virtual machine}
+    export_with_extraconfig: ${9:# All extra configuration options are exported for a virtual machine}
+    download_timeout: ${10:# The user defined timeout in second of exporting file}
+    hostname: ${11:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${12:# The username of the vSphere vCenter or ESXi server}
+    password: ${13:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${14:# Allows connection when SSL certificates are not valid}
+    port: ${15:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${16:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${17:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+  tags:
+    - community
+    - vmware
+    - vmware_export_ovf]]></content>
+  <tabTrigger>community.vmware.vmware_export_ovf</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Exports a VMware virtual machine to an OVF file, device files and a manifest file</description>
+</snippet>

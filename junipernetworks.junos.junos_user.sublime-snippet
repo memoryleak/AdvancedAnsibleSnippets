@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage local user accounts on Juniper JUNOS devices}
+  junipernetworks.junos.junos_user:
+    aggregate: ${2:# The C(aggregate) argument defines a list of users to be configured on the remote device}
+    name: ${3:# The C(name) argument defines the username of the user to be created on the system}
+    full_name: ${4:# The C(full_name) argument provides the full name of the user account to be created on the remote device}
+    role: ${5:# The C(role) argument defines the role of the user account on the remote system}
+    sshkey: ${6:# The C(sshkey) argument defines the public SSH key to be configured for the user account on the remote system}
+    encrypted_password: ${7:# The C(encrypted_password) argument set already hashed password for the user account on the remote system}
+    purge: ${8:# The C(purge) argument instructs the module to consider the users definition absolute}
+    state: ${9:# The C(state) argument configures the state of the user definitions as it relates to the device operational configuration}
+    active: ${10:# Specifies whether or not the configuration is active or deactivated}
+  tags:
+    - junipernetworks
+    - junos
+    - junos_user]]></content>
+  <tabTrigger>junipernetworks.junos.junos_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage local user accounts on Juniper JUNOS devices</description>
+</snippet>

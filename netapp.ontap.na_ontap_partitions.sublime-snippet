@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP Assign partitions and disks to nodes}
+  netapp.ontap.na_ontap_partitions:
+    node: ${2:# Specifies the node that the partitions and disks should be assigned to}
+    partition_count: ${3:# Total number of partitions that should be assigned to the owner}
+    disk_type: ${4:# The type of disk that the partitions that should use}
+    partition_type: ${5:# The type of partiton being assigned either root, data, data1 or data2,}
+    partitioning_method: ${6:# The type of partiton method being used, either root_data or root_data1_data2}
+    min_spares: ${7:# Minimum spares disks or partitions required per type for the node}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    username: ${9:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${10:# Password for the specified user}
+    cert_filepath: ${11:# path to SSL client cert file (}
+    key_filepath: ${12:# path to SSL client key file}
+    https: ${13:# Enable and disable https}
+    validate_certs: ${14:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${15:# Override the default port (80 or 443) with this port}
+    ontapi: ${16:# The ontap api version to use}
+    use_rest: ${17:# Whether to use REST or ZAPI}
+    feature_flags: ${18:# Enable or disable a new feature}
+    force_ontap_version: ${19:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_partitions]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_partitions</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP Assign partitions and disks to nodes</description>
+</snippet>

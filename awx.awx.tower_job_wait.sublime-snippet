@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Wait for Automation Platform Controller job to finish}
+  awx.awx.tower_job_wait:
+    job_id: ${2:# ID of the job to monitor}
+    interval: ${3:# The interval in sections, to request an update from the controller}
+    timeout: ${4:# Maximum time in seconds to wait for a job to finish}
+    job_type: ${5:# Job type to wait for}
+    controller_host: ${6:# URL to your Automation Platform Controller instance}
+    controller_username: ${7:# Username for your controller instance}
+    controller_password: ${8:# Password for your controller instance}
+    controller_oauthtoken: ${9:# The OAuth token to use}
+    validate_certs: ${10:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${11:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - tower_job_wait]]></content>
+  <tabTrigger>awx.awx.tower_job_wait</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Wait for Automation Platform Controller job to finish</description>
+</snippet>

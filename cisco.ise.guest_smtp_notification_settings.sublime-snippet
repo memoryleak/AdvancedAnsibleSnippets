@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for Guest SMTP Notification Settings}
+  cisco.ise.guest_smtp_notification_settings:
+    connectionTimeout: ${2:# Interval in seconds for all the SMTP client connections}
+    defaultFromAddress: ${3:# The default from email address to be used to send emails from}
+    id: ${4:# Guest SMTP Notification Settings's id}
+    notificationEnabled: ${5:# Indicates if the email notification service is to be enabled}
+    password: ${6:# Password of Secure SMTP server}
+    smtpPort: ${7:# Port at which SMTP Secure Server is listening}
+    smtpServer: ${8:# The SMTP server ip address or fqdn such as outbound}
+    useDefaultFromAddress: ${9:# If the default from address should be used rather than using a sponsor user email address}
+    usePasswordAuthentication: ${10:# If configured to true, SMTP server authentication will happen using username/password}
+    useTLSorSSLEncryption: ${11:# If configured to true, SMTP server authentication will happen using TLS/SSL}
+    userName: ${12:# Username of Secure SMTP server}
+    ise_hostname: ${13:# The Identity Services Engine hostname}
+    ise_username: ${14:# The Identity Services Engine username to authenticate}
+    ise_password: ${15:# The Identity Services Engine password to authenticate}
+    ise_verify: ${16:# Flag to enable or disable SSL certificate verification}
+    ise_version: ${17:# Informs the SDK which version of Identity Services Engine to use}
+    ise_wait_on_rate_limit: ${18:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
+    ise_debug: ${19:# Flag for Identity Services Engine SDK to enable debugging}
+    ise_uses_api_gateway: ${20:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
+    ise_uses_csrf_token: ${21:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+  tags:
+    - cisco
+    - ise
+    - guest_smtp_notification_settings]]></content>
+  <tabTrigger>cisco.ise.guest_smtp_notification_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for Guest SMTP Notification Settings</description>
+</snippet>

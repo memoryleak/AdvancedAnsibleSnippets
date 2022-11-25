@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Sends a text message to a mobile phone through Twilio}
+  community.general.twilio:
+    account_sid: ${2:# user's Twilio account token found on the account page}
+    auth_token: ${3:# user's Twilio authentication token}
+    msg: ${4:# the body of the text message}
+    to_numbers: ${5:# one or more phone numbers to send the text message to, format +15551112222}
+    from_number: ${6:# the Twilio number to send the text message from, format +15551112222}
+    media_url: ${7:# a URL with a picture, video or sound clip to send with an MMS (multimedia message) instead of a plain SMS}
+  tags:
+    - community
+    - general
+    - twilio]]></content>
+  <tabTrigger>community.general.twilio</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Sends a text message to a mobile phone through Twilio</description>
+</snippet>

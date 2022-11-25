@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gets or sets the proxysql global variables}
+  community.proxysql.proxysql_global_variables:
+    variable: ${2:# Defines which variable should be returned, or if I(value) is specified which variable should be updated}
+    value: ${3:# Defines a value the variable specified using I(variable) should be set to}
+    save_to_disk: ${4:# Save config to sqlite db on disk to persist the configuration}
+    load_to_runtime: ${5:# Dynamically load config to runtime memory}
+    login_user: ${6:# The username used to authenticate to ProxySQL admin interface}
+    login_password: ${7:# The password used to authenticate to ProxySQL admin interface}
+    login_host: ${8:# The host used to connect to ProxySQL admin interface}
+    login_unix_socket: ${9:# The socket used to connect to ProxySQL admin interface}
+    login_port: ${10:# The port used to connect to ProxySQL admin interface}
+    config_file: ${11:# Specify a config file from which I(login_user) and I(login_password) are to be read}
+  tags:
+    - community
+    - proxysql
+    - proxysql_global_variables]]></content>
+  <tabTrigger>community.proxysql.proxysql_global_variables</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gets or sets the proxysql global variables</description>
+</snippet>

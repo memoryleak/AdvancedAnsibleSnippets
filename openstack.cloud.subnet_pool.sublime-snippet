@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or delete subnet pools from OpenStack}
+  openstack.cloud.subnet_pool:
+    state: ${2:# Indicate desired state of the resource}
+    name: ${3:# Name to be give to the subnet pool}
+    project: ${4:# Unique name or ID of the project}
+    prefixes: ${5:# Set subnet pool prefixes (in CIDR notation)}
+    minimum_prefix_length: ${6:# The minimum prefix length that can be allocated from the subnet pool}
+    maximum_prefix_length: ${7:# The maximum prefix length that can be allocated from the subnet pool}
+    default_prefix_length: ${8:# The length of the prefix to allocate when the cidr or prefixlen attributes are omitted when creating a subnet}
+    address_scope: ${9:# Set address scope (ID or name) associated with the subnet pool}
+    is_default: ${10:# Whether this subnet pool is by default}
+    description: ${11:# The subnet pool description}
+    default_quota: ${12:# A per-project quota on the prefix space that can be allocated from the subnet pool for project subnets}
+    shared: ${13:# Whether this subnet pool is shared or not}
+    extra_specs: ${14:# Dictionary with extra key/value pairs passed to the API}
+    cloud: ${15:# Named cloud or cloud config to operate against}
+    auth: ${16:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${17:# Name of the auth plugin to use}
+    region_name: ${18:# Name of the region}
+    wait: ${19:# Should ansible wait until the requested resource is complete}
+    timeout: ${20:# How long should ansible wait for the requested resource}
+    api_timeout: ${21:# How long should the socket layer wait before timing out for API calls}
+    validate_certs: ${22:# Whether or not SSL API requests should be verified}
+    ca_cert: ${23:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${24:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${25:# A path to a client key to use as part of the SSL transaction}
+    interface: ${26:# Endpoint URL type to fetch from the service catalog}
+    availability_zone: ${27:# Ignored}
+    sdk_log_path: ${28:# Path to the logfile of the OpenStackSDK}
+    sdk_log_level: ${29:# Log level of the OpenStackSDK}
+  tags:
+    - openstack
+    - cloud
+    - subnet_pool]]></content>
+  <tabTrigger>openstack.cloud.subnet_pool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or delete subnet pools from OpenStack</description>
+</snippet>

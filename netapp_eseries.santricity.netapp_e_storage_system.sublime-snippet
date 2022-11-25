@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp E-Series Web Services Proxy manage storage arrays}
+  netapp_eseries.santricity.netapp_e_storage_system:
+    api_username: ${2:# The username to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    api_password: ${3:# The password to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    api_url: ${4:# The url to the SANtricity WebServices Proxy or embedded REST API}
+    validate_certs: ${5:# Should https certificates be validated?}
+    ssid: ${6:# The ID of the array to manage}
+    state: ${7:# Whether the specified array should be configured on the Web Services Proxy or not}
+    controller_addresses: ${8:# The list addresses for the out-of-band management adapter or the agent host}
+    array_wwn: ${9:# The WWN of the array to manage}
+    array_password: ${10:# The management password of the array to manage, if set}
+    enable_trace: ${11:# Enable trace logging for SYMbol calls to the storage system}
+    meta_tags: ${12:# Optional meta tags to associate to this storage system}
+    array_status_timeout_sec: ${13:# Array status timeout measured in seconds}
+  tags:
+    - netapp_eseries
+    - santricity
+    - netapp_e_storage_system]]></content>
+  <tabTrigger>netapp_eseries.santricity.netapp_e_storage_system</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp E-Series Web Services Proxy manage storage arrays</description>
+</snippet>

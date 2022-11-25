@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/update/delete Zabbix user directories}
+  community.zabbix.zabbix_user_directory:
+    name: ${2:# Unique name of the user directory}
+    host: ${3:# LDAP server host name, IP or URI}
+    port: ${4:# LDAP server port}
+    base_dn: ${5:# LDAP base distinguished name string}
+    search_attribute: ${6:# LDAP attribute name to identify user by username in Zabbix database}
+    bind_dn: ${7:# LDAP bind distinguished name string}
+    bind_password: ${8:# LDAP bind password}
+    description: ${9:# User directory description}
+    search_filter: ${10:# LDAP custom filter string when authenticating user in LDAP}
+    start_tls: ${11:# LDAP startTLS option}
+    state: ${12:# State of the user directory}
+    server_url: ${13:# URL of Zabbix server, with protocol (http or https)}
+    login_user: ${14:# Zabbix user name}
+    login_password: ${15:# Zabbix user password}
+    http_login_user: ${16:# Basic Auth login}
+    http_login_password: ${17:# Basic Auth password}
+    timeout: ${18:# The timeout of API request (seconds)}
+    validate_certs: ${19:# If set to False, SSL certificates will not be validated}
+  tags:
+    - community
+    - zabbix
+    - zabbix_user_directory]]></content>
+  <tabTrigger>community.zabbix.zabbix_user_directory</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/update/delete Zabbix user directories</description>
+</snippet>

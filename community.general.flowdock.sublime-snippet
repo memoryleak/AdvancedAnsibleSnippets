@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Send a message to a flowdock}
+  community.general.flowdock:
+    token: ${2:# API token}
+    type: ${3:# Whether to post to 'inbox' or 'chat'}
+    msg: ${4:# Content of the message}
+    tags: ${5:# tags of the message, separated by commas}
+    external_user_name: ${6:# (chat only - required) Name of the 'user' sending the message}
+    from_address: ${7:# (inbox only - required) Email address of the message sender}
+    source: ${8:# (inbox only - required) Human readable identifier of the application that uses the Flowdock API}
+    subject: ${9:# (inbox only - required) Subject line of the message}
+    from_name: ${10:# (inbox only) Name of the message sender}
+    reply_to: ${11:# (inbox only) Email address for replies}
+    project: ${12:# (inbox only) Human readable identifier for more detailed message categorization}
+    link: ${13:# (inbox only) Link associated with the message}
+    validate_certs: ${14:# If C(false), SSL certificates will not be validated}
+  tags:
+    - community
+    - general
+    - flowdock]]></content>
+  <tabTrigger>community.general.flowdock</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Send a message to a flowdock</description>
+</snippet>

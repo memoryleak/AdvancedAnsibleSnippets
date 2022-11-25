@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller labels}
+  awx.awx.tower_label:
+    name: ${2:# Name of this label}
+    new_name: ${3:# Setting this option will change the existing name (looked up via the name field)}
+    organization: ${4:# Organization this label belongs to}
+    state: ${5:# Desired state of the resource}
+    controller_host: ${6:# URL to your Automation Platform Controller instance}
+    controller_username: ${7:# Username for your controller instance}
+    controller_password: ${8:# Password for your controller instance}
+    controller_oauthtoken: ${9:# The OAuth token to use}
+    validate_certs: ${10:# Whether to allow insecure connections to AWX}
+    controller_config_file: ${11:# Path to the controller config file}
+  tags:
+    - awx
+    - awx
+    - tower_label]]></content>
+  <tabTrigger>awx.awx.tower_label</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>create, update, or destroy Automation Platform Controller labels</description>
+</snippet>

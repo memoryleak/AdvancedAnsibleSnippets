@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Device compliance report for devices managed in OpenManage Enterprise}
+  dellemc.openmanage.ome_configuration_compliance_info:
+    baseline: ${2:# The name of the created baseline}
+    device_id: ${3:# The ID of the target device which is associated with the I(baseline)}
+    device_service_tag: ${4:# The device service tag of the target device associated with the I(baseline)}
+    hostname: ${5:# OpenManage Enterprise IP address or hostname}
+    username: ${6:# OpenManage Enterprise username}
+    password: ${7:# OpenManage Enterprise password}
+    port: ${8:# OpenManage Enterprise HTTPS port}
+    validate_certs: ${9:# If C(False), the SSL certificates will not be validated}
+    ca_path: ${10:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    timeout: ${11:# The socket level timeout in seconds}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_configuration_compliance_info]]></content>
+  <tabTrigger>dellemc.openmanage.ome_configuration_compliance_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Device compliance report for devices managed in OpenManage Enterprise</description>
+</snippet>

@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage geo-replication sessions}
+  gluster.gluster.geo_rep:
+    action: ${2:# Action to be performed on geo-replication session}
+    mastervol: ${3:# Master volume name}
+    slavevol: ${4:# Slave volume name}
+    force: ${5:# force the system to perform the action}
+    georepuser: ${6:# Username to be used for the action being performed}
+    gluster_log_file: ${7:# The path to the geo-replication glusterfs log file}
+    gluster_log_level: ${8:# The log level for glusterfs processes}
+    log_file: ${9:# The path to the geo-replication log file}
+    log_level: ${10:# The log level for geo-replication}
+    changelog_log_level: ${11:# The log level for the changelog}
+    ssh_command: ${12:# The SSH command to connect to the remote machine}
+    rsync_command: ${13:# The command to use for setting synchronizing method for the files}
+    use_tarssh: ${14:# To use tar over ssh}
+    volume_id: ${15:# deletes the existing master UID for the intermediate/slave node}
+    timeout: ${16:# timeout period}
+    sync_jobs: ${17:# number of sync-jobs }
+    ignore_deletes: ${18:# file deletion on the master will not trigger a delete operation on the slave}
+    checkpoint: ${19:# Sets a checkpoint with the given option}
+    sync_acls: ${20:# Syncs acls to the Slave cluster}
+    sync_xattrs: ${21:# Syncs extended attributes to the Slave cluster}
+    log_rsync_performance: ${22:# for recording the rsync performance in log files}
+    rsync_options: ${23:# Additional options to rsync}
+    use_meta_volume: ${24:# to use meta volume in Geo-replication}
+    meta_volume_mnt: ${25:# The path of the meta volume mount point}
+  tags:
+    - gluster
+    - gluster
+    - geo_rep]]></content>
+  <tabTrigger>gluster.gluster.geo_rep</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage geo-replication sessions</description>
+</snippet>

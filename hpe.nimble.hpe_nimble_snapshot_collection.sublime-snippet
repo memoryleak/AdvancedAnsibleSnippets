@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the HPE Nimble Storage snapshot collections}
+  hpe.nimble.hpe_nimble_snapshot_collection:
+    agent_type: ${2:# External management agent type for snapshots being created as part of snapshot collection}
+    allow_writes: ${3:# Allow applications to write to created snapshot(s)}
+    change_name: ${4:# Change name of the existing snapshot collection}
+    description: ${5:# Text description of snapshot collection}
+    disable_appsync: ${6:# Do not perform application synchronization for this snapshot}
+    expiry_after: ${7:# Number of seconds after which this snapcoll is considered expired by the snapshot TTL}
+    force: ${8:# Forcibly delete the specified snapshot collection even if it is the last replicated snapshot}
+    invoke_on_upstream_partner: ${9:# Invoke snapshot request on upstream partner}
+    is_external_trigger: ${10:# Is externally triggered}
+    metadata: ${11:# Key-value pairs that augment a snapshot collection attributes}
+    name: ${12:# Name of the snapshot collection}
+    replicate_to: ${13:# Specifies the partner name that the snapshots in this snapshot collection are replicated to}
+    skip_db_consistency_check: ${14:# Skip consistency check for database files on this snapshot}
+    snap_verify: ${15:# Run verification tool on this snapshot}
+    start_online: ${16:# Start with snapshot set online}
+    state: ${17:# The snapshot collection operation}
+    vol_snap_attr_list: ${18:# List of snapshot attributes for snapshots being created as part of snapshot collection creation}
+    volcoll: ${19:# Parent volume collection name}
+    host: ${20:# HPE Nimble Storage IP address}
+    password: ${21:# HPE Nimble Storage password}
+    username: ${22:# HPE Nimble Storage user name}
+  tags:
+    - hpe
+    - nimble
+    - hpe_nimble_snapshot_collection]]></content>
+  <tabTrigger>hpe.nimble.hpe_nimble_snapshot_collection</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the HPE Nimble Storage snapshot collections</description>
+</snippet>

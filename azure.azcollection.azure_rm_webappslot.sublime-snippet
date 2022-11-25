@@ -1,0 +1,44 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure Web App slot}
+  azure.azcollection.azure_rm_webappslot:
+    resource_group: ${2:# Name of the resource group to which the resource belongs}
+    name: ${3:# Unique name of the deployment slot to create or update}
+    webapp_name: ${4:# Web app name which this deployment slot belongs to}
+    location: ${5:# Resource location}
+    configuration_source: ${6:# Source slot to clone configurations from when creating slot}
+    auto_swap_slot_name: ${7:# Used to configure target slot name to auto swap, or disable auto swap}
+    swap: ${8:# Swap deployment slots of a web app}
+    frameworks: ${9:# Set of run time framework settings}
+    container_settings: ${10:# Web app slot container settings}
+    startup_file: ${11:# The slot startup file}
+    app_settings: ${12:# Configure web app slot application settings}
+    purge_app_settings: ${13:# Purge any existing application settings}
+    deployment_source: ${14:# Deployment source for git}
+    app_state: ${15:# Start/Stop/Restart the slot}
+    state: ${16:# State of the Web App deployment slot}
+    ad_user: ${17:# Active Directory username}
+    password: ${18:# Active Directory user password}
+    profile: ${19:# Security profile found in ~/}
+    subscription_id: ${20:# Your Azure subscription Id}
+    client_id: ${21:# Azure client ID}
+    secret: ${22:# Azure client secret}
+    tenant: ${23:# Azure tenant ID}
+    cloud_environment: ${24:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    adfs_authority_url: ${25:# Azure AD authority url}
+    cert_validation_mode: ${26:# Controls the certificate validation behavior for Azure endpoints}
+    auth_source: ${27:# Controls the source of the credentials to use for authentication}
+    api_profile: ${28:# Selects an API profile to use when communicating with Azure services}
+    log_path: ${29:# Parent argument}
+    log_mode: ${30:# Parent argument}
+    x509_certificate_path: ${31:# Path to the X509 certificate used to create the service principal in PEM format}
+    thumbprint: ${32:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tags: ${33:# Dictionary of string:string pairs to assign as metadata to the object}
+    append_tags: ${34:# Use to control if tags field is canonical or just appends to existing tags}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_webappslot]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_webappslot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure Web App slot</description>
+</snippet>
