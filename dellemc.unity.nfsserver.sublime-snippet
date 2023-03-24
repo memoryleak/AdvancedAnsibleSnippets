@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage NFS server on Unity storage system}
+  dellemc.unity.nfsserver:
+    nas_server_name: ${2:# Name of the NAS server on which NFS server will be hosted}
+    nas_server_id: ${3:# ID of the NAS server on which NFS server will be hosted}
+    nfs_server_id: ${4:# ID of the NFS server}
+    host_name: ${5:# Host name of the NFS server}
+    nfs_v4_enabled: ${6:# Indicates whether the NFSv4 is enabled on the NAS server}
+    is_secure_enabled: ${7:# Indicates whether the secure NFS is enabled}
+    kerberos_domain_controller_type: ${8:# Type of Kerberos Domain Controller used for secure NFS service}
+    kerberos_domain_controller_username: ${9:# Kerberos Domain Controller administrator username}
+    kerberos_domain_controller_password: ${10:# Kerberos Domain Controller administrator password}
+    is_extended_credentials_enabled: ${11:# Indicates whether support for more than 16 unix groups in a Unix credential}
+    remove_spn_from_kerberos: ${12:# Indicates whether to remove the SPN from Kerberos Domain Controller}
+    state: ${13:# Define whether the NFS server should exist or not}
+    unispherehost: ${14:# IP or FQDN of the Unity management server}
+    username: ${15:# The username of the Unity management server}
+    password: ${16:# The password of the Unity management server}
+    validate_certs: ${17:# Boolean variable to specify whether or not to validate SSL certificate}
+    port: ${18:# Port number through which communication happens with Unity management server}
+  tags:
+    - dellemc
+    - unity
+    - nfsserver]]></content>
+  <tabTrigger>dellemc.unity.nfsserver</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage NFS server on Unity storage system</description>
+</snippet>

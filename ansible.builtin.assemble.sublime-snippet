@@ -3,9 +3,9 @@
   ansible.builtin.assemble:
     src: ${2:# An already existing directory full of source files}
     dest: ${3:# A file to create using the concatenation of all of the source files}
-    backup: ${4:# Create a backup file (if C(yes)), including the timestamp information so you can get the original file back if you somehow clobbered it incorrectly}
+    backup: ${4:# Create a backup file (if C(true)), including the timestamp information so you can get the original file back if you somehow clobbered it incorrectly}
     delimiter: ${5:# A delimiter to separate the file contents}
-    remote_src: ${6:# If C(no), it will search for src at originating/master machine}
+    remote_src: ${6:# If C(false), it will search for src at originating/master machine}
     regexp: ${7:# Assemble files only if C(regex) matches the filename}
     ignore_hidden: ${8:# A boolean that controls if files that start with a '}
     validate: ${9:# The validation command to run before copying into place}
@@ -20,8 +20,6 @@
     unsafe_writes: ${18:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
     attributes: ${19:# The attributes the resulting filesystem object should have}
   tags:
-    - ansible
-    - builtin
     - assemble]]></content>
   <tabTrigger>ansible.builtin.assemble</tabTrigger>
   <scope>source.yaml,source.ansible</scope>

@@ -2,8 +2,9 @@
   <content><![CDATA[- name: ${1:Collect information from F5 BIG-IP devices}
   f5networks.f5_modules.bigip_device_info:
     partition: ${2:# Specifies the partition to gather the resource information from}
-    gather_subset: ${3:# When supplied, this argument will restrict the information returned to a given subset}
-    provider: ${4:# A dict object containing connection details}
+    data_increment: ${3:# Specifies the paging increment at which device data is gathered from the API}
+    gather_subset: ${4:# When supplied, this argument will restrict the information returned to a given subset}
+    provider: ${5:# A dict object containing connection details}
   tags:
     - f5networks
     - f5_modules

@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP module to create, modify or delete security IPsec policy}
+  netapp.ontap.na_ontap_security_ipsec_policy:
+    state: ${2:# Create or delete security IPsec policy}
+    name: ${3:# Name of the security IPsec policy}
+    action: ${4:# Action for the IPsec policy}
+    authentication_method: ${5:# Authentication method for the IPsec policy}
+    certificate: ${6:# Certificate for the IPsec policy}
+    enabled: ${7:# Indicates whether or not the policy is enabled}
+    ipspace: ${8:# IPspace name where C(svm) exist}
+    local_endpoint: ${9:# Local endpoint for the IPsec policy}
+    remote_endpoint: ${10:# remote endpoint for the IPsec policy}
+    local_identity: ${11:# local IKE endpoint's identity for authentication purpose}
+    remote_identity: ${12:# remote IKE endpoint's identity for authentication purpose}
+    protocol: ${13:# protocol to be protected by by this policy}
+    secret_key: ${14:# Pre-shared key for IKE negotiation}
+    svm: ${15:# The name of the SVM}
+    hostname: ${16:# The hostname or IP address of the ONTAP instance}
+    username: ${17:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${18:# Password for the specified user}
+    cert_filepath: ${19:# path to SSL client cert file (}
+    key_filepath: ${20:# path to SSL client key file}
+    https: ${21:# Enable and disable https}
+    validate_certs: ${22:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${23:# Override the default port (80 or 443) with this port}
+    ontapi: ${24:# The ontap api version to use}
+    use_rest: ${25:# Whether to use REST or ZAPI}
+    feature_flags: ${26:# Enable or disable a new feature}
+    force_ontap_version: ${27:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_security_ipsec_policy]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_security_ipsec_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP module to create, modify or delete security IPsec policy</description>
+</snippet>

@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add or remove YUM repositories}
   ansible.builtin.yum_repository:
-    async: ${2:# If set to C(yes) Yum will download packages and metadata from this repo in parallel, if possible}
+    async: ${2:# If set to C(true) Yum will download packages and metadata from this repo in parallel, if possible}
     bandwidth: ${3:# Maximum available network bandwidth in bytes/second}
     baseurl: ${4:# URL to the directory where the yum repository's 'repodata' directory lives}
     cost: ${5:# Relative cost of accessing this repository}
@@ -39,7 +39,7 @@
     reposdir: ${37:# Directory where the C(}
     retries: ${38:# Set the number of times any attempt to retrieve a file should retry before returning an error}
     s3_enabled: ${39:# Enables support for S3 repositories}
-    skip_if_unavailable: ${40:# If set to C(yes) yum will continue running if this repository cannot be contacted for any reason}
+    skip_if_unavailable: ${40:# If set to C(true) yum will continue running if this repository cannot be contacted for any reason}
     ssl_check_cert_permissions: ${41:# Whether yum should check the permissions on the paths for the certificates on the repository (both remote and local)}
     sslcacert: ${42:# Path to the directory containing the databases of the certificate authorities yum should use to verify SSL certificates}
     sslclientcert: ${43:# Path to the SSL client certificate yum should use to connect to repos/remote sites}
@@ -60,8 +60,6 @@
     unsafe_writes: ${58:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
     attributes: ${59:# The attributes the resulting filesystem object should have}
   tags:
-    - ansible
-    - builtin
     - yum_repository]]></content>
   <tabTrigger>ansible.builtin.yum_repository</tabTrigger>
   <scope>source.yaml,source.ansible</scope>

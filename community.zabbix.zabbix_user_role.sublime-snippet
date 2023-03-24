@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds or removes zabbix roles}
+  community.zabbix.zabbix_user_role:
+    state: ${2:# State of the user_role}
+    name: ${3:# Name of the role to be processed}
+    type: ${4:# User type}
+    rules: ${5:# Rules set as defined in https://www}
+    server_url: ${6:# URL of Zabbix server, with protocol (http or https)}
+    login_user: ${7:# Zabbix user name}
+    login_password: ${8:# Zabbix user password}
+    http_login_user: ${9:# Basic Auth login}
+    http_login_password: ${10:# Basic Auth password}
+    timeout: ${11:# The timeout of API request (seconds)}
+    validate_certs: ${12:# If set to False, SSL certificates will not be validated}
+  tags:
+    - community
+    - zabbix
+    - zabbix_user_role]]></content>
+  <tabTrigger>community.zabbix.zabbix_user_role</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds or removes zabbix roles</description>
+</snippet>

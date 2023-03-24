@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp Ontap - create, delete or modify vserver audit configuration}
+  netapp.ontap.na_ontap_vserver_audit:
+    state: ${2:# Whether the specified vserver audit configuration should exist or not}
+    vserver: ${3:# Specifies name of the Vserver}
+    log_path: ${4:# The audit log destination path where consolidated audit logs are stored}
+    guarantee: ${5:# Indicates whether there is a strict Guarantee of Auditing}
+    enabled: ${6:# Specifies whether or not auditing is enabled on the SVM}
+    events: ${7:# Specifies events for which auditing is enabled on the SVM}
+    log: ${8:# Specifies events for which auditing is enabled on the SVM}
+    hostname: ${9:# The hostname or IP address of the ONTAP instance}
+    username: ${10:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${11:# Password for the specified user}
+    cert_filepath: ${12:# path to SSL client cert file (}
+    key_filepath: ${13:# path to SSL client key file}
+    https: ${14:# Enable and disable https}
+    validate_certs: ${15:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${16:# Override the default port (80 or 443) with this port}
+    ontapi: ${17:# The ontap api version to use}
+    use_rest: ${18:# Whether to use REST or ZAPI}
+    feature_flags: ${19:# Enable or disable a new feature}
+    force_ontap_version: ${20:# Override the cluster ONTAP version when using REST}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_vserver_audit]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_vserver_audit</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp Ontap - create, delete or modify vserver audit configuration</description>
+</snippet>

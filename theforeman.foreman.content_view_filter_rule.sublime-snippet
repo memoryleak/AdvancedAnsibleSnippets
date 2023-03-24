@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage content view filter rules}
+  theforeman.foreman.content_view_filter_rule:
+    architecture: ${2:# set package, module_stream, etc}
+    content_view: ${3:# the name of the content view that the filter applies to}
+    content_view_filter: ${4:# the name of the content view filter that the rule applies to}
+    context: ${5:# the context for a module}
+    date_type: ${6:# set whether rule applied to erratum using the 'Issued On' or 'Updated On' date}
+    end_date: ${7:# the rule limit for erratum end date (YYYY-MM-DD)}
+    errata_id: ${8:# erratum id}
+    max_version: ${9:# package maximum version}
+    min_version: ${10:# package minimum version}
+    name: ${11:# Content view filter rule name, package name, package_group name, module stream or docker tag}
+    start_date: ${12:# the rule limit for erratum start date (YYYY-MM-DD)}
+    stream: ${13:# the context for a module}
+    types: ${14:# errata types the ruel applies to (enhancement, bugfix, security)}
+    version: ${15:# package or module version}
+    server_url: ${16:# URL of the Foreman server}
+    username: ${17:# Username accessing the Foreman server}
+    password: ${18:# Password of the user accessing the Foreman server}
+    validate_certs: ${19:# Whether or not to verify the TLS certificates of the Foreman server}
+    state: ${20:# State of the entity}
+    organization: ${21:# Organization that the entity is in}
+  tags:
+    - theforeman
+    - foreman
+    - content_view_filter_rule]]></content>
+  <tabTrigger>theforeman.foreman.content_view_filter_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage content view filter rules</description>
+</snippet>

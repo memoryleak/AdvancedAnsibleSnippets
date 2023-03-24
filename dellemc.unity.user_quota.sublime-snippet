@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage user quota on the Unity storage system}
+  dellemc.unity.user_quota:
+    filesystem_name: ${2:# The name of the filesystem for which the user quota is created}
+    filesystem_id: ${3:# The ID of the filesystem for which the user quota is created}
+    nas_server_name: ${4:# The name of the NAS server in which the filesystem is created}
+    nas_server_id: ${5:# The ID of the NAS server in which the filesystem is created}
+    hard_limit: ${6:# Hard limitation for a user on the total space available}
+    soft_limit: ${7:# Soft limitation for a user on the total space available}
+    cap_unit: ${8:# Unit of I(soft_limit) and I(hard_limit) size}
+    user_type: ${9:# Type of user creating a user quota}
+    win_domain: ${10:# Fully qualified or short domain name for Windows user type}
+    user_name: ${11:# User name of the user quota when I(user_type) is C(Windows) or C(Unix)}
+    uid: ${12:# User ID of the user quota}
+    user_quota_id: ${13:# User quota ID generated after creation of a user quota}
+    tree_quota_id: ${14:# The ID of the quota tree}
+    path: ${15:# The path to the quota tree}
+    state: ${16:# The I(state) option is used to mention the existence of the user quota}
+    unispherehost: ${17:# IP or FQDN of the Unity management server}
+    username: ${18:# The username of the Unity management server}
+    password: ${19:# The password of the Unity management server}
+    validate_certs: ${20:# Boolean variable to specify whether or not to validate SSL certificate}
+    port: ${21:# Port number through which communication happens with Unity management server}
+  tags:
+    - dellemc
+    - unity
+    - user_quota]]></content>
+  <tabTrigger>dellemc.unity.user_quota</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage user quota on the Unity storage system</description>
+</snippet>

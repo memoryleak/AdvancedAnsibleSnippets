@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage device on Dell PowerFlex}
+  dellemc.powerflex.device:
+    current_pathname: ${2:# Full path of the device to be added}
+    device_name: ${3:# Device name}
+    device_id: ${4:# Device ID}
+    sds_name: ${5:# The name of the SDS}
+    sds_id: ${6:# The ID of the SDS}
+    storage_pool_name: ${7:# Storage Pool name}
+    storage_pool_id: ${8:# Storage Pool ID}
+    acceleration_pool_name: ${9:# Acceleration Pool Name}
+    acceleration_pool_id: ${10:# Acceleration Pool ID}
+    protection_domain_name: ${11:# Protection domain name}
+    protection_domain_id: ${12:# Protection domain ID}
+    external_acceleration_type: ${13:# Device external acceleration types}
+    media_type: ${14:# Device media types}
+    state: ${15:# State of the device}
+    hostname: ${16:# IP or FQDN of the PowerFlex host}
+    username: ${17:# The username of the PowerFlex host}
+    password: ${18:# The password of the PowerFlex host}
+    validate_certs: ${19:# Boolean variable to specify whether or not to validate SSL certificate}
+    port: ${20:# Port number through which communication happens with PowerFlex host}
+    timeout: ${21:# Time after which connection will get terminated}
+  tags:
+    - dellemc
+    - powerflex
+    - device]]></content>
+  <tabTrigger>dellemc.powerflex.device</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage device on Dell PowerFlex</description>
+</snippet>

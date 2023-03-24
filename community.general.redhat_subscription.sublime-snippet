@@ -4,29 +4,31 @@
     state: ${2:# whether to register and subscribe (C(present)), or unregister (C(absent)) a system}
     username: ${3:# access}
     password: ${4:# access}
-    server_hostname: ${5:# Specify an alternative Red Hat Subscription Management or Sat6 server}
-    server_insecure: ${6:# Enable or disable https server certificate verification when connecting to C(server_hostname)}
-    server_prefix: ${7:# Specify the prefix when registering to the Red Hat Subscription Management or Sat6 server}
-    server_port: ${8:# Specify the port when registering to the Red Hat Subscription Management or Sat6 server}
-    rhsm_baseurl: ${9:# Specify CDN baseurl}
-    rhsm_repo_ca_cert: ${10:# Specify an alternative location for a CA certificate for CDN}
-    server_proxy_hostname: ${11:# Specify an HTTP proxy hostname}
-    server_proxy_port: ${12:# Specify an HTTP proxy port}
-    server_proxy_user: ${13:# Specify a user for HTTP proxy with basic authentication}
-    server_proxy_password: ${14:# Specify a password for HTTP proxy with basic authentication}
-    auto_attach: ${15:# Upon successful registration, auto-consume available subscriptions}
-    activationkey: ${16:# supply an activation key for use with registration}
-    org_id: ${17:# Organization ID to use in conjunction with activationkey}
-    environment: ${18:# Register with a specific environment in the destination org}
-    pool: ${19:# Specify a subscription pool name to consume}
-    pool_ids: ${20:# Specify subscription pool IDs to consume}
-    consumer_type: ${21:# The type of unit to register, defaults to system}
-    consumer_name: ${22:# Name of the system to register, defaults to the hostname}
-    consumer_id: ${23:# References an existing consumer ID to resume using a previous registration
+    token: ${5:# sso}
+    server_hostname: ${6:# Specify an alternative Red Hat Subscription Management or Red Hat Satellite or Katello server}
+    server_insecure: ${7:# Enable or disable https server certificate verification when connecting to C(server_hostname)}
+    server_prefix: ${8:# Specify the prefix when registering to the Red Hat Subscription Management or Red Hat Satellite or Katello server}
+    server_port: ${9:# Specify the port when registering to the Red Hat Subscription Management or Red Hat Satellite or Katello server}
+    rhsm_baseurl: ${10:# Specify CDN baseurl}
+    rhsm_repo_ca_cert: ${11:# Specify an alternative location for a CA certificate for CDN}
+    server_proxy_hostname: ${12:# Specify an HTTP proxy hostname}
+    server_proxy_scheme: ${13:# Specify an HTTP proxy scheme, for example C(http) or C(https)}
+    server_proxy_port: ${14:# Specify an HTTP proxy port}
+    server_proxy_user: ${15:# Specify a user for HTTP proxy with basic authentication}
+    server_proxy_password: ${16:# Specify a password for HTTP proxy with basic authentication}
+    auto_attach: ${17:# Upon successful registration, auto-consume available subscriptions}
+    activationkey: ${18:# supply an activation key for use with registration}
+    org_id: ${19:# Organization ID to use in conjunction with activationkey}
+    environment: ${20:# Register with a specific environment in the destination org}
+    pool: ${21:# Specify a subscription pool name to consume}
+    pool_ids: ${22:# Specify subscription pool IDs to consume}
+    consumer_type: ${23:# The type of unit to register, defaults to system}
+    consumer_name: ${24:# Name of the system to register, defaults to the hostname}
+    consumer_id: ${25:# References an existing consumer ID to resume using a previous registration
 for this system}
-    force_register: ${24:# Register the system even if it is already registered}
-    release: ${25:# Set a release version}
-    syspurpose: ${26:# Set syspurpose attributes in file C(/etc/rhsm/syspurpose/syspurpose}
+    force_register: ${26:# Register the system even if it is already registered}
+    release: ${27:# Set a release version}
+    syspurpose: ${28:# Set syspurpose attributes in file C(/etc/rhsm/syspurpose/syspurpose}
   tags:
     - community
     - general

@@ -66,24 +66,25 @@
     source_region: ${64:# The region of the DB instance from which the replica is created}
     storage_encrypted: ${65:# Whether the DB instance is encrypted}
     storage_type: ${66:# The storage type to be associated with the DB instance}
-    tde_credential_arn: ${67:# The ARN from the key store with which to associate the instance for Transparent Data Encryption}
-    tde_credential_password: ${68:# The password for the given ARN from the key store in order to access the device}
-    timezone: ${69:# The time zone of the DB instance}
-    use_latest_restorable_time: ${70:# Whether to restore the DB instance to the latest restorable backup time}
-    vpc_security_group_ids: ${71:# A list of EC2 VPC security groups to associate with the DB instance}
-    purge_security_groups: ${72:# Set to False to retain any enabled security groups that aren't specified in the task and are associated with the instance}
-    access_key: ${73:# AWS access key ID}
-    secret_key: ${74:# AWS secret access key}
-    session_token: ${75:# AWS STS session token for use with temporary credentials}
-    profile: ${76:# A named AWS profile to use for authentication}
-    endpoint_url: ${77:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${78:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${79:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${80:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${81:# Use a C(botocore}
-    region: ${82:# The AWS region to use}
-    tags: ${83:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${84:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    storage_throughput: ${67:# The storage throughput when the I(storage_type) is C(gp3)}
+    tde_credential_arn: ${68:# The ARN from the key store with which to associate the instance for Transparent Data Encryption}
+    tde_credential_password: ${69:# The password for the given ARN from the key store in order to access the device}
+    timezone: ${70:# The time zone of the DB instance}
+    use_latest_restorable_time: ${71:# Whether to restore the DB instance to the latest restorable backup time}
+    vpc_security_group_ids: ${72:# A list of EC2 VPC security groups to associate with the DB instance}
+    purge_security_groups: ${73:# Set to False to retain any enabled security groups that aren't specified in the task and are associated with the instance}
+    access_key: ${74:# AWS access key ID}
+    secret_key: ${75:# AWS secret access key}
+    session_token: ${76:# AWS STS session token for use with temporary credentials}
+    profile: ${77:# A named AWS profile to use for authentication}
+    endpoint_url: ${78:# URL to connect to instead of the default AWS endpoints}
+    aws_ca_bundle: ${79:# The location of a CA Bundle to use when validating SSL certificates}
+    validate_certs: ${80:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    aws_config: ${81:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${82:# Use a C(botocore}
+    region: ${83:# The AWS region to use}
+    tags: ${84:# A dictionary representing the tags to be applied to the resource}
+    purge_tags: ${85:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
   tags:
     - amazon
     - aws

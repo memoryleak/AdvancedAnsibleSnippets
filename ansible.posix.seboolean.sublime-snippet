@@ -2,12 +2,10 @@
   <content><![CDATA[- name: ${1:Toggles SELinux booleans}
   ansible.posix.seboolean:
     name: ${2:# Name of the boolean to configure}
-    persistent: ${3:# Set to C(yes) if the boolean setting should survive a reboot}
+    persistent: ${3:# Set to C(true) if the boolean setting should survive a reboot}
     state: ${4:# Desired boolean value}
     ignore_selinux_state: ${5:# Useful for scenarios (chrooted environment) that you can't get the real SELinux state}
   tags:
-    - ansible
-    - posix
     - seboolean]]></content>
   <tabTrigger>ansible.posix.seboolean</tabTrigger>
   <scope>source.yaml,source.ansible</scope>

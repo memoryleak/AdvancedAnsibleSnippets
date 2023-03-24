@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Hetzner's vSwitch}
+  community.hrobot.v_switch:
+    vlan: ${2:# The vSwitch's VLAN ID}
+    name: ${3:# The vSwitch's name}
+    state: ${4:# State of the vSwitch}
+    servers: ${5:# List of server identifiers (server's numeric ID or server's main IPv4 or IPv6)}
+    wait: ${6:# Whether to wait until the vSwitch has been successfully configured before determining what to do, and before returning from the module}
+    wait_delay: ${7:# Delay to wait (in seconds) before checking again whether the vSwitch servers has been configured}
+    timeout: ${8:# Timeout (in seconds) for waiting for vSwitch servers to be configured}
+    hetzner_user: ${9:# The username for the Robot webservice user}
+    hetzner_password: ${10:# The password for the Robot webservice user}
+  tags:
+    - community
+    - hrobot
+    - v_switch]]></content>
+  <tabTrigger>community.hrobot.v_switch</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Hetzner&#39;s vSwitch</description>
+</snippet>

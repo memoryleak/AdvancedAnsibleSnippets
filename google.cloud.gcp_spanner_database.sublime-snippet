@@ -4,14 +4,15 @@
     state: ${2:# Whether the given object should exist in GCP}
     name: ${3:# A unique identifier for the database, which cannot be changed after the instance is created}
     extra_statements: ${4:# An optional list of DDL statements to run inside the newly created database}
-    instance: ${5:# The instance to create the database on}
-    project: ${6:# The Google Cloud Platform project to use}
-    auth_kind: ${7:# The type of credential used}
-    service_account_contents: ${8:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${9:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${10:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${11:# Array of scopes to be used}
-    env_type: ${12:# Specifies which Ansible environment you're running this module within}
+    encryption_config: ${5:# Encryption configuration for the database }
+    instance: ${6:# The instance to create the database on}
+    project: ${7:# The Google Cloud Platform project to use}
+    auth_kind: ${8:# The type of credential used}
+    service_account_contents: ${9:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_file: ${10:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    service_account_email: ${11:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    scopes: ${12:# Array of scopes to be used}
+    env_type: ${13:# Specifies which Ansible environment you're running this module within}
   tags:
     - google
     - cloud

@@ -5,11 +5,13 @@
     group: ${3:# The name of the group for the sudoers rule}
     name: ${4:# The name of the sudoers rule}
     nopassword: ${5:# Whether a password will be required to run the sudo'd command}
-    runas: ${6:# Specify the target user the command(s) will run as}
-    sudoers_path: ${7:# The path which sudoers config files will be managed in}
-    state: ${8:# Whether the rule should exist or not}
-    user: ${9:# The name of the user for the sudoers rule}
-    validation: ${10:# If C(absent), the sudoers rule will be added without validation}
+    setenv: ${6:# Whether to allow keeping the environment when command is run with sudo}
+    host: ${7:# Specify the host the rule is for}
+    runas: ${8:# Specify the target user the command(s) will run as}
+    sudoers_path: ${9:# The path which sudoers config files will be managed in}
+    state: ${10:# Whether the rule should exist or not}
+    user: ${11:# The name of the user for the sudoers rule}
+    validation: ${12:# If C(absent), the sudoers rule will be added without validation}
   tags:
     - community
     - general

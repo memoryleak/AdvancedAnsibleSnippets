@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Snapshots on Dell PowerFlex}
+  dellemc.powerflex.snapshot:
+    snapshot_name: ${2:# The name of the snapshot}
+    snapshot_id: ${3:# The ID of the Snapshot}
+    vol_name: ${4:# The name of the volume for which snapshot will be taken}
+    vol_id: ${5:# The ID of the volume}
+    read_only: ${6:# Specifies whether mapping of the created snapshot volume will have read-write access or limited to read-only access}
+    size: ${7:# The size of the snapshot}
+    cap_unit: ${8:# The unit of the volume size}
+    snapshot_new_name: ${9:# New name of the snapshot}
+    allow_multiple_mappings: ${10:# Specifies whether to allow multiple mappings or not}
+    desired_retention: ${11:# The retention value for the Snapshot}
+    retention_unit: ${12:# The unit for retention}
+    sdc: ${13:# Specifies SDC parameters}
+    sdc_state: ${14:# Mapping state of the SDC}
+    remove_mode: ${15:# Removal mode for the snapshot}
+    state: ${16:# State of the snapshot}
+    hostname: ${17:# IP or FQDN of the PowerFlex host}
+    username: ${18:# The username of the PowerFlex host}
+    password: ${19:# The password of the PowerFlex host}
+    validate_certs: ${20:# Boolean variable to specify whether or not to validate SSL certificate}
+    port: ${21:# Port number through which communication happens with PowerFlex host}
+    timeout: ${22:# Time after which connection will get terminated}
+  tags:
+    - dellemc
+    - powerflex
+    - snapshot]]></content>
+  <tabTrigger>dellemc.powerflex.snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Snapshots on Dell PowerFlex</description>
+</snippet>

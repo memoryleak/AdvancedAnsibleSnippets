@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Copy a file into a Docker container}
+  community.docker.docker_container_copy_into:
+    container: ${2:# The name of the container to copy files to}
+    path: ${3:# Path to a file on the managed node}
+    content: ${4:# The file's content}
+    content_is_b64: ${5:# If set to C(true), the content in I(content) is assumed to be Base64 encoded and will be decoded before being used}
+    container_path: ${6:# Path to a file inside the Docker container}
+    follow: ${7:# This flag indicates that filesystem links in the Docker container, if they exist, should be followed}
+    local_follow: ${8:# This flag indicates that filesystem links in the source tree (where the module is executed), if they exist, should be followed}
+    owner_id: ${9:# The owner ID to use when writing the file to disk}
+    group_id: ${10:# The group ID to use when writing the file to disk}
+    mode: ${11:# The file mode to use when writing the file to disk}
+    force: ${12:# If set to C(true), force writing the file (without performing any idempotency checks)}
+    docker_host: ${13:# The URL or Unix socket path used to connect to the Docker API}
+    tls_hostname: ${14:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    api_version: ${15:# The version of the Docker API running on the Docker Host}
+    timeout: ${16:# The maximum amount of time in seconds to wait on a response from the API}
+    ca_cert: ${17:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${18:# Path to the client's TLS certificate file}
+    client_key: ${19:# Path to the client's TLS key file}
+    ssl_version: ${20:# Provide a valid SSL version number}
+    tls: ${21:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    use_ssh_client: ${22:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${23:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    debug: ${24:# Debug mode}
+  tags:
+    - community
+    - docker
+    - docker_container_copy_into]]></content>
+  <tabTrigger>community.docker.docker_container_copy_into</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Copy a file into a Docker container</description>
+</snippet>

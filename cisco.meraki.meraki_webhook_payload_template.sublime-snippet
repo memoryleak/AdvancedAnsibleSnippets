@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage webhook payload templates for a network in the Meraki cloud}
+  cisco.meraki.meraki_webhook_payload_template:
+    state: ${2:# Specifies whether payload template should be queried, created, modified, or deleted}
+    name: ${3:# Name of the template}
+    net_name: ${4:# Name of network containing access points}
+    net_id: ${5:# ID of network containing access points}
+    body: ${6:# The liquid template used for the body of the webhook message}
+    headers: ${7:# List of the liquid templates used with the webhook headers}
+    auth_key: ${8:# Authentication key provided by the dashboard}
+    host: ${9:# Hostname for Meraki dashboard}
+    use_proxy: ${10:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${11:# If C(no), it will use HTTP}
+    output_format: ${12:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${13:# Set amount of debug output during module execution}
+    timeout: ${14:# Time to timeout for HTTP requests}
+    validate_certs: ${15:# Whether to validate HTTP certificates}
+    org_name: ${16:# Name of organization}
+    org_id: ${17:# ID of organization}
+    rate_limit_retry_time: ${18:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${19:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_webhook_payload_template]]></content>
+  <tabTrigger>cisco.meraki.meraki_webhook_payload_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage webhook payload templates for a network in the Meraki cloud</description>
+</snippet>

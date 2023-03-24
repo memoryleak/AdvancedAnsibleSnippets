@@ -5,14 +5,12 @@
     dest: ${3:# Path of the file on the remote machine to be patched}
     src: ${4:# Path of the patch file as accepted by the GNU patch tool}
     state: ${5:# Whether the patch should be applied or reverted}
-    remote_src: ${6:# If C(no), it will search for src at originating/controller machine, if C(yes) it will go to the remote/target machine for the C(src)}
+    remote_src: ${6:# If C(false), it will search for src at originating/controller machine, if C(true) it will go to the remote/target machine for the C(src)}
     strip: ${7:# Number that indicates the smallest prefix containing leading slashes that will be stripped from each file name found in the patch file}
     backup: ${8:# Passes C(--backup --version-control=numbered) to patch, producing numbered backup copies}
-    binary: ${9:# Setting to C(yes) will disable patch's heuristic for transforming CRLF line endings into LF}
-    ignore_whitespace: ${10:# Setting to C(yes) will ignore white space changes between patch and input}
+    binary: ${9:# Setting to C(true) will disable patch's heuristic for transforming CRLF line endings into LF}
+    ignore_whitespace: ${10:# Setting to C(true) will ignore white space changes between patch and input}
   tags:
-    - ansible
-    - posix
     - patch]]></content>
   <tabTrigger>ansible.posix.patch</tabTrigger>
   <scope>source.yaml,source.ansible</scope>

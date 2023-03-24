@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set bmc system and audit log setting}
+  inspur.ispim.edit_m6_log_setting:
+    status: ${2:# System Log Status}
+    host_tag: ${3:# System log host tag,set when I(status=enable)}
+    level: ${4:# Events Level,set when I(status=enable)}
+    protocol_type: ${5:# Protocol Type,set when I(status=enable)}
+    server_id: ${6:# Syslog Server ID,set when I(status=enable)}
+    server_addr: ${7:# Server Address,set when server_id is not none}
+    server_port: ${8:# Server Address,set when server_id is not none}
+    log_type: ${9:# Remote Log Type,set when server_id is not none}
+    test: ${10:# Test remote log settings,set when server_id is not none}
+    provider: ${11:# A dict object containing connection details}
+    host: ${12:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    username: ${13:# Configures the username to use to authenticate the connection to the remote device}
+    password: ${14:# Specifies the password to use to authenticate the connection to the remote device}
+  tags:
+    - inspur
+    - ispim
+    - edit_m6_log_setting]]></content>
+  <tabTrigger>inspur.ispim.edit_m6_log_setting</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set bmc system and audit log setting</description>
+</snippet>

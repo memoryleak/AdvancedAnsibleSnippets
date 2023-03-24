@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get information about hostgroup(s)}
+  theforeman.foreman.hostgroup_info:
+    server_url: ${2:# URL of the Foreman server}
+    username: ${3:# Username accessing the Foreman server}
+    password: ${4:# Password of the user accessing the Foreman server}
+    validate_certs: ${5:# Whether or not to verify the TLS certificates of the Foreman server}
+    name: ${6:# Name of the resource to fetch information for}
+    location: ${7:# Label of the Location to scope the search for}
+    organization: ${8:# Name of the Organization to scope the search for}
+    search: ${9:# Search query to use}
+  tags:
+    - theforeman
+    - foreman
+    - hostgroup_info]]></content>
+  <tabTrigger>theforeman.foreman.hostgroup_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get information about hostgroup(s)</description>
+</snippet>

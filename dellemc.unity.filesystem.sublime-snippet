@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage filesystem on Unity storage system}
+  dellemc.unity.filesystem:
+    filesystem_name: ${2:# The name of the filesystem}
+    filesystem_id: ${3:# The id of the filesystem}
+    pool_name: ${4:# This is the name of the pool where the filesystem will be created}
+    pool_id: ${5:# This is the ID of the pool where the filesystem will be created}
+    size: ${6:# The size of the filesystem}
+    cap_unit: ${7:# The unit of the filesystem size}
+    nas_server_name: ${8:# Name of the NAS server on which filesystem will be hosted}
+    nas_server_id: ${9:# ID of the NAS server on which filesystem will be hosted}
+    supported_protocols: ${10:# Protocols supported by the file system}
+    description: ${11:# Description about the filesystem}
+    smb_properties: ${12:# Advance settings for SMB}
+    data_reduction: ${13:# Boolean variable, specifies whether or not to enable compression}
+    is_thin: ${14:# Boolean variable, specifies whether or not it is a thin filesystem}
+    access_policy: ${15:# Access policy of a filesystem}
+    locking_policy: ${16:# File system locking policies}
+    tiering_policy: ${17:# Tiering policy choices for how the storage resource data will be distributed among the tiers available in the pool}
+    quota_config: ${18:# Configuration for quota management}
+    state: ${19:# State variable to determine whether filesystem will exist or not}
+    snap_schedule_name: ${20:# This is the name of an existing snapshot schedule which is to be associated with the filesystem}
+    snap_schedule_id: ${21:# This is the id of an existing snapshot schedule which is to be associated with the filesystem}
+    replication_params: ${22:# Settings required for enabling or modifying replication}
+    replication_state: ${23:# State of the replication}
+    unispherehost: ${24:# IP or FQDN of the Unity management server}
+    username: ${25:# The username of the Unity management server}
+    password: ${26:# The password of the Unity management server}
+    validate_certs: ${27:# Boolean variable to specify whether or not to validate SSL certificate}
+    port: ${28:# Port number through which communication happens with Unity management server}
+  tags:
+    - dellemc
+    - unity
+    - filesystem]]></content>
+  <tabTrigger>dellemc.unity.filesystem</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage filesystem on Unity storage system</description>
+</snippet>

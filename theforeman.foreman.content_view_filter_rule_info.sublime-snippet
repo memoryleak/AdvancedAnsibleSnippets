@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Fetch information about a Content View Filter Rule}
+  theforeman.foreman.content_view_filter_rule_info:
+    content_view: ${2:# the name of the content view that the filter applies to}
+    content_view_filter: ${3:# the name of the content view filter that the rule applies to}
+    errata_id: ${4:# for erratum fitlers using errata_by_id, the errata id to search for}
+    server_url: ${5:# URL of the Foreman server}
+    username: ${6:# Username accessing the Foreman server}
+    password: ${7:# Password of the user accessing the Foreman server}
+    validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
+    organization: ${9:# Name of the Organization to scope the search for}
+    name: ${10:# Name of the resource to fetch information for}
+    location: ${11:# Label of the Location to scope the search for}
+    search: ${12:# Search query to use}
+  tags:
+    - theforeman
+    - foreman
+    - content_view_filter_rule_info]]></content>
+  <tabTrigger>theforeman.foreman.content_view_filter_rule_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Fetch information about a Content View Filter Rule</description>
+</snippet>

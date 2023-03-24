@@ -8,28 +8,33 @@
     comment: ${6:# Specifies the SnapMirror policy comment}
     tries: ${7:# Specifies the number of tries}
     transfer_priority: ${8:# Specifies the priority at which a SnapMirror transfer runs}
-    common_snapshot_schedule: ${9:# Specifies the common Snapshot copy schedule associated with the policy, only required for strict_sync_mirror and sync_mirror}
-    owner: ${10:# Specifies the owner of the SnapMirror policy}
-    is_network_compression_enabled: ${11:# Specifies whether network compression is enabled for transfers}
-    ignore_atime: ${12:# Specifies whether incremental transfers will ignore files which have only their access time changed}
-    restart: ${13:# Defines the behavior of SnapMirror if an interrupted transfer exists, applies to data protection only}
-    snapmirror_label: ${14:# SnapMirror policy rule label}
-    keep: ${15:# SnapMirror policy rule retention count for snapshots created}
-    prefix: ${16:# SnapMirror policy rule prefix}
-    schedule: ${17:# SnapMirror policy rule schedule}
-    identity_preservation: ${18:# Specifies which configuration of the source SVM is replicated to the destination SVM}
-    hostname: ${19:# The hostname or IP address of the ONTAP instance}
-    username: ${20:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${21:# Password for the specified user}
-    cert_filepath: ${22:# path to SSL client cert file (}
-    key_filepath: ${23:# path to SSL client key file}
-    https: ${24:# Enable and disable https}
-    validate_certs: ${25:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${26:# Override the default port (80 or 443) with this port}
-    ontapi: ${27:# The ontap api version to use}
-    use_rest: ${28:# Whether to use REST or ZAPI}
-    feature_flags: ${29:# Enable or disable a new feature}
-    force_ontap_version: ${30:# Override the cluster ONTAP version when using REST}
+    transfer_schedule: ${9:# Specifies the name of the schedule used to update asynchronous SnapMirror relationships}
+    common_snapshot_schedule: ${10:# Specifies the common Snapshot copy schedule associated with the policy, only required for strict_sync_mirror and sync_mirror}
+    owner: ${11:# Specifies the owner of the SnapMirror policy}
+    is_network_compression_enabled: ${12:# Specifies whether network compression is enabled for transfers}
+    ignore_atime: ${13:# Specifies whether incremental transfers will ignore files which have only their access time changed}
+    restart: ${14:# Defines the behavior of SnapMirror if an interrupted transfer exists, applies to data protection only}
+    snapmirror_label: ${15:# SnapMirror policy rule label}
+    keep: ${16:# SnapMirror policy rule retention count for snapshots created}
+    prefix: ${17:# SnapMirror policy rule prefix}
+    schedule: ${18:# SnapMirror policy rule schedule}
+    identity_preservation: ${19:# Specifies which configuration of the source SVM is replicated to the destination SVM}
+    copy_all_source_snapshots: ${20:# Specifies whether all source Snapshot copies should be copied to the destination on a transfer rather than specifying specific retentions}
+    copy_latest_source_snapshot: ${21:# Specifies that the latest source Snapshot copy (created by SnapMirror before the transfer begins) should be copied to the destination on a transfer}
+    create_snapshot_on_source: ${22:# Specifies whether a new Snapshot copy should be created on the source at the beginning of an update or resync operation}
+    sync_type: ${23:# This property is only applicable to sync policy types}
+    hostname: ${24:# The hostname or IP address of the ONTAP instance}
+    username: ${25:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    password: ${26:# Password for the specified user}
+    cert_filepath: ${27:# path to SSL client cert file (}
+    key_filepath: ${28:# path to SSL client key file}
+    https: ${29:# Enable and disable https}
+    validate_certs: ${30:# If set to C(no), the SSL certificates will not be validated}
+    http_port: ${31:# Override the default port (80 or 443) with this port}
+    ontapi: ${32:# The ontap api version to use}
+    use_rest: ${33:# Whether to use REST or ZAPI}
+    feature_flags: ${34:# Enable or disable a new feature}
+    force_ontap_version: ${35:# Override the cluster ONTAP version when using REST}
   tags:
     - netapp
     - ontap

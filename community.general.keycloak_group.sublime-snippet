@@ -6,16 +6,17 @@
     realm: ${4:# They Keycloak realm under which this group resides}
     id: ${5:# The unique identifier for this group}
     attributes: ${6:# A dict of key/value pairs to set as custom attributes for the group}
-    auth_keycloak_url: ${7:# URL to the Keycloak instance}
-    auth_client_id: ${8:# OpenID Connect I(client_id) to authenticate to the API with}
-    auth_realm: ${9:# Keycloak realm name to authenticate to for API access}
-    auth_client_secret: ${10:# Client Secret to use in conjunction with I(auth_client_id) (if required)}
-    auth_username: ${11:# Username to authenticate for API access with}
-    auth_password: ${12:# Password to authenticate for API access with}
-    token: ${13:# Authentication token for Keycloak API}
-    validate_certs: ${14:# Verify TLS certificates (do not disable this in production)}
-    connection_timeout: ${15:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
-    http_agent: ${16:# Configures the HTTP User-Agent header}
+    parents: ${7:# List of parent groups for the group to handle sorted top to bottom}
+    auth_keycloak_url: ${8:# URL to the Keycloak instance}
+    auth_client_id: ${9:# OpenID Connect I(client_id) to authenticate to the API with}
+    auth_realm: ${10:# Keycloak realm name to authenticate to for API access}
+    auth_client_secret: ${11:# Client Secret to use in conjunction with I(auth_client_id) (if required)}
+    auth_username: ${12:# Username to authenticate for API access with}
+    auth_password: ${13:# Password to authenticate for API access with}
+    token: ${14:# Authentication token for Keycloak API}
+    validate_certs: ${15:# Verify TLS certificates (do not disable this in production)}
+    connection_timeout: ${16:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    http_agent: ${17:# Configures the HTTP User-Agent header}
   tags:
     - community
     - general

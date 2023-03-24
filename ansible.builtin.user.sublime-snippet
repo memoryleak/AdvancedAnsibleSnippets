@@ -9,15 +9,15 @@
     seuser: ${7:# Optionally sets the seuser type (user_u) on selinux enabled systems}
     group: ${8:# Optionally sets the user's primary group (takes a group name)}
     groups: ${9:# List of groups user will be added to}
-    append: ${10:# If C(yes), add the user to the groups specified in C(groups)}
+    append: ${10:# If C(true), add the user to the groups specified in C(groups)}
     shell: ${11:# Optionally set the user's shell}
     home: ${12:# Optionally set the user's home directory}
     skeleton: ${13:# Optionally set a home skeleton directory}
-    password: ${14:# Optionally set the user's password to this crypted value}
+    password: ${14:# If provided, set the user's password to the provided encrypted hash (Linux) or plain text password (macOS)}
     state: ${15:# Whether the account should exist or not, taking action if the state is different from what is stated}
-    create_home: ${16:# Unless set to C(no), a home directory will be made for the user when the account is created or if the home directory does not exist}
-    move_home: ${17:# If set to C(yes) when used with C(home: ), attempt to move the user's old home directory to the specified directory if it isn't there already and the old home exists}
-    system: ${18:# When creating an account C(state=present), setting this to C(yes) makes the user a system account}
+    create_home: ${16:# Unless set to C(false), a home directory will be made for the user when the account is created or if the home directory does not exist}
+    move_home: ${17:# If set to C(true) when used with C(home: ), attempt to move the user's old home directory to the specified directory if it isn't there already and the old home exists}
+    system: ${18:# When creating an account C(state=present), setting this to C(true) makes the user a system account}
     force: ${19:# This only affects C(state=absent), it forces removal of the user and associated directories on supported platforms}
     remove: ${20:# This only affects C(state=absent), it attempts to remove directories associated with the user}
     login_class: ${21:# Optionally sets the user's login class, a feature of most BSD OSs}
@@ -38,8 +38,6 @@
     password_expire_min: ${36:# Minimum number of days between password change}
     umask: ${37:# Sets the umask of the user}
   tags:
-    - ansible
-    - builtin
     - user]]></content>
   <tabTrigger>ansible.builtin.user</tabTrigger>
   <scope>source.yaml,source.ansible</scope>

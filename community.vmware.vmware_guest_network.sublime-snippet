@@ -10,29 +10,30 @@
     cluster: ${8:# Name of cluster where VM belongs to}
     esxi_hostname: ${9:# The hostname of the ESXi host where the VM belongs to}
     mac_address: ${10:# MAC address of the NIC that should be altered, if a MAC address is not supplied a new nic will be created}
-    vlan_id: ${11:# VLAN id associated with the network}
-    network_name: ${12:# Name of network in vSphere}
-    device_type: ${13:# Type of virtual network device}
-    label: ${14:# Alter the name of the network adapter}
-    switch: ${15:# Name of the (dv)switch for destination network, this is only required for dvswitches}
-    guest_control: ${16:# Enables guest control over whether the connectable device is connected}
-    state: ${17:# NIC state}
-    start_connected: ${18:# If NIC should be connected to network on startup}
-    wake_onlan: ${19:# Enable wake on LAN}
-    connected: ${20:# If NIC should be connected to the network}
-    directpath_io: ${21:# Enable Universal Pass-through (UPT)}
-    physical_function_backing: ${22:# If set, specifies the PCI ID of the physical function to use as backing for a SR-IOV network adapter}
-    virtual_function_backing: ${23:# If set, specifies the PCI ID of the physical function to use as backing for a SR-IOV network adapter}
-    allow_guest_os_mtu_change: ${24:# Allows the guest OS to change the MTU on a SR-IOV network adapter}
-    force: ${25:# Force adapter creation even if an existing adapter is attached to the same network}
-    gather_network_info: ${26:# Return information about current guest network adapters}
-    hostname: ${27:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${28:# The username of the vSphere vCenter or ESXi server}
-    password: ${29:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${30:# Allows connection when SSL certificates are not valid}
-    port: ${31:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${32:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${33:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    label: ${11:# Label of the NIC that should be altered}
+    vlan_id: ${12:# VLAN id associated with the network}
+    network_name: ${13:# Name of network in vSphere}
+    device_type: ${14:# Type of virtual network device}
+    pvrdma_device_protocol: ${15:# The PVRDMA device protocol used}
+    switch: ${16:# Name of the (dv)switch for destination network, this is only required for dvswitches}
+    guest_control: ${17:# Enables guest control over whether the connectable device is connected}
+    state: ${18:# NIC state}
+    start_connected: ${19:# If NIC should be connected to network on startup}
+    wake_onlan: ${20:# Enable wake on LAN}
+    connected: ${21:# If NIC should be connected to the network}
+    directpath_io: ${22:# Enable Universal Pass-through (UPT)}
+    physical_function_backing: ${23:# If set, specifies the PCI ID of the physical function to use as backing for a SR-IOV network adapter}
+    virtual_function_backing: ${24:# If set, specifies the PCI ID of the physical function to use as backing for a SR-IOV network adapter}
+    allow_guest_os_mtu_change: ${25:# Allows the guest OS to change the MTU on a SR-IOV network adapter}
+    force: ${26:# Force adapter creation even if an existing adapter is attached to the same network}
+    gather_network_info: ${27:# Return information about current guest network adapters}
+    hostname: ${28:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${29:# The username of the vSphere vCenter or ESXi server}
+    password: ${30:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${31:# Allows connection when SSL certificates are not valid}
+    port: ${32:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${33:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${34:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
   tags:
     - community
     - vmware

@@ -5,21 +5,22 @@
     uuid: ${3:# UUID of the instance to manage if known, this is VMware's BIOS UUID by default}
     moid: ${4:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
     use_instance_uuid: ${5:# Whether to use the VMware instance UUID rather than the BIOS UUID}
-    boot_order: ${6:# List of the boot devices}
-    name_match: ${7:# If multiple virtual machines matching the name, use the first or last found}
-    boot_delay: ${8:# Delay in milliseconds before starting the boot sequence}
-    enter_bios_setup: ${9:# If set to C(True), the virtual machine automatically enters BIOS setup the next time it boots}
-    boot_retry_enabled: ${10:# If set to C(True), the virtual machine that fails to boot, will try to boot again after C(boot_retry_delay) is expired}
-    boot_retry_delay: ${11:# Specify the time in milliseconds between virtual machine boot failure and subsequent attempt to boot again}
-    boot_firmware: ${12:# Choose which firmware should be used to boot the virtual machine}
-    secure_boot_enabled: ${13:# Choose if EFI secure boot should be enabled}
-    hostname: ${14:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${15:# The username of the vSphere vCenter or ESXi server}
-    password: ${16:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${17:# Allows connection when SSL certificates are not valid}
-    port: ${18:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${19:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${20:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    name_match: ${6:# If multiple virtual machines matching the name, use the first or last found}
+    boot_order: ${7:# List of the boot devices}
+    boot_hdd_name: ${8:# Name of disk to be set as boot disk, which is case sensitive, e}
+    boot_delay: ${9:# Delay in milliseconds before starting the boot sequence}
+    enter_bios_setup: ${10:# If set to C(True), the virtual machine automatically enters BIOS setup the next time it boots}
+    boot_retry_enabled: ${11:# If set to C(True), the virtual machine that fails to boot, will try to boot again after C(boot_retry_delay) is expired}
+    boot_retry_delay: ${12:# Specify the time in milliseconds between virtual machine boot failure and subsequent attempt to boot again}
+    boot_firmware: ${13:# Choose which firmware should be used to boot the virtual machine}
+    secure_boot_enabled: ${14:# Choose if EFI secure boot should be enabled}
+    hostname: ${15:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    username: ${16:# The username of the vSphere vCenter or ESXi server}
+    password: ${17:# The password of the vSphere vCenter or ESXi server}
+    validate_certs: ${18:# Allows connection when SSL certificates are not valid}
+    port: ${19:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${20:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${21:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
   tags:
     - community
     - vmware

@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage volumes on Dell PowerFlex}
+  dellemc.powerflex.volume:
+    vol_name: ${2:# The name of the volume}
+    vol_id: ${3:# The ID of the volume}
+    storage_pool_name: ${4:# The name of the storage pool}
+    storage_pool_id: ${5:# The ID of the storage pool}
+    protection_domain_name: ${6:# The name of the protection domain}
+    protection_domain_id: ${7:# The ID of the protection domain}
+    vol_type: ${8:# Type of volume provisioning}
+    compression_type: ${9:# Type of the compression method}
+    use_rmcache: ${10:# Whether to use RM Cache or not}
+    snapshot_policy_name: ${11:# Name of the snapshot policy}
+    snapshot_policy_id: ${12:# ID of the snapshot policy}
+    auto_snap_remove_type: ${13:# Whether to remove or detach the snapshot policy}
+    size: ${14:# The size of the volume}
+    cap_unit: ${15:# The unit of the volume size}
+    vol_new_name: ${16:# New name of the volume}
+    allow_multiple_mappings: ${17:# Specifies whether to allow or not allow multiple mappings}
+    sdc: ${18:# Specifies SDC parameters}
+    sdc_state: ${19:# Mapping state of the SDC}
+    delete_snapshots: ${20:# If C(True), the volume and all its dependent snapshots will be deleted}
+    state: ${21:# State of the volume}
+    hostname: ${22:# IP or FQDN of the PowerFlex host}
+    username: ${23:# The username of the PowerFlex host}
+    password: ${24:# The password of the PowerFlex host}
+    validate_certs: ${25:# Boolean variable to specify whether or not to validate SSL certificate}
+    port: ${26:# Port number through which communication happens with PowerFlex host}
+    timeout: ${27:# Time after which connection will get terminated}
+  tags:
+    - dellemc
+    - powerflex
+    - volume]]></content>
+  <tabTrigger>dellemc.powerflex.volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage volumes on Dell PowerFlex</description>
+</snippet>

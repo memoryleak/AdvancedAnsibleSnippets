@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage snapshot schedules on Unity storage system}
+  dellemc.unity.snapshotschedule:
+    name: ${2:# The name of the snapshot schedule}
+    id: ${3:# The ID of the snapshot schedule}
+    type: ${4:# Type of the rule to be included in snapshot schedule}
+    interval: ${5:# Number of hours between snapshots}
+    hours_of_day: ${6:# Hours of the day when the snapshot will be taken}
+    day_interval: ${7:# Number of days between snapshots}
+    days_of_week: ${8:# Days of the week for which the snapshot schedule rule applies}
+    day_of_month: ${9:# Day of the month for which the snapshot schedule rule applies}
+    hour: ${10:# The hour when the snapshot will be taken}
+    minute: ${11:# Minute offset from the hour when the snapshot will be taken}
+    desired_retention: ${12:# The number of days/hours for which snapshot will be retained}
+    retention_unit: ${13:# The retention unit for the snapshot}
+    auto_delete: ${14:# Indicates whether the system can automatically delete the snapshot}
+    state: ${15:# Define whether the snapshot schedule should exist or not}
+    unispherehost: ${16:# IP or FQDN of the Unity management server}
+    username: ${17:# The username of the Unity management server}
+    password: ${18:# The password of the Unity management server}
+    validate_certs: ${19:# Boolean variable to specify whether or not to validate SSL certificate}
+    port: ${20:# Port number through which communication happens with Unity management server}
+  tags:
+    - dellemc
+    - unity
+    - snapshotschedule]]></content>
+  <tabTrigger>dellemc.unity.snapshotschedule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage snapshot schedules on Unity storage system</description>
+</snippet>

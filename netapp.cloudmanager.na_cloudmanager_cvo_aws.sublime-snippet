@@ -19,46 +19,47 @@
     security_group_id: ${17:# The ID of the security group for the working environment}
     instance_profile_name: ${18:# The instance profile name for the working environment}
     svm_password: ${19:# The admin password for Cloud Volumes ONTAP}
-    ontap_version: ${20:# The required ONTAP version}
-    use_latest_version: ${21:# Indicates whether to use the latest available ONTAP version}
-    platform_serial_number: ${22:# The serial number for the cluster}
-    tier_level: ${23:# The tiering level when 'capacity_tier' is set to 'S3'}
-    cluster_key_pair_name: ${24:# SSH authentication key pair name}
-    nss_account: ${25:# The NetApp Support Site account ID to use with this Cloud Volumes ONTAP system}
-    writing_speed_state: ${26:# The write speed setting for Cloud Volumes ONTAP ['NORMAL','HIGH']}
-    iops: ${27:# Provisioned IOPS}
-    throughput: ${28:# Unit is Mb/s}
-    capacity_tier: ${29:# Whether to enable data tiering for the first data aggregate}
-    instance_tenancy: ${30:# The EC2 instance tenancy}
-    cloud_provider_account: ${31:# The cloud provider credentials id to use when deploying the Cloud Volumes ONTAP system}
-    backup_volumes_to_cbs: ${32:# Automatically enable back up of all volumes to S3}
-    enable_compliance: ${33:# Enable the Cloud Compliance service on the working environment}
-    enable_monitoring: ${34:# Enable the Monitoring service on the working environment}
-    optimized_network_utilization: ${35:# Use optimized network utilization}
-    kms_key_id: ${36:# Aws Encryption parameters}
-    kms_key_arn: ${37:# AWS encryption parameters}
-    aws_tag: ${38:# Additional tags for the AWS CVO working environment}
-    is_ha: ${39:# Indicate whether the working environment is an HA pair or not}
-    platform_serial_number_node1: ${40:# For HA BYOL, the serial number for the first node}
-    platform_serial_number_node2: ${41:# For HA BYOL, the serial number for the second node}
-    node1_subnet_id: ${42:# For HA, the subnet ID of the first node}
-    node2_subnet_id: ${43:# For HA, the subnet ID of the second node}
-    mediator_subnet_id: ${44:# For HA, the subnet ID of the mediator}
-    failover_mode: ${45:# For HA, the failover mode for the HA pair}
-    mediator_assign_public_ip: ${46:# Boolean option to assign public IP}
-    mediator_key_pair_name: ${47:# For HA, the key pair name for the mediator instance}
-    cluster_floating_ip: ${48:# For HA FloatingIP, the cluster management floating IP address}
-    data_floating_ip: ${49:# For HA FloatingIP, the data floating IP address}
-    data_floating_ip2: ${50:# For HA FloatingIP, the data floating IP address}
-    svm_floating_ip: ${51:# For HA FloatingIP, the SVM management floating IP address}
-    route_table_ids: ${52:# For HA FloatingIP, the list of route table IDs that will be updated with the floating IPs}
-    upgrade_ontap_version: ${53:# Indicates whether to upgrade ONTAP image on the CVO}
-    update_svm_password: ${54:# Indicates whether to update svm_password on the CVO}
-    refresh_token: ${55:# The refresh token for NetApp Cloud Manager API operations}
-    sa_secret_key: ${56:# The service account secret key for NetApp Cloud Manager API operations}
-    sa_client_id: ${57:# The service account secret client ID for NetApp Cloud Manager API operations}
-    environment: ${58:# The environment for NetApp Cloud Manager API operations}
-    feature_flags: ${59:# Enable or disable a new feature}
+    svm_name: ${20:# The name of the SVM}
+    ontap_version: ${21:# The required ONTAP version}
+    use_latest_version: ${22:# Indicates whether to use the latest available ONTAP version}
+    platform_serial_number: ${23:# The serial number for the cluster}
+    tier_level: ${24:# The tiering level when 'capacity_tier' is set to 'S3'}
+    cluster_key_pair_name: ${25:# SSH authentication key pair name}
+    nss_account: ${26:# The NetApp Support Site account ID to use with this Cloud Volumes ONTAP system}
+    writing_speed_state: ${27:# The write speed setting for Cloud Volumes ONTAP ['NORMAL','HIGH']}
+    iops: ${28:# Provisioned IOPS}
+    throughput: ${29:# Unit is Mb/s}
+    capacity_tier: ${30:# Whether to enable data tiering for the first data aggregate}
+    instance_tenancy: ${31:# The EC2 instance tenancy}
+    cloud_provider_account: ${32:# The cloud provider credentials id to use when deploying the Cloud Volumes ONTAP system}
+    backup_volumes_to_cbs: ${33:# Automatically enable back up of all volumes to S3}
+    enable_compliance: ${34:# Enable the Cloud Compliance service on the working environment}
+    enable_monitoring: ${35:# Enable the Monitoring service on the working environment}
+    optimized_network_utilization: ${36:# Use optimized network utilization}
+    kms_key_id: ${37:# Aws Encryption parameters}
+    kms_key_arn: ${38:# AWS encryption parameters}
+    aws_tag: ${39:# Additional tags for the AWS CVO working environment}
+    is_ha: ${40:# Indicate whether the working environment is an HA pair or not}
+    platform_serial_number_node1: ${41:# For HA BYOL, the serial number for the first node}
+    platform_serial_number_node2: ${42:# For HA BYOL, the serial number for the second node}
+    node1_subnet_id: ${43:# For HA, the subnet ID of the first node}
+    node2_subnet_id: ${44:# For HA, the subnet ID of the second node}
+    mediator_subnet_id: ${45:# For HA, the subnet ID of the mediator}
+    failover_mode: ${46:# For HA, the failover mode for the HA pair}
+    mediator_assign_public_ip: ${47:# Boolean option to assign public IP}
+    mediator_key_pair_name: ${48:# For HA, the key pair name for the mediator instance}
+    cluster_floating_ip: ${49:# For HA FloatingIP, the cluster management floating IP address}
+    data_floating_ip: ${50:# For HA FloatingIP, the data floating IP address}
+    data_floating_ip2: ${51:# For HA FloatingIP, the data floating IP address}
+    svm_floating_ip: ${52:# For HA FloatingIP, the SVM management floating IP address}
+    route_table_ids: ${53:# For HA FloatingIP, the list of route table IDs that will be updated with the floating IPs}
+    upgrade_ontap_version: ${54:# Indicates whether to upgrade ONTAP image on the CVO}
+    update_svm_password: ${55:# Indicates whether to update svm_password on the CVO}
+    refresh_token: ${56:# The refresh token for NetApp Cloud Manager API operations}
+    sa_secret_key: ${57:# The service account secret key for NetApp Cloud Manager API operations}
+    sa_client_id: ${58:# The service account secret client ID for NetApp Cloud Manager API operations}
+    environment: ${59:# The environment for NetApp Cloud Manager API operations}
+    feature_flags: ${60:# Enable or disable a new feature}
   tags:
     - netapp
     - cloudmanager

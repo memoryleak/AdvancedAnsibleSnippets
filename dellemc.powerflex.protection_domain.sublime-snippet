@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Protection Domain on Dell PowerFlex}
+  dellemc.powerflex.protection_domain:
+    protection_domain_name: ${2:# The name of the protection domain}
+    protection_domain_id: ${3:# The ID of the protection domain}
+    protection_domain_new_name: ${4:# Used to rename the protection domain}
+    is_active: ${5:# Used to activate or deactivate the protection domain}
+    network_limits: ${6:# Network bandwidth limit used by all SDS in protection domain}
+    rf_cache_limits: ${7:# Used to set the RFcache parameters of the protection domain}
+    state: ${8:# State of the protection domain}
+    hostname: ${9:# IP or FQDN of the PowerFlex host}
+    username: ${10:# The username of the PowerFlex host}
+    password: ${11:# The password of the PowerFlex host}
+    validate_certs: ${12:# Boolean variable to specify whether or not to validate SSL certificate}
+    port: ${13:# Port number through which communication happens with PowerFlex host}
+    timeout: ${14:# Time after which connection will get terminated}
+  tags:
+    - dellemc
+    - powerflex
+    - protection_domain]]></content>
+  <tabTrigger>dellemc.powerflex.protection_domain</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Protection Domain on Dell PowerFlex</description>
+</snippet>

@@ -2,55 +2,56 @@
   <content><![CDATA[- name: ${1:Manage Grafana datasources}
   community.grafana.grafana_datasource:
     name: ${2:# The name of the datasource}
-    ds_type: ${3:# The type of the datasource}
-    ds_url: ${4:# The URL of the datasource}
-    access: ${5:# The access mode for this datasource}
-    database: ${6:# Name of the database for the datasource}
-    user: ${7:# The datasource login user for influxdb datasources}
-    password: ${8:# The datasource password}
-    basic_auth_user: ${9:# The datasource basic auth user}
-    basic_auth_password: ${10:# The datasource basic auth password, when C(basic auth) is C(yes)}
-    with_credentials: ${11:# Whether credentials such as cookies or auth headers should be sent with cross-site requests}
-    tls_client_cert: ${12:# The client TLS certificate}
-    tls_client_key: ${13:# The client TLS private key}
-    tls_ca_cert: ${14:# The TLS CA certificate for self signed certificates}
-    tls_skip_verify: ${15:# Skip the TLS datasource certificate verification}
-    is_default: ${16:# Make this datasource the default one}
-    org_id: ${17:# Grafana Organisation ID in which the datasource should be created}
-    state: ${18:# Status of the datasource}
-    es_version: ${19:# Elasticsearch version (for C(ds_type = elasticsearch) only)}
-    max_concurrent_shard_requests: ${20:# Starting with elasticsearch 5}
-    time_field: ${21:# Name of the time field in elasticsearch ds}
-    time_interval: ${22:# Minimum group by interval for C(influxdb) or C(elasticsearch) datasources}
-    interval: ${23:# For elasticsearch C(ds_type), this is the index pattern used}
-    tsdb_version: ${24:# The opentsdb version}
-    tsdb_resolution: ${25:# The opentsdb time resolution}
-    sslmode: ${26:# SSL mode for C(postgres) datasource type}
-    trends: ${27:# Use trends or not for zabbix datasource type}
-    aws_auth_type: ${28:# Type for AWS authentication for CloudWatch datasource type (authType of grafana api)}
-    aws_default_region: ${29:# AWS default region for CloudWatch datasource type}
-    aws_credentials_profile: ${30:# Profile for AWS credentials for CloudWatch datasource type when C(aws_auth_type) is C(credentials)}
-    aws_access_key: ${31:# AWS access key for CloudWatch datasource type when C(aws_auth_type) is C(keys)}
-    aws_secret_key: ${32:# AWS secret key for CloudWatch datasource type when C(aws_auth_type) is C(keys)}
-    aws_assume_role_arn: ${33:# AWS IAM role arn to assume for CloudWatch datasource type when C(aws_auth_type) is C(arn)}
-    aws_custom_metrics_namespaces: ${34:# Namespaces of Custom Metrics for CloudWatch datasource type}
-    azure_cloud: ${35:# The national cloud for your Azure account}
-    azure_tenant: ${36:# The directory/tenant ID for the Azure AD app registration to use for authentication}
-    azure_client: ${37:# The application/client ID for the Azure AD app registration to use for authentication}
-    azure_secret: ${38:# The application client secret for the Azure AD app registration to use for auth}
-    zabbix_user: ${39:# User for Zabbix API}
-    zabbix_password: ${40:# Password for Zabbix API}
-    additional_json_data: ${41:# Defined data is used for datasource jsonData}
-    additional_secure_json_data: ${42:# Defined data is used for datasource secureJsonData}
-    enforce_secure_data: ${43:# Secure data is not updated per default (see notes!)}
-    url: ${44:# The Grafana URL}
-    url_username: ${45:# The Grafana user for API authentication}
-    url_password: ${46:# The Grafana password for API authentication}
-    use_proxy: ${47:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    client_cert: ${48:# PEM formatted certificate chain file to be used for SSL client authentication}
-    client_key: ${49:# PEM formatted file that contains your private key to be used for SSL client authentication}
-    validate_certs: ${50:# If C(no), SSL certificates will not be validated}
-    grafana_api_key: ${51:# The Grafana API key}
+    uid: ${3:# The uid of the datasource}
+    ds_type: ${4:# The type of the datasource}
+    ds_url: ${5:# The URL of the datasource}
+    access: ${6:# The access mode for this datasource}
+    database: ${7:# Name of the database for the datasource}
+    user: ${8:# The datasource login user for influxdb datasources}
+    password: ${9:# The datasource password}
+    basic_auth_user: ${10:# The datasource basic auth user}
+    basic_auth_password: ${11:# The datasource basic auth password, when C(basic auth) is C(yes)}
+    with_credentials: ${12:# Whether credentials such as cookies or auth headers should be sent with cross-site requests}
+    tls_client_cert: ${13:# The client TLS certificate}
+    tls_client_key: ${14:# The client TLS private key}
+    tls_ca_cert: ${15:# The TLS CA certificate for self signed certificates}
+    tls_skip_verify: ${16:# Skip the TLS datasource certificate verification}
+    is_default: ${17:# Make this datasource the default one}
+    org_id: ${18:# Grafana Organisation ID in which the datasource should be created}
+    state: ${19:# Status of the datasource}
+    es_version: ${20:# Elasticsearch version (for C(ds_type = elasticsearch) only)}
+    max_concurrent_shard_requests: ${21:# Starting with elasticsearch 5}
+    time_field: ${22:# Name of the time field in elasticsearch ds}
+    time_interval: ${23:# Minimum group by interval for C(influxdb) or C(elasticsearch) datasources}
+    interval: ${24:# For elasticsearch C(ds_type), this is the index pattern used}
+    tsdb_version: ${25:# The opentsdb version}
+    tsdb_resolution: ${26:# The opentsdb time resolution}
+    sslmode: ${27:# SSL mode for C(postgres) datasource type}
+    trends: ${28:# Use trends or not for zabbix datasource type}
+    aws_auth_type: ${29:# Type for AWS authentication for CloudWatch datasource type (authType of grafana api)}
+    aws_default_region: ${30:# AWS default region for CloudWatch datasource type}
+    aws_credentials_profile: ${31:# Profile for AWS credentials for CloudWatch datasource type when C(aws_auth_type) is C(credentials)}
+    aws_access_key: ${32:# AWS access key for CloudWatch datasource type when C(aws_auth_type) is C(keys)}
+    aws_secret_key: ${33:# AWS secret key for CloudWatch datasource type when C(aws_auth_type) is C(keys)}
+    aws_assume_role_arn: ${34:# AWS IAM role arn to assume for CloudWatch datasource type when C(aws_auth_type) is C(arn)}
+    aws_custom_metrics_namespaces: ${35:# Namespaces of Custom Metrics for CloudWatch datasource type}
+    azure_cloud: ${36:# The national cloud for your Azure account}
+    azure_tenant: ${37:# The directory/tenant ID for the Azure AD app registration to use for authentication}
+    azure_client: ${38:# The application/client ID for the Azure AD app registration to use for authentication}
+    azure_secret: ${39:# The application client secret for the Azure AD app registration to use for auth}
+    zabbix_user: ${40:# User for Zabbix API}
+    zabbix_password: ${41:# Password for Zabbix API}
+    additional_json_data: ${42:# Defined data is used for datasource jsonData}
+    additional_secure_json_data: ${43:# Defined data is used for datasource secureJsonData}
+    enforce_secure_data: ${44:# Secure data is not updated per default (see notes!)}
+    url: ${45:# The Grafana URL}
+    url_username: ${46:# The Grafana user for API authentication}
+    url_password: ${47:# The Grafana password for API authentication}
+    use_proxy: ${48:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    client_cert: ${49:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${50:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    validate_certs: ${51:# If C(no), SSL certificates will not be validated}
+    grafana_api_key: ${52:# The Grafana API key}
   tags:
     - community
     - grafana

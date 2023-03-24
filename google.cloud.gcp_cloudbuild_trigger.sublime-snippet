@@ -13,14 +13,16 @@
     included_files: ${11:# ignoredFiles and includedFiles are file glob matches using U(https://golang}
     trigger_template: ${12:# Template describing the types of source changes to trigger a build}
     github: ${13:# Describes the configuration of a trigger that creates a build whenever a GitHub event is received}
-    build: ${14:# Contents of the build template}
-    project: ${15:# The Google Cloud Platform project to use}
-    auth_kind: ${16:# The type of credential used}
-    service_account_contents: ${17:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${18:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${19:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${20:# Array of scopes to be used}
-    env_type: ${21:# Specifies which Ansible environment you're running this module within}
+    pubsub_config: ${14:# PubsubConfig describes the configuration of a trigger that creates a build whenever a Pub/Sub message is published}
+    webhook_config: ${15:# WebhookConfig describes the configuration of a trigger that creates a build whenever a webhook is sent to a trigger's webhook URL}
+    build: ${16:# Contents of the build template}
+    project: ${17:# The Google Cloud Platform project to use}
+    auth_kind: ${18:# The type of credential used}
+    service_account_contents: ${19:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_file: ${20:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    service_account_email: ${21:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    scopes: ${22:# Array of scopes to be used}
+    env_type: ${23:# Specifies which Ansible environment you're running this module within}
   tags:
     - google
     - cloud

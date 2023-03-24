@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gathering information about Dell PowerFlex}
+  dellemc.powerflex.info:
+    gather_subset: ${2:# List of string variables to specify the Powerflex storage system entities for which information is required}
+    filters: ${3:# List of filters to support filtered output for storage entities}
+    hostname: ${4:# IP or FQDN of the PowerFlex host}
+    username: ${5:# The username of the PowerFlex host}
+    password: ${6:# The password of the PowerFlex host}
+    validate_certs: ${7:# Boolean variable to specify whether or not to validate SSL certificate}
+    port: ${8:# Port number through which communication happens with PowerFlex host}
+    timeout: ${9:# Time after which connection will get terminated}
+  tags:
+    - dellemc
+    - powerflex
+    - info]]></content>
+  <tabTrigger>dellemc.powerflex.info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gathering information about Dell PowerFlex</description>
+</snippet>

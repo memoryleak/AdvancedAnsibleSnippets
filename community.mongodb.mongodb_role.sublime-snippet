@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Adds or removes a role from a MongoDB database}
+  community.mongodb.mongodb_role:
+    replica_set: ${2:# Replica set to connect to (automatically connects to primary for writes)}
+    database: ${3:# The name of the database to add/remove the role from}
+    name: ${4:# The name of the role to add or remove}
+    privileges: ${5:# The privileges to grant the role}
+    authenticationRestrictions: ${6:# The authentication restrictions the server enforces on the role}
+    roles: ${7:# The database user roles should be provided as a dictionary with the db and role keys}
+    state: ${8:# The database user state}
+    debug: ${9:# Enable extra debugging output}
+    login_user: ${10:# The MongoDB user to login with}
+    login_password: ${11:# The password used to authenticate with}
+    login_database: ${12:# The database where login credentials are stored}
+    login_host: ${13:# The host running MongoDB instance to login to}
+    login_port: ${14:# The MongoDB server port to login to}
+    strict_compatibility: ${15:# Enforce strict requirements for pymongo and MongoDB software versions}
+    ssl: ${16:# Whether to use an SSL connection when connecting to the database}
+    ssl_cert_reqs: ${17:# Specifies whether a certificate is required from the other side of the connection, and whether it will be validated if provided}
+    ssl_ca_certs: ${18:# The ssl_ca_certs option takes a path to a CA file}
+    ssl_crlfile: ${19:# The ssl_crlfile option takes a path to a CRL file}
+    ssl_certfile: ${20:# Present a client certificate using the ssl_certfile option}
+    ssl_keyfile: ${21:# Private key for the client certificate}
+    ssl_pem_passphrase: ${22:# Passphrase to decrypt encrypted private keys}
+    auth_mechanism: ${23:# Authentication type}
+    connection_options: ${24:# Additional connection options}
+  tags:
+    - community
+    - mongodb
+    - mongodb_role]]></content>
+  <tabTrigger>community.mongodb.mongodb_role</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Adds or removes a role from a MongoDB database</description>
+</snippet>

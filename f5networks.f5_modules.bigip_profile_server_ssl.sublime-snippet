@@ -14,12 +14,15 @@
     certificate: ${12:# Specifies the name of the certificate the system uses for server-side SSL processing}
     key: ${13:# Specifies the file name of the SSL key}
     chain: ${14:# Specifies the certificates-key chain to associate with the SSL profile}
-    passphrase: ${15:# Specifies a passphrase used to encrypt the key}
-    update_password: ${16:# C(always) allows users to update passwords if they choose to do so}
-    ocsp_profile: ${17:# Specifies the name of the OCSP profile for purpose of validating the status of server certificate}
-    partition: ${18:# Device partition to manage resources on}
-    state: ${19:# When C(present), ensures the profile exists}
-    provider: ${20:# A dict object containing connection details}
+    authenticate_name: ${15:# Specifies a Common Name (CN) that is embedded in a server certificate}
+    ca_file: ${16:# Specifies a server CA the system trusts}
+    options: ${17:# Options the system uses for SSL processing in the form of a list}
+    passphrase: ${18:# Specifies a passphrase used to encrypt the key}
+    update_password: ${19:# C(always) allows users to update passwords if they choose to do so}
+    ocsp_profile: ${20:# Specifies the name of the OCSP profile for purpose of validating the status of server certificate}
+    partition: ${21:# Device partition to manage resources on}
+    state: ${22:# When C(present), ensures the profile exists}
+    provider: ${23:# A dict object containing connection details}
   tags:
     - f5networks
     - f5_modules

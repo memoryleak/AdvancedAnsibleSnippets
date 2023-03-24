@@ -17,18 +17,19 @@
     include_subdomains: ${15:# When set to C(yes), applies the HSTS policy to the HSTS host and its sub-domains}
     maximum_age: ${16:# Specifies the maximum length of time, in seconds, that HSTS functionality requests clients only use HTTPS to connect to the current host and any sub-domains of the current host's domain name}
     hsts_mode: ${17:# When set to C(yes), enables the HSTS settings}
-    accept_xff: ${18:# Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's XFF (X-forwarded-for) headers, if they exist}
-    xff_alternative_names: ${19:# Specifies alternative XFF headers instead of the default X-forwarded-for header}
-    fallback_host: ${20:# Specifies an HTTP fallback host}
-    fallback_status_codes: ${21:# Specifies one or more HTTP error codes from server responses that should trigger a redirection to the fallback host}
-    oneconnect_transformations: ${22:# Enables the system to perform HTTP header transformations for keeping server-side connections open}
-    request_chunking: ${23:# Specifies how to handle chunked and unchunked requests}
-    response_chunking: ${24:# Specifies how to handle chunked and unchunked responses}
-    enforcement: ${25:# Specifies protocol enforcement settings for the HTTP profile}
-    sflow: ${26:# Specifies sFlow settings for the HTTP profile}
-    partition: ${27:# Device partition to manage resources on}
-    state: ${28:# When C(present), ensures the profile exists}
-    provider: ${29:# A dict object containing connection details}
+    hsts_preload: ${18:# When set to C(yes), adds the HSTS host and its subdomains to the browser's HSTS preload list of sites that are considered HTTPS only}
+    accept_xff: ${19:# Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's XFF (X-forwarded-for) headers, if they exist}
+    xff_alternative_names: ${20:# Specifies alternative XFF headers instead of the default X-forwarded-for header}
+    fallback_host: ${21:# Specifies an HTTP fallback host}
+    fallback_status_codes: ${22:# Specifies one or more HTTP error codes from server responses that should trigger a redirection to the fallback host}
+    oneconnect_transformations: ${23:# Enables the system to perform HTTP header transformations for keeping server-side connections open}
+    request_chunking: ${24:# Specifies how to handle chunked and unchunked requests}
+    response_chunking: ${25:# Specifies how to handle chunked and unchunked responses}
+    enforcement: ${26:# Specifies protocol enforcement settings for the HTTP profile}
+    sflow: ${27:# Specifies sFlow settings for the HTTP profile}
+    partition: ${28:# Device partition to manage resources on}
+    state: ${29:# When C(present), ensures the profile exists}
+    provider: ${30:# A dict object containing connection details}
   tags:
     - f5networks
     - f5_modules

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages snapshots on Vultr}
+  vultr.cloud.snapshot:
+    description: ${2:# Description of the snapshot}
+    instance: ${3:# The description or ID of the instance from which to take the snapshot}
+    url: ${4:# The URL of the snapshot image (RAW) to be uploaded}
+    state: ${5:# State of the snapshot}
+    api_key: ${6:# API key of the Vultr API}
+    api_timeout: ${7:# HTTP timeout to Vultr API}
+    api_retries: ${8:# Amount of retries in case of the Vultr API retuns an HTTP 503 code}
+    api_retry_max_delay: ${9:# Retry backoff delay in seconds is exponential up to this max}
+    api_endpoint: ${10:# URL to API endpint (without trailing slash)}
+    validate_certs: ${11:# Validate SSL certs of the Vultr API}
+  tags:
+    - vultr
+    - cloud
+    - snapshot]]></content>
+  <tabTrigger>vultr.cloud.snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages snapshots on Vultr</description>
+</snippet>

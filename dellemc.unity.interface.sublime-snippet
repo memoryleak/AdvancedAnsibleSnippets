@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Interfaces on Unity storage system}
+  dellemc.unity.interface:
+    nas_server_name: ${2:# Name of the NAS server for which interface will be configured}
+    nas_server_id: ${3:# ID of the NAS server for which interface will be configured}
+    ethernet_port_name: ${4:# Name of the ethernet port}
+    ethernet_port_id: ${5:# ID of the ethernet port}
+    role: ${6:# Indicates whether interface is configured as production or backup}
+    interface_ip: ${7:# IP of network interface}
+    netmask: ${8:# Netmask of network interface}
+    prefix_length: ${9:# Prefix length is mutually exclusive with I(netmask)}
+    gateway: ${10:# Gateway of network interface}
+    vlan_id: ${11:# Vlan id of the interface}
+    state: ${12:# Define whether the interface should exist or not}
+    unispherehost: ${13:# IP or FQDN of the Unity management server}
+    username: ${14:# The username of the Unity management server}
+    password: ${15:# The password of the Unity management server}
+    validate_certs: ${16:# Boolean variable to specify whether or not to validate SSL certificate}
+    port: ${17:# Port number through which communication happens with Unity management server}
+  tags:
+    - dellemc
+    - unity
+    - interface]]></content>
+  <tabTrigger>dellemc.unity.interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Interfaces on Unity storage system</description>
+</snippet>

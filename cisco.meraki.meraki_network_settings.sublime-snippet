@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the settings of networks in the Meraki cloud}
+  cisco.meraki.meraki_network_settings:
+    state: ${2:# Create or modify an organization}
+    net_name: ${3:# Name of a network}
+    net_id: ${4:# ID number of a network}
+    local_status_page_enabled: ${5:# - Enables the local device status pages (U[my}
+    remote_status_page_enabled: ${6:# Enables access to the device status page (U(http://device LAN IP))}
+    local_status_page: ${7:# Configuration stanza of the local status page}
+    secure_port: ${8:# Configuration of SecureConnect options applied to the network}
+    auth_key: ${9:# Authentication key provided by the dashboard}
+    host: ${10:# Hostname for Meraki dashboard}
+    use_proxy: ${11:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_https: ${12:# If C(no), it will use HTTP}
+    output_format: ${13:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${14:# Set amount of debug output during module execution}
+    timeout: ${15:# Time to timeout for HTTP requests}
+    validate_certs: ${16:# Whether to validate HTTP certificates}
+    org_name: ${17:# Name of organization}
+    org_id: ${18:# ID of organization}
+    rate_limit_retry_time: ${19:# Number of seconds to retry if rate limiter is triggered}
+    internal_error_retry_time: ${20:# Number of seconds to retry if server returns an internal server error}
+  tags:
+    - cisco
+    - meraki
+    - meraki_network_settings]]></content>
+  <tabTrigger>cisco.meraki.meraki_network_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the settings of networks in the Meraki cloud</description>
+</snippet>

@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage volume on Unity storage system}
+  dellemc.unity.volume:
+    vol_name: ${2:# The name of the volume}
+    vol_id: ${3:# The id of the volume}
+    pool_name: ${4:# This is the name of the pool where the volume will be created}
+    pool_id: ${5:# This is the id of the pool where the volume will be created}
+    size: ${6:# The size of the volume}
+    cap_unit: ${7:# The unit of the volume size}
+    description: ${8:# Description about the volume}
+    snap_schedule: ${9:# Snapshot schedule assigned to the volume}
+    compression: ${10:# Boolean variable , specifies whether or not to enable compression}
+    is_thin: ${11:# Boolean variable , specifies whether or not it is a thin volume}
+    sp: ${12:# Storage Processor for this volume}
+    io_limit_policy: ${13:# IO limit policy associated with this volume}
+    host_name: ${14:# Name of the host to be mapped/unmapped with this volume}
+    host_id: ${15:# ID of the host to be mapped/unmapped with this volume}
+    hlu: ${16:# Host Lun Unit to be mapped/unmapped with this volume}
+    mapping_state: ${17:# State of host access for volume}
+    new_vol_name: ${18:# New name of the volume for rename operation}
+    tiering_policy: ${19:# Tiering policy choices for how the storage resource data will be distributed among the tiers available in the pool}
+    state: ${20:# State variable to determine whether volume will exist or not}
+    hosts: ${21:# Name of hosts for mapping to a volume}
+    unispherehost: ${22:# IP or FQDN of the Unity management server}
+    username: ${23:# The username of the Unity management server}
+    password: ${24:# The password of the Unity management server}
+    validate_certs: ${25:# Boolean variable to specify whether or not to validate SSL certificate}
+    port: ${26:# Port number through which communication happens with Unity management server}
+  tags:
+    - dellemc
+    - unity
+    - volume]]></content>
+  <tabTrigger>dellemc.unity.volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage volume on Unity storage system</description>
+</snippet>

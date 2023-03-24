@@ -16,11 +16,12 @@
     validate_certs: ${14:# Specifies whether the system checks an SSL peer, as a result of which the system requires and verifies the server certificate}
     login_ldap_attr: ${15:# Specifies the LDAP directory attribute containing the local user name that is associated with the selected directory entry}
     fallback_to_local: ${16:# Specifies the system uses the Local authentication method if the remote authentication method is not available}
-    state: ${17:# When C(present), ensures the device authentication method exists}
-    update_password: ${18:# C(always) always updates the C(bind_password)}
-    use_for_auth: ${19:# Specifies whether or not this auth source is put in use on the system}
-    source_type: ${20:# Specifies the auth source for user authentication, should be used with C(use_for_auth)}
-    provider: ${21:# A dict object containing connection details}
+    referrals: ${17:# Specifies whether automatic referral chasing should be enabled}
+    state: ${18:# When C(present), ensures the device authentication method exists}
+    update_password: ${19:# C(always) always updates the C(bind_password)}
+    use_for_auth: ${20:# Specifies whether or not this auth source is put in use on the system}
+    source_type: ${21:# Specifies the auth source for user authentication, should be used with C(use_for_auth)}
+    provider: ${22:# A dict object containing connection details}
   tags:
     - f5networks
     - f5_modules

@@ -10,13 +10,13 @@
     disable_gpg_check: ${8:# Whether to disable the GPG checking of signatures of packages being installed}
     installroot: ${9:# Specifies an alternative installroot, relative to which all packages will be installed}
     releasever: ${10:# Specifies an alternative release from which all packages will be installed}
-    autoremove: ${11:# If C(yes), removes all 'leaf' packages from the system that were originally installed as dependencies of user-installed packages but which are no longer required by any such package}
+    autoremove: ${11:# If C(true), removes all 'leaf' packages from the system that were originally installed as dependencies of user-installed packages but which are no longer required by any such package}
     exclude: ${12:# Package name(s) to exclude when state=present, or latest}
     skip_broken: ${13:# Skip all unavailable packages or packages with broken dependencies without raising an error}
     update_cache: ${14:# Force dnf to check if cache is out of date and redownload if needed}
     update_only: ${15:# When using latest, only update installed packages}
-    security: ${16:# If set to C(yes), and C(state=latest) then only installs updates that have been marked security related}
-    bugfix: ${17:# If set to C(yes), and C(state=latest) then only installs updates that have been marked bugfix related}
+    security: ${16:# If set to C(true), and C(state=latest) then only installs updates that have been marked security related}
+    bugfix: ${17:# If set to C(true), and C(state=latest) then only installs updates that have been marked bugfix related}
     enable_plugin: ${18:# I(Plugin) name to enable for the install/update operation}
     disable_plugin: ${19:# I(Plugin) name to disable for the install/update operation}
     disable_excludes: ${20:# Disable the excludes defined in DNF config files}
@@ -28,12 +28,10 @@
     lock_timeout: ${26:# Amount of time to wait for the dnf lockfile to be freed}
     install_weak_deps: ${27:# Will also install all packages linked by a weak dependency relation}
     download_dir: ${28:# Specifies an alternate directory to store packages}
-    allowerasing: ${29:# If C(yes) it allows  erasing  of  installed  packages to resolve dependencies}
+    allowerasing: ${29:# If C(true) it allows  erasing  of  installed  packages to resolve dependencies}
     nobest: ${30:# Set best option to False, so that transactions are not limited to best candidates only}
     cacheonly: ${31:# Tells dnf to run entirely from system cache; does not download or update metadata}
   tags:
-    - ansible
-    - builtin
     - dnf]]></content>
   <tabTrigger>ansible.builtin.dnf</tabTrigger>
   <scope>source.yaml,source.ansible</scope>

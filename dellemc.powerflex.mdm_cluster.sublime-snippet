@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage MDM cluster on Dell PowerFlex}
+  dellemc.powerflex.mdm_cluster:
+    mdm_name: ${2:# The name of the MDM}
+    mdm_id: ${3:# The ID of the MDM}
+    mdm_new_name: ${4:# To rename the MDM}
+    standby_mdm: ${5:# Specifies add standby MDM parameters}
+    is_primary: ${6:# Set I(is_primary) as C(true) to change MDM cluster ownership from the current master MDM to different MDM}
+    cluster_mode: ${7:# Mode of the cluster}
+    mdm: ${8:# Specifies parameters to add/remove MDMs to/from the MDM cluster}
+    mdm_state: ${9:# Mapping state of MDM}
+    virtual_ip_interfaces: ${10:# List of interfaces to be used for virtual IPs}
+    clear_interfaces: ${11:# Clear all virtual IP interfaces}
+    performance_profile: ${12:# Apply performance profile to cluster MDMs}
+    state: ${13:# State of the MDM cluster}
+    hostname: ${14:# IP or FQDN of the PowerFlex host}
+    username: ${15:# The username of the PowerFlex host}
+    password: ${16:# The password of the PowerFlex host}
+    validate_certs: ${17:# Boolean variable to specify whether or not to validate SSL certificate}
+    port: ${18:# Port number through which communication happens with PowerFlex host}
+    timeout: ${19:# Time after which connection will get terminated}
+  tags:
+    - dellemc
+    - powerflex
+    - mdm_cluster]]></content>
+  <tabTrigger>dellemc.powerflex.mdm_cluster</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage MDM cluster on Dell PowerFlex</description>
+</snippet>

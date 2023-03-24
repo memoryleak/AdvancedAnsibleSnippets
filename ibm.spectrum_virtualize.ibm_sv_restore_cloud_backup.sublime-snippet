@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module restores the cloud backup on IBM Spectrum Virtualize family storage systems}
+  ibm.spectrum_virtualize.ibm_sv_restore_cloud_backup:
+    clustername: ${2:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${3:# Domain for the Spectrum Virtualize storage system}
+    username: ${4:# REST API username for the Spectrum Virtualize storage system}
+    password: ${5:# REST API password for the Spectrum Virtualize storage system}
+    token: ${6:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    log_path: ${7:# Path of debug log file}
+    target_volume_name: ${8:# Specifies the volume name to restore onto}
+    source_volume_uid: ${9:# Specifies the volume snapshot to restore (specified by volume UID)}
+    generation: ${10:# Specifies the snapshot generation to restore}
+    restoreuid: ${11:# Specifies the UID of the restored volume should be set to the UID of the volume snapshot that is being restored}
+    deletelatergenerations: ${12:# Specifies that all backup generations should be deleted after the generation is restored}
+    cancel: ${13:# Specifies to cancel the restore operation}
+    validate_certs: ${14:# Validates certification}
+  tags:
+    - ibm
+    - spectrum_virtualize
+    - ibm_sv_restore_cloud_backup]]></content>
+  <tabTrigger>ibm.spectrum_virtualize.ibm_sv_restore_cloud_backup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module restores the cloud backup on IBM Spectrum Virtualize family storage systems</description>
+</snippet>

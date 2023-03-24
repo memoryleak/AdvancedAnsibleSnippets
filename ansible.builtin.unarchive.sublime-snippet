@@ -11,7 +11,7 @@
     include: ${9:# List of directory and file entries that you would like to extract from the archive}
     keep_newer: ${10:# Do not replace existing files that are newer than files from the archive}
     extra_opts: ${11:# Specify additional options by passing in an array}
-    remote_src: ${12:# Set to C(yes) to indicate the archived file is already on the remote system and not local to the Ansible controller}
+    remote_src: ${12:# Set to C(true) to indicate the archived file is already on the remote system and not local to the Ansible controller}
     validate_certs: ${13:# This only applies if using a https URL as the source of the file}
     decrypt: ${14:# This option controls the autodecryption of source files using vault}
     mode: ${15:# The permissions the resulting filesystem object should have}
@@ -24,8 +24,6 @@
     unsafe_writes: ${22:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
     attributes: ${23:# The attributes the resulting filesystem object should have}
   tags:
-    - ansible
-    - builtin
     - unarchive]]></content>
   <tabTrigger>ansible.builtin.unarchive</tabTrigger>
   <scope>source.yaml,source.ansible</scope>

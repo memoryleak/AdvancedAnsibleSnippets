@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage replication consistency groups on Dell PowerFlex}
+  dellemc.powerflex.replication_consistency_group:
+    rcg_name: ${2:# The name of the replication consistency group}
+    rcg_id: ${3:# The ID of the replication consistency group}
+    create_snapshot: ${4:# Whether to create the snapshot of the replication consistency group}
+    rpo: ${5:# Desired RPO in seconds}
+    protection_domain_id: ${6:# Protection domain id}
+    protection_domain_name: ${7:# Protection domain name}
+    activity_mode: ${8:# Activity mode of RCG}
+    pause: ${9:# Pause or resume the RCG}
+    freeze: ${10:# Freeze or unfreeze the RCG}
+    pause_mode: ${11:# Pause mode}
+    target_volume_access_mode: ${12:# Target volume access mode}
+    is_consistent: ${13:# Consistency of RCG}
+    new_rcg_name: ${14:# Name of RCG to rename to}
+    remote_peer: ${15:# Remote peer system}
+    state: ${16:# State of the replication consistency group}
+    hostname: ${17:# IP or FQDN of the PowerFlex host}
+    username: ${18:# The username of the PowerFlex host}
+    password: ${19:# The password of the PowerFlex host}
+    validate_certs: ${20:# Boolean variable to specify whether or not to validate SSL certificate}
+    port: ${21:# Port number through which communication happens with PowerFlex host}
+    timeout: ${22:# Time after which connection will get terminated}
+  tags:
+    - dellemc
+    - powerflex
+    - replication_consistency_group]]></content>
+  <tabTrigger>dellemc.powerflex.replication_consistency_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage replication consistency groups on Dell PowerFlex</description>
+</snippet>
