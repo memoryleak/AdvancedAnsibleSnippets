@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module to manage roles in oVirt/RHV}
   ovirt.ovirt.ovirt_role:
-    name: ${2:# Name of the role to manage}
-    id: ${3:# ID of the role to manage}
+    administrative: ${2:# Defines the role as administrative-only or not}
+    auth: ${3:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
     description: ${4:# Description of the role}
-    state: ${5:# Should the role be present/absent}
-    administrative: ${6:# Defines the role as administrative-only or not}
-    permits: ${7:# List of permits which role will have}
-    wait: ${8:# C(yes) if the module should wait for the entity to get into desired state}
-    fetch_nested: ${9:# If I(True) the module will fetch additional data from the API}
-    nested_attributes: ${10:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${11:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    fetch_nested: ${5:# If I(True) the module will fetch additional data from the API}
+    id: ${6:# ID of the role to manage}
+    name: ${7:# Name of the role to manage}
+    nested_attributes: ${8:# Specifies list of the attributes which should be fetched from the API}
+    permits: ${9:# List of permits which role will have}
+    poll_interval: ${10:# Number of the seconds the module waits until another poll request on entity status is sent}
+    state: ${11:# Should the role be present/absent}
     timeout: ${12:# The amount of time in seconds the module should wait for the instance to get into desired state}
-    poll_interval: ${13:# Number of the seconds the module waits until another poll request on entity status is sent}
+    wait: ${13:# C(yes) if the module should wait for the entity to get into desired state}
   tags:
     - ovirt
     - ovirt

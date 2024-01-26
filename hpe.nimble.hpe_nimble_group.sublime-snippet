@@ -2,9 +2,9 @@
   <content><![CDATA[- name: ${1:Manage the HPE Nimble Storage group}
   hpe.nimble.hpe_nimble_group:
     alarms: ${2:# Whether alarm feature is enabled}
-    alert_to_email_addrs: ${3:# Comma-separated list of email addresses to receive emails}
-    alert_from_email_addrs: ${4:# From email address to use while sending emails}
-    alert_min_level: ${5:# Minimum level of alert to be notified}
+    alert_from_email_addrs: ${3:# From email address to use while sending emails}
+    alert_min_level: ${4:# Minimum level of alert to be notified}
+    alert_to_email_addrs: ${5:# Comma-separated list of email addresses to receive emails}
     allow_analytics_gui: ${6:# Specify whether to allow HPE Nimble Storage to use Google Analytics in the GUI}
     allow_support_tunnel: ${7:# Whether to allow support tunnel}
     auto_switchover: ${8:# Whether automatic switchover of Group management services feature is enabled}
@@ -17,68 +17,68 @@
     date: ${15:# Unix epoch time local to the group}
     default_iscsi_target_scope: ${16:# Newly created volumes are exported under iSCSI Group Target or iSCSI Volume Target}
     default_volume_limit: ${17:# Default limit for a volume space usage as a percentage of volume size}
-    domain_name: ${18:# Domain name for this group}
-    dns_servers: ${19:# IP addresses for this group's dns servers}
+    dns_servers: ${18:# IP addresses for this group's dns servers}
+    domain_name: ${19:# Domain name for this group}
     fc_enabled: ${20:# Whether FC is enabled on this group}
     force: ${21:# Can be used with halt or merge flag}
     group_snapshot_ttl: ${22:# Snapshot Time-to-live(TTL) configured at group level for automatic deletion of unmanaged snapshots}
     group_target_enabled: ${23:# Is group_target enabled on this group}
     group_target_name: ${24:# Iscsi target name for this group}
     halt: ${25:# Halt all arrays in the group}
-    iscsi_enabled: ${26:# Whether iSCSI is enabled on this group}
-    isns_enabled: ${27:# Whether iSNS is enabled}
-    isns_port: ${28:# Port number for iSNS Server}
-    isns_server: ${29:# Hostname or IP Address of iSNS Server}
-    level: ${30:# Level of the test alert}
-    login_banner_after_auth: ${31:# Should the banner be displayed before the user credentials are prompted or after prompting the user credentials}
-    login_banner_message: ${32:# The message for the login banner that is displayed during user login activity}
-    login_banner_reset: ${33:# This will reset the banner to the version of the installed NOS}
-    merge: ${34:# Perform group merge with the specified group}
-    migrate: ${35:# Migrate the group Management Service to the current group Management Service backup array}
-    name: ${36:# Name of the group}
-    ntp_server: ${37:# Either IP address or hostname of the NTP server for this group}
-    proxy_port: ${38:# Proxy Port of HTTP Proxy Server}
-    proxy_server: ${39:# Hostname or IP Address of HTTP Proxy Server}
-    proxy_username: ${40:# Username to authenticate with HTTP Proxy Server}
-    proxy_password: ${41:# Password to authenticate with HTTP Proxy Server}
-    reboot: ${42:# Reboot all arrays in the group}
-    repl_throttle_list: ${43:# All the replication bandwidth limits on the system}
-    send_alert_to_support: ${44:# Whether to send alert to Support}
-    skip_secondary_mgmt_ip: ${45:# Skip check for secondary management IP address}
-    smtp_auth_enabled: ${46:# Whether SMTP Server requires authentication}
-    smtp_auth_password: ${47:# Password to authenticate with SMTP Server}
-    smtp_auth_username: ${48:# Username to authenticate with SMTP Server}
-    smtp_port: ${49:# Port number of SMTP Server}
-    smtp_encrypt_type: ${50:# Level of encryption for SMTP}
-    snmp_community: ${51:# Community string to be used with SNMP}
-    snmp_get_enabled: ${52:# Whether to accept SNMP get commands}
-    snmp_get_port: ${53:# Port number to which SNMP get requests should be sent}
-    snmp_trap_enabled: ${54:# Whether to enable SNMP traps}
-    snmp_trap_host: ${55:# Hostname or IP Address to send SNMP traps}
-    snmp_trap_port: ${56:# Port number of SNMP trap host}
-    snmp_sys_contact: ${57:# Name of the SNMP administrator}
-    snmp_sys_location: ${58:# Location of the group}
-    src_group_ip: ${59:# IP address of the source group}
-    src_group_name: ${60:# Name of the source group}
-    src_username: ${61:# Username of the source group}
-    src_passphrase: ${62:# Source group encryption passphrase}
-    src_password: ${63:# Password of the source group}
-    state: ${64:# The group operation}
-    syslogd_enabled: ${65:# Is syslogd enabled on this system}
-    syslogd_port: ${66:# Port number for syslogd server}
-    syslogd_server: ${67:# Hostname of the syslogd server}
-    tdz_enabled: ${68:# Is Target Driven Zoning (TDZ) enabled on this group}
-    tdz_prefix: ${69:# Target Driven Zoning (TDZ) prefix for peer zones created by TDZ}
-    test_alert: ${70:# Generate a test alert}
-    timezone: ${71:# Timezone in which this group is located}
-    tlsv1_enabled: ${72:# Enable or disable TLSv1}
-    user_inactivity_timeout: ${73:# The amount of time in seconds that the user session is inactive before timing out}
-    validate_merge: ${74:# Perform group merge validation}
-    vss_validation_timeout: ${75:# The amount of time in seconds to validate Microsoft VSS application synchronization before timing out}
-    vvol_enabled: ${76:# Are vVol enabled on this group}
-    host: ${77:# HPE Nimble Storage IP address}
-    password: ${78:# HPE Nimble Storage password}
-    username: ${79:# HPE Nimble Storage user name}
+    host: ${26:# HPE Nimble Storage IP address}
+    iscsi_enabled: ${27:# Whether iSCSI is enabled on this group}
+    isns_enabled: ${28:# Whether iSNS is enabled}
+    isns_port: ${29:# Port number for iSNS Server}
+    isns_server: ${30:# Hostname or IP Address of iSNS Server}
+    level: ${31:# Level of the test alert}
+    login_banner_after_auth: ${32:# Should the banner be displayed before the user credentials are prompted or after prompting the user credentials}
+    login_banner_message: ${33:# The message for the login banner that is displayed during user login activity}
+    login_banner_reset: ${34:# This will reset the banner to the version of the installed NOS}
+    merge: ${35:# Perform group merge with the specified group}
+    migrate: ${36:# Migrate the group Management Service to the current group Management Service backup array}
+    name: ${37:# Name of the group}
+    ntp_server: ${38:# Either IP address or hostname of the NTP server for this group}
+    password: ${39:# HPE Nimble Storage password}
+    proxy_password: ${40:# Password to authenticate with HTTP Proxy Server}
+    proxy_port: ${41:# Proxy Port of HTTP Proxy Server}
+    proxy_server: ${42:# Hostname or IP Address of HTTP Proxy Server}
+    proxy_username: ${43:# Username to authenticate with HTTP Proxy Server}
+    reboot: ${44:# Reboot all arrays in the group}
+    repl_throttle_list: ${45:# All the replication bandwidth limits on the system}
+    send_alert_to_support: ${46:# Whether to send alert to Support}
+    skip_secondary_mgmt_ip: ${47:# Skip check for secondary management IP address}
+    smtp_auth_enabled: ${48:# Whether SMTP Server requires authentication}
+    smtp_auth_password: ${49:# Password to authenticate with SMTP Server}
+    smtp_auth_username: ${50:# Username to authenticate with SMTP Server}
+    smtp_encrypt_type: ${51:# Level of encryption for SMTP}
+    smtp_port: ${52:# Port number of SMTP Server}
+    snmp_community: ${53:# Community string to be used with SNMP}
+    snmp_get_enabled: ${54:# Whether to accept SNMP get commands}
+    snmp_get_port: ${55:# Port number to which SNMP get requests should be sent}
+    snmp_sys_contact: ${56:# Name of the SNMP administrator}
+    snmp_sys_location: ${57:# Location of the group}
+    snmp_trap_enabled: ${58:# Whether to enable SNMP traps}
+    snmp_trap_host: ${59:# Hostname or IP Address to send SNMP traps}
+    snmp_trap_port: ${60:# Port number of SNMP trap host}
+    src_group_ip: ${61:# IP address of the source group}
+    src_group_name: ${62:# Name of the source group}
+    src_passphrase: ${63:# Source group encryption passphrase}
+    src_password: ${64:# Password of the source group}
+    src_username: ${65:# Username of the source group}
+    state: ${66:# The group operation}
+    syslogd_enabled: ${67:# Is syslogd enabled on this system}
+    syslogd_port: ${68:# Port number for syslogd server}
+    syslogd_server: ${69:# Hostname of the syslogd server}
+    tdz_enabled: ${70:# Is Target Driven Zoning (TDZ) enabled on this group}
+    tdz_prefix: ${71:# Target Driven Zoning (TDZ) prefix for peer zones created by TDZ}
+    test_alert: ${72:# Generate a test alert}
+    timezone: ${73:# Timezone in which this group is located}
+    tlsv1_enabled: ${74:# Enable or disable TLSv1}
+    user_inactivity_timeout: ${75:# The amount of time in seconds that the user session is inactive before timing out}
+    username: ${76:# HPE Nimble Storage user name}
+    validate_merge: ${77:# Perform group merge validation}
+    vss_validation_timeout: ${78:# The amount of time in seconds to validate Microsoft VSS application synchronization before timing out}
+    vvol_enabled: ${79:# Are vVol enabled on this group}
   tags:
     - hpe
     - nimble

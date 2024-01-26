@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieve information about one or more oVirt/RHV virtual machine snapshots}
   ovirt.ovirt.ovirt_snapshot_info:
-    vm: ${2:# Name of the VM with snapshot}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
     description: ${3:# Description of the snapshot, can be used as glob expression}
-    snapshot_id: ${4:# Id of the snapshot we want to retrieve information about}
+    fetch_nested: ${4:# If I(yes) the module will fetch additional data from the API}
     follow: ${5:# List of linked entities, which should be fetched along with the main entity}
-    fetch_nested: ${6:# If I(yes) the module will fetch additional data from the API}
-    nested_attributes: ${7:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${8:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    nested_attributes: ${6:# Specifies list of the attributes which should be fetched from the API}
+    snapshot_id: ${7:# Id of the snapshot we want to retrieve information about}
+    vm: ${8:# Name of the VM with snapshot}
   tags:
     - ovirt
     - ovirt

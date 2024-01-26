@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures Managed Objects on Cisco UCS Manager}
   cisco.ucs.ucs_managed_objects:
-    state: ${2:# If C(present), will verify that the Managed Objects are present and will create if needed}
+    hostname: ${2:# IP address or hostname of Cisco UCS Manager}
     objects: ${3:# List of managed objects to configure}
-    hostname: ${4:# IP address or hostname of Cisco UCS Manager}
-    username: ${5:# Username for Cisco UCS Manager authentication}
-    password: ${6:# Password for Cisco UCS Manager authentication}
-    port: ${7:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
-    use_ssl: ${8:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    use_proxy: ${9:# If C(no), will not use the proxy as defined by system environment variable}
-    proxy: ${10:# If use_proxy is no, specfies proxy to be used for connection}
+    password: ${4:# Password for Cisco UCS Manager authentication}
+    port: ${5:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    proxy: ${6:# If use_proxy is no, specfies proxy to be used for connection}
+    state: ${7:# If C(present), will verify that the Managed Objects are present and will create if needed}
+    use_proxy: ${8:# If C(no), will not use the proxy as defined by system environment variable}
+    use_ssl: ${9:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${10:# Username for Cisco UCS Manager authentication}
   tags:
     - cisco
     - ucs

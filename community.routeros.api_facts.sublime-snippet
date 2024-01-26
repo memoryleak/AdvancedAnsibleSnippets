@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Collect facts from remote devices running MikroTik RouterOS using the API}
   community.routeros.api_facts:
-    gather_subset: ${2:# When supplied, this argument will restrict the facts collected to a given subset}
-    hostname: ${3:# RouterOS hostname API}
-    username: ${4:# RouterOS login user}
-    password: ${5:# RouterOS user password}
-    timeout: ${6:# Timeout for the request}
-    tls: ${7:# If is set TLS will be used for RouterOS API connection}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for certificate validation}
+    encoding: ${3:# Use the specified encoding when communicating with the RouterOS device}
+    force_no_cert: ${4:# Set to V(true) to connect without a certificate when O(tls=true)}
+    gather_subset: ${5:# When supplied, this argument will restrict the facts collected to a given subset}
+    hostname: ${6:# RouterOS hostname API}
+    password: ${7:# RouterOS user password}
     port: ${8:# RouterOS api port}
-    force_no_cert: ${9:# Set to C(true) to connect without a certificate when I(tls=true)}
-    validate_certs: ${10:# Set to C(false) to skip validation of TLS certificates}
-    validate_cert_hostname: ${11:# Set to C(true) to validate hostnames in certificates}
-    ca_path: ${12:# PEM formatted file that contains a CA certificate to be used for certificate validation}
-    encoding: ${13:# Use the specified encoding when communicating with the RouterOS device}
+    timeout: ${9:# Timeout for the request}
+    tls: ${10:# If is set TLS will be used for RouterOS API connection}
+    username: ${11:# RouterOS login user}
+    validate_cert_hostname: ${12:# Set to V(true) to validate hostnames in certificates}
+    validate_certs: ${13:# Set to V(false) to skip validation of TLS certificates}
   tags:
     - community
     - routeros

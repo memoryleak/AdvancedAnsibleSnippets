@@ -1,15 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Get subscription list}
   awx.awx.subscriptions:
-    username: ${2:# Red Hat or Red Hat Satellite username to get available subscriptions}
-    password: ${3:# Red Hat or Red Hat Satellite password to get available subscriptions}
-    filters: ${4:# Client side filters to apply to the subscriptions}
-    controller_host: ${5:# URL to your Automation Platform Controller instance}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
     controller_username: ${6:# Username for your controller instance}
-    controller_password: ${7:# Password for your controller instance}
-    controller_oauthtoken: ${8:# The OAuth token to use}
-    validate_certs: ${9:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${10:# Path to the controller config file}
+    filters: ${7:# Client side filters to apply to the subscriptions}
+    password: ${8:# Red Hat or Red Hat Satellite password to get available subscriptions}
+    request_timeout: ${9:# Specify the timeout Ansible should use in requests to the controller host}
+    username: ${10:# Red Hat or Red Hat Satellite username to get available subscriptions}
+    validate_certs: ${11:# Whether to allow insecure connections to AWX}
   tags:
     - awx
     - awx

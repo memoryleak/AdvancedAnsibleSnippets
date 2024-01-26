@@ -1,23 +1,32 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage BIG-IP advanced routing configuration sections}
   f5networks.f5_modules.bigip_imish_config:
-    route_domain: ${2:# Route domain on which to manage the BGP configuration}
-    lines: ${3:# The ordered set of commands that should be configured in the section}
-    parents: ${4:# The ordered set of parents that uniquely identify the section or hierarchy the commands should be checked against}
-    src: ${5:# The I(src) argument provides a path to the configuration file to load into the remote system}
-    before: ${6:# The ordered set of commands to push onto the command stack if a change needs to be made}
-    after: ${7:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
-    match: ${8:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
-    replace: ${9:# Instructs the module on the way to perform the configuration on the device}
-    backup: ${10:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
-    running_config: ${11:# By default, the module will connect to the remote device and retrieve the current running-config to use as a base for comparing against the contents of source}
-    save_when: ${12:# When changes are made to the device running-configuration, the changes are not copied to non-volatile storage by default}
-    diff_against: ${13:# When using the C(ansible-playbook --diff) command line argument, the module can generate diffs against different sources}
-    diff_ignore_lines: ${14:# Use this argument to specify one or more lines that should be ignored during the diff}
-    intended_config: ${15:# The C(intended_config) provides the master configuration the node should conform to and is used to check the final running-config against}
-    backup_options: ${16:# This is a dict object containing configurable options related to backup file path}
-    allow_duplicates: ${17:# Allows duplicate commands to be sent to the device}
-    provider: ${18:# A dict object containing connection details}
+    after: ${2:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
+    allow_duplicates: ${3:# Allows duplicate commands to be sent to the device}
+    attributes: ${4:# The attributes the resulting filesystem object should have}
+    backup: ${5:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
+    backup_options: ${6:# This is a dict object containing configurable options related to backup file path}
+    before: ${7:# The ordered set of commands to push onto the command stack if a change needs to be made}
+    diff_against: ${8:# When using the C(ansible-playbook --diff) command line argument, the module can generate diffs against different sources}
+    diff_ignore_lines: ${9:# Use this argument to specify one or more lines that should be ignored during the diff}
+    group: ${10:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    intended_config: ${11:# The C(intended_config) provides the master configuration the node should conform to and is used to check the final running-config against}
+    lines: ${12:# The ordered set of commands that should be configured in the section}
+    match: ${13:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
+    mode: ${14:# The permissions the resulting filesystem object should have}
+    owner: ${15:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
+    parents: ${16:# The ordered set of parents that uniquely identify the section or hierarchy the commands should be checked against}
+    provider: ${17:# A dict object containing connection details}
+    replace: ${18:# Instructs the module on the way to perform the configuration on the device}
+    route_domain: ${19:# Route domain on which to manage the BGP configuration}
+    running_config: ${20:# By default, the module will connect to the remote device and retrieve the current running-config to use as a base for comparing against the contents of source}
+    save_when: ${21:# When changes are made to the device running-configuration, the changes are not copied to non-volatile storage by default}
+    selevel: ${22:# The level part of the SELinux filesystem object context}
+    serole: ${23:# The role part of the SELinux filesystem object context}
+    setype: ${24:# The type part of the SELinux filesystem object context}
+    seuser: ${25:# The user part of the SELinux filesystem object context}
+    src: ${26:# The I(src) argument provides a path to the configuration file to load into the remote system}
+    unsafe_writes: ${27:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
   tags:
     - f5networks
     - f5_modules

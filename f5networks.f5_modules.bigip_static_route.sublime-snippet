@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manipulate static routes on a BIG-IP}
   f5networks.f5_modules.bigip_static_route:
-    name: ${2:# Name of the static route}
-    description: ${3:# Descriptive text that identifies the route}
-    destination: ${4:# Specifies an IP address for the static entry in the routing table}
-    netmask: ${5:# The netmask for the static route}
-    gateway_address: ${6:# Specifies the router for the system to use when forwarding packets to the destination host or network}
-    vlan: ${7:# Specifies the VLAN or Tunnel through which the system forwards packets to the destination}
-    pool: ${8:# Specifies the pool through which the system forwards packets to the destination}
-    reject: ${9:# Specifies the system drops packets sent to the destination}
-    mtu: ${10:# Specifies a specific maximum transmission unit (MTU)}
-    route_domain: ${11:# The route domain ID of the system}
-    partition: ${12:# Device partition to manage resources on}
+    description: ${2:# Descriptive text that identifies the route}
+    destination: ${3:# Specifies an IP address for the static entry in the routing table}
+    gateway_address: ${4:# Specifies the router for the system to use when forwarding packets to the destination host or network}
+    mtu: ${5:# Specifies a specific maximum transmission unit (MTU)}
+    name: ${6:# Name of the static route}
+    netmask: ${7:# The netmask for the static route}
+    partition: ${8:# Device partition to manage resources on}
+    pool: ${9:# Specifies the pool through which the system forwards packets to the destination}
+    provider: ${10:# A dict object containing connection details}
+    reject: ${11:# Specifies the system drops packets sent to the destination}
+    route_domain: ${12:# The route domain ID of the system}
     state: ${13:# When C(present), ensures the static route exists}
-    provider: ${14:# A dict object containing connection details}
+    vlan: ${14:# Specifies the VLAN or Tunnel through which the system forwards packets to the destination}
   tags:
     - f5networks
     - f5_modules

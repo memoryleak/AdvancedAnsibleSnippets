@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage AWS IAM User access keys}
+  amazon.aws.iam_access_key:
+    access_key: ${2:# AWS access key ID}
+    active: ${3:# Whether the key should be enabled or disabled}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    id: ${8:# The ID of the access key}
+    profile: ${9:# A named AWS profile to use for authentication}
+    region: ${10:# The AWS region to use}
+    rotate_keys: ${11:# When there are already 2 access keys attached to the IAM user the oldest key will be removed and a new key created}
+    secret_key: ${12:# AWS secret access key}
+    session_token: ${13:# AWS STS session token for use with temporary credentials}
+    state: ${14:# Create or remove the access key}
+    user_name: ${15:# The name of the IAM User to which the key belongs}
+    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+  tags:
+    - amazon
+    - aws
+    - iam_access_key]]></content>
+  <tabTrigger>amazon.aws.iam_access_key</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage AWS IAM User access keys</description>
+</snippet>

@@ -2,13 +2,13 @@
   <content><![CDATA[- name: ${1:Manage the collection of local users on VyOS device}
   vyos.vyos.vyos_user:
     aggregate: ${2:# The set of username objects to be configured on the remote VyOS device}
-    name: ${3:# The username to be configured on the VyOS device}
+    configured_password: ${3:# The password to be configured on the VyOS device}
     full_name: ${4:# The C(full_name) argument provides the full name of the user account to be created on the remote device}
-    configured_password: ${5:# The password to be configured on the VyOS device}
-    update_password: ${6:# Since passwords are encrypted in the device running config, this argument will instruct the module when to change the password}
-    level: ${7:# The C(level) argument configures the level of the user when logged into the system}
-    purge: ${8:# Instructs the module to consider the resource definition absolute}
-    state: ${9:# Configures the state of the username definition as it relates to the device operational configuration}
+    level: ${5:# The C(level) argument configures the level of the user when logged into the system}
+    name: ${6:# The username to be configured on the VyOS device}
+    purge: ${7:# Instructs the module to consider the resource definition absolute}
+    state: ${8:# Configures the state of the username definition as it relates to the device operational configuration}
+    update_password: ${9:# Since passwords are encrypted in the device running config, this argument will instruct the module when to change the password}
   tags:
     - vyos
     - vyos

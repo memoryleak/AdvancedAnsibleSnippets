@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Export technical support logs(TSR) to network share location}
   dellemc.openmanage.ome_diagnostics:
-    device_ids: ${2:# List of target device IDs}
-    device_service_tags: ${3:# List of target identifier}
-    device_group_name: ${4:# Name of the device group to export C(support_assist_collection) or C(supportassist_collection) logs of all devices within the group}
-    log_type: ${5:# C(application) is applicable for OpenManage Enterprise Modular to export the application log bundle}
-    mask_sensitive_info: ${6:# Select this option to mask the personal identification information such as IPAddress, DNS, alert destination, email, gateway, inet6, MacAddress, netmask etc}
-    log_selectors: ${7:# By default, the SupportAssist logs contain only hardware logs}
-    share_address: ${8:# Network share IP address}
-    share_name: ${9:# Network share path}
-    share_type: ${10:# Network share type}
-    share_user: ${11:# Network share username}
-    share_password: ${12:# Network share password}
-    share_domain: ${13:# Network share domain name}
-    job_wait: ${14:# Whether to wait for the Job completion or not}
-    job_wait_timeout: ${15:# The maximum wait time of I(job_wait) in minutes}
-    test_connection: ${16:# Test the availability of the network share location}
-    lead_chassis_only: ${17:# Extract the logs from Lead chassis only}
-    hostname: ${18:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
-    username: ${19:# OpenManage Enterprise or OpenManage Enterprise Modular username}
-    password: ${20:# OpenManage Enterprise or OpenManage Enterprise Modular password}
-    port: ${21:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
-    validate_certs: ${22:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${23:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${24:# The socket level timeout in seconds}
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    device_group_name: ${3:# Name of the device group to export C(support_assist_collection) or C(supportassist_collection) logs of all devices within the group}
+    device_ids: ${4:# List of target device IDs}
+    device_service_tags: ${5:# List of target identifier}
+    hostname: ${6:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    job_wait: ${7:# Whether to wait for the Job completion or not}
+    job_wait_timeout: ${8:# The maximum wait time of I(job_wait) in minutes}
+    lead_chassis_only: ${9:# Extract the logs from Lead chassis only}
+    log_selectors: ${10:# By default, the SupportAssist logs contain only hardware logs}
+    log_type: ${11:# C(application) is applicable for OpenManage Enterprise Modular to export the application log bundle}
+    mask_sensitive_info: ${12:# Select this option to mask the personal identification information such as IPAddress, DNS, alert destination, email, gateway, inet6, MacAddress, netmask etc}
+    password: ${13:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${14:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    share_address: ${15:# Network share IP address}
+    share_domain: ${16:# Network share domain name}
+    share_name: ${17:# Network share path}
+    share_password: ${18:# Network share password}
+    share_type: ${19:# Network share type}
+    share_user: ${20:# Network share username}
+    test_connection: ${21:# Test the availability of the network share location}
+    timeout: ${22:# The socket level timeout in seconds}
+    username: ${23:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    validate_certs: ${24:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

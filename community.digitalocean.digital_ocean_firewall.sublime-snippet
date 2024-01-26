@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage cloud firewalls within DigitalOcean}
   community.digitalocean.digital_ocean_firewall:
-    name: ${2:# Name of the firewall rule to create or manage}
-    state: ${3:# Assert the state of the firewall rule}
-    droplet_ids: ${4:# List of droplet ids to be assigned to the firewall}
-    tags: ${5:# List of tags to be assigned to the firewall}
-    inbound_rules: ${6:# Firewall rules specifically targeting inbound network traffic into DigitalOcean}
+    baseurl: ${2:# DigitalOcean API base url}
+    droplet_ids: ${3:# List of droplet ids to be assigned to the firewall}
+    inbound_rules: ${4:# Firewall rules specifically targeting inbound network traffic into DigitalOcean}
+    name: ${5:# Name of the firewall rule to create or manage}
+    oauth_token: ${6:# DigitalOcean OAuth token}
     outbound_rules: ${7:# Firewall rules specifically targeting outbound network traffic from DigitalOcean}
-    baseurl: ${8:# DigitalOcean API base url}
-    oauth_token: ${9:# DigitalOcean OAuth token}
+    state: ${8:# Assert the state of the firewall rule}
+    tags: ${9:# List of tags to be assigned to the firewall}
     timeout: ${10:# The timeout in seconds used for polling DigitalOcean's API}
     validate_certs: ${11:# If set to C(no), the SSL certificates will not be validated}
   tags:

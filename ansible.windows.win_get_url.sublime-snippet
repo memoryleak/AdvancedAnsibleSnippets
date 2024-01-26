@@ -1,30 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Downloads file from HTTP, HTTPS, or FTP to node}
   ansible.windows.win_get_url:
-    url: ${2:# The full URL of a file to download}
-    dest: ${3:# The location to save the file at the URL}
-    force: ${4:# If C(yes), will download the file every time and replace the file if the contents change}
-    checksum: ${5:# If a I(checksum) is passed to this parameter, the digest of the destination file will be calculated after it is downloaded to ensure its integrity and verify that the transfer completed successfully}
-    checksum_algorithm: ${6:# Specifies the hashing algorithm used when calculating the checksum of the remote and destination file}
-    checksum_url: ${7:# Specifies a URL that contains the checksum values for the resource at I(url)}
-    url_method: ${8:# The HTTP Method of the request}
-    url_timeout: ${9:# Specifies how long the request can be pending before it times out (in seconds)}
-    url_username: ${10:# The username to use for authentication}
-    url_password: ${11:# The password for I(url_username)}
-    follow_redirects: ${12:# Whether or the module should follow redirects}
-    headers: ${13:# Extra headers to set on the request}
-    http_agent: ${14:# Header to identify as, generally appears in web server logs}
-    maximum_redirection: ${15:# Specify how many times the module will redirect a connection to an alternative URI before the connection fails}
-    validate_certs: ${16:# If C(no), SSL certificates will not be validated}
-    client_cert: ${17:# The path to the client certificate (}
-    client_cert_password: ${18:# The password for I(client_cert) if the cert is password protected}
-    force_basic_auth: ${19:# By default the authentication header is only sent when a webservice responses to an initial request with a 401 status}
-    use_default_credential: ${20:# Uses the current user's credentials when authenticating with a server protected with C(NTLM), C(Kerberos), or C(Negotiate) authentication}
-    use_proxy: ${21:# If C(no), it will not use the proxy defined in IE for the current user}
-    proxy_url: ${22:# An explicit proxy to use for the request}
-    proxy_username: ${23:# The username to use for proxy authentication}
-    proxy_password: ${24:# The password for I(proxy_username)}
-    proxy_use_default_credential: ${25:# Uses the current user's credentials when authenticating with a proxy host protected with C(NTLM), C(Kerberos), or C(Negotiate) authentication}
+    checksum: ${2:# If a I(checksum) is passed to this parameter, the digest of the destination file will be calculated after it is downloaded to ensure its integrity and verify that the transfer completed successfully}
+    checksum_algorithm: ${3:# Specifies the hashing algorithm used when calculating the checksum of the remote and destination file}
+    checksum_url: ${4:# Specifies a URL that contains the checksum values for the resource at I(url)}
+    client_cert: ${5:# The path to the client certificate (}
+    client_cert_password: ${6:# The password for I(client_cert) if the cert is password protected}
+    dest: ${7:# The location to save the file at the URL}
+    follow_redirects: ${8:# Whether or the module should follow redirects}
+    force: ${9:# If C(true), will download the file every time and replace the file if the contents change}
+    force_basic_auth: ${10:# By default the authentication header is only sent when a webservice responses to an initial request with a 401 status}
+    headers: ${11:# Extra headers to set on the request}
+    http_agent: ${12:# Header to identify as, generally appears in web server logs}
+    maximum_redirection: ${13:# Specify how many times the module will redirect a connection to an alternative URI before the connection fails}
+    proxy_password: ${14:# The password for I(proxy_username)}
+    proxy_url: ${15:# An explicit proxy to use for the request}
+    proxy_use_default_credential: ${16:# Uses the current user's credentials when authenticating with a proxy host protected with C(NTLM), C(Kerberos), or C(Negotiate) authentication}
+    proxy_username: ${17:# The username to use for proxy authentication}
+    url: ${18:# The full URL of a file to download}
+    url_method: ${19:# The HTTP Method of the request}
+    url_password: ${20:# The password for I(url_username)}
+    url_timeout: ${21:# Specifies how long the request can be pending before it times out (in seconds)}
+    url_username: ${22:# The username to use for authentication}
+    use_default_credential: ${23:# Uses the current user's credentials when authenticating with a server protected with C(NTLM), C(Kerberos), or C(Negotiate) authentication}
+    use_proxy: ${24:# If C(no), it will not use the proxy defined in IE for the current user}
+    validate_certs: ${25:# If C(no), SSL certificates will not be validated}
   tags:
     - win_get_url]]></content>
   <tabTrigger>ansible.windows.win_get_url</tabTrigger>

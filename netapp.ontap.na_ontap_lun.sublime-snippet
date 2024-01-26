@@ -1,36 +1,37 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP manage LUNs}
   netapp.ontap.na_ontap_lun:
-    state: ${2:# Whether the specified LUN should exist or not}
-    name: ${3:# The name of the LUN to manage}
-    from_name: ${4:# The name of the LUN to be renamed}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    comment: ${3:# Optional descriptive comment for the LUN}
+    feature_flags: ${4:# Enable or disable a new feature}
     flexvol_name: ${5:# The name of the FlexVol the LUN should exist on}
-    size: ${6:# The size of the LUN in C(size_unit)}
-    size_unit: ${7:# The unit used to interpret the size parameter}
-    comment: ${8:# Optional descriptive comment for the LUN}
+    force_ontap_version: ${6:# Override the cluster ONTAP version when using REST}
+    force_remove: ${7:# If 'true', override checks that prevent a LUN from being destroyed if it is online and mapped}
+    force_remove_fenced: ${8:# If 'true', override checks that prevent a LUN from being destroyed while it is fenced}
     force_resize: ${9:# Forcibly reduce the size}
-    force_remove: ${10:# If 'true', override checks that prevent a LUN from being destroyed if it is online and mapped}
-    force_remove_fenced: ${11:# If 'true', override checks that prevent a LUN from being destroyed while it is fenced}
-    vserver: ${12:# The name of the vserver to use}
-    os_type: ${13:# The os type for the LUN}
-    qos_policy_group: ${14:# The QoS policy group to be set on the LUN}
-    qos_adaptive_policy_group: ${15:# The adaptive QoS policy group to be set on the LUN}
-    space_reserve: ${16:# This can be set to 'false' which will create a LUN without any space being reserved}
-    space_allocation: ${17:# This enables support for the SCSI Thin Provisioning features}
-    use_exact_size: ${18:# This can be set to 'false' which will round the LUN >= 450g}
-    san_application_template: ${19:# additional options when using the application/applications REST API to create LUNs}
-    hostname: ${20:# The hostname or IP address of the ONTAP instance}
-    username: ${21:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${22:# Password for the specified user}
-    cert_filepath: ${23:# path to SSL client cert file (}
-    key_filepath: ${24:# path to SSL client key file}
-    https: ${25:# Enable and disable https}
-    validate_certs: ${26:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${27:# Override the default port (80 or 443) with this port}
-    ontapi: ${28:# The ontap api version to use}
+    from_name: ${10:# The name of the LUN to be renamed}
+    hostname: ${11:# The hostname or IP address of the ONTAP instance}
+    http_port: ${12:# Override the default port (80 or 443) with this port}
+    https: ${13:# Enable and disable https}
+    key_filepath: ${14:# path to SSL client key file}
+    name: ${15:# The name of the LUN to manage}
+    ontapi: ${16:# The ontap api version to use}
+    os_type: ${17:# The os type for the LUN}
+    password: ${18:# Password for the specified user}
+    qos_adaptive_policy_group: ${19:# The adaptive QoS policy group to be set on the LUN}
+    qos_policy_group: ${20:# The QoS policy group to be set on the LUN}
+    qtree_name: ${21:# Specifies the name of the Qtree that contains the new LUN}
+    san_application_template: ${22:# additional options when using the application/applications REST API to create LUNs}
+    size: ${23:# The size of the LUN in C(size_unit)}
+    size_unit: ${24:# The unit used to interpret the size parameter}
+    space_allocation: ${25:# This enables support for the SCSI Thin Provisioning features}
+    space_reserve: ${26:# This can be set to 'false' which will create a LUN without any space being reserved}
+    state: ${27:# Whether the specified LUN should exist or not}
+    use_exact_size: ${28:# This can be set to 'false' which will round the LUN >= 450g}
     use_rest: ${29:# Whether to use REST or ZAPI}
-    feature_flags: ${30:# Enable or disable a new feature}
-    force_ontap_version: ${31:# Override the cluster ONTAP version when using REST}
+    username: ${30:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${31:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${32:# The name of the vserver to use}
   tags:
     - netapp
     - ontap

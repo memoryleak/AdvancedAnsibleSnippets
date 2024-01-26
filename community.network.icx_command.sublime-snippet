@@ -2,10 +2,10 @@
   <content><![CDATA[- name: ${1:Run arbitrary commands on remote Ruckus ICX 7000 series switches}
   community.network.icx_command:
     commands: ${2:# List of commands to send to the remote ICX device over the configured provider}
-    wait_for: ${3:# List of conditions to evaluate against the output of the command}
+    interval: ${3:# Configures the interval in seconds to wait between retries of the command}
     match: ${4:# The I(match) argument is used in conjunction with the I(wait_for) argument to specify the match policy}
     retries: ${5:# Specifies the number of times a command should by tried before it is considered failed}
-    interval: ${6:# Configures the interval in seconds to wait between retries of the command}
+    wait_for: ${6:# List of conditions to evaluate against the output of the command}
   tags:
     - community
     - network

@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Gather information about ec2 AMIs}
   amazon.aws.ec2_ami_info:
-    image_ids: ${2:# One or more image IDs}
-    filters: ${3:# A dict of filters to apply}
-    owners: ${4:# Filter the images by the owner}
-    executable_users: ${5:# Filter images by users with explicit launch permissions}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
     describe_image_attributes: ${6:# Describe attributes (like launchPermission) of the images found}
-    access_key: ${7:# AWS access key ID}
-    secret_key: ${8:# AWS secret access key}
-    session_token: ${9:# AWS STS session token for use with temporary credentials}
-    profile: ${10:# A named AWS profile to use for authentication}
-    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${12:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${13:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${14:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${15:# Use a C(botocore}
-    region: ${16:# The AWS region to use}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    executable_users: ${8:# Filter images by users with explicit launch permissions}
+    filters: ${9:# A dict of filters to apply}
+    image_ids: ${10:# One or more image IDs}
+    owners: ${11:# Filter the images by the owner}
+    profile: ${12:# A named AWS profile to use for authentication}
+    region: ${13:# The AWS region to use}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - amazon
     - aws

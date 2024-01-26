@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage self-signed device certificates}
   f5networks.f5_modules.bigip_device_certificate:
-    days_valid: ${2:# Specifies the interval for which the self-signed certificate is valid}
+    add_to_trusted: ${2:# Specifies if the certificate should be added to the trusted client and server certificate files}
     cert_name: ${3:# Specifies the full name of the certificate file}
-    key_name: ${4:# Specifies the full name of the key file}
-    key_size: ${5:# Specifies the desired key size in bits}
+    days_valid: ${4:# Specifies the interval for which the self-signed certificate is valid}
+    force: ${5:# When C(true), will update or overwrite the existing certificate when it is not expired on the device}
     issuer: ${6:# Certificate properties, required when generating new certificates}
-    add_to_trusted: ${7:# Specified if the certificate should be added to the trusted client and server certificate files}
-    new_cert: ${8:# Specified if the module should generate a new certificate}
-    force: ${9:# When C(yes), will update or overwrite the existing certificate when it is not expired on the device}
+    key_name: ${7:# Specifies the full name of the key file}
+    key_size: ${8:# Specifies the desired key size in bits}
+    new_cert: ${9:# Specifies if the module should generate a new certificate}
     provider: ${10:# A dict object containing connection details}
   tags:
     - f5networks

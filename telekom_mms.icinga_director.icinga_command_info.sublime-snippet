@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Query commands in Icinga2}
+  telekom_mms.icinga_director.icinga_command_info:
+    client_cert: ${2:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${3:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    external: ${4:# Also include external objects in output}
+    force: ${5:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${6:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    http_agent: ${7:# Header to identify as, generally appears in web server logs}
+    query: ${8:# Text to filter search results}
+    resolved: ${9:# Resolve all inherited object properties and omit templates in output}
+    url: ${10:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    url_password: ${11:# The password for use in HTTP basic authentication}
+    url_username: ${12:# The username for use in HTTP basic authentication}
+    use_gssapi: ${13:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${14:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${15:# If V(no), SSL certificates will not be validated}
+  tags:
+    - telekom_mms
+    - icinga_director
+    - icinga_command_info]]></content>
+  <tabTrigger>telekom_mms.icinga_director.icinga_command_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Query commands in Icinga2</description>
+</snippet>

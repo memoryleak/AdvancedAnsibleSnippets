@@ -1,19 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Launch a Nomad Job}
   community.general.nomad_job:
-    name: ${2:# Name of job for delete, stop and start job without source}
-    state: ${3:# Deploy or remove job}
-    force_start: ${4:# Force job to started}
-    content: ${5:# Content of Nomad job}
-    content_format: ${6:# Type of content of Nomad job}
+    client_cert: ${2:# Path of certificate for TLS/SSL}
+    client_key: ${3:# Path of certificate's private key for TLS/SSL}
+    content: ${4:# Content of Nomad job}
+    content_format: ${5:# Type of content of Nomad job}
+    force_start: ${6:# Force job to started}
     host: ${7:# FQDN of Nomad server}
-    use_ssl: ${8:# Use TLS/SSL connection}
-    timeout: ${9:# Timeout (in seconds) for the request to Nomad}
-    validate_certs: ${10:# Enable TLS/SSL certificate validation}
-    client_cert: ${11:# Path of certificate for TLS/SSL}
-    client_key: ${12:# Path of certificate's private key for TLS/SSL}
-    namespace: ${13:# Namespace for Nomad}
-    token: ${14:# ACL token for authentification}
+    name: ${8:# Name of job for delete, stop and start job without source}
+    namespace: ${9:# Namespace for Nomad}
+    port: ${10:# Port of Nomad server}
+    state: ${11:# Deploy or remove job}
+    timeout: ${12:# Timeout (in seconds) for the request to Nomad}
+    token: ${13:# ACL token for authentication}
+    use_ssl: ${14:# Use TLS/SSL connection}
+    validate_certs: ${15:# Enable TLS/SSL certificate validation}
   tags:
     - community
     - general

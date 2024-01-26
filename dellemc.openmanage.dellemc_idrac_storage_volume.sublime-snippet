@@ -1,30 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures the RAID configuration attributes}
   dellemc.openmanage.dellemc_idrac_storage_volume:
-    state: ${2:# C(create), performs create volume operation}
-    span_depth: ${3:# Number of spans in the RAID configuration}
-    span_length: ${4:# Number of disks in a span}
-    number_dedicated_hot_spare: ${5:# Number of Dedicated Hot Spare}
-    volume_type: ${6:# Provide the the required RAID level}
-    disk_cache_policy: ${7:# Disk Cache Policy}
-    write_cache_policy: ${8:# Write cache policy}
-    read_cache_policy: ${9:# Read cache policy}
-    stripe_size: ${10:# Stripe size value to be provided in multiples of 64 * 1024}
-    controller_id: ${11:# Fully Qualified Device Descriptor (FQDD) of the storage controller, for example 'RAID}
-    media_type: ${12:# Media type}
-    protocol: ${13:# Bus protocol}
-    volume_id: ${14:# Fully Qualified Device Descriptor (FQDD) of the virtual disk, for example 'Disk}
-    volumes: ${15:# A list of virtual disk specific iDRAC attributes}
-    capacity: ${16:# Virtual disk size in GB}
-    raid_reset_config: ${17:# This option represents whether a reset config operation needs to be performed on the RAID controller}
-    raid_init_operation: ${18:# This option represents initialization configuration operation to be performed on the virtual disk}
-    idrac_ip: ${19:# iDRAC IP Address}
-    idrac_user: ${20:# iDRAC username}
-    idrac_password: ${21:# iDRAC user password}
-    idrac_port: ${22:# iDRAC port}
-    validate_certs: ${23:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${24:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${25:# The socket level timeout in seconds}
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    capacity: ${3:# Virtual disk size in GB}
+    controller_id: ${4:# Fully Qualified Device Descriptor (FQDD) of the storage controller, for example 'RAID}
+    disk_cache_policy: ${5:# Disk Cache Policy}
+    idrac_ip: ${6:# iDRAC IP Address}
+    idrac_password: ${7:# iDRAC user password}
+    idrac_port: ${8:# iDRAC port}
+    idrac_user: ${9:# iDRAC username}
+    media_type: ${10:# Media type}
+    number_dedicated_hot_spare: ${11:# Number of Dedicated Hot Spare}
+    protocol: ${12:# Bus protocol}
+    raid_init_operation: ${13:# This option represents initialization configuration operation to be performed on the virtual disk}
+    raid_reset_config: ${14:# This option represents whether a reset config operation needs to be performed on the RAID controller}
+    read_cache_policy: ${15:# Read cache policy}
+    span_depth: ${16:# Number of spans in the RAID configuration}
+    span_length: ${17:# Number of disks in a span}
+    state: ${18:# C(create), performs create volume operation}
+    stripe_size: ${19:# Stripe size value to be provided in multiples of 64 * 1024}
+    timeout: ${20:# The socket level timeout in seconds}
+    validate_certs: ${21:# If C(false), the SSL certificates will not be validated}
+    volume_id: ${22:# Fully Qualified Device Descriptor (FQDD) of the virtual disk, for example 'Disk}
+    volume_type: ${23:# Provide the the required RAID level}
+    volumes: ${24:# A list of virtual disk specific iDRAC attributes}
+    write_cache_policy: ${25:# Write cache policy}
   tags:
     - dellemc
     - openmanage

@@ -1,73 +1,79 @@
 <snippet>
   <content><![CDATA[- name: ${1:rds_cluster module}
   amazon.aws.rds_cluster:
-    state: ${2:# Whether the snapshot should exist or not}
-    creation_source: ${3:# Which source to use if creating from a template (an existing cluster, S3 bucket, or snapshot)}
-    force_update_password: ${4:# Set to C(true) to update your cluster password with I(master_user_password)}
-    promote: ${5:# Set to C(true) to promote a read replica cluster}
-    purge_cloudwatch_logs_exports: ${6:# Whether or not to disable Cloudwatch logs enabled for the DB cluster that are not provided in I(enable_cloudwatch_logs_exports)}
-    purge_security_groups: ${7:# Set to C(false) to retain any enabled security groups that aren't specified in the task and are associated with the cluster}
-    wait: ${8:# Whether to wait for the cluster to be available or deleted}
-    apply_immediately: ${9:# A value that specifies whether modifying a cluster with I(new_db_cluster_identifier) and I(master_user_password) should be applied as soon as possible, regardless of the I(preferred_maintenance_window) setting}
-    availability_zones: ${10:# A list of EC2 Availability Zones that instances in the DB cluster can be created in}
-    backtrack_to: ${11:# The timestamp of the time to backtrack the DB cluster to in ISO 8601 format, such as '2017-07-08T18:00Z'}
-    backtrack_window: ${12:# The target backtrack window, in seconds}
-    backup_retention_period: ${13:# The number of days for which automated backups are retained (must be within C(1) to C(35))}
-    character_set_name: ${14:# The character set to associate with the DB cluster}
-    database_name: ${15:# The name for your database}
-    db_cluster_identifier: ${16:# The DB cluster (lowercase) identifier}
+    access_key: ${2:# AWS access key ID}
+    allocated_storage: ${3:# The amount of storage in gibibytes (GiB) to allocate to each DB instance in the Multi-AZ DB cluster}
+    apply_immediately: ${4:# A value that specifies whether modifying a cluster with I(new_db_cluster_identifier) and I(master_user_password) should be applied as soon as possible, regardless of the I(preferred_maintenance_window) setting}
+    availability_zones: ${5:# A list of EC2 Availability Zones that instances in the DB cluster can be created in}
+    aws_ca_bundle: ${6:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${7:# A dictionary to modify the botocore configuration}
+    backtrack_to: ${8:# The timestamp of the time to backtrack the DB cluster to in ISO 8601 format, such as '2017-07-08T18:00Z'}
+    backtrack_window: ${9:# The target backtrack window, in seconds}
+    backup_retention_period: ${10:# The number of days for which automated backups are retained (must be within C(1) to C(35))}
+    character_set_name: ${11:# The character set to associate with the DB cluster}
+    copy_tags_to_snapshot: ${12:# Indicates whether to copy all tags from the DB cluster to snapshots of the DB cluster}
+    creation_source: ${13:# Which source to use if creating from a template (an existing cluster, S3 bucket, or snapshot)}
+    database_name: ${14:# The name for your database}
+    db_cluster_identifier: ${15:# The DB cluster (lowercase) identifier}
+    db_cluster_instance_class: ${16:# The compute and memory capacity of each DB instance in the Multi-AZ DB cluster, for example C(db}
     db_cluster_parameter_group_name: ${17:# The name of the DB cluster parameter group to associate with this DB cluster}
     db_subnet_group_name: ${18:# A DB subnet group to associate with this DB cluster if not using the default}
-    enable_cloudwatch_logs_exports: ${19:# A list of log types that need to be enabled for exporting to CloudWatch Logs}
+    debug_botocore_endpoint_logs: ${19:# Use a C(botocore}
     deletion_protection: ${20:# A value that indicates whether the DB cluster has deletion protection enabled}
-    global_cluster_identifier: ${21:# The global cluster ID of an Aurora cluster that becomes the primary cluster in the new global database cluster}
-    enable_http_endpoint: ${22:# A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster}
-    copy_tags_to_snapshot: ${23:# Indicates whether to copy all tags from the DB cluster to snapshots of the DB cluster}
-    domain: ${24:# The Active Directory directory ID to create the DB cluster in}
-    domain_iam_role_name: ${25:# Specify the name of the IAM role to be used when making API calls to the Directory Service}
-    enable_global_write_forwarding: ${26:# A value that indicates whether to enable this DB cluster to forward write operations to the primary cluster of an Aurora global database}
-    enable_iam_database_authentication: ${27:# Enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts}
+    domain: ${21:# The Active Directory directory ID to create the DB cluster in}
+    domain_iam_role_name: ${22:# Specify the name of the IAM role to be used when making API calls to the Directory Service}
+    enable_cloudwatch_logs_exports: ${23:# A list of log types that need to be enabled for exporting to CloudWatch Logs}
+    enable_global_write_forwarding: ${24:# A value that indicates whether to enable this DB cluster to forward write operations to the primary cluster of an Aurora global database}
+    enable_http_endpoint: ${25:# A value that indicates whether to enable the HTTP endpoint for an Aurora Serverless DB cluster}
+    enable_iam_database_authentication: ${26:# Enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts}
+    endpoint_url: ${27:# URL to connect to instead of the default AWS endpoints}
     engine: ${28:# The name of the database engine to be used for this DB cluster}
-    engine_version: ${29:# The version number of the database engine to use}
-    final_snapshot_identifier: ${30:# The DB cluster snapshot identifier of the new DB cluster snapshot created when I(skip_final_snapshot=false)}
-    force_backtrack: ${31:# A boolean to indicate if the DB cluster should be forced to backtrack when binary logging is enabled}
-    kms_key_id: ${32:# The AWS KMS key identifier (the ARN, unless you are creating a cluster in the same account that owns the KMS key, in which case the KMS key alias may be used)}
-    master_user_password: ${33:# An 8-41 character password for the master database user}
-    master_username: ${34:# The name of the master user for the DB cluster}
-    new_db_cluster_identifier: ${35:# The new DB cluster (lowercase) identifier for the DB cluster when renaming a DB cluster}
-    option_group_name: ${36:# The option group to associate with the DB cluster}
-    port: ${37:# The port number on which the instances in the DB cluster accept connections}
-    preferred_backup_window: ${38:# The daily time range (in UTC) of at least 30 minutes, during which automated backups are created if automated backups are enabled using I(backup_retention_period)}
-    preferred_maintenance_window: ${39:# The weekly time range (in UTC) of at least 30 minutes, during which system maintenance can occur}
-    replication_source_identifier: ${40:# The Amazon Resource Name (ARN) of the source DB instance or DB cluster if this DB cluster is created as a Read Replica}
-    restore_to_time: ${41:# The UTC date and time to restore the DB cluster to}
-    restore_type: ${42:# The type of restore to be performed}
-    role_arn: ${43:# The Amazon Resource Name (ARN) of the IAM role to associate with the Aurora DB cluster, for example 'arn:aws:iam::123456789012:role/AuroraAccessRole'}
-    s3_bucket_name: ${44:# The name of the Amazon S3 bucket that contains the data used to create the Amazon Aurora DB cluster}
-    s3_ingestion_role_arn: ${45:# The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorizes Amazon RDS to access the Amazon S3 bucket on your behalf}
-    s3_prefix: ${46:# The prefix for all of the file names that contain the data used to create the Amazon Aurora DB cluster}
-    skip_final_snapshot: ${47:# Whether a final DB cluster snapshot is created before the DB cluster is deleted}
-    snapshot_identifier: ${48:# The identifier for the DB snapshot or DB cluster snapshot to restore from}
-    source_db_cluster_identifier: ${49:# The identifier of the source DB cluster from which to restore}
-    source_engine: ${50:# The identifier for the database engine that was backed up to create the files stored in the Amazon S3 bucket}
-    source_engine_version: ${51:# The version of the database that the backup files were created from}
-    source_region: ${52:# The ID of the region that contains the source for the DB cluster}
-    storage_encrypted: ${53:# Whether the DB cluster is encrypted}
-    use_earliest_time_on_point_in_time_unavailable: ${54:# If I(backtrack_to) is set to a timestamp earlier than the earliest backtrack time, this value backtracks the DB cluster to the earliest possible backtrack time}
-    use_latest_restorable_time: ${55:# Whether to restore the DB cluster to the latest restorable backup time}
-    vpc_security_group_ids: ${56:# A list of EC2 VPC security groups to associate with the DB cluster}
-    access_key: ${57:# AWS access key ID}
+    engine_mode: ${29:# The DB engine mode of the DB cluster}
+    engine_version: ${30:# The version number of the database engine to use}
+    final_snapshot_identifier: ${31:# The DB cluster snapshot identifier of the new DB cluster snapshot created when I(skip_final_snapshot=false)}
+    force_backtrack: ${32:# A boolean to indicate if the DB cluster should be forced to backtrack when binary logging is enabled}
+    force_update_password: ${33:# Set to C(true) to update your cluster password with I(master_user_password)}
+    global_cluster_identifier: ${34:# The global cluster ID of an Aurora cluster that becomes the primary cluster in the new global database cluster}
+    iops: ${35:# The amount of Provisioned IOPS (input/output operations per second) to be initially allocated for each DB instance in the Multi-AZ DB cluster}
+    kms_key_id: ${36:# The AWS KMS key identifier (the ARN, unless you are creating a cluster in the same account that owns the KMS key, in which case the KMS key alias may be used)}
+    master_user_password: ${37:# An 8-41 character password for the master database user}
+    master_username: ${38:# The name of the master user for the DB cluster}
+    new_db_cluster_identifier: ${39:# The new DB cluster (lowercase) identifier for the DB cluster when renaming a DB cluster}
+    option_group_name: ${40:# The option group to associate with the DB cluster}
+    port: ${41:# The port number on which the instances in the DB cluster accept connections}
+    preferred_backup_window: ${42:# The daily time range (in UTC) of at least 30 minutes, during which automated backups are created if automated backups are enabled using I(backup_retention_period)}
+    preferred_maintenance_window: ${43:# The weekly time range (in UTC) of at least 30 minutes, during which system maintenance can occur}
+    profile: ${44:# A named AWS profile to use for authentication}
+    promote: ${45:# Set to C(true) to promote a read replica cluster}
+    purge_cloudwatch_logs_exports: ${46:# Whether or not to disable Cloudwatch logs enabled for the DB cluster that are not provided in I(enable_cloudwatch_logs_exports)}
+    purge_security_groups: ${47:# Set to C(false) to retain any enabled security groups that aren't specified in the task and are associated with the cluster}
+    purge_tags: ${48:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${49:# The AWS region to use}
+    remove_from_global_db: ${50:# If set to C(true), the cluster will be removed from global DB}
+    replication_source_identifier: ${51:# The Amazon Resource Name (ARN) of the source DB instance or DB cluster if this DB cluster is created as a Read Replica}
+    restore_to_time: ${52:# The UTC date and time to restore the DB cluster to}
+    restore_type: ${53:# The type of restore to be performed}
+    role_arn: ${54:# The Amazon Resource Name (ARN) of the IAM role to associate with the Aurora DB cluster, for example 'arn:aws:iam::123456789012:role/AuroraAccessRole'}
+    s3_bucket_name: ${55:# The name of the Amazon S3 bucket that contains the data used to create the Amazon Aurora DB cluster}
+    s3_ingestion_role_arn: ${56:# The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorizes Amazon RDS to access the Amazon S3 bucket on your behalf}
+    s3_prefix: ${57:# The prefix for all of the file names that contain the data used to create the Amazon Aurora DB cluster}
     secret_key: ${58:# AWS secret access key}
     session_token: ${59:# AWS STS session token for use with temporary credentials}
-    profile: ${60:# A named AWS profile to use for authentication}
-    endpoint_url: ${61:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${62:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${63:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${64:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${65:# Use a C(botocore}
-    region: ${66:# The AWS region to use}
-    tags: ${67:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${68:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    skip_final_snapshot: ${60:# Whether a final DB cluster snapshot is created before the DB cluster is deleted}
+    snapshot_identifier: ${61:# The identifier for the DB snapshot or DB cluster snapshot to restore from}
+    source_db_cluster_identifier: ${62:# The identifier of the source DB cluster from which to restore}
+    source_engine: ${63:# The identifier for the database engine that was backed up to create the files stored in the Amazon S3 bucket}
+    source_engine_version: ${64:# The version of the database that the backup files were created from}
+    source_region: ${65:# The ID of the region that contains the source for the DB cluster}
+    state: ${66:# Whether the snapshot should exist or not}
+    storage_encrypted: ${67:# Whether the DB cluster is encrypted}
+    storage_type: ${68:# Specifies the storage type to be associated with the DB cluster}
+    tags: ${69:# A dictionary representing the tags to be applied to the resource}
+    use_earliest_time_on_point_in_time_unavailable: ${70:# If I(backtrack_to) is set to a timestamp earlier than the earliest backtrack time, this value backtracks the DB cluster to the earliest possible backtrack time}
+    use_latest_restorable_time: ${71:# Whether to restore the DB cluster to the latest restorable backup time}
+    validate_certs: ${72:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_security_group_ids: ${73:# A list of EC2 VPC security groups to associate with the DB cluster}
+    wait: ${74:# Whether to wait for the cluster to be available or deleted}
   tags:
     - amazon
     - aws

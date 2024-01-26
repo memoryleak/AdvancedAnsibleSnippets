@@ -1,12 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages virtual machines supported by libvirt}
   community.libvirt.virt:
-    uri: ${2:# Libvirt connection uri}
-    xml: ${3:# XML document used with the define command}
-    name: ${4:# name of the guest VM being managed}
-    autostart: ${5:# Start VM at host startup}
-    state: ${6:# Note that there may be some lag for state requests like C(shutdown) since these refer only to VM states}
-    command: ${7:# In addition to state management, various non-idempotent commands are available}
+    autostart: ${2:# Start VM at host startup}
+    command: ${3:# In addition to state management, various non-idempotent commands are available}
+    flags: ${4:# Pass additional parameters}
+    force: ${5:# Enforce an action}
+    mutate_flags: ${6:# For each mutate_flag, we will modify the given XML in some way}
+    name: ${7:# name of the guest VM being managed}
+    state: ${8:# Note that there may be some lag for state requests like C(shutdown) since these refer only to VM states}
+    uri: ${9:# Libvirt connection uri}
+    xml: ${10:# XML document used with the define command}
   tags:
     - community
     - libvirt

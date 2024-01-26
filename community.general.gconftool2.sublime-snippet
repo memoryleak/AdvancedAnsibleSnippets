@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Edit GNOME Configurations}
   community.general.gconftool2:
-    key: ${2:# A GConf preference key is an element in the GConf repository that corresponds to an application preference}
-    value: ${3:# Preference keys typically have simple values such as strings, integers, or lists of strings and integers}
-    value_type: ${4:# The type of value being set}
+    config_source: ${2:# Specify a configuration source to use rather than the default path}
+    direct: ${3:# Access the config database directly, bypassing server}
+    key: ${4:# A GConf preference key is an element in the GConf repository that corresponds to an application preference}
     state: ${5:# The action to take upon the key/value}
-    config_source: ${6:# Specify a configuration source to use rather than the default path}
-    direct: ${7:# Access the config database directly, bypassing server}
+    value: ${6:# Preference keys typically have simple values such as strings, integers, or lists of strings and integers}
+    value_type: ${7:# The type of value being set}
   tags:
     - community
     - general

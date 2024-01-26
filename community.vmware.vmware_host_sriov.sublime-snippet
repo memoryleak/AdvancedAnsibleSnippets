@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage SR-IOV settings on host}
   community.vmware.vmware_host_sriov:
-    esxi_hostname: ${2:# Name of the host system to work with}
-    cluster_name: ${3:# Name of the cluster from which all host systems will be used}
-    vmnic: ${4:# Interface name, like vmnic0}
+    cluster_name: ${2:# Name of the cluster from which all host systems will be used}
+    esxi_hostname: ${3:# Name of the host system to work with}
+    hostname: ${4:# The hostname or IP address of the vSphere vCenter or ESXi server}
     num_virt_func: ${5:# number of functions to activate on interface}
-    sriov_on: ${6:# optional parameter, related to C(num_virt_func)}
-    hostname: ${7:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${8:# The username of the vSphere vCenter or ESXi server}
-    password: ${9:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${10:# Allows connection when SSL certificates are not valid}
-    port: ${11:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${12:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${13:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    password: ${6:# The password of the vSphere vCenter or ESXi server}
+    port: ${7:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${8:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${9:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    sriov_on: ${10:# optional parameter, related to O(num_virt_func)}
+    username: ${11:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${12:# Allows connection when SSL certificates are not valid}
+    vmnic: ${13:# Interface name, like vmnic0}
   tags:
     - community
     - vmware

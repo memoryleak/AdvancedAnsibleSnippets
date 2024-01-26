@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages floating IPs on the cloudscale}
   cloudscale_ch.cloud.floating_ip:
-    network: ${2:# Floating IP address to change}
-    name: ${3:# Name to identifiy the floating IP address for idempotency}
-    state: ${4:# State of the floating IP}
+    api_timeout: ${2:# Timeout in seconds for calls to the cloudscale}
+    api_token: ${3:# cloudscale}
+    api_url: ${4:# cloudscale}
     ip_version: ${5:# IP protocol version of the floating IP}
-    server: ${6:# UUID of the server assigned to this floating IP}
-    type: ${7:# The type of the floating IP}
-    region: ${8:# Region in which the floating IP resides (e}
-    prefix_length: ${9:# Only valid if I(ip_version) is 6}
+    name: ${6:# Name to identifiy the floating IP address for idempotency}
+    network: ${7:# Floating IP address to change}
+    prefix_length: ${8:# Only valid if I(ip_version) is 6}
+    region: ${9:# Region in which the floating IP resides (e}
     reverse_ptr: ${10:# Reverse PTR entry for this address}
-    tags: ${11:# Tags associated with the floating IP}
-    api_url: ${12:# cloudscale}
-    api_token: ${13:# cloudscale}
-    api_timeout: ${14:# Timeout in seconds for calls to the cloudscale}
+    server: ${11:# UUID of the server assigned to this floating IP}
+    state: ${12:# State of the floating IP}
+    tags: ${13:# Tags associated with the floating IP}
+    type: ${14:# The type of the floating IP}
   tags:
     - cloudscale_ch
     - cloud

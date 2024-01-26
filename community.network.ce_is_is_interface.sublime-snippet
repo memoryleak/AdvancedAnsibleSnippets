@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages isis interface configuration on HUAWEI CloudEngine devices}
   community.network.ce_is_is_interface:
-    instance_id: ${2:# Specifies the id of a isis process}
-    ifname: ${3:# A L3 interface}
-    leveltype: ${4:# level type for three types}
-    level1dispriority: ${5:# the dispriority of the level1}
-    level2dispriority: ${6:# the dispriority of the level1}
-    silentenable: ${7:# enable the interface can send isis message}
-    silentcost: ${8:# Specifies whether the routing cost of the silent interface is 0}
-    typep2penable: ${9:# Simulate the network type of the interface as P2P}
-    snpacheck: ${10:# Enable SNPA check for LSPs and SNPs}
+    bfdblocken: ${2:# Blocking interfaces to dynamically create BFD features}
+    bfdstaticen: ${3:# Configure static BFD on a specific interface enabled with ISIS}
+    ifname: ${4:# A L3 interface}
+    instance_id: ${5:# Specifies the id of a isis process}
+    level1cost: ${6:# Specifies the link cost of the interface when performing Level-1 SPF calculation}
+    level1dispriority: ${7:# the dispriority of the level1}
+    level2cost: ${8:# Specifies the link cost of the interface when performing Level-2 SPF calculation}
+    level2dispriority: ${9:# the dispriority of the level1}
+    leveltype: ${10:# level type for three types}
     p2pnegotiationmode: ${11:# Set the P2P neighbor negotiation type}
     p2ppeeripignore: ${12:# When the P2P hello packet is received, no IP address check is performed}
     ppposicpcheckenable: ${13:# Interface for setting PPP link protocol to check OSICP negotiation status}
-    level1cost: ${14:# Specifies the link cost of the interface when performing Level-1 SPF calculation}
-    level2cost: ${15:# Specifies the link cost of the interface when performing Level-2 SPF calculation}
-    bfdstaticen: ${16:# Configure static BFD on a specific interface enabled with ISIS}
-    bfdblocken: ${17:# Blocking interfaces to dynamically create BFD features}
-    state: ${18:# Determines whether the config should be present or not on the device}
+    silentcost: ${14:# Specifies whether the routing cost of the silent interface is 0}
+    silentenable: ${15:# enable the interface can send isis message}
+    snpacheck: ${16:# Enable SNPA check for LSPs and SNPs}
+    state: ${17:# Determines whether the config should be present or not on the device}
+    typep2penable: ${18:# Simulate the network type of the interface as P2P}
   tags:
     - community
     - network

@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Enable or disable the syslog on iDRAC}
   dellemc.openmanage.idrac_syslog:
-    syslog: ${2:# Enables or disables an iDRAC syslog}
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
     idrac_ip: ${3:# iDRAC IP Address}
-    idrac_user: ${4:# iDRAC username}
-    idrac_password: ${5:# iDRAC user password}
-    idrac_port: ${6:# iDRAC port}
-    validate_certs: ${7:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${8:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${9:# The socket level timeout in seconds}
-    share_name: ${10:# Network share or a local path}
-    share_user: ${11:# Network share user name}
-    share_password: ${12:# Network share user password}
-    share_mnt: ${13:# Local mount path of the network share with read-write permission for ansible user}
+    idrac_password: ${4:# iDRAC user password}
+    idrac_port: ${5:# iDRAC port}
+    idrac_user: ${6:# iDRAC username}
+    share_mnt: ${7:# Local mount path of the network share with read-write permission for ansible user}
+    share_name: ${8:# Network share or a local path}
+    share_password: ${9:# Network share user password}
+    share_user: ${10:# Network share user name}
+    syslog: ${11:# Enables or disables an iDRAC syslog}
+    timeout: ${12:# The socket level timeout in seconds}
+    validate_certs: ${13:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

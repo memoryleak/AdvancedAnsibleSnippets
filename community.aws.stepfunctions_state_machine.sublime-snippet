@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage AWS Step Functions state machines}
   community.aws.stepfunctions_state_machine:
-    name: ${2:# Name of the state machine}
-    definition: ${3:# The Amazon States Language definition of the state machine}
-    role_arn: ${4:# The ARN of the IAM Role that will be used by the state machine for its executions}
-    state: ${5:# Desired state for the state machine}
-    access_key: ${6:# AWS access key ID}
-    secret_key: ${7:# AWS secret access key}
-    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    definition: ${6:# The Amazon States Language definition of the state machine}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    name: ${8:# Name of the state machine}
     profile: ${9:# A named AWS profile to use for authentication}
-    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${13:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
-    region: ${15:# The AWS region to use}
+    purge_tags: ${10:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${11:# The AWS region to use}
+    role_arn: ${12:# The ARN of the IAM Role that will be used by the state machine for its executions}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    state: ${15:# Desired state for the state machine}
     tags: ${16:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${17:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

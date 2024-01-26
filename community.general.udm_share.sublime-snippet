@@ -1,59 +1,59 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage samba shares on a univention corporate server}
   community.general.udm_share:
-    state: ${2:# Whether the share is present or not}
-    name: ${3:# Name}
-    host: ${4:# Host FQDN (server which provides the share), e}
-    path: ${5:# Directory on the providing server, e}
-    sambaName: ${6:# Windows name}
-    ou: ${7:# Organisational unit, inside the LDAP Base DN}
-    owner: ${8:# Directory owner of the share's root directory}
-    group: ${9:# Directory owner group of the share's root directory}
-    directorymode: ${10:# Permissions for the share's root directory}
+    directorymode: ${2:# Permissions for the share's root directory}
+    group: ${3:# Directory owner group of the share's root directory}
+    host: ${4:# Host FQDN (server which provides the share), for example V( ansible_fqdn )}
+    name: ${5:# Name}
+    nfsCustomSettings: ${6:# Option name in exports file}
+    nfs_hosts: ${7:# Only allow access for this host, IP address or network}
+    ou: ${8:# Organisational unit, inside the LDAP Base DN}
+    owner: ${9:# Directory owner of the share's root directory}
+    path: ${10:# Directory on the providing server, for example V(/home)}
     root_squash: ${11:# Modify user ID for root user (root squashing)}
-    subtree_checking: ${12:# Subtree checking}
-    sync: ${13:# NFS synchronisation}
-    writeable: ${14:# NFS write access}
-    sambaBlockSize: ${15:# Blocking size}
-    sambaBlockingLocks: ${16:# Blocking locks}
-    sambaBrowseable: ${17:# Show in Windows network environment}
-    sambaCreateMode: ${18:# File mode}
-    sambaCscPolicy: ${19:# Client-side caching policy}
-    sambaCustomSettings: ${20:# Option name in smb}
-    sambaDirectoryMode: ${21:# Directory mode}
-    sambaDirectorySecurityMode: ${22:# Directory security mode}
-    sambaDosFilemode: ${23:# Users with write access may modify permissions}
-    sambaFakeOplocks: ${24:# Fake oplocks}
-    sambaForceCreateMode: ${25:# Force file mode}
-    sambaForceDirectoryMode: ${26:# Force directory mode}
-    sambaForceDirectorySecurityMode: ${27:# Force directory security mode}
-    sambaForceGroup: ${28:# Force group}
-    sambaForceSecurityMode: ${29:# Force security mode}
-    sambaForceUser: ${30:# Force user}
-    sambaHideFiles: ${31:# Hide files}
-    sambaHideUnreadable: ${32:# Hide unreadable files/directories}
-    sambaHostsAllow: ${33:# Allowed host/network}
-    sambaHostsDeny: ${34:# Denied host/network}
-    sambaInheritAcls: ${35:# Inherit ACLs}
-    sambaInheritOwner: ${36:# Create files/directories with the owner of the parent directory}
-    sambaInheritPermissions: ${37:# Create files/directories with permissions of the parent directory}
-    sambaInvalidUsers: ${38:# Invalid users or groups}
-    sambaLevel2Oplocks: ${39:# Level 2 oplocks}
-    sambaLocking: ${40:# Locking}
-    sambaMSDFSRoot: ${41:# MSDFS root}
-    sambaNtAclSupport: ${42:# NT ACL support}
-    sambaOplocks: ${43:# Oplocks}
-    sambaPostexec: ${44:# Postexec script}
-    sambaPreexec: ${45:# Preexec script}
-    sambaPublic: ${46:# Allow anonymous read-only access with a guest user}
-    sambaSecurityMode: ${47:# Security mode}
-    sambaStrictLocking: ${48:# Strict locking}
-    sambaVFSObjects: ${49:# VFS objects}
-    sambaValidUsers: ${50:# Valid users or groups}
-    sambaWriteList: ${51:# Restrict write access to these users/groups}
-    sambaWriteable: ${52:# Samba write access}
-    nfs_hosts: ${53:# Only allow access for this host, IP address or network}
-    nfsCustomSettings: ${54:# Option name in exports file}
+    sambaBlockSize: ${12:# Blocking size}
+    sambaBlockingLocks: ${13:# Blocking locks}
+    sambaBrowseable: ${14:# Show in Windows network environment}
+    sambaCreateMode: ${15:# File mode}
+    sambaCscPolicy: ${16:# Client-side caching policy}
+    sambaCustomSettings: ${17:# Option name in smb}
+    sambaDirectoryMode: ${18:# Directory mode}
+    sambaDirectorySecurityMode: ${19:# Directory security mode}
+    sambaDosFilemode: ${20:# Users with write access may modify permissions}
+    sambaFakeOplocks: ${21:# Fake oplocks}
+    sambaForceCreateMode: ${22:# Force file mode}
+    sambaForceDirectoryMode: ${23:# Force directory mode}
+    sambaForceDirectorySecurityMode: ${24:# Force directory security mode}
+    sambaForceGroup: ${25:# Force group}
+    sambaForceSecurityMode: ${26:# Force security mode}
+    sambaForceUser: ${27:# Force user}
+    sambaHideFiles: ${28:# Hide files}
+    sambaHideUnreadable: ${29:# Hide unreadable files/directories}
+    sambaHostsAllow: ${30:# Allowed host/network}
+    sambaHostsDeny: ${31:# Denied host/network}
+    sambaInheritAcls: ${32:# Inherit ACLs}
+    sambaInheritOwner: ${33:# Create files/directories with the owner of the parent directory}
+    sambaInheritPermissions: ${34:# Create files/directories with permissions of the parent directory}
+    sambaInvalidUsers: ${35:# Invalid users or groups}
+    sambaLevel2Oplocks: ${36:# Level 2 oplocks}
+    sambaLocking: ${37:# Locking}
+    sambaMSDFSRoot: ${38:# MSDFS root}
+    sambaName: ${39:# Windows name}
+    sambaNtAclSupport: ${40:# NT ACL support}
+    sambaOplocks: ${41:# Oplocks}
+    sambaPostexec: ${42:# Postexec script}
+    sambaPreexec: ${43:# Preexec script}
+    sambaPublic: ${44:# Allow anonymous read-only access with a guest user}
+    sambaSecurityMode: ${45:# Security mode}
+    sambaStrictLocking: ${46:# Strict locking}
+    sambaVFSObjects: ${47:# VFS objects}
+    sambaValidUsers: ${48:# Valid users or groups}
+    sambaWriteList: ${49:# Restrict write access to these users/groups}
+    sambaWriteable: ${50:# Samba write access}
+    state: ${51:# Whether the share is present or not}
+    subtree_checking: ${52:# Subtree checking}
+    sync: ${53:# NFS synchronisation}
+    writeable: ${54:# NFS write access}
   tags:
     - community
     - general

@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages FTP profiles}
   f5networks.f5_modules.bigip_profile_ftp:
-    name: ${2:# Specifies the name of the profile}
-    allow_ftps: ${3:# Allows explicit FTPS negotiation}
-    description: ${4:# Description of the profile}
-    parent: ${5:# Specifies the profile from which this profile inherits settings}
-    inherit_parent_profile: ${6:# Enables the FTP data channel to inherit the TCP profile used by the control channel}
-    log_profile: ${7:# Configures the ALG log profile that controls logging}
-    log_publisher: ${8:# Configures the log publisher that handles events logging for this profile}
-    translate_extended: ${9:# Translates RFC 2428 extended requests C(EPSV) and C(EPRT) to C(PASV) and C(PORT) when communicating with IPv4 servers}
+    allow_ftps: ${2:# Allows explicit FTPS negotiation}
+    description: ${3:# Description of the profile}
+    inherit_parent_profile: ${4:# Enables the FTP data channel to inherit the TCP profile used by the control channel}
+    log_profile: ${5:# Configures the ALG log profile that controls logging}
+    log_publisher: ${6:# Configures the log publisher that handles events logging for this profile}
+    name: ${7:# Specifies the name of the profile}
+    parent: ${8:# Specifies the profile from which this profile inherits settings}
+    partition: ${9:# Device partition to manage resources on}
     port: ${10:# Specifies a service for the data channel port used for this FTP profile}
-    security: ${11:# Enables secure FTP traffic for the BIG-IP Application Security Manager}
-    state: ${12:# When C(state) is C(present), ensures the ftp profile exists}
-    partition: ${13:# Device partition to manage resources on}
-    provider: ${14:# A dict object containing connection details}
+    provider: ${11:# A dict object containing connection details}
+    security: ${12:# Enables secure FTP traffic for the BIG-IP Application Security Manager}
+    state: ${13:# When C(state) is C(present), ensures the ftp profile exists}
+    translate_extended: ${14:# Translates RFC 2428 extended requests C(EPSV) and C(EPRT) to C(PASV) and C(PORT) when communicating with IPv4 servers}
   tags:
     - f5networks
     - f5_modules

@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage user-defined APM ACLs}
   f5networks.f5_modules.bigip_apm_acl:
-    name: ${2:# Specifies the name of the ACL to manage}
+    acl_order: ${2:# Specifies a number that indicates the order of this ACL relative to other ACLs}
     description: ${3:# User created ACL description}
-    type: ${4:# Specifies the type of ACL to create}
-    acl_order: ${5:# Specifies a number that indicates the order of this ACL relative to other ACLs}
-    path_match_case: ${6:# Specifies whether alphabetic case is considered when matching paths in an access control entry}
-    entries: ${7:# Access control entries that define the ACL matching and its respective behavior}
-    partition: ${8:# Device partition to manage resources on}
+    entries: ${4:# Access control entries that define the ACL matching and its respective behavior}
+    name: ${5:# Specifies the name of the ACL to manage}
+    partition: ${6:# Device partition to manage resources on}
+    path_match_case: ${7:# Specifies whether alphabetic case is considered when matching paths in an access control entry}
+    provider: ${8:# A dict object containing connection details}
     state: ${9:# When C(state) is C(present), ensures that the ACL exists}
-    provider: ${10:# A dict object containing connection details}
+    type: ${10:# Specifies the type of ACL to create}
   tags:
     - f5networks
     - f5_modules

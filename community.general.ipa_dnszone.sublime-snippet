@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage FreeIPA DNS Zones}
   community.general.ipa_dnszone:
-    zone_name: ${2:# The DNS zone name to which needs to be managed}
-    state: ${3:# State to ensure}
-    dynamicupdate: ${4:# Apply dynamic update to zone}
-    allowsyncptr: ${5:# Allow synchronization of forward and reverse records in the zone}
+    allowsyncptr: ${2:# Allow synchronization of forward and reverse records in the zone}
+    dynamicupdate: ${3:# Apply dynamic update to zone}
+    ipa_host: ${4:# IP or hostname of IPA server}
+    ipa_pass: ${5:# Password of administrative user}
     ipa_port: ${6:# Port of FreeIPA / IPA server}
-    ipa_host: ${7:# IP or hostname of IPA server}
-    ipa_user: ${8:# Administrative account used on IPA server}
-    ipa_pass: ${9:# Password of administrative user}
-    ipa_prot: ${10:# Protocol used by IPA server}
-    validate_certs: ${11:# This only applies if C(ipa_prot) is I(https)}
-    ipa_timeout: ${12:# Specifies idle timeout (in seconds) for the connection}
+    ipa_prot: ${7:# Protocol used by IPA server}
+    ipa_timeout: ${8:# Specifies idle timeout (in seconds) for the connection}
+    ipa_user: ${9:# Administrative account used on IPA server}
+    state: ${10:# State to ensure}
+    validate_certs: ${11:# This only applies if O(ipa_prot) is V(https)}
+    zone_name: ${12:# The DNS zone name to which needs to be managed}
   tags:
     - community
     - general

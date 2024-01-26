@@ -1,38 +1,38 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of HealthMonitor Avi RESTful Object}
   community.network.avi_healthmonitor:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
     avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    description: ${5:# User defined description for the object}
-    dns_monitor: ${6:# Healthmonitordns settings for healthmonitor}
-    external_monitor: ${7:# Healthmonitorexternal settings for healthmonitor}
-    failed_checks: ${8:# Number of continuous failed health checks before the server is marked down}
-    http_monitor: ${9:# Healthmonitorhttp settings for healthmonitor}
-    https_monitor: ${10:# Healthmonitorhttp settings for healthmonitor}
-    is_federated: ${11:# This field describes the object's replication scope}
-    monitor_port: ${12:# Use this port instead of the port defined for the server in the pool}
-    name: ${13:# A user friendly name for this health monitor}
-    radius_monitor: ${14:# Health monitor for radius}
-    receive_timeout: ${15:# A valid response from the server is expected within the receive timeout window}
-    send_interval: ${16:# Frequency, in seconds, that monitors are sent to a server}
-    sip_monitor: ${17:# Health monitor for sip}
-    successful_checks: ${18:# Number of continuous successful health checks before server is marked up}
-    tcp_monitor: ${19:# Healthmonitortcp settings for healthmonitor}
-    tenant_ref: ${20:# It is a reference to an object of type tenant}
-    type: ${21:# Type of the health monitor}
-    udp_monitor: ${22:# Healthmonitorudp settings for healthmonitor}
-    url: ${23:# Avi controller URL of the object}
-    uuid: ${24:# Uuid of the health monitor}
-    controller: ${25:# IP address or hostname of the controller}
-    username: ${26:# Username used for accessing Avi controller}
-    password: ${27:# Password of Avi user in Avi controller}
-    tenant: ${28:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${29:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${30:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${31:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${32:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${33:# It disables avi session information to be cached as a fact}
+    avi_api_update_method: ${5:# Default method for object update is HTTP PUT}
+    avi_credentials: ${6:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${7:# It disables avi session information to be cached as a fact}
+    controller: ${8:# IP address or hostname of the controller}
+    description: ${9:# User defined description for the object}
+    dns_monitor: ${10:# Healthmonitordns settings for healthmonitor}
+    external_monitor: ${11:# Healthmonitorexternal settings for healthmonitor}
+    failed_checks: ${12:# Number of continuous failed health checks before the server is marked down}
+    http_monitor: ${13:# Healthmonitorhttp settings for healthmonitor}
+    https_monitor: ${14:# Healthmonitorhttp settings for healthmonitor}
+    is_federated: ${15:# This field describes the object's replication scope}
+    monitor_port: ${16:# Use this port instead of the port defined for the server in the pool}
+    name: ${17:# A user friendly name for this health monitor}
+    password: ${18:# Password of Avi user in Avi controller}
+    radius_monitor: ${19:# Health monitor for radius}
+    receive_timeout: ${20:# A valid response from the server is expected within the receive timeout window}
+    send_interval: ${21:# Frequency, in seconds, that monitors are sent to a server}
+    sip_monitor: ${22:# Health monitor for sip}
+    state: ${23:# The state that should be applied on the entity}
+    successful_checks: ${24:# Number of continuous successful health checks before server is marked up}
+    tcp_monitor: ${25:# Healthmonitortcp settings for healthmonitor}
+    tenant: ${26:# Name of tenant used for all Avi API calls and context of object}
+    tenant_ref: ${27:# It is a reference to an object of type tenant}
+    tenant_uuid: ${28:# UUID of tenant used for all Avi API calls and context of object}
+    type: ${29:# Type of the health monitor}
+    udp_monitor: ${30:# Healthmonitorudp settings for healthmonitor}
+    url: ${31:# Avi controller URL of the object}
+    username: ${32:# Username used for accessing Avi controller}
+    uuid: ${33:# Uuid of the health monitor}
   tags:
     - community
     - network

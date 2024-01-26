@@ -1,20 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:create, update, or destroy Execution Environments in Automation Platform Controller}
   awx.awx.execution_environment:
-    name: ${2:# Name to use for the execution environment}
-    new_name: ${3:# Setting this option will change the existing name (looked up via the name field}
-    image: ${4:# The fully qualified url of the container image}
-    description: ${5:# Description to use for the execution environment}
-    organization: ${6:# The organization the execution environment belongs to}
-    credential: ${7:# Name of the credential to use for the execution environment}
-    state: ${8:# Desired state of the resource}
-    pull: ${9:# determine image pull behavior}
-    controller_host: ${10:# URL to your Automation Platform Controller instance}
-    controller_username: ${11:# Username for your controller instance}
-    controller_password: ${12:# Password for your controller instance}
-    controller_oauthtoken: ${13:# The OAuth token to use}
-    validate_certs: ${14:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${15:# Path to the controller config file}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    credential: ${7:# Name, ID, or named URL of the credential to use for the execution environment}
+    description: ${8:# Description to use for the execution environment}
+    image: ${9:# The fully qualified url of the container image}
+    name: ${10:# Name to use for the execution environment}
+    new_name: ${11:# Setting this option will change the existing name (looked up via the name field}
+    organization: ${12:# The organization name, ID, or named URL that the execution environment belongs to}
+    pull: ${13:# determine image pull behavior}
+    request_timeout: ${14:# Specify the timeout Ansible should use in requests to the controller host}
+    state: ${15:# Desired state of the resource}
+    validate_certs: ${16:# Whether to allow insecure connections to AWX}
   tags:
     - awx
     - awx

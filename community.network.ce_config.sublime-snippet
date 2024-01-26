@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Huawei CloudEngine configuration sections}
   community.network.ce_config:
-    lines: ${2:# The ordered set of commands that should be configured in the section}
-    parents: ${3:# The ordered set of parents that uniquely identify the section or hierarchy the commands should be checked against}
-    src: ${4:# The I(src) argument provides a path to the configuration file to load into the remote system}
+    after: ${2:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
+    backup: ${3:# This argument will cause the module to create a full backup of the current C(current-configuration) from the remote device before any changes are made}
+    backup_options: ${4:# This is a dict object containing configurable options related to backup file path}
     before: ${5:# The ordered set of commands to push on to the command stack if a change needs to be made}
-    after: ${6:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
-    match: ${7:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
-    replace: ${8:# Instructs the module on the way to perform the configuration on the device}
-    backup: ${9:# This argument will cause the module to create a full backup of the current C(current-configuration) from the remote device before any changes are made}
-    config: ${10:# The module, by default, will connect to the remote device and retrieve the current current-configuration to use as a base for comparing against the contents of source}
-    defaults: ${11:# The I(defaults) argument will influence how the current-configuration is collected from the device}
+    config: ${6:# The module, by default, will connect to the remote device and retrieve the current current-configuration to use as a base for comparing against the contents of source}
+    defaults: ${7:# The I(defaults) argument will influence how the current-configuration is collected from the device}
+    lines: ${8:# The ordered set of commands that should be configured in the section}
+    match: ${9:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
+    parents: ${10:# The ordered set of parents that uniquely identify the section or hierarchy the commands should be checked against}
+    replace: ${11:# Instructs the module on the way to perform the configuration on the device}
     save: ${12:# The C(save) argument instructs the module to save the current-configuration to saved-configuration}
-    backup_options: ${13:# This is a dict object containing configurable options related to backup file path}
+    src: ${13:# The I(src) argument provides a path to the configuration file to load into the remote system}
   tags:
     - community
     - network

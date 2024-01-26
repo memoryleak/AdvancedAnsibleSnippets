@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP manage volume autosize}
   netapp.ontap.na_ontap_volume_autosize:
-    volume: ${2:# The name of the flexible volume for which we want to set autosize}
-    mode: ${3:# Specify the flexible volume's autosize mode of operation}
-    vserver: ${4:# Name of the vserver to use}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    feature_flags: ${3:# Enable or disable a new feature}
+    force_ontap_version: ${4:# Override the cluster ONTAP version when using REST}
     grow_threshold_percent: ${5:# Specifies the percentage of the flexible volume's capacity at which autogrow is initiated}
-    increment_size: ${6:# Specify the flexible volume's increment size using the following format < number > [k|m|g|t]}
-    maximum_size: ${7:# Specify the flexible volume's maximum allowed size using the following format < number > [k|m|g|t]}
-    minimum_size: ${8:# Specify the flexible volume's minimum allowed size using the following format < number > [k|m|g|t] The amount is the absolute size to set}
-    reset: ${9:# Sets the values of maximum_size, increment_size, minimum_size, grow_threshold_percent, shrink_threshold_percent and mode to their defaults}
-    shrink_threshold_percent: ${10:# Specifies the percentage of the flexible volume's capacity at which autoshrink is initiated}
-    hostname: ${11:# The hostname or IP address of the ONTAP instance}
-    username: ${12:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${13:# Password for the specified user}
-    cert_filepath: ${14:# path to SSL client cert file (}
-    key_filepath: ${15:# path to SSL client key file}
-    https: ${16:# Enable and disable https}
-    validate_certs: ${17:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${18:# Override the default port (80 or 443) with this port}
-    ontapi: ${19:# The ontap api version to use}
-    use_rest: ${20:# Whether to use REST or ZAPI}
-    feature_flags: ${21:# Enable or disable a new feature}
-    force_ontap_version: ${22:# Override the cluster ONTAP version when using REST}
+    hostname: ${6:# The hostname or IP address of the ONTAP instance}
+    http_port: ${7:# Override the default port (80 or 443) with this port}
+    https: ${8:# Enable and disable https}
+    increment_size: ${9:# Specify the flexible volume's increment size using the following format < number > [k|m|g|t]}
+    key_filepath: ${10:# path to SSL client key file}
+    maximum_size: ${11:# Specify the flexible volume's maximum allowed size using the following format < number > [k|m|g|t]}
+    minimum_size: ${12:# Specify the flexible volume's minimum allowed size using the following format < number > [k|m|g|t] The amount is the absolute size to set}
+    mode: ${13:# Specify the flexible volume's autosize mode of operation}
+    ontapi: ${14:# The ontap api version to use}
+    password: ${15:# Password for the specified user}
+    reset: ${16:# Sets the values of maximum_size, increment_size, minimum_size, grow_threshold_percent, shrink_threshold_percent and mode to their defaults}
+    shrink_threshold_percent: ${17:# Specifies the percentage of the flexible volume's capacity at which autoshrink is initiated}
+    use_rest: ${18:# Whether to use REST or ZAPI}
+    username: ${19:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${20:# If set to C(no), the SSL certificates will not be validated}
+    volume: ${21:# The name of the flexible volume for which we want to set autosize}
+    vserver: ${22:# Name of the vserver to use}
   tags:
     - netapp
     - ontap

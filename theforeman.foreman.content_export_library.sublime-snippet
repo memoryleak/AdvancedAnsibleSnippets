@@ -1,16 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage library content exports}
   theforeman.foreman.content_export_library:
-    destination_server: ${2:# Destination server name; optional parameter to differentiate between exports}
-    chunk_size_gb: ${3:# Split the exported content into archives no greater than the specified size in gigabytes}
+    chunk_size_gb: ${2:# Split the exported content into archives no greater than the specified size in gigabytes}
+    destination_server: ${3:# Destination server name; optional parameter to differentiate between exports}
     fail_on_missing_content: ${4:# Fails if any of the repositories belonging to this organization are unexportable}
-    incremental: ${5:# Export only the content that has changed since the last export}
+    format: ${5:# Export format}
     from_history_id: ${6:# Export history identifier used for incremental export}
-    server_url: ${7:# URL of the Foreman server}
-    username: ${8:# Username accessing the Foreman server}
+    incremental: ${7:# Export only the content that has changed since the last export}
+    organization: ${8:# Organization that the entity is in}
     password: ${9:# Password of the user accessing the Foreman server}
-    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
-    organization: ${11:# Organization that the entity is in}
+    server_url: ${10:# URL of the Foreman server}
+    username: ${11:# Username accessing the Foreman server}
+    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

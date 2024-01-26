@@ -1,41 +1,41 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure gslb vserver entities in Netscaler}
   community.network.netscaler_gslb_vserver:
-    name: ${2:# Name for the GSLB virtual server}
-    servicetype: ${3:# Protocol used by services bound to the virtual server}
-    dnsrecordtype: ${4:# DNS record type to associate with the GSLB virtual server's domain name}
-    lbmethod: ${5:# Load balancing method for the GSLB virtual server}
-    backuplbmethod: ${6:# Backup load balancing method}
-    netmask: ${7:# IPv4 network mask for use in the SOURCEIPHASH load balancing method}
-    v6netmasklen: ${8:# Number of bits to consider, in an IPv6 source IP address, for creating the hash that is required by the C(SOURCEIPHASH) load balancing method}
-    tolerance: ${9:# Site selection tolerance, in milliseconds, for implementing the RTT load balancing method}
-    persistencetype: ${10:# Use source IP address based persistence for the virtual server}
-    persistenceid: ${11:# The persistence ID for the GSLB virtual server}
-    persistmask: ${12:# The optional IPv4 network mask applied to IPv4 addresses to establish source IP address based persistence}
-    v6persistmasklen: ${13:# Number of bits to consider in an IPv6 source IP address when creating source IP address based persistence sessions}
-    timeout: ${14:# Idle time, in minutes, after which a persistence entry is cleared}
-    mir: ${15:# Include multiple IP addresses in the DNS responses sent to clients}
-    disableprimaryondown: ${16:# Continue to direct traffic to the backup chain even after the primary GSLB virtual server returns to the UP state}
-    dynamicweight: ${17:# Specify if the appliance should consider the service count, service weights, or ignore both when using weight-based load balancing methods}
-    considereffectivestate: ${18:# If the primary state of all bound GSLB services is DOWN, consider the effective states of all the GSLB services, obtained through the Metrics Exchange Protocol (MEP), when determining the state of the GSLB virtual server}
-    comment: ${19:# Any comments that you might want to associate with the GSLB virtual server}
-    somethod: ${20:# Type of threshold that, when exceeded, triggers spillover}
-    sopersistence: ${21:# If spillover occurs, maintain source IP address based persistence for both primary and backup GSLB virtual servers}
-    sopersistencetimeout: ${22:# Timeout for spillover persistence, in minutes}
-    sothreshold: ${23:# Threshold at which spillover occurs}
-    sobackupaction: ${24:# Action to be performed if spillover is to take effect, but no backup chain to spillover is usable or exists}
-    appflowlog: ${25:# Enable logging appflow flow information}
-    domain_bindings: ${26:# List of bindings for domains for this glsb vserver}
-    service_bindings: ${27:# List of bindings for gslb services bound to this gslb virtual server}
-    disabled: ${28:# When set to C(yes) the GSLB Vserver state will be set to C(disabled)}
-    nsip: ${29:# The ip address of the netscaler appliance where the nitro API calls will be made}
-    nitro_user: ${30:# The username with which to authenticate to the netscaler node}
-    nitro_pass: ${31:# The password with which to authenticate to the netscaler node}
-    nitro_protocol: ${32:# Which protocol to use when accessing the nitro API objects}
-    validate_certs: ${33:# If C(no), SSL certificates will not be validated}
-    nitro_timeout: ${34:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
-    state: ${35:# The state of the resource being configured by the module on the netscaler node}
-    save_config: ${36:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+    appflowlog: ${2:# Enable logging appflow flow information}
+    backuplbmethod: ${3:# Backup load balancing method}
+    comment: ${4:# Any comments that you might want to associate with the GSLB virtual server}
+    considereffectivestate: ${5:# If the primary state of all bound GSLB services is DOWN, consider the effective states of all the GSLB services, obtained through the Metrics Exchange Protocol (MEP), when determining the state of the GSLB virtual server}
+    disabled: ${6:# When set to C(yes) the GSLB Vserver state will be set to C(disabled)}
+    disableprimaryondown: ${7:# Continue to direct traffic to the backup chain even after the primary GSLB virtual server returns to the UP state}
+    dnsrecordtype: ${8:# DNS record type to associate with the GSLB virtual server's domain name}
+    domain_bindings: ${9:# List of bindings for domains for this glsb vserver}
+    dynamicweight: ${10:# Specify if the appliance should consider the service count, service weights, or ignore both when using weight-based load balancing methods}
+    lbmethod: ${11:# Load balancing method for the GSLB virtual server}
+    mir: ${12:# Include multiple IP addresses in the DNS responses sent to clients}
+    name: ${13:# Name for the GSLB virtual server}
+    netmask: ${14:# IPv4 network mask for use in the SOURCEIPHASH load balancing method}
+    nitro_pass: ${15:# The password with which to authenticate to the netscaler node}
+    nitro_protocol: ${16:# Which protocol to use when accessing the nitro API objects}
+    nitro_timeout: ${17:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
+    nitro_user: ${18:# The username with which to authenticate to the netscaler node}
+    nsip: ${19:# The ip address of the netscaler appliance where the nitro API calls will be made}
+    persistenceid: ${20:# The persistence ID for the GSLB virtual server}
+    persistencetype: ${21:# Use source IP address based persistence for the virtual server}
+    persistmask: ${22:# The optional IPv4 network mask applied to IPv4 addresses to establish source IP address based persistence}
+    save_config: ${23:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+    service_bindings: ${24:# List of bindings for gslb services bound to this gslb virtual server}
+    servicetype: ${25:# Protocol used by services bound to the virtual server}
+    sobackupaction: ${26:# Action to be performed if spillover is to take effect, but no backup chain to spillover is usable or exists}
+    somethod: ${27:# Type of threshold that, when exceeded, triggers spillover}
+    sopersistence: ${28:# If spillover occurs, maintain source IP address based persistence for both primary and backup GSLB virtual servers}
+    sopersistencetimeout: ${29:# Timeout for spillover persistence, in minutes}
+    sothreshold: ${30:# Threshold at which spillover occurs}
+    state: ${31:# The state of the resource being configured by the module on the netscaler node}
+    timeout: ${32:# Idle time, in minutes, after which a persistence entry is cleared}
+    tolerance: ${33:# Site selection tolerance, in milliseconds, for implementing the RTT load balancing method}
+    v6netmasklen: ${34:# Number of bits to consider, in an IPv6 source IP address, for creating the hash that is required by the C(SOURCEIPHASH) load balancing method}
+    v6persistmasklen: ${35:# Number of bits to consider in an IPv6 source IP address when creating source IP address based persistence sessions}
+    validate_certs: ${36:# If C(no), SSL certificates will not be validated}
   tags:
     - community
     - network

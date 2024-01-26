@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage port lists on BIG-IP AFM}
   f5networks.f5_modules.bigip_firewall_port_list:
-    name: ${2:# Specifies the name of the port list}
-    partition: ${3:# Device partition to manage resources on}
-    description: ${4:# Description of the port list}
-    ports: ${5:# Simple list of port values to add to the list}
+    description: ${2:# Description of the port list}
+    name: ${3:# Specifies the name of the port list}
+    partition: ${4:# Device partition to manage resources on}
+    port_lists: ${5:# Simple list of existing port lists to add to this list}
     port_ranges: ${6:# A list of port ranges where the range starts with a port number, is followed by a dash (-), and then a second number}
-    port_lists: ${7:# Simple list of existing port lists to add to this list}
-    state: ${8:# When C(present), ensures the address list and entries exists}
-    provider: ${9:# A dict object containing connection details}
+    ports: ${7:# Simple list of port values to add to the list}
+    provider: ${8:# A dict object containing connection details}
+    state: ${9:# When C(present), ensures the address list and entries exists}
   tags:
     - f5networks
     - f5_modules

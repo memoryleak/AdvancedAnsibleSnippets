@@ -1,57 +1,57 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage service configuration in Netscaler}
   community.network.netscaler_service:
-    name: ${2:# Name for the service}
-    ip: ${3:# IP to assign to the service}
-    servername: ${4:# Name of the server that hosts the service}
-    servicetype: ${5:# Protocol in which data is exchanged with the service}
-    port: ${6:# Port number of the service}
-    cleartextport: ${7:# Port to which clear text data must be sent after the appliance decrypts incoming SSL traffic}
-    cachetype: ${8:# Cache type supported by the cache server}
-    maxclient: ${9:# Maximum number of simultaneous open connections to the service}
-    healthmonitor: ${10:# Monitor the health of this service}
-    maxreq: ${11:# Maximum number of requests that can be sent on a persistent connection to the service}
-    cacheable: ${12:# Use the transparent cache redirection virtual server to forward requests to the cache server}
-    cip: ${13:# Before forwarding a request to the service, insert an HTTP header with the client's IPv4 or IPv6 address as its value}
-    cipheader: ${14:# Name for the HTTP header whose value must be set to the IP address of the client}
-    usip: ${15:# Use the client's IP address as the source IP address when initiating a connection to the server}
-    pathmonitor: ${16:# Path monitoring for clustering}
-    pathmonitorindv: ${17:# Individual Path monitoring decisions}
-    useproxyport: ${18:# Use the proxy port as the source port when initiating connections with the server}
-    sp: ${19:# Enable surge protection for the service}
-    rtspsessionidremap: ${20:# Enable RTSP session ID mapping for the service}
-    clttimeout: ${21:# Time, in seconds, after which to terminate an idle client connection}
-    svrtimeout: ${22:# Time, in seconds, after which to terminate an idle server connection}
-    customserverid: ${23:# Unique identifier for the service}
-    serverid: ${24:# The identifier for the service}
-    cka: ${25:# Enable client keep-alive for the service}
-    tcpb: ${26:# Enable TCP buffering for the service}
-    cmp: ${27:# Enable compression for the service}
-    maxbandwidth: ${28:# Maximum bandwidth, in Kbps, allocated to the service}
-    accessdown: ${29:# Use Layer 2 mode to bridge the packets sent to this service if it is marked as DOWN}
-    monthreshold: ${30:# Minimum sum of weights of the monitors that are bound to this service}
-    downstateflush: ${31:# Flush all active transactions associated with a service whose state transitions from UP to DOWN}
-    tcpprofilename: ${32:# Name of the TCP profile that contains TCP configuration settings for the service}
-    httpprofilename: ${33:# Name of the HTTP profile that contains HTTP configuration settings for the service}
-    hashid: ${34:# A numerical identifier that can be used by hash based load balancing methods}
-    comment: ${35:# Any information about the service}
-    appflowlog: ${36:# Enable logging of AppFlow information}
-    netprofile: ${37:# Network profile to use for the service}
-    td: ${38:# Integer value that uniquely identifies the traffic domain in which you want to configure the entity}
-    processlocal: ${39:# By turning on this option packets destined to a service in a cluster will not under go any steering}
-    dnsprofilename: ${40:# Name of the DNS profile to be associated with the service}
-    ipaddress: ${41:# The new IP address of the service}
-    graceful: ${42:# Shut down gracefully, not accepting any new connections, and disabling the service when all of its connections are closed}
-    monitor_bindings: ${43:# A list of load balancing monitors to bind to this service}
-    disabled: ${44:# When set to C(yes) the service state will be set to DISABLED}
-    nsip: ${45:# The ip address of the netscaler appliance where the nitro API calls will be made}
-    nitro_user: ${46:# The username with which to authenticate to the netscaler node}
-    nitro_pass: ${47:# The password with which to authenticate to the netscaler node}
-    nitro_protocol: ${48:# Which protocol to use when accessing the nitro API objects}
-    validate_certs: ${49:# If C(no), SSL certificates will not be validated}
-    nitro_timeout: ${50:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
-    state: ${51:# The state of the resource being configured by the module on the netscaler node}
-    save_config: ${52:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+    accessdown: ${2:# Use Layer 2 mode to bridge the packets sent to this service if it is marked as DOWN}
+    appflowlog: ${3:# Enable logging of AppFlow information}
+    cacheable: ${4:# Use the transparent cache redirection virtual server to forward requests to the cache server}
+    cachetype: ${5:# Cache type supported by the cache server}
+    cip: ${6:# Before forwarding a request to the service, insert an HTTP header with the client's IPv4 or IPv6 address as its value}
+    cipheader: ${7:# Name for the HTTP header whose value must be set to the IP address of the client}
+    cka: ${8:# Enable client keep-alive for the service}
+    cleartextport: ${9:# Port to which clear text data must be sent after the appliance decrypts incoming SSL traffic}
+    clttimeout: ${10:# Time, in seconds, after which to terminate an idle client connection}
+    cmp: ${11:# Enable compression for the service}
+    comment: ${12:# Any information about the service}
+    customserverid: ${13:# Unique identifier for the service}
+    disabled: ${14:# When set to C(yes) the service state will be set to DISABLED}
+    dnsprofilename: ${15:# Name of the DNS profile to be associated with the service}
+    downstateflush: ${16:# Flush all active transactions associated with a service whose state transitions from UP to DOWN}
+    graceful: ${17:# Shut down gracefully, not accepting any new connections, and disabling the service when all of its connections are closed}
+    hashid: ${18:# A numerical identifier that can be used by hash based load balancing methods}
+    healthmonitor: ${19:# Monitor the health of this service}
+    httpprofilename: ${20:# Name of the HTTP profile that contains HTTP configuration settings for the service}
+    ip: ${21:# IP to assign to the service}
+    ipaddress: ${22:# The new IP address of the service}
+    maxbandwidth: ${23:# Maximum bandwidth, in Kbps, allocated to the service}
+    maxclient: ${24:# Maximum number of simultaneous open connections to the service}
+    maxreq: ${25:# Maximum number of requests that can be sent on a persistent connection to the service}
+    monitor_bindings: ${26:# A list of load balancing monitors to bind to this service}
+    monthreshold: ${27:# Minimum sum of weights of the monitors that are bound to this service}
+    name: ${28:# Name for the service}
+    netprofile: ${29:# Network profile to use for the service}
+    nitro_pass: ${30:# The password with which to authenticate to the netscaler node}
+    nitro_protocol: ${31:# Which protocol to use when accessing the nitro API objects}
+    nitro_timeout: ${32:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
+    nitro_user: ${33:# The username with which to authenticate to the netscaler node}
+    nsip: ${34:# The ip address of the netscaler appliance where the nitro API calls will be made}
+    pathmonitor: ${35:# Path monitoring for clustering}
+    pathmonitorindv: ${36:# Individual Path monitoring decisions}
+    port: ${37:# Port number of the service}
+    processlocal: ${38:# By turning on this option packets destined to a service in a cluster will not under go any steering}
+    rtspsessionidremap: ${39:# Enable RTSP session ID mapping for the service}
+    save_config: ${40:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+    serverid: ${41:# The identifier for the service}
+    servername: ${42:# Name of the server that hosts the service}
+    servicetype: ${43:# Protocol in which data is exchanged with the service}
+    sp: ${44:# Enable surge protection for the service}
+    state: ${45:# The state of the resource being configured by the module on the netscaler node}
+    svrtimeout: ${46:# Time, in seconds, after which to terminate an idle server connection}
+    tcpb: ${47:# Enable TCP buffering for the service}
+    tcpprofilename: ${48:# Name of the TCP profile that contains TCP configuration settings for the service}
+    td: ${49:# Integer value that uniquely identifies the traffic domain in which you want to configure the entity}
+    useproxyport: ${50:# Use the proxy port as the source port when initiating connections with the server}
+    usip: ${51:# Use the client's IP address as the source IP address when initiating a connection to the server}
+    validate_certs: ${52:# If C(no), SSL certificates will not be validated}
   tags:
     - community
     - network

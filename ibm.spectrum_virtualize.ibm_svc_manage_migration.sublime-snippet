@@ -1,26 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module manages volume migration between clusters on IBM Spectrum Virtualize family storage systems}
   ibm.spectrum_virtualize.ibm_svc_manage_migration:
-    type_of_migration: ${2:# Specifies the type of migration whether it is migration across pools or migration across clusters}
-    new_pool: ${3:# Specifies the pool on which the volume has to be migrated}
-    source_volume: ${4:# Specifies the name of the existing source volume to be used in migration}
-    target_volume: ${5:# Specifies the name of the volume to be created on the target system}
-    clustername: ${6:# The hostname or management IP of the Spectrum Virtualize storage system}
-    remote_cluster: ${7:# Specifies the name of the remote cluster}
-    domain: ${8:# Domain for the Spectrum Virtualize storage system}
-    username: ${9:# REST API username for the Spectrum Virtualize storage system}
-    remote_username: ${10:# REST API username for the partner Spectrum Virtualize storage system}
-    password: ${11:# REST API password for the Spectrum Virtualize storage system}
-    remote_password: ${12:# REST API password for the partner Spectrum Virtualize storage system}
-    relationship_name: ${13:# Name of the migration relationship}
-    state: ${14:# Specifies the different states of the migration process when I(type_of_migration=across_clusters)}
-    token: ${15:# The authentication token to verify a user on the Spectrum Virtualize storage system}
-    remote_token: ${16:# The authentication token to verify a user on the partner Spectrum Virtualize storage system}
-    remote_pool: ${17:# Specifies the pool on which the volume on Partner Spectrum Virtualize storage system should get created}
-    validate_certs: ${18:# Validates certification}
-    remote_validate_certs: ${19:# Validates certification for partner Spectrum Virtualize storage system}
-    replicate_hosts: ${20:# Replicates the hosts mapped to a source volume on the source system, to the target system, and maps the hosts to the target volume}
-    log_path: ${21:# Path of debug log file}
+    clustername: ${2:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${3:# Domain for the Spectrum Virtualize storage system}
+    log_path: ${4:# Path of debug log file}
+    new_pool: ${5:# Specifies the pool on which the volume has to be migrated}
+    password: ${6:# REST API password for the Spectrum Virtualize storage system}
+    relationship_name: ${7:# Name of the migration relationship}
+    remote_cluster: ${8:# Specifies the name of the remote cluster}
+    remote_password: ${9:# REST API password for the partner Spectrum Virtualize storage system}
+    remote_pool: ${10:# Specifies the pool on which the volume on Partner Spectrum Virtualize storage system should get created}
+    remote_token: ${11:# The authentication token to verify a user on the partner Spectrum Virtualize storage system}
+    remote_username: ${12:# REST API username for the partner Spectrum Virtualize storage system}
+    remote_validate_certs: ${13:# Validates certification for partner Spectrum Virtualize storage system}
+    replicate_hosts: ${14:# Replicates the hosts mapped to a source volume on the source system, to the target system, and maps the hosts to the target volume}
+    source_volume: ${15:# Specifies the name of the existing source volume to be used in migration}
+    state: ${16:# Specifies the different states of the migration process when I(type_of_migration=across_clusters)}
+    target_volume: ${17:# Specifies the name of the volume to be created on the target system}
+    token: ${18:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    type_of_migration: ${19:# Specifies the type of migration whether it is migration across pools or migration across clusters}
+    username: ${20:# REST API username for the Spectrum Virtualize storage system}
+    validate_certs: ${21:# Validates certification}
   tags:
     - ibm
     - spectrum_virtualize

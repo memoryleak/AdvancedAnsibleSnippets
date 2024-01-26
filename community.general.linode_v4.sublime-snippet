@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage instances on the Linode cloud}
   community.general.linode_v4:
-    region: ${2:# The region of the instance}
-    image: ${3:# The image of the instance}
-    type: ${4:# The type of the instance}
-    label: ${5:# The instance label}
-    group: ${6:# The group that the instance should be marked under}
-    private_ip: ${7:# If C(true), the created Linode will have private networking enabled and assigned a private IPv4 address}
-    tags: ${8:# The tags that the instance should be marked under}
+    access_token: ${2:# The Linode API v4 access token}
+    authorized_keys: ${3:# A list of SSH public key parts to deploy for the root user}
+    group: ${4:# The group that the instance should be marked under}
+    image: ${5:# The image of the instance}
+    label: ${6:# The instance label}
+    private_ip: ${7:# If V(true), the created Linode will have private networking enabled and assigned a private IPv4 address}
+    region: ${8:# The region of the instance}
     root_pass: ${9:# The password for the root user}
-    authorized_keys: ${10:# A list of SSH public key parts to deploy for the root user}
-    state: ${11:# The desired instance state}
-    access_token: ${12:# The Linode API v4 access token}
-    stackscript_id: ${13:# The numeric ID of the StackScript to use when creating the instance}
-    stackscript_data: ${14:# An object containing arguments to any User Defined Fields present in the StackScript used when creating the instance}
+    stackscript_data: ${10:# An object containing arguments to any User Defined Fields present in the StackScript used when creating the instance}
+    stackscript_id: ${11:# The numeric ID of the StackScript to use when creating the instance}
+    state: ${12:# The desired instance state}
+    tags: ${13:# The tags that the instance should be marked under}
+    type: ${14:# The type of the instance}
   tags:
     - community
     - general

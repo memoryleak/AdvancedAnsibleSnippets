@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage export groups on Vexata VX100 storage arrays}
   community.general.vexata_eg:
-    name: ${2:# Export group name}
-    state: ${3:# Creates export group when present or delete when absent}
-    vg: ${4:# Volume group name}
-    ig: ${5:# Initiator group name}
+    array: ${2:# Vexata VX100 array hostname or IPv4 Address}
+    ig: ${3:# Initiator group name}
+    name: ${4:# Export group name}
+    password: ${5:# Vexata API user password}
     pg: ${6:# Port group name}
-    array: ${7:# Vexata VX100 array hostname or IPv4 Address}
+    state: ${7:# Creates export group when present or delete when absent}
     user: ${8:# Vexata API user with administrative privileges}
-    password: ${9:# Vexata API user password}
-    validate_certs: ${10:# Allows connection when SSL certificates are not valid}
+    validate_certs: ${9:# Allows connection when SSL certificates are not valid}
+    vg: ${10:# Volume group name}
   tags:
     - community
     - general

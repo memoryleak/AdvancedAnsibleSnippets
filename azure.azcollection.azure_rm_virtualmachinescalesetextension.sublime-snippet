@@ -1,33 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure Virtual Machine Scale Set (VMSS) extensions}
   azure.azcollection.azure_rm_virtualmachinescalesetextension:
-    resource_group: ${2:# Name of a resource group where the VMSS extension exists or will be created}
-    vmss_name: ${3:# The name of the virtual machine where the extension should be create or updated}
-    name: ${4:# Name of the VMSS extension}
-    location: ${5:# Valid Azure location}
-    publisher: ${6:# The name of the extension handler publisher}
-    type: ${7:# The type of the extension handler}
-    type_handler_version: ${8:# The type version of the extension handler}
-    settings: ${9:# A dictionary containing extension settings}
-    protected_settings: ${10:# A dictionary containing protected extension settings}
-    auto_upgrade_minor_version: ${11:# Whether the extension handler should be automatically upgraded across minor versions}
-    state: ${12:# Assert the state of the extension}
-    ad_user: ${13:# Active Directory username}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${5:# Controls the source of the credentials to use for authentication}
+    auto_upgrade_minor_version: ${6:# Whether the extension handler should be automatically upgraded across minor versions}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    location: ${10:# Valid Azure location}
+    log_mode: ${11:# Parent argument}
+    log_path: ${12:# Parent argument}
+    name: ${13:# Name of the VMSS extension}
     password: ${14:# Active Directory user password}
     profile: ${15:# Security profile found in ~/}
-    subscription_id: ${16:# Your Azure subscription Id}
-    client_id: ${17:# Azure client ID}
-    secret: ${18:# Azure client secret}
-    tenant: ${19:# Azure tenant ID}
-    cloud_environment: ${20:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${21:# Azure AD authority url}
-    cert_validation_mode: ${22:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${23:# Controls the source of the credentials to use for authentication}
-    api_profile: ${24:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${25:# Parent argument}
-    log_mode: ${26:# Parent argument}
-    x509_certificate_path: ${27:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${28:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    protected_settings: ${16:# A dictionary containing protected extension settings}
+    publisher: ${17:# The name of the extension handler publisher}
+    resource_group: ${18:# Name of a resource group where the VMSS extension exists or will be created}
+    secret: ${19:# Azure client secret}
+    settings: ${20:# A dictionary containing extension settings}
+    state: ${21:# Assert the state of the extension}
+    subscription_id: ${22:# Your Azure subscription Id}
+    tenant: ${23:# Azure tenant ID}
+    thumbprint: ${24:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    type: ${25:# The type of the extension handler}
+    type_handler_version: ${26:# The type version of the extension handler}
+    vmss_name: ${27:# The name of the virtual machine where the extension should be create or updated}
+    x509_certificate_path: ${28:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

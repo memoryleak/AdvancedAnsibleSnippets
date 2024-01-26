@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures a SQL Agent job}
   lowlydba.sqlserver.agent_job:
-    job: ${2:# The name of the target SQL Agent job}
+    category: ${2:# Category for the target SQL Agent job}
     description: ${3:# Description for the SQL Agent job}
-    category: ${4:# Category for the target SQL Agent job}
-    enabled: ${5:# Whether the SQL Agent job should be enabled or disabled}
-    owner_login: ${6:# The owning login for the database}
-    start_step_id: ${7:# What step number the job should begin with when run}
+    enabled: ${4:# Whether the SQL Agent job should be enabled or disabled}
+    force: ${5:# If I(force=true), any job categories will be created if they don't exist already}
+    job: ${6:# The name of the target SQL Agent job}
+    owner_login: ${7:# The owning login for the database}
     schedule: ${8:# The name of the schedule the job should be associated with}
-    force: ${9:# If I(force=true), any job categories will be created if they don't exist already}
-    sql_instance: ${10:# The SQL Server instance to modify}
+    sql_instance: ${9:# The SQL Server instance to modify}
+    sql_password: ${10:# Password for SQL Authentication}
     sql_username: ${11:# Username for SQL Authentication}
-    sql_password: ${12:# Password for SQL Authentication}
+    start_step_id: ${12:# What step number the job should begin with when run}
     state: ${13:# Whether or not the object should be C(present) or C(absent)}
   tags:
     - lowlydba

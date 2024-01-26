@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures storage profiles on Cisco UCS Manager}
   cisco.ucs.ucs_storage_profile:
-    state: ${2:# If C(present), will verify that the storage profile is present and will create if needed}
-    name: ${3:# The name of the storage profile}
-    description: ${4:# The user-defined description of the storage profile}
-    local_luns: ${5:# List of Local LUNs used by the storage profile}
+    description: ${2:# The user-defined description of the storage profile}
+    hostname: ${3:# IP address or hostname of Cisco UCS Manager}
+    local_luns: ${4:# List of Local LUNs used by the storage profile}
+    name: ${5:# The name of the storage profile}
     org_dn: ${6:# The distinguished name (dn) of the organization where the resource is assigned}
-    hostname: ${7:# IP address or hostname of Cisco UCS Manager}
-    username: ${8:# Username for Cisco UCS Manager authentication}
-    password: ${9:# Password for Cisco UCS Manager authentication}
-    port: ${10:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
-    use_ssl: ${11:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    use_proxy: ${12:# If C(no), will not use the proxy as defined by system environment variable}
-    proxy: ${13:# If use_proxy is no, specfies proxy to be used for connection}
+    password: ${7:# Password for Cisco UCS Manager authentication}
+    port: ${8:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    proxy: ${9:# If use_proxy is no, specfies proxy to be used for connection}
+    state: ${10:# If C(present), will verify that the storage profile is present and will create if needed}
+    use_proxy: ${11:# If C(no), will not use the proxy as defined by system environment variable}
+    use_ssl: ${12:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${13:# Username for Cisco UCS Manager authentication}
   tags:
     - cisco
     - ucs

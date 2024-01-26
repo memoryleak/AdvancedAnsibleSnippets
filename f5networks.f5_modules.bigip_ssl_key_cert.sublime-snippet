@@ -1,15 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Import/Delete SSL keys and certs from BIG-IP}
   f5networks.f5_modules.bigip_ssl_key_cert:
-    key_content: ${2:# Sets the contents of a key directly to the specified value}
-    state: ${3:# When C(present), ensures the key and/or cert is uploaded to the device}
-    key_name: ${4:# The name of the key}
-    passphrase: ${5:# Passphrase on key}
-    cert_content: ${6:# Sets the contents of a certificate directly to the specified value}
-    cert_name: ${7:# SSL certificate name}
-    issuer_cert: ${8:# Issuer certificate used for OCSP monitoring}
-    partition: ${9:# Device partition to manage resources on}
-    provider: ${10:# A dict object containing connection details}
+    cert_content: ${2:# Sets the contents of a certificate directly to the specified value}
+    cert_name: ${3:# SSL certificate name}
+    issuer_cert: ${4:# Issuer certificate used for OCSP monitoring}
+    key_content: ${5:# Sets the contents of a key directly to the specified value}
+    key_name: ${6:# The name of the key}
+    partition: ${7:# Device partition to manage resources on}
+    passphrase: ${8:# Passphrase on key}
+    provider: ${9:# A dict object containing connection details}
+    state: ${10:# When C(present), ensures the key and/or cert is uploaded to the device}
+    true_names: ${11:# When C(true), the module does not append C(}
   tags:
     - f5networks
     - f5_modules

@@ -1,23 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP configuration for EMS event destination}
   netapp.ontap.na_ontap_ems_destination:
-    state: ${2:# Whether the destination should be present or not}
-    name: ${3:# Name of the EMS destination}
-    type: ${4:# Type of the EMS destination}
+    ca: ${2:# Name of the CA certificate}
+    cert_filepath: ${3:# path to SSL client cert file (}
+    certificate: ${4:# Name of the certificate}
     destination: ${5:# Destination - content depends on the type}
-    filters: ${6:# List of filters that destination is linked to}
-    hostname: ${7:# The hostname or IP address of the ONTAP instance}
-    username: ${8:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${9:# Password for the specified user}
-    cert_filepath: ${10:# path to SSL client cert file (}
-    key_filepath: ${11:# path to SSL client key file}
-    https: ${12:# Enable and disable https}
-    validate_certs: ${13:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${14:# Override the default port (80 or 443) with this port}
-    ontapi: ${15:# The ontap api version to use}
-    use_rest: ${16:# Whether to use REST or ZAPI}
-    feature_flags: ${17:# Enable or disable a new feature}
-    force_ontap_version: ${18:# Override the cluster ONTAP version when using REST}
+    feature_flags: ${6:# Enable or disable a new feature}
+    filters: ${7:# List of filters that destination is linked to}
+    force_ontap_version: ${8:# Override the cluster ONTAP version when using REST}
+    hostname: ${9:# The hostname or IP address of the ONTAP instance}
+    http_port: ${10:# Override the default port (80 or 443) with this port}
+    https: ${11:# Enable and disable https}
+    key_filepath: ${12:# path to SSL client key file}
+    name: ${13:# Name of the EMS destination}
+    ontapi: ${14:# The ontap api version to use}
+    password: ${15:# Password for the specified user}
+    state: ${16:# Whether the destination should be present or not}
+    type: ${17:# Type of the EMS destination}
+    use_rest: ${18:# Whether to use REST or ZAPI}
+    username: ${19:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${20:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

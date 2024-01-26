@@ -1,31 +1,32 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage Swift container}
+  <content><![CDATA[- name: ${1:Manage a Swift container}
   openstack.cloud.object_container:
-    container: ${2:# Name of a container in Swift}
-    metadata: ${3:# Key/value pairs to be set as metadata on the container}
-    keys: ${4:# Keys from 'metadata' to be deleted}
-    delete_with_all_objects: ${5:# Whether the container should be deleted with all objects or not}
-    state: ${6:# Whether resource should be present or absent}
-    cloud: ${7:# Named cloud or cloud config to operate against}
-    auth: ${8:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${9:# Name of the auth plugin to use}
-    region_name: ${10:# Name of the region}
-    wait: ${11:# Should ansible wait until the requested resource is complete}
-    timeout: ${12:# How long should ansible wait for the requested resource}
-    api_timeout: ${13:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${14:# Whether or not SSL API requests should be verified}
-    ca_cert: ${15:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${16:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${17:# A path to a client key to use as part of the SSL transaction}
-    interface: ${18:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${19:# Ignored}
-    sdk_log_path: ${20:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${21:# Log level of the OpenStackSDK}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    delete_metadata_keys: ${9:# Keys from I(metadata) to be deleted}
+    delete_with_all_objects: ${10:# Whether the container should be deleted recursively, i}
+    interface: ${11:# Endpoint URL type to fetch from the service catalog}
+    metadata: ${12:# Key value pairs to be set as metadata on the container}
+    name: ${13:# Name (and ID) of a Swift container}
+    read_ACL: ${14:# The ACL that grants read access}
+    region_name: ${15:# Name of the region}
+    sdk_log_level: ${16:# Log level of the OpenStackSDK}
+    sdk_log_path: ${17:# Path to the logfile of the OpenStackSDK}
+    state: ${18:# Whether the object should be C(present) or C(absent)}
+    timeout: ${19:# How long should ansible wait for the requested resource}
+    validate_certs: ${20:# Whether or not SSL API requests should be verified}
+    wait: ${21:# Should ansible wait until the requested resource is complete}
+    write_ACL: ${22:# The ACL that grants write access}
   tags:
     - openstack
     - cloud
     - object_container]]></content>
   <tabTrigger>openstack.cloud.object_container</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage Swift container</description>
+  <description>Manage a Swift container</description>
 </snippet>

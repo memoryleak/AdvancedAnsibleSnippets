@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP publickey configuration}
   netapp.ontap.na_ontap_publickey:
-    state: ${2:# Whether the specified publickey should exist or not}
-    account: ${3:# The name of the user account}
+    account: ${2:# The name of the user account}
+    cert_filepath: ${3:# path to SSL client cert file (}
     comment: ${4:# Optional comment for the public key}
     delete_all: ${5:# If index is not present, with state=absent, delete all public key for this user account}
-    index: ${6:# Index number for the public key}
-    public_key: ${7:# The public key}
-    vserver: ${8:# The name of the vserver to use}
-    hostname: ${9:# The hostname or IP address of the ONTAP instance}
-    username: ${10:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${11:# Password for the specified user}
-    cert_filepath: ${12:# path to SSL client cert file (}
-    key_filepath: ${13:# path to SSL client key file}
-    https: ${14:# Enable and disable https}
-    validate_certs: ${15:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${16:# Override the default port (80 or 443) with this port}
-    ontapi: ${17:# The ontap api version to use}
-    use_rest: ${18:# Whether to use REST or ZAPI}
-    feature_flags: ${19:# Enable or disable a new feature}
-    force_ontap_version: ${20:# Override the cluster ONTAP version when using REST}
+    feature_flags: ${6:# Enable or disable a new feature}
+    force_ontap_version: ${7:# Override the cluster ONTAP version when using REST}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    http_port: ${9:# Override the default port (80 or 443) with this port}
+    https: ${10:# Enable and disable https}
+    index: ${11:# Index number for the public key}
+    key_filepath: ${12:# path to SSL client key file}
+    ontapi: ${13:# The ontap api version to use}
+    password: ${14:# Password for the specified user}
+    public_key: ${15:# The public key}
+    state: ${16:# Whether the specified publickey should exist or not}
+    use_rest: ${17:# Whether to use REST or ZAPI}
+    username: ${18:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${19:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${20:# The name of the vserver to use}
   tags:
     - netapp
     - ontap

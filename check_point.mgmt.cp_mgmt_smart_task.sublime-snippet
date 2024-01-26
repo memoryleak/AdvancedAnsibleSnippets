@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages smart-task objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_smart_task:
+    action: ${2:# The action to be run when the trigger is fired}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    color: ${4:# Color of the object}
+    comments: ${5:# Comments string}
+    custom_data: ${6:# Per SmartTask custom data in JSON format}
+    description: ${7:# Description of the SmartTask's functionality and options}
+    details_level: ${8:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    enabled: ${9:# Whether the SmartTask is enabled and will run when triggered}
+    fail_open: ${10:# If the action fails to execute, whether to treat the execution failure as an error, or continue}
+    ignore_errors: ${11:# Apply changes ignoring errors}
+    ignore_warnings: ${12:# Apply changes ignoring warnings}
+    name: ${13:# Object name}
+    state: ${14:# State of the access rule (present or absent)}
+    tags: ${15:# Collection of tag identifiers}
+    trigger: ${16:# Trigger type associated with the SmartTask}
+    version: ${17:# Version of checkpoint}
+    wait_for_task: ${18:# Wait for the task to end}
+    wait_for_task_timeout: ${19:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_smart_task]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_smart_task</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages smart-task objects on Checkpoint over Web Services API</description>
+</snippet>

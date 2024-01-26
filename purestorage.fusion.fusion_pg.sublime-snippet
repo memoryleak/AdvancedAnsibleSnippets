@@ -1,16 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage placement groups in Pure Storage Fusion}
   purestorage.fusion.fusion_pg:
-    name: ${2:# The name of the placement group}
-    display_name: ${3:# The human name of the placement group}
-    state: ${4:# Define whether the placement group should exist or not}
-    tenant: ${5:# The name of the tenant}
-    tenant_space: ${6:# The name of the tenant space}
-    region: ${7:# The name of the region the availability zone is in}
-    availability_zone: ${8:# The name of the availability zone to create the placement group in}
+    access_token: ${2:# Access token for Fusion Service}
+    array: ${3:# Array to place the placement group to}
+    availability_zone: ${4:# The name of the availability zone the placement group is in}
+    destroy_snapshots_on_delete: ${5:# Before deleting placement group, snapshots within the placement group will be deleted}
+    display_name: ${6:# The human name of the placement group}
+    issuer_id: ${7:# Application ID from Pure1 Registration page}
+    name: ${8:# The name of the placement group}
     placement_engine: ${9:# For workload placement recommendations from Pure1 Meta, use C(pure1meta)}
-    key_file: ${10:# Path to the private key file}
-    app_id: ${11:# Application ID from Pure1 Registration page}
+    private_key_file: ${10:# Path to the private key file}
+    private_key_password: ${11:# Password of the encrypted private key file}
+    region: ${12:# The name of the region the availability zone is in}
+    state: ${13:# Define whether the placement group should exist or not}
+    storage_service: ${14:# The name of the storage service to create the placement group for}
+    tenant: ${15:# The name of the tenant}
+    tenant_space: ${16:# The name of the tenant space}
   tags:
     - purestorage
     - fusion

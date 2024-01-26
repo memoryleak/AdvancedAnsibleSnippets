@@ -1,21 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller notification}
   awx.awx.notification_template:
-    name: ${2:# The name of the notification}
-    new_name: ${3:# Setting this option will change the existing name (looked up via the name field}
-    copy_from: ${4:# Name or id to copy the notification from}
-    description: ${5:# The description of the notification}
-    organization: ${6:# The organization the notification belongs to}
-    notification_type: ${7:# The type of notification to be sent}
-    notification_configuration: ${8:# The notification configuration file}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    copy_from: ${7:# Name or id to copy the notification from}
+    description: ${8:# The description of the notification}
     messages: ${9:# Optional custom messages for notification template}
-    state: ${10:# Desired state of the resource}
-    controller_host: ${11:# URL to your Automation Platform Controller instance}
-    controller_username: ${12:# Username for your controller instance}
-    controller_password: ${13:# Password for your controller instance}
-    controller_oauthtoken: ${14:# The OAuth token to use}
-    validate_certs: ${15:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${16:# Path to the controller config file}
+    name: ${10:# The name of the notification}
+    new_name: ${11:# Setting this option will change the existing name (looked up via the name field}
+    notification_configuration: ${12:# The notification configuration file}
+    notification_type: ${13:# The type of notification to be sent}
+    organization: ${14:# The organization name, ID, or named URL the notification belongs to}
+    request_timeout: ${15:# Specify the timeout Ansible should use in requests to the controller host}
+    state: ${16:# Desired state of the resource}
+    validate_certs: ${17:# Whether to allow insecure connections to AWX}
   tags:
     - awx
     - awx

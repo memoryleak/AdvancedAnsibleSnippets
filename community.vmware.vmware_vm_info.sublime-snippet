@@ -1,19 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Return basic info pertaining to a VMware machine guest}
   community.vmware.vmware_vm_info:
-    vm_type: ${2:# If set to C(vm), then information are gathered for virtual machines only}
-    show_attribute: ${3:# Attributes related to VM guest shown in information only when this is set C(true)}
-    folder: ${4:# Specify a folder location of VMs to gather information from}
-    show_tag: ${5:# Tags related to virtual machine are shown if set to C(True)}
-    show_allocated: ${6:# Allocated storage in byte and memory in MB are shown if it set to True}
-    vm_name: ${7:# Name of the virtual machine to get related configurations information from}
-    hostname: ${8:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${9:# The username of the vSphere vCenter or ESXi server}
-    password: ${10:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${11:# Allows connection when SSL certificates are not valid}
-    port: ${12:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${13:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${14:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    folder: ${2:# Specify a folder location of VMs to gather information from}
+    hostname: ${3:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    password: ${4:# The password of the vSphere vCenter or ESXi server}
+    port: ${5:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${6:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${7:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    show_allocated: ${8:# Allocated storage in byte and memory in MB are shown if it set to True}
+    show_attribute: ${9:# Attributes related to VM guest shown in information only when this is set V(true)}
+    show_cluster: ${10:# Tags virtual machine's cluster is shown if set to V(true)}
+    show_datacenter: ${11:# Tags virtual machine's datacenter is shown if set to V(true)}
+    show_datastore: ${12:# Tags virtual machine's datastore is shown if set to V(true)}
+    show_esxi_hostname: ${13:# Tags virtual machine's ESXi host is shown if set to V(true)}
+    show_folder: ${14:# Show folders}
+    show_mac_address: ${15:# Tags virtual machine's mac address is shown if set to V(true)}
+    show_net: ${16:# Tags virtual machine's network is shown if set to V(true)}
+    show_resource_pool: ${17:# Tags virtual machine's resource pool is shown if set to V(true)}
+    show_tag: ${18:# Tags related to virtual machine are shown if set to V(true)}
+    username: ${19:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${20:# Allows connection when SSL certificates are not valid}
+    vm_name: ${21:# Name of the virtual machine to get related configurations information from}
+    vm_type: ${22:# If set to V(vm), then information are gathered for virtual machines only}
   tags:
     - community
     - vmware

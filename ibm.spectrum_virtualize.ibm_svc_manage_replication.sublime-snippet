@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module manages remote copies (or rcrelationship) on IBM Spectrum Virtualize family storage systems}
   ibm.spectrum_virtualize.ibm_svc_manage_replication:
-    name: ${2:# Specifies the name to assign to the new remote copy relationship or to operate on the existing remote copy}
-    state: ${3:# Creates or updates (C(present)), removes (C(absent)) a remote copy relationship}
-    clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
-    domain: ${5:# Domain for the Spectrum Virtualize storage system}
-    username: ${6:# REST API username for the Spectrum Virtualize storage system}
-    password: ${7:# REST API password for the Spectrum Virtualize storage system}
-    token: ${8:# The authentication token to verify a user on the Spectrum Virtualize storage system}
-    copytype: ${9:# Specifies the mirror type of the remote copy}
+    aux: ${2:# Specifies the auxiliary volume name when creating a remote copy}
+    clustername: ${3:# The hostname or management IP of the Spectrum Virtualize storage system}
+    consistgrp: ${4:# Specifies a consistency group that this relationship will join}
+    copytype: ${5:# Specifies the mirror type of the remote copy}
+    cyclingperiod: ${6:# Specifies the cycle period in seconds}
+    domain: ${7:# Domain for the Spectrum Virtualize storage system}
+    force: ${8:# Specifies that the relationship must be deleted even if it results in the secondary volume containing inconsistent data}
+    log_path: ${9:# Path of debug log file}
     master: ${10:# Specifies the master volume name when creating a remote copy}
-    aux: ${11:# Specifies the auxiliary volume name when creating a remote copy}
-    cyclingperiod: ${12:# Specifies the cycle period in seconds}
-    remotecluster: ${13:# Specifies the name of remote cluster when creating a remote copy}
-    sync: ${14:# Specifies whether to create a synchronized relationship}
-    force: ${15:# Specifies that the relationship must be deleted even if it results in the secondary volume containing inconsistent data}
-    consistgrp: ${16:# Specifies a consistency group that this relationship will join}
-    noconsistgrp: ${17:# Specifies whether to remove the specified relationship from a consistency group, making the relationship a stand-alone relationship}
-    validate_certs: ${18:# Validates certification}
-    log_path: ${19:# Path of debug log file}
+    name: ${11:# Specifies the name to assign to the new remote copy relationship or to operate on the existing remote copy}
+    noconsistgrp: ${12:# Specifies whether to remove the specified relationship from a consistency group, making the relationship a stand-alone relationship}
+    password: ${13:# REST API password for the Spectrum Virtualize storage system}
+    remotecluster: ${14:# Specifies the name of remote cluster when creating a remote copy}
+    state: ${15:# Creates or updates (C(present)), removes (C(absent)) a remote copy relationship}
+    sync: ${16:# Specifies whether to create a synchronized relationship}
+    token: ${17:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    username: ${18:# REST API username for the Spectrum Virtualize storage system}
+    validate_certs: ${19:# Validates certification}
   tags:
     - ibm
     - spectrum_virtualize

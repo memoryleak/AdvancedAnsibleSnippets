@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates or removes contact roles from NetBox}
   netbox.netbox.netbox_contact_role:
-    data: ${2:# Defines the contact role configuration}
-    netbox_url: ${3:# The URL of the NetBox instance}
+    cert: ${2:# Certificate path}
+    data: ${3:# Defines the contact role configuration}
     netbox_token: ${4:# The NetBox API token}
-    state: ${5:# The state of the object}
+    netbox_url: ${5:# The URL of the NetBox instance}
     query_params: ${6:# This can be used to override the specified values in ALLOWED_QUERY_PARAMS that are defined}
-    validate_certs: ${7:# If C(no), SSL certificates will not be validated}
-    cert: ${8:# Certificate path}
+    state: ${7:# The state of the object}
+    validate_certs: ${8:# If C(no), SSL certificates will not be validated}
   tags:
     - netbox
     - netbox

@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage docker configs}
   community.docker.docker_config:
-    data: ${2:# The value of the config}
-    data_is_b64: ${3:# If set to C(true), the data is assumed to be Base64 encoded and will be decoded before being used}
-    data_src: ${4:# The file on the target from which to read the config}
-    labels: ${5:# A map of key:value meta data, where both the I(key) and I(value) are expected to be a string}
-    force: ${6:# Use with state C(present) to always remove and recreate an existing config}
-    rolling_versions: ${7:# If set to C(true), configs are created with an increasing version number appended to their name}
-    versions_to_keep: ${8:# When using I(rolling_versions), the number of old versions of the config to keep}
-    name: ${9:# The name of the config}
-    state: ${10:# Set to C(present), if the config should exist, and C(absent), if it should not}
-    template_driver: ${11:# Set to C(golang) to use a Go template in I(data) or a Go template file in I(data_src)}
-    docker_host: ${12:# The URL or Unix socket path used to connect to the Docker API}
-    tls_hostname: ${13:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    api_version: ${14:# The version of the Docker API running on the Docker Host}
-    timeout: ${15:# The maximum amount of time in seconds to wait on a response from the API}
-    ca_cert: ${16:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
-    client_cert: ${17:# Path to the client's TLS certificate file}
-    client_key: ${18:# Path to the client's TLS key file}
-    ssl_version: ${19:# Provide a valid SSL version number}
-    tls: ${20:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    ca_cert: ${3:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${4:# Path to the client's TLS certificate file}
+    client_key: ${5:# Path to the client's TLS key file}
+    data: ${6:# The value of the config}
+    data_is_b64: ${7:# If set to V(true), the data is assumed to be Base64 encoded and will be decoded before being used}
+    data_src: ${8:# The file on the target from which to read the config}
+    debug: ${9:# Debug mode}
+    docker_host: ${10:# The URL or Unix socket path used to connect to the Docker API}
+    force: ${11:# Use with O(state=present) to always remove and recreate an existing config}
+    labels: ${12:# A map of key:value meta data, where both the C(key) and C(value) are expected to be a string}
+    name: ${13:# The name of the config}
+    rolling_versions: ${14:# If set to V(true), configs are created with an increasing version number appended to their name}
+    ssl_version: ${15:# Provide a valid SSL version number}
+    state: ${16:# Set to V(present), if the config should exist, and V(absent), if it should not}
+    template_driver: ${17:# Set to V(golang) to use a Go template in O(data) or a Go template file in O(data_src)}
+    timeout: ${18:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${19:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${20:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
     use_ssh_client: ${21:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
     validate_certs: ${22:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
-    debug: ${23:# Debug mode}
+    versions_to_keep: ${23:# When using O(rolling_versions), the number of old versions of the config to keep}
   tags:
     - community
     - docker

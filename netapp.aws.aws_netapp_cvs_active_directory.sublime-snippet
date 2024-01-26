@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp AWS CloudVolumes Service Manage Active Directory}
   netapp.aws.aws_netapp_cvs_active_directory:
-    state: ${2:# Whether the specified ActiveDirectory should exist or not}
-    region: ${3:# The region to which the Active Directory credentials are associated}
-    domain: ${4:# Name of the Active Directory domain}
-    DNS: ${5:# DNS server address for the Active Directory domain}
-    netBIOS: ${6:# NetBIOS name of the server}
-    username: ${7:# Username of the Active Directory domain administrator}
+    DNS: ${2:# DNS server address for the Active Directory domain}
+    api_key: ${3:# The access key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API}
+    api_url: ${4:# The url to the AWSCVS Web Services Proxy or Embedded Web Services API}
+    domain: ${5:# Name of the Active Directory domain}
+    feature_flags: ${6:# Enable or disable a new feature}
+    netBIOS: ${7:# NetBIOS name of the server}
     password: ${8:# Password of the Active Directory domain administrator}
-    api_key: ${9:# The access key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API}
+    region: ${9:# The region to which the Active Directory credentials are associated}
     secret_key: ${10:# The secret_key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API}
-    api_url: ${11:# The url to the AWSCVS Web Services Proxy or Embedded Web Services API}
-    validate_certs: ${12:# Should https certificates be validated?}
-    feature_flags: ${13:# Enable or disable a new feature}
+    state: ${11:# Whether the specified ActiveDirectory should exist or not}
+    username: ${12:# Username of the Active Directory domain administrator}
+    validate_certs: ${13:# Should https certificates be validated?}
   tags:
     - netapp
     - aws

@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages remote copies (or rcrelationship) on IBM Storage Virtualize family systems}
+  ibm.storage_virtualize.ibm_svc_manage_replication:
+    aux: ${2:# Specifies the auxiliary volume name when creating a remote copy}
+    clustername: ${3:# The hostname or management IP of the Storage Virtualize system}
+    consistgrp: ${4:# Specifies a consistency group that this relationship will join}
+    copytype: ${5:# Specifies the mirror type of the remote copy}
+    cyclingperiod: ${6:# Specifies the cycle period in seconds}
+    domain: ${7:# Domain for the Storage Virtualize system}
+    force: ${8:# Specifies that the relationship must be deleted even if it results in the secondary volume containing inconsistent data}
+    log_path: ${9:# Path of debug log file}
+    master: ${10:# Specifies the master volume name when creating a remote copy}
+    name: ${11:# Specifies the name to assign to the new remote copy relationship or to operate on the existing remote copy}
+    noconsistgrp: ${12:# Specifies whether to remove the specified relationship from a consistency group, making the relationship a stand-alone relationship}
+    password: ${13:# REST API password for the Storage Virtualize system}
+    remotecluster: ${14:# Specifies the name of remote cluster when creating a remote copy}
+    state: ${15:# Creates or updates (C(present)), removes (C(absent)) a remote copy relationship}
+    sync: ${16:# Specifies whether to create a synchronized relationship}
+    token: ${17:# The authentication token to verify a user on the Storage Virtualize system}
+    username: ${18:# REST API username for the Storage Virtualize system}
+    validate_certs: ${19:# Validates certification}
+  tags:
+    - ibm
+    - storage_virtualize
+    - ibm_svc_manage_replication]]></content>
+  <tabTrigger>ibm.storage_virtualize.ibm_svc_manage_replication</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages remote copies (or rcrelationship) on IBM Storage Virtualize family systems</description>
+</snippet>

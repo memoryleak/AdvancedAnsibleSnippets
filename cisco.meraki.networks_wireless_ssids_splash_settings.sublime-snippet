@@ -1,0 +1,49 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for networks _wireless _ssids _splash _settings}
+  cisco.meraki.networks_wireless_ssids_splash_settings:
+    allowSimultaneousLogins: ${2:# Whether or not to allow simultaneous logins from different devices}
+    billing: ${3:# Details associated with billing splash}
+    blockAllTrafficBeforeSignOn: ${4:# How restricted allowing traffic should be}
+    controllerDisconnectionBehavior: ${5:# How login attempts should be handled when the controller is unreachable}
+    guestSponsorship: ${6:# Details associated with guest sponsored splash}
+    meraki_action_batch_retry_wait_time: ${7:# meraki_action_batch_retry_wait_time (integer), action batch concurrency error retry wait time}
+    meraki_api_key: ${8:# meraki_api_key (string), API key generated in dashboard; can also be set as an environment variable MERAKI_DASHBOARD_API_KEY}
+    meraki_base_url: ${9:# meraki_base_url (string), preceding all endpoint resources}
+    meraki_be_geo_id: ${10:# meraki_be_geo_id (string), optional partner identifier for API usage tracking; can also be set as an environment variable BE_GEO_ID}
+    meraki_caller: ${11:# meraki_caller (string), optional identifier for API usage tracking; can also be set as an environment variable MERAKI_PYTHON_SDK_CALLER}
+    meraki_certificate_path: ${12:# meraki_certificate_path (string), path for TLS/SSL certificate verification if behind local proxy}
+    meraki_inherit_logging_config: ${13:# meraki_inherit_logging_config (boolean), Inherits your own logger instance}
+    meraki_log_file_prefix: ${14:# meraki_log_file_prefix (string), log file name appended with date and timestamp}
+    meraki_log_path: ${15:# log_path (string), path to output log; by default, working directory of script if not specified}
+    meraki_maximum_retries: ${16:# meraki_maximum_retries (integer), retry up to this many times when encountering 429s or other server-side errors}
+    meraki_nginx_429_retry_wait_time: ${17:# meraki_nginx_429_retry_wait_time (integer), Nginx 429 retry wait time}
+    meraki_output_log: ${18:# meraki_output_log (boolean), create an output log file?}
+    meraki_print_console: ${19:# meraki_print_console (boolean), print logging output to console?}
+    meraki_requests_proxy: ${20:# meraki_requests_proxy (string), proxy server and port, if needed, for HTTPS}
+    meraki_retry_4xx_error: ${21:# meraki_retry_4xx_error (boolean), retry if encountering other 4XX error (besides 429)?}
+    meraki_retry_4xx_error_wait_time: ${22:# meraki_retry_4xx_error_wait_time (integer), other 4XX error retry wait time}
+    meraki_simulate: ${23:# meraki_simulate (boolean), simulate POST/PUT/DELETE calls to prevent changes?}
+    meraki_single_request_timeout: ${24:# meraki_single_request_timeout (integer), maximum number of seconds for each API call}
+    meraki_suppress_logging: ${25:# meraki_suppress_logging (boolean), disable all logging? you're on your own then!}
+    meraki_use_iterator_for_get_pages: ${26:# meraki_use_iterator_for_get_pages (boolean), list* methods will return an iterator with each object instead of a complete list with all items}
+    meraki_wait_on_rate_limit: ${27:# meraki_wait_on_rate_limit (boolean), retry if 429 rate limit error encountered?}
+    networkId: ${28:# NetworkId path parameter}
+    number: ${29:# Number path parameter}
+    redirectUrl: ${30:# The custom redirect URL where the users will go after the splash page}
+    sentryEnrollment: ${31:# Systems Manager sentry enrollment splash settings}
+    splashImage: ${32:# The image used in the splash page}
+    splashLogo: ${33:# The logo used in the splash page}
+    splashPrepaidFront: ${34:# The prepaid front image used in the splash page}
+    splashTimeout: ${35:# Splash timeout in minutes}
+    splashUrl: ${36:# Optional The custom splash URL of the click-through splash page}
+    useRedirectUrl: ${37:# The Boolean indicating whether the the user will be redirected to the custom redirect URL after the splash page}
+    useSplashUrl: ${38:# Optional Boolean indicating whether the users will be redirected to the custom splash url}
+    welcomeMessage: ${39:# The welcome message for the users on the splash page}
+  tags:
+    - cisco
+    - meraki
+    - networks_wireless_ssids_splash_settings]]></content>
+  <tabTrigger>cisco.meraki.networks_wireless_ssids_splash_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for networks _wireless _ssids _splash _settings</description>
+</snippet>

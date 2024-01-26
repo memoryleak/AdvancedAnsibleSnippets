@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Adds hosts to or removes them from IBM Spectrum Accelerate Family storage systems}
   community.general.ibm_sa_host:
-    host: ${2:# Host name}
-    state: ${3:# Host state}
-    cluster: ${4:# The name of the cluster to include the host}
-    domain: ${5:# The domains the cluster will be attached to}
+    cluster: ${2:# The name of the cluster to include the host}
+    domain: ${3:# The domains the cluster will be attached to}
+    endpoints: ${4:# The hostname or management IP of Spectrum Accelerate storage system}
+    host: ${5:# Host name}
     iscsi_chap_name: ${6:# The host's CHAP name identifier}
     iscsi_chap_secret: ${7:# The password of the initiator used to authenticate to the system when CHAP is enable}
-    username: ${8:# Management user on the spectrum accelerate storage system}
-    password: ${9:# Password for username on the spectrum accelerate storage system}
-    endpoints: ${10:# The hostname or management IP of Spectrum Accelerate storage system}
+    password: ${8:# Password for username on the spectrum accelerate storage system}
+    state: ${9:# Host state}
+    username: ${10:# Management user on the spectrum accelerate storage system}
   tags:
     - community
     - general

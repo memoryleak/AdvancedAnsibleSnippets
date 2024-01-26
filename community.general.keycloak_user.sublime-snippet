@@ -1,0 +1,43 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and configure a user in Keycloak}
+  community.general.keycloak_user:
+    access: ${2:# list user access}
+    attributes: ${3:# List of user attributes}
+    auth_client_id: ${4:# OpenID Connect C(client_id) to authenticate to the API with}
+    auth_client_secret: ${5:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
+    auth_keycloak_url: ${6:# URL to the Keycloak instance}
+    auth_password: ${7:# Password to authenticate for API access with}
+    auth_realm: ${8:# Keycloak realm name to authenticate to for API access}
+    auth_username: ${9:# Username to authenticate for API access with}
+    client_consents: ${10:# Client Authenticator Type}
+    connection_timeout: ${11:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    credentials: ${12:# User credentials}
+    disableable_credential_types: ${13:# list user Credential Type}
+    email: ${14:# User email}
+    email_verified: ${15:# Check the validity of user email}
+    enabled: ${16:# Enabled user}
+    federated_identities: ${17:# List of IDPs of user}
+    federation_link: ${18:# Federation Link}
+    first_name: ${19:# The user's first name}
+    force: ${20:# If V(true), allows to remove user and recreate it}
+    groups: ${21:# List of groups for the user}
+    http_agent: ${22:# Configures the HTTP User-Agent header}
+    id: ${23:# ID of the user on the Keycloak server if known}
+    last_name: ${24:# The user's last name}
+    origin: ${25:# user origin}
+    realm: ${26:# The name of the realm in which is the client}
+    required_actions: ${27:# RequiredActions user Auth}
+    self: ${28:# user self administration}
+    service_account_client_id: ${29:# Description of the client Application}
+    state: ${30:# Control whether the user should exists or not}
+    token: ${31:# Authentication token for Keycloak API}
+    username: ${32:# Username for the user}
+    validate_certs: ${33:# Verify TLS certificates (do not disable this in production)}
+  tags:
+    - community
+    - general
+    - keycloak_user]]></content>
+  <tabTrigger>community.general.keycloak_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and configure a user in Keycloak</description>
+</snippet>

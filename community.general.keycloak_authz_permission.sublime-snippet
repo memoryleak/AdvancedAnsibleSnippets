@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Allows administration of Keycloak client authorization permissions via Keycloak API}
+  community.general.keycloak_authz_permission:
+    auth_client_id: ${2:# OpenID Connect C(client_id) to authenticate to the API with}
+    auth_client_secret: ${3:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
+    auth_keycloak_url: ${4:# URL to the Keycloak instance}
+    auth_password: ${5:# Password to authenticate for API access with}
+    auth_realm: ${6:# Keycloak realm name to authenticate to for API access}
+    auth_username: ${7:# Username to authenticate for API access with}
+    client_id: ${8:# The clientId of the keycloak client that should have the authorization scope}
+    connection_timeout: ${9:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    decision_strategy: ${10:# The decision strategy to use with this permission}
+    description: ${11:# The description of the authorization permission}
+    http_agent: ${12:# Configures the HTTP User-Agent header}
+    name: ${13:# Name of the authorization permission to create}
+    permission_type: ${14:# The type of authorization permission}
+    policies: ${15:# Policy names to attach to this permission}
+    realm: ${16:# The name of the Keycloak realm the Keycloak client is in}
+    resources: ${17:# Resource names to attach to this permission}
+    scopes: ${18:# Scope names to attach to this permission}
+    state: ${19:# State of the authorization permission}
+    token: ${20:# Authentication token for Keycloak API}
+    validate_certs: ${21:# Verify TLS certificates (do not disable this in production)}
+  tags:
+    - community
+    - general
+    - keycloak_authz_permission]]></content>
+  <tabTrigger>community.general.keycloak_authz_permission</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Allows administration of Keycloak client authorization permissions via Keycloak API</description>
+</snippet>

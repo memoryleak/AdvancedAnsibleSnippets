@@ -1,35 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure Public IP Addresses}
   azure.azcollection.azure_rm_publicipaddress:
-    resource_group: ${2:# Name of resource group with which the Public IP is associated}
-    allocation_method: ${3:# Control whether the assigned Public IP remains permanently assigned to the object}
-    domain_name: ${4:# The customizable portion of the FQDN assigned to public IP address}
-    name: ${5:# Name of the Public IP}
-    state: ${6:# Assert the state of the Public IP}
-    location: ${7:# Valid Azure location}
-    sku: ${8:# The public IP address SKU}
-    ip_tags: ${9:# List of IpTag associated with the public IP address}
-    idle_timeout: ${10:# Idle timeout in minutes}
-    version: ${11:# The public IP address version}
-    zones: ${12:# A list of availability zones denoting the IP allocated for the resource needs to come from}
-    ad_user: ${13:# Active Directory username}
-    password: ${14:# Active Directory user password}
-    profile: ${15:# Security profile found in ~/}
-    subscription_id: ${16:# Your Azure subscription Id}
-    client_id: ${17:# Azure client ID}
-    secret: ${18:# Azure client secret}
-    tenant: ${19:# Azure tenant ID}
-    cloud_environment: ${20:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${21:# Azure AD authority url}
-    cert_validation_mode: ${22:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${23:# Controls the source of the credentials to use for authentication}
-    api_profile: ${24:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${25:# Parent argument}
-    log_mode: ${26:# Parent argument}
-    x509_certificate_path: ${27:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${28:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${29:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${30:# Use to control if tags field is canonical or just appends to existing tags}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    allocation_method: ${4:# Control whether the assigned Public IP remains permanently assigned to the object}
+    api_profile: ${5:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${6:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${7:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    domain_name: ${11:# The customizable portion of the FQDN assigned to public IP address}
+    idle_timeout: ${12:# Idle timeout in minutes}
+    ip_tags: ${13:# List of IpTag associated with the public IP address}
+    location: ${14:# Valid Azure location}
+    log_mode: ${15:# Parent argument}
+    log_path: ${16:# Parent argument}
+    name: ${17:# Name of the Public IP}
+    password: ${18:# Active Directory user password}
+    profile: ${19:# Security profile found in ~/}
+    resource_group: ${20:# Name of resource group with which the Public IP is associated}
+    secret: ${21:# Azure client secret}
+    sku: ${22:# The public IP address SKU}
+    state: ${23:# Assert the state of the Public IP}
+    subscription_id: ${24:# Your Azure subscription Id}
+    tags: ${25:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${26:# Azure tenant ID}
+    thumbprint: ${27:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    version: ${28:# The public IP address version}
+    x509_certificate_path: ${29:# Path to the X509 certificate used to create the service principal in PEM format}
+    zones: ${30:# A list of availability zones denoting the IP allocated for the resource needs to come from}
   tags:
     - azure
     - azcollection

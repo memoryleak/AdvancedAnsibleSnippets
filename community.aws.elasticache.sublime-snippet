@@ -1,30 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage cache clusters in Amazon ElastiCache}
   community.aws.elasticache:
-    state: ${2:# C(absent) or C(present) are idempotent actions that will create or destroy a cache cluster as needed}
-    name: ${3:# The cache cluster identifier}
-    engine: ${4:# Name of the cache engine to be used}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
     cache_engine_version: ${5:# The version number of the cache engine}
-    node_type: ${6:# The compute and memory capacity of the nodes in the cache cluster}
-    num_nodes: ${7:# The initial number of cache nodes that the cache cluster will have}
-    cache_port: ${8:# The port number on which each of the cache nodes will accept connections}
-    cache_parameter_group: ${9:# The name of the cache parameter group to associate with this cache cluster}
-    cache_subnet_group: ${10:# The subnet group name to associate with}
-    security_group_ids: ${11:# A list of VPC security group IDs to associate with this cache cluster}
-    cache_security_groups: ${12:# A list of cache security group names to associate with this cache cluster}
-    zone: ${13:# The EC2 Availability Zone in which the cache cluster will be created}
-    wait: ${14:# Wait for cache cluster result before returning}
-    hard_modify: ${15:# Whether to destroy and recreate an existing cache cluster if necessary in order to modify its state}
-    access_key: ${16:# AWS access key ID}
-    secret_key: ${17:# AWS secret access key}
-    session_token: ${18:# AWS STS session token for use with temporary credentials}
-    profile: ${19:# A named AWS profile to use for authentication}
-    endpoint_url: ${20:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${21:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${22:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${23:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${24:# Use a C(botocore}
-    region: ${25:# The AWS region to use}
+    cache_parameter_group: ${6:# The name of the cache parameter group to associate with this cache cluster}
+    cache_port: ${7:# The port number on which each of the cache nodes will accept connections}
+    cache_security_groups: ${8:# A list of cache security group names to associate with this cache cluster}
+    cache_subnet_group: ${9:# The subnet group name to associate with}
+    debug_botocore_endpoint_logs: ${10:# Use a C(botocore}
+    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
+    engine: ${12:# Name of the cache engine to be used}
+    hard_modify: ${13:# Whether to destroy and recreate an existing cache cluster if necessary in order to modify its state}
+    name: ${14:# The cache cluster identifier}
+    node_type: ${15:# The compute and memory capacity of the nodes in the cache cluster}
+    num_nodes: ${16:# The initial number of cache nodes that the cache cluster will have}
+    profile: ${17:# A named AWS profile to use for authentication}
+    region: ${18:# The AWS region to use}
+    secret_key: ${19:# AWS secret access key}
+    security_group_ids: ${20:# A list of VPC security group IDs to associate with this cache cluster}
+    session_token: ${21:# AWS STS session token for use with temporary credentials}
+    state: ${22:# C(absent) or C(present) are idempotent actions that will create or destroy a cache cluster as needed}
+    validate_certs: ${23:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${24:# Wait for cache cluster result before returning}
+    zone: ${25:# The EC2 Availability Zone in which the cache cluster will be created}
   tags:
     - community
     - aws

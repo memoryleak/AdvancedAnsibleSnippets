@@ -2,10 +2,10 @@
   <content><![CDATA[- name: ${1:CLI command to add/remove vrouter-loopback-interface}
   community.network.pn_vrouter_loopback_interface:
     pn_cliswitch: ${2:# Target switch to run the CLI on}
-    state: ${3:# State the action to perform}
+    pn_index: ${3:# loopback index from 1 to 255}
     pn_ip: ${4:# loopback IP address}
-    pn_index: ${5:# loopback index from 1 to 255}
-    pn_vrouter_name: ${6:# name of service config}
+    pn_vrouter_name: ${5:# name of service config}
+    state: ${6:# State the action to perform}
   tags:
     - community
     - network

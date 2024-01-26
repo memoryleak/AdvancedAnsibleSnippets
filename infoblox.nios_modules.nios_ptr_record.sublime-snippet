@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure Infoblox NIOS PTR records}
   infoblox.nios_modules.nios_ptr_record:
-    name: ${2:# The name of the DNS PTR record in FQDN format to add or remove from the system}
-    view: ${3:# Sets the DNS view to associate this a record with}
+    comment: ${2:# Configures a text string comment to be associated with the instance of this object}
+    extattrs: ${3:# Allows for the configuration of Extensible Attributes on the instance of the object}
     ipv4addr: ${4:# The IPv4 Address of the record}
     ipv6addr: ${5:# The IPv6 Address of the record}
-    ptrdname: ${6:# The domain name of the DNS PTR record in FQDN format}
-    ttl: ${7:# Time To Live (TTL) value for the record}
-    extattrs: ${8:# Allows for the configuration of Extensible Attributes on the instance of the object}
-    comment: ${9:# Configures a text string comment to be associated with the instance of this object}
-    state: ${10:# Configures the intended state of the instance of the object on the NIOS server}
-    provider: ${11:# A dict object containing connection details}
+    name: ${6:# The name of the DNS PTR record in FQDN format to add or remove from the system}
+    provider: ${7:# A dict object containing connection details}
+    ptrdname: ${8:# The domain name of the DNS PTR record in FQDN format}
+    state: ${9:# Configures the intended state of the instance of the object on the NIOS server}
+    ttl: ${10:# Time To Live (TTL) value for the record}
+    view: ${11:# Sets the DNS view to associate this a record with}
   tags:
     - infoblox
     - nios_modules

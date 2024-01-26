@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manipulate consul sessions}
   community.general.consul_session:
-    id: ${2:# ID of the session, required when I(state) is either C(info) or C(remove)}
-    state: ${3:# Whether the session should be present i}
-    name: ${4:# The name that should be associated with the session}
+    behavior: ${2:# The optional behavior that can be attached to the session when it is created}
+    checks: ${3:# Checks that will be used to verify the session health}
+    datacenter: ${4:# The name of the datacenter in which the session exists or should be created}
     delay: ${5:# The optional lock delay that can be attached to the session when it is created}
-    node: ${6:# The name of the node that with which the session will be associated}
-    datacenter: ${7:# The name of the datacenter in which the session exists or should be created}
-    checks: ${8:# Checks that will be used to verify the session health}
-    host: ${9:# The host of the consul agent defaults to localhost}
+    host: ${6:# The host of the consul agent defaults to localhost}
+    id: ${7:# ID of the session, required when O(state) is either V(info) or V(remove)}
+    name: ${8:# The name that should be associated with the session}
+    node: ${9:# The name of the node that with which the session will be associated}
     port: ${10:# The port on which the consul agent is running}
     scheme: ${11:# The protocol scheme on which the consul agent is running}
-    validate_certs: ${12:# Whether to verify the TLS certificate of the consul agent}
-    behavior: ${13:# The optional behavior that can be attached to the session when it is created}
+    state: ${12:# Whether the session should be present i}
+    token: ${13:# The token key identifying an ACL rule set that controls access to the key value pair}
     ttl: ${14:# Specifies the duration of a session in seconds (between 10 and 86400)}
-    token: ${15:# The token key identifying an ACL rule set that controls access to the key value pair}
+    validate_certs: ${15:# Whether to verify the TLS certificate of the consul agent}
   tags:
     - community
     - general

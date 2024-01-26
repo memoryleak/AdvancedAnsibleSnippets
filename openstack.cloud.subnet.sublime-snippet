@@ -1,38 +1,40 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add/Remove subnet to an OpenStack network}
   openstack.cloud.subnet:
-    state: ${2:# Indicate desired state of the resource}
-    network_name: ${3:# Name of the network to which the subnet should be attached}
-    name: ${4:# The name of the subnet that should be created}
-    cidr: ${5:# The CIDR representation of the subnet that should be assigned to the subnet}
-    ip_version: ${6:# The IP version of the subnet 4 or 6}
-    enable_dhcp: ${7:# Whether DHCP should be enabled for this subnet}
-    gateway_ip: ${8:# The ip that would be assigned to the gateway for this subnet}
-    no_gateway_ip: ${9:# The gateway IP would not be assigned for this subnet}
-    dns_nameservers: ${10:# List of DNS nameservers for this subnet}
-    allocation_pool_start: ${11:# From the subnet pool the starting address from which the IP should be allocated}
-    allocation_pool_end: ${12:# From the subnet pool the last IP that should be assigned to the virtual machines}
-    host_routes: ${13:# A list of host route dictionaries for the subnet}
-    ipv6_ra_mode: ${14:# IPv6 router advertisement mode}
-    ipv6_address_mode: ${15:# IPv6 address mode}
-    use_default_subnetpool: ${16:# Use the default subnetpool for I(ip_version) to obtain a CIDR}
-    project: ${17:# Project name or ID containing the subnet (name admin-only)}
-    extra_specs: ${18:# Dictionary with extra key/value pairs passed to the API}
-    cloud: ${19:# Named cloud or cloud config to operate against}
-    auth: ${20:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${21:# Name of the auth plugin to use}
-    region_name: ${22:# Name of the region}
-    wait: ${23:# Should ansible wait until the requested resource is complete}
-    timeout: ${24:# How long should ansible wait for the requested resource}
-    api_timeout: ${25:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${26:# Whether or not SSL API requests should be verified}
-    ca_cert: ${27:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${28:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${29:# A path to a client key to use as part of the SSL transaction}
-    interface: ${30:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${31:# Ignored}
-    sdk_log_path: ${32:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${33:# Log level of the OpenStackSDK}
+    allocation_pool_end: ${2:# From the subnet pool the last IP that should be assigned to the virtual machines}
+    allocation_pool_start: ${3:# From the subnet pool the starting address from which the IP should be allocated}
+    api_timeout: ${4:# How long should the socket layer wait before timing out for API calls}
+    auth: ${5:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${6:# Name of the auth plugin to use}
+    ca_cert: ${7:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    cidr: ${8:# The CIDR representation of the subnet that should be assigned to the subnet}
+    client_cert: ${9:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${10:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${11:# Named cloud or cloud config to operate against}
+    description: ${12:# Description of the subnet}
+    disable_gateway_ip: ${13:# The gateway IP would not be assigned for this subnet}
+    dns_nameservers: ${14:# List of DNS nameservers for this subnet}
+    extra_attrs: ${15:# Dictionary with extra key/value pairs passed to the API}
+    gateway_ip: ${16:# The ip that would be assigned to the gateway for this subnet}
+    host_routes: ${17:# A list of host route dictionaries for the subnet}
+    interface: ${18:# Endpoint URL type to fetch from the service catalog}
+    ip_version: ${19:# The IP version of the subnet 4 or 6}
+    ipv6_address_mode: ${20:# IPv6 address mode}
+    ipv6_ra_mode: ${21:# IPv6 router advertisement mode}
+    is_dhcp_enabled: ${22:# Whether DHCP should be enabled for this subnet}
+    name: ${23:# The name of the subnet that should be created}
+    network: ${24:# Name or id of the network to which the subnet should be attached}
+    prefix_length: ${25:# The prefix length to use for subnet allocation from a subnet pool}
+    project: ${26:# Project name or ID containing the subnet (name admin-only)}
+    region_name: ${27:# Name of the region}
+    sdk_log_level: ${28:# Log level of the OpenStackSDK}
+    sdk_log_path: ${29:# Path to the logfile of the OpenStackSDK}
+    state: ${30:# Indicate desired state of the resource}
+    subnet_pool: ${31:# The subnet pool name or ID from which to obtain a CIDR}
+    timeout: ${32:# How long should ansible wait for the requested resource}
+    use_default_subnet_pool: ${33:# Use the default subnetpool for I(ip_version) to obtain a CIDR}
+    validate_certs: ${34:# Whether or not SSL API requests should be verified}
+    wait: ${35:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud

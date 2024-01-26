@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Runs migration scripts against a database}
   lowlydba.sqlserver.install_script:
-    database: ${2:# Name of the target database}
-    path: ${3:# Directory where targeted sql scripts are stored}
-    schema_version_table: ${4:# A table that will hold the history of script execution}
+    connection_timeout: ${2:# Database server connection timeout in seconds}
+    create_database: ${3:# Will create an empty database if missing}
+    database: ${4:# Name of the target database}
     deployment_method: ${5:# C(SingleTransaction) - wrap all the deployment scripts into a single transaction and rollback whole deployment on error}
-    no_log_version: ${6:# If set, the deployment will not be tracked in the database}
-    connection_timeout: ${7:# Database server connection timeout in seconds}
-    execution_timeout: ${8:# Script execution timeout}
-    output_file: ${9:# Log output into specified file}
-    create_database: ${10:# Will create an empty database if missing}
-    no_recurse: ${11:# Only process the first level of the target path}
-    match: ${12:# Runs a regex verification against provided file names using the provided string}
+    execution_timeout: ${6:# Script execution timeout}
+    match: ${7:# Runs a regex verification against provided file names using the provided string}
+    no_log_version: ${8:# If set, the deployment will not be tracked in the database}
+    no_recurse: ${9:# Only process the first level of the target path}
+    output_file: ${10:# Log output into specified file}
+    path: ${11:# Directory where targeted sql scripts are stored}
+    schema_version_table: ${12:# A table that will hold the history of script execution}
     sql_instance: ${13:# The SQL Server instance to modify}
-    sql_username: ${14:# Username for SQL Authentication}
-    sql_password: ${15:# Password for SQL Authentication}
+    sql_password: ${14:# Password for SQL Authentication}
+    sql_username: ${15:# Username for SQL Authentication}
   tags:
     - lowlydba
     - sqlserver

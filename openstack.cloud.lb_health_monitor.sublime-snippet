@@ -1,38 +1,37 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Add/Delete a health m nonitor to a pool in the load balancing service from OpenStack Cloud}
+  <content><![CDATA[- name: ${1:Manage health monitor in a OpenStack load-balancer pool}
   openstack.cloud.lb_health_monitor:
-    name: ${2:# Name that has to be given to the health monitor}
-    state: ${3:# Should the resource be present or absent}
-    pool: ${4:# The pool name or id to monitor by the health monitor}
-    type: ${5:# One of HTTP, HTTPS, PING, SCTP, TCP, TLS-HELLO, or UDP-CONNECT}
-    delay: ${6:# the interval, in seconds, between health checks}
-    max_retries: ${7:# The number of successful checks before changing the operating status of the member to ONLINE}
-    max_retries_down: ${8:# The number of allowed check failures before changing the operating status of the member to ERROR}
-    resp_timeout: ${9:# The time, in seconds, after which a health check times out}
-    admin_state_up: ${10:# The admin state of the helath monitor true for up or false for down}
-    expected_codes: ${11:# The list of HTTP status codes expected in response from the member to declare it healthy}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    delay: ${9:# The interval, in seconds, between health checks}
+    expected_codes: ${10:# The list of HTTP status codes expected in response from the member to declare it healthy}
+    health_monitor_timeout: ${11:# The time, in seconds, after which a health check times out}
     http_method: ${12:# The HTTP method that the health monitor uses for requests}
-    url_path: ${13:# The HTTP URL path of the request sent by the monitor to test the health of a backend member}
-    cloud: ${14:# Named cloud or cloud config to operate against}
-    auth: ${15:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${16:# Name of the auth plugin to use}
-    region_name: ${17:# Name of the region}
-    wait: ${18:# Should ansible wait until the requested resource is complete}
-    timeout: ${19:# How long should ansible wait for the requested resource}
-    api_timeout: ${20:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${21:# Whether or not SSL API requests should be verified}
-    ca_cert: ${22:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${23:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${24:# A path to a client key to use as part of the SSL transaction}
-    interface: ${25:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${26:# Ignored}
-    sdk_log_path: ${27:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${28:# Log level of the OpenStackSDK}
+    interface: ${13:# Endpoint URL type to fetch from the service catalog}
+    is_admin_state_up: ${14:# Whether the health monitor is up or down}
+    max_retries: ${15:# The number of successful checks before changing the operating status of the member to ONLINE}
+    max_retries_down: ${16:# The number of allowed check failures before changing the operating status of the member to ERROR}
+    name: ${17:# Name that has to be given to the health monitor}
+    pool: ${18:# The pool name or id to monitor by the health monitor}
+    region_name: ${19:# Name of the region}
+    sdk_log_level: ${20:# Log level of the OpenStackSDK}
+    sdk_log_path: ${21:# Path to the logfile of the OpenStackSDK}
+    state: ${22:# Should the resource be present or absent}
+    timeout: ${23:# How long should ansible wait for the requested resource}
+    type: ${24:# The type of health monitor}
+    url_path: ${25:# The HTTP URL path of the request sent by the monitor to test the health of a backend member}
+    validate_certs: ${26:# Whether or not SSL API requests should be verified}
+    wait: ${27:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud
     - lb_health_monitor]]></content>
   <tabTrigger>openstack.cloud.lb_health_monitor</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Add/Delete a health m nonitor to a pool in the load balancing service from OpenStack Cloud</description>
+  <description>Manage health monitor in a OpenStack load-balancer pool</description>
 </snippet>

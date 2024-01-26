@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Amazon MSK cluster configurations}
   community.aws.msk_config:
-    state: ${2:# Create (C(present)) or delete (C(absent)) cluster configuration}
-    name: ${3:# The name of the configuration}
-    description: ${4:# The description of the configuration}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
     config: ${5:# Contents of the server}
-    kafka_versions: ${6:# The versions of Apache Kafka with which you can use this MSK configuration}
-    access_key: ${7:# AWS access key ID}
-    secret_key: ${8:# AWS secret access key}
-    session_token: ${9:# AWS STS session token for use with temporary credentials}
-    profile: ${10:# A named AWS profile to use for authentication}
-    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${12:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${13:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${14:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${15:# Use a C(botocore}
-    region: ${16:# The AWS region to use}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    description: ${7:# The description of the configuration}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
+    kafka_versions: ${9:# The versions of Apache Kafka with which you can use this MSK configuration}
+    name: ${10:# The name of the configuration}
+    profile: ${11:# A named AWS profile to use for authentication}
+    region: ${12:# The AWS region to use}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    state: ${15:# Create (C(present)) or delete (C(absent)) cluster configuration}
+    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

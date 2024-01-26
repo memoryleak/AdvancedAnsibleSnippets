@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages pools on IBM Storage Virtualize family systems}
+  ibm.storage_virtualize.ibm_svc_mdiskgrp:
+    clustername: ${2:# The hostname or management IP of the Storage Virtualize system}
+    datareduction: ${3:# Defines use of data reduction pools (DRPs) on the MDisk group}
+    domain: ${4:# Domain for the Storage Virtualize system}
+    easytier: ${5:# Defines use of easytier with the MDisk group}
+    encrypt: ${6:# Defines use of encryption with the MDisk group}
+    etfcmoverallocationmax: ${7:# Specifies the maximum over allocation which Easy Tier can migrate onto FlashCore Module arrays, when the array is used as the top tier in a multitier pool}
+    ext: ${8:# Specifies the size of the extents for this group in MB}
+    log_path: ${9:# Path of debug log file}
+    name: ${10:# Specifies the name to assign to the new pool}
+    noownershipgroup: ${11:# Specifies to unmap ownershipgroup from the pool}
+    noprovisioningpolicy: ${12:# Specify to unmap provisioning policy from the pool}
+    noquota: ${13:# Specify to create a data reduction child pool}
+    old_name: ${14:# Specifies the old name of an existing pool}
+    ownershipgroup: ${15:# Specifies the name of the ownershipgroup to map it with the pool}
+    parentmdiskgrp: ${16:# Parentmdiskgrp for subpool}
+    password: ${17:# REST API password for the Storage Virtualize system}
+    provisioningpolicy: ${18:# Specify the name of the provisioning policy to map it with the pool}
+    replication_partner_clusterid: ${19:# Specifies the id or name of the partner cluster which will be used for replication}
+    replicationpoollinkuid: ${20:# Specifies the replication pool unique identifier which should be same as the pool that present in the replication server}
+    resetreplicationpoollinkuid: ${21:# If set, any links between this pool on local system and pools on remote systems will be removed}
+    safeguarded: ${22:# Specify to create a safeguarded child pool}
+    size: ${23:# Specifies the child pool capacity}
+    state: ${24:# Creates (C(present)) or removes (C(absent)) an MDisk group}
+    token: ${25:# The authentication token to verify a user on the Storage Virtualize system}
+    unit: ${26:# Unit for subpool}
+    username: ${27:# REST API username for the Storage Virtualize system}
+    validate_certs: ${28:# Validates certification}
+    vdiskprotectionenabled: ${29:# Specifies whether volume protection is enabled for this storage pool}
+    warning: ${30:# If specified, generates a warning when the used disk capacity in the storage pool first exceeds the specified threshold}
+  tags:
+    - ibm
+    - storage_virtualize
+    - ibm_svc_mdiskgrp]]></content>
+  <tabTrigger>ibm.storage_virtualize.ibm_svc_mdiskgrp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages pools on IBM Storage Virtualize family systems</description>
+</snippet>

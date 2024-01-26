@@ -1,37 +1,37 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add or remove MySQL databases from a remote host}
   community.mysql.mysql_db:
-    name: ${2:# Name of the database to add or remove}
-    state: ${3:# The database state}
-    collation: ${4:# Collation mode (sorting)}
-    encoding: ${5:# Encoding mode to use, examples include C(utf8) or C(latin1_swedish_ci), at creation of database, dump or importation of sql script}
-    target: ${6:# Location, on the remote host, of the dump file to read from or write to}
-    single_transaction: ${7:# Execute the dump in a single transaction}
-    quick: ${8:# Option used for dumping large tables}
-    ignore_tables: ${9:# A list of table names that will be ignored in the dump of the form database_name}
-    hex_blob: ${10:# Dump binary columns using hexadecimal notation}
-    force: ${11:# Continue dump or import even if we get an SQL error}
-    master_data: ${12:# Option to dump a master replication server to produce a dump file that can be used to set up another server as a slave of the master}
-    skip_lock_tables: ${13:# Skip locking tables for read}
-    dump_extra_args: ${14:# Provide additional arguments for mysqldump}
-    use_shell: ${15:# Used to prevent C(Broken pipe) errors when the imported I(target) file is compressed}
-    unsafe_login_password: ${16:# If C(no), the module will safely use a shell-escaped version of the I(login_password) value}
-    restrict_config_file: ${17:# Read only passed I(config_file)}
-    check_implicit_admin: ${18:# Check if mysql allows login as root/nopassword before trying supplied credentials}
-    config_overrides_defaults: ${19:# If C(yes), connection parameters from I(config_file) will override the default values of I(login_host) and I(login_port) parameters}
-    chdir: ${20:# Changes the current working directory}
-    pipefail: ${21:# Use C(bash) instead of C(sh) and add C(-o pipefail) to catch errors from the mysql_dump command when I(state=import) and compression is used}
-    login_user: ${22:# The username used to authenticate with}
-    login_password: ${23:# The password used to authenticate with}
-    login_host: ${24:# Host running the database}
-    login_port: ${25:# Port of the MySQL server}
-    login_unix_socket: ${26:# The path to a Unix domain socket for local connections}
-    connect_timeout: ${27:# The connection timeout when connecting to the MySQL server}
-    config_file: ${28:# Specify a config file from which user and password are to be read}
-    ca_cert: ${29:# The path to a Certificate Authority (CA) certificate}
-    client_cert: ${30:# The path to a client public key certificate}
-    client_key: ${31:# The path to the client private key}
-    check_hostname: ${32:# Whether to validate the server host name when an SSL connection is required}
+    ca_cert: ${2:# The path to a Certificate Authority (CA) certificate}
+    chdir: ${3:# Changes the current working directory}
+    check_hostname: ${4:# Whether to validate the server host name when an SSL connection is required}
+    check_implicit_admin: ${5:# Check if mysql allows login as root/nopassword before trying supplied credentials}
+    client_cert: ${6:# The path to a client public key certificate}
+    client_key: ${7:# The path to the client private key}
+    collation: ${8:# Collation mode (sorting)}
+    config_file: ${9:# Specify a config file from which user and password are to be read}
+    config_overrides_defaults: ${10:# If C(yes), connection parameters from I(config_file) will override the default values of I(login_host) and I(login_port) parameters}
+    connect_timeout: ${11:# The connection timeout when connecting to the MySQL server}
+    dump_extra_args: ${12:# Provide additional arguments for mysqldump}
+    encoding: ${13:# Encoding mode to use, examples include C(utf8) or C(latin1_swedish_ci), at creation of database, dump or importation of sql script}
+    force: ${14:# Continue dump or import even if we get an SQL error}
+    hex_blob: ${15:# Dump binary columns using hexadecimal notation}
+    ignore_tables: ${16:# A list of table names that will be ignored in the dump of the form database_name}
+    login_host: ${17:# Host running the database}
+    login_password: ${18:# The password used to authenticate with}
+    login_port: ${19:# Port of the MySQL server}
+    login_unix_socket: ${20:# The path to a Unix domain socket for local connections}
+    login_user: ${21:# The username used to authenticate with}
+    master_data: ${22:# Option to dump a master replication server to produce a dump file that can be used to set up another server as a slave of the master}
+    name: ${23:# Name of the database to add or remove}
+    pipefail: ${24:# Use C(bash) instead of C(sh) and add C(-o pipefail) to catch errors from the mysql_dump command when I(state=import) and compression is used}
+    quick: ${25:# Option used for dumping large tables}
+    restrict_config_file: ${26:# Read only passed I(config_file)}
+    single_transaction: ${27:# Execute the dump in a single transaction}
+    skip_lock_tables: ${28:# Skip locking tables for read}
+    state: ${29:# The database state}
+    target: ${30:# Location, on the remote host, of the dump file to read from or write to}
+    unsafe_login_password: ${31:# If C(no), the module will safely use a shell-escaped version of the I(login_password) value}
+    use_shell: ${32:# Used to prevent C(Broken pipe) errors when the imported I(target) file is compressed}
   tags:
     - community
     - mysql

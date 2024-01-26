@@ -1,23 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller users}
   awx.awx.user:
-    username: ${2:# Required}
-    new_username: ${3:# Setting this option will change the existing username (looked up via the name field}
-    first_name: ${4:# First name of the user}
-    last_name: ${5:# Last name of the user}
-    email: ${6:# Email address of the user}
-    organization: ${7:# The user will be created as a member of that organization (needed for organization admins to create new organization users)}
-    is_superuser: ${8:# Designates that this user has all permissions without explicitly assigning them}
-    is_system_auditor: ${9:# User is a system wide auditor}
-    password: ${10:# Write-only field used to change the password}
-    update_secrets: ${11:# C(true) will always change password if user specifies password, even if API gives $encrypted$ for password}
-    state: ${12:# Desired state of the resource}
-    controller_host: ${13:# URL to your Automation Platform Controller instance}
-    controller_username: ${14:# Username for your controller instance}
-    controller_password: ${15:# Password for your controller instance}
-    controller_oauthtoken: ${16:# The OAuth token to use}
-    validate_certs: ${17:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${18:# Path to the controller config file}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    email: ${7:# Email address of the user}
+    first_name: ${8:# First name of the user}
+    is_superuser: ${9:# Designates that this user has all permissions without explicitly assigning them}
+    is_system_auditor: ${10:# User is a system wide auditor}
+    last_name: ${11:# Last name of the user}
+    new_username: ${12:# Setting this option will change the existing username (looked up via the name field}
+    organization: ${13:# The user will be created as a member of that organization name, ID, or named URL (needed for organization admins to create new organization users)}
+    password: ${14:# Write-only field used to change the password}
+    request_timeout: ${15:# Specify the timeout Ansible should use in requests to the controller host}
+    state: ${16:# Desired state of the resource}
+    update_secrets: ${17:# C(true) will always change password if user specifies password, even if API gives $encrypted$ for password}
+    username: ${18:# Required}
+    validate_certs: ${19:# Whether to allow insecure connections to AWX}
   tags:
     - awx
     - awx

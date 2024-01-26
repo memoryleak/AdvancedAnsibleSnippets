@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages remote copy consistency group on IBM Storage Virtualize family systems}
+  ibm.storage_virtualize.ibm_svc_manage_replicationgroup:
+    clustername: ${2:# The hostname or management IP of the Storage Virtualize system}
+    copytype: ${3:# Specifies the mirror type of the remote copy}
+    cyclingmode: ${4:# Specifies the behavior of Global Mirror for the relationship}
+    cyclingperiod: ${5:# Specifies the cycle period in seconds}
+    domain: ${6:# Domain for the Storage Virtualize system}
+    force: ${7:# If used to delete a consistency group, it specifies that you want the system to remove any relationship that belongs to the consistency group before the group is deleted}
+    log_path: ${8:# Path of debug log file}
+    name: ${9:# Specifies the name for the new consistency group}
+    password: ${10:# REST API password for the Storage Virtualize system}
+    remotecluster: ${11:# Specifies the name of the remote system}
+    state: ${12:# Creates or updates (C(present)) removes (C(absent)) a consistency group}
+    token: ${13:# The authentication token to verify a user on the Storage Virtualize system}
+    username: ${14:# REST API username for the Storage Virtualize system}
+    validate_certs: ${15:# Validates certification}
+  tags:
+    - ibm
+    - storage_virtualize
+    - ibm_svc_manage_replicationgroup]]></content>
+  <tabTrigger>ibm.storage_virtualize.ibm_svc_manage_replicationgroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages remote copy consistency group on IBM Storage Virtualize family systems</description>
+</snippet>

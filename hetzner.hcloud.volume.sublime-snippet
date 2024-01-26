@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and manage block Volume on the Hetzner Cloud}
+  hetzner.hcloud.volume:
+    api_endpoint: ${2:# The API Endpoint for the Hetzner Cloud}
+    api_token: ${3:# The API Token for the Hetzner Cloud}
+    automount: ${4:# Automatically mount the Volume}
+    delete_protection: ${5:# Protect the Volume for deletion}
+    format: ${6:# Automatically Format the volume on creation}
+    id: ${7:# The ID of the Hetzner Cloud Block Volume to manage}
+    labels: ${8:# User-defined key-value pairs}
+    location: ${9:# Location of the Hetzner Cloud Volume}
+    name: ${10:# The Name of the Hetzner Cloud Block Volume to manage}
+    server: ${11:# Server Name the Volume should be assigned to}
+    size: ${12:# The size of the Block Volume in GB}
+    state: ${13:# State of the Volume}
+  tags:
+    - hetzner
+    - hcloud
+    - volume]]></content>
+  <tabTrigger>hetzner.hcloud.volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and manage block Volume on the Hetzner Cloud</description>
+</snippet>

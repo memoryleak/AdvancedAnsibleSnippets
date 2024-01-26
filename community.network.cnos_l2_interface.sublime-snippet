@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Layer-2 interface on Lenovo CNOS devices}
   community.network.cnos_l2_interface:
-    name: ${2:# Full name of the interface excluding any logical unit number, i}
-    mode: ${3:# Mode in which interface needs to be configured}
-    access_vlan: ${4:# Configure given VLAN in access port}
-    trunk_vlans: ${5:# List of VLANs to be configured in trunk port}
+    access_vlan: ${2:# Configure given VLAN in access port}
+    aggregate: ${3:# List of Layer-2 interface definitions}
+    mode: ${4:# Mode in which interface needs to be configured}
+    name: ${5:# Full name of the interface excluding any logical unit number, i}
     native_vlan: ${6:# Native VLAN to be configured in trunk port}
-    trunk_allowed_vlans: ${7:# List of allowed VLANs in a given trunk port}
-    aggregate: ${8:# List of Layer-2 interface definitions}
-    state: ${9:# Manage the state of the Layer-2 Interface configuration}
+    state: ${7:# Manage the state of the Layer-2 Interface configuration}
+    trunk_allowed_vlans: ${8:# List of allowed VLANs in a given trunk port}
+    trunk_vlans: ${9:# List of VLANs to be configured in trunk port}
   tags:
     - community
     - network

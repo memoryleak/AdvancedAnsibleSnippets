@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages F5 BIG-IP GTM Wide IP}
   f5networks.f5_modules.bigip_gtm_wide_ip:
-    pool_lb_method: ${2:# Specifies the load balancing method used to select a pool in this wide IP}
-    name: ${3:# Wide IP name}
-    type: ${4:# Specifies the type of Wide IP}
-    state: ${5:# When C(present) or C(enabled), ensures the Wide IP exists and is enabled}
+    aliases: ${2:# Specifies alternate domain names for the web site content you are load balancing}
+    irules: ${3:# List of rules to be applied}
+    last_resort_pool: ${4:# Specifies which GTM pool for the system to use as the last resort pool for the Wide IP}
+    name: ${5:# Wide IP name}
     partition: ${6:# Device partition to manage resources on}
-    pools: ${7:# The pools you want associated with the Wide IP}
-    irules: ${8:# List of rules to be applied}
-    aliases: ${9:# Specifies alternate domain names for the web site content you are load balancing}
-    last_resort_pool: ${10:# Specifies which GTM pool for the system to use as the last resort pool for the Wide IP}
-    persistence: ${11:# When C(yes), ensures that when a local DNS makes repetitive requests on behalf of a client, the system reconnects the client to the same resource as previous requests}
-    persistence_ttl: ${12:# Specifies the time to maintain a connection between an local DNS and a particular virtual server}
-    persist_cidr_ipv4: ${13:# Specifies a mask used to group IPv4 LDNS addresses}
-    persist_cidr_ipv6: ${14:# Specifies a mask used to group IPv6 LDNS addresses}
-    provider: ${15:# A dict object containing connection details}
+    persist_cidr_ipv4: ${7:# Specifies a mask used to group IPv4 LDNS addresses}
+    persist_cidr_ipv6: ${8:# Specifies a mask used to group IPv6 LDNS addresses}
+    persistence: ${9:# When C(true), ensures when a local DNS makes repetitive requests on behalf of a client, the system reconnects the client to the same resource as previous requests}
+    persistence_ttl: ${10:# Specifies the time to maintain a connection between an local DNS and a particular virtual server}
+    pool_lb_method: ${11:# Specifies the load balancing method used to select a pool in this wide IP}
+    pools: ${12:# The pools you want associated with the Wide IP}
+    provider: ${13:# A dict object containing connection details}
+    state: ${14:# When C(present) or C(enabled), ensures the Wide IP exists and is enabled}
+    type: ${15:# Specifies the type of Wide IP}
   tags:
     - f5networks
     - f5_modules

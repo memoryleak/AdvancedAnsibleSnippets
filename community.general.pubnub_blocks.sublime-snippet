@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:PubNub blocks management module}
   community.general.pubnub_blocks:
-    email: ${2:# Email from account for which new session should be started}
-    password: ${3:# Password which match to account to which specified C(email) belong}
+    account: ${2:# Name of PubNub account for from which O(application) will be used to manage blocks}
+    application: ${3:# Name of target PubNub application for which blocks configuration on specific O(keyset) will be done}
     cache: ${4:# In case if single play use blocks management module few times it is preferred to enabled 'caching' by making previous module to share gathered artifacts and pass them to this parameter}
-    account: ${5:# Name of PubNub account for from which C(application) will be used to manage blocks}
-    application: ${6:# Name of target PubNub application for which blocks configuration on specific C(keyset) will be done}
-    keyset: ${7:# Name of application's keys set which is bound to managed blocks}
-    state: ${8:# Intended block state after event handlers creation / update process will be completed}
-    name: ${9:# Name of managed block which will be later visible on admin}
-    description: ${10:# Short block description which will be later visible on admin}
-    event_handlers: ${11:# List of event handlers which should be updated for specified block C(name)}
-    changes: ${12:# List of fields which should be changed by block itself (doesn't affect any event handlers)}
+    changes: ${5:# List of fields which should be changed by block itself (doesn't affect any event handlers)}
+    description: ${6:# Short block description which will be later visible on admin}
+    email: ${7:# Email from account for which new session should be started}
+    event_handlers: ${8:# List of event handlers which should be updated for specified block O(name)}
+    keyset: ${9:# Name of application's keys set which is bound to managed blocks}
+    name: ${10:# Name of managed block which will be later visible on admin}
+    password: ${11:# Password which match to account to which specified O(email) belong}
+    state: ${12:# Intended block state after event handlers creation / update process will be completed}
     validate_certs: ${13:# This key allow to try skip certificates check when performing REST API calls}
   tags:
     - community

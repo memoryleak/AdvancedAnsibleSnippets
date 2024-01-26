@@ -1,9 +1,9 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage rpm-ostree upgrade transactions}
   ansible.posix.rpm_ostree_upgrade:
-    os: ${2:# The OSNAME upon which to operate}
+    allow_downgrade: ${2:# Allow for the upgrade to be a chronologically older tree}
     cache_only: ${3:# Perform the transaction using only pre-cached data, do not download}
-    allow_downgrade: ${4:# Allow for the upgrade to be a chronologically older tree}
+    os: ${4:# The OSNAME upon which to operate}
     peer: ${5:# Force peer-to-peer connection instead of using a system message bus}
   tags:
     - rpm_ostree_upgrade]]></content>

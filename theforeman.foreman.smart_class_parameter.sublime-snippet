@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Smart Class Parameters}
   theforeman.foreman.smart_class_parameter:
-    puppetclass_name: ${2:# Name of the puppetclass that own the parameter}
-    parameter: ${3:# Name of the parameter}
+    avoid_duplicates: ${2:# Remove duplicate values (only array type)}
+    default_value: ${3:# Value to use by default}
     description: ${4:# Description of the Smart Class Parameter}
-    override: ${5:# Whether the smart class parameter value is managed by Foreman}
-    default_value: ${6:# Value to use by default}
-    hidden_value: ${7:# When enabled the parameter is hidden in the UI}
+    hidden_value: ${5:# When enabled the parameter is hidden in the UI}
+    merge_default: ${6:# Include default value when merging all matching values}
+    merge_overrides: ${7:# Merge all matching values (only array/hash type)}
     omit: ${8:# Don't send this parameter in classification output}
-    override_value_order: ${9:# The order in which values are resolved}
-    validator_type: ${10:# Types of validation values}
-    validator_rule: ${11:# Used to enforce certain values for the parameter values}
-    parameter_type: ${12:# Types of variable values}
-    required: ${13:# If true, will raise an error if there is no default value and no matcher provide a value}
-    merge_overrides: ${14:# Merge all matching values (only array/hash type)}
-    merge_default: ${15:# Include default value when merging all matching values}
-    avoid_duplicates: ${16:# Remove duplicate values (only array type)}
-    override_values: ${17:# Value overrides}
+    override: ${9:# Whether the smart class parameter value is managed by Foreman}
+    override_value_order: ${10:# The order in which values are resolved}
+    override_values: ${11:# Value overrides}
+    parameter: ${12:# Name of the parameter}
+    parameter_type: ${13:# Types of variable values}
+    password: ${14:# Password of the user accessing the Foreman server}
+    puppetclass_name: ${15:# Name of the puppetclass that own the parameter}
+    required: ${16:# If true, will raise an error if there is no default value and no matcher provide a value}
+    server_url: ${17:# URL of the Foreman server}
     state: ${18:# State of the entity}
-    server_url: ${19:# URL of the Foreman server}
-    username: ${20:# Username accessing the Foreman server}
-    password: ${21:# Password of the user accessing the Foreman server}
-    validate_certs: ${22:# Whether or not to verify the TLS certificates of the Foreman server}
+    username: ${19:# Username accessing the Foreman server}
+    validate_certs: ${20:# Whether or not to verify the TLS certificates of the Foreman server}
+    validator_rule: ${21:# Used to enforce certain values for the parameter values}
+    validator_type: ${22:# Types of validation values}
   tags:
     - theforeman
     - foreman

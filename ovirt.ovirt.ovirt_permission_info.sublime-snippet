@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieve information about one or more oVirt/RHV permissions}
   ovirt.ovirt.ovirt_permission_info:
-    user_name: ${2:# Username of the user to manage}
-    group_name: ${3:# Name of the group to manage}
-    authz_name: ${4:# Authorization provider of the user/group}
-    namespace: ${5:# Namespace of the authorization provider, where user/group resides}
-    follow: ${6:# List of linked entities, which should be fetched along with the main entity}
-    fetch_nested: ${7:# If I(yes) the module will fetch additional data from the API}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    authz_name: ${3:# Authorization provider of the user/group}
+    fetch_nested: ${4:# If I(yes) the module will fetch additional data from the API}
+    follow: ${5:# List of linked entities, which should be fetched along with the main entity}
+    group_name: ${6:# Name of the group to manage}
+    namespace: ${7:# Namespace of the authorization provider, where user/group resides}
     nested_attributes: ${8:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${9:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    user_name: ${9:# Username of the user to manage}
   tags:
     - ovirt
     - ovirt

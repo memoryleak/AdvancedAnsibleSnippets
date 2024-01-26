@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates and deletes Memset DNS zones}
   community.general.memset_zone:
-    state: ${2:# Indicates desired state of resource}
-    api_key: ${3:# The API key obtained from the Memset control panel}
+    api_key: ${2:# The API key obtained from the Memset control panel}
+    force: ${3:# Forces deletion of a zone and all zone domains/zone records it contains}
     name: ${4:# The zone nickname; usually the same as the main domain}
-    ttl: ${5:# The default TTL for all records created in the zone}
-    force: ${6:# Forces deletion of a zone and all zone domains/zone records it contains}
+    state: ${5:# Indicates desired state of resource}
+    ttl: ${6:# The default TTL for all records created in the zone}
   tags:
     - community
     - general

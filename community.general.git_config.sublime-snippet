@@ -1,13 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Read and write git configuration}
   community.general.git_config:
-    list_all: ${2:# List all settings (optionally limited to a given I(scope))}
-    name: ${3:# The name of the setting}
-    repo: ${4:# Path to a git repository for reading and writing values from a specific repo}
-    file: ${5:# Path to an adhoc git configuration file to be managed using the C(file) scope}
-    scope: ${6:# Specify which scope to read/set values from}
-    state: ${7:# Indicates the setting should be set/unset}
-    value: ${8:# When specifying the name of a single setting, supply a value to set that setting to the given value}
+    add_mode: ${2:# Specify if a value should replace the existing value(s) or if the new value should be added alongside other values with the same name}
+    file: ${3:# Path to an adhoc git configuration file to be managed using the V(file) scope}
+    list_all: ${4:# List all settings (optionally limited to a given O(scope))}
+    name: ${5:# The name of the setting}
+    repo: ${6:# Path to a git repository for reading and writing values from a specific repo}
+    scope: ${7:# Specify which scope to read/set values from}
+    state: ${8:# Indicates the setting should be set/unset}
+    value: ${9:# When specifying the name of a single setting, supply a value to set that setting to the given value}
   tags:
     - community
     - general

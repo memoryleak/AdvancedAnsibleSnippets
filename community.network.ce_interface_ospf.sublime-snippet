@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages configuration of an OSPF interface instanceon HUAWEI CloudEngine switches}
   community.network.ce_interface_ospf:
-    interface: ${2:# Full name of interface, i}
-    process_id: ${3:# Specifies a process ID}
-    area: ${4:# Ospf area associated with this ospf process}
-    cost: ${5:# The cost associated with this interface}
-    hello_interval: ${6:# Time between sending successive hello packets}
-    dead_interval: ${7:# Time interval an ospf neighbor waits for a hello packet before tearing down adjacencies}
-    silent_interface: ${8:# Setting to true will prevent this interface from receiving HELLO packets}
-    auth_mode: ${9:# Specifies the authentication type}
-    auth_text_simple: ${10:# Specifies a password for simple authentication}
-    auth_key_id: ${11:# Authentication key id when C(auth_mode) is 'hmac-sha256', 'md5' or 'hmac-md5}
-    auth_text_md5: ${12:# Specifies a password for MD5, HMAC-MD5, or HMAC-SHA256 authentication}
+    area: ${2:# Ospf area associated with this ospf process}
+    auth_key_id: ${3:# Authentication key id when C(auth_mode) is 'hmac-sha256', 'md5' or 'hmac-md5}
+    auth_mode: ${4:# Specifies the authentication type}
+    auth_text_md5: ${5:# Specifies a password for MD5, HMAC-MD5, or HMAC-SHA256 authentication}
+    auth_text_simple: ${6:# Specifies a password for simple authentication}
+    cost: ${7:# The cost associated with this interface}
+    dead_interval: ${8:# Time interval an ospf neighbor waits for a hello packet before tearing down adjacencies}
+    hello_interval: ${9:# Time between sending successive hello packets}
+    interface: ${10:# Full name of interface, i}
+    process_id: ${11:# Specifies a process ID}
+    silent_interface: ${12:# Setting to true will prevent this interface from receiving HELLO packets}
     state: ${13:# Determines whether the config should be present or not on the device}
   tags:
     - community

@@ -1,0 +1,46 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for organizations _loginsecurity}
+  cisco.meraki.organizations_login_security:
+    accountLockoutAttempts: ${2:# Number of consecutive failed login attempts after which users' accounts will be locked}
+    apiAuthentication: ${3:# Details for indicating whether organization will restrict access to API (but not Dashboard) to certain IP addresses}
+    enforceAccountLockout: ${4:# Boolean indicating whether users' Dashboard accounts will be locked out after a specified number of consecutive failed login attempts}
+    enforceDifferentPasswords: ${5:# Boolean indicating whether users, when setting a new password, are forced to choose a new password that is different from any past passwords}
+    enforceIdleTimeout: ${6:# Boolean indicating whether users will be logged out after being idle for the specified number of minutes}
+    enforceLoginIpRanges: ${7:# Boolean indicating whether organization will restrict access to Dashboard (including the API) from certain IP addresses}
+    enforcePasswordExpiration: ${8:# Boolean indicating whether users are forced to change their password every X number of days}
+    enforceStrongPasswords: ${9:# Boolean indicating whether users will be forced to choose strong passwords for their accounts}
+    enforceTwoFactorAuth: ${10:# Boolean indicating whether users in this organization will be required to use an extra verification code when logging in to Dashboard}
+    idleTimeoutMinutes: ${11:# Number of minutes users can remain idle before being logged out of their accounts}
+    loginIpRanges: ${12:# List of acceptable IP ranges}
+    meraki_action_batch_retry_wait_time: ${13:# meraki_action_batch_retry_wait_time (integer), action batch concurrency error retry wait time}
+    meraki_api_key: ${14:# meraki_api_key (string), API key generated in dashboard; can also be set as an environment variable MERAKI_DASHBOARD_API_KEY}
+    meraki_base_url: ${15:# meraki_base_url (string), preceding all endpoint resources}
+    meraki_be_geo_id: ${16:# meraki_be_geo_id (string), optional partner identifier for API usage tracking; can also be set as an environment variable BE_GEO_ID}
+    meraki_caller: ${17:# meraki_caller (string), optional identifier for API usage tracking; can also be set as an environment variable MERAKI_PYTHON_SDK_CALLER}
+    meraki_certificate_path: ${18:# meraki_certificate_path (string), path for TLS/SSL certificate verification if behind local proxy}
+    meraki_inherit_logging_config: ${19:# meraki_inherit_logging_config (boolean), Inherits your own logger instance}
+    meraki_log_file_prefix: ${20:# meraki_log_file_prefix (string), log file name appended with date and timestamp}
+    meraki_log_path: ${21:# log_path (string), path to output log; by default, working directory of script if not specified}
+    meraki_maximum_retries: ${22:# meraki_maximum_retries (integer), retry up to this many times when encountering 429s or other server-side errors}
+    meraki_nginx_429_retry_wait_time: ${23:# meraki_nginx_429_retry_wait_time (integer), Nginx 429 retry wait time}
+    meraki_output_log: ${24:# meraki_output_log (boolean), create an output log file?}
+    meraki_print_console: ${25:# meraki_print_console (boolean), print logging output to console?}
+    meraki_requests_proxy: ${26:# meraki_requests_proxy (string), proxy server and port, if needed, for HTTPS}
+    meraki_retry_4xx_error: ${27:# meraki_retry_4xx_error (boolean), retry if encountering other 4XX error (besides 429)?}
+    meraki_retry_4xx_error_wait_time: ${28:# meraki_retry_4xx_error_wait_time (integer), other 4XX error retry wait time}
+    meraki_simulate: ${29:# meraki_simulate (boolean), simulate POST/PUT/DELETE calls to prevent changes?}
+    meraki_single_request_timeout: ${30:# meraki_single_request_timeout (integer), maximum number of seconds for each API call}
+    meraki_suppress_logging: ${31:# meraki_suppress_logging (boolean), disable all logging? you're on your own then!}
+    meraki_use_iterator_for_get_pages: ${32:# meraki_use_iterator_for_get_pages (boolean), list* methods will return an iterator with each object instead of a complete list with all items}
+    meraki_wait_on_rate_limit: ${33:# meraki_wait_on_rate_limit (boolean), retry if 429 rate limit error encountered?}
+    numDifferentPasswords: ${34:# Number of recent passwords that new password must be distinct from}
+    organizationId: ${35:# OrganizationId path parameter}
+    passwordExpirationDays: ${36:# Number of days after which users will be forced to change their password}
+  tags:
+    - cisco
+    - meraki
+    - organizations_login_security]]></content>
+  <tabTrigger>cisco.meraki.organizations_login_security</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for organizations _loginsecurity</description>
+</snippet>

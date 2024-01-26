@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage snapshot policies on Dell PowerFlex}
+  dellemc.powerflex.snapshot_policy:
+    access_mode: ${2:# Access mode of the snapshot policy}
+    auto_snapshot_creation_cadence: ${3:# The auto snapshot creation cadence of the snapshot policy}
+    hostname: ${4:# IP or FQDN of the PowerFlex host}
+    new_name: ${5:# New name of the snapshot policy}
+    num_of_retained_snapshots_per_level: ${6:# Number of retained snapshots per level}
+    password: ${7:# The password of the PowerFlex host}
+    pause: ${8:# Whether to pause or resume the snapshot policy}
+    port: ${9:# Port number through which communication happens with PowerFlex host}
+    secure_snapshots: ${10:# Whether to secure snapshots or not}
+    snapshot_policy_id: ${11:# The unique identifier of the snapshot policy}
+    snapshot_policy_name: ${12:# The name of the snapshot policy}
+    source_volume: ${13:# The source volume details to be added or removed}
+    state: ${14:# State of the snapshot policy}
+    timeout: ${15:# Time after which connection will get terminated}
+    username: ${16:# The username of the PowerFlex host}
+    validate_certs: ${17:# Boolean variable to specify whether or not to validate SSL certificate}
+  tags:
+    - dellemc
+    - powerflex
+    - snapshot_policy]]></content>
+  <tabTrigger>dellemc.powerflex.snapshot_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage snapshot policies on Dell PowerFlex</description>
+</snippet>

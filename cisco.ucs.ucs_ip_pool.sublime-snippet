@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures IP address pools on Cisco UCS Manager}
   cisco.ucs.ucs_ip_pool:
-    state: ${2:# If C(present), will verify IP pool is present and will create if needed}
-    name: ${3:# The name of the IP address pool}
-    description: ${4:# The user-defined description of the IP address pool}
-    order: ${5:# The Assignment Order field}
-    ip_blocks: ${6:# List of IPv4 blocks used by the IP Pool}
-    ipv6_blocks: ${7:# List of IPv6 blocks used by the IP Pool}
+    description: ${2:# The user-defined description of the IP address pool}
+    hostname: ${3:# IP address or hostname of Cisco UCS Manager}
+    ip_blocks: ${4:# List of IPv4 blocks used by the IP Pool}
+    ipv6_blocks: ${5:# List of IPv6 blocks used by the IP Pool}
+    name: ${6:# The name of the IP address pool}
+    order: ${7:# The Assignment Order field}
     org_dn: ${8:# Org dn (distinguished name)}
-    hostname: ${9:# IP address or hostname of Cisco UCS Manager}
-    username: ${10:# Username for Cisco UCS Manager authentication}
-    password: ${11:# Password for Cisco UCS Manager authentication}
-    port: ${12:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
-    use_ssl: ${13:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    use_proxy: ${14:# If C(no), will not use the proxy as defined by system environment variable}
-    proxy: ${15:# If use_proxy is no, specfies proxy to be used for connection}
+    password: ${9:# Password for Cisco UCS Manager authentication}
+    port: ${10:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    proxy: ${11:# If use_proxy is no, specfies proxy to be used for connection}
+    state: ${12:# If C(present), will verify IP pool is present and will create if needed}
+    use_proxy: ${13:# If C(no), will not use the proxy as defined by system environment variable}
+    use_ssl: ${14:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${15:# Username for Cisco UCS Manager authentication}
   tags:
     - cisco
     - ucs

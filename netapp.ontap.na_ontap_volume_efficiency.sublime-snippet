@@ -1,39 +1,39 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP enables, disables or modifies volume efficiency}
   netapp.ontap.na_ontap_volume_efficiency:
-    state: ${2:# Whether the specified volume efficiency should be enabled or not}
-    vserver: ${3:# Specifies the vserver for the volume}
-    path: ${4:# Specifies the path for the volume}
-    volume_name: ${5:# Specifies the volume name}
-    schedule: ${6:# Specifies the storage efficiency schedule}
-    policy: ${7:# Specifies the storage efficiency policy to use}
-    enable_compression: ${8:# Specifies if compression is to be enabled}
-    enable_inline_compression: ${9:# Specifies if in-line compression is to be enabled}
-    enable_inline_dedupe: ${10:# Specifies if in-line deduplication is to be enabled, only supported on AFF systems or hybrid aggregates}
-    enable_data_compaction: ${11:# Specifies if compaction is to be enabled}
-    enable_cross_volume_inline_dedupe: ${12:# Specifies if in-line cross volume inline deduplication is to be enabled, this can only be enabled when inline deduplication is enabled}
-    enable_cross_volume_background_dedupe: ${13:# Specifies if cross volume background deduplication is to be enabled, this can only be enabled when inline deduplication is enabled}
-    volume_efficiency: ${14:# Start or Stop a volume efficiency operation on a given volume path}
-    start_ve_scan_all: ${15:# Specifies the scanner to scan the entire volume without applying share block optimization}
-    start_ve_build_metadata: ${16:# Specifies the scanner to scan the entire and generate fingerprint database without attempting the sharing}
-    start_ve_delete_checkpoint: ${17:# Specifies the scanner to delete existing checkpoint and start the operation from the begining}
-    start_ve_queue_operation: ${18:# Specifies the operation to queue if an exisitng operation is already running on the volume and in the fingerprint verification phase}
-    start_ve_scan_old_data: ${19:# Specifies the operation to scan the file system to process all the existing data}
-    start_ve_qos_policy: ${20:# Specifies the QoS policy for the operation}
-    stop_ve_all_operations: ${21:# Specifies that all running and queued operations to be stopped}
-    storage_efficiency_mode: ${22:# Storage efficiency mode used by volume}
-    hostname: ${23:# The hostname or IP address of the ONTAP instance}
-    username: ${24:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${25:# Password for the specified user}
-    cert_filepath: ${26:# path to SSL client cert file (}
-    key_filepath: ${27:# path to SSL client key file}
-    https: ${28:# Enable and disable https}
-    validate_certs: ${29:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${30:# Override the default port (80 or 443) with this port}
-    ontapi: ${31:# The ontap api version to use}
-    use_rest: ${32:# Whether to use REST or ZAPI}
-    feature_flags: ${33:# Enable or disable a new feature}
-    force_ontap_version: ${34:# Override the cluster ONTAP version when using REST}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    enable_compression: ${3:# Specifies if compression is to be enabled}
+    enable_cross_volume_background_dedupe: ${4:# Specifies if cross volume background deduplication is to be enabled, this can only be enabled when inline deduplication is enabled}
+    enable_cross_volume_inline_dedupe: ${5:# Specifies if in-line cross volume inline deduplication is to be enabled, this can only be enabled when inline deduplication is enabled}
+    enable_data_compaction: ${6:# Specifies if compaction is to be enabled}
+    enable_inline_compression: ${7:# Specifies if in-line compression is to be enabled}
+    enable_inline_dedupe: ${8:# Specifies if in-line deduplication is to be enabled, only supported on AFF systems or hybrid aggregates}
+    feature_flags: ${9:# Enable or disable a new feature}
+    force_ontap_version: ${10:# Override the cluster ONTAP version when using REST}
+    hostname: ${11:# The hostname or IP address of the ONTAP instance}
+    http_port: ${12:# Override the default port (80 or 443) with this port}
+    https: ${13:# Enable and disable https}
+    key_filepath: ${14:# path to SSL client key file}
+    ontapi: ${15:# The ontap api version to use}
+    password: ${16:# Password for the specified user}
+    path: ${17:# Specifies the path for the volume}
+    policy: ${18:# Specifies the storage efficiency policy to use}
+    schedule: ${19:# Specifies the storage efficiency schedule}
+    start_ve_build_metadata: ${20:# Specifies the scanner to scan the entire and generate fingerprint database without attempting the sharing}
+    start_ve_delete_checkpoint: ${21:# Specifies the scanner to delete existing checkpoint and start the operation from the begining}
+    start_ve_qos_policy: ${22:# Specifies the QoS policy for the operation}
+    start_ve_queue_operation: ${23:# Specifies the operation to queue if an exisitng operation is already running on the volume and in the fingerprint verification phase}
+    start_ve_scan_all: ${24:# Specifies the scanner to scan the entire volume without applying share block optimization}
+    start_ve_scan_old_data: ${25:# Specifies the operation to scan the file system to process all the existing data}
+    state: ${26:# Whether the specified volume efficiency should be enabled or not}
+    stop_ve_all_operations: ${27:# Specifies that all running and queued operations to be stopped}
+    storage_efficiency_mode: ${28:# Storage efficiency mode used by volume}
+    use_rest: ${29:# Whether to use REST or ZAPI}
+    username: ${30:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${31:# If set to C(no), the SSL certificates will not be validated}
+    volume_efficiency: ${32:# Start or Stop a volume efficiency operation on a given volume path}
+    volume_name: ${33:# Specifies the volume name}
+    vserver: ${34:# Specifies the vserver for the volume}
   tags:
     - netapp
     - ontap

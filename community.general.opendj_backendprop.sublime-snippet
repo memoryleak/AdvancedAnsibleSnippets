@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Will update the backend configuration of OpenDJ via the dsconfig set-backend-prop command}
   community.general.opendj_backendprop:
-    opendj_bindir: ${2:# The path to the bin directory of OpenDJ}
+    backend: ${2:# The name of the backend on which the property needs to be updated}
     hostname: ${3:# The hostname of the OpenDJ server}
-    port: ${4:# The Admin port on which the OpenDJ instance is available}
-    username: ${5:# The username to connect to}
+    name: ${4:# The configuration setting to update}
+    opendj_bindir: ${5:# The path to the bin directory of OpenDJ}
     password: ${6:# The password for the cn=Directory Manager user}
     passwordfile: ${7:# Location to the password file which holds the password for the cn=Directory Manager user}
-    backend: ${8:# The name of the backend on which the property needs to be updated}
-    name: ${9:# The configuration setting to update}
-    value: ${10:# The value for the configuration item}
-    state: ${11:# If configuration needs to be added/updated}
+    port: ${8:# The Admin port on which the OpenDJ instance is available}
+    state: ${9:# If configuration needs to be added/updated}
+    username: ${10:# The username to connect to}
+    value: ${11:# The value for the configuration item}
   tags:
     - community
     - general

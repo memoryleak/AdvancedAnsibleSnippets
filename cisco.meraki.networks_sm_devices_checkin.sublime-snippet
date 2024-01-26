@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for networks _sm _devices _checkin}
+  cisco.meraki.networks_sm_devices_checkin:
+    ids: ${2:# The ids of the devices to be checked-in}
+    meraki_action_batch_retry_wait_time: ${3:# meraki_action_batch_retry_wait_time (integer), action batch concurrency error retry wait time}
+    meraki_api_key: ${4:# meraki_api_key (string), API key generated in dashboard; can also be set as an environment variable MERAKI_DASHBOARD_API_KEY}
+    meraki_base_url: ${5:# meraki_base_url (string), preceding all endpoint resources}
+    meraki_be_geo_id: ${6:# meraki_be_geo_id (string), optional partner identifier for API usage tracking; can also be set as an environment variable BE_GEO_ID}
+    meraki_caller: ${7:# meraki_caller (string), optional identifier for API usage tracking; can also be set as an environment variable MERAKI_PYTHON_SDK_CALLER}
+    meraki_certificate_path: ${8:# meraki_certificate_path (string), path for TLS/SSL certificate verification if behind local proxy}
+    meraki_inherit_logging_config: ${9:# meraki_inherit_logging_config (boolean), Inherits your own logger instance}
+    meraki_log_file_prefix: ${10:# meraki_log_file_prefix (string), log file name appended with date and timestamp}
+    meraki_log_path: ${11:# log_path (string), path to output log; by default, working directory of script if not specified}
+    meraki_maximum_retries: ${12:# meraki_maximum_retries (integer), retry up to this many times when encountering 429s or other server-side errors}
+    meraki_nginx_429_retry_wait_time: ${13:# meraki_nginx_429_retry_wait_time (integer), Nginx 429 retry wait time}
+    meraki_output_log: ${14:# meraki_output_log (boolean), create an output log file?}
+    meraki_print_console: ${15:# meraki_print_console (boolean), print logging output to console?}
+    meraki_requests_proxy: ${16:# meraki_requests_proxy (string), proxy server and port, if needed, for HTTPS}
+    meraki_retry_4xx_error: ${17:# meraki_retry_4xx_error (boolean), retry if encountering other 4XX error (besides 429)?}
+    meraki_retry_4xx_error_wait_time: ${18:# meraki_retry_4xx_error_wait_time (integer), other 4XX error retry wait time}
+    meraki_simulate: ${19:# meraki_simulate (boolean), simulate POST/PUT/DELETE calls to prevent changes?}
+    meraki_single_request_timeout: ${20:# meraki_single_request_timeout (integer), maximum number of seconds for each API call}
+    meraki_suppress_logging: ${21:# meraki_suppress_logging (boolean), disable all logging? you're on your own then!}
+    meraki_use_iterator_for_get_pages: ${22:# meraki_use_iterator_for_get_pages (boolean), list* methods will return an iterator with each object instead of a complete list with all items}
+    meraki_wait_on_rate_limit: ${23:# meraki_wait_on_rate_limit (boolean), retry if 429 rate limit error encountered?}
+    networkId: ${24:# NetworkId path parameter}
+    scope: ${25:# The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be checked-in}
+    serials: ${26:# The serials of the devices to be checked-in}
+    wifiMacs: ${27:# The wifiMacs of the devices to be checked-in}
+  tags:
+    - cisco
+    - meraki
+    - networks_sm_devices_checkin]]></content>
+  <tabTrigger>cisco.meraki.networks_sm_devices_checkin</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for networks _sm _devices _checkin</description>
+</snippet>

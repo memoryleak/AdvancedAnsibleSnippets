@@ -1,18 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add or remove multiple LDAP attribute values}
   community.general.ldap_attrs:
-    state: ${2:# The state of the attribute values}
-    attributes: ${3:# The attribute(s) and value(s) to add or remove}
-    ordered: ${4:# If C(true), prepend list values with X-ORDERED index numbers in all attributes specified in the current task}
-    bind_dn: ${5:# A DN to bind with}
-    bind_pw: ${6:# The password to use with I(bind_dn)}
-    dn: ${7:# The DN of the entry to add or remove}
-    referrals_chasing: ${8:# Set the referrals chasing behavior}
-    server_uri: ${9:# The I(server_uri) parameter may be a comma- or whitespace-separated list of URIs containing only the schema, the host, and the port fields}
-    start_tls: ${10:# If true, we'll use the START_TLS LDAP extension}
-    validate_certs: ${11:# If set to C(false), SSL certificates will not be validated}
-    sasl_class: ${12:# The class to use for SASL authentication}
-    xorder_discovery: ${13:# Set the behavior on how to process Xordered DNs}
+    attributes: ${2:# The attribute(s) and value(s) to add or remove}
+    bind_dn: ${3:# A DN to bind with}
+    bind_pw: ${4:# The password to use with O(bind_dn)}
+    ca_path: ${5:# Set the path to PEM file with CA certs}
+    client_cert: ${6:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${7:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    dn: ${8:# The DN of the entry to add or remove}
+    ordered: ${9:# If V(true), prepend list values with X-ORDERED index numbers in all attributes specified in the current task}
+    referrals_chasing: ${10:# Set the referrals chasing behavior}
+    sasl_class: ${11:# The class to use for SASL authentication}
+    server_uri: ${12:# The O(server_uri) parameter may be a comma- or whitespace-separated list of URIs containing only the schema, the host, and the port fields}
+    start_tls: ${13:# If true, we'll use the START_TLS LDAP extension}
+    state: ${14:# The state of the attribute values}
+    validate_certs: ${15:# If set to V(false), SSL certificates will not be validated}
+    xorder_discovery: ${16:# Set the behavior on how to process Xordered DNs}
   tags:
     - community
     - general

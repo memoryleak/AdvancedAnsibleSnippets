@@ -2,15 +2,16 @@
   <content><![CDATA[- name: ${1:Resource module for Guest User Approve}
   cisco.ise.guest_user_approve:
     id: ${2:# Id path parameter}
-    ise_hostname: ${3:# The Identity Services Engine hostname}
-    ise_username: ${4:# The Identity Services Engine username to authenticate}
+    ise_debug: ${3:# Flag for Identity Services Engine SDK to enable debugging}
+    ise_hostname: ${4:# The Identity Services Engine hostname}
     ise_password: ${5:# The Identity Services Engine password to authenticate}
-    ise_verify: ${6:# Flag to enable or disable SSL certificate verification}
-    ise_version: ${7:# Informs the SDK which version of Identity Services Engine to use}
-    ise_wait_on_rate_limit: ${8:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
-    ise_debug: ${9:# Flag for Identity Services Engine SDK to enable debugging}
-    ise_uses_api_gateway: ${10:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
-    ise_uses_csrf_token: ${11:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+    ise_single_request_timeout: ${6:# Timeout (in seconds) for RESTful HTTP requests}
+    ise_username: ${7:# The Identity Services Engine username to authenticate}
+    ise_uses_api_gateway: ${8:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
+    ise_uses_csrf_token: ${9:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+    ise_verify: ${10:# Flag to enable or disable SSL certificate verification}
+    ise_version: ${11:# Informs the SDK which version of Identity Services Engine to use}
+    ise_wait_on_rate_limit: ${12:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
   tags:
     - cisco
     - ise

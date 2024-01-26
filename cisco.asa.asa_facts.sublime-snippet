@@ -1,9 +1,9 @@
 <snippet>
   <content><![CDATA[- name: ${1:Collect facts from remote devices running Cisco ASA}
   cisco.asa.asa_facts:
-    gather_subset: ${2:# When supplied, this argument restricts the facts collected to a given subset}
+    context: ${2:# Specifies which context to target if you are running in the ASA in multiple context mode}
     gather_network_resources: ${3:# When supplied, this argument will restrict the facts collected to a given subset}
-    context: ${4:# Specifies which context to target if you are running in the ASA in multiple context mode}
+    gather_subset: ${4:# When supplied, this argument restricts the facts collected to a given subset}
     passwords: ${5:# Saves running-config passwords in clear-text when set to True}
   tags:
     - cisco

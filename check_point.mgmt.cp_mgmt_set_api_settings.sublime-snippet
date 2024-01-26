@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Edit API settings, the changes will be applied after publish followed by running 'api restart' command}
+  check_point.mgmt.cp_mgmt_set_api_settings:
+    accepted_api_calls_from: ${2:# Clients allowed to connect to the API Server}
+    version: ${3:# Version of checkpoint}
+    wait_for_task: ${4:# Wait for the task to end}
+    wait_for_task_timeout: ${5:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_set_api_settings]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_set_api_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Edit API settings, the changes will be applied after publish followed by running &#39;api restart&#39; command</description>
+</snippet>

@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage a OpenStack cloud resource}
+  openstack.cloud.resource:
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    attributes: ${3:# Resource attributes which are defined in openstacksdk's resource classes}
+    auth: ${4:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${5:# Name of the auth plugin to use}
+    ca_cert: ${6:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${7:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${8:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${9:# Named cloud or cloud config to operate against}
+    interface: ${10:# Endpoint URL type to fetch from the service catalog}
+    non_updateable_attributes: ${11:# List of attribute names which cannot be updated}
+    region_name: ${12:# Name of the region}
+    sdk_log_level: ${13:# Log level of the OpenStackSDK}
+    sdk_log_path: ${14:# Path to the logfile of the OpenStackSDK}
+    service: ${15:# OpenStack service which this resource is part of}
+    state: ${16:# Whether the resource should be C(present) or C(absent)}
+    timeout: ${17:# How long should ansible wait for the requested resource}
+    type: ${18:# Typename of the resource}
+    updateable_attributes: ${19:# List of attribute names which can be updated}
+    validate_certs: ${20:# Whether or not SSL API requests should be verified}
+    wait: ${21:# Whether Ansible should wait until the resource has reached its target I(state)}
+  tags:
+    - openstack
+    - cloud
+    - resource]]></content>
+  <tabTrigger>openstack.cloud.resource</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage a OpenStack cloud resource</description>
+</snippet>

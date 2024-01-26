@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create SSL CSR files on the BIG-IP}
   f5networks.f5_modules.bigip_ssl_csr:
-    name: ${2:# The name of the CSR file}
-    common_name: ${3:# The certificate common name}
-    key_name: ${4:# The SSL key to be used to generate the CSR}
-    state: ${5:# When C(present), ensures the resource exists}
-    dest: ${6:# Destination on your local filesystem when you want to save the CSR file}
-    force: ${7:# If C(no), the file will only be transferred if the destination does not exist}
-    provider: ${8:# A dict object containing connection details}
+    common_name: ${2:# The certificate common name}
+    dest: ${3:# Destination on your local filesystem when you want to save the CSR file}
+    force: ${4:# If C(false), the file will only be transferred if the destination does not exist}
+    key_name: ${5:# The SSL key to be used to generate the CSR}
+    name: ${6:# The name of the CSR file}
+    provider: ${7:# A dict object containing connection details}
+    state: ${8:# When C(present), ensures the resource exists}
   tags:
     - f5networks
     - f5_modules

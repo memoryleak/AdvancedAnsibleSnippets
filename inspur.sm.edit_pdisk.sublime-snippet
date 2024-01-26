@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Set physical disk}
   inspur.sm.edit_pdisk:
-    info: ${2:# Show controller and pdisk info}
+    action: ${2:# Action while set physical drive hotspare}
     ctrl_id: ${3:# Raid controller ID}
     device_id: ${4:# physical drive id}
-    option: ${5:# Set operation options fo physical disk,}
-    action: ${6:# Action while set physical drive hotspare}
-    revertible: ${7:# IsRevertible while set physical drive hotspare}
-    encl: ${8:# IsEnclAffinity while set physical drive hotspare}
+    duration: ${5:# duration range is 1-255,physical drive under PMC raid controller}
+    encl: ${6:# IsEnclAffinity while set physical drive hotspare}
+    host: ${7:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    info: ${8:# Show controller and pdisk info}
     logical_drivers: ${9:# Logical Drivers while set physical drive hotspare, input multiple Logical Drivers index like 0,1,2}
-    duration: ${10:# duration range is 1-255,physical drive under PMC raid controller}
-    provider: ${11:# A dict object containing connection details}
-    host: ${12:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
-    username: ${13:# Configures the username to use to authenticate the connection to the remote device}
-    password: ${14:# Specifies the password to use to authenticate the connection to the remote device}
+    option: ${10:# Set operation options fo physical disk,}
+    password: ${11:# Specifies the password to use to authenticate the connection to the remote device}
+    provider: ${12:# A dict object containing connection details}
+    revertible: ${13:# IsRevertible while set physical drive hotspare}
+    username: ${14:# Configures the username to use to authenticate the connection to the remote device}
   tags:
     - inspur
     - sm

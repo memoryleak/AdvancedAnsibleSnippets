@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module to manage configuration sections}
   cisco.iosxr.iosxr_config:
-    lines: ${2:# The ordered set of commands that should be configured in the section}
-    parents: ${3:# The ordered set of parents that uniquely identify the section or hierarchy the commands should be checked against}
-    src: ${4:# Specifies the source path to the file that contains the configuration or configuration template to load}
-    before: ${5:# The ordered set of commands to push on to the command stack if a change needs to be made}
-    after: ${6:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
-    match: ${7:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
-    replace: ${8:# Instructs the module on the way to perform the configuration on the device}
-    force: ${9:# The force argument instructs the module to not consider the current devices running-config}
-    config: ${10:# The module, by default, will connect to the remote device and retrieve the current running-config to use as a base for comparing against the contents of source}
-    backup: ${11:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
-    comment: ${12:# Allows a commit description to be specified to be included when the configuration is committed}
-    admin: ${13:# Enters into administration configuration mode for making config changes to the device}
-    label: ${14:# Allows a commit label to be specified to be included when the configuration is committed}
-    backup_options: ${15:# This is a dict object containing configurable options related to backup file path}
-    exclusive: ${16:# Enters into exclusive configuration mode that locks out all users from committing configuration changes until the exclusive session ends}
-    disable_default_comment: ${17:# disable default comment when set to True}
+    admin: ${2:# Enters into administration configuration mode for making config changes to the device}
+    after: ${3:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
+    backup: ${4:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
+    backup_options: ${5:# This is a dict object containing configurable options related to backup file path}
+    before: ${6:# The ordered set of commands to push on to the command stack if a change needs to be made}
+    comment: ${7:# Allows a commit description to be specified to be included when the configuration is committed}
+    config: ${8:# The module, by default, will connect to the remote device and retrieve the current running-config to use as a base for comparing against the contents of source}
+    disable_default_comment: ${9:# disable default comment when set to True}
+    exclusive: ${10:# Enters into exclusive configuration mode that locks out all users from committing configuration changes until the exclusive session ends}
+    force: ${11:# The force argument instructs the module to not consider the current devices running-config}
+    label: ${12:# Allows a commit label to be specified to be included when the configuration is committed}
+    lines: ${13:# The ordered set of commands that should be configured in the section}
+    match: ${14:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
+    parents: ${15:# The ordered set of parents that uniquely identify the section or hierarchy the commands should be checked against}
+    replace: ${16:# Instructs the module on the way to perform the configuration on the device}
+    src: ${17:# Specifies the source path to the file that contains the configuration or configuration template to load}
   tags:
     - cisco
     - iosxr

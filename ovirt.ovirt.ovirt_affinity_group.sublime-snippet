@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module to manage affinity groups in oVirt/RHV}
   ovirt.ovirt.ovirt_affinity_group:
-    name: ${2:# Name of the affinity group to manage}
-    state: ${3:# Should the affinity group be present or absent}
-    cluster: ${4:# Name of the cluster of the affinity group}
-    description: ${5:# Description of the affinity group}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    cluster: ${3:# Name of the cluster of the affinity group}
+    description: ${4:# Description of the affinity group}
+    fetch_nested: ${5:# If I(True) the module will fetch additional data from the API}
     host_enforcing: ${6:# If I(yes) VM cannot start on host if it does not satisfy the C(host_rule)}
     host_rule: ${7:# If I(positive) I(all) VMs in this group should run on the this host}
-    vm_enforcing: ${8:# If I(yes) VM cannot start if it does not satisfy the C(vm_rule)}
-    vm_rule: ${9:# If I(positive) I(all) VMs in this group should run on the host defined by C(host_rule)}
-    vms: ${10:# List of the VMs names, which should have assigned this affinity group}
-    hosts: ${11:# List of the hosts names, which should have assigned this affinity group}
-    vms_labels: ${12:# List of the hosts lable names, which should have assigned this affinity group}
-    hosts_labels: ${13:# List of the hosts lable names, which should have assigned this affinity group}
-    wait: ${14:# C(yes) if the module should wait for the entity to get into desired state}
-    fetch_nested: ${15:# If I(True) the module will fetch additional data from the API}
-    nested_attributes: ${16:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${17:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
-    timeout: ${18:# The amount of time in seconds the module should wait for the instance to get into desired state}
-    poll_interval: ${19:# Number of the seconds the module waits until another poll request on entity status is sent}
+    hosts: ${8:# List of the hosts names, which should have assigned this affinity group}
+    hosts_labels: ${9:# List of the hosts lable names, which should have assigned this affinity group}
+    name: ${10:# Name of the affinity group to manage}
+    nested_attributes: ${11:# Specifies list of the attributes which should be fetched from the API}
+    poll_interval: ${12:# Number of the seconds the module waits until another poll request on entity status is sent}
+    state: ${13:# Should the affinity group be present or absent}
+    timeout: ${14:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    vm_enforcing: ${15:# If I(yes) VM cannot start if it does not satisfy the C(vm_rule)}
+    vm_rule: ${16:# If I(positive) I(all) VMs in this group should run on the host defined by C(host_rule)}
+    vms: ${17:# List of the VMs names, which should have assigned this affinity group}
+    vms_labels: ${18:# List of the hosts lable names, which should have assigned this affinity group}
+    wait: ${19:# C(yes) if the module should wait for the entity to get into desired state}
   tags:
     - ovirt
     - ovirt

@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages MDisks on IBM Storage Virtualize family systems}
+  ibm.storage_virtualize.ibm_svc_mdisk:
+    clustername: ${2:# The hostname or management IP of the Storage Virtualize system}
+    domain: ${3:# Domain for the Storage Virtualize system}
+    drive: ${4:# Drive(s) to use as members of the RAID array}
+    driveclass: ${5:# Specifies the class that is being used to create the array}
+    drivecount: ${6:# Specifies the number of the drives}
+    encrypt: ${7:# Defines use of encryption with the MDisk group}
+    level: ${8:# Specifies the RAID level}
+    log_path: ${9:# Path of debug log file}
+    mdiskgrp: ${10:# The storage pool (mdiskgrp) to which you want to add the MDisk}
+    name: ${11:# The MDisk name}
+    old_name: ${12:# Specifies the old name of an existing pool}
+    password: ${13:# REST API password for the Storage Virtualize system}
+    state: ${14:# Creates (C(present)) or removes (C(absent)) the MDisk}
+    stripewidth: ${15:# Specifies the width of a single unit of redundancy within a distributed set of drives}
+    token: ${16:# The authentication token to verify a user on the Storage Virtualize system}
+    username: ${17:# REST API username for the Storage Virtualize system}
+    validate_certs: ${18:# Validates certification}
+  tags:
+    - ibm
+    - storage_virtualize
+    - ibm_svc_mdisk]]></content>
+  <tabTrigger>ibm.storage_virtualize.ibm_svc_mdisk</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages MDisks on IBM Storage Virtualize family systems</description>
+</snippet>

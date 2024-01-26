@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage DNS records}
   community.general.nsupdate:
-    state: ${2:# Manage DNS record}
-    server: ${3:# Apply DNS modification on this server, specified by IPv4 or IPv6 address}
-    port: ${4:# Use this TCP port when connecting to C(server)}
-    key_name: ${5:# Use TSIG key name to authenticate against DNS C(server)}
-    key_secret: ${6:# Use TSIG key secret, associated with C(key_name), to authenticate against C(server)}
-    key_algorithm: ${7:# Specify key algorithm used by C(key_secret)}
-    zone: ${8:# DNS record will be modified on this C(zone)}
-    record: ${9:# Sets the DNS record to modify}
-    type: ${10:# Sets the record type}
-    ttl: ${11:# Sets the record TTL}
+    key_algorithm: ${2:# Specify key algorithm used by O(key_secret)}
+    key_name: ${3:# Use TSIG key name to authenticate against DNS O(server)}
+    key_secret: ${4:# Use TSIG key secret, associated with O(key_name), to authenticate against O(server)}
+    port: ${5:# Use this TCP port when connecting to O(server)}
+    protocol: ${6:# Sets the transport protocol (TCP or UDP)}
+    record: ${7:# Sets the DNS record to modify}
+    server: ${8:# Apply DNS modification on this server, specified by IPv4 or IPv6 address}
+    state: ${9:# Manage DNS record}
+    ttl: ${10:# Sets the record TTL}
+    type: ${11:# Sets the record type}
     value: ${12:# Sets the record value}
-    protocol: ${13:# Sets the transport protocol (TCP or UDP)}
+    zone: ${13:# DNS record will be modified on this O(zone)}
   tags:
     - community
     - general

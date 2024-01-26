@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage configuration sections on Extreme Ironware devices}
   community.network.ironware_config:
-    lines: ${2:# The ordered set of commands that should be configured in the section}
-    parents: ${3:# The ordered set of parents that uniquely identify the section the commands should be checked against}
-    src: ${4:# Specifies the source path to the file that contains the configuration or configuration template to load}
-    before: ${5:# The ordered set of commands to push on to the command stack if a change needs to be made}
-    after: ${6:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
-    match: ${7:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
-    replace: ${8:# Instructs the module on the way to perform the configuration on the device}
-    update: ${9:# The I(update) argument controls how the configuration statements are processed on the remote device}
-    commit: ${10:# This argument specifies the update method to use when applying the configuration changes to the remote node}
-    backup: ${11:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
-    config: ${12:# The C(config) argument allows the playbook designer to supply the base configuration to be used to validate configuration changes necessary}
+    after: ${2:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
+    authorize: ${3:# B(Deprecated)}
+    backup: ${4:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
+    backup_options: ${5:# This is a dict object containing configurable options related to backup file path}
+    before: ${6:# The ordered set of commands to push on to the command stack if a change needs to be made}
+    commit: ${7:# This argument specifies the update method to use when applying the configuration changes to the remote node}
+    config: ${8:# The C(config) argument allows the playbook designer to supply the base configuration to be used to validate configuration changes necessary}
+    lines: ${9:# The ordered set of commands that should be configured in the section}
+    match: ${10:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
+    parents: ${11:# The ordered set of parents that uniquely identify the section the commands should be checked against}
+    replace: ${12:# Instructs the module on the way to perform the configuration on the device}
     save_when: ${13:# When changes are made to the device running-configuration, the changes are not copied to non-volatile storage by default}
-    backup_options: ${14:# This is a dict object containing configurable options related to backup file path}
-    authorize: ${15:# B(Deprecated)}
+    src: ${14:# Specifies the source path to the file that contains the configuration or configuration template to load}
+    update: ${15:# The I(update) argument controls how the configuration statements are processed on the remote device}
   tags:
     - community
     - network

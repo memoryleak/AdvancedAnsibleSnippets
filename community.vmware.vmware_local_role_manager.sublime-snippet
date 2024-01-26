@@ -1,23 +1,23 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage local roles on an ESXi host}
+  <content><![CDATA[- name: ${1:Manage local roles on an ESXi host or vCenter}
   community.vmware.vmware_local_role_manager:
-    local_role_name: ${2:# The local role name to be managed}
-    local_privilege_ids: ${3:# The list of privileges that role needs to have}
-    state: ${4:# Indicate desired state of the role}
-    force_remove: ${5:# If set to C(False) then prevents the role from being removed if any permissions are using it}
-    action: ${6:# This parameter is only valid while updating an existing role with privileges}
-    hostname: ${7:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${8:# The username of the vSphere vCenter or ESXi server}
-    password: ${9:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${10:# Allows connection when SSL certificates are not valid}
-    port: ${11:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${12:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${13:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    action: ${2:# This parameter is only valid while updating an existing role with privileges}
+    force_remove: ${3:# If set to V(false) then prevents the role from being removed if any permissions are using it}
+    hostname: ${4:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    local_privilege_ids: ${5:# The list of privileges that role needs to have}
+    local_role_name: ${6:# The local role name to be managed}
+    password: ${7:# The password of the vSphere vCenter or ESXi server}
+    port: ${8:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${9:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${10:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    state: ${11:# Indicate desired state of the role}
+    username: ${12:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${13:# Allows connection when SSL certificates are not valid}
   tags:
     - community
     - vmware
     - vmware_local_role_manager]]></content>
   <tabTrigger>community.vmware.vmware_local_role_manager</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage local roles on an ESXi host</description>
+  <description>Manage local roles on an ESXi host or vCenter</description>
 </snippet>

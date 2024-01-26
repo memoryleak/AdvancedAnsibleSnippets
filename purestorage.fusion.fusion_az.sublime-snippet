@@ -1,12 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create Availability Zones in Pure Storage Fusion}
   purestorage.fusion.fusion_az:
-    name: ${2:# The name of the Availability Zone}
-    state: ${3:# Define whether the Availability Zone should exist or not}
-    display_name: ${4:# The human name of the Availability Zone}
-    region: ${5:# Region within which the AZ is created}
-    key_file: ${6:# Path to the private key file}
-    app_id: ${7:# Application ID from Pure1 Registration page}
+    access_token: ${2:# Access token for Fusion Service}
+    display_name: ${3:# The human name of the Availability Zone}
+    issuer_id: ${4:# Application ID from Pure1 Registration page}
+    name: ${5:# The name of the Availability Zone}
+    private_key_file: ${6:# Path to the private key file}
+    private_key_password: ${7:# Password of the encrypted private key file}
+    region: ${8:# Region within which the AZ is created}
+    state: ${9:# Define whether the Availability Zone should exist or not}
   tags:
     - purestorage
     - fusion

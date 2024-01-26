@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Efficiently upload multiple files to S3}
   community.aws.s3_sync:
-    mode: ${2:# sync direction}
-    file_change_strategy: ${3:# Difference determination method to allow changes-only syncing}
-    bucket: ${4:# Bucket name}
-    key_prefix: ${5:# In addition to file path, prepend s3 path with this prefix}
-    file_root: ${6:# File/directory path for synchronization}
-    permission: ${7:# Canned ACL to apply to synced files}
-    mime_map: ${8:# Dict entry from extension to MIME type}
-    include: ${9:# Shell pattern-style file matching}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    bucket: ${5:# Bucket name}
+    cache_control: ${6:# Cache-Control header set on uploaded objects}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    delete: ${8:# Remove remote files that exist in bucket but are not present in the file root}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
     exclude: ${10:# Shell pattern-style file matching}
-    cache_control: ${11:# Cache-Control header set on uploaded objects}
-    storage_class: ${12:# Storage class to be associated to each object added to the S3 bucket}
-    delete: ${13:# Remove remote files that exist in bucket but are not present in the file root}
-    access_key: ${14:# AWS access key ID}
-    secret_key: ${15:# AWS secret access key}
-    session_token: ${16:# AWS STS session token for use with temporary credentials}
-    profile: ${17:# A named AWS profile to use for authentication}
-    endpoint_url: ${18:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${19:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${20:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${21:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${22:# Use a C(botocore}
-    region: ${23:# The AWS region to use}
+    file_change_strategy: ${11:# Difference determination method to allow changes-only syncing}
+    file_root: ${12:# File/directory path for synchronization}
+    include: ${13:# Shell pattern-style file matching}
+    key_prefix: ${14:# In addition to file path, prepend s3 path with this prefix}
+    mime_map: ${15:# Dict entry from extension to MIME type}
+    mode: ${16:# sync direction}
+    permission: ${17:# Canned ACL to apply to synced files}
+    profile: ${18:# A named AWS profile to use for authentication}
+    region: ${19:# The AWS region to use}
+    secret_key: ${20:# AWS secret access key}
+    session_token: ${21:# AWS STS session token for use with temporary credentials}
+    storage_class: ${22:# Storage class to be associated to each object added to the S3 bucket}
+    validate_certs: ${23:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

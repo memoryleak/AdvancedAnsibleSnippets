@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages Cisco EVPN VXLAN Network Identifier (VNI)}
   cisco.nxos.nxos_evpn_vni:
-    vni: ${2:# The EVPN VXLAN Network Identifier}
-    route_distinguisher: ${3:# The VPN Route Distinguisher (RD)}
-    route_target_both: ${4:# Enables/Disables route-target settings for both import and export target communities using a single property}
+    route_distinguisher: ${2:# The VPN Route Distinguisher (RD)}
+    route_target_both: ${3:# Enables/Disables route-target settings for both import and export target communities using a single property}
+    route_target_export: ${4:# Sets the route-target 'export' extended communities}
     route_target_import: ${5:# Sets the route-target 'import' extended communities}
-    route_target_export: ${6:# Sets the route-target 'export' extended communities}
-    state: ${7:# Determines whether the config should be present or not on the device}
+    state: ${6:# Determines whether the config should be present or not on the device}
+    vni: ${7:# The EVPN VXLAN Network Identifier}
   tags:
     - cisco
     - nxos

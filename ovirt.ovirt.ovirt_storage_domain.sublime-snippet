@@ -1,35 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module to manage storage domains in oVirt/RHV}
   ovirt.ovirt.ovirt_storage_domain:
-    id: ${2:# Id of the storage domain to be imported}
-    name: ${3:# Name of the storage domain to manage}
-    state: ${4:# Should the storage domain be present/absent/maintenance/unattached/imported/update_ovf_store}
-    description: ${5:# Description of the storage domain}
-    comment: ${6:# Comment of the storage domain}
-    data_center: ${7:# Data center name where storage domain should be attached}
-    domain_function: ${8:# Function of the storage domain}
-    host: ${9:# Host to be used to mount storage}
-    localfs: ${10:# Dictionary with values for localfs storage type:}
-    nfs: ${11:# Dictionary with values for NFS storage type:}
-    iscsi: ${12:# Dictionary with values for iSCSI storage type:}
-    posixfs: ${13:# Dictionary with values for PosixFS storage type:}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    backup: ${3:# Boolean flag which indicates whether the storage domain is configured as backup or not}
+    comment: ${4:# Comment of the storage domain}
+    critical_space_action_blocker: ${5:# Indicates the minimal free space the storage domain should contain in percentages}
+    data_center: ${6:# Data center name where storage domain should be attached}
+    description: ${7:# Description of the storage domain}
+    destroy: ${8:# Logical remove of the storage domain}
+    discard_after_delete: ${9:# If I(True) storage domain blocks will be discarded upon deletion}
+    domain_function: ${10:# Function of the storage domain}
+    fcp: ${11:# Dictionary with values for fibre channel storage type:}
+    fetch_nested: ${12:# If I(True) the module will fetch additional data from the API}
+    format: ${13:# If I(True) storage domain will be formatted after removing it from oVirt/RHV}
     glusterfs: ${14:# Dictionary with values for GlusterFS storage type:}
-    managed_block_storage: ${15:# Dictionary with values for managed block storage type}
-    fcp: ${16:# Dictionary with values for fibre channel storage type:}
-    wipe_after_delete: ${17:# Boolean flag which indicates whether the storage domain should wipe the data after delete}
-    backup: ${18:# Boolean flag which indicates whether the storage domain is configured as backup or not}
-    critical_space_action_blocker: ${19:# Indicates the minimal free space the storage domain should contain in percentages}
-    warning_low_space: ${20:# Indicates the minimum percentage of a free space in a storage domain to present a warning}
-    destroy: ${21:# Logical remove of the storage domain}
-    format: ${22:# If I(True) storage domain will be formatted after removing it from oVirt/RHV}
-    discard_after_delete: ${23:# If I(True) storage domain blocks will be discarded upon deletion}
-    storage_format: ${24:# One of v1, v2, v3, v4, v5 - sets the storage format of the domain}
-    wait: ${25:# C(yes) if the module should wait for the entity to get into desired state}
-    fetch_nested: ${26:# If I(True) the module will fetch additional data from the API}
-    nested_attributes: ${27:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${28:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
-    timeout: ${29:# The amount of time in seconds the module should wait for the instance to get into desired state}
-    poll_interval: ${30:# Number of the seconds the module waits until another poll request on entity status is sent}
+    host: ${15:# Host to be used to mount storage}
+    id: ${16:# Id of the storage domain to be imported}
+    iscsi: ${17:# Dictionary with values for iSCSI storage type:}
+    localfs: ${18:# Dictionary with values for localfs storage type:}
+    managed_block_storage: ${19:# Dictionary with values for managed block storage type}
+    name: ${20:# Name of the storage domain to manage}
+    nested_attributes: ${21:# Specifies list of the attributes which should be fetched from the API}
+    nfs: ${22:# Dictionary with values for NFS storage type:}
+    poll_interval: ${23:# Number of the seconds the module waits until another poll request on entity status is sent}
+    posixfs: ${24:# Dictionary with values for PosixFS storage type:}
+    state: ${25:# Should the storage domain be present/absent/maintenance/unattached/imported/update_ovf_store}
+    storage_format: ${26:# One of v1, v2, v3, v4, v5 - sets the storage format of the domain}
+    timeout: ${27:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    wait: ${28:# C(yes) if the module should wait for the entity to get into desired state}
+    warning_low_space: ${29:# Indicates the minimum percentage of a free space in a storage domain to present a warning}
+    wipe_after_delete: ${30:# Boolean flag which indicates whether the storage domain should wipe the data after delete}
   tags:
     - ovirt
     - ovirt

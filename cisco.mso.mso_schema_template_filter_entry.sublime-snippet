@@ -1,35 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage filter entries in schema templates}
   cisco.mso.mso_schema_template_filter_entry:
-    schema: ${2:# The name of the schema}
-    template: ${3:# The name of the template}
-    filter: ${4:# The name of the filter to manage}
-    filter_description: ${5:# The description of this filter is supported on versions of MSO that are 3}
-    filter_display_name: ${6:# The name as displayed on the MSO web interface}
-    entry: ${7:# The filter entry name to manage}
-    display_name: ${8:# The name as displayed on the MSO web interface}
-    filter_entry_description: ${9:# The description of this filter entry}
-    ethertype: ${10:# The ethernet type to use for this filter entry}
-    ip_protocol: ${11:# The IP protocol to use for this filter entry}
-    tcp_session_rules: ${12:# A list of TCP session rules}
-    source_from: ${13:# The source port range from}
-    source_to: ${14:# The source port range to}
-    destination_from: ${15:# The destination port range from}
-    destination_to: ${16:# The destination port range to}
-    arp_flag: ${17:# The ARP flag to use for this filter entry}
-    stateful: ${18:# Whether this filter entry is stateful}
-    fragments_only: ${19:# Whether this filter entry only matches fragments}
-    state: ${20:# Use C(present) or C(absent) for adding or removing}
-    host: ${21:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${22:# Port number to be used for the REST connection}
-    username: ${23:# The username to use for authentication}
-    password: ${24:# The password to use for authentication}
-    output_level: ${25:# Influence the output of this MSO module}
+    arp_flag: ${2:# The ARP flag to use for this filter entry}
+    destination_from: ${3:# The destination port range from}
+    destination_to: ${4:# The destination port range to}
+    display_name: ${5:# The name as displayed on the MSO web interface}
+    entry: ${6:# The filter entry name to manage}
+    ethertype: ${7:# The ethernet type to use for this filter entry}
+    filter: ${8:# The name of the filter to manage}
+    filter_description: ${9:# The description of this filter is supported on versions of MSO that are 3}
+    filter_display_name: ${10:# The name as displayed on the MSO web interface}
+    filter_entry_description: ${11:# The description of this filter entry}
+    fragments_only: ${12:# Whether this filter entry only matches fragments}
+    host: ${13:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    ip_protocol: ${14:# The IP protocol to use for this filter entry}
+    login_domain: ${15:# The login domain name to use for authentication}
+    output_level: ${16:# Influence the output of this MSO module}
+    password: ${17:# The password to use for authentication}
+    port: ${18:# Port number to be used for the REST connection}
+    schema: ${19:# The name of the schema}
+    source_from: ${20:# The source port range from}
+    source_to: ${21:# The source port range to}
+    state: ${22:# Use C(present) or C(absent) for adding or removing}
+    stateful: ${23:# Whether this filter entry is stateful}
+    tcp_session_rules: ${24:# A list of TCP session rules}
+    template: ${25:# The name of the template}
     timeout: ${26:# The socket level timeout in seconds}
-    use_proxy: ${27:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${28:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${29:# If C(no), SSL certificates will not be validated}
-    login_domain: ${30:# The login domain name to use for authentication}
+    use_proxy: ${27:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${28:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${29:# The username to use for authentication}
+    validate_certs: ${30:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - mso

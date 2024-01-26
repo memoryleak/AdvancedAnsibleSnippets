@@ -1,20 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage volumes in Pure Storage Fusion}
   purestorage.fusion.fusion_volume:
-    name: ${2:# The name of the volume}
+    access_token: ${2:# Access token for Fusion Service}
     display_name: ${3:# The human name of the volume}
-    state: ${4:# Define whether the volume should exist or not}
-    tenant: ${5:# The name of the tenant}
-    tenant_space: ${6:# The name of the tenant space}
-    eradicate: ${7:# Define whether to eradicate the volume on delete or leave in trash}
-    size: ${8:# Volume size in M, G, T or P units}
-    storage_class: ${9:# The name of the storage class}
-    placement_group: ${10:# The name of the plcement group}
+    eradicate: ${4:# Wipes the volume instead of a soft delete if true}
+    host_access_policies: ${5:# A list of host access policies to connect the volume to}
+    issuer_id: ${6:# Application ID from Pure1 Registration page}
+    name: ${7:# The name of the volume}
+    placement_group: ${8:# The name of the placement group}
+    private_key_file: ${9:# Path to the private key file}
+    private_key_password: ${10:# Password of the encrypted private key file}
     protection_policy: ${11:# The name of the protection policy}
-    hosts: ${12:# A list of host access policies to connect the volume to}
-    rename: ${13:# New name for volume}
-    key_file: ${14:# Path to the private key file}
-    app_id: ${15:# Application ID from Pure1 Registration page}
+    rename: ${12:# New name for volume}
+    size: ${13:# Volume size in M, G, T or P units}
+    source_snapshot: ${14:# The source snapshot name}
+    source_volume: ${15:# The source volume name}
+    source_volume_snapshot: ${16:# The source volume snapshot name}
+    state: ${17:# Define whether the volume should exist or not}
+    storage_class: ${18:# The name of the storage class}
+    tenant: ${19:# The name of the tenant}
+    tenant_space: ${20:# The name of the tenant space}
   tags:
     - purestorage
     - fusion

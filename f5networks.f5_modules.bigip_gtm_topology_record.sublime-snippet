@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages GTM Topology Records}
   f5networks.f5_modules.bigip_gtm_topology_record:
-    source: ${2:# Specifies the origination of an incoming DNS request}
-    destination: ${3:# Specifies where the system directs the incoming DNS request}
-    weight: ${4:# Specifies the weight of the topology record}
-    partition: ${5:# Device partition to manage resources on}
+    destination: ${2:# Specifies where the system directs the incoming DNS request}
+    partition: ${3:# Device partition to manage resources on}
+    provider: ${4:# A dict object containing connection details}
+    source: ${5:# Specifies the origination of an incoming DNS request}
     state: ${6:# When C(state) is C(present), ensures the record exists}
-    provider: ${7:# A dict object containing connection details}
+    weight: ${7:# Specifies the weight of the topology record}
   tags:
     - f5networks
     - f5_modules

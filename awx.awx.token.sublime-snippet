@@ -1,18 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller tokens}
   awx.awx.token:
-    description: ${2:# Optional description of this access token}
-    application: ${3:# The application tied to this token}
-    scope: ${4:# Allowed scopes, further restricts user's permissions}
-    existing_token: ${5:# The data structure produced from token in create mode to be used with state absent}
-    existing_token_id: ${6:# A token ID (number) which can be used to delete an arbitrary token with state absent}
-    state: ${7:# Desired state of the resource}
-    controller_host: ${8:# URL to your Automation Platform Controller instance}
-    controller_username: ${9:# Username for your controller instance}
-    controller_password: ${10:# Password for your controller instance}
-    controller_oauthtoken: ${11:# The OAuth token to use}
-    validate_certs: ${12:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${13:# Path to the controller config file}
+    application: ${2:# The application name, ID, or named URL tied to this token}
+    controller_config_file: ${3:# Path to the controller config file}
+    controller_host: ${4:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${5:# The OAuth token to use}
+    controller_password: ${6:# Password for your controller instance}
+    controller_username: ${7:# Username for your controller instance}
+    description: ${8:# Optional description of this access token}
+    existing_token: ${9:# The data structure produced from token in create mode to be used with state absent}
+    existing_token_id: ${10:# A token ID (number) which can be used to delete an arbitrary token with state absent}
+    request_timeout: ${11:# Specify the timeout Ansible should use in requests to the controller host}
+    scope: ${12:# Allowed scopes, further restricts user's permissions}
+    state: ${13:# Desired state of the resource}
+    validate_certs: ${14:# Whether to allow insecure connections to AWX}
   tags:
     - awx
     - awx

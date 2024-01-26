@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manipulate Consul roles}
+  community.general.consul_role:
+    description: ${2:# Description of the role}
+    host: ${3:# Host of the consul agent, defaults to V(localhost)}
+    name: ${4:# A name used to identify the role}
+    node_identities: ${5:# List of node identities to attach to the role}
+    policies: ${6:# List of policies to attach to the role}
+    port: ${7:# The port on which the consul agent is running}
+    scheme: ${8:# The protocol scheme on which the consul agent is running}
+    service_identities: ${9:# List of service identities to attach to the role}
+    state: ${10:# whether the role should be present or absent}
+    token: ${11:# A management token is required to manipulate the roles}
+    validate_certs: ${12:# Whether to verify the TLS certificate of the consul agent}
+  tags:
+    - community
+    - general
+    - consul_role]]></content>
+  <tabTrigger>community.general.consul_role</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manipulate Consul roles</description>
+</snippet>

@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage OpenBSD system upgrades}
   community.general.sysupgrade:
-    snapshot: ${2:# Apply the latest snapshot}
+    fetch_only: ${2:# Fetch and verify files and create /bsd}
     force: ${3:# Force upgrade (for snapshots only)}
-    keep_files: ${4:# Keep the files under /home/_sysupgrade}
-    fetch_only: ${5:# Fetch and verify files and create /bsd}
-    installurl: ${6:# OpenBSD mirror top-level URL for fetching an upgrade}
+    installurl: ${4:# OpenBSD mirror top-level URL for fetching an upgrade}
+    keep_files: ${5:# Keep the files under /home/_sysupgrade}
+    snapshot: ${6:# Apply the latest snapshot}
   tags:
     - community
     - general

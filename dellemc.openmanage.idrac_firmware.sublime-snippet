@@ -1,22 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Firmware update from a repository on a network share (CIFS, NFS, HTTP, HTTPS, FTP)}
   dellemc.openmanage.idrac_firmware:
-    share_name: ${2:# Network share path of update repository}
-    share_user: ${3:# Network share user in the format 'user@domain' or 'domain\\\\user' if user is part of a domain else 'user'}
-    share_password: ${4:# Network share user password}
-    share_mnt: ${5:# Local mount path of the network share with read-write permission for ansible user}
-    job_wait: ${6:# Whether to wait for job completion or not}
-    catalog_file_name: ${7:# Catalog file name relative to the I(share_name)}
-    ignore_cert_warning: ${8:# Specifies if certificate warnings are ignored when HTTPS share is used}
-    apply_update: ${9:# If I(apply_update) is set to C(True), then the packages are applied}
-    reboot: ${10:# Provides the option to apply the update packages immediately or in the next reboot}
-    idrac_ip: ${11:# iDRAC IP Address}
-    idrac_user: ${12:# iDRAC username}
-    idrac_password: ${13:# iDRAC user password}
-    idrac_port: ${14:# iDRAC port}
-    validate_certs: ${15:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${16:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${17:# The socket level timeout in seconds}
+    apply_update: ${2:# If I(apply_update) is set to C(true), then the packages are applied}
+    ca_path: ${3:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    catalog_file_name: ${4:# Catalog file name relative to the I(share_name)}
+    idrac_ip: ${5:# iDRAC IP Address}
+    idrac_password: ${6:# iDRAC user password}
+    idrac_port: ${7:# iDRAC port}
+    idrac_user: ${8:# iDRAC username}
+    ignore_cert_warning: ${9:# Specifies if certificate warnings are ignored when HTTPS share is used}
+    job_wait: ${10:# Whether to wait for job completion or not}
+    proxy_passwd: ${11:# The password for the proxy server}
+    proxy_port: ${12:# The Port for the proxy server}
+    proxy_server: ${13:# The IP address of the proxy server}
+    proxy_support: ${14:# Specifies if a proxy should be used}
+    proxy_type: ${15:# The proxy type of the proxy server}
+    proxy_uname: ${16:# The user name for the proxy server}
+    reboot: ${17:# Provides the option to apply the update packages immediately or in the next reboot}
+    share_mnt: ${18:# Local mount path of the network share with read-write permission for ansible user}
+    share_name: ${19:# Network share path of update repository}
+    share_password: ${20:# Network share user password}
+    share_user: ${21:# Network share user in the format 'user@domain' or 'domain\\\\user' if user is part of a domain else 'user'}
+    timeout: ${22:# The socket level timeout in seconds}
+    validate_certs: ${23:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

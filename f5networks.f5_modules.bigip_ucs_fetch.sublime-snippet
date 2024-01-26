@@ -1,16 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:Fetches a UCS file from remote nodes}
   f5networks.f5_modules.bigip_ucs_fetch:
-    backup: ${2:# Creates a backup file including the timestamp information so you can get the original file back if you overwrote it incorrectly}
-    create_on_missing: ${3:# Creates the UCS based on the value of C(src), if the file does not already exist on the remote system}
-    dest: ${4:# A directory to save the UCS file into}
-    encryption_password: ${5:# Password to use to encrypt the UCS file if desired}
-    fail_on_missing: ${6:# Make the module fail if the UCS file on the remote system is missing}
-    force: ${7:# If C(no), the file is only transferred if the destination does not exist}
-    src: ${8:# The name of the UCS file to create on the remote server for downloading}
-    async_timeout: ${9:# Parameter used when creating new UCS file on a device}
-    only_create_file: ${10:# If C(yes), the file is created on the device and not downloaded}
-    provider: ${11:# A dict object containing connection details}
+    async_timeout: ${2:# Parameter used when creating new UCS file on a device}
+    attributes: ${3:# The attributes the resulting filesystem object should have}
+    backup: ${4:# Creates a backup file including the timestamp information so you can get the original file back if you overwrote it incorrectly}
+    create_on_missing: ${5:# Creates the UCS based on the value of C(src), if the file does not already exist on the remote system}
+    dest: ${6:# A directory to save the UCS file into}
+    encryption_password: ${7:# Password to use to encrypt the UCS file if desired}
+    fail_on_missing: ${8:# Make the module fail if the UCS file on the remote system is missing}
+    force: ${9:# If C(false), the file is only transferred if the destination does not exist}
+    group: ${10:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    mode: ${11:# The permissions the resulting filesystem object should have}
+    only_create_file: ${12:# If C(true), the file is created on the device and not downloaded}
+    owner: ${13:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
+    provider: ${14:# A dict object containing connection details}
+    selevel: ${15:# The level part of the SELinux filesystem object context}
+    serole: ${16:# The role part of the SELinux filesystem object context}
+    setype: ${17:# The type part of the SELinux filesystem object context}
+    seuser: ${18:# The user part of the SELinux filesystem object context}
+    src: ${19:# The name of the UCS file to create on the remote server for downloading}
+    unsafe_writes: ${20:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
   tags:
     - f5networks
     - f5_modules

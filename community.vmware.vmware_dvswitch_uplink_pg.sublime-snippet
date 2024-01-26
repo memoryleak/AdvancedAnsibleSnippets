@@ -1,26 +1,26 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage uplink portproup configuration of a Distributed Switch}
+  <content><![CDATA[- name: ${1:Manage uplink portgroup configuration of a Distributed Switch}
   community.vmware.vmware_dvswitch_uplink_pg:
-    switch: ${2:# The name of the Distributed Switch}
-    name: ${3:# The name of the uplink portgroup}
+    advanced: ${2:# Dictionary which configures the advanced policy settings for the uplink portgroup}
+    block_all_ports: ${3:# Indicates if all ports are blocked on the uplink portgroup}
     description: ${4:# The description of the uplink portgroup}
-    advanced: ${5:# Dictionary which configures the advanced policy settings for the uplink portgroup}
-    vlan_trunk_range: ${6:# The VLAN trunk range that should be configured with the uplink portgroup}
-    lacp: ${7:# Dictionary which configures the LACP settings for the uplink portgroup}
+    hostname: ${5:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    lacp: ${6:# Dictionary which configures the LACP settings for the uplink portgroup}
+    name: ${7:# The name of the uplink portgroup}
     netflow_enabled: ${8:# Indicates if NetFlow is enabled on the uplink portgroup}
-    block_all_ports: ${9:# Indicates if all ports are blocked on the uplink portgroup}
-    hostname: ${10:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${11:# The username of the vSphere vCenter or ESXi server}
-    password: ${12:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${13:# Allows connection when SSL certificates are not valid}
-    port: ${14:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${15:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${16:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    password: ${9:# The password of the vSphere vCenter or ESXi server}
+    port: ${10:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${11:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${12:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    switch: ${13:# The name of the Distributed Switch}
+    username: ${14:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${15:# Allows connection when SSL certificates are not valid}
+    vlan_trunk_range: ${16:# The VLAN trunk range that should be configured with the uplink portgroup}
   tags:
     - community
     - vmware
     - vmware_dvswitch_uplink_pg]]></content>
   <tabTrigger>community.vmware.vmware_dvswitch_uplink_pg</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage uplink portproup configuration of a Distributed Switch</description>
+  <description>Manage uplink portgroup configuration of a Distributed Switch</description>
 </snippet>

@@ -1,14 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage role assignments in Pure Storage Fusion}
   purestorage.fusion.fusion_ra:
-    name: ${2:# The name of the role to be assigned/unassigned}
-    state: ${3:# Define whether the role assingment should exist or not}
-    user: ${4:# The username to assign the role to}
-    scope: ${5:# The level to which the role is assigned}
-    tenant: ${6:# The name of the tenant the user has the role applied to}
-    tenant_space: ${7:# The name of the tenant_space the user has the role applied to}
-    key_file: ${8:# Path to the private key file}
-    app_id: ${9:# Application ID from Pure1 Registration page}
+    access_token: ${2:# Access token for Fusion Service}
+    api_client_key: ${3:# The issuer ID of the API client to assign the role to}
+    issuer_id: ${4:# Application ID from Pure1 Registration page}
+    principal: ${5:# The unique ID of the principal (User or API Client) to assign to the role}
+    private_key_file: ${6:# Path to the private key file}
+    private_key_password: ${7:# Password of the encrypted private key file}
+    role: ${8:# The name of the role to be assigned/unassigned}
+    scope: ${9:# The level to which the role is assigned}
+    state: ${10:# Define whether the role assingment should exist or not}
+    tenant: ${11:# The name of the tenant the user has the role applied to}
+    tenant_space: ${12:# The name of the tenant_space the user has the role applied to}
+    user: ${13:# The username to assign the role to}
   tags:
     - purestorage
     - fusion

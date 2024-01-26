@@ -1,106 +1,108 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module to manage Virtual Machines in oVirt/RHV}
   ovirt.ovirt.ovirt_vm:
-    name: ${2:# Name of the Virtual Machine to manage}
-    id: ${3:# ID of the Virtual Machine to manage}
-    state: ${4:# Should the Virtual Machine be running/stopped/present/absent/suspended/next_run/registered/exported/reboot}
-    cluster: ${5:# Name of the cluster, where Virtual Machine should be created}
-    allow_partial_import: ${6:# Boolean indication whether to allow partial registration of Virtual Machine when C(state) is registered}
-    vnic_profile_mappings: ${7:# Mapper which maps an external virtual NIC profile to one that exists in the engine when C(state) is registered}
-    cluster_mappings: ${8:# Mapper which maps cluster name between VM's OVF and the destination cluster this VM should be registered to, relevant when C(state) is registered}
-    role_mappings: ${9:# Mapper which maps role name between VM's OVF and the destination role this VM should be registered to, relevant when C(state) is registered}
-    domain_mappings: ${10:# Mapper which maps aaa domain name between VM's OVF and the destination aaa domain this VM should be registered to, relevant when C(state) is registered}
-    affinity_group_mappings: ${11:# Mapper which maps affinity name between VM's OVF and the destination affinity this VM should be registered to, relevant when C(state) is registered}
-    affinity_label_mappings: ${12:# Mapper which maps affinity label name between VM's OVF and the destination label this VM should be registered to, relevant when C(state) is registered}
-    lun_mappings: ${13:# Mapper which maps lun between VM's OVF and the destination lun this VM should contain, relevant when C(state) is registered}
-    reassign_bad_macs: ${14:# Boolean indication whether to reassign bad macs when C(state) is registered}
-    template: ${15:# Name of the template, which should be used to create Virtual Machine}
-    template_version: ${16:# Version number of the template to be used for VM}
-    use_latest_template_version: ${17:# Specify if latest template version should be used, when running a stateless VM}
-    storage_domain: ${18:# Name of the storage domain where all template disks should be created}
-    disk_format: ${19:# Specify format of the disk}
-    memory: ${20:# Amount of memory of the Virtual Machine}
-    memory_guaranteed: ${21:# Amount of minimal guaranteed memory of the Virtual Machine}
-    memory_max: ${22:# Upper bound of virtual machine memory up to which memory hot-plug can be performed}
-    cpu_shares: ${23:# Set a CPU shares for this Virtual Machine}
-    cpu_cores: ${24:# Number of virtual CPUs cores of the Virtual Machine}
-    cpu_sockets: ${25:# Number of virtual CPUs sockets of the Virtual Machine}
-    cpu_threads: ${26:# Number of threads per core of the Virtual Machine}
-    type: ${27:# Type of the Virtual Machine}
-    quota_id: ${28:# Virtual Machine quota ID to be used for disk}
-    operating_system: ${29:# Operating system of the Virtual Machine, for example 'rhel_8x64'}
-    boot_devices: ${30:# List of boot devices which should be used to boot}
-    boot_menu: ${31:# I(True) enable menu to select boot device, I(False) to disable it}
-    bios_type: ${32:# Set bios type, necessary for some operating systems and secure boot}
-    usb_support: ${33:# I(True) enable USB support, I(False) to disable it}
-    serial_console: ${34:# I(True) enable VirtIO serial console, I(False) to disable it}
-    sso: ${35:# I(True) enable Single Sign On by Guest Agent, I(False) to disable it}
-    host: ${36:# Specify host where Virtual Machine should be running}
-    high_availability: ${37:# If I(yes) Virtual Machine will be set as highly available}
-    high_availability_priority: ${38:# Indicates the priority of the virtual machine inside the run and migration queues}
-    lease: ${39:# Name of the storage domain this virtual machine lease reside on}
-    custom_compatibility_version: ${40:# Enables a virtual machine to be customized to its own compatibility version}
-    host_devices: ${41:# Single Root I/O Virtualization - technology that allows single device to expose multiple endpoints that can be passed to VMs}
-    delete_protected: ${42:# If I(yes) Virtual Machine will be set as delete protected}
-    stateless: ${43:# If I(yes) Virtual Machine will be set as stateless}
-    clone: ${44:# If I(yes) then the disks of the created virtual machine will be cloned and independent of the template}
-    clone_permissions: ${45:# If I(yes) then the permissions of the template (only the direct ones, not the inherited ones) will be copied to the created virtual machine}
-    cd_iso: ${46:# ISO file from ISO storage domain which should be attached to Virtual Machine}
-    force: ${47:# Please check to I(Synopsis) to more detailed description of force parameter, it can behave differently in different situations}
-    nics: ${48:# List of NICs, which should be attached to Virtual Machine}
-    disks: ${49:# List of disks, which should be attached to Virtual Machine}
-    sysprep: ${50:# Dictionary with values for Windows Virtual Machine initialization using sysprep}
-    cloud_init: ${51:# Dictionary with values for Unix-like Virtual Machine initialization using cloud init}
-    cloud_init_nics: ${52:# List of dictionaries representing network interfaces to be setup by cloud init}
-    cloud_init_persist: ${53:# If I(yes) the C(cloud_init) or C(sysprep) parameters will be saved for the virtual machine and the virtual machine won't be started as run-once}
-    kernel_params_persist: ${54:# If I(true) C(kernel_params), C(initrd_path) and C(kernel_path) will persist in virtual machine configuration, if I(False) it will be used for run once}
-    kernel_path: ${55:# Path to a kernel image used to boot the virtual machine}
-    initrd_path: ${56:# Path to an initial ramdisk to be used with the kernel specified by C(kernel_path) option}
-    kernel_params: ${57:# Kernel command line parameters (formatted as string) to be used with the kernel specified by C(kernel_path) option}
-    instance_type: ${58:# Name of virtual machine's hardware configuration}
-    description: ${59:# Description of the Virtual Machine}
-    comment: ${60:# Comment of the Virtual Machine}
-    timezone: ${61:# Sets time zone offset of the guest hardware clock}
-    serial_policy: ${62:# Specify a serial number policy for the Virtual Machine}
-    serial_policy_value: ${63:# Allows you to specify a custom serial number}
-    vmware: ${64:# Dictionary of values to be used to connect to VMware and import a virtual machine to oVirt}
-    xen: ${65:# Dictionary of values to be used to connect to XEN and import a virtual machine to oVirt}
-    kvm: ${66:# Dictionary of values to be used to connect to kvm and import a virtual machine to oVirt}
-    cpu_mode: ${67:# CPU mode of the virtual machine}
-    placement_policy: ${68:# The configuration of the virtual machine's placement policy}
-    placement_policy_hosts: ${69:# List of host names}
-    ticket: ${70:# If I(true), in addition return I(remote_vv_file) inside I(vm) dictionary, which contains compatible content for remote-viewer application}
-    cpu_pinning: ${71:# CPU Pinning topology to map virtual machine CPU to host CPU}
-    soundcard_enabled: ${72:# If I(true), the sound card is added to the virtual machine}
-    smartcard_enabled: ${73:# If I(true), use smart card authentication}
-    io_threads: ${74:# Number of IO threads used by virtual machine}
-    ballooning_enabled: ${75:# If I(true), use memory ballooning}
-    numa_tune_mode: ${76:# Set how the memory allocation for NUMA nodes of this VM is applied (relevant if NUMA nodes are set for this VM)}
-    numa_nodes: ${77:# List of vNUMA Nodes to set for this VM and pin them to assigned host's physical NUMA node}
-    rng_device: ${78:# Random number generator (RNG)}
-    custom_properties: ${79:# Properties sent to VDSM to configure various hooks}
-    watchdog: ${80:# Assign watchdog device for the virtual machine}
-    graphical_console: ${81:# Assign graphical console to the virtual machine}
-    exclusive: ${82:# When C(state) is I(exported) this parameter indicates if the existing VM with the same name should be overwritten}
-    export_domain: ${83:# When C(state) is I(exported)this parameter specifies the name of the export storage domain}
-    export_ova: ${84:# Dictionary of values to be used to export VM as OVA}
-    force_migrate: ${85:# If I(true), the VM will migrate when I(placement_policy=user-migratable) but not when I(placement_policy=pinned)}
-    migrate: ${86:# If I(true), the VM will migrate to any available host}
-    next_run: ${87:# If I(true), the update will not be applied to the VM immediately and will be only applied when virtual machine is restarted}
-    snapshot_name: ${88:# Snapshot to clone VM from}
-    snapshot_vm: ${89:# Source VM to clone VM from}
-    custom_emulated_machine: ${90:# Sets the value of the custom_emulated_machine attribute}
-    virtio_scsi_enabled: ${91:# Enable Virtio SCSI support}
-    multi_queues_enabled: ${92:# If `true`, each virtual interface will get the optimal number of queues, depending on the available virtual Cpus}
-    virtio_scsi_multi_queues: ${93:# Number of queues for a Virtio-SCSI controller, possible values: -1 - Indicates that the queues will be automatically set}
-    wait_after_lease: ${94:# Number of seconds which should the module wait after the lease is changed}
-    volatile: ${95:# Indicates that this run configuration will be discarded even in the case of guest-initiated reboot}
-    wait: ${96:# C(yes) if the module should wait for the entity to get into desired state}
-    fetch_nested: ${97:# If I(True) the module will fetch additional data from the API}
-    nested_attributes: ${98:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${99:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
-    timeout: ${100:# The amount of time in seconds the module should wait for the instance to get into desired state}
-    poll_interval: ${101:# Number of the seconds the module waits until another poll request on entity status is sent}
+    affinity_group_mappings: ${2:# Mapper which maps affinity name between VM's OVF and the destination affinity this VM should be registered to, relevant when C(state) is registered}
+    affinity_label_mappings: ${3:# Mapper which maps affinity label name between VM's OVF and the destination label this VM should be registered to, relevant when C(state) is registered}
+    allow_partial_import: ${4:# Boolean indication whether to allow partial registration of Virtual Machine when C(state) is registered}
+    auth: ${5:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    ballooning_enabled: ${6:# If I(true), use memory ballooning}
+    bios_type: ${7:# Set bios type, necessary for some operating systems and secure boot}
+    boot_devices: ${8:# List of boot devices which should be used to boot}
+    boot_menu: ${9:# I(True) enable menu to select boot device, I(False) to disable it}
+    cd_iso: ${10:# ISO file from ISO storage domain which should be attached to Virtual Machine}
+    clone: ${11:# If I(yes) then the disks of the created virtual machine will be cloned and independent of the template}
+    clone_permissions: ${12:# If I(yes) then the permissions of the template (only the direct ones, not the inherited ones) will be copied to the created virtual machine}
+    cloud_init: ${13:# Dictionary with values for Unix-like Virtual Machine initialization using cloud init}
+    cloud_init_nics: ${14:# List of dictionaries representing network interfaces to be setup by cloud init}
+    cloud_init_persist: ${15:# If I(yes) the C(cloud_init) or C(sysprep) parameters will be saved for the virtual machine and the virtual machine won't be started as run-once}
+    cluster: ${16:# Name of the cluster, where Virtual Machine should be created}
+    cluster_mappings: ${17:# Mapper which maps cluster name between VM's OVF and the destination cluster this VM should be registered to, relevant when C(state) is registered}
+    comment: ${18:# Comment of the Virtual Machine}
+    cpu_cores: ${19:# Number of virtual CPUs cores of the Virtual Machine}
+    cpu_mode: ${20:# CPU mode of the virtual machine}
+    cpu_pinning: ${21:# CPU Pinning topology to map virtual machine CPU to host CPU}
+    cpu_shares: ${22:# Set a CPU shares for this Virtual Machine}
+    cpu_sockets: ${23:# Number of virtual CPUs sockets of the Virtual Machine}
+    cpu_threads: ${24:# Number of threads per core of the Virtual Machine}
+    custom_compatibility_version: ${25:# Enables a virtual machine to be customized to its own compatibility version}
+    custom_emulated_machine: ${26:# Sets the value of the custom_emulated_machine attribute}
+    custom_properties: ${27:# Properties sent to VDSM to configure various hooks}
+    delete_protected: ${28:# If I(yes) Virtual Machine will be set as delete protected}
+    description: ${29:# Description of the Virtual Machine}
+    disk_format: ${30:# Specify format of the disk}
+    disks: ${31:# List of disks, which should be attached to Virtual Machine}
+    domain_mappings: ${32:# Mapper which maps aaa domain name between VM's OVF and the destination aaa domain this VM should be registered to, relevant when C(state) is registered}
+    exclusive: ${33:# When C(state) is I(exported) this parameter indicates if the existing VM with the same name should be overwritten}
+    export_domain: ${34:# When C(state) is I(exported)this parameter specifies the name of the export storage domain}
+    export_ova: ${35:# Dictionary of values to be used to export VM as OVA}
+    fetch_nested: ${36:# If I(True) the module will fetch additional data from the API}
+    force: ${37:# Please check to I(Synopsis) to more detailed description of force parameter, it can behave differently in different situations}
+    force_migrate: ${38:# If I(true), the VM will migrate when I(placement_policy=user-migratable) but not when I(placement_policy=pinned)}
+    graphical_console: ${39:# Assign graphical console to the virtual machine}
+    high_availability: ${40:# If I(yes) Virtual Machine will be set as highly available}
+    high_availability_priority: ${41:# Indicates the priority of the virtual machine inside the run and migration queues}
+    host: ${42:# Specify host where Virtual Machine should be running}
+    host_devices: ${43:# Single Root I/O Virtualization - technology that allows single device to expose multiple endpoints that can be passed to VMs}
+    id: ${44:# ID of the Virtual Machine to manage}
+    initrd_path: ${45:# Path to an initial ramdisk to be used with the kernel specified by C(kernel_path) option}
+    instance_type: ${46:# Name of virtual machine's hardware configuration}
+    io_threads: ${47:# Number of IO threads used by virtual machine}
+    kernel_params: ${48:# Kernel command line parameters (formatted as string) to be used with the kernel specified by C(kernel_path) option}
+    kernel_params_persist: ${49:# If I(true) C(kernel_params), C(initrd_path) and C(kernel_path) will persist in virtual machine configuration, if I(False) it will be used for run once}
+    kernel_path: ${50:# Path to a kernel image used to boot the virtual machine}
+    kvm: ${51:# Dictionary of values to be used to connect to kvm and import a virtual machine to oVirt}
+    lease: ${52:# Name of the storage domain this virtual machine lease reside on}
+    lun_mappings: ${53:# Mapper which maps lun between VM's OVF and the destination lun this VM should contain, relevant when C(state) is registered}
+    memory: ${54:# Amount of memory of the Virtual Machine}
+    memory_guaranteed: ${55:# Amount of minimal guaranteed memory of the Virtual Machine}
+    memory_max: ${56:# Upper bound of virtual machine memory up to which memory hot-plug can be performed}
+    migrate: ${57:# If I(true), the VM will migrate to any available host}
+    multi_queues_enabled: ${58:# If `true`, each virtual interface will get the optimal number of queues, depending on the available virtual Cpus}
+    name: ${59:# Name of the Virtual Machine to manage}
+    nested_attributes: ${60:# Specifies list of the attributes which should be fetched from the API}
+    next_run: ${61:# If I(true), the update will not be applied to the VM immediately and will be only applied when virtual machine is restarted}
+    nics: ${62:# List of NICs, which should be attached to Virtual Machine}
+    numa_nodes: ${63:# List of vNUMA Nodes to set for this VM and pin them to assigned host's physical NUMA node}
+    numa_tune_mode: ${64:# Set how the memory allocation for NUMA nodes of this VM is applied (relevant if NUMA nodes are set for this VM)}
+    operating_system: ${65:# Operating system of the Virtual Machine, for example 'rhel_8x64'}
+    placement_policy: ${66:# The configuration of the virtual machine's placement policy}
+    placement_policy_hosts: ${67:# List of host names}
+    poll_interval: ${68:# Number of the seconds the module waits until another poll request on entity status is sent}
+    quota_id: ${69:# Virtual Machine quota ID to be used for disk}
+    reassign_bad_macs: ${70:# Boolean indication whether to reassign bad macs when C(state) is registered}
+    rng_device: ${71:# Random number generator (RNG)}
+    role_mappings: ${72:# Mapper which maps role name between VM's OVF and the destination role this VM should be registered to, relevant when C(state) is registered}
+    serial_console: ${73:# I(True) enable VirtIO serial console, I(False) to disable it}
+    serial_policy: ${74:# Specify a serial number policy for the Virtual Machine}
+    serial_policy_value: ${75:# Allows you to specify a custom serial number}
+    smartcard_enabled: ${76:# If I(true), use smart card authentication}
+    snapshot_name: ${77:# Snapshot to clone VM from}
+    snapshot_vm: ${78:# Source VM to clone VM from}
+    soundcard_enabled: ${79:# If I(true), the sound card is added to the virtual machine}
+    sso: ${80:# I(True) enable Single Sign On by Guest Agent, I(False) to disable it}
+    state: ${81:# Should the Virtual Machine be running/stopped/present/absent/suspended/next_run/registered/exported/reboot}
+    stateless: ${82:# If I(yes) Virtual Machine will be set as stateless}
+    storage_domain: ${83:# Name of the storage domain where all template disks should be created}
+    storage_error_resume_behaviour: ${84:# If the storage, on which this virtual machine has some disks gets unresponsive, the virtual machine gets paused}
+    sysprep: ${85:# Dictionary with values for Windows Virtual Machine initialization using sysprep}
+    template: ${86:# Name of the template, which should be used to create Virtual Machine}
+    template_version: ${87:# Version number of the template to be used for VM}
+    ticket: ${88:# If I(true), in addition return I(remote_vv_file) inside I(vm) dictionary, which contains compatible content for remote-viewer application}
+    timeout: ${89:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    timezone: ${90:# Sets time zone offset of the guest hardware clock}
+    tpm_enabled: ${91:# If `true`, a TPM device is added to the virtual machine}
+    type: ${92:# Type of the Virtual Machine}
+    usb_support: ${93:# I(True) enable USB support, I(False) to disable it}
+    use_latest_template_version: ${94:# Specify if latest template version should be used, when running a stateless VM}
+    virtio_scsi_enabled: ${95:# Enable Virtio SCSI support}
+    virtio_scsi_multi_queues: ${96:# Number of queues for a Virtio-SCSI controller, possible values: -1 - Indicates that the queues will be automatically set}
+    vmware: ${97:# Dictionary of values to be used to connect to VMware and import a virtual machine to oVirt}
+    vnic_profile_mappings: ${98:# Mapper which maps an external virtual NIC profile to one that exists in the engine when C(state) is registered}
+    volatile: ${99:# Indicates that this run configuration will be discarded even in the case of guest-initiated reboot}
+    wait: ${100:# C(yes) if the module should wait for the entity to get into desired state}
+    wait_after_lease: ${101:# Number of seconds which should the module wait after the lease is changed}
+    watchdog: ${102:# Assign watchdog device for the virtual machine}
+    xen: ${103:# Dictionary of values to be used to connect to XEN and import a virtual machine to oVirt}
   tags:
     - ovirt
     - ovirt

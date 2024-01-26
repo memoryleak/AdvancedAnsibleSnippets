@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Searches for usage of the target object in other objects and rules}
+  check_point.mgmt.cp_mgmt_where_used:
+    async_response: ${2:# Run command in asynchronous mode and return task UID}
+    dereference_group_members: ${3:# Indicates whether to dereference 'members' field by details level for every object in reply}
+    details_level: ${4:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${5:# Indicates which domains to process the commands on}
+    indirect: ${6:# Search for indirect usage}
+    indirect_max_depth: ${7:# Maximum nesting level during indirect usage search}
+    name: ${8:# Object name}
+    show_membership: ${9:# Indicates whether to calculate and show 'groups' field for every object in reply}
+    version: ${10:# Version of checkpoint}
+    wait_for_task: ${11:# Wait for the task to end}
+    wait_for_task_timeout: ${12:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_where_used]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_where_used</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Searches for usage of the target object in other objects and rules</description>
+</snippet>

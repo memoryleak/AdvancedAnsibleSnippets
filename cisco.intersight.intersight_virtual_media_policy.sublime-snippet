@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Virtual Media policy configuration for Cisco Intersight}
   cisco.intersight.intersight_virtual_media_policy:
-    state: ${2:# If C(present), will verify the resource is present and will create if needed}
-    organization: ${3:# The name of the Organization this resource is assigned to}
-    name: ${4:# The name assigned to the NTP policy}
-    tags: ${5:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
-    descrption: ${6:# The user-defined description of the NTP policy}
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    cdd_virtual_media: ${5:# CDD Virtual Media image mapping options}
+    description: ${6:# The user-defined description of the NTP policy}
     enable: ${7:# Enable or disable virtual media}
     encryption: ${8:# If enabled, allows encryption of all Virtual Media communications}
-    low_power_usb: ${9:# If enabled, the virtual drives appear on the boot selection menu after mapping the image and rebooting the host}
-    cdd_virtual_media: ${10:# CDD Virtual Media image mapping options}
-    hdd_virtual_media: ${11:# HDD Virtual Media image mapping options}
-    api_private_key: ${12:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
-    api_uri: ${13:# URI used to access the Intersight API}
-    api_key_id: ${14:# Public API Key ID associated with the private key}
-    validate_certs: ${15:# Boolean control for verifying the api_uri TLS certificate}
-    use_proxy: ${16:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    hdd_virtual_media: ${9:# HDD Virtual Media image mapping options}
+    low_power_usb: ${10:# If enabled, the virtual drives appear on the boot selection menu after mapping the image and rebooting the host}
+    name: ${11:# The name assigned to the NTP policy}
+    organization: ${12:# The name of the Organization this resource is assigned to}
+    state: ${13:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${14:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${15:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${16:# Boolean control for verifying the api_uri TLS certificate}
   tags:
     - cisco
     - intersight

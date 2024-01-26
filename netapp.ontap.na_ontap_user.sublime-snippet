@@ -1,34 +1,34 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP user configuration and management}
   netapp.ontap.na_ontap_user:
-    state: ${2:# Whether the specified user should exist or not}
-    name: ${3:# The name of the user to manage}
-    application_strs: ${4:# List of applications to grant access to}
-    application_dicts: ${5:# List of applications to grant access to}
-    authentication_method: ${6:# Authentication method for the application}
-    set_password: ${7:# Password for the user account}
-    role_name: ${8:# The name of the role}
-    lock_user: ${9:# Whether the specified user account is locked}
-    vserver: ${10:# The name of the vserver to use}
-    authentication_protocol: ${11:# Authentication protocol for the snmp user}
-    authentication_password: ${12:# Password for the authentication protocol}
-    engine_id: ${13:# Authoritative entity's EngineID for the SNMPv3 user}
-    privacy_protocol: ${14:# Privacy protocol for the snmp user}
-    privacy_password: ${15:# Password for the privacy protocol}
-    remote_switch_ipaddress: ${16:# This optionally specifies the IP Address of the remote switch}
-    replace_existing_apps_and_methods: ${17:# If the user already exists, the current applications and authentications methods are replaced when state=present}
-    hostname: ${18:# The hostname or IP address of the ONTAP instance}
-    username: ${19:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${20:# Password for the specified user}
-    cert_filepath: ${21:# path to SSL client cert file (}
-    key_filepath: ${22:# path to SSL client key file}
-    https: ${23:# Enable and disable https}
-    validate_certs: ${24:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${25:# Override the default port (80 or 443) with this port}
-    ontapi: ${26:# The ontap api version to use}
-    use_rest: ${27:# Whether to use REST or ZAPI}
-    feature_flags: ${28:# Enable or disable a new feature}
-    force_ontap_version: ${29:# Override the cluster ONTAP version when using REST}
+    application_dicts: ${2:# List of applications to grant access to}
+    application_strs: ${3:# List of applications to grant access to}
+    authentication_method: ${4:# Authentication method for the application}
+    authentication_password: ${5:# Password for the authentication protocol}
+    authentication_protocol: ${6:# Authentication protocol for the snmp user}
+    cert_filepath: ${7:# path to SSL client cert file (}
+    engine_id: ${8:# Authoritative entity's EngineID for the SNMPv3 user}
+    feature_flags: ${9:# Enable or disable a new feature}
+    force_ontap_version: ${10:# Override the cluster ONTAP version when using REST}
+    hostname: ${11:# The hostname or IP address of the ONTAP instance}
+    http_port: ${12:# Override the default port (80 or 443) with this port}
+    https: ${13:# Enable and disable https}
+    key_filepath: ${14:# path to SSL client key file}
+    lock_user: ${15:# Whether the specified user account is locked}
+    name: ${16:# The name of the user to manage}
+    ontapi: ${17:# The ontap api version to use}
+    password: ${18:# Password for the specified user}
+    privacy_password: ${19:# Password for the privacy protocol}
+    privacy_protocol: ${20:# Privacy protocol for the snmp user}
+    remote_switch_ipaddress: ${21:# This optionally specifies the IP Address of the remote switch}
+    replace_existing_apps_and_methods: ${22:# If the user already exists, the current applications and authentications methods are replaced when state=present}
+    role_name: ${23:# The name of the role}
+    set_password: ${24:# Password for the user account}
+    state: ${25:# Whether the specified user should exist or not}
+    use_rest: ${26:# Whether to use REST or ZAPI}
+    username: ${27:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${28:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${29:# The name of the vserver to use}
   tags:
     - netapp
     - ontap

@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages SELinux network port type definitions}
   community.general.seport:
-    ports: ${2:# Ports or port ranges}
-    proto: ${3:# Protocol for the specified port}
-    setype: ${4:# SELinux type for the specified port}
-    state: ${5:# Desired boolean value}
+    ignore_selinux_state: ${2:# Run independent of selinux runtime state}
+    local: ${3:# Work with local modifications only}
+    ports: ${4:# Ports or port ranges}
+    proto: ${5:# Protocol for the specified port}
     reload: ${6:# Reload SELinux policy after commit}
-    ignore_selinux_state: ${7:# Run independent of selinux runtime state}
-    local: ${8:# Work with local modifications only}
+    setype: ${7:# SELinux type for the specified port}
+    state: ${8:# Desired boolean value}
   tags:
     - community
     - general

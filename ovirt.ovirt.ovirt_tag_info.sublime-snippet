@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieve information about one or more oVirt/RHV tags}
   ovirt.ovirt.ovirt_tag_info:
-    name: ${2:# Name of the tag which should be listed}
-    vm: ${3:# Name of the VM, which tags should be listed}
-    host: ${4:# Name of the host, which tags should be listed}
-    follow: ${5:# List of linked entities, which should be fetched along with the main entity}
-    fetch_nested: ${6:# If I(yes) the module will fetch additional data from the API}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    fetch_nested: ${3:# If I(yes) the module will fetch additional data from the API}
+    follow: ${4:# List of linked entities, which should be fetched along with the main entity}
+    host: ${5:# Name of the host, which tags should be listed}
+    name: ${6:# Name of the tag which should be listed}
     nested_attributes: ${7:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${8:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    vm: ${8:# Name of the VM, which tags should be listed}
   tags:
     - ovirt
     - ovirt

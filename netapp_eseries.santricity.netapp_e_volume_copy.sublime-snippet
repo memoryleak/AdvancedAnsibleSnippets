@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp E-Series create volume copy pairs}
   netapp_eseries.santricity.netapp_e_volume_copy:
-    ssid: ${2:# Storage system identifier}
-    api_username: ${3:# The username to authenticate with the SANtricity WebServices Proxy or embedded REST API}
-    api_password: ${4:# The password to authenticate with the SANtricity WebServices Proxy or embedded REST API}
-    api_url: ${5:# The url to the SANtricity WebServices Proxy or embedded REST API, for example C(https://prod-1}
-    validate_certs: ${6:# Should https certificates be validated?}
-    source_volume_id: ${7:# The id of the volume copy source}
-    destination_volume_id: ${8:# The id of the volume copy destination}
-    volume_copy_pair_id: ${9:# The id of a given volume copy pair}
-    state: ${10:# Whether the specified volume copy pair should exist or not}
-    create_copy_pair_if_does_not_exist: ${11:# Defines if a copy pair will be created if it does not exist}
+    api_password: ${2:# The password to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    api_url: ${3:# The url to the SANtricity WebServices Proxy or embedded REST API, for example C(https://prod-1}
+    api_username: ${4:# The username to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    copy_priority: ${5:# Copy priority level}
+    create_copy_pair_if_does_not_exist: ${6:# Defines if a copy pair will be created if it does not exist}
+    destination_volume_id: ${7:# The id of the volume copy destination}
+    onlineCopy: ${8:# Whether copy should be online}
+    search_volume_id: ${9:# Searches for all valid potential target and source volumes that could be used in a copy_pair}
+    source_volume_id: ${10:# The id of the volume copy source}
+    ssid: ${11:# Storage system identifier}
     start_stop_copy: ${12:# starts a re-copy or stops a copy in progress}
-    search_volume_id: ${13:# Searches for all valid potential target and source volumes that could be used in a copy_pair}
-    copy_priority: ${14:# Copy priority level}
-    onlineCopy: ${15:# Whether copy should be online}
-    targetWriteProtected: ${16:# Whether target should be write protected}
+    state: ${13:# Whether the specified volume copy pair should exist or not}
+    targetWriteProtected: ${14:# Whether target should be write protected}
+    validate_certs: ${15:# Should https certificates be validated?}
+    volume_copy_pair_id: ${16:# The id of a given volume copy pair}
   tags:
     - netapp_eseries
     - santricity

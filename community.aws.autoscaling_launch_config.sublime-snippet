@@ -1,37 +1,37 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create or delete AWS Autoscaling Launch Configurations}
   community.aws.autoscaling_launch_config:
-    state: ${2:# Register or deregister the instance}
-    name: ${3:# Unique name for configuration}
-    instance_type: ${4:# Instance type to use for the instance}
-    image_id: ${5:# The AMI unique identifier to be used for the group}
-    key_name: ${6:# The SSH key name to be used for access to managed instances}
-    security_groups: ${7:# A list of security groups to apply to the instances}
-    volumes: ${8:# A list dictionaries defining the volumes to create}
-    user_data: ${9:# Opaque blob of data which is made available to the ec2 instance}
-    user_data_path: ${10:# Path to the file that contains userdata for the ec2 instances}
-    kernel_id: ${11:# Kernel id for the EC2 instance}
-    spot_price: ${12:# The spot price you are bidding}
+    access_key: ${2:# AWS access key ID}
+    assign_public_ip: ${3:# Used for Auto Scaling groups that launch instances into an Amazon Virtual Private Cloud}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    classic_link_vpc_id: ${6:# Id of ClassicLink enabled VPC}
+    classic_link_vpc_security_groups: ${7:# A list of security group IDs with which to associate the ClassicLink VPC instances}
+    debug_botocore_endpoint_logs: ${8:# Use a C(botocore}
+    ebs_optimized: ${9:# Specifies whether the instance is optimized for EBS I/O (true) or not (false)}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    image_id: ${11:# The AMI unique identifier to be used for the group}
+    instance_id: ${12:# The Id of a running instance to use as a basis for a launch configuration}
     instance_monitoring: ${13:# Specifies whether instances are launched with detailed monitoring}
-    assign_public_ip: ${14:# Used for Auto Scaling groups that launch instances into an Amazon Virtual Private Cloud}
-    ramdisk_id: ${15:# A RAM disk id for the instances}
-    instance_profile_name: ${16:# The name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instances}
-    ebs_optimized: ${17:# Specifies whether the instance is optimized for EBS I/O (true) or not (false)}
-    classic_link_vpc_id: ${18:# Id of ClassicLink enabled VPC}
-    classic_link_vpc_security_groups: ${19:# A list of security group IDs with which to associate the ClassicLink VPC instances}
-    vpc_id: ${20:# VPC ID, used when resolving security group names to IDs}
-    instance_id: ${21:# The Id of a running instance to use as a basis for a launch configuration}
-    placement_tenancy: ${22:# Determines whether the instance runs on single-tenant hardware or not}
-    access_key: ${23:# AWS access key ID}
-    secret_key: ${24:# AWS secret access key}
+    instance_profile_name: ${14:# The name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instances}
+    instance_type: ${15:# Instance type to use for the instance}
+    kernel_id: ${16:# Kernel id for the EC2 instance}
+    key_name: ${17:# The SSH key name to be used for access to managed instances}
+    name: ${18:# Unique name for configuration}
+    placement_tenancy: ${19:# Determines whether the instance runs on single-tenant hardware or not}
+    profile: ${20:# A named AWS profile to use for authentication}
+    ramdisk_id: ${21:# A RAM disk id for the instances}
+    region: ${22:# The AWS region to use}
+    secret_key: ${23:# AWS secret access key}
+    security_groups: ${24:# A list of security groups to apply to the instances}
     session_token: ${25:# AWS STS session token for use with temporary credentials}
-    profile: ${26:# A named AWS profile to use for authentication}
-    endpoint_url: ${27:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${28:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${29:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${30:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${31:# Use a C(botocore}
-    region: ${32:# The AWS region to use}
+    spot_price: ${26:# The spot price you are bidding}
+    state: ${27:# Register or deregister the instance}
+    user_data: ${28:# Opaque blob of data which is made available to the ec2 instance}
+    user_data_path: ${29:# Path to the file that contains userdata for the ec2 instances}
+    validate_certs: ${30:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    volumes: ${31:# A list dictionaries defining the volumes to create}
+    vpc_id: ${32:# VPC ID, used when resolving security group names to IDs}
   tags:
     - community
     - aws

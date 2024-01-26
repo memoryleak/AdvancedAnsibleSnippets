@@ -1,20 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/delete/update Zabbix user groups}
   community.zabbix.zabbix_usergroup:
-    name: ${2:# Name of the user group to create, update or delete}
+    debug_mode: ${2:# Whether debug mode is enabled or disabled}
     gui_access: ${3:# Frontend authentication method of the users in the group}
-    debug_mode: ${4:# Whether debug mode is enabled or disabled}
-    status: ${5:# Whether the user group is enabled or disabled}
-    rights: ${6:# Permissions to assign to the group}
-    tag_filters: ${7:# Tag based permissions to assign to the group}
-    state: ${8:# State of the user group}
-    server_url: ${9:# URL of Zabbix server, with protocol (http or https)}
-    login_user: ${10:# Zabbix user name}
-    login_password: ${11:# Zabbix user password}
-    http_login_user: ${12:# Basic Auth login}
-    http_login_password: ${13:# Basic Auth password}
-    timeout: ${14:# The timeout of API request (seconds)}
-    validate_certs: ${15:# If set to False, SSL certificates will not be validated}
+    hostgroup_rights: ${4:# Host group permissions to assign to the user group}
+    http_login_password: ${5:# Basic Auth password}
+    http_login_user: ${6:# Basic Auth login}
+    name: ${7:# Name of the user group to create, update or delete}
+    rights: ${8:# Permissions to assign to the group}
+    state: ${9:# State of the user group}
+    status: ${10:# Whether the user group is enabled or disabled}
+    tag_filters: ${11:# Tag based permissions to assign to the group}
+    templategroup_rights: ${12:# Template group permissions to assign to the user group}
+    userdirectory: ${13:# Authentication user directory when gui_access set to LDAP or System default}
   tags:
     - community
     - zabbix

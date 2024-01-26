@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages BFD session configuration on HUAWEI CloudEngine devices}
   community.network.ce_bfd_session:
-    session_name: ${2:# Specifies the name of a BFD session}
+    addr_type: ${2:# Specifies the peer IP address type}
     create_type: ${3:# BFD session creation mode, the currently created BFD session only supports static or static auto-negotiation mode}
-    addr_type: ${4:# Specifies the peer IP address type}
-    out_if_name: ${5:# Specifies the type and number of the interface bound to the BFD session}
-    dest_addr: ${6:# Specifies the peer IP address bound to the BFD session}
-    src_addr: ${7:# Indicates the source IP address carried in BFD packets}
-    local_discr: ${8:# The BFD session local identifier does not need to be configured when the mode is auto}
-    remote_discr: ${9:# The BFD session remote identifier does not need to be configured when the mode is auto}
-    vrf_name: ${10:# Specifies the name of a Virtual Private Network (VPN) instance that is bound to a BFD session}
+    dest_addr: ${4:# Specifies the peer IP address bound to the BFD session}
+    local_discr: ${5:# The BFD session local identifier does not need to be configured when the mode is auto}
+    out_if_name: ${6:# Specifies the type and number of the interface bound to the BFD session}
+    remote_discr: ${7:# The BFD session remote identifier does not need to be configured when the mode is auto}
+    session_name: ${8:# Specifies the name of a BFD session}
+    src_addr: ${9:# Indicates the source IP address carried in BFD packets}
+    state: ${10:# Determines whether the config should be present or not on the device}
     use_default_ip: ${11:# Indicates the default multicast IP address that is bound to a BFD session}
-    state: ${12:# Determines whether the config should be present or not on the device}
+    vrf_name: ${12:# Specifies the name of a Virtual Private Network (VPN) instance that is bound to a BFD session}
   tags:
     - community
     - network

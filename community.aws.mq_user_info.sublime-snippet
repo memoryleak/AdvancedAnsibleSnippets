@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:List users of an Amazon MQ broker}
+  community.aws.mq_user_info:
+    access_key: ${2:# AWS access key ID}
+    as_dict: ${3:# Convert result into lookup table by username}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    broker_id: ${6:# The ID of the MQ broker to work on}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
+    max_results: ${9:# The maximum number of results to return}
+    profile: ${10:# A named AWS profile to use for authentication}
+    region: ${11:# The AWS region to use}
+    secret_key: ${12:# AWS secret access key}
+    session_token: ${13:# AWS STS session token for use with temporary credentials}
+    skip_pending_create: ${14:# Will skip pending creates from the result set}
+    skip_pending_delete: ${15:# Will skip pending deletes from the result set}
+    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+  tags:
+    - community
+    - aws
+    - mq_user_info]]></content>
+  <tabTrigger>community.aws.mq_user_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>List users of an Amazon MQ broker</description>
+</snippet>

@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Set Time/Date parameters in WTI OOB and PDU devices}
   wti.remote.cpm_time_config:
-    cpm_url: ${2:# This is the URL of the WTI device to send the module}
-    cpm_username: ${3:# This is the Username of the WTI device to send the module}
-    cpm_password: ${4:# This is the Password of the WTI device to send the module}
-    use_https: ${5:# Designates to use an https connection or http connection}
-    validate_certs: ${6:# If false, SSL certificates will not be validated}
-    use_proxy: ${7:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
-    date: ${8:# Static date in the format of two digit month, two digit day, four digit year separated by a slash symbol}
+    cpm_password: ${2:# This is the Password of the WTI device to send the module}
+    cpm_url: ${3:# This is the URL of the WTI device to send the module}
+    cpm_username: ${4:# This is the Username of the WTI device to send the module}
+    date: ${5:# Static date in the format of two digit month, two digit day, four digit year separated by a slash symbol}
+    ipv4address: ${6:# Comma separated string of up to two addresses for a primary and secondary IPv4 base NTP server}
+    ipv6address: ${7:# Comma separated string of up to two addresses for a primary and secondary IPv6 base NTP server}
+    ntpenable: ${8:# This enables or disables the NTP client service}
     time: ${9:# Static time in the format of two digit hour, two digit minute, two digit second separated by a colon symbol}
-    timezone: ${10:# This is timezone that is assigned to the WTI device}
-    ntpenable: ${11:# This enables or disables the NTP client service}
-    ipv4address: ${12:# Comma separated string of up to two addresses for a primary and secondary IPv4 base NTP server}
-    ipv6address: ${13:# Comma separated string of up to two addresses for a primary and secondary IPv6 base NTP server}
-    timeout: ${14:# Set the network timeout in seconds of contacting the NTP servers, valid options can be from 1-60}
+    timeout: ${10:# Set the network timeout in seconds of contacting the NTP servers, valid options can be from 1-60}
+    timezone: ${11:# This is timezone that is assigned to the WTI device}
+    use_https: ${12:# Designates to use an https connection or http connection}
+    use_proxy: ${13:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+    validate_certs: ${14:# If false, SSL certificates will not be validated}
   tags:
     - wti
     - remote

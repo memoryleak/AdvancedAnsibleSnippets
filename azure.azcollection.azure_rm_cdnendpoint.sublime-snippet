@@ -1,40 +1,40 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage a Azure CDN endpoint}
   azure.azcollection.azure_rm_cdnendpoint:
-    resource_group: ${2:# Name of a resource group where the Azure CDN endpoint exists or will be created}
-    name: ${3:# Name of the Azure CDN endpoint}
-    location: ${4:# Valid azure location}
-    started: ${5:# Use with I(state=present) to start the endpoint}
-    purge: ${6:# Use with I(state=present) to purge the endpoint}
-    purge_content_paths: ${7:# Use with I(state=present) and I(purge=true) to specify content paths to be purged}
-    profile_name: ${8:# Name of the CDN profile where the endpoint attached to}
-    origins: ${9:# Set of source of the content being delivered via CDN}
-    origin_host_header: ${10:# The host header value sent to the origin with each request}
-    origin_path: ${11:# A directory path on the origin that CDN can use to retrieve content from}
-    content_types_to_compress: ${12:# List of content types on which compression applies}
-    is_compression_enabled: ${13:# Indicates whether content compression is enabled on CDN}
-    is_http_allowed: ${14:# Indicates whether HTTP traffic is allowed on the endpoint}
-    is_https_allowed: ${15:# Indicates whether HTTPS traffic is allowed on the endpoint}
-    query_string_caching_behavior: ${16:# Defines how CDN caches requests that include query strings}
-    state: ${17:# Assert the state of the Azure CDN endpoint}
-    ad_user: ${18:# Active Directory username}
-    password: ${19:# Active Directory user password}
-    profile: ${20:# Security profile found in ~/}
-    subscription_id: ${21:# Your Azure subscription Id}
-    client_id: ${22:# Azure client ID}
-    secret: ${23:# Azure client secret}
-    tenant: ${24:# Azure tenant ID}
-    cloud_environment: ${25:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${26:# Azure AD authority url}
-    cert_validation_mode: ${27:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${28:# Controls the source of the credentials to use for authentication}
-    api_profile: ${29:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${30:# Parent argument}
-    log_mode: ${31:# Parent argument}
-    x509_certificate_path: ${32:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${33:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${34:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${35:# Use to control if tags field is canonical or just appends to existing tags}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    content_types_to_compress: ${10:# List of content types on which compression applies}
+    is_compression_enabled: ${11:# Indicates whether content compression is enabled on CDN}
+    is_http_allowed: ${12:# Indicates whether HTTP traffic is allowed on the endpoint}
+    is_https_allowed: ${13:# Indicates whether HTTPS traffic is allowed on the endpoint}
+    location: ${14:# Valid azure location}
+    log_mode: ${15:# Parent argument}
+    log_path: ${16:# Parent argument}
+    name: ${17:# Name of the Azure CDN endpoint}
+    origin_host_header: ${18:# The host header value sent to the origin with each request}
+    origin_path: ${19:# A directory path on the origin that CDN can use to retrieve content from}
+    origins: ${20:# Set of source of the content being delivered via CDN}
+    password: ${21:# Active Directory user password}
+    profile: ${22:# Security profile found in ~/}
+    profile_name: ${23:# Name of the CDN profile where the endpoint attached to}
+    purge: ${24:# Use with I(state=present) to purge the endpoint}
+    purge_content_paths: ${25:# Use with I(state=present) and I(purge=true) to specify content paths to be purged}
+    query_string_caching_behavior: ${26:# Defines how CDN caches requests that include query strings}
+    resource_group: ${27:# Name of a resource group where the Azure CDN endpoint exists or will be created}
+    secret: ${28:# Azure client secret}
+    started: ${29:# Use with I(state=present) to start the endpoint}
+    state: ${30:# Assert the state of the Azure CDN endpoint}
+    subscription_id: ${31:# Your Azure subscription Id}
+    tags: ${32:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${33:# Azure tenant ID}
+    thumbprint: ${34:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${35:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

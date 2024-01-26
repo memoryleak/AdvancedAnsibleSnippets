@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage device groups on a BIG-IP}
   f5networks.f5_modules.bigip_device_group:
-    name: ${2:# Specifies the name of the device group}
-    type: ${3:# Specifies the type of group}
+    asm_sync: ${2:# Specifies whether to synchronize ASM configurations of device group members}
+    auto_sync: ${3:# Indicates whether configuration synchronization occurs manually or automatically}
     description: ${4:# Description of the device group}
-    auto_sync: ${5:# Indicates whether configuration synchronization occurs manually or automatically}
-    asm_sync: ${6:# Specifies whether to synchronize ASM configurations of device group members}
-    save_on_auto_sync: ${7:# When performing an auto-sync, specifies whether the configuration will be saved or not}
-    full_sync: ${8:# Specifies whether the system synchronizes the entire configuration during synchronization operations}
-    max_incremental_sync_size: ${9:# Specifies the size of the changes cache for incremental sync}
-    state: ${10:# When C(state) is C(present), ensures the device group exists}
-    network_failover: ${11:# Indicates whether failover occurs over the network or is hard-wired}
-    provider: ${12:# A dict object containing connection details}
+    full_sync: ${5:# Specifies whether the system synchronizes the entire configuration during synchronization operations}
+    max_incremental_sync_size: ${6:# Specifies the size of the changes cache for incremental sync}
+    name: ${7:# Specifies the name of the device group}
+    network_failover: ${8:# Indicates whether failover occurs over the network or is hard-wired}
+    provider: ${9:# A dict object containing connection details}
+    save_on_auto_sync: ${10:# When performing an auto-sync, specifies whether the configuration is saved or not}
+    state: ${11:# When C(state) is C(present), ensures the device group exists}
+    type: ${12:# Specifies the type of group}
   tags:
     - f5networks
     - f5_modules

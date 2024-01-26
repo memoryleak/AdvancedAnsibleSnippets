@@ -1,46 +1,46 @@
 <snippet>
   <content><![CDATA[- name: ${1:Modifies query rules using the proxysql admin interface}
   community.proxysql.proxysql_query_rules:
-    rule_id: ${2:# The unique id of the rule}
+    OK_msg: ${2:# The specified message will be returned for a query that uses the defined rule}
     active: ${3:# A rule with I(active) set to C(False) will be tracked in the database, but will be never loaded in the in-memory data structures}
-    username: ${4:# Filtering criteria matching username}
-    schemaname: ${5:# Filtering criteria matching schemaname}
-    flagIN: ${6:# Used in combination with I(flagOUT) and I(apply) to create chains of rules}
+    apply: ${4:# Used in combination with I(flagIN) and I(flagOUT) to create chains of rules}
+    cache_empty_result: ${5:# Controls if resultset without rows will be cached or not}
+    cache_ttl: ${6:# The number of milliseconds for which to cache the result of the query}
     client_addr: ${7:# Match traffic from a specific source}
-    proxy_addr: ${8:# Match incoming traffic on a specific local IP}
-    proxy_port: ${9:# Match incoming traffic on a specific local port}
-    digest: ${10:# Match queries with a specific digest, as returned by stats_mysql_query_digest}
-    match_digest: ${11:# Regular expression that matches the query digest}
-    match_pattern: ${12:# Regular expression that matches the query text}
-    negate_match_pattern: ${13:# If I(negate_match_pattern) is set to C(True), only queries not matching the query text will be considered as a match}
-    re_modifiers: ${14:# Comma separated list of options to modify the behavior of the RE engine}
+    comment: ${8:# Free form text field, usable for a descriptive comment of the query rule}
+    config_file: ${9:# Specify a config file from which I(login_user) and I(login_password) are to be read}
+    delay: ${10:# Number of milliseconds to delay the execution of the query}
+    destination_hostgroup: ${11:# Route matched queries to this hostgroup}
+    digest: ${12:# Match queries with a specific digest, as returned by stats_mysql_query_digest}
+    error_msg: ${13:# Query will be blocked, and the specified error_msg will be returned to the client}
+    flagIN: ${14:# Used in combination with I(flagOUT) and I(apply) to create chains of rules}
     flagOUT: ${15:# Used in combination with I(flagIN) and apply to create chains of rules}
-    replace_pattern: ${16:# This is the pattern with which to replace the matched pattern}
-    destination_hostgroup: ${17:# Route matched queries to this hostgroup}
-    cache_ttl: ${18:# The number of milliseconds for which to cache the result of the query}
-    cache_empty_result: ${19:# Controls if resultset without rows will be cached or not}
-    multiplex: ${20:# If C(0), multiplex will be disabled}
-    timeout: ${21:# The maximum timeout in milliseconds with which the matched or rewritten query should be executed}
-    retries: ${22:# The maximum number of times a query needs to be re-executed in case of detected failure during the execution of the query}
-    delay: ${23:# Number of milliseconds to delay the execution of the query}
-    next_query_flagIN: ${24:# When is set, its value will become the I(flagIN) value for the next queries}
-    mirror_flagOUT: ${25:# Enables query mirroring}
-    mirror_hostgroup: ${26:# Enables query mirroring}
-    OK_msg: ${27:# The specified message will be returned for a query that uses the defined rule}
-    error_msg: ${28:# Query will be blocked, and the specified error_msg will be returned to the client}
-    log: ${29:# Query will be logged}
-    apply: ${30:# Used in combination with I(flagIN) and I(flagOUT) to create chains of rules}
-    comment: ${31:# Free form text field, usable for a descriptive comment of the query rule}
-    state: ${32:# When C(present) - adds the rule, when C(absent) - removes the rule}
-    force_delete: ${33:# By default we avoid deleting more than one schedule in a single batch, however if you need this behaviour and you are not concerned about the schedules deleted, you can set I(force_delete) to C(True)}
-    save_to_disk: ${34:# Save config to sqlite db on disk to persist the configuration}
-    load_to_runtime: ${35:# Dynamically load config to runtime memory}
-    login_user: ${36:# The username used to authenticate to ProxySQL admin interface}
-    login_password: ${37:# The password used to authenticate to ProxySQL admin interface}
-    login_host: ${38:# The host used to connect to ProxySQL admin interface}
-    login_unix_socket: ${39:# The socket used to connect to ProxySQL admin interface}
-    login_port: ${40:# The port used to connect to ProxySQL admin interface}
-    config_file: ${41:# Specify a config file from which I(login_user) and I(login_password) are to be read}
+    force_delete: ${16:# By default we avoid deleting more than one schedule in a single batch, however if you need this behaviour and you are not concerned about the schedules deleted, you can set I(force_delete) to C(True)}
+    load_to_runtime: ${17:# Dynamically load config to runtime memory}
+    log: ${18:# Query will be logged}
+    login_host: ${19:# The host used to connect to ProxySQL admin interface}
+    login_password: ${20:# The password used to authenticate to ProxySQL admin interface}
+    login_port: ${21:# The port used to connect to ProxySQL admin interface}
+    login_unix_socket: ${22:# The socket used to connect to ProxySQL admin interface}
+    login_user: ${23:# The username used to authenticate to ProxySQL admin interface}
+    match_digest: ${24:# Regular expression that matches the query digest}
+    match_pattern: ${25:# Regular expression that matches the query text}
+    mirror_flagOUT: ${26:# Enables query mirroring}
+    mirror_hostgroup: ${27:# Enables query mirroring}
+    multiplex: ${28:# If C(0), multiplex will be disabled}
+    negate_match_pattern: ${29:# If I(negate_match_pattern) is set to C(True), only queries not matching the query text will be considered as a match}
+    next_query_flagIN: ${30:# When is set, its value will become the I(flagIN) value for the next queries}
+    proxy_addr: ${31:# Match incoming traffic on a specific local IP}
+    proxy_port: ${32:# Match incoming traffic on a specific local port}
+    re_modifiers: ${33:# Comma separated list of options to modify the behavior of the RE engine}
+    replace_pattern: ${34:# This is the pattern with which to replace the matched pattern}
+    retries: ${35:# The maximum number of times a query needs to be re-executed in case of detected failure during the execution of the query}
+    rule_id: ${36:# The unique id of the rule}
+    save_to_disk: ${37:# Save config to sqlite db on disk to persist the configuration}
+    schemaname: ${38:# Filtering criteria matching schemaname}
+    state: ${39:# When C(present) - adds the rule, when C(absent) - removes the rule}
+    timeout: ${40:# The maximum timeout in milliseconds with which the matched or rewritten query should be executed}
+    username: ${41:# Filtering criteria matching username}
   tags:
     - community
     - proxysql

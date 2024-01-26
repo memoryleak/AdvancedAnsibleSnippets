@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp Element Software Manage Snapshots}
   netapp.elementsw.na_elementsw_snapshot:
-    name: ${2:# Name of new snapshot create}
-    state: ${3:# Whether the specified snapshot should exist or not}
-    src_volume_id: ${4:# ID or Name of active volume}
-    account_id: ${5:# Account ID or Name of Parent/Source Volume}
-    retention: ${6:# Retention period for the snapshot}
-    src_snapshot_id: ${7:# ID or Name of an existing snapshot}
-    enable_remote_replication: ${8:# Flag, whether to replicate the snapshot created to a remote replication cluster}
+    account_id: ${2:# Account ID or Name of Parent/Source Volume}
+    enable_remote_replication: ${3:# Flag, whether to replicate the snapshot created to a remote replication cluster}
+    expiration_time: ${4:# The date and time (format ISO 8601 date string) at which this snapshot will expire}
+    hostname: ${5:# The hostname or IP address of the SolidFire cluster}
+    name: ${6:# Name of new snapshot create}
+    password: ${7:# Password for the specified user}
+    retention: ${8:# Retention period for the snapshot}
     snap_mirror_label: ${9:# Label used by SnapMirror software to specify snapshot retention policy on SnapMirror endpoint}
-    expiration_time: ${10:# The date and time (format ISO 8601 date string) at which this snapshot will expire}
-    hostname: ${11:# The hostname or IP address of the SolidFire cluster}
-    username: ${12:# Please ensure that the user has the adequate permissions}
-    password: ${13:# Password for the specified user}
+    src_snapshot_id: ${10:# ID or Name of an existing snapshot}
+    src_volume_id: ${11:# ID or Name of active volume}
+    state: ${12:# Whether the specified snapshot should exist or not}
+    username: ${13:# Please ensure that the user has the adequate permissions}
   tags:
     - netapp
     - elementsw

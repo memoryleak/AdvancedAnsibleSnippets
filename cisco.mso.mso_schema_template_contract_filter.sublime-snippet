@@ -1,32 +1,32 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage contract filters in schema templates}
   cisco.mso.mso_schema_template_contract_filter:
-    schema: ${2:# The name of the schema}
-    template: ${3:# The name of the template}
-    contract: ${4:# The name of the contract to manage}
-    description: ${5:# The description of contract is supported on versions of MSO/NDO that are 3}
-    contract_display_name: ${6:# The name as displayed on the MSO web interface}
-    contract_filter_type: ${7:# DEPRECATION WARNING, contract_filter_type will not be used anymore and is deduced from filter_type}
-    contract_scope: ${8:# The scope of the contract}
-    filter: ${9:# The filter to associate with this contract}
-    filter_template: ${10:# The template name in which the filter is located}
-    filter_schema: ${11:# The schema name in which the filter is located}
+    action: ${2:# The filter action parameter is supported on versions of MSO/NDO that are 3}
+    contract: ${3:# The name of the contract to manage}
+    contract_display_name: ${4:# The name as displayed on the MSO web interface}
+    contract_filter_type: ${5:# DEPRECATION WARNING, contract_filter_type will not be used anymore and is deduced from filter_type}
+    contract_scope: ${6:# The scope of the contract}
+    description: ${7:# The description of contract is supported on versions of MSO/NDO that are 3}
+    filter: ${8:# The filter to associate with this contract}
+    filter_directives: ${9:# A list of filter directives}
+    filter_schema: ${10:# The schema name in which the filter is located}
+    filter_template: ${11:# The template name in which the filter is located}
     filter_type: ${12:# The type of filter to manage}
-    filter_directives: ${13:# A list of filter directives}
-    qos_level: ${14:# The Contract QoS Level parameter is supported on versions of MSO/NDO that are 3}
-    action: ${15:# The filter action parameter is supported on versions of MSO/NDO that are 3}
-    priority: ${16:# The filter priority override parameter is supported on versions of MSO/NDO that are 3}
-    state: ${17:# Use C(present) or C(absent) for adding or removing}
-    host: ${18:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${19:# Port number to be used for the REST connection}
-    username: ${20:# The username to use for authentication}
-    password: ${21:# The password to use for authentication}
-    output_level: ${22:# Influence the output of this MSO module}
+    host: ${13:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${14:# The login domain name to use for authentication}
+    output_level: ${15:# Influence the output of this MSO module}
+    password: ${16:# The password to use for authentication}
+    port: ${17:# Port number to be used for the REST connection}
+    priority: ${18:# The filter priority override parameter is supported on versions of MSO/NDO that are 3}
+    qos_level: ${19:# The Contract QoS Level parameter is supported on versions of MSO/NDO that are 3}
+    schema: ${20:# The name of the schema}
+    state: ${21:# Use C(present) or C(absent) for adding or removing}
+    template: ${22:# The name of the template}
     timeout: ${23:# The socket level timeout in seconds}
-    use_proxy: ${24:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${25:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${26:# If C(no), SSL certificates will not be validated}
-    login_domain: ${27:# The login domain name to use for authentication}
+    use_proxy: ${24:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${25:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${26:# The username to use for authentication}
+    validate_certs: ${27:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - mso

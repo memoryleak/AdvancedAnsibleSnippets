@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Get service-group objects facts on Check Point over Web Services API}
   check_point.mgmt.cp_mgmt_service_group_facts:
-    name: ${2:# Object name}
-    show_as_ranges: ${3:# When true, the service group's matched content is displayed as ranges of port numbers rather than service objects}
-    details_level: ${4:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
-    limit: ${5:# No more than that many results will be returned}
+    dereference_group_members: ${2:# Indicates whether to dereference 'members' field by details level for every object in reply}
+    details_level: ${3:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    limit: ${4:# No more than that many results will be returned}
+    name: ${5:# Object name}
     offset: ${6:# Skip that many results before beginning to return them}
     order: ${7:# Sorts results by the given field}
-    dereference_group_members: ${8:# Indicates whether to dereference 'members' field by details level for every object in reply}
+    show_as_ranges: ${8:# When true, the service group's matched content is displayed as ranges of port numbers rather than service objects}
     show_membership: ${9:# Indicates whether to calculate and show 'groups' field for every object in reply}
     version: ${10:# Version of checkpoint}
   tags:

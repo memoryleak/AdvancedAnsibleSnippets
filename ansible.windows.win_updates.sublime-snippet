@@ -1,18 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Download and install Windows updates}
   ansible.windows.win_updates:
-    accept_list: ${2:# A list of update titles or KB numbers that can be used to specify which updates are to be searched or installed}
-    category_names: ${3:# A scalar or list of categories to install updates from}
-    skip_optional: ${4:# Skip optional updates where the update has BrowseOnly set by Microsoft}
-    reboot: ${5:# Ansible will automatically reboot the remote host if it is required and continue to install updates after the reboot}
-    reboot_timeout: ${6:# The time in seconds to wait until the host is back online from a reboot}
-    server_selection: ${7:# Defines the Windows Update source catalog}
-    state: ${8:# Controls whether found updates are downloaded or installed or listed}
-    log_path: ${9:# If set, C(win_updates) will append update progress to the specified file}
-    reject_list: ${10:# A list of update titles or KB numbers that can be used to specify which updates are to be excluded from installation}
-    use_scheduled_task: ${11:# This option is deprecated and no longer does anything since C(v1}
-    _output_path: ${12:# Internal use only}
-    _wait: ${13:# Internal use only}
+    _operation: ${2:# Internal use only}
+    _operation_options: ${3:# Internal use only}
+    accept_list: ${4:# A list of update titles or KB numbers that can be used to specify which updates are to be searched or installed}
+    category_names: ${5:# A scalar or list of categories to install updates from}
+    log_path: ${6:# If set, C(win_updates) will append update progress to the specified file}
+    reboot: ${7:# Ansible will automatically reboot the remote host if it is required and continue to install updates after the reboot}
+    reboot_timeout: ${8:# The time in seconds to wait until the host is back online from a reboot}
+    reject_list: ${9:# A list of update titles or KB numbers that can be used to specify which updates are to be excluded from installation}
+    server_selection: ${10:# Defines the Windows Update source catalog}
+    skip_optional: ${11:# Skip optional updates where the update has BrowseOnly set by Microsoft}
+    state: ${12:# Controls whether found updates are downloaded or installed or listed}
   tags:
     - win_updates]]></content>
   <tabTrigger>ansible.windows.win_updates</tabTrigger>

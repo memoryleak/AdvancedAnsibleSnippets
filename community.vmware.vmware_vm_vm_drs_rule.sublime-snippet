@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure VMware DRS Affinity rule for virtual machines in the given cluster}
   community.vmware.vmware_vm_vm_drs_rule:
-    cluster_name: ${2:# Desired cluster name where virtual machines are present for the DRS rule}
-    vms: ${3:# List of virtual machines name for which DRS rule needs to be applied}
+    affinity_rule: ${2:# If set to V(true), the DRS rule will be an Affinity rule}
+    cluster_name: ${3:# Desired cluster name where virtual machines are present for the DRS rule}
     drs_rule_name: ${4:# The name of the DRS rule to manage}
-    enabled: ${5:# If set to C(True), the DRS rule will be enabled}
-    mandatory: ${6:# If set to C(True), the DRS rule will be mandatory}
-    affinity_rule: ${7:# If set to C(True), the DRS rule will be an Affinity rule}
-    state: ${8:# If set to C(present), then the DRS rule is created if not present}
-    hostname: ${9:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${10:# The username of the vSphere vCenter or ESXi server}
-    password: ${11:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${12:# Allows connection when SSL certificates are not valid}
-    port: ${13:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${14:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${15:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    enabled: ${5:# If set to V(true), the DRS rule will be enabled}
+    hostname: ${6:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    mandatory: ${7:# If set to V(true), the DRS rule will be mandatory}
+    password: ${8:# The password of the vSphere vCenter or ESXi server}
+    port: ${9:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${10:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${11:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    state: ${12:# If set to V(present), then the DRS rule is created if not present}
+    username: ${13:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${14:# Allows connection when SSL certificates are not valid}
+    vms: ${15:# List of virtual machines name for which DRS rule needs to be applied}
   tags:
     - community
     - vmware

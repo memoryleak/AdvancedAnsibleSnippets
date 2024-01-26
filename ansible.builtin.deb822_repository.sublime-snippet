@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add and remove deb822 formatted repositories}
+  ansible.builtin.deb822_repository:
+    allow_downgrade_to_insecure: ${2:# Allow downgrading a package that was previously authenticated but is no longer authenticated}
+    allow_insecure: ${3:# Allow insecure repositories}
+    allow_weak: ${4:# Allow repositories signed with a key using a weak digest algorithm}
+    architectures: ${5:# Architectures to search within repository}
+    by_hash: ${6:# Controls if APT should try to acquire indexes via a URI constructed from a hashsum of the expected file instead of using the well-known stable filename of the index}
+    check_date: ${7:# Controls if APT should consider the machine's time correct and hence perform time related checks, such as verifying that a Release file is not from the future}
+    check_valid_until: ${8:# Controls if APT should try to detect replay attacks}
+    components: ${9:# Components specify different sections of one distribution version present in a Suite}
+    date_max_future: ${10:# Controls how far from the future a repository may be}
+    enabled: ${11:# Tells APT whether the source is enabled or not}
+    inrelease_path: ${12:# Determines the path to the InRelease file, relative to the normal position of an InRelease file}
+    languages: ${13:# Defines which languages information such as translated package descriptions should be downloaded}
+    mode: ${14:# The octal mode for newly created files in sources}
+    name: ${15:# Name of the repo}
+    pdiffs: ${16:# Controls if APT should try to use PDiffs to update old indexes instead of downloading the new indexes entirely}
+    signed_by: ${17:# Either a URL to a GPG key, absolute path to a keyring file, one or more fingerprints of keys either in the C(trusted}
+    state: ${18:# A source string state}
+    suites: ${19:# Suite can specify an exact path in relation to the URI(s) provided, in which case the Components: must be omitted and suite must end with a slash (C(/))}
+    targets: ${20:# Defines which download targets apt will try to acquire from this source}
+    trusted: ${21:# Decides if a source is considered trusted or if warnings should be raised before e}
+    types: ${22:# Which types of packages to look for from a given source; either binary V(deb) or source code V(deb-src)}
+    uris: ${23:# The URIs must specify the base of the Debian distribution archive, from which APT finds the information it needs}
+  tags:
+    - deb822_repository]]></content>
+  <tabTrigger>ansible.builtin.deb822_repository</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add and remove deb822 formatted repositories</description>
+</snippet>

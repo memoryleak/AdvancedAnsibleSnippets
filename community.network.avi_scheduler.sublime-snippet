@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of Scheduler Avi RESTful Object}
   community.network.avi_scheduler:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
     avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    backup_config_ref: ${5:# Backup configuration to be executed by this scheduler}
-    enabled: ${6:# Boolean flag to set enabled}
-    end_date_time: ${7:# Scheduler end date and time}
-    frequency: ${8:# Frequency at which custom scheduler will run}
-    frequency_unit: ${9:# Unit at which custom scheduler will run}
-    name: ${10:# Name of scheduler}
-    run_mode: ${11:# Scheduler run mode}
-    run_script_ref: ${12:# Control script to be executed by this scheduler}
-    scheduler_action: ${13:# Define scheduler action}
-    start_date_time: ${14:# Scheduler start date and time}
-    tenant_ref: ${15:# It is a reference to an object of type tenant}
-    url: ${16:# Avi controller URL of the object}
-    uuid: ${17:# Unique object identifier of the object}
-    controller: ${18:# IP address or hostname of the controller}
-    username: ${19:# Username used for accessing Avi controller}
-    password: ${20:# Password of Avi user in Avi controller}
+    avi_api_update_method: ${5:# Default method for object update is HTTP PUT}
+    avi_credentials: ${6:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${7:# It disables avi session information to be cached as a fact}
+    backup_config_ref: ${8:# Backup configuration to be executed by this scheduler}
+    controller: ${9:# IP address or hostname of the controller}
+    enabled: ${10:# Boolean flag to set enabled}
+    end_date_time: ${11:# Scheduler end date and time}
+    frequency: ${12:# Frequency at which custom scheduler will run}
+    frequency_unit: ${13:# Unit at which custom scheduler will run}
+    name: ${14:# Name of scheduler}
+    password: ${15:# Password of Avi user in Avi controller}
+    run_mode: ${16:# Scheduler run mode}
+    run_script_ref: ${17:# Control script to be executed by this scheduler}
+    scheduler_action: ${18:# Define scheduler action}
+    start_date_time: ${19:# Scheduler start date and time}
+    state: ${20:# The state that should be applied on the entity}
     tenant: ${21:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${22:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${23:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${24:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${25:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${26:# It disables avi session information to be cached as a fact}
+    tenant_ref: ${22:# It is a reference to an object of type tenant}
+    tenant_uuid: ${23:# UUID of tenant used for all Avi API calls and context of object}
+    url: ${24:# Avi controller URL of the object}
+    username: ${25:# Username used for accessing Avi controller}
+    uuid: ${26:# Unique object identifier of the object}
   tags:
     - community
     - network

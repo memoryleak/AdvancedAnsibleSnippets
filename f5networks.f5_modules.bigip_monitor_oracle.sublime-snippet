@@ -1,30 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages BIG-IP Oracle monitors}
   f5networks.f5_modules.bigip_monitor_oracle:
-    name: ${2:# Monitor name}
-    app_service: ${3:# The iApp service to be associated with this profile}
-    description: ${4:# Specifies descriptive text that identifies the monitor}
-    parent: ${5:# The parent template of this monitor template}
-    ip: ${6:# IP address part of the IP/port definition}
-    port: ${7:# Port address part of the IP/port definition}
-    interval: ${8:# Specifies the frequency, in seconds, at which the system issues the monitor check when either the resource is down or the status of the resource is unknown}
-    timeout: ${9:# Specifies the number of seconds the target has in which to respond to the monitor request}
-    time_until_up: ${10:# Specifies the number of seconds to wait after a resource first responds correctly to the monitor before setting the resource to 'up'}
-    up_interval: ${11:# Specifies the interval for the system to use to perform the health check when a resource is up}
-    manual_resume: ${12:# Specifies whether the system automatically changes the status of a resource to B(enabled) at the next successful monitor check}
-    recv: ${13:# Specifies the text string that the monitor looks for in the returned resource}
-    recv_column: ${14:# Specifies the column in the database where the specified C(recv) string should be located}
-    recv_row: ${15:# Specifies the row in the database where the specified C(recv) string should be located}
-    send: ${16:# Specifies the SQL query the monitor sends to the target object}
-    database: ${17:# Specifies the name of the database the monitor tries to access}
-    count: ${18:# Specifies the number of monitor probes after which the connection to the database will be terminated}
-    target_username: ${19:# Specifies the user name, if the monitored target requires authentication}
+    app_service: ${2:# The iApp service to be associated with this profile}
+    count: ${3:# Specifies the number of monitor probes after which the connection to the database will be terminated}
+    database: ${4:# Specifies the name of the database the monitor tries to access}
+    debug: ${5:# Specifies whether the monitor sends error messages and additional information to a log file created and labeled specifically for this monitor}
+    description: ${6:# Specifies descriptive text that identifies the monitor}
+    interval: ${7:# Specifies the frequency, in seconds, at which the system issues the monitor check when either the resource is down or the status of the resource is unknown}
+    ip: ${8:# IP address part of the IP/port definition}
+    manual_resume: ${9:# Specifies whether the system automatically changes the status of a resource to B(enabled) at the next successful monitor check}
+    name: ${10:# Monitor name}
+    parent: ${11:# The parent template of this monitor template}
+    partition: ${12:# Device partition to manage resources on}
+    port: ${13:# Port address part of the IP/port definition}
+    provider: ${14:# A dict object containing connection details}
+    recv: ${15:# Specifies the text string that the monitor looks for in the returned resource}
+    recv_column: ${16:# Specifies the column in the database where the specified C(recv) string should be located}
+    recv_row: ${17:# Specifies the row in the database where the specified C(recv) string should be located}
+    send: ${18:# Specifies the SQL query the monitor sends to the target object}
+    state: ${19:# When C(present), ensures the monitor exists}
     target_password: ${20:# Specifies the password, if the monitored target requires authentication}
-    debug: ${21:# Specifies whether the monitor sends error messages and additional information to a log file created and labeled specifically for this monitor}
-    update_password: ${22:# C(always) will update passwords if the C(target_password) is specified}
-    partition: ${23:# Device partition to manage resources on}
-    state: ${24:# When C(present), ensures the monitor exists}
-    provider: ${25:# A dict object containing connection details}
+    target_username: ${21:# Specifies the user name, if the monitored target requires authentication}
+    time_until_up: ${22:# Specifies the number of seconds to wait after a resource first responds correctly to the monitor before setting the resource to 'up'}
+    timeout: ${23:# Specifies the number of seconds the target has in which to respond to the monitor request}
+    up_interval: ${24:# Specifies the interval for the system to use to perform the health check when a resource is up}
+    update_password: ${25:# C(always) will update passwords if the C(target_password) is specified}
   tags:
     - f5networks
     - f5_modules

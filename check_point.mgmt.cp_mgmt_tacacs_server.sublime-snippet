@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages tacacs-server objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_tacacs_server:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    color: ${3:# Color of the object}
+    comments: ${4:# Comments string}
+    details_level: ${5:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    encryption: ${6:# Is there a secret key defined on the server}
+    groups: ${7:# Collection of group identifiers}
+    ignore_errors: ${8:# Apply changes ignoring errors}
+    ignore_warnings: ${9:# Apply changes ignoring warnings}
+    name: ${10:# Object name}
+    priority: ${11:# The priority of the TACACS Server in case it is a member of a TACACS Group}
+    secret_key: ${12:# The server's secret key}
+    server: ${13:# The UID or Name of the host that is the TACACS Server}
+    server_type: ${14:# Server type, TACACS or TACACS+}
+    service: ${15:# Server service, only relevant when 'server-type' is TACACS}
+    state: ${16:# State of the access rule (present or absent)}
+    tags: ${17:# Collection of tag identifiers}
+    version: ${18:# Version of checkpoint}
+    wait_for_task: ${19:# Wait for the task to end}
+    wait_for_task_timeout: ${20:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_tacacs_server]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_tacacs_server</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages tacacs-server objects on Checkpoint over Web Services API</description>
+</snippet>

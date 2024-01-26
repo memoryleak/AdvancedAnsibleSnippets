@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get all triggers about a Zabbix group}
+  community.zabbix.zabbix_group_events_info:
+    hostgroup_name: ${2:# Name of the hostgroup in Zabbix}
+    http_login_password: ${3:# Basic Auth password}
+    http_login_user: ${4:# Basic Auth login}
+    trigger_severity: ${5:# Zabbix severity for search filter}
+  tags:
+    - community
+    - zabbix
+    - zabbix_group_events_info]]></content>
+  <tabTrigger>community.zabbix.zabbix_group_events_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get all triggers about a Zabbix group</description>
+</snippet>

@@ -1,14 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Cancel an Automation Platform Controller Job}
   awx.awx.job_cancel:
-    job_id: ${2:# ID of the job to cancel}
-    fail_if_not_running: ${3:# Fail loudly if the I(job_id) can not be canceled}
-    controller_host: ${4:# URL to your Automation Platform Controller instance}
-    controller_username: ${5:# Username for your controller instance}
-    controller_password: ${6:# Password for your controller instance}
-    controller_oauthtoken: ${7:# The OAuth token to use}
-    validate_certs: ${8:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${9:# Path to the controller config file}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    fail_if_not_running: ${7:# Fail loudly if the I(job_id) can not be canceled}
+    job_id: ${8:# ID of the job to cancel}
+    request_timeout: ${9:# Specify the timeout Ansible should use in requests to the controller host}
+    validate_certs: ${10:# Whether to allow insecure connections to AWX}
   tags:
     - awx
     - awx

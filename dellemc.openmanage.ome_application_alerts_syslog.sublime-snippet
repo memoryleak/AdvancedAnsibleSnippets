@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure syslog forwarding settings on OpenManage Enterprise and OpenManage Enterprise Modular}
   dellemc.openmanage.ome_application_alerts_syslog:
-    syslog_servers: ${2:# List of servers to forward syslog}
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
     hostname: ${3:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
-    username: ${4:# OpenManage Enterprise or OpenManage Enterprise Modular username}
-    password: ${5:# OpenManage Enterprise or OpenManage Enterprise Modular password}
-    port: ${6:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
-    validate_certs: ${7:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${8:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${9:# The socket level timeout in seconds}
+    password: ${4:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${5:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    syslog_servers: ${6:# List of servers to forward syslog}
+    timeout: ${7:# The socket level timeout in seconds}
+    username: ${8:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    validate_certs: ${9:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

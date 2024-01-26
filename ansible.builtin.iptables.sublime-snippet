@@ -1,51 +1,52 @@
 <snippet>
   <content><![CDATA[- name: ${1:Modify iptables rules}
   ansible.builtin.iptables:
-    table: ${2:# This option specifies the packet matching table which the command should operate on}
-    state: ${3:# Whether the rule should be absent or present}
-    action: ${4:# Whether the rule should be appended at the bottom or inserted at the top}
-    rule_num: ${5:# Insert the rule as the given rule number}
-    ip_version: ${6:# Which version of the IP protocol this rule should apply to}
-    chain: ${7:# Specify the iptables chain to modify}
-    protocol: ${8:# The protocol of the rule or of the packet to check}
-    source: ${9:# Source specification}
-    destination: ${10:# Destination specification}
-    tcp_flags: ${11:# TCP flags specification}
-    match: ${12:# Specifies a match to use, that is, an extension module that tests for a specific property}
-    jump: ${13:# This specifies the target of the rule; i}
-    gateway: ${14:# This specifies the IP address of host to send the cloned packets}
-    log_prefix: ${15:# Specifies a log text for the rule}
-    log_level: ${16:# Logging level according to the syslogd-defined priorities}
-    goto: ${17:# This specifies that the processing should continue in a user specified chain}
-    in_interface: ${18:# Name of an interface via which a packet was received (only for packets entering the C(INPUT), C(FORWARD) and C(PREROUTING) chains)}
-    out_interface: ${19:# Name of an interface via which a packet is going to be sent (for packets entering the C(FORWARD), C(OUTPUT) and C(POSTROUTING) chains)}
-    fragment: ${20:# This means that the rule only refers to second and further fragments of fragmented packets}
-    set_counters: ${21:# This enables the administrator to initialize the packet and byte counters of a rule (during C(INSERT), C(APPEND), C(REPLACE) operations)}
-    source_port: ${22:# Source port or port range specification}
-    destination_port: ${23:# Destination port or port range specification}
-    destination_ports: ${24:# This specifies multiple destination port numbers or port ranges to match in the multiport module}
-    to_ports: ${25:# This specifies a destination port or range of ports to use, without this, the destination port is never altered}
-    to_destination: ${26:# This specifies a destination address to use with C(DNAT)}
-    to_source: ${27:# This specifies a source address to use with C(SNAT)}
-    syn: ${28:# This allows matching packets that have the SYN bit set and the ACK and RST bits unset}
-    set_dscp_mark: ${29:# This allows specifying a DSCP mark to be added to packets}
-    set_dscp_mark_class: ${30:# This allows specifying a predefined DiffServ class which will be translated to the corresponding DSCP mark}
-    comment: ${31:# This specifies a comment that will be added to the rule}
-    ctstate: ${32:# A list of the connection states to match in the conntrack module}
-    src_range: ${33:# Specifies the source IP range to match in the iprange module}
-    dst_range: ${34:# Specifies the destination IP range to match in the iprange module}
-    match_set: ${35:# Specifies a set name which can be defined by ipset}
-    match_set_flags: ${36:# Specifies the necessary flags for the match_set parameter}
-    limit: ${37:# Specifies the maximum average number of matches to allow per second}
-    limit_burst: ${38:# Specifies the maximum burst before the above limit kicks in}
-    uid_owner: ${39:# Specifies the UID or username to use in match by owner rule}
-    gid_owner: ${40:# Specifies the GID or group to use in match by owner rule}
-    reject_with: ${41:# Specifies the error packet type to return while rejecting}
-    icmp_type: ${42:# This allows specification of the ICMP type, which can be a numeric ICMP type, type/code pair, or one of the ICMP type names shown by the command 'iptables -p icmp -h'}
-    flush: ${43:# Flushes the specified table and chain of all rules}
-    policy: ${44:# Set the policy for the chain to the given target}
-    wait: ${45:# Wait N seconds for the xtables lock to prevent multiple instances of the program from running concurrently}
-    chain_management: ${46:# If C(true) and C(state) is C(present), the chain will be created if needed}
+    action: ${2:# Whether the rule should be appended at the bottom or inserted at the top}
+    chain: ${3:# Specify the iptables chain to modify}
+    chain_management: ${4:# If V(true) and O(state) is V(present), the chain will be created if needed}
+    comment: ${5:# This specifies a comment that will be added to the rule}
+    ctstate: ${6:# A list of the connection states to match in the conntrack module}
+    destination: ${7:# Destination specification}
+    destination_port: ${8:# Destination port or port range specification}
+    destination_ports: ${9:# This specifies multiple destination port numbers or port ranges to match in the multiport module}
+    dst_range: ${10:# Specifies the destination IP range to match in the iprange module}
+    flush: ${11:# Flushes the specified table and chain of all rules}
+    fragment: ${12:# This means that the rule only refers to second and further fragments of fragmented packets}
+    gateway: ${13:# This specifies the IP address of host to send the cloned packets}
+    gid_owner: ${14:# Specifies the GID or group to use in match by owner rule}
+    goto: ${15:# This specifies that the processing should continue in a user specified chain}
+    icmp_type: ${16:# This allows specification of the ICMP type, which can be a numeric ICMP type, type/code pair, or one of the ICMP type names shown by the command 'iptables -p icmp -h'}
+    in_interface: ${17:# Name of an interface via which a packet was received (only for packets entering the V(INPUT), V(FORWARD) and V(PREROUTING) chains)}
+    ip_version: ${18:# Which version of the IP protocol this rule should apply to}
+    jump: ${19:# This specifies the target of the rule; i}
+    limit: ${20:# Specifies the maximum average number of matches to allow per second}
+    limit_burst: ${21:# Specifies the maximum burst before the above limit kicks in}
+    log_level: ${22:# Logging level according to the syslogd-defined priorities}
+    log_prefix: ${23:# Specifies a log text for the rule}
+    match: ${24:# Specifies a match to use, that is, an extension module that tests for a specific property}
+    match_set: ${25:# Specifies a set name which can be defined by ipset}
+    match_set_flags: ${26:# Specifies the necessary flags for the match_set parameter}
+    numeric: ${27:# This parameter controls the running of the list -action of iptables, which is used internally by the module}
+    out_interface: ${28:# Name of an interface via which a packet is going to be sent (for packets entering the V(FORWARD), V(OUTPUT) and V(POSTROUTING) chains)}
+    policy: ${29:# Set the policy for the chain to the given target}
+    protocol: ${30:# The protocol of the rule or of the packet to check}
+    reject_with: ${31:# Specifies the error packet type to return while rejecting}
+    rule_num: ${32:# Insert the rule as the given rule number}
+    set_counters: ${33:# This enables the administrator to initialize the packet and byte counters of a rule (during V(INSERT), V(APPEND), V(REPLACE) operations)}
+    set_dscp_mark: ${34:# This allows specifying a DSCP mark to be added to packets}
+    set_dscp_mark_class: ${35:# This allows specifying a predefined DiffServ class which will be translated to the corresponding DSCP mark}
+    source: ${36:# Source specification}
+    source_port: ${37:# Source port or port range specification}
+    src_range: ${38:# Specifies the source IP range to match in the iprange module}
+    state: ${39:# Whether the rule should be absent or present}
+    syn: ${40:# This allows matching packets that have the SYN bit set and the ACK and RST bits unset}
+    table: ${41:# This option specifies the packet matching table which the command should operate on}
+    tcp_flags: ${42:# TCP flags specification}
+    to_destination: ${43:# This specifies a destination address to use with C(DNAT)}
+    to_ports: ${44:# This specifies a destination port or range of ports to use, without this, the destination port is never altered}
+    to_source: ${45:# This specifies a source address to use with C(SNAT)}
+    uid_owner: ${46:# Specifies the UID or username to use in match by owner rule}
+    wait: ${47:# Wait N seconds for the xtables lock to prevent multiple instances of the program from running concurrently}
   tags:
     - iptables]]></content>
   <tabTrigger>ansible.builtin.iptables</tabTrigger>

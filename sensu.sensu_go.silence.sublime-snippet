@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Sensu silences}
   sensu.sensu_go.silence:
-    subscription: ${2:# The name of the subscription the entry should match}
-    check: ${3:# The name of the check the entry should match}
+    annotations: ${2:# Custom metadata fields with fewer restrictions, as key/value pairs}
+    auth: ${3:# Authentication parameters}
     begin: ${4:# UNIX time at which silence entry goes into effect}
-    expire: ${5:# Number of seconds until the silence expires}
-    expire_on_resolve: ${6:# If the entry should be deleted when a check begins return OK status (resolves)}
-    reason: ${7:# Reason for silencing}
-    auth: ${8:# Authentication parameters}
+    check: ${5:# The name of the check the entry should match}
+    expire: ${6:# Number of seconds until the silence expires}
+    expire_on_resolve: ${7:# If the entry should be deleted when a check begins return OK status (resolves)}
+    labels: ${8:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
     namespace: ${9:# RBAC namespace to operate in}
-    state: ${10:# Target state of the Sensu object}
-    labels: ${11:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
-    annotations: ${12:# Custom metadata fields with fewer restrictions, as key/value pairs}
+    reason: ${10:# Reason for silencing}
+    state: ${11:# Target state of the Sensu object}
+    subscription: ${12:# The name of the subscription the entry should match}
   tags:
     - sensu
     - sensu_go

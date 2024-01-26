@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage configuration on devices running Juniper JUNOS}
   junipernetworks.junos.junos_config:
-    lines: ${2:# This argument takes a list of C(set) or C(delete) configuration lines to push into the remote device}
-    src: ${3:# The I(src) argument provides a path to the configuration file to load into the remote system}
-    src_format: ${4:# The I(src_format) argument specifies the format of the configuration found int I(src)}
-    rollback: ${5:# The C(rollback) argument instructs the module to rollback the current configuration to the identifier specified in the argument}
-    zeroize: ${6:# The C(zeroize) argument is used to completely sanitize the remote device configuration back to initial defaults}
-    confirm: ${7:# The C(confirm) argument will configure a time out value in minutes for the commit to be confirmed before it is automatically rolled back}
-    comment: ${8:# The C(comment) argument specifies a text string to be used when committing the configuration}
+    backup: ${2:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
+    backup_options: ${3:# This is a dict object containing configurable options related to backup file path}
+    check_commit: ${4:# This argument will check correctness of syntax; do not apply changes}
+    comment: ${5:# The C(comment) argument specifies a text string to be used when committing the configuration}
+    confirm: ${6:# The C(confirm) argument will configure a time out value in minutes for the commit to be confirmed before it is automatically rolled back}
+    confirm_commit: ${7:# This argument will execute commit operation on remote device}
+    lines: ${8:# This argument takes a list of C(set) or C(delete) configuration lines to push into the remote device}
     replace: ${9:# The C(replace) argument will instruct the remote device to replace the current configuration hierarchy with the one specified in the corresponding hierarchy of the source configuration loaded from this module}
-    backup: ${10:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
-    update: ${11:# This argument will decide how to load the configuration data particularly when the candidate configuration and loaded configuration contain conflicting statements}
-    confirm_commit: ${12:# This argument will execute commit operation on remote device}
-    check_commit: ${13:# This argument will check correctness of syntax; do not apply changes}
-    backup_options: ${14:# This is a dict object containing configurable options related to backup file path}
+    rollback: ${10:# The C(rollback) argument instructs the module to rollback the current configuration to the identifier specified in the argument}
+    src: ${11:# The I(src) argument provides a path to the configuration file to load into the remote system}
+    src_format: ${12:# The I(src_format) argument specifies the format of the configuration found int I(src)}
+    update: ${13:# This argument will decide how to load the configuration data particularly when the candidate configuration and loaded configuration contain conflicting statements}
+    zeroize: ${14:# The C(zeroize) argument is used to completely sanitize the remote device configuration back to initial defaults}
   tags:
     - junipernetworks
     - junos

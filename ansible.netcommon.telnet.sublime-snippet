@@ -2,16 +2,17 @@
   <content><![CDATA[- name: ${1:Executes a low-down and dirty telnet command}
   ansible.netcommon.telnet:
     command: ${2:# List of commands to be executed in the telnet session}
-    host: ${3:# The host/target on which to execute the command}
-    user: ${4:# The user for login}
-    password: ${5:# The password for login}
-    port: ${6:# Remote port to use}
-    timeout: ${7:# timeout for remote operations}
-    prompts: ${8:# List of prompts expected before sending next command}
-    login_prompt: ${9:# Login or username prompt to expect}
-    password_prompt: ${10:# Login or username prompt to expect}
-    pause: ${11:# Seconds to pause between each command issued}
-    send_newline: ${12:# Sends a newline character upon successful connection to start the terminal session}
+    crlf: ${3:# Sends a CRLF (Carrage Return) instead of just a LF (Line Feed)}
+    host: ${4:# The host/target on which to execute the command}
+    login_prompt: ${5:# Login or username prompt to expect}
+    password: ${6:# The password for login}
+    password_prompt: ${7:# Login or username prompt to expect}
+    pause: ${8:# Seconds to pause between each command issued}
+    port: ${9:# Remote port to use}
+    prompts: ${10:# List of prompts expected before sending next command}
+    send_newline: ${11:# Sends a newline character upon successful connection to start the terminal session}
+    timeout: ${12:# timeout for remote operations}
+    user: ${13:# The user for login}
   tags:
     - telnet]]></content>
   <tabTrigger>ansible.netcommon.telnet</tabTrigger>

@@ -1,21 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP Model}
   google.cloud.gcp_mlengine_model:
-    state: ${2:# Whether the given object should exist in GCP}
-    name: ${3:# The name specified for the model}
-    description: ${4:# The description specified for the model when it was created}
-    default_version: ${5:# The default version of the model}
-    regions: ${6:# The list of regions where the model is going to be deployed}
-    online_prediction_logging: ${7:# If true, online prediction access logs are sent to StackDriver Logging}
-    online_prediction_console_logging: ${8:# If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging}
-    labels: ${9:# One or more labels that you can add, to organize your models}
-    project: ${10:# The Google Cloud Platform project to use}
-    auth_kind: ${11:# The type of credential used}
-    service_account_contents: ${12:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${13:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${14:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${15:# Array of scopes to be used}
-    env_type: ${16:# Specifies which Ansible environment you're running this module within}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    auth_kind: ${3:# The type of credential used}
+    default_version: ${4:# The default version of the model}
+    description: ${5:# The description specified for the model when it was created}
+    env_type: ${6:# Specifies which Ansible environment you're running this module within}
+    labels: ${7:# One or more labels that you can add, to organize your models}
+    name: ${8:# The name specified for the model}
+    online_prediction_console_logging: ${9:# If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging}
+    online_prediction_logging: ${10:# If true, online prediction access logs are sent to StackDriver Logging}
+    project: ${11:# The Google Cloud Platform project to use}
+    regions: ${12:# The list of regions where the model is going to be deployed}
+    scopes: ${13:# Array of scopes to be used}
+    service_account_contents: ${14:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_email: ${15:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    service_account_file: ${16:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    state: ${17:# Whether the given object should exist in GCP}
   tags:
     - google
     - cloud

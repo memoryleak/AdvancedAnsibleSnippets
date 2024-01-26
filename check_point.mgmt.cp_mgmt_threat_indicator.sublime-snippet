@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages threat-indicator objects on Check Point over Web Services API}
   check_point.mgmt.cp_mgmt_threat_indicator:
-    name: ${2:# Object name}
-    observables: ${3:# The indicator's observables}
-    observables_raw_data: ${4:# The contents of a file containing the indicator's observables}
-    action: ${5:# The indicator's action}
-    profile_overrides: ${6:# Profiles in which to override the indicator's default action}
-    tags: ${7:# Collection of tag identifiers}
-    color: ${8:# Color of the object}
-    comments: ${9:# Comments string}
-    details_level: ${10:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
-    ignore_warnings: ${11:# Apply changes ignoring warnings}
-    ignore_errors: ${12:# Apply changes ignoring errors}
+    action: ${2:# The indicator's action}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    color: ${4:# Color of the object}
+    comments: ${5:# Comments string}
+    details_level: ${6:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_errors: ${7:# Apply changes ignoring errors}
+    ignore_warnings: ${8:# Apply changes ignoring warnings}
+    name: ${9:# Object name}
+    observables: ${10:# The indicator's observables}
+    observables_raw_data: ${11:# The contents of a file containing the indicator's observables}
+    profile_overrides: ${12:# Profiles in which to override the indicator's default action}
     state: ${13:# State of the access rule (present or absent)}
-    auto_publish_session: ${14:# Publish the current session if changes have been performed after task completes}
-    wait_for_task: ${15:# Wait for the task to end}
-    wait_for_task_timeout: ${16:# How many minutes to wait until throwing a timeout error}
-    version: ${17:# Version of checkpoint}
+    tags: ${14:# Collection of tag identifiers}
+    version: ${15:# Version of checkpoint}
+    wait_for_task: ${16:# Wait for the task to end}
+    wait_for_task_timeout: ${17:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

@@ -1,31 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates or deletes AWS SQS queues}
   community.aws.sqs_queue:
-    state: ${2:# Create or delete the queue}
-    name: ${3:# Name of the queue}
-    queue_type: ${4:# Standard or FIFO queue}
-    visibility_timeout: ${5:# The default visibility timeout in seconds}
-    message_retention_period: ${6:# The message retention period in seconds}
-    maximum_message_size: ${7:# The maximum message size in bytes}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    content_based_deduplication: ${5:# Enables content-based deduplication}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    deduplication_scope: ${7:# Deduplication scope for FIFO queues}
     delay_seconds: ${8:# The delivery delay in seconds}
-    receive_message_wait_time_seconds: ${9:# The receive message wait time in seconds}
-    policy: ${10:# Policy to attach to the queue}
-    redrive_policy: ${11:# JSON dict with the redrive_policy (see example)}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
+    fifo_throughput_limit: ${10:# Throughput limit for FIFO queues}
+    kms_data_key_reuse_period_seconds: ${11:# The length of time, in seconds, for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again}
     kms_master_key_id: ${12:# The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK}
-    kms_data_key_reuse_period_seconds: ${13:# The length of time, in seconds, for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again}
-    content_based_deduplication: ${14:# Enables content-based deduplication}
-    access_key: ${15:# AWS access key ID}
-    secret_key: ${16:# AWS secret access key}
-    session_token: ${17:# AWS STS session token for use with temporary credentials}
-    profile: ${18:# A named AWS profile to use for authentication}
-    endpoint_url: ${19:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${20:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${21:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${22:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${23:# Use a C(botocore}
-    region: ${24:# The AWS region to use}
-    tags: ${25:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${26:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    maximum_message_size: ${13:# The maximum message size in bytes}
+    message_retention_period: ${14:# The message retention period in seconds}
+    name: ${15:# Name of the queue}
+    policy: ${16:# Policy to attach to the queue}
+    profile: ${17:# A named AWS profile to use for authentication}
+    purge_tags: ${18:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    queue_type: ${19:# Standard or FIFO queue}
+    receive_message_wait_time_seconds: ${20:# The receive message wait time in seconds}
+    redrive_policy: ${21:# JSON dict with the redrive_policy (see example)}
+    region: ${22:# The AWS region to use}
+    secret_key: ${23:# AWS secret access key}
+    session_token: ${24:# AWS STS session token for use with temporary credentials}
+    state: ${25:# Create or delete the queue}
+    tags: ${26:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${27:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    visibility_timeout: ${28:# The default visibility timeout in seconds}
   tags:
     - community
     - aws

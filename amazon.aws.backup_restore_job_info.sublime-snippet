@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:List information about backup restore jobs}
+  amazon.aws.backup_restore_job_info:
+    access_key: ${2:# AWS access key ID}
+    account_id: ${3:# The account ID to list the restore jobs from}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    completed_after: ${6:# Specified date to filter result based on the restore job completion datetime}
+    completed_before: ${7:# Specified date to filter result based on the restore job completion datetime}
+    created_after: ${8:# Specified date to filter result based on the restore job creation datetime}
+    created_before: ${9:# Specified date to filter result based on the restore job creation datetime}
+    debug_botocore_endpoint_logs: ${10:# Use a C(botocore}
+    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
+    profile: ${12:# A named AWS profile to use for authentication}
+    region: ${13:# The AWS region to use}
+    restore_job_id: ${14:# ID of the restore job to get information about}
+    secret_key: ${15:# AWS secret access key}
+    session_token: ${16:# AWS STS session token for use with temporary credentials}
+    status: ${17:# Status of restore jobs to filter the result based on job status}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+  tags:
+    - amazon
+    - aws
+    - backup_restore_job_info]]></content>
+  <tabTrigger>amazon.aws.backup_restore_job_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>List information about backup restore jobs</description>
+</snippet>

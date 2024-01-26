@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages firewall rules on Apache CloudStack based clouds}
   ngine_io.cloudstack.cs_firewall:
-    ip_address: ${2:# Public IP address the ingress rule is assigned to}
-    network: ${3:# Network the egress rule is related to}
-    state: ${4:# State of the firewall rule}
-    type: ${5:# Type of the firewall rule}
-    protocol: ${6:# Protocol of the firewall rule}
-    cidrs: ${7:# List of CIDRs (full notation) to be used for firewall rule}
-    start_port: ${8:# Start port for this rule}
-    end_port: ${9:# End port for this rule}
-    icmp_type: ${10:# Type of the icmp message being sent}
-    icmp_code: ${11:# Error code for this icmp message}
-    domain: ${12:# Domain the firewall rule is related to}
-    account: ${13:# Account the firewall rule is related to}
-    project: ${14:# Name of the project the firewall rule is related to}
-    zone: ${15:# Name of the zone in which the virtual machine is in}
+    account: ${2:# Account the firewall rule is related to}
+    api_http_method: ${3:# HTTP method used to query the API endpoint}
+    api_key: ${4:# API key of the CloudStack API}
+    api_secret: ${5:# Secret key of the CloudStack API}
+    api_timeout: ${6:# HTTP timeout in seconds}
+    api_url: ${7:# URL of the CloudStack API e}
+    api_verify_ssl_cert: ${8:# Verify CA authority cert file}
+    cidrs: ${9:# List of CIDRs (full notation) to be used for firewall rule}
+    domain: ${10:# Domain the firewall rule is related to}
+    end_port: ${11:# End port for this rule}
+    icmp_code: ${12:# Error code for this icmp message}
+    icmp_type: ${13:# Type of the icmp message being sent}
+    ip_address: ${14:# Public IP address the ingress rule is assigned to}
+    network: ${15:# Network the egress rule is related to}
     poll_async: ${16:# Poll async jobs until job has finished}
-    tags: ${17:# List of tags}
-    api_key: ${18:# API key of the CloudStack API}
-    api_secret: ${19:# Secret key of the CloudStack API}
-    api_url: ${20:# URL of the CloudStack API e}
-    api_http_method: ${21:# HTTP method used to query the API endpoint}
-    api_timeout: ${22:# HTTP timeout in seconds}
-    api_verify_ssl_cert: ${23:# Verify CA authority cert file}
+    project: ${17:# Name of the project the firewall rule is related to}
+    protocol: ${18:# Protocol of the firewall rule}
+    start_port: ${19:# Start port for this rule}
+    state: ${20:# State of the firewall rule}
+    tags: ${21:# List of tags}
+    type: ${22:# Type of the firewall rule}
+    zone: ${23:# Name of the zone in which the virtual machine is in}
   tags:
     - ngine_io
     - cloudstack

@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage data groups on a BIG-IP}
   f5networks.f5_modules.bigip_data_group:
-    name: ${2:# Specifies the name of the data group}
+    delete_data_group_file: ${2:# When C(true), ensures the remote data group file is deleted}
     description: ${3:# The description of the data group}
-    type: ${4:# The type of records in this data group}
+    external_file_name: ${4:# When creating a new data group, this specifies the file name you want to give an external data group file on the BIG-IP}
     internal: ${5:# The type of this data group}
-    external_file_name: ${6:# When creating a new data group, this specifies the file name you want to give an external data group file on the BIG-IP}
-    records: ${7:# Specifies the records you want to add to a data group}
-    records_src: ${8:# Path to a file with records in it}
-    separator: ${9:# When specifying C(records_src), this is the string of characters that will be used to break apart entries in the C(records_src) into key/value pairs}
-    delete_data_group_file: ${10:# When C(yes), ensures the remote data group file is deleted}
-    partition: ${11:# Device partition to manage resources on}
+    name: ${6:# Specifies the name of the data group}
+    partition: ${7:# Device partition to manage resources on}
+    provider: ${8:# A dict object containing connection details}
+    records: ${9:# Specifies the records you want to add to a data group}
+    records_src: ${10:# Path to a file with records in it}
+    separator: ${11:# When specifying C(records_src), this is the string of characters that will be used to break apart entries in the C(records_src) into key/value pairs}
     state: ${12:# When C(state) is C(present), ensures the data group exists}
-    provider: ${13:# A dict object containing connection details}
+    type: ${13:# The type of records in this data group}
   tags:
     - f5networks
     - f5_modules

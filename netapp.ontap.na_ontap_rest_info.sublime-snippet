@@ -1,26 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP information gatherer using REST APIs}
   netapp.ontap.na_ontap_rest_info:
-    state: ${2:# deprecated as of 21}
-    gather_subset: ${3:# When supplied, this argument will restrict the information collected to a given subset}
-    max_records: ${4:# Maximum number of records returned in a single call}
-    fields: ${5:# Request specific fields from subset}
-    parameters: ${6:# Allows for any rest option to be passed in}
-    use_python_keys: ${7:# If true, I(/) in the returned dictionary keys are translated to I(_)}
-    owning_resource: ${8:# Some resources cannot be accessed directly}
-    ignore_api_errors: ${9:# List of substrings}
-    hostname: ${10:# The hostname or IP address of the ONTAP instance}
-    username: ${11:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${12:# Password for the specified user}
-    cert_filepath: ${13:# path to SSL client cert file (}
-    key_filepath: ${14:# path to SSL client key file}
-    https: ${15:# Enable and disable https}
-    validate_certs: ${16:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${17:# Override the default port (80 or 443) with this port}
-    ontapi: ${18:# The ontap api version to use}
-    use_rest: ${19:# Whether to use REST or ZAPI}
-    feature_flags: ${20:# Enable or disable a new feature}
-    force_ontap_version: ${21:# Override the cluster ONTAP version when using REST}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    feature_flags: ${3:# Enable or disable a new feature}
+    fields: ${4:# Request specific fields from subset}
+    force_ontap_version: ${5:# Override the cluster ONTAP version when using REST}
+    gather_subset: ${6:# When supplied, this argument will restrict the information collected to a given subset}
+    hal_linking: ${7:# if false, HAL-encoded links are disabled in the REST calls}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    http_port: ${9:# Override the default port (80 or 443) with this port}
+    https: ${10:# Enable and disable https}
+    ignore_api_errors: ${11:# List of substrings}
+    key_filepath: ${12:# path to SSL client key file}
+    max_records: ${13:# Maximum number of records returned in a single call}
+    ontapi: ${14:# The ontap api version to use}
+    owning_resource: ${15:# Some resources cannot be accessed directly}
+    parameters: ${16:# Allows for any rest option to be passed in}
+    password: ${17:# Password for the specified user}
+    state: ${18:# deprecated as of 21}
+    use_python_keys: ${19:# If true, I(/) in the returned dictionary keys are translated to I(_)}
+    use_rest: ${20:# Whether to use REST or ZAPI}
+    username: ${21:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${22:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Reboot a windows machine}
   ansible.windows.win_reboot:
-    pre_reboot_delay: ${2:# Seconds to wait before reboot}
-    post_reboot_delay: ${3:# Seconds to wait after the reboot command was successful before attempting to validate the system rebooted successfully}
-    reboot_timeout: ${4:# Maximum seconds to wait for machine to re-appear on the network and respond to a test command}
-    connect_timeout: ${5:# Maximum seconds to wait for a single successful TCP connection to the WinRM endpoint before trying again}
-    test_command: ${6:# Command to expect success for to determine the machine is ready for management}
-    msg: ${7:# Message to display to users}
-    boot_time_command: ${8:# Command to run that returns a unique string indicating the last time the system was booted}
+    boot_time_command: ${2:# Command to run that returns a unique string indicating the last time the system was booted}
+    connect_timeout: ${3:# Maximum seconds to wait for a single successful TCP connection to the WinRM endpoint before trying again}
+    msg: ${4:# Message to display to users}
+    post_reboot_delay: ${5:# Seconds to wait after the reboot command was successful before attempting to validate the system rebooted successfully}
+    pre_reboot_delay: ${6:# Seconds to wait before reboot}
+    reboot_timeout: ${7:# Maximum seconds to wait for machine to re-appear on the network and respond to a test command}
+    test_command: ${8:# Command to expect success for to determine the machine is ready for management}
   tags:
     - win_reboot]]></content>
   <tabTrigger>ansible.windows.win_reboot</tabTrigger>

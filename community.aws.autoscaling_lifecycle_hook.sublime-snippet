@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, delete or update AWS ASG Lifecycle Hooks}
   community.aws.autoscaling_lifecycle_hook:
-    state: ${2:# Create or delete Lifecycle Hook}
-    lifecycle_hook_name: ${3:# The name of the lifecycle hook}
-    autoscaling_group_name: ${4:# The name of the Auto Scaling group to which you want to assign the lifecycle hook}
-    transition: ${5:# The instance state to which you want to attach the lifecycle hook}
-    role_arn: ${6:# The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target}
-    notification_target_arn: ${7:# The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook}
-    notification_meta_data: ${8:# Contains additional information that you want to include any time Auto Scaling sends a message to the notification target}
+    access_key: ${2:# AWS access key ID}
+    autoscaling_group_name: ${3:# The name of the Auto Scaling group to which you want to assign the lifecycle hook}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    default_result: ${7:# Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
     heartbeat_timeout: ${9:# The amount of time, in seconds, that can elapse before the lifecycle hook times out}
-    default_result: ${10:# Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs}
-    access_key: ${11:# AWS access key ID}
-    secret_key: ${12:# AWS secret access key}
-    session_token: ${13:# AWS STS session token for use with temporary credentials}
-    profile: ${14:# A named AWS profile to use for authentication}
-    endpoint_url: ${15:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${16:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${18:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${19:# Use a C(botocore}
-    region: ${20:# The AWS region to use}
+    lifecycle_hook_name: ${10:# The name of the lifecycle hook}
+    notification_meta_data: ${11:# Contains additional information that you want to include any time Auto Scaling sends a message to the notification target}
+    notification_target_arn: ${12:# The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook}
+    profile: ${13:# A named AWS profile to use for authentication}
+    region: ${14:# The AWS region to use}
+    role_arn: ${15:# The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target}
+    secret_key: ${16:# AWS secret access key}
+    session_token: ${17:# AWS STS session token for use with temporary credentials}
+    state: ${18:# Create or delete Lifecycle Hook}
+    transition: ${19:# The instance state to which you want to attach the lifecycle hook}
+    validate_certs: ${20:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage LDAP Authentication Sources}
   theforeman.foreman.auth_source_ldap:
-    name: ${2:# The name of the LDAP authentication source}
-    host: ${3:# The hostname of the LDAP server}
-    port: ${4:# The port number of the LDAP server}
-    account: ${5:# Account name to use when accessing the LDAP server}
-    account_password: ${6:# Account password to use when accessing the LDAP server}
-    base_dn: ${7:# The base DN to use when searching}
-    attr_login: ${8:# Attribute containing login ID}
-    attr_firstname: ${9:# Attribute containing first name}
-    attr_lastname: ${10:# Attribute containing last name}
-    attr_mail: ${11:# Attribute containing email address}
-    attr_photo: ${12:# Attribute containing user photo}
-    onthefly_register: ${13:# Whether or not to register users on the fly}
-    usergroup_sync: ${14:# Whether or not to sync external user groups on login}
-    tls: ${15:# Whether or not to use TLS when contacting the LDAP server}
-    groups_base: ${16:# Base DN where groups reside}
-    use_netgroups: ${17:# Whether to use NIS netgroups instead of posix groups, not valid for I(server_type=active_directory)}
-    server_type: ${18:# Type of the LDAP server}
-    ldap_filter: ${19:# Filter to apply to LDAP searches}
+    account: ${2:# Account name to use when accessing the LDAP server}
+    account_password: ${3:# Account password to use when accessing the LDAP server}
+    attr_firstname: ${4:# Attribute containing first name}
+    attr_lastname: ${5:# Attribute containing last name}
+    attr_login: ${6:# Attribute containing login ID}
+    attr_mail: ${7:# Attribute containing email address}
+    attr_photo: ${8:# Attribute containing user photo}
+    base_dn: ${9:# The base DN to use when searching}
+    groups_base: ${10:# Base DN where groups reside}
+    host: ${11:# The hostname of the LDAP server}
+    ldap_filter: ${12:# Filter to apply to LDAP searches}
+    locations: ${13:# List of locations the entity should be assigned to}
+    name: ${14:# The name of the LDAP authentication source}
+    onthefly_register: ${15:# Whether or not to register users on the fly}
+    organizations: ${16:# List of organizations the entity should be assigned to}
+    password: ${17:# Password of the user accessing the Foreman server}
+    port: ${18:# The port number of the LDAP server}
+    server_type: ${19:# Type of the LDAP server}
     server_url: ${20:# URL of the Foreman server}
-    username: ${21:# Username accessing the Foreman server}
-    password: ${22:# Password of the user accessing the Foreman server}
-    validate_certs: ${23:# Whether or not to verify the TLS certificates of the Foreman server}
-    state: ${24:# State of the entity}
-    organizations: ${25:# List of organizations the entity should be assigned to}
-    locations: ${26:# List of locations the entity should be assigned to}
+    state: ${21:# State of the entity}
+    tls: ${22:# Whether or not to use TLS when contacting the LDAP server}
+    use_netgroups: ${23:# Whether to use NIS netgroups instead of posix groups, not valid for I(server_type=active_directory)}
+    usergroup_sync: ${24:# Whether or not to sync external user groups on login}
+    username: ${25:# Username accessing the Foreman server}
+    validate_certs: ${26:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

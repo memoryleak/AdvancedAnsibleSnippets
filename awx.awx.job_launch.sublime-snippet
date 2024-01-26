@@ -1,34 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:Launch an Ansible Job}
   awx.awx.job_launch:
-    name: ${2:# Name of the job template to use}
-    job_type: ${3:# Job_type to use for the job, only used if prompt for job_type is set}
-    inventory: ${4:# Inventory to use for the job, only used if prompt for inventory is set}
-    organization: ${5:# Organization the job template exists in}
-    credentials: ${6:# Credential to use for job, only used if prompt for credential is set}
-    extra_vars: ${7:# extra_vars to use for the Job Template}
-    limit: ${8:# Limit to use for the I(job_template)}
-    tags: ${9:# Specific tags to use for from playbook}
-    scm_branch: ${10:# A specific of the SCM project to run the template on}
-    skip_tags: ${11:# Specific tags to skip from the playbook}
-    verbosity: ${12:# Verbosity level for this job run}
-    diff_mode: ${13:# Show the changes made by Ansible tasks where supported}
-    credential_passwords: ${14:# Passwords for credentials which are set to prompt on launch}
-    execution_environment: ${15:# Execution environment to use for the job, only used if prompt for execution environment is set}
-    forks: ${16:# Forks to use for the job, only used if prompt for forks is set}
-    instance_groups: ${17:# Instance groups to use for the job, only used if prompt for instance groups is set}
-    job_slice_count: ${18:# Job slice count to use for the job, only used if prompt for job slice count is set}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    credential_passwords: ${7:# Passwords for credentials which are set to prompt on launch}
+    credentials: ${8:# Credential names, IDs, or named URLs to use for job, only used if prompt for credential is set}
+    diff_mode: ${9:# Show the changes made by Ansible tasks where supported}
+    execution_environment: ${10:# Execution environment name, ID, or named URL to use for the job, only used if prompt for execution environment is set}
+    extra_vars: ${11:# extra_vars to use for the Job Template}
+    forks: ${12:# Forks to use for the job, only used if prompt for forks is set}
+    instance_groups: ${13:# Instance group names, IDs, or named URLs to use for the job, only used if prompt for instance groups is set}
+    interval: ${14:# The interval to request an update from the controller}
+    inventory: ${15:# Inventory name, ID, or named URL to use for the job, only used if prompt for inventory is set}
+    job_slice_count: ${16:# Job slice count to use for the job, only used if prompt for job slice count is set}
+    job_timeout: ${17:# Timeout to use for the job, only used if prompt for timeout is set}
+    job_type: ${18:# Job_type to use for the job, only used if prompt for job_type is set}
     labels: ${19:# Labels to use for the job, only used if prompt for labels is set}
-    job_timeout: ${20:# Timeout to use for the job, only used if prompt for timeout is set}
-    wait: ${21:# Wait for the job to complete}
-    interval: ${22:# The interval to request an update from the controller}
-    timeout: ${23:# If waiting for the job to complete this will abort after this amount of seconds}
-    controller_host: ${24:# URL to your Automation Platform Controller instance}
-    controller_username: ${25:# Username for your controller instance}
-    controller_password: ${26:# Password for your controller instance}
-    controller_oauthtoken: ${27:# The OAuth token to use}
+    limit: ${20:# Limit to use for the I(job_template)}
+    name: ${21:# Name of the job template to use}
+    organization: ${22:# Organization name, ID, or named URL the job template exists in}
+    request_timeout: ${23:# Specify the timeout Ansible should use in requests to the controller host}
+    scm_branch: ${24:# A specific of the SCM project to run the template on}
+    skip_tags: ${25:# Specific tags to skip from the playbook}
+    tags: ${26:# Specific tags to use for from playbook}
+    timeout: ${27:# If waiting for the job to complete this will abort after this amount of seconds}
     validate_certs: ${28:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${29:# Path to the controller config file}
+    verbosity: ${29:# Verbosity level for this job run}
+    wait: ${30:# Wait for the job to complete}
   tags:
     - awx
     - awx

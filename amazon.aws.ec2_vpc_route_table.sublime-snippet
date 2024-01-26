@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage route tables for AWS Virtual Private Clouds}
   amazon.aws.ec2_vpc_route_table:
-    gateway_id: ${2:# The ID of the gateway to associate with the route table}
-    lookup: ${3:# Look up route table by either I(tags) or by I(route_table_id)}
-    propagating_vgw_ids: ${4:# Enable route propagation from virtual gateways specified by ID}
-    purge_routes: ${5:# Purge existing routes that are not found in routes}
-    purge_subnets: ${6:# Purge existing subnets that are not found in subnets}
-    route_table_id: ${7:# The ID of the route table to update or delete}
-    routes: ${8:# List of routes in the route table}
-    state: ${9:# Create or destroy the VPC route table}
-    subnets: ${10:# An array of subnets to add to this route table}
-    vpc_id: ${11:# VPC ID of the VPC in which to create the route table}
-    access_key: ${12:# AWS access key ID}
-    secret_key: ${13:# AWS secret access key}
-    session_token: ${14:# AWS STS session token for use with temporary credentials}
-    profile: ${15:# A named AWS profile to use for authentication}
-    endpoint_url: ${16:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${17:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${19:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${20:# Use a C(botocore}
-    region: ${21:# The AWS region to use}
-    tags: ${22:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${23:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    endpoint_url: ${6:# URL to connect to instead of the default AWS endpoints}
+    gateway_id: ${7:# The ID of the gateway to associate with the route table}
+    lookup: ${8:# Look up route table by either I(tags) or by I(route_table_id)}
+    profile: ${9:# A named AWS profile to use for authentication}
+    propagating_vgw_ids: ${10:# Enable route propagation from virtual gateways specified by ID}
+    purge_routes: ${11:# Purge existing routes that are not found in routes}
+    purge_subnets: ${12:# Purge existing subnets that are not found in subnets}
+    purge_tags: ${13:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${14:# The AWS region to use}
+    route_table_id: ${15:# The ID of the route table to update or delete}
+    routes: ${16:# List of routes in the route table}
+    secret_key: ${17:# AWS secret access key}
+    session_token: ${18:# AWS STS session token for use with temporary credentials}
+    state: ${19:# Create or destroy the VPC route table}
+    subnets: ${20:# An array of subnets to add to this route table}
+    tags: ${21:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${22:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_id: ${23:# VPC ID of the VPC in which to create the route table}
   tags:
     - amazon
     - aws

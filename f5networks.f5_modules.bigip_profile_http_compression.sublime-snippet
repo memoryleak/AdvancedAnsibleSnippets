@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage HTTP compression profiles on a BIG-IP}
   f5networks.f5_modules.bigip_profile_http_compression:
-    name: ${2:# Specifies the name of the compression profile}
-    parent: ${3:# Specifies the profile from which this profile inherits settings}
+    buffer_size: ${2:# Maximum number of compressed bytes the system buffers before inserting a Content-Length header (which specifies the compressed size) into the response}
+    content_type_include: ${3:# Specifies the list of the content types that are allowed}
     description: ${4:# Description of the HTTP compression profile}
-    buffer_size: ${5:# Maximum number of compressed bytes the system buffers before inserting a Content-Length header (which specifies the compressed size) into the response}
-    gzip_level: ${6:# Specifies the degree to which the system compresses the content}
-    gzip_memory_level: ${7:# Number of kilobytes of memory the system uses for internal compression buffers when compressing a server response}
-    gzip_window_size: ${8:# Number of kilobytes in the window size the system uses when compressing a server response}
-    partition: ${9:# Device partition to manage resources on}
-    state: ${10:# When C(present), ensures the profile exists}
-    content_type_include: ${11:# Specifies the list of the content types that are allowed}
-    provider: ${12:# A dict object containing connection details}
+    gzip_level: ${5:# Specifies the degree to which the system compresses the content}
+    gzip_memory_level: ${6:# Number of kilobytes of memory the system uses for internal compression buffers when compressing a server response}
+    gzip_window_size: ${7:# Number of kilobytes in the window size the system uses when compressing a server response}
+    name: ${8:# Specifies the name of the compression profile}
+    parent: ${9:# Specifies the profile from which this profile inherits settings}
+    partition: ${10:# Device partition to manage resources on}
+    provider: ${11:# A dict object containing connection details}
+    state: ${12:# When C(present), ensures the profile exists}
   tags:
     - f5networks
     - f5_modules

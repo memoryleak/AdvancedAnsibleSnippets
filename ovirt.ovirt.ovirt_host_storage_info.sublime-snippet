@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieve information about one or more oVirt/RHV HostStorages (applicable only for block storage)}
   ovirt.ovirt.ovirt_host_storage_info:
-    host: ${2:# Host to get device list from}
-    iscsi: ${3:# Dictionary with values for iSCSI storage type:}
-    fcp: ${4:# Dictionary with values for fibre channel storage type:}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    fcp: ${3:# Dictionary with values for fibre channel storage type:}
+    fetch_nested: ${4:# If I(yes) the module will fetch additional data from the API}
     follow: ${5:# List of linked entities, which should be fetched along with the main entity}
-    fetch_nested: ${6:# If I(yes) the module will fetch additional data from the API}
-    nested_attributes: ${7:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${8:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    host: ${6:# Host to get device list from}
+    iscsi: ${7:# Dictionary with values for iSCSI storage type:}
+    nested_attributes: ${8:# Specifies list of the attributes which should be fetched from the API}
   tags:
     - ovirt
     - ovirt

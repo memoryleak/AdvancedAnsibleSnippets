@@ -1,26 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Insert/update/remove a text block surrounded by marker lines}
   ansible.builtin.blockinfile:
-    path: ${2:# The file to modify}
-    state: ${3:# Whether the block should be there or not}
-    marker: ${4:# The marker line template}
+    append_newline: ${2:# Append a blank line to the inserted block, if this does not appear at the end of the file}
+    attributes: ${3:# The attributes the resulting filesystem object should have}
+    backup: ${4:# Create a backup file including the timestamp information so you can get the original file back if you somehow clobbered it incorrectly}
     block: ${5:# The text to insert inside the marker lines}
-    insertafter: ${6:# If specified and no begin/ending C(marker) lines are found, the block will be inserted after the last match of specified regular expression}
-    insertbefore: ${7:# If specified and no begin/ending C(marker) lines are found, the block will be inserted before the last match of specified regular expression}
-    create: ${8:# Create a new file if it does not exist}
-    backup: ${9:# Create a backup file including the timestamp information so you can get the original file back if you somehow clobbered it incorrectly}
-    marker_begin: ${10:# This will be inserted at C({mark}) in the opening ansible block marker}
-    marker_end: ${11:# This will be inserted at C({mark}) in the closing ansible block marker}
-    mode: ${12:# The permissions the resulting filesystem object should have}
-    owner: ${13:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
-    group: ${14:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
-    seuser: ${15:# The user part of the SELinux filesystem object context}
-    serole: ${16:# The role part of the SELinux filesystem object context}
-    setype: ${17:# The type part of the SELinux filesystem object context}
-    selevel: ${18:# The level part of the SELinux filesystem object context}
-    unsafe_writes: ${19:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
-    attributes: ${20:# The attributes the resulting filesystem object should have}
-    validate: ${21:# The validation command to run before copying the updated file into the final destination}
+    create: ${6:# Create a new file if it does not exist}
+    group: ${7:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    insertafter: ${8:# If specified and no begin/ending O(marker) lines are found, the block will be inserted after the last match of specified regular expression}
+    insertbefore: ${9:# If specified and no begin/ending O(marker) lines are found, the block will be inserted before the last match of specified regular expression}
+    marker: ${10:# The marker line template}
+    marker_begin: ${11:# This will be inserted at C(mark) in the opening ansible block O(marker)}
+    marker_end: ${12:# This will be inserted at C(mark) in the closing ansible block O(marker)}
+    mode: ${13:# The permissions the resulting filesystem object should have}
+    owner: ${14:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
+    path: ${15:# The file to modify}
+    prepend_newline: ${16:# Prepend a blank line to the inserted block, if this does not appear at the beginning of the file}
+    selevel: ${17:# The level part of the SELinux filesystem object context}
+    serole: ${18:# The role part of the SELinux filesystem object context}
+    setype: ${19:# The type part of the SELinux filesystem object context}
+    seuser: ${20:# The user part of the SELinux filesystem object context}
+    state: ${21:# Whether the block should be there or not}
+    unsafe_writes: ${22:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
+    validate: ${23:# The validation command to run before copying the updated file into the final destination}
   tags:
     - blockinfile]]></content>
   <tabTrigger>ansible.builtin.blockinfile</tabTrigger>

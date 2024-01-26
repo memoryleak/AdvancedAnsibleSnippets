@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module to manage the system attributes}
   cisco.iosxr.iosxr_system:
-    hostname: ${2:# Configure the device hostname parameter}
-    vrf: ${3:# VRF name for domain services}
-    domain_name: ${4:# Configure the IP domain name on the remote device to the provided value}
-    domain_search: ${5:# Provides the list of domain suffixes to append to the hostname for the purpose of doing name resolution}
+    domain_name: ${2:# Configure the IP domain name on the remote device to the provided value}
+    domain_search: ${3:# Provides the list of domain suffixes to append to the hostname for the purpose of doing name resolution}
+    hostname: ${4:# Configure the device hostname parameter}
+    lookup_enabled: ${5:# Provides administrative control for enabling or disabling DNS lookups}
     lookup_source: ${6:# The C(lookup_source) argument provides one or more source interfaces to use for performing DNS lookups}
-    lookup_enabled: ${7:# Provides administrative control for enabling or disabling DNS lookups}
-    name_servers: ${8:# The C(name_serves) argument accepts a list of DNS name servers by way of either FQDN or IP address to use to perform name resolution lookups}
-    state: ${9:# State of the configuration values in the device's current active configuration}
+    name_servers: ${7:# The C(name_serves) argument accepts a list of DNS name servers by way of either FQDN or IP address to use to perform name resolution lookups}
+    state: ${8:# State of the configuration values in the device's current active configuration}
+    vrf: ${9:# VRF name for domain services}
   tags:
     - cisco
     - iosxr

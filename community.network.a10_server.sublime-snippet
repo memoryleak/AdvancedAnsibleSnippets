@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage A10 Networks AX/SoftAX/Thunder/vThunder devices' server object}
   community.network.a10_server:
-    partition: ${2:# set active-partition}
-    server_name: ${3:# The SLB (Server Load Balancer) server name}
-    server_ip: ${4:# The SLB server IPv4 address}
-    server_status: ${5:# The SLB virtual server status}
-    server_ports: ${6:# A list of ports to create for the server}
-    state: ${7:# This is to specify the operation to create, update or remove SLB server}
-    validate_certs: ${8:# If C(no), SSL certificates will not be validated}
-    host: ${9:# Hostname or IP of the A10 Networks device}
-    username: ${10:# An account with administrator privileges}
-    password: ${11:# Password for the C(username) account}
-    write_config: ${12:# If C(yes), any changes will cause a write of the running configuration to non-volatile memory}
-    url: ${13:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
-    force: ${14:# If C(yes) do not get a cached copy}
-    http_agent: ${15:# Header to identify as, generally appears in web server logs}
-    use_proxy: ${16:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    client_cert: ${2:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${3:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    force: ${4:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${5:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    host: ${6:# Hostname or IP of the A10 Networks device}
+    http_agent: ${7:# Header to identify as, generally appears in web server logs}
+    partition: ${8:# set active-partition}
+    password: ${9:# Password for the C(username) account}
+    server_ip: ${10:# The SLB server IPv4 address}
+    server_name: ${11:# The SLB (Server Load Balancer) server name}
+    server_ports: ${12:# A list of ports to create for the server}
+    server_status: ${13:# The SLB virtual server status}
+    state: ${14:# This is to specify the operation to create, update or remove SLB server}
+    url: ${15:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    url_password: ${16:# The password for use in HTTP basic authentication}
     url_username: ${17:# The username for use in HTTP basic authentication}
-    url_password: ${18:# The password for use in HTTP basic authentication}
-    force_basic_auth: ${19:# Credentials specified with I(url_username) and I(url_password) should be passed in HTTP Header}
-    client_cert: ${20:# PEM formatted certificate chain file to be used for SSL client authentication}
-    client_key: ${21:# PEM formatted file that contains your private key to be used for SSL client authentication}
-    use_gssapi: ${22:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_gssapi: ${18:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${19:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    username: ${20:# An account with administrator privileges}
+    validate_certs: ${21:# If C(no), SSL certificates will not be validated}
+    write_config: ${22:# If C(yes), any changes will cause a write of the running configuration to non-volatile memory}
   tags:
     - community
     - network

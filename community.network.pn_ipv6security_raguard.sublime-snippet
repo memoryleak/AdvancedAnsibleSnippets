@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:CLI command to create/modify/delete ipv6security-raguard}
   community.network.pn_ipv6security_raguard:
-    pn_cliswitch: ${2:# Target switch to run the CLI on}
-    state: ${3:# ipv6security-raguard configuration command}
+    pn_access_list: ${2:# RA Guard Access List of Source IPs}
+    pn_cliswitch: ${3:# Target switch to run the CLI on}
     pn_device: ${4:# RA Guard Device}
-    pn_access_list: ${5:# RA Guard Access List of Source IPs}
+    pn_name: ${5:# RA Guard Policy Name}
     pn_prefix_list: ${6:# RA Guard Prefix List}
     pn_router_priority: ${7:# RA Guard Router Priority}
-    pn_name: ${8:# RA Guard Policy Name}
+    state: ${8:# ipv6security-raguard configuration command}
   tags:
     - community
     - network

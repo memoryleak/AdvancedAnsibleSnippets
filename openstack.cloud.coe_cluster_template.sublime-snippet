@@ -1,51 +1,50 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Add/Remove COE cluster template from OpenStack Cloud}
+  <content><![CDATA[- name: ${1:Manage COE cluster template in OpenStack Cloud}
   openstack.cloud.coe_cluster_template:
-    coe: ${2:# The Container Orchestration Engine for this clustertemplate}
-    dns_nameserver: ${3:# The DNS nameserver address}
-    docker_storage_driver: ${4:# Docker storage driver}
-    docker_volume_size: ${5:# The size in GB of the docker volume}
-    external_network_id: ${6:# The external network to attach to the Cluster}
-    fixed_network: ${7:# The fixed network name to attach to the Cluster}
-    fixed_subnet: ${8:# The fixed subnet name to attach to the Cluster}
-    flavor_id: ${9:# The flavor of the minion node for this ClusterTemplate}
-    floating_ip_enabled: ${10:# Indicates whether created clusters should have a floating ip or not}
-    keypair_id: ${11:# Name or ID of the keypair to use}
-    image_id: ${12:# Image id the cluster will be based on}
-    labels: ${13:# One or more key/value pairs}
-    http_proxy: ${14:# Address of a proxy that will receive all HTTP requests and relay them The format is a URL including a port number}
-    https_proxy: ${15:# Address of a proxy that will receive all HTTPS requests and relay them}
-    master_flavor_id: ${16:# The flavor of the master node for this ClusterTemplate}
-    master_lb_enabled: ${17:# Indicates whether created clusters should have a load balancer for master nodes or not}
-    name: ${18:# Name that has to be given to the cluster template}
-    network_driver: ${19:# The name of the driver used for instantiating container networks}
-    no_proxy: ${20:# A comma separated list of IPs for which proxies should not be used in the cluster}
-    public: ${21:# Indicates whether the ClusterTemplate is public or not}
-    registry_enabled: ${22:# Indicates whether the docker registry is enabled}
-    server_type: ${23:# Server type for this ClusterTemplate}
-    state: ${24:# Indicate desired state of the resource}
-    tls_disabled: ${25:# Indicates whether the TLS should be disabled}
-    volume_driver: ${26:# The name of the driver used for instantiating container volumes}
-    cloud: ${27:# Named cloud or cloud config to operate against}
-    auth: ${28:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${29:# Name of the auth plugin to use}
-    region_name: ${30:# Name of the region}
-    wait: ${31:# Should ansible wait until the requested resource is complete}
-    timeout: ${32:# How long should ansible wait for the requested resource}
-    api_timeout: ${33:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${34:# Whether or not SSL API requests should be verified}
-    ca_cert: ${35:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${36:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${37:# A path to a client key to use as part of the SSL transaction}
-    interface: ${38:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${39:# Ignored}
-    sdk_log_path: ${40:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${41:# Log level of the OpenStackSDK}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    coe: ${9:# The Container Orchestration Engine for this cluster template}
+    dns_nameserver: ${10:# The DNS nameserver address}
+    docker_storage_driver: ${11:# Docker storage driver}
+    docker_volume_size: ${12:# The size in GB of the docker volume}
+    external_network_id: ${13:# The external network to attach to the cluster}
+    fixed_network: ${14:# The fixed network name or id to attach to the cluster}
+    fixed_subnet: ${15:# The fixed subnet name or id to attach to the cluster}
+    flavor_id: ${16:# The flavor of the minion node for this cluster template}
+    http_proxy: ${17:# Address of a proxy that will receive all HTTP requests and relay them}
+    https_proxy: ${18:# Address of a proxy that will receive all HTTPS requests and relay them}
+    image_id: ${19:# Image id the cluster will be based on}
+    interface: ${20:# Endpoint URL type to fetch from the service catalog}
+    is_floating_ip_enabled: ${21:# Indicates whether created clusters should have a floating ip or not}
+    is_master_lb_enabled: ${22:# Indicates whether created clusters should have a load balancer for master nodes or not}
+    is_public: ${23:# Indicates whether the cluster template is public or not}
+    is_registry_enabled: ${24:# Indicates whether the docker registry is enabled}
+    is_tls_disabled: ${25:# Indicates whether the TLS should be disabled}
+    keypair_id: ${26:# Name or ID of the keypair to use}
+    labels: ${27:# One or more key/value pairs}
+    master_flavor_id: ${28:# The flavor of the master node for this cluster template}
+    name: ${29:# Name that has to be given to the cluster template}
+    network_driver: ${30:# The name of the driver used for instantiating container networks}
+    no_proxy: ${31:# A comma separated list of IPs for which proxies should not be used in the cluster}
+    region_name: ${32:# Name of the region}
+    sdk_log_level: ${33:# Log level of the OpenStackSDK}
+    sdk_log_path: ${34:# Path to the logfile of the OpenStackSDK}
+    server_type: ${35:# Server type for this cluster template}
+    state: ${36:# Indicate desired state of the resource}
+    timeout: ${37:# How long should ansible wait for the requested resource}
+    validate_certs: ${38:# Whether or not SSL API requests should be verified}
+    volume_driver: ${39:# The name of the driver used for instantiating container volumes}
+    wait: ${40:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud
     - coe_cluster_template]]></content>
   <tabTrigger>openstack.cloud.coe_cluster_template</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Add/Remove COE cluster template from OpenStack Cloud</description>
+  <description>Manage COE cluster template in OpenStack Cloud</description>
 </snippet>

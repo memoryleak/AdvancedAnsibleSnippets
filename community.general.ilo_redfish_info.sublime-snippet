@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Gathers server information through iLO using Redfish APIs}
   community.general.ilo_redfish_info:
-    category: ${2:# List of categories to execute on iLO}
-    command: ${3:# List of commands to execute on iLO}
-    baseuri: ${4:# Base URI of iLO}
-    username: ${5:# Username for authenticating to iLO}
+    auth_token: ${2:# Security token for authenticating to iLO}
+    baseuri: ${3:# Base URI of iLO}
+    category: ${4:# List of categories to execute on iLO}
+    command: ${5:# List of commands to execute on iLO}
     password: ${6:# Password for authenticating to iLO}
-    auth_token: ${7:# Security token for authenticating to iLO}
-    timeout: ${8:# Timeout in seconds for HTTP requests to iLO}
+    timeout: ${7:# Timeout in seconds for HTTP requests to iLO}
+    username: ${8:# Username for authenticating to iLO}
   tags:
     - community
     - general

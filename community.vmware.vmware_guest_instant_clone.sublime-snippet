@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Instant Clone VM}
   community.vmware.vmware_guest_instant_clone:
-    name: ${2:# Name of the Cloned virtual machine}
-    parent_vm: ${3:# Name of the parent virtual machine}
-    uuid: ${4:# UUID of the vm instance to clone from, this is VMware's unique identifier}
-    moid: ${5:# Managed Object ID of the vm instance to manage if known, this is a unique identifier only within a single vCenter instance}
-    use_instance_uuid: ${6:# Whether to use the VMware instance UUID rather than the BIOS UUID}
-    host: ${7:# Name of the ESX Host in datacenter in which to place cloned VM}
-    datastore: ${8:# The name of the datastore or the datastore cluster}
-    datacenter: ${9:# Name of the datacenter, where VM to be deployed}
-    folder: ${10:# Destination folder, absolute path to deploy the cloned vm}
-    resource_pool: ${11:# Name of the resource pool in datacenter in which to place deployed VM}
-    vm_username: ${12:# The user to login-in to the virtual machine}
-    vm_password: ${13:# The password used to login-in to the virtual machine}
-    guestinfo_vars: ${14:# Provides GuestOS Customization functionality in instant cloned VM}
-    wait_vm_tools: ${15:# Whether waiting until vm tools start after rebooting an instant clone vm}
-    wait_vm_tools_timeout: ${16:# Define a timeout (in seconds) for I(the wait_vm_tools) parameter}
-    hostname: ${17:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${18:# The username of the vSphere vCenter or ESXi server}
-    password: ${19:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${20:# Allows connection when SSL certificates are not valid}
-    port: ${21:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${22:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${23:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    datacenter: ${2:# Name of the datacenter, where VM to be deployed}
+    datastore: ${3:# The name of the datastore or the datastore cluster}
+    folder: ${4:# Destination folder, absolute path to deploy the cloned vm}
+    guestinfo_vars: ${5:# Provides GuestOS Customization functionality in instant cloned VM}
+    host: ${6:# Name of the ESX Host in datacenter in which to place cloned VM}
+    hostname: ${7:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    moid: ${8:# Managed Object ID of the vm instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    name: ${9:# Name of the Cloned virtual machine}
+    parent_vm: ${10:# Name of the parent virtual machine}
+    password: ${11:# The password of the vSphere vCenter or ESXi server}
+    port: ${12:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${13:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${14:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    resource_pool: ${15:# Name of the resource pool in datacenter in which to place deployed VM}
+    use_instance_uuid: ${16:# Whether to use the VMware instance UUID rather than the BIOS UUID}
+    username: ${17:# The username of the vSphere vCenter or ESXi server}
+    uuid: ${18:# UUID of the vm instance to clone from, this is VMware's unique identifier}
+    validate_certs: ${19:# Allows connection when SSL certificates are not valid}
+    vm_password: ${20:# The password used to login-in to the virtual machine}
+    vm_username: ${21:# The user to login-in to the virtual machine}
+    wait_vm_tools: ${22:# Whether waiting until vm tools start after rebooting an instant clone vm}
+    wait_vm_tools_timeout: ${23:# Define a timeout (in seconds) for the O(wait_vm_tools) parameter}
   tags:
     - community
     - vmware

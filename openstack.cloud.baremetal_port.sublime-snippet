@@ -1,31 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/Delete Bare Metal port Resources from OpenStack}
   openstack.cloud.baremetal_port:
-    state: ${2:# Indicates desired state of the resource}
-    uuid: ${3:# globally unique identifier (UUID) to be given to the resource}
-    node: ${4:# UUID or Name of the Node this resource belongs to}
-    address: ${5:# Physical hardware address of this network Port, typically the hardware MAC address}
-    portgroup: ${6:# UUID or Name of the Portgroup this resource belongs to}
-    local_link_connection: ${7:# The Port binding profile}
-    is_pxe_enabled: ${8:# Whether PXE should be enabled or disabled on the Port}
-    physical_network: ${9:# The name of the physical network to which a port is connected}
+    address: ${2:# Physical hardware address of this network Port, typically the hardware MAC address}
+    api_timeout: ${3:# How long should the socket layer wait before timing out for API calls}
+    auth: ${4:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${5:# Name of the auth plugin to use}
+    ca_cert: ${6:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${7:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${8:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${9:# Named cloud or cloud config to operate against}
     extra: ${10:# A set of one or more arbitrary metadata key and value pairs}
-    ironic_url: ${11:# If noauth mode is utilized, this is required to be set to the endpoint URL for the Ironic API}
-    cloud: ${12:# Named cloud or cloud config to operate against}
-    auth: ${13:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${14:# Name of the auth plugin to use}
-    region_name: ${15:# Name of the region}
-    wait: ${16:# Should ansible wait until the requested resource is complete}
-    timeout: ${17:# How long should ansible wait for the requested resource}
-    api_timeout: ${18:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${19:# Whether or not SSL API requests should be verified}
-    ca_cert: ${20:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${21:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${22:# A path to a client key to use as part of the SSL transaction}
-    interface: ${23:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${24:# Ignored}
-    sdk_log_path: ${25:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${26:# Log level of the OpenStackSDK}
+    id: ${11:# ID of the Port}
+    interface: ${12:# Endpoint URL type to fetch from the service catalog}
+    is_pxe_enabled: ${13:# Whether PXE should be enabled or disabled on the Port}
+    local_link_connection: ${14:# The Port binding profile}
+    node: ${15:# ID or Name of the Node this resource belongs to}
+    physical_network: ${16:# The name of the physical network to which a port is connected}
+    port_group: ${17:# ID or Name of the portgroup this resource belongs to}
+    region_name: ${18:# Name of the region}
+    sdk_log_level: ${19:# Log level of the OpenStackSDK}
+    sdk_log_path: ${20:# Path to the logfile of the OpenStackSDK}
+    state: ${21:# Indicates desired state of the resource}
+    timeout: ${22:# How long should ansible wait for the requested resource}
+    validate_certs: ${23:# Whether or not SSL API requests should be verified}
+    wait: ${24:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud

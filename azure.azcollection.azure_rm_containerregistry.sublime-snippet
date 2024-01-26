@@ -1,30 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage an Azure Container Registry}
   azure.azcollection.azure_rm_containerregistry:
-    resource_group: ${2:# Name of a resource group where the Container Registry exists or will be created}
-    name: ${3:# Name of the Container Registry}
-    state: ${4:# Assert the state of the container registry}
-    location: ${5:# Valid azure location}
-    admin_user_enabled: ${6:# If enabled, you can use the registry name as username and admin user access key as password to docker login to your container registry}
-    sku: ${7:# Specifies the SKU to use}
-    ad_user: ${8:# Active Directory username}
-    password: ${9:# Active Directory user password}
-    profile: ${10:# Security profile found in ~/}
-    subscription_id: ${11:# Your Azure subscription Id}
-    client_id: ${12:# Azure client ID}
-    secret: ${13:# Azure client secret}
-    tenant: ${14:# Azure tenant ID}
-    cloud_environment: ${15:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${16:# Azure AD authority url}
-    cert_validation_mode: ${17:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${18:# Controls the source of the credentials to use for authentication}
-    api_profile: ${19:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${20:# Parent argument}
-    log_mode: ${21:# Parent argument}
-    x509_certificate_path: ${22:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${23:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${24:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${25:# Use to control if tags field is canonical or just appends to existing tags}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    admin_user_enabled: ${4:# If enabled, you can use the registry name as username and admin user access key as password to docker login to your container registry}
+    api_profile: ${5:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${6:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${7:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    location: ${11:# Valid azure location}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    name: ${14:# Name of the Container Registry}
+    password: ${15:# Active Directory user password}
+    profile: ${16:# Security profile found in ~/}
+    resource_group: ${17:# Name of a resource group where the Container Registry exists or will be created}
+    secret: ${18:# Azure client secret}
+    sku: ${19:# Specifies the SKU to use}
+    state: ${20:# Assert the state of the container registry}
+    subscription_id: ${21:# Your Azure subscription Id}
+    tags: ${22:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${23:# Azure tenant ID}
+    thumbprint: ${24:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

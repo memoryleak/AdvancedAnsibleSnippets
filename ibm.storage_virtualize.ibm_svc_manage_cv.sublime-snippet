@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages the change volume for a given volume on IBM Storage Virtualize family systems}
+  ibm.storage_virtualize.ibm_svc_manage_cv:
+    basevolume: ${2:# Specifies the base volume name (master or auxiliary)}
+    clustername: ${3:# The hostname or management IP of the Storage Virtualize system}
+    cvname: ${4:# Specifies the name to assign to the master or auxiliary change volume}
+    domain: ${5:# Domain for the Storage Virtualize system}
+    ismaster: ${6:# Specifies whether the change volume is being (dis)associated with master cluster}
+    log_path: ${7:# Path of debug log file}
+    password: ${8:# REST API password for the Storage Virtualize system}
+    rname: ${9:# Specifies the name of the remote copy relationship}
+    state: ${10:# Creates or updates (C(present)) or removes (C(absent)), a change volume}
+    token: ${11:# The authentication token to verify a user on the Storage Virtualize system}
+    username: ${12:# REST API username for the Storage Virtualize system}
+    validate_certs: ${13:# Validates certification}
+  tags:
+    - ibm
+    - storage_virtualize
+    - ibm_svc_manage_cv]]></content>
+  <tabTrigger>ibm.storage_virtualize.ibm_svc_manage_cv</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages the change volume for a given volume on IBM Storage Virtualize family systems</description>
+</snippet>

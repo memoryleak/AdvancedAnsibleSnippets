@@ -1,70 +1,70 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, update or delete Spotinst AWS Elastigroups}
   community.general.spotinst_aws_elastigroup:
-    credentials_path: ${2:# Optional parameter that allows to set a non-default credentials path}
-    account_id: ${3:# Optional parameter that allows to set an account-id inside the module configuration}
-    token: ${4:# A Personal API Access Token issued by Spotinst}
-    availability_vs_cost: ${5:# The strategy orientation}
-    availability_zones: ${6:# A list of hash/dictionaries of Availability Zones that are configured in the elastigroup; '[{'key':'value', 'key':'value'}]'; keys allowed are name (String), subnet_id (String), placement_group_name (String),}
-    block_device_mappings: ${7:# A list of hash/dictionaries of Block Device Mappings for elastigroup instances; You can specify virtual devices and EBS volumes}
-    chef: ${8:# The Chef integration configuration}
-    draining_timeout: ${9:# Time for instance to be drained from incoming requests and deregistered from ELB before termination}
-    ebs_optimized: ${10:# Enable EBS optimization for supported instances which are not enabled by default}
-    ebs_volume_pool: ${11:# A list of hash/dictionaries of EBS devices to reattach to the elastigroup when available; '[{'key':'value', 'key':'value'}]'; keys allowed are - volume_ids (List of Strings), device_name (String)}
-    ecs: ${12:# The ECS integration configuration}
-    elastic_ips: ${13:# List of ElasticIps Allocation Ids (Example C(eipalloc-9d4e16f8)) to associate to the group instances}
-    fallback_to_od: ${14:# In case of no spots available, Elastigroup will launch an On-demand instance instead}
-    health_check_grace_period: ${15:# The amount of time, in seconds, after the instance has launched to start and check its health}
-    health_check_unhealthy_duration_before_replacement: ${16:# Minimal mount of time instance should be unhealthy for us to consider it unhealthy}
-    health_check_type: ${17:# The service to use for the health check}
-    iam_role_name: ${18:# The instance profile iamRole name}
-    iam_role_arn: ${19:# The instance profile iamRole arn}
-    id: ${20:# The group id if it already exists and you want to update, or delete it}
-    image_id: ${21:# The image Id used to launch the instance}
-    key_pair: ${22:# Specify a Key Pair to attach to the instances}
-    kubernetes: ${23:# The Kubernetes integration configuration}
-    lifetime_period: ${24:# Lifetime period}
-    load_balancers: ${25:# List of classic ELB names}
-    max_size: ${26:# The upper limit number of instances that you can scale up to}
-    mesosphere: ${27:# The Mesosphere integration configuration}
-    min_size: ${28:# The lower limit number of instances that you can scale down to}
-    monitoring: ${29:# Describes whether instance Enhanced Monitoring is enabled}
-    name: ${30:# Unique name for elastigroup to be created, updated or deleted}
-    network_interfaces: ${31:# A list of hash/dictionaries of network interfaces to add to the elastigroup; '[{'key':'value', 'key':'value'}]'; keys allowed are - description (String), device_index (Integer), secondary_private_ip_address_count (Integer), associate_public_ip_address (Boolean), delete_on_termination (Boolean), groups (List of Strings), network_interface_id (String), private_ip_address (String), subnet_id (String), associate_ipv6_address (Boolean), private_ip_addresses (List of Objects, Keys are privateIpAddress (String, required) and primary (Boolean))}
-    on_demand_count: ${32:# Required if risk is not set}
-    on_demand_instance_type: ${33:# On-demand instance type that will be provisioned}
-    opsworks: ${34:# The elastigroup OpsWorks integration configration}
-    persistence: ${35:# The Stateful elastigroup configration}
-    product: ${36:# Operation system type}
-    rancher: ${37:# The Rancher integration configuration}
-    right_scale: ${38:# The Rightscale integration configuration}
-    risk: ${39:# Required if on demand is not set}
-    roll_config: ${40:# Roll configuration}
-    scheduled_tasks: ${41:# A list of hash/dictionaries of scheduled tasks to configure in the elastigroup; '[{'key':'value', 'key':'value'}]'; keys allowed are - adjustment (Integer), scale_target_capacity (Integer), scale_min_capacity (Integer), scale_max_capacity (Integer), adjustment_percentage (Integer), batch_size_percentage (Integer), cron_expression (String), frequency (String), grace_period (Integer), task_type (String, required), is_enabled (Boolean)}
-    security_group_ids: ${42:# One or more security group IDs}
-    shutdown_script: ${43:# The Base64-encoded shutdown script that executes prior to instance termination}
-    signals: ${44:# A list of hash/dictionaries of signals to configure in the elastigroup; keys allowed are - name (String, required), timeout (Integer)}
-    spin_up_time: ${45:# Spin up time, in seconds, for the instance}
-    spot_instance_types: ${46:# Spot instance type that will be provisioned}
-    state: ${47:# Create or delete the elastigroup}
-    tags: ${48:# A list of tags to configure in the elastigroup}
-    target: ${49:# The number of instances to launch}
-    target_group_arns: ${50:# List of target group arns instances should be registered to}
-    tenancy: ${51:# Dedicated vs shared tenancy}
-    terminate_at_end_of_billing_hour: ${52:# Terminate at the end of billing hour}
-    unit: ${53:# The capacity unit to launch instances by}
-    up_scaling_policies: ${54:# A list of hash/dictionaries of scaling policies to configure in the elastigroup; '[{'key':'value', 'key':'value'}]'; keys allowed are - policy_name (String, required), namespace (String, required), metric_name (String, required), dimensions (List of Objects, Keys allowed are name (String, required) and value (String)), statistic (String, required) evaluation_periods (String, required), period (String, required), threshold (String, required), cooldown (String, required), unit (String, required), operator (String, required), action_type (String, required), adjustment (String), min_target_capacity (String), target (String), maximum (String), minimum (String)}
-    down_scaling_policies: ${55:# A list of hash/dictionaries of scaling policies to configure in the elastigroup; '[{'key':'value', 'key':'value'}]'; keys allowed are - policy_name (String, required), namespace (String, required), metric_name (String, required), dimensions ((List of Objects), Keys allowed are name (String, required) and value (String)), statistic (String, required), evaluation_periods (String, required), period (String, required), threshold (String, required), cooldown (String, required), unit (String, required), operator (String, required), action_type (String, required), adjustment (String), max_target_capacity (String), target (String), maximum (String), minimum (String)}
-    target_tracking_policies: ${56:# A list of hash/dictionaries of target tracking policies to configure in the elastigroup; '[{'key':'value', 'key':'value'}]'; keys allowed are - policy_name (String, required), namespace (String, required), source (String, required), metric_name (String, required), statistic (String, required), unit (String, required), cooldown (String, required), target (String, required)}
-    uniqueness_by: ${57:# If your group names are not unique, you may use this feature to update or delete a specific group}
-    user_data: ${58:# Base64-encoded MIME user data}
-    utilize_reserved_instances: ${59:# In case of any available Reserved Instances, Elastigroup will utilize your reservations before purchasing Spot instances}
-    wait_for_instances: ${60:# Whether or not the elastigroup creation / update actions should wait for the instances to spin}
-    wait_timeout: ${61:# How long the module should wait for instances before failing the action}
-    do_not_update: ${62:# TODO document}
-    multai_token: ${63:# Token used for Multai configuration}
-    multai_load_balancers: ${64:# Configuration parameters for Multai load balancers}
-    elastic_beanstalk: ${65:# Placeholder parameter for future implementation of Elastic Beanstalk configurations}
+    account_id: ${2:# Optional parameter that allows to set an account-id inside the module configuration}
+    availability_vs_cost: ${3:# The strategy orientation}
+    availability_zones: ${4:# A list of hash/dictionaries of Availability Zones that are configured in the elastigroup; '['key':'value', 'key':'value']'; keys allowed are name (String), subnet_id (String), placement_group_name (String),}
+    block_device_mappings: ${5:# A list of hash/dictionaries of Block Device Mappings for elastigroup instances; You can specify virtual devices and EBS volumes}
+    chef: ${6:# The Chef integration configuration}
+    credentials_path: ${7:# Optional parameter that allows to set a non-default credentials path}
+    do_not_update: ${8:# TODO document}
+    down_scaling_policies: ${9:# A list of hash/dictionaries of scaling policies to configure in the elastigroup; '['key':'value', 'key':'value']'; keys allowed are - policy_name (String, required), namespace (String, required), metric_name (String, required), dimensions ((List of Objects), Keys allowed are name (String, required) and value (String)), statistic (String, required), evaluation_periods (String, required), period (String, required), threshold (String, required), cooldown (String, required), unit (String, required), operator (String, required), action_type (String, required), adjustment (String), max_target_capacity (String), target (String), maximum (String), minimum (String)}
+    draining_timeout: ${10:# Time for instance to be drained from incoming requests and deregistered from ELB before termination}
+    ebs_optimized: ${11:# Enable EBS optimization for supported instances which are not enabled by default}
+    ebs_volume_pool: ${12:# A list of hash/dictionaries of EBS devices to reattach to the elastigroup when available; '['key':'value', 'key':'value']'; keys allowed are - volume_ids (List of Strings), device_name (String)}
+    ecs: ${13:# The ECS integration configuration}
+    elastic_beanstalk: ${14:# Placeholder parameter for future implementation of Elastic Beanstalk configurations}
+    elastic_ips: ${15:# List of ElasticIps Allocation Ids (example V(eipalloc-9d4e16f8)) to associate to the group instances}
+    fallback_to_od: ${16:# In case of no spots available, Elastigroup will launch an On-demand instance instead}
+    health_check_grace_period: ${17:# The amount of time, in seconds, after the instance has launched to start and check its health}
+    health_check_type: ${18:# The service to use for the health check}
+    health_check_unhealthy_duration_before_replacement: ${19:# Minimal mount of time instance should be unhealthy for us to consider it unhealthy}
+    iam_role_arn: ${20:# The instance profile iamRole arn}
+    iam_role_name: ${21:# The instance profile iamRole name}
+    id: ${22:# The group id if it already exists and you want to update, or delete it}
+    image_id: ${23:# The image Id used to launch the instance}
+    key_pair: ${24:# Specify a Key Pair to attach to the instances}
+    kubernetes: ${25:# The Kubernetes integration configuration}
+    lifetime_period: ${26:# Lifetime period}
+    load_balancers: ${27:# List of classic ELB names}
+    max_size: ${28:# The upper limit number of instances that you can scale up to}
+    mesosphere: ${29:# The Mesosphere integration configuration}
+    min_size: ${30:# The lower limit number of instances that you can scale down to}
+    monitoring: ${31:# Describes whether instance Enhanced Monitoring is enabled}
+    multai_load_balancers: ${32:# Configuration parameters for Multai load balancers}
+    multai_token: ${33:# Token used for Multai configuration}
+    name: ${34:# Unique name for elastigroup to be created, updated or deleted}
+    network_interfaces: ${35:# A list of hash/dictionaries of network interfaces to add to the elastigroup; '['key':'value', 'key':'value']'; keys allowed are - description (String), device_index (Integer), secondary_private_ip_address_count (Integer), associate_public_ip_address (Boolean), delete_on_termination (Boolean), groups (List of Strings), network_interface_id (String), private_ip_address (String), subnet_id (String), associate_ipv6_address (Boolean), private_ip_addresses (List of Objects, Keys are privateIpAddress (String, required) and primary (Boolean))}
+    on_demand_count: ${36:# Required if risk is not set}
+    on_demand_instance_type: ${37:# On-demand instance type that will be provisioned}
+    opsworks: ${38:# The elastigroup OpsWorks integration configuration}
+    persistence: ${39:# The Stateful elastigroup configuration}
+    product: ${40:# Operation system type}
+    rancher: ${41:# The Rancher integration configuration}
+    right_scale: ${42:# The Rightscale integration configuration}
+    risk: ${43:# Required if on demand is not set}
+    roll_config: ${44:# Roll configuration}
+    scheduled_tasks: ${45:# A list of hash/dictionaries of scheduled tasks to configure in the elastigroup; '['key':'value', 'key':'value']'; keys allowed are - adjustment (Integer), scale_target_capacity (Integer), scale_min_capacity (Integer), scale_max_capacity (Integer), adjustment_percentage (Integer), batch_size_percentage (Integer), cron_expression (String), frequency (String), grace_period (Integer), task_type (String, required), is_enabled (Boolean)}
+    security_group_ids: ${46:# One or more security group IDs}
+    shutdown_script: ${47:# The Base64-encoded shutdown script that executes prior to instance termination}
+    signals: ${48:# A list of hash/dictionaries of signals to configure in the elastigroup; keys allowed are - name (String, required), timeout (Integer)}
+    spin_up_time: ${49:# Spin up time, in seconds, for the instance}
+    spot_instance_types: ${50:# Spot instance type that will be provisioned}
+    state: ${51:# Create or delete the elastigroup}
+    tags: ${52:# A list of tags to configure in the elastigroup}
+    target: ${53:# The number of instances to launch}
+    target_group_arns: ${54:# List of target group arns instances should be registered to}
+    target_tracking_policies: ${55:# A list of hash/dictionaries of target tracking policies to configure in the elastigroup; '['key':'value', 'key':'value']'; keys allowed are - policy_name (String, required), namespace (String, required), source (String, required), metric_name (String, required), statistic (String, required), unit (String, required), cooldown (String, required), target (String, required)}
+    tenancy: ${56:# Dedicated vs shared tenancy}
+    terminate_at_end_of_billing_hour: ${57:# Terminate at the end of billing hour}
+    token: ${58:# A Personal API Access Token issued by Spotinst}
+    uniqueness_by: ${59:# If your group names are not unique, you may use this feature to update or delete a specific group}
+    unit: ${60:# The capacity unit to launch instances by}
+    up_scaling_policies: ${61:# A list of hash/dictionaries of scaling policies to configure in the elastigroup; '['key':'value', 'key':'value']'; keys allowed are - policy_name (String, required), namespace (String, required), metric_name (String, required), dimensions (List of Objects, Keys allowed are name (String, required) and value (String)), statistic (String, required) evaluation_periods (String, required), period (String, required), threshold (String, required), cooldown (String, required), unit (String, required), operator (String, required), action_type (String, required), adjustment (String), min_target_capacity (String), target (String), maximum (String), minimum (String)}
+    user_data: ${62:# Base64-encoded MIME user data}
+    utilize_reserved_instances: ${63:# In case of any available Reserved Instances, Elastigroup will utilize your reservations before purchasing Spot instances}
+    wait_for_instances: ${64:# Whether or not the elastigroup creation / update actions should wait for the instances to spin}
+    wait_timeout: ${65:# How long the module should wait for instances before failing the action}
   tags:
     - community
     - general

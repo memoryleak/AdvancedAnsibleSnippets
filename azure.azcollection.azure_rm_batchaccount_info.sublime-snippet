@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get the Batch Account on Azure facts}
+  azure.azcollection.azure_rm_batchaccount_info:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${5:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${6:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${7:# Azure client ID}
+    cloud_environment: ${8:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    log_mode: ${9:# Parent argument}
+    log_path: ${10:# Parent argument}
+    name: ${11:# The name of the Batch Account}
+    password: ${12:# Active Directory user password}
+    profile: ${13:# Security profile found in ~/}
+    resource_group: ${14:# The name of the resource group in which to create the Batch Account}
+    secret: ${15:# Azure client secret}
+    subscription_id: ${16:# Your Azure subscription Id}
+    tags: ${17:# Limit results by providing a list of tags}
+    tenant: ${18:# Azure tenant ID}
+    thumbprint: ${19:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${20:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_batchaccount_info]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_batchaccount_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get the Batch Account on Azure facts</description>
+</snippet>

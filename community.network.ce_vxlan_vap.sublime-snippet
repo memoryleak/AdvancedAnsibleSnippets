@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages VXLAN virtual access point on HUAWEI CloudEngine Devices}
   community.network.ce_vxlan_vap:
-    bridge_domain_id: ${2:# Specifies a bridge domain ID}
-    bind_vlan_id: ${3:# Specifies the VLAN binding to a BD(Bridge Domain)}
-    l2_sub_interface: ${4:# Specifies an Sub-Interface full name, i}
+    bind_vlan_id: ${2:# Specifies the VLAN binding to a BD(Bridge Domain)}
+    bridge_domain_id: ${3:# Specifies a bridge domain ID}
+    ce_vid: ${4:# When I(encapsulation) is 'dot1q', specifies a VLAN ID in the outer VLAN tag}
     encapsulation: ${5:# Specifies an encapsulation type of packets allowed to pass through a Layer 2 sub-interface}
-    ce_vid: ${6:# When I(encapsulation) is 'dot1q', specifies a VLAN ID in the outer VLAN tag}
+    l2_sub_interface: ${6:# Specifies an Sub-Interface full name, i}
     pe_vid: ${7:# When I(encapsulation) is 'qinq', specifies an inner VLAN ID for double-tagged packets to be received by a Layer 2 sub-interface}
     state: ${8:# Determines whether the config should be present or not on the device}
   tags:

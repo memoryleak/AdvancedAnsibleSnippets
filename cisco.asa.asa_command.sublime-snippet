@@ -2,12 +2,12 @@
   <content><![CDATA[- name: ${1:Run arbitrary commands on Cisco ASA devices}
   cisco.asa.asa_command:
     commands: ${2:# List of commands to send to the remote device over the configured provider}
-    wait_for: ${3:# List of conditions to evaluate against the output of the command}
-    match: ${4:# The I(match) argument is used in conjunction with the I(wait_for) argument to specify the match policy}
-    retries: ${5:# Specifies the number of retries a command should by tried before it is considered failed}
-    interval: ${6:# Configures the interval in seconds to wait between retries of the command}
-    context: ${7:# Specifies which context to target if you are running in the ASA in multiple context mode}
-    passwords: ${8:# Saves running-config passwords in clear-text when set to True}
+    context: ${3:# Specifies which context to target if you are running in the ASA in multiple context mode}
+    interval: ${4:# Configures the interval in seconds to wait between retries of the command}
+    match: ${5:# The I(match) argument is used in conjunction with the I(wait_for) argument to specify the match policy}
+    passwords: ${6:# Saves running-config passwords in clear-text when set to True}
+    retries: ${7:# Specifies the number of retries a command should by tried before it is considered failed}
+    wait_for: ${8:# List of conditions to evaluate against the output of the command}
   tags:
     - cisco
     - asa

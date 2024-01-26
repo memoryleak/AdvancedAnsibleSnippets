@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module manages standard volumes on IBM Spectrum Virtualize family storage systems}
   ibm.spectrum_virtualize.ibm_svc_manage_volume:
-    name: ${2:# Specifies the name to assign to the new volume}
-    state: ${3:# Creates or updates (C(present)) or removes (C(absent)) a volume}
+    buffersize: ${2:# Specifies the pool capacity that the volume will reserve as a buffer for thin-provisioned and compressed volumes}
+    cloud_account_name: ${3:# Specifies the name of the cloud account name}
     clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
-    domain: ${5:# Domain for the Spectrum Virtualize storage system}
-    username: ${6:# REST API username for the Spectrum Virtualize storage system}
-    password: ${7:# REST API password for the Spectrum Virtualize storage system}
-    token: ${8:# The authentication token to verify a user on the Spectrum Virtualize storage system}
-    pool: ${9:# Specifies the name of the storage pool to use while creating the volume}
-    size: ${10:# Defines the size of the volume}
-    unit: ${11:# Specifies the data units to use with the capacity that is specified by the 'size' parameter}
-    iogrp: ${12:# Specifies the list of I/O group names}
-    thin: ${13:# Specifies that a thin-provisioned volume is to be created}
-    compressed: ${14:# Specifies that a compressed volume is to be created}
-    buffersize: ${15:# Specifies the pool capacity that the volume will reserve as a buffer for thin-provisioned and compressed volumes}
-    deduplicated: ${16:# Specifies that a deduplicated volume is to be created}
-    volumegroup: ${17:# Specifies the name of the volumegroup to which the volume is to be added}
-    novolumegroup: ${18:# If specified `True`, the volume is removed from its associated volumegroup}
-    old_name: ${19:# Specifies the old name of the volume during renaming}
-    enable_cloud_snapshot: ${20:# Specify to enable or disable cloud snapshot}
-    cloud_account_name: ${21:# Specifies the name of the cloud account name}
+    compressed: ${5:# Specifies that a compressed volume is to be created}
+    deduplicated: ${6:# Specifies that a deduplicated volume is to be created}
+    domain: ${7:# Domain for the Spectrum Virtualize storage system}
+    enable_cloud_snapshot: ${8:# Specify to enable or disable cloud snapshot}
+    iogrp: ${9:# Specifies the list of I/O group names}
+    log_path: ${10:# Path of debug log file}
+    name: ${11:# Specifies the name to assign to the new volume}
+    novolumegroup: ${12:# If specified `True`, the volume is removed from its associated volumegroup}
+    old_name: ${13:# Specifies the old name of the volume during renaming}
+    password: ${14:# REST API password for the Spectrum Virtualize storage system}
+    pool: ${15:# Specifies the name of the storage pool to use while creating the volume}
+    size: ${16:# Defines the size of the volume}
+    state: ${17:# Creates or updates (C(present)) or removes (C(absent)) a volume}
+    thin: ${18:# Specifies that a thin-provisioned volume is to be created}
+    token: ${19:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    unit: ${20:# Specifies the data units to use with the capacity that is specified by the 'size' parameter}
+    username: ${21:# REST API username for the Spectrum Virtualize storage system}
     validate_certs: ${22:# Validates certification}
-    log_path: ${23:# Path of debug log file}
+    volumegroup: ${23:# Specifies the name of the volumegroup to which the volume is to be added}
   tags:
     - ibm
     - spectrum_virtualize

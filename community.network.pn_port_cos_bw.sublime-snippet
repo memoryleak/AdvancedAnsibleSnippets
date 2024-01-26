@@ -2,12 +2,12 @@
   <content><![CDATA[- name: ${1:CLI command to modify port-cos-bw}
   community.network.pn_port_cos_bw:
     pn_cliswitch: ${2:# Target switch to run the CLI on}
-    state: ${3:# State the action to perform}
+    pn_cos: ${3:# CoS priority}
     pn_max_bw_limit: ${4:# Maximum b/w in percentage}
-    pn_cos: ${5:# CoS priority}
+    pn_min_bw_guarantee: ${5:# Minimum b/w in percentage}
     pn_port: ${6:# physical port number}
     pn_weight: ${7:# Scheduling weight (1 to 127) after b/w guarantee met}
-    pn_min_bw_guarantee: ${8:# Minimum b/w in percentage}
+    state: ${8:# State the action to perform}
   tags:
     - community
     - network

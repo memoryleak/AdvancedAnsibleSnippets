@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure AWS Virtual Private Clouds}
   amazon.aws.ec2_vpc_net:
-    name: ${2:# The name to give your VPC}
-    vpc_id: ${3:# The ID of the VPC}
-    cidr_block: ${4:# The primary CIDR of the VPC}
-    ipv6_cidr: ${5:# Request an Amazon-provided IPv6 CIDR block with /56 prefix length}
-    purge_cidrs: ${6:# Remove CIDRs that are associated with the VPC and are not specified in I(cidr_block)}
-    tenancy: ${7:# Whether to be default or dedicated tenancy}
-    dns_support: ${8:# Whether to enable AWS DNS support}
-    dns_hostnames: ${9:# Whether to enable AWS hostname support}
-    dhcp_opts_id: ${10:# The id of the DHCP options to use for this VPC}
-    state: ${11:# The state of the VPC}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    cidr_block: ${5:# The primary CIDR of the VPC}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    dhcp_opts_id: ${7:# The id of the DHCP options to use for this VPC}
+    dns_hostnames: ${8:# Whether to enable AWS hostname support}
+    dns_support: ${9:# Whether to enable AWS DNS support}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    ipv6_cidr: ${11:# Request an Amazon-provided IPv6 CIDR block with /56 prefix length}
     multi_ok: ${12:# By default the module will not create another VPC if there is another VPC with the same name and CIDR block}
-    access_key: ${13:# AWS access key ID}
-    secret_key: ${14:# AWS secret access key}
-    session_token: ${15:# AWS STS session token for use with temporary credentials}
-    profile: ${16:# A named AWS profile to use for authentication}
-    endpoint_url: ${17:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${18:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${19:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${20:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${21:# Use a C(botocore}
-    region: ${22:# The AWS region to use}
-    tags: ${23:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${24:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    name: ${13:# The name to give your VPC}
+    profile: ${14:# A named AWS profile to use for authentication}
+    purge_cidrs: ${15:# Remove CIDRs that are associated with the VPC and are not specified in I(cidr_block)}
+    purge_tags: ${16:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${17:# The AWS region to use}
+    secret_key: ${18:# AWS secret access key}
+    session_token: ${19:# AWS STS session token for use with temporary credentials}
+    state: ${20:# The state of the VPC}
+    tags: ${21:# A dictionary representing the tags to be applied to the resource}
+    tenancy: ${22:# Whether to be default or dedicated tenancy}
+    validate_certs: ${23:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_id: ${24:# The ID of the VPC}
   tags:
     - amazon
     - aws

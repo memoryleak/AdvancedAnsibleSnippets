@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage DHCP Relay policies}
   cisco.mso.mso_dhcp_relay_policy:
-    dhcp_relay_policy: ${2:# Name of the DHCP Relay Policy}
-    description: ${3:# Description of the DHCP Relay Policy}
-    tenant: ${4:# Tenant where the DHCP Relay Policy is located}
-    state: ${5:# Use C(present) or C(absent) for adding or removing}
-    host: ${6:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${7:# Port number to be used for the REST connection}
-    username: ${8:# The username to use for authentication}
-    password: ${9:# The password to use for authentication}
-    output_level: ${10:# Influence the output of this MSO module}
+    description: ${2:# Description of the DHCP Relay Policy}
+    dhcp_relay_policy: ${3:# Name of the DHCP Relay Policy}
+    host: ${4:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${5:# The login domain name to use for authentication}
+    output_level: ${6:# Influence the output of this MSO module}
+    password: ${7:# The password to use for authentication}
+    port: ${8:# Port number to be used for the REST connection}
+    state: ${9:# Use C(present) or C(absent) for adding or removing}
+    tenant: ${10:# Tenant where the DHCP Relay Policy is located}
     timeout: ${11:# The socket level timeout in seconds}
-    use_proxy: ${12:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${13:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${14:# If C(no), SSL certificates will not be validated}
-    login_domain: ${15:# The login domain name to use for authentication}
+    use_proxy: ${12:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${13:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${14:# The username to use for authentication}
+    validate_certs: ${15:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - mso

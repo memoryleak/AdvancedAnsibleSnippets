@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages a Django application}
   community.general.django_manage:
-    command: ${2:# The name of the Django management command to run}
-    project_path: ${3:# The path to the root of the Django application where C(manage}
-    settings: ${4:# The Python path to the application's settings module, such as C(myapp}
-    pythonpath: ${5:# A directory to add to the Python path}
-    virtualenv: ${6:# An optional path to a C(virtualenv) installation to use while running the manage application}
-    apps: ${7:# A list of space-delimited apps to target}
-    cache_table: ${8:# The name of the table used for database-backed caching}
-    clear: ${9:# Clear the existing files before trying to copy or link the original file}
-    database: ${10:# The database to target}
-    failfast: ${11:# Fail the command immediately if a test fails}
-    fixtures: ${12:# A space-delimited list of fixture file names to load in the database}
-    skip: ${13:# Will skip over out-of-order missing migrations, you can only use this parameter with C(migrate) command}
-    merge: ${14:# Will run out-of-order or missing migrations as they are not rollback migrations, you can only use this parameter with C(migrate) command}
-    link: ${15:# Will create links to the files instead of copying them, you can only use this parameter with C(collectstatic) command}
+    ack_venv_creation_deprecation: ${2:# When a O(virtualenv) is set but the virtual environment does not exist, the current behavior is to create a new virtual environment}
+    apps: ${3:# A list of space-delimited apps to target}
+    cache_table: ${4:# The name of the table used for database-backed caching}
+    clear: ${5:# Clear the existing files before trying to copy or link the original file}
+    command: ${6:# The name of the Django management command to run}
+    database: ${7:# The database to target}
+    failfast: ${8:# Fail the command immediately if a test fails}
+    fixtures: ${9:# A space-delimited list of fixture file names to load in the database}
+    link: ${10:# Will create links to the files instead of copying them, you can only use this parameter with V(collectstatic) command}
+    merge: ${11:# Will run out-of-order or missing migrations as they are not rollback migrations, you can only use this parameter with V(migrate) command}
+    project_path: ${12:# The path to the root of the Django application where C(manage}
+    pythonpath: ${13:# A directory to add to the Python path}
+    settings: ${14:# The Python path to the application's settings module, such as V(myapp}
+    skip: ${15:# Will skip over out-of-order missing migrations, you can only use this parameter with V(migrate) command}
     testrunner: ${16:# Controls the test runner class that is used to execute tests}
-    ack_venv_creation_deprecation: ${17:# When a I(virtualenv) is set but the virtual environment does not exist, the current behavior is to create a new virtual environment}
+    virtualenv: ${17:# An optional path to a C(virtualenv) installation to use while running the manage application}
   tags:
     - community
     - general

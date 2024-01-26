@@ -1,48 +1,48 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage service group configuration in Netscaler}
   community.network.netscaler_servicegroup:
-    servicegroupname: ${2:# Name of the service group}
-    servicetype: ${3:# Protocol used to exchange data with the service}
-    cachetype: ${4:# Cache type supported by the cache server}
-    maxclient: ${5:# Maximum number of simultaneous open connections for the service group}
-    maxreq: ${6:# Maximum number of requests that can be sent on a persistent connection to the service group}
-    cacheable: ${7:# Use the transparent cache redirection virtual server to forward the request to the cache server}
-    cip: ${8:# Insert the Client IP header in requests forwarded to the service}
-    cipheader: ${9:# Name of the HTTP header whose value must be set to the IP address of the client}
-    usip: ${10:# Use client's IP address as the source IP address when initiating connection to the server}
-    pathmonitor: ${11:# Path monitoring for clustering}
-    pathmonitorindv: ${12:# Individual Path monitoring decisions}
-    useproxyport: ${13:# Use the proxy port as the source port when initiating connections with the server}
-    healthmonitor: ${14:# Monitor the health of this service}
-    sp: ${15:# Enable surge protection for the service group}
-    rtspsessionidremap: ${16:# Enable RTSP session ID mapping for the service group}
-    clttimeout: ${17:# Time, in seconds, after which to terminate an idle client connection}
-    svrtimeout: ${18:# Time, in seconds, after which to terminate an idle server connection}
-    cka: ${19:# Enable client keep-alive for the service group}
-    tcpb: ${20:# Enable TCP buffering for the service group}
-    cmp: ${21:# Enable compression for the specified service}
-    maxbandwidth: ${22:# Maximum bandwidth, in Kbps, allocated for all the services in the service group}
-    monthreshold: ${23:# Minimum sum of weights of the monitors that are bound to this service}
-    downstateflush: ${24:# Flush all active transactions associated with all the services in the service group whose state transitions from UP to DOWN}
-    tcpprofilename: ${25:# Name of the TCP profile that contains TCP configuration settings for the service group}
-    httpprofilename: ${26:# Name of the HTTP profile that contains HTTP configuration settings for the service group}
-    comment: ${27:# Any information about the service group}
-    appflowlog: ${28:# Enable logging of AppFlow information for the specified service group}
-    netprofile: ${29:# Network profile for the service group}
-    autoscale: ${30:# Auto scale option for a servicegroup}
-    memberport: ${31:# member port}
-    graceful: ${32:# Wait for all existing connections to the service to terminate before shutting down the service}
-    servicemembers: ${33:# A list of dictionaries describing each service member of the service group}
-    monitorbindings: ${34:# A list of monitornames to bind to this service}
-    disabled: ${35:# When set to C(yes) the service group state will be set to DISABLED}
-    nsip: ${36:# The ip address of the netscaler appliance where the nitro API calls will be made}
-    nitro_user: ${37:# The username with which to authenticate to the netscaler node}
-    nitro_pass: ${38:# The password with which to authenticate to the netscaler node}
-    nitro_protocol: ${39:# Which protocol to use when accessing the nitro API objects}
-    validate_certs: ${40:# If C(no), SSL certificates will not be validated}
-    nitro_timeout: ${41:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
-    state: ${42:# The state of the resource being configured by the module on the netscaler node}
-    save_config: ${43:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+    appflowlog: ${2:# Enable logging of AppFlow information for the specified service group}
+    autoscale: ${3:# Auto scale option for a servicegroup}
+    cacheable: ${4:# Use the transparent cache redirection virtual server to forward the request to the cache server}
+    cachetype: ${5:# Cache type supported by the cache server}
+    cip: ${6:# Insert the Client IP header in requests forwarded to the service}
+    cipheader: ${7:# Name of the HTTP header whose value must be set to the IP address of the client}
+    cka: ${8:# Enable client keep-alive for the service group}
+    clttimeout: ${9:# Time, in seconds, after which to terminate an idle client connection}
+    cmp: ${10:# Enable compression for the specified service}
+    comment: ${11:# Any information about the service group}
+    disabled: ${12:# When set to C(yes) the service group state will be set to DISABLED}
+    downstateflush: ${13:# Flush all active transactions associated with all the services in the service group whose state transitions from UP to DOWN}
+    graceful: ${14:# Wait for all existing connections to the service to terminate before shutting down the service}
+    healthmonitor: ${15:# Monitor the health of this service}
+    httpprofilename: ${16:# Name of the HTTP profile that contains HTTP configuration settings for the service group}
+    maxbandwidth: ${17:# Maximum bandwidth, in Kbps, allocated for all the services in the service group}
+    maxclient: ${18:# Maximum number of simultaneous open connections for the service group}
+    maxreq: ${19:# Maximum number of requests that can be sent on a persistent connection to the service group}
+    memberport: ${20:# member port}
+    monitorbindings: ${21:# A list of monitornames to bind to this service}
+    monthreshold: ${22:# Minimum sum of weights of the monitors that are bound to this service}
+    netprofile: ${23:# Network profile for the service group}
+    nitro_pass: ${24:# The password with which to authenticate to the netscaler node}
+    nitro_protocol: ${25:# Which protocol to use when accessing the nitro API objects}
+    nitro_timeout: ${26:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
+    nitro_user: ${27:# The username with which to authenticate to the netscaler node}
+    nsip: ${28:# The ip address of the netscaler appliance where the nitro API calls will be made}
+    pathmonitor: ${29:# Path monitoring for clustering}
+    pathmonitorindv: ${30:# Individual Path monitoring decisions}
+    rtspsessionidremap: ${31:# Enable RTSP session ID mapping for the service group}
+    save_config: ${32:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+    servicegroupname: ${33:# Name of the service group}
+    servicemembers: ${34:# A list of dictionaries describing each service member of the service group}
+    servicetype: ${35:# Protocol used to exchange data with the service}
+    sp: ${36:# Enable surge protection for the service group}
+    state: ${37:# The state of the resource being configured by the module on the netscaler node}
+    svrtimeout: ${38:# Time, in seconds, after which to terminate an idle server connection}
+    tcpb: ${39:# Enable TCP buffering for the service group}
+    tcpprofilename: ${40:# Name of the TCP profile that contains TCP configuration settings for the service group}
+    useproxyport: ${41:# Use the proxy port as the source port when initiating connections with the server}
+    usip: ${42:# Use client's IP address as the source IP address when initiating connection to the server}
+    validate_certs: ${43:# If C(no), SSL certificates will not be validated}
   tags:
     - community
     - network

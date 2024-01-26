@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp StorageGRID manage accounts}
   netapp.storagegrid.na_sg_grid_account:
-    state: ${2:# Whether the specified account should exist or not}
-    name: ${3:# Name of the tenant}
-    account_id: ${4:# Account Id of the tenant}
-    protocol: ${5:# Object Storage protocol used by the tenancy}
+    account_id: ${2:# Account Id of the tenant}
+    allow_platform_services: ${3:# Allows tenant to use platform services features such as CloudMirror}
+    api_url: ${4:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${5:# The authorization token for the API request}
     management: ${6:# Whether the tenant can login to the StorageGRID tenant portal}
-    use_own_identity_source: ${7:# Whether the tenant account should configure its own identity source}
-    allow_platform_services: ${8:# Allows tenant to use platform services features such as CloudMirror}
-    root_access_group: ${9:# Existing federated group to have initial Root Access permissions for the tenant}
+    name: ${7:# Name of the tenant}
+    password: ${8:# Root password for tenant account}
+    protocol: ${9:# Object Storage protocol used by the tenancy}
     quota_size: ${10:# Quota to apply to the tenant specified in I(quota_size_unit)}
     quota_size_unit: ${11:# The unit used to interpret the size parameter}
-    password: ${12:# Root password for tenant account}
-    update_password: ${13:# Choose when to update the password}
-    auth_token: ${14:# The authorization token for the API request}
-    api_url: ${15:# The url to the StorageGRID Admin Node REST API}
+    root_access_group: ${12:# Existing federated group to have initial Root Access permissions for the tenant}
+    state: ${13:# Whether the specified account should exist or not}
+    update_password: ${14:# Choose when to update the password}
+    use_own_identity_source: ${15:# Whether the tenant account should configure its own identity source}
     validate_certs: ${16:# Should https certificates be validated?}
   tags:
     - netapp

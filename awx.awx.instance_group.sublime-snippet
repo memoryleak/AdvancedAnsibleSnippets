@@ -1,24 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller instance groups}
   awx.awx.instance_group:
-    name: ${2:# Name of this instance group}
-    new_name: ${3:# Setting this option will change the existing name (looked up via the name field}
-    credential: ${4:# Credential to authenticate with Kubernetes or OpenShift}
-    is_container_group: ${5:# Signifies that this InstanceGroup should act as a ContainerGroup}
-    policy_instance_percentage: ${6:# Minimum percentage of all instances that will be automatically assigned to this group when new instances come online}
-    policy_instance_minimum: ${7:# Static minimum number of Instances that will be automatically assign to this group when new instances come online}
-    max_concurrent_jobs: ${8:# Maximum number of concurrent jobs to run on this group}
-    max_forks: ${9:# Max forks to execute on this group}
-    policy_instance_list: ${10:# List of exact-match Instances that will be assigned to this group}
-    pod_spec_override: ${11:# A custom Kubernetes or OpenShift Pod specification}
-    instances: ${12:# The instances associated with this instance_group}
-    state: ${13:# Desired state of the resource}
-    controller_host: ${14:# URL to your Automation Platform Controller instance}
-    controller_username: ${15:# Username for your controller instance}
-    controller_password: ${16:# Password for your controller instance}
-    controller_oauthtoken: ${17:# The OAuth token to use}
-    validate_certs: ${18:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${19:# Path to the controller config file}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    credential: ${7:# Credential name, ID, or named URL to authenticate with Kubernetes or OpenShift}
+    instances: ${8:# The instance names, IDs, or named URLs associated with this instance_group}
+    is_container_group: ${9:# Signifies that this InstanceGroup should act as a ContainerGroup}
+    max_concurrent_jobs: ${10:# Maximum number of concurrent jobs to run on this group}
+    max_forks: ${11:# Max forks to execute on this group}
+    name: ${12:# Name of this instance group}
+    new_name: ${13:# Setting this option will change the existing name (looked up via the name field}
+    pod_spec_override: ${14:# A custom Kubernetes or OpenShift Pod specification}
+    policy_instance_list: ${15:# List of exact-match Instances that will be assigned to this group}
+    policy_instance_minimum: ${16:# Static minimum number of Instances that will be automatically assign to this group when new instances come online}
+    policy_instance_percentage: ${17:# Minimum percentage of all instances that will be automatically assigned to this group when new instances come online}
+    request_timeout: ${18:# Specify the timeout Ansible should use in requests to the controller host}
+    state: ${19:# Desired state of the resource}
+    validate_certs: ${20:# Whether to allow insecure connections to AWX}
   tags:
     - awx
     - awx

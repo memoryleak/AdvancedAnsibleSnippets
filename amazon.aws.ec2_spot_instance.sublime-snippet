@@ -1,27 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Request, stop, reboot or cancel spot instance}
   amazon.aws.ec2_spot_instance:
-    zone_group: ${2:# Name for logical grouping of spot requests}
-    client_token: ${3:# The idempotency token you provided when you launched the instance, if applicable}
-    count: ${4:# Number of instances to launch}
-    interruption: ${5:# The behavior when a Spot Instance is interrupted}
-    launch_group: ${6:# Launch group for spot requests, see U(https://docs}
-    launch_specification: ${7:# The launch specification}
-    state: ${8:# Whether the spot request should be created or removed}
-    spot_price: ${9:# Maximum spot price to bid}
-    spot_type: ${10:# The type of spot request}
-    tags: ${11:# A dictionary of key-value pairs for tagging the Spot Instance request on creation}
-    spot_instance_request_ids: ${12:# List of strings with IDs of spot requests to be cancelled}
-    access_key: ${13:# AWS access key ID}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    client_token: ${5:# The idempotency token you provided when you launched the instance, if applicable}
+    count: ${6:# Number of instances to launch}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
+    interruption: ${9:# The behavior when a Spot Instance is interrupted}
+    launch_group: ${10:# Launch group for spot requests, see U(https://docs}
+    launch_specification: ${11:# The launch specification}
+    profile: ${12:# A named AWS profile to use for authentication}
+    region: ${13:# The AWS region to use}
     secret_key: ${14:# AWS secret access key}
     session_token: ${15:# AWS STS session token for use with temporary credentials}
-    profile: ${16:# A named AWS profile to use for authentication}
-    endpoint_url: ${17:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${18:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${19:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${20:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${21:# Use a C(botocore}
-    region: ${22:# The AWS region to use}
+    spot_instance_request_ids: ${16:# List of strings with IDs of spot requests to be cancelled}
+    spot_price: ${17:# Maximum spot price to bid}
+    spot_type: ${18:# The type of spot request}
+    state: ${19:# Whether the spot request should be created or removed}
+    tags: ${20:# A dictionary of key-value pairs for tagging the Spot Instance request on creation}
+    terminate_instances: ${21:# Boolean value to set whether or not to terminate instances associated to spot request}
+    validate_certs: ${22:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    zone_group: ${23:# Name for logical grouping of spot requests}
   tags:
     - amazon
     - aws

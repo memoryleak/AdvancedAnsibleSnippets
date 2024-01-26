@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp E-Series update the role of a storage array within an Asynchronous Mirror Group (AMG)}
   netapp_eseries.santricity.netapp_e_amg_role:
-    api_username: ${2:# The username to authenticate with the SANtricity WebServices Proxy or embedded REST API}
-    api_password: ${3:# The password to authenticate with the SANtricity WebServices Proxy or embedded REST API}
-    api_url: ${4:# The url to the SANtricity WebServices Proxy or embedded REST API}
-    validate_certs: ${5:# Should https certificates be validated?}
-    ssid: ${6:# The ID of the primary storage array for the async mirror action}
-    name: ${7:# Name of the role}
+    api_password: ${2:# The password to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    api_url: ${3:# The url to the SANtricity WebServices Proxy or embedded REST API}
+    api_username: ${4:# The username to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    force: ${5:# Whether to force the role reversal regardless of the online-state of the primary}
+    name: ${6:# Name of the role}
+    noSync: ${7:# Whether to avoid synchronization prior to role reversal}
     role: ${8:# Whether the array should be the primary or secondary array for the AMG}
-    noSync: ${9:# Whether to avoid synchronization prior to role reversal}
-    force: ${10:# Whether to force the role reversal regardless of the online-state of the primary}
+    ssid: ${9:# The ID of the primary storage array for the async mirror action}
+    validate_certs: ${10:# Should https certificates be validated?}
   tags:
     - netapp_eseries
     - santricity

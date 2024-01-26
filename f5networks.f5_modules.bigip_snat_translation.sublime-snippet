@@ -2,17 +2,17 @@
   <content><![CDATA[- name: ${1:Manage SNAT translations on a BIG-IP}
   f5networks.f5_modules.bigip_snat_translation:
     address: ${2:# Specifies the IP address of the SNAT translation}
-    arp: ${3:# If C(yes), specifies the NAT sends ARP requests}
+    arp: ${3:# If C(true), specifies the NAT sends ARP requests}
     connection_limit: ${4:# Specifies a limit on the number of connections a translation address must reach before it no longer initiates a connection}
     description: ${5:# Description of snat-translation}
     ip_idle_timeout: ${6:# Specifies the amount of time connections to an IP address initiated using a SNAT address are allowed to remain idle before being automatically disconnected}
     name: ${7:# The name of SNAT translation}
     partition: ${8:# Device partition to manage resources on}
-    state: ${9:# The SNAT translation state}
-    tcp_idle_timeout: ${10:# Specifies the amount of time that TCP connections initiated using a SNAT address are allowed to remain idle before being automatically disconnected}
-    traffic_group: ${11:# The traffic group for the snat-translation address}
-    udp_idle_timeout: ${12:# Specifies the amount of time UDP connections initiated using a SNAT address are allowed to remain idle before being automatically disconnected}
-    provider: ${13:# A dict object containing connection details}
+    provider: ${9:# A dict object containing connection details}
+    state: ${10:# The SNAT translation state}
+    tcp_idle_timeout: ${11:# Specifies the amount of time that TCP connections initiated using a SNAT address are allowed to remain idle before being automatically disconnected}
+    traffic_group: ${12:# The traffic group for the snat-translation address}
+    udp_idle_timeout: ${13:# Specifies the amount of time UDP connections initiated using a SNAT address are allowed to remain idle before being automatically disconnected}
   tags:
     - f5networks
     - f5_modules

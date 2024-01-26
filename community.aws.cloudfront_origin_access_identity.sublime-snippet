@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, update and delete origin access identities for a CloudFront distribution}
   community.aws.cloudfront_origin_access_identity:
-    state: ${2:# If the named resource should exist}
-    origin_access_identity_id: ${3:# The origin_access_identity_id of the CloudFront distribution}
-    comment: ${4:# A comment to describe the CloudFront origin access identity}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
     caller_reference: ${5:# A unique identifier to reference the origin access identity by}
-    access_key: ${6:# AWS access key ID}
-    secret_key: ${7:# AWS secret access key}
-    session_token: ${8:# AWS STS session token for use with temporary credentials}
-    profile: ${9:# A named AWS profile to use for authentication}
-    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${13:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
-    region: ${15:# The AWS region to use}
+    comment: ${6:# A comment to describe the CloudFront origin access identity}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
+    origin_access_identity_id: ${9:# The origin_access_identity_id of the CloudFront distribution}
+    profile: ${10:# A named AWS profile to use for authentication}
+    region: ${11:# The AWS region to use}
+    secret_key: ${12:# AWS secret access key}
+    session_token: ${13:# AWS STS session token for use with temporary credentials}
+    state: ${14:# If the named resource should exist}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage schemas}
   cisco.mso.mso_schema:
-    schema: ${2:# The name of the schema}
-    state: ${3:# Use C(absent) for removing}
-    host: ${4:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${5:# Port number to be used for the REST connection}
-    username: ${6:# The username to use for authentication}
-    password: ${7:# The password to use for authentication}
-    output_level: ${8:# Influence the output of this MSO module}
+    host: ${2:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${3:# The login domain name to use for authentication}
+    output_level: ${4:# Influence the output of this MSO module}
+    password: ${5:# The password to use for authentication}
+    port: ${6:# Port number to be used for the REST connection}
+    schema: ${7:# The name of the schema}
+    state: ${8:# Use C(absent) for removing}
     timeout: ${9:# The socket level timeout in seconds}
-    use_proxy: ${10:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${11:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${12:# If C(no), SSL certificates will not be validated}
-    login_domain: ${13:# The login domain name to use for authentication}
+    use_proxy: ${10:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${11:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${12:# The username to use for authentication}
+    validate_certs: ${13:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - mso

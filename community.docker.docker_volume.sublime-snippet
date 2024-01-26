@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Docker volumes}
   community.docker.docker_volume:
-    volume_name: ${2:# Name of the volume to operate on}
-    driver: ${3:# Specify the type of volume}
-    driver_options: ${4:# Dictionary of volume settings}
-    labels: ${5:# Dictionary of label key/values to set for the volume}
-    recreate: ${6:# Controls when a volume will be recreated when I(state) is C(present)}
-    state: ${7:# C(absent) deletes the volume}
-    docker_host: ${8:# The URL or Unix socket path used to connect to the Docker API}
-    tls_hostname: ${9:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    api_version: ${10:# The version of the Docker API running on the Docker Host}
-    timeout: ${11:# The maximum amount of time in seconds to wait on a response from the API}
-    ca_cert: ${12:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
-    client_cert: ${13:# Path to the client's TLS certificate file}
-    client_key: ${14:# Path to the client's TLS key file}
-    ssl_version: ${15:# Provide a valid SSL version number}
-    tls: ${16:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    ca_cert: ${3:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${4:# Path to the client's TLS certificate file}
+    client_key: ${5:# Path to the client's TLS key file}
+    debug: ${6:# Debug mode}
+    docker_host: ${7:# The URL or Unix socket path used to connect to the Docker API}
+    driver: ${8:# Specify the type of volume}
+    driver_options: ${9:# Dictionary of volume settings}
+    labels: ${10:# Dictionary of label key/values to set for the volume}
+    recreate: ${11:# Controls when a volume will be recreated when O(state=present)}
+    ssl_version: ${12:# Provide a valid SSL version number}
+    state: ${13:# V(absent) deletes the volume}
+    timeout: ${14:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${15:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${16:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
     use_ssh_client: ${17:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
     validate_certs: ${18:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
-    debug: ${19:# Debug mode}
+    volume_name: ${19:# Name of the volume to operate on}
   tags:
     - community
     - docker

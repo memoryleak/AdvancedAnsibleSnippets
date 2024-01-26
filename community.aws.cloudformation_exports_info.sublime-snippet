@@ -2,15 +2,15 @@
   <content><![CDATA[- name: ${1:Read a value from CloudFormation Exports}
   community.aws.cloudformation_exports_info:
     access_key: ${2:# AWS access key ID}
-    secret_key: ${3:# AWS secret access key}
-    session_token: ${4:# AWS STS session token for use with temporary credentials}
-    profile: ${5:# A named AWS profile to use for authentication}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
     endpoint_url: ${6:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${7:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${8:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${9:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${10:# Use a C(botocore}
-    region: ${11:# The AWS region to use}
+    profile: ${7:# A named AWS profile to use for authentication}
+    region: ${8:# The AWS region to use}
+    secret_key: ${9:# AWS secret access key}
+    session_token: ${10:# AWS STS session token for use with temporary credentials}
+    validate_certs: ${11:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

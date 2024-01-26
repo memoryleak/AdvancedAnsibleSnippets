@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage HA group settings on a BIG-IP system}
   f5networks.f5_modules.bigip_device_ha_group:
-    name: ${2:# Name of the HA group to create/manage}
-    enable: ${3:# When set to C(no), the system disables the HA score feature}
-    description: ${4:# User created HA group description}
-    active_bonus: ${5:# Specifies the extra value to be added to the HA score of the active unit}
+    active_bonus: ${2:# Specifies the extra value to be added to the HA score of the active unit}
+    description: ${3:# User created HA group description}
+    enable: ${4:# When set to C(false), the system disables the HA score feature}
+    name: ${5:# Name of the HA group to create/manage}
     pools: ${6:# Specifies pools to contribute to the HA score}
-    trunks: ${7:# Specifies trunks to contribute to the HA score}
+    provider: ${7:# A dict object containing connection details}
     state: ${8:# When C(present), ensures the resource exists}
-    provider: ${9:# A dict object containing connection details}
+    trunks: ${9:# Specifies trunks to contribute to the HA score}
   tags:
     - f5networks
     - f5_modules

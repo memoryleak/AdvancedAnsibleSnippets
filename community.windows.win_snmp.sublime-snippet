@@ -1,9 +1,9 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures the Windows SNMP service}
   community.windows.win_snmp:
-    permitted_managers: ${2:# The list of permitted SNMP managers}
+    action: ${2:# C(add) will add new SNMP community strings and/or SNMP managers}
     community_strings: ${3:# The list of read-only SNMP community strings}
-    action: ${4:# C(add) will add new SNMP community strings and/or SNMP managers}
+    permitted_managers: ${4:# The list of permitted SNMP managers}
   tags:
     - community
     - windows

@@ -1,17 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage arrays in Pure Storage Fusion}
   purestorage.fusion.fusion_array:
-    name: ${2:# The name of the array}
-    state: ${3:# Define whether the array should exist or not}
-    display_name: ${4:# The human name of the array}
-    region: ${5:# The region the AZ is in}
-    availability_zone: ${6:# The availability zone the array is located in}
+    access_token: ${2:# Access token for Fusion Service}
+    apartment_id: ${3:# The Apartment ID of the Array}
+    appliance_id: ${4:# Appliance ID of the array}
+    availability_zone: ${5:# The availability zone the array is located in}
+    display_name: ${6:# The human name of the array}
     hardware_type: ${7:# Hardware type to which the storage class applies}
     host_name: ${8:# Management IP address of the array, or FQDN}
-    appliance_id: ${9:# Appliance ID of the array}
-    maintenance_mode: ${10:# Set the array in maintenance mode or not}
-    key_file: ${11:# Path to the private key file}
-    app_id: ${12:# Application ID from Pure1 Registration page}
+    issuer_id: ${9:# Application ID from Pure1 Registration page}
+    maintenance_mode: ${10:# Switch the array into maintenance mode or back}
+    name: ${11:# The name of the array}
+    private_key_file: ${12:# Path to the private key file}
+    private_key_password: ${13:# Password of the encrypted private key file}
+    region: ${14:# The region the AZ is in}
+    state: ${15:# Define whether the array should exist or not}
+    unavailable_mode: ${16:# Switch the array into unavailable mode or back}
   tags:
     - purestorage
     - fusion

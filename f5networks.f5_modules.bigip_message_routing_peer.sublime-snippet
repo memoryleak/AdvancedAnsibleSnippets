@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage peers for routing generic message protocol messages}
   f5networks.f5_modules.bigip_message_routing_peer:
-    name: ${2:# Specifies the name of the peer to manage}
-    description: ${3:# The user-defined description of the peer}
-    type: ${4:# Parameter used to specify the type of the peer to manage}
-    auto_init: ${5:# If C(yes), the BIG-IP automatically creates outbound connections to the active pool members in the specified C(pool) using the configuration of the specified C(transport_config)}
-    auto_init_interval: ${6:# Specifies the interval at which attempts to initiate a connection occur}
-    connection_mode: ${7:# Specifies how the number of connections per host are to be limited}
-    number_of_connections: ${8:# Specifies the distribution of connections between the BIG-IP and a remote host}
+    auto_init: ${2:# If C(true), the BIG-IP automatically creates outbound connections to the active pool members in the specified C(pool) using the configuration of the specified C(transport_config)}
+    auto_init_interval: ${3:# Specifies the interval at which attempts to initiate a connection occur}
+    connection_mode: ${4:# Specifies how the number of connections per host are to be limited}
+    description: ${5:# The user-defined description of the peer}
+    name: ${6:# Specifies the name of the peer to manage}
+    number_of_connections: ${7:# Specifies the distribution of connections between the BIG-IP and a remote host}
+    partition: ${8:# Device partition to create peer object on}
     pool: ${9:# Specifies the name of the pool that messages are routed towards}
-    ratio: ${10:# Specifies the ratio to be used for selection of a peer within a list of peers in a LTM route}
-    transport_config: ${11:# The name of the LTM virtual or LTM transport-config to use for creating an outgoing connection}
-    partition: ${12:# Device partition to create peer object on}
-    state: ${13:# When C(present), ensures the peer exists}
-    provider: ${14:# A dict object containing connection details}
+    provider: ${10:# A dict object containing connection details}
+    ratio: ${11:# Specifies the ratio to be used for selection of a peer within a list of peers in a LTM route}
+    state: ${12:# When C(present), ensures the peer exists}
+    transport_config: ${13:# The name of the LTM virtual or LTM transport-config to use for creating an outgoing connection}
+    type: ${14:# Parameter used to specify the type of the peer to manage}
   tags:
     - f5networks
     - f5_modules

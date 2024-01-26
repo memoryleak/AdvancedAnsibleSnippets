@@ -1,17 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Network Interface Groups in Pure Storage Fusion}
   purestorage.fusion.fusion_nig:
-    name: ${2:# The name of the network interface group}
-    display_name: ${3:# The human name of the network interface group}
-    state: ${4:# Define whether the network interface group should exist or not}
-    availability_zone: ${5:# The name of the availability zone for the network interface group}
-    region: ${6:# Region for the network interface group}
-    gateway: ${7:# Address of the subnet gateway}
+    access_token: ${2:# Access token for Fusion Service}
+    availability_zone: ${3:# The name of the availability zone for the network interface group}
+    display_name: ${4:# The human name of the network interface group}
+    gateway: ${5:# Address of the subnet gateway}
+    group_type: ${6:# The type of network interface group}
+    issuer_id: ${7:# Application ID from Pure1 Registration page}
     mtu: ${8:# MTU setting for the subnet}
-    group_type: ${9:# The type of network interface group}
-    prefix: ${10:# Network prefix in CIDR format}
-    key_file: ${11:# Path to the private key file}
-    app_id: ${12:# Application ID from Pure1 Registration page}
+    name: ${9:# The name of the network interface group}
+    prefix: ${10:# Network prefix in CIDR notation}
+    private_key_file: ${11:# Path to the private key file}
+    private_key_password: ${12:# Password of the encrypted private key file}
+    region: ${13:# Region for the network interface group}
+    state: ${14:# Define whether the network interface group should exist or not}
   tags:
     - purestorage
     - fusion

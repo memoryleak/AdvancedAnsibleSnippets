@@ -1,23 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller inventory}
   awx.awx.inventory:
-    name: ${2:# The name to use for the inventory}
-    new_name: ${3:# Setting this option will change the existing name (looked up via the name field}
-    copy_from: ${4:# Name or id to copy the inventory from}
-    description: ${5:# The description to use for the inventory}
-    organization: ${6:# Organization the inventory belongs to}
-    variables: ${7:# Inventory variables}
-    kind: ${8:# The kind field}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    copy_from: ${7:# Name or id to copy the inventory from}
+    description: ${8:# The description to use for the inventory}
     host_filter: ${9:# The host_filter field}
-    instance_groups: ${10:# list of Instance Groups for this Organization to run on}
-    prevent_instance_group_fallback: ${11:# Prevent falling back to instance groups set on the organization}
-    state: ${12:# Desired state of the resource}
-    controller_host: ${13:# URL to your Automation Platform Controller instance}
-    controller_username: ${14:# Username for your controller instance}
-    controller_password: ${15:# Password for your controller instance}
-    controller_oauthtoken: ${16:# The OAuth token to use}
-    validate_certs: ${17:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${18:# Path to the controller config file}
+    input_inventories: ${10:# List of Inventory names, IDs, or named URLs to use as input for Constructed Inventory}
+    instance_groups: ${11:# list of Instance Group names, IDs, or named URLs for this Organization to run on}
+    kind: ${12:# The kind field}
+    name: ${13:# The name to use for the inventory}
+    new_name: ${14:# Setting this option will change the existing name (looked up via the name field}
+    organization: ${15:# Organization name, ID, or named URL the inventory belongs to}
+    prevent_instance_group_fallback: ${16:# Prevent falling back to instance groups set on the organization}
+    request_timeout: ${17:# Specify the timeout Ansible should use in requests to the controller host}
+    state: ${18:# Desired state of the resource}
+    validate_certs: ${19:# Whether to allow insecure connections to AWX}
+    variables: ${20:# Inventory variables}
   tags:
     - awx
     - awx

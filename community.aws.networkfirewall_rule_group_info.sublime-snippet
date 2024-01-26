@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:describe AWS Network Firewall rule groups}
   community.aws.networkfirewall_rule_group_info:
-    arn: ${2:# The ARN of the Network Firewall rule group}
-    name: ${3:# The name of the Network Firewall rule group}
-    rule_type: ${4:# Indicates whether the rule group is stateless or stateful}
-    scope: ${5:# The scope of the request}
-    access_key: ${6:# AWS access key ID}
-    secret_key: ${7:# AWS secret access key}
-    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    access_key: ${2:# AWS access key ID}
+    arn: ${3:# The ARN of the Network Firewall rule group}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    name: ${8:# The name of the Network Firewall rule group}
     profile: ${9:# A named AWS profile to use for authentication}
-    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${13:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
-    region: ${15:# The AWS region to use}
+    region: ${10:# The AWS region to use}
+    rule_type: ${11:# Indicates whether the rule group is stateless or stateful}
+    scope: ${12:# The scope of the request}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

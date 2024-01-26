@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Set and retrieve file ACL information}
   ansible.posix.acl:
-    path: ${2:# The full path of the file or object}
-    state: ${3:# Define whether the ACL should be present or not}
-    follow: ${4:# Whether to follow symlinks on the path if a symlink is encountered}
-    default: ${5:# If the target is a directory, setting this to C(true) will make it the default ACL for entities created inside the directory}
-    entity: ${6:# The actual user or group that the ACL applies to when matching entity types user or group are selected}
-    etype: ${7:# The entity type of the ACL to apply, see C(setfacl) documentation for more info}
+    default: ${2:# If the target is a directory, setting this to C(true) will make it the default ACL for entities created inside the directory}
+    entity: ${3:# The actual user or group that the ACL applies to when matching entity types user or group are selected}
+    entry: ${4:# DEPRECATED}
+    etype: ${5:# The entity type of the ACL to apply, see C(setfacl) documentation for more info}
+    follow: ${6:# Whether to follow symlinks on the path if a symlink is encountered}
+    path: ${7:# The full path of the file or object}
     permissions: ${8:# The permissions to apply/remove can be any combination of C(r), C(w), C(x)}
-    entry: ${9:# DEPRECATED}
+    recalculate_mask: ${9:# Select if and when to recalculate the effective right masks of the files}
     recursive: ${10:# Recursively sets the specified ACL}
-    use_nfsv4_acls: ${11:# Use NFSv4 ACLs instead of POSIX ACLs}
-    recalculate_mask: ${12:# Select if and when to recalculate the effective right masks of the files}
+    state: ${11:# Define whether the ACL should be present or not}
+    use_nfsv4_acls: ${12:# Use NFSv4 ACLs instead of POSIX ACLs}
   tags:
     - acl]]></content>
   <tabTrigger>ansible.posix.acl</tabTrigger>

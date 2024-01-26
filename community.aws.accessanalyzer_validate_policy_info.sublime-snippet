@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Performs validation of IAM policies}
   community.aws.accessanalyzer_validate_policy_info:
-    policy: ${2:# A properly json formatted policy}
-    locale: ${3:# The locale to use for localizing the findings}
-    policy_type: ${4:# The type of policy to validate}
-    resource_type: ${5:# The type of resource to attach to your resource policy}
-    results_filter: ${6:# Filter the findings and limit them to specific finding types}
-    access_key: ${7:# AWS access key ID}
-    secret_key: ${8:# AWS secret access key}
-    session_token: ${9:# AWS STS session token for use with temporary credentials}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    endpoint_url: ${6:# URL to connect to instead of the default AWS endpoints}
+    locale: ${7:# The locale to use for localizing the findings}
+    policy: ${8:# A properly json formatted policy}
+    policy_type: ${9:# The type of policy to validate}
     profile: ${10:# A named AWS profile to use for authentication}
-    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${12:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${13:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${14:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${15:# Use a C(botocore}
-    region: ${16:# The AWS region to use}
+    region: ${11:# The AWS region to use}
+    resource_type: ${12:# The type of resource to attach to your resource policy}
+    results_filter: ${13:# Filter the findings and limit them to specific finding types}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

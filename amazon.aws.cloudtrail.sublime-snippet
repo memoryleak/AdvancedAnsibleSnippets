@@ -1,30 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:manage CloudTrail create, delete, update}
   amazon.aws.cloudtrail:
-    state: ${2:# Add or remove CloudTrail configuration}
-    name: ${3:# Name for the CloudTrail}
-    enable_logging: ${4:# Start or stop the CloudTrail logging}
-    s3_bucket_name: ${5:# An existing S3 bucket where CloudTrail will deliver log files}
-    s3_key_prefix: ${6:# S3 Key prefix for delivered log files}
-    is_multi_region_trail: ${7:# Specify whether the trail belongs only to one region or exists in all regions}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    cloudwatch_logs_log_group_arn: ${5:# A full ARN specifying a valid CloudWatch log group to which CloudTrail logs will be delivered}
+    cloudwatch_logs_role_arn: ${6:# Specifies a full ARN for an IAM role that assigns the proper permissions for CloudTrail to create and write to the log group}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
     enable_log_file_validation: ${8:# Specifies whether log file integrity validation is enabled}
-    include_global_events: ${9:# Record API calls from global services such as IAM and STS}
-    sns_topic_name: ${10:# SNS Topic name to send notifications to when a log file is delivered}
-    cloudwatch_logs_role_arn: ${11:# Specifies a full ARN for an IAM role that assigns the proper permissions for CloudTrail to create and write to the log group}
-    cloudwatch_logs_log_group_arn: ${12:# A full ARN specifying a valid CloudWatch log group to which CloudTrail logs will be delivered}
+    enable_logging: ${9:# Start or stop the CloudTrail logging}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    include_global_events: ${11:# Record API calls from global services such as IAM and STS}
+    is_multi_region_trail: ${12:# Specify whether the trail belongs only to one region or exists in all regions}
     kms_key_id: ${13:# Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail}
-    access_key: ${14:# AWS access key ID}
-    secret_key: ${15:# AWS secret access key}
-    session_token: ${16:# AWS STS session token for use with temporary credentials}
-    profile: ${17:# A named AWS profile to use for authentication}
-    endpoint_url: ${18:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${19:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${20:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${21:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${22:# Use a C(botocore}
-    region: ${23:# The AWS region to use}
+    name: ${14:# Name for the CloudTrail}
+    profile: ${15:# A named AWS profile to use for authentication}
+    purge_tags: ${16:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${17:# The AWS region to use}
+    s3_bucket_name: ${18:# An existing S3 bucket where CloudTrail will deliver log files}
+    s3_key_prefix: ${19:# S3 Key prefix for delivered log files}
+    secret_key: ${20:# AWS secret access key}
+    session_token: ${21:# AWS STS session token for use with temporary credentials}
+    sns_topic_name: ${22:# SNS Topic name to send notifications to when a log file is delivered}
+    state: ${23:# Add or remove CloudTrail configuration}
     tags: ${24:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${25:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    validate_certs: ${25:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - amazon
     - aws

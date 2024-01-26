@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages F5 BIG-IP LTM HTTP monitors}
   f5networks.f5_modules.bigip_monitor_http:
-    name: ${2:# Monitor name}
-    parent: ${3:# The parent template of this monitor template}
-    description: ${4:# The description of the monitor}
-    send: ${5:# The Send string for the monitor call}
-    receive: ${6:# The Receive string for the monitor call}
-    receive_disable: ${7:# This setting works like C(receive), except the system marks the node or pool member disabled when its response matches the C(receive_disable) string but not C(receive)}
-    ip: ${8:# IP address part of the IP/port definition}
-    port: ${9:# Port address part of the IP/port definition}
-    interval: ${10:# The interval specifying how frequently the monitor instance of this template will run}
-    timeout: ${11:# The number of seconds in which the node or service must respond to the monitor request}
-    time_until_up: ${12:# Specifies the amount of time in seconds after the first successful response before a node is marked up}
-    target_username: ${13:# Specifies the user name, if the monitored target requires authentication}
-    target_password: ${14:# Specifies the password, if the monitored target requires authentication}
-    reverse: ${15:# Specifies whether the monitor operates in reverse mode}
-    up_interval: ${16:# Specifies the interval for the system to use to perform the health check when a resource is up}
-    partition: ${17:# Device partition to manage resources on}
-    state: ${18:# When C(present), ensures the monitor exists}
-    provider: ${19:# A dict object containing connection details}
+    description: ${2:# The description of the monitor}
+    interval: ${3:# The interval specifying how frequently the monitor instance of this template will run}
+    ip: ${4:# IP address part of the IP/port definition}
+    name: ${5:# Monitor name}
+    parent: ${6:# The parent template of this monitor template}
+    partition: ${7:# Device partition to manage resources on}
+    port: ${8:# Port address part of the IP/port definition}
+    provider: ${9:# A dict object containing connection details}
+    receive: ${10:# The Receive string for the monitor call}
+    receive_disable: ${11:# This setting works like C(receive), except the system marks the node or pool member disabled when its response matches the C(receive_disable) string but not C(receive)}
+    reverse: ${12:# Specifies whether the monitor operates in reverse mode}
+    send: ${13:# The Send string for the monitor call}
+    state: ${14:# When C(present), ensures the monitor exists}
+    target_password: ${15:# Specifies the password, if the monitored target requires authentication}
+    target_username: ${16:# Specifies the user name, if the monitored target requires authentication}
+    time_until_up: ${17:# Specifies the amount of time in seconds after the first successful response before a node is marked up}
+    timeout: ${18:# The number of seconds in which the node or service must respond to the monitor request}
+    up_interval: ${19:# Specifies the interval for the system to use to perform the health check when a resource is up}
   tags:
     - f5networks
     - f5_modules

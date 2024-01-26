@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage a bare metal server in the Packet Host}
   community.general.packet_device:
-    auth_token: ${2:# Packet API token}
-    count: ${3:# The number of devices to create}
-    count_offset: ${4:# From which number to start the count}
-    device_ids: ${5:# List of device IDs on which to operate}
-    tags: ${6:# List of device tags}
+    always_pxe: ${2:# Persist PXE as the first boot option}
+    auth_token: ${3:# Packet API token}
+    count: ${4:# The number of devices to create}
+    count_offset: ${5:# From which number to start the count}
+    device_ids: ${6:# List of device IDs on which to operate}
     facility: ${7:# Facility slug for device creation}
     features: ${8:# Dict with 'features' for device creation}
     hostnames: ${9:# A hostname of a device, or a list of hostnames}
-    locked: ${10:# Whether to lock a created device}
-    operating_system: ${11:# OS slug for device creation}
-    plan: ${12:# Plan slug for device creation}
-    project_id: ${13:# ID of project of the device}
-    state: ${14:# Desired state of the device}
-    user_data: ${15:# Userdata blob made available to the machine}
-    wait_for_public_IPv: ${16:# Whether to wait for the instance to be assigned a public IPv4/IPv6 address}
-    wait_timeout: ${17:# How long (seconds) to wait either for automatic IP address assignment, or for the device to reach the C(active) I(state)}
-    ipxe_script_url: ${18:# URL of custom iPXE script for provisioning}
-    always_pxe: ${19:# Persist PXE as the first boot option}
+    ipxe_script_url: ${10:# URL of custom iPXE script for provisioning}
+    locked: ${11:# Whether to lock a created device}
+    operating_system: ${12:# OS slug for device creation}
+    plan: ${13:# Plan slug for device creation}
+    project_id: ${14:# ID of project of the device}
+    state: ${15:# Desired state of the device}
+    tags: ${16:# List of device tags}
+    user_data: ${17:# Userdata blob made available to the machine}
+    wait_for_public_IPv: ${18:# Whether to wait for the instance to be assigned a public IPv4/IPv6 address}
+    wait_timeout: ${19:# How long (seconds) to wait either for automatic IP address assignment, or for the device to reach the V(active) state}
   tags:
     - community
     - general

@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:create, delete, accept, and reject VPC peering connections between two VPCs}
   community.aws.ec2_vpc_peer:
-    vpc_id: ${2:# VPC id of the requesting VPC}
-    peering_id: ${3:# Peering connection id}
-    peer_region: ${4:# Region of the accepting VPC}
-    peer_vpc_id: ${5:# VPC id of the accepting VPC}
-    peer_owner_id: ${6:# The AWS account number for cross account peering}
-    state: ${7:# Create, delete, accept, reject a peering connection}
-    wait: ${8:# Wait for peering state changes to complete}
-    access_key: ${9:# AWS access key ID}
-    secret_key: ${10:# AWS secret access key}
-    session_token: ${11:# AWS STS session token for use with temporary credentials}
-    profile: ${12:# A named AWS profile to use for authentication}
-    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${16:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
-    region: ${18:# The AWS region to use}
-    tags: ${19:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${20:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    endpoint_url: ${6:# URL to connect to instead of the default AWS endpoints}
+    peer_owner_id: ${7:# The AWS account number for cross account peering}
+    peer_region: ${8:# Region of the accepting VPC}
+    peer_vpc_id: ${9:# VPC id of the accepting VPC}
+    peering_id: ${10:# Peering connection id}
+    profile: ${11:# A named AWS profile to use for authentication}
+    purge_tags: ${12:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${13:# The AWS region to use}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    state: ${16:# Create, delete, accept, reject a peering connection}
+    tags: ${17:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_id: ${19:# VPC id of the requesting VPC}
+    wait: ${20:# Wait for peering state changes to complete}
   tags:
     - community
     - aws

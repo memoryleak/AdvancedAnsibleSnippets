@@ -1,32 +1,32 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Associate OpenStack Identity users and roles}
+  <content><![CDATA[- name: ${1:Assign OpenStack identity groups and users to roles}
   openstack.cloud.role_assignment:
-    role: ${2:# Name or ID for the role}
-    user: ${3:# Name or ID for the user}
-    group: ${4:# Name or ID for the group}
-    project: ${5:# Name or ID of the project to scope the role association to}
-    domain: ${6:# Name or ID of the domain to scope the role association to}
-    state: ${7:# Should the roles be present or absent on the user}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
     cloud: ${8:# Named cloud or cloud config to operate against}
-    auth: ${9:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${10:# Name of the auth plugin to use}
-    region_name: ${11:# Name of the region}
-    wait: ${12:# Should ansible wait until the requested resource is complete}
-    timeout: ${13:# How long should ansible wait for the requested resource}
-    api_timeout: ${14:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${15:# Whether or not SSL API requests should be verified}
-    ca_cert: ${16:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${17:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${18:# A path to a client key to use as part of the SSL transaction}
-    interface: ${19:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${20:# Ignored}
-    sdk_log_path: ${21:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${22:# Log level of the OpenStackSDK}
+    domain: ${9:# Name or ID of the domain to scope the role association to}
+    group: ${10:# Name or ID for the group}
+    interface: ${11:# Endpoint URL type to fetch from the service catalog}
+    project: ${12:# Name or ID of the project to scope the role association to}
+    region_name: ${13:# Name of the region}
+    role: ${14:# Name or ID for the role}
+    sdk_log_level: ${15:# Log level of the OpenStackSDK}
+    sdk_log_path: ${16:# Path to the logfile of the OpenStackSDK}
+    state: ${17:# Should the roles be present or absent on the user}
+    system: ${18:# Name of system to scope the role association to}
+    timeout: ${19:# How long should ansible wait for the requested resource}
+    user: ${20:# Name or ID for the user}
+    validate_certs: ${21:# Whether or not SSL API requests should be verified}
+    wait: ${22:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud
     - role_assignment]]></content>
   <tabTrigger>openstack.cloud.role_assignment</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Associate OpenStack Identity users and roles</description>
+  <description>Assign OpenStack identity groups and users to roles</description>
 </snippet>

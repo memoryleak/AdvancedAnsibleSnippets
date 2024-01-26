@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage FlashBlade Active Directory Account}
   purestorage.flashblade.purefb_ad:
-    name: ${2:# Name of the AD account}
-    existing: ${3:# Does the account I(name) already exist in the AD environment}
-    state: ${4:# Define whether the AD sccount is deleted or not}
-    computer: ${5:# The common name of the computer account to be created in the Active Directory domain}
-    domain: ${6:# The Active Directory domain to join}
-    username: ${7:# A user capable of creating a computer account within the domain}
-    password: ${8:# Password string for I(username)}
-    encryption: ${9:# The encryption types that will be supported for use by clients for Kerberos authentication}
-    join_ou: ${10:# Location where the Computer account will be created}
-    directory_servers: ${11:# A list of directory servers that will be used for lookups related to user authorization}
-    kerberos_servers: ${12:# A list of key distribution servers to use for Kerberos protocol}
-    service_principals: ${13:# A list of either FQDNs or SPNs for registering services with the domain}
+    api_token: ${2:# FlashBlade API token for admin privileged user}
+    computer: ${3:# The common name of the computer account to be created in the Active Directory domain}
+    directory_servers: ${4:# A list of directory servers that will be used for lookups related to user authorization}
+    domain: ${5:# The Active Directory domain to join}
+    encryption: ${6:# The encryption types that will be supported for use by clients for Kerberos authentication}
+    existing: ${7:# Does the account I(name) already exist in the AD environment}
+    fb_url: ${8:# FlashBlade management IP address or Hostname}
+    join_ou: ${9:# Location where the Computer account will be created}
+    kerberos_servers: ${10:# A list of key distribution servers to use for Kerberos protocol}
+    local_only: ${11:# Do a local-only delete of an active directory account}
+    name: ${12:# Name of the AD account}
+    password: ${13:# Password string for I(username)}
     service: ${14:# Service protocol for Active Directory principals}
-    local_only: ${15:# Do a local-only delete of an active directory account}
-    fb_url: ${16:# FlashBlade management IP address or Hostname}
-    api_token: ${17:# FlashBlade API token for admin privileged user}
+    service_principals: ${15:# A list of either FQDNs or SPNs for registering services with the domain}
+    state: ${16:# Define whether the AD sccount is deleted or not}
+    username: ${17:# A user capable of creating a computer account within the domain}
   tags:
     - purestorage
     - flashblade

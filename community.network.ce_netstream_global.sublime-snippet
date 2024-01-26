@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages global parameters of NetStream on HUAWEI CloudEngine switches}
   community.network.ce_netstream_global:
-    type: ${2:# Specifies the type of netstream global}
-    state: ${3:# Specify desired state of the resource}
-    interface: ${4:# Netstream global interface}
+    index_switch: ${2:# Specifies the netstream index-switch}
+    interface: ${3:# Netstream global interface}
+    sampler_direction: ${4:# Specifies the netstream sampler direction}
     sampler_interval: ${5:# Specifies the netstream sampler interval, length is 1 - 65535}
-    sampler_direction: ${6:# Specifies the netstream sampler direction}
+    state: ${6:# Specify desired state of the resource}
     statistics_direction: ${7:# Specifies the netstream statistic direction}
     statistics_record: ${8:# Specifies the flexible netstream statistic record, length is 1 - 32}
-    index_switch: ${9:# Specifies the netstream index-switch}
+    type: ${9:# Specifies the type of netstream global}
   tags:
     - community
     - network

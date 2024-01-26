@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Execute shell commands on targets}
   ansible.builtin.shell:
-    free_form: ${2:# The shell module takes a free form command to run, as a string}
+    chdir: ${2:# Change into this directory before running the command}
     cmd: ${3:# The command to run followed by optional arguments}
     creates: ${4:# A filename, when it already exists, this step will B(not) be run}
-    removes: ${5:# A filename, when it does not exist, this step will B(not) be run}
-    chdir: ${6:# Change into this directory before running the command}
-    executable: ${7:# Change the shell used to execute the command}
+    executable: ${5:# Change the shell used to execute the command}
+    free_form: ${6:# The shell module takes a free form command to run, as a string}
+    removes: ${7:# A filename, when it does not exist, this step will B(not) be run}
     stdin: ${8:# Set the stdin of the command directly to the specified value}
     stdin_add_newline: ${9:# Whether to append a newline to stdin data}
   tags:

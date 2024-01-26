@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages packages with the I(dnf5) package manager}
+  ansible.builtin.dnf5:
+    allow_downgrade: ${2:# Specify if the named package and version is allowed to downgrade a maybe already installed higher version of that package}
+    allowerasing: ${3:# If V(true) it allows  erasing  of  installed  packages to resolve dependencies}
+    autoremove: ${4:# If V(true), removes all 'leaf' packages from the system that were originally installed as dependencies of user-installed packages but which are no longer required by any such package}
+    bugfix: ${5:# If set to V(true), and O(state=latest) then only installs updates that have been marked bugfix related}
+    cacheonly: ${6:# Tells dnf to run entirely from system cache; does not download or update metadata}
+    conf_file: ${7:# The remote dnf configuration file to use for the transaction}
+    disable_excludes: ${8:# Disable the excludes defined in DNF config files}
+    disable_gpg_check: ${9:# Whether to disable the GPG checking of signatures of packages being installed}
+    disable_plugin: ${10:# This is currently a no-op as dnf5 itself does not implement this feature}
+    disablerepo: ${11:# I(Repoid) of repositories to disable for the install/update operation}
+    download_dir: ${12:# Specifies an alternate directory to store packages}
+    download_only: ${13:# Only download the packages, do not install them}
+    enable_plugin: ${14:# This is currently a no-op as dnf5 itself does not implement this feature}
+    enablerepo: ${15:# I(Repoid) of repositories to enable for the install/update operation}
+    exclude: ${16:# Package name(s) to exclude when state=present, or latest}
+    install_repoquery: ${17:# This is effectively a no-op in DNF as it is not needed with DNF, but is an accepted parameter for feature parity/compatibility with the M(ansible}
+    install_weak_deps: ${18:# Will also install all packages linked by a weak dependency relation}
+    installroot: ${19:# Specifies an alternative installroot, relative to which all packages will be installed}
+    list: ${20:# Various (non-idempotent) commands for usage with C(/usr/bin/ansible) and I(not) playbooks}
+    lock_timeout: ${21:# This is currently a no-op as dnf5 does not provide an option to configure it}
+    name: ${22:# A package name or package specifier with version, like C(name-1}
+    nobest: ${23:# Set best option to False, so that transactions are not limited to best candidates only}
+    releasever: ${24:# Specifies an alternative release from which all packages will be installed}
+    security: ${25:# If set to V(true), and O(state=latest) then only installs updates that have been marked security related}
+    skip_broken: ${26:# Skip all unavailable packages or packages with broken dependencies without raising an error}
+    sslverify: ${27:# Disables SSL validation of the repository server for this transaction}
+    state: ${28:# Whether to install (V(present), V(latest)), or remove (V(absent)) a package}
+    update_cache: ${29:# Force dnf to check if cache is out of date and redownload if needed}
+    update_only: ${30:# When using latest, only update installed packages}
+    validate_certs: ${31:# This is effectively a no-op in the dnf5 module as dnf5 itself handles downloading a https url as the source of the rpm, but is an accepted parameter for feature parity/compatibility with the M(ansible}
+  tags:
+    - dnf5]]></content>
+  <tabTrigger>ansible.builtin.dnf5</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages packages with the I(dnf5) package manager</description>
+</snippet>

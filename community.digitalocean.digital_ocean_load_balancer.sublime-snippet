@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage DigitalOcean Load Balancers}
   community.digitalocean.digital_ocean_load_balancer:
-    state: ${2:# The usual, C(present) to create, C(absent) to destroy}
-    name: ${3:# A human-readable name for a load balancer instance}
-    size: ${4:# The size of the load balancer}
-    size_unit: ${5:# How many nodes the load balancer contains}
-    droplet_ids: ${6:# An array containing the IDs of the Droplets assigned to the load balancer}
-    tag: ${7:# A tag associated with the droplets that you want to dynamically assign to the load balancer}
-    region: ${8:# The slug identifier for the region where the resource will initially be available}
-    forwarding_rules: ${9:# An array of objects specifying the forwarding rules for a load balancer}
-    health_check: ${10:# An object specifying health check settings for the load balancer}
-    sticky_sessions: ${11:# An object specifying sticky sessions settings for the load balancer}
-    redirect_http_to_https: ${12:# A boolean value indicating whether HTTP requests to the load balancer on port 80 will be redirected to HTTPS on port 443}
-    enable_proxy_protocol: ${13:# A boolean value indicating whether PROXY Protocol is in use}
-    enable_backend_keepalive: ${14:# A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets}
-    vpc_uuid: ${15:# A string specifying the UUID of the VPC to which the load balancer is assigned}
-    wait: ${16:# Wait for the Load Balancer to be running before returning}
-    wait_timeout: ${17:# How long before wait gives up, in seconds, when creating a Load Balancer}
-    project_name: ${18:# Project to assign the resource to (project name, not UUID)}
-    baseurl: ${19:# DigitalOcean API base url}
-    oauth_token: ${20:# DigitalOcean OAuth token}
-    timeout: ${21:# The timeout in seconds used for polling DigitalOcean's API}
-    validate_certs: ${22:# If set to C(no), the SSL certificates will not be validated}
+    baseurl: ${2:# DigitalOcean API base url}
+    droplet_ids: ${3:# An array containing the IDs of the Droplets assigned to the load balancer}
+    enable_backend_keepalive: ${4:# A boolean value indicating whether HTTP keepalive connections are maintained to target Droplets}
+    enable_proxy_protocol: ${5:# A boolean value indicating whether PROXY Protocol is in use}
+    forwarding_rules: ${6:# An array of objects specifying the forwarding rules for a load balancer}
+    health_check: ${7:# An object specifying health check settings for the load balancer}
+    name: ${8:# A human-readable name for a load balancer instance}
+    oauth_token: ${9:# DigitalOcean OAuth token}
+    project_name: ${10:# Project to assign the resource to (project name, not UUID)}
+    redirect_http_to_https: ${11:# A boolean value indicating whether HTTP requests to the load balancer on port 80 will be redirected to HTTPS on port 443}
+    region: ${12:# The slug identifier for the region where the resource will initially be available}
+    size: ${13:# The size of the load balancer}
+    size_unit: ${14:# How many nodes the load balancer contains}
+    state: ${15:# The usual, C(present) to create, C(absent) to destroy}
+    sticky_sessions: ${16:# An object specifying sticky sessions settings for the load balancer}
+    tag: ${17:# A tag associated with the droplets that you want to dynamically assign to the load balancer}
+    timeout: ${18:# The timeout in seconds used for polling DigitalOcean's API}
+    validate_certs: ${19:# If set to C(no), the SSL certificates will not be validated}
+    vpc_uuid: ${20:# A string specifying the UUID of the VPC to which the load balancer is assigned}
+    wait: ${21:# Wait for the Load Balancer to be running before returning}
+    wait_timeout: ${22:# How long before wait gives up, in seconds, when creating a Load Balancer}
   tags:
     - community
     - digitalocean

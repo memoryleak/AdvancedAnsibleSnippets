@@ -1,30 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP file security permissions ACL}
   netapp.ontap.na_ontap_file_security_permissions_acl:
-    state: ${2:# Whether the specified file security permissions ACL should exist or not}
-    path: ${3:# The path of the file or directory on which to apply security permissions}
-    vserver: ${4:# Name of the vserver to use}
-    access_control: ${5:# An Access Control Level specifies the access control of the task to be applied}
-    access: ${6:# An ACE is an element in an access control list (ACL)}
-    acl_user: ${7:# Specifies the account to which the ACE applies}
-    rights: ${8:# Specifies the access right controlled by the ACE for the account specified}
-    apply_to: ${9:# Specifies where to apply the DACL or SACL entries}
-    advanced_rights: ${10:# Specifies the advanced access right controlled by the ACE for the account specified}
-    ignore_paths: ${11:# For each file or directory in the list, specifies that permissions on this file or directory cannot be replaced}
-    propagation_mode: ${12:# Specifies how to propagate security settings to child subfolders and files}
-    validate_changes: ${13:# ACLs may not be applied as expected}
-    hostname: ${14:# The hostname or IP address of the ONTAP instance}
-    username: ${15:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    access: ${2:# An ACE is an element in an access control list (ACL)}
+    access_control: ${3:# An Access Control Level specifies the access control of the task to be applied}
+    acl_user: ${4:# Specifies the account to which the ACE applies}
+    advanced_rights: ${5:# Specifies the advanced access right controlled by the ACE for the account specified}
+    apply_to: ${6:# Specifies where to apply the DACL or SACL entries}
+    cert_filepath: ${7:# path to SSL client cert file (}
+    feature_flags: ${8:# Enable or disable a new feature}
+    force_ontap_version: ${9:# Override the cluster ONTAP version when using REST}
+    hostname: ${10:# The hostname or IP address of the ONTAP instance}
+    http_port: ${11:# Override the default port (80 or 443) with this port}
+    https: ${12:# Enable and disable https}
+    ignore_paths: ${13:# For each file or directory in the list, specifies that permissions on this file or directory cannot be replaced}
+    key_filepath: ${14:# path to SSL client key file}
+    ontapi: ${15:# The ontap api version to use}
     password: ${16:# Password for the specified user}
-    cert_filepath: ${17:# path to SSL client cert file (}
-    key_filepath: ${18:# path to SSL client key file}
-    https: ${19:# Enable and disable https}
-    validate_certs: ${20:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${21:# Override the default port (80 or 443) with this port}
-    ontapi: ${22:# The ontap api version to use}
-    use_rest: ${23:# Whether to use REST or ZAPI}
-    feature_flags: ${24:# Enable or disable a new feature}
-    force_ontap_version: ${25:# Override the cluster ONTAP version when using REST}
+    path: ${17:# The path of the file or directory on which to apply security permissions}
+    propagation_mode: ${18:# Specifies how to propagate security settings to child subfolders and files}
+    rights: ${19:# Specifies the access right controlled by the ACE for the account specified}
+    state: ${20:# Whether the specified file security permissions ACL should exist or not}
+    use_rest: ${21:# Whether to use REST or ZAPI}
+    username: ${22:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${23:# If set to C(no), the SSL certificates will not be validated}
+    validate_changes: ${24:# ACLs may not be applied as expected}
+    vserver: ${25:# Name of the vserver to use}
   tags:
     - netapp
     - ontap

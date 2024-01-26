@@ -1,26 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP configure active directory}
   netapp.ontap.na_ontap_active_directory:
-    state: ${2:# Whether the Active Directory should exist or not}
-    vserver: ${3:# The name of the vserver to use}
-    account_name: ${4:# Active Directory account NetBIOS name}
-    admin_password: ${5:# Administrator password required for Active Directory account creation}
-    admin_username: ${6:# Administrator username required for Active Directory account creation}
-    domain: ${7:# Fully qualified domain name}
+    account_name: ${2:# Active Directory account NetBIOS name}
+    admin_password: ${3:# Administrator password required for Active Directory account creation}
+    admin_username: ${4:# Administrator username required for Active Directory account creation}
+    cert_filepath: ${5:# path to SSL client cert file (}
+    domain: ${6:# Fully qualified domain name}
+    feature_flags: ${7:# Enable or disable a new feature}
     force_account_overwrite: ${8:# If true and a machine account with the same name as specified in 'account-name' exists in Active Directory, it will be overwritten and reused}
-    organizational_unit: ${9:# Organizational unit under which the Active Directory account will be created}
+    force_ontap_version: ${9:# Override the cluster ONTAP version when using REST}
     hostname: ${10:# The hostname or IP address of the ONTAP instance}
-    username: ${11:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${12:# Password for the specified user}
-    cert_filepath: ${13:# path to SSL client cert file (}
-    key_filepath: ${14:# path to SSL client key file}
-    https: ${15:# Enable and disable https}
-    validate_certs: ${16:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${17:# Override the default port (80 or 443) with this port}
-    ontapi: ${18:# The ontap api version to use}
-    use_rest: ${19:# Whether to use REST or ZAPI}
-    feature_flags: ${20:# Enable or disable a new feature}
-    force_ontap_version: ${21:# Override the cluster ONTAP version when using REST}
+    http_port: ${11:# Override the default port (80 or 443) with this port}
+    https: ${12:# Enable and disable https}
+    key_filepath: ${13:# path to SSL client key file}
+    ontapi: ${14:# The ontap api version to use}
+    organizational_unit: ${15:# Organizational unit under which the Active Directory account will be created}
+    password: ${16:# Password for the specified user}
+    state: ${17:# Whether the Active Directory should exist or not}
+    use_rest: ${18:# Whether to use REST or ZAPI}
+    username: ${19:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${20:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${21:# The name of the vserver to use}
   tags:
     - netapp
     - ontap

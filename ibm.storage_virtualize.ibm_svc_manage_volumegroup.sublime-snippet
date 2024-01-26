@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages volume groups on IBM Storage Virtualize family systems}
+  ibm.storage_virtualize.ibm_svc_manage_volumegroup:
+    clustername: ${2:# The hostname or management IP of the Storage Virtualize system}
+    domain: ${3:# Domain for the Storage Virtualize system}
+    fromsourcegroup: ${4:# Specifies the parent volume group of the snapshot}
+    ignoreuserfcmaps: ${5:# Allows user to create snapshots through the scheduler or manually with `addsnapshot`}
+    iogrp: ${6:# Specifies the I/O group for new volumes}
+    log_path: ${7:# Path of debug log file}
+    name: ${8:# Specifies the name for the volume group}
+    noownershipgroup: ${9:# If specified `True`, the object is removed from the ownership group to which it belongs}
+    nopartition: ${10:# If specified `True`, removes the volume group from the storage partition}
+    noreplicationpolicy: ${11:# If specified `True`, removes the replication policy assigned to the volume group}
+    nosafeguardpolicy: ${12:# If specified `True`, removes the Safeguarded policy assigned to the volume group}
+    nosnapshotpolicy: ${13:# If specified `True`, removes the snapshot policy assigned to the volume group}
+    old_name: ${14:# Specifies the old name of the volume group during renaming}
+    ownershipgroup: ${15:# Specifies the name of the ownership group to which the object is being added}
+    partition: ${16:# Specifies the name of the storage partition to be assigned to the volume group}
+    password: ${17:# REST API password for the Storage Virtualize system}
+    policystarttime: ${18:# Specifies the time when the first Safeguarded backup is to be taken}
+    pool: ${19:# Specifies the pool name where the target volumes are to be created}
+    replicationpolicy: ${20:# Specifies the name of the replication policy to be assigned to the volume group}
+    safeguarded: ${21:# If specified, the snapshot policy creates safeguarded snapshots}
+    safeguardpolicyname: ${22:# The name of the Safeguarded policy to be assigned to the volume group}
+    snapshot: ${23:# Specifies the name of the snapshot used to prepopulate the new volumes in the new volume group}
+    snapshotpolicy: ${24:# The name of the snapshot policy to be assigned to the volume group}
+    snapshotpolicysuspended: ${25:# Specifies whether to suspend (C(yes)) or resume (C(no)) the snapshot policy on this volume group}
+    state: ${26:# Creates or updates (C(present)) or removes (C(absent)) a volume group}
+    token: ${27:# The authentication token to verify a user on the Storage Virtualize system}
+    type: ${28:# Specifies the type of volume group to be created from the snapshot}
+    username: ${29:# REST API username for the Storage Virtualize system}
+    validate_certs: ${30:# Validates certification}
+  tags:
+    - ibm
+    - storage_virtualize
+    - ibm_svc_manage_volumegroup]]></content>
+  <tabTrigger>ibm.storage_virtualize.ibm_svc_manage_volumegroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages volume groups on IBM Storage Virtualize family systems</description>
+</snippet>

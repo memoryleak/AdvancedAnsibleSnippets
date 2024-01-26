@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of PKIProfile Avi RESTful Object}
   community.network.avi_pkiprofile:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
     avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    ca_certs: ${5:# List of certificate authorities (root and intermediate) trusted that is used for certificate validation}
-    created_by: ${6:# Creator name}
-    crl_check: ${7:# When enabled, avi will verify via crl checks that certificates in the trust chain have not been revoked}
-    crls: ${8:# Certificate revocation lists}
-    ignore_peer_chain: ${9:# When enabled, avi will not trust intermediate and root certs presented by a client}
-    is_federated: ${10:# This field describes the object's replication scope}
-    name: ${11:# Name of the pki profile}
-    tenant_ref: ${12:# It is a reference to an object of type tenant}
-    url: ${13:# Avi controller URL of the object}
-    uuid: ${14:# Unique object identifier of the object}
-    validate_only_leaf_crl: ${15:# When enabled, avi will only validate the revocation status of the leaf certificate using crl}
-    controller: ${16:# IP address or hostname of the controller}
-    username: ${17:# Username used for accessing Avi controller}
-    password: ${18:# Password of Avi user in Avi controller}
-    tenant: ${19:# Name of tenant used for all Avi API calls and context of object}
+    avi_api_update_method: ${5:# Default method for object update is HTTP PUT}
+    avi_credentials: ${6:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${7:# It disables avi session information to be cached as a fact}
+    ca_certs: ${8:# List of certificate authorities (root and intermediate) trusted that is used for certificate validation}
+    controller: ${9:# IP address or hostname of the controller}
+    created_by: ${10:# Creator name}
+    crl_check: ${11:# When enabled, avi will verify via crl checks that certificates in the trust chain have not been revoked}
+    crls: ${12:# Certificate revocation lists}
+    ignore_peer_chain: ${13:# When enabled, avi will not trust intermediate and root certs presented by a client}
+    is_federated: ${14:# This field describes the object's replication scope}
+    name: ${15:# Name of the pki profile}
+    password: ${16:# Password of Avi user in Avi controller}
+    state: ${17:# The state that should be applied on the entity}
+    tenant: ${18:# Name of tenant used for all Avi API calls and context of object}
+    tenant_ref: ${19:# It is a reference to an object of type tenant}
     tenant_uuid: ${20:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${21:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${22:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${23:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${24:# It disables avi session information to be cached as a fact}
+    url: ${21:# Avi controller URL of the object}
+    username: ${22:# Username used for accessing Avi controller}
+    uuid: ${23:# Unique object identifier of the object}
+    validate_only_leaf_crl: ${24:# When enabled, avi will only validate the revocation status of the leaf certificate using crl}
   tags:
     - community
     - network

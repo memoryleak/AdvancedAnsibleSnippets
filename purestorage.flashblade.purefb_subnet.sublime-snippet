@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage network subnets in a Pure Storage FlashBlade}
   purestorage.flashblade.purefb_subnet:
-    name: ${2:# Subnet Name}
-    state: ${3:# Create, delete or modifies a subnet}
-    lag: ${4:# Name of the Link Aggreation Group to use for the subnet}
-    gateway: ${5:# IPv4 or IPv6 address of subnet gateway}
+    api_token: ${2:# FlashBlade API token for admin privileged user}
+    fb_url: ${3:# FlashBlade management IP address or Hostname}
+    gateway: ${4:# IPv4 or IPv6 address of subnet gateway}
+    lag: ${5:# Name of the Link Aggreation Group to use for the subnet}
     mtu: ${6:# MTU size of the subnet}
-    prefix: ${7:# IPv4 or IPv6 address associated with the subnet}
-    vlan: ${8:# VLAN ID of the subnet}
-    fb_url: ${9:# FlashBlade management IP address or Hostname}
-    api_token: ${10:# FlashBlade API token for admin privileged user}
+    name: ${7:# Subnet Name}
+    prefix: ${8:# IPv4 or IPv6 address associated with the subnet}
+    state: ${9:# Create, delete or modifies a subnet}
+    vlan: ${10:# VLAN ID of the subnet}
   tags:
     - purestorage
     - flashblade

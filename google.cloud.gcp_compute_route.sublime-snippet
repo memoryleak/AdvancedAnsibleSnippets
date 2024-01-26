@@ -1,25 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP Route}
   google.cloud.gcp_compute_route:
-    state: ${2:# Whether the given object should exist in GCP}
-    dest_range: ${3:# The destination range of outgoing packets that this route applies to}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    auth_kind: ${3:# The type of credential used}
     description: ${4:# An optional description of this resource}
-    name: ${5:# Name of the resource}
-    network: ${6:# The network that this route applies to}
-    priority: ${7:# The priority of this route}
-    tags: ${8:# A list of instance tags to which this route applies}
+    dest_range: ${5:# The destination range of outgoing packets that this route applies to}
+    env_type: ${6:# Specifies which Ansible environment you're running this module within}
+    name: ${7:# Name of the resource}
+    network: ${8:# The network that this route applies to}
     next_hop_gateway: ${9:# URL to a gateway that should handle matching packets}
-    next_hop_instance: ${10:# URL to an instance that should handle matching packets}
-    next_hop_ip: ${11:# Network IP address of an instance that should handle matching packets}
-    next_hop_vpn_tunnel: ${12:# URL to a VpnTunnel that should handle matching packets}
-    next_hop_ilb: ${13:# The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets}
-    project: ${14:# The Google Cloud Platform project to use}
-    auth_kind: ${15:# The type of credential used}
-    service_account_contents: ${16:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${17:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    next_hop_ilb: ${10:# The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets}
+    next_hop_instance: ${11:# URL to an instance that should handle matching packets}
+    next_hop_ip: ${12:# Network IP address of an instance that should handle matching packets}
+    next_hop_vpn_tunnel: ${13:# URL to a VpnTunnel that should handle matching packets}
+    priority: ${14:# The priority of this route}
+    project: ${15:# The Google Cloud Platform project to use}
+    scopes: ${16:# Array of scopes to be used}
+    service_account_contents: ${17:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
     service_account_email: ${18:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${19:# Array of scopes to be used}
-    env_type: ${20:# Specifies which Ansible environment you're running this module within}
+    service_account_file: ${19:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    state: ${20:# Whether the given object should exist in GCP}
+    tags: ${21:# A list of instance tags to which this route applies}
   tags:
     - google
     - cloud

@@ -1,22 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP InstanceGroup}
   google.cloud.gcp_compute_instance_group:
-    state: ${2:# Whether the given object should exist in GCP}
-    description: ${3:# An optional description of this resource}
-    name: ${4:# The name of the instance group}
-    named_ports: ${5:# Assigns a name to a port number}
-    network: ${6:# The network to which all instances in the instance group belong}
-    region: ${7:# The region where the instance group is located (for regional resources)}
-    subnetwork: ${8:# The subnetwork to which all instances in the instance group belong}
-    zone: ${9:# A reference to the zone where the instance group resides}
-    instances: ${10:# The list of instances associated with this InstanceGroup}
-    project: ${11:# The Google Cloud Platform project to use}
-    auth_kind: ${12:# The type of credential used}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    auth_kind: ${3:# The type of credential used}
+    description: ${4:# An optional description of this resource}
+    env_type: ${5:# Specifies which Ansible environment you're running this module within}
+    instances: ${6:# The list of instances associated with this InstanceGroup}
+    name: ${7:# The name of the instance group}
+    named_ports: ${8:# Assigns a name to a port number}
+    network: ${9:# The network to which all instances in the instance group belong}
+    project: ${10:# The Google Cloud Platform project to use}
+    region: ${11:# The region where the instance group is located (for regional resources)}
+    scopes: ${12:# Array of scopes to be used}
     service_account_contents: ${13:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${14:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${15:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${16:# Array of scopes to be used}
-    env_type: ${17:# Specifies which Ansible environment you're running this module within}
+    service_account_email: ${14:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    service_account_file: ${15:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    state: ${16:# Whether the given object should exist in GCP}
+    subnetwork: ${17:# The subnetwork to which all instances in the instance group belong}
+    zone: ${18:# A reference to the zone where the instance group resides}
   tags:
     - google
     - cloud

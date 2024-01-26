@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages load balancers on the cloudscale}
+  cloudscale_ch.cloud.load_balancer_health_monitor:
+    api_timeout: ${2:# Timeout in seconds for calls to the cloudscale}
+    api_token: ${3:# cloudscale}
+    api_url: ${4:# cloudscale}
+    delay_s: ${5:# The delay between two successive checks in seconds}
+    down_threshold: ${6:# The number of checks that need to fail before the monitor_status of a pool member changes to 'down'}
+    http: ${7:# Advanced options for health monitors with type 'http' or 'https'}
+    pool: ${8:# The pool of the health monitor}
+    state: ${9:# State of the load balancer health monitor}
+    tags: ${10:# Tags assosiated with the load balancer}
+    timeout_s: ${11:# The maximum time allowed for an individual check in seconds}
+    type: ${12:# The type of the health monitor}
+    up_threshold: ${13:# The number of checks that need to be successful before the monitor_status of a pool member changes to 'up'}
+    uuid: ${14:# UUID of the load balancer health monitor}
+  tags:
+    - cloudscale_ch
+    - cloud
+    - load_balancer_health_monitor]]></content>
+  <tabTrigger>cloudscale_ch.cloud.load_balancer_health_monitor</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages load balancers on the cloudscale</description>
+</snippet>

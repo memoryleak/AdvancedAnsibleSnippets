@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module to manage groups in oVirt/RHV}
   ovirt.ovirt.ovirt_group:
-    name: ${2:# Name of the group to manage}
-    state: ${3:# Should the group be present/absent}
-    authz_name: ${4:# Authorization provider of the group}
-    namespace: ${5:# Namespace of the authorization provider, where group resides}
-    wait: ${6:# C(yes) if the module should wait for the entity to get into desired state}
-    fetch_nested: ${7:# If I(True) the module will fetch additional data from the API}
-    nested_attributes: ${8:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${9:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    authz_name: ${3:# Authorization provider of the group}
+    fetch_nested: ${4:# If I(True) the module will fetch additional data from the API}
+    name: ${5:# Name of the group to manage}
+    namespace: ${6:# Namespace of the authorization provider, where group resides}
+    nested_attributes: ${7:# Specifies list of the attributes which should be fetched from the API}
+    poll_interval: ${8:# Number of the seconds the module waits until another poll request on entity status is sent}
+    state: ${9:# Should the group be present/absent}
     timeout: ${10:# The amount of time in seconds the module should wait for the instance to get into desired state}
-    poll_interval: ${11:# Number of the seconds the module waits until another poll request on entity status is sent}
+    wait: ${11:# C(yes) if the module should wait for the entity to get into desired state}
   tags:
     - ovirt
     - ovirt

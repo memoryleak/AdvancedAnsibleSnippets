@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP modify local CIFS user}
   netapp.ontap.na_ontap_cifs_local_user_modify:
-    name: ${2:# The name of the local cifs user}
-    vserver: ${3:# the name of the data vserver to use}
-    is_account_disabled: ${4:# Whether the local cifs user is disabled or not}
-    description: ${5:# the description for the local cifs user}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    description: ${3:# the description for the local cifs user}
+    feature_flags: ${4:# Enable or disable a new feature}
+    force_ontap_version: ${5:# Override the cluster ONTAP version when using REST}
     full_name: ${6:# the full name for the local cifs user}
     hostname: ${7:# The hostname or IP address of the ONTAP instance}
-    username: ${8:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${9:# Password for the specified user}
-    cert_filepath: ${10:# path to SSL client cert file (}
+    http_port: ${8:# Override the default port (80 or 443) with this port}
+    https: ${9:# Enable and disable https}
+    is_account_disabled: ${10:# Whether the local cifs user is disabled or not}
     key_filepath: ${11:# path to SSL client key file}
-    https: ${12:# Enable and disable https}
-    validate_certs: ${13:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${14:# Override the default port (80 or 443) with this port}
-    ontapi: ${15:# The ontap api version to use}
-    use_rest: ${16:# Whether to use REST or ZAPI}
-    feature_flags: ${17:# Enable or disable a new feature}
-    force_ontap_version: ${18:# Override the cluster ONTAP version when using REST}
+    name: ${12:# The name of the local cifs user}
+    ontapi: ${13:# The ontap api version to use}
+    password: ${14:# Password for the specified user}
+    use_rest: ${15:# Whether to use REST or ZAPI}
+    username: ${16:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${17:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${18:# the name of the data vserver to use}
   tags:
     - netapp
     - ontap

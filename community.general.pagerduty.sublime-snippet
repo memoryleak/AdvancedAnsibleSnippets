@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create PagerDuty maintenance windows}
   community.general.pagerduty:
-    state: ${2:# Create a maintenance window or get a list of ongoing windows}
-    name: ${3:# PagerDuty unique subdomain}
-    user: ${4:# PagerDuty user ID}
-    token: ${5:# A pagerduty token, generated on the pagerduty site}
+    desc: ${2:# Short description of maintenance window}
+    hours: ${3:# Length of maintenance window in hours}
+    minutes: ${4:# Maintenance window in minutes (this is added to the hours)}
+    name: ${5:# PagerDuty unique subdomain}
     requester_id: ${6:# ID of user making the request}
     service: ${7:# A comma separated list of PagerDuty service IDs}
-    window_id: ${8:# ID of maintenance window}
-    hours: ${9:# Length of maintenance window in hours}
-    minutes: ${10:# Maintenance window in minutes (this is added to the hours)}
-    desc: ${11:# Short description of maintenance window}
-    validate_certs: ${12:# If C(false), SSL certificates will not be validated}
+    state: ${8:# Create a maintenance window or get a list of ongoing windows}
+    token: ${9:# A pagerduty token, generated on the pagerduty site}
+    user: ${10:# PagerDuty user ID}
+    validate_certs: ${11:# If V(false), SSL certificates will not be validated}
+    window_id: ${12:# ID of maintenance window}
   tags:
     - community
     - general

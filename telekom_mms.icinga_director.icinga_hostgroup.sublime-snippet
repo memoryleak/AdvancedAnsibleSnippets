@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage hostgroups in Icinga2}
+  telekom_mms.icinga_director.icinga_hostgroup:
+    append: ${2:# Do not overwrite the whole object but instead append the defined properties}
+    assign_filter: ${3:# This allows you to configure an assignment filter}
+    client_cert: ${4:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${5:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    display_name: ${6:# An alternative display name for this group}
+    force: ${7:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${8:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    http_agent: ${9:# Header to identify as, generally appears in web server logs}
+    object_name: ${10:# Icinga object name for this hostgroup}
+    state: ${11:# Apply feature state}
+    url: ${12:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    url_password: ${13:# The password for use in HTTP basic authentication}
+    url_username: ${14:# The username for use in HTTP basic authentication}
+    use_gssapi: ${15:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${16:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${17:# If V(no), SSL certificates will not be validated}
+  tags:
+    - telekom_mms
+    - icinga_director
+    - icinga_hostgroup]]></content>
+  <tabTrigger>telekom_mms.icinga_director.icinga_hostgroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage hostgroups in Icinga2</description>
+</snippet>

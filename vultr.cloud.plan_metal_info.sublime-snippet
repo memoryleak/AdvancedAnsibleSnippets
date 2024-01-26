@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Gather information about the Vultr bare metal plans}
   vultr.cloud.plan_metal_info:
-    api_key: ${2:# API key of the Vultr API}
-    api_timeout: ${3:# HTTP timeout to Vultr API}
+    api_endpoint: ${2:# URL to API endpint (without trailing slash)}
+    api_key: ${3:# API key of the Vultr API}
     api_retries: ${4:# Amount of retries in case of the Vultr API retuns an HTTP 503 code}
     api_retry_max_delay: ${5:# Retry backoff delay in seconds is exponential up to this max}
-    api_endpoint: ${6:# URL to API endpint (without trailing slash)}
+    api_timeout: ${6:# HTTP timeout to Vultr API}
     validate_certs: ${7:# Validate SSL certs of the Vultr API}
   tags:
     - vultr

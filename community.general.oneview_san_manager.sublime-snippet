@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage OneView SAN Manager resources}
   community.general.oneview_san_manager:
-    state: ${2:# Indicates the desired state for the Uplink Set resource}
-    data: ${3:# List with SAN Manager properties}
-    config: ${4:# Path to a }
-    api_version: ${5:# OneView API Version}
+    api_version: ${2:# OneView API Version}
+    config: ${3:# Path to a JSON configuration file containing the OneView client configuration}
+    data: ${4:# List with SAN Manager properties}
+    hostname: ${5:# IP address or hostname for the appliance}
     image_streamer_hostname: ${6:# IP address or hostname for the HPE Image Streamer REST API}
-    hostname: ${7:# IP address or hostname for the appliance}
-    username: ${8:# Username for API authentication}
-    password: ${9:# Password for API authentication}
+    password: ${7:# Password for API authentication}
+    state: ${8:# Indicates the desired state for the Uplink Set resource}
+    username: ${9:# Username for API authentication}
     validate_etag: ${10:# When the ETag Validation is enabled, the request will be conditionally processed only if the current ETag for the resource matches the ETag provided in the data}
   tags:
     - community

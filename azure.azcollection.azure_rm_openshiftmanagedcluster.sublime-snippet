@@ -1,36 +1,36 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure Red Hat OpenShift Managed Cluster instance}
   azure.azcollection.azure_rm_openshiftmanagedcluster:
-    resource_group: ${2:# The name of the resource group}
-    name: ${3:# Resource name}
-    location: ${4:# Resource location}
-    cluster_profile: ${5:# Configuration for OpenShift cluster}
-    service_principal_profile: ${6:# service principal}
-    network_profile: ${7:# Configuration for OpenShift networking (immutable)}
-    master_profile: ${8:# Configuration for OpenShift master VMs}
-    worker_profiles: ${9:# Configuration for OpenShift worker Vms}
-    api_server_profile: ${10:# API server configuration}
-    ingress_profiles: ${11:# Ingress profiles configuration}
-    provisioning_state: ${12:# The current deployment or provisioning state, which only appears in the response}
-    state: ${13:# Assert the state of the OpenShiftManagedCluster}
-    ad_user: ${14:# Active Directory username}
-    password: ${15:# Active Directory user password}
-    profile: ${16:# Security profile found in ~/}
-    subscription_id: ${17:# Your Azure subscription Id}
-    client_id: ${18:# Azure client ID}
-    secret: ${19:# Azure client secret}
-    tenant: ${20:# Azure tenant ID}
-    cloud_environment: ${21:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${22:# Azure AD authority url}
-    cert_validation_mode: ${23:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${24:# Controls the source of the credentials to use for authentication}
-    api_profile: ${25:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${26:# Parent argument}
-    log_mode: ${27:# Parent argument}
-    x509_certificate_path: ${28:# Path to the X509 certificate used to create the service principal in PEM format}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    api_server_profile: ${5:# API server configuration}
+    append_tags: ${6:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${7:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    cluster_profile: ${11:# Configuration for OpenShift cluster}
+    ingress_profiles: ${12:# Ingress profiles configuration}
+    location: ${13:# Resource location}
+    log_mode: ${14:# Parent argument}
+    log_path: ${15:# Parent argument}
+    master_profile: ${16:# Configuration for OpenShift master VMs}
+    name: ${17:# Resource name}
+    network_profile: ${18:# Configuration for OpenShift networking (immutable)}
+    password: ${19:# Active Directory user password}
+    profile: ${20:# Security profile found in ~/}
+    provisioning_state: ${21:# The current deployment or provisioning state, which only appears in the response}
+    resource_group: ${22:# The name of the resource group}
+    secret: ${23:# Azure client secret}
+    service_principal_profile: ${24:# service principal}
+    state: ${25:# Assert the state of the OpenShiftManagedCluster}
+    subscription_id: ${26:# Your Azure subscription Id}
+    tags: ${27:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${28:# Azure tenant ID}
     thumbprint: ${29:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${30:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${31:# Use to control if tags field is canonical or just appends to existing tags}
+    worker_profiles: ${30:# Configuration for OpenShift worker Vms}
+    x509_certificate_path: ${31:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

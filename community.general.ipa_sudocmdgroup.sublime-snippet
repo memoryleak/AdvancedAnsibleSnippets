@@ -3,15 +3,15 @@
   community.general.ipa_sudocmdgroup:
     cn: ${2:# Sudo Command Group}
     description: ${3:# Group description}
-    state: ${4:# State to ensure}
-    sudocmd: ${5:# List of sudo commands to assign to the group}
+    ipa_host: ${4:# IP or hostname of IPA server}
+    ipa_pass: ${5:# Password of administrative user}
     ipa_port: ${6:# Port of FreeIPA / IPA server}
-    ipa_host: ${7:# IP or hostname of IPA server}
-    ipa_user: ${8:# Administrative account used on IPA server}
-    ipa_pass: ${9:# Password of administrative user}
-    ipa_prot: ${10:# Protocol used by IPA server}
-    validate_certs: ${11:# This only applies if C(ipa_prot) is I(https)}
-    ipa_timeout: ${12:# Specifies idle timeout (in seconds) for the connection}
+    ipa_prot: ${7:# Protocol used by IPA server}
+    ipa_timeout: ${8:# Specifies idle timeout (in seconds) for the connection}
+    ipa_user: ${9:# Administrative account used on IPA server}
+    state: ${10:# State to ensure}
+    sudocmd: ${11:# List of sudo commands to assign to the group}
+    validate_certs: ${12:# This only applies if O(ipa_prot) is V(https)}
   tags:
     - community
     - general

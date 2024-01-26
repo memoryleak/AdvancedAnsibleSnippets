@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures Service Profiles from templates on Cisco UCS Manager}
   cisco.ucs.ucs_service_profile_from_template:
-    state: ${2:# If C(present), will verify Service Profiles are present and will create if needed}
-    name: ${3:# The name of the service profile}
-    source_template: ${4:# The name of the service profile template used to create this serivce profile}
-    power_state: ${5:# The power state to be applied when this service profile is associated with a server}
-    user_label: ${6:# The User Label you want to assign to this service profile}
-    org_dn: ${7:# Org dn (distinguished name)}
-    description: ${8:# Optional}
-    hostname: ${9:# IP address or hostname of Cisco UCS Manager}
-    username: ${10:# Username for Cisco UCS Manager authentication}
-    password: ${11:# Password for Cisco UCS Manager authentication}
-    port: ${12:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    description: ${2:# Optional}
+    hostname: ${3:# IP address or hostname of Cisco UCS Manager}
+    name: ${4:# The name of the service profile}
+    org_dn: ${5:# Org dn (distinguished name)}
+    password: ${6:# Password for Cisco UCS Manager authentication}
+    port: ${7:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    power_state: ${8:# The power state to be applied when this service profile is associated with a server}
+    proxy: ${9:# If use_proxy is no, specfies proxy to be used for connection}
+    source_template: ${10:# The name of the service profile template used to create this serivce profile}
+    state: ${11:# If C(present), will verify Service Profiles are present and will create if needed}
+    use_proxy: ${12:# If C(no), will not use the proxy as defined by system environment variable}
     use_ssl: ${13:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    use_proxy: ${14:# If C(no), will not use the proxy as defined by system environment variable}
-    proxy: ${15:# If use_proxy is no, specfies proxy to be used for connection}
+    user_label: ${14:# The User Label you want to assign to this service profile}
+    username: ${15:# Username for Cisco UCS Manager authentication}
   tags:
     - cisco
     - ucs

@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage certificates in DigitalOcean}
   community.digitalocean.digital_ocean_certificate:
-    name: ${2:# The name of the certificate}
-    private_key: ${3:# A PEM-formatted private key content of SSL Certificate}
+    baseurl: ${2:# DigitalOcean API base url}
+    certificate_chain: ${3:# The full PEM-formatted trust chain between the certificate authority's certificate and your domain's SSL certificate}
     leaf_certificate: ${4:# A PEM-formatted public SSL Certificate}
-    certificate_chain: ${5:# The full PEM-formatted trust chain between the certificate authority's certificate and your domain's SSL certificate}
-    state: ${6:# Whether the certificate should be present or absent}
-    baseurl: ${7:# DigitalOcean API base url}
-    oauth_token: ${8:# DigitalOcean OAuth token}
+    name: ${5:# The name of the certificate}
+    oauth_token: ${6:# DigitalOcean OAuth token}
+    private_key: ${7:# A PEM-formatted private key content of SSL Certificate}
+    state: ${8:# Whether the certificate should be present or absent}
     timeout: ${9:# The timeout in seconds used for polling DigitalOcean's API}
     validate_certs: ${10:# If set to C(no), the SSL certificates will not be validated}
   tags:

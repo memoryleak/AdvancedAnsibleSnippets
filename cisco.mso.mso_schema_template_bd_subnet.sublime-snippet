@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage BD subnets in schema templates}
   cisco.mso.mso_schema_template_bd_subnet:
-    schema: ${2:# The name of the schema}
-    template: ${3:# The name of the template to change}
-    bd: ${4:# The name of the BD to manage}
-    subnet: ${5:# The IP range in CIDR notation}
-    description: ${6:# The description of this subnet}
-    is_virtual_ip: ${7:# Treat as Virtual IP Address}
-    scope: ${8:# The scope of the subnet}
-    shared: ${9:# Whether this subnet is shared between VRFs}
-    no_default_gateway: ${10:# Whether this subnet has a default gateway}
-    querier: ${11:# Whether this subnet is an IGMP querier}
-    primary: ${12:# Treat as Primary Subnet}
-    state: ${13:# Use C(present) or C(absent) for adding or removing}
-    host: ${14:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${15:# Port number to be used for the REST connection}
-    username: ${16:# The username to use for authentication}
-    password: ${17:# The password to use for authentication}
-    output_level: ${18:# Influence the output of this MSO module}
+    bd: ${2:# The name of the BD to manage}
+    description: ${3:# The description of this subnet}
+    host: ${4:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    is_virtual_ip: ${5:# Treat as Virtual IP Address}
+    login_domain: ${6:# The login domain name to use for authentication}
+    no_default_gateway: ${7:# Whether this subnet has a default gateway}
+    output_level: ${8:# Influence the output of this MSO module}
+    password: ${9:# The password to use for authentication}
+    port: ${10:# Port number to be used for the REST connection}
+    primary: ${11:# Treat as Primary Subnet}
+    querier: ${12:# Whether this subnet is an IGMP querier}
+    schema: ${13:# The name of the schema}
+    scope: ${14:# The scope of the subnet}
+    shared: ${15:# Whether this subnet is shared between VRFs}
+    state: ${16:# Use C(present) or C(absent) for adding or removing}
+    subnet: ${17:# The IP range in CIDR notation}
+    template: ${18:# The name of the template to change}
     timeout: ${19:# The socket level timeout in seconds}
-    use_proxy: ${20:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${21:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${22:# If C(no), SSL certificates will not be validated}
-    login_domain: ${23:# The login domain name to use for authentication}
+    use_proxy: ${20:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${21:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${22:# The username to use for authentication}
+    validate_certs: ${23:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - mso

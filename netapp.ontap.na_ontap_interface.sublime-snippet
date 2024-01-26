@@ -1,50 +1,50 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP LIF configuration}
   netapp.ontap.na_ontap_interface:
-    state: ${2:# Whether the specified interface should exist or not}
-    interface_name: ${3:# Specifies the logical interface (LIF) name}
-    home_node: ${4:# Specifies the LIF's home node}
-    current_node: ${5:# Specifies the LIF's current node}
-    home_port: ${6:# Specifies the LIF's home port}
+    address: ${2:# Specifies the LIF's IP address}
+    admin_status: ${3:# Specifies the administrative status of the LIF}
+    broadcast_domain: ${4:# broadcast_domain name can be used to specify the location on an IP interface with REST, as an alternative to node or port}
+    cert_filepath: ${5:# path to SSL client cert file (}
+    current_node: ${6:# Specifies the LIF's current node}
     current_port: ${7:# Specifies the LIF's current port}
-    role: ${8:# Specifies the role of the LIF}
-    address: ${9:# Specifies the LIF's IP address}
-    netmask: ${10:# Specifies the LIF's netmask}
-    is_ipv4_link_local: ${11:# Specifies the LIF's are to acquire a ipv4 link local address}
-    vserver: ${12:# The name of the vserver to use}
-    firewall_policy: ${13:# Specifies the firewall policy for the LIF}
-    failover_policy: ${14:# Specifies the failover policy for the LIF}
-    failover_scope: ${15:# Specifies the failover scope for the LIF}
-    failover_group: ${16:# Specifies the failover group for the LIF}
-    subnet_name: ${17:# Subnet where the IP interface address is allocated from}
-    fail_if_subnet_conflicts: ${18:# Creating or updating an IP Interface fails if the specified IP address falls within the address range of a named subnet}
-    admin_status: ${19:# Specifies the administrative status of the LIF}
-    is_auto_revert: ${20:# If true, data LIF will revert to its home node under certain circumstances such as startup,}
-    force_subnet_association: ${21:# Set this to true to acquire the address from the named subnet and assign the subnet to the LIF}
-    protocols: ${22:# Specifies the list of data protocols configured on the LIF}
-    data_protocol: ${23:# The data protocol for which the FC interface is configured}
-    dns_domain_name: ${24:# Specifies the unique, fully qualified domain name of the DNS zone of this LIF}
-    listen_for_dns_query: ${25:# If True, this IP address will listen for DNS queries for the dnszone specified}
-    is_dns_update_enabled: ${26:# Specifies if DNS update is enabled for this LIF}
-    service_policy: ${27:# Starting with ONTAP 9}
-    from_name: ${28:# name of the interface to be renamed}
-    interface_type: ${29:# type of the interface}
-    ipspace: ${30:# IPspace name is required with REST for cluster-scoped interfaces}
-    broadcast_domain: ${31:# broadcast_domain name can be used to specify the location on an IP interface with REST, as an alternative to node or port}
-    ignore_zapi_options: ${32:# ignore unsupported options that should not be relevant}
-    probe_port: ${33:# Probe port for Cloud load balancer - only valid in the Azure environment}
-    hostname: ${34:# The hostname or IP address of the ONTAP instance}
-    username: ${35:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${36:# Password for the specified user}
-    cert_filepath: ${37:# path to SSL client cert file (}
-    key_filepath: ${38:# path to SSL client key file}
-    https: ${39:# Enable and disable https}
-    validate_certs: ${40:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${41:# Override the default port (80 or 443) with this port}
-    ontapi: ${42:# The ontap api version to use}
-    use_rest: ${43:# Whether to use REST or ZAPI}
-    feature_flags: ${44:# Enable or disable a new feature}
-    force_ontap_version: ${45:# Override the cluster ONTAP version when using REST}
+    data_protocol: ${8:# The data protocol for which the FC interface is configured}
+    dns_domain_name: ${9:# Specifies the unique, fully qualified domain name of the DNS zone of this LIF}
+    fail_if_subnet_conflicts: ${10:# Creating or updating an IP Interface fails if the specified IP address falls within the address range of a named subnet}
+    failover_group: ${11:# Specifies the failover group for the LIF}
+    failover_policy: ${12:# Specifies the failover policy for the LIF}
+    failover_scope: ${13:# Specifies the failover scope for the LIF}
+    feature_flags: ${14:# Enable or disable a new feature}
+    firewall_policy: ${15:# Specifies the firewall policy for the LIF}
+    force_ontap_version: ${16:# Override the cluster ONTAP version when using REST}
+    force_subnet_association: ${17:# Set this to true to acquire the address from the named subnet and assign the subnet to the LIF}
+    from_name: ${18:# name of the interface to be renamed}
+    home_node: ${19:# Specifies the LIF's home node}
+    home_port: ${20:# Specifies the LIF's home port}
+    hostname: ${21:# The hostname or IP address of the ONTAP instance}
+    http_port: ${22:# Override the default port (80 or 443) with this port}
+    https: ${23:# Enable and disable https}
+    ignore_zapi_options: ${24:# ignore unsupported options that should not be relevant}
+    interface_name: ${25:# Specifies the logical interface (LIF) name}
+    interface_type: ${26:# type of the interface}
+    ipspace: ${27:# IPspace name is required with REST for cluster-scoped interfaces}
+    is_auto_revert: ${28:# If true, data LIF will revert to its home node under certain circumstances such as startup,}
+    is_dns_update_enabled: ${29:# Specifies if DNS update is enabled for this LIF}
+    is_ipv4_link_local: ${30:# Specifies the LIF's are to acquire a ipv4 link local address}
+    key_filepath: ${31:# path to SSL client key file}
+    listen_for_dns_query: ${32:# If True, this IP address will listen for DNS queries for the dnszone specified}
+    netmask: ${33:# Specifies the LIF's netmask}
+    ontapi: ${34:# The ontap api version to use}
+    password: ${35:# Password for the specified user}
+    probe_port: ${36:# Probe port for Cloud load balancer - only valid in the Azure environment}
+    protocols: ${37:# Specifies the list of data protocols configured on the LIF}
+    role: ${38:# Specifies the role of the LIF}
+    service_policy: ${39:# Starting with ONTAP 9}
+    state: ${40:# Whether the specified interface should exist or not}
+    subnet_name: ${41:# Subnet where the IP interface address is allocated from}
+    use_rest: ${42:# Whether to use REST or ZAPI}
+    username: ${43:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${44:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${45:# The name of the vserver to use}
   tags:
     - netapp
     - ontap

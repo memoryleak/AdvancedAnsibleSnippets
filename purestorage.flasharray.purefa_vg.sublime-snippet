@@ -1,19 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage volume groups on Pure Storage FlashArrays}
   purestorage.flasharray.purefa_vg:
-    name: ${2:# The name of the volume group}
-    state: ${3:# Define whether the volume group should exist or not}
-    eradicate: ${4:# Define whether to eradicate the volume group on delete and leave in trash}
-    bw_qos: ${5:# Bandwidth limit for vgroup in M or G units}
-    iops_qos: ${6:# IOPs limit for vgroup - use value or K or M K will mean 1000 M will mean 1000000 To clear an existing IOPs setting use 0 (zero)}
-    count: ${7:# Number of volume groups to be created in a multiple volume group creation}
-    start: ${8:# Number at which to start the multiple volume group creation index}
-    digits: ${9:# Number of digits to use for multiple volume group count}
-    suffix: ${10:# Suffix string, if required, for multiple volume group create}
-    priority_operator: ${11:# DMM Priority Adjustment operator}
-    priority_value: ${12:# DMM Priority Adjustment value}
-    fa_url: ${13:# FlashArray management IPv4 address or Hostname}
-    api_token: ${14:# FlashArray API token for admin privileged user}
+    api_token: ${2:# FlashArray API token for admin privileged user}
+    bw_qos: ${3:# Bandwidth limit for vgroup in M or G units}
+    count: ${4:# Number of volume groups to be created in a multiple volume group creation}
+    digits: ${5:# Number of digits to use for multiple volume group count}
+    eradicate: ${6:# Define whether to eradicate the volume group on delete and leave in trash}
+    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
+    iops_qos: ${8:# IOPs limit for vgroup - use value or K or M K will mean 1000 M will mean 1000000 To clear an existing IOPs setting use 0 (zero)}
+    name: ${9:# The name of the volume group}
+    priority_operator: ${10:# DMM Priority Adjustment operator}
+    priority_value: ${11:# DMM Priority Adjustment value}
+    rename: ${12:# Value to rename the specified volume group to}
+    start: ${13:# Number at which to start the multiple volume group creation index}
+    state: ${14:# Define whether the volume group should exist or not}
+    suffix: ${15:# Suffix string, if required, for multiple volume group create}
   tags:
     - purestorage
     - flasharray

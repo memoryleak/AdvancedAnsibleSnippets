@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage LXC Containers}
   community.general.lxc_container:
-    name: ${2:# Name of a container}
-    backing_store: ${3:# Backend storage type for the container}
-    template: ${4:# Name of the template to use within an LXC create}
-    template_options: ${5:# Template options when building the container}
-    config: ${6:# Path to the LXC configuration file}
-    lv_name: ${7:# Name of the logical volume, defaults to the container name}
-    vg_name: ${8:# If backend store is lvm, specify the name of the volume group}
-    thinpool: ${9:# Use LVM thin pool called TP}
-    fs_type: ${10:# Create fstype TYPE}
-    fs_size: ${11:# File system Size}
-    directory: ${12:# Place rootfs directory under DIR}
-    zfs_root: ${13:# Create zfs under given zfsroot}
-    container_command: ${14:# Run a command within a container}
-    lxc_path: ${15:# Place container under C(PATH)}
-    container_log: ${16:# Enable a container log for host actions to the container}
-    container_log_level: ${17:# Set the log level for a container where I(container_log) was set}
-    clone_name: ${18:# Name of the new cloned server}
-    clone_snapshot: ${19:# Create a snapshot a container when cloning}
-    archive: ${20:# Create an archive of a container}
-    archive_path: ${21:# Path the save the archived container}
-    archive_compression: ${22:# Type of compression to use when creating an archive of a running container}
-    state: ${23:# Define the state of a container}
-    container_config: ${24:# A list of C(key=value) options to use when configuring a container}
+    archive: ${2:# Create an archive of a container}
+    archive_compression: ${3:# Type of compression to use when creating an archive of a running container}
+    archive_path: ${4:# Path the save the archived container}
+    backing_store: ${5:# Backend storage type for the container}
+    clone_name: ${6:# Name of the new cloned server}
+    clone_snapshot: ${7:# Create a snapshot a container when cloning}
+    config: ${8:# Path to the LXC configuration file}
+    container_command: ${9:# Run a command within a container}
+    container_config: ${10:# A list of C(key=value) options to use when configuring a container}
+    container_log: ${11:# Enable a container log for host actions to the container}
+    container_log_level: ${12:# Set the log level for a container where O(container_log) was set}
+    directory: ${13:# Place rootfs directory under DIR}
+    fs_size: ${14:# File system Size}
+    fs_type: ${15:# Create fstype TYPE}
+    lv_name: ${16:# Name of the logical volume, defaults to the container name}
+    lxc_path: ${17:# Place container under E(PATH)}
+    name: ${18:# Name of a container}
+    state: ${19:# Define the state of a container}
+    template: ${20:# Name of the template to use within an LXC create}
+    template_options: ${21:# Template options when building the container}
+    thinpool: ${22:# Use LVM thin pool called TP}
+    vg_name: ${23:# If backend store is lvm, specify the name of the volume group}
+    zfs_root: ${24:# Create zfs under given zfsroot}
   tags:
     - community
     - general

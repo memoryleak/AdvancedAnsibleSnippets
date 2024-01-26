@@ -1,13 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage filesystem replica links between Pure Storage FlashBlades}
   purestorage.flashblade.purefb_fs_replica:
-    name: ${2:# Local Filesystem Name}
-    state: ${3:# Creates or modifies a filesystem replica link}
-    target_array: ${4:# Remote array name to create replica on}
-    target_fs: ${5:# Name of target filesystem name}
+    api_token: ${2:# FlashBlade API token for admin privileged user}
+    fb_url: ${3:# FlashBlade management IP address or Hostname}
+    in_progress: ${4:# Confirmation that you wish to delete a filesystem replica link}
+    name: ${5:# Local Filesystem Name}
     policy: ${6:# Name of filesystem snapshot policy to apply to the replica link}
-    fb_url: ${7:# FlashBlade management IP address or Hostname}
-    api_token: ${8:# FlashBlade API token for admin privileged user}
+    state: ${7:# Creates or modifies a filesystem replica link}
+    target_array: ${8:# Remote array name to create replica on}
+    target_fs: ${9:# Name of target filesystem name}
   tags:
     - purestorage
     - flashblade

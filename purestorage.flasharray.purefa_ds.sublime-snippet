@@ -1,22 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure FlashArray Directory Service}
   purestorage.flasharray.purefa_ds:
-    state: ${2:# Create or delete directory service configuration}
-    enable: ${3:# Whether to enable or disable directory service support}
-    dstype: ${4:# The type of directory service to work on}
-    uri: ${5:# A list of up to 30 URIs of the directory servers}
-    base_dn: ${6:# Sets the base of the Distinguished Name (DN) of the directory service groups}
-    bind_password: ${7:# Sets the password of the bind_user user name account}
-    force_bind_password: ${8:# Will force the bind password to be reset even if the bind user password is unchanged}
-    bind_user: ${9:# Sets the user name that can be used to bind to and query the directory}
-    group_base: ${10:# Specifies where the configured groups are located in the directory tree}
-    ro_group: ${11:# Sets the common Name (CN) of the configured directory service group containing users with read-only privileges on the FlashArray}
-    sa_group: ${12:# Sets the common Name (CN) of the configured directory service group containing administrators with storage-related privileges on the FlashArray}
-    aa_group: ${13:# Sets the common Name (CN) of the directory service group containing administrators with full privileges when managing the FlashArray}
-    user_login: ${14:# User login attribute in the structure of the configured LDAP servers}
-    user_object: ${15:# Value of the object class for a management LDAP user}
-    fa_url: ${16:# FlashArray management IPv4 address or Hostname}
-    api_token: ${17:# FlashArray API token for admin privileged user}
+    aa_group: ${2:# Sets the common Name (CN) of the directory service group containing administrators with full privileges when managing the FlashArray}
+    api_token: ${3:# FlashArray API token for admin privileged user}
+    base_dn: ${4:# Sets the base of the Distinguished Name (DN) of the directory service groups}
+    bind_password: ${5:# Sets the password of the bind_user user name account}
+    bind_user: ${6:# Sets the user name that can be used to bind to and query the directory}
+    certificate: ${7:# The certificate of the Certificate Authority (CA) that signed the certificates of the directory servers, which is used to validate the authenticity of the configured servers}
+    check_peer: ${8:# Whether or not server authenticity is enforced when a certificate is provided}
+    dstype: ${9:# The type of directory service to work on}
+    enable: ${10:# Whether to enable or disable directory service support}
+    fa_url: ${11:# FlashArray management IPv4 address or Hostname}
+    force_bind_password: ${12:# Will force the bind password to be reset even if the bind user password is unchanged}
+    group_base: ${13:# Specifies where the configured groups are located in the directory tree}
+    ro_group: ${14:# Sets the common Name (CN) of the configured directory service group containing users with read-only privileges on the FlashArray}
+    sa_group: ${15:# Sets the common Name (CN) of the configured directory service group containing administrators with storage-related privileges on the FlashArray}
+    state: ${16:# Create or delete directory service configuration}
+    uri: ${17:# A list of up to 30 URIs of the directory servers}
+    user_login: ${18:# User login attribute in the structure of the configured LDAP servers}
+    user_object: ${19:# Value of the object class for a management LDAP user}
   tags:
     - purestorage
     - flasharray

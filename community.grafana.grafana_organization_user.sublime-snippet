@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Grafana Organization Users}
+  community.grafana.grafana_organization_user:
+    client_cert: ${2:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${3:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    login: ${4:# Username or email}
+    org_id: ${5:# Organization ID}
+    role: ${6:# User's role in the organization}
+    state: ${7:# Status of a user's organization membership}
+    url: ${8:# The Grafana URL}
+    url_password: ${9:# The Grafana password for API authentication}
+    url_username: ${10:# The Grafana user for API authentication}
+    use_proxy: ${11:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${12:# If C(no), SSL certificates will not be validated}
+  tags:
+    - community
+    - grafana
+    - grafana_organization_user]]></content>
+  <tabTrigger>community.grafana.grafana_organization_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Grafana Organization Users</description>
+</snippet>

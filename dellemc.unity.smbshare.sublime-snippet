@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage SMB shares on Unity storage system}
   dellemc.unity.smbshare:
-    share_name: ${2:# Name of the SMB share}
-    share_id: ${3:# ID of the SMB share}
-    path: ${4:# Local path to the file system/Snapshot or any existing sub-folder of the file system/Snapshot that is shared over the network}
-    filesystem_id: ${5:# The ID of the File System}
-    snapshot_id: ${6:# The ID of the Filesystem Snapshot}
-    nas_server_id: ${7:# The ID of the NAS Server}
-    filesystem_name: ${8:# The Name of the File System}
-    snapshot_name: ${9:# The Name of the Filesystem Snapshot}
+    description: ${2:# Description for the SMB share}
+    filesystem_id: ${3:# The ID of the File System}
+    filesystem_name: ${4:# The Name of the File System}
+    is_abe_enabled: ${5:# Indicates whether Access-based Enumeration (ABE) for SMB share is enabled}
+    is_branch_cache_enabled: ${6:# Indicates whether Branch Cache optimization for SMB share is enabled}
+    is_continuous_availability_enabled: ${7:# Indicates whether continuous availability for SMB 3}
+    is_encryption_enabled: ${8:# Indicates whether encryption for SMB 3}
+    nas_server_id: ${9:# The ID of the NAS Server}
     nas_server_name: ${10:# The Name of the NAS Server}
-    description: ${11:# Description for the SMB share}
-    is_abe_enabled: ${12:# Indicates whether Access-based Enumeration (ABE) for SMB share is enabled}
-    is_branch_cache_enabled: ${13:# Indicates whether Branch Cache optimization for SMB share is enabled}
-    is_continuous_availability_enabled: ${14:# Indicates whether continuous availability for SMB 3}
-    is_encryption_enabled: ${15:# Indicates whether encryption for SMB 3}
-    offline_availability: ${16:# Defines valid states of Offline Availability}
-    umask: ${17:# The default UNIX umask for new files created on the SMB Share}
-    state: ${18:# Define whether the SMB share should exist or not}
-    unispherehost: ${19:# IP or FQDN of the Unity management server}
-    username: ${20:# The username of the Unity management server}
-    password: ${21:# The password of the Unity management server}
-    validate_certs: ${22:# Boolean variable to specify whether or not to validate SSL certificate}
-    port: ${23:# Port number through which communication happens with Unity management server}
+    offline_availability: ${11:# Defines valid states of Offline Availability}
+    password: ${12:# The password of the Unity management server}
+    path: ${13:# Local path to the file system/Snapshot or any existing sub-folder of the file system/Snapshot that is shared over the network}
+    port: ${14:# Port number through which communication happens with Unity management server}
+    share_id: ${15:# ID of the SMB share}
+    share_name: ${16:# Name of the SMB share}
+    snapshot_id: ${17:# The ID of the Filesystem Snapshot}
+    snapshot_name: ${18:# The Name of the Filesystem Snapshot}
+    state: ${19:# Define whether the SMB share should exist or not}
+    umask: ${20:# The default UNIX umask for new files created on the SMB Share}
+    unispherehost: ${21:# IP or FQDN of the Unity management server}
+    username: ${22:# The username of the Unity management server}
+    validate_certs: ${23:# Boolean variable to specify whether or not to validate SSL certificate}
   tags:
     - dellemc
     - unity

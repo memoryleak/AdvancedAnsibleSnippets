@@ -1,42 +1,49 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage FlashBlade policies}
   purestorage.flashblade.purefb_policy:
-    state: ${2:# Create or delete policy}
-    target: ${3:# Name of policy to copy rule to}
-    target_rule: ${4:# Name of the rule to copy the exisitng rule to}
-    policy_type: ${5:# Type of policy}
-    account: ${6:# Name of Object Store account policy applies to}
-    rule: ${7:# Name of the rule for the Object Store Access Policy}
-    effect: ${8:# Allow S3 requests that match all of the I(actions) item selected}
-    actions: ${9:# List of permissions to grant}
-    object_resources: ${10:# List of bucket names and object paths, with a wildcard (*) to specify objects in a bucket; e}
-    source_ips: ${11:# List of IPs and subnets from which this rule should allow requests; e}
-    s3_prefixes: ${12:# List of 'folders' (object key prefixes) for which object listings may be requested}
-    s3_delimiters: ${13:# List of delimiter characters allowed in object list requests}
-    ignore_enforcement: ${14:# Certain combinations of actions and other rule elements are inherently ignored if specified together in a rule}
-    user: ${15:# User in the I(account) that the policy is granted to}
-    force_delete: ${16:# Force the deletion of a Object Store Access Policy is this has attached users}
-    name: ${17:# Name of the policy}
-    enabled: ${18:# State of policy}
-    every: ${19:# Interval between snapshots in seconds}
-    keep_for: ${20:# How long to keep snapshots for}
-    at: ${21:# Provide a time in 12-hour AM/PM format, eg}
-    timezone: ${22:# Time Zone used for the I(at) parameter}
-    filesystem: ${23:# List of filesystems to add to a policy on creation}
-    replica_link: ${24:# List of filesystem replica links to add to a policy on creation}
-    access: ${25:# Specifies access control for the export policy rule}
-    anonuid: ${26:# Any user whose UID is affected by an I(access) of `root_squash` or `all_squash` will have their UID mapped to anonuid}
-    anongid: ${27:# Any user whose GID is affected by an I(access) of `root_squash` or `all_squash` will have their GID mapped to anongid}
-    atime: ${28:# After a read operation has occurred, the inode access time is updated only if any of the following conditions is true; the previous access time is less than the inode modify time, the previous access time is less than the inode change time, or the previous access time is more than 24 hours ago}
-    client: ${29:# Specifies the clients that will be permitted to access the export}
-    fileid_32bit: ${30:# Whether the file id is 32 bits or not}
-    permission: ${31:# Specifies which read-write client access permissions are allowed for the export}
-    secure: ${32:# If true, this prevents NFS access to client connections coming from non-reserved ports}
-    security: ${33:# The security flavors to use for accessing files on this mount point}
-    before_rule: ${34:# The index of the client rule to insert or move a client rule before}
-    rename: ${35:# New name for export policy}
-    fb_url: ${36:# FlashBlade management IP address or Hostname}
-    api_token: ${37:# FlashBlade API token for admin privileged user}
+    access: ${2:# Specifies access control for the export policy rule}
+    account: ${3:# Name of Object Store account policy applies to}
+    actions: ${4:# List of permissions to grant}
+    anongid: ${5:# Any user whose GID is affected by an I(access) of `root_squash` or `all_squash` will have their GID mapped to anongid}
+    anonuid: ${6:# Any user whose UID is affected by an I(access) of `root_squash` or `all_squash` will have their UID mapped to anonuid}
+    api_token: ${7:# FlashBlade API token for admin privileged user}
+    at: ${8:# Provide a time in 12-hour AM/PM format, eg}
+    atime: ${9:# After a read operation has occurred, the inode access time is updated only if any of the following conditions is true; the previous access time is less than the inode modify time, the previous access time is less than the inode change time, or the previous access time is more than 24 hours ago}
+    before_rule: ${10:# The index of the client rule to insert or move a client rule before}
+    change: ${11:# The state of the SMB share principals Change access permission}
+    client: ${12:# Specifies the clients that will be permitted to access the export}
+    desc: ${13:# A description of an object store policy, optionally specified when the policy is created}
+    destroy_snapshots: ${14:# This parameter must be set to true in order to modify a policy such that local or remote snapshots would be destroyed}
+    effect: ${15:# Allow S3 requests that match all of the I(actions) item selected}
+    enabled: ${16:# State of policy}
+    every: ${17:# Interval between snapshots in seconds}
+    fb_url: ${18:# FlashBlade management IP address or Hostname}
+    fileid_32bit: ${19:# Whether the file id is 32 bits or not}
+    filesystem: ${20:# List of filesystems to add to a policy on creation}
+    force_delete: ${21:# Force the deletion of a Object Store Access Policy is this has attached users}
+    full_control: ${22:# The state of the SMB share principals Full Control access permission}
+    ignore_enforcement: ${23:# Certain combinations of actions and other rule elements are inherently ignored if specified together in a rule}
+    keep_for: ${24:# How long to keep snapshots for}
+    name: ${25:# Name of the policy}
+    object_resources: ${26:# List of bucket names and object paths, with a wildcard (*) to specify objects in a bucket; e}
+    permission: ${27:# Specifies which read-write client access permissions are allowed for the export}
+    policy_type: ${28:# Type of policy}
+    principal: ${29:# The user or group who is the subject of this rule, and their domain}
+    read: ${30:# The state of the SMB share principals Read access permission}
+    rename: ${31:# New name for policy}
+    replica_link: ${32:# List of filesystem replica links to add to a policy on creation}
+    rule: ${33:# Name of the rule for the Object Store Access Policy}
+    s3_delimiters: ${34:# List of delimiter characters allowed in object list requests}
+    s3_prefixes: ${35:# List of 'folders' (object key prefixes) for which object listings may be requested}
+    secure: ${36:# If true, this prevents NFS access to client connections coming from non-reserved ports}
+    security: ${37:# The security flavors to use for accessing files on this mount point}
+    smb_encryption: ${38:# The status of SMB encryption in a client policy rule}
+    source_ips: ${39:# List of IPs and subnets from which this rule should allow requests; e}
+    state: ${40:# Create or delete policy}
+    target: ${41:# Name of policy to copy rule to}
+    target_rule: ${42:# Name of the rule to copy the exisitng rule to}
+    timezone: ${43:# Time Zone used for the I(at) parameter}
+    user: ${44:# User in the I(account) that the policy is granted to}
   tags:
     - purestorage
     - flashblade

@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure Pure Storage FlashArray alert email settings}
   purestorage.flasharray.purefa_alert:
-    state: ${2:# Create or delete alert email}
-    address: ${3:# Email address (valid format required)}
+    address: ${2:# Email address (valid format required)}
+    api_token: ${3:# FlashArray API token for admin privileged user}
     enabled: ${4:# Set specified email address to be enabled or disabled}
     fa_url: ${5:# FlashArray management IPv4 address or Hostname}
-    api_token: ${6:# FlashArray API token for admin privileged user}
+    state: ${6:# Create or delete alert email}
   tags:
     - purestorage
     - flasharray

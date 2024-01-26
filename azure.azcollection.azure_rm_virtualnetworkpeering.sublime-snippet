@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure Virtual Network Peering}
   azure.azcollection.azure_rm_virtualnetworkpeering:
-    resource_group: ${2:# Name of a resource group where the vnet exists}
-    name: ${3:# Name of the virtual network peering}
-    virtual_network: ${4:# Name or resource ID of the virtual network to be peered}
-    remote_virtual_network: ${5:# Remote virtual network to be peered}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    allow_forwarded_traffic: ${4:# Allows forwarded traffic from the VMs in the remote VNet}
+    allow_gateway_transit: ${5:# Allows VNet to use the remote VNet's gateway}
     allow_virtual_network_access: ${6:# Allows VMs in the remote VNet to access all VMs in the local VNet}
-    allow_forwarded_traffic: ${7:# Allows forwarded traffic from the VMs in the remote VNet}
-    use_remote_gateways: ${8:# If remote gateways can be used on this virtual network}
-    allow_gateway_transit: ${9:# Allows VNet to use the remote VNet's gateway}
-    state: ${10:# State of the virtual network peering}
-    ad_user: ${11:# Active Directory username}
-    password: ${12:# Active Directory user password}
-    profile: ${13:# Security profile found in ~/}
-    subscription_id: ${14:# Your Azure subscription Id}
-    client_id: ${15:# Azure client ID}
-    secret: ${16:# Azure client secret}
-    tenant: ${17:# Azure tenant ID}
-    cloud_environment: ${18:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${19:# Azure AD authority url}
-    cert_validation_mode: ${20:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${21:# Controls the source of the credentials to use for authentication}
-    api_profile: ${22:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${23:# Parent argument}
-    log_mode: ${24:# Parent argument}
-    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    api_profile: ${7:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${8:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${9:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${10:# Azure client ID}
+    cloud_environment: ${11:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    name: ${14:# Name of the virtual network peering}
+    password: ${15:# Active Directory user password}
+    profile: ${16:# Security profile found in ~/}
+    remote_virtual_network: ${17:# Remote virtual network to be peered}
+    resource_group: ${18:# Name of a resource group where the vnet exists}
+    secret: ${19:# Azure client secret}
+    state: ${20:# State of the virtual network peering}
+    subscription_id: ${21:# Your Azure subscription Id}
+    tenant: ${22:# Azure tenant ID}
+    thumbprint: ${23:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    use_remote_gateways: ${24:# If remote gateways can be used on this virtual network}
+    virtual_network: ${25:# Name or resource ID of the virtual network to be peered}
+    x509_certificate_path: ${26:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

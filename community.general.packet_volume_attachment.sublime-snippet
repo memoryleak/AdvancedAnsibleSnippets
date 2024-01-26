@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Attach/detach a volume to a device in the Packet host}
   community.general.packet_volume_attachment:
-    state: ${2:# Indicate desired state of the attachment}
-    auth_token: ${3:# Packet API token}
+    auth_token: ${2:# Packet API token}
+    device: ${3:# Selector for the device}
     project_id: ${4:# UUID of the project to which the device and volume belong}
-    volume: ${5:# Selector for the volume}
-    device: ${6:# Selector for the device}
+    state: ${5:# Indicate desired state of the attachment}
+    volume: ${6:# Selector for the volume}
   tags:
     - community
     - general

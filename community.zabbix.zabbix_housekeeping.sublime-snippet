@@ -1,33 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Update Zabbix housekeeping}
   community.zabbix.zabbix_housekeeping:
-    hk_events_mode: ${2:# Internal housekeeping for events and alerts will be enabled if C(true)}
-    hk_events_trigger: ${3:# Storage period of trigger data (e}
-    hk_events_service: ${4:# Storage period of service data (e}
-    hk_events_internal: ${5:# Storage period of internal data (e}
-    hk_events_discovery: ${6:# Storage period of network discovery (e}
-    hk_events_autoreg: ${7:# Storage period of autoregistration data (e}
-    hk_services_mode: ${8:# Internal housekeeping for services will be enabled if C(true)}
-    hk_services: ${9:# Storage period of services data (e}
-    hk_audit_mode: ${10:# Internal housekeeping for audit will be enabled if C(true)}
-    hk_audit: ${11:# Storage period of audit data (e}
-    hk_sessions_mode: ${12:# Internal housekeeping for sessions will be enabled if C(true)}
-    hk_sessions: ${13:# Storage period of sessions data (e}
+    compress_older: ${2:# Compress history and trends records older than this period if I(compression_status=true)}
+    compression_status: ${3:# TimescaleDB compression for history and trends will be enabled if C(true)}
+    hk_audit: ${4:# Storage period of audit data (e}
+    hk_audit_mode: ${5:# Internal housekeeping for audit will be enabled if C(true)}
+    hk_events_autoreg: ${6:# Storage period of autoregistration data (e}
+    hk_events_discovery: ${7:# Storage period of network discovery (e}
+    hk_events_internal: ${8:# Storage period of internal data (e}
+    hk_events_mode: ${9:# Internal housekeeping for events and alerts will be enabled if C(true)}
+    hk_events_service: ${10:# Storage period of service data (e}
+    hk_events_trigger: ${11:# Storage period of trigger data (e}
+    hk_history: ${12:# Storage priod of history data (e}
+    hk_history_global: ${13:# Overriding history period of each items will be enabled if C(true)}
     hk_history_mode: ${14:# Internal housekeeping for history will be enabled if C(true)}
-    hk_history_global: ${15:# Overriding history period of each items will be enabled if C(true)}
-    hk_history: ${16:# Storage priod of history data (e}
-    hk_trends_mode: ${17:# Internal housekeeping for trends will be enabled if C(true)}
-    hk_trends_global: ${18:# Overriding trend period of each items will be enabled if C(true)}
+    hk_services: ${15:# Storage period of services data (e}
+    hk_services_mode: ${16:# Internal housekeeping for services will be enabled if C(true)}
+    hk_sessions: ${17:# Storage period of sessions data (e}
+    hk_sessions_mode: ${18:# Internal housekeeping for sessions will be enabled if C(true)}
     hk_trends: ${19:# Storage priod of trends data (e}
-    compression_status: ${20:# TimescaleDB compression for history and trends will be enabled if C(true)}
-    compress_older: ${21:# Compress history and trends records older than this period if I(compression_status=true)}
-    server_url: ${22:# URL of Zabbix server, with protocol (http or https)}
-    login_user: ${23:# Zabbix user name}
-    login_password: ${24:# Zabbix user password}
-    http_login_user: ${25:# Basic Auth login}
-    http_login_password: ${26:# Basic Auth password}
-    timeout: ${27:# The timeout of API request (seconds)}
-    validate_certs: ${28:# If set to False, SSL certificates will not be validated}
+    hk_trends_global: ${20:# Overriding trend period of each items will be enabled if C(true)}
+    hk_trends_mode: ${21:# Internal housekeeping for trends will be enabled if C(true)}
+    http_login_password: ${22:# Basic Auth password}
+    http_login_user: ${23:# Basic Auth login}
   tags:
     - community
     - zabbix

@@ -1,38 +1,38 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage multi-container Docker applications with Docker Compose}
   community.docker.docker_compose:
-    project_src: ${2:# Path to a directory containing a C(docker-compose}
-    project_name: ${3:# Provide a project name}
-    env_file: ${4:# By default environment files are loaded from a C(}
-    files: ${5:# List of Compose file names relative to I(project_src)}
-    profiles: ${6:# List of profiles to enable when starting services}
-    state: ${7:# Desired state of the project}
-    services: ${8:# When I(state) is C(present) run C(docker-compose up) resp}
-    scale: ${9:# When I(state) is C(present) scale services}
-    dependencies: ${10:# When I(state) is C(present) specify whether or not to include linked services}
-    definition: ${11:# Compose file describing one or more services, networks and volumes}
-    hostname_check: ${12:# Whether or not to check the Docker daemon's hostname against the name provided in the client certificate}
-    recreate: ${13:# By default containers will be recreated when their configuration differs from the service definition}
-    build: ${14:# Use with I(state) C(present) to always build images prior to starting the application}
-    pull: ${15:# Use with I(state) C(present) to always pull images prior to starting the application}
-    nocache: ${16:# Use with the I(build) option to ignore the cache during the image build process}
-    remove_images: ${17:# Use with I(state) C(absent) to remove all images or only local images}
-    remove_volumes: ${18:# Use with I(state) C(absent) to remove data volumes}
-    stopped: ${19:# Use with I(state) C(present) to stop all containers defined in the Compose file}
-    restarted: ${20:# Use with I(state) C(present) to restart all containers defined in the Compose file}
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    build: ${3:# Use with O(state=present) to always build images prior to starting the application}
+    ca_cert: ${4:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${5:# Path to the client's TLS certificate file}
+    client_key: ${6:# Path to the client's TLS key file}
+    debug: ${7:# Debug mode}
+    definition: ${8:# Compose file describing one or more services, networks and volumes}
+    dependencies: ${9:# When O(state) is V(present) specify whether or not to include linked services}
+    docker_host: ${10:# The URL or Unix socket path used to connect to the Docker API}
+    env_file: ${11:# By default environment files are loaded from a C(}
+    files: ${12:# List of Compose file names relative to O(project_src)}
+    hostname_check: ${13:# Whether or not to check the Docker daemon's hostname against the name provided in the client certificate}
+    nocache: ${14:# Use with the O(build) option to ignore the cache during the image build process}
+    profiles: ${15:# List of profiles to enable when starting services}
+    project_name: ${16:# Provide a project name}
+    project_src: ${17:# Path to a directory containing a C(docker-compose}
+    pull: ${18:# Use with O(state=present) to always pull images prior to starting the application}
+    recreate: ${19:# By default containers will be recreated when their configuration differs from the service definition}
+    remove_images: ${20:# Use with O(state=absent) to remove all images or only local images}
     remove_orphans: ${21:# Remove containers for services not defined in the Compose file}
-    timeout: ${22:# Timeout in seconds for container shutdown when attached or when containers are already running}
-    use_ssh_client: ${23:# Currently ignored for this module, but might suddenly be supported later on}
-    docker_host: ${24:# The URL or Unix socket path used to connect to the Docker API}
-    tls_hostname: ${25:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    api_version: ${26:# The version of the Docker API running on the Docker Host}
-    ca_cert: ${27:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
-    client_cert: ${28:# Path to the client's TLS certificate file}
-    client_key: ${29:# Path to the client's TLS key file}
-    ssl_version: ${30:# Provide a valid SSL version number}
-    tls: ${31:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    validate_certs: ${32:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
-    debug: ${33:# Debug mode}
+    remove_volumes: ${22:# Use with O(state=absent) to remove data volumes}
+    restarted: ${23:# Use with O(state=present) to restart all containers defined in the Compose file}
+    scale: ${24:# When O(state) is V(present) scale services}
+    services: ${25:# When O(state) is V(present) run C(docker-compose up) resp}
+    ssl_version: ${26:# Provide a valid SSL version number}
+    state: ${27:# Desired state of the project}
+    stopped: ${28:# Use with O(state=present) to stop all containers defined in the Compose file}
+    timeout: ${29:# Timeout in seconds for container shutdown when attached or when containers are already running}
+    tls: ${30:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${31:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    use_ssh_client: ${32:# Currently ignored for this module, but might suddenly be supported later on}
+    validate_certs: ${33:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
   tags:
     - community
     - docker

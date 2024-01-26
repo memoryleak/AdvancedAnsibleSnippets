@@ -1,32 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:Generate Certificate Revocation Lists (CRLs)}
   community.crypto.x509_crl:
-    state: ${2:# Whether the CRL file should exist or not, taking action if the state is different from what is stated}
-    mode: ${3:# Defines how to process entries of existing CRLs}
-    force: ${4:# Should the CRL be forced to be regenerated}
-    backup: ${5:# Create a backup file including a timestamp so you can get the original CRL back if you overwrote it with a new one by accident}
-    path: ${6:# Remote absolute path where the generated CRL file should be created or is already located}
+    attributes: ${2:# The attributes the resulting filesystem object should have}
+    backup: ${3:# Create a backup file including a timestamp so you can get the original CRL back if you overwrote it with a new one by accident}
+    crl_mode: ${4:# Defines how to process entries of existing CRLs}
+    digest: ${5:# Digest algorithm to be used when signing the CRL}
+    force: ${6:# Should the CRL be forced to be regenerated}
     format: ${7:# Whether the CRL file should be in PEM or DER format}
-    privatekey_path: ${8:# Path to the CA's private key to use when signing the CRL}
-    privatekey_content: ${9:# The content of the CA's private key to use when signing the CRL}
-    privatekey_passphrase: ${10:# The passphrase for the I(privatekey_path)}
-    issuer: ${11:# Key/value pairs that will be present in the issuer name field of the CRL}
-    issuer_ordered: ${12:# A list of dictionaries, where every dictionary must contain one key/value pair}
-    last_update: ${13:# The point in time from which this CRL can be trusted}
-    next_update: ${14:# The absolute latest point in time by which this I(issuer) is expected to have issued another CRL}
-    digest: ${15:# Digest algorithm to be used when signing the CRL}
-    revoked_certificates: ${16:# List of certificates to be revoked}
-    ignore_timestamps: ${17:# Whether the timestamps I(last_update), I(next_update) and I(revocation_date) (in I(revoked_certificates)) should be ignored for idempotency checks}
-    return_content: ${18:# If set to C(true), will return the (current or generated) CRL's content as I(crl)}
-    owner: ${19:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
-    group: ${20:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
-    seuser: ${21:# The user part of the SELinux filesystem object context}
-    serole: ${22:# The role part of the SELinux filesystem object context}
-    setype: ${23:# The type part of the SELinux filesystem object context}
-    selevel: ${24:# The level part of the SELinux filesystem object context}
-    unsafe_writes: ${25:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
-    attributes: ${26:# The attributes the resulting filesystem object should have}
-    name_encoding: ${27:# How to encode names (DNS names, URIs, email addresses) in return values}
+    group: ${8:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    ignore_timestamps: ${9:# Whether the timestamps O(last_update), O(next_update) and O(revoked_certificates[]}
+    issuer: ${10:# Key/value pairs that will be present in the issuer name field of the CRL}
+    issuer_ordered: ${11:# A list of dictionaries, where every dictionary must contain one key/value pair}
+    last_update: ${12:# The point in time from which this CRL can be trusted}
+    mode: ${13:# This parameter has been renamed to O(crl_mode)}
+    name_encoding: ${14:# How to encode names (DNS names, URIs, email addresses) in return values}
+    next_update: ${15:# The absolute latest point in time by which this O(issuer) is expected to have issued another CRL}
+    owner: ${16:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
+    path: ${17:# Remote absolute path where the generated CRL file should be created or is already located}
+    privatekey_content: ${18:# The content of the CA's private key to use when signing the CRL}
+    privatekey_passphrase: ${19:# The passphrase for the O(privatekey_path)}
+    privatekey_path: ${20:# Path to the CA's private key to use when signing the CRL}
+    return_content: ${21:# If set to V(true), will return the (current or generated) CRL's content as RV(crl)}
+    revoked_certificates: ${22:# List of certificates to be revoked}
+    selevel: ${23:# The level part of the SELinux filesystem object context}
+    serole: ${24:# The role part of the SELinux filesystem object context}
+    setype: ${25:# The type part of the SELinux filesystem object context}
+    seuser: ${26:# The user part of the SELinux filesystem object context}
+    state: ${27:# Whether the CRL file should exist or not, taking action if the state is different from what is stated}
+    unsafe_writes: ${28:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
   tags:
     - community
     - crypto

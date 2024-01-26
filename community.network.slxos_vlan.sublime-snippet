@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage VLANs on Extreme Networks SLX-OS network devices}
   community.network.slxos_vlan:
-    name: ${2:# Name of the VLAN}
-    vlan_id: ${3:# ID of the VLAN}
+    aggregate: ${2:# List of VLANs definitions}
+    delay: ${3:# Delay the play should wait to check for declarative intent params values}
     interfaces: ${4:# List of interfaces that should be associated to the VLAN}
-    delay: ${5:# Delay the play should wait to check for declarative intent params values}
-    aggregate: ${6:# List of VLANs definitions}
-    purge: ${7:# Purge VLANs not defined in the I(aggregate) parameter}
-    state: ${8:# State of the VLAN configuration}
+    name: ${5:# Name of the VLAN}
+    purge: ${6:# Purge VLANs not defined in the I(aggregate) parameter}
+    state: ${7:# State of the VLAN configuration}
+    vlan_id: ${8:# ID of the VLAN}
   tags:
     - community
     - network

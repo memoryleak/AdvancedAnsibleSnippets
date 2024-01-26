@@ -1,22 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage arbitrary ports/services with firewalld}
   ansible.posix.firewalld:
-    service: ${2:# Name of a service to add/remove to/from firewalld}
-    port: ${3:# Name of a port or port range to add/remove to/from firewalld}
-    port_forward: ${4:# Port and protocol to forward using firewalld}
-    rich_rule: ${5:# Rich rule to add/remove to/from firewalld}
-    source: ${6:# The source/network you would like to add/remove to/from firewalld}
-    interface: ${7:# The interface you would like to add/remove to/from a zone in firewalld}
-    icmp_block: ${8:# The ICMP block you would like to add/remove to/from a zone in firewalld}
-    icmp_block_inversion: ${9:# Enable/Disable inversion of ICMP blocks for a zone in firewalld}
-    zone: ${10:# The firewalld zone to add/remove to/from}
-    permanent: ${11:# Should this configuration be in the running firewalld configuration or persist across reboots}
-    immediate: ${12:# Should this configuration be applied immediately, if set as permanent}
-    state: ${13:# Enable or disable a setting}
-    timeout: ${14:# The amount of time in seconds the rule should be in effect for when non-permanent}
-    masquerade: ${15:# The masquerade setting you would like to enable/disable to/from zones within firewalld}
-    offline: ${16:# Whether to run this module even when firewalld is offline}
-    target: ${17:# firewalld Zone target}
+    icmp_block: ${2:# The ICMP block you would like to add/remove to/from a zone in firewalld}
+    icmp_block_inversion: ${3:# Enable/Disable inversion of ICMP blocks for a zone in firewalld}
+    immediate: ${4:# Should this configuration be applied immediately, if set as permanent}
+    interface: ${5:# The interface you would like to add/remove to/from a zone in firewalld}
+    masquerade: ${6:# The masquerade setting you would like to enable/disable to/from zones within firewalld}
+    offline: ${7:# Whether to run this module even when firewalld is offline}
+    permanent: ${8:# Should this configuration be in the running firewalld configuration or persist across reboots}
+    port: ${9:# Name of a port or port range to add/remove to/from firewalld}
+    port_forward: ${10:# Port and protocol to forward using firewalld}
+    protocol: ${11:# Name of a protocol to add/remove to/from firewalld}
+    rich_rule: ${12:# Rich rule to add/remove to/from firewalld}
+    service: ${13:# Name of a service to add/remove to/from firewalld}
+    source: ${14:# The source/network you would like to add/remove to/from firewalld}
+    state: ${15:# Enable or disable a setting}
+    target: ${16:# firewalld Zone target}
+    timeout: ${17:# The amount of time in seconds the rule should be in effect for when non-permanent}
+    zone: ${18:# The firewalld zone to add/remove to/from}
   tags:
     - firewalld]]></content>
   <tabTrigger>ansible.posix.firewalld</tabTrigger>

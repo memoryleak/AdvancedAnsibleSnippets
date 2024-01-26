@@ -1,22 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add or remove PostgreSQL extensions from a database}
   community.postgresql.postgresql_ext:
-    name: ${2:# Name of the extension to add or remove}
-    db: ${3:# Name of the database to add or remove the extension to/from}
-    schema: ${4:# Name of the schema to add the extension to}
-    session_role: ${5:# Switch to session_role after connecting}
-    state: ${6:# The database extension state}
-    cascade: ${7:# Automatically install/remove any extensions that this extension depends on that are not already installed/removed (supported since PostgreSQL 9}
+    ca_cert: ${2:# Specifies the name of a file containing SSL certificate authority (CA) certificate(s)}
+    cascade: ${3:# Automatically install/remove any extensions that this extension depends on that are not already installed/removed (supported since PostgreSQL 9}
+    connect_params: ${4:# Any additional parameters to be passed to libpg}
+    db: ${5:# Name of the database to add or remove the extension to/from}
+    login_host: ${6:# Host running the database}
+    login_password: ${7:# The password this module should use to establish its PostgreSQL session}
     login_unix_socket: ${8:# Path to a Unix domain socket for local connections}
-    ssl_mode: ${9:# Determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the server}
-    ca_cert: ${10:# Specifies the name of a file containing SSL certificate authority (CA) certificate(s)}
-    version: ${11:# Extension version to add or update to}
-    trust_input: ${12:# If C(false), check whether values of parameters I(ext), I(schema), I(version), I(session_role) are potentially dangerous}
-    login_user: ${13:# The username this module should use to establish its PostgreSQL session}
-    login_password: ${14:# The password this module should use to establish its PostgreSQL session}
-    login_host: ${15:# Host running the database}
-    port: ${16:# Database port to connect to}
-    connect_params: ${17:# Any additional parameters to be passed to libpg}
+    login_user: ${9:# The username this module should use to establish its PostgreSQL session}
+    name: ${10:# Name of the extension to add or remove}
+    port: ${11:# Database port to connect to}
+    schema: ${12:# Name of the schema to add the extension to}
+    session_role: ${13:# Switch to session_role after connecting}
+    ssl_cert: ${14:# Specifies the file name of the client SSL certificate}
+    ssl_key: ${15:# Specifies the location for the secret key used for the client certificate}
+    ssl_mode: ${16:# Determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the server}
+    state: ${17:# The database extension state}
+    trust_input: ${18:# If C(false), check whether values of parameters I(ext), I(schema), I(version), I(session_role) are potentially dangerous}
+    version: ${19:# Extension version to add or update to}
   tags:
     - community
     - postgresql

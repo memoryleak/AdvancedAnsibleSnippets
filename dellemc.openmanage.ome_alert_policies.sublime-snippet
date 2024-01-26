@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage OME alert policies}
+  dellemc.openmanage.ome_alert_policies:
+    actions: ${2:# Actions to be triggered for the alert policy}
+    all_devices: ${3:# This option indicates whether the alert policy is applicable to all the discovered and undiscovered devices or not}
+    any_undiscovered_devices: ${4:# This option indicates whether the alert policy is applicable to any undiscovered devices or not}
+    ca_path: ${5:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    category: ${6:# Category of the alerts received}
+    date_and_time: ${7:# Specifies the schedule for when the alert policy is applicable}
+    description: ${8:# Description for the alert policy}
+    device_group: ${9:# List of device group names on which the alert policy is applicable}
+    device_service_tag: ${10:# List of device service tags on which the alert policy will be applicable}
+    enable: ${11:# C(true) allows you to enable an alert policy}
+    hostname: ${12:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    message_file: ${13:# Local path of a CSV formatted file with message IDs}
+    message_ids: ${14:# List of Message ids}
+    name: ${15:# Name of an alert policy or a list of alert policies}
+    new_name: ${16:# New name for the alert policy}
+    password: ${17:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${18:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    severity: ${19:# Severity of the alert policy}
+    specific_undiscovered_devices: ${20:# List of undiscovered IPs, hostnames, or range of IPs of devices on which the alert policy is applicable}
+    state: ${21:# C(present) allows you to create an alert policy or update if the policy name already exists}
+    timeout: ${22:# The socket level timeout in seconds}
+    username: ${23:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    validate_certs: ${24:# If C(false), the SSL certificates will not be validated}
+  tags:
+    - dellemc
+    - openmanage
+    - ome_alert_policies]]></content>
+  <tabTrigger>dellemc.openmanage.ome_alert_policies</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage OME alert policies</description>
+</snippet>

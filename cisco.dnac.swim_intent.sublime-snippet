@@ -2,15 +2,16 @@
   <content><![CDATA[- name: ${1:Intent module for SWIM related functions}
   cisco.dnac.swim_intent:
     config: ${2:# List of details of SWIM image being managed}
-    dnac_host: ${3:# The Cisco DNA Center hostname}
-    dnac_port: ${4:# The Cisco DNA Center port}
-    dnac_username: ${5:# The Cisco DNA Center username to authenticate}
+    dnac_debug: ${3:# Flag for Cisco DNA Center SDK to enable debugging}
+    dnac_host: ${4:# The Cisco DNA Center hostname}
+    dnac_log: ${5:# Flag for logging playbook execution details}
     dnac_password: ${6:# The Cisco DNA Center password to authenticate}
-    dnac_verify: ${7:# Flag to enable or disable SSL certificate verification}
-    dnac_version: ${8:# Informs the SDK which version of Cisco DNA Center to use}
-    dnac_debug: ${9:# Flag for Cisco DNA Center SDK to enable debugging}
-    dnac_log: ${10:# Flag for logging playbook execution details}
-    validate_response_schema: ${11:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
+    dnac_port: ${7:# The Cisco DNA Center port}
+    dnac_username: ${8:# The Cisco DNA Center username to authenticate}
+    dnac_verify: ${9:# Flag to enable or disable SSL certificate verification}
+    dnac_version: ${10:# Informs the SDK which version of Cisco DNA Center to use}
+    state: ${11:# The state of DNAC after module completion}
+    validate_response_schema: ${12:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
   tags:
     - cisco
     - dnac

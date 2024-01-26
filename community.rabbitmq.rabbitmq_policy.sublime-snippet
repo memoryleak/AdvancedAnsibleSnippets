@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage the state of policies in RabbitMQ}
   community.rabbitmq.rabbitmq_policy:
-    name: ${2:# The name of the policy to manage}
-    vhost: ${3:# The name of the vhost to apply to}
-    apply_to: ${4:# What the policy applies to}
+    apply_to: ${2:# What the policy applies to}
+    name: ${3:# The name of the policy to manage}
+    node: ${4:# Erlang node name of the rabbit we wish to configure}
     pattern: ${5:# A regex of queues to apply the policy to}
-    tags: ${6:# A dict or string describing the policy}
-    priority: ${7:# The priority of the policy}
-    node: ${8:# Erlang node name of the rabbit we wish to configure}
-    state: ${9:# The state of the policy}
+    priority: ${6:# The priority of the policy}
+    state: ${7:# The state of the policy}
+    tags: ${8:# A dict or string describing the policy}
+    vhost: ${9:# The name of the vhost to apply to}
   tags:
     - community
     - rabbitmq

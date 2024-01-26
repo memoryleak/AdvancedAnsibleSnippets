@@ -1,26 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP create, delete, or modify vserver security file-directory policy}
   netapp.ontap.na_ontap_file_directory_policy:
-    state: ${2:# Whether the specified policy or task should exist or not}
-    vserver: ${3:# Specifies the vserver for the policy}
-    policy_name: ${4:# Specifies the name of the policy}
-    access_control: ${5:# Specifies the access control of task to be applied}
-    ntfs_mode: ${6:# Specifies NTFS Propagation Mode}
-    ntfs_sd: ${7:# Specifies NTFS security descriptor identifier}
-    path: ${8:# Specifies the file or folder path of the task}
-    security_type: ${9:# Specifies the type of security}
-    ignore_broken_symlinks: ${10:# Skip Broken Symlinks}
-    hostname: ${11:# The hostname or IP address of the ONTAP instance}
-    username: ${12:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    access_control: ${2:# Specifies the access control of task to be applied}
+    cert_filepath: ${3:# path to SSL client cert file (}
+    feature_flags: ${4:# Enable or disable a new feature}
+    hostname: ${5:# The hostname or IP address of the ONTAP instance}
+    http_port: ${6:# Override the default port (80 or 443) with this port}
+    https: ${7:# Enable and disable https}
+    ignore_broken_symlinks: ${8:# Skip Broken Symlinks}
+    key_filepath: ${9:# path to SSL client key file}
+    ntfs_mode: ${10:# Specifies NTFS Propagation Mode}
+    ntfs_sd: ${11:# Specifies NTFS security descriptor identifier}
+    ontapi: ${12:# The ontap api version to use}
     password: ${13:# Password for the specified user}
-    cert_filepath: ${14:# path to SSL client cert file (}
-    key_filepath: ${15:# path to SSL client key file}
-    https: ${16:# Enable and disable https}
-    validate_certs: ${17:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${18:# Override the default port (80 or 443) with this port}
-    ontapi: ${19:# The ontap api version to use}
-    use_rest: ${20:# This module only support ZAPI and will can not be swtich to REST}
-    feature_flags: ${21:# Enable or disable a new feature}
+    path: ${14:# Specifies the file or folder path of the task}
+    policy_name: ${15:# Specifies the name of the policy}
+    security_type: ${16:# Specifies the type of security}
+    state: ${17:# Whether the specified policy or task should exist or not}
+    use_rest: ${18:# This module only support ZAPI and will can not be swtich to REST}
+    username: ${19:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${20:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${21:# Specifies the vserver for the policy}
   tags:
     - netapp
     - ontap

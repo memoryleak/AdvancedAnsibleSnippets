@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Get the status of a Lifecycle Controller job}
   dellemc.openmanage.idrac_lifecycle_controller_job_status_info:
-    job_id: ${2:# JOB ID in the format 'JID_123456789012'}
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
     idrac_ip: ${3:# iDRAC IP Address}
-    idrac_user: ${4:# iDRAC username}
-    idrac_password: ${5:# iDRAC user password}
-    idrac_port: ${6:# iDRAC port}
-    validate_certs: ${7:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${8:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${9:# The socket level timeout in seconds}
+    idrac_password: ${4:# iDRAC user password}
+    idrac_port: ${5:# iDRAC port}
+    idrac_user: ${6:# iDRAC username}
+    job_id: ${7:# JOB ID in the format 'JID_123456789012'}
+    timeout: ${8:# The socket level timeout in seconds}
+    validate_certs: ${9:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

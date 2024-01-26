@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures WWNN or WWPN pools on Cisco UCS Manager}
   cisco.ucs.ucs_wwn_pool:
-    state: ${2:# If C(present), will verify WWNNs/WWPNs are present and will create if needed}
-    name: ${3:# The name of the World Wide Node Name (WWNN) or World Wide Port Name (WWPN) pool}
-    purpose: ${4:# Specify whether this is a node (WWNN) or port (WWPN) pool}
-    description: ${5:# A description of the WWNN or WWPN pool}
-    order: ${6:# The Assignment Order field}
-    first_addr: ${7:# The first initiator in the World Wide Name (WWN) block}
-    last_addr: ${8:# The last initiator in the World Wide Name (WWN) block}
-    org_dn: ${9:# Org dn (distinguished name)}
-    hostname: ${10:# IP address or hostname of Cisco UCS Manager}
-    username: ${11:# Username for Cisco UCS Manager authentication}
-    password: ${12:# Password for Cisco UCS Manager authentication}
-    port: ${13:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
-    use_ssl: ${14:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    use_proxy: ${15:# If C(no), will not use the proxy as defined by system environment variable}
-    proxy: ${16:# If use_proxy is no, specfies proxy to be used for connection}
+    description: ${2:# A description of the WWNN or WWPN pool}
+    first_addr: ${3:# The first initiator in the World Wide Name (WWN) block}
+    hostname: ${4:# IP address or hostname of Cisco UCS Manager}
+    last_addr: ${5:# The last initiator in the World Wide Name (WWN) block}
+    name: ${6:# The name of the World Wide Node Name (WWNN) or World Wide Port Name (WWPN) pool}
+    order: ${7:# The Assignment Order field}
+    org_dn: ${8:# Org dn (distinguished name)}
+    password: ${9:# Password for Cisco UCS Manager authentication}
+    port: ${10:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    proxy: ${11:# If use_proxy is no, specfies proxy to be used for connection}
+    purpose: ${12:# Specify whether this is a node (WWNN) or port (WWPN) pool}
+    state: ${13:# If C(present), will verify WWNNs/WWPNs are present and will create if needed}
+    use_proxy: ${14:# If C(no), will not use the proxy as defined by system environment variable}
+    use_ssl: ${15:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${16:# Username for Cisco UCS Manager authentication}
   tags:
     - cisco
     - ucs

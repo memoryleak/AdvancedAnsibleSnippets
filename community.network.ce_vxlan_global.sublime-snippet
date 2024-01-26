@@ -2,14 +2,14 @@
   <content><![CDATA[- name: ${1:Manages global attributes of VXLAN and bridge domain on HUAWEI CloudEngine devices}
   community.network.ce_vxlan_global:
     bridge_domain_id: ${2:# Specifies a bridge domain ID}
-    tunnel_mode_vxlan: ${3:# Set the tunnel mode to VXLAN when configuring the VXLAN feature}
-    nvo3_prevent_loops: ${4:# Loop prevention of VXLAN traffic in non-enhanced mode}
-    nvo3_acl_extend: ${5:# Enabling or disabling the VXLAN ACL extension function}
+    nvo3_acl_extend: ${3:# Enabling or disabling the VXLAN ACL extension function}
+    nvo3_ecmp_hash: ${4:# Load balancing of VXLAN packets through ECMP in optimized mode}
+    nvo3_eth_trunk_hash: ${5:# Eth-Trunk from load balancing VXLAN packets in optimized mode}
     nvo3_gw_enhanced: ${6:# Configuring the Layer 3 VXLAN Gateway to Work in Non-loopback Mode}
-    nvo3_service_extend: ${7:# Enabling or disabling the VXLAN service extension function}
-    nvo3_eth_trunk_hash: ${8:# Eth-Trunk from load balancing VXLAN packets in optimized mode}
-    nvo3_ecmp_hash: ${9:# Load balancing of VXLAN packets through ECMP in optimized mode}
-    state: ${10:# Determines whether the config should be present or not on the device}
+    nvo3_prevent_loops: ${7:# Loop prevention of VXLAN traffic in non-enhanced mode}
+    nvo3_service_extend: ${8:# Enabling or disabling the VXLAN service extension function}
+    state: ${9:# Determines whether the config should be present or not on the device}
+    tunnel_mode_vxlan: ${10:# Set the tunnel mode to VXLAN when configuring the VXLAN feature}
   tags:
     - community
     - network

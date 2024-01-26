@@ -1,35 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP fPolicy external engine configuration}
   netapp.ontap.na_ontap_fpolicy_ext_engine:
-    state: ${2:# Whether the fPolicy external engine is present or not}
-    vserver: ${3:# the name of the vserver to create the external engine on}
-    name: ${4:# Name of the external engine}
-    certificate_ca: ${5:# Certificate authority name}
-    certificate_common_name: ${6:# FQDN or custom common name of certificate}
-    certificate_serial: ${7:# Serial number of certificate}
-    extern_engine_type: ${8:# External engine type}
-    is_resiliency_enabled: ${9:# Indicates if the resiliency with this engine is required}
-    max_connection_retries: ${10:# Number of times storage appliance will attempt to establish a broken connection to FPolicy server}
-    max_server_reqs: ${11:# Maximum number of outstanding screen requests that will be queued for an FPolicy Server}
-    port: ${12:# Port number of the FPolicy server application}
-    primary_servers: ${13:# Primary FPolicy servers}
-    recv_buffer_size: ${14:# Receive buffer size of connected socket for FPolicy Server}
-    resiliency_directory_path: ${15:# Directory path under Vserver for storing file access notifications}
-    secondary_servers: ${16:# Secondary FPolicy servers}
-    send_buffer_size: ${17:# Send buffer size of connected socket for FPolicy Server}
-    ssl_option: ${18:# SSL option for external communication}
-    hostname: ${19:# The hostname or IP address of the ONTAP instance}
-    username: ${20:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${21:# Password for the specified user}
-    cert_filepath: ${22:# path to SSL client cert file (}
-    key_filepath: ${23:# path to SSL client key file}
-    https: ${24:# Enable and disable https}
-    validate_certs: ${25:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${26:# Override the default port (80 or 443) with this port}
-    ontapi: ${27:# The ontap api version to use}
-    use_rest: ${28:# Whether to use REST or ZAPI}
-    feature_flags: ${29:# Enable or disable a new feature}
-    force_ontap_version: ${30:# Override the cluster ONTAP version when using REST}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    certificate_ca: ${3:# Certificate authority name}
+    certificate_common_name: ${4:# FQDN or custom common name of certificate}
+    certificate_serial: ${5:# Serial number of certificate}
+    extern_engine_type: ${6:# External engine type}
+    feature_flags: ${7:# Enable or disable a new feature}
+    force_ontap_version: ${8:# Override the cluster ONTAP version when using REST}
+    hostname: ${9:# The hostname or IP address of the ONTAP instance}
+    http_port: ${10:# Override the default port (80 or 443) with this port}
+    https: ${11:# Enable and disable https}
+    is_resiliency_enabled: ${12:# Indicates if the resiliency with this engine is required}
+    key_filepath: ${13:# path to SSL client key file}
+    max_connection_retries: ${14:# Number of times storage appliance will attempt to establish a broken connection to FPolicy server}
+    max_server_reqs: ${15:# Maximum number of outstanding screen requests that will be queued for an FPolicy Server}
+    name: ${16:# Name of the external engine}
+    ontapi: ${17:# The ontap api version to use}
+    password: ${18:# Password for the specified user}
+    port: ${19:# Port number of the FPolicy server application}
+    primary_servers: ${20:# Primary FPolicy servers}
+    recv_buffer_size: ${21:# Receive buffer size of connected socket for FPolicy Server}
+    resiliency_directory_path: ${22:# Directory path under Vserver for storing file access notifications}
+    secondary_servers: ${23:# Secondary FPolicy servers}
+    send_buffer_size: ${24:# Send buffer size of connected socket for FPolicy Server}
+    ssl_option: ${25:# SSL option for external communication}
+    state: ${26:# Whether the fPolicy external engine is present or not}
+    use_rest: ${27:# Whether to use REST or ZAPI}
+    username: ${28:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${29:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${30:# the name of the vserver to create the external engine on}
   tags:
     - netapp
     - ontap

@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Fetch information about Host Errata}
   theforeman.foreman.host_errata_info:
-    host: ${2:# Name of the host to fetch errata for}
-    content_view: ${3:# Calculate Applicable Errata based on a particular Content View}
+    content_view: ${2:# Calculate Applicable Errata based on a particular Content View}
+    host: ${3:# Name of the host to fetch errata for}
     lifecycle_environment: ${4:# Calculate Applicable Errata based on a particular Lifecycle Environment}
-    server_url: ${5:# URL of the Foreman server}
-    username: ${6:# Username accessing the Foreman server}
+    location: ${5:# Label of the Location to scope the search for}
+    organization: ${6:# Name of the Organization to scope the search for}
     password: ${7:# Password of the user accessing the Foreman server}
-    validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
-    location: ${9:# Label of the Location to scope the search for}
-    organization: ${10:# Name of the Organization to scope the search for}
-    search: ${11:# Search query to use}
+    search: ${8:# Search query to use}
+    server_url: ${9:# URL of the Foreman server}
+    username: ${10:# Username accessing the Foreman server}
+    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

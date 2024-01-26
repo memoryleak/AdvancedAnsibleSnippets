@@ -1,0 +1,72 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Update Zabbix global settings}
+  community.zabbix.zabbix_settings:
+    alert_usrgrp: ${2:# A name of user group which user belongs to receive an alerm message when database down}
+    auditlog_enabled: ${3:# Enable audit logging if C(true)}
+    blink_period: ${4:# A time of period for blinking status changed triggers}
+    connect_timeout: ${5:# A time of connection timeout with Zabbix server}
+    custom_color: ${6:# Custom event color settings will be activated if C(true)}
+    default_inventory_mode: ${7:# A default value for host inventory mode}
+    default_lang: ${8:# Default language for users}
+    default_theme: ${9:# Default theme for users}
+    default_timezone: ${10:# Default time zone for users}
+    discovery_group: ${11:# A hostgroup which discovered hosts will belong to}
+    frontend_url: ${12:# A URL of frontend}
+    geomaps_attribution: ${13:# A text of Geomap attribution}
+    geomaps_max_zoom: ${14:# Max zoom level of geomap}
+    geomaps_tile_provider: ${15:# A provider of Geomap tile}
+    geomaps_tile_url: ${16:# A URL of geomap tile}
+    history_period: ${17:# Max period of displaying history data}
+    http_login_password: ${18:# Basic Auth password}
+    http_login_user: ${19:# Basic Auth login}
+    iframe_sandboxing_enabled: ${20:# The Zabbix uses iframe sandboxing if C(true)}
+    iframe_sandboxing_exceptions: ${21:# A text of iframe sandboxing exceptions}
+    item_test_timeout: ${22:# A time of network timeout for item tests}
+    login_attempts: ${23:# A number of login attempts you can try with non blocked}
+    login_block: ${24:# A time of interval to reset login attempts when the user is blocked}
+    max_in_table: ${25:# Max count of elements to show inside table cell}
+    max_overview_table_size: ${26:# Max number of columns and rows in overview tables}
+    max_period: ${27:# Max period for time filter}
+    media_type_test_timeout: ${28:# A time of network timeout for media type test}
+    ok_ack_color: ${29:# A custom color for acknowledged RESOLVED events}
+    ok_ack_style: ${30:# Acknowledged RESOLVED events blink if C(true)}
+    ok_period: ${31:# A time of period for displaying OK triggers}
+    ok_unack_color: ${32:# A custom color for unacknowledged RESOLVED events}
+    ok_unack_style: ${33:# Unacknowledged RESOLVED events blink if C(true)}
+    period_default: ${34:# Default period value for time filter}
+    problem_ack_color: ${35:# A custom color for acknowledged PROBLEM events}
+    problem_ack_style: ${36:# Acknowledged PROBLEM events blink if C(true)}
+    problem_unack_color: ${37:# A custom color for unacknowledged PROBLEM events}
+    problem_unack_style: ${38:# Unacknowledged PROBLEM events blink if C(true)}
+    report_test_timeout: ${39:# A time of network timeout for scheduled report test}
+    script_timeout: ${40:# A time of network timeout for script execution}
+    search_limit: ${41:# A number of search and filter results limit}
+    server_check_interval: ${42:# The Zabbix shows 'Zabbix server is down' warning if C(true)}
+    severity_color_0: ${43:# A custom color for not classified severity}
+    severity_color_1: ${44:# A custom color for information severity}
+    severity_color_2: ${45:# A custom color for warning severity}
+    severity_color_3: ${46:# A custom color for average severity}
+    severity_color_4: ${47:# A custom color for high severity}
+    severity_color_5: ${48:# A custom color for disaster severity}
+    severity_name_0: ${49:# A custom name for not classified severity}
+    severity_name_1: ${50:# A custom name for information severity}
+    severity_name_2: ${51:# A custom name for warning severity}
+    severity_name_3: ${52:# A custom name for average severity}
+    severity_name_4: ${53:# A custom name for high severity}
+    severity_name_5: ${54:# A custom name for disaster severity}
+    show_technical_errors: ${55:# The Zabbix shows PHP and SQL technical errors to users who are non-Super admin or belong to user groups with debug mode not enabled if C(true)}
+    snmptrap_logging: ${56:# Logging unmatched SNMP traps will be ebabled if C(true)}
+    socket_timeout: ${57:# A time of network default timeout}
+    uri_valid_schemes: ${58:# A list of valid URI scheme}
+    validate_uri_schemes: ${59:# Validate URI schemes if C(true)}
+    vault_provider: ${60:# A name of vault provider}
+    work_period: ${61:# Working time setting}
+    x_frame_options: ${62:# A text of X-Frame-Options of HTTP header}
+  tags:
+    - community
+    - zabbix
+    - zabbix_settings]]></content>
+  <tabTrigger>community.zabbix.zabbix_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Update Zabbix global settings</description>
+</snippet>

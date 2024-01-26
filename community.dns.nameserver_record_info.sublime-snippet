@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Look up all records of a type from all nameservers for a DNS name}
+  community.dns.nameserver_record_info:
+    always_ask_default_resolver: ${2:# When set to V(true) (default), will use the default resolver to find the authoritative nameservers of a subzone}
+    name: ${3:# A list of DNS names whose nameservers to retrieve}
+    query_retry: ${4:# Number of retries for DNS query timeouts}
+    query_timeout: ${5:# Timeout per DNS query in seconds}
+    servfail_retries: ${6:# How often to retry on SERVFAIL errors}
+    type: ${7:# The record type to retrieve}
+  tags:
+    - community
+    - dns
+    - nameserver_record_info]]></content>
+  <tabTrigger>community.dns.nameserver_record_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Look up all records of a type from all nameservers for a DNS name</description>
+</snippet>

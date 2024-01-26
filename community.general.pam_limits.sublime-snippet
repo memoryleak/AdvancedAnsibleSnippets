@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Modify Linux PAM limits}
   community.general.pam_limits:
-    domain: ${2:# A username, @groupname, wildcard, UID/GID range}
-    limit_type: ${3:# Limit type, see C(man 5 limits}
-    limit_item: ${4:# The limit to be set}
-    value: ${5:# The value of the limit}
-    backup: ${6:# Create a backup file including the timestamp information so you can get the original file back if you somehow clobbered it incorrectly}
-    use_min: ${7:# If set to C(true), the minimal value will be used or conserved}
-    use_max: ${8:# If set to C(true), the maximal value will be used or conserved}
-    dest: ${9:# Modify the limits}
-    comment: ${10:# Comment associated with the limit}
+    backup: ${2:# Create a backup file including the timestamp information so you can get the original file back if you somehow clobbered it incorrectly}
+    comment: ${3:# Comment associated with the limit}
+    dest: ${4:# Modify the limits}
+    domain: ${5:# A username, @groupname, wildcard, UID/GID range}
+    limit_item: ${6:# The limit to be set}
+    limit_type: ${7:# Limit type, see C(man 5 limits}
+    use_max: ${8:# If set to V(true), the maximal value will be used or conserved}
+    use_min: ${9:# If set to V(true), the minimal value will be used or conserved}
+    value: ${10:# The value of the limit}
   tags:
     - community
     - general

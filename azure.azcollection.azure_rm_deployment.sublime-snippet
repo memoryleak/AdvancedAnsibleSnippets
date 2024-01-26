@@ -1,35 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create or destroy Azure Resource Manager template deployments}
   azure.azcollection.azure_rm_deployment:
-    resource_group: ${2:# The resource group name to use or create to host the deployed template}
-    name: ${3:# The name of the deployment to be tracked in the resource group deployment history}
-    location: ${4:# The geo-locations in which the resource group will be located}
-    deployment_mode: ${5:# In incremental mode, resources are deployed without deleting existing resources that are not included in the template}
-    template: ${6:# A hash containing the templates inline}
-    template_link: ${7:# Uri of file containing the template body}
-    parameters: ${8:# A hash of all the required template variables for the deployment template}
-    parameters_link: ${9:# Uri of file containing the parameters body}
-    wait_for_deployment_completion: ${10:# Whether or not to block until the deployment has completed}
-    wait_for_deployment_polling_period: ${11:# Time (in seconds) to wait between polls when waiting for deployment completion}
-    state: ${12:# If I(state=present), template will be created}
-    ad_user: ${13:# Active Directory username}
-    password: ${14:# Active Directory user password}
-    profile: ${15:# Security profile found in ~/}
-    subscription_id: ${16:# Your Azure subscription Id}
-    client_id: ${17:# Azure client ID}
-    secret: ${18:# Azure client secret}
-    tenant: ${19:# Azure tenant ID}
-    cloud_environment: ${20:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${21:# Azure AD authority url}
-    cert_validation_mode: ${22:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${23:# Controls the source of the credentials to use for authentication}
-    api_profile: ${24:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${25:# Parent argument}
-    log_mode: ${26:# Parent argument}
-    x509_certificate_path: ${27:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${28:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${29:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${30:# Use to control if tags field is canonical or just appends to existing tags}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    deployment_mode: ${10:# In incremental mode, resources are deployed without deleting existing resources that are not included in the template}
+    location: ${11:# The geo-locations in which the resource group will be located}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    name: ${14:# The name of the deployment to be tracked in the resource group deployment history}
+    parameters: ${15:# A hash of all the required template variables for the deployment template}
+    parameters_link: ${16:# Uri of file containing the parameters body}
+    password: ${17:# Active Directory user password}
+    profile: ${18:# Security profile found in ~/}
+    resource_group: ${19:# The resource group name to use or create to host the deployed template}
+    secret: ${20:# Azure client secret}
+    state: ${21:# If I(state=present), template will be created}
+    subscription_id: ${22:# Your Azure subscription Id}
+    tags: ${23:# Dictionary of string:string pairs to assign as metadata to the object}
+    template: ${24:# A hash containing the templates inline}
+    template_link: ${25:# Uri of file containing the template body}
+    tenant: ${26:# Azure tenant ID}
+    thumbprint: ${27:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    wait_for_deployment_completion: ${28:# Whether or not to block until the deployment has completed}
+    wait_for_deployment_polling_period: ${29:# Time (in seconds) to wait between polls when waiting for deployment completion}
+    x509_certificate_path: ${30:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

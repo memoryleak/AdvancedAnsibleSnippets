@@ -1,25 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage key-value pairs in AWS Systems Manager Parameter Store}
   community.aws.ssm_parameter:
-    name: ${2:# Parameter key name}
-    description: ${3:# Parameter key description}
-    value: ${4:# Parameter value}
-    state: ${5:# Creates or modifies an existing parameter}
-    string_type: ${6:# Parameter String type}
-    decryption: ${7:# Work with SecureString type to get plain text secrets}
-    key_id: ${8:# AWS KMS key to decrypt the secrets}
-    overwrite_value: ${9:# Option to overwrite an existing value if it already exists}
-    tier: ${10:# Parameter store tier type}
-    access_key: ${11:# AWS access key ID}
-    secret_key: ${12:# AWS secret access key}
-    session_token: ${13:# AWS STS session token for use with temporary credentials}
-    profile: ${14:# A named AWS profile to use for authentication}
-    endpoint_url: ${15:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${16:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${18:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${19:# Use a C(botocore}
-    region: ${20:# The AWS region to use}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    decryption: ${6:# Work with SecureString type to get plain text secrets}
+    description: ${7:# Parameter key description}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
+    key_id: ${9:# AWS KMS key to decrypt the secrets}
+    name: ${10:# Parameter key name}
+    overwrite_value: ${11:# Option to overwrite an existing value if it already exists}
+    profile: ${12:# A named AWS profile to use for authentication}
+    purge_tags: ${13:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${14:# The AWS region to use}
+    secret_key: ${15:# AWS secret access key}
+    session_token: ${16:# AWS STS session token for use with temporary credentials}
+    state: ${17:# Creates or modifies an existing parameter}
+    string_type: ${18:# Parameter String type}
+    tags: ${19:# A dictionary representing the tags to be applied to the resource}
+    tier: ${20:# Parameter store tier type}
+    validate_certs: ${21:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    value: ${22:# Parameter value}
   tags:
     - community
     - aws

@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP Vserver peering}
   netapp.ontap.na_ontap_vserver_peer:
-    state: ${2:# Whether the specified vserver peer should exist or not}
-    vserver: ${3:# Specifies name of the source Vserver in the relationship}
-    applications: ${4:# List of applications which can make use of the peering relationship}
-    peer_vserver: ${5:# Specifies name of the peer Vserver in the relationship}
-    peer_cluster: ${6:# Specifies name of the peer Cluster}
-    local_name_for_peer: ${7:# Specifies local name of the peer Vserver in the relationship}
-    local_name_for_source: ${8:# Specifies local name of the source Vserver in the relationship}
-    dest_hostname: ${9:# DEPRECATED - please use C(peer_options)}
-    dest_username: ${10:# DEPRECATED - please use C(peer_options)}
-    dest_password: ${11:# DEPRECATED - please use C(peer_options)}
-    hostname: ${12:# The hostname or IP address of the ONTAP instance}
-    username: ${13:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${14:# Password for the specified user}
-    cert_filepath: ${15:# path to SSL client cert file (}
-    key_filepath: ${16:# path to SSL client key file}
-    https: ${17:# Enable and disable https}
-    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${19:# Override the default port (80 or 443) with this port}
-    ontapi: ${20:# The ontap api version to use}
+    applications: ${2:# List of applications which can make use of the peering relationship}
+    cert_filepath: ${3:# path to SSL client cert file (}
+    dest_hostname: ${4:# DEPRECATED - please use C(peer_options)}
+    dest_password: ${5:# DEPRECATED - please use C(peer_options)}
+    dest_username: ${6:# DEPRECATED - please use C(peer_options)}
+    feature_flags: ${7:# Enable or disable a new feature}
+    force_ontap_version: ${8:# Override the cluster ONTAP version when using REST}
+    hostname: ${9:# The hostname or IP address of the ONTAP instance}
+    http_port: ${10:# Override the default port (80 or 443) with this port}
+    https: ${11:# Enable and disable https}
+    key_filepath: ${12:# path to SSL client key file}
+    local_name_for_peer: ${13:# Specifies local name of the peer Vserver in the relationship}
+    local_name_for_source: ${14:# Specifies local name of the source Vserver in the relationship}
+    ontapi: ${15:# The ontap api version to use}
+    password: ${16:# Password for the specified user}
+    peer_cluster: ${17:# Specifies name of the peer Cluster}
+    peer_options: ${18:# IP address and connection options for the peer system}
+    peer_vserver: ${19:# Specifies name of the peer Vserver in the relationship}
+    state: ${20:# Whether the specified vserver peer should exist or not}
     use_rest: ${21:# Whether to use REST or ZAPI}
-    feature_flags: ${22:# Enable or disable a new feature}
-    force_ontap_version: ${23:# Override the cluster ONTAP version when using REST}
-    peer_options: ${24:# IP address and connection options for the peer system}
+    username: ${22:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${23:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${24:# Specifies name of the source Vserver in the relationship}
   tags:
     - netapp
     - ontap

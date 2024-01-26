@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Executes a command in a running container}
+  containers.podman.podman_container_exec:
+    argv: ${2:# Passes the command as a list rather than a string}
+    command: ${3:# The command to run in the container}
+    detach: ${4:# If true, the command runs in the background}
+    env: ${5:# Set environment variables}
+    name: ${6:# Name of the container where the command is executed}
+    privileged: ${7:# Give extended privileges to the container}
+    tty: ${8:# Allocate a pseudo-TTY}
+    user: ${9:# The username or UID used and, optionally, the groupname or GID for the specified command}
+    workdir: ${10:# Working directory inside the container}
+  tags:
+    - containers
+    - podman
+    - podman_container_exec]]></content>
+  <tabTrigger>containers.podman.podman_container_exec</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Executes a command in a running container</description>
+</snippet>

@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage VMware protocol-endpoints on Pure Storage FlashArrays}
   purestorage.flasharray.purefa_endpoint:
-    name: ${2:# The name of the endpoint}
-    state: ${3:# Define whether the endpoint should exist or not}
-    eradicate: ${4:# Define whether to eradicate the endpoint on delete or leave in trash}
-    rename: ${5:# Value to rename the specified endpoint to}
+    api_token: ${2:# FlashArray API token for admin privileged user}
+    eradicate: ${3:# Define whether to eradicate the endpoint on delete or leave in trash}
+    fa_url: ${4:# FlashArray management IPv4 address or Hostname}
+    hgroup: ${5:# name of hostgroup to attach endpoint to}
     host: ${6:# name of host to attach endpoint to}
-    hgroup: ${7:# name of hostgroup to attach endpoint to}
-    fa_url: ${8:# FlashArray management IPv4 address or Hostname}
-    api_token: ${9:# FlashArray API token for admin privileged user}
+    name: ${7:# The name of the endpoint}
+    rename: ${8:# Value to rename the specified endpoint to}
+    state: ${9:# Define whether the endpoint should exist or not}
   tags:
     - purestorage
     - flasharray

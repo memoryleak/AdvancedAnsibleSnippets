@@ -1,47 +1,47 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Repositories}
   theforeman.foreman.repository:
-    name: ${2:# Name of the repository}
-    description: ${3:# Description of the repository}
-    product: ${4:# Product to which the repository lives in}
-    label: ${5:# label of the repository}
+    ansible_collection_requirements: ${2:# Contents of requirement yaml file to sync from URL}
+    arch: ${3:# Architecture of content in the repository}
+    auto_enabled: ${4:# repositories will be automatically enabled on a registered host subscribed to this product}
+    checksum_type: ${5:# Checksum of the repository}
     content_type: ${6:# The content type of the repository}
-    url: ${7:# Repository URL to sync from}
-    ignore_global_proxy: ${8:# Whether content sync should use or ignore the global http proxy setting}
-    http_proxy_policy: ${9:# Which proxy to use for content synching}
-    http_proxy: ${10:# Name of the http proxy to use for content synching}
-    gpg_key: ${11:# Repository GPG key}
-    ssl_ca_cert: ${12:# Repository SSL CA certificate}
-    ssl_client_cert: ${13:# Repository SSL client certificate}
-    ssl_client_key: ${14:# Repository SSL client private key}
-    download_concurrency: ${15:# download concurrency for sync from upstream}
-    download_policy: ${16:# The download policy for sync from upstream}
-    mirror_on_sync: ${17:# toggle 'mirror on sync' where the state of the repository mirrors that of the upstream repository at sync time}
-    mirroring_policy: ${18:# Policy to set for mirroring content}
-    verify_ssl_on_sync: ${19:# verify the upstream certifcates are signed by a trusted CA}
-    upstream_username: ${20:# username to access upstream repository}
-    upstream_password: ${21:# Password to access upstream repository}
-    docker_upstream_name: ${22:# name of the upstream docker repository}
-    docker_tags_whitelist: ${23:# list of tags to sync for Container Image repository}
-    deb_releases: ${24:# comma separated list of releases to be synced from deb-archive}
-    deb_components: ${25:# comma separated list of repo components to be synced from deb-archive}
-    deb_architectures: ${26:# comma separated list of architectures to be synced from deb-archive}
-    deb_errata_url: ${27:# URL to sync Debian or Ubuntu errata information from}
-    unprotected: ${28:# publish the repository via HTTP}
-    checksum_type: ${29:# Checksum of the repository}
-    ignorable_content: ${30:# List of content units to ignore while syncing a yum repository}
-    ansible_collection_requirements: ${31:# Contents of requirement yaml file to sync from URL}
-    auto_enabled: ${32:# repositories will be automatically enabled on a registered host subscribed to this product}
-    os_versions: ${33:# Identifies whether the repository should be disabled on a client with a non-matching OS version}
-    arch: ${34:# Architecture of content in the repository}
-    include_tags: ${35:# List of tags to sync for a container image repository}
-    exclude_tags: ${36:# List of tags to exclude when syncing a container image repository}
-    server_url: ${37:# URL of the Foreman server}
-    username: ${38:# Username accessing the Foreman server}
-    password: ${39:# Password of the user accessing the Foreman server}
-    validate_certs: ${40:# Whether or not to verify the TLS certificates of the Foreman server}
-    state: ${41:# State of the entity}
-    organization: ${42:# Organization that the entity is in}
+    deb_architectures: ${7:# comma separated list of architectures to be synced from deb-archive}
+    deb_components: ${8:# comma separated list of repo components to be synced from deb-archive}
+    deb_errata_url: ${9:# URL to sync Debian or Ubuntu errata information from}
+    deb_releases: ${10:# comma separated list of releases to be synced from deb-archive}
+    description: ${11:# Description of the repository}
+    docker_tags_whitelist: ${12:# list of tags to sync for Container Image repository}
+    docker_upstream_name: ${13:# name of the upstream docker repository}
+    download_concurrency: ${14:# download concurrency for sync from upstream}
+    download_policy: ${15:# The download policy for sync from upstream}
+    exclude_tags: ${16:# List of tags to exclude when syncing a container image repository}
+    gpg_key: ${17:# Repository GPG key}
+    http_proxy: ${18:# Name of the http proxy to use for content synching}
+    http_proxy_policy: ${19:# Which proxy to use for content synching}
+    ignorable_content: ${20:# List of content units to ignore while syncing a yum repository}
+    ignore_global_proxy: ${21:# Whether content sync should use or ignore the global http proxy setting}
+    include_tags: ${22:# List of tags to sync for a container image repository}
+    label: ${23:# label of the repository}
+    mirror_on_sync: ${24:# toggle 'mirror on sync' where the state of the repository mirrors that of the upstream repository at sync time}
+    mirroring_policy: ${25:# Policy to set for mirroring content}
+    name: ${26:# Name of the repository}
+    organization: ${27:# Organization that the entity is in}
+    os_versions: ${28:# Identifies whether the repository should be disabled on a client with a non-matching OS version}
+    password: ${29:# Password of the user accessing the Foreman server}
+    product: ${30:# Product to which the repository lives in}
+    server_url: ${31:# URL of the Foreman server}
+    ssl_ca_cert: ${32:# Repository SSL CA certificate}
+    ssl_client_cert: ${33:# Repository SSL client certificate}
+    ssl_client_key: ${34:# Repository SSL client private key}
+    state: ${35:# State of the entity}
+    unprotected: ${36:# publish the repository via HTTP}
+    upstream_password: ${37:# Password to access upstream repository}
+    upstream_username: ${38:# username to access upstream repository}
+    url: ${39:# Repository URL to sync from}
+    username: ${40:# Username accessing the Foreman server}
+    validate_certs: ${41:# Whether or not to verify the TLS certificates of the Foreman server}
+    verify_ssl_on_sync: ${42:# verify the upstream certifcates are signed by a trusted CA}
   tags:
     - theforeman
     - foreman

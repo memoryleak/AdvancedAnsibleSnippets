@@ -1,50 +1,50 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure load balancers}
   azure.azcollection.azure_rm_loadbalancer:
-    resource_group: ${2:# Name of a resource group where the load balancer exists or will be created}
-    name: ${3:# Name of the load balancer}
-    state: ${4:# Assert the state of the load balancer}
-    location: ${5:# Valid Azure location}
-    sku: ${6:# The load balancer SKU}
-    frontend_ip_configurations: ${7:# List of frontend IPs to be used}
-    backend_address_pools: ${8:# List of backend address pools}
-    probes: ${9:# List of probe definitions used to check endpoint health}
-    inbound_nat_pools: ${10:# Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer}
-    load_balancing_rules: ${11:# Object collection representing the load balancing rules Gets the provisioning}
-    inbound_nat_rules: ${12:# Collection of inbound NAT Rules used by a load balancer}
-    public_ip_address_name: ${13:# (deprecated) Name of an existing public IP address object to associate with the security group}
-    probe_port: ${14:# (deprecated) The port that the health probe will use}
-    probe_protocol: ${15:# (deprecated) The protocol to use for the health probe}
-    probe_interval: ${16:# (deprecated) Time (in seconds) between endpoint health probes}
-    probe_fail_count: ${17:# (deprecated) The amount of probe failures for the load balancer to make a health determination}
-    probe_request_path: ${18:# (deprecated) The URL that an HTTP probe or HTTPS probe will use (only relevant if I(probe_protocol=Http) or I(probe_protocol=Https))}
-    protocol: ${19:# (deprecated) The protocol (TCP or UDP) that the load balancer will use}
-    load_distribution: ${20:# (deprecated) The type of load distribution that the load balancer will employ}
-    frontend_port: ${21:# (deprecated) Frontend port that will be exposed for the load balancer}
-    backend_port: ${22:# (deprecated) Backend port that will be exposed for the load balancer}
-    idle_timeout: ${23:# (deprecated) Timeout for TCP idle connection in minutes}
-    natpool_frontend_port_start: ${24:# (deprecated) Start of the port range for a NAT pool}
-    natpool_frontend_port_end: ${25:# (deprecated) End of the port range for a NAT pool}
-    natpool_backend_port: ${26:# (deprecated) Backend port used by the NAT pool}
-    natpool_protocol: ${27:# (deprecated) The protocol for the NAT pool}
-    ad_user: ${28:# Active Directory username}
-    password: ${29:# Active Directory user password}
-    profile: ${30:# Security profile found in ~/}
-    subscription_id: ${31:# Your Azure subscription Id}
-    client_id: ${32:# Azure client ID}
-    secret: ${33:# Azure client secret}
-    tenant: ${34:# Azure tenant ID}
-    cloud_environment: ${35:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${36:# Azure AD authority url}
-    cert_validation_mode: ${37:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${38:# Controls the source of the credentials to use for authentication}
-    api_profile: ${39:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${40:# Parent argument}
-    log_mode: ${41:# Parent argument}
-    x509_certificate_path: ${42:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${43:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${44:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${45:# Use to control if tags field is canonical or just appends to existing tags}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    backend_address_pools: ${7:# List of backend address pools}
+    backend_port: ${8:# (deprecated) Backend port that will be exposed for the load balancer}
+    cert_validation_mode: ${9:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${10:# Azure client ID}
+    cloud_environment: ${11:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    frontend_ip_configurations: ${12:# List of frontend IPs to be used}
+    frontend_port: ${13:# (deprecated) Frontend port that will be exposed for the load balancer}
+    idle_timeout: ${14:# (deprecated) Timeout for TCP idle connection in minutes}
+    inbound_nat_pools: ${15:# Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer}
+    inbound_nat_rules: ${16:# Collection of inbound NAT Rules used by a load balancer}
+    load_balancing_rules: ${17:# Object collection representing the load balancing rules Gets the provisioning}
+    load_distribution: ${18:# (deprecated) The type of load distribution that the load balancer will employ}
+    location: ${19:# Valid Azure location}
+    log_mode: ${20:# Parent argument}
+    log_path: ${21:# Parent argument}
+    name: ${22:# Name of the load balancer}
+    natpool_backend_port: ${23:# (deprecated) Backend port used by the NAT pool}
+    natpool_frontend_port_end: ${24:# (deprecated) End of the port range for a NAT pool}
+    natpool_frontend_port_start: ${25:# (deprecated) Start of the port range for a NAT pool}
+    natpool_protocol: ${26:# (deprecated) The protocol for the NAT pool}
+    password: ${27:# Active Directory user password}
+    probe_fail_count: ${28:# (deprecated) The amount of probe failures for the load balancer to make a health determination}
+    probe_interval: ${29:# (deprecated) Time (in seconds) between endpoint health probes}
+    probe_port: ${30:# (deprecated) The port that the health probe will use}
+    probe_protocol: ${31:# (deprecated) The protocol to use for the health probe}
+    probe_request_path: ${32:# (deprecated) The URL that an HTTP probe or HTTPS probe will use (only relevant if I(probe_protocol=Http) or I(probe_protocol=Https))}
+    probes: ${33:# List of probe definitions used to check endpoint health}
+    profile: ${34:# Security profile found in ~/}
+    protocol: ${35:# (deprecated) The protocol (TCP or UDP) that the load balancer will use}
+    public_ip_address_name: ${36:# (deprecated) Name of an existing public IP address object to associate with the security group}
+    resource_group: ${37:# Name of a resource group where the load balancer exists or will be created}
+    secret: ${38:# Azure client secret}
+    sku: ${39:# The load balancer SKU}
+    state: ${40:# Assert the state of the load balancer}
+    subscription_id: ${41:# Your Azure subscription Id}
+    tags: ${42:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${43:# Azure tenant ID}
+    thumbprint: ${44:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${45:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

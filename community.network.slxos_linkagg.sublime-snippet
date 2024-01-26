@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage link aggregation groups on Extreme Networks SLX-OS network devices}
   community.network.slxos_linkagg:
-    group: ${2:# Channel-group number for the port-channel Link aggregation group}
-    mode: ${3:# Mode of the link aggregation group}
+    aggregate: ${2:# List of link aggregation definitions}
+    group: ${3:# Channel-group number for the port-channel Link aggregation group}
     members: ${4:# List of members of the link aggregation group}
-    aggregate: ${5:# List of link aggregation definitions}
-    state: ${6:# State of the link aggregation group}
-    purge: ${7:# Purge links not defined in the I(aggregate) parameter}
+    mode: ${5:# Mode of the link aggregation group}
+    purge: ${6:# Purge links not defined in the I(aggregate) parameter}
+    state: ${7:# State of the link aggregation group}
   tags:
     - community
     - network

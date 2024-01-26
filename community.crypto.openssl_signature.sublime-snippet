@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[- name: ${1:Sign data with openssl}
   community.crypto.openssl_signature:
-    privatekey_path: ${2:# The path to the private key to use when signing}
+    path: ${2:# The file to sign}
     privatekey_content: ${3:# The content of the private key to use when signing the certificate signing request}
     privatekey_passphrase: ${4:# The passphrase for the private key}
-    path: ${5:# The file to sign}
+    privatekey_path: ${5:# The path to the private key to use when signing}
     select_crypto_backend: ${6:# Determines which crypto backend to use}
   tags:
     - community

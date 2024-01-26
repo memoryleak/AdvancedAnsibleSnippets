@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Shows list of Gateways & Servers sorted by name}
+  check_point.mgmt.cp_mgmt_show_gateways_and_servers:
+    details_level: ${2:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${3:# Indicates which domains to process the commands on}
+    limit: ${4:# The maximal number of returned results}
+    offset: ${5:# Number of the results to initially skip}
+    order: ${6:# Sorts the results by search criteria}
+    version: ${7:# Version of checkpoint}
+    wait_for_task: ${8:# Wait for the task to end}
+    wait_for_task_timeout: ${9:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_show_gateways_and_servers]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_show_gateways_and_servers</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Shows list of Gateways &amp; Servers sorted by name</description>
+</snippet>

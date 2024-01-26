@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Setup OMAPI hosts}
   community.general.omapi_host:
-    state: ${2:# Create or remove OMAPI host}
-    hostname: ${3:# Sets the host lease hostname (mandatory if state=present)}
-    host: ${4:# Sets OMAPI server host to interact with}
-    port: ${5:# Sets the OMAPI server port to interact with}
-    key_name: ${6:# Sets the TSIG key name for authenticating against OMAPI server}
-    key: ${7:# Sets the TSIG key content for authenticating against OMAPI server}
+    ddns: ${2:# Enable dynamic DNS updates for this host}
+    host: ${3:# Sets OMAPI server host to interact with}
+    hostname: ${4:# Sets the host lease hostname (mandatory if state=present)}
+    ip: ${5:# Sets the lease host IP address}
+    key: ${6:# Sets the TSIG key content for authenticating against OMAPI server}
+    key_name: ${7:# Sets the TSIG key name for authenticating against OMAPI server}
     macaddr: ${8:# Sets the lease host MAC address}
-    ip: ${9:# Sets the lease host IP address}
-    statements: ${10:# Attach a list of OMAPI DHCP statements with host lease (without ending semicolon)}
-    ddns: ${11:# Enable dynamic DNS updates for this host}
+    port: ${9:# Sets the OMAPI server port to interact with}
+    state: ${10:# Create or remove OMAPI host}
+    statements: ${11:# Attach a list of OMAPI DHCP statements with host lease (without ending semicolon)}
   tags:
     - community
     - general

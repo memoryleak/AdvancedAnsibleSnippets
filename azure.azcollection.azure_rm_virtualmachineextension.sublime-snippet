@@ -1,34 +1,34 @@
 <snippet>
   <content><![CDATA[- name: ${1:Managed Azure Virtual Machine extension}
   azure.azcollection.azure_rm_virtualmachineextension:
-    resource_group: ${2:# Name of a resource group where the vm extension exists or will be created}
-    name: ${3:# Name of the vm extension}
-    state: ${4:# State of the vm extension}
-    location: ${5:# Valid Azure location}
-    virtual_machine_name: ${6:# The name of the virtual machine where the extension should be create or updated}
-    publisher: ${7:# The name of the extension handler publisher}
-    virtual_machine_extension_type: ${8:# The type of the extension handler}
-    type_handler_version: ${9:# The type version of the extension handler}
-    settings: ${10:# JSON formatted public settings for the extension}
-    protected_settings: ${11:# JSON formatted protected settings for the extension}
-    auto_upgrade_minor_version: ${12:# Whether the extension handler should be automatically upgraded across minor versions}
-    force_update_tag: ${13:# Whether the extension should be updated or re-run even if no changes can be detected from what is currently configured}
-    ad_user: ${14:# Active Directory username}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${5:# Controls the source of the credentials to use for authentication}
+    auto_upgrade_minor_version: ${6:# Whether the extension handler should be automatically upgraded across minor versions}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    force_update_tag: ${10:# Whether the extension should be updated or re-run even if no changes can be detected from what is currently configured}
+    location: ${11:# Valid Azure location}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    name: ${14:# Name of the vm extension}
     password: ${15:# Active Directory user password}
     profile: ${16:# Security profile found in ~/}
-    subscription_id: ${17:# Your Azure subscription Id}
-    client_id: ${18:# Azure client ID}
-    secret: ${19:# Azure client secret}
-    tenant: ${20:# Azure tenant ID}
-    cloud_environment: ${21:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${22:# Azure AD authority url}
-    cert_validation_mode: ${23:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${24:# Controls the source of the credentials to use for authentication}
-    api_profile: ${25:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${26:# Parent argument}
-    log_mode: ${27:# Parent argument}
-    x509_certificate_path: ${28:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${29:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    protected_settings: ${17:# JSON formatted protected settings for the extension}
+    publisher: ${18:# The name of the extension handler publisher}
+    resource_group: ${19:# Name of a resource group where the vm extension exists or will be created}
+    secret: ${20:# Azure client secret}
+    settings: ${21:# JSON formatted public settings for the extension}
+    state: ${22:# State of the vm extension}
+    subscription_id: ${23:# Your Azure subscription Id}
+    tenant: ${24:# Azure tenant ID}
+    thumbprint: ${25:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    type_handler_version: ${26:# The type version of the extension handler}
+    virtual_machine_extension_type: ${27:# The type of the extension handler}
+    virtual_machine_name: ${28:# The name of the virtual machine where the extension should be create or updated}
+    x509_certificate_path: ${29:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

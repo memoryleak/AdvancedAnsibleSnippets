@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP manage cifs-share-access-control}
   netapp.ontap.na_ontap_cifs_acl:
-    permission: ${2:# The access rights that the user or group has on the defined CIFS share}
-    share_name: ${3:# The name of the cifs-share-access-control to manage}
-    state: ${4:# Whether the specified CIFS share acl should exist or not}
-    vserver: ${5:# Name of the vserver to use}
-    user_or_group: ${6:# The user or group name for which the permissions are listed}
-    type: ${7:# The type (also known as user-group-type) of the user or group to add to the ACL}
-    hostname: ${8:# The hostname or IP address of the ONTAP instance}
-    username: ${9:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    feature_flags: ${3:# Enable or disable a new feature}
+    force_ontap_version: ${4:# Override the cluster ONTAP version when using REST}
+    hostname: ${5:# The hostname or IP address of the ONTAP instance}
+    http_port: ${6:# Override the default port (80 or 443) with this port}
+    https: ${7:# Enable and disable https}
+    key_filepath: ${8:# path to SSL client key file}
+    ontapi: ${9:# The ontap api version to use}
     password: ${10:# Password for the specified user}
-    cert_filepath: ${11:# path to SSL client cert file (}
-    key_filepath: ${12:# path to SSL client key file}
-    https: ${13:# Enable and disable https}
-    validate_certs: ${14:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${15:# Override the default port (80 or 443) with this port}
-    ontapi: ${16:# The ontap api version to use}
-    use_rest: ${17:# Whether to use REST or ZAPI}
-    feature_flags: ${18:# Enable or disable a new feature}
-    force_ontap_version: ${19:# Override the cluster ONTAP version when using REST}
+    permission: ${11:# The access rights that the user or group has on the defined CIFS share}
+    share_name: ${12:# The name of the cifs-share-access-control to manage}
+    state: ${13:# Whether the specified CIFS share acl should exist or not}
+    type: ${14:# The type (also known as user-group-type) of the user or group to add to the ACL}
+    use_rest: ${15:# Whether to use REST or ZAPI}
+    user_or_group: ${16:# The user or group name for which the permissions are listed}
+    username: ${17:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${19:# Name of the vserver to use}
   tags:
     - netapp
     - ontap

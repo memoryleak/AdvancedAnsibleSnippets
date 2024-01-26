@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP Update Software}
   netapp.ontap.na_ontap_software_update:
-    state: ${2:# This module downloads and optionally installs ONTAP software on a cluster}
-    nodes: ${3:# List of nodes to be updated, the nodes have to be a part of a HA Pair}
-    package_version: ${4:# Specifies the package version to update ONTAP software to, or to be deleted}
-    package_url: ${5:# Specifies the package URL to download the package}
-    ignore_validation_warning: ${6:# Allows the update to continue if warnings are encountered during the validation phase}
-    download_only: ${7:# Allows to download image without update}
-    validate_after_download: ${8:# By default validation is not run after download, as it is already done in the update step}
-    stabilize_minutes: ${9:# Number of minutes that the update should wait after a takeover or giveback is completed}
-    timeout: ${10:# how long to wait for the update to complete, in seconds}
-    force_update: ${11:# force an update, even if package_version matches what is reported as installed}
-    hostname: ${12:# The hostname or IP address of the ONTAP instance}
-    username: ${13:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${14:# Password for the specified user}
-    cert_filepath: ${15:# path to SSL client cert file (}
-    key_filepath: ${16:# path to SSL client key file}
-    https: ${17:# Enable and disable https}
-    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${19:# Override the default port (80 or 443) with this port}
-    ontapi: ${20:# The ontap api version to use}
-    use_rest: ${21:# Whether to use REST or ZAPI}
-    feature_flags: ${22:# Enable or disable a new feature}
-    force_ontap_version: ${23:# Override the cluster ONTAP version when using REST}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    download_only: ${3:# Allows to download image without update}
+    feature_flags: ${4:# Enable or disable a new feature}
+    force_ontap_version: ${5:# Override the cluster ONTAP version when using REST}
+    force_update: ${6:# force an update, even if package_version matches what is reported as installed}
+    hostname: ${7:# The hostname or IP address of the ONTAP instance}
+    http_port: ${8:# Override the default port (80 or 443) with this port}
+    https: ${9:# Enable and disable https}
+    ignore_validation_warning: ${10:# Allows the update to continue if warnings are encountered during the validation phase}
+    key_filepath: ${11:# path to SSL client key file}
+    nodes: ${12:# List of nodes to be updated, the nodes have to be a part of a HA Pair}
+    ontapi: ${13:# The ontap api version to use}
+    package_url: ${14:# Specifies the package URL to download the package}
+    package_version: ${15:# Specifies the package version to update ONTAP software to, or to be deleted}
+    password: ${16:# Password for the specified user}
+    stabilize_minutes: ${17:# Number of minutes that the update should wait after a takeover or giveback is completed}
+    state: ${18:# This module downloads and optionally installs ONTAP software on a cluster}
+    timeout: ${19:# how long to wait for the update to complete, in seconds}
+    use_rest: ${20:# Whether to use REST or ZAPI}
+    username: ${21:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_after_download: ${22:# By default validation is not run after download, as it is already done in the update step}
+    validate_certs: ${23:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

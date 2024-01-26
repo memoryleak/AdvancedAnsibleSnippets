@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages Perl library dependencies}
   community.general.cpanm:
-    name: ${2:# The Perl library to install}
+    executable: ${2:# Override the path to the cpanm executable}
     from_path: ${3:# The local directory or C(tar}
-    notest: ${4:# Do not run unit tests}
+    installdeps: ${4:# Only install dependencies}
     locallib: ${5:# Specify the install base to install modules}
     mirror: ${6:# Specifies the base URL for the CPAN mirror to use}
     mirror_only: ${7:# Use the mirror's index file instead of the CPAN Meta DB}
-    installdeps: ${8:# Only install dependencies}
-    version: ${9:# Version specification for the perl module}
-    executable: ${10:# Override the path to the cpanm executable}
-    mode: ${11:# Controls the module behavior}
-    name_check: ${12:# When in C(new) mode, this parameter can be used to check if there is a module I(name) installed (at I(version), when specified)}
+    mode: ${8:# Controls the module behavior}
+    name: ${9:# The Perl library to install}
+    name_check: ${10:# When O(mode=new), this parameter can be used to check if there is a module O(name) installed (at O(version), when specified)}
+    notest: ${11:# Do not run unit tests}
+    version: ${12:# Version specification for the perl module}
   tags:
     - community
     - general

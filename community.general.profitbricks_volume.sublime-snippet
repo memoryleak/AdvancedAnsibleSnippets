@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create or destroy a volume}
   community.general.profitbricks_volume:
-    datacenter: ${2:# The datacenter in which to create the volumes}
-    name: ${3:# The name of the volumes}
-    size: ${4:# The size of the volume}
-    bus: ${5:# The bus type}
-    image: ${6:# The system image ID for the volume, e}
-    image_password: ${7:# Password set for the administrative user}
-    ssh_keys: ${8:# Public SSH keys allowing access to the virtual machine}
-    disk_type: ${9:# The disk type of the volume}
+    auto_increment: ${2:# Whether or not to increment a single number in the name for created virtual machines}
+    bus: ${3:# The bus type}
+    count: ${4:# The number of volumes you wish to create}
+    datacenter: ${5:# The datacenter in which to create the volumes}
+    disk_type: ${6:# The disk type of the volume}
+    image: ${7:# The system image ID for the volume, e}
+    image_password: ${8:# Password set for the administrative user}
+    instance_ids: ${9:# list of instance ids, currently only used when state='absent' to remove instances}
     licence_type: ${10:# The licence type for the volume}
-    count: ${11:# The number of volumes you wish to create}
-    auto_increment: ${12:# Whether or not to increment a single number in the name for created virtual machines}
-    instance_ids: ${13:# list of instance ids, currently only used when state='absent' to remove instances}
-    subscription_user: ${14:# The ProfitBricks username}
-    subscription_password: ${15:# THe ProfitBricks password}
-    wait: ${16:# wait for the datacenter to be created before returning}
-    wait_timeout: ${17:# how long before wait gives up, in seconds}
-    state: ${18:# create or terminate datacenters}
-    server: ${19:# Server name to attach the volume to}
+    name: ${11:# The name of the volumes}
+    server: ${12:# Server name to attach the volume to}
+    size: ${13:# The size of the volume}
+    ssh_keys: ${14:# Public SSH keys allowing access to the virtual machine}
+    state: ${15:# create or terminate datacenters}
+    subscription_password: ${16:# THe ProfitBricks password}
+    subscription_user: ${17:# The ProfitBricks username}
+    wait: ${18:# wait for the datacenter to be created before returning}
+    wait_timeout: ${19:# how long before wait gives up, in seconds}
   tags:
     - community
     - general

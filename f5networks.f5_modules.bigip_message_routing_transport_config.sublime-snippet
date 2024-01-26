@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages configuration for an outgoing connection}
   f5networks.f5_modules.bigip_message_routing_transport_config:
-    name: ${2:# Specifies the name of the transport config to manage}
-    description: ${3:# The user-defined description of the transport config}
-    profiles: ${4:# Specifies a list of profiles for the outgoing connection to use to direct and manage traffic}
-    src_addr_translation: ${5:# Specifies the type of source address translation enabled for the transport config and the pool the source address translation will use}
-    src_port: ${6:# Specifies the source port for the connection being created}
+    description: ${2:# The user-defined description of the transport config}
+    name: ${3:# Specifies the name of the transport config to manage}
+    partition: ${4:# Device partition to create transport-config object on}
+    profiles: ${5:# Specifies a list of profiles for the outgoing connection to use to direct and manage traffic}
+    provider: ${6:# A dict object containing connection details}
     rules: ${7:# The iRules you want run on this transport config}
-    type: ${8:# Parameter used to specify the type of transport-config object to manage}
-    partition: ${9:# Device partition to create transport-config object on}
+    src_addr_translation: ${8:# Specifies the type of source address translation enabled for the transport config and the pool the source address translation will use}
+    src_port: ${9:# Specifies the source port for the connection being created}
     state: ${10:# When C(present), ensures the transport-config object exists}
-    provider: ${11:# A dict object containing connection details}
+    type: ${11:# Parameter used to specify the type of transport-config object to manage}
   tags:
     - f5networks
     - f5_modules

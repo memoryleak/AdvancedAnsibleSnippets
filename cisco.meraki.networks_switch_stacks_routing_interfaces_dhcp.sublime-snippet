@@ -1,0 +1,46 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for networks _switch _stacks _routing _interfaces _dhcp}
+  cisco.meraki.networks_switch_stacks_routing_interfaces_dhcp:
+    bootFileName: ${2:# The PXE boot server file name for the DHCP server running on the switch stack interface}
+    bootNextServer: ${3:# The PXE boot server IP for the DHCP server running on the switch stack interface}
+    bootOptionsEnabled: ${4:# Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch stack interface}
+    dhcpLeaseTime: ${5:# The DHCP lease time config for the dhcp server running on switch stack interface ('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')}
+    dhcpMode: ${6:# The DHCP mode options for the switch stack interface ('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')}
+    dhcpOptions: ${7:# Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface}
+    dhcpRelayServerIps: ${8:# The DHCP relay server IPs to which DHCP packets would get relayed for the switch stack interface}
+    dnsCustomNameservers: ${9:# The DHCP name server IPs when DHCP name server option is 'custom'}
+    dnsNameserversOption: ${10:# The DHCP name server option for the dhcp server running on the switch stack interface ('googlePublicDns', 'openDns' or 'custom')}
+    fixedIpAssignments: ${11:# Array of DHCP fixed IP assignments for the DHCP server running on the switch stack interface}
+    interfaceId: ${12:# InterfaceId path parameter}
+    meraki_action_batch_retry_wait_time: ${13:# meraki_action_batch_retry_wait_time (integer), action batch concurrency error retry wait time}
+    meraki_api_key: ${14:# meraki_api_key (string), API key generated in dashboard; can also be set as an environment variable MERAKI_DASHBOARD_API_KEY}
+    meraki_base_url: ${15:# meraki_base_url (string), preceding all endpoint resources}
+    meraki_be_geo_id: ${16:# meraki_be_geo_id (string), optional partner identifier for API usage tracking; can also be set as an environment variable BE_GEO_ID}
+    meraki_caller: ${17:# meraki_caller (string), optional identifier for API usage tracking; can also be set as an environment variable MERAKI_PYTHON_SDK_CALLER}
+    meraki_certificate_path: ${18:# meraki_certificate_path (string), path for TLS/SSL certificate verification if behind local proxy}
+    meraki_inherit_logging_config: ${19:# meraki_inherit_logging_config (boolean), Inherits your own logger instance}
+    meraki_log_file_prefix: ${20:# meraki_log_file_prefix (string), log file name appended with date and timestamp}
+    meraki_log_path: ${21:# log_path (string), path to output log; by default, working directory of script if not specified}
+    meraki_maximum_retries: ${22:# meraki_maximum_retries (integer), retry up to this many times when encountering 429s or other server-side errors}
+    meraki_nginx_429_retry_wait_time: ${23:# meraki_nginx_429_retry_wait_time (integer), Nginx 429 retry wait time}
+    meraki_output_log: ${24:# meraki_output_log (boolean), create an output log file?}
+    meraki_print_console: ${25:# meraki_print_console (boolean), print logging output to console?}
+    meraki_requests_proxy: ${26:# meraki_requests_proxy (string), proxy server and port, if needed, for HTTPS}
+    meraki_retry_4xx_error: ${27:# meraki_retry_4xx_error (boolean), retry if encountering other 4XX error (besides 429)?}
+    meraki_retry_4xx_error_wait_time: ${28:# meraki_retry_4xx_error_wait_time (integer), other 4XX error retry wait time}
+    meraki_simulate: ${29:# meraki_simulate (boolean), simulate POST/PUT/DELETE calls to prevent changes?}
+    meraki_single_request_timeout: ${30:# meraki_single_request_timeout (integer), maximum number of seconds for each API call}
+    meraki_suppress_logging: ${31:# meraki_suppress_logging (boolean), disable all logging? you're on your own then!}
+    meraki_use_iterator_for_get_pages: ${32:# meraki_use_iterator_for_get_pages (boolean), list* methods will return an iterator with each object instead of a complete list with all items}
+    meraki_wait_on_rate_limit: ${33:# meraki_wait_on_rate_limit (boolean), retry if 429 rate limit error encountered?}
+    networkId: ${34:# NetworkId path parameter}
+    reservedIpRanges: ${35:# Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface}
+    switchStackId: ${36:# SwitchStackId path parameter}
+  tags:
+    - cisco
+    - meraki
+    - networks_switch_stacks_routing_interfaces_dhcp]]></content>
+  <tabTrigger>cisco.meraki.networks_switch_stacks_routing_interfaces_dhcp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for networks _switch _stacks _routing _interfaces _dhcp</description>
+</snippet>

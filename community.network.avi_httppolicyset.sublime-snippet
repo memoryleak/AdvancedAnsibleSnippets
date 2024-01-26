@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of HTTPPolicySet Avi RESTful Object}
   community.network.avi_httppolicyset:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
     avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    cloud_config_cksum: ${5:# Checksum of cloud configuration for pool}
-    created_by: ${6:# Creator name}
-    description: ${7:# User defined description for the object}
-    http_request_policy: ${8:# Http request policy for the virtual service}
-    http_response_policy: ${9:# Http response policy for the virtual service}
-    http_security_policy: ${10:# Http security policy for the virtual service}
-    is_internal_policy: ${11:# Boolean flag to set is_internal_policy}
-    name: ${12:# Name of the http policy set}
-    tenant_ref: ${13:# It is a reference to an object of type tenant}
-    url: ${14:# Avi controller URL of the object}
-    uuid: ${15:# Uuid of the http policy set}
-    controller: ${16:# IP address or hostname of the controller}
-    username: ${17:# Username used for accessing Avi controller}
-    password: ${18:# Password of Avi user in Avi controller}
+    avi_api_update_method: ${5:# Default method for object update is HTTP PUT}
+    avi_credentials: ${6:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${7:# It disables avi session information to be cached as a fact}
+    cloud_config_cksum: ${8:# Checksum of cloud configuration for pool}
+    controller: ${9:# IP address or hostname of the controller}
+    created_by: ${10:# Creator name}
+    description: ${11:# User defined description for the object}
+    http_request_policy: ${12:# Http request policy for the virtual service}
+    http_response_policy: ${13:# Http response policy for the virtual service}
+    http_security_policy: ${14:# Http security policy for the virtual service}
+    is_internal_policy: ${15:# Boolean flag to set is_internal_policy}
+    name: ${16:# Name of the http policy set}
+    password: ${17:# Password of Avi user in Avi controller}
+    state: ${18:# The state that should be applied on the entity}
     tenant: ${19:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${20:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${21:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${22:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${23:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${24:# It disables avi session information to be cached as a fact}
+    tenant_ref: ${20:# It is a reference to an object of type tenant}
+    tenant_uuid: ${21:# UUID of tenant used for all Avi API calls and context of object}
+    url: ${22:# Avi controller URL of the object}
+    username: ${23:# Username used for accessing Avi controller}
+    uuid: ${24:# Uuid of the http policy set}
   tags:
     - community
     - network

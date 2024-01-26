@@ -1,11 +1,11 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Configure a }
+  <content><![CDATA[- name: ${1:Configure a}
   ansible.builtin.debconf:
     name: ${2:# Name of package to configure}
     question: ${3:# A debconf configuration setting}
-    vtype: ${4:# The type of the value supplied}
+    unseen: ${4:# Do not set 'seen' flag when pre-seeding}
     value: ${5:# Value to set the configuration to}
-    unseen: ${6:# Do not set 'seen' flag when pre-seeding}
+    vtype: ${6:# The type of the value supplied}
   tags:
     - debconf]]></content>
   <tabTrigger>ansible.builtin.debconf</tabTrigger>

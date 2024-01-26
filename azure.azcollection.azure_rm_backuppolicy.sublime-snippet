@@ -1,35 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure Backup Policy}
   azure.azcollection.azure_rm_backuppolicy:
-    vault_name: ${2:# The name of the Recovery Services Vault the policy belongs to}
-    name: ${3:# The name of the backup policy}
-    resource_group: ${4:# The name of the resource group the vault is in}
-    state: ${5:# Assert the state of the backup policy}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${5:# Controls the source of the credentials to use for authentication}
     backup_management_type: ${6:# Defines the type of resource the policy will be applied to}
-    schedule_run_time: ${7:# The hour to run backups}
-    instant_recovery_snapshot_retention: ${8:# How many days to retain instant recovery snapshots}
-    schedule_run_frequency: ${9:# The frequency to run the policy}
-    schedule_days: ${10:# List of days to execute the schedule}
-    weekly_retention_count: ${11:# The amount of weeks to retain backups}
-    daily_retention_count: ${12:# The amount of days to retain backups}
-    schedule_weekly_frequency: ${13:# The amount of weeks between backups}
-    time_zone: ${14:# Timezone to apply schedule_run_time}
-    ad_user: ${15:# Active Directory username}
-    password: ${16:# Active Directory user password}
-    profile: ${17:# Security profile found in ~/}
-    subscription_id: ${18:# Your Azure subscription Id}
-    client_id: ${19:# Azure client ID}
-    secret: ${20:# Azure client secret}
-    tenant: ${21:# Azure tenant ID}
-    cloud_environment: ${22:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${23:# Azure AD authority url}
-    cert_validation_mode: ${24:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${25:# Controls the source of the credentials to use for authentication}
-    api_profile: ${26:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${27:# Parent argument}
-    log_mode: ${28:# Parent argument}
-    x509_certificate_path: ${29:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${30:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    daily_retention_count: ${10:# The amount of days to retain backups}
+    instant_recovery_snapshot_retention: ${11:# How many days to retain instant recovery snapshots}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    name: ${14:# The name of the backup policy}
+    password: ${15:# Active Directory user password}
+    profile: ${16:# Security profile found in ~/}
+    resource_group: ${17:# The name of the resource group the vault is in}
+    schedule_days: ${18:# List of days to execute the schedule}
+    schedule_run_frequency: ${19:# The frequency to run the policy}
+    schedule_run_time: ${20:# The hour to run backups}
+    schedule_weekly_frequency: ${21:# The amount of weeks between backups}
+    secret: ${22:# Azure client secret}
+    state: ${23:# Assert the state of the backup policy}
+    subscription_id: ${24:# Your Azure subscription Id}
+    tenant: ${25:# Azure tenant ID}
+    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    time_zone: ${27:# Timezone to apply I(schedule_run_time)}
+    vault_name: ${28:# The name of the Recovery Services Vault the policy belongs to}
+    weekly_retention_count: ${29:# The amount of weeks to retain backups}
+    x509_certificate_path: ${30:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

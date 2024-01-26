@@ -1,54 +1,54 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of Cloud Avi RESTful Object}
   community.network.avi_cloud:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
-    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    apic_configuration: ${5:# Apicconfiguration settings for cloud}
-    apic_mode: ${6:# Boolean flag to set apic_mode}
-    autoscale_polling_interval: ${7:# Cloudconnector polling interval for external autoscale groups}
-    aws_configuration: ${8:# Awsconfiguration settings for cloud}
-    azure_configuration: ${9:# Field introduced in 17}
-    cloudstack_configuration: ${10:# Cloudstackconfiguration settings for cloud}
-    custom_tags: ${11:# Custom tags for all avi created resources in the cloud infrastructure}
-    dhcp_enabled: ${12:# Select the ip address management scheme}
-    dns_provider_ref: ${13:# Dns profile for the cloud}
-    docker_configuration: ${14:# Dockerconfiguration settings for cloud}
-    east_west_dns_provider_ref: ${15:# Dns profile for east-west services}
-    east_west_ipam_provider_ref: ${16:# Ipam profile for east-west services}
-    enable_vip_static_routes: ${17:# Use static routes for vip side network resolution during virtualservice placement}
-    gcp_configuration: ${18:# Google cloud platform configuration}
-    ip6_autocfg_enabled: ${19:# Enable ipv6 auto configuration}
-    ipam_provider_ref: ${20:# Ipam profile for the cloud}
-    license_tier: ${21:# Specifies the default license tier which would be used by new se groups}
-    license_type: ${22:# If no license type is specified then default license enforcement for the cloud type is chosen}
-    linuxserver_configuration: ${23:# Linuxserverconfiguration settings for cloud}
-    mesos_configuration: ${24:# Field deprecated in 18}
-    mtu: ${25:# Mtu setting for the cloud}
-    name: ${26:# Name of the object}
-    nsx_configuration: ${27:# Configuration parameters for nsx manager}
-    obj_name_prefix: ${28:# Default prefix for all automatically created objects in this cloud}
-    openstack_configuration: ${29:# Openstackconfiguration settings for cloud}
-    oshiftk8s_configuration: ${30:# Oshiftk8sconfiguration settings for cloud}
-    prefer_static_routes: ${31:# Prefer static routes over interface routes during virtualservice placement}
-    proxy_configuration: ${32:# Proxyconfiguration settings for cloud}
-    rancher_configuration: ${33:# Rancherconfiguration settings for cloud}
-    state_based_dns_registration: ${34:# Dns records for vips are added/deleted based on the operational state of the vips}
-    tenant_ref: ${35:# It is a reference to an object of type tenant}
-    url: ${36:# Avi controller URL of the object}
-    uuid: ${37:# Unique object identifier of the object}
-    vca_configuration: ${38:# Vcloudairconfiguration settings for cloud}
-    vcenter_configuration: ${39:# Vcenterconfiguration settings for cloud}
-    vtype: ${40:# Cloud type}
-    controller: ${41:# IP address or hostname of the controller}
-    username: ${42:# Username used for accessing Avi controller}
-    password: ${43:# Password of Avi user in Avi controller}
-    tenant: ${44:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${45:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${46:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${47:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${48:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${49:# It disables avi session information to be cached as a fact}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
+    apic_configuration: ${4:# Apicconfiguration settings for cloud}
+    apic_mode: ${5:# Boolean flag to set apic_mode}
+    autoscale_polling_interval: ${6:# Cloudconnector polling interval for external autoscale groups}
+    avi_api_patch_op: ${7:# Patch operation to use when using avi_api_update_method as patch}
+    avi_api_update_method: ${8:# Default method for object update is HTTP PUT}
+    avi_credentials: ${9:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${10:# It disables avi session information to be cached as a fact}
+    aws_configuration: ${11:# Awsconfiguration settings for cloud}
+    azure_configuration: ${12:# Field introduced in 17}
+    cloudstack_configuration: ${13:# Cloudstackconfiguration settings for cloud}
+    controller: ${14:# IP address or hostname of the controller}
+    custom_tags: ${15:# Custom tags for all avi created resources in the cloud infrastructure}
+    dhcp_enabled: ${16:# Select the ip address management scheme}
+    dns_provider_ref: ${17:# Dns profile for the cloud}
+    docker_configuration: ${18:# Dockerconfiguration settings for cloud}
+    east_west_dns_provider_ref: ${19:# Dns profile for east-west services}
+    east_west_ipam_provider_ref: ${20:# Ipam profile for east-west services}
+    enable_vip_static_routes: ${21:# Use static routes for vip side network resolution during virtualservice placement}
+    gcp_configuration: ${22:# Google cloud platform configuration}
+    ip6_autocfg_enabled: ${23:# Enable ipv6 auto configuration}
+    ipam_provider_ref: ${24:# Ipam profile for the cloud}
+    license_tier: ${25:# Specifies the default license tier which would be used by new se groups}
+    license_type: ${26:# If no license type is specified then default license enforcement for the cloud type is chosen}
+    linuxserver_configuration: ${27:# Linuxserverconfiguration settings for cloud}
+    mesos_configuration: ${28:# Field deprecated in 18}
+    mtu: ${29:# Mtu setting for the cloud}
+    name: ${30:# Name of the object}
+    nsx_configuration: ${31:# Configuration parameters for nsx manager}
+    obj_name_prefix: ${32:# Default prefix for all automatically created objects in this cloud}
+    openstack_configuration: ${33:# Openstackconfiguration settings for cloud}
+    oshiftk8s_configuration: ${34:# Oshiftk8sconfiguration settings for cloud}
+    password: ${35:# Password of Avi user in Avi controller}
+    prefer_static_routes: ${36:# Prefer static routes over interface routes during virtualservice placement}
+    proxy_configuration: ${37:# Proxyconfiguration settings for cloud}
+    rancher_configuration: ${38:# Rancherconfiguration settings for cloud}
+    state: ${39:# The state that should be applied on the entity}
+    state_based_dns_registration: ${40:# Dns records for vips are added/deleted based on the operational state of the vips}
+    tenant: ${41:# Name of tenant used for all Avi API calls and context of object}
+    tenant_ref: ${42:# It is a reference to an object of type tenant}
+    tenant_uuid: ${43:# UUID of tenant used for all Avi API calls and context of object}
+    url: ${44:# Avi controller URL of the object}
+    username: ${45:# Username used for accessing Avi controller}
+    uuid: ${46:# Unique object identifier of the object}
+    vca_configuration: ${47:# Vcloudairconfiguration settings for cloud}
+    vcenter_configuration: ${48:# Vcenterconfiguration settings for cloud}
+    vtype: ${49:# Cloud type}
   tags:
     - community
     - network

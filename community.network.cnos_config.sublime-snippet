@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Lenovo CNOS configuration sections}
   community.network.cnos_config:
-    lines: ${2:# The ordered set of commands that should be configured in the section}
-    parents: ${3:# The ordered set of parents that uniquely identify the section the commands should be checked against}
-    src: ${4:# Specifies the source path to the file that contains the configuration or configuration template to load}
-    before: ${5:# The ordered set of commands to push on to the command stack if a change needs to be made}
-    after: ${6:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
-    match: ${7:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
-    replace: ${8:# Instructs the module on the way to perform the configuration on the device}
-    config: ${9:# The module, by default, will connect to the remote device and retrieve the current running-config to use as a base for comparing against the contents of source}
-    backup: ${10:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
-    comment: ${11:# Allows a commit description to be specified to be included when the configuration is committed}
-    admin: ${12:# Enters into administration configuration mode for making config changes to the device}
-    backup_options: ${13:# This is a dict object containing configurable options related to backup file path}
+    admin: ${2:# Enters into administration configuration mode for making config changes to the device}
+    after: ${3:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
+    backup: ${4:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
+    backup_options: ${5:# This is a dict object containing configurable options related to backup file path}
+    before: ${6:# The ordered set of commands to push on to the command stack if a change needs to be made}
+    comment: ${7:# Allows a commit description to be specified to be included when the configuration is committed}
+    config: ${8:# The module, by default, will connect to the remote device and retrieve the current running-config to use as a base for comparing against the contents of source}
+    lines: ${9:# The ordered set of commands that should be configured in the section}
+    match: ${10:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
+    parents: ${11:# The ordered set of parents that uniquely identify the section the commands should be checked against}
+    replace: ${12:# Instructs the module on the way to perform the configuration on the device}
+    src: ${13:# Specifies the source path to the file that contains the configuration or configuration template to load}
   tags:
     - community
     - network

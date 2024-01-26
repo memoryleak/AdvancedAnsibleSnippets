@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage EdgeOS configuration on remote device}
   community.network.edgeos_config:
-    lines: ${2:# The ordered set of configuration lines to be managed and compared with the existing configuration on the remote device}
-    src: ${3:# The C(src) argument specifies the path to the source config file to load}
-    match: ${4:# The C(match) argument controls the method used to match against the current active configuration}
-    backup: ${5:# The C(backup) argument will backup the current device's active configuration to the Ansible control host prior to making any changes}
-    comment: ${6:# Allows a commit description to be specified to be included when the configuration is committed}
-    config: ${7:# The C(config) argument specifies the base configuration to use to compare against the desired configuration}
+    backup: ${2:# The C(backup) argument will backup the current device's active configuration to the Ansible control host prior to making any changes}
+    backup_options: ${3:# This is a dict object containing configurable options related to backup file path}
+    comment: ${4:# Allows a commit description to be specified to be included when the configuration is committed}
+    config: ${5:# The C(config) argument specifies the base configuration to use to compare against the desired configuration}
+    lines: ${6:# The ordered set of configuration lines to be managed and compared with the existing configuration on the remote device}
+    match: ${7:# The C(match) argument controls the method used to match against the current active configuration}
     save: ${8:# The C(save) argument controls whether or not changes made to the active configuration are saved to disk}
-    backup_options: ${9:# This is a dict object containing configurable options related to backup file path}
+    src: ${9:# The C(src) argument specifies the path to the source config file to load}
   tags:
     - community
     - network

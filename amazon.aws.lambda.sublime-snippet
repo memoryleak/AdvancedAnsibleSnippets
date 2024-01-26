@@ -1,37 +1,38 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage AWS Lambda functions}
   amazon.aws.lambda:
-    name: ${2:# The name you want to assign to the function you are uploading}
-    state: ${3:# Create or delete Lambda function}
-    runtime: ${4:# The runtime environment for the Lambda function you are uploading}
-    role: ${5:# The Amazon Resource Name (ARN) of the IAM role that Lambda assumes when it executes your function to access any other Amazon Web Services (AWS) resources}
-    handler: ${6:# The function within your code that Lambda calls to begin execution}
-    zip_file: ${7:# A }
-    s3_bucket: ${8:# Amazon S3 bucket name where the }
-    s3_key: ${9:# The Amazon S3 object (the deployment package) key name you want to upload}
-    s3_object_version: ${10:# The Amazon S3 object (the deployment package) version you want to upload}
-    description: ${11:# A short, user-defined function description}
-    timeout: ${12:# The function maximum execution time in seconds after which Lambda should terminate the function}
-    memory_size: ${13:# The amount of memory, in MB, your Lambda function is given}
-    vpc_subnet_ids: ${14:# List of subnet IDs to run Lambda function in}
-    vpc_security_group_ids: ${15:# List of VPC security group IDs to associate with the Lambda function}
-    environment_variables: ${16:# A dictionary of environment variables the Lambda function is given}
-    dead_letter_arn: ${17:# The parent object that contains the target Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic}
-    tracing_mode: ${18:# Set mode to 'Active' to sample and trace incoming requests with AWS X-Ray}
-    kms_key_arn: ${19:# The KMS key ARN used to encrypt the function's environment variables}
-    architecture: ${20:# The instruction set architecture that the function supports}
-    access_key: ${21:# AWS access key ID}
-    secret_key: ${22:# AWS secret access key}
-    session_token: ${23:# AWS STS session token for use with temporary credentials}
-    profile: ${24:# A named AWS profile to use for authentication}
-    endpoint_url: ${25:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${26:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${27:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${28:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${29:# Use a C(botocore}
-    region: ${30:# The AWS region to use}
-    tags: ${31:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${32:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    access_key: ${2:# AWS access key ID}
+    architecture: ${3:# The instruction set architecture that the function supports}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    dead_letter_arn: ${6:# The parent object that contains the target Amazon Resource Name (ARN) of an Amazon SQS queue or Amazon SNS topic}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    description: ${8:# A short, user-defined function description}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
+    environment_variables: ${10:# A dictionary of environment variables the Lambda function is given}
+    handler: ${11:# The function within your code that Lambda calls to begin execution}
+    kms_key_arn: ${12:# The KMS key ARN used to encrypt the function's environment variables}
+    layers: ${13:# A list of function layers to add to the function's execution environment}
+    memory_size: ${14:# The amount of memory, in MB, your Lambda function is given}
+    name: ${15:# The name you want to assign to the function you are uploading}
+    profile: ${16:# A named AWS profile to use for authentication}
+    purge_tags: ${17:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${18:# The AWS region to use}
+    role: ${19:# The Amazon Resource Name (ARN) of the IAM role that Lambda assumes when it executes your function to access any other Amazon Web Services (AWS) resources}
+    runtime: ${20:# The runtime environment for the Lambda function you are uploading}
+    s3_bucket: ${21:# Amazon S3 bucket name where the}
+    s3_key: ${22:# The Amazon S3 object (the deployment package) key name you want to upload}
+    s3_object_version: ${23:# The Amazon S3 object (the deployment package) version you want to upload}
+    secret_key: ${24:# AWS secret access key}
+    session_token: ${25:# AWS STS session token for use with temporary credentials}
+    state: ${26:# Create or delete Lambda function}
+    tags: ${27:# A dictionary representing the tags to be applied to the resource}
+    timeout: ${28:# The function maximum execution time in seconds after which Lambda should terminate the function}
+    tracing_mode: ${29:# Set mode to 'Active' to sample and trace incoming requests with AWS X-Ray}
+    validate_certs: ${30:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_security_group_ids: ${31:# List of VPC security group IDs to associate with the Lambda function}
+    vpc_subnet_ids: ${32:# List of subnet IDs to run Lambda function in}
+    zip_file: ${33:# A}
   tags:
     - amazon
     - aws

@@ -1,32 +1,34 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage filesystemon Pure Storage FlashBlade`}
   purestorage.flashblade.purefb_fs:
-    name: ${2:# Filesystem Name}
-    state: ${3:# Create, delete or modifies a filesystem}
-    eradicate: ${4:# Define whether to eradicate the filesystem on delete or leave in trash}
-    size: ${5:# Volume size in M, G, T or P units}
-    nfsv3: ${6:# Define whether to NFSv3 protocol is enabled for the filesystem}
-    nfsv4: ${7:# Define whether to NFSv4}
-    nfs_rules: ${8:# Define the NFS rules in operation}
-    smb: ${9:# Define whether to SMB protocol is enabled for the filesystem}
-    smb_aclmode: ${10:# Specify the ACL mode for the SMB protocol}
-    http: ${11:# Define whether to HTTP/HTTPS protocol is enabled for the filesystem}
-    snapshot: ${12:# Define whether a snapshot directory is enabled for the filesystem}
-    writable: ${13:# Define if a filesystem is writeable}
-    promote: ${14:# Promote/demote a filesystem}
-    fastremove: ${15:# Define whether the fast remove directory is enabled for the filesystem}
-    hard_limit: ${16:# Define whether the capacity for a filesystem is a hard limit}
-    user_quota: ${17:# Default quota in M, G, T or P units for a user under this file system}
-    group_quota: ${18:# Default quota in M, G, T or P units for a group under this file system}
-    policy: ${19:# Filesystem policy to assign to or remove from a filesystem}
-    policy_state: ${20:# Add or delete a policy from a filesystem}
-    delete_link: ${21:# Define if the filesystem can be deleted even if it has a replica link}
-    discard_snaps: ${22:# Allow a filesystem to be demoted}
-    access_control: ${23:# The access control style that is utilized for client actions such as setting file and directory ACLs}
-    safeguard_acls: ${24:# Safeguards ACLs on a filesystem}
-    export_policy: ${25:# Name of NFS export policy to assign to filesystem}
-    fb_url: ${26:# FlashBlade management IP address or Hostname}
-    api_token: ${27:# FlashBlade API token for admin privileged user}
+    access_control: ${2:# The access control style that is utilized for client actions such as setting file and directory ACLs}
+    api_token: ${3:# FlashBlade API token for admin privileged user}
+    client_policy: ${4:# Name of SMB client policy to assign to filesystem}
+    delete_link: ${5:# Define if the filesystem can be deleted even if it has a replica link}
+    discard_snaps: ${6:# Allow a filesystem to be demoted}
+    eradicate: ${7:# Define whether to eradicate the filesystem on delete or leave in trash}
+    export_policy: ${8:# Name of NFS export policy to assign to filesystem}
+    fastremove: ${9:# Define whether the fast remove directory is enabled for the filesystem}
+    fb_url: ${10:# FlashBlade management IP address or Hostname}
+    group_quota: ${11:# Default quota in M, G, T or P units for a group under this file system}
+    hard_limit: ${12:# Define whether the capacity for a filesystem is a hard limit}
+    http: ${13:# Define whether to HTTP/HTTPS protocol is enabled for the filesystem}
+    name: ${14:# Filesystem Name}
+    nfs_rules: ${15:# Define the NFS rules in operation}
+    nfsv3: ${16:# Define whether to NFSv3 protocol is enabled for the filesystem}
+    nfsv4: ${17:# Define whether to NFSv4}
+    policy: ${18:# Filesystem policy to assign to or remove from a filesystem}
+    policy_state: ${19:# Add or delete a policy from a filesystem}
+    promote: ${20:# Promote/demote a filesystem}
+    safeguard_acls: ${21:# Safeguards ACLs on a filesystem}
+    share_policy: ${22:# Name of SMB share policy to assign to filesystem}
+    size: ${23:# Volume size in M, G, T or P units}
+    smb: ${24:# Define whether to SMB protocol is enabled for the filesystem}
+    smb_aclmode: ${25:# Specify the ACL mode for the SMB protocol}
+    snapshot: ${26:# Define whether a snapshot directory is enabled for the filesystem}
+    state: ${27:# Create, delete or modifies a filesystem}
+    user_quota: ${28:# Default quota in M, G, T or P units for a user under this file system}
+    writable: ${29:# Define if a filesystem is writeable}
   tags:
     - purestorage
     - flashblade

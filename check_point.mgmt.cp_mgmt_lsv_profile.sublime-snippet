@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages lsv-profile objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_lsv_profile:
+    allowed_ip_addresses: ${2:# Collection of network objects identified by name or UID that represent IP addresses allowed in profile's VPN domain}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    certificate_authority: ${4:# Trusted Certificate authority for establishing trust between VPN peers, identified by name or UID}
+    color: ${5:# Color of the object}
+    comments: ${6:# Comments string}
+    details_level: ${7:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    groups: ${8:# Collection of group identifiers}
+    ignore_errors: ${9:# Apply changes ignoring errors}
+    ignore_warnings: ${10:# Apply changes ignoring warnings}
+    name: ${11:# Object name}
+    restrict_allowed_addresses: ${12:# Indicate whether the IP addresses allowed in the VPN Domain will be restricted or not, according to allowed-ip-addresses field}
+    state: ${13:# State of the access rule (present or absent)}
+    tags: ${14:# Collection of tag identifiers}
+    version: ${15:# Version of checkpoint}
+    vpn_domain: ${16:# peers' VPN Domain properties}
+    wait_for_task: ${17:# Wait for the task to end}
+    wait_for_task_timeout: ${18:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_lsv_profile]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_lsv_profile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages lsv-profile objects on Checkpoint over Web Services API</description>
+</snippet>

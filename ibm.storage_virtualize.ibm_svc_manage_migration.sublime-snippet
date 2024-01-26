@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages volume migration between clusters on IBM Storage Virtualize family systems}
+  ibm.storage_virtualize.ibm_svc_manage_migration:
+    clustername: ${2:# The hostname or management IP of the Storage Virtualize system}
+    domain: ${3:# Domain for the Storage Virtualize system}
+    log_path: ${4:# Path of debug log file}
+    new_pool: ${5:# Specifies the pool on which the volume has to be migrated}
+    password: ${6:# REST API password for the Storage Virtualize system}
+    relationship_name: ${7:# Name of the migration relationship}
+    remote_cluster: ${8:# Specifies the name of the remote cluster}
+    remote_password: ${9:# REST API password for the partner Storage Virtualize system}
+    remote_pool: ${10:# Specifies the pool on which the volume on Partner Storage Virtualize system should get created}
+    remote_token: ${11:# The authentication token to verify a user on the partner Storage Virtualize system}
+    remote_username: ${12:# REST API username for the partner Storage Virtualize system}
+    remote_validate_certs: ${13:# Validates certification for partner Storage Virtualize system}
+    replicate_hosts: ${14:# Replicates the hosts mapped to a source volume on the source system, to the target system, and maps the hosts to the target volume}
+    source_volume: ${15:# Specifies the name of the existing source volume to be used in migration}
+    state: ${16:# Specifies the different states of the migration process when I(type_of_migration=across_clusters)}
+    target_volume: ${17:# Specifies the name of the volume to be created on the target system}
+    token: ${18:# The authentication token to verify a user on the Storage Virtualize system}
+    type_of_migration: ${19:# Specifies the type of migration whether it is migration across pools or migration across clusters}
+    username: ${20:# REST API username for the Storage Virtualize system}
+    validate_certs: ${21:# Validates certification}
+  tags:
+    - ibm
+    - storage_virtualize
+    - ibm_svc_manage_migration]]></content>
+  <tabTrigger>ibm.storage_virtualize.ibm_svc_manage_migration</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages volume migration between clusters on IBM Storage Virtualize family systems</description>
+</snippet>

@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp AWS Cloud Volumes Service Manage FileSystem}
   netapp.aws.aws_netapp_cvs_filesystems:
-    state: ${2:# Whether the specified fileSystem should exist or not}
-    region: ${3:# The region to which the filesystem belongs to}
+    api_key: ${2:# The access key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API}
+    api_url: ${3:# The url to the AWSCVS Web Services Proxy or Embedded Web Services API}
     creationToken: ${4:# Name of the filesystem}
-    quotaInBytes: ${5:# Size of the filesystem}
-    serviceLevel: ${6:# Service Level of a filesystem}
-    exportPolicy: ${7:# The policy rules to export the filesystem}
-    api_key: ${8:# The access key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API}
+    exportPolicy: ${5:# The policy rules to export the filesystem}
+    feature_flags: ${6:# Enable or disable a new feature}
+    quotaInBytes: ${7:# Size of the filesystem}
+    region: ${8:# The region to which the filesystem belongs to}
     secret_key: ${9:# The secret_key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API}
-    api_url: ${10:# The url to the AWSCVS Web Services Proxy or Embedded Web Services API}
-    validate_certs: ${11:# Should https certificates be validated?}
-    feature_flags: ${12:# Enable or disable a new feature}
+    serviceLevel: ${10:# Service Level of a filesystem}
+    state: ${11:# Whether the specified fileSystem should exist or not}
+    validate_certs: ${12:# Should https certificates be validated?}
   tags:
     - netapp
     - aws

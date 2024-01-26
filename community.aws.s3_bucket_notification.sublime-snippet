@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates, updates or deletes S3 Bucket notifications targeting Lambda functions, SNS or SQS}
   community.aws.s3_bucket_notification:
-    event_name: ${2:# Unique name for event notification on bucket}
-    bucket_name: ${3:# S3 bucket name}
-    state: ${4:# Describes the desired state}
-    queue_arn: ${5:# The ARN of the SQS queue}
-    topic_arn: ${6:# The ARN of the SNS topic}
-    lambda_function_arn: ${7:# The ARN of the lambda function}
-    lambda_alias: ${8:# Name of the Lambda function alias}
-    lambda_version: ${9:# Version of the Lambda function}
-    events: ${10:# Events that will be triggering a notification}
-    prefix: ${11:# Optional prefix to limit the notifications to objects with keys that start with matching characters}
-    suffix: ${12:# Optional suffix to limit the notifications to objects with keys that end with matching characters}
-    access_key: ${13:# AWS access key ID}
-    secret_key: ${14:# AWS secret access key}
-    session_token: ${15:# AWS STS session token for use with temporary credentials}
-    profile: ${16:# A named AWS profile to use for authentication}
-    endpoint_url: ${17:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${18:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${19:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${20:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${21:# Use a C(botocore}
-    region: ${22:# The AWS region to use}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    bucket_name: ${5:# S3 bucket name}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    event_name: ${8:# Unique name for event notification on bucket}
+    events: ${9:# Events that will be triggering a notification}
+    lambda_alias: ${10:# Name of the Lambda function alias}
+    lambda_function_arn: ${11:# The ARN of the lambda function}
+    lambda_version: ${12:# Version of the Lambda function}
+    prefix: ${13:# Optional prefix to limit the notifications to objects with keys that start with matching characters}
+    profile: ${14:# A named AWS profile to use for authentication}
+    queue_arn: ${15:# The ARN of the SQS queue}
+    region: ${16:# The AWS region to use}
+    secret_key: ${17:# AWS secret access key}
+    session_token: ${18:# AWS STS session token for use with temporary credentials}
+    state: ${19:# Describes the desired state}
+    suffix: ${20:# Optional suffix to limit the notifications to objects with keys that end with matching characters}
+    topic_arn: ${21:# The ARN of the SNS topic}
+    validate_certs: ${22:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

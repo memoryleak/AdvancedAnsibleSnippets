@@ -1,14 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Object Store Buckets on a  Pure Storage FlashBlade}
   purestorage.flashblade.purefb_bucket:
-    name: ${2:# Bucket Name}
-    account: ${3:# Object Store Account for Bucket}
-    versioning: ${4:# State of S3 bucket versioning}
-    state: ${5:# Create, delete or modifies a bucket}
-    eradicate: ${6:# Define whether to eradicate the bucket on delete or leave in trash}
-    mode: ${7:# The type of bucket to be created}
-    fb_url: ${8:# FlashBlade management IP address or Hostname}
-    api_token: ${9:# FlashBlade API token for admin privileged user}
+    account: ${2:# Object Store Account for Bucket}
+    api_token: ${3:# FlashBlade API token for admin privileged user}
+    default_retention: ${4:# The retention period, in days, used to apply locks on new objects if none is specified by the S3 client}
+    eradicate: ${5:# Define whether to eradicate the bucket on delete or leave in trash}
+    fb_url: ${6:# FlashBlade management IP address or Hostname}
+    freeze_locked_objects: ${7:# If set to true, a locked object will be read-only and no new versions of the object may be created due to modifications}
+    hard_limit: ${8:# Whether the I(quota) value is enforced or not}
+    mode: ${9:# The type of bucket to be created}
+    name: ${10:# Bucket Name}
+    object_lock_enabled: ${11:# If set to true, then S3 APIs relating to object lock may be used}
+    quota: ${12:# User quota in M, G, T or P units}
+    retention_lock: ${13:# Set retention lock level for the bucket}
+    retention_mode: ${14:# The retention mode used to apply locks on new objects if none is specified by the S3 client}
+    state: ${15:# Create, delete or modifies a bucket}
+    versioning: ${16:# State of S3 bucket versioning}
   tags:
     - purestorage
     - flashblade

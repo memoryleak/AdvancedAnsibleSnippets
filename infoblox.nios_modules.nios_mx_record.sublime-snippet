@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure Infoblox NIOS MX records}
   infoblox.nios_modules.nios_mx_record:
-    name: ${2:# Specifies the fully qualified hostname to add or remove from the system}
-    view: ${3:# Sets the DNS view to associate this a record with}
+    comment: ${2:# Configures a text string comment to be associated with the instance of this object}
+    extattrs: ${3:# Allows for the configuration of Extensible Attributes on the instance of the object}
     mail_exchanger: ${4:# Configures the mail exchanger FQDN for this MX record}
-    preference: ${5:# Configures the preference (0-65535) for this MX record}
-    ttl: ${6:# Configures the TTL to be associated with this host record}
-    extattrs: ${7:# Allows for the configuration of Extensible Attributes on the instance of the object}
-    comment: ${8:# Configures a text string comment to be associated with the instance of this object}
-    state: ${9:# Configures the intended state of the instance of the object on the NIOS server}
-    provider: ${10:# A dict object containing connection details}
+    name: ${5:# Specifies the fully qualified hostname to add or remove from the system}
+    preference: ${6:# Configures the preference (0-65535) for this MX record}
+    provider: ${7:# A dict object containing connection details}
+    state: ${8:# Configures the intended state of the instance of the object on the NIOS server}
+    ttl: ${9:# Configures the TTL to be associated with this host record}
+    view: ${10:# Sets the DNS view to associate this a record with}
   tags:
     - infoblox
     - nios_modules

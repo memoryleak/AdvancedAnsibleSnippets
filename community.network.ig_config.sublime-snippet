@@ -2,22 +2,22 @@
   <content><![CDATA[- name: ${1:Manage the configuration database on an Ingate SBC}
   community.network.ig_config:
     add: ${2:# Add a row to a table}
-    delete: ${3:# Delete all rows in a table or a specific row}
-    get: ${4:# Return all rows in a table or a specific row}
-    modify: ${5:# Modify a row in a table}
-    revert: ${6:# Reset the preliminary configuration}
+    client: ${3:# A dict object containing connection details}
+    columns: ${4:# A dict containing column names/values}
+    delete: ${5:# Delete all rows in a table or a specific row}
+    download: ${6:# Download the configuration database from the unit}
     factory: ${7:# Reset the preliminary configuration to its factory defaults}
-    store: ${8:# Store the preliminary configuration}
-    no_response: ${9:# Expect no response when storing the preliminary configuration}
-    return_rowid: ${10:# Get rowid(s) from a table where the columns match}
-    download: ${11:# Download the configuration database from the unit}
-    store_download: ${12:# If the downloaded configuration should be stored on disk}
-    path: ${13:# Where in the filesystem to store the downloaded configuration}
-    filename: ${14:# The name of the file to store the downloaded configuration in}
-    table: ${15:# The name of the table}
-    rowid: ${16:# A row id}
-    columns: ${17:# A dict containing column names/values}
-    client: ${18:# A dict object containing connection details}
+    filename: ${8:# The name of the file to store the downloaded configuration in}
+    get: ${9:# Return all rows in a table or a specific row}
+    modify: ${10:# Modify a row in a table}
+    no_response: ${11:# Expect no response when storing the preliminary configuration}
+    path: ${12:# Where in the filesystem to store the downloaded configuration}
+    return_rowid: ${13:# Get rowid(s) from a table where the columns match}
+    revert: ${14:# Reset the preliminary configuration}
+    rowid: ${15:# A row id}
+    store: ${16:# Store the preliminary configuration}
+    store_download: ${17:# If the downloaded configuration should be stored on disk}
+    table: ${18:# The name of the table}
   tags:
     - community
     - network

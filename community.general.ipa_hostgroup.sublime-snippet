@@ -1,18 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage FreeIPA host-group}
   community.general.ipa_hostgroup:
-    cn: ${2:# Name of host-group}
-    description: ${3:# Description}
-    host: ${4:# List of hosts that belong to the host-group}
-    hostgroup: ${5:# List of host-groups than belong to that host-group}
-    state: ${6:# State to ensure}
-    ipa_port: ${7:# Port of FreeIPA / IPA server}
-    ipa_host: ${8:# IP or hostname of IPA server}
-    ipa_user: ${9:# Administrative account used on IPA server}
-    ipa_pass: ${10:# Password of administrative user}
-    ipa_prot: ${11:# Protocol used by IPA server}
-    validate_certs: ${12:# This only applies if C(ipa_prot) is I(https)}
-    ipa_timeout: ${13:# Specifies idle timeout (in seconds) for the connection}
+    append: ${2:# If V(true), add the listed O(host) to the O(hostgroup)}
+    cn: ${3:# Name of host-group}
+    description: ${4:# Description}
+    host: ${5:# List of hosts that belong to the host-group}
+    hostgroup: ${6:# List of host-groups than belong to that host-group}
+    ipa_host: ${7:# IP or hostname of IPA server}
+    ipa_pass: ${8:# Password of administrative user}
+    ipa_port: ${9:# Port of FreeIPA / IPA server}
+    ipa_prot: ${10:# Protocol used by IPA server}
+    ipa_timeout: ${11:# Specifies idle timeout (in seconds) for the connection}
+    ipa_user: ${12:# Administrative account used on IPA server}
+    state: ${13:# State to ensure}
+    validate_certs: ${14:# This only applies if O(ipa_prot) is V(https)}
   tags:
     - community
     - general

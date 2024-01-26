@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages power states of host systems in vCenter}
   community.vmware.vmware_host_powerstate:
-    state: ${2:# Set the state of the host system}
+    cluster_name: ${2:# Name of the cluster from which all host systems will be used}
     esxi_hostname: ${3:# Name of the host system to work with}
-    cluster_name: ${4:# Name of the cluster from which all host systems will be used}
-    force: ${5:# This parameter specify if the host should be proceeding with user defined powerstate regardless of whether it is in maintenance mode}
-    timeout: ${6:# This parameter defines timeout for C(state) set to C(power-down-to-standby) or C(power-up-from-standby)}
-    hostname: ${7:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${8:# The username of the vSphere vCenter or ESXi server}
-    password: ${9:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${10:# Allows connection when SSL certificates are not valid}
-    port: ${11:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${12:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${13:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    force: ${4:# This parameter specify if the host should be proceeding with user defined powerstate regardless of whether it is in maintenance mode}
+    hostname: ${5:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    password: ${6:# The password of the vSphere vCenter or ESXi server}
+    port: ${7:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${8:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${9:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    state: ${10:# Set the state of the host system}
+    timeout: ${11:# This parameter defines timeout for O(state=power-down-to-standby) or O(state=power-up-from-standby)}
+    username: ${12:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${13:# Allows connection when SSL certificates are not valid}
   tags:
     - community
     - vmware

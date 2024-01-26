@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manipulate Consul policies}
+  community.general.consul_policy:
+    description: ${2:# Description of the policy}
+    host: ${3:# Host of the consul agent, defaults to localhost}
+    name: ${4:# The name that should be associated with the policy, this is opaque to Consul}
+    port: ${5:# The port on which the consul agent is running}
+    rules: ${6:# Rule document that should be associated with the current policy}
+    scheme: ${7:# The protocol scheme on which the consul agent is running}
+    state: ${8:# Whether the policy should be present or absent}
+    token: ${9:# A management token is required to manipulate the policies}
+    valid_datacenters: ${10:# Valid datacenters for the policy}
+    validate_certs: ${11:# Whether to verify the TLS certificate of the consul agent or not}
+  tags:
+    - community
+    - general
+    - consul_policy]]></content>
+  <tabTrigger>community.general.consul_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manipulate Consul policies</description>
+</snippet>

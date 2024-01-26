@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages log destinations on a BIG-IP}
   f5networks.f5_modules.bigip_log_destination:
-    name: ${2:# Specifies the name of the log destination}
-    type: ${3:# Specifies the type of log destination}
-    description: ${4:# The description of the log destination}
-    syslog_format: ${5:# Specifies the method to use to format the logs associated with the remote Syslog log destination}
-    forward_to: ${6:# When C(type) is C(remote-syslog), specifies the management port log destination, which will be used to forward the logs to a single log server, or a remote high-speed log destination, which will be used to forward the logs to a pool of remote log servers}
-    pool: ${7:# When C(type) is C(remote-high-speed-log), specifies the existing pool of remote high-speed log servers where logs will be sent}
-    protocol: ${8:# When C(type) is C(remote-high-speed-log), specifies the protocol for the system to use to send logs to the pool of remote high-speed log servers, where the logs are stored}
-    distribution: ${9:# Specifies the distribution method used by the Remote High Speed Log destination to send messages to pool members}
-    address: ${10:# Specifies the IP address that will receive messages from the specified local Log Destination}
-    port: ${11:# Specifies the port of the IP address that will receive messages from the specified local Log Destination}
-    transport_profile: ${12:# Is a transport profile based on either TCP or UDP}
-    server_ssl_profile: ${13:# If the C(transport_profile) is a TCP profile, you can use this field to choose a Secure Socket Layer (SSL) profile for sending logs to the IPFIX collectors}
-    template_retransmit_interval: ${14:# Enter the time (in seconds) between each transmission of IPFIX templates to the pool of IPFIX collectors}
+    address: ${2:# Specifies the IP address that will receive messages from the specified local Log Destination}
+    description: ${3:# The description of the log destination}
+    distribution: ${4:# Specifies the distribution method used by the Remote High Speed Log destination to send messages to pool members}
+    forward_to: ${5:# When C(type) is C(remote-syslog), specifies the management port log destination, which will be used to forward the logs to a single log server, or a remote high-speed log destination, which will be used to forward the logs to a pool of remote log servers}
+    name: ${6:# Specifies the name of the log destination}
+    partition: ${7:# Device partition to manage resources on}
+    pool: ${8:# When C(type) is C(remote-high-speed-log), specifies the existing pool of remote high-speed log servers where logs will be sent}
+    port: ${9:# Specifies the port of the IP address that will receive messages from the specified local Log Destination}
+    protocol: ${10:# When C(type) is C(remote-high-speed-log), specifies the protocol for the system to use to send logs to the pool of remote high-speed log servers, where the logs are stored}
+    provider: ${11:# A dict object containing connection details}
+    server_ssl_profile: ${12:# If the C(transport_profile) is a TCP profile, you can use this field to choose a Secure Socket Layer (SSL) profile for sending logs to the IPFIX collectors}
+    state: ${13:# When C(present), ensures the resource exists}
+    syslog_format: ${14:# Specifies the method to use to format the logs associated with the remote Syslog log destination}
     template_delete_delay: ${15:# Enter the time (in seconds) that the BIG-IP device should pause between deleting an obsolete IPFIX template and reusing its template ID}
-    partition: ${16:# Device partition to manage resources on}
-    state: ${17:# When C(present), ensures the resource exists}
-    provider: ${18:# A dict object containing connection details}
+    template_retransmit_interval: ${16:# Enter the time (in seconds) between each transmission of IPFIX templates to the pool of IPFIX collectors}
+    transport_profile: ${17:# Is a transport profile based on either TCP or UDP}
+    type: ${18:# Specifies the type of log destination}
   tags:
     - f5networks
     - f5_modules

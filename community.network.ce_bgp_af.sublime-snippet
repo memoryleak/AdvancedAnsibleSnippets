@@ -1,60 +1,60 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages BGP Address-family configuration on HUAWEI CloudEngine switches}
   community.network.ce_bgp_af:
-    state: ${2:# Specify desired state of the resource}
-    vrf_name: ${3:# Name of a BGP instance}
+    active_route_advertise: ${2:# If the value is true, BGP is enabled to advertise only optimal routes in the RM to peers}
+    add_path_sel_num: ${3:# Number of Add-Path routes}
     af_type: ${4:# Address family type of a BGP instance}
-    max_load_ibgp_num: ${5:# Specify the maximum number of equal-cost IBGP routes}
-    ibgp_ecmp_nexthop_changed: ${6:# If the value is true, the next hop of an advertised route is changed to the advertiser itself in IBGP load-balancing scenarios}
-    max_load_ebgp_num: ${7:# Specify the maximum number of equal-cost EBGP routes}
-    ebgp_ecmp_nexthop_changed: ${8:# If the value is true, the next hop of an advertised route is changed to the advertiser itself in EBGP load-balancing scenarios}
-    maximum_load_balance: ${9:# Specify the maximum number of equal-cost routes in the BGP routing table}
-    ecmp_nexthop_changed: ${10:# If the value is true, the next hop of an advertised route is changed to the advertiser itself in BGP load-balancing scenarios}
-    default_local_pref: ${11:# Set the Local-Preference attribute}
-    default_med: ${12:# Specify the Multi-Exit-Discriminator (MED) of BGP routes}
-    default_rt_import_enable: ${13:# If the value is true, importing default routes to the BGP routing table is allowed}
-    router_id: ${14:# ID of a router that is in IPv4 address format}
-    vrf_rid_auto_sel: ${15:# If the value is true, VPN BGP instances are enabled to automatically select router IDs}
-    nexthop_third_party: ${16:# If the value is true, the third-party next hop function is enabled}
-    summary_automatic: ${17:# If the value is true, automatic aggregation is enabled for locally imported routes}
-    auto_frr_enable: ${18:# If the value is true, BGP auto FRR is enabled}
-    load_balancing_as_path_ignore: ${19:# Load balancing as path ignore}
-    rib_only_enable: ${20:# If the value is true, BGP routes cannot be advertised to the IP routing table}
-    rib_only_policy_name: ${21:# Specify the name of a routing policy}
-    active_route_advertise: ${22:# If the value is true, BGP is enabled to advertise only optimal routes in the RM to peers}
-    as_path_neglect: ${23:# If the value is true, the AS path attribute is ignored when BGP selects an optimal route}
-    med_none_as_maximum: ${24:# If the value is true, when BGP selects an optimal route, the system uses 4294967295 as the MED value of a route if the route's attribute does not carry a MED value}
-    router_id_neglect: ${25:# If the value is true, the router ID attribute is ignored when BGP selects the optimal route}
-    igp_metric_ignore: ${26:# If the value is true, the metrics of next-hop IGP routes are not compared when BGP selects an optimal route}
-    always_compare_med: ${27:# If the value is true, the MEDs of routes learned from peers in different autonomous systems are compared when BGP selects an optimal route}
-    determin_med: ${28:# If the value is true, BGP deterministic-MED is enabled}
-    preference_external: ${29:# Set the protocol priority of EBGP routes}
-    preference_internal: ${30:# Set the protocol priority of IBGP routes}
-    preference_local: ${31:# Set the protocol priority of a local BGP route}
-    prefrence_policy_name: ${32:# Set a routing policy to filter routes so that a configured priority is applied to the routes that match the specified policy}
-    reflect_between_client: ${33:# If the value is true, route reflection is enabled between clients}
-    reflector_cluster_id: ${34:# Set a cluster ID}
-    reflector_cluster_ipv4: ${35:# Set a cluster ipv4 address}
-    rr_filter_number: ${36:# Set the number of the extended community filter supported by an RR group}
-    policy_vpn_target: ${37:# If the value is true, VPN-Target filtering function is performed for received VPN routes}
-    next_hop_sel_depend_type: ${38:# Next hop select depend type}
-    nhp_relay_route_policy_name: ${39:# Specify the name of a route-policy for route iteration}
-    ebgp_if_sensitive: ${40:# If the value is true, after the fast EBGP interface awareness function is enabled, EBGP sessions on an interface are deleted immediately when the interface goes Down}
-    reflect_chg_path: ${41:# If the value is true, the route reflector is enabled to modify route path attributes based on an export policy}
-    add_path_sel_num: ${42:# Number of Add-Path routes}
-    route_sel_delay: ${43:# Route selection delay}
-    allow_invalid_as: ${44:# Allow routes with BGP origin AS validation result Invalid to be selected}
-    policy_ext_comm_enable: ${45:# If the value is true, modifying extended community attributes is allowed}
-    supernet_uni_adv: ${46:# If the value is true, the function to advertise supernetwork unicast routes is enabled}
-    supernet_label_adv: ${47:# If the value is true, the function to advertise supernetwork label is enabled}
-    ingress_lsp_policy_name: ${48:# Ingress lsp policy name}
-    originator_prior: ${49:# Originator prior}
-    lowest_priority: ${50:# If the value is true, enable reduce priority to advertise route}
-    relay_delay_enable: ${51:# If the value is true, relay delay enable}
-    import_protocol: ${52:# Routing protocol from which routes can be imported}
-    import_process_id: ${53:# Process ID of an imported routing protocol}
-    network_address: ${54:# Specify the IP address advertised by BGP}
-    mask_len: ${55:# Specify the mask length of an IP address}
+    allow_invalid_as: ${5:# Allow routes with BGP origin AS validation result Invalid to be selected}
+    always_compare_med: ${6:# If the value is true, the MEDs of routes learned from peers in different autonomous systems are compared when BGP selects an optimal route}
+    as_path_neglect: ${7:# If the value is true, the AS path attribute is ignored when BGP selects an optimal route}
+    auto_frr_enable: ${8:# If the value is true, BGP auto FRR is enabled}
+    default_local_pref: ${9:# Set the Local-Preference attribute}
+    default_med: ${10:# Specify the Multi-Exit-Discriminator (MED) of BGP routes}
+    default_rt_import_enable: ${11:# If the value is true, importing default routes to the BGP routing table is allowed}
+    determin_med: ${12:# If the value is true, BGP deterministic-MED is enabled}
+    ebgp_ecmp_nexthop_changed: ${13:# If the value is true, the next hop of an advertised route is changed to the advertiser itself in EBGP load-balancing scenarios}
+    ebgp_if_sensitive: ${14:# If the value is true, after the fast EBGP interface awareness function is enabled, EBGP sessions on an interface are deleted immediately when the interface goes Down}
+    ecmp_nexthop_changed: ${15:# If the value is true, the next hop of an advertised route is changed to the advertiser itself in BGP load-balancing scenarios}
+    ibgp_ecmp_nexthop_changed: ${16:# If the value is true, the next hop of an advertised route is changed to the advertiser itself in IBGP load-balancing scenarios}
+    igp_metric_ignore: ${17:# If the value is true, the metrics of next-hop IGP routes are not compared when BGP selects an optimal route}
+    import_process_id: ${18:# Process ID of an imported routing protocol}
+    import_protocol: ${19:# Routing protocol from which routes can be imported}
+    ingress_lsp_policy_name: ${20:# Ingress lsp policy name}
+    load_balancing_as_path_ignore: ${21:# Load balancing as path ignore}
+    lowest_priority: ${22:# If the value is true, enable reduce priority to advertise route}
+    mask_len: ${23:# Specify the mask length of an IP address}
+    max_load_ebgp_num: ${24:# Specify the maximum number of equal-cost EBGP routes}
+    max_load_ibgp_num: ${25:# Specify the maximum number of equal-cost IBGP routes}
+    maximum_load_balance: ${26:# Specify the maximum number of equal-cost routes in the BGP routing table}
+    med_none_as_maximum: ${27:# If the value is true, when BGP selects an optimal route, the system uses 4294967295 as the MED value of a route if the route's attribute does not carry a MED value}
+    network_address: ${28:# Specify the IP address advertised by BGP}
+    next_hop_sel_depend_type: ${29:# Next hop select depend type}
+    nexthop_third_party: ${30:# If the value is true, the third-party next hop function is enabled}
+    nhp_relay_route_policy_name: ${31:# Specify the name of a route-policy for route iteration}
+    originator_prior: ${32:# Originator prior}
+    policy_ext_comm_enable: ${33:# If the value is true, modifying extended community attributes is allowed}
+    policy_vpn_target: ${34:# If the value is true, VPN-Target filtering function is performed for received VPN routes}
+    preference_external: ${35:# Set the protocol priority of EBGP routes}
+    preference_internal: ${36:# Set the protocol priority of IBGP routes}
+    preference_local: ${37:# Set the protocol priority of a local BGP route}
+    prefrence_policy_name: ${38:# Set a routing policy to filter routes so that a configured priority is applied to the routes that match the specified policy}
+    reflect_between_client: ${39:# If the value is true, route reflection is enabled between clients}
+    reflect_chg_path: ${40:# If the value is true, the route reflector is enabled to modify route path attributes based on an export policy}
+    reflector_cluster_id: ${41:# Set a cluster ID}
+    reflector_cluster_ipv4: ${42:# Set a cluster ipv4 address}
+    relay_delay_enable: ${43:# If the value is true, relay delay enable}
+    rib_only_enable: ${44:# If the value is true, BGP routes cannot be advertised to the IP routing table}
+    rib_only_policy_name: ${45:# Specify the name of a routing policy}
+    route_sel_delay: ${46:# Route selection delay}
+    router_id: ${47:# ID of a router that is in IPv4 address format}
+    router_id_neglect: ${48:# If the value is true, the router ID attribute is ignored when BGP selects the optimal route}
+    rr_filter_number: ${49:# Set the number of the extended community filter supported by an RR group}
+    state: ${50:# Specify desired state of the resource}
+    summary_automatic: ${51:# If the value is true, automatic aggregation is enabled for locally imported routes}
+    supernet_label_adv: ${52:# If the value is true, the function to advertise supernetwork label is enabled}
+    supernet_uni_adv: ${53:# If the value is true, the function to advertise supernetwork unicast routes is enabled}
+    vrf_name: ${54:# Name of a BGP instance}
+    vrf_rid_auto_sel: ${55:# If the value is true, VPN BGP instances are enabled to automatically select router IDs}
   tags:
     - community
     - network

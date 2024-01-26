@@ -2,19 +2,19 @@
   <content><![CDATA[- name: ${1:Manage InfluxDB databases}
   community.general.influxdb_database:
     database_name: ${2:# Name of the database}
-    state: ${3:# Determines if the database should be created or destroyed}
-    hostname: ${4:# The hostname or IP address on which InfluxDB server is listening}
-    username: ${5:# Username that will be used to authenticate against InfluxDB server}
-    password: ${6:# Password that will be used to authenticate against InfluxDB server}
-    port: ${7:# The port on which InfluxDB server is listening}
-    path: ${8:# The path on which InfluxDB server is accessible}
-    validate_certs: ${9:# If set to C(false), the SSL certificates will not be validated}
-    ssl: ${10:# Use https instead of http to connect to InfluxDB server}
+    hostname: ${3:# The hostname or IP address on which InfluxDB server is listening}
+    password: ${4:# Password that will be used to authenticate against InfluxDB server}
+    path: ${5:# The path on which InfluxDB server is accessible}
+    port: ${6:# The port on which InfluxDB server is listening}
+    proxies: ${7:# HTTP(S) proxy to use for Requests to connect to InfluxDB server}
+    retries: ${8:# Number of retries client will try before aborting}
+    ssl: ${9:# Use https instead of http to connect to InfluxDB server}
+    state: ${10:# Determines if the database should be created or destroyed}
     timeout: ${11:# Number of seconds Requests will wait for client to establish a connection}
-    retries: ${12:# Number of retries client will try before aborting}
+    udp_port: ${12:# UDP port to connect to InfluxDB server}
     use_udp: ${13:# Use UDP to connect to InfluxDB server}
-    udp_port: ${14:# UDP port to connect to InfluxDB server}
-    proxies: ${15:# HTTP(S) proxy to use for Requests to connect to InfluxDB server}
+    username: ${14:# Username that will be used to authenticate against InfluxDB server}
+    validate_certs: ${15:# If set to V(false), the SSL certificates will not be validated}
   tags:
     - community
     - general

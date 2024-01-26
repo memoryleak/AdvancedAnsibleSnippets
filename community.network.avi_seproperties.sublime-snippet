@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of SeProperties Avi RESTful Object}
   community.network.avi_seproperties:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
     avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    se_agent_properties: ${5:# Seagentproperties settings for seproperties}
-    se_bootup_properties: ${6:# Sebootupproperties settings for seproperties}
-    se_runtime_properties: ${7:# Seruntimeproperties settings for seproperties}
-    url: ${8:# Avi controller URL of the object}
-    uuid: ${9:# Unique object identifier of the object}
-    controller: ${10:# IP address or hostname of the controller}
-    username: ${11:# Username used for accessing Avi controller}
-    password: ${12:# Password of Avi user in Avi controller}
-    tenant: ${13:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${14:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${15:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${16:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${17:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${18:# It disables avi session information to be cached as a fact}
+    avi_api_update_method: ${5:# Default method for object update is HTTP PUT}
+    avi_credentials: ${6:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${7:# It disables avi session information to be cached as a fact}
+    controller: ${8:# IP address or hostname of the controller}
+    password: ${9:# Password of Avi user in Avi controller}
+    se_agent_properties: ${10:# Seagentproperties settings for seproperties}
+    se_bootup_properties: ${11:# Sebootupproperties settings for seproperties}
+    se_runtime_properties: ${12:# Seruntimeproperties settings for seproperties}
+    state: ${13:# The state that should be applied on the entity}
+    tenant: ${14:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${15:# UUID of tenant used for all Avi API calls and context of object}
+    url: ${16:# Avi controller URL of the object}
+    username: ${17:# Username used for accessing Avi controller}
+    uuid: ${18:# Unique object identifier of the object}
   tags:
     - community
     - network

@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Generate OpenSSL Diffie-Hellman Parameters}
   community.crypto.openssl_dhparam:
-    state: ${2:# Whether the parameters should exist or not, taking action if the state is different from what is stated}
-    size: ${3:# Size (in bits) of the generated DH-params}
+    attributes: ${2:# The attributes the resulting filesystem object should have}
+    backup: ${3:# Create a backup file including a timestamp so you can get the original DH params back if you overwrote them with new ones by accident}
     force: ${4:# Should the parameters be regenerated even it it already exists}
-    path: ${5:# Name of the file in which the generated parameters will be saved}
-    backup: ${6:# Create a backup file including a timestamp so you can get the original DH params back if you overwrote them with new ones by accident}
-    select_crypto_backend: ${7:# Determines which crypto backend to use}
-    return_content: ${8:# If set to C(true), will return the (current or generated) DH parameter's content as I(dhparams)}
-    mode: ${9:# The permissions the resulting filesystem object should have}
-    owner: ${10:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
-    group: ${11:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
-    seuser: ${12:# The user part of the SELinux filesystem object context}
-    serole: ${13:# The role part of the SELinux filesystem object context}
-    setype: ${14:# The type part of the SELinux filesystem object context}
-    selevel: ${15:# The level part of the SELinux filesystem object context}
-    unsafe_writes: ${16:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
-    attributes: ${17:# The attributes the resulting filesystem object should have}
+    group: ${5:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    mode: ${6:# The permissions the resulting filesystem object should have}
+    owner: ${7:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
+    path: ${8:# Name of the file in which the generated parameters will be saved}
+    return_content: ${9:# If set to V(true), will return the (current or generated) DH parameter's content as RV(dhparams)}
+    select_crypto_backend: ${10:# Determines which crypto backend to use}
+    selevel: ${11:# The level part of the SELinux filesystem object context}
+    serole: ${12:# The role part of the SELinux filesystem object context}
+    setype: ${13:# The type part of the SELinux filesystem object context}
+    seuser: ${14:# The user part of the SELinux filesystem object context}
+    size: ${15:# Size (in bits) of the generated DH-params}
+    state: ${16:# Whether the parameters should exist or not, taking action if the state is different from what is stated}
+    unsafe_writes: ${17:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
   tags:
     - community
     - crypto

@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage SDS on Dell PowerFlex}
   dellemc.powerflex.sds:
-    sds_name: ${2:# The name of the SDS}
-    sds_id: ${3:# The ID of the SDS}
-    protection_domain_name: ${4:# The name of the protection domain}
-    protection_domain_id: ${5:# The ID of the protection domain}
-    sds_ip_list: ${6:# Dictionary of IPs and their roles for the SDS}
-    sds_ip_state: ${7:# State of IP with respect to the SDS}
+    hostname: ${2:# IP or FQDN of the PowerFlex host}
+    password: ${3:# The password of the PowerFlex host}
+    performance_profile: ${4:# Performance profile to apply to the SDS}
+    port: ${5:# Port number through which communication happens with PowerFlex host}
+    protection_domain_id: ${6:# The ID of the protection domain}
+    protection_domain_name: ${7:# The name of the protection domain}
     rfcache_enabled: ${8:# Whether to enable the Read Flash cache}
     rmcache_enabled: ${9:# Whether to enable the Read RAM cache}
     rmcache_size: ${10:# Read RAM cache size (in MB)}
-    sds_new_name: ${11:# SDS new name}
-    performance_profile: ${12:# Performance profile to apply to the SDS}
-    state: ${13:# State of the SDS}
-    hostname: ${14:# IP or FQDN of the PowerFlex host}
-    username: ${15:# The username of the PowerFlex host}
-    password: ${16:# The password of the PowerFlex host}
-    validate_certs: ${17:# Boolean variable to specify whether or not to validate SSL certificate}
-    port: ${18:# Port number through which communication happens with PowerFlex host}
-    timeout: ${19:# Time after which connection will get terminated}
+    sds_id: ${11:# The ID of the SDS}
+    sds_ip_list: ${12:# Dictionary of IPs and their roles for the SDS}
+    sds_ip_state: ${13:# State of IP with respect to the SDS}
+    sds_name: ${14:# The name of the SDS}
+    sds_new_name: ${15:# SDS new name}
+    state: ${16:# State of the SDS}
+    timeout: ${17:# Time after which connection will get terminated}
+    username: ${18:# The username of the PowerFlex host}
+    validate_certs: ${19:# Boolean variable to specify whether or not to validate SSL certificate}
   tags:
     - dellemc
     - powerflex

@@ -1,16 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller labels}
   awx.awx.label:
-    name: ${2:# Name of this label}
-    new_name: ${3:# Setting this option will change the existing name (looked up via the name field)}
-    organization: ${4:# Organization this label belongs to}
-    state: ${5:# Desired state of the resource}
-    controller_host: ${6:# URL to your Automation Platform Controller instance}
-    controller_username: ${7:# Username for your controller instance}
-    controller_password: ${8:# Password for your controller instance}
-    controller_oauthtoken: ${9:# The OAuth token to use}
-    validate_certs: ${10:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${11:# Path to the controller config file}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    name: ${7:# Name of this label}
+    new_name: ${8:# Setting this option will change the existing name (looked up via the name field)}
+    organization: ${9:# Organization name, ID, or named URL this label belongs to}
+    request_timeout: ${10:# Specify the timeout Ansible should use in requests to the controller host}
+    state: ${11:# Desired state of the resource}
+    validate_certs: ${12:# Whether to allow insecure connections to AWX}
   tags:
     - awx
     - awx

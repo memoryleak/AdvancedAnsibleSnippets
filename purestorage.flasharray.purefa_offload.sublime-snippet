@@ -1,21 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, modify and delete NFS, S3 or Azure offload targets}
   purestorage.flasharray.purefa_offload:
-    state: ${2:# Define state of offload}
-    name: ${3:# The name of the offload target}
-    protocol: ${4:# Define which protocol the offload engine uses}
-    address: ${5:# The IP or FQDN address of the NFS server}
-    share: ${6:# NFS export on the NFS server}
-    options: ${7:# Additonal mount options for the NFS share}
-    access_key: ${8:# Access Key ID of the offload target}
-    container: ${9:# Name of the blob container of the Azure target}
-    bucket: ${10:# Name of the bucket for the S3 or GCP target}
-    account: ${11:# Name of the Azure blob storage account}
-    secret: ${12:# Secret Access Key for the offload target}
-    initialize: ${13:# Define whether to initialize the offload bucket}
-    placement: ${14:# AWS S3 placement strategy}
-    fa_url: ${15:# FlashArray management IPv4 address or Hostname}
-    api_token: ${16:# FlashArray API token for admin privileged user}
+    access_key: ${2:# Access Key ID of the offload target}
+    account: ${3:# Name of the Azure blob storage account}
+    address: ${4:# The IP or FQDN address of the NFS server}
+    api_token: ${5:# FlashArray API token for admin privileged user}
+    bucket: ${6:# Name of the bucket for the S3 or GCP target}
+    container: ${7:# Name of the blob container of the Azure target}
+    fa_url: ${8:# FlashArray management IPv4 address or Hostname}
+    initialize: ${9:# Define whether to initialize the offload bucket}
+    name: ${10:# The name of the offload target}
+    options: ${11:# Additonal mount options for the NFS share}
+    placement: ${12:# AWS S3 placement strategy}
+    profile: ${13:# The Offload target profile that will be selected for this target}
+    protocol: ${14:# Define which protocol the offload engine uses}
+    secret: ${15:# Secret Access Key for the offload target}
+    share: ${16:# NFS export on the NFS server}
+    state: ${17:# Define state of offload}
   tags:
     - purestorage
     - flasharray

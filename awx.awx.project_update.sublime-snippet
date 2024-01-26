@@ -1,17 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Update a Project in Automation Platform Controller}
   awx.awx.project_update:
-    name: ${2:# The name or id of the project to update}
-    organization: ${3:# Organization the project exists in}
-    wait: ${4:# Wait for the project to update}
-    interval: ${5:# The interval to request an update from the controller}
-    timeout: ${6:# If waiting for the project to update this will abort after this amount of seconds}
-    controller_host: ${7:# URL to your Automation Platform Controller instance}
-    controller_username: ${8:# Username for your controller instance}
-    controller_password: ${9:# Password for your controller instance}
-    controller_oauthtoken: ${10:# The OAuth token to use}
-    validate_certs: ${11:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${12:# Path to the controller config file}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    interval: ${7:# The interval to request an update from the controller}
+    name: ${8:# The name or id of the project to update}
+    organization: ${9:# Organization name, ID, or named URL the project exists in}
+    request_timeout: ${10:# Specify the timeout Ansible should use in requests to the controller host}
+    timeout: ${11:# If waiting for the project to update this will abort after this amount of seconds}
+    validate_certs: ${12:# Whether to allow insecure connections to AWX}
+    wait: ${13:# Wait for the project to update}
   tags:
     - awx
     - awx

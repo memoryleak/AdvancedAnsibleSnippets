@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, Delete and Modify network spaces on Infinibox}
   infinidat.infinibox.infini_network_space:
-    name: ${2:# Network space name}
-    state: ${3:# Creates/Modifies network spaces when present}
-    interfaces: ${4:# A list of interfaces for the space}
-    service: ${5:# Choose a service}
-    mtu: ${6:# Set an MTU}
+    interfaces: ${2:# A list of interfaces for the space}
+    ips: ${3:# List of IPs}
+    mtu: ${4:# Set an MTU}
+    name: ${5:# Network space name}
+    netmask: ${6:# Network mask}
     network: ${7:# Starting IP address}
-    netmask: ${8:# Network mask}
-    ips: ${9:# List of IPs}
-    rate_limit: ${10:# Specify the throughput limit per node}
-    system: ${11:# Infinibox Hostname or IPv4 Address}
-    user: ${12:# Infinibox User username with sufficient priveledges ( see notes )}
-    password: ${13:# Infinibox User password}
+    password: ${8:# Infinibox User password}
+    rate_limit: ${9:# Specify the throughput limit per node}
+    service: ${10:# Choose a service}
+    state: ${11:# Creates/Modifies network spaces when present}
+    system: ${12:# Infinibox Hostname or IPv4 Address}
+    user: ${13:# Infinibox User username with sufficient priveledges ( see notes )}
   tags:
     - infinidat
     - infinibox

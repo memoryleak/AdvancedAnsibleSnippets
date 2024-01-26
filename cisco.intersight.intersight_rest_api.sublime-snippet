@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:REST API configuration for Cisco Intersight}
   cisco.intersight.intersight_rest_api:
-    resource_path: ${2:# Resource URI being configured related to api_uri}
-    query_params: ${3:# Query parameters for the Intersight API query languange}
-    update_method: ${4:# The HTTP method used for update operations}
-    api_body: ${5:# The paylod for API requests used to modify resources}
+    api_body: ${2:# The paylod for API requests used to modify resources}
+    api_key_id: ${3:# Public API Key ID associated with the private key}
+    api_private_key: ${4:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${5:# URI used to access the Intersight API}
     list_body: ${6:# The paylod for API requests used to modify resources}
-    return_list: ${7:# If C(yes), will return a list of API results in the api_response}
-    state: ${8:# If C(present), will verify the resource is present and will create if needed}
-    api_private_key: ${9:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
-    api_uri: ${10:# URI used to access the Intersight API}
-    api_key_id: ${11:# Public API Key ID associated with the private key}
-    validate_certs: ${12:# Boolean control for verifying the api_uri TLS certificate}
-    use_proxy: ${13:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    query_params: ${7:# Query parameters for the Intersight API query languange}
+    resource_path: ${8:# Resource URI being configured related to api_uri}
+    return_list: ${9:# If C(yes), will return a list of API results in the api_response}
+    state: ${10:# If C(present), will verify the resource is present and will create if needed}
+    update_method: ${11:# The HTTP method used for update operations}
+    use_proxy: ${12:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${13:# Boolean control for verifying the api_uri TLS certificate}
   tags:
     - cisco
     - intersight

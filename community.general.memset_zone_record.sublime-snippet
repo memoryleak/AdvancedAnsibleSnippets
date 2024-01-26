@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create and delete records in Memset DNS zones}
   community.general.memset_zone_record:
-    state: ${2:# Indicates desired state of resource}
+    address: ${2:# The address for this record (can be IP or text string depending on record type)}
     api_key: ${3:# The API key obtained from the Memset control panel}
-    address: ${4:# The address for this record (can be IP or text string depending on record type)}
-    priority: ${5:# C(SRV) and C(TXT) record priority, in the range 0 > 999 (inclusive)}
-    record: ${6:# The subdomain to create}
-    type: ${7:# The type of DNS record to create}
-    relative: ${8:# If set then the current domain is added onto the address field for C(CNAME), C(MX), C(NS) and C(SRV)record types}
-    ttl: ${9:# The record's TTL in seconds (will inherit zone's TTL if not explicitly set)}
+    priority: ${4:# C(SRV) and C(TXT) record priority, in the range 0 > 999 (inclusive)}
+    record: ${5:# The subdomain to create}
+    relative: ${6:# If set then the current domain is added onto the address field for C(CNAME), C(MX), C(NS) and C(SRV)record types}
+    state: ${7:# Indicates desired state of resource}
+    ttl: ${8:# The record's TTL in seconds (will inherit zone's TTL if not explicitly set)}
+    type: ${9:# The type of DNS record to create}
     zone: ${10:# The name of the zone to which to add the record to}
   tags:
     - community

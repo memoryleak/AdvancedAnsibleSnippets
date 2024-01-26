@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Get access-rule objects facts on Check Point over Web Services API}
   check_point.mgmt.cp_mgmt_access_rule_facts:
-    name: ${2:# Object name}
-    layer: ${3:# Layer that the rule belongs to identified by the name or UID}
-    show_as_ranges: ${4:# When true, the source, destination and services & applications parameters are displayed as ranges of IP addresses and port numbers rather than network objects}
-    show_hits: ${5:# N/A}
+    dereference_group_members: ${2:# Indicates whether to dereference 'members' field by details level for every object in reply}
+    details_level: ${3:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    filter: ${4:# Search expression to filter the rulebase}
+    filter_settings: ${5:# Sets filter preferences}
     hits_settings: ${6:# N/A}
-    details_level: ${7:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
-    filter: ${8:# Search expression to filter the rulebase}
-    filter_settings: ${9:# Sets filter preferences}
-    limit: ${10:# No more than that many results will be returned}
-    offset: ${11:# Skip that many results before beginning to return them}
-    order: ${12:# Sorts results by the given field}
-    package: ${13:# Name of the package}
-    use_object_dictionary: ${14:# N/A}
-    dereference_group_members: ${15:# Indicates whether to dereference 'members' field by details level for every object in reply}
-    show_membership: ${16:# Indicates whether to calculate and show 'groups' field for every object in reply}
+    layer: ${7:# Layer that the rule belongs to identified by the name or UID}
+    limit: ${8:# No more than that many results will be returned}
+    name: ${9:# Object name}
+    offset: ${10:# Skip that many results before beginning to return them}
+    order: ${11:# Sorts results by the given field}
+    package: ${12:# Name of the package}
+    show_as_ranges: ${13:# When true, the source, destination and services & applications parameters are displayed as ranges of IP addresses and port numbers rather than network objects}
+    show_hits: ${14:# N/A}
+    show_membership: ${15:# Indicates whether to calculate and show 'groups' field for every object in reply}
+    use_object_dictionary: ${16:# N/A}
     version: ${17:# Version of checkpoint}
   tags:
     - check_point

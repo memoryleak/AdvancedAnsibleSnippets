@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Allows administration of Keycloak realm keys via Keycloak API}
+  community.general.keycloak_realm_key:
+    auth_client_id: ${2:# OpenID Connect C(client_id) to authenticate to the API with}
+    auth_client_secret: ${3:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
+    auth_keycloak_url: ${4:# URL to the Keycloak instance}
+    auth_password: ${5:# Password to authenticate for API access with}
+    auth_realm: ${6:# Keycloak realm name to authenticate to for API access}
+    auth_username: ${7:# Username to authenticate for API access with}
+    config: ${8:# Dict specifying the key and its properties}
+    connection_timeout: ${9:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    force: ${10:# Enforce the state of the private key and certificate}
+    http_agent: ${11:# Configures the HTTP User-Agent header}
+    name: ${12:# Name of the realm key to create}
+    parent_id: ${13:# The parent_id of the realm key}
+    provider_id: ${14:# The name of the 'provider ID' for the key}
+    state: ${15:# State of the keycloak realm key}
+    token: ${16:# Authentication token for Keycloak API}
+    validate_certs: ${17:# Verify TLS certificates (do not disable this in production)}
+  tags:
+    - community
+    - general
+    - keycloak_realm_key]]></content>
+  <tabTrigger>community.general.keycloak_realm_key</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Allows administration of Keycloak realm keys via Keycloak API</description>
+</snippet>

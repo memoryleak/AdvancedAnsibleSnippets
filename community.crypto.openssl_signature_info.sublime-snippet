@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Verify signatures with openssl}
   community.crypto.openssl_signature_info:
-    path: ${2:# The signed file to verify}
+    certificate_content: ${2:# The content of the certificate used to verify the signature}
     certificate_path: ${3:# The path to the certificate used to verify the signature}
-    certificate_content: ${4:# The content of the certificate used to verify the signature}
-    signature: ${5:# Base64 encoded signature}
-    select_crypto_backend: ${6:# Determines which crypto backend to use}
+    path: ${4:# The signed file to verify}
+    select_crypto_backend: ${5:# Determines which crypto backend to use}
+    signature: ${6:# Base64 encoded signature}
   tags:
     - community
     - crypto

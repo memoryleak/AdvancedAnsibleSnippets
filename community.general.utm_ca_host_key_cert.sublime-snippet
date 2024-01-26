@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, update or destroy ca host_key_cert entry in Sophos UTM}
   community.general.utm_ca_host_key_cert:
-    name: ${2:# The name of the object}
-    ca: ${3:# A reference to an existing utm_ca_signing_ca or utm_ca_verification_ca object}
-    meta: ${4:# A reference to an existing utm_ca_meta_x509 object}
-    certificate: ${5:# The certificate in PEM format}
-    comment: ${6:# Optional comment string}
-    encrypted: ${7:# Optionally enable encryption}
-    key: ${8:# Optional private key in PEM format}
-    headers: ${9:# A dictionary of additional headers to be sent to POST and PUT requests}
-    utm_host: ${10:# The REST Endpoint of the Sophos UTM}
-    utm_port: ${11:# The port of the REST interface}
-    utm_token: ${12:# The token used to identify at the REST-API}
+    ca: ${2:# A reference to an existing utm_ca_signing_ca or utm_ca_verification_ca object}
+    certificate: ${3:# The certificate in PEM format}
+    comment: ${4:# Optional comment string}
+    encrypted: ${5:# Optionally enable encryption}
+    headers: ${6:# A dictionary of additional headers to be sent to POST and PUT requests}
+    key: ${7:# Optional private key in PEM format}
+    meta: ${8:# A reference to an existing utm_ca_meta_x509 object}
+    name: ${9:# The name of the object}
+    state: ${10:# The desired state of the object}
+    utm_host: ${11:# The REST Endpoint of the Sophos UTM}
+    utm_port: ${12:# The port of the REST interface}
     utm_protocol: ${13:# The protocol of the REST Endpoint}
-    validate_certs: ${14:# Whether the REST interface's ssl certificate should be verified or not}
-    state: ${15:# The desired state of the object}
+    utm_token: ${14:# The token used to identify at the REST-API}
+    validate_certs: ${15:# Whether the REST interface's ssl certificate should be verified or not}
   tags:
     - community
     - general

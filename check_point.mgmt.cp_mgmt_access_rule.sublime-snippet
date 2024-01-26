@@ -1,40 +1,40 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages access-rule objects on Check Point over Web Services API}
   check_point.mgmt.cp_mgmt_access_rule:
-    layer: ${2:# Layer that the rule belongs to identified by the name or UID}
-    position: ${3:# Position in the rulebase}
-    relative_position: ${4:# Position in the rulebase}
-    search_entire_rulebase: ${5:# Whether to search the entire rulebase for a rule that's been edited in its relative_position field to make sure there indeed has been a change in its position or the section it might be in}
-    name: ${6:# Object name}
-    action: ${7:# a 'Accept', 'Drop', 'Ask', 'Inform', 'Reject', 'User Auth', 'Client Auth', 'Apply Layer'}
-    action_settings: ${8:# Action settings}
-    content: ${9:# List of processed file types that this rule applies on}
-    content_direction: ${10:# On which direction the file types processing is applied}
-    content_negate: ${11:# True if negate is set for data}
-    custom_fields: ${12:# Custom fields}
-    destination: ${13:# Collection of Network objects identified by the name or UID}
-    destination_negate: ${14:# True if negate is set for destination}
-    enabled: ${15:# Enable/Disable the rule}
+    action: ${2:# a 'Accept', 'Drop', 'Ask', 'Inform', 'Reject', 'User Auth', 'Client Auth', 'Apply Layer'}
+    action_settings: ${3:# Action settings}
+    auto_publish_session: ${4:# Publish the current session if changes have been performed after task completes}
+    comments: ${5:# Comments string}
+    content: ${6:# List of processed file types that this rule applies on}
+    content_direction: ${7:# On which direction the file types processing is applied}
+    content_negate: ${8:# True if negate is set for data}
+    custom_fields: ${9:# Custom fields}
+    destination: ${10:# Collection of Network objects identified by the name or UID}
+    destination_negate: ${11:# True if negate is set for destination}
+    details_level: ${12:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    enabled: ${13:# Enable/Disable the rule}
+    ignore_errors: ${14:# Apply changes ignoring errors}
+    ignore_warnings: ${15:# Apply changes ignoring warnings}
     inline_layer: ${16:# Inline Layer identified by the name or UID}
     install_on: ${17:# Which Gateways identified by the name or UID to install the policy on}
-    service: ${18:# Collection of Network objects identified by the name or UID}
-    service_negate: ${19:# True if negate is set for service}
-    source: ${20:# Collection of Network objects identified by the name or UID}
-    source_negate: ${21:# True if negate is set for source}
-    time: ${22:# List of time objects}
-    track: ${23:# Track Settings}
-    user_check: ${24:# User check settings}
-    vpn_list: ${25:# Communities or Directional}
-    vpn: ${26:# Any or All_GwToGw}
-    comments: ${27:# Comments string}
-    details_level: ${28:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
-    ignore_warnings: ${29:# Apply changes ignoring warnings}
-    ignore_errors: ${30:# Apply changes ignoring errors}
-    state: ${31:# State of the access rule (present or absent)}
-    auto_publish_session: ${32:# Publish the current session if changes have been performed after task completes}
-    wait_for_task: ${33:# Wait for the task to end}
-    wait_for_task_timeout: ${34:# How many minutes to wait until throwing a timeout error}
-    version: ${35:# Version of checkpoint}
+    layer: ${18:# Layer that the rule belongs to identified by the name or UID}
+    name: ${19:# Object name}
+    position: ${20:# Position in the rulebase}
+    relative_position: ${21:# Position in the rulebase}
+    search_entire_rulebase: ${22:# Whether to search the entire rulebase for a rule that's been edited in its relative_position field to make sure there indeed has been a change in its position or the section it might be in}
+    service: ${23:# Collection of Network objects identified by the name or UID}
+    service_negate: ${24:# True if negate is set for service}
+    source: ${25:# Collection of Network objects identified by the name or UID}
+    source_negate: ${26:# True if negate is set for source}
+    state: ${27:# State of the access rule (present or absent)}
+    time: ${28:# List of time objects}
+    track: ${29:# Track Settings}
+    user_check: ${30:# User check settings}
+    version: ${31:# Version of checkpoint}
+    vpn: ${32:# Any or All_GwToGw}
+    vpn_list: ${33:# Communities or Directional}
+    wait_for_task: ${34:# Wait for the task to end}
+    wait_for_task_timeout: ${35:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

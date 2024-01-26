@@ -1,51 +1,51 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create or delete AWS AutoScaling Groups (ASGs)}
   amazon.aws.autoscaling_group:
-    state: ${2:# Register or deregister the instance}
-    name: ${3:# Unique name for group to be created or deleted}
-    load_balancers: ${4:# List of ELB names to use for the group}
-    target_group_arns: ${5:# List of target group ARNs to use for the group}
-    availability_zones: ${6:# List of availability zone names in which to create the group}
-    launch_config_name: ${7:# Name of the Launch configuration to use for the group}
-    launch_template: ${8:# Dictionary describing the Launch Template to use}
-    min_size: ${9:# Minimum number of instances in group, if unspecified then the current group value will be used}
-    max_size: ${10:# Maximum number of instances in group, if unspecified then the current group value will be used}
-    max_instance_lifetime: ${11:# The maximum amount of time, in seconds, that an instance can be in service}
-    mixed_instances_policy: ${12:# A mixed instance policy to use for the ASG}
-    placement_group: ${13:# Physical location of your cluster placement group created in Amazon EC2}
-    desired_capacity: ${14:# Desired number of instances in group, if unspecified then the current group value will be used}
-    replace_all_instances: ${15:# In a rolling fashion, replace all instances that used the old launch configuration with one from the new launch configuration}
-    replace_batch_size: ${16:# Number of instances you'd like to replace at a time}
-    replace_instances: ${17:# List of I(instance_ids) belonging to the named AutoScalingGroup that you would like to terminate and be replaced with instances matching the current launch configuration}
-    detach_instances: ${18:# Removes one or more instances from the specified AutoScalingGroup}
-    decrement_desired_capacity: ${19:# Indicates whether the AutoScalingGroup decrements the desired capacity value by the number of instances detached}
-    lc_check: ${20:# Check to make sure instances that are being replaced with I(replace_instances) do not already have the current I(launch_config)}
-    lt_check: ${21:# Check to make sure instances that are being replaced with I(replace_instances) do not already have the current I(launch_template or I(launch_template) I(version)}
-    vpc_zone_identifier: ${22:# List of VPC subnets to use}
-    tags: ${23:# A list of tags to add to the Auto Scale Group}
-    purge_tags: ${24:# If C(true), existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
-    health_check_period: ${25:# Length of time in seconds after a new EC2 instance comes into service that Auto Scaling starts checking its health}
-    health_check_type: ${26:# The service you want the health status from, Amazon EC2 or Elastic Load Balancer}
-    default_cooldown: ${27:# The number of seconds after a scaling activity completes before another can begin}
-    wait_timeout: ${28:# How long to wait for instances to become viable when replaced}
-    wait_for_instances: ${29:# Wait for the ASG instances to be in a ready state before exiting}
-    termination_policies: ${30:# An ordered list of criteria used for selecting instances to be removed from the Auto Scaling group when reducing capacity}
-    notification_topic: ${31:# A SNS topic ARN to send auto scaling notifications to}
-    notification_types: ${32:# A list of auto scaling events to trigger notifications on}
-    suspend_processes: ${33:# A list of scaling processes to suspend}
-    metrics_collection: ${34:# Enable ASG metrics collection}
-    metrics_granularity: ${35:# When I(metrics_collection=true) this will determine the granularity of metrics collected by CloudWatch}
-    metrics_list: ${36:# List of autoscaling metrics to collect when I(metrics_collection=true)}
-    access_key: ${37:# AWS access key ID}
-    secret_key: ${38:# AWS secret access key}
-    session_token: ${39:# AWS STS session token for use with temporary credentials}
-    profile: ${40:# A named AWS profile to use for authentication}
-    endpoint_url: ${41:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${42:# The location of a CA Bundle to use when validating SSL certificates}
+    access_key: ${2:# AWS access key ID}
+    availability_zones: ${3:# List of availability zone names in which to create the group}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    decrement_desired_capacity: ${7:# Indicates whether the AutoScalingGroup decrements the desired capacity value by the number of instances detached}
+    default_cooldown: ${8:# The number of seconds after a scaling activity completes before another can begin}
+    desired_capacity: ${9:# Desired number of instances in group, if unspecified then the current group value will be used}
+    detach_instances: ${10:# Removes one or more instances from the specified AutoScalingGroup}
+    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
+    health_check_period: ${12:# Length of time in seconds after a new EC2 instance comes into service that Auto Scaling starts checking its health}
+    health_check_type: ${13:# The service you want the health status from, Amazon EC2 or Elastic Load Balancer}
+    launch_config_name: ${14:# Name of the Launch configuration to use for the group}
+    launch_template: ${15:# Dictionary describing the Launch Template to use}
+    lc_check: ${16:# Check to make sure instances that are being replaced with I(replace_instances) do not already have the current I(launch_config)}
+    load_balancers: ${17:# List of ELB names to use for the group}
+    lt_check: ${18:# Check to make sure instances that are being replaced with I(replace_instances) do not already have the current I(launch_template or I(launch_template) I(version)}
+    max_instance_lifetime: ${19:# The maximum amount of time, in seconds, that an instance can be in service}
+    max_size: ${20:# Maximum number of instances in group, if unspecified then the current group value will be used}
+    metrics_collection: ${21:# Enable ASG metrics collection}
+    metrics_granularity: ${22:# When I(metrics_collection=true) this will determine the granularity of metrics collected by CloudWatch}
+    metrics_list: ${23:# List of autoscaling metrics to collect when I(metrics_collection=true)}
+    min_size: ${24:# Minimum number of instances in group, if unspecified then the current group value will be used}
+    mixed_instances_policy: ${25:# A mixed instance policy to use for the ASG}
+    name: ${26:# Unique name for group to be created or deleted}
+    notification_topic: ${27:# A SNS topic ARN to send auto scaling notifications to}
+    notification_types: ${28:# A list of auto scaling events to trigger notifications on}
+    placement_group: ${29:# Physical location of your cluster placement group created in Amazon EC2}
+    profile: ${30:# A named AWS profile to use for authentication}
+    purge_tags: ${31:# If C(true), existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${32:# The AWS region to use}
+    replace_all_instances: ${33:# In a rolling fashion, replace all instances that used the old launch configuration with one from the new launch configuration}
+    replace_batch_size: ${34:# Number of instances you'd like to replace at a time}
+    replace_instances: ${35:# List of I(instance_ids) belonging to the named AutoScalingGroup that you would like to terminate and be replaced with instances matching the current launch configuration}
+    secret_key: ${36:# AWS secret access key}
+    session_token: ${37:# AWS STS session token for use with temporary credentials}
+    state: ${38:# Register or deregister the instance}
+    suspend_processes: ${39:# A list of scaling processes to suspend}
+    tags: ${40:# A list of tags to add to the Auto Scale Group}
+    target_group_arns: ${41:# List of target group ARNs to use for the group}
+    termination_policies: ${42:# An ordered list of criteria used for selecting instances to be removed from the Auto Scaling group when reducing capacity}
     validate_certs: ${43:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${44:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${45:# Use a C(botocore}
-    region: ${46:# The AWS region to use}
+    vpc_zone_identifier: ${44:# List of VPC subnets to use}
+    wait_for_instances: ${45:# Wait for the ASG instances to be in a ready state before exiting}
+    wait_timeout: ${46:# How long to wait for instances to become viable when replaced}
   tags:
     - amazon
     - aws

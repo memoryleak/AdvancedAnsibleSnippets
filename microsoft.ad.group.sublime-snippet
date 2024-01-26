@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Active Directory group objects}
+  microsoft.ad.group:
+    attributes: ${2:# The attributes to either add, remove, or set on the AD object}
+    category: ${3:# The category of the group}
+    description: ${4:# The description of the AD object to set}
+    display_name: ${5:# The display name of the AD object to set}
+    domain_password: ${6:# The password for I(domain_username)}
+    domain_server: ${7:# Specified the Active Directory Domain Services instance to connect to}
+    domain_username: ${8:# The username to use when interacting with AD}
+    homepage: ${9:# The homepage of the group}
+    identity: ${10:# The identity of the AD object used to find the AD object to manage}
+    managed_by: ${11:# The user or group that manages the group}
+    members: ${12:# The members of the group to set}
+    name: ${13:# The C(name) of the AD object to manage}
+    path: ${14:# The path of the OU or the container where the new object should exist in}
+    protect_from_deletion: ${15:# Marks the object as protected from accidental deletion}
+    sam_account_name: ${16:# The C(sAMAccountName) value to set for the group}
+    scope: ${17:# The scope of the group}
+    state: ${18:# Set to C(present) to ensure the AD object exists}
+  tags:
+    - microsoft
+    - ad
+    - group]]></content>
+  <tabTrigger>microsoft.ad.group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Active Directory group objects</description>
+</snippet>

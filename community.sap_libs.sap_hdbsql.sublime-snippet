@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Ansible Module to execute SQL on SAP HANA}
   community.sap_libs.sap_hdbsql:
-    sid: ${2:# The system ID}
+    autocommit: ${2:# Autocommit the statement}
     bin_path: ${3:# The path to the hdbsql binary}
-    instance: ${4:# The instance number}
-    user: ${5:# A dedicated username}
-    userstore: ${6:# If C(true), the user must be in hdbuserstore}
-    password: ${7:# The password to connect to the database}
-    autocommit: ${8:# Autocommit the statement}
-    host: ${9:# The Host IP address}
-    database: ${10:# Define the database on which to connect}
-    encrypted: ${11:# Use encrypted connection}
-    filepath: ${12:# One or more files each containing one SQL query to run}
-    query: ${13:# SQL query to run}
+    database: ${4:# Define the database on which to connect}
+    encrypted: ${5:# Use encrypted connection}
+    filepath: ${6:# One or more files each containing one SQL query to run}
+    host: ${7:# The Host IP address}
+    instance: ${8:# The instance number}
+    password: ${9:# The password to connect to the database}
+    query: ${10:# SQL query to run}
+    sid: ${11:# The system ID}
+    user: ${12:# A dedicated username}
+    userstore: ${13:# If C(true), the user must be in hdbuserstore}
   tags:
     - community
     - sap_libs

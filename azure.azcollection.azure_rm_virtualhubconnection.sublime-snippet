@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure VirtualHub instance}
   azure.azcollection.azure_rm_virtualhubconnection:
-    resource_group: ${2:# The resource group name of the VirtualHub}
-    name: ${3:# The name of the VirtualHub connection}
-    vhub_name: ${4:# The VirtualHub name}
-    enable_internet_security: ${5:# Enable internet security}
-    allow_remote_vnet_to_use_hub_vnet_gateways: ${6:# Allow RemoteVnet to use Virtual Hub's gateways}
-    allow_hub_to_remote_vnet_transit: ${7:# VirtualHub to RemoteVnet transit to enabled or not}
-    remote_virtual_network: ${8:# ID of the remote VNet to connect to}
-    routing_configuration: ${9:# The Routing Configuration indicating the associated and propagated route tables on this connection}
-    state: ${10:# Assert the state of the VirtualHub connection}
-    ad_user: ${11:# Active Directory username}
-    password: ${12:# Active Directory user password}
-    profile: ${13:# Security profile found in ~/}
-    subscription_id: ${14:# Your Azure subscription Id}
-    client_id: ${15:# Azure client ID}
-    secret: ${16:# Azure client secret}
-    tenant: ${17:# Azure tenant ID}
-    cloud_environment: ${18:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${19:# Azure AD authority url}
-    cert_validation_mode: ${20:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${21:# Controls the source of the credentials to use for authentication}
-    api_profile: ${22:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${23:# Parent argument}
-    log_mode: ${24:# Parent argument}
-    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    allow_hub_to_remote_vnet_transit: ${4:# VirtualHub to RemoteVnet transit to enabled or not}
+    allow_remote_vnet_to_use_hub_vnet_gateways: ${5:# Allow RemoteVnet to use Virtual Hub's gateways}
+    api_profile: ${6:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${7:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    enable_internet_security: ${11:# Enable internet security}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    name: ${14:# The name of the VirtualHub connection}
+    password: ${15:# Active Directory user password}
+    profile: ${16:# Security profile found in ~/}
+    remote_virtual_network: ${17:# ID of the remote VNet to connect to}
+    resource_group: ${18:# The resource group name of the VirtualHub}
+    routing_configuration: ${19:# The Routing Configuration indicating the associated and propagated route tables on this connection}
+    secret: ${20:# Azure client secret}
+    state: ${21:# Assert the state of the VirtualHub connection}
+    subscription_id: ${22:# Your Azure subscription Id}
+    tenant: ${23:# Azure tenant ID}
+    thumbprint: ${24:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    vhub_name: ${25:# The VirtualHub name}
+    x509_certificate_path: ${26:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

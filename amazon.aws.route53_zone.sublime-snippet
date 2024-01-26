@@ -1,25 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:add or delete Route53 zones}
   amazon.aws.route53_zone:
-    zone: ${2:# The DNS zone record (eg: foo}
-    state: ${3:# Whether or not the zone should exist or not}
-    vpc_id: ${4:# The VPC ID the zone should be a part of (if this is going to be a private zone)}
-    vpc_region: ${5:# The VPC Region the zone should be a part of (if this is going to be a private zone)}
-    comment: ${6:# Comment associated with the zone}
-    hosted_zone_id: ${7:# The unique zone identifier you want to delete or 'all' if there are many zones with the same domain name}
-    delegation_set_id: ${8:# The reusable delegation set ID to be associated with the zone}
-    access_key: ${9:# AWS access key ID}
-    secret_key: ${10:# AWS secret access key}
-    session_token: ${11:# AWS STS session token for use with temporary credentials}
-    profile: ${12:# A named AWS profile to use for authentication}
-    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${16:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
-    region: ${18:# The AWS region to use}
-    tags: ${19:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${20:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    comment: ${5:# Comment associated with the zone}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    delegation_set_id: ${7:# The reusable delegation set ID to be associated with the zone}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
+    hosted_zone_id: ${9:# The unique zone identifier you want to delete or 'all' if there are many zones with the same domain name}
+    profile: ${10:# A named AWS profile to use for authentication}
+    purge_tags: ${11:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${12:# The AWS region to use}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    state: ${15:# Whether or not the zone should exist or not}
+    tags: ${16:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_id: ${18:# The VPC ID the zone should be a part of (if this is going to be a private zone)}
+    vpc_region: ${19:# The VPC Region the zone should be a part of (if this is going to be a private zone)}
+    vpcs: ${20:# The VPCs the zone should be a part of (if this is going to be a private zone)}
+    zone: ${21:# The DNS zone record (eg: foo}
   tags:
     - amazon
     - aws

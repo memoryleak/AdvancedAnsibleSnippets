@@ -1,28 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP S3 Buckets}
   netapp.ontap.na_ontap_s3_buckets:
-    state: ${2:# Whether the specified S3 bucket should exist or not}
-    name: ${3:# The name of the S3 bucket}
-    vserver: ${4:# Name of the vserver to use}
-    aggregates: ${5:# List of aggregates names to use for the S3 bucket}
+    aggregates: ${2:# List of aggregates names to use for the S3 bucket}
+    audit_event_selector: ${3:# Audit event selector allows you to specify access and permission types to audit}
+    cert_filepath: ${4:# path to SSL client cert file (}
+    comment: ${5:# Comment for the S3 bucket}
     constituents_per_aggregate: ${6:# Number of constituents per aggregate}
-    size: ${7:# Size of the S3 bucket in bytes}
-    comment: ${8:# Comment for the S3 bucket}
-    policy: ${9:# Access policy uses the Amazon Web Services (AWS) policy language syntax to allow S3 tenants to create access policies to their data}
-    qos_policy: ${10:# A policy group defines measurable service level objectives (SLOs) that apply to the storage objects with which the policy group is associated}
-    audit_event_selector: ${11:# Audit event selector allows you to specify access and permission types to audit}
-    hostname: ${12:# The hostname or IP address of the ONTAP instance}
-    username: ${13:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${14:# Password for the specified user}
-    cert_filepath: ${15:# path to SSL client cert file (}
-    key_filepath: ${16:# path to SSL client key file}
-    https: ${17:# Enable and disable https}
-    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${19:# Override the default port (80 or 443) with this port}
-    ontapi: ${20:# The ontap api version to use}
-    use_rest: ${21:# Whether to use REST or ZAPI}
-    feature_flags: ${22:# Enable or disable a new feature}
-    force_ontap_version: ${23:# Override the cluster ONTAP version when using REST}
+    feature_flags: ${7:# Enable or disable a new feature}
+    force_ontap_version: ${8:# Override the cluster ONTAP version when using REST}
+    hostname: ${9:# The hostname or IP address of the ONTAP instance}
+    http_port: ${10:# Override the default port (80 or 443) with this port}
+    https: ${11:# Enable and disable https}
+    key_filepath: ${12:# path to SSL client key file}
+    name: ${13:# The name of the S3 or NAS bucket}
+    nas_path: ${14:# Specifies the NAS path to which the nas bucket corresponds to}
+    ontapi: ${15:# The ontap api version to use}
+    password: ${16:# Password for the specified user}
+    policy: ${17:# Access policy uses the Amazon Web Services (AWS) policy language syntax to allow S3 tenants to create access policies to their data}
+    qos_policy: ${18:# A policy group defines measurable service level objectives (SLOs) that apply to the storage objects with which the policy group is associated}
+    size: ${19:# Size of the S3 bucket in bytes}
+    state: ${20:# Whether the specified S3 bucket should exist or not}
+    type: ${21:# Specifies the bucket type}
+    use_rest: ${22:# Whether to use REST or ZAPI}
+    username: ${23:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${24:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${25:# Name of the vserver to use}
   tags:
     - netapp
     - ontap

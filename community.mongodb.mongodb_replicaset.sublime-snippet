@@ -1,34 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:Initialises a MongoDB replicaset}
   community.mongodb.mongodb_replicaset:
-    replica_set: ${2:# Replicaset name}
-    members: ${3:# Yaml list consisting of the replicaset members}
-    validate: ${4:# Performs some basic validation on the provided replicaset config}
-    arbiter_at_index: ${5:# Identifies the position of the member in the array that is an arbiter}
-    chaining_allowed: ${6:# When I(settings}
-    heartbeat_timeout_secs: ${7:# Number of seconds that the replicaset members wait for a successful heartbeat from each other}
-    election_timeout_millis: ${8:# The time limit in milliseconds for detecting when a replicaset's primary is unreachable}
-    protocol_version: ${9:# Version of the replicaset election protocol}
-    reconfigure: ${10:# This feature is currently experimental}
-    force: ${11:# Only relevant when reconfigure = true}
-    max_time_ms: ${12:# Specifies a cumulative time limit in milliseconds for processing the replicaset reconfiguration}
-    debug: ${13:# Add additonal info for debug}
-    cluster_cmd: ${14:# Command the module should use to obtain information about the MongoDB node we are connecting to}
-    login_user: ${15:# The MongoDB user to login with}
-    login_password: ${16:# The password used to authenticate with}
-    login_database: ${17:# The database where login credentials are stored}
-    login_host: ${18:# The host running MongoDB instance to login to}
-    login_port: ${19:# The MongoDB server port to login to}
-    strict_compatibility: ${20:# Enforce strict requirements for pymongo and MongoDB software versions}
-    ssl: ${21:# Whether to use an SSL connection when connecting to the database}
-    ssl_cert_reqs: ${22:# Specifies whether a certificate is required from the other side of the connection, and whether it will be validated if provided}
+    arbiter_at_index: ${2:# Identifies the position of the member in the array that is an arbiter}
+    atlas_auth: ${3:# Authentication path intended for MongoDB Atlas Instances}
+    auth_mechanism: ${4:# Authentication type}
+    chaining_allowed: ${5:# When I(settings}
+    cluster_cmd: ${6:# Command the module should use to obtain information about the MongoDB node we are connecting to}
+    connection_options: ${7:# Additional connection options}
+    debug: ${8:# Add additonal info for debug}
+    election_timeout_millis: ${9:# The time limit in milliseconds for detecting when a replicaset's primary is unreachable}
+    force: ${10:# Only relevant when reconfigure = true}
+    heartbeat_timeout_secs: ${11:# Number of seconds that the replicaset members wait for a successful heartbeat from each other}
+    login_database: ${12:# The database where login credentials are stored}
+    login_host: ${13:# The host running MongoDB instance to login to}
+    login_password: ${14:# The password used to authenticate with}
+    login_port: ${15:# The MongoDB server port to login to}
+    login_user: ${16:# The MongoDB user to login with}
+    max_time_ms: ${17:# Specifies a cumulative time limit in milliseconds for processing the replicaset reconfiguration}
+    members: ${18:# Yaml list consisting of the replicaset members}
+    protocol_version: ${19:# Version of the replicaset election protocol}
+    reconfigure: ${20:# This feature is currently experimental}
+    replica_set: ${21:# Replicaset name}
+    ssl: ${22:# Whether to use an SSL connection when connecting to the database}
     ssl_ca_certs: ${23:# The ssl_ca_certs option takes a path to a CA file}
-    ssl_crlfile: ${24:# The ssl_crlfile option takes a path to a CRL file}
+    ssl_cert_reqs: ${24:# Specifies whether a certificate is required from the other side of the connection, and whether it will be validated if provided}
     ssl_certfile: ${25:# Present a client certificate using the ssl_certfile option}
-    ssl_keyfile: ${26:# Private key for the client certificate}
-    ssl_pem_passphrase: ${27:# Passphrase to decrypt encrypted private keys}
-    auth_mechanism: ${28:# Authentication type}
-    connection_options: ${29:# Additional connection options}
+    ssl_crlfile: ${26:# The ssl_crlfile option takes a path to a CRL file}
+    ssl_keyfile: ${27:# Private key for the client certificate}
+    ssl_pem_passphrase: ${28:# Passphrase to decrypt encrypted private keys}
+    strict_compatibility: ${29:# Enforce strict requirements for pymongo and MongoDB software versions}
+    validate: ${30:# Performs some basic validation on the provided replicaset config}
   tags:
     - community
     - mongodb

@@ -2,12 +2,13 @@
   <content><![CDATA[- name: ${1:import resources into Automation Platform Controller}
   awx.awx.import:
     assets: ${2:# The assets to import}
-    controller_host: ${3:# URL to your Automation Platform Controller instance}
-    controller_username: ${4:# Username for your controller instance}
-    controller_password: ${5:# Password for your controller instance}
-    controller_oauthtoken: ${6:# The OAuth token to use}
-    validate_certs: ${7:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${8:# Path to the controller config file}
+    controller_config_file: ${3:# Path to the controller config file}
+    controller_host: ${4:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${5:# The OAuth token to use}
+    controller_password: ${6:# Password for your controller instance}
+    controller_username: ${7:# Username for your controller instance}
+    request_timeout: ${8:# Specify the timeout Ansible should use in requests to the controller host}
+    validate_certs: ${9:# Whether to allow insecure connections to AWX}
   tags:
     - awx
     - awx

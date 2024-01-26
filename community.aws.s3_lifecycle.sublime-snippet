@@ -1,35 +1,36 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage S3 bucket lifecycle rules in AWS}
   community.aws.s3_lifecycle:
-    name: ${2:# Name of the S3 bucket}
-    abort_incomplete_multipart_upload_days: ${3:# Specifies the days since the initiation of an incomplete multipart upload that Amazon S3 will wait before permanently removing all parts of the upload}
-    expiration_date: ${4:# Indicates the lifetime of the objects that are subject to the rule by the date they will expire}
-    expiration_days: ${5:# Indicates the lifetime, in days, of the objects that are subject to the rule}
-    expire_object_delete_marker: ${6:# Indicates whether Amazon S3 will remove a delete marker with no noncurrent versions}
-    prefix: ${7:# Prefix identifying one or more objects to which the rule applies}
-    purge_transitions: ${8:# Whether to replace all the current transition(s) with the new transition(s)}
-    noncurrent_version_expiration_days: ${9:# The number of days after which non-current versions should be deleted}
-    noncurrent_version_storage_class: ${10:# The storage class to which non-current versions are transitioned}
-    noncurrent_version_transition_days: ${11:# The number of days after which non-current versions will be transitioned to the storage class specified in I(noncurrent_version_storage_class)}
-    noncurrent_version_transitions: ${12:# A list of transition behaviors to be applied to noncurrent versions for the rule}
-    rule_id: ${13:# Unique identifier for the rule}
-    state: ${14:# Create or remove the lifecycle rule}
-    status: ${15:# If C(enabled), the rule is currently being applied}
-    storage_class: ${16:# The storage class to transition to}
-    transition_date: ${17:# Indicates the lifetime of the objects that are subject to the rule by the date they will transition to a different storage class}
-    transition_days: ${18:# Indicates when, in days, an object transitions to a different storage class}
-    transitions: ${19:# A list of transition behaviors to be applied to the rule}
-    wait: ${20:# Wait for the configuration to complete before returning}
-    access_key: ${21:# AWS access key ID}
+    abort_incomplete_multipart_upload_days: ${2:# Specifies the days since the initiation of an incomplete multipart upload that Amazon S3 will wait before permanently removing all parts of the upload}
+    access_key: ${3:# AWS access key ID}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    expiration_date: ${8:# Indicates the lifetime of the objects that are subject to the rule by the date they will expire}
+    expiration_days: ${9:# Indicates the lifetime, in days, of the objects that are subject to the rule}
+    expire_object_delete_marker: ${10:# Indicates whether Amazon S3 will remove a delete marker with no noncurrent versions}
+    name: ${11:# Name of the S3 bucket}
+    noncurrent_version_expiration_days: ${12:# The number of days after which non-current versions should be deleted}
+    noncurrent_version_keep_newer: ${13:# The minimum number of non-current versions to retain}
+    noncurrent_version_storage_class: ${14:# The storage class to which non-current versions are transitioned}
+    noncurrent_version_transition_days: ${15:# The number of days after which non-current versions will be transitioned to the storage class specified in I(noncurrent_version_storage_class)}
+    noncurrent_version_transitions: ${16:# A list of transition behaviors to be applied to noncurrent versions for the rule}
+    prefix: ${17:# Prefix identifying one or more objects to which the rule applies}
+    profile: ${18:# A named AWS profile to use for authentication}
+    purge_transitions: ${19:# Whether to replace all the current transition(s) with the new transition(s)}
+    region: ${20:# The AWS region to use}
+    rule_id: ${21:# Unique identifier for the rule}
     secret_key: ${22:# AWS secret access key}
     session_token: ${23:# AWS STS session token for use with temporary credentials}
-    profile: ${24:# A named AWS profile to use for authentication}
-    endpoint_url: ${25:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${26:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${27:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${28:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${29:# Use a C(botocore}
-    region: ${30:# The AWS region to use}
+    state: ${24:# Create or remove the lifecycle rule}
+    status: ${25:# If C(enabled), the rule is currently being applied}
+    storage_class: ${26:# The storage class to transition to}
+    transition_date: ${27:# Indicates the lifetime of the objects that are subject to the rule by the date they will transition to a different storage class}
+    transition_days: ${28:# Indicates when, in days, an object transitions to a different storage class}
+    transitions: ${29:# A list of transition behaviors to be applied to the rule}
+    validate_certs: ${30:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${31:# Wait for the configuration to complete before returning}
   tags:
     - community
     - aws

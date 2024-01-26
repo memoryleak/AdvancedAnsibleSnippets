@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage trunks on a BIG-IP}
   f5networks.f5_modules.bigip_trunk:
-    name: ${2:# Specifies the name of the trunk}
-    interfaces: ${3:# The interfaces that are part of the trunk}
-    description: ${4:# Description of the trunk}
-    link_selection_policy: ${5:# Once the trunk is configured, specifies the policy the trunk uses to determine which member link (interface) can handle new traffic}
-    frame_distribution_hash: ${6:# Specifies the basis for the hash the system uses as the frame distribution algorithm}
-    lacp_enabled: ${7:# When C(yes), specifies the system supports the link aggregation control protocol (LACP), which monitors the trunk by exchanging control packets over the member links to determine the health of the links}
-    lacp_mode: ${8:# Specifies the operation mode for link aggregation control protocol (LACP), if LACP is enabled for the trunk}
-    lacp_timeout: ${9:# Specifies the rate at which the system sends the LACP control packets}
-    qinq_ethertype: ${10:# Specifies the ether-type value used for the packets handled on this trunk when it is a member in a QinQ VLAN}
-    state: ${11:# When C(present), ensures the resource exists}
-    provider: ${12:# A dict object containing connection details}
+    description: ${2:# Description of the trunk}
+    frame_distribution_hash: ${3:# Specifies the basis for the hash the system uses as the frame distribution algorithm}
+    interfaces: ${4:# The interfaces that are part of the trunk}
+    lacp_enabled: ${5:# When C(true), specifies the system supports the link aggregation control protocol (LACP), which monitors the trunk by exchanging control packets over the member links to determine the health of the links}
+    lacp_mode: ${6:# Specifies the operation mode for link aggregation control protocol (LACP), if LACP is enabled for the trunk}
+    lacp_timeout: ${7:# Specifies the rate at which the system sends the LACP control packets}
+    link_selection_policy: ${8:# Once the trunk is configured, specifies the policy the trunk uses to determine which member link (interface) can handle new traffic}
+    name: ${9:# Specifies the name of the trunk}
+    provider: ${10:# A dict object containing connection details}
+    qinq_ethertype: ${11:# Specifies the ether-type value used for the packets handled on this trunk when it is a member in a QinQ VLAN}
+    state: ${12:# When C(present), ensures the resource exists}
   tags:
     - f5networks
     - f5_modules

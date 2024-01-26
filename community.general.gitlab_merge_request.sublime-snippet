@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update, or delete GitLab merge requests}
+  community.general.gitlab_merge_request:
+    api_job_token: ${2:# GitLab CI job token for logging in}
+    api_oauth_token: ${3:# GitLab OAuth token for logging in}
+    api_password: ${4:# The password to use for authentication against the API}
+    api_token: ${5:# GitLab access token with API permissions}
+    api_url: ${6:# The resolvable endpoint for the API}
+    api_username: ${7:# The username to use for authentication against the API}
+    assignee_ids: ${8:# Comma separated list of assignees usernames omitting V(@) character}
+    ca_path: ${9:# The CA certificates bundle to use to verify GitLab server certificate}
+    description: ${10:# A description for the merge request}
+    description_path: ${11:# A path of file containing merge request's description}
+    labels: ${12:# Comma separated list of label names}
+    project: ${13:# The path or name of the project}
+    remove_source_branch: ${14:# Flag indicating if a merge request should remove the source branch when merging}
+    reviewer_ids: ${15:# Comma separated list of reviewers usernames omitting V(@) character}
+    source_branch: ${16:# Merge request's source branch}
+    state: ${17:# Create or delete merge request}
+    state_filter: ${18:# Filter specifying state of merge requests while searching}
+    target_branch: ${19:# Merge request's target branch}
+    title: ${20:# A title for the merge request}
+    validate_certs: ${21:# Whether or not to validate SSL certs when supplying a HTTPS endpoint}
+  tags:
+    - community
+    - general
+    - gitlab_merge_request]]></content>
+  <tabTrigger>community.general.gitlab_merge_request</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update, or delete GitLab merge requests</description>
+</snippet>

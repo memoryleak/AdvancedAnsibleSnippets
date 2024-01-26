@@ -1,26 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, modify or delete a uplink for a fabric on OpenManage Enterprise Modular}
   dellemc.openmanage.ome_smart_fabric_uplink:
-    state: ${2:# C(present) - Creates a new uplink with the provided I(name)}
-    fabric_name: ${3:# Provide the I(fabric_name) of the fabric for which the uplink is to be configured}
-    name: ${4:# Provide the I(name) of the uplink to be created, modified or deleted}
-    new_name: ${5:# Provide the new I(new_name) for the uplink}
-    description: ${6:# Provide a short description for the uplink to be created or modified}
-    uplink_type: ${7:# Specify the uplink type}
-    ufd_enable: ${8:# Add or Remove the uplink to the Uplink Failure Detection (UFD) group}
-    primary_switch_service_tag: ${9:# Service tag of the primary switch}
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    description: ${3:# Provide a short description for the uplink to be created or modified}
+    fabric_name: ${4:# Provide the I(fabric_name) of the fabric for which the uplink is to be configured}
+    hostname: ${5:# OpenManage Enterprise Modular IP address or hostname}
+    name: ${6:# Provide the I(name) of the uplink to be created, modified or deleted}
+    new_name: ${7:# Provide the new I(new_name) for the uplink}
+    password: ${8:# OpenManage Enterprise Modular password}
+    port: ${9:# OpenManage Enterprise Modular HTTPS port}
     primary_switch_ports: ${10:# The IOM slots to be connected to the primary switch}
-    secondary_switch_service_tag: ${11:# Service tag of the secondary switch}
+    primary_switch_service_tag: ${11:# Service tag of the primary switch}
     secondary_switch_ports: ${12:# The IOM slots to be connected to the secondary switch}
-    tagged_networks: ${13:# VLANs to be associated with the uplink I(name)}
-    untagged_network: ${14:# Specify the name of the VLAN to be added as untagged to the uplink}
-    hostname: ${15:# OpenManage Enterprise Modular IP address or hostname}
-    username: ${16:# OpenManage Enterprise Modular username}
-    password: ${17:# OpenManage Enterprise Modular password}
-    port: ${18:# OpenManage Enterprise Modular HTTPS port}
-    validate_certs: ${19:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${20:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${21:# The socket level timeout in seconds}
+    secondary_switch_service_tag: ${13:# Service tag of the secondary switch}
+    state: ${14:# C(present) - Creates a new uplink with the provided I(name)}
+    tagged_networks: ${15:# VLANs to be associated with the uplink I(name)}
+    timeout: ${16:# The socket level timeout in seconds}
+    ufd_enable: ${17:# Add or Remove the uplink to the Uplink Failure Detection (UFD) group}
+    untagged_network: ${18:# Specify the name of the VLAN to be added as untagged to the uplink}
+    uplink_type: ${19:# Specify the uplink type}
+    username: ${20:# OpenManage Enterprise Modular username}
+    validate_certs: ${21:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

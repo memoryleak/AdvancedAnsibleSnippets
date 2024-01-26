@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/delete a project in Packet host}
   community.general.packet_project:
-    state: ${2:# Indicate desired state of the target}
-    payment_method: ${3:# Payment method is name of one of the payment methods available to your user}
-    auth_token: ${4:# Packet api token}
+    auth_token: ${2:# Packet api token}
+    custom_data: ${3:# Custom data about the project to create}
+    id: ${4:# UUID of the project which you want to remove}
     name: ${5:# Name for/of the project}
     org_id: ${6:# UUID of the organization to create a project for}
-    id: ${7:# UUID of the project which you want to remove}
-    custom_data: ${8:# Custom data about the project to create}
+    payment_method: ${7:# Payment method is name of one of the payment methods available to your user}
+    state: ${8:# Indicate desired state of the target}
   tags:
     - community
     - general

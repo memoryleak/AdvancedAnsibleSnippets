@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Sensu hooks}
   sensu.sensu_go.hook:
-    command: ${2:# Command to run when the hook is triggered}
-    timeout: ${3:# The hook execution duration timeout in seconds (hard stop)}
-    stdin: ${4:# Controls whether Sensu writes serialized JSON data to the process's stdin}
-    runtime_assets: ${5:# List of runtime assets required to run the check}
-    auth: ${6:# Authentication parameters}
-    name: ${7:# The Sensu resource's name}
-    namespace: ${8:# RBAC namespace to operate in}
+    annotations: ${2:# Custom metadata fields with fewer restrictions, as key/value pairs}
+    auth: ${3:# Authentication parameters}
+    command: ${4:# Command to run when the hook is triggered}
+    labels: ${5:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
+    name: ${6:# The Sensu resource's name}
+    namespace: ${7:# RBAC namespace to operate in}
+    runtime_assets: ${8:# List of runtime assets required to run the check}
     state: ${9:# Target state of the Sensu object}
-    labels: ${10:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
-    annotations: ${11:# Custom metadata fields with fewer restrictions, as key/value pairs}
+    stdin: ${10:# Controls whether Sensu writes serialized JSON data to the process's stdin}
+    timeout: ${11:# The hook execution duration timeout in seconds (hard stop)}
   tags:
     - sensu
     - sensu_go

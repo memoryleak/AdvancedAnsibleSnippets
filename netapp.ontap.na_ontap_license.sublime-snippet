@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP protocol and feature license packages}
   netapp.ontap.na_ontap_license:
-    state: ${2:# Whether the specified license packages should be installed or removed}
-    remove_unused: ${3:# Remove license packages that have no controller affiliation in the cluster}
-    remove_expired: ${4:# Remove license packages that have expired in the cluster}
-    serial_number: ${5:# Serial number of the node or cluster associated with the license package}
-    license_names: ${6:# List of license package names to remove}
-    license_codes: ${7:# List of license codes to be installed}
-    hostname: ${8:# The hostname or IP address of the ONTAP instance}
-    username: ${9:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${10:# Password for the specified user}
-    cert_filepath: ${11:# path to SSL client cert file (}
-    key_filepath: ${12:# path to SSL client key file}
-    https: ${13:# Enable and disable https}
-    validate_certs: ${14:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${15:# Override the default port (80 or 443) with this port}
-    ontapi: ${16:# The ontap api version to use}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    feature_flags: ${3:# Enable or disable a new feature}
+    force_ontap_version: ${4:# Override the cluster ONTAP version when using REST}
+    hostname: ${5:# The hostname or IP address of the ONTAP instance}
+    http_port: ${6:# Override the default port (80 or 443) with this port}
+    https: ${7:# Enable and disable https}
+    key_filepath: ${8:# path to SSL client key file}
+    license_codes: ${9:# List of license codes to be installed}
+    license_names: ${10:# List of license package names to remove}
+    ontapi: ${11:# The ontap api version to use}
+    password: ${12:# Password for the specified user}
+    remove_expired: ${13:# Remove license packages that have expired in the cluster}
+    remove_unused: ${14:# Remove license packages that have no controller affiliation in the cluster}
+    serial_number: ${15:# Serial number of the node or cluster associated with the license package}
+    state: ${16:# Whether the specified license packages should be installed or removed}
     use_rest: ${17:# Whether to use REST or ZAPI}
-    feature_flags: ${18:# Enable or disable a new feature}
-    force_ontap_version: ${19:# Override the cluster ONTAP version when using REST}
+    username: ${18:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${19:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

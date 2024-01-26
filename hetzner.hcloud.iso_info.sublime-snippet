@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather infos about the Hetzner Cloud ISO list}
+  hetzner.hcloud.iso_info:
+    api_endpoint: ${2:# The API Endpoint for the Hetzner Cloud}
+    api_token: ${3:# The API Token for the Hetzner Cloud}
+    architecture: ${4:# Filter ISOs with compatible architecture}
+    id: ${5:# The ID of the ISO image you want to get}
+    include_architecture_wildcard: ${6:# Include ISOs with wildcard architecture (architecture is null)}
+    name: ${7:# The name of the ISO you want to get}
+  tags:
+    - hetzner
+    - hcloud
+    - iso_info]]></content>
+  <tabTrigger>hetzner.hcloud.iso_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather infos about the Hetzner Cloud ISO list</description>
+</snippet>

@@ -1,34 +1,34 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP vserver CIFS security modification}
   netapp.ontap.na_ontap_vserver_cifs_security:
-    vserver: ${2:# name of the vserver}
-    kerberos_clock_skew: ${3:# The clock skew in minutes is the tolerance for accepting tickets with time stamps that do not exactly match the host's system clock}
-    kerberos_ticket_age: ${4:# Determine the maximum amount of time in hours that a user's ticket may be used for the purpose of Kerberos authentication}
-    kerberos_renew_age: ${5:# Determine the maximum amount of time in days for which a ticket can be renewed}
-    kerberos_kdc_timeout: ${6:# Determine the timeout value in seconds for KDC connections}
-    is_signing_required: ${7:# Determine whether signing is required for incoming CIFS traffic}
-    is_password_complexity_required: ${8:# Determine whether password complexity is required for local users}
-    is_aes_encryption_enabled: ${9:# Determine whether AES-128 and AES-256 encryption mechanisms are enabled for Kerberos-related CIFS communication}
-    is_smb_encryption_required: ${10:# Determine whether SMB encryption is required for incoming CIFS traffic}
-    lm_compatibility_level: ${11:# Determine the LM compatibility level}
-    referral_enabled_for_ad_ldap: ${12:# Determine whether LDAP referral chasing is enabled or not for AD LDAP connections}
-    session_security_for_ad_ldap: ${13:# Determine the level of security required for LDAP communications}
-    smb1_enabled_for_dc_connections: ${14:# Determine if SMB version 1 is used for connections to domain controllers}
-    smb2_enabled_for_dc_connections: ${15:# Determine if SMB version 2 is used for connections to domain controllers}
-    use_start_tls_for_ad_ldap: ${16:# Determine whether to use start_tls for AD LDAP connections}
-    encryption_required_for_dc_connections: ${17:# Specifies whether encryption is required for domain controller connections}
-    use_ldaps_for_ad_ldap: ${18:# Determine whether to use LDAPS for secure Active Directory LDAP connections}
-    hostname: ${19:# The hostname or IP address of the ONTAP instance}
-    username: ${20:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${21:# Password for the specified user}
-    cert_filepath: ${22:# path to SSL client cert file (}
-    key_filepath: ${23:# path to SSL client key file}
-    https: ${24:# Enable and disable https}
-    validate_certs: ${25:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${26:# Override the default port (80 or 443) with this port}
-    ontapi: ${27:# The ontap api version to use}
-    use_rest: ${28:# This module only support ZAPI and will can not be swtich to REST}
-    feature_flags: ${29:# Enable or disable a new feature}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    encryption_required_for_dc_connections: ${3:# Specifies whether encryption is required for domain controller connections}
+    feature_flags: ${4:# Enable or disable a new feature}
+    hostname: ${5:# The hostname or IP address of the ONTAP instance}
+    http_port: ${6:# Override the default port (80 or 443) with this port}
+    https: ${7:# Enable and disable https}
+    is_aes_encryption_enabled: ${8:# Determine whether AES-128 and AES-256 encryption mechanisms are enabled for Kerberos-related CIFS communication}
+    is_password_complexity_required: ${9:# Determine whether password complexity is required for local users}
+    is_signing_required: ${10:# Determine whether signing is required for incoming CIFS traffic}
+    is_smb_encryption_required: ${11:# Determine whether SMB encryption is required for incoming CIFS traffic}
+    kerberos_clock_skew: ${12:# The clock skew in minutes is the tolerance for accepting tickets with time stamps that do not exactly match the host's system clock}
+    kerberos_kdc_timeout: ${13:# Determine the timeout value in seconds for KDC connections}
+    kerberos_renew_age: ${14:# Determine the maximum amount of time in days for which a ticket can be renewed}
+    kerberos_ticket_age: ${15:# Determine the maximum amount of time in hours that a user's ticket may be used for the purpose of Kerberos authentication}
+    key_filepath: ${16:# path to SSL client key file}
+    lm_compatibility_level: ${17:# Determine the LM compatibility level}
+    ontapi: ${18:# The ontap api version to use}
+    password: ${19:# Password for the specified user}
+    referral_enabled_for_ad_ldap: ${20:# Determine whether LDAP referral chasing is enabled or not for AD LDAP connections}
+    session_security_for_ad_ldap: ${21:# Determine the level of security required for LDAP communications}
+    smb1_enabled_for_dc_connections: ${22:# Determine if SMB version 1 is used for connections to domain controllers}
+    smb2_enabled_for_dc_connections: ${23:# Determine if SMB version 2 is used for connections to domain controllers}
+    use_ldaps_for_ad_ldap: ${24:# Determine whether to use LDAPS for secure Active Directory LDAP connections}
+    use_rest: ${25:# This module only support ZAPI and will can not be swtich to REST}
+    use_start_tls_for_ad_ldap: ${26:# Determine whether to use start_tls for AD LDAP connections}
+    username: ${27:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${28:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${29:# name of the vserver}
   tags:
     - netapp
     - ontap

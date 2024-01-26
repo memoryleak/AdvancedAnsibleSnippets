@@ -4,17 +4,17 @@
     data_points: ${2:# Data points as dict to write into the database}
     database_name: ${3:# Name of the database}
     hostname: ${4:# The hostname or IP address on which InfluxDB server is listening}
-    username: ${5:# Username that will be used to authenticate against InfluxDB server}
-    password: ${6:# Password that will be used to authenticate against InfluxDB server}
+    password: ${5:# Password that will be used to authenticate against InfluxDB server}
+    path: ${6:# The path on which InfluxDB server is accessible}
     port: ${7:# The port on which InfluxDB server is listening}
-    path: ${8:# The path on which InfluxDB server is accessible}
-    validate_certs: ${9:# If set to C(false), the SSL certificates will not be validated}
+    proxies: ${8:# HTTP(S) proxy to use for Requests to connect to InfluxDB server}
+    retries: ${9:# Number of retries client will try before aborting}
     ssl: ${10:# Use https instead of http to connect to InfluxDB server}
     timeout: ${11:# Number of seconds Requests will wait for client to establish a connection}
-    retries: ${12:# Number of retries client will try before aborting}
+    udp_port: ${12:# UDP port to connect to InfluxDB server}
     use_udp: ${13:# Use UDP to connect to InfluxDB server}
-    udp_port: ${14:# UDP port to connect to InfluxDB server}
-    proxies: ${15:# HTTP(S) proxy to use for Requests to connect to InfluxDB server}
+    username: ${14:# Username that will be used to authenticate against InfluxDB server}
+    validate_certs: ${15:# If set to V(false), the SSL certificates will not be validated}
   tags:
     - community
     - general

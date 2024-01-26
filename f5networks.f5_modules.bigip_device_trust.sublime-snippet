@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage the trust relationships between BIG-IPs}
   f5networks.f5_modules.bigip_device_trust:
-    peer_server: ${2:# The peer address to connect to and trust for synchronizing the configuration}
-    peer_hostname: ${3:# The hostname you want to associate with the device}
-    peer_user: ${4:# The API username of the remote peer device you are trusting}
-    peer_password: ${5:# The password of the API username of the remote peer device you are trusting}
-    type: ${6:# Specifies whether the device you are adding is a Peer or a Subordinate}
+    peer_hostname: ${2:# The hostname you want to associate with the device}
+    peer_password: ${3:# The password of the API username of the remote peer device you are trusting}
+    peer_server: ${4:# The peer address to connect to and trust for synchronizing the configuration}
+    peer_user: ${5:# The API username of the remote peer device you are trusting}
+    provider: ${6:# A dict object containing connection details}
     state: ${7:# When C(present), ensures the specified devices are trusted}
-    provider: ${8:# A dict object containing connection details}
+    type: ${8:# Specifies whether the device you are adding is a Peer or a Subordinate}
   tags:
     - f5networks
     - f5_modules

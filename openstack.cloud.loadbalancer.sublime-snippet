@@ -1,38 +1,37 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Add/Delete load balancer from OpenStack Cloud}
+  <content><![CDATA[- name: ${1:Manage Octavia load-balancer in an OpenStack cloud}
   openstack.cloud.loadbalancer:
-    name: ${2:# The name of the load balancer}
-    state: ${3:# Should the resource be present or absent}
-    flavor: ${4:# The flavor of the load balancer}
-    vip_network: ${5:# The name or id of the network for the virtual IP of the load balancer}
-    vip_subnet: ${6:# The name or id of the subnet for the virtual IP of the load balancer}
-    vip_port: ${7:# The name or id of the load balancer virtual IP port}
-    vip_address: ${8:# IP address of the load balancer virtual IP}
-    public_ip_address: ${9:# Public IP address associated with the VIP}
-    auto_public_ip: ${10:# Allocate a public IP address and associate with the VIP automatically}
-    public_network: ${11:# The name or ID of a Neutron external network}
-    delete_public_ip: ${12:# When C(state=absent) and this option is true, any public IP address associated with the VIP will be deleted along with the load balancer}
-    listeners: ${13:# A list of listeners that attached to the load balancer}
-    wait: ${14:# If the module should wait for the load balancer to be created or deleted}
-    timeout: ${15:# The amount of time the module should wait}
-    cloud: ${16:# Named cloud or cloud config to operate against}
-    auth: ${17:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${18:# Name of the auth plugin to use}
-    region_name: ${19:# Name of the region}
-    api_timeout: ${20:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${21:# Whether or not SSL API requests should be verified}
-    ca_cert: ${22:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${23:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${24:# A path to a client key to use as part of the SSL transaction}
-    interface: ${25:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${26:# Ignored}
-    sdk_log_path: ${27:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${28:# Log level of the OpenStackSDK}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    assign_floating_ip: ${3:# Allocate floating ip address and associate with the VIP automatically}
+    auth: ${4:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${5:# Name of the auth plugin to use}
+    ca_cert: ${6:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${7:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${8:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${9:# Named cloud or cloud config to operate against}
+    delete_floating_ip: ${10:# When I(state) is C(present) and I(delete_floating_ip) is C(true), then any floating ip address associated with the VIP will be deleted}
+    description: ${11:# A human-readable description for the load-balancer}
+    flavor: ${12:# The flavor of the load balancer}
+    floating_ip_address: ${13:# Floating ip address aka public ip address associated with the VIP}
+    floating_ip_network: ${14:# Name or ID of a Neutron external network where floating ip address will be created on}
+    interface: ${15:# Endpoint URL type to fetch from the service catalog}
+    name: ${16:# The name of the load balancer}
+    region_name: ${17:# Name of the region}
+    sdk_log_level: ${18:# Log level of the OpenStackSDK}
+    sdk_log_path: ${19:# Path to the logfile of the OpenStackSDK}
+    state: ${20:# Should the resource be present or absent}
+    timeout: ${21:# How long should ansible wait for the requested resource}
+    validate_certs: ${22:# Whether or not SSL API requests should be verified}
+    vip_address: ${23:# IP address of the load balancer virtual IP}
+    vip_network: ${24:# The name or id of the network for the virtual IP of the load balancer}
+    vip_port: ${25:# The name or id of the load balancer virtual IP port}
+    vip_subnet: ${26:# The name or id of the subnet for the virtual IP of the load balancer}
+    wait: ${27:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud
     - loadbalancer]]></content>
   <tabTrigger>openstack.cloud.loadbalancer</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Add/Delete load balancer from OpenStack Cloud</description>
+  <description>Manage Octavia load-balancer in an OpenStack cloud</description>
 </snippet>

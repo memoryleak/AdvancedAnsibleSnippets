@@ -1,26 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Run commands via the MongoDB shell}
   community.mongodb.mongodb_shell:
-    mongo_cmd: ${2:# The MongoDB shell command}
-    db: ${3:# The database to run commands against}
-    file: ${4:# Path to a file containing MongoDB commands}
-    eval: ${5:# A MongoDB command to run}
-    nodb: ${6:# Specify a non-default encoding for output}
-    norc: ${7:# Prevents the shell from sourcing and evaluating ~/}
-    quiet: ${8:# Silences output from the shell during the connection process}
-    debug: ${9:# show additional debug info}
-    transform: ${10:# Transform the output returned to the user}
-    split_char: ${11:# Used by the split action in the transform stage}
-    stringify: ${12:# Wraps the command in eval in JSON}
-    additional_args: ${13:# Additional arguments to supply to the mongo command}
-    idempotent: ${14:# Provides a form of pseudo-idempotency to the module}
-    omit: ${15:# Parameter to omit from the command line}
-    login_user: ${16:# The MongoDB user to login with}
-    login_password: ${17:# The password used to authenticate with}
-    login_database: ${18:# The database where login credentials are stored}
-    login_host: ${19:# The host running MongoDB instance to login to}
-    login_port: ${20:# The MongoDB server port to login to}
-    strict_compatibility: ${21:# Enforce strict requirements for pymongo and MongoDB software versions}
+    additional_args: ${2:# Additional arguments to supply to the mongo command}
+    atlas_auth: ${3:# Authentication path intended for MongoDB Atlas Instances}
+    db: ${4:# The database to run commands against}
+    debug: ${5:# show additional debug info}
+    eval: ${6:# A MongoDB command to run}
+    file: ${7:# Path to a file containing MongoDB commands}
+    idempotent: ${8:# Provides a form of pseudo-idempotency to the module}
+    login_database: ${9:# The database where login credentials are stored}
+    login_host: ${10:# The host running MongoDB instance to login to}
+    login_password: ${11:# The password used to authenticate with}
+    login_port: ${12:# The MongoDB server port to login to}
+    login_user: ${13:# The MongoDB user to login with}
+    mongo_cmd: ${14:# The MongoDB shell command}
+    nodb: ${15:# Specify a non-default encoding for output}
+    norc: ${16:# Prevents the shell from sourcing and evaluating ~/}
+    omit: ${17:# Parameter to omit from the command line}
+    quiet: ${18:# Silences output from the shell during the connection process}
+    split_char: ${19:# Used by the split action in the transform stage}
+    strict_compatibility: ${20:# Enforce strict requirements for pymongo and MongoDB software versions}
+    stringify: ${21:# Wraps the command in eval in JSON}
+    transform: ${22:# Transform the output returned to the user}
   tags:
     - community
     - mongodb

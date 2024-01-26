@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Management of provider in ManageIQ}
   community.general.manageiq_provider:
-    state: ${2:# absent - provider should not exist, present - provider should be present, refresh - provider will be refreshed}
-    name: ${3:# The provider's name}
-    type: ${4:# The provider's type}
-    zone: ${5:# The ManageIQ zone name that will manage the provider}
-    provider_region: ${6:# The provider region name to connect to (e}
-    host_default_vnc_port_start: ${7:# The first port in the host VNC range}
-    host_default_vnc_port_end: ${8:# The last port in the host VNC range}
-    subscription: ${9:# Microsoft Azure subscription ID}
+    alerts: ${2:# Alerts endpoint connection information}
+    api_version: ${3:# The OpenStack Keystone API version}
+    azure_tenant_id: ${4:# Tenant ID}
+    host_default_vnc_port_end: ${5:# The last port in the host VNC range}
+    host_default_vnc_port_start: ${6:# The first port in the host VNC range}
+    manageiq_connection: ${7:# ManageIQ connection configuration information}
+    metrics: ${8:# Metrics endpoint connection information}
+    name: ${9:# The provider's name}
     project: ${10:# Google Compute Engine Project ID}
-    azure_tenant_id: ${11:# Tenant ID}
-    tenant_mapping_enabled: ${12:# Whether to enable mapping of existing tenants}
-    api_version: ${13:# The OpenStack Keystone API version}
-    provider: ${14:# Default endpoint connection information, required if state is true}
-    metrics: ${15:# Metrics endpoint connection information}
-    alerts: ${16:# Alerts endpoint connection information}
-    ssh_keypair: ${17:# SSH key pair used for SSH connections to all hosts in this provider}
-    manageiq_connection: ${18:# ManageIQ connection configuration information}
+    provider: ${11:# Default endpoint connection information, required if state is true}
+    provider_region: ${12:# The provider region name to connect to (e}
+    ssh_keypair: ${13:# SSH key pair used for SSH connections to all hosts in this provider}
+    state: ${14:# absent - provider should not exist, present - provider should be present, refresh - provider will be refreshed}
+    subscription: ${15:# Microsoft Azure subscription ID}
+    tenant_mapping_enabled: ${16:# Whether to enable mapping of existing tenants}
+    type: ${17:# The provider's type}
+    zone: ${18:# The ManageIQ zone name that will manage the provider}
   tags:
     - community
     - general

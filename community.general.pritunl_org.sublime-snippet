@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages Pritunl Organizations using the Pritunl API}
   community.general.pritunl_org:
-    name: ${2:# The name of the organization to manage in Pritunl}
-    force: ${3:# If I(force) is C(true) and I(state) is C(absent), the module will delete the organization, no matter if it contains users or not}
-    state: ${4:# If C(present), the module adds organization I(name) to Pritunl}
-    pritunl_url: ${5:# URL and port of the Pritunl server on which the API is enabled}
-    pritunl_api_token: ${6:# API Token of a Pritunl admin user}
-    pritunl_api_secret: ${7:# API Secret found in Administrators > USERNAME > API Secret}
+    force: ${2:# If O(force) is V(true) and O(state) is V(absent), the module will delete the organization, no matter if it contains users or not}
+    name: ${3:# The name of the organization to manage in Pritunl}
+    pritunl_api_secret: ${4:# API Secret found in Administrators > USERNAME > API Secret}
+    pritunl_api_token: ${5:# API Token of a Pritunl admin user}
+    pritunl_url: ${6:# URL and port of the Pritunl server on which the API is enabled}
+    state: ${7:# If V(present), the module adds organization O(name) to Pritunl}
     validate_certs: ${8:# If certificates should be validated or not}
   tags:
     - community

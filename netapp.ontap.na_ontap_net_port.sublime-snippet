@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP network ports}
   netapp.ontap.na_ontap_net_port:
-    state: ${2:# Whether the specified net port should exist or not}
-    node: ${3:# Specifies the name of node}
-    ports: ${4:# Specifies the name of port(s)}
-    mtu: ${5:# Specifies the maximum transmission unit (MTU) reported by the port}
-    autonegotiate_admin: ${6:# Enables or disables Ethernet auto-negotiation of speed, duplex and flow control}
-    duplex_admin: ${7:# Specifies the user preferred duplex setting of the port}
-    speed_admin: ${8:# Specifies the user preferred speed setting of the port}
-    flowcontrol_admin: ${9:# Specifies the user preferred flow control setting of the port}
-    ipspace: ${10:# Specifies the port's associated IPspace name}
-    up_admin: ${11:# Enables or disables the port}
-    hostname: ${12:# The hostname or IP address of the ONTAP instance}
-    username: ${13:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${14:# Password for the specified user}
-    cert_filepath: ${15:# path to SSL client cert file (}
-    key_filepath: ${16:# path to SSL client key file}
-    https: ${17:# Enable and disable https}
-    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${19:# Override the default port (80 or 443) with this port}
-    ontapi: ${20:# The ontap api version to use}
+    autonegotiate_admin: ${2:# Enables or disables Ethernet auto-negotiation of speed, duplex and flow control}
+    cert_filepath: ${3:# path to SSL client cert file (}
+    duplex_admin: ${4:# Specifies the user preferred duplex setting of the port}
+    feature_flags: ${5:# Enable or disable a new feature}
+    flowcontrol_admin: ${6:# Specifies the user preferred flow control setting of the port}
+    force_ontap_version: ${7:# Override the cluster ONTAP version when using REST}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    http_port: ${9:# Override the default port (80 or 443) with this port}
+    https: ${10:# Enable and disable https}
+    ipspace: ${11:# Specifies the port's associated IPspace name}
+    key_filepath: ${12:# path to SSL client key file}
+    mtu: ${13:# Specifies the maximum transmission unit (MTU) reported by the port}
+    node: ${14:# Specifies the name of node}
+    ontapi: ${15:# The ontap api version to use}
+    password: ${16:# Password for the specified user}
+    ports: ${17:# Specifies the name of port(s)}
+    speed_admin: ${18:# Specifies the user preferred speed setting of the port}
+    state: ${19:# Whether the specified net port should exist or not}
+    up_admin: ${20:# Enables or disables the port}
     use_rest: ${21:# Whether to use REST or ZAPI}
-    feature_flags: ${22:# Enable or disable a new feature}
-    force_ontap_version: ${23:# Override the cluster ONTAP version when using REST}
+    username: ${22:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${23:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

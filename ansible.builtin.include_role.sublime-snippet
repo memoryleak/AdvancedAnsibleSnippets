@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Load and execute a role}
   ansible.builtin.include_role:
-    apply: ${2:# Accepts a hash of task keywords (e}
-    name: ${3:# The name of the role to be executed}
-    tasks_from: ${4:# File to load from a role's C(tasks/) directory}
-    vars_from: ${5:# File to load from a role's C(vars/) directory}
-    defaults_from: ${6:# File to load from a role's C(defaults/) directory}
-    allow_duplicates: ${7:# Overrides the role's metadata setting to allow using a role more than once with the same parameters}
-    public: ${8:# This option dictates whether the role's C(vars) and C(defaults) are exposed to the play}
-    handlers_from: ${9:# File to load from a role's C(handlers/) directory}
-    rolespec_validate: ${10:# Perform role argument spec validation if an argument spec is defined}
+    allow_duplicates: ${2:# Overrides the role's metadata setting to allow using a role more than once with the same parameters}
+    apply: ${3:# Accepts a hash of task keywords (for example C(tags), C(become)) that will be applied to all tasks within the included role}
+    defaults_from: ${4:# File to load from a role's C(defaults/) directory}
+    handlers_from: ${5:# File to load from a role's C(handlers/) directory}
+    name: ${6:# The name of the role to be executed}
+    public: ${7:# This option dictates whether the role's C(vars) and C(defaults) are exposed to the play}
+    rolespec_validate: ${8:# Perform role argument spec validation if an argument spec is defined}
+    tasks_from: ${9:# File to load from a role's C(tasks/) directory}
+    vars_from: ${10:# File to load from a role's C(vars/) directory}
   tags:
     - include_role]]></content>
   <tabTrigger>ansible.builtin.include_role</tabTrigger>

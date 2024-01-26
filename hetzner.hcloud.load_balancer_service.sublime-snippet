@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and manage the services of cloud Load Balancers on the Hetzner Cloud}
+  hetzner.hcloud.load_balancer_service:
+    api_endpoint: ${2:# The API Endpoint for the Hetzner Cloud}
+    api_token: ${3:# The API Token for the Hetzner Cloud}
+    destination_port: ${4:# The port traffic is forwarded to, i}
+    health_check: ${5:# Configuration for health checks}
+    http: ${6:# Configuration for HTTP and HTTPS services}
+    listen_port: ${7:# The port the service listens on, i}
+    load_balancer: ${8:# Name or ID of the Hetzner Cloud Load Balancer the service belongs to}
+    protocol: ${9:# Protocol of the service}
+    proxyprotocol: ${10:# Enable the PROXY protocol}
+    state: ${11:# State of the Load Balancer}
+  tags:
+    - hetzner
+    - hcloud
+    - load_balancer_service]]></content>
+  <tabTrigger>hetzner.hcloud.load_balancer_service</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and manage the services of cloud Load Balancers on the Hetzner Cloud</description>
+</snippet>

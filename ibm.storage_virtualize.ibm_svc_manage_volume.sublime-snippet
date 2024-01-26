@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages standard volumes on IBM Storage Virtualize family systems}
+  ibm.storage_virtualize.ibm_svc_manage_volume:
+    allow_hs: ${2:# If specified `True`, manages the hyperswap volume by ignoring the volume type validation}
+    buffersize: ${3:# Specifies the pool capacity that the volume will reserve as a buffer for thin-provisioned and compressed volumes}
+    cloud_account_name: ${4:# Specifies the name of the cloud account name}
+    clustername: ${5:# The hostname or management IP of the Storage Virtualize system}
+    compressed: ${6:# Specifies that a compressed volume is to be created}
+    deduplicated: ${7:# Specifies that a deduplicated volume is to be created}
+    domain: ${8:# Domain for the Storage Virtualize system}
+    enable_cloud_snapshot: ${9:# Specify to enable or disable cloud snapshot}
+    iogrp: ${10:# Specifies the list of I/O group names}
+    log_path: ${11:# Path of debug log file}
+    name: ${12:# Specifies the name to assign to the new volume}
+    novolumegroup: ${13:# If specified `True`, the volume is removed from its associated volumegroup}
+    old_name: ${14:# Specifies the old name of the volume during renaming}
+    password: ${15:# REST API password for the Storage Virtualize system}
+    pool: ${16:# Specifies the name of the storage pool to use while creating the volume}
+    size: ${17:# Defines the size of the volume}
+    state: ${18:# Creates or updates (C(present)) or removes (C(absent)) a volume}
+    thin: ${19:# Specifies that a thin-provisioned volume is to be created}
+    token: ${20:# The authentication token to verify a user on the Storage Virtualize system}
+    unit: ${21:# Specifies the data units to use with the capacity that is specified by the 'size' parameter}
+    username: ${22:# REST API username for the Storage Virtualize system}
+    validate_certs: ${23:# Validates certification}
+    volumegroup: ${24:# Specifies the name of the volumegroup to which the volume is to be added}
+  tags:
+    - ibm
+    - storage_virtualize
+    - ibm_svc_manage_volume]]></content>
+  <tabTrigger>ibm.storage_virtualize.ibm_svc_manage_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages standard volumes on IBM Storage Virtualize family systems</description>
+</snippet>

@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, destroy, start, stop, and reboot a ProfitBricks virtual machine}
   community.general.profitbricks:
-    auto_increment: ${2:# Whether or not to increment a single number in the name for created virtual machines}
-    name: ${3:# The name of the virtual machine}
-    image: ${4:# The system image ID for creating the virtual machine, e}
-    image_password: ${5:# Password set for the administrative user}
-    ssh_keys: ${6:# Public SSH keys allowing access to the virtual machine}
-    datacenter: ${7:# The datacenter to provision this virtual machine}
-    cores: ${8:# The number of CPU cores to allocate to the virtual machine}
-    ram: ${9:# The amount of memory to allocate to the virtual machine}
-    cpu_family: ${10:# The CPU family type to allocate to the virtual machine}
-    volume_size: ${11:# The size in GB of the boot volume}
-    bus: ${12:# The bus type for the volume}
-    instance_ids: ${13:# list of instance ids, currently only used when state='absent' to remove instances}
-    count: ${14:# The number of virtual machines to create}
-    location: ${15:# The datacenter location}
-    assign_public_ip: ${16:# This will assign the machine to the public LAN}
-    lan: ${17:# The ID of the LAN you wish to add the servers to}
-    subscription_user: ${18:# The ProfitBricks username}
-    subscription_password: ${19:# THe ProfitBricks password}
-    wait: ${20:# wait for the instance to be in state 'running' before returning}
-    wait_timeout: ${21:# how long before wait gives up, in seconds}
-    remove_boot_volume: ${22:# remove the bootVolume of the virtual machine you're destroying}
-    state: ${23:# create or terminate instances}
-    disk_type: ${24:# the type of disk to be allocated}
+    assign_public_ip: ${2:# This will assign the machine to the public LAN}
+    auto_increment: ${3:# Whether or not to increment a single number in the name for created virtual machines}
+    bus: ${4:# The bus type for the volume}
+    cores: ${5:# The number of CPU cores to allocate to the virtual machine}
+    count: ${6:# The number of virtual machines to create}
+    cpu_family: ${7:# The CPU family type to allocate to the virtual machine}
+    datacenter: ${8:# The datacenter to provision this virtual machine}
+    disk_type: ${9:# the type of disk to be allocated}
+    image: ${10:# The system image ID for creating the virtual machine, e}
+    image_password: ${11:# Password set for the administrative user}
+    instance_ids: ${12:# list of instance ids, currently only used when state='absent' to remove instances}
+    lan: ${13:# The ID of the LAN you wish to add the servers to}
+    location: ${14:# The datacenter location}
+    name: ${15:# The name of the virtual machine}
+    ram: ${16:# The amount of memory to allocate to the virtual machine}
+    remove_boot_volume: ${17:# remove the bootVolume of the virtual machine you're destroying}
+    ssh_keys: ${18:# Public SSH keys allowing access to the virtual machine}
+    state: ${19:# create or terminate instances}
+    subscription_password: ${20:# THe ProfitBricks password}
+    subscription_user: ${21:# The ProfitBricks username}
+    volume_size: ${22:# The size in GB of the boot volume}
+    wait: ${23:# wait for the instance to be in state 'running' before returning}
+    wait_timeout: ${24:# how long before wait gives up, in seconds}
   tags:
     - community
     - general

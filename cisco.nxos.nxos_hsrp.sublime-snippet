@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages HSRP configuration on NX-OS switches}
   cisco.nxos.nxos_hsrp:
-    group: ${2:# HSRP group number}
-    interface: ${3:# Full name of interface that is being managed for HSRP}
-    version: ${4:# HSRP version}
-    priority: ${5:# HSRP priority or keyword 'default'}
+    auth_string: ${2:# Authentication string}
+    auth_type: ${3:# Authentication type}
+    group: ${4:# HSRP group number}
+    interface: ${5:# Full name of interface that is being managed for HSRP}
     preempt: ${6:# Enable/Disable preempt}
-    vip: ${7:# HSRP virtual IP address or keyword 'default'}
-    auth_string: ${8:# Authentication string}
-    auth_type: ${9:# Authentication type}
-    state: ${10:# Specify desired state of the resource}
+    priority: ${7:# HSRP priority or keyword 'default'}
+    state: ${8:# Specify desired state of the resource}
+    version: ${9:# HSRP version}
+    vip: ${10:# HSRP virtual IP address or keyword 'default'}
   tags:
     - cisco
     - nxos

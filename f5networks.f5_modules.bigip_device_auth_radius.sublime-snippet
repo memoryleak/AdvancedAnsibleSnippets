@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages RADIUS auth configuration on a BIG-IP device}
   f5networks.f5_modules.bigip_device_auth_radius:
-    servers: ${2:# Specifies the names of RADIUS servers for use with RADIUS authentication profiles}
-    accounting_bug: ${3:# Enables or disables validation of the accounting response vector}
-    retries: ${4:# Specifies the number of authentication retries the BIG-IP Local Traffic Management system allows before authentication fails}
-    service_type: ${5:# Specifies the type of service requested from the RADIUS server}
-    fallback_to_local: ${6:# Specifies the system uses the Local authentication method if the remote authentication method is not available}
-    use_for_auth: ${7:# Specifies whether or not this auth source is put in use on the system}
+    accounting_bug: ${2:# Enables or disables validation of the accounting response vector}
+    fallback_to_local: ${3:# Specifies the system uses the Local authentication method if the remote authentication method is not available}
+    provider: ${4:# A dict object containing connection details}
+    retries: ${5:# Specifies the number of authentication retries the BIG-IP Local Traffic Management system allows before authentication fails}
+    servers: ${6:# Specifies the names of RADIUS servers for use with RADIUS authentication profiles}
+    service_type: ${7:# Specifies the type of service requested from the RADIUS server}
     state: ${8:# When C(state) is C(present), ensures the RADIUS server exists}
-    provider: ${9:# A dict object containing connection details}
+    use_for_auth: ${9:# Specifies whether or not this auth source is put in use on the system}
   tags:
     - f5networks
     - f5_modules

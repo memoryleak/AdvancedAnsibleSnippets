@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Rollback Kubernetes (K8S) Deployments and DaemonSets}
   kubernetes.core.k8s_rollback:
-    label_selectors: ${2:# List of label selectors to use to filter results}
-    field_selectors: ${3:# List of field selectors to use to filter results}
-    host: ${4:# Provide a URL for accessing the API}
-    api_key: ${5:# Token used to authenticate with the API}
-    kubeconfig: ${6:# Path to an existing Kubernetes config file}
+    api_key: ${2:# Token used to authenticate with the API}
+    api_version: ${3:# Use to specify the API version}
+    ca_cert: ${4:# Path to a CA certificate used to authenticate with the API}
+    client_cert: ${5:# Path to a certificate used to authenticate with the API}
+    client_key: ${6:# Path to a key file used to authenticate with the API}
     context: ${7:# The name of a context found in the config file}
-    username: ${8:# Provide a username for authenticating with the API}
-    password: ${9:# Provide a password for authenticating with the API}
-    client_cert: ${10:# Path to a certificate used to authenticate with the API}
-    client_key: ${11:# Path to a key file used to authenticate with the API}
-    ca_cert: ${12:# Path to a CA certificate used to authenticate with the API}
-    validate_certs: ${13:# Whether or not to verify the API server's SSL certificates}
-    proxy: ${14:# The URL of an HTTP proxy to use for the connection}
-    no_proxy: ${15:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
-    proxy_headers: ${16:# The Header used for the HTTP proxy}
-    persist_config: ${17:# Whether or not to save the kube config refresh tokens}
-    impersonate_user: ${18:# Username to impersonate for the operation}
-    impersonate_groups: ${19:# Group(s) to impersonate for the operation}
-    api_version: ${20:# Use to specify the API version}
-    kind: ${21:# Use to specify an object model}
-    name: ${22:# Use to specify an object name}
-    namespace: ${23:# Use to specify an object namespace}
+    field_selectors: ${8:# List of field selectors to use to filter results}
+    host: ${9:# Provide a URL for accessing the API}
+    impersonate_groups: ${10:# Group(s) to impersonate for the operation}
+    impersonate_user: ${11:# Username to impersonate for the operation}
+    kind: ${12:# Use to specify an object model}
+    kubeconfig: ${13:# Path to an existing Kubernetes config file}
+    label_selectors: ${14:# List of label selectors to use to filter results}
+    name: ${15:# Use to specify an object name}
+    namespace: ${16:# Use to specify an object namespace}
+    no_proxy: ${17:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
+    password: ${18:# Provide a password for authenticating with the API}
+    persist_config: ${19:# Whether or not to save the kube config refresh tokens}
+    proxy: ${20:# The URL of an HTTP proxy to use for the connection}
+    proxy_headers: ${21:# The Header used for the HTTP proxy}
+    username: ${22:# Provide a username for authenticating with the API}
+    validate_certs: ${23:# Whether or not to verify the API server's SSL certificates}
   tags:
     - kubernetes
     - core

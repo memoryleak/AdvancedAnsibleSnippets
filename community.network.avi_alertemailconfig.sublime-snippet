@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of AlertEmailConfig Avi RESTful Object}
   community.network.avi_alertemailconfig:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
     avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    cc_emails: ${5:# Alerts are copied to the comma separated list of  email recipients}
-    description: ${6:# User defined description for the object}
-    name: ${7:# A user-friendly name of the email notification service}
-    tenant_ref: ${8:# It is a reference to an object of type tenant}
-    to_emails: ${9:# Alerts are sent to the comma separated list of  email recipients}
-    url: ${10:# Avi controller URL of the object}
-    uuid: ${11:# Unique object identifier of the object}
-    controller: ${12:# IP address or hostname of the controller}
-    username: ${13:# Username used for accessing Avi controller}
-    password: ${14:# Password of Avi user in Avi controller}
-    tenant: ${15:# Name of tenant used for all Avi API calls and context of object}
+    avi_api_update_method: ${5:# Default method for object update is HTTP PUT}
+    avi_credentials: ${6:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${7:# It disables avi session information to be cached as a fact}
+    cc_emails: ${8:# Alerts are copied to the comma separated list of  email recipients}
+    controller: ${9:# IP address or hostname of the controller}
+    description: ${10:# User defined description for the object}
+    name: ${11:# A user-friendly name of the email notification service}
+    password: ${12:# Password of Avi user in Avi controller}
+    state: ${13:# The state that should be applied on the entity}
+    tenant: ${14:# Name of tenant used for all Avi API calls and context of object}
+    tenant_ref: ${15:# It is a reference to an object of type tenant}
     tenant_uuid: ${16:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${17:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${18:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${19:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${20:# It disables avi session information to be cached as a fact}
+    to_emails: ${17:# Alerts are sent to the comma separated list of  email recipients}
+    url: ${18:# Avi controller URL of the object}
+    username: ${19:# Username used for accessing Avi controller}
+    uuid: ${20:# Unique object identifier of the object}
   tags:
     - community
     - network

@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Snapshots}
   theforeman.foreman.snapshot:
-    name: ${2:# Name of Snapshot}
-    description: ${3:# Description of Snapshot}
-    host: ${4:# Name of related Host}
+    description: ${2:# Description of Snapshot}
+    host: ${3:# Name of related Host}
+    id: ${4:# Id of Snapshot}
     include_ram: ${5:# Option to add RAM (only available for VMWare compute-resource)}
-    state: ${6:# State of Snapshot}
-    id: ${7:# Id of Snapshot}
+    name: ${6:# Name of Snapshot}
+    password: ${7:# Password of the user accessing the Foreman server}
     server_url: ${8:# URL of the Foreman server}
-    username: ${9:# Username accessing the Foreman server}
-    password: ${10:# Password of the user accessing the Foreman server}
+    state: ${9:# State of Snapshot}
+    username: ${10:# Username accessing the Foreman server}
     validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman

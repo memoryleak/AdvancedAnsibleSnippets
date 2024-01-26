@@ -1,18 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP RegionTargetHttpProxy}
   google.cloud.gcp_compute_region_target_http_proxy:
-    state: ${2:# Whether the given object should exist in GCP}
-    description: ${3:# An optional description of this resource}
-    name: ${4:# Name of the resource}
-    url_map: ${5:# A reference to the RegionUrlMap resource that defines the mapping from URL to the BackendService}
-    region: ${6:# The region where the regional proxy resides}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    auth_kind: ${3:# The type of credential used}
+    description: ${4:# An optional description of this resource}
+    env_type: ${5:# Specifies which Ansible environment you're running this module within}
+    name: ${6:# Name of the resource}
     project: ${7:# The Google Cloud Platform project to use}
-    auth_kind: ${8:# The type of credential used}
-    service_account_contents: ${9:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${10:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    region: ${8:# The region where the regional proxy resides}
+    scopes: ${9:# Array of scopes to be used}
+    service_account_contents: ${10:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
     service_account_email: ${11:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${12:# Array of scopes to be used}
-    env_type: ${13:# Specifies which Ansible environment you're running this module within}
+    service_account_file: ${12:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    state: ${13:# Whether the given object should exist in GCP}
+    url_map: ${14:# A reference to the RegionUrlMap resource that defines the mapping from URL to the BackendService}
   tags:
     - google
     - cloud

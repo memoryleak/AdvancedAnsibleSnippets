@@ -1,18 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Update inventory source(s)}
   awx.awx.inventory_source_update:
-    name: ${2:# The name or id of the inventory source to update}
-    inventory: ${3:# Name or id of the inventory that contains the inventory source(s) to update}
-    organization: ${4:# Name of the inventory source's inventory's organization}
-    wait: ${5:# Wait for the job to complete}
-    interval: ${6:# The interval to request an update from the controller}
-    timeout: ${7:# If waiting for the job to complete this will abort after this amount of seconds}
-    controller_host: ${8:# URL to your Automation Platform Controller instance}
-    controller_username: ${9:# Username for your controller instance}
-    controller_password: ${10:# Password for your controller instance}
-    controller_oauthtoken: ${11:# The OAuth token to use}
-    validate_certs: ${12:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${13:# Path to the controller config file}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    interval: ${7:# The interval to request an update from the controller}
+    inventory: ${8:# Name or id of the inventory that contains the inventory source(s) to update}
+    name: ${9:# The name or id of the inventory source to update}
+    organization: ${10:# Name, ID, or named URL of the inventory source's inventory's organization}
+    request_timeout: ${11:# Specify the timeout Ansible should use in requests to the controller host}
+    timeout: ${12:# If waiting for the job to complete this will abort after this amount of seconds}
+    validate_certs: ${13:# Whether to allow insecure connections to AWX}
+    wait: ${14:# Wait for the job to complete}
   tags:
     - awx
     - awx

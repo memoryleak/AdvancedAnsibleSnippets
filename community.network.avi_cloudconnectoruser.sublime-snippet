@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of CloudConnectorUser Avi RESTful Object}
   community.network.avi_cloudconnectoruser:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
     avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    azure_serviceprincipal: ${5:# Field introduced in 17}
-    azure_userpass: ${6:# Field introduced in 17}
-    gcp_credentials: ${7:# Credentials for google cloud platform}
-    name: ${8:# Name of the object}
-    oci_credentials: ${9:# Credentials for oracle cloud infrastructure}
-    private_key: ${10:# Private_key of cloudconnectoruser}
-    public_key: ${11:# Public_key of cloudconnectoruser}
-    tenant_ref: ${12:# It is a reference to an object of type tenant}
-    tencent_credentials: ${13:# Credentials for tencent cloud}
-    url: ${14:# Avi controller URL of the object}
-    uuid: ${15:# Unique object identifier of the object}
-    controller: ${16:# IP address or hostname of the controller}
-    username: ${17:# Username used for accessing Avi controller}
-    password: ${18:# Password of Avi user in Avi controller}
-    tenant: ${19:# Name of tenant used for all Avi API calls and context of object}
+    avi_api_update_method: ${5:# Default method for object update is HTTP PUT}
+    avi_credentials: ${6:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${7:# It disables avi session information to be cached as a fact}
+    azure_serviceprincipal: ${8:# Field introduced in 17}
+    azure_userpass: ${9:# Field introduced in 17}
+    controller: ${10:# IP address or hostname of the controller}
+    gcp_credentials: ${11:# Credentials for google cloud platform}
+    name: ${12:# Name of the object}
+    oci_credentials: ${13:# Credentials for oracle cloud infrastructure}
+    password: ${14:# Password of Avi user in Avi controller}
+    private_key: ${15:# Private_key of cloudconnectoruser}
+    public_key: ${16:# Public_key of cloudconnectoruser}
+    state: ${17:# The state that should be applied on the entity}
+    tenant: ${18:# Name of tenant used for all Avi API calls and context of object}
+    tenant_ref: ${19:# It is a reference to an object of type tenant}
     tenant_uuid: ${20:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${21:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${22:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${23:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${24:# It disables avi session information to be cached as a fact}
+    tencent_credentials: ${21:# Credentials for tencent cloud}
+    url: ${22:# Avi controller URL of the object}
+    username: ${23:# Username used for accessing Avi controller}
+    uuid: ${24:# Unique object identifier of the object}
   tags:
     - community
     - network

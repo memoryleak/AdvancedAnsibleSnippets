@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp E-Series set or update the password for a storage array}
   netapp_eseries.santricity.netapp_e_auth:
-    validate_certs: ${2:# Should https certificates be validated?}
-    name: ${3:# The name of the storage array}
-    ssid: ${4:# the identifier of the storage array in the Web Services Proxy}
-    set_admin: ${5:# Boolean value on whether to update the admin password}
-    current_password: ${6:# The current admin password}
+    api_password: ${2:# The password used to authenticate against the API}
+    api_url: ${3:# The full API url}
+    api_username: ${4:# The username used to authenticate against the API}
+    current_password: ${5:# The current admin password}
+    name: ${6:# The name of the storage array}
     new_password: ${7:# The password you would like to set}
-    api_url: ${8:# The full API url}
-    api_username: ${9:# The username used to authenticate against the API}
-    api_password: ${10:# The password used to authenticate against the API}
+    set_admin: ${8:# Boolean value on whether to update the admin password}
+    ssid: ${9:# the identifier of the storage array in the Web Services Proxy}
+    validate_certs: ${10:# Should https certificates be validated?}
   tags:
     - netapp_eseries
     - santricity

@@ -1,43 +1,38 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/Update/Delete Zabbix media types}
   community.zabbix.zabbix_mediatype:
-    name: ${2:# Name of the media type}
+    attempt_interval: ${2:# The interval between retry attempts}
     description: ${3:# Description of the media type}
-    state: ${4:# Desired state of the mediatype}
-    type: ${5:# Type of the media type}
-    status: ${6:# Whether the media type is enabled or no}
-    max_sessions: ${7:# The maximum number of alerts that can be processed in parallel}
-    max_attempts: ${8:# The maximum number of attempts to send an alert}
-    attempt_interval: ${9:# The interval between retry attempts}
-    script_name: ${10:# The name of the executed script}
-    script_params: ${11:# List of script parameters}
-    gsm_modem: ${12:# Serial device name of the gsm modem}
-    username: ${13:# Username or Jabber identifier}
-    password: ${14:# Authentication password}
-    smtp_server: ${15:# SMTP server host}
-    smtp_server_port: ${16:# SMTP server port}
-    smtp_helo: ${17:# SMTP HELO}
-    smtp_email: ${18:# Email address from which notifications will be sent}
+    event_menu: ${4:# Can be used when I(type=webhook)}
+    event_menu_name: ${5:# Requred when I(event_menu=true)}
+    event_menu_url: ${6:# Requred when I(event_menu=true)}
+    gsm_modem: ${7:# Serial device name of the gsm modem}
+    http_login_password: ${8:# Basic Auth password}
+    http_login_user: ${9:# Basic Auth login}
+    max_attempts: ${10:# The maximum number of attempts to send an alert}
+    max_sessions: ${11:# The maximum number of alerts that can be processed in parallel}
+    message_templates: ${12:# Default notification messages for the event types}
+    message_text_limit: ${13:# The message text limit}
+    name: ${14:# Name of the media type}
+    password: ${15:# Authentication password}
+    process_tags: ${16:# Can be used when I(type=webhook)}
+    script_name: ${17:# The name of the executed script}
+    script_params: ${18:# List of script parameters}
     smtp_authentication: ${19:# Whether SMTP authentication with username and password should be enabled or not}
-    smtp_security: ${20:# SMTP connection security level to use}
-    smtp_verify_host: ${21:# SSL verify host for SMTP}
-    smtp_verify_peer: ${22:# SSL verify peer for SMTP}
-    message_text_limit: ${23:# The message text limit}
-    webhook_script: ${24:# Required when I(type=webhook)}
-    webhook_timeout: ${25:# Can be used when I(type=webhook)}
-    process_tags: ${26:# Can be used when I(type=webhook)}
-    event_menu: ${27:# Can be used when I(type=webhook)}
-    event_menu_url: ${28:# Requred when I(event_menu=True)}
-    event_menu_name: ${29:# Requred when I(event_menu=True)}
-    webhook_params: ${30:# Can be used when I(type=webhook)}
-    message_templates: ${31:# Default notification messages for the event types}
-    server_url: ${32:# URL of Zabbix server, with protocol (http or https)}
-    login_user: ${33:# Zabbix user name}
-    login_password: ${34:# Zabbix user password}
-    http_login_user: ${35:# Basic Auth login}
-    http_login_password: ${36:# Basic Auth password}
-    timeout: ${37:# The timeout of API request (seconds)}
-    validate_certs: ${38:# If set to False, SSL certificates will not be validated}
+    smtp_email: ${20:# Email address from which notifications will be sent}
+    smtp_helo: ${21:# SMTP HELO}
+    smtp_security: ${22:# SMTP connection security level to use}
+    smtp_server: ${23:# SMTP server host}
+    smtp_server_port: ${24:# SMTP server port}
+    smtp_verify_host: ${25:# SSL verify host for SMTP}
+    smtp_verify_peer: ${26:# SSL verify peer for SMTP}
+    state: ${27:# Desired state of the mediatype}
+    status: ${28:# Whether the media type is enabled or no}
+    type: ${29:# Type of the media type}
+    username: ${30:# Username or Jabber identifier}
+    webhook_params: ${31:# Can be used when I(type=webhook)}
+    webhook_script: ${32:# Required when I(type=webhook)}
+    webhook_timeout: ${33:# Can be used when I(type=webhook)}
   tags:
     - community
     - zabbix

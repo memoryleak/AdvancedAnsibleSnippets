@@ -1,33 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Docker networks}
   community.docker.docker_network:
-    name: ${2:# Name of the network to operate on}
-    connected: ${3:# List of container names or container IDs to connect to a network}
-    driver: ${4:# Specify the type of network}
-    driver_options: ${5:# Dictionary of network settings}
-    force: ${6:# With state C(absent) forces disconnecting all containers from the network prior to deleting the network}
-    appends: ${7:# By default the connected list is canonical, meaning containers not on the list are removed from the network}
-    enable_ipv6: ${8:# Enable IPv6 networking}
-    ipam_driver: ${9:# Specify an IPAM driver}
-    ipam_driver_options: ${10:# Dictionary of IPAM driver options}
-    ipam_config: ${11:# List of IPAM config blocks}
-    state: ${12:# C(absent) deletes the network}
-    internal: ${13:# Restrict external access to the network}
-    labels: ${14:# Dictionary of labels}
-    scope: ${15:# Specify the network's scope}
-    attachable: ${16:# If enabled, and the network is in the global scope, non-service containers on worker nodes will be able to connect to the network}
-    docker_host: ${17:# The URL or Unix socket path used to connect to the Docker API}
-    tls_hostname: ${18:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    api_version: ${19:# The version of the Docker API running on the Docker Host}
-    timeout: ${20:# The maximum amount of time in seconds to wait on a response from the API}
-    ca_cert: ${21:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
-    client_cert: ${22:# Path to the client's TLS certificate file}
-    client_key: ${23:# Path to the client's TLS key file}
-    ssl_version: ${24:# Provide a valid SSL version number}
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    appends: ${3:# By default the connected list is canonical, meaning containers not on the list are removed from the network}
+    attachable: ${4:# If enabled, and the network is in the global scope, non-service containers on worker nodes will be able to connect to the network}
+    ca_cert: ${5:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${6:# Path to the client's TLS certificate file}
+    client_key: ${7:# Path to the client's TLS key file}
+    connected: ${8:# List of container names or container IDs to connect to a network}
+    debug: ${9:# Debug mode}
+    docker_host: ${10:# The URL or Unix socket path used to connect to the Docker API}
+    driver: ${11:# Specify the type of network}
+    driver_options: ${12:# Dictionary of network settings}
+    enable_ipv6: ${13:# Enable IPv6 networking}
+    force: ${14:# With state V(absent) forces disconnecting all containers from the network prior to deleting the network}
+    internal: ${15:# Restrict external access to the network}
+    ipam_config: ${16:# List of IPAM config blocks}
+    ipam_driver: ${17:# Specify an IPAM driver}
+    ipam_driver_options: ${18:# Dictionary of IPAM driver options}
+    labels: ${19:# Dictionary of labels}
+    name: ${20:# Name of the network to operate on}
+    scope: ${21:# Specify the network's scope}
+    ssl_version: ${22:# Provide a valid SSL version number}
+    state: ${23:# V(absent) deletes the network}
+    timeout: ${24:# The maximum amount of time in seconds to wait on a response from the API}
     tls: ${25:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    use_ssh_client: ${26:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
-    validate_certs: ${27:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
-    debug: ${28:# Debug mode}
+    tls_hostname: ${26:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    use_ssh_client: ${27:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${28:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
   tags:
     - community
     - docker

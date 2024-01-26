@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Nomad ACL tokens}
+  community.general.nomad_token:
+    client_cert: ${2:# Path of certificate for TLS/SSL}
+    client_key: ${3:# Path of certificate's private key for TLS/SSL}
+    global_replicated: ${4:# Indicates whether or not the token was created with the C(--global)}
+    host: ${5:# FQDN of Nomad server}
+    name: ${6:# Name of ACL token to create}
+    namespace: ${7:# Namespace for Nomad}
+    policies: ${8:# A list of the policies assigned to the token}
+    port: ${9:# Port of Nomad server}
+    state: ${10:# Create or remove ACL token}
+    timeout: ${11:# Timeout (in seconds) for the request to Nomad}
+    token: ${12:# ACL token for authentication}
+    token_type: ${13:# The type of the token can be V(client), V(management), or V(bootstrap)}
+    use_ssl: ${14:# Use TLS/SSL connection}
+    validate_certs: ${15:# Enable TLS/SSL certificate validation}
+  tags:
+    - community
+    - general
+    - nomad_token]]></content>
+  <tabTrigger>community.general.nomad_token</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Nomad ACL tokens</description>
+</snippet>

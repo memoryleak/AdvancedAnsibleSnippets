@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures availability group(s)}
   lowlydba.sqlserver.availability_group:
-    sql_instance_secondary: ${2:# The secondary SQL Server instance for the new Availability Group}
-    sql_username_secondary: ${3:# Username for SQL Authentication for the secondary replica}
-    sql_password_secondary: ${4:# Password for SQL Authentication for the secondary replica}
-    database: ${5:# Name of the database to create the Availability Group for}
-    ag_name: ${6:# Name of the Availability Group}
-    all_ags: ${7:# Apply changes to all availability groups on the instance}
-    shared_path: ${8:# The network share where the backups will be backed up and restored from}
-    dtc_support_enabled: ${9:# Enables Dtc support}
-    basic_availability_group: ${10:# Indicates whether the availability group is Basic Availability Group}
-    database_health_trigger: ${11:# Indicates whether the availability group triggers the database health}
-    is_distributed_ag: ${12:# Indicates whether the availability group is distributed}
-    healthcheck_timeout: ${13:# This setting used to specify the length of time, in milliseconds, that the SQL Server resource DLL should wait for information returned by the C(sp_server_diagnostics) stored procedure before reporting the Always On Failover Cluster Instance (FCI) as unresponsive}
-    failure_condition_level: ${14:# Specifies the different conditions that can trigger an automatic failover in Availability Group}
-    cluster_type: ${15:# Cluster type of the Availability Group}
-    failover_mode: ${16:# Whether the replica have Automatic or Manual failover}
-    availability_mode: ${17:# Whether the replica should be Asynchronous or Synchronous}
-    seeding_mode: ${18:# Default seeding mode for the replica}
-    automated_backup_preference: ${19:# How to handle backup requests by default}
-    allow_null_backup: ${20:# Allow taking a full backup to C(NULL) if one does not exist and I(seeding_mode=Automatic)}
-    force: ${21:# Drop and recreate the database on remote servers using fresh backup}
-    use_last_backup: ${22:# Use the last full and log backup of database}
-    sql_instance: ${23:# The SQL Server instance to modify}
-    sql_username: ${24:# Username for SQL Authentication}
-    sql_password: ${25:# Password for SQL Authentication}
-    state: ${26:# Whether or not the object should be C(present) or C(absent)}
+    ag_name: ${2:# Name of the Availability Group}
+    all_ags: ${3:# Apply changes to all availability groups on the instance}
+    allow_null_backup: ${4:# Allow taking a full backup to C(NULL) if one does not exist and I(seeding_mode=Automatic)}
+    automated_backup_preference: ${5:# How to handle backup requests by default}
+    availability_mode: ${6:# Whether the replica should be Asynchronous or Synchronous}
+    basic_availability_group: ${7:# Indicates whether the availability group is Basic Availability Group}
+    cluster_type: ${8:# Cluster type of the Availability Group}
+    database: ${9:# Name of the database to create the Availability Group for}
+    database_health_trigger: ${10:# Indicates whether the availability group triggers the database health}
+    dtc_support_enabled: ${11:# Enables Dtc support}
+    failover_mode: ${12:# Whether the replica have Automatic or Manual failover}
+    failure_condition_level: ${13:# Specifies the different conditions that can trigger an automatic failover in Availability Group}
+    force: ${14:# Drop and recreate the database on remote servers using fresh backup}
+    healthcheck_timeout: ${15:# This setting used to specify the length of time, in milliseconds, that the SQL Server resource DLL should wait for information returned by the C(sp_server_diagnostics) stored procedure before reporting the Always On Failover Cluster Instance (FCI) as unresponsive}
+    is_distributed_ag: ${16:# Indicates whether the availability group is distributed}
+    seeding_mode: ${17:# Default seeding mode for the replica}
+    shared_path: ${18:# The network share where the backups will be backed up and restored from}
+    sql_instance: ${19:# The SQL Server instance to modify}
+    sql_instance_secondary: ${20:# The secondary SQL Server instance for the new Availability Group}
+    sql_password: ${21:# Password for SQL Authentication}
+    sql_password_secondary: ${22:# Password for SQL Authentication for the secondary replica}
+    sql_username: ${23:# Username for SQL Authentication}
+    sql_username_secondary: ${24:# Username for SQL Authentication for the secondary replica}
+    state: ${25:# Whether or not the object should be C(present) or C(absent)}
+    use_last_backup: ${26:# Use the last full and log backup of database}
   tags:
     - lowlydba
     - sqlserver

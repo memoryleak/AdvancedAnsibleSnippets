@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Scaleway Container registry management module}
   community.general.scaleway_container_registry:
-    state: ${2:# Indicate desired state of the container regitry}
-    project_id: ${3:# Project identifier}
-    region: ${4:# Scaleway region to use (for example C(fr-par))}
-    name: ${5:# Name of the container registry}
-    description: ${6:# Description of the container registry}
+    api_timeout: ${2:# HTTP timeout to Scaleway API in seconds}
+    api_token: ${3:# Scaleway OAuth token}
+    api_url: ${4:# Scaleway API URL}
+    description: ${5:# Description of the container registry}
+    name: ${6:# Name of the container registry}
     privacy_policy: ${7:# Default visibility policy}
-    api_token: ${8:# Scaleway OAuth token}
-    api_url: ${9:# Scaleway API URL}
-    api_timeout: ${10:# HTTP timeout to Scaleway API in seconds}
-    query_parameters: ${11:# List of parameters passed to the query string}
+    project_id: ${8:# Project identifier}
+    query_parameters: ${9:# List of parameters passed to the query string}
+    region: ${10:# Scaleway region to use (for example V(fr-par))}
+    state: ${11:# Indicate desired state of the container registry}
     validate_certs: ${12:# Validate SSL certs of the Scaleway API}
     wait: ${13:# Wait for the resource to reach its desired state before returning}
-    wait_timeout: ${14:# Time to wait for the resource to reach the expected state}
-    wait_sleep_time: ${15:# Time to wait before every attempt to check the state of the resource}
+    wait_sleep_time: ${14:# Time to wait before every attempt to check the state of the resource}
+    wait_timeout: ${15:# Time to wait for the resource to reach the expected state}
   tags:
     - community
     - general

@@ -1,36 +1,36 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of ServiceEngine Avi RESTful Object}
   community.network.avi_serviceengine:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
-    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    availability_zone: ${5:# Availability_zone of serviceengine}
-    cloud_ref: ${6:# It is a reference to an object of type cloud}
-    container_mode: ${7:# Boolean flag to set container_mode}
-    container_type: ${8:# Enum options - container_type_bridge, container_type_host, container_type_host_dpdk}
-    controller_created: ${9:# Boolean flag to set controller_created}
-    controller_ip: ${10:# Controller_ip of serviceengine}
-    data_vnics: ${11:# List of vnic}
-    enable_state: ${12:# Inorder to disable se set this field appropriately}
-    flavor: ${13:# Flavor of serviceengine}
-    host_ref: ${14:# It is a reference to an object of type vimgrhostruntime}
-    hypervisor: ${15:# Enum options - default, vmware_esx, kvm, vmware_vsan, xen}
-    mgmt_vnic: ${16:# Vnic settings for serviceengine}
-    name: ${17:# Name of the object}
-    resources: ${18:# Seresources settings for serviceengine}
-    se_group_ref: ${19:# It is a reference to an object of type serviceenginegroup}
-    tenant_ref: ${20:# It is a reference to an object of type tenant}
-    url: ${21:# Avi controller URL of the object}
-    uuid: ${22:# Unique object identifier of the object}
-    controller: ${23:# IP address or hostname of the controller}
-    username: ${24:# Username used for accessing Avi controller}
-    password: ${25:# Password of Avi user in Avi controller}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
+    availability_zone: ${4:# Availability_zone of serviceengine}
+    avi_api_patch_op: ${5:# Patch operation to use when using avi_api_update_method as patch}
+    avi_api_update_method: ${6:# Default method for object update is HTTP PUT}
+    avi_credentials: ${7:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${8:# It disables avi session information to be cached as a fact}
+    cloud_ref: ${9:# It is a reference to an object of type cloud}
+    container_mode: ${10:# Boolean flag to set container_mode}
+    container_type: ${11:# Enum options - container_type_bridge, container_type_host, container_type_host_dpdk}
+    controller: ${12:# IP address or hostname of the controller}
+    controller_created: ${13:# Boolean flag to set controller_created}
+    controller_ip: ${14:# Controller_ip of serviceengine}
+    data_vnics: ${15:# List of vnic}
+    enable_state: ${16:# Inorder to disable se set this field appropriately}
+    flavor: ${17:# Flavor of serviceengine}
+    host_ref: ${18:# It is a reference to an object of type vimgrhostruntime}
+    hypervisor: ${19:# Enum options - default, vmware_esx, kvm, vmware_vsan, xen}
+    mgmt_vnic: ${20:# Vnic settings for serviceengine}
+    name: ${21:# Name of the object}
+    password: ${22:# Password of Avi user in Avi controller}
+    resources: ${23:# Seresources settings for serviceengine}
+    se_group_ref: ${24:# It is a reference to an object of type serviceenginegroup}
+    state: ${25:# The state that should be applied on the entity}
     tenant: ${26:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${27:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${28:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${29:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${30:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${31:# It disables avi session information to be cached as a fact}
+    tenant_ref: ${27:# It is a reference to an object of type tenant}
+    tenant_uuid: ${28:# UUID of tenant used for all Avi API calls and context of object}
+    url: ${29:# Avi controller URL of the object}
+    username: ${30:# Username used for accessing Avi controller}
+    uuid: ${31:# Unique object identifier of the object}
   tags:
     - community
     - network

@@ -1,19 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP Network}
   google.cloud.gcp_compute_network:
-    state: ${2:# Whether the given object should exist in GCP}
-    description: ${3:# An optional description of this resource}
-    name: ${4:# Name of the resource}
-    auto_create_subnetworks: ${5:# When set to `true`, the network is created in 'auto subnet mode' and it will create a subnet for each region automatically across the `10}
-    routing_config: ${6:# The network-level routing configuration for this network}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    auth_kind: ${3:# The type of credential used}
+    auto_create_subnetworks: ${4:# When set to `true`, the network is created in 'auto subnet mode' and it will create a subnet for each region automatically across the `10}
+    description: ${5:# An optional description of this resource}
+    env_type: ${6:# Specifies which Ansible environment you're running this module within}
     mtu: ${7:# Maximum Transmission Unit in bytes}
-    project: ${8:# The Google Cloud Platform project to use}
-    auth_kind: ${9:# The type of credential used}
-    service_account_contents: ${10:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${11:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${12:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${13:# Array of scopes to be used}
-    env_type: ${14:# Specifies which Ansible environment you're running this module within}
+    name: ${8:# Name of the resource}
+    project: ${9:# The Google Cloud Platform project to use}
+    routing_config: ${10:# The network-level routing configuration for this network}
+    scopes: ${11:# Array of scopes to be used}
+    service_account_contents: ${12:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_email: ${13:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    service_account_file: ${14:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    state: ${15:# Whether the given object should exist in GCP}
   tags:
     - google
     - cloud

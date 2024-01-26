@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, update, and delete an Elastic Beanstalk application}
   community.aws.elasticbeanstalk_app:
-    app_name: ${2:# Name of the Beanstalk application you wish to manage}
-    description: ${3:# The description of the application}
-    state: ${4:# Whether to ensure the application is present or absent}
-    terminate_by_force: ${5:# When I(terminate_by_force=true), running environments will be terminated before deleting the application}
-    access_key: ${6:# AWS access key ID}
-    secret_key: ${7:# AWS secret access key}
-    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    access_key: ${2:# AWS access key ID}
+    app_name: ${3:# Name of the Beanstalk application you wish to manage}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    description: ${7:# The description of the application}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
     profile: ${9:# A named AWS profile to use for authentication}
-    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${13:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
-    region: ${15:# The AWS region to use}
+    region: ${10:# The AWS region to use}
+    secret_key: ${11:# AWS secret access key}
+    session_token: ${12:# AWS STS session token for use with temporary credentials}
+    state: ${13:# Whether to ensure the application is present or absent}
+    terminate_by_force: ${14:# When I(terminate_by_force=true), running environments will be terminated before deleting the application}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

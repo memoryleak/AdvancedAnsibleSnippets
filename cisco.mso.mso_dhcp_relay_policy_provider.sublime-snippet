@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage DHCP providers in a DHCP Relay policy}
   cisco.mso.mso_dhcp_relay_policy_provider:
-    dhcp_relay_policy: ${2:# Name of the DHCP Relay Policy}
-    ip: ${3:# IP address of the DHCP Server}
-    tenant: ${4:# Tenant where the DHCP provider is located}
-    schema: ${5:# Schema where the DHCP provider is configured}
-    template: ${6:# template where the DHCP provider is configured}
-    application_profile: ${7:# Application Profile where the DHCP provider is configured}
-    endpoint_group: ${8:# EPG where the DHCP provider is configured}
-    external_endpoint_group: ${9:# External EPG where the DHCP provider is configured}
-    state: ${10:# Use C(present) or C(absent) for adding or removing}
-    host: ${11:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${12:# Port number to be used for the REST connection}
-    username: ${13:# The username to use for authentication}
-    password: ${14:# The password to use for authentication}
-    output_level: ${15:# Influence the output of this MSO module}
+    application_profile: ${2:# Application Profile where the DHCP provider is configured}
+    dhcp_relay_policy: ${3:# Name of the DHCP Relay Policy}
+    endpoint_group: ${4:# EPG where the DHCP provider is configured}
+    external_endpoint_group: ${5:# External EPG where the DHCP provider is configured}
+    host: ${6:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    ip: ${7:# IP address of the DHCP Server}
+    login_domain: ${8:# The login domain name to use for authentication}
+    output_level: ${9:# Influence the output of this MSO module}
+    password: ${10:# The password to use for authentication}
+    port: ${11:# Port number to be used for the REST connection}
+    schema: ${12:# Schema where the DHCP provider is configured}
+    state: ${13:# Use C(present) or C(absent) for adding or removing}
+    template: ${14:# template where the DHCP provider is configured}
+    tenant: ${15:# Tenant where the DHCP provider is located}
     timeout: ${16:# The socket level timeout in seconds}
-    use_proxy: ${17:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${18:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${19:# If C(no), SSL certificates will not be validated}
-    login_domain: ${20:# The login domain name to use for authentication}
+    use_proxy: ${17:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${18:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${19:# The username to use for authentication}
+    validate_certs: ${20:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - mso

@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages router profiles for message-routing protocols}
   f5networks.f5_modules.bigip_message_routing_router:
-    name: ${2:# Specifies the name of the router profile}
-    description: ${3:# The user-defined description of the router profile}
-    type: ${4:# Parameter used to specify the type of the router profile to manage}
-    parent: ${5:# The parent template of this router profile}
-    ignore_client_port: ${6:# When C(yes), the remote port on clientside connections (connections where the peer connected to the BIG-IP) is ignored when searching for an existing connection}
-    inherited_traffic_group: ${7:# When set to C(yes), the C(traffic_group) will be inherited from the containing folder}
-    traffic_group: ${8:# Specifies the traffic-group of the router profile}
-    use_local_connection: ${9:# If C(yes), the router will route a message to an existing connection on the same TMM as the message was received}
-    max_pending_bytes: ${10:# The maximum number of bytes worth of pending messages that will be held while waiting for a connection to a peer to be created}
-    max_pending_messages: ${11:# The maximum number of pending messages that will be held while waiting for a connection to a peer to be created}
-    max_retries: ${12:# Sets the maximum number of time a message may be resubmitted for rerouting by the C(MR::retry) iRule command}
-    mirror: ${13:# Enables or disables state mirroring}
-    mirrored_msg_sweeper_interval: ${14:# Specifies the maximum time in milliseconds that a message will be held on the standby device as it waits for the active device to route the message}
-    routes: ${15:# Specifies a list of static routes for the router instance to use}
-    partition: ${16:# Device partition to create router profile on}
-    state: ${17:# When C(present), ensures the router profile exists}
-    provider: ${18:# A dict object containing connection details}
+    description: ${2:# The user-defined description of the router profile}
+    ignore_client_port: ${3:# When C(true), the remote port on clientside connections (connections where the peer connected to the BIG-IP) is ignored when searching for an existing connection}
+    inherited_traffic_group: ${4:# When set to C(true), the C(traffic_group) is inherited from the containing folder}
+    max_pending_bytes: ${5:# The maximum number of bytes worth of pending messages that will be held while waiting for a connection to a peer to be created}
+    max_pending_messages: ${6:# The maximum number of pending messages that will be held while waiting for a connection to a peer to be created}
+    max_retries: ${7:# Sets the maximum number of time a message may be resubmitted for rerouting by the C(MR::retry) iRule command}
+    mirror: ${8:# Enables or disables state mirroring}
+    mirrored_msg_sweeper_interval: ${9:# Specifies the maximum time in milliseconds that a message will be held on the standby device as it waits for the active device to route the message}
+    name: ${10:# Specifies the name of the router profile}
+    parent: ${11:# The parent template of this router profile}
+    partition: ${12:# Device partition to create router profile on}
+    provider: ${13:# A dict object containing connection details}
+    routes: ${14:# Specifies a list of static routes for the router instance to use}
+    state: ${15:# When C(present), ensures the router profile exists}
+    traffic_group: ${16:# Specifies the traffic-group of the router profile}
+    type: ${17:# Parameter used to specify the type of the router profile to manage}
+    use_local_connection: ${18:# If C(true), the router will route a message to an existing connection on the same TMM as the message was received}
   tags:
     - f5networks
     - f5_modules

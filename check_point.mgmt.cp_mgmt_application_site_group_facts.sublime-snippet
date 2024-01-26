@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Get application-site-group objects facts on Check Point over Web Services API}
   check_point.mgmt.cp_mgmt_application_site_group_facts:
-    name: ${2:# Object name}
+    dereference_group_members: ${2:# Indicates whether to dereference 'members' field by details level for every object in reply}
     details_level: ${3:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
     limit: ${4:# No more than that many results will be returned}
-    offset: ${5:# Skip that many results before beginning to return them}
-    order: ${6:# Sorts results by the given field}
-    dereference_group_members: ${7:# Indicates whether to dereference 'members' field by details level for every object in reply}
+    name: ${5:# Object name}
+    offset: ${6:# Skip that many results before beginning to return them}
+    order: ${7:# Sorts results by the given field}
     show_membership: ${8:# Indicates whether to calculate and show 'groups' field for every object in reply}
     version: ${9:# Version of checkpoint}
   tags:

@@ -2,11 +2,11 @@
   <content><![CDATA[- name: ${1:CLI command to add/remove vrouter-packet-relay}
   community.network.pn_vrouter_packet_relay:
     pn_cliswitch: ${2:# Target switch to run the CLI on}
-    state: ${3:# vrouter-packet-relay configuration command}
-    pn_forward_ip: ${4:# forwarding IP address}
+    pn_forward_ip: ${3:# forwarding IP address}
+    pn_forward_proto: ${4:# protocol type to forward packets}
     pn_nic: ${5:# NIC}
-    pn_forward_proto: ${6:# protocol type to forward packets}
-    pn_vrouter_name: ${7:# name of service config}
+    pn_vrouter_name: ${6:# name of service config}
+    state: ${7:# vrouter-packet-relay configuration command}
   tags:
     - community
     - network

@@ -2,13 +2,13 @@
   <content><![CDATA[- name: ${1:Manages VXLAN tunnel configuration on HUAWEI CloudEngine devices}
   community.network.ce_vxlan_tunnel:
     bridge_domain_id: ${2:# Specifies a bridge domain ID}
-    vni_id: ${3:# Specifies a VXLAN network identifier (VNI) ID}
+    nve_mode: ${3:# Specifies the working mode of an NVE interface}
     nve_name: ${4:# Specifies the number of an NVE interface}
-    nve_mode: ${5:# Specifies the working mode of an NVE interface}
-    peer_list_ip: ${6:# Specifies the IP address of a remote VXLAN tunnel endpoints (VTEP)}
-    protocol_type: ${7:# The operation type of routing protocol}
-    source_ip: ${8:# Specifies an IP address for a source VTEP}
-    state: ${9:# Manage the state of the resource}
+    peer_list_ip: ${5:# Specifies the IP address of a remote VXLAN tunnel endpoints (VTEP)}
+    protocol_type: ${6:# The operation type of routing protocol}
+    source_ip: ${7:# Specifies an IP address for a source VTEP}
+    state: ${8:# Manage the state of the resource}
+    vni_id: ${9:# Specifies a VXLAN network identifier (VNI) ID}
   tags:
     - community
     - network

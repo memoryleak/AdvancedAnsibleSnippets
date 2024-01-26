@@ -1,28 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage AWS VPC NAT Gateways}
   amazon.aws.ec2_vpc_nat_gateway:
-    state: ${2:# Ensure NAT Gateway is present or absent}
-    nat_gateway_id: ${3:# The id AWS dynamically allocates to the NAT Gateway on creation}
-    subnet_id: ${4:# The id of the subnet to create the NAT Gateway in}
-    allocation_id: ${5:# The id of the elastic IP allocation}
-    eip_address: ${6:# The elastic IP address of the EIP you want attached to this NAT Gateway}
-    if_exist_do_not_create: ${7:# if a NAT Gateway exists already in the subnet_id, then do not create a new one}
-    release_eip: ${8:# Deallocate the EIP from the VPC}
-    wait: ${9:# Wait for operation to complete before returning}
-    wait_timeout: ${10:# How many seconds to wait for an operation to complete before timing out}
-    client_token: ${11:# Optional unique token to be used during create to ensure idempotency}
-    access_key: ${12:# AWS access key ID}
-    secret_key: ${13:# AWS secret access key}
-    session_token: ${14:# AWS STS session token for use with temporary credentials}
-    profile: ${15:# A named AWS profile to use for authentication}
-    endpoint_url: ${16:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${17:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${19:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${20:# Use a C(botocore}
-    region: ${21:# The AWS region to use}
+    access_key: ${2:# AWS access key ID}
+    allocation_id: ${3:# The id of the elastic IP allocation}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    client_token: ${6:# Optional unique token to be used during create to ensure idempotency}
+    connectivity_type: ${7:# Indicates whether the NAT gateway supports public or private connectivity}
+    debug_botocore_endpoint_logs: ${8:# Use a C(botocore}
+    default_create: ${9:# When I(default_create=True) and I(eip_address) has been set, but not yet allocated, the NAT gateway is created and a new EIP is automatically allocated}
+    eip_address: ${10:# The elastic IP address of the EIP you want attached to this NAT Gateway}
+    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
+    if_exist_do_not_create: ${12:# if a NAT Gateway exists already in the subnet_id, then do not create a new one}
+    nat_gateway_id: ${13:# The id AWS dynamically allocates to the NAT Gateway on creation}
+    profile: ${14:# A named AWS profile to use for authentication}
+    purge_tags: ${15:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${16:# The AWS region to use}
+    release_eip: ${17:# Deallocate the EIP from the VPC}
+    secret_key: ${18:# AWS secret access key}
+    session_token: ${19:# AWS STS session token for use with temporary credentials}
+    state: ${20:# Ensure NAT Gateway is present or absent}
+    subnet_id: ${21:# The id of the subnet to create the NAT Gateway in}
     tags: ${22:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${23:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    validate_certs: ${23:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${24:# Wait for operation to complete before returning}
+    wait_timeout: ${25:# How many seconds to wait for an operation to complete before timing out}
   tags:
     - amazon
     - aws

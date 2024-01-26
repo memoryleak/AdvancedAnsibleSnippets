@@ -2,10 +2,10 @@
   <content><![CDATA[- name: ${1:A wrapper to the unix getent utility}
   ansible.builtin.getent:
     database: ${2:# The name of a getent database supported by the target system (passwd, group, hosts, etc)}
-    key: ${3:# Key from which to return values from the specified database, otherwise the full contents are returned}
-    service: ${4:# Override all databases with the specified service}
-    split: ${5:# Character used to split the database values into lists/arrays such as C(:) or C(\\t), otherwise it will try to pick one depending on the database}
-    fail_key: ${6:# If a supplied key is missing this will make the task fail if C(true)}
+    fail_key: ${3:# If a supplied key is missing this will make the task fail if V(true)}
+    key: ${4:# Key from which to return values from the specified database, otherwise the full contents are returned}
+    service: ${5:# Override all databases with the specified service}
+    split: ${6:# Character used to split the database values into lists/arrays such as V(:) or V(\\\\t), otherwise it will try to pick one depending on the database}
   tags:
     - getent]]></content>
   <tabTrigger>ansible.builtin.getent</tabTrigger>

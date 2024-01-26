@@ -1,9 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:APT-RPM package manager}
   community.general.apt_rpm:
-    package: ${2:# list of packages to install, upgrade or remove}
-    state: ${3:# Indicates the desired package state}
-    update_cache: ${4:# update the package database first C(apt-get update)}
+    clean: ${2:# Run the equivalent of C(apt-get clean) to clear out the local repository of retrieved package files}
+    dist_upgrade: ${3:# If true performs an C(apt-get dist-upgrade) to upgrade system}
+    package: ${4:# List of packages to install, upgrade, or remove}
+    state: ${5:# Indicates the desired package state}
+    update_cache: ${6:# Run the equivalent of C(apt-get update) before the operation}
+    update_kernel: ${7:# If true performs an C(update-kernel) to upgrade kernel packages}
   tags:
     - community
     - general

@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages F5 BIG-IP LTM ICMP monitors}
   f5networks.f5_modules.bigip_monitor_icmp:
-    name: ${2:# Specifies the name of the monitor}
-    app_service: ${3:# The iApp service to be associated with this profile}
-    parent: ${4:# The parent template of this monitor template}
-    description: ${5:# The description of the monitor}
-    ip: ${6:# Specifies the IP address of the resource that is the destination of this monitor}
-    interval: ${7:# Specifies the frequency, in seconds, at which the system issues the monitor check when either the resource is down or the status of the resource is unknown}
-    timeout: ${8:# Specifies the number of seconds the target has in which to respond to the monitor request}
-    time_until_up: ${9:# Specifies the number of seconds to wait after a resource first responds correctly to the monitor before setting the resource to 'up'}
-    up_interval: ${10:# Specifies the interval for the system to use to perform the health check when a resource is up}
-    manual_resume: ${11:# Specifies whether the system automatically changes the status of a resource to B(enabled) at the next successful monitor check}
-    adaptive: ${12:# Specifies whether adaptive response time monitoring is enabled for this monitor}
-    allowed_divergence_type: ${13:# When specifying a new monitor, if C(adaptive) is C(yes), the default is C(relative)}
-    allowed_divergence_value: ${14:# When specifying a new monitor, if C(adaptive) is C(yes), and C(type) is C(relative), the default is C(25) percent}
-    adaptive_limit: ${15:# Specifies the absolute number of milliseconds that may not be exceeded by a monitor probe, regardless of C(allowed_divergence) setting, for a probe to be considered successful}
-    sampling_timespan: ${16:# Specifies the length, in seconds, of the probe history window the system uses to calculate the mean latency and standard deviation of a monitor probe}
-    transparent: ${17:# Specifies whether the monitor operates in transparent mode}
-    partition: ${18:# Device partition to manage resources on}
-    state: ${19:# When C(present), ensures that the monitor exists}
-    provider: ${20:# A dict object containing connection details}
+    adaptive: ${2:# Specifies whether adaptive response time monitoring is enabled for this monitor}
+    adaptive_limit: ${3:# Specifies the absolute number of milliseconds that may not be exceeded by a monitor probe, regardless of C(allowed_divergence) setting, for a probe to be considered successful}
+    allowed_divergence_type: ${4:# When specifying a new monitor, if C(adaptive) is C(true), the default is C(relative)}
+    allowed_divergence_value: ${5:# When specifying a new monitor, if C(adaptive) is C(true), and C(type) is C(relative), the default is C(25) percent}
+    app_service: ${6:# The iApp service to be associated with this profile}
+    description: ${7:# The description of the monitor}
+    interval: ${8:# Specifies the frequency, in seconds, at which the system issues the monitor check when either the resource is down or the status of the resource is unknown}
+    ip: ${9:# Specifies the IP address of the resource that is the destination of this monitor}
+    manual_resume: ${10:# Specifies whether the system automatically changes the status of a resource to B(enabled) at the next successful monitor check}
+    name: ${11:# Specifies the name of the monitor}
+    parent: ${12:# The parent template of this monitor template}
+    partition: ${13:# Device partition to manage resources on}
+    provider: ${14:# A dict object containing connection details}
+    sampling_timespan: ${15:# Specifies the length, in seconds, of the probe history window the system uses to calculate the mean latency and standard deviation of a monitor probe}
+    state: ${16:# When C(present), ensures that the monitor exists}
+    time_until_up: ${17:# Specifies the number of seconds to wait after a resource first responds correctly to the monitor before setting the resource to 'up'}
+    timeout: ${18:# Specifies the number of seconds the target has in which to respond to the monitor request}
+    transparent: ${19:# Specifies whether the monitor operates in transparent mode}
+    up_interval: ${20:# Specifies the interval for the system to use to perform the health check when a resource is up}
   tags:
     - f5networks
     - f5_modules

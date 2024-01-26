@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, Delete or Modify NFS Client(s) for existing exports on Infinibox}
   infinidat.infinibox.infini_export_client:
-    client: ${2:# Client IP or Range}
-    state: ${3:# Creates/Modifies client when present and removes when absent}
-    access_mode: ${4:# Read Write or Read Only Access}
+    access_mode: ${2:# Read Write or Read Only Access}
+    client: ${3:# Client IP or Range}
+    export: ${4:# Name of the export}
     no_root_squash: ${5:# Don't squash root user to anonymous}
-    export: ${6:# Name of the export}
-    system: ${7:# Infinibox Hostname or IPv4 Address}
-    user: ${8:# Infinibox User username with sufficient priveledges ( see notes )}
-    password: ${9:# Infinibox User password}
+    password: ${6:# Infinibox User password}
+    state: ${7:# Creates/Modifies client when present and removes when absent}
+    system: ${8:# Infinibox Hostname or IPv4 Address}
+    user: ${9:# Infinibox User username with sufficient priveledges ( see notes )}
   tags:
     - infinidat
     - infinibox

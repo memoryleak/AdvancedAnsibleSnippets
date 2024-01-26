@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages deploy keys for GitHub repositories}
   community.general.github_deploy_key:
-    github_url: ${2:# The base URL of the GitHub API}
-    owner: ${3:# The name of the individual account or organization that owns the GitHub repository}
-    repo: ${4:# The name of the GitHub repository}
+    force: ${2:# If V(true), forcefully adds the deploy key by deleting any existing deploy key with the same public key or title}
+    github_url: ${3:# The base URL of the GitHub API}
+    key: ${4:# The SSH public key to add to the repository as a deploy key}
     name: ${5:# The name for the deploy key}
-    key: ${6:# The SSH public key to add to the repository as a deploy key}
-    read_only: ${7:# If C(true), the deploy key will only be able to read repository contents}
-    state: ${8:# The state of the deploy key}
-    force: ${9:# If C(true), forcefully adds the deploy key by deleting any existing deploy key with the same public key or title}
-    username: ${10:# The username to authenticate with}
-    password: ${11:# The password to authenticate with}
+    otp: ${6:# The 6 digit One Time Password for 2-Factor Authentication}
+    owner: ${7:# The name of the individual account or organization that owns the GitHub repository}
+    password: ${8:# The password to authenticate with}
+    read_only: ${9:# If V(true), the deploy key will only be able to read repository contents}
+    repo: ${10:# The name of the GitHub repository}
+    state: ${11:# The state of the deploy key}
     token: ${12:# The OAuth2 token or personal access token to authenticate with}
-    otp: ${13:# The 6 digit One Time Password for 2-Factor Authentication}
+    username: ${13:# The username to authenticate with}
   tags:
     - community
     - general

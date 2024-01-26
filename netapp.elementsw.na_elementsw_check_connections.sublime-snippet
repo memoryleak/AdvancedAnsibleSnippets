@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp Element Software Check connectivity to MVIP and SVIP}
   netapp.elementsw.na_elementsw_check_connections:
-    skip: ${2:# Skip checking connection to SVIP or MVIP}
+    hostname: ${2:# The hostname or IP address of the SolidFire cluster}
     mvip: ${3:# Optionally, use to test connection of a different MVIP}
-    svip: ${4:# Optionally, use to test connection of a different SVIP}
-    hostname: ${5:# The hostname or IP address of the SolidFire cluster}
-    username: ${6:# Please ensure that the user has the adequate permissions}
-    password: ${7:# Password for the specified user}
+    password: ${4:# Password for the specified user}
+    skip: ${5:# Skip checking connection to SVIP or MVIP}
+    svip: ${6:# Optionally, use to test connection of a different SVIP}
+    username: ${7:# Please ensure that the user has the adequate permissions}
   tags:
     - netapp
     - elementsw

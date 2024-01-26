@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieve information about one or more oVirt scheduling policies}
   ovirt.ovirt.ovirt_scheduling_policy_info:
-    id: ${2:# ID of the scheduling policy}
-    name: ${3:# Name of the scheduling policy, can be used as glob expression}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    fetch_nested: ${3:# If I(yes) the module will fetch additional data from the API}
     follow: ${4:# List of linked entities, which should be fetched along with the main entity}
-    fetch_nested: ${5:# If I(yes) the module will fetch additional data from the API}
-    nested_attributes: ${6:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${7:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    id: ${5:# ID of the scheduling policy}
+    name: ${6:# Name of the scheduling policy, can be used as glob expression}
+    nested_attributes: ${7:# Specifies list of the attributes which should be fetched from the API}
   tags:
     - ovirt
     - ovirt

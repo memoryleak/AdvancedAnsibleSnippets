@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Elastic Container Registry repositories}
   community.aws.ecs_ecr:
-    name: ${2:# The name of the repository}
-    registry_id: ${3:# AWS account id associated with the registry}
-    policy: ${4:# JSON or dict that represents the new policy}
-    force_absent: ${5:# If I(force_absent=true), the repository will be removed, even if images are present}
-    force_set_policy: ${6:# If I(force_set_policy=false), it prevents setting a policy that would prevent you from setting another policy in the future}
-    purge_policy: ${7:# If C(true), remove the policy from the repository}
-    image_tag_mutability: ${8:# Configure whether repository should be mutable (ie}
-    lifecycle_policy: ${9:# JSON or dict that represents the new lifecycle policy}
-    purge_lifecycle_policy: ${10:# if C(true), remove the lifecycle policy from the repository}
-    state: ${11:# Create or destroy the repository}
-    scan_on_push: ${12:# if C(true), images are scanned for known vulnerabilities after being pushed to the repository}
-    encryption_configuration: ${13:# The encryption configuration for the repository}
-    access_key: ${14:# AWS access key ID}
-    secret_key: ${15:# AWS secret access key}
-    session_token: ${16:# AWS STS session token for use with temporary credentials}
-    profile: ${17:# A named AWS profile to use for authentication}
-    endpoint_url: ${18:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${19:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${20:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${21:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${22:# Use a C(botocore}
-    region: ${23:# The AWS region to use}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    encryption_configuration: ${6:# The encryption configuration for the repository}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    force_absent: ${8:# If I(force_absent=true), the repository will be removed, even if images are present}
+    force_set_policy: ${9:# If I(force_set_policy=false), it prevents setting a policy that would prevent you from setting another policy in the future}
+    image_tag_mutability: ${10:# Configure whether repository should be mutable (ie}
+    lifecycle_policy: ${11:# JSON or dict that represents the new lifecycle policy}
+    name: ${12:# The name of the repository}
+    policy: ${13:# JSON or dict that represents the new policy}
+    profile: ${14:# A named AWS profile to use for authentication}
+    purge_lifecycle_policy: ${15:# if C(true), remove the lifecycle policy from the repository}
+    purge_policy: ${16:# If C(true), remove the policy from the repository}
+    region: ${17:# The AWS region to use}
+    registry_id: ${18:# AWS account id associated with the registry}
+    scan_on_push: ${19:# if C(true), images are scanned for known vulnerabilities after being pushed to the repository}
+    secret_key: ${20:# AWS secret access key}
+    session_token: ${21:# AWS STS session token for use with temporary credentials}
+    state: ${22:# Create or destroy the repository}
+    validate_certs: ${23:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

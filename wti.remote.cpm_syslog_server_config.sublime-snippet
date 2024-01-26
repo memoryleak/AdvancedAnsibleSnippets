@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Set network SYSLOG Server parameters in WTI OOB and PDU devices}
   wti.remote.cpm_syslog_server_config:
-    cpm_url: ${2:# This is the URL of the WTI device to send the module}
-    cpm_username: ${3:# This is the Username of the WTI device to send the module}
+    address: ${2:# Sets the IP Address to block message logging}
+    clear: ${3:# Removes all the IP block entries for the protocol being defined before setting the newly defined entries}
     cpm_password: ${4:# This is the Password of the WTI device to send the module}
-    use_https: ${5:# Designates to use an https connection or http connection}
-    validate_certs: ${6:# If false, SSL certificates will not be validated}
-    use_proxy: ${7:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
-    interface: ${8:# The ethernet port for the SYSLOG we are defining}
-    protocol: ${9:# The protocol that the SYSLOG entry should be applied}
-    enable: ${10:# Activates SYSLOG listening for the specified interface and protocol}
-    port: ${11:# Defines the port number used by the SYSLOG Server (1 - 65535)}
-    transport: ${12:# Defines the transfer protocol type used by the SYSLOG Server}
-    secure: ${13:# Defines if a secure connection is used by the SYSLOG Server (TCP Transport required)}
-    clear: ${14:# Removes all the IP block entries for the protocol being defined before setting the newly defined entries}
-    index: ${15:# Index of the IP block being modified}
-    address: ${16:# Sets the IP Address to block message logging}
+    cpm_url: ${5:# This is the URL of the WTI device to send the module}
+    cpm_username: ${6:# This is the Username of the WTI device to send the module}
+    enable: ${7:# Activates SYSLOG listening for the specified interface and protocol}
+    index: ${8:# Index of the IP block being modified}
+    interface: ${9:# The ethernet port for the SYSLOG we are defining}
+    port: ${10:# Defines the port number used by the SYSLOG Server (1 - 65535)}
+    protocol: ${11:# The protocol that the SYSLOG entry should be applied}
+    secure: ${12:# Defines if a secure connection is used by the SYSLOG Server (TCP Transport required)}
+    transport: ${13:# Defines the transfer protocol type used by the SYSLOG Server}
+    use_https: ${14:# Designates to use an https connection or http connection}
+    use_proxy: ${15:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+    validate_certs: ${16:# If false, SSL certificates will not be validated}
   tags:
     - wti
     - remote

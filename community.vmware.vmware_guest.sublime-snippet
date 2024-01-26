@@ -1,48 +1,49 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages virtual machines in vCenter}
   community.vmware.vmware_guest:
-    state: ${2:# Specify the state the virtual machine should be in}
-    name: ${3:# Name of the virtual machine to work with}
-    name_match: ${4:# If multiple virtual machines matching the name, use the first or last found}
-    uuid: ${5:# UUID of the virtual machine to manage if known, this is VMware's unique identifier}
-    use_instance_uuid: ${6:# Whether to use the VMware instance UUID rather than the BIOS UUID}
-    template: ${7:# Template or existing virtual machine used to create new virtual machine}
-    is_template: ${8:# Flag the instance as a template}
-    folder: ${9:# Destination folder, absolute path to find an existing guest or create the new guest}
-    hardware: ${10:# Manage virtual machine's hardware attributes}
-    guest_id: ${11:# Set the guest ID}
-    disk: ${12:# A list of disks to add}
-    nvdimm: ${13:# Add or remove a virtual NVDIMM device to the virtual machine}
-    cdrom: ${14:# A list of CD-ROM configurations for the virtual machine}
-    resource_pool: ${15:# Use the given resource pool for virtual machine operation}
-    wait_for_ip_address: ${16:# Wait until vCenter detects an IP address for the virtual machine}
-    wait_for_ip_address_timeout: ${17:# Define a timeout (in seconds) for the wait_for_ip_address parameter}
-    wait_for_customization_timeout: ${18:# Define a timeout (in seconds) for the wait_for_customization parameter}
-    wait_for_customization: ${19:# Wait until vCenter detects all guest customizations as successfully completed}
-    state_change_timeout: ${20:# If the C(state) is set to C(shutdownguest), by default the module will return immediately after sending the shutdown signal}
-    snapshot_src: ${21:# Name of the existing snapshot to use to create a clone of a virtual machine}
+    advanced_settings: ${2:# Define a list of advanced settings to be added to the VMX config}
+    annotation: ${3:# A note or annotation to include in the virtual machine}
+    cdrom: ${4:# A list of CD-ROM configurations for the virtual machine}
+    cluster: ${5:# The cluster name where the virtual machine will run}
+    convert: ${6:# Specify convert disk type while cloning template or virtual machine}
+    customization: ${7:# Parameters for OS customization when cloning from the template or the virtual machine, or apply to the existing virtual machine directly}
+    customization_spec: ${8:# Unique name identifying the requested customization specification}
+    customvalues: ${9:# Define a list of custom values to set on virtual machine}
+    datacenter: ${10:# Destination datacenter for the deploy operation}
+    datastore: ${11:# Specify datastore or datastore cluster to provision virtual machine}
+    delete_from_inventory: ${12:# Whether to delete Virtual machine from inventory or delete from disk}
+    disk: ${13:# A list of disks to add}
+    encryption: ${14:# Manage virtual machine encryption settings}
+    esxi_hostname: ${15:# The ESXi hostname where the virtual machine will run}
+    folder: ${16:# Destination folder, absolute path to find an existing guest or create the new guest}
+    force: ${17:# Ignore warnings and complete the actions}
+    guest_id: ${18:# Set the guest ID}
+    hardware: ${19:# Manage virtual machine's hardware attributes}
+    hostname: ${20:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    is_template: ${21:# Flag the instance as a template}
     linked_clone: ${22:# Whether to create a linked clone from the snapshot specified}
-    force: ${23:# Ignore warnings and complete the actions}
-    delete_from_inventory: ${24:# Whether to delete Virtual machine from inventory or delete from disk}
-    datacenter: ${25:# Destination datacenter for the deploy operation}
-    cluster: ${26:# The cluster name where the virtual machine will run}
-    esxi_hostname: ${27:# The ESXi hostname where the virtual machine will run}
-    advanced_settings: ${28:# Define a list of advanced settings to be added to the VMX config}
-    annotation: ${29:# A note or annotation to include in the virtual machine}
-    customvalues: ${30:# Define a list of custom values to set on virtual machine}
-    networks: ${31:# A list of networks (in the order of the NICs)}
-    customization: ${32:# Parameters for OS customization when cloning from the template or the virtual machine, or apply to the existing virtual machine directly}
-    vapp_properties: ${33:# A list of vApp properties}
-    customization_spec: ${34:# Unique name identifying the requested customization specification}
-    datastore: ${35:# Specify datastore or datastore cluster to provision virtual machine}
-    convert: ${36:# Specify convert disk type while cloning template or virtual machine}
-    hostname: ${37:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${38:# The username of the vSphere vCenter or ESXi server}
-    password: ${39:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${40:# Allows connection when SSL certificates are not valid}
-    port: ${41:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${42:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${43:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    name: ${23:# Name of the virtual machine to work with}
+    name_match: ${24:# If multiple virtual machines matching the name, use the first or last found}
+    networks: ${25:# A list of networks (in the order of the NICs)}
+    nvdimm: ${26:# Add or remove a virtual NVDIMM device to the virtual machine}
+    password: ${27:# The password of the vSphere vCenter or ESXi server}
+    port: ${28:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${29:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${30:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    resource_pool: ${31:# Use the given resource pool for virtual machine operation}
+    snapshot_src: ${32:# Name of the existing snapshot to use to create a clone of a virtual machine}
+    state: ${33:# Specify the state the virtual machine should be in}
+    state_change_timeout: ${34:# If the O(state=shutdownguest), by default the module will return immediately after sending the shutdown signal}
+    template: ${35:# Template or existing virtual machine used to create new virtual machine}
+    use_instance_uuid: ${36:# Whether to use the VMware instance UUID rather than the BIOS UUID}
+    username: ${37:# The username of the vSphere vCenter or ESXi server}
+    uuid: ${38:# UUID of the virtual machine to manage if known, this is VMware's unique identifier}
+    validate_certs: ${39:# Allows connection when SSL certificates are not valid}
+    vapp_properties: ${40:# A list of vApp properties}
+    wait_for_customization: ${41:# Wait until vCenter detects all guest customizations as successfully completed}
+    wait_for_customization_timeout: ${42:# Define a timeout (in seconds) for the wait_for_customization parameter}
+    wait_for_ip_address: ${43:# Wait until vCenter detects an IP address for the virtual machine}
+    wait_for_ip_address_timeout: ${44:# Define a timeout (in seconds) for the wait_for_ip_address parameter}
   tags:
     - community
     - vmware

@@ -1,18 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates, updates, or deletes GitLab groups variables}
   community.general.gitlab_group_variable:
-    state: ${2:# Create or delete group variable}
-    group: ${3:# The path and name of the group}
-    purge: ${4:# When set to C(true), delete all variables which are not untouched in the task}
-    vars: ${5:# When the list element is a simple key-value pair, set masked and protected to false}
-    variables: ${6:# A list of dictionaries that represents CI/CD variables}
-    api_url: ${7:# The resolvable endpoint for the API}
-    api_username: ${8:# The username to use for authentication against the API}
-    api_password: ${9:# The password to use for authentication against the API}
-    validate_certs: ${10:# Whether or not to validate SSL certs when supplying a https endpoint}
-    api_token: ${11:# GitLab access token with API permissions}
-    api_oauth_token: ${12:# GitLab OAuth token for logging in}
-    api_job_token: ${13:# GitLab CI job token for logging in}
+    api_job_token: ${2:# GitLab CI job token for logging in}
+    api_oauth_token: ${3:# GitLab OAuth token for logging in}
+    api_password: ${4:# The password to use for authentication against the API}
+    api_token: ${5:# GitLab access token with API permissions}
+    api_url: ${6:# The resolvable endpoint for the API}
+    api_username: ${7:# The username to use for authentication against the API}
+    ca_path: ${8:# The CA certificates bundle to use to verify GitLab server certificate}
+    group: ${9:# The path and name of the group}
+    purge: ${10:# When set to V(true), delete all variables which are not untouched in the task}
+    state: ${11:# Create or delete group variable}
+    validate_certs: ${12:# Whether or not to validate SSL certs when supplying a HTTPS endpoint}
+    variables: ${13:# A list of dictionaries that represents CI/CD variables}
+    vars: ${14:# When the list element is a simple key-value pair, masked, raw and protected will be set to false}
   tags:
     - community
     - general

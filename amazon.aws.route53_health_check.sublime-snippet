@@ -1,31 +1,34 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage health-checks in Amazons Route53 DNS service}
   amazon.aws.route53_health_check:
-    state: ${2:# Specifies the action to take}
-    disabled: ${3:# Stops Route 53 from performing health checks}
-    ip_address: ${4:# IP address of the end-point to check}
-    port: ${5:# The port on the endpoint on which you want Amazon Route 53 to perform health checks}
-    type: ${6:# The type of health check that you want to create, which indicates how Amazon Route 53 determines whether an endpoint is healthy}
-    resource_path: ${7:# The path that you want Amazon Route 53 to request when performing health checks}
-    fqdn: ${8:# Domain name of the endpoint to check}
-    string_match: ${9:# If the check type is HTTP_STR_MATCH or HTTP_STR_MATCH, the string that you want Amazon Route 53 to search for in the response body from the specified resource}
-    request_interval: ${10:# The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request}
-    failure_threshold: ${11:# The number of consecutive health checks that an endpoint must pass or fail for Amazon Route 53 to change the current status of the endpoint from unhealthy to healthy or vice versa}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    child_health_checks: ${5:# The child health checks used for a calculated health check}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    disabled: ${7:# Stops Route 53 from performing health checks}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
+    failure_threshold: ${9:# The number of consecutive health checks that an endpoint must pass or fail for Amazon Route 53 to change the current status of the endpoint from unhealthy to healthy or vice versa}
+    fqdn: ${10:# Domain name of the endpoint to check}
+    health_check_id: ${11:# ID of the health check to be update or deleted}
     health_check_name: ${12:# Name of the Health Check}
-    use_unique_names: ${13:# Used together with I(health_check_name) to set/make use of I(health_check_name) as a unique identifier}
-    health_check_id: ${14:# ID of the health check to be update or deleted}
-    access_key: ${15:# AWS access key ID}
-    secret_key: ${16:# AWS secret access key}
-    session_token: ${17:# AWS STS session token for use with temporary credentials}
-    profile: ${18:# A named AWS profile to use for authentication}
-    endpoint_url: ${19:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${20:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${21:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${22:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${23:# Use a C(botocore}
-    region: ${24:# The AWS region to use}
-    tags: ${25:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${26:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    health_threshold: ${13:# The minimum number of healthy child health checks for a calculated health check to be considered healthy}
+    ip_address: ${14:# IP address of the end-point to check}
+    measure_latency: ${15:# To enable/disable latency graphs to monitor the latency between health checkers in multiple Amazon Web Services regions and your endpoint}
+    port: ${16:# The port on the endpoint on which you want Amazon Route 53 to perform health checks}
+    profile: ${17:# A named AWS profile to use for authentication}
+    purge_tags: ${18:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${19:# The AWS region to use}
+    request_interval: ${20:# The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request}
+    resource_path: ${21:# The path that you want Amazon Route 53 to request when performing health checks}
+    secret_key: ${22:# AWS secret access key}
+    session_token: ${23:# AWS STS session token for use with temporary credentials}
+    state: ${24:# Specifies the action to take}
+    string_match: ${25:# If the check type is HTTP_STR_MATCH or HTTP_STR_MATCH, the string that you want Amazon Route 53 to search for in the response body from the specified resource}
+    tags: ${26:# A dictionary representing the tags to be applied to the resource}
+    type: ${27:# The type of health check that you want to create, which indicates how Amazon Route 53 determines whether an endpoint is healthy}
+    use_unique_names: ${28:# Used together with I(health_check_name) to set/make use of I(health_check_name) as a unique identifier}
+    validate_certs: ${29:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - amazon
     - aws

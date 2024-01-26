@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Installs Python libraries}
   community.general.easy_install:
-    name: ${2:# A Python library name}
-    virtualenv: ${3:# an optional I(virtualenv) directory path to install into}
-    virtualenv_site_packages: ${4:# Whether the virtual environment will inherit packages from the global site-packages directory}
-    virtualenv_command: ${5:# The command to create the virtual environment with}
-    executable: ${6:# The explicit executable or a pathname to the executable to be used to run easy_install for a specific version of Python installed in the system}
-    state: ${7:# The desired state of the library}
+    executable: ${2:# The explicit executable or a pathname to the executable to be used to run easy_install for a specific version of Python installed in the system}
+    name: ${3:# A Python library name}
+    state: ${4:# The desired state of the library}
+    virtualenv: ${5:# An optional O(virtualenv) directory path to install into}
+    virtualenv_command: ${6:# The command to create the virtual environment with}
+    virtualenv_site_packages: ${7:# Whether the virtual environment will inherit packages from the global site-packages directory}
   tags:
     - community
     - general

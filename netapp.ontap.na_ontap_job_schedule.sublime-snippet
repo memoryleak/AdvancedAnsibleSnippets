@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP Job Schedule}
   netapp.ontap.na_ontap_job_schedule:
-    state: ${2:# Whether the specified job schedule should exist or not}
-    name: ${3:# The name of the job-schedule to manage}
-    job_minutes: ${4:# The minute(s) of each hour when the job should be run}
-    job_hours: ${5:# The hour(s) of the day when the job should be run}
-    job_months: ${6:# The month(s) when the job should be run}
-    job_days_of_month: ${7:# The day(s) of the month when the job should be run}
-    job_days_of_week: ${8:# The day(s) in the week when the job should be run}
-    month_offset: ${9:# whether January starts at 0 or 1}
-    cluster: ${10:# Defaults to local cluster}
-    hostname: ${11:# The hostname or IP address of the ONTAP instance}
-    username: ${12:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${13:# Password for the specified user}
-    cert_filepath: ${14:# path to SSL client cert file (}
-    key_filepath: ${15:# path to SSL client key file}
-    https: ${16:# Enable and disable https}
-    validate_certs: ${17:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${18:# Override the default port (80 or 443) with this port}
-    ontapi: ${19:# The ontap api version to use}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    cluster: ${3:# Defaults to local cluster}
+    feature_flags: ${4:# Enable or disable a new feature}
+    force_ontap_version: ${5:# Override the cluster ONTAP version when using REST}
+    hostname: ${6:# The hostname or IP address of the ONTAP instance}
+    http_port: ${7:# Override the default port (80 or 443) with this port}
+    https: ${8:# Enable and disable https}
+    job_days_of_month: ${9:# The day(s) of the month when the job should be run}
+    job_days_of_week: ${10:# The day(s) in the week when the job should be run}
+    job_hours: ${11:# The hour(s) of the day when the job should be run}
+    job_minutes: ${12:# The minute(s) of each hour when the job should be run}
+    job_months: ${13:# The month(s) when the job should be run}
+    key_filepath: ${14:# path to SSL client key file}
+    month_offset: ${15:# whether January starts at 0 or 1}
+    name: ${16:# The name of the job-schedule to manage}
+    ontapi: ${17:# The ontap api version to use}
+    password: ${18:# Password for the specified user}
+    state: ${19:# Whether the specified job schedule should exist or not}
     use_rest: ${20:# Whether to use REST or ZAPI}
-    feature_flags: ${21:# Enable or disable a new feature}
-    force_ontap_version: ${22:# Override the cluster ONTAP version when using REST}
+    username: ${21:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${22:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

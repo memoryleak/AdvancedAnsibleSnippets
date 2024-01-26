@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp Element Software Configure Node Network Interfaces}
   netapp.elementsw.na_elementsw_network_interfaces:
-    method: ${2:# deprecated, this option would trigger a 'updated failed' error}
-    ip_address_1g: ${3:# deprecated, use bond_1g option}
-    ip_address_10g: ${4:# deprecated, use bond_10g option}
-    subnet_1g: ${5:# deprecated, use bond_1g option}
-    subnet_10g: ${6:# deprecated, use bond_10g option}
-    gateway_address_1g: ${7:# deprecated, use bond_1g option}
+    bond_10g: ${2:# settings for the Bond10G interface}
+    bond_1g: ${3:# settings for the Bond1G interface}
+    bond_mode_10g: ${4:# deprecated, use bond_10g option}
+    bond_mode_1g: ${5:# deprecated, use bond_1g option}
+    dns_nameservers: ${6:# deprecated, use bond_1g and bond_10g options}
+    dns_search_domains: ${7:# deprecated, use bond_1g and bond_10g options}
     gateway_address_10g: ${8:# deprecated, use bond_10g option}
-    mtu_1g: ${9:# deprecated, use bond_1g option}
-    mtu_10g: ${10:# deprecated, use bond_10g option}
-    dns_nameservers: ${11:# deprecated, use bond_1g and bond_10g options}
-    dns_search_domains: ${12:# deprecated, use bond_1g and bond_10g options}
-    bond_mode_1g: ${13:# deprecated, use bond_1g option}
-    bond_mode_10g: ${14:# deprecated, use bond_10g option}
-    lacp_1g: ${15:# deprecated, use bond_1g option}
-    lacp_10g: ${16:# deprecated, use bond_10g option}
-    virtual_network_tag: ${17:# deprecated, use bond_1g and bond_10g options}
-    bond_1g: ${18:# settings for the Bond1G interface}
-    bond_10g: ${19:# settings for the Bond10G interface}
-    hostname: ${20:# The hostname or IP address of the SolidFire cluster}
+    gateway_address_1g: ${9:# deprecated, use bond_1g option}
+    hostname: ${10:# The hostname or IP address of the SolidFire cluster}
+    ip_address_10g: ${11:# deprecated, use bond_10g option}
+    ip_address_1g: ${12:# deprecated, use bond_1g option}
+    lacp_10g: ${13:# deprecated, use bond_10g option}
+    lacp_1g: ${14:# deprecated, use bond_1g option}
+    method: ${15:# deprecated, this option would trigger a 'updated failed' error}
+    mtu_10g: ${16:# deprecated, use bond_10g option}
+    mtu_1g: ${17:# deprecated, use bond_1g option}
+    password: ${18:# Password for the specified user}
+    subnet_10g: ${19:# deprecated, use bond_10g option}
+    subnet_1g: ${20:# deprecated, use bond_1g option}
     username: ${21:# Please ensure that the user has the adequate permissions}
-    password: ${22:# Password for the specified user}
+    virtual_network_tag: ${22:# deprecated, use bond_1g and bond_10g options}
   tags:
     - netapp
     - elementsw

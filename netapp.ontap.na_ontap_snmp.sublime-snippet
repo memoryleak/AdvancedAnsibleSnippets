@@ -1,26 +1,28 @@
 <snippet>
-  <content><![CDATA[- name: ${1:NetApp ONTAP SNMP community}
+  <content><![CDATA[- name: ${1:NetApp ONTAP SNMP user}
   netapp.ontap.na_ontap_snmp:
     access_control: ${2:# Access control for the community}
-    community_name: ${3:# The name of the SNMP community to manage}
-    state: ${4:# Whether the specified SNMP community should exist or not}
-    hostname: ${5:# The hostname or IP address of the ONTAP instance}
-    username: ${6:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${7:# Password for the specified user}
-    cert_filepath: ${8:# path to SSL client cert file (}
-    key_filepath: ${9:# path to SSL client key file}
-    https: ${10:# Enable and disable https}
-    validate_certs: ${11:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${12:# Override the default port (80 or 443) with this port}
-    ontapi: ${13:# The ontap api version to use}
-    use_rest: ${14:# Whether to use REST or ZAPI}
-    feature_flags: ${15:# Enable or disable a new feature}
-    force_ontap_version: ${16:# Override the cluster ONTAP version when using REST}
+    authentication_method: ${3:# Authentication method for SNMP user}
+    cert_filepath: ${4:# path to SSL client cert file (}
+    feature_flags: ${5:# Enable or disable a new feature}
+    force_ontap_version: ${6:# Override the cluster ONTAP version when using REST}
+    hostname: ${7:# The hostname or IP address of the ONTAP instance}
+    http_port: ${8:# Override the default port (80 or 443) with this port}
+    https: ${9:# Enable and disable https}
+    key_filepath: ${10:# path to SSL client key file}
+    ontapi: ${11:# The ontap api version to use}
+    password: ${12:# Password for the specified user}
+    snmp_username: ${13:# The name of the SNMP user to manage}
+    snmpv3: ${14:# Specify only when C(authentication_method) is either C(usm) or C(both)}
+    state: ${15:# Whether the specified SNMP user should exist or not}
+    use_rest: ${16:# Whether to use REST or ZAPI}
+    username: ${17:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap
     - na_ontap_snmp]]></content>
   <tabTrigger>netapp.ontap.na_ontap_snmp</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>NetApp ONTAP SNMP community</description>
+  <description>NetApp ONTAP SNMP user</description>
 </snippet>

@@ -1,26 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage EPG subnets in schema templates}
   cisco.mso.mso_schema_template_anp_epg_subnet:
-    schema: ${2:# The name of the schema}
-    template: ${3:# The name of the template to change}
-    anp: ${4:# The name of the ANP}
-    epg: ${5:# The name of the EPG to manage}
-    subnet: ${6:# The IP range in CIDR notation}
-    description: ${7:# The description of this subnet}
-    scope: ${8:# The scope of the subnet}
-    shared: ${9:# Whether this subnet is shared between VRFs}
-    no_default_gateway: ${10:# Whether this subnet has a default gateway}
-    state: ${11:# Use C(present) or C(absent) for adding or removing}
-    host: ${12:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${13:# Port number to be used for the REST connection}
-    username: ${14:# The username to use for authentication}
-    password: ${15:# The password to use for authentication}
-    output_level: ${16:# Influence the output of this MSO module}
+    anp: ${2:# The name of the ANP}
+    description: ${3:# The description of this subnet}
+    epg: ${4:# The name of the EPG to manage}
+    host: ${5:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${6:# The login domain name to use for authentication}
+    no_default_gateway: ${7:# Whether this subnet has a default gateway}
+    output_level: ${8:# Influence the output of this MSO module}
+    password: ${9:# The password to use for authentication}
+    port: ${10:# Port number to be used for the REST connection}
+    schema: ${11:# The name of the schema}
+    scope: ${12:# The scope of the subnet}
+    shared: ${13:# Whether this subnet is shared between VRFs}
+    state: ${14:# Use C(present) or C(absent) for adding or removing}
+    subnet: ${15:# The IP range in CIDR notation}
+    template: ${16:# The name of the template to change}
     timeout: ${17:# The socket level timeout in seconds}
-    use_proxy: ${18:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${19:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${20:# If C(no), SSL certificates will not be validated}
-    login_domain: ${21:# The login domain name to use for authentication}
+    use_proxy: ${18:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${19:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${20:# The username to use for authentication}
+    validate_certs: ${21:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - mso

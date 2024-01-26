@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Enables or disables NetApp Ontap storage failover for a specified node}
   netapp.ontap.na_ontap_storage_failover:
-    state: ${2:# Whether storage failover should be enabled (present) or disabled (absent)}
-    node_name: ${3:# Specifies the node name to enable or disable storage failover}
-    hostname: ${4:# The hostname or IP address of the ONTAP instance}
-    username: ${5:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${6:# Password for the specified user}
-    cert_filepath: ${7:# path to SSL client cert file (}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    feature_flags: ${3:# Enable or disable a new feature}
+    force_ontap_version: ${4:# Override the cluster ONTAP version when using REST}
+    hostname: ${5:# The hostname or IP address of the ONTAP instance}
+    http_port: ${6:# Override the default port (80 or 443) with this port}
+    https: ${7:# Enable and disable https}
     key_filepath: ${8:# path to SSL client key file}
-    https: ${9:# Enable and disable https}
-    validate_certs: ${10:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${11:# Override the default port (80 or 443) with this port}
-    ontapi: ${12:# The ontap api version to use}
+    node_name: ${9:# Specifies the node name to enable or disable storage failover}
+    ontapi: ${10:# The ontap api version to use}
+    password: ${11:# Password for the specified user}
+    state: ${12:# Whether storage failover should be enabled (present) or disabled (absent)}
     use_rest: ${13:# Whether to use REST or ZAPI}
-    feature_flags: ${14:# Enable or disable a new feature}
-    force_ontap_version: ${15:# Override the cluster ONTAP version when using REST}
+    username: ${14:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${15:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

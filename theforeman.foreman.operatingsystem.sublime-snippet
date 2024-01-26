@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Operating Systems}
   theforeman.foreman.operatingsystem:
-    name: ${2:# Name of the Operating System}
-    updated_name: ${3:# New operating system name}
-    release_name: ${4:# Release name of the operating system (recommended for debian)}
-    description: ${5:# Description of the Operating System}
-    os_family: ${6:# Distribution family of the Operating System}
-    major: ${7:# major version of the Operating System}
-    minor: ${8:# minor version of the Operating System}
-    architectures: ${9:# architectures, the operating system can be installed on}
-    media: ${10:# list of installation media}
-    ptables: ${11:# list of partitioning tables}
+    architectures: ${2:# architectures, the operating system can be installed on}
+    description: ${3:# Description of the Operating System}
+    major: ${4:# major version of the Operating System}
+    media: ${5:# list of installation media}
+    minor: ${6:# minor version of the Operating System}
+    name: ${7:# Name of the Operating System}
+    os_family: ${8:# Distribution family of the Operating System}
+    parameters: ${9:# Operating System specific host parameters}
+    password: ${10:# Password of the user accessing the Foreman server}
+    password_hash: ${11:# hashing algorithm for passwd}
     provisioning_templates: ${12:# List of provisioning templates that are associated with the operating system}
-    password_hash: ${13:# hashing algorithm for passwd}
-    parameters: ${14:# Operating System specific host parameters}
+    ptables: ${13:# list of partitioning tables}
+    release_name: ${14:# Release name of the operating system (recommended for debian)}
     server_url: ${15:# URL of the Foreman server}
-    username: ${16:# Username accessing the Foreman server}
-    password: ${17:# Password of the user accessing the Foreman server}
-    validate_certs: ${18:# Whether or not to verify the TLS certificates of the Foreman server}
-    state: ${19:# State of the entity}
+    state: ${16:# State of the entity}
+    updated_name: ${17:# New operating system name}
+    username: ${18:# Username accessing the Foreman server}
+    validate_certs: ${19:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

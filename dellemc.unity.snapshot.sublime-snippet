@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage snapshots on the Unity storage system}
   dellemc.unity.snapshot:
-    snapshot_name: ${2:# The name of the snapshot}
-    vol_name: ${3:# The name of the volume for which snapshot is created}
-    cg_name: ${4:# The name of the Consistency Group for which snapshot is created}
-    snapshot_id: ${5:# The id of the snapshot}
-    auto_delete: ${6:# This option specifies whether the snapshot is auto deleted or not}
-    expiry_time: ${7:# This option is for specifying the date and time after which the snapshot will expire}
-    description: ${8:# The additional information about the snapshot can be provided using this option}
+    auto_delete: ${2:# This option specifies whether the snapshot is auto deleted or not}
+    cg_name: ${3:# The name of the Consistency Group for which snapshot is created}
+    description: ${4:# The additional information about the snapshot can be provided using this option}
+    expiry_time: ${5:# This option is for specifying the date and time after which the snapshot will expire}
+    host_id: ${6:# The id of the host}
+    host_name: ${7:# The name of the host}
+    host_state: ${8:# The I(host_state) option is used to mention the existence of the host for snapshot}
     new_snapshot_name: ${9:# New name for the snapshot}
-    state: ${10:# The I(state) option is used to mention the existence of the snapshot}
-    host_name: ${11:# The name of the host}
-    host_id: ${12:# The id of the host}
-    host_state: ${13:# The I(host_state) option is used to mention the existence of the host for snapshot}
-    unispherehost: ${14:# IP or FQDN of the Unity management server}
-    username: ${15:# The username of the Unity management server}
-    password: ${16:# The password of the Unity management server}
+    password: ${10:# The password of the Unity management server}
+    port: ${11:# Port number through which communication happens with Unity management server}
+    snapshot_id: ${12:# The id of the snapshot}
+    snapshot_name: ${13:# The name of the snapshot}
+    state: ${14:# The I(state) option is used to mention the existence of the snapshot}
+    unispherehost: ${15:# IP or FQDN of the Unity management server}
+    username: ${16:# The username of the Unity management server}
     validate_certs: ${17:# Boolean variable to specify whether or not to validate SSL certificate}
-    port: ${18:# Port number through which communication happens with Unity management server}
+    vol_name: ${18:# The name of the volume for which snapshot is created}
   tags:
     - dellemc
     - unity

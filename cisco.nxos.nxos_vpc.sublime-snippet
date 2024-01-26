@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages global VPC configuration}
   cisco.nxos.nxos_vpc:
-    domain: ${2:# VPC domain}
-    role_priority: ${3:# Role priority for device}
-    system_priority: ${4:# System priority device}
-    pkl_src: ${5:# Source IP address used for peer keepalive link}
-    pkl_dest: ${6:# Destination (remote) IP address used for peer keepalive link}
-    pkl_vrf: ${7:# VRF used for peer keepalive link}
+    auto_recovery: ${2:# Enables/Disables auto recovery on platforms that support disable}
+    auto_recovery_reload_delay: ${3:# Manages auto-recovery reload-delay timer in seconds}
+    delay_restore: ${4:# manages delay restore command and config value in seconds}
+    delay_restore_interface_vlan: ${5:# manages delay restore interface-vlan command and config value in seconds}
+    delay_restore_orphan_port: ${6:# manages delay restore orphan-port command and config value in seconds}
+    domain: ${7:# VPC domain}
     peer_gw: ${8:# Enables/Disables peer gateway}
-    auto_recovery: ${9:# Enables/Disables auto recovery on platforms that support disable}
-    auto_recovery_reload_delay: ${10:# Manages auto-recovery reload-delay timer in seconds}
-    delay_restore: ${11:# manages delay restore command and config value in seconds}
-    delay_restore_interface_vlan: ${12:# manages delay restore interface-vlan command and config value in seconds}
-    delay_restore_orphan_port: ${13:# manages delay restore orphan-port command and config value in seconds}
-    state: ${14:# Manages desired state of the resource}
+    pkl_dest: ${9:# Destination (remote) IP address used for peer keepalive link}
+    pkl_src: ${10:# Source IP address used for peer keepalive link}
+    pkl_vrf: ${11:# VRF used for peer keepalive link}
+    role_priority: ${12:# Role priority for device}
+    state: ${13:# Manages desired state of the resource}
+    system_priority: ${14:# System priority device}
   tags:
     - cisco
     - nxos

@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage inline IAM policies for users, groups, and roles}
   amazon.aws.iam_policy:
-    iam_type: ${2:# Type of IAM resource}
-    iam_name: ${3:# Name of IAM resource you wish to target for policy actions}
-    policy_name: ${4:# The name label for the policy to create or remove}
-    policy_json: ${5:# A properly json formatted policy as string}
-    state: ${6:# Whether to create or delete the IAM policy}
-    skip_duplicates: ${7:# When I(skip_duplicates=true) the module looks for any policies that match the document you pass in}
-    access_key: ${8:# AWS access key ID}
-    secret_key: ${9:# AWS secret access key}
-    session_token: ${10:# AWS STS session token for use with temporary credentials}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    endpoint_url: ${6:# URL to connect to instead of the default AWS endpoints}
+    iam_name: ${7:# Name of IAM resource you wish to target for policy actions}
+    iam_type: ${8:# Type of IAM resource}
+    policy_json: ${9:# A properly json formatted policy as string}
+    policy_name: ${10:# The name label for the policy to create or remove}
     profile: ${11:# A named AWS profile to use for authentication}
-    endpoint_url: ${12:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${13:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${14:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${15:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${16:# Use a C(botocore}
-    region: ${17:# The AWS region to use}
+    region: ${12:# The AWS region to use}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    skip_duplicates: ${15:# When I(skip_duplicates=true) the module looks for any policies that match the document you pass in}
+    state: ${16:# Whether to create or delete the IAM policy}
+    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - amazon
     - aws

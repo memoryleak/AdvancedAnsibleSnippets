@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Nokia SR OS device configuration}
   community.network.sros_config:
-    lines: ${2:# The ordered set of commands that should be configured in the section}
-    parents: ${3:# The ordered set of parents that uniquely identify the section or hierarchy the commands should be checked against}
-    src: ${4:# Specifies the source path to the file that contains the configuration or configuration template to load}
+    after: ${2:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
+    backup: ${3:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
+    backup_options: ${4:# This is a dict object containing configurable options related to backup file path}
     before: ${5:# The ordered set of commands to push on to the command stack if a change needs to be made}
-    after: ${6:# The ordered set of commands to append to the end of the command stack if a change needs to be made}
-    match: ${7:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
-    replace: ${8:# Instructs the module on the way to perform the configuration on the device}
-    force: ${9:# The force argument instructs the module to not consider the current devices running-config}
-    backup: ${10:# This argument will cause the module to create a full backup of the current C(running-config) from the remote device before any changes are made}
-    config: ${11:# The C(config) argument allows the playbook designer to supply the base configuration to be used to validate configuration changes necessary}
-    defaults: ${12:# This argument specifies whether or not to collect all defaults when getting the remote device running config}
+    config: ${6:# The C(config) argument allows the playbook designer to supply the base configuration to be used to validate configuration changes necessary}
+    defaults: ${7:# This argument specifies whether or not to collect all defaults when getting the remote device running config}
+    force: ${8:# The force argument instructs the module to not consider the current devices running-config}
+    lines: ${9:# The ordered set of commands that should be configured in the section}
+    match: ${10:# Instructs the module on the way to perform the matching of the set of commands against the current device config}
+    parents: ${11:# The ordered set of parents that uniquely identify the section or hierarchy the commands should be checked against}
+    replace: ${12:# Instructs the module on the way to perform the configuration on the device}
     save: ${13:# The C(save) argument instructs the module to save the running- config to the startup-config at the conclusion of the module running}
-    backup_options: ${14:# This is a dict object containing configurable options related to backup file path}
+    src: ${14:# Specifies the source path to the file that contains the configuration or configuration template to load}
   tags:
     - community
     - network

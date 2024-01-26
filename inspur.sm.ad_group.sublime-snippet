@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage active directory group information}
   inspur.sm.ad_group:
-    state: ${2:# Whether the active directory group should exist or not, taking action if the state is different from what is stated}
-    name: ${3:# Group name}
-    domain: ${4:# Group domain}
-    pri: ${5:# Group privilege}
-    kvm: ${6:# Kvm privilege}
-    vm: ${7:# Vmedia privilege}
+    domain: ${2:# Group domain}
+    host: ${3:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    kvm: ${4:# Kvm privilege}
+    name: ${5:# Group name}
+    password: ${6:# Specifies the password to use to authenticate the connection to the remote device}
+    pri: ${7:# Group privilege}
     provider: ${8:# A dict object containing connection details}
-    host: ${9:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    state: ${9:# Whether the active directory group should exist or not, taking action if the state is different from what is stated}
     username: ${10:# Configures the username to use to authenticate the connection to the remote device}
-    password: ${11:# Specifies the password to use to authenticate the connection to the remote device}
+    vm: ${11:# Vmedia privilege}
   tags:
     - inspur
     - sm

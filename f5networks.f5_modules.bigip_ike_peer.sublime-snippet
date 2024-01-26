@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage IPSec IKE Peer configuration on BIG-IP}
   f5networks.f5_modules.bigip_ike_peer:
-    name: ${2:# Specifies the name of the IKE peer}
-    description: ${3:# Description of the IKE peer}
-    version: ${4:# Specifies which version of IKE (Internet Key Exchange) is used}
-    presented_id_type: ${5:# Specifies the identifier type the local system uses to identify itself to the peer during IKE Phase 1 negotiations}
-    presented_id_value: ${6:# Specifies a value for the identity when using a C(presented_id_type) of C(override)}
-    verified_id_type: ${7:# Specifies the identifier type the local system uses to identify the peer during IKE Phase 1 negotiation}
-    verified_id_value: ${8:# Specifies a value for the identity when using a C(verified_id_type) of C(override)}
-    phase1_auth_method: ${9:# Specifies the authentication method for phase 1 negotiation}
+    description: ${2:# Description of the IKE peer}
+    name: ${3:# Specifies the name of the IKE peer}
+    partition: ${4:# Device partition to manage resources on}
+    phase1_auth_method: ${5:# Specifies the authentication method for phase 1 negotiation}
+    phase1_cert: ${6:# Specifies the digital certificate to use for the RSA signature}
+    phase1_encryption_algorithm: ${7:# Specifies the algorithm to use for IKE encryption}
+    phase1_hash_algorithm: ${8:# Specifies the algorithm to use for IKE authentication}
+    phase1_key: ${9:# Specifies the public key the digital certificate contains}
     phase1_lifetime: ${10:# Defines the lifetime in minutes of an IKE SA which will be proposed in the phase 1 negotiations}
-    phase1_cert: ${11:# Specifies the digital certificate to use for the RSA signature}
-    phase1_key: ${12:# Specifies the public key the digital certificate contains}
-    phase1_verify_peer_cert: ${13:# In IKEv2, specifies whether the certificate sent by the IKE peer is verified using the Trusted Certificate Authorities, a CRL, and/or a peer certificate}
-    preshared_key: ${14:# Specifies a string the IKE peers share for authenticating each other}
-    remote_address: ${15:# Displays the IP address of the BIG-IP system that is remote to the system you are configuring}
-    phase1_encryption_algorithm: ${16:# Specifies the algorithm to use for IKE encryption}
-    phase1_hash_algorithm: ${17:# Specifies the algorithm to use for IKE authentication}
-    phase1_perfect_forward_secrecy: ${18:# Specifies the Diffie-Hellman group to use for IKE Phase 1 and Phase 2 negotiations}
+    phase1_perfect_forward_secrecy: ${11:# Specifies the Diffie-Hellman group to use for IKE Phase 1 and Phase 2 negotiations}
+    phase1_verify_peer_cert: ${12:# In IKEv2, specifies whether the certificate sent by the IKE peer is verified using the Trusted Certificate Authorities, a CRL, and/or a peer certificate}
+    presented_id_type: ${13:# Specifies the identifier type the local system uses to identify itself to the peer during IKE Phase 1 negotiations}
+    presented_id_value: ${14:# Specifies a value for the identity when using a C(presented_id_type) of C(override)}
+    preshared_key: ${15:# Specifies a string the IKE peers share for authenticating each other}
+    provider: ${16:# A dict object containing connection details}
+    remote_address: ${17:# Displays the IP address of the BIG-IP system that is remote to the system you are configuring}
+    state: ${18:# When C(present), ensures the resource exists}
     update_password: ${19:# C(always) allows updating passwords if the user chooses to do so}
-    partition: ${20:# Device partition to manage resources on}
-    state: ${21:# When C(present), ensures the resource exists}
-    provider: ${22:# A dict object containing connection details}
+    verified_id_type: ${20:# Specifies the identifier type the local system uses to identify the peer during IKE Phase 1 negotiation}
+    verified_id_value: ${21:# Specifies a value for the identity when using a C(verified_id_type) of C(override)}
+    version: ${22:# Specifies which version of IKE (Internet Key Exchange) is used}
   tags:
     - f5networks
     - f5_modules

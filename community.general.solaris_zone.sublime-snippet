@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Solaris zones}
   community.general.solaris_zone:
-    state: ${2:# C(present), configure and install the zone}
-    name: ${3:# Zone name}
-    path: ${4:# The path where the zone will be created}
-    sparse: ${5:# Whether to create a sparse (C(true)) or whole root (C(false)) zone}
-    root_password: ${6:# The password hash for the root account}
-    config: ${7:# The zonecfg configuration commands for this zone}
-    create_options: ${8:# Extra options to the zonecfg(1M) create command}
-    install_options: ${9:# Extra options to the zoneadm(1M) install command}
-    attach_options: ${10:# Extra options to the zoneadm attach command}
+    attach_options: ${2:# Extra options to the zoneadm attach command}
+    config: ${3:# The zonecfg configuration commands for this zone}
+    create_options: ${4:# Extra options to the zonecfg(1M) create command}
+    install_options: ${5:# Extra options to the zoneadm(1M) install command}
+    name: ${6:# Zone name}
+    path: ${7:# The path where the zone will be created}
+    root_password: ${8:# The password hash for the root account}
+    sparse: ${9:# Whether to create a sparse (V(true)) or whole root (V(false)) zone}
+    state: ${10:# V(present), configure and install the zone}
     timeout: ${11:# Timeout, in seconds, for zone to boot}
   tags:
     - community

@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieve facts for a device using SNMP}
   community.general.snmp_facts:
-    host: ${2:# Set to target SNMP server (normally C({{ inventory_hostname }}))}
-    version: ${3:# SNMP Version to use, C(v2), C(v2c) or C(v3)}
-    community: ${4:# The SNMP community string, required if I(version) is C(v2) or C(v2c)}
-    level: ${5:# Authentication level}
-    username: ${6:# Username for SNMPv3}
-    integrity: ${7:# Hashing algorithm}
-    authkey: ${8:# Authentication key}
-    privacy: ${9:# Encryption algorithm}
-    privkey: ${10:# Encryption key}
-    timeout: ${11:# Response timeout in seconds}
-    retries: ${12:# Maximum number of request retries, 0 retries means just a single request}
+    authkey: ${2:# Authentication key}
+    community: ${3:# The SNMP community string, required if O(version) is V(v2) or V(v2c)}
+    host: ${4:# Set to target SNMP server (normally C( inventory_hostname ))}
+    integrity: ${5:# Hashing algorithm}
+    level: ${6:# Authentication level}
+    privacy: ${7:# Encryption algorithm}
+    privkey: ${8:# Encryption key}
+    retries: ${9:# Maximum number of request retries, 0 retries means just a single request}
+    timeout: ${10:# Response timeout in seconds}
+    username: ${11:# Username for SNMPv3}
+    version: ${12:# SNMP Version to use, V(v2), V(v2c) or V(v3)}
   tags:
     - community
     - general

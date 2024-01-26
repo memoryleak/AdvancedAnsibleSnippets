@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Employ the internal FlashBlade ping and trace mechanisms}
+  purestorage.flashblade.purefb_pingtrace:
+    action: ${2:# Which action is required, ping or trace}
+    api_token: ${3:# FlashBlade API token for admin privileged user}
+    component: ${4:# Used by ping and trace to specify where to run the operation}
+    count: ${5:# Used by ping to specify the number of packets to send}
+    destination: ${6:# IP addtress or hostname used to run ping or trace against}
+    discover_mtu: ${7:# Used by trace to specify whether or not to discover the MTU along the path being traced}
+    fb_url: ${8:# FlashBlade management IP address or Hostname}
+    fragment: ${9:# Used by trace to specify whether or not to fragment packets}
+    latency: ${10:# Specify whether or not to print the full user-to-user latency}
+    method: ${11:# Used by trace to specify the method to use for operations}
+    packet_size: ${12:# Used by ping to specify the number of data bytes to send per packet}
+    port: ${13:# Used by trace to specify a destination port}
+    resolve: ${14:# Specify whether or not to map IP addresses to host names}
+    source: ${15:# IP address or hostname used by ping and trace to specify where to start to run the specified operation}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_pingtrace]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_pingtrace</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Employ the internal FlashBlade ping and trace mechanisms</description>
+</snippet>

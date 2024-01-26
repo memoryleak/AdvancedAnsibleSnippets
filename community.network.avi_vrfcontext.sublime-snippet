@@ -1,30 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of VrfContext Avi RESTful Object}
   community.network.avi_vrfcontext:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
     avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    bgp_profile: ${5:# Bgp local and peer info}
-    cloud_ref: ${6:# It is a reference to an object of type cloud}
-    debugvrfcontext: ${7:# Configure debug flags for vrf}
-    description: ${8:# User defined description for the object}
-    gateway_mon: ${9:# Configure ping based heartbeat check for gateway in service engines of vrf}
-    internal_gateway_monitor: ${10:# Configure ping based heartbeat check for all default gateways in service engines of vrf}
-    name: ${11:# Name of the object}
-    static_routes: ${12:# List of staticroute}
-    system_default: ${13:# Boolean flag to set system_default}
-    tenant_ref: ${14:# It is a reference to an object of type tenant}
-    url: ${15:# Avi controller URL of the object}
-    uuid: ${16:# Unique object identifier of the object}
-    controller: ${17:# IP address or hostname of the controller}
-    username: ${18:# Username used for accessing Avi controller}
-    password: ${19:# Password of Avi user in Avi controller}
+    avi_api_update_method: ${5:# Default method for object update is HTTP PUT}
+    avi_credentials: ${6:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${7:# It disables avi session information to be cached as a fact}
+    bgp_profile: ${8:# Bgp local and peer info}
+    cloud_ref: ${9:# It is a reference to an object of type cloud}
+    controller: ${10:# IP address or hostname of the controller}
+    debugvrfcontext: ${11:# Configure debug flags for vrf}
+    description: ${12:# User defined description for the object}
+    gateway_mon: ${13:# Configure ping based heartbeat check for gateway in service engines of vrf}
+    internal_gateway_monitor: ${14:# Configure ping based heartbeat check for all default gateways in service engines of vrf}
+    name: ${15:# Name of the object}
+    password: ${16:# Password of Avi user in Avi controller}
+    state: ${17:# The state that should be applied on the entity}
+    static_routes: ${18:# List of staticroute}
+    system_default: ${19:# Boolean flag to set system_default}
     tenant: ${20:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${21:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${22:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${23:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${24:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${25:# It disables avi session information to be cached as a fact}
+    tenant_ref: ${21:# It is a reference to an object of type tenant}
+    tenant_uuid: ${22:# UUID of tenant used for all Avi API calls and context of object}
+    url: ${23:# Avi controller URL of the object}
+    username: ${24:# Username used for accessing Avi controller}
+    uuid: ${25:# Unique object identifier of the object}
   tags:
     - community
     - network

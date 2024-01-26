@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp Element Software Manage Admin Users}
   netapp.elementsw.na_elementsw_admin_users:
-    state: ${2:# Whether the specified account should exist or not}
-    element_username: ${3:# Unique username for this account}
+    acceptEula: ${2:# Boolean, true for accepting Eula, False Eula}
+    access: ${3:# A list of types the admin has access to}
     element_password: ${4:# The password for the new admin account}
-    acceptEula: ${5:# Boolean, true for accepting Eula, False Eula}
-    access: ${6:# A list of types the admin has access to}
-    hostname: ${7:# The hostname or IP address of the SolidFire cluster}
-    username: ${8:# Please ensure that the user has the adequate permissions}
-    password: ${9:# Password for the specified user}
+    element_username: ${5:# Unique username for this account}
+    hostname: ${6:# The hostname or IP address of the SolidFire cluster}
+    password: ${7:# Password for the specified user}
+    state: ${8:# Whether the specified account should exist or not}
+    username: ${9:# Please ensure that the user has the adequate permissions}
   tags:
     - netapp
     - elementsw

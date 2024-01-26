@@ -2,10 +2,10 @@
   <content><![CDATA[- name: ${1:Make instance level system configuration changes via C(sp_configure)}
   lowlydba.sqlserver.sp_configure:
     name: ${2:# Name of the configuration that will be changed}
-    value: ${3:# New value the configuration will be set to}
-    sql_instance: ${4:# The SQL Server instance to modify}
+    sql_instance: ${3:# The SQL Server instance to modify}
+    sql_password: ${4:# Password for SQL Authentication}
     sql_username: ${5:# Username for SQL Authentication}
-    sql_password: ${6:# Password for SQL Authentication}
+    value: ${6:# New value the configuration will be set to}
   tags:
     - lowlydba
     - sqlserver

@@ -1,42 +1,42 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, Delete, Start and Stop servers in CenturyLink Cloud}
   community.general.clc_server:
-    additional_disks: ${2:# The list of additional disks for the server}
-    add_public_ip: ${3:# Whether to add a public ip to the server}
-    alias: ${4:# The account alias to provision the servers under}
-    anti_affinity_policy_id: ${5:# The anti-affinity policy to assign to the server}
-    anti_affinity_policy_name: ${6:# The anti-affinity policy to assign to the server}
-    alert_policy_id: ${7:# The alert policy to assign to the server}
-    alert_policy_name: ${8:# The alert policy to assign to the server}
-    count: ${9:# The number of servers to build (mutually exclusive with exact_count)}
-    count_group: ${10:# Required when exact_count is specified}
-    cpu: ${11:# How many CPUs to provision on the server}
-    cpu_autoscale_policy_id: ${12:# The autoscale policy to assign to the server}
-    custom_fields: ${13:# The list of custom fields to set on the server}
-    description: ${14:# The description to set for the server}
-    exact_count: ${15:# Run in idempotent mode}
-    group: ${16:# The Server Group to create servers under}
-    ip_address: ${17:# The IP Address for the server}
-    location: ${18:# The Datacenter to create servers in}
-    managed_os: ${19:# Whether to create the server as 'Managed' or not}
-    memory: ${20:# Memory in GB}
-    name: ${21:# A 1 to 6 character identifier to use for the server}
-    network_id: ${22:# The network UUID on which to create servers}
-    packages: ${23:# The list of blue print packages to run on the server after its created}
-    password: ${24:# Password for the administrator / root user}
-    primary_dns: ${25:# Primary DNS used by the server}
-    public_ip_protocol: ${26:# The protocol to use for the public ip if add_public_ip is set to True}
-    public_ip_ports: ${27:# A list of ports to allow on the firewall to the servers public ip, if add_public_ip is set to True}
-    secondary_dns: ${28:# Secondary DNS used by the server}
-    server_ids: ${29:# Required for started, stopped, and absent states}
-    source_server_password: ${30:# The password for the source server if a clone is specified}
-    state: ${31:# The state to insure that the provided resources are in}
-    storage_type: ${32:# The type of storage to attach to the server}
-    template: ${33:# The template to use for server creation}
-    ttl: ${34:# The time to live for the server in seconds}
-    type: ${35:# The type of server to create}
-    configuration_id: ${36:# Only required for bare metal servers}
-    os_type: ${37:# Only required for bare metal servers}
+    add_public_ip: ${2:# Whether to add a public ip to the server}
+    additional_disks: ${3:# The list of additional disks for the server}
+    alert_policy_id: ${4:# The alert policy to assign to the server}
+    alert_policy_name: ${5:# The alert policy to assign to the server}
+    alias: ${6:# The account alias to provision the servers under}
+    anti_affinity_policy_id: ${7:# The anti-affinity policy to assign to the server}
+    anti_affinity_policy_name: ${8:# The anti-affinity policy to assign to the server}
+    configuration_id: ${9:# Only required for bare metal servers}
+    count: ${10:# The number of servers to build (mutually exclusive with exact_count)}
+    count_group: ${11:# Required when exact_count is specified}
+    cpu: ${12:# How many CPUs to provision on the server}
+    cpu_autoscale_policy_id: ${13:# The autoscale policy to assign to the server}
+    custom_fields: ${14:# The list of custom fields to set on the server}
+    description: ${15:# The description to set for the server}
+    exact_count: ${16:# Run in idempotent mode}
+    group: ${17:# The Server Group to create servers under}
+    ip_address: ${18:# The IP Address for the server}
+    location: ${19:# The Datacenter to create servers in}
+    managed_os: ${20:# Whether to create the server as 'Managed' or not}
+    memory: ${21:# Memory in GB}
+    name: ${22:# A 1 to 6 character identifier to use for the server}
+    network_id: ${23:# The network UUID on which to create servers}
+    os_type: ${24:# Only required for bare metal servers}
+    packages: ${25:# The list of blue print packages to run on the server after its created}
+    password: ${26:# Password for the administrator / root user}
+    primary_dns: ${27:# Primary DNS used by the server}
+    public_ip_ports: ${28:# A list of ports to allow on the firewall to the servers public ip, if add_public_ip is set to True}
+    public_ip_protocol: ${29:# The protocol to use for the public ip if add_public_ip is set to True}
+    secondary_dns: ${30:# Secondary DNS used by the server}
+    server_ids: ${31:# Required for started, stopped, and absent states}
+    source_server_password: ${32:# The password for the source server if a clone is specified}
+    state: ${33:# The state to insure that the provided resources are in}
+    storage_type: ${34:# The type of storage to attach to the server}
+    template: ${35:# The template to use for server creation}
+    ttl: ${36:# The time to live for the server in seconds}
+    type: ${37:# The type of server to create}
     wait: ${38:# Whether to wait for the provisioning tasks to finish before returning}
   tags:
     - community

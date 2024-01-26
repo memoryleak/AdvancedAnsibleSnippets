@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage docker images}
   community.docker.docker_image:
-    source: ${2:# Determines where the module will try to retrieve the image from}
-    build: ${3:# Specifies options used for building images}
-    archive_path: ${4:# Use with state C(present) to archive an image to a }
-    load_path: ${5:# Use with state C(present) to load an image from a }
-    force_source: ${6:# Use with state C(present) to build, load or pull an image (depending on the value of the I(source) option) when the image already exists}
-    force_absent: ${7:# Use with state I(absent) to un-tag and remove all images matching the specified name}
-    force_tag: ${8:# Use with state C(present) to force tagging an image}
-    name: ${9:# Image name}
-    pull: ${10:# Specifies options used for pulling images}
-    push: ${11:# Push the image to the registry}
-    repository: ${12:# Use with state C(present) to tag the image}
-    state: ${13:# Make assertions about the state of an image}
-    tag: ${14:# Used to select an image when pulling}
-    docker_host: ${15:# The URL or Unix socket path used to connect to the Docker API}
-    tls_hostname: ${16:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    api_version: ${17:# The version of the Docker API running on the Docker Host}
-    timeout: ${18:# The maximum amount of time in seconds to wait on a response from the API}
-    ca_cert: ${19:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
-    client_cert: ${20:# Path to the client's TLS certificate file}
-    client_key: ${21:# Path to the client's TLS key file}
-    ssl_version: ${22:# Provide a valid SSL version number}
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    archive_path: ${3:# Use with O(state=present) to archive an image to a C(}
+    build: ${4:# Specifies options used for building images}
+    ca_cert: ${5:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${6:# Path to the client's TLS certificate file}
+    client_key: ${7:# Path to the client's TLS key file}
+    debug: ${8:# Debug mode}
+    docker_host: ${9:# The URL or Unix socket path used to connect to the Docker API}
+    force_absent: ${10:# Use with O(state=absent) to un-tag and remove all images matching the specified name}
+    force_source: ${11:# Use with O(state=present) to build, load or pull an image (depending on the value of the O(source) option) when the image already exists}
+    force_tag: ${12:# Use with O(state=present) to force tagging an image}
+    load_path: ${13:# Use with O(state=present) to load an image from a C(}
+    name: ${14:# Image name}
+    pull: ${15:# Specifies options used for pulling images}
+    push: ${16:# Push the image to the registry}
+    repository: ${17:# Use with O(state=present) to tag the image}
+    source: ${18:# Determines where the module will try to retrieve the image from}
+    ssl_version: ${19:# Provide a valid SSL version number}
+    state: ${20:# Make assertions about the state of an image}
+    tag: ${21:# Used to select an image when pulling}
+    timeout: ${22:# The maximum amount of time in seconds to wait on a response from the API}
     tls: ${23:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    use_ssh_client: ${24:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
-    validate_certs: ${25:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
-    debug: ${26:# Debug mode}
+    tls_hostname: ${24:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    use_ssh_client: ${25:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${26:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
   tags:
     - community
     - docker

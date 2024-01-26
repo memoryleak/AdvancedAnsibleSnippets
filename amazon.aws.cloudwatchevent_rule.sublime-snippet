@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage CloudWatch Event rules and targets}
   amazon.aws.cloudwatchevent_rule:
-    name: ${2:# The name of the rule you are creating, updating or deleting}
-    schedule_expression: ${3:# A cron or rate expression that defines the schedule the rule will trigger on}
-    event_pattern: ${4:# A string pattern that is used to match against incoming events to determine if the rule should be triggered}
-    state: ${5:# Whether the rule is present (and enabled), disabled, or absent}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
     description: ${6:# A description of the rule}
-    role_arn: ${7:# The Amazon Resource Name (ARN) of the IAM role associated with the rule}
-    targets: ${8:# A list of targets to add to or update for the rule}
-    access_key: ${9:# AWS access key ID}
-    secret_key: ${10:# AWS secret access key}
-    session_token: ${11:# AWS STS session token for use with temporary credentials}
-    profile: ${12:# A named AWS profile to use for authentication}
-    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${16:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
-    region: ${18:# The AWS region to use}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    event_pattern: ${8:# A string pattern that is used to match against incoming events to determine if the rule should be triggered}
+    name: ${9:# The name of the rule you are creating, updating or deleting}
+    profile: ${10:# A named AWS profile to use for authentication}
+    region: ${11:# The AWS region to use}
+    role_arn: ${12:# The Amazon Resource Name (ARN) of the IAM role associated with the rule}
+    schedule_expression: ${13:# A cron or rate expression that defines the schedule the rule will trigger on}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    state: ${16:# Whether the rule is present (and enabled), disabled, or absent}
+    targets: ${17:# A list of targets to add to or update for the rule}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - amazon
     - aws

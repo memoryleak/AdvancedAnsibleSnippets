@@ -1,46 +1,46 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures Service Profile Templates on Cisco UCS Manager}
   cisco.ucs.ucs_service_profile_template:
-    state: ${2:# If C(present), will verify Service Profile Templates are present and will create if needed}
-    name: ${3:# The name of the service profile template}
-    template_type: ${4:# The template type field which can be one of the following:}
-    uuid_pool: ${5:# Specifies how the UUID will be set on a server associated with a service profile created from this template}
-    description: ${6:# A user-defined description of the service profile template}
-    storage_profile: ${7:# The name of the storage profile you want to associate with service profiles created from this template}
-    local_disk_policy: ${8:# The name of the local disk policy you want to associate with service profiles created from this template}
-    lan_connectivity_policy: ${9:# The name of the LAN connectivity policy you want to associate with service profiles created from this template}
-    iqn_pool: ${10:# The name of the IQN pool (initiator) you want to apply to all iSCSI vNICs for service profiles created from this template}
-    san_connectivity_policy: ${11:# The name of the SAN connectivity policy you want to associate with service profiles created from this template}
-    vmedia_policy: ${12:# The name of the vMedia policy you want to associate with service profiles created from this template}
-    boot_policy: ${13:# The name of the boot order policy you want to associate with service profiles created from this template}
-    maintenance_policy: ${14:# The name of the maintenance policy you want to associate with service profiles created from this template}
-    server_pool: ${15:# The name of the server pool you want to associate with this service profile template}
-    server_pool_qualification: ${16:# The name of the server pool policy qualificaiton you want to use for this service profile template}
-    power_state: ${17:# The power state to be applied when a service profile created from this template is associated with a server}
-    host_firmware_package: ${18:# The name of the host firmware package you want to associate with service profiles created from this template}
-    bios_policy: ${19:# The name of the BIOS policy you want to associate with service profiles created from this template}
-    ipmi_access_profile: ${20:# The name of the IPMI access profile you want to associate with service profiles created from this template}
-    sol_policy: ${21:# The name of the Serial over LAN (SoL) policy you want to associate with service profiles created from this template}
-    mgmt_ip_state: ${22:# The state for the Outband Management IP pool you want to use with service profiles created from this template}
-    mgmt_ip_pool: ${23:# The name of the Outband Management IP pool you want to use with service profiles created from this template}
-    power_control_policy: ${24:# The name of the power control policy you want to associate with service profiles created from this template}
+    bios_policy: ${2:# The name of the BIOS policy you want to associate with service profiles created from this template}
+    boot_policy: ${3:# The name of the boot order policy you want to associate with service profiles created from this template}
+    description: ${4:# A user-defined description of the service profile template}
+    graphics_card_policy: ${5:# The name of the graphics card policy you want to associate with service profiles created from this template}
+    host_firmware_package: ${6:# The name of the host firmware package you want to associate with service profiles created from this template}
+    hostname: ${7:# IP address or hostname of Cisco UCS Manager}
+    ipmi_access_profile: ${8:# The name of the IPMI access profile you want to associate with service profiles created from this template}
+    iqn_pool: ${9:# The name of the IQN pool (initiator) you want to apply to all iSCSI vNICs for service profiles created from this template}
+    kvm_mgmt_policy: ${10:# The name of the KVM management policy you want to associate with service profiles created from this template}
+    lan_connectivity_policy: ${11:# The name of the LAN connectivity policy you want to associate with service profiles created from this template}
+    local_disk_policy: ${12:# The name of the local disk policy you want to associate with service profiles created from this template}
+    maintenance_policy: ${13:# The name of the maintenance policy you want to associate with service profiles created from this template}
+    mgmt_inband_pool_name: ${14:# How the inband management IPv4 address is derived for the server associated with this service profile}
+    mgmt_interface_mode: ${15:# The Management Interface you want to assign to service profiles created from this template}
+    mgmt_ip_pool: ${16:# The name of the Outband Management IP pool you want to use with service profiles created from this template}
+    mgmt_ip_state: ${17:# The state for the Outband Management IP pool you want to use with service profiles created from this template}
+    mgmt_vnet_name: ${18:# A VLAN selected from the associated VLAN group}
+    name: ${19:# The name of the service profile template}
+    org_dn: ${20:# Org dn (distinguished name)}
+    password: ${21:# Password for Cisco UCS Manager authentication}
+    port: ${22:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    power_control_policy: ${23:# The name of the power control policy you want to associate with service profiles created from this template}
+    power_state: ${24:# The power state to be applied when a service profile created from this template is associated with a server}
     power_sync_policy: ${25:# The name of the power sync policy you want to associate with service profiles created from this template}
-    scrub_policy: ${26:# The name of the scrub policy you want to associate with service profiles created from this template}
-    kvm_mgmt_policy: ${27:# The name of the KVM management policy you want to associate with service profiles created from this template}
-    graphics_card_policy: ${28:# The name of the graphics card policy you want to associate with service profiles created from this template}
-    threshold_policy: ${29:# The name of the threshold policy you want to associate with service profiles created from this template}
-    user_label: ${30:# The User Label you want to assign to service profiles created from this template}
-    mgmt_interface_mode: ${31:# The Management Interface you want to assign to service profiles created from this template}
-    mgmt_vnet_name: ${32:# A VLAN selected from the associated VLAN group}
-    mgmt_inband_pool_name: ${33:# How the inband management IPv4 address is derived for the server associated with this service profile}
-    org_dn: ${34:# Org dn (distinguished name)}
-    hostname: ${35:# IP address or hostname of Cisco UCS Manager}
-    username: ${36:# Username for Cisco UCS Manager authentication}
-    password: ${37:# Password for Cisco UCS Manager authentication}
-    port: ${38:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
-    use_ssl: ${39:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    use_proxy: ${40:# If C(no), will not use the proxy as defined by system environment variable}
-    proxy: ${41:# If use_proxy is no, specfies proxy to be used for connection}
+    proxy: ${26:# If use_proxy is no, specfies proxy to be used for connection}
+    san_connectivity_policy: ${27:# The name of the SAN connectivity policy you want to associate with service profiles created from this template}
+    scrub_policy: ${28:# The name of the scrub policy you want to associate with service profiles created from this template}
+    server_pool: ${29:# The name of the server pool you want to associate with this service profile template}
+    server_pool_qualification: ${30:# The name of the server pool policy qualificaiton you want to use for this service profile template}
+    sol_policy: ${31:# The name of the Serial over LAN (SoL) policy you want to associate with service profiles created from this template}
+    state: ${32:# If C(present), will verify Service Profile Templates are present and will create if needed}
+    storage_profile: ${33:# The name of the storage profile you want to associate with service profiles created from this template}
+    template_type: ${34:# The template type field which can be one of the following:}
+    threshold_policy: ${35:# The name of the threshold policy you want to associate with service profiles created from this template}
+    use_proxy: ${36:# If C(no), will not use the proxy as defined by system environment variable}
+    use_ssl: ${37:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    user_label: ${38:# The User Label you want to assign to service profiles created from this template}
+    username: ${39:# Username for Cisco UCS Manager authentication}
+    uuid_pool: ${40:# Specifies how the UUID will be set on a server associated with a service profile created from this template}
+    vmedia_policy: ${41:# The name of the vMedia policy you want to associate with service profiles created from this template}
   tags:
     - cisco
     - ucs

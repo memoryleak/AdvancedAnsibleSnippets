@@ -1,24 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module manages hosts on IBM Spectrum Virtualize family storage systems}
   ibm.spectrum_virtualize.ibm_svc_host:
-    name: ${2:# Specifies a name or label for the new host object}
-    state: ${3:# Creates or updates (C(present)) or removes (C(absent)) a host}
-    clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
-    domain: ${5:# Domain for the Spectrum Virtualize storage system}
-    username: ${6:# REST API username for the Spectrum Virtualize storage system}
-    password: ${7:# REST API password for the Spectrum Virtualize storage system}
-    token: ${8:# The authentication token to verify a user on the Spectrum Virtualize storage system}
-    fcwwpn: ${9:# List of Initiator WWPNs to be added to the host}
-    iscsiname: ${10:# List of Initiator IQNs to be added to the host}
-    iogrp: ${11:# Specifies a set of one or more input/output (I/O) groups from which the host can access the volumes}
-    protocol: ${12:# Specifies the protocol used by the host to communicate with the storage system}
-    type: ${13:# Specifies the type of host}
-    site: ${14:# Specifies the site name of the host}
-    hostcluster: ${15:# Specifies the name of the host cluster to which the host object is to be added}
-    nohostcluster: ${16:# If specified as C(True), host object is removed from the host cluster}
-    old_name: ${17:# Specifies the old name of the host while renaming}
-    log_path: ${18:# Path of debug log file}
-    validate_certs: ${19:# Validates certification}
+    clustername: ${2:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${3:# Domain for the Spectrum Virtualize storage system}
+    fcwwpn: ${4:# List of Initiator WWPNs to be added to the host}
+    hostcluster: ${5:# Specifies the name of the host cluster to which the host object is to be added}
+    iogrp: ${6:# Specifies a set of one or more input/output (I/O) groups from which the host can access the volumes}
+    iscsiname: ${7:# List of Initiator IQNs to be added to the host}
+    log_path: ${8:# Path of debug log file}
+    name: ${9:# Specifies a name or label for the new host object}
+    nohostcluster: ${10:# If specified as C(True), host object is removed from the host cluster}
+    nqn: ${11:# List of initiator NQNs to be added to the host}
+    old_name: ${12:# Specifies the old name of the host while renaming}
+    password: ${13:# REST API password for the Spectrum Virtualize storage system}
+    portset: ${14:# Specifies the portset to be associated with the host}
+    protocol: ${15:# Specifies the protocol used by the host to communicate with the storage system}
+    site: ${16:# Specifies the site name of the host}
+    state: ${17:# Creates or updates (C(present)) or removes (C(absent)) a host}
+    token: ${18:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    type: ${19:# Specifies the type of host}
+    username: ${20:# REST API username for the Spectrum Virtualize storage system}
+    validate_certs: ${21:# Validates certification}
   tags:
     - ibm
     - spectrum_virtualize

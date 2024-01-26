@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage AWS IAM roles}
+  amazon.aws.iam_role:
+    access_key: ${2:# AWS access key ID}
+    assume_role_policy_document: ${3:# The trust relationship policy document that grants an entity permission to assume the role}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    boundary: ${6:# The ARN of an IAM managed policy to use to restrict the permissions this role can pass on to IAM roles/users that it creates}
+    create_instance_profile: ${7:# Creates an IAM instance profile along with the role}
+    debug_botocore_endpoint_logs: ${8:# Use a C(botocore}
+    delete_instance_profile: ${9:# When I(delete_instance_profile=true) and I(state=absent) deleting a role will also delete the instance profile created with the same I(name) as the role}
+    description: ${10:# Provides a description of the role}
+    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
+    managed_policies: ${12:# A list of managed policy ARNs, managed policy ARNs or friendly names}
+    max_session_duration: ${13:# The maximum duration (in seconds) of a session when assuming the role}
+    name: ${14:# The name of the role to create}
+    path: ${15:# The path to the role}
+    profile: ${16:# A named AWS profile to use for authentication}
+    purge_policies: ${17:# When I(purge_policies=true) any managed policies not listed in I(managed_policies) will be detatched}
+    purge_tags: ${18:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${19:# The AWS region to use}
+    secret_key: ${20:# AWS secret access key}
+    session_token: ${21:# AWS STS session token for use with temporary credentials}
+    state: ${22:# Create or remove the IAM role}
+    tags: ${23:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${24:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${25:# When I(wait=True) the module will wait for up to I(wait_timeout) seconds for IAM role creation before returning}
+    wait_timeout: ${26:# How long (in seconds) to wait for creation / update to complete}
+  tags:
+    - amazon
+    - aws
+    - iam_role]]></content>
+  <tabTrigger>amazon.aws.iam_role</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage AWS IAM roles</description>
+</snippet>

@@ -1,11 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Sensu external datastore providers}
   sensu.sensu_go.datastore:
-    dsn: ${2:# Attribute that specifies the data source names as a URL or PostgreSQL connection string}
-    pool_size: ${3:# The maximum number of connections to hold in the PostgreSQL connection pool}
-    auth: ${4:# Authentication parameters}
-    name: ${5:# The Sensu resource's name}
-    state: ${6:# Target state of the Sensu object}
+    auth: ${2:# Authentication parameters}
+    batch_buffer: ${3:# Maximum number of requests to buffer in memory}
+    batch_size: ${4:# Number of requests in each PostgreSQL write transaction, as specified in the PostgreSQL configuration}
+    batch_workers: ${5:# Number of Goroutines sending data to PostgreSQL, as specified in the PostgreSQL configuration}
+    dsn: ${6:# Attribute that specifies the data source names as a URL or PostgreSQL connection string}
+    enable_round_robin: ${7:# Enables round robin scheduling on PostgreSQL}
+    max_conn_lifetime: ${8:# Maximum time a connection can persist before being destroyed}
+    max_idle_conns: ${9:# Maximum number of number of idle connections to retain}
+    name: ${10:# The Sensu resource's name}
+    pool_size: ${11:# The maximum number of connections to hold in the PostgreSQL connection pool}
+    state: ${12:# Target state of the Sensu object}
+    strict: ${13:# When the PostgresConfig resource is created, configuration validation will include connecting to the PostgreSQL database and executing a query to confirm whether the connected user has permission to create database tables}
   tags:
     - sensu
     - sensu_go

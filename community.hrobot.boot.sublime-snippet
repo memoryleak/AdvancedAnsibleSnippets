@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Set boot configuration}
   community.hrobot.boot:
-    server_number: ${2:# The server number of the server whose boot configuration to adjust}
-    regular_boot: ${3:# If this option is provided, all special boot configurations are removed and the installed operating system will be booted up next (assuming it is bootable)}
-    rescue: ${4:# If this option is provided, the rescue system will be activated for the next boot}
+    hetzner_password: ${2:# The password for the Robot webservice user}
+    hetzner_user: ${3:# The username for the Robot webservice user}
+    install_cpanel: ${4:# If this option is provided, a cPanel installation will be activated for the next boot}
     install_linux: ${5:# If this option is provided, a Linux system install will be activated for the next boot}
-    install_vnc: ${6:# If this option is provided, a VNC installation will be activated for the next boot}
-    install_windows: ${7:# If this option is provided, a Windows installation will be activated for the next boot}
-    install_plesk: ${8:# If this option is provided, a Plesk installation will be activated for the next boot}
-    install_cpanel: ${9:# If this option is provided, a cPanel installation will be activated for the next boot}
-    hetzner_user: ${10:# The username for the Robot webservice user}
-    hetzner_password: ${11:# The password for the Robot webservice user}
+    install_plesk: ${6:# If this option is provided, a Plesk installation will be activated for the next boot}
+    install_vnc: ${7:# If this option is provided, a VNC installation will be activated for the next boot}
+    install_windows: ${8:# If this option is provided, a Windows installation will be activated for the next boot}
+    regular_boot: ${9:# If this option is provided, all special boot configurations are removed and the installed operating system will be booted up next (assuming it is bootable)}
+    rescue: ${10:# If this option is provided, the rescue system will be activated for the next boot}
+    server_number: ${11:# The server number of the server whose boot configuration to adjust}
   tags:
     - community
     - hrobot

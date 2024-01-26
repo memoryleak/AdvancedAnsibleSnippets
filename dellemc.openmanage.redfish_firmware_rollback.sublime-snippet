@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:To perform a component firmware rollback using component name}
+  dellemc.openmanage.redfish_firmware_rollback:
+    baseuri: ${2:# IP address of the target out-of-band controller}
+    ca_path: ${3:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    name: ${4:# The name or regular expression of the component to match and is case-sensitive}
+    password: ${5:# Password of the target out-of-band controller}
+    reboot: ${6:# Reboot the server to apply the previous version of the firmware}
+    reboot_timeout: ${7:# Wait time in seconds}
+    timeout: ${8:# The socket level timeout in seconds}
+    username: ${9:# Username of the target out-of-band controller}
+    validate_certs: ${10:# If C(false), the SSL certificates will not be validated}
+  tags:
+    - dellemc
+    - openmanage
+    - redfish_firmware_rollback]]></content>
+  <tabTrigger>dellemc.openmanage.redfish_firmware_rollback</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>To perform a component firmware rollback using component name</description>
+</snippet>

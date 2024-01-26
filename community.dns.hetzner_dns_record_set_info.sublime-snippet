@@ -2,14 +2,14 @@
   <content><![CDATA[- name: ${1:Retrieve record sets in Hetzner DNS service}
   community.dns.hetzner_dns_record_set_info:
     hetzner_token: ${2:# The token for the Hetzner API}
-    type: ${3:# The type of DNS record to retrieve}
-    zone_id: ${4:# The ID of the DNS zone to modify}
-    what: ${5:# Describes whether to fetch a single record and type combination, all types for a record, or all records}
-    zone_name: ${6:# The DNS zone to modify}
-    record: ${7:# The full DNS record to retrieve}
-    prefix: ${8:# The prefix of the DNS record}
-    txt_transformation: ${9:# Determines how TXT entry values are converted between the API and this module's input and output}
-    txt_character_encoding: ${10:# Whether to treat numeric escape sequences (C(\\xyz)) as octal or decimal numbers}
+    prefix: ${3:# The prefix of the DNS record}
+    record: ${4:# The full DNS record to retrieve}
+    txt_character_encoding: ${5:# Whether to treat numeric escape sequences (V(\\\\xyz)) as octal or decimal numbers}
+    txt_transformation: ${6:# Determines how TXT entry values are converted between the API and this module's input and output}
+    type: ${7:# The type of DNS record to retrieve}
+    what: ${8:# Describes whether to fetch a single record and type combination, all types for a record, or all records}
+    zone_id: ${9:# The ID of the DNS zone to modify}
+    zone_name: ${10:# The DNS zone to modify}
   tags:
     - community
     - dns

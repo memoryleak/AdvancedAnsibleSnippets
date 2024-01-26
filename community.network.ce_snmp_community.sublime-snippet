@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages SNMP community configuration on HUAWEI CloudEngine switches}
   community.network.ce_snmp_community:
-    acl_number: ${2:# Access control list number}
-    community_name: ${3:# Unique name to identify the community}
-    access_right: ${4:# Access right read or write}
-    community_mib_view: ${5:# Mib view name}
+    access_right: ${2:# Access right read or write}
+    acl_number: ${3:# Access control list number}
+    community_mib_view: ${4:# Mib view name}
+    community_name: ${5:# Unique name to identify the community}
     group_name: ${6:# Unique name to identify the SNMPv3 group}
-    security_level: ${7:# Security level indicating whether to use authentication and encryption}
+    notify_view: ${7:# Mib view name for notification}
     read_view: ${8:# Mib view name for read}
-    write_view: ${9:# Mib view name for write}
-    notify_view: ${10:# Mib view name for notification}
-    state: ${11:# Manage the state of the resource}
+    security_level: ${9:# Security level indicating whether to use authentication and encryption}
+    state: ${10:# Manage the state of the resource}
+    write_view: ${11:# Mib view name for write}
   tags:
     - community
     - network

@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:MQ broker management}
+  community.aws.mq_broker:
+    access_key: ${2:# AWS access key ID}
+    authentication_strategy: ${3:# Choose between locally and remotely managed users}
+    auto_minor_version_upgrade: ${4:# Allow/disallow automatic minor version upgrades}
+    aws_ca_bundle: ${5:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${6:# A dictionary to modify the botocore configuration}
+    broker_name: ${7:# The Name of the MQ broker to work on}
+    debug_botocore_endpoint_logs: ${8:# Use a C(botocore}
+    deployment_mode: ${9:# Set broker deployment type}
+    enable_audit_log: ${10:# Enable/disable to push audit logs to AWS CloudWatch}
+    enable_general_log: ${11:# Enable/disable to push general logs to AWS CloudWatch}
+    endpoint_url: ${12:# URL to connect to instead of the default AWS endpoints}
+    engine_type: ${13:# Set broker engine type}
+    engine_version: ${14:# Set engine version of broker}
+    host_instance_type: ${15:# Instance type of broker instances}
+    kms_key_id: ${16:# Use referenced key to encrypt broker data at rest}
+    maintenance_window_start_time: ${17:# Set maintenance window for automatic minor upgrades}
+    profile: ${18:# A named AWS profile to use for authentication}
+    publicly_accessible: ${19:# Allow/disallow public access}
+    region: ${20:# The AWS region to use}
+    secret_key: ${21:# AWS secret access key}
+    security_groups: ${22:# Associate security groups with broker}
+    session_token: ${23:# AWS STS session token for use with temporary credentials}
+    state: ${24:# C(present): Create/update broker}
+    storage_type: ${25:# Set underlying storage type}
+    subnet_ids: ${26:# Defines where deploy broker instances to}
+    tags: ${27:# Tag newly created brokers}
+    use_aws_owned_key: ${28:# Must be set to C(false) if I(kms_key_id) is provided as well}
+    users: ${29:# This parameter allows to use a custom set of initial user(s)}
+    validate_certs: ${30:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+  tags:
+    - community
+    - aws
+    - mq_broker]]></content>
+  <tabTrigger>community.aws.mq_broker</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>MQ broker management</description>
+</snippet>

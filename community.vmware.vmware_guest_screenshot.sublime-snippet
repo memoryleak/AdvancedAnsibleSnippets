@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create a screenshot of the Virtual Machine console}
   community.vmware.vmware_guest_screenshot:
-    name: ${2:# Name of the virtual machine}
-    uuid: ${3:# UUID of the instance to gather facts if known, this is VMware's unique identifier}
-    moid: ${4:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    cluster: ${2:# The name of cluster where the virtual machine is running}
+    datacenter: ${3:# The datacenter name to which virtual machine belongs to}
+    esxi_hostname: ${4:# The ESXi hostname where the virtual machine is running}
     folder: ${5:# Destination folder, absolute or relative path to find an existing guest}
-    cluster: ${6:# The name of cluster where the virtual machine is running}
-    esxi_hostname: ${7:# The ESXi hostname where the virtual machine is running}
-    datacenter: ${8:# The datacenter name to which virtual machine belongs to}
-    local_path: ${9:# If C(local_path) is not set, the created screenshot file will be kept in the directory of the virtual machine on ESXi host}
-    hostname: ${10:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${11:# The username of the vSphere vCenter or ESXi server}
-    password: ${12:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${13:# Allows connection when SSL certificates are not valid}
-    port: ${14:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${15:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${16:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    hostname: ${6:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    local_path: ${7:# If not set, the created screenshot file will be kept in the directory of the virtual machine on ESXi host}
+    moid: ${8:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    name: ${9:# Name of the virtual machine}
+    password: ${10:# The password of the vSphere vCenter or ESXi server}
+    port: ${11:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${12:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    username: ${14:# The username of the vSphere vCenter or ESXi server}
+    uuid: ${15:# UUID of the instance to gather facts if known, this is VMware's unique identifier}
+    validate_certs: ${16:# Allows connection when SSL certificates are not valid}
   tags:
     - community
     - vmware

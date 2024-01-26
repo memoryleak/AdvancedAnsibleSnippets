@@ -2,12 +2,12 @@
   <content><![CDATA[- name: ${1:Run arbitrary commands on an Juniper JUNOS device}
   junipernetworks.junos.junos_command:
     commands: ${2:# The commands to send to the remote junos device}
-    rpcs: ${3:# The C(rpcs) argument accepts a list of RPCs to be executed over a netconf session and the results from the RPC execution is return to the playbook via the modules results dictionary}
-    wait_for: ${4:# Specifies what to evaluate from the output of the command and what conditionals to apply}
+    display: ${3:# Encoding scheme to use when serializing output from the device}
+    interval: ${4:# Configures the interval in seconds to wait between retries of the command}
     match: ${5:# The I(match) argument is used in conjunction with the I(wait_for) argument to specify the match policy}
     retries: ${6:# Specifies the number of retries a command should be tried before it is considered failed}
-    interval: ${7:# Configures the interval in seconds to wait between retries of the command}
-    display: ${8:# Encoding scheme to use when serializing output from the device}
+    rpcs: ${7:# The C(rpcs) argument accepts a list of RPCs to be executed over a netconf session and the results from the RPC execution is return to the playbook via the modules results dictionary}
+    wait_for: ${8:# Specifies what to evaluate from the output of the command and what conditionals to apply}
   tags:
     - junipernetworks
     - junos

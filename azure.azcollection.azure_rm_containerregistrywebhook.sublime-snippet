@@ -1,31 +1,32 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Webhook instance}
   azure.azcollection.azure_rm_containerregistrywebhook:
-    resource_group: ${2:# The name of the resource group to which the container registry belongs}
-    registry_name: ${3:# The name of the container registry}
-    webhook_name: ${4:# The name of the webhook}
-    location: ${5:# Resource location}
-    service_uri: ${6:# The service URI for the webhook to post notifications}
-    custom_headers: ${7:# Custom headers that will be added to the webhook notifications}
-    status: ${8:# The status of the webhook at the time the operation was called}
-    scope: ${9:# The scope of repositories where the event can be triggered}
-    actions: ${10:# The list of actions that trigger the webhook to post notifications}
-    ad_user: ${11:# Active Directory username}
-    password: ${12:# Active Directory user password}
-    profile: ${13:# Security profile found in ~/}
-    subscription_id: ${14:# Your Azure subscription Id}
-    client_id: ${15:# Azure client ID}
-    secret: ${16:# Azure client secret}
-    tenant: ${17:# Azure tenant ID}
-    cloud_environment: ${18:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${19:# Azure AD authority url}
-    cert_validation_mode: ${20:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${21:# Controls the source of the credentials to use for authentication}
-    api_profile: ${22:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${23:# Parent argument}
-    log_mode: ${24:# Parent argument}
-    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    actions: ${2:# The list of actions that trigger the webhook to post notifications}
+    ad_user: ${3:# Active Directory username}
+    adfs_authority_url: ${4:# Azure AD authority url}
+    api_profile: ${5:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    custom_headers: ${10:# Custom headers that will be added to the webhook notifications}
+    location: ${11:# Resource location}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    password: ${14:# Active Directory user password}
+    profile: ${15:# Security profile found in ~/}
+    registry_name: ${16:# The name of the container registry}
+    resource_group: ${17:# The name of the resource group to which the container registry belongs}
+    scope: ${18:# The scope of repositories where the event can be triggered}
+    secret: ${19:# Azure client secret}
+    service_uri: ${20:# The service URI for the webhook to post notifications}
+    state: ${21:# Assert the state of the Container registery replication}
+    status: ${22:# The status of the webhook at the time the operation was called}
+    subscription_id: ${23:# Your Azure subscription Id}
+    tenant: ${24:# Azure tenant ID}
+    thumbprint: ${25:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    webhook_name: ${26:# The name of the webhook}
+    x509_certificate_path: ${27:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

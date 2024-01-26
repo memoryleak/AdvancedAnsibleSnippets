@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Puppet Environments}
   theforeman.foreman.puppet_environment:
-    name: ${2:# The full environment name}
-    server_url: ${3:# URL of the Foreman server}
-    username: ${4:# Username accessing the Foreman server}
+    locations: ${2:# List of locations the entity should be assigned to}
+    name: ${3:# The full environment name}
+    organizations: ${4:# List of organizations the entity should be assigned to}
     password: ${5:# Password of the user accessing the Foreman server}
-    validate_certs: ${6:# Whether or not to verify the TLS certificates of the Foreman server}
+    server_url: ${6:# URL of the Foreman server}
     state: ${7:# State of the entity}
-    organizations: ${8:# List of organizations the entity should be assigned to}
-    locations: ${9:# List of locations the entity should be assigned to}
+    username: ${8:# Username accessing the Foreman server}
+    validate_certs: ${9:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

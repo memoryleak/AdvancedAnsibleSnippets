@@ -2,11 +2,12 @@
   <content><![CDATA[- name: ${1:Import/Delete certificates from BIG-IP}
   f5networks.f5_modules.bigip_ssl_certificate:
     content: ${2:# Sets the contents of a certificate directly to the specified value}
-    state: ${3:# Certificate state}
+    issuer_cert: ${3:# Issuer certificate used for OCSP monitoring}
     name: ${4:# SSL Certificate Name}
-    issuer_cert: ${5:# Issuer certificate used for OCSP monitoring}
-    partition: ${6:# Device partition to manage resources on}
-    provider: ${7:# A dict object containing connection details}
+    partition: ${5:# Device partition to manage resources on}
+    provider: ${6:# A dict object containing connection details}
+    state: ${7:# Certificate state}
+    true_names: ${8:# When C(true), the module does not append C(}
   tags:
     - f5networks
     - f5_modules

@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure 1&1 private networking}
   community.general.oneandone_private_network:
-    state: ${2:# Define a network's state to create, remove, or update}
-    auth_token: ${3:# Authenticating API token provided by 1&1}
-    private_network: ${4:# The identifier (id or name) of the network used with update state}
-    api_url: ${5:# Custom API URL}
-    name: ${6:# Private network name used with present state}
-    description: ${7:# Set a description for the network}
-    datacenter: ${8:# The identifier of the datacenter where the private network will be created}
-    network_address: ${9:# Set a private network space, i}
-    subnet_mask: ${10:# Set the netmask for the private network, i}
-    add_members: ${11:# List of server identifiers (name or id) to be added to the private network}
-    remove_members: ${12:# List of server identifiers (name or id) to be removed from the private network}
+    add_members: ${2:# List of server identifiers (name or id) to be added to the private network}
+    api_url: ${3:# Custom API URL}
+    auth_token: ${4:# Authenticating API token provided by 1&1}
+    datacenter: ${5:# The identifier of the datacenter where the private network will be created}
+    description: ${6:# Set a description for the network}
+    name: ${7:# Private network name used with present state}
+    network_address: ${8:# Set a private network space, i}
+    private_network: ${9:# The identifier (id or name) of the network used with update state}
+    remove_members: ${10:# List of server identifiers (name or id) to be removed from the private network}
+    state: ${11:# Define a network's state to create, remove, or update}
+    subnet_mask: ${12:# Set the netmask for the private network, i}
     wait: ${13:# wait for the instance to be in state 'running' before returning}
-    wait_timeout: ${14:# how long before wait gives up, in seconds}
-    wait_interval: ${15:# Defines the number of seconds to wait when using the _wait_for methods}
+    wait_interval: ${14:# Defines the number of seconds to wait when using the _wait_for methods}
+    wait_timeout: ${15:# how long before wait gives up, in seconds}
   tags:
     - community
     - general

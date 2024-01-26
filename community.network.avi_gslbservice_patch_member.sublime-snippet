@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Avi API Module}
   community.network.avi_gslbservice_patch_member:
-    data: ${2:# HTTP body of GSLB Service Member in YAML or JSON format}
-    params: ${3:# Query parameters passed to the HTTP API}
-    name: ${4:# Name of the GSLB Service}
-    state: ${5:# The state that should be applied to the member}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
+    avi_credentials: ${4:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${5:# It disables avi session information to be cached as a fact}
     controller: ${6:# IP address or hostname of the controller}
-    username: ${7:# Username used for accessing Avi controller}
-    password: ${8:# Password of Avi user in Avi controller}
-    tenant: ${9:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${10:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${11:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${12:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${13:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${14:# It disables avi session information to be cached as a fact}
+    data: ${7:# HTTP body of GSLB Service Member in YAML or JSON format}
+    name: ${8:# Name of the GSLB Service}
+    params: ${9:# Query parameters passed to the HTTP API}
+    password: ${10:# Password of Avi user in Avi controller}
+    state: ${11:# The state that should be applied to the member}
+    tenant: ${12:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${13:# UUID of tenant used for all Avi API calls and context of object}
+    username: ${14:# Username used for accessing Avi controller}
   tags:
     - community
     - network

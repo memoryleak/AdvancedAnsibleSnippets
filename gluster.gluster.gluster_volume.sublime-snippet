@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage GlusterFS volumes}
   gluster.gluster.gluster_volume:
-    name: ${2:# The volume name}
-    state: ${3:# Use present/absent ensure if a volume exists or not}
+    arbiters: ${2:# Arbiter count for volume}
+    bricks: ${3:# Brick paths on servers}
     cluster: ${4:# List of hosts to use for probing and brick setup}
-    host: ${5:# Override local hostname (for peer probing purposes)}
-    replicas: ${6:# Replica count for volume}
-    arbiters: ${7:# Arbiter count for volume}
-    stripes: ${8:# Stripe count for volume}
-    disperses: ${9:# Disperse count for volume}
-    redundancies: ${10:# Redundancy count for volume}
-    transport: ${11:# Transport type for volume}
-    bricks: ${12:# Brick paths on servers}
-    start_on_create: ${13:# Controls whether the volume is started after creation or not}
-    rebalance: ${14:# Controls whether the cluster is rebalanced after changes}
-    directory: ${15:# Directory for limit-usage}
-    options: ${16:# A dictionary/hash with options/settings for the volume}
-    quota: ${17:# Quota value for limit-usage (be sure to use 10}
-    force: ${18:# If brick is being created in the root partition, module will fail}
+    directory: ${5:# Directory for limit-usage}
+    disperses: ${6:# Disperse count for volume}
+    force: ${7:# If brick is being created in the root partition, module will fail}
+    host: ${8:# Override local hostname (for peer probing purposes)}
+    name: ${9:# The volume name}
+    options: ${10:# A dictionary/hash with options/settings for the volume}
+    quota: ${11:# Quota value for limit-usage (be sure to use 10}
+    rebalance: ${12:# Controls whether the cluster is rebalanced after changes}
+    redundancies: ${13:# Redundancy count for volume}
+    replicas: ${14:# Replica count for volume}
+    start_on_create: ${15:# Controls whether the volume is started after creation or not}
+    state: ${16:# Use present/absent ensure if a volume exists or not}
+    stripes: ${17:# Stripe count for volume}
+    transport: ${18:# Transport type for volume}
   tags:
     - gluster
     - gluster

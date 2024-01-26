@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Get information about Jenkins jobs}
   community.general.jenkins_job_info:
-    name: ${2:# Exact name of the Jenkins job to fetch information about}
+    color: ${2:# Only fetch jobs with the given status color}
     glob: ${3:# A shell glob of Jenkins job names to fetch information about}
-    color: ${4:# Only fetch jobs with the given status color}
+    name: ${4:# Exact name of the Jenkins job to fetch information about}
     password: ${5:# Password to authenticate with the Jenkins server}
     token: ${6:# API token used to authenticate with the Jenkins server}
     url: ${7:# URL where the Jenkins server is accessible}
     user: ${8:# User to authenticate with the Jenkins server}
-    validate_certs: ${9:# If set to C(False), the SSL certificates will not be validated}
+    validate_certs: ${9:# If set to V(false), the SSL certificates will not be validated}
   tags:
     - community
     - general

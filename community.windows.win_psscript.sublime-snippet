@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Install and manage PowerShell scripts from a PSRepository}
   community.windows.win_psscript:
-    name: ${2:# The name of the script you want to install or remove}
-    repository: ${3:# The registered name of the repository you want to install from}
-    scope: ${4:# Determines whether the script is installed for only the C(current_user) or for C(all_users)}
-    state: ${5:# The desired state of the script}
-    required_version: ${6:# The exact version of the script to install}
-    minimum_version: ${7:# The minimum version of the script to install}
-    maximum_version: ${8:# The maximum version of the script to install}
-    allow_prerelease: ${9:# If C(yes) installs scripts flagged as prereleases}
+    allow_prerelease: ${2:# If C(yes) installs scripts flagged as prereleases}
+    maximum_version: ${3:# The maximum version of the script to install}
+    minimum_version: ${4:# The minimum version of the script to install}
+    name: ${5:# The name of the script you want to install or remove}
+    repository: ${6:# The registered name of the repository you want to install from}
+    required_version: ${7:# The exact version of the script to install}
+    scope: ${8:# Determines whether the script is installed for only the C(current_user) or for C(all_users)}
+    source_password: ${9:# The password portion of the credential required to access the repository}
     source_username: ${10:# The username portion of the credential required to access the repository}
-    source_password: ${11:# The password portion of the credential required to access the repository}
+    state: ${11:# The desired state of the script}
   tags:
     - community
     - windows

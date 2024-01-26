@@ -1,32 +1,32 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP manage qtrees}
   netapp.ontap.na_ontap_qtree:
-    state: ${2:# Whether the specified qtree should exist or not}
-    name: ${3:# The name of the qtree to manage}
-    from_name: ${4:# Name of the qtree to be renamed}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    export_policy: ${3:# The name of the export policy to apply}
+    feature_flags: ${4:# Enable or disable a new feature}
     flexvol_name: ${5:# The name of the FlexVol the qtree should exist on}
-    vserver: ${6:# The name of the vserver to use}
-    export_policy: ${7:# The name of the export policy to apply}
-    security_style: ${8:# The security style for the qtree}
-    oplocks: ${9:# Whether the oplocks should be enabled or not for the qtree}
-    unix_permissions: ${10:# File permissions bits of the qtree}
-    force_delete: ${11:# Whether the qtree should be deleted even if files still exist}
-    wait_for_completion: ${12:# Only applicable for REST}
-    time_out: ${13:# Maximum time to wait for qtree deletion in seconds when wait_for_completion is True}
-    unix_user: ${14:# The user set as owner of the qtree}
-    unix_group: ${15:# The group set as owner of the qtree}
-    hostname: ${16:# The hostname or IP address of the ONTAP instance}
-    username: ${17:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${18:# Password for the specified user}
-    cert_filepath: ${19:# path to SSL client cert file (}
-    key_filepath: ${20:# path to SSL client key file}
-    https: ${21:# Enable and disable https}
-    validate_certs: ${22:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${23:# Override the default port (80 or 443) with this port}
-    ontapi: ${24:# The ontap api version to use}
-    use_rest: ${25:# Whether to use REST or ZAPI}
-    feature_flags: ${26:# Enable or disable a new feature}
-    force_ontap_version: ${27:# Override the cluster ONTAP version when using REST}
+    force_delete: ${6:# Whether the qtree should be deleted even if files still exist}
+    force_ontap_version: ${7:# Override the cluster ONTAP version when using REST}
+    from_name: ${8:# Name of the qtree to be renamed}
+    hostname: ${9:# The hostname or IP address of the ONTAP instance}
+    http_port: ${10:# Override the default port (80 or 443) with this port}
+    https: ${11:# Enable and disable https}
+    key_filepath: ${12:# path to SSL client key file}
+    name: ${13:# The name of the qtree to manage}
+    ontapi: ${14:# The ontap api version to use}
+    oplocks: ${15:# Whether the oplocks should be enabled or not for the qtree}
+    password: ${16:# Password for the specified user}
+    security_style: ${17:# The security style for the qtree}
+    state: ${18:# Whether the specified qtree should exist or not}
+    time_out: ${19:# Maximum time to wait for qtree deletion in seconds when wait_for_completion is True}
+    unix_group: ${20:# The group set as owner of the qtree}
+    unix_permissions: ${21:# File permissions bits of the qtree}
+    unix_user: ${22:# The user set as owner of the qtree}
+    use_rest: ${23:# Whether to use REST or ZAPI}
+    username: ${24:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${25:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${26:# The name of the vserver to use}
+    wait_for_completion: ${27:# Only applicable for REST}
   tags:
     - netapp
     - ontap

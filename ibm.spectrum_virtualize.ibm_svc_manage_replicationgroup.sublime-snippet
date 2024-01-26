@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module manages remote copy consistency group on IBM Spectrum Virtualize family storage systems}
   ibm.spectrum_virtualize.ibm_svc_manage_replicationgroup:
-    name: ${2:# Specifies the name for the new consistency group}
-    state: ${3:# Creates or updates (C(present)) removes (C(absent)) a consistency group}
-    clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
-    domain: ${5:# Domain for the Spectrum Virtualize storage system}
-    username: ${6:# REST API username for the Spectrum Virtualize storage system}
-    password: ${7:# REST API password for the Spectrum Virtualize storage system}
-    token: ${8:# The authentication token to verify a user on the Spectrum Virtualize storage system}
-    log_path: ${9:# Path of debug log file}
-    validate_certs: ${10:# Validates certification}
+    clustername: ${2:# The hostname or management IP of the Spectrum Virtualize storage system}
+    copytype: ${3:# Specifies the mirror type of the remote copy}
+    cyclingmode: ${4:# Specifies the behavior of Global Mirror for the relationship}
+    cyclingperiod: ${5:# Specifies the cycle period in seconds}
+    domain: ${6:# Domain for the Spectrum Virtualize storage system}
+    force: ${7:# If used to delete a consistency group, it specifies that you want the system to remove any relationship that belongs to the consistency group before the group is deleted}
+    log_path: ${8:# Path of debug log file}
+    name: ${9:# Specifies the name for the new consistency group}
+    password: ${10:# REST API password for the Spectrum Virtualize storage system}
     remotecluster: ${11:# Specifies the name of the remote system}
-    force: ${12:# If used to delete a consistency group, it specifies that you want the system to remove any relationship that belongs to the consistency group before the group is deleted}
-    copytype: ${13:# Specifies the mirror type of the remote copy}
-    cyclingmode: ${14:# Specifies the behavior of Global Mirror for the relationship}
-    cyclingperiod: ${15:# Specifies the cycle period in seconds}
+    state: ${12:# Creates or updates (C(present)) removes (C(absent)) a consistency group}
+    token: ${13:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    username: ${14:# REST API username for the Spectrum Virtualize storage system}
+    validate_certs: ${15:# Validates certification}
   tags:
     - ibm
     - spectrum_virtualize

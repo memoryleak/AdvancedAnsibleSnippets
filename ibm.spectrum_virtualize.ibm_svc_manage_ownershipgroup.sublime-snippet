@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module manages ownership group on IBM Spectrum Virtualize family storage systems}
   ibm.spectrum_virtualize.ibm_svc_manage_ownershipgroup:
-    name: ${2:# Specifies the name or label for the new ownership group object}
-    state: ${3:# Creates (C(present)) or removes (C(absent)) an ownership group}
-    clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
-    domain: ${5:# Domain for the Spectrum Virtualize storage system}
-    username: ${6:# REST API username for the Spectrum Virtualize storage system}
+    clustername: ${2:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${3:# Domain for the Spectrum Virtualize storage system}
+    keepobjects: ${4:# If specified, the objects that currently belong to the ownership group will be kept but will be moved to noownershipgroup}
+    log_path: ${5:# Path of debug log file}
+    name: ${6:# Specifies the name or label for the new ownership group object}
     password: ${7:# REST API password for the Spectrum Virtualize storage system}
-    token: ${8:# The authentication token to verify a user on the Spectrum Virtualize storage system}
-    keepobjects: ${9:# If specified, the objects that currently belong to the ownership group will be kept but will be moved to noownershipgroup}
-    log_path: ${10:# Path of debug log file}
+    state: ${8:# Creates (C(present)) or removes (C(absent)) an ownership group}
+    token: ${9:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    username: ${10:# REST API username for the Spectrum Virtualize storage system}
     validate_certs: ${11:# Validates certification}
   tags:
     - ibm

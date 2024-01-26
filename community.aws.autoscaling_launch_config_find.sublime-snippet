@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Find AWS Autoscaling Launch Configurations}
   community.aws.autoscaling_launch_config_find:
-    name_regex: ${2:# A Launch Configuration to match}
-    sort_order: ${3:# Order in which to sort results}
-    limit: ${4:# How many results to show}
-    region: ${5:# The AWS region to use}
-    access_key: ${6:# AWS access key ID}
-    secret_key: ${7:# AWS secret access key}
-    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    endpoint_url: ${6:# URL to connect to instead of the default AWS endpoints}
+    limit: ${7:# How many results to show}
+    name_regex: ${8:# A Launch Configuration to match}
     profile: ${9:# A named AWS profile to use for authentication}
-    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${13:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
+    region: ${10:# The AWS region to use}
+    secret_key: ${11:# AWS secret access key}
+    session_token: ${12:# AWS STS session token for use with temporary credentials}
+    sort_order: ${13:# Order in which to sort results}
+    validate_certs: ${14:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

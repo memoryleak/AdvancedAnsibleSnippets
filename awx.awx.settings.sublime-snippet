@@ -1,15 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Modify Automation Platform Controller settings}
   awx.awx.settings:
-    name: ${2:# Name of setting to modify}
-    value: ${3:# Value to be modified for given setting}
-    settings: ${4:# A data structure to be sent into the settings endpoint}
-    controller_host: ${5:# URL to your Automation Platform Controller instance}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
     controller_username: ${6:# Username for your controller instance}
-    controller_password: ${7:# Password for your controller instance}
-    controller_oauthtoken: ${8:# The OAuth token to use}
-    validate_certs: ${9:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${10:# Path to the controller config file}
+    name: ${7:# Name of setting to modify}
+    request_timeout: ${8:# Specify the timeout Ansible should use in requests to the controller host}
+    settings: ${9:# A data structure to be sent into the settings endpoint}
+    validate_certs: ${10:# Whether to allow insecure connections to AWX}
+    value: ${11:# Value to be modified for given setting}
   tags:
     - awx
     - awx

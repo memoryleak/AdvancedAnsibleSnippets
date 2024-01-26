@@ -1,15 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Get job details for a given job ID or an entire job queue on OpenMange Enterprise}
   dellemc.openmanage.ome_job_info:
-    job_id: ${2:# Unique ID of the job}
-    system_query_options: ${3:# Options for pagination of the output}
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    fetch_execution_history: ${3:# Fetches the execution history of the job}
     hostname: ${4:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
-    username: ${5:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    job_id: ${5:# Unique ID of the job}
     password: ${6:# OpenManage Enterprise or OpenManage Enterprise Modular password}
     port: ${7:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
-    validate_certs: ${8:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${9:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${10:# The socket level timeout in seconds}
+    system_query_options: ${8:# Options for pagination of the output}
+    timeout: ${9:# The socket level timeout in seconds}
+    username: ${10:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    validate_certs: ${11:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

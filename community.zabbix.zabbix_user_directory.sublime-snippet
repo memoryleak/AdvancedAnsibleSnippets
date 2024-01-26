@@ -1,24 +1,45 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/update/delete Zabbix user directories}
   community.zabbix.zabbix_user_directory:
-    name: ${2:# Unique name of the user directory}
-    host: ${3:# LDAP server host name, IP or URI}
-    port: ${4:# LDAP server port}
-    base_dn: ${5:# LDAP base distinguished name string}
-    search_attribute: ${6:# LDAP attribute name to identify user by username in Zabbix database}
-    bind_dn: ${7:# LDAP bind distinguished name string}
-    bind_password: ${8:# LDAP bind password}
-    description: ${9:# User directory description}
-    search_filter: ${10:# LDAP custom filter string when authenticating user in LDAP}
-    start_tls: ${11:# LDAP startTLS option}
-    state: ${12:# State of the user directory}
-    server_url: ${13:# URL of Zabbix server, with protocol (http or https)}
-    login_user: ${14:# Zabbix user name}
-    login_password: ${15:# Zabbix user password}
-    http_login_user: ${16:# Basic Auth login}
-    http_login_password: ${17:# Basic Auth password}
-    timeout: ${18:# The timeout of API request (seconds)}
-    validate_certs: ${19:# If set to False, SSL certificates will not be validated}
+    base_dn: ${2:# LDAP base distinguished name string}
+    bind_dn: ${3:# LDAP bind distinguished name string}
+    bind_password: ${4:# LDAP bind password}
+    description: ${5:# User directory description}
+    encrypt_assertions: ${6:# SAML encrypt assertions}
+    encrypt_nameid: ${7:# SAML encrypt name ID}
+    group_basedn: ${8:# LDAP groups path in LDAP tree to search for groups data}
+    group_filter: ${9:# LDAP search filter to select groups when searching for specific user groups}
+    group_member: ${10:# LDAP tree attribute name containing group name received with C(group_filter) query}
+    group_membership: ${11:# LDAP property containing groups of user}
+    group_name: ${12:# LDAP/SAML attribute name to get group name for group mapping between Zabbix and IdP}
+    host: ${13:# LDAP server host name, IP or URI}
+    http_login_password: ${14:# Basic Auth password}
+    http_login_user: ${15:# Basic Auth login}
+    idp_entityid: ${16:# SAML URI that identifies the IdP in SAML messages}
+    idp_type: ${17:# Type of IdP}
+    name: ${18:# Unique name of the user directory}
+    nameid_format: ${19:# SAML SP name ID format}
+    port: ${20:# LDAP server port}
+    provision_groups: ${21:# Array of the IdP media type mappings objects}
+    provision_media: ${22:# Array of the IdP media type mappings objects}
+    provision_status: ${23:# User directory provisioning status}
+    scim_status: ${24:# Whether the SCIM provisioning for SAML is enabled or disabled}
+    search_attribute: ${25:# LDAP attribute name to identify user by username in Zabbix database}
+    search_filter: ${26:# LDAP custom filter string when authenticating user in LDAP}
+    sign_assertions: ${27:# SAML sign assertions}
+    sign_authn_requests: ${28:# SAML sign AuthN requests}
+    sign_logout_requests: ${29:# SAML sign logout requests}
+    sign_logout_responses: ${30:# SAML sign logout responses}
+    sign_messages: ${31:# SAML sign messages}
+    slo_url: ${32:# SAML IdP service endpoint URL to which Zabbix will send SAML logout requests}
+    sp_entityid: ${33:# SAML SP entity ID}
+    sso_url: ${34:# SAML URL of the IdP's SAML SSO service, to which Zabbix will send SAML authentication requests}
+    start_tls: ${35:# LDAP startTLS option}
+    state: ${36:# State of the user directory}
+    user_lastname: ${37:# LDAP/SAML attribute name to use for users}
+    user_ref_attr: ${38:# LDAP user object attribute name}
+    user_username: ${39:# LDAP/SAML attribute name to use for users}
+    username_attribute: ${40:# SAML username attribute to be used in comparison with Zabbix user}
   tags:
     - community
     - zabbix

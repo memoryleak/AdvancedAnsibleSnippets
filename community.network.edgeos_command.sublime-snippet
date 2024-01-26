@@ -2,10 +2,10 @@
   <content><![CDATA[- name: ${1:Run one or more commands on EdgeOS devices}
   community.network.edgeos_command:
     commands: ${2:# The commands or ordered set of commands that should be run against the remote device}
-    wait_for: ${3:# Causes the task to wait for a specific condition to be met before moving forward}
+    interval: ${3:# The number of seconds to wait between C(retries) of the command}
     match: ${4:# Used in conjunction with C(wait_for) to create match policy}
     retries: ${5:# Number of times a command should be tried before it is considered failed}
-    interval: ${6:# The number of seconds to wait between C(retries) of the command}
+    wait_for: ${6:# Causes the task to wait for a specific condition to be met before moving forward}
   tags:
     - community
     - network

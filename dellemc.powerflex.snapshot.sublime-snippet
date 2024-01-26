@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Snapshots on Dell PowerFlex}
   dellemc.powerflex.snapshot:
-    snapshot_name: ${2:# The name of the snapshot}
-    snapshot_id: ${3:# The ID of the Snapshot}
-    vol_name: ${4:# The name of the volume for which snapshot will be taken}
-    vol_id: ${5:# The ID of the volume}
-    read_only: ${6:# Specifies whether mapping of the created snapshot volume will have read-write access or limited to read-only access}
-    size: ${7:# The size of the snapshot}
-    cap_unit: ${8:# The unit of the volume size}
-    snapshot_new_name: ${9:# New name of the snapshot}
-    allow_multiple_mappings: ${10:# Specifies whether to allow multiple mappings or not}
-    desired_retention: ${11:# The retention value for the Snapshot}
-    retention_unit: ${12:# The unit for retention}
-    sdc: ${13:# Specifies SDC parameters}
-    sdc_state: ${14:# Mapping state of the SDC}
-    remove_mode: ${15:# Removal mode for the snapshot}
-    state: ${16:# State of the snapshot}
-    hostname: ${17:# IP or FQDN of the PowerFlex host}
-    username: ${18:# The username of the PowerFlex host}
-    password: ${19:# The password of the PowerFlex host}
+    allow_multiple_mappings: ${2:# Specifies whether to allow multiple mappings or not}
+    cap_unit: ${3:# The unit of the volume size}
+    desired_retention: ${4:# The retention value for the Snapshot}
+    hostname: ${5:# IP or FQDN of the PowerFlex host}
+    password: ${6:# The password of the PowerFlex host}
+    port: ${7:# Port number through which communication happens with PowerFlex host}
+    read_only: ${8:# Specifies whether mapping of the created snapshot volume will have read-write access or limited to read-only access}
+    remove_mode: ${9:# Removal mode for the snapshot}
+    retention_unit: ${10:# The unit for retention}
+    sdc: ${11:# Specifies SDC parameters}
+    sdc_state: ${12:# Mapping state of the SDC}
+    size: ${13:# The size of the snapshot}
+    snapshot_id: ${14:# The ID of the Snapshot}
+    snapshot_name: ${15:# The name of the snapshot}
+    snapshot_new_name: ${16:# New name of the snapshot}
+    state: ${17:# State of the snapshot}
+    timeout: ${18:# Time after which connection will get terminated}
+    username: ${19:# The username of the PowerFlex host}
     validate_certs: ${20:# Boolean variable to specify whether or not to validate SSL certificate}
-    port: ${21:# Port number through which communication happens with PowerFlex host}
-    timeout: ${22:# Time after which connection will get terminated}
+    vol_id: ${21:# The ID of the volume}
+    vol_name: ${22:# The name of the volume for which snapshot will be taken}
   tags:
     - dellemc
     - powerflex

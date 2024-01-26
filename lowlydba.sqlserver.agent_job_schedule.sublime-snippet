@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures a SQL Agent job schedule}
   lowlydba.sqlserver.agent_job_schedule:
-    schedule: ${2:# The name of the schedule}
-    job: ${3:# The name of the job that has the schedule}
-    enabled: ${4:# Whether the schedule is enabled or disabled}
+    enabled: ${2:# Whether the schedule is enabled or disabled}
+    end_date: ${3:# The date on which execution of a job can stop}
+    end_time: ${4:# The time on any day to end execution of a job}
     force: ${5:# The force option will ignore some errors in the options and assume defaults}
-    frequency_type: ${6:# A value indicating when a job is to be executed}
-    frequency_interval: ${7:# The days that a job is executed}
-    frequency_subday_type: ${8:# Specifies the units for the subday I(frequency_interval)}
+    frequency_interval: ${6:# The days that a job is executed}
+    frequency_recurrence_factor: ${7:# The number of weeks or months between the scheduled execution of a job}
+    frequency_relative_interval: ${8:# A job's occurrence of I(frequency_interval) in each month}
     frequency_subday_interval: ${9:# The number of subday type periods to occur between each execution of a job}
-    frequency_relative_interval: ${10:# A job's occurrence of I(frequency_interval) in each month}
-    frequency_recurrence_factor: ${11:# The number of weeks or months between the scheduled execution of a job}
-    start_date: ${12:# The date on which execution of a job can begin}
-    end_date: ${13:# The date on which execution of a job can stop}
-    start_time: ${14:# The time on any day to begin execution of a job}
-    end_time: ${15:# The time on any day to end execution of a job}
-    sql_instance: ${16:# The SQL Server instance to modify}
-    sql_username: ${17:# Username for SQL Authentication}
-    sql_password: ${18:# Password for SQL Authentication}
+    frequency_subday_type: ${10:# Specifies the units for the subday I(frequency_interval)}
+    frequency_type: ${11:# A value indicating when a job is to be executed}
+    job: ${12:# The name of the job that has the schedule}
+    schedule: ${13:# The name of the schedule}
+    sql_instance: ${14:# The SQL Server instance to modify}
+    sql_password: ${15:# Password for SQL Authentication}
+    sql_username: ${16:# Username for SQL Authentication}
+    start_date: ${17:# The date on which execution of a job can begin}
+    start_time: ${18:# The time on any day to begin execution of a job}
     state: ${19:# Whether or not the object should be C(present) or C(absent)}
   tags:
     - lowlydba

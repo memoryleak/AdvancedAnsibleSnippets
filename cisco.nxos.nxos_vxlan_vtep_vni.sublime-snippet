@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a Virtual Network Identifier member (VNI)}
   cisco.nxos.nxos_vxlan_vtep_vni:
-    interface: ${2:# Interface name for the VXLAN Network Virtualization Endpoint}
-    vni: ${3:# ID of the Virtual Network Identifier}
-    assoc_vrf: ${4:# This attribute is used to identify and separate processing VNIs that are associated with a VRF and used for routing}
-    ingress_replication: ${5:# Specifies mechanism for host reachability advertisement}
-    multicast_group: ${6:# The multicast group (range) of the VNI}
+    assoc_vrf: ${2:# This attribute is used to identify and separate processing VNIs that are associated with a VRF and used for routing}
+    ingress_replication: ${3:# Specifies mechanism for host reachability advertisement}
+    interface: ${4:# Interface name for the VXLAN Network Virtualization Endpoint}
+    multicast_group: ${5:# The multicast group (range) of the VNI}
+    multisite_ingress_replication: ${6:# Enables multisite ingress replication}
     peer_list: ${7:# Set the ingress-replication static peer list}
-    suppress_arp: ${8:# Suppress arp under layer 2 VNI}
-    suppress_arp_disable: ${9:# Overrides the global ARP suppression config}
-    state: ${10:# Determines whether the config should be present or not on the device}
-    multisite_ingress_replication: ${11:# Enables multisite ingress replication}
+    state: ${8:# Determines whether the config should be present or not on the device}
+    suppress_arp: ${9:# Suppress arp under layer 2 VNI}
+    suppress_arp_disable: ${10:# Overrides the global ARP suppression config}
+    vni: ${11:# ID of the Virtual Network Identifier}
   tags:
     - cisco
     - nxos

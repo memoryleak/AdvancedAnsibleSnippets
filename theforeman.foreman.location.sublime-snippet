@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Locations}
   theforeman.foreman.location:
-    name: ${2:# Name of the Location}
-    parent: ${3:# Title of a parent Location for nesting}
+    ignore_types: ${2:# List of resources types that will be automatically associated}
+    name: ${3:# Name of the Location}
     organizations: ${4:# List of organizations the location should be assigned to}
-    ignore_types: ${5:# List of resources types that will be automatically associated}
-    server_url: ${6:# URL of the Foreman server}
-    username: ${7:# Username accessing the Foreman server}
-    password: ${8:# Password of the user accessing the Foreman server}
-    validate_certs: ${9:# Whether or not to verify the TLS certificates of the Foreman server}
-    state: ${10:# State of the entity}
-    parameters: ${11:# Entity domain specific host parameters}
+    parameters: ${5:# Entity domain specific host parameters}
+    parent: ${6:# Title of a parent Location for nesting}
+    password: ${7:# Password of the user accessing the Foreman server}
+    server_url: ${8:# URL of the Foreman server}
+    state: ${9:# State of the entity}
+    username: ${10:# Username accessing the Foreman server}
+    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

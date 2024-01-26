@@ -1,21 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller applications}
   awx.awx.application:
-    name: ${2:# Name of the application}
-    new_name: ${3:# Setting this option will change the existing name (looked up via the name field}
-    description: ${4:# Description of the application}
-    authorization_grant_type: ${5:# The grant type the user must use for acquire tokens for this application}
-    client_type: ${6:# Set to public or confidential depending on how secure the client device is}
-    organization: ${7:# Name of organization for application}
-    redirect_uris: ${8:# Allowed urls list, space separated}
-    state: ${9:# Desired state of the resource}
-    skip_authorization: ${10:# Set True to skip authorization step for completely trusted applications}
-    controller_host: ${11:# URL to your Automation Platform Controller instance}
-    controller_username: ${12:# Username for your controller instance}
-    controller_password: ${13:# Password for your controller instance}
-    controller_oauthtoken: ${14:# The OAuth token to use}
-    validate_certs: ${15:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${16:# Path to the controller config file}
+    authorization_grant_type: ${2:# The grant type the user must use for acquire tokens for this application}
+    client_type: ${3:# Set to public or confidential depending on how secure the client device is}
+    controller_config_file: ${4:# Path to the controller config file}
+    controller_host: ${5:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${6:# The OAuth token to use}
+    controller_password: ${7:# Password for your controller instance}
+    controller_username: ${8:# Username for your controller instance}
+    description: ${9:# Description of the application}
+    name: ${10:# Name of the application}
+    new_name: ${11:# Setting this option will change the existing name (looked up via the name field}
+    organization: ${12:# Name, ID, or named URL of organization for application}
+    redirect_uris: ${13:# Allowed urls list, space separated}
+    request_timeout: ${14:# Specify the timeout Ansible should use in requests to the controller host}
+    skip_authorization: ${15:# Set True to skip authorization step for completely trusted applications}
+    state: ${16:# Desired state of the resource}
+    validate_certs: ${17:# Whether to allow insecure connections to AWX}
   tags:
     - awx
     - awx

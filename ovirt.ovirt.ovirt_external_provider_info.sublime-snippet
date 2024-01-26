@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieve information about one or more oVirt/RHV external providers}
   ovirt.ovirt.ovirt_external_provider_info:
-    type: ${2:# Type of the external provider}
-    name: ${3:# Name of the external provider, can be used as glob expression}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    fetch_nested: ${3:# If I(yes) the module will fetch additional data from the API}
     follow: ${4:# List of linked entities, which should be fetched along with the main entity}
-    fetch_nested: ${5:# If I(yes) the module will fetch additional data from the API}
+    name: ${5:# Name of the external provider, can be used as glob expression}
     nested_attributes: ${6:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${7:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    type: ${7:# Type of the external provider}
   tags:
     - ovirt
     - ovirt

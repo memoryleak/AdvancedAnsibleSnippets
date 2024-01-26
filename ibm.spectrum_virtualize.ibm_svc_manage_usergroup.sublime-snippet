@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module manages user group on IBM Spectrum Virtualize family storage systems}
   ibm.spectrum_virtualize.ibm_svc_manage_usergroup:
-    name: ${2:# Specifies the name of the user group}
-    state: ${3:# Creates or updates (C(present)) or removes (C(absent)) a user group}
-    clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
-    domain: ${5:# Domain for the Spectrum Virtualize storage system}
-    username: ${6:# REST API username for the Spectrum Virtualize storage system}
-    password: ${7:# REST API password for the Spectrum Virtualize storage system}
-    token: ${8:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    clustername: ${2:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${3:# Domain for the Spectrum Virtualize storage system}
+    log_path: ${4:# Path of debug log file}
+    name: ${5:# Specifies the name of the user group}
+    noownershipgroup: ${6:# Specifies that the usergroup is removed from the ownership group it belonged to}
+    ownershipgroup: ${7:# Specifies the name of the ownership group}
+    password: ${8:# REST API password for the Spectrum Virtualize storage system}
     role: ${9:# Specifies the role associated with all users that belong to this user group}
-    ownershipgroup: ${10:# Specifies the name of the ownership group}
-    noownershipgroup: ${11:# Specifies that the usergroup is removed from the ownership group it belonged to}
-    validate_certs: ${12:# Validates certification}
-    log_path: ${13:# Path of debug log file}
+    state: ${10:# Creates or updates (C(present)) or removes (C(absent)) a user group}
+    token: ${11:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    username: ${12:# REST API username for the Spectrum Virtualize storage system}
+    validate_certs: ${13:# Validates certification}
   tags:
     - ibm
     - spectrum_virtualize

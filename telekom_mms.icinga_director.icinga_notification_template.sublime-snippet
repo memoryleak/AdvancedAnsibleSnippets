@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage notification templates in Icinga2}
+  telekom_mms.icinga_director.icinga_notification_template:
+    append: ${2:# Do not overwrite the whole object but instead append the defined properties}
+    client_cert: ${3:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${4:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    command: ${5:# Check command definition}
+    force: ${6:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${7:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    http_agent: ${8:# Header to identify as, generally appears in web server logs}
+    notification_interval: ${9:# The notification interval (in seconds)}
+    object_name: ${10:# Name of the notification template}
+    period: ${11:# The name of a time period which determines when this notification should be triggered}
+    state: ${12:# Apply feature state}
+    states: ${13:# The host or service states you want to get notifications for}
+    times_begin: ${14:# First notification delay}
+    times_end: ${15:# Last notification}
+    types: ${16:# The state transition types you want to get notifications for}
+    url: ${17:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    url_password: ${18:# The password for use in HTTP basic authentication}
+    url_username: ${19:# The username for use in HTTP basic authentication}
+    use_gssapi: ${20:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${21:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    user_groups: ${22:# User Groups that should be notified by this notification}
+    users: ${23:# Users that should be notified by this notification}
+    validate_certs: ${24:# If V(no), SSL certificates will not be validated}
+    zone: ${25:# Set the zone}
+  tags:
+    - telekom_mms
+    - icinga_director
+    - icinga_notification_template]]></content>
+  <tabTrigger>telekom_mms.icinga_director.icinga_notification_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage notification templates in Icinga2</description>
+</snippet>

@@ -1,16 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Update Zabbix autoregistration}
   community.zabbix.zabbix_autoregister:
-    tls_accept: ${2:# Type of allowed incoming connections for autoregistration}
-    tls_psk_identity: ${3:# TLS connection uses this PSK identity string}
-    tls_psk: ${4:# TLS connection uses this PSK value}
-    server_url: ${5:# URL of Zabbix server, with protocol (http or https)}
-    login_user: ${6:# Zabbix user name}
-    login_password: ${7:# Zabbix user password}
-    http_login_user: ${8:# Basic Auth login}
-    http_login_password: ${9:# Basic Auth password}
-    timeout: ${10:# The timeout of API request (seconds)}
-    validate_certs: ${11:# If set to False, SSL certificates will not be validated}
+    http_login_password: ${2:# Basic Auth password}
+    http_login_user: ${3:# Basic Auth login}
+    tls_accept: ${4:# Type of allowed incoming connections for autoregistration}
+    tls_psk: ${5:# TLS connection uses this PSK value}
+    tls_psk_identity: ${6:# TLS connection uses this PSK identity string}
   tags:
     - community
     - zabbix

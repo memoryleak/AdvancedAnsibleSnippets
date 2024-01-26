@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage packages with I(pacman)}
   community.general.pacman:
-    name: ${2:# Name or list of names of the package(s) or file(s) to install, upgrade, or remove}
-    state: ${3:# Whether to install (C(present) or C(installed), C(latest)), or remove (C(absent) or C(removed)) a package}
+    executable: ${2:# Path of the binary to use}
+    extra_args: ${3:# Additional option to pass to pacman when enforcing O(state)}
     force: ${4:# When removing packages, forcefully remove them, without any checks}
-    remove_nosave: ${5:# When removing packages, do not save modified configuration files as C(}
-    executable: ${6:# Path of the binary to use}
-    extra_args: ${7:# Additional option to pass to pacman when enforcing C(state)}
-    update_cache: ${8:# Whether or not to refresh the master package lists}
-    update_cache_extra_args: ${9:# Additional option to pass to pacman when enforcing C(update_cache)}
-    upgrade: ${10:# Whether or not to upgrade the whole system}
-    upgrade_extra_args: ${11:# Additional option to pass to pacman when enforcing C(upgrade)}
-    reason: ${12:# The install reason to set for the packages}
-    reason_for: ${13:# Set the install reason for C(all) packages or only for C(new) packages}
+    name: ${5:# Name or list of names of the package(s) or file(s) to install, upgrade, or remove}
+    reason: ${6:# The install reason to set for the packages}
+    reason_for: ${7:# Set the install reason for V(all) packages or only for V(new) packages}
+    remove_nosave: ${8:# When removing packages, do not save modified configuration files as C(}
+    state: ${9:# Whether to install (V(present) or V(installed), V(latest)), or remove (V(absent) or V(removed)) a package}
+    update_cache: ${10:# Whether or not to refresh the master package lists}
+    update_cache_extra_args: ${11:# Additional option to pass to pacman when enforcing O(update_cache)}
+    upgrade: ${12:# Whether or not to upgrade the whole system}
+    upgrade_extra_args: ${13:# Additional option to pass to pacman when enforcing O(upgrade)}
   tags:
     - community
     - general

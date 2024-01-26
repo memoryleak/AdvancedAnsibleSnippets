@@ -1,36 +1,36 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module to manage hosts in oVirt/RHV}
   ovirt.ovirt.ovirt_host:
-    id: ${2:# ID of the host to manage}
-    name: ${3:# Name of the host to manage}
-    state: ${4:# State which should a host to be in after successful completion}
-    comment: ${5:# Description of the host}
-    timeout: ${6:# The amount of time in seconds the module should wait for the host to get into desired state}
-    cluster: ${7:# Name of the cluster, where host should be created}
-    address: ${8:# Host address}
-    password: ${9:# Password of the root}
-    ssh_port: ${10:# The host SSH port}
-    public_key: ${11:# I(True) if the public key should be used to authenticate to host}
-    enroll_certificate: ${12:# Enrolls the certificate of the host}
-    kdump_integration: ${13:# Specify if host will have enabled Kdump integration}
-    spm_priority: ${14:# SPM priority of the host}
-    override_iptables: ${15:# If True host iptables will be overridden by host deploy script}
-    force: ${16:# Indicates that the host should be removed even if it is non-responsive, or if it is part of a Gluster Storage cluster and has volume bricks on it}
-    override_display: ${17:# Override the display address of all VMs on this host with specified address}
-    kernel_params: ${18:# List of kernel boot parameters}
-    hosted_engine: ${19:# If I(deploy) it means this host should deploy also hosted engine components}
-    power_management_enabled: ${20:# Enable or disable power management of the host}
-    activate: ${21:# If C(state) is I(present) activate the host}
-    iscsi: ${22:# If C(state) is I(iscsidiscover) it means that the iscsi attribute is being used to discover targets}
-    check_upgrade: ${23:# If I(true) and C(state) is I(upgraded) run check for upgrade action before executing upgrade action}
-    reboot_after_upgrade: ${24:# If I(true) and C(state) is I(upgraded) reboot host after successful upgrade}
-    reboot_after_installation: ${25:# If I(true) reboot host after successful installation}
-    vgpu_placement: ${26:# If I(consolidated), each vGPU is placed on the first physical card with available space}
-    wait: ${27:# C(yes) if the module should wait for the entity to get into desired state}
-    fetch_nested: ${28:# If I(True) the module will fetch additional data from the API}
-    nested_attributes: ${29:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${30:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
-    poll_interval: ${31:# Number of the seconds the module waits until another poll request on entity status is sent}
+    activate: ${2:# If C(state) is I(present) activate the host}
+    address: ${3:# Host address}
+    auth: ${4:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    check_upgrade: ${5:# If I(true) and C(state) is I(upgraded) run check for upgrade action before executing upgrade action}
+    cluster: ${6:# Name of the cluster, where host should be created}
+    comment: ${7:# Description of the host}
+    enroll_certificate: ${8:# Enrolls the certificate of the host}
+    fetch_nested: ${9:# If I(True) the module will fetch additional data from the API}
+    force: ${10:# Indicates that the host should be removed even if it is non-responsive, or if it is part of a Gluster Storage cluster and has volume bricks on it}
+    hosted_engine: ${11:# If I(deploy) it means this host should deploy also hosted engine components}
+    id: ${12:# ID of the host to manage}
+    iscsi: ${13:# If C(state) is I(iscsidiscover) it means that the iscsi attribute is being used to discover targets}
+    kdump_integration: ${14:# Specify if host will have enabled Kdump integration}
+    kernel_params: ${15:# List of kernel boot parameters}
+    name: ${16:# Name of the host to manage}
+    nested_attributes: ${17:# Specifies list of the attributes which should be fetched from the API}
+    override_display: ${18:# Override the display address of all VMs on this host with specified address}
+    override_iptables: ${19:# If True host iptables will be overridden by host deploy script}
+    password: ${20:# Password of the root}
+    poll_interval: ${21:# Number of the seconds the module waits until another poll request on entity status is sent}
+    power_management_enabled: ${22:# Enable or disable power management of the host}
+    public_key: ${23:# I(True) if the public key should be used to authenticate to host}
+    reboot_after_installation: ${24:# If I(true) reboot host after successful installation}
+    reboot_after_upgrade: ${25:# If I(true) and C(state) is I(upgraded) reboot host after successful upgrade}
+    spm_priority: ${26:# SPM priority of the host}
+    ssh_port: ${27:# The host SSH port}
+    state: ${28:# State which should a host to be in after successful completion}
+    timeout: ${29:# The amount of time in seconds the module should wait for the host to get into desired state}
+    vgpu_placement: ${30:# If I(consolidated), each vGPU is placed on the first physical card with available space}
+    wait: ${31:# C(yes) if the module should wait for the entity to get into desired state}
   tags:
     - ovirt
     - ovirt

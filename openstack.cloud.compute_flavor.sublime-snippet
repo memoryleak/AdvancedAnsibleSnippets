@@ -1,32 +1,32 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage OpenStack compute flavors}
   openstack.cloud.compute_flavor:
-    state: ${2:# Indicate desired state of the resource}
-    name: ${3:# Flavor name}
-    ram: ${4:# Amount of memory, in MB}
-    vcpus: ${5:# Number of virtual CPUs}
-    disk: ${6:# Size of local disk, in GB}
-    ephemeral: ${7:# Ephemeral space size, in GB}
-    swap: ${8:# Swap space size, in MB}
-    rxtx_factor: ${9:# RX/TX factor}
-    is_public: ${10:# Make flavor accessible to the public}
-    flavorid: ${11:# ID for the flavor}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    description: ${9:# Description of the flavor}
+    disk: ${10:# Size of local disk, in GB}
+    ephemeral: ${11:# Ephemeral space size, in GB}
     extra_specs: ${12:# Metadata dictionary}
-    cloud: ${13:# Named cloud or cloud config to operate against}
-    auth: ${14:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${15:# Name of the auth plugin to use}
-    region_name: ${16:# Name of the region}
-    wait: ${17:# Should ansible wait until the requested resource is complete}
-    timeout: ${18:# How long should ansible wait for the requested resource}
-    api_timeout: ${19:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${20:# Whether or not SSL API requests should be verified}
-    ca_cert: ${21:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${22:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${23:# A path to a client key to use as part of the SSL transaction}
-    interface: ${24:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${25:# Ignored}
-    sdk_log_path: ${26:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${27:# Log level of the OpenStackSDK}
+    id: ${13:# ID for the flavor}
+    interface: ${14:# Endpoint URL type to fetch from the service catalog}
+    is_public: ${15:# Make flavor accessible to the public}
+    name: ${16:# Flavor name}
+    ram: ${17:# Amount of memory, in MB}
+    region_name: ${18:# Name of the region}
+    rxtx_factor: ${19:# RX/TX factor}
+    sdk_log_level: ${20:# Log level of the OpenStackSDK}
+    sdk_log_path: ${21:# Path to the logfile of the OpenStackSDK}
+    state: ${22:# Indicate desired state of the resource}
+    swap: ${23:# Swap space size, in MB}
+    timeout: ${24:# How long should ansible wait for the requested resource}
+    validate_certs: ${25:# Whether or not SSL API requests should be verified}
+    vcpus: ${26:# Number of virtual CPUs}
+    wait: ${27:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud

@@ -1,33 +1,36 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Add/Delete a listener for a load balancer from OpenStack Cloud}
+  <content><![CDATA[- name: ${1:Manage load-balancer listener in a OpenStack cloud}
   openstack.cloud.lb_listener:
-    name: ${2:# Name that has to be given to the listener}
-    state: ${3:# Should the resource be present or absent}
-    loadbalancer: ${4:# The name or id of the load balancer that this listener belongs to}
-    protocol: ${5:# The protocol for the listener}
-    protocol_port: ${6:# The protocol port number for the listener}
-    timeout_client_data: ${7:# Client inactivity timeout in milliseconds}
-    timeout_member_data: ${8:# Member inactivity timeout in milliseconds}
-    wait: ${9:# If the module should wait for the load balancer to be ACTIVE}
-    timeout: ${10:# The amount of time the module should wait for the load balancer to get into ACTIVE state}
-    cloud: ${11:# Named cloud or cloud config to operate against}
-    auth: ${12:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${13:# Name of the auth plugin to use}
-    region_name: ${14:# Name of the region}
-    api_timeout: ${15:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${16:# Whether or not SSL API requests should be verified}
-    ca_cert: ${17:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${18:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${19:# A path to a client key to use as part of the SSL transaction}
-    interface: ${20:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${21:# Ignored}
-    sdk_log_path: ${22:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${23:# Log level of the OpenStackSDK}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    default_tls_container_ref: ${9:# A URI to a key manager service secrets container with TLS secrets}
+    description: ${10:# A human-readable description for the load-balancer listener}
+    interface: ${11:# Endpoint URL type to fetch from the service catalog}
+    is_admin_state_up: ${12:# The administrative state of the listener, which is up or down}
+    load_balancer: ${13:# The name or id of the load-balancer that this listener belongs to}
+    name: ${14:# Name that has to be given to the listener}
+    protocol: ${15:# The protocol for the listener}
+    protocol_port: ${16:# The protocol port number for the listener}
+    region_name: ${17:# Name of the region}
+    sdk_log_level: ${18:# Log level of the OpenStackSDK}
+    sdk_log_path: ${19:# Path to the logfile of the OpenStackSDK}
+    sni_container_refs: ${20:# A list of URIs to the key manager service secrets containers with TLS secrets}
+    state: ${21:# Should the resource be present or absent}
+    timeout: ${22:# How long should ansible wait for the requested resource}
+    timeout_client_data: ${23:# Client inactivity timeout in milliseconds}
+    timeout_member_data: ${24:# Member inactivity timeout in milliseconds}
+    validate_certs: ${25:# Whether or not SSL API requests should be verified}
+    wait: ${26:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud
     - lb_listener]]></content>
   <tabTrigger>openstack.cloud.lb_listener</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Add/Delete a listener for a load balancer from OpenStack Cloud</description>
+  <description>Manage load-balancer listener in a OpenStack cloud</description>
 </snippet>

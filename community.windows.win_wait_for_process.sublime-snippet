@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Waits for a process to exist or not exist before continuing}
   community.windows.win_wait_for_process:
-    process_name_exact: ${2:# The name of the process(es) for which to wait}
-    process_name_pattern: ${3:# RegEx pattern matching desired process(es)}
-    sleep: ${4:# Number of seconds to sleep between checks}
-    process_min_count: ${5:# Minimum number of process matching the supplied pattern to satisfy C(present) condition}
-    pid: ${6:# The PID of the process}
-    owner: ${7:# The owner of the process}
-    pre_wait_delay: ${8:# Seconds to wait before checking processes}
-    post_wait_delay: ${9:# Seconds to wait after checking for processes}
+    owner: ${2:# The owner of the process}
+    pid: ${3:# The PID of the process}
+    post_wait_delay: ${4:# Seconds to wait after checking for processes}
+    pre_wait_delay: ${5:# Seconds to wait before checking processes}
+    process_min_count: ${6:# Minimum number of process matching the supplied pattern to satisfy C(present) condition}
+    process_name_exact: ${7:# The name of the process(es) for which to wait}
+    process_name_pattern: ${8:# RegEx pattern matching desired process(es)}
+    sleep: ${9:# Number of seconds to sleep between checks}
     state: ${10:# When checking for a running process C(present) will block execution until the process exists, or until the timeout has been reached}
     timeout: ${11:# The maximum number of seconds to wait for a for a process to start or stop before erroring out}
   tags:

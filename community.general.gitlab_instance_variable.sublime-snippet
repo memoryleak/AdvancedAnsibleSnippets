@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates, updates, or deletes GitLab instance variables}
+  community.general.gitlab_instance_variable:
+    api_job_token: ${2:# GitLab CI job token for logging in}
+    api_oauth_token: ${3:# GitLab OAuth token for logging in}
+    api_password: ${4:# The password to use for authentication against the API}
+    api_token: ${5:# GitLab access token with API permissions}
+    api_url: ${6:# The resolvable endpoint for the API}
+    api_username: ${7:# The username to use for authentication against the API}
+    ca_path: ${8:# The CA certificates bundle to use to verify GitLab server certificate}
+    purge: ${9:# When set to V(true), delete all variables which are not mentioned in the task}
+    state: ${10:# Create or delete instance variable}
+    validate_certs: ${11:# Whether or not to validate SSL certs when supplying a HTTPS endpoint}
+    variables: ${12:# A list of dictionaries that represents CI/CD variables}
+  tags:
+    - community
+    - general
+    - gitlab_instance_variable]]></content>
+  <tabTrigger>community.general.gitlab_instance_variable</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates, updates, or deletes GitLab instance variables</description>
+</snippet>

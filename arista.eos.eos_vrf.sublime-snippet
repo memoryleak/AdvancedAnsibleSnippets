@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage VRFs on Arista EOS network devices}
   arista.eos.eos_vrf:
-    name: ${2:# Name of the VRF}
-    rd: ${3:# Route distinguisher of the VRF}
-    interfaces: ${4:# Identifies the set of interfaces that should be configured in the VRF}
-    associated_interfaces: ${5:# This is a intent option and checks the operational state of the for given vrf C(name) for associated interfaces}
-    aggregate: ${6:# List of VRFs instances}
+    aggregate: ${2:# List of VRFs instances}
+    associated_interfaces: ${3:# This is a intent option and checks the operational state of the for given vrf C(name) for associated interfaces}
+    delay: ${4:# Time in seconds to wait before checking for the operational state on remote device}
+    interfaces: ${5:# Identifies the set of interfaces that should be configured in the VRF}
+    name: ${6:# Name of the VRF}
     purge: ${7:# Purge VRFs not defined in the I(aggregate) parameter}
-    delay: ${8:# Time in seconds to wait before checking for the operational state on remote device}
+    rd: ${8:# Route distinguisher of the VRF}
     state: ${9:# State of the VRF configuration}
   tags:
     - arista

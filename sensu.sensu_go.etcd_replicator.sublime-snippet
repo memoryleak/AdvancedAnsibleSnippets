@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Sensu Go etcd replicators}
   sensu.sensu_go.etcd_replicator:
-    ca_cert: ${2:# Path to an the PEM-format CA certificate to use for TLS client authentication}
-    cert: ${3:# Path to the PEM-format certificate to use for TLS client authentication}
-    key: ${4:# Path to the PEM-format key file associated with the cert to use for TLS client authentication}
-    insecure: ${5:# Disable transport security}
-    url: ${6:# Destination cluster URLs}
-    api_version: ${7:# Sensu API version of the resource to replicate}
-    resource: ${8:# Name of the resource to replicate}
+    api_version: ${2:# Sensu API version of the resource to replicate}
+    auth: ${3:# Authentication parameters}
+    ca_cert: ${4:# Path to an the PEM-format CA certificate to use for TLS client authentication}
+    cert: ${5:# Path to the PEM-format certificate to use for TLS client authentication}
+    insecure: ${6:# Disable transport security}
+    key: ${7:# Path to the PEM-format key file associated with the cert to use for TLS client authentication}
+    name: ${8:# The Sensu resource's name}
     namespace: ${9:# Namespace to constrain replication to}
     replication_interval: ${10:# Interval at which the resource will be replicated}
-    auth: ${11:# Authentication parameters}
-    name: ${12:# The Sensu resource's name}
-    state: ${13:# Target state of the Sensu object}
+    resource: ${11:# Name of the resource to replicate}
+    state: ${12:# Target state of the Sensu object}
+    url: ${13:# Destination cluster URLs}
   tags:
     - sensu
     - sensu_go

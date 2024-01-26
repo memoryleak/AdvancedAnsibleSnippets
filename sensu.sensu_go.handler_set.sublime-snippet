@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Sensu handler set}
   sensu.sensu_go.handler_set:
-    handlers: ${2:# List of Sensu event handlers (names) to use for events using the handler set}
+    annotations: ${2:# Custom metadata fields with fewer restrictions, as key/value pairs}
     auth: ${3:# Authentication parameters}
-    name: ${4:# The Sensu resource's name}
-    namespace: ${5:# RBAC namespace to operate in}
-    state: ${6:# Target state of the Sensu object}
-    labels: ${7:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
-    annotations: ${8:# Custom metadata fields with fewer restrictions, as key/value pairs}
+    handlers: ${4:# List of Sensu event handlers (names) to use for events using the handler set}
+    labels: ${5:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
+    name: ${6:# The Sensu resource's name}
+    namespace: ${7:# RBAC namespace to operate in}
+    state: ${8:# Target state of the Sensu object}
   tags:
     - sensu
     - sensu_go

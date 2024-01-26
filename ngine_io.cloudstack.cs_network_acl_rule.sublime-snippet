@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages network access control list (ACL) rules on Apache CloudStack based clouds}
   ngine_io.cloudstack.cs_network_acl_rule:
-    network_acl: ${2:# Name of the network ACL}
-    cidrs: ${3:# CIDRs of the rule}
-    rule_position: ${4:# The position of the network ACL rule}
-    protocol: ${5:# Protocol of the rule}
-    protocol_number: ${6:# Protocol number from 1 to 256 required if I(protocol=by_number)}
-    start_port: ${7:# Start port for this rule}
-    end_port: ${8:# End port for this rule}
-    icmp_type: ${9:# Type of the icmp message being sent}
-    icmp_code: ${10:# Error code for this icmp message}
-    vpc: ${11:# VPC the network ACL is related to}
-    traffic_type: ${12:# Traffic type of the rule}
-    action_policy: ${13:# Action policy of the rule}
-    tags: ${14:# List of tags}
-    domain: ${15:# Domain the VPC is related to}
-    account: ${16:# Account the VPC is related to}
+    account: ${2:# Account the VPC is related to}
+    action_policy: ${3:# Action policy of the rule}
+    api_http_method: ${4:# HTTP method used to query the API endpoint}
+    api_key: ${5:# API key of the CloudStack API}
+    api_secret: ${6:# Secret key of the CloudStack API}
+    api_timeout: ${7:# HTTP timeout in seconds}
+    api_url: ${8:# URL of the CloudStack API e}
+    api_verify_ssl_cert: ${9:# Verify CA authority cert file}
+    cidrs: ${10:# CIDRs of the rule}
+    domain: ${11:# Domain the VPC is related to}
+    end_port: ${12:# End port for this rule}
+    icmp_code: ${13:# Error code for this icmp message}
+    icmp_type: ${14:# Type of the icmp message being sent}
+    network_acl: ${15:# Name of the network ACL}
+    poll_async: ${16:# Poll async jobs until job has finished}
     project: ${17:# Name of the project the VPC is related to}
-    zone: ${18:# Name of the zone the VPC related to}
-    state: ${19:# State of the network ACL rule}
-    poll_async: ${20:# Poll async jobs until job has finished}
-    api_key: ${21:# API key of the CloudStack API}
-    api_secret: ${22:# Secret key of the CloudStack API}
-    api_url: ${23:# URL of the CloudStack API e}
-    api_http_method: ${24:# HTTP method used to query the API endpoint}
-    api_timeout: ${25:# HTTP timeout in seconds}
-    api_verify_ssl_cert: ${26:# Verify CA authority cert file}
+    protocol: ${18:# Protocol of the rule}
+    protocol_number: ${19:# Protocol number from 1 to 256 required if I(protocol=by_number)}
+    rule_position: ${20:# The position of the network ACL rule}
+    start_port: ${21:# Start port for this rule}
+    state: ${22:# State of the network ACL rule}
+    tags: ${23:# List of tags}
+    traffic_type: ${24:# Traffic type of the rule}
+    vpc: ${25:# VPC the network ACL is related to}
+    zone: ${26:# Name of the zone the VPC related to}
   tags:
     - ngine_io
     - cloudstack

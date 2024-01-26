@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add or remove an apt key}
   ansible.builtin.apt_key:
-    id: ${2:# The identifier of the key}
-    data: ${3:# The keyfile contents to add to the keyring}
-    file: ${4:# The path to a keyfile on the remote server to add to the keyring}
+    data: ${2:# The keyfile contents to add to the keyring}
+    file: ${3:# The path to a keyfile on the remote server to add to the keyring}
+    id: ${4:# The identifier of the key}
     keyring: ${5:# The full path to specific keyring file in C(/etc/apt/trusted}
-    url: ${6:# The URL to retrieve key from}
-    keyserver: ${7:# The keyserver to retrieve key from}
-    state: ${8:# Ensures that the key is present (added) or absent (revoked)}
-    validate_certs: ${9:# If C(false), SSL certificates for the target url will not be validated}
+    keyserver: ${6:# The keyserver to retrieve key from}
+    state: ${7:# Ensures that the key is present (added) or absent (revoked)}
+    url: ${8:# The URL to retrieve key from}
+    validate_certs: ${9:# If V(false), SSL certificates for the target url will not be validated}
   tags:
     - apt_key]]></content>
   <tabTrigger>ansible.builtin.apt_key</tabTrigger>

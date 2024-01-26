@@ -2,29 +2,29 @@
   <content><![CDATA[- name: ${1:Manage FreeIPA users}
   community.general.ipa_user:
     displayname: ${2:# Display name}
-    update_password: ${3:# Set password for a user}
+    gidnumber: ${3:# Posix Group ID}
     givenname: ${4:# First name}
-    krbpasswordexpiration: ${5:# Date at which the user password will expire}
-    loginshell: ${6:# Login shell}
-    mail: ${7:# List of mail addresses assigned to the user}
-    password: ${8:# Password for a user}
-    sn: ${9:# Surname}
-    sshpubkey: ${10:# List of public SSH key}
-    state: ${11:# State to ensure}
-    telephonenumber: ${12:# List of telephone numbers assigned to the user}
-    title: ${13:# Title}
-    uid: ${14:# uid of the user}
-    uidnumber: ${15:# Account Settings UID/Posix User ID number}
-    gidnumber: ${16:# Posix Group ID}
-    homedirectory: ${17:# Default home directory of the user}
-    userauthtype: ${18:# The authentication type to use for the user}
-    ipa_port: ${19:# Port of FreeIPA / IPA server}
-    ipa_host: ${20:# IP or hostname of IPA server}
-    ipa_user: ${21:# Administrative account used on IPA server}
-    ipa_pass: ${22:# Password of administrative user}
-    ipa_prot: ${23:# Protocol used by IPA server}
-    validate_certs: ${24:# This only applies if C(ipa_prot) is I(https)}
-    ipa_timeout: ${25:# Specifies idle timeout (in seconds) for the connection}
+    homedirectory: ${5:# Default home directory of the user}
+    ipa_host: ${6:# IP or hostname of IPA server}
+    ipa_pass: ${7:# Password of administrative user}
+    ipa_port: ${8:# Port of FreeIPA / IPA server}
+    ipa_prot: ${9:# Protocol used by IPA server}
+    ipa_timeout: ${10:# Specifies idle timeout (in seconds) for the connection}
+    ipa_user: ${11:# Administrative account used on IPA server}
+    krbpasswordexpiration: ${12:# Date at which the user password will expire}
+    loginshell: ${13:# Login shell}
+    mail: ${14:# List of mail addresses assigned to the user}
+    password: ${15:# Password for a user}
+    sn: ${16:# Surname}
+    sshpubkey: ${17:# List of public SSH key}
+    state: ${18:# State to ensure}
+    telephonenumber: ${19:# List of telephone numbers assigned to the user}
+    title: ${20:# Title}
+    uid: ${21:# uid of the user}
+    uidnumber: ${22:# Account Settings UID/Posix User ID number}
+    update_password: ${23:# Set password for a user}
+    userauthtype: ${24:# The authentication type to use for the user}
+    validate_certs: ${25:# This only applies if O(ipa_prot) is V(https)}
   tags:
     - community
     - general

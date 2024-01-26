@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage of the posix group}
   community.general.udm_group:
-    state: ${2:# Whether the group is present or not}
+    description: ${2:# Group description}
     name: ${3:# Name of the posix group}
-    description: ${4:# Group description}
+    ou: ${4:# LDAP OU, e}
     position: ${5:# define the whole ldap position of the group, e}
-    ou: ${6:# LDAP OU, e}
+    state: ${6:# Whether the group is present or not}
     subpath: ${7:# Subpath inside the OU, e}
   tags:
     - community

@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configuration of alerts in ManageIQ}
   community.general.manageiq_alerts:
-    state: ${2:# absent - alert should not exist,}
-    description: ${3:# The unique alert description in ManageIQ}
-    resource_type: ${4:# The entity type for the alert in ManageIQ}
+    description: ${2:# The unique alert description in ManageIQ}
+    enabled: ${3:# Enable or disable the alert}
+    expression: ${4:# The alert expression for ManageIQ}
     expression_type: ${5:# Expression type}
-    expression: ${6:# The alert expression for ManageIQ}
-    enabled: ${7:# Enable or disable the alert}
-    options: ${8:# Additional alert options, such as notification type and frequency}
-    manageiq_connection: ${9:# ManageIQ connection configuration information}
+    manageiq_connection: ${6:# ManageIQ connection configuration information}
+    options: ${7:# Additional alert options, such as notification type and frequency}
+    resource_type: ${8:# The entity type for the alert in ManageIQ}
+    state: ${9:# absent - alert should not exist,}
   tags:
     - community
     - general

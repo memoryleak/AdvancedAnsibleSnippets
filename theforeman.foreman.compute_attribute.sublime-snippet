@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Compute Attributes}
   theforeman.foreman.compute_attribute:
-    compute_resource: ${2:# Name of compute resource}
-    compute_profile: ${3:# Name of compute profile}
-    vm_attrs: ${4:# Hash containing the data of vm_attrs}
+    compute_profile: ${2:# Name of compute profile}
+    compute_resource: ${3:# Name of compute resource}
+    password: ${4:# Password of the user accessing the Foreman server}
     server_url: ${5:# URL of the Foreman server}
-    username: ${6:# Username accessing the Foreman server}
-    password: ${7:# Password of the user accessing the Foreman server}
+    state: ${6:# State of the entity}
+    username: ${7:# Username accessing the Foreman server}
     validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
-    state: ${9:# State of the entity}
+    vm_attrs: ${9:# Hash containing the data of vm_attrs}
   tags:
     - theforeman
     - foreman

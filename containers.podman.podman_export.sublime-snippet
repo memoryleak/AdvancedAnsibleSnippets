@@ -1,10 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Export a podman container}
   containers.podman.podman_export:
-    dest: ${2:# Path to export container to}
-    container: ${3:# Container to export}
-    force: ${4:# Force saving to file even if it exists}
-    executable: ${5:# Path to C(podman) executable if it is not in the C($PATH) on the machine running C(podman)}
+    container: ${2:# Container to export}
+    dest: ${3:# Path to export container to}
+    executable: ${4:# Path to C(podman) executable if it is not in the C($PATH) on the machine running C(podman)}
+    force: ${5:# Force saving to file even if it exists}
+    volume: ${6:# Volume to export}
   tags:
     - containers
     - podman

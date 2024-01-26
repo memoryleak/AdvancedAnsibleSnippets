@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage users in existing Amazon MQ broker}
+  community.aws.mq_user:
+    access_key: ${2:# AWS access key ID}
+    allow_pw_update: ${3:# When I(allow_pw_update=true) and I(password) is set, the password will always be updated for the user}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    broker_id: ${6:# The ID of the MQ broker to work on}
+    console_access: ${7:# Whether the user can access the MQ Console}
+    debug_botocore_endpoint_logs: ${8:# Use a C(botocore}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
+    groups: ${10:# Set group memberships for user}
+    password: ${11:# Set password for user}
+    profile: ${12:# A named AWS profile to use for authentication}
+    region: ${13:# The AWS region to use}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    state: ${16:# Create/Update vs Delete of user}
+    username: ${17:# The name of the user to create/update/delete}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+  tags:
+    - community
+    - aws
+    - mq_user]]></content>
+  <tabTrigger>community.aws.mq_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage users in existing Amazon MQ broker</description>
+</snippet>

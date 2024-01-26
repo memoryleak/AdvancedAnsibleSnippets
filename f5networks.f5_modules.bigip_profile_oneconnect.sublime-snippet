@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage OneConnect profiles on a BIG-IP}
   f5networks.f5_modules.bigip_profile_oneconnect:
-    name: ${2:# Specifies the name of the OneConnect profile}
-    parent: ${3:# Specifies the profile from which this profile inherits settings}
-    source_mask: ${4:# Specifies a value the system applies to the source address to determine its eligibility for reuse}
-    description: ${5:# Description of the profile}
-    maximum_size: ${6:# Specifies the maximum number of connections the system holds in the connection reuse pool}
-    maximum_age: ${7:# Specifies the maximum number of seconds allowed for a connection in the connection reuse pool}
-    maximum_reuse: ${8:# Specifies the maximum number of times that a server-side connection can be reused}
-    idle_timeout_override: ${9:# Specifies the number of seconds a connection is idle before the connection flow is eligible for deletion}
-    limit_type: ${10:# When C(none), simultaneous in-flight requests and responses over TCP connections to a pool member are counted toward the limit}
-    share_pools: ${11:# Indicates connections may be shared not only within a virtual server, but also among similar virtual servers}
-    partition: ${12:# Device partition to manage resources on}
-    state: ${13:# When C(present), ensures the profile exists}
-    provider: ${14:# A dict object containing connection details}
+    description: ${2:# Description of the profile}
+    idle_timeout_override: ${3:# Specifies the number of seconds a connection is idle before the connection flow is eligible for deletion}
+    limit_type: ${4:# When C(none), simultaneous in-flight requests and responses over TCP connections to a pool member are counted toward the limit}
+    maximum_age: ${5:# Specifies the maximum number of seconds allowed for a connection in the connection reuse pool}
+    maximum_reuse: ${6:# Specifies the maximum number of times that a server-side connection can be reused}
+    maximum_size: ${7:# Specifies the maximum number of connections the system holds in the connection reuse pool}
+    name: ${8:# Specifies the name of the OneConnect profile}
+    parent: ${9:# Specifies the profile from which this profile inherits settings}
+    partition: ${10:# Device partition to manage resources on}
+    provider: ${11:# A dict object containing connection details}
+    share_pools: ${12:# Indicates connections may be shared not only within a virtual server, but also among similar virtual servers}
+    source_mask: ${13:# Specifies a value the system applies to the source address to determine its eligibility for reuse}
+    state: ${14:# When C(present), ensures the profile exists}
   tags:
     - f5networks
     - f5_modules

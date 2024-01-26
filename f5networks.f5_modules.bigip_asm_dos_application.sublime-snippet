@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage application settings for a DOS profile}
   f5networks.f5_modules.bigip_asm_dos_application:
-    profile: ${2:# Specifies the name of the profile to manage application settings in}
-    rtbh_duration: ${3:# Specifies the duration of the RTBH BGP route advertisement, in seconds}
-    rtbh_enable: ${4:# Specifies whether to enable Remote Triggered Black Hole C(RTBH) of attacking IPs by advertising BGP routes}
-    scrubbing_duration: ${5:# Specifies the duration of the Traffic Scrubbing BGP route advertisement, in seconds}
-    scrubbing_enable: ${6:# Specifies whether to enable Traffic Scrubbing during attacks by advertising BGP routes}
-    single_page_application: ${7:# Specifies, when C(yes), that the system supports a Single Page Applications}
-    trigger_irule: ${8:# Specifies, when C(yes), that the system activates an Application DoS iRule event}
-    geolocations: ${9:# Manages the geolocations countries whitelist, blacklist}
-    heavy_urls: ${10:# Manages Heavy URL protection}
-    mobile_detection: ${11:# Configures detection of mobile applications built with the Anti-Bot Mobile SDK and defines how requests from these mobile application clients are handled}
-    partition: ${12:# Device partition to manage resources on}
+    geolocations: ${2:# Manages the geolocations countries whitelist, blacklist}
+    heavy_urls: ${3:# Manages Heavy URL protection}
+    mobile_detection: ${4:# Configures detection of mobile applications built with the Anti-Bot Mobile SDK and defines how requests from these mobile application clients are handled}
+    partition: ${5:# Device partition to manage resources on}
+    profile: ${6:# Specifies the name of the profile to manage application settings in}
+    provider: ${7:# A dict object containing connection details}
+    rtbh_duration: ${8:# Specifies the duration of the RTBH BGP route advertisement, in seconds}
+    rtbh_enable: ${9:# Specifies whether to enable Remote Triggered Black Hole C(RTBH) of attacking IPs by advertising BGP routes}
+    scrubbing_duration: ${10:# Specifies the duration of the Traffic Scrubbing BGP route advertisement, in seconds}
+    scrubbing_enable: ${11:# Specifies whether to enable Traffic Scrubbing during attacks by advertising BGP routes}
+    single_page_application: ${12:# When C(true), specifies the system supports a Single Page Applications}
     state: ${13:# When C(state) is C(present), ensures that the Application object exists}
-    provider: ${14:# A dict object containing connection details}
+    trigger_irule: ${14:# When C(true), specifies the system activates an Application DoS iRule event}
   tags:
     - f5networks
     - f5_modules

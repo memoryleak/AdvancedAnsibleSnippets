@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages AAA server global configuration}
   cisco.nxos.nxos_aaa_server:
-    server_type: ${2:# The server type is either radius or tacacs}
-    global_key: ${3:# Global AAA shared secret or keyword 'default'}
+    deadtime: ${2:# Duration for which a non-reachable AAA server is skipped, in minutes or keyword 'default}
+    directed_request: ${3:# Enables direct authentication requests to AAA server or keyword 'default' Device default is disabled}
     encrypt_type: ${4:# The state of encryption applied to the entered global key}
-    deadtime: ${5:# Duration for which a non-reachable AAA server is skipped, in minutes or keyword 'default}
+    global_key: ${5:# Global AAA shared secret or keyword 'default'}
     server_timeout: ${6:# Global AAA server timeout period, in seconds or keyword 'default}
-    directed_request: ${7:# Enables direct authentication requests to AAA server or keyword 'default' Device default is disabled}
+    server_type: ${7:# The server type is either radius or tacacs}
     state: ${8:# Manage the state of the resource}
   tags:
     - cisco

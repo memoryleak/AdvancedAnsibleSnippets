@@ -1,35 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of Gslb Avi RESTful Object}
   community.network.avi_gslb:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
-    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    async_interval: ${5:# Frequency with which messages are propagated to vs mgr}
-    clear_on_max_retries: ${6:# Max retries after which the remote site is treated as a fresh start}
-    client_ip_addr_group: ${7:# Group to specify if the client ip addresses are public or private}
-    description: ${8:# User defined description for the object}
-    dns_configs: ${9:# Sub domain configuration for the gslb}
-    is_federated: ${10:# This field indicates that this object is replicated across gslb federation}
-    leader_cluster_uuid: ${11:# Mark this site as leader of gslb configuration}
-    maintenance_mode: ${12:# This field disables the configuration operations on the leader for all federated objects}
-    name: ${13:# Name for the gslb object}
-    send_interval: ${14:# Frequency with which group members communicate}
-    send_interval_prior_to_maintenance_mode: ${15:# The user can specify a send-interval while entering maintenance mode}
-    sites: ${16:# Select avi site member belonging to this gslb}
-    tenant_ref: ${17:# It is a reference to an object of type tenant}
-    third_party_sites: ${18:# Third party site member belonging to this gslb}
-    url: ${19:# Avi controller URL of the object}
-    uuid: ${20:# Uuid of the gslb object}
-    view_id: ${21:# The view-id is used in change-leader mode to differentiate partitioned groups while they have the same gslb namespace}
-    controller: ${22:# IP address or hostname of the controller}
-    username: ${23:# Username used for accessing Avi controller}
-    password: ${24:# Password of Avi user in Avi controller}
-    tenant: ${25:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${26:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${27:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${28:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${29:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${30:# It disables avi session information to be cached as a fact}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
+    async_interval: ${4:# Frequency with which messages are propagated to vs mgr}
+    avi_api_patch_op: ${5:# Patch operation to use when using avi_api_update_method as patch}
+    avi_api_update_method: ${6:# Default method for object update is HTTP PUT}
+    avi_credentials: ${7:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${8:# It disables avi session information to be cached as a fact}
+    clear_on_max_retries: ${9:# Max retries after which the remote site is treated as a fresh start}
+    client_ip_addr_group: ${10:# Group to specify if the client ip addresses are public or private}
+    controller: ${11:# IP address or hostname of the controller}
+    description: ${12:# User defined description for the object}
+    dns_configs: ${13:# Sub domain configuration for the gslb}
+    is_federated: ${14:# This field indicates that this object is replicated across gslb federation}
+    leader_cluster_uuid: ${15:# Mark this site as leader of gslb configuration}
+    maintenance_mode: ${16:# This field disables the configuration operations on the leader for all federated objects}
+    name: ${17:# Name for the gslb object}
+    password: ${18:# Password of Avi user in Avi controller}
+    send_interval: ${19:# Frequency with which group members communicate}
+    send_interval_prior_to_maintenance_mode: ${20:# The user can specify a send-interval while entering maintenance mode}
+    sites: ${21:# Select avi site member belonging to this gslb}
+    state: ${22:# The state that should be applied on the entity}
+    tenant: ${23:# Name of tenant used for all Avi API calls and context of object}
+    tenant_ref: ${24:# It is a reference to an object of type tenant}
+    tenant_uuid: ${25:# UUID of tenant used for all Avi API calls and context of object}
+    third_party_sites: ${26:# Third party site member belonging to this gslb}
+    url: ${27:# Avi controller URL of the object}
+    username: ${28:# Username used for accessing Avi controller}
+    uuid: ${29:# Uuid of the gslb object}
+    view_id: ${30:# The view-id is used in change-leader mode to differentiate partitioned groups while they have the same gslb namespace}
   tags:
     - community
     - network

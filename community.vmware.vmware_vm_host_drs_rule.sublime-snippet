@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates vm/host group in a given cluster}
   community.vmware.vmware_vm_host_drs_rule:
-    affinity_rule: ${2:# If set to C(True), the DRS rule will be an Affinity rule}
-    datacenter: ${3:# Datacenter to search for given cluster}
-    cluster_name: ${4:# Cluster to create VM-Host rule}
+    affinity_rule: ${2:# If set to V(true), the DRS rule will be an Affinity rule}
+    cluster_name: ${3:# Cluster to create VM-Host rule}
+    datacenter: ${4:# Datacenter to search for given cluster}
     drs_rule_name: ${5:# Name of rule to create or remove}
-    enabled: ${6:# If set to C(True), the DRS rule will be enabled}
+    enabled: ${6:# If set to V(true), the DRS rule will be enabled}
     host_group_name: ${7:# Name of Host group to use with rule}
-    mandatory: ${8:# If set to C(True), the DRS rule will be mandatory}
-    state: ${9:# If set to C(present) and the rule does not exist then the rule will be created}
-    vm_group_name: ${10:# Name of VM group to use with rule}
-    hostname: ${11:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${12:# The username of the vSphere vCenter or ESXi server}
-    password: ${13:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${14:# Allows connection when SSL certificates are not valid}
-    port: ${15:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${16:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${17:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    hostname: ${8:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    mandatory: ${9:# If set to V(true), the DRS rule will be mandatory}
+    password: ${10:# The password of the vSphere vCenter or ESXi server}
+    port: ${11:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${12:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    state: ${14:# If set to V(present) and the rule does not exist then the rule will be created}
+    username: ${15:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${16:# Allows connection when SSL certificates are not valid}
+    vm_group_name: ${17:# Name of VM group to use with rule}
   tags:
     - community
     - vmware

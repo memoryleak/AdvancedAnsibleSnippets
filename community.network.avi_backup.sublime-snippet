@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of Backup Avi RESTful Object}
   community.network.avi_backup:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
     avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    backup_config_ref: ${5:# Backupconfiguration information}
-    file_name: ${6:# The file name of backup}
-    local_file_url: ${7:# Url to download the backup file}
-    remote_file_url: ${8:# Url to download the backup file}
-    scheduler_ref: ${9:# Scheduler information}
-    tenant_ref: ${10:# It is a reference to an object of type tenant}
-    timestamp: ${11:# Unix timestamp of when the backup file is created}
-    url: ${12:# Avi controller URL of the object}
-    uuid: ${13:# Unique object identifier of the object}
-    controller: ${14:# IP address or hostname of the controller}
-    username: ${15:# Username used for accessing Avi controller}
-    password: ${16:# Password of Avi user in Avi controller}
-    tenant: ${17:# Name of tenant used for all Avi API calls and context of object}
+    avi_api_update_method: ${5:# Default method for object update is HTTP PUT}
+    avi_credentials: ${6:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${7:# It disables avi session information to be cached as a fact}
+    backup_config_ref: ${8:# Backupconfiguration information}
+    controller: ${9:# IP address or hostname of the controller}
+    file_name: ${10:# The file name of backup}
+    local_file_url: ${11:# Url to download the backup file}
+    password: ${12:# Password of Avi user in Avi controller}
+    remote_file_url: ${13:# Url to download the backup file}
+    scheduler_ref: ${14:# Scheduler information}
+    state: ${15:# The state that should be applied on the entity}
+    tenant: ${16:# Name of tenant used for all Avi API calls and context of object}
+    tenant_ref: ${17:# It is a reference to an object of type tenant}
     tenant_uuid: ${18:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${19:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${20:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${21:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${22:# It disables avi session information to be cached as a fact}
+    timestamp: ${19:# Unix timestamp of when the backup file is created}
+    url: ${20:# Avi controller URL of the object}
+    username: ${21:# Username used for accessing Avi controller}
+    uuid: ${22:# Unique object identifier of the object}
   tags:
     - community
     - network

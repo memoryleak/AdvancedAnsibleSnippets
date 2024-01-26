@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp E-Series manage SSD caches}
   netapp_eseries.santricity.netapp_e_flashcache:
-    api_username: ${2:# The username to authenticate with the SANtricity WebServices Proxy or embedded REST API}
-    api_password: ${3:# The password to authenticate with the SANtricity WebServices Proxy or embedded REST API}
-    api_url: ${4:# The url to the SANtricity WebServices Proxy or embedded REST API}
-    validate_certs: ${5:# Should https certificates be validated?}
-    ssid: ${6:# The ID of the array to manage (as configured on the web services proxy)}
-    state: ${7:# Whether the specified SSD cache should exist or not}
-    name: ${8:# The name of the SSD cache to manage}
+    api_password: ${2:# The password to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    api_url: ${3:# The url to the SANtricity WebServices Proxy or embedded REST API}
+    api_username: ${4:# The username to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    cache_size_min: ${5:# The minimum size (in size_units) of the ssd cache}
+    criteria_disk_phy_type: ${6:# Type of physical disk}
+    disk_count: ${7:# The minimum number of disks to use for building the cache}
+    disk_refs: ${8:# List of disk references}
     io_type: ${9:# The type of workload to optimize the cache for}
-    disk_count: ${10:# The minimum number of disks to use for building the cache}
-    disk_refs: ${11:# List of disk references}
-    size_unit: ${12:# The unit to be applied to size arguments}
-    cache_size_min: ${13:# The minimum size (in size_units) of the ssd cache}
-    criteria_disk_phy_type: ${14:# Type of physical disk}
-    log_mode: ${15:# Log mode}
-    log_path: ${16:# Log path}
+    log_mode: ${10:# Log mode}
+    log_path: ${11:# Log path}
+    name: ${12:# The name of the SSD cache to manage}
+    size_unit: ${13:# The unit to be applied to size arguments}
+    ssid: ${14:# The ID of the array to manage (as configured on the web services proxy)}
+    state: ${15:# Whether the specified SSD cache should exist or not}
+    validate_certs: ${16:# Should https certificates be validated?}
   tags:
     - netapp_eseries
     - santricity

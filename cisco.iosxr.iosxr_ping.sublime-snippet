@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Tests reachability using ping from IOSXR switch}
   cisco.iosxr.iosxr_ping:
-    count: ${2:# Repeat count the number of packets to send}
-    afi: ${3:# Define echo type ipv4 or ipv6}
+    afi: ${2:# Define echo type ipv4 or ipv6}
+    count: ${3:# Repeat count the number of packets to send}
     dest: ${4:# The IP Address or hostname (resolvable by switch) of the remote node}
     df_bit: ${5:# Set the DF bit in IP-header}
-    sweep: ${6:# Sweep ping}
-    validate: ${7:# Validate return packet}
-    source: ${8:# Source address or source interface}
-    size: ${9:# Datagram size the size of packets to send}
-    state: ${10:# Determines if the expected result is success or fail}
+    size: ${6:# Datagram size the size of packets to send}
+    source: ${7:# Source address or source interface}
+    state: ${8:# Determines if the expected result is success or fail}
+    sweep: ${9:# Sweep ping}
+    validate: ${10:# Validate return packet}
     vrf: ${11:# The VRF to use for forwarding}
   tags:
     - cisco

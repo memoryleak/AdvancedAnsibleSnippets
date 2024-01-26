@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage FlashArray API Clients}
   purestorage.flasharray.purefa_apiclient:
-    name: ${2:# Name of the API Client}
-    state: ${3:# Define whether the API client should exist or not}
-    role: ${4:# The maximum role allowed for ID Tokens issued by this API client}
+    api_token: ${2:# FlashArray API token for admin privileged user}
+    enabled: ${3:# State of the API Client Key}
+    fa_url: ${4:# FlashArray management IPv4 address or Hostname}
     issuer: ${5:# The name of the identity provider that will be issuing ID Tokens for this API client}
-    public_key: ${6:# The API clients PEM formatted (Base64 encoded) RSA public key}
-    token_ttl: ${7:# Time To Live length in seconds for the exchanged access token}
-    enabled: ${8:# State of the API Client Key}
-    fa_url: ${9:# FlashArray management IPv4 address or Hostname}
-    api_token: ${10:# FlashArray API token for admin privileged user}
+    name: ${6:# Name of the API Client}
+    public_key: ${7:# The API clients PEM formatted (Base64 encoded) RSA public key}
+    role: ${8:# The maximum role allowed for ID Tokens issued by this API client}
+    state: ${9:# Define whether the API client should exist or not}
+    token_ttl: ${10:# Time To Live length in seconds for the exchanged access token}
   tags:
     - purestorage
     - flasharray

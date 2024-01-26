@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure certificates for iDRAC}
   dellemc.openmanage.idrac_certificates:
-    command: ${2:# C(generate_csr), generate CSR}
-    certificate_type: ${3:# Type of the iDRAC certificate}
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    cert_params: ${3:# Certificate parameters to generate signing request}
     certificate_path: ${4:# Absolute path of the certificate file if I(command) is C(import)}
-    passphrase: ${5:# The passphrase string if the certificate to be imported is passphrase protected}
-    cert_params: ${6:# Certificate parameters to generate signing request}
-    resource_id: ${7:# Redfish ID of the resource}
-    reset: ${8:# To reset the iDRAC after the certificate operation}
-    wait: ${9:# Maximum wait time for iDRAC to start after the reset, in seconds}
-    idrac_ip: ${10:# iDRAC IP Address}
-    idrac_user: ${11:# iDRAC username}
-    idrac_password: ${12:# iDRAC user password}
-    idrac_port: ${13:# iDRAC port}
-    validate_certs: ${14:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${15:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${16:# The socket level timeout in seconds}
+    certificate_type: ${5:# Type of the iDRAC certificate}
+    command: ${6:# C(generate_csr), generate CSR}
+    idrac_ip: ${7:# iDRAC IP Address}
+    idrac_password: ${8:# iDRAC user password}
+    idrac_port: ${9:# iDRAC port}
+    idrac_user: ${10:# iDRAC username}
+    passphrase: ${11:# The passphrase string if the certificate to be imported is passphrase protected}
+    reset: ${12:# To reset the iDRAC after the certificate operation}
+    resource_id: ${13:# Redfish ID of the resource}
+    timeout: ${14:# The socket level timeout in seconds}
+    validate_certs: ${15:# If C(false), the SSL certificates will not be validated}
+    wait: ${16:# Maximum wait time for iDRAC to start after the reset, in seconds}
   tags:
     - dellemc
     - openmanage

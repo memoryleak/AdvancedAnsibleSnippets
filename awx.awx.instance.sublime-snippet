@@ -1,19 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller instances}
   awx.awx.instance:
-    hostname: ${2:# Hostname of this instance}
-    capacity_adjustment: ${3:# Capacity adjustment (0 <= capacity_adjustment <= 1)}
-    enabled: ${4:# If true, the instance will be enabled and used}
-    managed_by_policy: ${5:# Managed by policy}
-    node_type: ${6:# Role that this node plays in the mesh}
-    node_state: ${7:# Indicates the current life cycle stage of this instance}
-    listener_port: ${8:# Port that Receptor will listen for incoming connections on}
-    controller_host: ${9:# URL to your Automation Platform Controller instance}
-    controller_username: ${10:# Username for your controller instance}
-    controller_password: ${11:# Password for your controller instance}
-    controller_oauthtoken: ${12:# The OAuth token to use}
-    validate_certs: ${13:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${14:# Path to the controller config file}
+    capacity_adjustment: ${2:# Capacity adjustment (0 <= capacity_adjustment <= 1)}
+    controller_config_file: ${3:# Path to the controller config file}
+    controller_host: ${4:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${5:# The OAuth token to use}
+    controller_password: ${6:# Password for your controller instance}
+    controller_username: ${7:# Username for your controller instance}
+    enabled: ${8:# If true, the instance will be enabled and used}
+    hostname: ${9:# Hostname of this instance}
+    listener_port: ${10:# Port that Receptor will listen for incoming connections on}
+    managed_by_policy: ${11:# Managed by policy}
+    node_state: ${12:# Indicates the current life cycle stage of this instance}
+    node_type: ${13:# Role that this node plays in the mesh}
+    peers: ${14:# List of peers to connect outbound to}
+    peers_from_control_nodes: ${15:# If enabled, control plane nodes will automatically peer to this node}
+    request_timeout: ${16:# Specify the timeout Ansible should use in requests to the controller host}
+    validate_certs: ${17:# Whether to allow insecure connections to AWX}
   tags:
     - awx
     - awx

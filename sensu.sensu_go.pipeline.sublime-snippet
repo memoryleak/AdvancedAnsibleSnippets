@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Sensu pipeline}
+  sensu.sensu_go.pipeline:
+    auth: ${2:# Authentication parameters}
+    labels: ${3:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
+    name: ${4:# The Sensu resource's name}
+    namespace: ${5:# RBAC namespace to operate in}
+    state: ${6:# Target state of the Sensu object}
+    workflows: ${7:# Array of workflows (by names) to use when filtering, mutating, and handling observability events with a pipeline}
+  tags:
+    - sensu
+    - sensu_go
+    - pipeline]]></content>
+  <tabTrigger>sensu.sensu_go.pipeline</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Sensu pipeline</description>
+</snippet>

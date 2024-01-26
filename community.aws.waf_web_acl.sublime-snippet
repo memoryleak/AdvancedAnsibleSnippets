@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create and delete WAF Web ACLs}
   community.aws.waf_web_acl:
-    name: ${2:# Name of the Web Application Firewall ACL to manage}
-    default_action: ${3:# The action that you want AWS WAF to take when a request doesn't match the criteria specified in any of the Rule objects that are associated with the WebACL}
-    state: ${4:# Whether the Web ACL should be present or absent}
-    metric_name: ${5:# A friendly name or description for the metrics for this WebACL}
-    rules: ${6:# A list of rules that the Web ACL will enforce}
-    purge_rules: ${7:# Whether to remove rules that aren't passed with I(rules)}
-    waf_regional: ${8:# Whether to use C(waf-regional) module}
-    access_key: ${9:# AWS access key ID}
-    secret_key: ${10:# AWS secret access key}
-    session_token: ${11:# AWS STS session token for use with temporary credentials}
-    profile: ${12:# A named AWS profile to use for authentication}
-    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${16:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
-    region: ${18:# The AWS region to use}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    default_action: ${6:# The action that you want AWS WAF to take when a request doesn't match the criteria specified in any of the Rule objects that are associated with the WebACL}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    metric_name: ${8:# A friendly name or description for the metrics for this WebACL}
+    name: ${9:# Name of the Web Application Firewall ACL to manage}
+    profile: ${10:# A named AWS profile to use for authentication}
+    purge_rules: ${11:# Whether to remove rules that aren't passed with I(rules)}
+    region: ${12:# The AWS region to use}
+    rules: ${13:# A list of rules that the Web ACL will enforce}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    state: ${16:# Whether the Web ACL should be present or absent}
+    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    waf_regional: ${18:# Whether to use C(waf-regional) module}
   tags:
     - community
     - aws

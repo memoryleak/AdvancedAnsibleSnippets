@@ -1,22 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP Subnetwork}
   google.cloud.gcp_compute_subnetwork:
-    state: ${2:# Whether the given object should exist in GCP}
-    description: ${3:# An optional description of this resource}
-    ip_cidr_range: ${4:# The range of internal addresses that are owned by this subnetwork}
-    name: ${5:# The name of the resource, provided by the client when initially creating the resource}
-    network: ${6:# The network this subnet belongs to}
-    secondary_ip_ranges: ${7:# An array of configurations for secondary IP ranges for VM instances contained in this subnetwork}
-    private_ip_google_access: ${8:# When enabled, VMs in this subnetwork without external IP addresses can access Google APIs and services by using Private Google Access}
-    private_ipv6_google_access: ${9:# The private IPv6 google access type for the VMs in this subnet}
-    region: ${10:# The GCP region for this subnetwork}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    auth_kind: ${3:# The type of credential used}
+    description: ${4:# An optional description of this resource}
+    env_type: ${5:# Specifies which Ansible environment you're running this module within}
+    ip_cidr_range: ${6:# The range of internal addresses that are owned by this subnetwork}
+    name: ${7:# The name of the resource, provided by the client when initially creating the resource}
+    network: ${8:# The network this subnet belongs to}
+    private_ip_google_access: ${9:# When enabled, VMs in this subnetwork without external IP addresses can access Google APIs and services by using Private Google Access}
+    private_ipv6_google_access: ${10:# The private IPv6 google access type for the VMs in this subnet}
     project: ${11:# The Google Cloud Platform project to use}
-    auth_kind: ${12:# The type of credential used}
-    service_account_contents: ${13:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${14:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${15:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${16:# Array of scopes to be used}
-    env_type: ${17:# Specifies which Ansible environment you're running this module within}
+    region: ${12:# The GCP region for this subnetwork}
+    scopes: ${13:# Array of scopes to be used}
+    secondary_ip_ranges: ${14:# An array of configurations for secondary IP ranges for VM instances contained in this subnetwork}
+    service_account_contents: ${15:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_email: ${16:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    service_account_file: ${17:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    state: ${18:# Whether the given object should exist in GCP}
   tags:
     - google
     - cloud

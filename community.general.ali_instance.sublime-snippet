@@ -1,54 +1,54 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, Start, Stop, Restart or Terminate an Instance in ECS; Add or Remove Instance to/from a Security Group}
   community.general.ali_instance:
-    state: ${2:# The state of the instance after operating}
-    availability_zone: ${3:# Aliyun availability zone ID in which to launch the instance}
-    image_id: ${4:# Image ID used to launch instances}
-    instance_type: ${5:# Instance type used to launch instances}
-    security_groups: ${6:# A list of security group IDs}
-    vswitch_id: ${7:# The subnet ID in which to launch the instances (VPC)}
-    instance_name: ${8:# The name of ECS instance, which is a string of 2 to 128 Chinese or English characters}
-    description: ${9:# The description of ECS instance, which is a string of 2 to 256 characters}
-    internet_charge_type: ${10:# Internet charge type of ECS instance}
-    max_bandwidth_in: ${11:# Maximum incoming bandwidth from the public network, measured in Mbps (Megabits per second)}
-    max_bandwidth_out: ${12:# Maximum outgoing bandwidth to the public network, measured in Mbps (Megabits per second)}
-    host_name: ${13:# Instance host name}
-    unique_suffix: ${14:# Specifies whether to add sequential suffixes to the host_name}
-    password: ${15:# The password to login instance}
-    system_disk_category: ${16:# Category of the system disk}
-    system_disk_size: ${17:# Size of the system disk, in GB}
-    system_disk_name: ${18:# Name of the system disk}
-    system_disk_description: ${19:# Description of the system disk}
-    count: ${20:# The number of the new instance}
-    count_tag: ${21:# I(count) determines how many instances based on a specific tag criteria should be present}
-    allocate_public_ip: ${22:# Whether allocate a public ip for the new instance}
+    alicloud_access_key: ${2:# Alibaba Cloud access key}
+    alicloud_assume_role: ${3:# If provided with a role ARN, Ansible will attempt to assume this role using the supplied credentials}
+    alicloud_assume_role_arn: ${4:# The Alibaba Cloud C(role_arn)}
+    alicloud_assume_role_session_expiration: ${5:# The Alibaba Cloud C(session_expiration)}
+    alicloud_assume_role_session_name: ${6:# The Alibaba Cloud session_name}
+    alicloud_region: ${7:# The Alibaba Cloud region to use}
+    alicloud_secret_key: ${8:# Alibaba Cloud secret key}
+    alicloud_security_token: ${9:# The Alibaba Cloud security token}
+    allocate_public_ip: ${10:# Whether allocate a public ip for the new instance}
+    auto_renew: ${11:# Whether automate renew the charge of the instance}
+    auto_renew_period: ${12:# The duration of the automatic renew the charge of the instance}
+    availability_zone: ${13:# Aliyun availability zone ID in which to launch the instance}
+    count: ${14:# The number of the new instance}
+    count_tag: ${15:# O(count) determines how many instances based on a specific tag criteria should be present}
+    description: ${16:# The description of ECS instance, which is a string of 2 to 256 characters}
+    dry_run: ${17:# Specifies whether to send a dry-run request}
+    ecs_role_name: ${18:# The RAM Role Name attached on a ECS instance for API operations}
+    force: ${19:# Whether the current operation needs to be execute forcibly}
+    host_name: ${20:# Instance host name}
+    image_id: ${21:# Image ID used to launch instances}
+    include_data_disks: ${22:# Whether to change instance disks charge type when changing instance charge type}
     instance_charge_type: ${23:# The charge type of the instance}
-    period: ${24:# The charge duration of the instance, in months}
-    auto_renew: ${25:# Whether automate renew the charge of the instance}
-    auto_renew_period: ${26:# The duration of the automatic renew the charge of the instance}
-    instance_ids: ${27:# A list of instance ids}
-    force: ${28:# Whether the current operation needs to be execute forcibly}
-    tags: ${29:# A hash/dictionaries of instance tags, to add to the new instance or for starting/stopping instance by tag}
-    purge_tags: ${30:# Delete any tags not specified in the task that are on the instance}
-    key_name: ${31:# The name of key pair which is used to access ECS instance in SSH}
-    user_data: ${32:# User-defined data to customize the startup behaviors of an ECS instance and to pass data into an ECS instance}
-    ram_role_name: ${33:# The name of the instance RAM role}
-    spot_price_limit: ${34:# The maximum hourly price for the preemptible instance}
-    spot_strategy: ${35:# The bidding mode of the pay-as-you-go instance}
-    period_unit: ${36:# The duration unit that you will buy the resource}
-    dry_run: ${37:# Specifies whether to send a dry-run request}
-    include_data_disks: ${38:# Whether to change instance disks charge type when changing instance charge type}
-    alicloud_access_key: ${39:# Alibaba Cloud access key}
-    alicloud_secret_key: ${40:# Alibaba Cloud secret key}
-    alicloud_region: ${41:# The Alibaba Cloud region to use}
-    alicloud_security_token: ${42:# The Alibaba Cloud security token}
-    alicloud_assume_role: ${43:# If provided with a role ARN, Ansible will attempt to assume this role using the supplied credentials}
-    alicloud_assume_role_arn: ${44:# The Alibaba Cloud role_arn}
-    alicloud_assume_role_session_name: ${45:# The Alibaba Cloud session_name}
-    alicloud_assume_role_session_expiration: ${46:# The Alibaba Cloud session_expiration}
-    ecs_role_name: ${47:# The RAM Role Name attached on a ECS instance for API operations}
-    profile: ${48:# This is the Alicloud profile name as set in the shared credentials file}
-    shared_credentials_file: ${49:# This is the path to the shared credentials file}
+    instance_ids: ${24:# A list of instance ids}
+    instance_name: ${25:# The name of ECS instance, which is a string of 2 to 128 Chinese or English characters}
+    instance_type: ${26:# Instance type used to launch instances}
+    internet_charge_type: ${27:# Internet charge type of ECS instance}
+    key_name: ${28:# The name of key pair which is used to access ECS instance in SSH}
+    max_bandwidth_in: ${29:# Maximum incoming bandwidth from the public network, measured in Mbps (Megabits per second)}
+    max_bandwidth_out: ${30:# Maximum outgoing bandwidth to the public network, measured in Mbps (Megabits per second)}
+    password: ${31:# The password to login instance}
+    period: ${32:# The charge duration of the instance, in months}
+    period_unit: ${33:# The duration unit that you will buy the resource}
+    profile: ${34:# This is the Alicloud profile name as set in the shared credentials file}
+    purge_tags: ${35:# Delete any tags not specified in the task that are on the instance}
+    ram_role_name: ${36:# The name of the instance RAM role}
+    security_groups: ${37:# A list of security group IDs}
+    shared_credentials_file: ${38:# This is the path to the shared credentials file}
+    spot_price_limit: ${39:# The maximum hourly price for the preemptible instance}
+    spot_strategy: ${40:# The bidding mode of the pay-as-you-go instance}
+    state: ${41:# The state of the instance after operating}
+    system_disk_category: ${42:# Category of the system disk}
+    system_disk_description: ${43:# Description of the system disk}
+    system_disk_name: ${44:# Name of the system disk}
+    system_disk_size: ${45:# Size of the system disk, in GB}
+    tags: ${46:# A hash/dictionaries of instance tags, to add to the new instance or for starting/stopping instance by tag}
+    unique_suffix: ${47:# Specifies whether to add sequential suffixes to the host_name}
+    user_data: ${48:# User-defined data to customize the startup behaviors of an ECS instance and to pass data into an ECS instance}
+    vswitch_id: ${49:# The subnet ID in which to launch the instances (VPC)}
   tags:
     - community
     - general

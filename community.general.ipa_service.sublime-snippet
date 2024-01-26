@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage FreeIPA service}
   community.general.ipa_service:
-    krbcanonicalname: ${2:# Principal of the service}
+    force: ${2:# Force principal name even if host is not in DNS}
     hosts: ${3:# Defines the list of 'ManagedBy' hosts}
-    force: ${4:# Force principal name even if host is not in DNS}
-    skip_host_check: ${5:# Force service to be created even when host object does not exist to manage it}
-    state: ${6:# State to ensure}
-    ipa_port: ${7:# Port of FreeIPA / IPA server}
-    ipa_host: ${8:# IP or hostname of IPA server}
+    ipa_host: ${4:# IP or hostname of IPA server}
+    ipa_pass: ${5:# Password of administrative user}
+    ipa_port: ${6:# Port of FreeIPA / IPA server}
+    ipa_prot: ${7:# Protocol used by IPA server}
+    ipa_timeout: ${8:# Specifies idle timeout (in seconds) for the connection}
     ipa_user: ${9:# Administrative account used on IPA server}
-    ipa_pass: ${10:# Password of administrative user}
-    ipa_prot: ${11:# Protocol used by IPA server}
-    validate_certs: ${12:# This only applies if C(ipa_prot) is I(https)}
-    ipa_timeout: ${13:# Specifies idle timeout (in seconds) for the connection}
+    krbcanonicalname: ${10:# Principal of the service}
+    skip_host_check: ${11:# Force service to be created even when host object does not exist to manage it}
+    state: ${12:# State to ensure}
+    validate_certs: ${13:# This only applies if O(ipa_prot) is V(https)}
   tags:
     - community
     - general

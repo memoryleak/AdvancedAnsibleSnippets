@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure FlashBlade SNMP Managers}
   purestorage.flashblade.purefb_snmp_mgr:
-    name: ${2:# Name of SNMP Manager}
-    state: ${3:# Create or delete SNMP manager}
-    auth_passphrase: ${4:# SNMPv3 only}
-    auth_protocol: ${5:# SNMP v3 only}
-    community: ${6:# SNMP v2c only}
+    api_token: ${2:# FlashBlade API token for admin privileged user}
+    auth_passphrase: ${3:# SNMPv3 only}
+    auth_protocol: ${4:# SNMP v3 only}
+    community: ${5:# SNMP v2c only}
+    fb_url: ${6:# FlashBlade management IP address or Hostname}
     host: ${7:# IPv4 or IPv6 address or FQDN to send trap messages to}
-    user: ${8:# SNMP v3 only}
-    version: ${9:# Version of SNMP protocol to use for the manager}
-    notification: ${10:# Action to perform on event}
-    privacy_passphrase: ${11:# SNMPv3 only}
-    privacy_protocol: ${12:# SNMP v3 only}
-    fb_url: ${13:# FlashBlade management IP address or Hostname}
-    api_token: ${14:# FlashBlade API token for admin privileged user}
+    name: ${8:# Name of SNMP Manager}
+    notification: ${9:# Action to perform on event}
+    privacy_passphrase: ${10:# SNMPv3 only}
+    privacy_protocol: ${11:# SNMP v3 only}
+    state: ${12:# Create or delete SNMP manager}
+    user: ${13:# SNMP v3 only}
+    version: ${14:# Version of SNMP protocol to use for the manager}
   tags:
     - purestorage
     - flashblade

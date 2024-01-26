@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create and delete DigitalOcean snapshots}
   community.digitalocean.digital_ocean_snapshot:
-    state: ${2:# Whether the snapshot should be present (created) or absent (deleted)}
-    snapshot_type: ${3:# Specifies the type of snapshot information to be create or delete}
-    snapshot_name: ${4:# Name of the snapshot to create}
-    snapshot_tags: ${5:# List of tags to apply to the volume snapshot}
-    droplet_id: ${6:# Droplet ID to snapshot}
-    volume_id: ${7:# Volume ID to snapshot}
-    snapshot_id: ${8:# Snapshot ID to delete}
-    wait: ${9:# Wait for the snapshot to be created before returning}
-    wait_timeout: ${10:# How long before wait gives up, in seconds, when creating a snapshot}
-    baseurl: ${11:# DigitalOcean API base url}
-    oauth_token: ${12:# DigitalOcean OAuth token}
-    timeout: ${13:# The timeout in seconds used for polling DigitalOcean's API}
-    validate_certs: ${14:# If set to C(no), the SSL certificates will not be validated}
+    baseurl: ${2:# DigitalOcean API base url}
+    droplet_id: ${3:# Droplet ID to snapshot}
+    oauth_token: ${4:# DigitalOcean OAuth token}
+    snapshot_id: ${5:# Snapshot ID to delete}
+    snapshot_name: ${6:# Name of the snapshot to create}
+    snapshot_tags: ${7:# List of tags to apply to the volume snapshot}
+    snapshot_type: ${8:# Specifies the type of snapshot information to be create or delete}
+    state: ${9:# Whether the snapshot should be present (created) or absent (deleted)}
+    timeout: ${10:# The timeout in seconds used for polling DigitalOcean's API}
+    validate_certs: ${11:# If set to C(no), the SSL certificates will not be validated}
+    volume_id: ${12:# Volume ID to snapshot}
+    wait: ${13:# Wait for the snapshot to be created before returning}
+    wait_timeout: ${14:# How long before wait gives up, in seconds, when creating a snapshot}
   tags:
     - community
     - digitalocean

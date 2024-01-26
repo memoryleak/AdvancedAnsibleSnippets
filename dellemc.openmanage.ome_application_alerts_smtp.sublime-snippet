@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module allows to configure SMTP or email configurations}
   dellemc.openmanage.ome_application_alerts_smtp:
-    destination_address: ${2:# The IP address or FQDN of the SMTP destination server}
-    port_number: ${3:# The port number of the SMTP destination server}
-    use_ssl: ${4:# Use SSL to connect with the SMTP server}
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    credentials: ${3:# The credentials for the SMTP server}
+    destination_address: ${4:# The IP address or FQDN of the SMTP destination server}
     enable_authentication: ${5:# Enable or disable authentication to access the SMTP server}
-    credentials: ${6:# The credentials for the SMTP server}
-    hostname: ${7:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
-    username: ${8:# OpenManage Enterprise or OpenManage Enterprise Modular username}
-    password: ${9:# OpenManage Enterprise or OpenManage Enterprise Modular password}
-    port: ${10:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
-    validate_certs: ${11:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${12:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${13:# The socket level timeout in seconds}
+    hostname: ${6:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    password: ${7:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${8:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    port_number: ${9:# The port number of the SMTP destination server}
+    timeout: ${10:# The socket level timeout in seconds}
+    use_ssl: ${11:# Use SSL to connect with the SMTP server}
+    username: ${12:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    validate_certs: ${13:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

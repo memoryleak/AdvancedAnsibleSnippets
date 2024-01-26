@@ -1,18 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:IMC Access Policy configuration for Cisco Intersight}
   cisco.intersight.intersight_imc_access_policy:
-    state: ${2:# If C(present), will verify the resource is present and will create if needed}
-    organization: ${3:# The name of the Organization this resource is assigned to}
-    name: ${4:# The name assigned to the IMC Access Policy}
-    tags: ${5:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
-    descrption: ${6:# The user-defined description of the IMC access policy}
-    vlan_id: ${7:# VLAN to be used for server access over Inband network}
-    ip_pool: ${8:# IP Pool used to assign IP address and other required network settings}
-    api_private_key: ${9:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
-    api_uri: ${10:# URI used to access the Intersight API}
-    api_key_id: ${11:# Public API Key ID associated with the private key}
-    validate_certs: ${12:# Boolean control for verifying the api_uri TLS certificate}
-    use_proxy: ${13:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    description: ${5:# The user-defined description of the IMC access policy}
+    ip_pool: ${6:# IP Pool used to assign IP address and other required network settings}
+    name: ${7:# The name assigned to the IMC Access Policy}
+    organization: ${8:# The name of the Organization this resource is assigned to}
+    out_of_band: ${9:# If C(true), will enable Out-Of-Band configuration}
+    state: ${10:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${11:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${12:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${13:# Boolean control for verifying the api_uri TLS certificate}
+    vlan_id: ${14:# VLAN to be used for server access over Inband network}
   tags:
     - cisco
     - intersight

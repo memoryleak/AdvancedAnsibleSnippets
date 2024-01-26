@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages SES email and domain identity}
   community.aws.ses_identity:
-    identity: ${2:# This is the email address or domain to verify / delete}
-    state: ${3:# Whether to create(or update) or delete the identity}
-    bounce_notifications: ${4:# Setup the SNS topic used to report bounce notifications}
-    complaint_notifications: ${5:# Setup the SNS topic used to report complaint notifications}
-    delivery_notifications: ${6:# Setup the SNS topic used to report delivery notifications}
-    feedback_forwarding: ${7:# Whether or not to enable feedback forwarding}
-    access_key: ${8:# AWS access key ID}
-    secret_key: ${9:# AWS secret access key}
-    session_token: ${10:# AWS STS session token for use with temporary credentials}
-    profile: ${11:# A named AWS profile to use for authentication}
-    endpoint_url: ${12:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${13:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${14:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${15:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${16:# Use a C(botocore}
-    region: ${17:# The AWS region to use}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    bounce_notifications: ${5:# Setup the SNS topic used to report bounce notifications}
+    complaint_notifications: ${6:# Setup the SNS topic used to report complaint notifications}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    delivery_notifications: ${8:# Setup the SNS topic used to report delivery notifications}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
+    feedback_forwarding: ${10:# Whether or not to enable feedback forwarding}
+    identity: ${11:# This is the email address or domain to verify / delete}
+    profile: ${12:# A named AWS profile to use for authentication}
+    region: ${13:# The AWS region to use}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    state: ${16:# Whether to create(or update) or delete the identity}
+    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

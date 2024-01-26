@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage a VLAN in a Cloud Control network domain}
   community.general.dimensiondata_vlan:
-    name: ${2:# The name of the target VLAN}
+    allow_expand: ${2:# Permit expansion of the target VLAN's network if the module parameters specify a larger network than the VLAN currently possesses}
     description: ${3:# A description of the VLAN}
-    network_domain: ${4:# The Id or name of the target network domain}
-    private_ipv4_base_address: ${5:# The base address for the VLAN's IPv4 network (e}
-    private_ipv4_prefix_size: ${6:# The size of the IPv4 address space, e}
-    state: ${7:# The desired state for the target VLAN}
-    allow_expand: ${8:# Permit expansion of the target VLAN's network if the module parameters specify a larger network than the VLAN currently possesses}
-    region: ${9:# The target region}
-    mcp_user: ${10:# The username used to authenticate to the CloudControl API}
-    mcp_password: ${11:# The password used to authenticate to the CloudControl API}
-    location: ${12:# The target datacenter}
-    validate_certs: ${13:# If C(false), SSL certificates will not be validated}
+    location: ${4:# The target datacenter}
+    mcp_password: ${5:# The password used to authenticate to the CloudControl API}
+    mcp_user: ${6:# The username used to authenticate to the CloudControl API}
+    name: ${7:# The name of the target VLAN}
+    network_domain: ${8:# The Id or name of the target network domain}
+    private_ipv4_base_address: ${9:# The base address for the VLAN's IPv4 network (e}
+    private_ipv4_prefix_size: ${10:# The size of the IPv4 address space, e}
+    region: ${11:# The target region}
+    state: ${12:# The desired state for the target VLAN}
+    validate_certs: ${13:# If V(false), SSL certificates will not be validated}
     wait: ${14:# Should we wait for the task to complete before moving onto the next}
-    wait_time: ${15:# The maximum amount of time (in seconds) to wait for the task to complete}
-    wait_poll_interval: ${16:# The amount of time (in seconds) to wait between checks for task completion}
+    wait_poll_interval: ${15:# The amount of time (in seconds) to wait between checks for task completion}
+    wait_time: ${16:# The maximum amount of time (in seconds) to wait for the task to complete}
   tags:
     - community
     - general

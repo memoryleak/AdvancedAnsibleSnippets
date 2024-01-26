@@ -1,45 +1,45 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP NFS status}
   netapp.ontap.na_ontap_nfs:
-    state: ${2:# Whether NFS should exist or not}
-    service_state: ${3:# Whether the specified NFS should be enabled or disabled}
-    vserver: ${4:# Name of the vserver to use}
-    nfsv3: ${5:# status of NFSv3}
-    nfsv3_fsid_change: ${6:# status of if NFSv3 clients see change in FSID as they traverse filesystems}
-    nfsv4_fsid_change: ${7:# status of if NFSv4 clients see change in FSID as they traverse filesystems}
-    nfsv4: ${8:# status of NFSv4}
-    nfsv41: ${9:# status of NFSv41}
-    nfsv41_pnfs: ${10:# status of NFSv41 pNFS}
-    nfsv4_numeric_ids: ${11:# status of NFSv4 numeric ID's}
-    vstorage_state: ${12:# status of vstorage_state}
-    nfsv4_id_domain: ${13:# Name of the nfsv4_id_domain to use}
-    nfsv40_acl: ${14:# status of NFS v4}
-    nfsv40_read_delegation: ${15:# status for NFS v4}
-    nfsv40_write_delegation: ${16:# status for NFS v4}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    feature_flags: ${3:# Enable or disable a new feature}
+    force_ontap_version: ${4:# Override the cluster ONTAP version when using REST}
+    hostname: ${5:# The hostname or IP address of the ONTAP instance}
+    http_port: ${6:# Override the default port (80 or 443) with this port}
+    https: ${7:# Enable and disable https}
+    key_filepath: ${8:# path to SSL client key file}
+    nfsv3: ${9:# status of NFSv3}
+    nfsv3_fsid_change: ${10:# status of if NFSv3 clients see change in FSID as they traverse filesystems}
+    nfsv4: ${11:# status of NFSv4}
+    nfsv40_acl: ${12:# status of NFS v4}
+    nfsv40_read_delegation: ${13:# status for NFS v4}
+    nfsv40_referrals: ${14:# status for NFS v4}
+    nfsv40_write_delegation: ${15:# status for NFS v4}
+    nfsv41: ${16:# status of NFSv41}
     nfsv41_acl: ${17:# status of NFS v4}
-    nfsv41_read_delegation: ${18:# status for NFS v4}
-    nfsv41_write_delegation: ${19:# status for NFS v4}
-    nfsv40_referrals: ${20:# status for NFS v4}
-    nfsv41_referrals: ${21:# status for NFS v4}
-    tcp: ${22:# Enable TCP (support from ONTAP 9}
-    udp: ${23:# Enable UDP (support from ONTAP 9}
-    showmount: ${24:# Whether SVM allows showmount}
-    tcp_max_xfer_size: ${25:# TCP Maximum Transfer Size (bytes)}
-    windows: ${26:# This option can be set or modified when using REST}
+    nfsv41_pnfs: ${18:# status of NFSv41 pNFS}
+    nfsv41_read_delegation: ${19:# status for NFS v4}
+    nfsv41_referrals: ${20:# status for NFS v4}
+    nfsv41_write_delegation: ${21:# status for NFS v4}
+    nfsv4_fsid_change: ${22:# status of if NFSv4 clients see change in FSID as they traverse filesystems}
+    nfsv4_id_domain: ${23:# Name of the nfsv4_id_domain to use}
+    nfsv4_numeric_ids: ${24:# status of NFSv4 numeric ID's}
+    ontapi: ${25:# The ontap api version to use}
+    password: ${26:# Password for the specified user}
     root: ${27:# This option can be set or modified when using REST}
     security: ${28:# This option can be set or modified when using REST}
-    hostname: ${29:# The hostname or IP address of the ONTAP instance}
-    username: ${30:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${31:# Password for the specified user}
-    cert_filepath: ${32:# path to SSL client cert file (}
-    key_filepath: ${33:# path to SSL client key file}
-    https: ${34:# Enable and disable https}
-    validate_certs: ${35:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${36:# Override the default port (80 or 443) with this port}
-    ontapi: ${37:# The ontap api version to use}
-    use_rest: ${38:# Whether to use REST or ZAPI}
-    feature_flags: ${39:# Enable or disable a new feature}
-    force_ontap_version: ${40:# Override the cluster ONTAP version when using REST}
+    service_state: ${29:# Whether the specified NFS should be enabled or disabled}
+    showmount: ${30:# Whether SVM allows showmount}
+    state: ${31:# Whether NFS should exist or not}
+    tcp: ${32:# Enable TCP (support from ONTAP 9}
+    tcp_max_xfer_size: ${33:# TCP Maximum Transfer Size (bytes)}
+    udp: ${34:# Enable UDP (support from ONTAP 9}
+    use_rest: ${35:# Whether to use REST or ZAPI}
+    username: ${36:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${37:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${38:# Name of the vserver to use}
+    vstorage_state: ${39:# status of vstorage_state}
+    windows: ${40:# This option can be set or modified when using REST}
   tags:
     - netapp
     - ontap

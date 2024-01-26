@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage regkey license assignment on BIG-IPs from a BIG-IQ}
   f5networks.f5_modules.bigiq_regkey_license_assignment:
-    pool: ${2:# The registration key pool to use}
-    key: ${3:# The registration key you want to assign from the pool}
-    device: ${4:# When C(managed) is C(no), specifies the address, or hostname, where the BIG-IQ can reach the remote device to register}
-    managed: ${5:# Whether the specified device is a managed or un-managed device}
-    device_port: ${6:# Specifies the port of the remote device to connect to}
-    device_username: ${7:# The username used to connect to the remote device}
-    device_password: ${8:# The password of the C(device_username)}
-    state: ${9:# When C(present), ensures the device is assigned the specified license}
-    provider: ${10:# A dict object containing connection details}
+    device: ${2:# When C(managed) is C(false), specifies the address, or hostname, where the BIG-IQ can reach the remote device to register}
+    device_password: ${3:# The password of the C(device_username)}
+    device_port: ${4:# Specifies the port of the remote device to connect to}
+    device_username: ${5:# The username used to connect to the remote device}
+    key: ${6:# The registration key you want to assign from the pool}
+    managed: ${7:# Whether the specified device is a managed or un-managed device}
+    pool: ${8:# The registration key pool to use}
+    provider: ${9:# A dict object containing connection details}
+    state: ${10:# When C(present), ensures the device is assigned the specified license}
   tags:
     - f5networks
     - f5_modules

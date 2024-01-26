@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure 1&1 firewall policy}
   community.general.oneandone_firewall_policy:
-    state: ${2:# Define a firewall policy state to create, remove, or update}
-    auth_token: ${3:# Authenticating API token provided by 1&1}
+    add_rules: ${2:# A list of rules that will be added to an existing firewall policy}
+    add_server_ips: ${3:# A list of server identifiers (id or name) to be assigned to a firewall policy}
     api_url: ${4:# Custom API URL}
-    name: ${5:# Firewall policy name used with present state}
-    firewall_policy: ${6:# The identifier (id or name) of the firewall policy used with update state}
-    rules: ${7:# A list of rules that will be set for the firewall policy}
-    add_server_ips: ${8:# A list of server identifiers (id or name) to be assigned to a firewall policy}
-    remove_server_ips: ${9:# A list of server IP ids to be unassigned from a firewall policy}
-    add_rules: ${10:# A list of rules that will be added to an existing firewall policy}
-    remove_rules: ${11:# A list of rule ids that will be removed from an existing firewall policy}
-    description: ${12:# Firewall policy description}
+    auth_token: ${5:# Authenticating API token provided by 1&1}
+    description: ${6:# Firewall policy description}
+    firewall_policy: ${7:# The identifier (id or name) of the firewall policy used with update state}
+    name: ${8:# Firewall policy name used with present state}
+    remove_rules: ${9:# A list of rule ids that will be removed from an existing firewall policy}
+    remove_server_ips: ${10:# A list of server IP ids to be unassigned from a firewall policy}
+    rules: ${11:# A list of rules that will be set for the firewall policy}
+    state: ${12:# Define a firewall policy state to create, remove, or update}
     wait: ${13:# wait for the instance to be in state 'running' before returning}
-    wait_timeout: ${14:# how long before wait gives up, in seconds}
-    wait_interval: ${15:# Defines the number of seconds to wait when using the _wait_for methods}
+    wait_interval: ${14:# Defines the number of seconds to wait when using the _wait_for methods}
+    wait_timeout: ${15:# how long before wait gives up, in seconds}
   tags:
     - community
     - general

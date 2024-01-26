@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Execute an AWS Lambda function}
   amazon.aws.lambda_execute:
-    name: ${2:# The name of the function to be invoked}
-    function_arn: ${3:# The name of the function to be invoked}
-    tail_log: ${4:# If I(tail_log=true), the result of the task will include the last 4 KB of the CloudWatch log for the function execution}
-    wait: ${5:# Whether to wait for the function results or not}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
     dry_run: ${6:# Do not *actually* invoke the function}
-    version_qualifier: ${7:# Which version/alias of the function to run}
-    payload: ${8:# A dictionary in any form to be provided as input to the Lambda function}
-    access_key: ${9:# AWS access key ID}
-    secret_key: ${10:# AWS secret access key}
-    session_token: ${11:# AWS STS session token for use with temporary credentials}
-    profile: ${12:# A named AWS profile to use for authentication}
-    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${16:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
-    region: ${18:# The AWS region to use}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    function_arn: ${8:# The name of the function to be invoked}
+    name: ${9:# The name of the function to be invoked}
+    payload: ${10:# A dictionary in any form to be provided as input to the Lambda function}
+    profile: ${11:# A named AWS profile to use for authentication}
+    region: ${12:# The AWS region to use}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    tail_log: ${15:# If I(tail_log=true), the result of the task will include the last 4 KB of the CloudWatch log for the function execution}
+    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    version_qualifier: ${17:# Which version/alias of the function to run}
+    wait: ${18:# Whether to wait for the function results or not}
   tags:
     - amazon
     - aws

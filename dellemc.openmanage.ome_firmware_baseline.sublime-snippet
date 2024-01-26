@@ -1,26 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, modify, or delete a firmware baseline on OpenManage Enterprise or OpenManage Enterprise Modular}
   dellemc.openmanage.ome_firmware_baseline:
-    state: ${2:# C(present) creates or modifies a baseline}
-    baseline_name: ${3:# Name of the the baseline}
-    baseline_id: ${4:# ID of the existing baseline}
-    new_baseline_name: ${5:# New name of the baseline}
-    baseline_description: ${6:# Description for the baseline being created}
-    catalog_name: ${7:# Name of the catalog to be associated with the baseline}
-    downgrade_enabled: ${8:# Indicates whether firmware downgrade is allowed for the devices in the baseline}
-    is_64_bit: ${9:# Indicates if the repository contains 64-bit DUPs}
-    device_ids: ${10:# List of device IDs}
-    device_service_tags: ${11:# List of device service tags}
-    device_group_names: ${12:# List of group names}
-    job_wait: ${13:# Provides the option to wait for job completion}
-    job_wait_timeout: ${14:# The maximum wait time of I(job_wait) in seconds}
-    hostname: ${15:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
-    username: ${16:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    baseline_description: ${2:# Description for the baseline being created}
+    baseline_id: ${3:# ID of the existing baseline}
+    baseline_name: ${4:# Name of the the baseline}
+    ca_path: ${5:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    catalog_name: ${6:# Name of the catalog to be associated with the baseline}
+    device_group_names: ${7:# List of group names}
+    device_ids: ${8:# List of device IDs}
+    device_service_tags: ${9:# List of device service tags}
+    downgrade_enabled: ${10:# Indicates whether firmware downgrade is allowed for the devices in the baseline}
+    filter_no_reboot_required: ${11:# Select only components with no reboot required allows to create a firmware/driver baseline that consists of only the components of the target devices that don't require a reboot of the target devices}
+    hostname: ${12:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
+    is_64_bit: ${13:# Indicates if the repository contains 64-bit DUPs}
+    job_wait: ${14:# Provides the option to wait for job completion}
+    job_wait_timeout: ${15:# The maximum wait time of I(job_wait) in seconds}
+    new_baseline_name: ${16:# New name of the baseline}
     password: ${17:# OpenManage Enterprise or OpenManage Enterprise Modular password}
     port: ${18:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
-    validate_certs: ${19:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${20:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${21:# The socket level timeout in seconds}
+    state: ${19:# C(present) creates or modifies a baseline}
+    timeout: ${20:# The socket level timeout in seconds}
+    username: ${21:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    validate_certs: ${22:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

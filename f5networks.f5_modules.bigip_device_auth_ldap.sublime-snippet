@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage LDAP device authentication settings on BIG-IP}
   f5networks.f5_modules.bigip_device_auth_ldap:
-    servers: ${2:# Specifies the LDAP servers the system must use to obtain authentication information}
-    port: ${3:# Specifies the port the system uses for access to the remote host server}
-    remote_directory_tree: ${4:# Specifies the file location (tree) of the user authentication database on the server}
-    scope: ${5:# Specifies the level of the remote Active Directory or LDAP directory the system should search for the user authentication}
-    bind_dn: ${6:# Specifies the distinguished name for the Active Directory or LDAP server user ID}
-    bind_password: ${7:# Specifies a password for the Active Directory or LDAP server user ID}
-    user_template: ${8:# Specifies the distinguished name of the user who is logging on}
-    check_member_attr: ${9:# Checks the member attribute of the user in the remote LDAP or AD group}
-    ssl: ${10:# Specifies whether the system uses an SSL port to communicate with the LDAP server}
-    ca_cert: ${11:# Specifies the name of an SSL certificate from a certificate authority (CA)}
-    client_key: ${12:# Specifies the name of an SSL client key}
-    client_cert: ${13:# Specifies the name of an SSL client certificate}
-    validate_certs: ${14:# Specifies whether the system checks an SSL peer, as a result of which the system requires and verifies the server certificate}
-    login_ldap_attr: ${15:# Specifies the LDAP directory attribute containing the local user name that is associated with the selected directory entry}
-    fallback_to_local: ${16:# Specifies the system uses the Local authentication method if the remote authentication method is not available}
-    referrals: ${17:# Specifies whether automatic referral chasing should be enabled}
+    bind_dn: ${2:# Specifies the distinguished name for the Active Directory or LDAP server user ID}
+    bind_password: ${3:# Specifies a password for the Active Directory or LDAP server user ID}
+    ca_cert: ${4:# Specifies the name of an SSL certificate from a certificate authority (CA)}
+    check_member_attr: ${5:# Checks the member attribute of the user in the remote LDAP or AD group}
+    client_cert: ${6:# Specifies the name of an SSL client certificate}
+    client_key: ${7:# Specifies the name of an SSL client key}
+    fallback_to_local: ${8:# Specifies the system uses the Local authentication method if the remote authentication method is not available}
+    login_ldap_attr: ${9:# Specifies the LDAP directory attribute containing the local user name that is associated with the selected directory entry}
+    port: ${10:# Specifies the port the system uses for access to the remote host server}
+    provider: ${11:# A dict object containing connection details}
+    referrals: ${12:# Specifies whether automatic referral chasing should be enabled}
+    remote_directory_tree: ${13:# Specifies the file location (tree) of the user authentication database on the server}
+    scope: ${14:# Specifies the level of the remote Active Directory or LDAP directory the system should search for the user authentication}
+    servers: ${15:# Specifies the LDAP servers the system must use to obtain authentication information}
+    source_type: ${16:# Specifies the auth source for user authentication, should be used with C(use_for_auth)}
+    ssl: ${17:# Specifies whether the system uses an SSL port to communicate with the LDAP server}
     state: ${18:# When C(present), ensures the device authentication method exists}
     update_password: ${19:# C(always) always updates the C(bind_password)}
     use_for_auth: ${20:# Specifies whether or not this auth source is put in use on the system}
-    source_type: ${21:# Specifies the auth source for user authentication, should be used with C(use_for_auth)}
-    provider: ${22:# A dict object containing connection details}
+    user_template: ${21:# Specifies the distinguished name of the user who is logging on}
+    validate_certs: ${22:# Specifies whether the system checks an SSL peer, as a result of which the system requires and verifies the server certificate}
   tags:
     - f5networks
     - f5_modules

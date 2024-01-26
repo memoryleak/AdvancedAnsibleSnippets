@@ -1,36 +1,38 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP Manage cifs-share}
   netapp.ontap.na_ontap_cifs:
-    comment: ${2:# The CIFS share description}
-    path: ${3:# The file system path that is shared through this CIFS share}
-    vserver: ${4:# Vserver containing the CIFS share}
-    name: ${5:# The name of the CIFS share}
-    share_properties: ${6:# The list of properties for the CIFS share}
-    symlink_properties: ${7:# The list of symlink properties for this CIFS share}
-    state: ${8:# Whether the specified CIFS share should exist or not}
-    vscan_fileop_profile: ${9:# Profile_set of file_ops to which vscan on access scanning is applicable}
-    unix_symlink: ${10:# The list of unix_symlink properties for this CIFS share}
-    access_based_enumeration: ${11:# If enabled, all folders inside this share are visible to a user based on that individual user access right; prevents the display of folders or other shared resources that the user does not have access to}
-    allow_unencrypted_access: ${12:# Specifies whether or not the SMB2 clients are allowed to access the encrypted share}
-    change_notify: ${13:# Specifies whether CIFS clients can request for change notifications for directories on this share}
-    encryption: ${14:# Specifies that SMB encryption must be used when accessing this share}
-    home_directory: ${15:# Specifies whether or not the share is a home directory share, where the share and path names are dynamic}
-    namespace_caching: ${16:# Specifies whether or not the SMB clients connecting to this share can cache the directory enumeration results returned by the CIFS servers}
-    oplocks: ${17:# Specify whether opportunistic locks are enabled on this share}
-    show_snapshot: ${18:# Specifies whether or not the Snapshot copies can be viewed and traversed by clients}
-    continuously_available: ${19:# Specifies whether or not the clients connecting to this share can open files in a persistent manner}
-    hostname: ${20:# The hostname or IP address of the ONTAP instance}
-    username: ${21:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${22:# Password for the specified user}
-    cert_filepath: ${23:# path to SSL client cert file (}
-    key_filepath: ${24:# path to SSL client key file}
-    https: ${25:# Enable and disable https}
-    validate_certs: ${26:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${27:# Override the default port (80 or 443) with this port}
-    ontapi: ${28:# The ontap api version to use}
+    access_based_enumeration: ${2:# If enabled, all folders inside this share are visible to a user based on that individual user access right; prevents the display of folders or other shared resources that the user does not have access to}
+    allow_unencrypted_access: ${3:# Specifies whether or not the SMB2 clients are allowed to access the encrypted share}
+    browsable: ${4:# Specifies whether or not the Windows clients can browse the share}
+    cert_filepath: ${5:# path to SSL client cert file (}
+    change_notify: ${6:# Specifies whether CIFS clients can request for change notifications for directories on this share}
+    comment: ${7:# The CIFS share description}
+    continuously_available: ${8:# Specifies whether or not the clients connecting to this share can open files in a persistent manner}
+    encryption: ${9:# Specifies that SMB encryption must be used when accessing this share}
+    feature_flags: ${10:# Enable or disable a new feature}
+    force_ontap_version: ${11:# Override the cluster ONTAP version when using REST}
+    home_directory: ${12:# Specifies whether or not the share is a home directory share, where the share and path names are dynamic}
+    hostname: ${13:# The hostname or IP address of the ONTAP instance}
+    http_port: ${14:# Override the default port (80 or 443) with this port}
+    https: ${15:# Enable and disable https}
+    key_filepath: ${16:# path to SSL client key file}
+    name: ${17:# The name of the CIFS share}
+    namespace_caching: ${18:# Specifies whether or not the SMB clients connecting to this share can cache the directory enumeration results returned by the CIFS servers}
+    ontapi: ${19:# The ontap api version to use}
+    oplocks: ${20:# Specify whether opportunistic locks are enabled on this share}
+    password: ${21:# Password for the specified user}
+    path: ${22:# The file system path that is shared through this CIFS share}
+    share_properties: ${23:# The list of properties for the CIFS share}
+    show_previous_versions: ${24:# Specifies that the previous version can be viewed and restored from the client}
+    show_snapshot: ${25:# Specifies whether or not the Snapshot copies can be viewed and traversed by clients}
+    state: ${26:# Whether the specified CIFS share should exist or not}
+    symlink_properties: ${27:# The list of symlink properties for this CIFS share}
+    unix_symlink: ${28:# The list of unix_symlink properties for this CIFS share}
     use_rest: ${29:# Whether to use REST or ZAPI}
-    feature_flags: ${30:# Enable or disable a new feature}
-    force_ontap_version: ${31:# Override the cluster ONTAP version when using REST}
+    username: ${30:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${31:# If set to C(no), the SSL certificates will not be validated}
+    vscan_fileop_profile: ${32:# Profile_set of file_ops to which vscan on access scanning is applicable}
+    vserver: ${33:# Vserver containing the CIFS share}
   tags:
     - netapp
     - ontap

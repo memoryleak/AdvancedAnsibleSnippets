@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages block storage volumes on Vultr}
   vultr.cloud.block_storage:
-    label: ${2:# Name of the block storage volume}
-    size_gb: ${3:# Size of the block storage volume in GB}
-    block_type: ${4:# The type of block storage volume that will be created}
-    region: ${5:# Region the block storage volume is deployed into}
-    state: ${6:# State of the block storage volume}
+    api_endpoint: ${2:# URL to API endpint (without trailing slash)}
+    api_key: ${3:# API key of the Vultr API}
+    api_retries: ${4:# Amount of retries in case of the Vultr API retuns an HTTP 503 code}
+    api_retry_max_delay: ${5:# Retry backoff delay in seconds is exponential up to this max}
+    api_timeout: ${6:# HTTP timeout to Vultr API}
     attached_to_instance: ${7:# The ID of the server instance the volume is attached to}
-    live: ${8:# Whether the volume should be attached/detached without restarting the instance}
-    api_key: ${9:# API key of the Vultr API}
-    api_timeout: ${10:# HTTP timeout to Vultr API}
-    api_retries: ${11:# Amount of retries in case of the Vultr API retuns an HTTP 503 code}
-    api_retry_max_delay: ${12:# Retry backoff delay in seconds is exponential up to this max}
-    api_endpoint: ${13:# URL to API endpint (without trailing slash)}
+    block_type: ${8:# The type of block storage volume that will be created}
+    label: ${9:# Name of the block storage volume}
+    live: ${10:# Whether the volume should be attached/detached without restarting the instance}
+    region: ${11:# Region the block storage volume is deployed into}
+    size_gb: ${12:# Size of the block storage volume in GB}
+    state: ${13:# State of the block storage volume}
     validate_certs: ${14:# Validate SSL certs of the Vultr API}
   tags:
     - vultr

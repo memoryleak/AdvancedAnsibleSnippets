@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure open vswitch database}
   openvswitch.openvswitch.openvswitch_db:
-    state: ${2:# Configures the state of the key}
-    table: ${3:# Identifies the table in the database}
-    record: ${4:# Identifies the record in the table}
-    col: ${5:# Identifies the column in the record}
-    key: ${6:# Identifies the key in the record column, when the column is a map type}
-    value: ${7:# Expected value for the table, record, column and key}
+    col: ${2:# Identifies the column in the record}
+    database_socket: ${3:# Path/ip to datbase socket to use}
+    key: ${4:# Identifies the key in the record column, when the column is a map type}
+    record: ${5:# Identifies the record in the table}
+    state: ${6:# Configures the state of the key}
+    table: ${7:# Identifies the table in the database}
     timeout: ${8:# How long to wait for ovs-vswitchd to respond}
-    database_socket: ${9:# Path/ip to datbase socket to use}
+    value: ${9:# Expected value for the table, record, column and key}
   tags:
     - openvswitch
     - openvswitch

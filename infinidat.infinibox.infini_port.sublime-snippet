@@ -2,12 +2,12 @@
   <content><![CDATA[- name: ${1:Add and Delete fiber channel and iSCSI ports to a host on Infinibox}
   infinidat.infinibox.infini_port:
     host: ${2:# Host Name}
-    state: ${3:# Creates mapping when present, removes when absent, or provides details of a mapping when stat}
-    wwns: ${4:# List of wwns of the host}
-    iqns: ${5:# List of iqns of the host}
+    iqns: ${3:# List of iqns of the host}
+    password: ${4:# Infinibox User password}
+    state: ${5:# Creates mapping when present, removes when absent, or provides details of a mapping when stat}
     system: ${6:# Infinibox Hostname or IPv4 Address}
     user: ${7:# Infinibox User username with sufficient priveledges ( see notes )}
-    password: ${8:# Infinibox User password}
+    wwns: ${8:# List of wwns of the host}
   tags:
     - infinidat
     - infinibox

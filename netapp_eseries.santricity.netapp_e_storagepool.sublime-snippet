@@ -1,26 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp E-Series manage volume groups and disk pools}
   netapp_eseries.santricity.netapp_e_storagepool:
-    state: ${2:# Whether the specified storage pool should exist or not}
-    name: ${3:# The name of the storage pool to manage}
-    criteria_drive_count: ${4:# The number of disks to use for building the storage pool}
-    criteria_min_usable_capacity: ${5:# The minimum size of the storage pool (in size_unit)}
-    criteria_drive_type: ${6:# The type of disk (hdd or ssd) to use when searching for candidates to use}
-    criteria_size_unit: ${7:# The unit used to interpret size parameters}
-    criteria_drive_min_size: ${8:# The minimum individual drive size (in size_unit) to consider when choosing drives for the storage pool}
-    criteria_drive_interface_type: ${9:# The interface type to use when selecting drives for the storage pool}
-    criteria_drive_require_da: ${10:# Ensures the storage pool will be created with only data assurance (DA) capable drives}
-    criteria_drive_require_fde: ${11:# Whether full disk encryption ability is required for drives to be added to the storage pool}
-    raid_level: ${12:# The RAID level of the storage pool to be created}
-    secure_pool: ${13:# Enables security at rest feature on the storage pool}
-    reserve_drive_count: ${14:# Set the number of drives reserved by the storage pool for reconstruction operations}
-    remove_volumes: ${15:# Prior to removing a storage pool, delete all volumes in the pool}
-    erase_secured_drives: ${16:# If I(state=='absent') then all storage pool drives will be erase}
-    api_username: ${17:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_password: ${18:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_url: ${19:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
-    validate_certs: ${20:# Should https certificates be validated?}
-    ssid: ${21:# The ID of the array to manage}
+    api_password: ${2:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${3:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_username: ${4:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    criteria_drive_count: ${5:# The number of disks to use for building the storage pool}
+    criteria_drive_interface_type: ${6:# The interface type to use when selecting drives for the storage pool}
+    criteria_drive_min_size: ${7:# The minimum individual drive size (in size_unit) to consider when choosing drives for the storage pool}
+    criteria_drive_require_da: ${8:# Ensures the storage pool will be created with only data assurance (DA) capable drives}
+    criteria_drive_require_fde: ${9:# Whether full disk encryption ability is required for drives to be added to the storage pool}
+    criteria_drive_type: ${10:# The type of disk (hdd or ssd) to use when searching for candidates to use}
+    criteria_min_usable_capacity: ${11:# The minimum size of the storage pool (in size_unit)}
+    criteria_size_unit: ${12:# The unit used to interpret size parameters}
+    erase_secured_drives: ${13:# If I(state=='absent') then all storage pool drives will be erase}
+    name: ${14:# The name of the storage pool to manage}
+    raid_level: ${15:# The RAID level of the storage pool to be created}
+    remove_volumes: ${16:# Prior to removing a storage pool, delete all volumes in the pool}
+    reserve_drive_count: ${17:# Set the number of drives reserved by the storage pool for reconstruction operations}
+    secure_pool: ${18:# Enables security at rest feature on the storage pool}
+    ssid: ${19:# The ID of the array to manage}
+    state: ${20:# Whether the specified storage pool should exist or not}
+    validate_certs: ${21:# Should https certificates be validated?}
   tags:
     - netapp_eseries
     - santricity

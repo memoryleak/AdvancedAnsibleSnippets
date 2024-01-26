@@ -1,38 +1,38 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage gslb service entities in Netscaler}
   community.network.netscaler_gslb_service:
-    servicename: ${2:# Name for the GSLB service}
-    cnameentry: ${3:# Canonical name of the GSLB service}
-    servername: ${4:# Name of the server hosting the GSLB service}
-    servicetype: ${5:# Type of service to create}
-    port: ${6:# Port on which the load balancing entity represented by this GSLB service listens}
-    publicip: ${7:# The public IP address that a NAT device translates to the GSLB service's private IP address}
-    publicport: ${8:# The public port associated with the GSLB service's public IP address}
-    maxclient: ${9:# The maximum number of open connections that the service can support at any given time}
+    appflowlog: ${2:# Enable logging appflow flow information}
+    cip: ${3:# In the request that is forwarded to the GSLB service, insert a header that stores the client's IP address}
+    cipheader: ${4:# Name for the HTTP header that stores the client's IP address}
+    clttimeout: ${5:# Idle time, in seconds, after which a client connection is terminated}
+    cnameentry: ${6:# Canonical name of the GSLB service}
+    comment: ${7:# Any comments that you might want to associate with the GSLB service}
+    downstateflush: ${8:# Flush all active transactions associated with the GSLB service when its state transitions from UP to DOWN}
+    hashid: ${9:# Unique hash identifier for the GSLB service, used by hash based load balancing methods}
     healthmonitor: ${10:# Monitor the health of the GSLB service}
-    sitename: ${11:# Name of the GSLB site to which the service belongs}
-    cip: ${12:# In the request that is forwarded to the GSLB service, insert a header that stores the client's IP address}
-    cipheader: ${13:# Name for the HTTP header that stores the client's IP address}
-    sitepersistence: ${14:# Use cookie-based site persistence}
-    siteprefix: ${15:# The site's prefix string}
-    clttimeout: ${16:# Idle time, in seconds, after which a client connection is terminated}
-    maxbandwidth: ${17:# Integer specifying the maximum bandwidth allowed for the service}
-    downstateflush: ${18:# Flush all active transactions associated with the GSLB service when its state transitions from UP to DOWN}
-    maxaaausers: ${19:# Maximum number of SSL VPN users that can be logged on concurrently to the VPN virtual server that is represented by this GSLB service}
-    monthreshold: ${20:# Monitoring threshold value for the GSLB service}
-    hashid: ${21:# Unique hash identifier for the GSLB service, used by hash based load balancing methods}
-    comment: ${22:# Any comments that you might want to associate with the GSLB service}
-    appflowlog: ${23:# Enable logging appflow flow information}
-    ipaddress: ${24:# IP address for the GSLB service}
-    monitor_bindings: ${25:# Bind monitors to this gslb service}
-    nsip: ${26:# The ip address of the netscaler appliance where the nitro API calls will be made}
-    nitro_user: ${27:# The username with which to authenticate to the netscaler node}
-    nitro_pass: ${28:# The password with which to authenticate to the netscaler node}
-    nitro_protocol: ${29:# Which protocol to use when accessing the nitro API objects}
-    validate_certs: ${30:# If C(no), SSL certificates will not be validated}
-    nitro_timeout: ${31:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
+    ipaddress: ${11:# IP address for the GSLB service}
+    maxaaausers: ${12:# Maximum number of SSL VPN users that can be logged on concurrently to the VPN virtual server that is represented by this GSLB service}
+    maxbandwidth: ${13:# Integer specifying the maximum bandwidth allowed for the service}
+    maxclient: ${14:# The maximum number of open connections that the service can support at any given time}
+    monitor_bindings: ${15:# Bind monitors to this gslb service}
+    monthreshold: ${16:# Monitoring threshold value for the GSLB service}
+    nitro_pass: ${17:# The password with which to authenticate to the netscaler node}
+    nitro_protocol: ${18:# Which protocol to use when accessing the nitro API objects}
+    nitro_timeout: ${19:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
+    nitro_user: ${20:# The username with which to authenticate to the netscaler node}
+    nsip: ${21:# The ip address of the netscaler appliance where the nitro API calls will be made}
+    port: ${22:# Port on which the load balancing entity represented by this GSLB service listens}
+    publicip: ${23:# The public IP address that a NAT device translates to the GSLB service's private IP address}
+    publicport: ${24:# The public port associated with the GSLB service's public IP address}
+    save_config: ${25:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+    servername: ${26:# Name of the server hosting the GSLB service}
+    servicename: ${27:# Name for the GSLB service}
+    servicetype: ${28:# Type of service to create}
+    sitename: ${29:# Name of the GSLB site to which the service belongs}
+    sitepersistence: ${30:# Use cookie-based site persistence}
+    siteprefix: ${31:# The site's prefix string}
     state: ${32:# The state of the resource being configured by the module on the netscaler node}
-    save_config: ${33:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+    validate_certs: ${33:# If C(no), SSL certificates will not be validated}
   tags:
     - community
     - network

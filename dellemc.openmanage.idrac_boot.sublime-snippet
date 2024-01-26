@@ -3,21 +3,21 @@
   dellemc.openmanage.idrac_boot:
     boot_options: ${2:# Options to enable or disable the boot devices}
     boot_order: ${3:# This option allows to set the boot devices in the required boot order sequences}
-    boot_source_override_mode: ${4:# The BIOS boot mode (either Legacy or UEFI) to be used when I(boot_source_override_target) boot source is booted from}
-    boot_source_override_enabled: ${5:# The state of the Boot Source Override feature}
+    boot_source_override_enabled: ${4:# The state of the Boot Source Override feature}
+    boot_source_override_mode: ${5:# The BIOS boot mode (either Legacy or UEFI) to be used when I(boot_source_override_target) boot source is booted from}
     boot_source_override_target: ${6:# The boot source override target device to use during the next boot instead of the normal boot device}
-    uefi_target_boot_source_override: ${7:# The UEFI device path of the device from which to boot when I(boot_source_override_target) is C(uefi_target)}
-    reset_type: ${8:# C(none) Host system is not rebooted and I(job_wait) is not applicable}
-    job_wait: ${9:# Provides the option to wait for job completion}
-    job_wait_timeout: ${10:# The maximum wait time of I(job_wait) in seconds}
-    resource_id: ${11:# Redfish ID of the resource}
-    idrac_ip: ${12:# iDRAC IP Address}
-    idrac_user: ${13:# iDRAC username}
-    idrac_password: ${14:# iDRAC user password}
-    idrac_port: ${15:# iDRAC port}
-    validate_certs: ${16:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${17:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${18:# The socket level timeout in seconds}
+    ca_path: ${7:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    idrac_ip: ${8:# iDRAC IP Address}
+    idrac_password: ${9:# iDRAC user password}
+    idrac_port: ${10:# iDRAC port}
+    idrac_user: ${11:# iDRAC username}
+    job_wait: ${12:# Provides the option to wait for job completion}
+    job_wait_timeout: ${13:# The maximum wait time of I(job_wait) in seconds}
+    reset_type: ${14:# C(none) Host system is not rebooted and I(job_wait) is not applicable}
+    resource_id: ${15:# Redfish ID of the resource}
+    timeout: ${16:# The socket level timeout in seconds}
+    uefi_target_boot_source_override: ${17:# The UEFI device path of the device from which to boot when I(boot_source_override_target) is C(uefi_target)}
+    validate_certs: ${18:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

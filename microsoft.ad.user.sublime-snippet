@@ -1,0 +1,43 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Active Directory users}
+  microsoft.ad.user:
+    account_locked: ${2:# C(no) will unlock the user account if locked}
+    attributes: ${3:# The attributes to either add, remove, or set on the AD object}
+    city: ${4:# Configures the user's city}
+    company: ${5:# Configures the user's company name}
+    country: ${6:# Configures the user's country code}
+    delegates: ${7:# The principal objects that the current AD object can trust for delegation to either add, remove or set}
+    description: ${8:# The description of the AD object to set}
+    display_name: ${9:# The display name of the AD object to set}
+    domain_password: ${10:# The password for I(domain_username)}
+    domain_server: ${11:# Specified the Active Directory Domain Services instance to connect to}
+    domain_username: ${12:# The username to use when interacting with AD}
+    email: ${13:# Configures the user's email address}
+    enabled: ${14:# C(yes) will enable the user account}
+    firstname: ${15:# Configures the user's first name (given name)}
+    groups: ${16:# Specifies the group membership the user is added, removed, or set to}
+    identity: ${17:# The identity of the AD object used to find the AD object to manage}
+    name: ${18:# The C(name) of the AD object to manage}
+    password: ${19:# Optionally set the user's password to this (plain text) value}
+    password_expired: ${20:# C(yes) will require the user to change their password at next login}
+    password_never_expires: ${21:# C(yes) will set the password to never expire}
+    path: ${22:# The path of the OU or the container where the new object should exist in}
+    postal_code: ${23:# Configures the user's postal code / zip code}
+    protect_from_deletion: ${24:# Marks the object as protected from accidental deletion}
+    sam_account_name: ${25:# The C(sAMAccountName) value to set for the user}
+    spn: ${26:# Specifies the service principal name(s) for the account to add, remove or set}
+    state: ${27:# Set to C(present) to ensure the AD object exists}
+    state_province: ${28:# Configures the user's state}
+    street: ${29:# Configures the user's street address}
+    surname: ${30:# Configures the user's last name (surname)}
+    update_password: ${31:# C(always) will always update passwords}
+    upn: ${32:# Configures the User Principal Name (UPN) for the account}
+    user_cannot_change_password: ${33:# C(yes) will prevent the user from changing their password}
+  tags:
+    - microsoft
+    - ad
+    - user]]></content>
+  <tabTrigger>microsoft.ad.user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Active Directory users</description>
+</snippet>

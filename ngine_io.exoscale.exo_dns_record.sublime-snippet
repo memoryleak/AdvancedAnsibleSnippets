@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages DNS records on Exoscale DNS}
   ngine_io.exoscale.exo_dns_record:
-    name: ${2:# Name of the record}
-    domain: ${3:# Domain the record is related to}
-    record_type: ${4:# Type of the record}
-    content: ${5:# Content of the record}
-    ttl: ${6:# TTL of the record in seconds}
-    prio: ${7:# Priority of the record}
+    api_key: ${2:# API key of the Exoscale DNS API}
+    api_region: ${3:# Name of the ini section in the C(cloustack}
+    api_secret: ${4:# Secret key of the Exoscale DNS API}
+    api_timeout: ${5:# HTTP timeout to Exoscale DNS API}
+    content: ${6:# Content of the record}
+    domain: ${7:# Domain the record is related to}
     multiple: ${8:# Whether there are more than one records with similar I(name) and I(record_type)}
-    state: ${9:# State of the record}
-    api_key: ${10:# API key of the Exoscale DNS API}
-    api_secret: ${11:# Secret key of the Exoscale DNS API}
-    api_timeout: ${12:# HTTP timeout to Exoscale DNS API}
-    api_region: ${13:# Name of the ini section in the C(cloustack}
+    name: ${9:# Name of the record}
+    prio: ${10:# Priority of the record}
+    record_type: ${11:# Type of the record}
+    state: ${12:# State of the record}
+    ttl: ${13:# TTL of the record in seconds}
     validate_certs: ${14:# Validate SSL certs of the Exoscale DNS API}
   tags:
     - ngine_io

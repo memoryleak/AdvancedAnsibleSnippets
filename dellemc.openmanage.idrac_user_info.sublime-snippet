@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieve details of all users or a specific user on iDRAC}
+  dellemc.openmanage.idrac_user_info:
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    idrac_ip: ${3:# iDRAC IP Address}
+    idrac_password: ${4:# iDRAC user password}
+    idrac_port: ${5:# iDRAC port}
+    idrac_user: ${6:# iDRAC username}
+    timeout: ${7:# The socket level timeout in seconds}
+    user_id: ${8:# Sequential user id numbers that supports from 1 to 16}
+    username: ${9:# Username of the account that is created in iDRAC local users}
+    validate_certs: ${10:# If C(false), the SSL certificates will not be validated}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_user_info]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_user_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieve details of all users or a specific user on iDRAC</description>
+</snippet>

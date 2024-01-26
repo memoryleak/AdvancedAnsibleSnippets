@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and manage certificates on the Hetzner Cloud}
+  hetzner.hcloud.certificate:
+    api_endpoint: ${2:# The API Endpoint for the Hetzner Cloud}
+    api_token: ${3:# The API Token for the Hetzner Cloud}
+    certificate: ${4:# Certificate and chain in PEM format, in order so that each record directly certifies the one preceding}
+    domain_names: ${5:# Domains and subdomains that should be contained in the Certificate issued by Let's Encrypt}
+    id: ${6:# The ID of the Hetzner Cloud certificate to manage}
+    labels: ${7:# User-defined labels (key-value pairs)}
+    name: ${8:# The Name of the Hetzner Cloud certificate to manage}
+    private_key: ${9:# Certificate key in PEM format}
+    state: ${10:# State of the certificate}
+    type: ${11:# Choose between uploading a Certificate in PEM format or requesting a managed Let's Encrypt Certificate}
+  tags:
+    - hetzner
+    - hcloud
+    - certificate]]></content>
+  <tabTrigger>hetzner.hcloud.certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and manage certificates on the Hetzner Cloud</description>
+</snippet>

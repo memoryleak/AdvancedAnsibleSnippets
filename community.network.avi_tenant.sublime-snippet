@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of Tenant Avi RESTful Object}
   community.network.avi_tenant:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
     avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    config_settings: ${5:# Tenantconfiguration settings for tenant}
-    created_by: ${6:# Creator of this tenant}
-    description: ${7:# User defined description for the object}
-    local: ${8:# Boolean flag to set local}
-    name: ${9:# Name of the object}
-    url: ${10:# Avi controller URL of the object}
-    uuid: ${11:# Unique object identifier of the object}
-    controller: ${12:# IP address or hostname of the controller}
-    username: ${13:# Username used for accessing Avi controller}
+    avi_api_update_method: ${5:# Default method for object update is HTTP PUT}
+    avi_credentials: ${6:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${7:# It disables avi session information to be cached as a fact}
+    config_settings: ${8:# Tenantconfiguration settings for tenant}
+    controller: ${9:# IP address or hostname of the controller}
+    created_by: ${10:# Creator of this tenant}
+    description: ${11:# User defined description for the object}
+    local: ${12:# Boolean flag to set local}
+    name: ${13:# Name of the object}
     password: ${14:# Password of Avi user in Avi controller}
-    tenant: ${15:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${16:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${17:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${18:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${19:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${20:# It disables avi session information to be cached as a fact}
+    state: ${15:# The state that should be applied on the entity}
+    tenant: ${16:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${17:# UUID of tenant used for all Avi API calls and context of object}
+    url: ${18:# Avi controller URL of the object}
+    username: ${19:# Username used for accessing Avi controller}
+    uuid: ${20:# Unique object identifier of the object}
   tags:
     - community
     - network

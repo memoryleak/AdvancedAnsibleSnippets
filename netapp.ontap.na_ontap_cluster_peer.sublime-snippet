@@ -1,30 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP Manage Cluster peering}
   netapp.ontap.na_ontap_cluster_peer:
-    state: ${2:# Whether the specified cluster peer should exist or not}
-    source_intercluster_lifs: ${3:# List of intercluster addresses of the source cluster}
-    dest_intercluster_lifs: ${4:# List of intercluster addresses of the destination cluster}
-    passphrase: ${5:# The arbitrary passphrase that matches the one given to the peer cluster}
-    source_cluster_name: ${6:# The name of the source cluster name in the peer relation to be deleted}
-    dest_cluster_name: ${7:# The name of the destination cluster name in the peer relation to be deleted}
-    dest_hostname: ${8:# DEPRECATED - please use C(peer_options)}
-    dest_username: ${9:# DEPRECATED - please use C(peer_options)}
-    dest_password: ${10:# DEPRECATED - please use C(peer_options)}
-    ipspace: ${11:# IPspace of the local intercluster LIFs}
-    encryption_protocol_proposed: ${12:# Encryption protocol to be used for inter-cluster communication}
-    hostname: ${13:# The hostname or IP address of the ONTAP instance}
-    username: ${14:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${15:# Password for the specified user}
-    cert_filepath: ${16:# path to SSL client cert file (}
-    key_filepath: ${17:# path to SSL client key file}
-    https: ${18:# Enable and disable https}
-    validate_certs: ${19:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${20:# Override the default port (80 or 443) with this port}
-    ontapi: ${21:# The ontap api version to use}
-    use_rest: ${22:# Whether to use REST or ZAPI}
-    feature_flags: ${23:# Enable or disable a new feature}
-    force_ontap_version: ${24:# Override the cluster ONTAP version when using REST}
-    peer_options: ${25:# IP address and connection options for the peer system}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    dest_cluster_name: ${3:# The name of the destination cluster name in the peer relation to be deleted}
+    dest_hostname: ${4:# DEPRECATED - please use C(peer_options)}
+    dest_intercluster_lifs: ${5:# List of intercluster addresses of the destination cluster}
+    dest_password: ${6:# DEPRECATED - please use C(peer_options)}
+    dest_username: ${7:# DEPRECATED - please use C(peer_options)}
+    encryption_protocol_proposed: ${8:# Encryption protocol to be used for inter-cluster communication}
+    feature_flags: ${9:# Enable or disable a new feature}
+    force_ontap_version: ${10:# Override the cluster ONTAP version when using REST}
+    hostname: ${11:# The hostname or IP address of the ONTAP instance}
+    http_port: ${12:# Override the default port (80 or 443) with this port}
+    https: ${13:# Enable and disable https}
+    ipspace: ${14:# IPspace of the local intercluster LIFs}
+    key_filepath: ${15:# path to SSL client key file}
+    ontapi: ${16:# The ontap api version to use}
+    passphrase: ${17:# The arbitrary passphrase that matches the one given to the peer cluster}
+    password: ${18:# Password for the specified user}
+    peer_options: ${19:# IP address and connection options for the peer system}
+    source_cluster_name: ${20:# The name of the source cluster name in the peer relation to be deleted}
+    source_intercluster_lifs: ${21:# List of intercluster addresses of the source cluster}
+    state: ${22:# Whether the specified cluster peer should exist or not}
+    use_rest: ${23:# Whether to use REST or ZAPI}
+    username: ${24:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${25:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

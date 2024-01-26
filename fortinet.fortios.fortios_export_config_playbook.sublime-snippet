@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Collect the current configurations of the modules and convert then into playbooks}
   fortinet.fortios.fortios_export_config_playbook:
-    output_path: ${2:# the path used for saving the playbook}
-    access_token: ${3:# Token-based authentication}
-    enable_log: ${4:# Enable/Disable logging for task}
-    vdom: ${5:# Virtual domain, among those defined previously}
-    filters: ${6:# A list of expressions to filter the returned results}
-    sorters: ${7:# A list of expressions to sort the returned results}
-    formatters: ${8:# A list of fields to display for returned results}
+    access_token: ${2:# Token-based authentication}
+    enable_log: ${3:# Enable/Disable logging for task}
+    filters: ${4:# A list of expressions to filter the returned results}
+    formatters: ${5:# A list of fields to display for returned results}
+    output_path: ${6:# the path used for saving the playbook}
+    params: ${7:# the parameter for each selector, see definition in above list}
+    selector: ${8:# Module name that used to fetch the current configurations and export the playbook}
     selectors: ${9:# A list of selectors used to fetch the current configurations and export the playbook}
-    selector: ${10:# Module name that used to fetch the current configurations and export the playbook}
-    params: ${11:# the parameter for each selector, see definition in above list}
+    sorters: ${10:# A list of expressions to sort the returned results}
+    vdom: ${11:# Virtual domain, among those defined previously}
   tags:
     - fortinet
     - fortios

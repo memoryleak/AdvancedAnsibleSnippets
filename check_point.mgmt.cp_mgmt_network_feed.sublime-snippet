@@ -1,32 +1,32 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages network-feed objects on Checkpoint over Web Services API}
   check_point.mgmt.cp_mgmt_network_feed:
-    name: ${2:# Object name}
-    feed_url: ${3:# URL of the feed}
-    certificate_id: ${4:# Certificate SHA-1 fingerprint to access the feed}
-    feed_format: ${5:# Feed file format}
-    feed_type: ${6:# Feed type to be enforced}
-    password: ${7:# password for authenticating with the URL}
-    tags: ${8:# Collection of tag identifiers}
-    username: ${9:# username for authenticating with the URL}
-    custom_header: ${10:# Headers to allow different authentication methods with the URL}
-    update_interval: ${11:# Interval in minutes for updating the feed on the Security Gateway}
-    data_column: ${12:# Number of the column that contains the feed's data}
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    certificate_id: ${3:# Certificate SHA-1 fingerprint to access the feed}
+    color: ${4:# Color of the object}
+    comments: ${5:# Comments string}
+    custom_header: ${6:# Headers to allow different authentication methods with the URL}
+    data_column: ${7:# Number of the column that contains the feed's data}
+    details_level: ${8:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${9:# Indicates which domains to process the commands on}
+    feed_format: ${10:# Feed file format}
+    feed_type: ${11:# Feed type to be enforced}
+    feed_url: ${12:# URL of the feed}
     fields_delimiter: ${13:# The delimiter that separates between the columns in the feed}
-    ignore_lines_that_start_with: ${14:# A prefix that will determine which lines to ignore}
-    json_query: ${15:# JQ query to be parsed}
-    use_gateway_proxy: ${16:# Use the gateway's proxy for retrieving the feed}
-    color: ${17:# Color of the object}
-    comments: ${18:# Comments string}
-    details_level: ${19:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
-    domains_to_process: ${20:# Indicates which domains to process the commands on}
-    ignore_warnings: ${21:# Apply changes ignoring warnings}
-    ignore_errors: ${22:# Apply changes ignoring errors}
-    state: ${23:# State of the access rule (present or absent)}
-    auto_publish_session: ${24:# Publish the current session if changes have been performed after task completes}
-    wait_for_task: ${25:# Wait for the task to end}
-    wait_for_task_timeout: ${26:# How many minutes to wait until throwing a timeout error}
-    version: ${27:# Version of checkpoint}
+    ignore_errors: ${14:# Apply changes ignoring errors}
+    ignore_lines_that_start_with: ${15:# A prefix that will determine which lines to ignore}
+    ignore_warnings: ${16:# Apply changes ignoring warnings}
+    json_query: ${17:# JQ query to be parsed}
+    name: ${18:# Object name}
+    password: ${19:# password for authenticating with the URL}
+    state: ${20:# State of the access rule (present or absent)}
+    tags: ${21:# Collection of tag identifiers}
+    update_interval: ${22:# Interval in minutes for updating the feed on the Security Gateway}
+    use_gateway_proxy: ${23:# Use the gateway's proxy for retrieving the feed}
+    username: ${24:# username for authenticating with the URL}
+    version: ${25:# Version of checkpoint}
+    wait_for_task: ${26:# Wait for the task to end}
+    wait_for_task_timeout: ${27:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

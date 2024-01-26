@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add or remove a host from the C(known_hosts) file}
   ansible.builtin.known_hosts:
-    name: ${2:# The host to add or remove (must match a host specified in key)}
+    hash_host: ${2:# Hash the hostname in the known_hosts file}
     key: ${3:# The SSH public host key, as a string}
-    path: ${4:# The known_hosts file to edit}
-    hash_host: ${5:# Hash the hostname in the known_hosts file}
-    state: ${6:# I(present) to add the host key}
+    name: ${4:# The host to add or remove (must match a host specified in key)}
+    path: ${5:# The known_hosts file to edit}
+    state: ${6:# V(present) to add the host key}
   tags:
     - known_hosts]]></content>
   <tabTrigger>ansible.builtin.known_hosts</tabTrigger>

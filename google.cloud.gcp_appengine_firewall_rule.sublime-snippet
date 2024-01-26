@@ -1,18 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP FirewallRule}
   google.cloud.gcp_appengine_firewall_rule:
-    state: ${2:# Whether the given object should exist in GCP}
-    description: ${3:# An optional string description of this rule}
-    source_range: ${4:# IP address or range, defined using CIDR notation, of requests that this rule applies to}
-    action: ${5:# The action to take if this rule matches}
-    priority: ${6:# A positive integer that defines the order of rule evaluation}
-    project: ${7:# The Google Cloud Platform project to use}
-    auth_kind: ${8:# The type of credential used}
-    service_account_contents: ${9:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${10:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    action: ${3:# The action to take if this rule matches}
+    auth_kind: ${4:# The type of credential used}
+    description: ${5:# An optional string description of this rule}
+    env_type: ${6:# Specifies which Ansible environment you're running this module within}
+    priority: ${7:# A positive integer that defines the order of rule evaluation}
+    project: ${8:# The Google Cloud Platform project to use}
+    scopes: ${9:# Array of scopes to be used}
+    service_account_contents: ${10:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
     service_account_email: ${11:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${12:# Array of scopes to be used}
-    env_type: ${13:# Specifies which Ansible environment you're running this module within}
+    service_account_file: ${12:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    source_range: ${13:# IP address or range, defined using CIDR notation, of requests that this rule applies to}
+    state: ${14:# Whether the given object should exist in GCP}
   tags:
     - google
     - cloud

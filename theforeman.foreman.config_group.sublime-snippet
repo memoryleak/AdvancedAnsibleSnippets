@@ -2,13 +2,13 @@
   <content><![CDATA[- name: ${1:Manage (Puppet) Config Groups}
   theforeman.foreman.config_group:
     name: ${2:# The config group name}
-    updated_name: ${3:# New config group name}
+    password: ${3:# Password of the user accessing the Foreman server}
     puppetclasses: ${4:# List of puppet classes to include in this group}
     server_url: ${5:# URL of the Foreman server}
-    username: ${6:# Username accessing the Foreman server}
-    password: ${7:# Password of the user accessing the Foreman server}
-    validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
-    state: ${9:# State of the entity}
+    state: ${6:# State of the entity}
+    updated_name: ${7:# New config group name}
+    username: ${8:# Username accessing the Foreman server}
+    validate_certs: ${9:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages device IP configuration settings for HA on a BIG-IP}
   f5networks.f5_modules.bigip_device_connectivity:
-    config_sync_ip: ${2:# Local IP address the system uses for ConfigSync operations}
-    mirror_primary_address: ${3:# Specifies the primary IP address for the system to use to mirror connections}
-    mirror_secondary_address: ${4:# Specifies the secondary IP address for the system to use to mirror connections}
-    unicast_failover: ${5:# Addresses to use for failover operations}
-    failover_multicast: ${6:# When C(yes), ensures the Failover Multicast configuration is enabled and, if no further multicast configuration is provided, ensures that C(multicast_interface), C(multicast_address) and C(multicast_port) are the defaults specified in the description of each option}
-    multicast_interface: ${7:# Interface over which the system sends multicast messages associated with failover}
-    multicast_address: ${8:# IP address for the system to send multicast messages associated with failover}
+    cluster_mirroring: ${2:# Specifies whether mirroring occurs within the same cluster or between different clusters on a multi-bladed system}
+    config_sync_ip: ${3:# Local IP address the system uses for ConfigSync operations}
+    failover_multicast: ${4:# When C(true), ensures the Failover Multicast configuration is enabled and, if no further multicast configuration is provided, ensures that C(multicast_interface), C(multicast_address) and C(multicast_port) are the defaults specified in the description of each option}
+    mirror_primary_address: ${5:# Specifies the primary IP address for the system to use to mirror connections}
+    mirror_secondary_address: ${6:# Specifies the secondary IP address for the system to use to mirror connections}
+    multicast_address: ${7:# IP address for the system to send multicast messages associated with failover}
+    multicast_interface: ${8:# Interface over which the system sends multicast messages associated with failover}
     multicast_port: ${9:# Port for the system to send multicast messages associated with failover}
-    cluster_mirroring: ${10:# Specifies whether mirroring occurs within the same cluster or between different clusters on a multi-bladed system}
-    provider: ${11:# A dict object containing connection details}
+    provider: ${10:# A dict object containing connection details}
+    unicast_failover: ${11:# Addresses to use for failover operations}
   tags:
     - f5networks
     - f5_modules

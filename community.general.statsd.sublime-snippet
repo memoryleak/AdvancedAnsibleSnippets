@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Send metrics to StatsD}
   community.general.statsd:
-    state: ${2:# State of the check, only C(present) makes sense}
+    delta: ${2:# If the metric is of type V(gauge), change the value by O(delta)}
     host: ${3:# StatsD host (hostname or IP) to send metrics to}
-    port: ${4:# The port on C(host) which StatsD is listening on}
-    protocol: ${5:# The transport protocol to send metrics over}
-    timeout: ${6:# Sender timeout, only applicable if C(protocol) is C(tcp)}
-    metric: ${7:# The name of the metric}
-    metric_type: ${8:# The type of metric}
-    metric_prefix: ${9:# The prefix to add to the metric}
-    value: ${10:# The value of the metric}
-    delta: ${11:# If the metric is of type C(gauge), change the value by C(delta)}
+    metric: ${4:# The name of the metric}
+    metric_prefix: ${5:# The prefix to add to the metric}
+    metric_type: ${6:# The type of metric}
+    port: ${7:# The port on O(host) which StatsD is listening on}
+    protocol: ${8:# The transport protocol to send metrics over}
+    state: ${9:# State of the check, only V(present) makes sense}
+    timeout: ${10:# Sender timeout, only applicable if O(protocol) is V(tcp)}
+    value: ${11:# The value of the metric}
   tags:
     - community
     - general

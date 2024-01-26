@@ -1,33 +1,31 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Fetch Neutron policies}
+  <content><![CDATA[- name: ${1:Fetch Neutron RBAC policies}
   openstack.cloud.neutron_rbac_policies_info:
-    policy_id: ${2:# The RBAC policy ID}
-    object_id: ${3:# The object ID (the subject of the policy) to which the RBAC rules applies}
-    object_type: ${4:# Can be one of the following object types C(network), C(security_group) or C(qos_policy)}
-    target_project_id: ${5:# Filters the RBAC rules based on the target project id}
-    project_id: ${6:# Filters the RBAC rules based on the project id to which the object belongs to}
-    project: ${7:# Filters the RBAC rules based on the project name}
-    action: ${8:# Can be either of the following options C(access_as_shared) | C(access_as_external)}
+    action: ${2:# Action for the RBAC policy}
+    api_timeout: ${3:# How long should the socket layer wait before timing out for API calls}
+    auth: ${4:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${5:# Name of the auth plugin to use}
+    ca_cert: ${6:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${7:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${8:# A path to a client key to use as part of the SSL transaction}
     cloud: ${9:# Named cloud or cloud config to operate against}
-    auth: ${10:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${11:# Name of the auth plugin to use}
-    region_name: ${12:# Name of the region}
-    wait: ${13:# Should ansible wait until the requested resource is complete}
-    timeout: ${14:# How long should ansible wait for the requested resource}
-    api_timeout: ${15:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${16:# Whether or not SSL API requests should be verified}
-    ca_cert: ${17:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${18:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${19:# A path to a client key to use as part of the SSL transaction}
-    interface: ${20:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${21:# Ignored}
-    sdk_log_path: ${22:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${23:# Log level of the OpenStackSDK}
+    interface: ${10:# Endpoint URL type to fetch from the service catalog}
+    object_id: ${11:# The object ID (the subject of the policy) to which the RBAC rules applies}
+    object_type: ${12:# Type of the object that this RBAC policy affects}
+    policy_id: ${13:# The RBAC policy ID}
+    project: ${14:# ID or name of the project to which C(object_id) belongs to}
+    region_name: ${15:# Name of the region}
+    sdk_log_level: ${16:# Log level of the OpenStackSDK}
+    sdk_log_path: ${17:# Path to the logfile of the OpenStackSDK}
+    target_project_id: ${18:# The ID of the project this RBAC will be enforced}
+    timeout: ${19:# How long should ansible wait for the requested resource}
+    validate_certs: ${20:# Whether or not SSL API requests should be verified}
+    wait: ${21:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud
     - neutron_rbac_policies_info]]></content>
   <tabTrigger>openstack.cloud.neutron_rbac_policies_info</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Fetch Neutron policies</description>
+  <description>Fetch Neutron RBAC policies</description>
 </snippet>

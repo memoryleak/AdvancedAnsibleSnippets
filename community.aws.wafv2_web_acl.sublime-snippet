@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create and delete WAF Web ACLs}
   community.aws.wafv2_web_acl:
-    state: ${2:# Whether the rule is present or absent}
-    name: ${3:# The name of the web acl}
-    scope: ${4:# Geographical scope of the web acl}
-    description: ${5:# Description of wafv2 web acl}
-    default_action: ${6:# Default action of the wafv2 web acl}
-    sampled_requests: ${7:# Whether to store a sample of the web requests, true or false}
-    cloudwatch_metrics: ${8:# Enable cloudwatch metric for wafv2 web acl}
-    metric_name: ${9:# Name of cloudwatch metrics}
-    rules: ${10:# The Rule statements used to identify the web requests that you want to allow, block, or count}
-    custom_response_bodies: ${11:# A map of custom response keys and content bodies}
-    purge_rules: ${12:# When set to C(no), keep the existing load balancer rules in place}
-    access_key: ${13:# AWS access key ID}
-    secret_key: ${14:# AWS secret access key}
-    session_token: ${15:# AWS STS session token for use with temporary credentials}
-    profile: ${16:# A named AWS profile to use for authentication}
-    endpoint_url: ${17:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${18:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${19:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${20:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${21:# Use a C(botocore}
-    region: ${22:# The AWS region to use}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    cloudwatch_metrics: ${5:# Enable cloudwatch metric for wafv2 web acl}
+    custom_response_bodies: ${6:# A map of custom response keys and content bodies}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    default_action: ${8:# Default action of the wafv2 web acl}
+    description: ${9:# Description of wafv2 web acl}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    metric_name: ${11:# Name of cloudwatch metrics}
+    name: ${12:# The name of the web acl}
+    profile: ${13:# A named AWS profile to use for authentication}
+    purge_rules: ${14:# When set to C(no), keep the existing load balancer rules in place}
+    purge_tags: ${15:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${16:# The AWS region to use}
+    rules: ${17:# The Rule statements used to identify the web requests that you want to allow, block, or count}
+    sampled_requests: ${18:# Whether to store a sample of the web requests, true or false}
+    scope: ${19:# Geographical scope of the web acl}
+    secret_key: ${20:# AWS secret access key}
+    session_token: ${21:# AWS STS session token for use with temporary credentials}
+    state: ${22:# Whether the rule is present or absent}
     tags: ${23:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${24:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    validate_certs: ${24:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

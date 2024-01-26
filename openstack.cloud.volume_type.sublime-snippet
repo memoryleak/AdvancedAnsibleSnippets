@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage OpenStack volume type}
+  openstack.cloud.volume_type:
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    description: ${9:# Description of the volume type}
+    extra_specs: ${10:# List of volume type properties}
+    interface: ${11:# Endpoint URL type to fetch from the service catalog}
+    is_public: ${12:# Make volume type accessible to the public}
+    name: ${13:# Volume type name or id}
+    region_name: ${14:# Name of the region}
+    sdk_log_level: ${15:# Log level of the OpenStackSDK}
+    sdk_log_path: ${16:# Path to the logfile of the OpenStackSDK}
+    state: ${17:# Indicate desired state of the resource}
+    timeout: ${18:# How long should ansible wait for the requested resource}
+    validate_certs: ${19:# Whether or not SSL API requests should be verified}
+    wait: ${20:# Should ansible wait until the requested resource is complete}
+  tags:
+    - openstack
+    - cloud
+    - volume_type]]></content>
+  <tabTrigger>openstack.cloud.volume_type</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage OpenStack volume type</description>
+</snippet>

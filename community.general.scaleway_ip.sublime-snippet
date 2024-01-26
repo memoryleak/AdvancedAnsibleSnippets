@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Scaleway IP management module}
   community.general.scaleway_ip:
-    state: ${2:# Indicate desired state of the IP}
-    organization: ${3:# Scaleway organization identifier}
-    region: ${4:# Scaleway region to use (for example par1)}
+    api_timeout: ${2:# HTTP timeout to Scaleway API in seconds}
+    api_token: ${3:# Scaleway OAuth token}
+    api_url: ${4:# Scaleway API URL}
     id: ${5:# id of the Scaleway IP (UUID)}
-    server: ${6:# id of the server you want to attach an IP to}
-    reverse: ${7:# Reverse to assign to the IP}
-    api_token: ${8:# Scaleway OAuth token}
-    api_url: ${9:# Scaleway API URL}
-    api_timeout: ${10:# HTTP timeout to Scaleway API in seconds}
-    query_parameters: ${11:# List of parameters passed to the query string}
+    organization: ${6:# Scaleway organization identifier}
+    query_parameters: ${7:# List of parameters passed to the query string}
+    region: ${8:# Scaleway region to use (for example par1)}
+    reverse: ${9:# Reverse to assign to the IP}
+    server: ${10:# id of the server you want to attach an IP to}
+    state: ${11:# Indicate desired state of the IP}
     validate_certs: ${12:# Validate SSL certs of the Scaleway API}
   tags:
     - community

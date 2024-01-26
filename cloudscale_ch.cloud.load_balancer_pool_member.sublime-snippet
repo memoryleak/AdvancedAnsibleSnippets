@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages load balancer pool members on the cloudscale}
+  cloudscale_ch.cloud.load_balancer_pool_member:
+    address: ${2:# The IP address to which traffic is sent}
+    api_timeout: ${3:# Timeout in seconds for calls to the cloudscale}
+    api_token: ${4:# cloudscale}
+    api_url: ${5:# cloudscale}
+    enabled: ${6:# Pool member will not receive traffic if false}
+    load_balancer_pool: ${7:# UUID of the load balancer pool}
+    monitor_port: ${8:# The port to which health monitor checks are sent}
+    name: ${9:# Name of the load balancer pool member}
+    protocol_port: ${10:# The port to which actual traffic is sent}
+    state: ${11:# State of the load balancer pool member}
+    subnet: ${12:# The subnet of the address must be specified here}
+    tags: ${13:# Tags assosiated with the load balancer}
+    uuid: ${14:# UUID of the load balancer}
+  tags:
+    - cloudscale_ch
+    - cloud
+    - load_balancer_pool_member]]></content>
+  <tabTrigger>cloudscale_ch.cloud.load_balancer_pool_member</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages load balancer pool members on the cloudscale</description>
+</snippet>

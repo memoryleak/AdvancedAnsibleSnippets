@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Apply JSON patch operations to existing objects}
   kubernetes.core.k8s_json_patch:
-    api_version: ${2:# Use to specify the API version}
-    kind: ${3:# Use to specify an object model}
-    namespace: ${4:# Use to specify an object namespace}
-    name: ${5:# Use to specify an object name}
-    patch: ${6:# List of JSON patch operations}
-    host: ${7:# Provide a URL for accessing the API}
-    api_key: ${8:# Token used to authenticate with the API}
-    kubeconfig: ${9:# Path to an existing Kubernetes config file}
-    context: ${10:# The name of a context found in the config file}
-    username: ${11:# Provide a username for authenticating with the API}
-    password: ${12:# Provide a password for authenticating with the API}
-    client_cert: ${13:# Path to a certificate used to authenticate with the API}
-    client_key: ${14:# Path to a key file used to authenticate with the API}
-    ca_cert: ${15:# Path to a CA certificate used to authenticate with the API}
-    validate_certs: ${16:# Whether or not to verify the API server's SSL certificates}
-    proxy: ${17:# The URL of an HTTP proxy to use for the connection}
-    no_proxy: ${18:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
-    proxy_headers: ${19:# The Header used for the HTTP proxy}
-    persist_config: ${20:# Whether or not to save the kube config refresh tokens}
-    impersonate_user: ${21:# Username to impersonate for the operation}
-    impersonate_groups: ${22:# Group(s) to impersonate for the operation}
+    api_key: ${2:# Token used to authenticate with the API}
+    api_version: ${3:# Use to specify the API version}
+    ca_cert: ${4:# Path to a CA certificate used to authenticate with the API}
+    client_cert: ${5:# Path to a certificate used to authenticate with the API}
+    client_key: ${6:# Path to a key file used to authenticate with the API}
+    context: ${7:# The name of a context found in the config file}
+    host: ${8:# Provide a URL for accessing the API}
+    impersonate_groups: ${9:# Group(s) to impersonate for the operation}
+    impersonate_user: ${10:# Username to impersonate for the operation}
+    kind: ${11:# Use to specify an object model}
+    kubeconfig: ${12:# Path to an existing Kubernetes config file}
+    name: ${13:# Use to specify an object name}
+    namespace: ${14:# Use to specify an object namespace}
+    no_proxy: ${15:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
+    password: ${16:# Provide a password for authenticating with the API}
+    patch: ${17:# List of JSON patch operations}
+    persist_config: ${18:# Whether or not to save the kube config refresh tokens}
+    proxy: ${19:# The URL of an HTTP proxy to use for the connection}
+    proxy_headers: ${20:# The Header used for the HTTP proxy}
+    username: ${21:# Provide a username for authenticating with the API}
+    validate_certs: ${22:# Whether or not to verify the API server's SSL certificates}
     wait: ${23:# Whether to wait for certain resource kinds to end up in the desired state}
-    wait_sleep: ${24:# Number of seconds to sleep between checks}
-    wait_timeout: ${25:# How long in seconds to wait for the resource to end up in the desired state}
-    wait_condition: ${26:# Specifies a custom condition on the status to wait for}
+    wait_condition: ${24:# Specifies a custom condition on the status to wait for}
+    wait_sleep: ${25:# Number of seconds to sleep between checks}
+    wait_timeout: ${26:# How long in seconds to wait for the resource to end up in the desired state}
   tags:
     - kubernetes
     - core

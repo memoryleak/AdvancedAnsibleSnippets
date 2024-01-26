@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages backup schedules}
   cisco.mso.mso_backup_schedule:
-    start_date: ${2:# The date to start the scheduler in format YYYY-MM-DD}
-    start_time: ${3:# The time to start the scheduler in format HH:MM:SS}
-    frequency_unit: ${4:# The interval unit type}
-    frequency_length: ${5:# Amount of hours or days for the schedule trigger frequency}
-    remote_location: ${6:# The remote location's name where the backup should be stored}
-    remote_path: ${7:# This path is relative to the remote location}
-    state: ${8:# Use C(present) or C(absent) for adding or removing}
-    host: ${9:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${10:# Port number to be used for the REST connection}
-    username: ${11:# The username to use for authentication}
-    password: ${12:# The password to use for authentication}
-    output_level: ${13:# Influence the output of this MSO module}
+    frequency_length: ${2:# Amount of hours or days for the schedule trigger frequency}
+    frequency_unit: ${3:# The interval unit type}
+    host: ${4:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${5:# The login domain name to use for authentication}
+    output_level: ${6:# Influence the output of this MSO module}
+    password: ${7:# The password to use for authentication}
+    port: ${8:# Port number to be used for the REST connection}
+    remote_location: ${9:# The remote location's name where the backup should be stored}
+    remote_path: ${10:# This path is relative to the remote location}
+    start_date: ${11:# The date to start the scheduler in format YYYY-MM-DD}
+    start_time: ${12:# The time to start the scheduler in format HH:MM:SS}
+    state: ${13:# Use C(present) or C(absent) for adding or removing}
     timeout: ${14:# The socket level timeout in seconds}
-    use_proxy: ${15:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${16:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${17:# If C(no), SSL certificates will not be validated}
-    login_domain: ${18:# The login domain name to use for authentication}
+    use_proxy: ${15:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${16:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${17:# The username to use for authentication}
+    validate_certs: ${18:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - mso

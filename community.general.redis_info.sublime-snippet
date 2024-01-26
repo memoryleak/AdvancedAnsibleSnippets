@@ -1,9 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Gather information about Redis servers}
   community.general.redis_info:
-    login_host: ${2:# The host running the database}
-    login_port: ${3:# The port to connect to}
-    login_password: ${4:# The password used to authenticate with, when authentication is enabled for the Redis server}
+    ca_certs: ${2:# Path to root certificates file}
+    login_host: ${3:# Specify the target host running the database}
+    login_password: ${4:# Specify the password to authenticate with}
+    login_port: ${5:# Specify the port to connect to}
+    login_user: ${6:# Specify the user to authenticate with}
+    tls: ${7:# Specify whether or not to use TLS for the connection}
+    validate_certs: ${8:# Specify whether or not to validate TLS certificates}
   tags:
     - community
     - general

@@ -1,33 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/update/delete Zabbix scripts}
   community.zabbix.zabbix_script:
-    name: ${2:# Name of the script}
-    script_type: ${3:# Script type}
-    command: ${4:# Command to run}
-    scope: ${5:# Script scope}
+    authtype: ${2:# Authentication method used for SSH script type}
+    command: ${3:# Command to run}
+    confirmation: ${4:# Confirmation pop up text}
+    description: ${5:# Description of the script}
     execute_on: ${6:# Where to run the script}
-    menu_path: ${7:# Folders separated by slash that form a menu like navigation in frontend when clicked on host or event}
-    authtype: ${8:# Authentication method used for SSH script type}
-    username: ${9:# User name used for authentication}
-    password: ${10:# Password used for SSH scripts with password authentication and Telnet scripts}
-    publickey: ${11:# Name of the public key file used for SSH scripts with public key authentication}
-    privatekey: ${12:# Name of the private key file used for SSH scripts with public key authentication}
-    port: ${13:# Port number used for SSH and Telnet scripts}
-    host_group: ${14:# host group name that the script can be run on}
-    user_group: ${15:# user group name that will be allowed to run the script}
-    host_access: ${16:# Host permissions needed to run the script}
-    confirmation: ${17:# Confirmation pop up text}
-    script_timeout: ${18:# Webhook script execution timeout in seconds}
-    parameters: ${19:# Array of webhook input parameters}
-    description: ${20:# Description of the script}
+    host_access: ${7:# Host permissions needed to run the script}
+    host_group: ${8:# host group name that the script can be run on}
+    http_login_password: ${9:# Basic Auth password}
+    http_login_user: ${10:# Basic Auth login}
+    menu_path: ${11:# Folders separated by slash that form a menu like navigation in frontend when clicked on host or event}
+    name: ${12:# Name of the script}
+    parameters: ${13:# Array of webhook input parameters}
+    password: ${14:# Password used for SSH scripts with password authentication and Telnet scripts}
+    port: ${15:# Port number used for SSH and Telnet scripts}
+    privatekey: ${16:# Name of the private key file used for SSH scripts with public key authentication}
+    publickey: ${17:# Name of the public key file used for SSH scripts with public key authentication}
+    scope: ${18:# Script scope}
+    script_timeout: ${19:# Webhook script execution timeout in seconds}
+    script_type: ${20:# Script type}
     state: ${21:# State of the script}
-    server_url: ${22:# URL of Zabbix server, with protocol (http or https)}
-    login_user: ${23:# Zabbix user name}
-    login_password: ${24:# Zabbix user password}
-    http_login_user: ${25:# Basic Auth login}
-    http_login_password: ${26:# Basic Auth password}
-    timeout: ${27:# The timeout of API request (seconds)}
-    validate_certs: ${28:# If set to False, SSL certificates will not be validated}
+    user_group: ${22:# user group name that will be allowed to run the script}
+    username: ${23:# User name used for authentication}
   tags:
     - community
     - zabbix

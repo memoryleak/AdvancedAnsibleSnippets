@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module implements SSH Client which helps to run svcinfo CLI command on IBM Spectrum Virtualize family storage systems}
   ibm.spectrum_virtualize.ibm_svcinfo_command:
-    command: ${2:# Single svcinfo CLI command to be executed on Spectrum Virtualize storage system}
-    usesshkey: ${3:# For key-pair based SSH connection, set this field as C('yes')}
+    clustername: ${2:# The hostname or management IP of the Spectrum Virtualize storage system}
+    command: ${3:# Single svcinfo CLI command to be executed on Spectrum Virtualize storage system}
     key_filename: ${4:# SSH client private key filename}
-    clustername: ${5:# The hostname or management IP of the Spectrum Virtualize storage system}
-    username: ${6:# Username for the Spectrum Virtualize storage system}
-    password: ${7:# Password for the Spectrum Virtualize storage system}
-    log_path: ${8:# Path of debug log file}
+    log_path: ${5:# Path of debug log file}
+    password: ${6:# Password for the Spectrum Virtualize storage system}
+    username: ${7:# Username for the Spectrum Virtualize storage system}
+    usesshkey: ${8:# For key-pair based SSH connection, set this field as C('yes')}
   tags:
     - ibm
     - spectrum_virtualize

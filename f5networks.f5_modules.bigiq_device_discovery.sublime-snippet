@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage BIG-IP devices through BIG-IQ}
   f5networks.f5_modules.bigiq_device_discovery:
-    device_address: ${2:# The IP address of the BIG-IP device to be imported/managed}
-    device_username: ${3:# The administrator username for the BIG-IP device}
-    device_password: ${4:# The administrator password for the BIG-IP device}
-    device_port: ${5:# The port on which a device trust setup between BIG-IQ and BIG-IP should happen}
-    ha_name: ${6:# DSC cluster name of the BIG-IP device to be managed}
-    use_bigiq_sync: ${7:# When set to C(no), initiate BIG-IP DSC sync when deploying configuration changes}
-    conflict_policy: ${8:# Sets the conflict resolution policy for shared objects across BIG-IP devices, except LTM profiles and monitors}
-    versioned_conflict_policy: ${9:# Sets the conflict resolution policy for LTM profile and monitor objects that are specific to a BIG-IP software version}
-    device_conflict_policy: ${10:# Sets the conflict resolution policy for objects that are specific to a particular to a BIG-IP device and not shared among BIG-IP devices}
-    access_conflict_policy: ${11:# Sets the conflict resolution policy for Access module C(apm) objects}
-    access_group_name: ${12:# Access group name to import Access configuration for devices}
-    access_group_first_device: ${13:# Specifies if the imported device is the first device in the access group to import shared configuration for that access group}
-    force: ${14:# Forces rediscovery and import of existing modules on the managed BIG-IP}
-    modules: ${15:# List of modules to be discovered and imported into the device}
+    access_conflict_policy: ${2:# Sets the conflict resolution policy for Access module C(apm) objects}
+    access_group_first_device: ${3:# Specifies if the imported device is the first device in the access group to import shared configuration for that access group}
+    access_group_name: ${4:# Access group name to import Access configuration for devices}
+    conflict_policy: ${5:# Sets the conflict resolution policy for shared objects across BIG-IP devices, except LTM profiles and monitors}
+    device_address: ${6:# The IP address of the BIG-IP device to be imported/managed}
+    device_conflict_policy: ${7:# Sets the conflict resolution policy for objects that are specific to a particular to a BIG-IP device and not shared among BIG-IP devices}
+    device_password: ${8:# The administrator password for the BIG-IP device}
+    device_port: ${9:# The port on which a device trust setup between BIG-IQ and BIG-IP should happen}
+    device_username: ${10:# The administrator username for the BIG-IP device}
+    force: ${11:# Forces rediscovery and import of existing modules on the managed BIG-IP}
+    ha_name: ${12:# DSC cluster name of the BIG-IP device to be managed}
+    modules: ${13:# List of modules to be discovered and imported into the device}
+    provider: ${14:# A dict object containing connection details}
+    state: ${15:# The state of the managed device on the system}
     statistics: ${16:# Specify the statistics collection for discovered device}
-    state: ${17:# The state of the managed device on the system}
-    provider: ${18:# A dict object containing connection details}
+    use_bigiq_sync: ${17:# When set to C(false), initiate BIG-IP DSC sync when deploying configuration changes}
+    versioned_conflict_policy: ${18:# Sets the conflict resolution policy for LTM profile and monitor objects that are specific to a BIG-IP software version}
   tags:
     - f5networks
     - f5_modules

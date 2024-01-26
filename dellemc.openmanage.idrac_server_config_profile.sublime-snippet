@@ -1,24 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:Export or Import iDRAC Server Configuration Profile (SCP)}
   dellemc.openmanage.idrac_server_config_profile:
-    command: ${2:# If C(import), the module performs SCP import operation}
-    job_wait: ${3:# Whether to wait for job completion or not}
-    share_name: ${4:# Network share or local path}
-    share_user: ${5:# Network share user in the format 'user@domain' or 'domain\\\\user' if user is part of a domain else 'user'}
-    share_password: ${6:# Network share user password}
-    scp_file: ${7:# Name of the server configuration profile (SCP) file}
-    scp_components: ${8:# If C(ALL), this module exports or imports all components configurations from SCP file}
-    shutdown_type: ${9:# This option is applicable for C(import) command}
-    end_host_power_state: ${10:# This option is applicable for C(import) command}
-    export_format: ${11:# Specify the output file format}
-    export_use: ${12:# Specify the type of server configuration profile (SCP) to be exported}
-    idrac_ip: ${13:# iDRAC IP Address}
-    idrac_user: ${14:# iDRAC username}
-    idrac_password: ${15:# iDRAC user password}
-    idrac_port: ${16:# iDRAC port}
-    validate_certs: ${17:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${18:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${19:# The socket level timeout in seconds}
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    command: ${3:# If C(import), the module performs SCP import operation}
+    end_host_power_state: ${4:# This option is applicable for C(import) command}
+    export_format: ${5:# Specify the output file format}
+    export_use: ${6:# Specify the type of Server Configuration Profile (SCP) to be exported}
+    idrac_ip: ${7:# iDRAC IP Address}
+    idrac_password: ${8:# iDRAC user password}
+    idrac_port: ${9:# iDRAC port}
+    idrac_user: ${10:# iDRAC username}
+    ignore_certificate_warning: ${11:# If C(ignore), it ignores the certificate warnings}
+    import_buffer: ${12:# Used to import the buffer input of xml or json into the iDRAC}
+    include_in_export: ${13:# This option is applicable when I(command) is C(export)}
+    job_wait: ${14:# Whether to wait for job completion or not}
+    proxy_password: ${15:# Proxy password to authenticate}
+    proxy_port: ${16:# Proxy port to authenticate}
+    proxy_server: ${17:# I(proxy_server) is required when I(share_name) is of type HTTPS or HTTP and I(proxy_support) is C(true)}
+    proxy_support: ${18:# Proxy to be enabled or disabled}
+    proxy_type: ${19:# C(http) to select HTTP type proxy}
+    proxy_username: ${20:# Proxy username to authenticate}
+    scp_components: ${21:# If C(ALL), this option exports or imports all components configurations from the SCP file}
+    scp_file: ${22:# Name of the server configuration profile (SCP) file}
+    share_name: ${23:# Network share or local path}
+    share_password: ${24:# Network share user password}
+    share_user: ${25:# Network share user in the format 'user@domain' or 'domain\\\\user' if user is part of a domain else 'user'}
+    shutdown_type: ${26:# This option is applicable for C(import) command}
+    timeout: ${27:# The socket level timeout in seconds}
+    validate_certs: ${28:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

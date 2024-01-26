@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create and Delete mapping of a volume to a host or cluster on Infinibox}
   infinidat.infinibox.infini_map:
-    host: ${2:# Host Name}
-    cluster: ${3:# Cluster Name}
-    state: ${4:# Creates mapping when present or removes when absent, or provides details of a mapping when stat}
-    volume: ${5:# Volume name to map to the host}
-    lun: ${6:# Volume lun}
+    cluster: ${2:# Cluster Name}
+    host: ${3:# Host Name}
+    lun: ${4:# Volume lun}
+    password: ${5:# Infinibox User password}
+    state: ${6:# Creates mapping when present or removes when absent, or provides details of a mapping when stat}
     system: ${7:# Infinibox Hostname or IPv4 Address}
     user: ${8:# Infinibox User username with sufficient priveledges ( see notes )}
-    password: ${9:# Infinibox User password}
+    volume: ${9:# Volume name to map to the host}
   tags:
     - infinidat
     - infinibox

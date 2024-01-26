@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages the RADIUS server configuration of the device}
   f5networks.f5_modules.bigip_device_auth_radius_server:
-    name: ${2:# Specifies the name of the RADIUS server to manage}
-    description: ${3:# The description of the RADIUS server}
-    ip: ${4:# The IP address of the server}
-    port: ${5:# The port of the server}
-    secret: ${6:# Specifies the secret used for accessing RADIUS server}
-    timeout: ${7:# Specifies the timeout value in seconds}
-    partition: ${8:# Device partition to manage resources on}
+    description: ${2:# The description of the RADIUS server}
+    ip: ${3:# The IP address of the server}
+    name: ${4:# Specifies the name of the RADIUS server to manage}
+    partition: ${5:# Device partition to manage resources on}
+    port: ${6:# The port of the server}
+    provider: ${7:# A dict object containing connection details}
+    secret: ${8:# Specifies the secret used for accessing RADIUS server}
     state: ${9:# When C(state) is C(present), ensures the RADIUS server exists}
-    update_secret: ${10:# C(always) will update passwords if the C(secret) is specified}
-    provider: ${11:# A dict object containing connection details}
+    timeout: ${10:# Specifies the timeout value in seconds}
+    update_secret: ${11:# C(always) will update passwords if the C(secret) is specified}
   tags:
     - f5networks
     - f5_modules

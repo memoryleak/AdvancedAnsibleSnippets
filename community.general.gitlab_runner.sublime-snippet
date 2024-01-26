@@ -1,25 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, modify and delete GitLab Runners}
   community.general.gitlab_runner:
-    project: ${2:# ID or full path of the project in the form of group/name}
-    description: ${3:# The unique name of the runner}
-    state: ${4:# Make sure that the runner with the same name exists with the same configuration or delete the runner with the same name}
-    registration_token: ${5:# The registration token is used to register new runners}
-    owned: ${6:# Searches only runners available to the user when searching for existing, when false admin token required}
-    active: ${7:# Define if the runners is immediately active after creation}
-    locked: ${8:# Determines if the runner is locked or not}
-    access_level: ${9:# Determines if a runner can pick up jobs only from protected branches}
-    access_level_on_creation: ${10:# Whether the runner should be registered with an access level or not}
-    maximum_timeout: ${11:# The maximum time that a runner has to complete a specific job}
-    run_untagged: ${12:# Run untagged jobs or not}
-    tag_list: ${13:# The tags that apply to the runner}
-    api_url: ${14:# The resolvable endpoint for the API}
-    api_username: ${15:# The username to use for authentication against the API}
-    api_password: ${16:# The password to use for authentication against the API}
-    validate_certs: ${17:# Whether or not to validate SSL certs when supplying a https endpoint}
-    api_token: ${18:# GitLab access token with API permissions}
-    api_oauth_token: ${19:# GitLab OAuth token for logging in}
-    api_job_token: ${20:# GitLab CI job token for logging in}
+    access_level: ${2:# Determines if a runner can pick up jobs only from protected branches}
+    access_level_on_creation: ${3:# Whether the runner should be registered with an access level or not}
+    active: ${4:# Define if the runners is immediately active after creation}
+    api_job_token: ${5:# GitLab CI job token for logging in}
+    api_oauth_token: ${6:# GitLab OAuth token for logging in}
+    api_password: ${7:# The password to use for authentication against the API}
+    api_token: ${8:# GitLab access token with API permissions}
+    api_url: ${9:# The resolvable endpoint for the API}
+    api_username: ${10:# The username to use for authentication against the API}
+    ca_path: ${11:# The CA certificates bundle to use to verify GitLab server certificate}
+    description: ${12:# The unique name of the runner}
+    group: ${13:# ID or full path of the group in the form group/subgroup}
+    locked: ${14:# Determines if the runner is locked or not}
+    maximum_timeout: ${15:# The maximum time that a runner has to complete a specific job}
+    owned: ${16:# Searches only runners available to the user when searching for existing, when false admin token required}
+    paused: ${17:# Define if the runners is active or paused after creation}
+    project: ${18:# ID or full path of the project in the form of group/name}
+    registration_token: ${19:# The registration token is used to register new runners before GitLab 16}
+    run_untagged: ${20:# Run untagged jobs or not}
+    state: ${21:# Make sure that the runner with the same name exists with the same configuration or delete the runner with the same name}
+    tag_list: ${22:# The tags that apply to the runner}
+    validate_certs: ${23:# Whether or not to validate SSL certs when supplying a HTTPS endpoint}
   tags:
     - community
     - general

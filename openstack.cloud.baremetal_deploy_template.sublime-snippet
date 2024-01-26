@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/Delete Bare Metal deploy template Resources from OpenStack}
+  openstack.cloud.baremetal_deploy_template:
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    extra: ${9:# A set of one or more arbitrary metadata key and value pairs}
+    id: ${10:# ID of the deploy template}
+    interface: ${11:# Endpoint URL type to fetch from the service catalog}
+    name: ${12:# Name of the deploy template}
+    region_name: ${13:# Name of the region}
+    sdk_log_level: ${14:# Log level of the OpenStackSDK}
+    sdk_log_path: ${15:# Path to the logfile of the OpenStackSDK}
+    state: ${16:# Indicates desired state of the resource}
+    steps: ${17:# List of deploy steps to apply}
+    timeout: ${18:# How long should ansible wait for the requested resource}
+    validate_certs: ${19:# Whether or not SSL API requests should be verified}
+    wait: ${20:# Should ansible wait until the requested resource is complete}
+  tags:
+    - openstack
+    - cloud
+    - baremetal_deploy_template]]></content>
+  <tabTrigger>openstack.cloud.baremetal_deploy_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/Delete Bare Metal deploy template Resources from OpenStack</description>
+</snippet>

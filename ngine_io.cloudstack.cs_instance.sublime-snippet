@@ -1,48 +1,48 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages instances and virtual machines on Apache CloudStack based clouds}
   ngine_io.cloudstack.cs_instance:
-    name: ${2:# Host name of the instance}
-    display_name: ${3:# Custom display name of the instances}
-    group: ${4:# Group in where the new instance should be in}
-    state: ${5:# State of the instance}
-    service_offering: ${6:# Name or id of the service offering of the new instance}
-    cpu: ${7:# The number of CPUs to allocate to the instance, used with custom service offerings}
-    cpu_speed: ${8:# The clock speed/shares allocated to the instance, used with custom service offerings}
-    memory: ${9:# The memory allocated to the instance, used with custom service offerings}
-    template: ${10:# Name, display text or id of the template to be used for creating the new instance}
-    iso: ${11:# Name or id of the ISO to be used for creating the new instance}
-    template_filter: ${12:# Name of the filter used to search for the template or iso}
-    hypervisor: ${13:# Name the hypervisor to be used for creating the new instance}
-    keyboard: ${14:# Keyboard device type for the instance}
-    networks: ${15:# List of networks to use for the new instance}
-    ip_address: ${16:# IPv4 address for default instance's network during creation}
-    ip6_address: ${17:# IPv6 address for default instance's network}
-    ip_to_networks: ${18:# List of mappings in the form I({'network': NetworkName, 'ip': 1}
-    disk_offering: ${19:# Name of the disk offering to be used}
-    disk_size: ${20:# Disk size in GByte required if deploying instance from ISO}
-    root_disk_size: ${21:# Root disk size in GByte required if deploying instance with KVM hypervisor and want resize the root disk size at startup (needs CloudStack >= 4}
-    security_groups: ${22:# List of security groups the instance to be applied to}
-    host: ${23:# Host on which an instance should be deployed or started on}
-    cluster: ${24:# Cluster on which an instance should be deployed or started on}
-    pod: ${25:# Pod on which an instance should be deployed or started on}
-    domain: ${26:# Domain the instance is related to}
-    account: ${27:# Account the instance is related to}
-    project: ${28:# Name of the project the instance to be deployed in}
-    zone: ${29:# Name of the zone in which the instance should be deployed}
-    ssh_key: ${30:# Name of the SSH key to be deployed on the new instance}
-    affinity_groups: ${31:# Affinity groups names to be applied to the new instance}
-    user_data: ${32:# Optional data (ASCII) that can be sent to the instance upon a successful deployment}
-    force: ${33:# Force stop/start the instance if required to apply changes, otherwise a running instance will not be changed}
-    allow_root_disk_shrink: ${34:# Enables a volume shrinkage when the new size is smaller than the old one}
-    tags: ${35:# List of tags}
-    poll_async: ${36:# Poll async jobs until job has finished}
-    details: ${37:# Map to specify custom parameters}
-    api_key: ${38:# API key of the CloudStack API}
-    api_secret: ${39:# Secret key of the CloudStack API}
-    api_url: ${40:# URL of the CloudStack API e}
-    api_http_method: ${41:# HTTP method used to query the API endpoint}
-    api_timeout: ${42:# HTTP timeout in seconds}
-    api_verify_ssl_cert: ${43:# Verify CA authority cert file}
+    account: ${2:# Account the instance is related to}
+    affinity_groups: ${3:# Affinity groups names to be applied to the new instance}
+    allow_root_disk_shrink: ${4:# Enables a volume shrinkage when the new size is smaller than the old one}
+    api_http_method: ${5:# HTTP method used to query the API endpoint}
+    api_key: ${6:# API key of the CloudStack API}
+    api_secret: ${7:# Secret key of the CloudStack API}
+    api_timeout: ${8:# HTTP timeout in seconds}
+    api_url: ${9:# URL of the CloudStack API e}
+    api_verify_ssl_cert: ${10:# Verify CA authority cert file}
+    cluster: ${11:# Cluster on which an instance should be deployed or started on}
+    cpu: ${12:# The number of CPUs to allocate to the instance, used with custom service offerings}
+    cpu_speed: ${13:# The clock speed/shares allocated to the instance, used with custom service offerings}
+    details: ${14:# Map to specify custom parameters}
+    disk_offering: ${15:# Name of the disk offering to be used}
+    disk_size: ${16:# Disk size in GByte required if deploying instance from ISO}
+    display_name: ${17:# Custom display name of the instances}
+    domain: ${18:# Domain the instance is related to}
+    force: ${19:# Force stop/start the instance if required to apply changes, otherwise a running instance will not be changed}
+    group: ${20:# Group in where the new instance should be in}
+    host: ${21:# Host on which an instance should be deployed or started on}
+    hypervisor: ${22:# Name the hypervisor to be used for creating the new instance}
+    ip6_address: ${23:# IPv6 address for default instance's network}
+    ip_address: ${24:# IPv4 address for default instance's network during creation}
+    ip_to_networks: ${25:# List of mappings in the form I('network': NetworkName, 'ip': 1}
+    iso: ${26:# Name or id of the ISO to be used for creating the new instance}
+    keyboard: ${27:# Keyboard device type for the instance}
+    memory: ${28:# The memory allocated to the instance, used with custom service offerings}
+    name: ${29:# Host name of the instance}
+    networks: ${30:# List of networks to use for the new instance}
+    pod: ${31:# Pod on which an instance should be deployed or started on}
+    poll_async: ${32:# Poll async jobs until job has finished}
+    project: ${33:# Name of the project the instance to be deployed in}
+    root_disk_size: ${34:# Root disk size in GByte required if deploying instance with KVM hypervisor and want resize the root disk size at startup (needs CloudStack >= 4}
+    security_groups: ${35:# List of security groups the instance to be applied to}
+    service_offering: ${36:# Name or id of the service offering of the new instance}
+    ssh_key: ${37:# Name of the SSH key to be deployed on the new instance}
+    state: ${38:# State of the instance}
+    tags: ${39:# List of tags}
+    template: ${40:# Name, display text or id of the template to be used for creating the new instance}
+    template_filter: ${41:# Name of the filter used to search for the template or iso}
+    user_data: ${42:# Optional data (ASCII) that can be sent to the instance upon a successful deployment}
+    zone: ${43:# Name of the zone in which the instance should be deployed}
   tags:
     - ngine_io
     - cloudstack

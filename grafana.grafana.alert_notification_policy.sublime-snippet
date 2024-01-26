@@ -1,22 +1,22 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Sets the notification policy tree in Alerting on Grafana Cloud}
+  <content><![CDATA[- name: ${1:Manage Alerting Policies points in Grafana}
   grafana.grafana.alert_notification_policy:
     Continue: ${2:# Continue matching subsequent sibling nodes if set to C(true)}
-    groupByStr: ${3:# List of string}
-    muteTimeIntervals: ${4:# List of string}
-    rootPolicyReceiver: ${5:# Sets the name of the contact point to be set as the default receiver}
-    routes: ${6:# List of objects}
-    groupInterval: ${7:# Sets the wait time to send a batch of new alerts for that group after the first notification was sent}
-    groupWait: ${8:# Sets the wait time until the initial notification is sent for a new group created by an incoming alert}
+    grafana_api_key: ${3:# Grafana API Key used to authenticate with Grafana}
+    grafana_url: ${4:# URL of the Grafana instance}
+    groupByStr: ${5:# List of string}
+    groupInterval: ${6:# Sets the wait time to send a batch of new alerts for that group after the first notification was sent}
+    groupWait: ${7:# Sets the wait time until the initial notification is sent for a new group created by an incoming alert}
+    muteTimeIntervals: ${8:# List of string}
     objectMatchers: ${9:# Matchers is a slice of Matchers that is sortable, implements Stringer, and provides a Matches method to match a LabelSet}
     repeatInterval: ${10:# Sets the waiting time to resend an alert after they have successfully been sent}
-    stack_slug: ${11:# Name of the Grafana Cloud stack to which the notification policies will be added}
-    grafana_api_key: ${12:# Grafana API Key used to authenticate with Grafana}
+    rootPolicyReceiver: ${11:# Sets the name of the contact point to be set as the default receiver}
+    routes: ${12:# List of objects}
   tags:
     - grafana
     - grafana
     - alert_notification_policy]]></content>
   <tabTrigger>grafana.grafana.alert_notification_policy</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Sets the notification policy tree in Alerting on Grafana Cloud</description>
+  <description>Manage Alerting Policies points in Grafana</description>
 </snippet>

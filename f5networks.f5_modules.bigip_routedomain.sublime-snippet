@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage route domains on a BIG-IP}
   f5networks.f5_modules.bigip_routedomain:
-    name: ${2:# The name of the route domain}
-    bwc_policy: ${3:# The bandwidth controller for the route domain}
-    connection_limit: ${4:# The maximum number of concurrent connections allowed for the route domain}
-    description: ${5:# Specifies descriptive text that identifies the route domain}
-    flow_eviction_policy: ${6:# The eviction policy to use with this route domain}
+    bwc_policy: ${2:# The bandwidth controller for the route domain}
+    connection_limit: ${3:# The maximum number of concurrent connections allowed for the route domain}
+    description: ${4:# Specifies descriptive text that identifies the route domain}
+    flow_eviction_policy: ${5:# The eviction policy to use with this route domain}
+    fw_enforced_policy: ${6:# Specifies an AFM policy to be attached to route domain}
     id: ${7:# The unique identifying integer representing the route domain}
-    parent: ${8:# Specifies the route domain the system searches when it cannot find a route in the configured domain}
-    partition: ${9:# Partition on which you want to create the route domain}
-    routing_protocol: ${10:# Dynamic routing protocols for the system to use in the route domain}
-    service_policy: ${11:# Service policy to associate with the route domain}
-    state: ${12:# Whether the route domain should exist or not}
-    strict: ${13:# Specifies whether the system enforces cross-routing restrictions or not}
-    vlans: ${14:# VLANs for the system to use in the route domain}
-    fw_enforced_policy: ${15:# Specifies an AFM policy to be attached to route domain}
-    provider: ${16:# A dict object containing connection details}
+    name: ${8:# The name of the route domain}
+    parent: ${9:# Specifies the route domain the system searches when it cannot find a route in the configured domain}
+    partition: ${10:# Partition on which you want to create the route domain}
+    provider: ${11:# A dict object containing connection details}
+    routing_protocol: ${12:# Dynamic routing protocols for the system to use in the route domain}
+    service_policy: ${13:# Service policy to associate with the route domain}
+    state: ${14:# Whether the route domain should exist or not}
+    strict: ${15:# Specifies whether the system enforces cross-routing restrictions or not}
+    vlans: ${16:# VLANs for the system to use in the route domain}
   tags:
     - f5networks
     - f5_modules

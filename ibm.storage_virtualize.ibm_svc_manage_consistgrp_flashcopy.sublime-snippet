@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages FlashCopy consistency groups on IBM Storage Virtualize family systems}
+  ibm.storage_virtualize.ibm_svc_manage_consistgrp_flashcopy:
+    clustername: ${2:# The hostname or management IP of the Storage Virtualize system}
+    domain: ${3:# Domain for the Storage Virtualize system}
+    force: ${4:# If specified True, removes all the associated FlashCopy mappings while deleting the FlashCopy consistency group}
+    log_path: ${5:# Path of debug log file}
+    name: ${6:# Specifies the name of the FlashCopy consistency group}
+    noownershipgroup: ${7:# If specified True, the consistency group is removed from all associated ownership groups}
+    ownershipgroup: ${8:# Specifies the name of the ownership group}
+    password: ${9:# REST API password for the Storage Virtualize system}
+    state: ${10:# Creates (C(present)) or removes (C(absent)) a FlashCopy consistency group}
+    token: ${11:# The authentication token to verify a user on the Storage Virtualize system}
+    username: ${12:# REST API username for the Storage Virtualize system}
+    validate_certs: ${13:# Validates certification}
+  tags:
+    - ibm
+    - storage_virtualize
+    - ibm_svc_manage_consistgrp_flashcopy]]></content>
+  <tabTrigger>ibm.storage_virtualize.ibm_svc_manage_consistgrp_flashcopy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages FlashCopy consistency groups on IBM Storage Virtualize family systems</description>
+</snippet>

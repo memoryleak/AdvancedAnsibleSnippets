@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Remove unreferenced images}
   community.okd.openshift_adm_prune_images:
-    namespace: ${2:# Use to specify namespace for objects}
-    all_images: ${3:# Include images that were imported from external registries as candidates for pruning}
-    keep_younger_than: ${4:# Specify the minimum age (in minutes) of an image and its referrers for it to be considered a candidate for pruning}
-    prune_over_size_limit: ${5:# Specify if images which are exceeding LimitRanges specified in the same namespace, should be considered for pruning}
-    registry_url: ${6:# The address to use when contacting the registry, instead of using the default value}
-    registry_ca_cert: ${7:# Path to a CA certificate used to contact registry}
-    registry_validate_certs: ${8:# Whether or not to verify the API server's SSL certificates}
-    prune_registry: ${9:# If set to I(False), the prune operation will clean up image API objects, but none of the associated content in the registry is removed}
-    ignore_invalid_refs: ${10:# If set to I(True), the pruning process will ignore all errors while parsing image references}
-    host: ${11:# Provide a URL for accessing the API}
-    api_key: ${12:# Token used to authenticate with the API}
+    all_images: ${2:# Include images that were imported from external registries as candidates for pruning}
+    api_key: ${3:# Token used to authenticate with the API}
+    ca_cert: ${4:# Path to a CA certificate used to authenticate with the API}
+    client_cert: ${5:# Path to a certificate used to authenticate with the API}
+    client_key: ${6:# Path to a key file used to authenticate with the API}
+    context: ${7:# The name of a context found in the config file}
+    host: ${8:# Provide a URL for accessing the API}
+    ignore_invalid_refs: ${9:# If set to I(True), the pruning process will ignore all errors while parsing image references}
+    impersonate_groups: ${10:# Group(s) to impersonate for the operation}
+    impersonate_user: ${11:# Username to impersonate for the operation}
+    keep_younger_than: ${12:# Specify the minimum age (in minutes) of an image and its referrers for it to be considered a candidate for pruning}
     kubeconfig: ${13:# Path to an existing Kubernetes config file}
-    context: ${14:# The name of a context found in the config file}
-    username: ${15:# Provide a username for authenticating with the API}
+    namespace: ${14:# Use to specify namespace for objects}
+    no_proxy: ${15:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
     password: ${16:# Provide a password for authenticating with the API}
-    client_cert: ${17:# Path to a certificate used to authenticate with the API}
-    client_key: ${18:# Path to a key file used to authenticate with the API}
-    ca_cert: ${19:# Path to a CA certificate used to authenticate with the API}
-    validate_certs: ${20:# Whether or not to verify the API server's SSL certificates}
-    proxy: ${21:# The URL of an HTTP proxy to use for the connection}
-    no_proxy: ${22:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
-    proxy_headers: ${23:# The Header used for the HTTP proxy}
-    persist_config: ${24:# Whether or not to save the kube config refresh tokens}
-    impersonate_user: ${25:# Username to impersonate for the operation}
-    impersonate_groups: ${26:# Group(s) to impersonate for the operation}
+    persist_config: ${17:# Whether or not to save the kube config refresh tokens}
+    proxy: ${18:# The URL of an HTTP proxy to use for the connection}
+    proxy_headers: ${19:# The Header used for the HTTP proxy}
+    prune_over_size_limit: ${20:# Specify if images which are exceeding LimitRanges specified in the same namespace, should be considered for pruning}
+    prune_registry: ${21:# If set to I(False), the prune operation will clean up image API objects, but none of the associated content in the registry is removed}
+    registry_ca_cert: ${22:# Path to a CA certificate used to contact registry}
+    registry_url: ${23:# The address to use when contacting the registry, instead of using the default value}
+    registry_validate_certs: ${24:# Whether or not to verify the API server's SSL certificates}
+    username: ${25:# Provide a username for authenticating with the API}
+    validate_certs: ${26:# Whether or not to verify the API server's SSL certificates}
   tags:
     - community
     - okd

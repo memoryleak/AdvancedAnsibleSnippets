@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Docker Swarm node}
   community.docker.docker_node:
-    hostname: ${2:# The hostname or ID of node as registered in Swarm}
-    labels: ${3:# User-defined key/value metadata that will be assigned as node attribute}
-    labels_state: ${4:# It defines the operation on the labels assigned to node and labels specified in I(labels) option}
-    labels_to_remove: ${5:# List of labels that will be removed from the node configuration}
-    availability: ${6:# Node availability to assign}
-    role: ${7:# Node role to assign}
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    availability: ${3:# Node availability to assign}
+    ca_cert: ${4:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${5:# Path to the client's TLS certificate file}
+    client_key: ${6:# Path to the client's TLS key file}
+    debug: ${7:# Debug mode}
     docker_host: ${8:# The URL or Unix socket path used to connect to the Docker API}
-    tls_hostname: ${9:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    api_version: ${10:# The version of the Docker API running on the Docker Host}
-    timeout: ${11:# The maximum amount of time in seconds to wait on a response from the API}
-    ca_cert: ${12:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
-    client_cert: ${13:# Path to the client's TLS certificate file}
-    client_key: ${14:# Path to the client's TLS key file}
-    ssl_version: ${15:# Provide a valid SSL version number}
+    hostname: ${9:# The hostname or ID of node as registered in Swarm}
+    labels: ${10:# User-defined key/value metadata that will be assigned as node attribute}
+    labels_state: ${11:# It defines the operation on the labels assigned to node and labels specified in O(labels) option}
+    labels_to_remove: ${12:# List of labels that will be removed from the node configuration}
+    role: ${13:# Node role to assign}
+    ssl_version: ${14:# Provide a valid SSL version number}
+    timeout: ${15:# The maximum amount of time in seconds to wait on a response from the API}
     tls: ${16:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    use_ssh_client: ${17:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
-    validate_certs: ${18:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
-    debug: ${19:# Debug mode}
+    tls_hostname: ${17:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    use_ssh_client: ${18:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${19:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
   tags:
     - community
     - docker

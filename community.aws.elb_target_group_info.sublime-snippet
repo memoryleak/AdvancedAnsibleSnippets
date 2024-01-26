@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Gather information about ELB target groups in AWS}
   community.aws.elb_target_group_info:
-    load_balancer_arn: ${2:# The Amazon Resource Name (ARN) of the load balancer}
-    target_group_arns: ${3:# The Amazon Resource Names (ARN) of the target groups}
-    names: ${4:# The names of the target groups}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
     collect_targets_health: ${5:# When set to C(True), output contains targets health description}
-    access_key: ${6:# AWS access key ID}
-    secret_key: ${7:# AWS secret access key}
-    session_token: ${8:# AWS STS session token for use with temporary credentials}
-    profile: ${9:# A named AWS profile to use for authentication}
-    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${13:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
-    region: ${15:# The AWS region to use}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    load_balancer_arn: ${8:# The Amazon Resource Name (ARN) of the load balancer}
+    names: ${9:# The names of the target groups}
+    profile: ${10:# A named AWS profile to use for authentication}
+    region: ${11:# The AWS region to use}
+    secret_key: ${12:# AWS secret access key}
+    session_token: ${13:# AWS STS session token for use with temporary credentials}
+    target_group_arns: ${14:# The Amazon Resource Names (ARN) of the target groups}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages a VMware VMkernel Adapter of an ESXi host}
   community.vmware.vmware_vmkernel:
-    vswitch_name: ${2:# The name of the vSwitch where to add the VMKernel interface}
+    device: ${2:# Search VMkernel adapter by device name}
     dvswitch_name: ${3:# The name of the vSphere Distributed Switch (vDS) where to add the VMKernel interface}
-    portgroup_name: ${4:# The name of the port group for the VMKernel interface}
-    network: ${5:# A dictionary of network details}
-    mtu: ${6:# The MTU for the VMKernel interface}
-    device: ${7:# Search VMkernel adapter by device name}
-    enable_vsan: ${8:# Enable VSAN traffic on the VMKernel adapter}
+    enable_ft: ${4:# Enable Fault Tolerance traffic on the VMKernel adapter}
+    enable_mgmt: ${5:# Enable Management traffic on the VMKernel adapter}
+    enable_provisioning: ${6:# Enable Provisioning traffic on the VMKernel adapter}
+    enable_replication: ${7:# Enable vSphere Replication traffic on the VMKernel adapter}
+    enable_replication_nfc: ${8:# Enable vSphere Replication NFC traffic on the VMKernel adapter}
     enable_vmotion: ${9:# Enable vMotion traffic on the VMKernel adapter}
-    enable_mgmt: ${10:# Enable Management traffic on the VMKernel adapter}
-    enable_ft: ${11:# Enable Fault Tolerance traffic on the VMKernel adapter}
-    enable_provisioning: ${12:# Enable Provisioning traffic on the VMKernel adapter}
-    enable_replication: ${13:# Enable vSphere Replication traffic on the VMKernel adapter}
-    enable_replication_nfc: ${14:# Enable vSphere Replication NFC traffic on the VMKernel adapter}
-    state: ${15:# If set to C(present), the VMKernel adapter will be created with the given specifications}
-    esxi_hostname: ${16:# Name of ESXi host to which VMKernel is to be managed}
-    hostname: ${17:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${18:# The username of the vSphere vCenter or ESXi server}
-    password: ${19:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${20:# Allows connection when SSL certificates are not valid}
-    port: ${21:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${22:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${23:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    enable_vsan: ${10:# Enable VSAN traffic on the VMKernel adapter}
+    esxi_hostname: ${11:# Name of ESXi host to which VMKernel is to be managed}
+    hostname: ${12:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    mtu: ${13:# The MTU for the VMKernel interface}
+    network: ${14:# A dictionary of network details}
+    password: ${15:# The password of the vSphere vCenter or ESXi server}
+    port: ${16:# The port number of the vSphere vCenter or ESXi server}
+    portgroup_name: ${17:# The name of the port group for the VMKernel interface}
+    proxy_host: ${18:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${19:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    state: ${20:# If set to V(present), the VMKernel adapter will be created with the given specifications}
+    username: ${21:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${22:# Allows connection when SSL certificates are not valid}
+    vswitch_name: ${23:# The name of the vSwitch where to add the VMKernel interface}
   tags:
     - community
     - vmware

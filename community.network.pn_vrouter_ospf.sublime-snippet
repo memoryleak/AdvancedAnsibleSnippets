@@ -2,11 +2,11 @@
   <content><![CDATA[- name: ${1:CLI command to add/remove vrouter-ospf}
   community.network.pn_vrouter_ospf:
     pn_cliswitch: ${2:# Target switch to run the CLI on}
-    state: ${3:# vrouter-ospf configuration command}
-    pn_netmask: ${4:# OSPF network IP address netmask}
+    pn_netmask: ${3:# OSPF network IP address netmask}
+    pn_network: ${4:# OSPF network IP address}
     pn_ospf_area: ${5:# stub area number for the configuration}
-    pn_network: ${6:# OSPF network IP address}
-    pn_vrouter_name: ${7:# name of service config}
+    pn_vrouter_name: ${6:# name of service config}
+    state: ${7:# vrouter-ospf configuration command}
   tags:
     - community
     - network

@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about carrier gateways in AWS}
+  community.aws.ec2_carrier_gateway_info:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    carrier_gateway_ids: ${5:# Get details of specific Carrier Gateway ID}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    filters: ${8:# A dict of filters to apply}
+    profile: ${9:# A named AWS profile to use for authentication}
+    region: ${10:# The AWS region to use}
+    secret_key: ${11:# AWS secret access key}
+    session_token: ${12:# AWS STS session token for use with temporary credentials}
+    validate_certs: ${13:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+  tags:
+    - community
+    - aws
+    - ec2_carrier_gateway_info]]></content>
+  <tabTrigger>community.aws.ec2_carrier_gateway_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about carrier gateways in AWS</description>
+</snippet>

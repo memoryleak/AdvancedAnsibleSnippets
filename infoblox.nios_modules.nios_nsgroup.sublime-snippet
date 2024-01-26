@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure InfoBlox DNS Nameserver Groups}
   infoblox.nios_modules.nios_nsgroup:
-    name: ${2:# Specifies the name of the NIOS nameserver group to be managed}
-    grid_primary: ${3:# This host is to be used as primary server in this nameserver group}
-    grid_secondaries: ${4:# Configures the list of grid member hosts that act as secondary nameservers}
-    is_grid_default: ${5:# If set to C(True) this nsgroup will become the default nameserver group for new zones}
-    use_external_primary: ${6:# This flag controls whether the group is using an external primary nameserver}
-    external_primaries: ${7:# Configures a list of external nameservers (non-members of the grid)}
-    external_secondaries: ${8:# Allows to provide a list of external secondary nameservers, that are not members of the grid}
-    extattrs: ${9:# Allows for the configuration of Extensible Attributes on the instance of the object}
-    comment: ${10:# Configures a text string comment to be associated with the instance of this object}
+    comment: ${2:# Configures a text string comment to be associated with the instance of this object}
+    extattrs: ${3:# Allows for the configuration of Extensible Attributes on the instance of the object}
+    external_primaries: ${4:# Configures a list of external nameservers (non-members of the grid)}
+    external_secondaries: ${5:# Allows to provide a list of external secondary nameservers, that are not members of the grid}
+    grid_primary: ${6:# This host is to be used as primary server in this nameserver group}
+    grid_secondaries: ${7:# Configures the list of grid member hosts that act as secondary nameservers}
+    is_grid_default: ${8:# If set to C(True) this nsgroup will become the default nameserver group for new zones}
+    name: ${9:# Specifies the name of the NIOS nameserver group to be managed}
+    provider: ${10:# A dict object containing connection details}
     state: ${11:# Configures the intended state of the instance of the object on the NIOS server}
-    provider: ${12:# A dict object containing connection details}
+    use_external_primary: ${12:# This flag controls whether the group is using an external primary nameserver}
   tags:
     - infoblox
     - nios_modules

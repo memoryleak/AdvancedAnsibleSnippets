@@ -2,43 +2,43 @@
   <content><![CDATA[- name: ${1:Update Zabbix authentication}
   community.zabbix.zabbix_authentication:
     authentication_type: ${2:# Choose default authentication type}
-    http_auth_enabled: ${3:# HTTP authentication will be enabled if C(true)}
-    http_login_form: ${4:# Choose default login form}
-    http_strip_domains: ${5:# A list of domain names that should be removed from the username}
-    http_case_sensitive: ${6:# Case sensitive login for HTTP authentication will be enabled if C(true)}
-    ldap_configured: ${7:# LDAP authentication will be enabled if C(true)}
-    ldap_host: ${8:# LDAP server name}
-    ldap_port: ${9:# A port number of LDAP server}
-    ldap_base_dn: ${10:# Base DN of LDAP}
-    ldap_search_attribute: ${11:# Search attribute of LDAP}
-    ldap_bind_dn: ${12:# Bind DN of LDAP}
-    ldap_case_sensitive: ${13:# case sensitive login for LDAP authentication will be enabled if C(true)}
+    disabled_usrgroup: ${3:# User group name to assign the deprovisioned user to}
+    http_auth_enabled: ${4:# HTTP authentication will be enabled if C(true)}
+    http_case_sensitive: ${5:# Case sensitive login for HTTP authentication will be enabled if C(true)}
+    http_login_form: ${6:# Choose default login form}
+    http_login_password: ${7:# Basic Auth password}
+    http_login_user: ${8:# Basic Auth login}
+    http_strip_domains: ${9:# A list of domain names that should be removed from the username}
+    jit_provision_interval: ${10:# Time interval between JIT provision requests for logged-in user}
+    ldap_auth_enabled: ${11:# LDAP authentication will be enabled if C(true)}
+    ldap_base_dn: ${12:# Base DN of LDAP}
+    ldap_bind_dn: ${13:# Bind DN of LDAP}
     ldap_bind_password: ${14:# Bind password of LDAP}
-    ldap_userdirectory: ${15:# LDAP authentication default user directory name for user groups with gui_access set to LDAP or System default}
-    saml_auth_enabled: ${16:# SAML authentication will be enabled if C(true)}
-    saml_idp_entityid: ${17:# SAML identify provider's entity ID}
-    saml_sso_url: ${18:# URL for single sign on service of SAML}
-    saml_slo_url: ${19:# URL for SAML single logout service}
-    saml_username_attribute: ${20:# User name attribute of SAML}
-    saml_sp_entityid: ${21:# Entity ID of SAML service provider}
-    saml_nameid_format: ${22:# Name identifier format of SAML service provider}
-    saml_sign_messages: ${23:# SAML sign messages will be enabled if C(true)}
-    saml_sign_assertions: ${24:# SAML sign assertions will be enabled if C(true)}
-    saml_sign_authn_requests: ${25:# SAML sign AuthN requests will be enabled if C(true)}
-    saml_sign_logout_requests: ${26:# SAML sign logout requests will be enabled if C(true)}
-    saml_sign_logout_responses: ${27:# SAML sign logout responses will be enabled if C(true)}
-    saml_encrypt_nameid: ${28:# SAML encrypt name ID will be enabled if C(true)}
-    saml_encrypt_assertions: ${29:# SAML encrypt assertions will be enabled if C(true)}
-    saml_case_sensitive: ${30:# Case sensitive login for SAML authentication will be enabled if C(true)}
-    passwd_min_length: ${31:# Minimal length of password}
-    passwd_check_rules: ${32:# Checking password rules}
-    server_url: ${33:# URL of Zabbix server, with protocol (http or https)}
-    login_user: ${34:# Zabbix user name}
-    login_password: ${35:# Zabbix user password}
-    http_login_user: ${36:# Basic Auth login}
-    http_login_password: ${37:# Basic Auth password}
-    timeout: ${38:# The timeout of API request (seconds)}
-    validate_certs: ${39:# If set to False, SSL certificates will not be validated}
+    ldap_case_sensitive: ${15:# case sensitive login for LDAP authentication will be enabled if C(true)}
+    ldap_configured: ${16:# LDAP authentication will be enabled if C(true)}
+    ldap_host: ${17:# LDAP server name}
+    ldap_jit_status: ${18:# Status of LDAP provisioning}
+    ldap_port: ${19:# A port number of LDAP server}
+    ldap_search_attribute: ${20:# Search attribute of LDAP}
+    ldap_userdirectory: ${21:# LDAP authentication default user directory name for user groups with gui_access set to LDAP or System default}
+    passwd_check_rules: ${22:# Checking password rules}
+    passwd_min_length: ${23:# Minimal length of password}
+    saml_auth_enabled: ${24:# SAML authentication will be enabled if C(true)}
+    saml_case_sensitive: ${25:# Case sensitive login for SAML authentication will be enabled if C(true)}
+    saml_encrypt_assertions: ${26:# SAML encrypt assertions will be enabled if C(true)}
+    saml_encrypt_nameid: ${27:# SAML encrypt name ID will be enabled if C(true)}
+    saml_idp_entityid: ${28:# SAML identify provider's entity ID}
+    saml_jit_status: ${29:# Status of SAML provisioning}
+    saml_nameid_format: ${30:# Name identifier format of SAML service provider}
+    saml_sign_assertions: ${31:# SAML sign assertions will be enabled if C(true)}
+    saml_sign_authn_requests: ${32:# SAML sign AuthN requests will be enabled if C(true)}
+    saml_sign_logout_requests: ${33:# SAML sign logout requests will be enabled if C(true)}
+    saml_sign_logout_responses: ${34:# SAML sign logout responses will be enabled if C(true)}
+    saml_sign_messages: ${35:# SAML sign messages will be enabled if C(true)}
+    saml_slo_url: ${36:# URL for SAML single logout service}
+    saml_sp_entityid: ${37:# Entity ID of SAML service provider}
+    saml_sso_url: ${38:# URL for single sign on service of SAML}
+    saml_username_attribute: ${39:# User name attribute of SAML}
   tags:
     - community
     - zabbix

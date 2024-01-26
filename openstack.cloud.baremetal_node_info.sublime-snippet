@@ -1,24 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieve information about Bare Metal nodes from OpenStack}
   openstack.cloud.baremetal_node_info:
-    node: ${2:# Name or globally unique identifier (UUID) to identify the host}
-    mac: ${3:# Unique mac address that is used to attempt to identify the host}
-    ironic_url: ${4:# If noauth mode is utilized, this is required to be set to the endpoint URL for the Ironic API}
-    cloud: ${5:# Named cloud or cloud config to operate against}
-    auth: ${6:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${7:# Name of the auth plugin to use}
-    region_name: ${8:# Name of the region}
-    wait: ${9:# Should ansible wait until the requested resource is complete}
-    timeout: ${10:# How long should ansible wait for the requested resource}
-    api_timeout: ${11:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${12:# Whether or not SSL API requests should be verified}
-    ca_cert: ${13:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${14:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${15:# A path to a client key to use as part of the SSL transaction}
-    interface: ${16:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${17:# Ignored}
-    sdk_log_path: ${18:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${19:# Log level of the OpenStackSDK}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    interface: ${9:# Endpoint URL type to fetch from the service catalog}
+    mac: ${10:# MAC address that is used to attempt to identify the host}
+    name: ${11:# Name or ID of the baremetal node}
+    region_name: ${12:# Name of the region}
+    sdk_log_level: ${13:# Log level of the OpenStackSDK}
+    sdk_log_path: ${14:# Path to the logfile of the OpenStackSDK}
+    timeout: ${15:# How long should ansible wait for the requested resource}
+    validate_certs: ${16:# Whether or not SSL API requests should be verified}
+    wait: ${17:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud

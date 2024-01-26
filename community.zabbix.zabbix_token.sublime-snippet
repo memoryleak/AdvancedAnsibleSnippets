@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/Update/Generate/Delete Zabbix token}
+  community.zabbix.zabbix_token:
+    description: ${2:# Description of the token}
+    expires_at: ${3:# A timestamp of the token will be expired}
+    generate_token: ${4:# New token string will be generated if C(true)}
+    http_login_password: ${5:# Basic Auth password}
+    http_login_user: ${6:# Basic Auth login}
+    name: ${7:# Name of the token}
+    state: ${8:# Create or delete token}
+    status: ${9:# Status of the token}
+    username: ${10:# Name of user who is the token assinged to}
+  tags:
+    - community
+    - zabbix
+    - zabbix_token]]></content>
+  <tabTrigger>community.zabbix.zabbix_token</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/Update/Generate/Delete Zabbix token</description>
+</snippet>

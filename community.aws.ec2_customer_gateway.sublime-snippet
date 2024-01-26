@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage an AWS customer gateway}
   community.aws.ec2_customer_gateway:
-    bgp_asn: ${2:# Border Gateway Protocol (BGP) Autonomous System Number (ASN)}
-    ip_address: ${3:# Internet-routable IP address for customers gateway, must be a static address}
-    name: ${4:# Name of the customer gateway}
-    routing: ${5:# The type of routing}
-    state: ${6:# Create or terminate the Customer Gateway}
-    access_key: ${7:# AWS access key ID}
-    secret_key: ${8:# AWS secret access key}
-    session_token: ${9:# AWS STS session token for use with temporary credentials}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    bgp_asn: ${5:# Border Gateway Protocol (BGP) Autonomous System Number (ASN)}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    ip_address: ${8:# Internet-routable IP address for customers gateway, must be a static address}
+    name: ${9:# Name of the customer gateway}
     profile: ${10:# A named AWS profile to use for authentication}
-    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${12:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${13:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${14:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${15:# Use a C(botocore}
-    region: ${16:# The AWS region to use}
+    region: ${11:# The AWS region to use}
+    routing: ${12:# The type of routing}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    state: ${15:# Create or terminate the Customer Gateway}
+    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

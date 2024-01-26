@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set the type of aclientscope in realm or client via Keycloak API}
+  community.general.keycloak_clientscope_type:
+    auth_client_id: ${2:# OpenID Connect C(client_id) to authenticate to the API with}
+    auth_client_secret: ${3:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
+    auth_keycloak_url: ${4:# URL to the Keycloak instance}
+    auth_password: ${5:# Password to authenticate for API access with}
+    auth_realm: ${6:# Keycloak realm name to authenticate to for API access}
+    auth_username: ${7:# Username to authenticate for API access with}
+    client_id: ${8:# The O(client_id) of the client}
+    connection_timeout: ${9:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    default_clientscopes: ${10:# Client scopes that should be of type default}
+    http_agent: ${11:# Configures the HTTP User-Agent header}
+    optional_clientscopes: ${12:# Client scopes that should be of type optional}
+    realm: ${13:# The Keycloak realm}
+    token: ${14:# Authentication token for Keycloak API}
+    validate_certs: ${15:# Verify TLS certificates (do not disable this in production)}
+  tags:
+    - community
+    - general
+    - keycloak_clientscope_type]]></content>
+  <tabTrigger>community.general.keycloak_clientscope_type</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set the type of aclientscope in realm or client via Keycloak API</description>
+</snippet>

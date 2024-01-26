@@ -1,19 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage host access policies in Pure Storage Fusion}
   purestorage.fusion.fusion_hap:
-    name: ${2:# The name of the host access policy}
+    access_token: ${2:# Access token for Fusion Service}
     display_name: ${3:# The human name of the host access policy}
-    state: ${4:# Define whether the host access policy should exist or not}
-    wwns: ${5:# CURRENTLY NOT SUPPORTED}
+    host_password: ${4:# CURRENTLY NOT SUPPORTED}
+    host_user: ${5:# CURRENTLY NOT SUPPORTED}
     iqn: ${6:# IQN for the host access policy}
-    nqn: ${7:# CURRENTLY NOT SUPPORTED}
-    personality: ${8:# Define which operating system the host is}
-    target_user: ${9:# CURRENTLY NOT SUPPORTED}
-    target_password: ${10:# CURRENTLY NOT SUPPORTED}
-    host_user: ${11:# CURRENTLY NOT SUPPORTED}
-    host_password: ${12:# CURRENTLY NOT SUPPORTED}
-    key_file: ${13:# Path to the private key file}
-    app_id: ${14:# Application ID from Pure1 Registration page}
+    issuer_id: ${7:# Application ID from Pure1 Registration page}
+    name: ${8:# The name of the host access policy}
+    nqn: ${9:# CURRENTLY NOT SUPPORTED}
+    personality: ${10:# Define which operating system the host is}
+    private_key_file: ${11:# Path to the private key file}
+    private_key_password: ${12:# Password of the encrypted private key file}
+    state: ${13:# Define whether the host access policy should exist or not}
+    target_password: ${14:# CURRENTLY NOT SUPPORTED}
+    target_user: ${15:# CURRENTLY NOT SUPPORTED}
+    wwns: ${16:# CURRENTLY NOT SUPPORTED}
   tags:
     - purestorage
     - fusion

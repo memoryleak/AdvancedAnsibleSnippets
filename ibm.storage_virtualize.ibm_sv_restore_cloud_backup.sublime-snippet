@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module restores the cloud backup on IBM Storage Virtualize family systems}
+  ibm.storage_virtualize.ibm_sv_restore_cloud_backup:
+    cancel: ${2:# Specifies to cancel the restore operation}
+    clustername: ${3:# The hostname or management IP of the Storage Virtualize system}
+    deletelatergenerations: ${4:# Specifies that all backup generations should be deleted after the generation is restored}
+    domain: ${5:# Domain for the Storage Virtualize system}
+    generation: ${6:# Specifies the snapshot generation to restore}
+    log_path: ${7:# Path of debug log file}
+    password: ${8:# REST API password for the Storage Virtualize system}
+    restoreuid: ${9:# Specifies the UID of the restored volume should be set to the UID of the volume snapshot that is being restored}
+    source_volume_uid: ${10:# Specifies the volume snapshot to restore (specified by volume UID)}
+    target_volume_name: ${11:# Specifies the volume name to restore onto}
+    token: ${12:# The authentication token to verify a user on the Storage Virtualize system}
+    username: ${13:# REST API username for the Storage Virtualize system}
+    validate_certs: ${14:# Validates certification}
+  tags:
+    - ibm
+    - storage_virtualize
+    - ibm_sv_restore_cloud_backup]]></content>
+  <tabTrigger>ibm.storage_virtualize.ibm_sv_restore_cloud_backup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module restores the cloud backup on IBM Storage Virtualize family systems</description>
+</snippet>

@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module to manage storage domain disk profiles in ovirt}
   ovirt.ovirt.ovirt_disk_profile:
-    id: ${2:# ID of the disk profile to manage}
-    name: ${3:# Name of the disk profile to manage}
-    description: ${4:# Description of the disk profile}
-    comment: ${5:# Comment of the disk profile}
-    storage_domain: ${6:# Name of the storage domain where the disk profile should be created}
-    data_center: ${7:# Name of the data center where the qos entry has been created}
-    qos: ${8:# Name of the QoS entry on the disk profile}
-    state: ${9:# Should the disk profile be present/absent}
-    wait: ${10:# C(yes) if the module should wait for the entity to get into desired state}
-    fetch_nested: ${11:# If I(True) the module will fetch additional data from the API}
-    nested_attributes: ${12:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${13:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    comment: ${3:# Comment of the disk profile}
+    data_center: ${4:# Name of the data center where the qos entry has been created}
+    description: ${5:# Description of the disk profile}
+    fetch_nested: ${6:# If I(True) the module will fetch additional data from the API}
+    id: ${7:# ID of the disk profile to manage}
+    name: ${8:# Name of the disk profile to manage}
+    nested_attributes: ${9:# Specifies list of the attributes which should be fetched from the API}
+    poll_interval: ${10:# Number of the seconds the module waits until another poll request on entity status is sent}
+    qos: ${11:# Name of the QoS entry on the disk profile}
+    state: ${12:# Should the disk profile be present/absent}
+    storage_domain: ${13:# Name of the storage domain where the disk profile should be created}
     timeout: ${14:# The amount of time in seconds the module should wait for the instance to get into desired state}
-    poll_interval: ${15:# Number of the seconds the module waits until another poll request on entity status is sent}
+    wait: ${15:# C(yes) if the module should wait for the entity to get into desired state}
   tags:
     - ovirt
     - ovirt

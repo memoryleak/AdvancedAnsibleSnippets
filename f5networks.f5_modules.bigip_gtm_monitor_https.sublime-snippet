@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages F5 BIG-IP GTM HTTPS monitors}
   f5networks.f5_modules.bigip_gtm_monitor_https:
-    name: ${2:# Monitor name}
-    parent: ${3:# The parent template of this monitor template}
-    send: ${4:# The send string for the monitor call}
-    receive: ${5:# The receive string for the monitor call}
-    ip: ${6:# IP address part of the IP/port definition}
-    port: ${7:# Port address part of the IP/port definition}
-    interval: ${8:# The interval specifying how frequently the monitor instance of this template will run}
-    timeout: ${9:# The number of seconds in which the node or service must respond to the monitor request}
-    partition: ${10:# Device partition to manage resources on}
-    state: ${11:# When C(present), ensures the monitor exists}
-    probe_timeout: ${12:# Specifies the number of seconds after which the system times out the probe request to the system}
-    ignore_down_response: ${13:# Specifies the monitor allows more than one probe attempt per interval}
-    transparent: ${14:# Specifies whether the monitor operates in transparent mode}
-    reverse: ${15:# Instructs the system to mark the target resource down when the test is successful}
-    target_username: ${16:# Specifies the user name, if the monitored target requires authentication}
-    target_password: ${17:# Specifies the password, if the monitored target requires authentication}
-    update_password: ${18:# C(always) updates passwords if the C(target_password) is specified}
-    cipher_list: ${19:# Specifies the list of ciphers for this monitor}
-    compatibility: ${20:# Specifies, when enabled, the SSL options setting (in OpenSSL) is set to B(all)}
-    client_cert: ${21:# Specifies a fully-qualified path for a client certificate the monitor sends to the target SSL server}
-    client_key: ${22:# Specifies a key for a client certificate the monitor sends to the target SSL server}
-    provider: ${23:# A dict object containing connection details}
+    cipher_list: ${2:# Specifies the list of ciphers for this monitor}
+    client_cert: ${3:# Specifies a fully-qualified path for a client certificate the monitor sends to the target SSL server}
+    client_key: ${4:# Specifies a key for a client certificate the monitor sends to the target SSL server}
+    compatibility: ${5:# When enabled, specifies the SSL options setting (in OpenSSL) is set to B(all)}
+    ignore_down_response: ${6:# Specifies the monitor allows more than one probe attempt per interval}
+    interval: ${7:# The interval specifying how frequently the monitor instance of this template will run}
+    ip: ${8:# IP address part of the IP/port definition}
+    name: ${9:# Monitor name}
+    parent: ${10:# The parent template of this monitor template}
+    partition: ${11:# Device partition to manage resources on}
+    port: ${12:# Port address part of the IP/port definition}
+    probe_timeout: ${13:# Specifies the number of seconds after which the system times out the probe request to the system}
+    provider: ${14:# A dict object containing connection details}
+    receive: ${15:# The receive string for the monitor call}
+    reverse: ${16:# Instructs the system to mark the target resource down when the test is successful}
+    send: ${17:# The send string for the monitor call}
+    state: ${18:# When C(present), ensures the monitor exists}
+    target_password: ${19:# Specifies the password, if the monitored target requires authentication}
+    target_username: ${20:# Specifies the user name, if the monitored target requires authentication}
+    timeout: ${21:# The number of seconds in which the node or service must respond to the monitor request}
+    transparent: ${22:# Specifies whether the monitor operates in transparent mode}
+    update_password: ${23:# C(always) updates passwords if the C(target_password) is specified}
   tags:
     - f5networks
     - f5_modules

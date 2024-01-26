@@ -1,44 +1,44 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure Cache for Redis instance}
   azure.azcollection.azure_rm_rediscache:
-    resource_group: ${2:# Name of the resource group to which the resource belongs}
-    name: ${3:# Unique name of the Azure Cache for Redis to create or update}
-    location: ${4:# Resource location}
-    sku: ${5:# SKU info of Azure Cache for Redis}
-    enable_non_ssl_port: ${6:# When set I(enable_non_ssl_port=true), the non-ssl Redis server port 6379 will be enabled}
-    maxfragmentationmemory_reserved: ${7:# Configures the amount of memory in MB that is reserved to accommodate for memory fragmentation}
-    maxmemory_reserved: ${8:# Configures the amount of memory in MB that is reserved for non-cache operations}
-    maxmemory_policy: ${9:# Configures the eviction policy of the cache}
-    minimum_tls_version: ${10:# Require clients to use a specified TLS version}
-    public_network_access: ${11:# Whether or not public endpoint access is allowed for this cache}
-    notify_keyspace_events: ${12:# Allows clients to receive notifications when certain events occur}
-    redis_version: ${13:# The major version of Redis}
-    shard_count: ${14:# The number of shards to be created when I(sku=premium)}
-    static_ip: ${15:# Static IP address}
-    subnet: ${16:# Subnet in a virtual network to deploy the Azure Cache for Redis in}
-    tenant_settings: ${17:# Dict of tenant settings}
-    reboot: ${18:# Reboot specified Redis node(s)}
-    regenerate_key: ${19:# Regenerate Redis cache's access keys}
-    wait_for_provisioning: ${20:# Wait till the Azure Cache for Redis instance provisioning_state is Succeeded}
-    state: ${21:# Assert the state of the Azure Cache for Redis}
-    ad_user: ${22:# Active Directory username}
-    password: ${23:# Active Directory user password}
-    profile: ${24:# Security profile found in ~/}
-    subscription_id: ${25:# Your Azure subscription Id}
-    client_id: ${26:# Azure client ID}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    enable_non_ssl_port: ${10:# When set I(enable_non_ssl_port=true), the non-ssl Redis server port 6379 will be enabled}
+    location: ${11:# Resource location}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    maxfragmentationmemory_reserved: ${14:# Configures the amount of memory in MB that is reserved to accommodate for memory fragmentation}
+    maxmemory_policy: ${15:# Configures the eviction policy of the cache}
+    maxmemory_reserved: ${16:# Configures the amount of memory in MB that is reserved for non-cache operations}
+    minimum_tls_version: ${17:# Require clients to use a specified TLS version}
+    name: ${18:# Unique name of the Azure Cache for Redis to create or update}
+    notify_keyspace_events: ${19:# Allows clients to receive notifications when certain events occur}
+    password: ${20:# Active Directory user password}
+    profile: ${21:# Security profile found in ~/}
+    public_network_access: ${22:# Whether or not public endpoint access is allowed for this cache}
+    reboot: ${23:# Reboot specified Redis node(s)}
+    redis_version: ${24:# The major version of Redis}
+    regenerate_key: ${25:# Regenerate Redis cache's access keys}
+    resource_group: ${26:# Name of the resource group to which the resource belongs}
     secret: ${27:# Azure client secret}
-    tenant: ${28:# Azure tenant ID}
-    cloud_environment: ${29:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${30:# Azure AD authority url}
-    cert_validation_mode: ${31:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${32:# Controls the source of the credentials to use for authentication}
-    api_profile: ${33:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${34:# Parent argument}
-    log_mode: ${35:# Parent argument}
-    x509_certificate_path: ${36:# Path to the X509 certificate used to create the service principal in PEM format}
+    shard_count: ${28:# The number of shards to be created when I(sku=premium)}
+    sku: ${29:# SKU info of Azure Cache for Redis}
+    state: ${30:# Assert the state of the Azure Cache for Redis}
+    static_ip: ${31:# Static IP address}
+    subnet: ${32:# Subnet in a virtual network to deploy the Azure Cache for Redis in}
+    subscription_id: ${33:# Your Azure subscription Id}
+    tags: ${34:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${35:# Azure tenant ID}
+    tenant_settings: ${36:# Dict of tenant settings}
     thumbprint: ${37:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${38:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${39:# Use to control if tags field is canonical or just appends to existing tags}
+    wait_for_provisioning: ${38:# Wait till the Azure Cache for Redis instance provisioning_state is Succeeded}
+    x509_certificate_path: ${39:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

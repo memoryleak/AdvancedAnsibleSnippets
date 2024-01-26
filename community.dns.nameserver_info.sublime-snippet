@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Look up nameservers for a DNS name}
+  community.dns.nameserver_info:
+    always_ask_default_resolver: ${2:# When set to V(true) (default), will use the default resolver to find the authoritative nameservers of a subzone}
+    name: ${3:# A list of DNS names whose nameservers to retrieve}
+    query_retry: ${4:# Number of retries for DNS query timeouts}
+    query_timeout: ${5:# Timeout per DNS query in seconds}
+    resolve_addresses: ${6:# Whether to resolve the nameserver names to IP addresses}
+    servfail_retries: ${7:# How often to retry on SERVFAIL errors}
+  tags:
+    - community
+    - dns
+    - nameserver_info]]></content>
+  <tabTrigger>community.dns.nameserver_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Look up nameservers for a DNS name</description>
+</snippet>

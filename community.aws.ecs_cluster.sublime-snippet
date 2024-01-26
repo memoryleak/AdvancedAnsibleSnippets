@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create or terminate ECS clusters}
   community.aws.ecs_cluster:
-    state: ${2:# The desired state of the cluster}
-    name: ${3:# The cluster name}
-    delay: ${4:# Number of seconds to wait}
-    repeat: ${5:# The number of times to wait for the cluster to have an instance}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    capacity_provider_strategy: ${5:# List of capacity provider strategies to use for the cluster}
     capacity_providers: ${6:# List of capacity providers to use for the cluster}
-    capacity_provider_strategy: ${7:# List of capacity provider strategies to use for the cluster}
-    purge_capacity_providers: ${8:# Toggle overwriting of existing capacity providers or strategy}
-    access_key: ${9:# AWS access key ID}
-    secret_key: ${10:# AWS secret access key}
-    session_token: ${11:# AWS STS session token for use with temporary credentials}
-    profile: ${12:# A named AWS profile to use for authentication}
-    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${16:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
-    region: ${18:# The AWS region to use}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    delay: ${8:# Number of seconds to wait}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
+    name: ${10:# The cluster name}
+    profile: ${11:# A named AWS profile to use for authentication}
+    purge_capacity_providers: ${12:# Toggle overwriting of existing capacity providers or strategy}
+    region: ${13:# The AWS region to use}
+    repeat: ${14:# The number of times to wait for the cluster to have an instance}
+    secret_key: ${15:# AWS secret access key}
+    session_token: ${16:# AWS STS session token for use with temporary credentials}
+    state: ${17:# The desired state of the cluster}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

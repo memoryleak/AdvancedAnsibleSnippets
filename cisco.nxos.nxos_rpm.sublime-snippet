@@ -1,9 +1,9 @@
 <snippet>
   <content><![CDATA[- name: ${1:Install patch or feature rpms on Cisco NX-OS devices}
   cisco.nxos.nxos_rpm:
-    pkg: ${2:# Name of the RPM package}
+    aggregate: ${2:# List of RPM/patch definitions}
     file_system: ${3:# The remote file system of the device}
-    aggregate: ${4:# List of RPM/patch definitions}
+    pkg: ${4:# Name of the RPM package}
     state: ${5:# If the state is present, the rpm will be installed, If the state is absent, it will be removed}
   tags:
     - cisco

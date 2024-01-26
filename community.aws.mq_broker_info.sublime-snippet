@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieve MQ Broker details}
+  community.aws.mq_broker_info:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    broker_id: ${5:# Get details for broker with specified ID}
+    broker_name: ${6:# Get details for broker with specified Name}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
+    profile: ${9:# A named AWS profile to use for authentication}
+    region: ${10:# The AWS region to use}
+    secret_key: ${11:# AWS secret access key}
+    session_token: ${12:# AWS STS session token for use with temporary credentials}
+    validate_certs: ${13:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+  tags:
+    - community
+    - aws
+    - mq_broker_info]]></content>
+  <tabTrigger>community.aws.mq_broker_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieve MQ Broker details</description>
+</snippet>

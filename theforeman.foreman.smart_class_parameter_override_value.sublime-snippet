@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Smart Class Parameter Override Values}
+  theforeman.foreman.smart_class_parameter_override_value:
+    match: ${2:# Override match}
+    omit: ${3:# Foreman will not send this parameter in classification output}
+    password: ${4:# Password of the user accessing the Foreman server}
+    puppetclass: ${5:# Puppet Class the Smart Class Parameter belongs to}
+    server_url: ${6:# URL of the Foreman server}
+    smart_class_parameter: ${7:# Smart Class Parameter the Override Value belongs to}
+    state: ${8:# State of the entity}
+    username: ${9:# Username accessing the Foreman server}
+    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
+    value: ${11:# Override value, required if omit is false}
+  tags:
+    - theforeman
+    - foreman
+    - smart_class_parameter_override_value]]></content>
+  <tabTrigger>theforeman.foreman.smart_class_parameter_override_value</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Smart Class Parameter Override Values</description>
+</snippet>

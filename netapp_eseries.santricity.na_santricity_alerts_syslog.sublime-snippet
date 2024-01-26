@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp E-Series manage syslog servers receiving storage system alerts}
   netapp_eseries.santricity.na_santricity_alerts_syslog:
-    servers: ${2:# List of dictionaries where each dictionary contains a syslog server entry}
-    test: ${3:# This forces a test syslog message to be sent to the stated syslog server}
+    api_password: ${2:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${3:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
     api_username: ${4:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_password: ${5:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_url: ${6:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
-    validate_certs: ${7:# Should https certificates be validated?}
-    ssid: ${8:# The ID of the array to manage}
+    servers: ${5:# List of dictionaries where each dictionary contains a syslog server entry}
+    ssid: ${6:# The ID of the array to manage}
+    test: ${7:# This forces a test syslog message to be sent to the stated syslog server}
+    validate_certs: ${8:# Should https certificates be validated?}
   tags:
     - netapp_eseries
     - santricity

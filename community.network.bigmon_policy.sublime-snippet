@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create and remove a bigmon out-of-band policy}
   community.network.bigmon_policy:
-    name: ${2:# The name of the policy}
-    policy_description: ${3:# Description of policy}
-    action: ${4:# Forward matching packets to delivery interfaces, Drop is for measure rate of matching packets, but do not forward to delivery interfaces, capture packets and write to a PCAP file, or enable NetFlow generation}
-    priority: ${5:# A priority associated with this policy}
+    access_token: ${2:# Bigmon access token}
+    action: ${3:# Forward matching packets to delivery interfaces, Drop is for measure rate of matching packets, but do not forward to delivery interfaces, capture packets and write to a PCAP file, or enable NetFlow generation}
+    controller: ${4:# The controller address}
+    delivery_packet_count: ${5:# Run policy until delivery_packet_count packets are delivered}
     duration: ${6:# Run policy for duration duration or until delivery_packet_count packets are delivered, whichever comes first}
-    start_time: ${7:# Date the policy becomes active}
-    delivery_packet_count: ${8:# Run policy until delivery_packet_count packets are delivered}
-    state: ${9:# Whether the policy should be present or absent}
-    controller: ${10:# The controller address}
-    validate_certs: ${11:# If C(false), SSL certificates will not be validated}
-    access_token: ${12:# Bigmon access token}
+    name: ${7:# The name of the policy}
+    policy_description: ${8:# Description of policy}
+    priority: ${9:# A priority associated with this policy}
+    start_time: ${10:# Date the policy becomes active}
+    state: ${11:# Whether the policy should be present or absent}
+    validate_certs: ${12:# If C(false), SSL certificates will not be validated}
   tags:
     - community
     - network

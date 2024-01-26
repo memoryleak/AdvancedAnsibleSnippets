@@ -1,14 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage the state of a program or group of programs running via supervisord}
   community.general.supervisorctl:
-    name: ${2:# The name of the supervisord program or group to manage}
-    config: ${3:# The supervisor configuration file path}
-    server_url: ${4:# URL on which supervisord server is listening}
-    username: ${5:# username to use for authentication}
-    password: ${6:# password to use for authentication}
+    config: ${2:# The supervisor configuration file path}
+    name: ${3:# The name of the supervisord program or group to manage}
+    password: ${4:# password to use for authentication}
+    server_url: ${5:# URL on which supervisord server is listening}
+    signal: ${6:# The signal to send to the program/group, when combined with the 'signalled' state}
     state: ${7:# The desired state of program/group}
-    signal: ${8:# The signal to send to the program/group, when combined with the 'signalled' state}
+    stop_before_removing: ${8:# Use O(stop_before_removing=true) to stop the program/group before removing it}
     supervisorctl_path: ${9:# path to supervisorctl executable}
+    username: ${10:# username to use for authentication}
   tags:
     - community
     - general

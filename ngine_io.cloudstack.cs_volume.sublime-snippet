@@ -1,34 +1,34 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages volumes on Apache CloudStack based clouds}
   ngine_io.cloudstack.cs_volume:
-    name: ${2:# Name of the volume}
-    account: ${3:# Account the volume is related to}
-    device_id: ${4:# ID of the device on a VM the volume is attached to}
-    custom_id: ${5:# Custom id to the resource}
-    disk_offering: ${6:# Name of the disk offering to be used}
-    display_volume: ${7:# Whether to display the volume to the end user or not}
-    domain: ${8:# Name of the domain the volume to be deployed in}
-    max_iops: ${9:# Max iops}
-    min_iops: ${10:# Min iops}
-    project: ${11:# Name of the project the volume to be deployed in}
-    size: ${12:# Size of disk in GB}
-    snapshot: ${13:# The snapshot name for the disk volume}
+    account: ${2:# Account the volume is related to}
+    api_http_method: ${3:# HTTP method used to query the API endpoint}
+    api_key: ${4:# API key of the CloudStack API}
+    api_secret: ${5:# Secret key of the CloudStack API}
+    api_timeout: ${6:# HTTP timeout in seconds}
+    api_url: ${7:# URL of the CloudStack API e}
+    api_verify_ssl_cert: ${8:# Verify CA authority cert file}
+    custom_id: ${9:# Custom id to the resource}
+    device_id: ${10:# ID of the device on a VM the volume is attached to}
+    disk_offering: ${11:# Name of the disk offering to be used}
+    display_volume: ${12:# Whether to display the volume to the end user or not}
+    domain: ${13:# Name of the domain the volume to be deployed in}
     force: ${14:# Force removal of volume even it is attached to a VM}
-    shrink_ok: ${15:# Whether to allow to shrink the volume}
-    vm: ${16:# Name of the virtual machine to attach the volume to}
-    zone: ${17:# Name of the zone in which the volume should be deployed}
-    state: ${18:# State of the volume}
-    poll_async: ${19:# Poll async jobs until job has finished}
-    tags: ${20:# List of tags}
-    url: ${21:# URL to which the volume would be extracted on I(state=extracted)}
-    mode: ${22:# Mode for the volume extraction}
-    format: ${23:# The format for the volume}
-    api_key: ${24:# API key of the CloudStack API}
-    api_secret: ${25:# Secret key of the CloudStack API}
-    api_url: ${26:# URL of the CloudStack API e}
-    api_http_method: ${27:# HTTP method used to query the API endpoint}
-    api_timeout: ${28:# HTTP timeout in seconds}
-    api_verify_ssl_cert: ${29:# Verify CA authority cert file}
+    format: ${15:# The format for the volume}
+    max_iops: ${16:# Max iops}
+    min_iops: ${17:# Min iops}
+    mode: ${18:# Mode for the volume extraction}
+    name: ${19:# Name of the volume}
+    poll_async: ${20:# Poll async jobs until job has finished}
+    project: ${21:# Name of the project the volume to be deployed in}
+    shrink_ok: ${22:# Whether to allow to shrink the volume}
+    size: ${23:# Size of disk in GB}
+    snapshot: ${24:# The snapshot name for the disk volume}
+    state: ${25:# State of the volume}
+    tags: ${26:# List of tags}
+    url: ${27:# URL to which the volume would be extracted on I(state=extracted)}
+    vm: ${28:# Name of the virtual machine to attach the volume to}
+    zone: ${29:# Name of the zone in which the volume should be deployed}
   tags:
     - ngine_io
     - cloudstack

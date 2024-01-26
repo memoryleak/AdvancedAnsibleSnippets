@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates an AWS Lambda layer or deletes an AWS Lambda layer version}
+  amazon.aws.lambda_layer:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    compatible_architectures: ${5:# A list of compatible instruction set architectures}
+    compatible_runtimes: ${6:# A list of compatible function runtimes}
+    content: ${7:# The function layer archive}
+    debug_botocore_endpoint_logs: ${8:# Use a C(botocore}
+    description: ${9:# The description of the version}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    license_info: ${11:# The layer's software license}
+    name: ${12:# The name or Amazon Resource Name (ARN) of the Lambda layer}
+    profile: ${13:# A named AWS profile to use for authentication}
+    region: ${14:# The AWS region to use}
+    secret_key: ${15:# AWS secret access key}
+    session_token: ${16:# AWS STS session token for use with temporary credentials}
+    state: ${17:# Determines if an Lambda layer should be created, or deleted}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    version: ${19:# The version number of the layer to delete}
+  tags:
+    - amazon
+    - aws
+    - lambda_layer]]></content>
+  <tabTrigger>amazon.aws.lambda_layer</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates an AWS Lambda layer or deletes an AWS Lambda layer version</description>
+</snippet>

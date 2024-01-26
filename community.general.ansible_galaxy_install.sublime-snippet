@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Install Ansible roles or collections using ansible-galaxy}
   community.general.ansible_galaxy_install:
-    type: ${2:# The type of installation performed by C(ansible-galaxy)}
-    name: ${3:# Name of the collection or role being installed}
-    requirements_file: ${4:# Path to a file containing a list of requirements to be installed}
-    dest: ${5:# The path to the directory containing your collections or roles, according to the value of I(type)}
-    no_deps: ${6:# Refrain from installing dependencies}
-    force: ${7:# Force overwriting an existing role or collection}
-    ack_ansible29: ${8:# Acknowledge using Ansible 2}
-    ack_min_ansiblecore211: ${9:# Acknowledge the module is deprecating support for Ansible 2}
+    ack_ansible29: ${2:# This option has no longer any effect and will be removed in community}
+    ack_min_ansiblecore211: ${3:# This option has no longer any effect and will be removed in community}
+    dest: ${4:# The path to the directory containing your collections or roles, according to the value of O(type)}
+    force: ${5:# Force overwriting an existing role or collection}
+    name: ${6:# Name of the collection or role being installed}
+    no_deps: ${7:# Refrain from installing dependencies}
+    requirements_file: ${8:# Path to a file containing a list of requirements to be installed}
+    type: ${9:# The type of installation performed by C(ansible-galaxy)}
   tags:
     - community
     - general

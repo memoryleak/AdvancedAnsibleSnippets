@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add/remove resource pools to/from vCenter}
   community.vmware.vmware_resource_pool:
-    datacenter: ${2:# Name of the datacenter}
-    cluster: ${3:# Name of the cluster to configure the resource pool}
-    esxi_hostname: ${4:# Name of the host to configure the resource pool}
-    parent_resource_pool: ${5:# Name of the parent resource pool}
-    resource_pool: ${6:# Resource pool name to manage}
-    cpu_expandable_reservations: ${7:# In a resource pool with an expandable reservation, the reservation on a resource pool can grow beyond the specified value}
-    cpu_reservation: ${8:# Amount of resource that is guaranteed available to the virtual machine or resource pool}
-    cpu_limit: ${9:# The utilization of a virtual machine/resource pool will not exceed this limit, even if there are available resources}
-    cpu_shares: ${10:# Memory shares are used in case of resource contention}
-    cpu_allocation_shares: ${11:# The number of cpu shares allocated}
+    cluster: ${2:# Name of the cluster to configure the resource pool}
+    cpu_allocation_shares: ${3:# The number of cpu shares allocated}
+    cpu_expandable_reservations: ${4:# In a resource pool with an expandable reservation, the reservation on a resource pool can grow beyond the specified value}
+    cpu_limit: ${5:# The utilization of a virtual machine/resource pool will not exceed this limit, even if there are available resources}
+    cpu_reservation: ${6:# Amount of resource that is guaranteed available to the virtual machine or resource pool}
+    cpu_shares: ${7:# Memory shares are used in case of resource contention}
+    datacenter: ${8:# Name of the datacenter}
+    esxi_hostname: ${9:# Name of the host to configure the resource pool}
+    hostname: ${10:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    mem_allocation_shares: ${11:# The number of memory shares allocated}
     mem_expandable_reservations: ${12:# In a resource pool with an expandable reservation, the reservation on a resource pool can grow beyond the specified value}
-    mem_reservation: ${13:# Amount of resource that is guaranteed available to the virtual machine or resource pool}
-    mem_limit: ${14:# The utilization of a virtual machine/resource pool will not exceed this limit, even if there are available resources}
+    mem_limit: ${13:# The utilization of a virtual machine/resource pool will not exceed this limit, even if there are available resources}
+    mem_reservation: ${14:# Amount of resource that is guaranteed available to the virtual machine or resource pool}
     mem_shares: ${15:# Memory shares are used in case of resource contention}
-    mem_allocation_shares: ${16:# The number of memory shares allocated}
-    state: ${17:# Add or remove the resource pool}
-    hostname: ${18:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${19:# The username of the vSphere vCenter or ESXi server}
-    password: ${20:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${21:# Allows connection when SSL certificates are not valid}
-    port: ${22:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${23:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${24:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    parent_resource_pool: ${16:# Name of the parent resource pool}
+    password: ${17:# The password of the vSphere vCenter or ESXi server}
+    port: ${18:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${19:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${20:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    resource_pool: ${21:# Resource pool name to manage}
+    state: ${22:# Add or remove the resource pool}
+    username: ${23:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${24:# Allows connection when SSL certificates are not valid}
   tags:
     - community
     - vmware

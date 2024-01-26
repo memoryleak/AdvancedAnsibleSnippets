@@ -1,20 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Information module for MNT Session Disconnect}
   cisco.ise.mnt_session_disconnect_info:
-    ENDPOINT_IP: ${2:# ENDPOINT_IP path parameter}
-    PSN_NAME: ${3:# PSN_NAME path parameter}
+    DISCONNECT_TYPE: ${2:# DISCONNECT_TYPE path parameter}
+    ENDPOINT_IP: ${3:# ENDPOINT_IP path parameter}
     MAC: ${4:# MAC path parameter}
-    DISCONNECT_TYPE: ${5:# DISCONNECT_TYPE path parameter}
-    NAS_IPV4: ${6:# NAS_IPV4 path parameter}
-    ise_hostname: ${7:# The Identity Services Engine hostname}
-    ise_username: ${8:# The Identity Services Engine username to authenticate}
+    NAS_IPV4: ${5:# NAS_IPV4 path parameter}
+    PSN_NAME: ${6:# PSN_NAME path parameter}
+    ise_debug: ${7:# Flag for Identity Services Engine SDK to enable debugging}
+    ise_hostname: ${8:# The Identity Services Engine hostname}
     ise_password: ${9:# The Identity Services Engine password to authenticate}
-    ise_verify: ${10:# Flag to enable or disable SSL certificate verification}
-    ise_version: ${11:# Informs the SDK which version of Identity Services Engine to use}
-    ise_wait_on_rate_limit: ${12:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
-    ise_debug: ${13:# Flag for Identity Services Engine SDK to enable debugging}
-    ise_uses_api_gateway: ${14:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
-    ise_uses_csrf_token: ${15:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+    ise_single_request_timeout: ${10:# Timeout (in seconds) for RESTful HTTP requests}
+    ise_username: ${11:# The Identity Services Engine username to authenticate}
+    ise_uses_api_gateway: ${12:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
+    ise_uses_csrf_token: ${13:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+    ise_verify: ${14:# Flag to enable or disable SSL certificate verification}
+    ise_version: ${15:# Informs the SDK which version of Identity Services Engine to use}
+    ise_wait_on_rate_limit: ${16:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
   tags:
     - cisco
     - ise

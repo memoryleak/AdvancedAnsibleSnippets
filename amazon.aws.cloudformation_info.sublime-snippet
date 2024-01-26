@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Obtain information about an AWS CloudFormation stack}
   amazon.aws.cloudformation_info:
-    stack_name: ${2:# The name or id of the CloudFormation stack}
+    access_key: ${2:# AWS access key ID}
     all_facts: ${3:# Get all stack information for the stack}
-    stack_events: ${4:# Get stack events for the stack}
-    stack_template: ${5:# Get stack template body for the stack}
-    stack_resources: ${6:# Get stack resources for the stack}
-    stack_policy: ${7:# Get stack policy for the stack}
-    stack_change_sets: ${8:# Get stack change sets for the stack}
-    access_key: ${9:# AWS access key ID}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    profile: ${8:# A named AWS profile to use for authentication}
+    region: ${9:# The AWS region to use}
     secret_key: ${10:# AWS secret access key}
     session_token: ${11:# AWS STS session token for use with temporary credentials}
-    profile: ${12:# A named AWS profile to use for authentication}
-    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${14:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${16:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${17:# Use a C(botocore}
-    region: ${18:# The AWS region to use}
+    stack_change_sets: ${12:# Get stack change sets for the stack}
+    stack_events: ${13:# Get stack events for the stack}
+    stack_name: ${14:# The name or id of the CloudFormation stack}
+    stack_policy: ${15:# Get stack policy for the stack}
+    stack_resources: ${16:# Get stack resources for the stack}
+    stack_template: ${17:# Get stack template body for the stack}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - amazon
     - aws

@@ -1,18 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures a login for the target SQL Server instance}
   lowlydba.sqlserver.login:
-    login: ${2:# Name of the login to configure}
-    password: ${3:# Password for the login, if SQL Authentication login}
-    enabled: ${4:# Whether the login is enabled or disabled}
-    default_database: ${5:# Default database for the login}
-    language: ${6:# Default language for the login}
-    password_must_change: ${7:# Enforces user must change password at next login}
-    password_policy_enforced: ${8:# Enforces password complexity policy}
-    password_expiration_enabled: ${9:# Enforces password expiration policy}
-    sql_instance: ${10:# The SQL Server instance to modify}
-    sql_username: ${11:# Username for SQL Authentication}
+    default_database: ${2:# Default database for the login}
+    enabled: ${3:# Whether the login is enabled or disabled}
+    language: ${4:# Default language for the login}
+    login: ${5:# Name of the login to configure}
+    password: ${6:# Password for the login, if SQL Authentication login}
+    password_expiration_enabled: ${7:# Enforces password expiration policy}
+    password_must_change: ${8:# Enforces user must change password at next login}
+    password_policy_enforced: ${9:# Enforces password complexity policy}
+    sid: ${10:# Provide an explicit Sid that should be used when creating the account}
+    sql_instance: ${11:# The SQL Server instance to modify}
     sql_password: ${12:# Password for SQL Authentication}
-    state: ${13:# Whether or not the object should be C(present) or C(absent)}
+    sql_username: ${13:# Username for SQL Authentication}
+    state: ${14:# Whether or not the object should be C(present) or C(absent)}
   tags:
     - lowlydba
     - sqlserver

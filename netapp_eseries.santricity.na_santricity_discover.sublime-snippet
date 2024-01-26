@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp E-Series discover E-Series storage systems}
   netapp_eseries.santricity.na_santricity_discover:
-    subnet_mask: ${2:# This is the IPv4 search range for discovering E-Series storage arrays}
-    ports: ${3:# This option specifies which ports to be tested during the discovery process}
-    proxy_url: ${4:# Web Services Proxy REST API URL}
-    proxy_username: ${5:# Web Service Proxy username}
-    proxy_password: ${6:# Web Service Proxy user password}
+    ports: ${2:# This option specifies which ports to be tested during the discovery process}
+    prefer_embedded: ${3:# Give preference to Web Services Embedded when an option exists for both Web Services Proxy and Embedded}
+    proxy_password: ${4:# Web Service Proxy user password}
+    proxy_url: ${5:# Web Services Proxy REST API URL}
+    proxy_username: ${6:# Web Service Proxy username}
     proxy_validate_certs: ${7:# Whether to validate Web Service Proxy SSL certificate}
-    prefer_embedded: ${8:# Give preference to Web Services Embedded when an option exists for both Web Services Proxy and Embedded}
+    subnet_mask: ${8:# This is the IPv4 search range for discovering E-Series storage arrays}
   tags:
     - netapp_eseries
     - santricity

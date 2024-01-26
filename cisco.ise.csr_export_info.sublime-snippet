@@ -1,20 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Information module for CSR Export}
   cisco.ise.csr_export_info:
-    hostname: ${2:# Hostname path parameter}
-    id: ${3:# Id path parameter}
-    dirPath: ${4:# Directory absolute path}
-    saveFile: ${5:# Enable or disable automatic file creation of raw response}
-    filename: ${6:# The filename used to save the download file}
+    dirPath: ${2:# Directory absolute path}
+    filename: ${3:# The filename used to save the download file}
+    hostname: ${4:# Hostname path parameter}
+    id: ${5:# Id path parameter}
+    ise_debug: ${6:# Flag for Identity Services Engine SDK to enable debugging}
     ise_hostname: ${7:# The Identity Services Engine hostname}
-    ise_username: ${8:# The Identity Services Engine username to authenticate}
-    ise_password: ${9:# The Identity Services Engine password to authenticate}
-    ise_verify: ${10:# Flag to enable or disable SSL certificate verification}
-    ise_version: ${11:# Informs the SDK which version of Identity Services Engine to use}
-    ise_wait_on_rate_limit: ${12:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
-    ise_debug: ${13:# Flag for Identity Services Engine SDK to enable debugging}
-    ise_uses_api_gateway: ${14:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
-    ise_uses_csrf_token: ${15:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+    ise_password: ${8:# The Identity Services Engine password to authenticate}
+    ise_single_request_timeout: ${9:# Timeout (in seconds) for RESTful HTTP requests}
+    ise_username: ${10:# The Identity Services Engine username to authenticate}
+    ise_uses_api_gateway: ${11:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
+    ise_uses_csrf_token: ${12:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+    ise_verify: ${13:# Flag to enable or disable SSL certificate verification}
+    ise_version: ${14:# Informs the SDK which version of Identity Services Engine to use}
+    ise_wait_on_rate_limit: ${15:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
+    saveFile: ${16:# Enable or disable automatic file creation of raw response}
   tags:
     - cisco
     - ise

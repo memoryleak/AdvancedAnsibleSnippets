@@ -2,13 +2,15 @@
   <content><![CDATA[- name: ${1:Manage jenkins builds}
   community.general.jenkins_build:
     args: ${2:# A list of parameters to pass to the build}
-    name: ${3:# Name of the Jenkins job to build}
-    build_number: ${4:# An integer which specifies a build of a job}
-    password: ${5:# Password to authenticate with the Jenkins server}
-    state: ${6:# Attribute that specifies if the build is to be created, deleted or stopped}
-    token: ${7:# API token used to authenticate with the Jenkins server}
-    url: ${8:# URL of the Jenkins server}
-    user: ${9:# User to authenticate with the Jenkins server}
+    build_number: ${3:# An integer which specifies a build of a job}
+    detach: ${4:# Enable detached mode to not wait for the build end}
+    name: ${5:# Name of the Jenkins job to build}
+    password: ${6:# Password to authenticate with the Jenkins server}
+    state: ${7:# Attribute that specifies if the build is to be created, deleted or stopped}
+    time_between_checks: ${8:# Time in seconds to wait between requests to the Jenkins server}
+    token: ${9:# API token used to authenticate with the Jenkins server}
+    url: ${10:# URL of the Jenkins server}
+    user: ${11:# User to authenticate with the Jenkins server}
   tags:
     - community
     - general

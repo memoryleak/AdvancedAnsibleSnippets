@@ -1,21 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Run a workflow in Automation Platform Controller}
   awx.awx.workflow_launch:
-    name: ${2:# The name of the workflow template to run}
-    organization: ${3:# Organization the workflow job template exists in}
-    inventory: ${4:# Inventory to use for the job ran with this workflow, only used if prompt for inventory is set}
-    limit: ${5:# Limit to use for the I(job_template)}
-    scm_branch: ${6:# A specific branch of the SCM project to run the template on}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
     extra_vars: ${7:# Any extra vars required to launch the job}
-    wait: ${8:# Wait for the workflow to complete}
-    interval: ${9:# The interval to request an update from the controller}
-    timeout: ${10:# If waiting for the workflow to complete this will abort after this amount of seconds}
-    controller_host: ${11:# URL to your Automation Platform Controller instance}
-    controller_username: ${12:# Username for your controller instance}
-    controller_password: ${13:# Password for your controller instance}
-    controller_oauthtoken: ${14:# The OAuth token to use}
-    validate_certs: ${15:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${16:# Path to the controller config file}
+    interval: ${8:# The interval to request an update from the controller}
+    inventory: ${9:# Inventory name, ID, or named URL to use for the job ran with this workflow, only used if prompt for inventory is set}
+    limit: ${10:# Limit to use for the I(job_template)}
+    name: ${11:# The name of the workflow template to run}
+    organization: ${12:# Organization name, ID, or named URL the workflow job template exists in}
+    request_timeout: ${13:# Specify the timeout Ansible should use in requests to the controller host}
+    scm_branch: ${14:# A specific branch of the SCM project to run the template on}
+    timeout: ${15:# If waiting for the workflow to complete this will abort after this amount of seconds}
+    validate_certs: ${16:# Whether to allow insecure connections to AWX}
+    wait: ${17:# Wait for the workflow to complete}
   tags:
     - awx
     - awx

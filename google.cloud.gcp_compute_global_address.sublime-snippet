@@ -1,22 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP GlobalAddress}
   google.cloud.gcp_compute_global_address:
-    state: ${2:# Whether the given object should exist in GCP}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
     address: ${3:# The static external IP address represented by this resource}
-    description: ${4:# An optional description of this resource}
-    name: ${5:# Name of the resource}
-    ip_version: ${6:# The IP Version that will be used by this address}
-    prefix_length: ${7:# The prefix length of the IP range}
-    address_type: ${8:# The type of the address to reserve}
-    purpose: ${9:# The purpose of the resource}
+    address_type: ${4:# The type of the address to reserve}
+    auth_kind: ${5:# The type of credential used}
+    description: ${6:# An optional description of this resource}
+    env_type: ${7:# Specifies which Ansible environment you're running this module within}
+    ip_version: ${8:# The IP Version that will be used by this address}
+    name: ${9:# Name of the resource}
     network: ${10:# The URL of the network in which to reserve the IP range}
-    project: ${11:# The Google Cloud Platform project to use}
-    auth_kind: ${12:# The type of credential used}
-    service_account_contents: ${13:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${14:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${15:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${16:# Array of scopes to be used}
-    env_type: ${17:# Specifies which Ansible environment you're running this module within}
+    prefix_length: ${11:# The prefix length of the IP range}
+    project: ${12:# The Google Cloud Platform project to use}
+    purpose: ${13:# The purpose of the resource}
+    scopes: ${14:# Array of scopes to be used}
+    service_account_contents: ${15:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_email: ${16:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    service_account_file: ${17:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    state: ${18:# Whether the given object should exist in GCP}
   tags:
     - google
     - cloud

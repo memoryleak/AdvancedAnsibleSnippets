@@ -1,29 +1,28 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Retrieve information about one or more OpenStack users}
+  <content><![CDATA[- name: ${1:Fetch OpenStack identity (Keystone) users}
   openstack.cloud.identity_user_info:
-    name: ${2:# Name or ID of the user}
-    domain: ${3:# Name or ID of the domain containing the user if the cloud supports domains}
-    filters: ${4:# A dictionary of meta data to use for further filtering}
-    cloud: ${5:# Named cloud or cloud config to operate against}
-    auth: ${6:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${7:# Name of the auth plugin to use}
-    region_name: ${8:# Name of the region}
-    wait: ${9:# Should ansible wait until the requested resource is complete}
-    timeout: ${10:# How long should ansible wait for the requested resource}
-    api_timeout: ${11:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${12:# Whether or not SSL API requests should be verified}
-    ca_cert: ${13:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${14:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${15:# A path to a client key to use as part of the SSL transaction}
-    interface: ${16:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${17:# Ignored}
-    sdk_log_path: ${18:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${19:# Log level of the OpenStackSDK}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    domain: ${9:# Name or ID of the domain containing the user}
+    filters: ${10:# A dictionary of meta data to use for further filtering}
+    interface: ${11:# Endpoint URL type to fetch from the service catalog}
+    name: ${12:# Name or ID of the user}
+    region_name: ${13:# Name of the region}
+    sdk_log_level: ${14:# Log level of the OpenStackSDK}
+    sdk_log_path: ${15:# Path to the logfile of the OpenStackSDK}
+    timeout: ${16:# How long should ansible wait for the requested resource}
+    validate_certs: ${17:# Whether or not SSL API requests should be verified}
+    wait: ${18:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud
     - identity_user_info]]></content>
   <tabTrigger>openstack.cloud.identity_user_info</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Retrieve information about one or more OpenStack users</description>
+  <description>Fetch OpenStack identity (Keystone) users</description>
 </snippet>

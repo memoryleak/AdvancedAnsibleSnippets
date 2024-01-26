@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages BIG-IQ FastL4 TCP applications}
   f5networks.f5_modules.bigiq_application_fastl4_tcp:
-    name: ${2:# Name of the new application}
+    add_analytics: ${2:# Collects statistics of the BIG-IP to which the application is deployed}
     description: ${3:# Description of the application}
-    servers: ${4:# A list of servers on which the application is hosted}
-    inbound_virtual: ${5:# Settings to configure the virtual which will receive the inbound connection}
-    service_environment: ${6:# Specifies the name of service environment to which the application is deployed}
-    add_analytics: ${7:# Collects statistics of the BIG-IP to which the application is deployed}
-    state: ${8:# The state of the resource on the system}
-    wait: ${9:# If the module should wait for the application to be created, deleted, or updated}
-    provider: ${10:# A dict object containing connection details}
+    inbound_virtual: ${4:# Settings to configure the virtual which will receive the inbound connection}
+    name: ${5:# Name of the new application}
+    provider: ${6:# A dict object containing connection details}
+    servers: ${7:# A list of servers on which the application is hosted}
+    service_environment: ${8:# Specifies the name of service environment to which the application is deployed}
+    state: ${9:# The state of the resource on the system}
+    wait: ${10:# If the module should wait for the application to be created, deleted, or updated}
   tags:
     - f5networks
     - f5_modules

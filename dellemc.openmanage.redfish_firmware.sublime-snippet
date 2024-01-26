@@ -1,14 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:To perform a component firmware update using the image file available on the local or remote system}
   dellemc.openmanage.redfish_firmware:
-    image_uri: ${2:# Firmware Image location URI or local path}
-    transfer_protocol: ${3:# Protocol used to transfer the firmware image file}
-    baseuri: ${4:# IP address of the target out-of-band controller}
-    username: ${5:# Username of the target out-of-band controller}
-    password: ${6:# Password of the target out-of-band controller}
-    validate_certs: ${7:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${8:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${9:# The socket level timeout in seconds}
+    baseuri: ${2:# IP address of the target out-of-band controller}
+    ca_path: ${3:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    image_uri: ${4:# Firmware Image location URI or local path}
+    job_wait: ${5:# Provides the option to wait for job completion}
+    job_wait_timeout: ${6:# The maximum wait time of I(job_wait) in seconds}
+    password: ${7:# Password of the target out-of-band controller}
+    timeout: ${8:# The socket level timeout in seconds}
+    transfer_protocol: ${9:# Protocol used to transfer the firmware image file}
+    username: ${10:# Username of the target out-of-band controller}
+    validate_certs: ${11:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

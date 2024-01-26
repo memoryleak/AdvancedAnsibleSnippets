@@ -1,22 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Modify data at paths with API}
   community.routeros.api_modify:
-    path: ${2:# Path to query}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for certificate validation}
     data: ${3:# Data to ensure that is present for this path}
-    ensure_order: ${4:# Whether to ensure the same order of the config as present in I(data)}
-    handle_absent_entries: ${5:# How to handle entries that are present in the current config, but not in I(data)}
-    handle_entries_content: ${6:# For a single entry in I(data), this describes how to handle fields that are not mentioned in that entry, but appear in the actual config}
-    hostname: ${7:# RouterOS hostname API}
-    username: ${8:# RouterOS login user}
-    password: ${9:# RouterOS user password}
-    timeout: ${10:# Timeout for the request}
-    tls: ${11:# If is set TLS will be used for RouterOS API connection}
-    port: ${12:# RouterOS api port}
-    force_no_cert: ${13:# Set to C(true) to connect without a certificate when I(tls=true)}
-    validate_certs: ${14:# Set to C(false) to skip validation of TLS certificates}
-    validate_cert_hostname: ${15:# Set to C(true) to validate hostnames in certificates}
-    ca_path: ${16:# PEM formatted file that contains a CA certificate to be used for certificate validation}
-    encoding: ${17:# Use the specified encoding when communicating with the RouterOS device}
+    encoding: ${4:# Use the specified encoding when communicating with the RouterOS device}
+    ensure_order: ${5:# Whether to ensure the same order of the config as present in O(data)}
+    force_no_cert: ${6:# Set to V(true) to connect without a certificate when O(tls=true)}
+    handle_absent_entries: ${7:# How to handle entries that are present in the current config, but not in O(data)}
+    handle_entries_content: ${8:# For a single entry in O(data), this describes how to handle fields that are not mentioned in that entry, but appear in the actual config}
+    handle_read_only: ${9:# How to handle values passed in for read-only fields}
+    handle_write_only: ${10:# How to handle values passed in for write-only fields}
+    hostname: ${11:# RouterOS hostname API}
+    password: ${12:# RouterOS user password}
+    path: ${13:# Path to query}
+    port: ${14:# RouterOS api port}
+    timeout: ${15:# Timeout for the request}
+    tls: ${16:# If is set TLS will be used for RouterOS API connection}
+    username: ${17:# RouterOS login user}
+    validate_cert_hostname: ${18:# Set to V(true) to validate hostnames in certificates}
+    validate_certs: ${19:# Set to V(false) to skip validation of TLS certificates}
   tags:
     - community
     - routeros

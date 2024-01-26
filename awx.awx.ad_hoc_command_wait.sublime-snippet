@@ -2,14 +2,15 @@
   <content><![CDATA[- name: ${1:Wait for Automation Platform Controller Ad Hoc Command to finish}
   awx.awx.ad_hoc_command_wait:
     command_id: ${2:# ID of the ad hoc command to monitor}
-    interval: ${3:# The interval in sections, to request an update from the controller}
-    timeout: ${4:# Maximum time in seconds to wait for a ad hoc command to finish}
-    controller_host: ${5:# URL to your Automation Platform Controller instance}
-    controller_username: ${6:# Username for your controller instance}
-    controller_password: ${7:# Password for your controller instance}
-    controller_oauthtoken: ${8:# The OAuth token to use}
-    validate_certs: ${9:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${10:# Path to the controller config file}
+    controller_config_file: ${3:# Path to the controller config file}
+    controller_host: ${4:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${5:# The OAuth token to use}
+    controller_password: ${6:# Password for your controller instance}
+    controller_username: ${7:# Username for your controller instance}
+    interval: ${8:# The interval in sections, to request an update from the controller}
+    request_timeout: ${9:# Specify the timeout Ansible should use in requests to the controller host}
+    timeout: ${10:# Maximum time in seconds to wait for a ad hoc command to finish}
+    validate_certs: ${11:# Whether to allow insecure connections to AWX}
   tags:
     - awx
     - awx

@@ -1,27 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure locks}
   azure.azcollection.azure_rm_lock:
-    name: ${2:# Name of the lock}
-    managed_resource_id: ${3:# Manage a lock for the specified resource ID}
-    resource_group: ${4:# Manage a lock for the named resource group}
-    state: ${5:# State of the lock}
-    level: ${6:# The lock level type}
-    ad_user: ${7:# Active Directory username}
-    password: ${8:# Active Directory user password}
-    profile: ${9:# Security profile found in ~/}
-    subscription_id: ${10:# Your Azure subscription Id}
-    client_id: ${11:# Azure client ID}
-    secret: ${12:# Azure client secret}
-    tenant: ${13:# Azure tenant ID}
-    cloud_environment: ${14:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${15:# Azure AD authority url}
-    cert_validation_mode: ${16:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${17:# Controls the source of the credentials to use for authentication}
-    api_profile: ${18:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${19:# Parent argument}
-    log_mode: ${20:# Parent argument}
-    x509_certificate_path: ${21:# Path to the X509 certificate used to create the service principal in PEM format}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${5:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${6:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${7:# Azure client ID}
+    cloud_environment: ${8:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    level: ${9:# The lock level type}
+    log_mode: ${10:# Parent argument}
+    log_path: ${11:# Parent argument}
+    managed_resource_id: ${12:# Manage a lock for the specified resource ID}
+    name: ${13:# Name of the lock}
+    notes: ${14:# Notes about the lock}
+    password: ${15:# Active Directory user password}
+    profile: ${16:# Security profile found in ~/}
+    resource_group: ${17:# Manage a lock for the named resource group}
+    secret: ${18:# Azure client secret}
+    state: ${19:# State of the lock}
+    subscription_id: ${20:# Your Azure subscription Id}
+    tenant: ${21:# Azure tenant ID}
     thumbprint: ${22:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${23:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

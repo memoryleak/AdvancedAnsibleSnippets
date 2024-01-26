@@ -1,57 +1,51 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage OpenStack Quotas}
   openstack.cloud.quota:
-    name: ${2:# Name of the OpenStack Project to manage}
-    state: ${3:# A value of present sets the quota and a value of absent resets the quota to system defaults}
-    backup_gigabytes: ${4:# Maximum size of backups in GB's}
-    backups: ${5:# Maximum number of backups allowed}
-    cores: ${6:# Maximum number of CPU's per project}
-    fixed_ips: ${7:# Number of fixed IP's to allow}
-    floating_ips: ${8:# Number of floating IP's to allow in Compute}
-    floatingip: ${9:# Number of floating IP's to allow in Network}
-    gigabytes: ${10:# Maximum volume storage allowed for project}
-    gigabytes_types: ${11:# Per driver volume storage quotas}
-    injected_file_size: ${12:# Maximum file size in bytes}
-    injected_files: ${13:# Number of injected files to allow}
-    injected_path_size: ${14:# Maximum path size}
-    instances: ${15:# Maximum number of instances allowed}
-    key_pairs: ${16:# Number of key pairs to allow}
-    loadbalancer: ${17:# Number of load balancers to allow}
-    metadata_items: ${18:# Number of metadata items allowed per instance}
-    network: ${19:# Number of networks to allow}
-    per_volume_gigabytes: ${20:# Maximum size in GB's of individual volumes}
-    pool: ${21:# Number of load balancer pools to allow}
-    port: ${22:# Number of Network ports to allow, this needs to be greater than the instances limit}
-    properties: ${23:# Number of properties to allow}
-    ram: ${24:# Maximum amount of ram in MB to allow}
-    rbac_policy: ${25:# Number of policies to allow}
-    router: ${26:# Number of routers to allow}
-    security_group_rule: ${27:# Number of rules per security group to allow}
-    security_group: ${28:# Number of security groups to allow}
-    server_group_members: ${29:# Number of server group members to allow}
-    server_groups: ${30:# Number of server groups to allow}
-    snapshots: ${31:# Number of snapshots to allow}
-    snapshots_types: ${32:# Per-driver volume snapshot quotas}
-    subnet: ${33:# Number of subnets to allow}
-    subnetpool: ${34:# Number of subnet pools to allow}
-    volumes: ${35:# Number of volumes to allow}
-    volumes_types: ${36:# Per-driver volume count quotas}
-    project: ${37:# Unused, kept for compatability}
-    cloud: ${38:# Named cloud or cloud config to operate against}
-    auth: ${39:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${40:# Name of the auth plugin to use}
-    region_name: ${41:# Name of the region}
-    wait: ${42:# Should ansible wait until the requested resource is complete}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    backup_gigabytes: ${5:# Maximum size of backups in GB's}
+    backups: ${6:# Maximum number of backups allowed}
+    ca_cert: ${7:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${8:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${9:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${10:# Named cloud or cloud config to operate against}
+    cores: ${11:# Maximum number of CPU's per project}
+    fixed_ips: ${12:# Number of fixed IP's to allow}
+    floating_ips: ${13:# Number of floating IP's to allow}
+    gigabytes: ${14:# Maximum volume storage allowed for project}
+    groups: ${15:# Number of groups that are allowed for the project}
+    injected_file_content_bytes: ${16:# Maximum file size in bytes}
+    injected_file_path_bytes: ${17:# Maximum path size}
+    injected_files: ${18:# Number of injected files to allow}
+    instances: ${19:# Maximum number of instances allowed}
+    interface: ${20:# Endpoint URL type to fetch from the service catalog}
+    key_pairs: ${21:# Number of key pairs to allow}
+    load_balancers: ${22:# The maximum amount of load balancers you can create}
+    metadata_items: ${23:# Number of metadata items allowed per instance}
+    name: ${24:# Name of the OpenStack Project to manage}
+    networks: ${25:# Number of networks to allow}
+    per_volume_gigabytes: ${26:# Maximum size in GB's of individual volumes}
+    pools: ${27:# The maximum number of pools you can create}
+    ports: ${28:# Number of Network ports to allow, this needs to be greater than the instances limit}
+    ram: ${29:# Maximum amount of ram in MB to allow}
+    rbac_policies: ${30:# Number of policies to allow}
+    region_name: ${31:# Name of the region}
+    routers: ${32:# Number of routers to allow}
+    sdk_log_level: ${33:# Log level of the OpenStackSDK}
+    sdk_log_path: ${34:# Path to the logfile of the OpenStackSDK}
+    security_group_rules: ${35:# Number of rules per security group to allow}
+    security_groups: ${36:# Number of security groups to allow}
+    server_group_members: ${37:# Number of server group members to allow}
+    server_groups: ${38:# Number of server groups to allow}
+    snapshots: ${39:# Number of snapshots to allow}
+    state: ${40:# A value of C(present) sets the quota and a value of C(absent) resets the quota to defaults}
+    subnet_pools: ${41:# Number of subnet pools to allow}
+    subnets: ${42:# Number of subnets to allow}
     timeout: ${43:# How long should ansible wait for the requested resource}
-    api_timeout: ${44:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${45:# Whether or not SSL API requests should be verified}
-    ca_cert: ${46:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${47:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${48:# A path to a client key to use as part of the SSL transaction}
-    interface: ${49:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${50:# Ignored}
-    sdk_log_path: ${51:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${52:# Log level of the OpenStackSDK}
+    validate_certs: ${44:# Whether or not SSL API requests should be verified}
+    volumes: ${45:# Number of volumes to allow}
+    wait: ${46:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud

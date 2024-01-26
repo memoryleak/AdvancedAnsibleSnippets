@@ -1,27 +1,27 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Tweak settings in /etc/network/interfaces files}
+  <content><![CDATA[- name: ${1:Tweak settings in C(/etc/network/interfaces) files}
   community.general.interfaces_file:
-    dest: ${2:# Path to the interfaces file}
-    iface: ${3:# Name of the interface, required for value changes or option remove}
-    address_family: ${4:# Address family of the interface, useful if same interface name is used for both inet and inet6}
-    option: ${5:# Name of the option, required for value changes or option remove}
-    value: ${6:# If I(option) is not presented for the I(interface) and I(state) is C(present) option will be added}
-    backup: ${7:# Create a backup file including the timestamp information so you can get the original file back if you somehow clobbered it incorrectly}
-    state: ${8:# If set to C(absent) the option or section will be removed if present instead of created}
-    mode: ${9:# The permissions the resulting filesystem object should have}
+    address_family: ${2:# Address family of the interface, useful if same interface name is used for both V(inet) and V(inet6)}
+    attributes: ${3:# The attributes the resulting filesystem object should have}
+    backup: ${4:# Create a backup file including the timestamp information so you can get the original file back if you somehow clobbered it incorrectly}
+    dest: ${5:# Path to the interfaces file}
+    group: ${6:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    iface: ${7:# Name of the interface, required for value changes or option remove}
+    mode: ${8:# The permissions the resulting filesystem object should have}
+    option: ${9:# Name of the option, required for value changes or option remove}
     owner: ${10:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
-    group: ${11:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
-    seuser: ${12:# The user part of the SELinux filesystem object context}
-    serole: ${13:# The role part of the SELinux filesystem object context}
-    setype: ${14:# The type part of the SELinux filesystem object context}
-    selevel: ${15:# The level part of the SELinux filesystem object context}
+    selevel: ${11:# The level part of the SELinux filesystem object context}
+    serole: ${12:# The role part of the SELinux filesystem object context}
+    setype: ${13:# The type part of the SELinux filesystem object context}
+    seuser: ${14:# The user part of the SELinux filesystem object context}
+    state: ${15:# If set to V(absent) the option or section will be removed if present instead of created}
     unsafe_writes: ${16:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
-    attributes: ${17:# The attributes the resulting filesystem object should have}
+    value: ${17:# If O(option) is not presented for the O(iface) and O(state) is V(present) option will be added}
   tags:
     - community
     - general
     - interfaces_file]]></content>
   <tabTrigger>community.general.interfaces_file</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Tweak settings in /etc/network/interfaces files</description>
+  <description>Tweak settings in C(/etc/network/interfaces) files</description>
 </snippet>

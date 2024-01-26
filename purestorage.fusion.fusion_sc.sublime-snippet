@@ -1,15 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage storage classes in Pure Storage Fusion}
   purestorage.fusion.fusion_sc:
-    name: ${2:# The name of the storage class}
-    state: ${3:# Define whether the storage class should exist or not}
+    access_token: ${2:# Access token for Fusion Service}
+    bw_limit: ${3:# The bandwidth limit in M or G units}
     display_name: ${4:# The human name of the storage class}
-    size_limit: ${5:# Volume size limit in M, G, T or P units}
-    bw_limit: ${6:# The bandwidth limit in M or G units}
-    iops_limit: ${7:# The IOPs limit - use value or K or M}
-    storage_service: ${8:# Storage service to which the storage class belongs}
-    key_file: ${9:# Path to the private key file}
-    app_id: ${10:# Application ID from Pure1 Registration page}
+    iops_limit: ${5:# The IOPs limit - use value or K or M}
+    issuer_id: ${6:# Application ID from Pure1 Registration page}
+    name: ${7:# The name of the storage class}
+    private_key_file: ${8:# Path to the private key file}
+    private_key_password: ${9:# Password of the encrypted private key file}
+    size_limit: ${10:# Volume size limit in M, G, T or P units}
+    state: ${11:# Define whether the storage class should exist or not}
+    storage_service: ${12:# Storage service to which the storage class belongs}
   tags:
     - purestorage
     - fusion

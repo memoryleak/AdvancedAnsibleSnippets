@@ -1,33 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:Generate OpenSSH host or user certificates}
   community.crypto.openssh_cert:
-    state: ${2:# Whether the host or user certificate should exist or not, taking action if the state is different from what is stated}
-    type: ${3:# Whether the module should generate a host or a user certificate}
-    force: ${4:# Should the certificate be regenerated even if it already exists and is valid}
-    path: ${5:# Path of the file containing the certificate}
-    regenerate: ${6:# When C(never) the task will fail if a certificate already exists at I(path) and is unreadable otherwise a new certificate will only be generated if there is no existing certificate}
-    signature_algorithm: ${7:# As of OpenSSH 8}
-    signing_key: ${8:# The path to the private openssh key that is used for signing the public key in order to generate the certificate}
-    pkcs11_provider: ${9:# To use a signing key that resides on a PKCS#11 token, set this to the name (or full path) of the shared library to use with the token}
-    use_agent: ${10:# Should the ssh-keygen use a CA key residing in a ssh-agent}
-    public_key: ${11:# The path to the public key that will be signed with the signing key in order to generate the certificate}
-    valid_from: ${12:# The point in time the certificate is valid from}
-    valid_to: ${13:# The point in time the certificate is valid to}
-    valid_at: ${14:# Check if the certificate is valid at a certain point in time}
-    ignore_timestamps: ${15:# Whether the I(valid_from) and I(valid_to) timestamps should be ignored for idempotency checks}
-    principals: ${16:# Certificates may be limited to be valid for a set of principal (user/host) names}
-    options: ${17:# Specify certificate options when signing a key}
-    identifier: ${18:# Specify the key identity when signing a public key}
-    serial_number: ${19:# Specify the certificate serial number}
-    mode: ${20:# The permissions the resulting filesystem object should have}
-    owner: ${21:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
-    group: ${22:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
-    seuser: ${23:# The user part of the SELinux filesystem object context}
-    serole: ${24:# The role part of the SELinux filesystem object context}
-    setype: ${25:# The type part of the SELinux filesystem object context}
-    selevel: ${26:# The level part of the SELinux filesystem object context}
-    unsafe_writes: ${27:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
-    attributes: ${28:# The attributes the resulting filesystem object should have}
+    attributes: ${2:# The attributes the resulting filesystem object should have}
+    force: ${3:# Should the certificate be regenerated even if it already exists and is valid}
+    group: ${4:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    identifier: ${5:# Specify the key identity when signing a public key}
+    ignore_timestamps: ${6:# Whether the O(valid_from) and O(valid_to) timestamps should be ignored for idempotency checks}
+    mode: ${7:# The permissions the resulting filesystem object should have}
+    options: ${8:# Specify certificate options when signing a key}
+    owner: ${9:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
+    path: ${10:# Path of the file containing the certificate}
+    pkcs11_provider: ${11:# To use a signing key that resides on a PKCS#11 token, set this to the name (or full path) of the shared library to use with the token}
+    principals: ${12:# Certificates may be limited to be valid for a set of principal (user/host) names}
+    public_key: ${13:# The path to the public key that will be signed with the signing key in order to generate the certificate}
+    regenerate: ${14:# When V(never) the task will fail if a certificate already exists at O(path) and is unreadable otherwise a new certificate will only be generated if there is no existing certificate}
+    selevel: ${15:# The level part of the SELinux filesystem object context}
+    serial_number: ${16:# Specify the certificate serial number}
+    serole: ${17:# The role part of the SELinux filesystem object context}
+    setype: ${18:# The type part of the SELinux filesystem object context}
+    seuser: ${19:# The user part of the SELinux filesystem object context}
+    signature_algorithm: ${20:# As of OpenSSH 8}
+    signing_key: ${21:# The path to the private openssh key that is used for signing the public key in order to generate the certificate}
+    state: ${22:# Whether the host or user certificate should exist or not, taking action if the state is different from what is stated}
+    type: ${23:# Whether the module should generate a host or a user certificate}
+    unsafe_writes: ${24:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
+    use_agent: ${25:# Should the ssh-keygen use a CA key residing in a ssh-agent}
+    valid_at: ${26:# Check if the certificate is valid at a certain point in time}
+    valid_from: ${27:# The point in time the certificate is valid from}
+    valid_to: ${28:# The point in time the certificate is valid to}
   tags:
     - community
     - crypto

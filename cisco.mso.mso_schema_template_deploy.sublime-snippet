@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Deploy schema templates to sites}
   cisco.mso.mso_schema_template_deploy:
-    schema: ${2:# The name of the schema}
-    template: ${3:# The name of the template}
-    site: ${4:# The name of the site B(to undeploy)}
-    state: ${5:# Use C(deploy) to deploy schema template}
-    host: ${6:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${7:# Port number to be used for the REST connection}
-    username: ${8:# The username to use for authentication}
-    password: ${9:# The password to use for authentication}
-    output_level: ${10:# Influence the output of this MSO module}
+    host: ${2:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${3:# The login domain name to use for authentication}
+    output_level: ${4:# Influence the output of this MSO module}
+    password: ${5:# The password to use for authentication}
+    port: ${6:# Port number to be used for the REST connection}
+    schema: ${7:# The name of the schema}
+    site: ${8:# The name of the site B(to undeploy)}
+    state: ${9:# Use C(deploy) to deploy schema template}
+    template: ${10:# The name of the template}
     timeout: ${11:# The socket level timeout in seconds}
-    use_proxy: ${12:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${13:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${14:# If C(no), SSL certificates will not be validated}
-    login_domain: ${15:# The login domain name to use for authentication}
+    use_proxy: ${12:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${13:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${14:# The username to use for authentication}
+    validate_certs: ${15:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - mso

@@ -1,19 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Search for entries in a LDAP server}
   community.general.ldap_search:
-    dn: ${2:# The LDAP DN to search in}
-    scope: ${3:# The LDAP scope to use}
-    filter: ${4:# Used for filtering the LDAP search result}
-    attrs: ${5:# A list of attributes for limiting the result}
-    schema: ${6:# Set to C(true) to return the full attribute schema of entries, not their attribute values}
-    bind_dn: ${7:# A DN to bind with}
-    bind_pw: ${8:# The password to use with I(bind_dn)}
-    referrals_chasing: ${9:# Set the referrals chasing behavior}
-    server_uri: ${10:# The I(server_uri) parameter may be a comma- or whitespace-separated list of URIs containing only the schema, the host, and the port fields}
-    start_tls: ${11:# If true, we'll use the START_TLS LDAP extension}
-    validate_certs: ${12:# If set to C(false), SSL certificates will not be validated}
+    attrs: ${2:# A list of attributes for limiting the result}
+    base64_attributes: ${3:# If provided, all attribute values returned that are listed in this option will be Base64 encoded}
+    bind_dn: ${4:# A DN to bind with}
+    bind_pw: ${5:# The password to use with O(bind_dn)}
+    ca_path: ${6:# Set the path to PEM file with CA certs}
+    client_cert: ${7:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${8:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    dn: ${9:# The LDAP DN to search in}
+    filter: ${10:# Used for filtering the LDAP search result}
+    page_size: ${11:# The page size when performing a simple paged result search (RFC 2696)}
+    referrals_chasing: ${12:# Set the referrals chasing behavior}
     sasl_class: ${13:# The class to use for SASL authentication}
-    xorder_discovery: ${14:# Set the behavior on how to process Xordered DNs}
+    schema: ${14:# Set to V(true) to return the full attribute schema of entries, not their attribute values}
+    scope: ${15:# The LDAP scope to use}
+    server_uri: ${16:# The O(server_uri) parameter may be a comma- or whitespace-separated list of URIs containing only the schema, the host, and the port fields}
+    start_tls: ${17:# If true, we'll use the START_TLS LDAP extension}
+    validate_certs: ${18:# If set to V(false), SSL certificates will not be validated}
+    xorder_discovery: ${19:# Set the behavior on how to process Xordered DNs}
   tags:
     - community
     - general

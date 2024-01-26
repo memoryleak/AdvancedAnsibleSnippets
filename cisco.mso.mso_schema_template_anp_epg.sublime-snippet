@@ -1,36 +1,36 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Endpoint Groups (EPGs) in schema templates}
   cisco.mso.mso_schema_template_anp_epg:
-    schema: ${2:# The name of the schema}
-    template: ${3:# The name of the template}
-    anp: ${4:# The name of the ANP}
-    epg: ${5:# The name of the EPG to manage}
-    display_name: ${6:# The name as displayed on the MSO web interface}
-    description: ${7:# The description as displayed on the MSO web interface}
-    bd: ${8:# The BD associated to this ANP}
-    vrf: ${9:# The VRF associated to this ANP}
-    subnets: ${10:# The subnets associated to this ANP}
-    useg_epg: ${11:# Whether this is a USEG EPG}
+    access_type: ${2:# This parameter indicates how the service will be accessed}
+    anp: ${3:# The name of the ANP}
+    bd: ${4:# The BD associated to this ANP}
+    deployment_type: ${5:# The deployment_type parameter indicates how and where the service is deployed}
+    description: ${6:# The description as displayed on the MSO web interface}
+    display_name: ${7:# The name as displayed on the MSO web interface}
+    epg: ${8:# The name of the EPG to manage}
+    epg_type: ${9:# The EPG type parameter is supported on versions of MSO that are 3}
+    host: ${10:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    intersite_multicast_source: ${11:# Whether intersite multicast source is enabled}
     intra_epg_isolation: ${12:# Whether intra EPG isolation is enforced}
-    intersite_multicast_source: ${13:# Whether intersite multicast source is enabled}
-    proxy_arp: ${14:# Whether proxy arp is enabled}
-    preferred_group: ${15:# Whether this EPG is added to preferred group or not}
-    qos_level: ${16:# Quality of Service (QoS) allows you to classify the network traffic in the fabric}
-    epg_type: ${17:# The EPG type parameter is supported on versions of MSO that are 3}
-    deployment_type: ${18:# The deployment_type parameter indicates how and where the service is deployed}
-    access_type: ${19:# This parameter indicates how the service will be accessed}
-    service_type: ${20:# The service_type parameter refers to the type of cloud services}
-    state: ${21:# Use C(present) or C(absent) for adding or removing}
-    host: ${22:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${23:# Port number to be used for the REST connection}
-    username: ${24:# The username to use for authentication}
-    password: ${25:# The password to use for authentication}
-    output_level: ${26:# Influence the output of this MSO module}
-    timeout: ${27:# The socket level timeout in seconds}
-    use_proxy: ${28:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${29:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${30:# If C(no), SSL certificates will not be validated}
-    login_domain: ${31:# The login domain name to use for authentication}
+    login_domain: ${13:# The login domain name to use for authentication}
+    output_level: ${14:# Influence the output of this MSO module}
+    password: ${15:# The password to use for authentication}
+    port: ${16:# Port number to be used for the REST connection}
+    preferred_group: ${17:# Whether this EPG is added to preferred group or not}
+    proxy_arp: ${18:# Whether proxy arp is enabled}
+    qos_level: ${19:# Quality of Service (QoS) allows you to classify the network traffic in the fabric}
+    schema: ${20:# The name of the schema}
+    service_type: ${21:# The service_type parameter refers to the type of cloud services}
+    state: ${22:# Use C(present) or C(absent) for adding or removing}
+    subnets: ${23:# The subnets associated to this ANP}
+    template: ${24:# The name of the template}
+    timeout: ${25:# The socket level timeout in seconds}
+    use_proxy: ${26:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${27:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    useg_epg: ${28:# Whether this is a USEG EPG}
+    username: ${29:# The username to use for authentication}
+    validate_certs: ${30:# If C(false), SSL certificates will not be validated}
+    vrf: ${31:# The VRF associated to this ANP}
   tags:
     - cisco
     - mso

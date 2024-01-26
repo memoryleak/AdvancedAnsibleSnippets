@@ -1,0 +1,59 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for organizations _configtemplates _switch _profiles _ports}
+  cisco.meraki.organizations_config_templates_switch_profiles_ports:
+    accessPolicyNumber: ${2:# The number of a custom access policy to configure on the switch profile port}
+    accessPolicyType: ${3:# The type of the access policy of the switch profile port}
+    allowedVlans: ${4:# The VLANs allowed on the switch profile port}
+    configTemplateId: ${5:# ConfigTemplateId path parameter}
+    daiTrusted: ${6:# If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic}
+    enabled: ${7:# The status of the switch profile port}
+    flexibleStackingEnabled: ${8:# For supported switches (e}
+    isolationEnabled: ${9:# The isolation status of the switch profile port}
+    linkNegotiation: ${10:# The link speed for the switch profile port}
+    macAllowList: ${11:# Only devices with MAC addresses specified in this list will have access to this port}
+    meraki_action_batch_retry_wait_time: ${12:# meraki_action_batch_retry_wait_time (integer), action batch concurrency error retry wait time}
+    meraki_api_key: ${13:# meraki_api_key (string), API key generated in dashboard; can also be set as an environment variable MERAKI_DASHBOARD_API_KEY}
+    meraki_base_url: ${14:# meraki_base_url (string), preceding all endpoint resources}
+    meraki_be_geo_id: ${15:# meraki_be_geo_id (string), optional partner identifier for API usage tracking; can also be set as an environment variable BE_GEO_ID}
+    meraki_caller: ${16:# meraki_caller (string), optional identifier for API usage tracking; can also be set as an environment variable MERAKI_PYTHON_SDK_CALLER}
+    meraki_certificate_path: ${17:# meraki_certificate_path (string), path for TLS/SSL certificate verification if behind local proxy}
+    meraki_inherit_logging_config: ${18:# meraki_inherit_logging_config (boolean), Inherits your own logger instance}
+    meraki_log_file_prefix: ${19:# meraki_log_file_prefix (string), log file name appended with date and timestamp}
+    meraki_log_path: ${20:# log_path (string), path to output log; by default, working directory of script if not specified}
+    meraki_maximum_retries: ${21:# meraki_maximum_retries (integer), retry up to this many times when encountering 429s or other server-side errors}
+    meraki_nginx_429_retry_wait_time: ${22:# meraki_nginx_429_retry_wait_time (integer), Nginx 429 retry wait time}
+    meraki_output_log: ${23:# meraki_output_log (boolean), create an output log file?}
+    meraki_print_console: ${24:# meraki_print_console (boolean), print logging output to console?}
+    meraki_requests_proxy: ${25:# meraki_requests_proxy (string), proxy server and port, if needed, for HTTPS}
+    meraki_retry_4xx_error: ${26:# meraki_retry_4xx_error (boolean), retry if encountering other 4XX error (besides 429)?}
+    meraki_retry_4xx_error_wait_time: ${27:# meraki_retry_4xx_error_wait_time (integer), other 4XX error retry wait time}
+    meraki_simulate: ${28:# meraki_simulate (boolean), simulate POST/PUT/DELETE calls to prevent changes?}
+    meraki_single_request_timeout: ${29:# meraki_single_request_timeout (integer), maximum number of seconds for each API call}
+    meraki_suppress_logging: ${30:# meraki_suppress_logging (boolean), disable all logging? you're on your own then!}
+    meraki_use_iterator_for_get_pages: ${31:# meraki_use_iterator_for_get_pages (boolean), list* methods will return an iterator with each object instead of a complete list with all items}
+    meraki_wait_on_rate_limit: ${32:# meraki_wait_on_rate_limit (boolean), retry if 429 rate limit error encountered?}
+    name: ${33:# The name of the switch profile port}
+    organizationId: ${34:# OrganizationId path parameter}
+    poeEnabled: ${35:# The PoE status of the switch profile port}
+    portId: ${36:# PortId path parameter}
+    portScheduleId: ${37:# The ID of the port schedule}
+    profile: ${38:# Profile attributes}
+    profileId: ${39:# ProfileId path parameter}
+    rstpEnabled: ${40:# The rapid spanning tree protocol status}
+    stickyMacAllowList: ${41:# The initial list of MAC addresses for sticky Mac allow list}
+    stickyMacAllowListLimit: ${42:# The maximum number of MAC addresses for sticky MAC allow list}
+    stormControlEnabled: ${43:# The storm control status of the switch profile port}
+    stpGuard: ${44:# The state of the STP guard ('disabled', 'root guard', 'bpdu guard' or 'loop guard')}
+    tags: ${45:# The list of tags of the switch profile port}
+    type: ${46:# The type of the switch profile port ('trunk' or 'access')}
+    udld: ${47:# The action to take when Unidirectional Link is detected (Alert only, Enforce)}
+    vlan: ${48:# The VLAN of the switch profile port}
+    voiceVlan: ${49:# The voice VLAN of the switch profile port}
+  tags:
+    - cisco
+    - meraki
+    - organizations_config_templates_switch_profiles_ports]]></content>
+  <tabTrigger>cisco.meraki.organizations_config_templates_switch_profiles_ports</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for organizations _configtemplates _switch _profiles _ports</description>
+</snippet>

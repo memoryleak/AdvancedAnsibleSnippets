@@ -1,19 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/update/delete Zabbix host macros}
   community.zabbix.zabbix_hostmacro:
-    host_name: ${2:# Name of the host}
-    macro_name: ${3:# Name of the host macro in zabbix native format C({$MACRO}) or simple format C(MACRO)}
-    macro_value: ${4:# Value of the host macro}
-    macro_type: ${5:# Type of the host macro}
-    state: ${6:# State of the macro}
-    force: ${7:# Only updates an existing macro if set to C(yes)}
-    server_url: ${8:# URL of Zabbix server, with protocol (http or https)}
-    login_user: ${9:# Zabbix user name}
-    login_password: ${10:# Zabbix user password}
-    http_login_user: ${11:# Basic Auth login}
-    http_login_password: ${12:# Basic Auth password}
-    timeout: ${13:# The timeout of API request (seconds)}
-    validate_certs: ${14:# If set to False, SSL certificates will not be validated}
+    force: ${2:# Only updates an existing macro if set to C(yes)}
+    host_name: ${3:# Name of the host}
+    http_login_password: ${4:# Basic Auth password}
+    http_login_user: ${5:# Basic Auth login}
+    macro_description: ${6:# Text Description of the global macro}
+    macro_name: ${7:# Name of the host macro in zabbix native format C($MACRO) or simple format C(MACRO)}
+    macro_type: ${8:# Type of the host macro}
+    macro_value: ${9:# Value of the host macro}
+    state: ${10:# State of the macro}
   tags:
     - community
     - zabbix

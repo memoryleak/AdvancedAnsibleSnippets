@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage site-local EPG static ports in schema template}
   cisco.mso.mso_schema_site_anp_epg_staticport:
-    schema: ${2:# The name of the schema}
-    site: ${3:# The name of the site}
-    template: ${4:# The name of the template}
-    anp: ${5:# The name of the ANP}
-    epg: ${6:# The name of the EPG}
-    type: ${7:# The path type of the static port}
-    pod: ${8:# The pod of the static port}
-    leaf: ${9:# The leaf of the static port}
-    fex: ${10:# The fex id of the static port}
-    path: ${11:# The path of the static port}
-    vlan: ${12:# The port encap VLAN id of the static port}
-    deployment_immediacy: ${13:# The deployment immediacy of the static port}
-    mode: ${14:# The mode of the static port}
+    anp: ${2:# The name of the ANP}
+    deployment_immediacy: ${3:# The deployment immediacy of the static port}
+    epg: ${4:# The name of the EPG}
+    fex: ${5:# The fex id of the static port}
+    host: ${6:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    leaf: ${7:# The leaf of the static port}
+    login_domain: ${8:# The login domain name to use for authentication}
+    mode: ${9:# The mode of the static port}
+    output_level: ${10:# Influence the output of this MSO module}
+    password: ${11:# The password to use for authentication}
+    path: ${12:# The path of the static port}
+    pod: ${13:# The pod of the static port}
+    port: ${14:# Port number to be used for the REST connection}
     primary_micro_segment_vlan: ${15:# Primary micro-seg VLAN of static port}
-    state: ${16:# Use C(present) or C(absent) for adding or removing}
-    host: ${17:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${18:# Port number to be used for the REST connection}
-    username: ${19:# The username to use for authentication}
-    password: ${20:# The password to use for authentication}
-    output_level: ${21:# Influence the output of this MSO module}
-    timeout: ${22:# The socket level timeout in seconds}
-    use_proxy: ${23:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${24:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${25:# If C(no), SSL certificates will not be validated}
-    login_domain: ${26:# The login domain name to use for authentication}
+    schema: ${16:# The name of the schema}
+    site: ${17:# The name of the site}
+    state: ${18:# Use C(present) or C(absent) for adding or removing}
+    template: ${19:# The name of the template}
+    timeout: ${20:# The socket level timeout in seconds}
+    type: ${21:# The path type of the static port}
+    use_proxy: ${22:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${23:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${24:# The username to use for authentication}
+    validate_certs: ${25:# If C(false), SSL certificates will not be validated}
+    vlan: ${26:# The port encap VLAN id of the static port}
   tags:
     - cisco
     - mso

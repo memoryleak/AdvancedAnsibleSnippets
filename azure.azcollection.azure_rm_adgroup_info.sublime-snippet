@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Get Azure Active Directory group info}
   azure.azcollection.azure_rm_adgroup_info:
-    tenant: ${2:# The tenant ID}
-    object_id: ${3:# The object id for the ad group}
-    attribute_name: ${4:# The name of an attribute that you want to match to attribute_value}
-    attribute_value: ${5:# The value to match attribute_name to}
-    odata_filter: ${6:# returns groups based on the the OData filter passed into this parameter}
-    check_membership: ${7:# The object ID of the contact, group, user, or service principal to check for membership against returned groups}
-    return_owners: ${8:# Indicate whether the owners of a group should be returned with the returned groups}
-    return_group_members: ${9:# Indicate whether the members of a group should be returned with the returned groups}
-    return_member_groups: ${10:# Indicate whether the groups in which a groups is a member should be returned with the returned groups}
-    all: ${11:# If True, will return all groups in tenant}
-    ad_user: ${12:# Active Directory username}
-    password: ${13:# Active Directory user password}
-    profile: ${14:# Security profile found in ~/}
-    subscription_id: ${15:# Your Azure subscription Id}
-    client_id: ${16:# Azure client ID}
-    secret: ${17:# Azure client secret}
-    cloud_environment: ${18:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${19:# Azure AD authority url}
-    cert_validation_mode: ${20:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${21:# Controls the source of the credentials to use for authentication}
-    api_profile: ${22:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${23:# Parent argument}
-    log_mode: ${24:# Parent argument}
-    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    all: ${4:# If True, will return all groups in tenant}
+    api_profile: ${5:# Selects an API profile to use when communicating with Azure services}
+    attribute_name: ${6:# The name of an attribute that you want to match to I(attribute_value)}
+    attribute_value: ${7:# The value to match attribute_name to}
+    auth_source: ${8:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${9:# Controls the certificate validation behavior for Azure endpoints}
+    check_membership: ${10:# The object ID of the contact, group, user, or service principal to check for membership against returned groups}
+    client_id: ${11:# Azure client ID}
+    cloud_environment: ${12:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    log_mode: ${13:# Parent argument}
+    log_path: ${14:# Parent argument}
+    object_id: ${15:# The object id for the ad group}
+    odata_filter: ${16:# returns groups based on the the OData filter passed into this parameter}
+    password: ${17:# Active Directory user password}
+    profile: ${18:# Security profile found in ~/}
+    return_group_members: ${19:# Indicate whether the members of a group should be returned with the returned groups}
+    return_member_groups: ${20:# Indicate whether the groups in which a groups is a member should be returned with the returned groups}
+    return_owners: ${21:# Indicate whether the owners of a group should be returned with the returned groups}
+    secret: ${22:# Azure client secret}
+    subscription_id: ${23:# Your Azure subscription Id}
+    tenant: ${24:# The tenant ID}
+    thumbprint: ${25:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${26:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

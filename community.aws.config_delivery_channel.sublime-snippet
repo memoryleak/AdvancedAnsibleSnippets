@@ -1,22 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage AWS Config delivery channels}
   community.aws.config_delivery_channel:
-    name: ${2:# The name of the AWS Config resource}
-    state: ${3:# Whether the Config rule should be present or absent}
-    s3_bucket: ${4:# The name of the Amazon S3 bucket to which AWS Config delivers configuration snapshots and configuration history files}
-    s3_prefix: ${5:# The prefix for the specified Amazon S3 bucket}
-    sns_topic_arn: ${6:# The Amazon Resource Name (ARN) of the Amazon SNS topic to which AWS Config sends notifications about configuration changes}
-    delivery_frequency: ${7:# The frequency with which AWS Config delivers configuration snapshots}
-    access_key: ${8:# AWS access key ID}
-    secret_key: ${9:# AWS secret access key}
-    session_token: ${10:# AWS STS session token for use with temporary credentials}
-    profile: ${11:# A named AWS profile to use for authentication}
-    endpoint_url: ${12:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${13:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${14:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${15:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${16:# Use a C(botocore}
-    region: ${17:# The AWS region to use}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    delivery_frequency: ${6:# The frequency with which AWS Config delivers configuration snapshots}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    kms_key_arn: ${8:# The ARN of a KMS key used to encrypt objects delivered by Config}
+    name: ${9:# The name of the AWS Config resource}
+    profile: ${10:# A named AWS profile to use for authentication}
+    region: ${11:# The AWS region to use}
+    s3_bucket: ${12:# The name of the Amazon S3 bucket to which AWS Config delivers configuration snapshots and configuration history files}
+    s3_prefix: ${13:# The prefix for the specified Amazon S3 bucket}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    sns_topic_arn: ${16:# The Amazon Resource Name (ARN) of the Amazon SNS topic to which AWS Config sends notifications about configuration changes}
+    state: ${17:# Whether the Config rule should be present or absent}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

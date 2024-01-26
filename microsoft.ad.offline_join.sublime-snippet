@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get the Offline Domain Join BLOB}
+  microsoft.ad.offline_join:
+    blob_path: ${2:# If set, will store the blob bytes into a file at this path}
+    domain_server: ${3:# Specified the Active Directory Domain Services instance to connect to}
+    identity: ${4:# The identity of the computer object used to generate the offline join blob for}
+    name: ${5:# The name of the computer object used to generate the offline join blob for}
+    path: ${6:# The path where the computer object specified by C(name) is stored}
+    provision_root_ca_certs: ${7:# Adds all the root Certificate Authority certificates on the local machine and adds them to the blob}
+  tags:
+    - microsoft
+    - ad
+    - offline_join]]></content>
+  <tabTrigger>microsoft.ad.offline_join</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get the Offline Domain Join BLOB</description>
+</snippet>

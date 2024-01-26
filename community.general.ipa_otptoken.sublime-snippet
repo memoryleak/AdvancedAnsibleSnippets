@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage FreeIPA OTPs}
   community.general.ipa_otptoken:
-    uniqueid: ${2:# Unique ID of the token in IPA}
-    newuniqueid: ${3:# If specified, the unique id specified will be changed to this}
-    otptype: ${4:# Type of OTP}
-    secretkey: ${5:# Token secret (Base64)}
-    description: ${6:# Description of the token (informational only)}
-    owner: ${7:# Assigned user of the token}
-    enabled: ${8:# Mark the token as enabled (default C(true))}
-    notbefore: ${9:# First date/time the token can be used}
-    notafter: ${10:# Last date/time the token can be used}
-    vendor: ${11:# Token vendor name (informational only)}
-    model: ${12:# Token model (informational only)}
-    serial: ${13:# Token serial (informational only)}
-    state: ${14:# State to ensure}
-    algorithm: ${15:# Token hash algorithm}
-    digits: ${16:# Number of digits each token code will have}
-    offset: ${17:# TOTP token / IPA server time difference}
-    interval: ${18:# Length of TOTP token code validity in seconds}
-    counter: ${19:# Initial counter for the HOTP token}
-    ipa_port: ${20:# Port of FreeIPA / IPA server}
-    ipa_host: ${21:# IP or hostname of IPA server}
-    ipa_user: ${22:# Administrative account used on IPA server}
-    ipa_pass: ${23:# Password of administrative user}
-    ipa_prot: ${24:# Protocol used by IPA server}
-    validate_certs: ${25:# This only applies if C(ipa_prot) is I(https)}
-    ipa_timeout: ${26:# Specifies idle timeout (in seconds) for the connection}
+    algorithm: ${2:# Token hash algorithm}
+    counter: ${3:# Initial counter for the HOTP token}
+    description: ${4:# Description of the token (informational only)}
+    digits: ${5:# Number of digits each token code will have}
+    enabled: ${6:# Mark the token as enabled (default V(true))}
+    interval: ${7:# Length of TOTP token code validity in seconds}
+    ipa_host: ${8:# IP or hostname of IPA server}
+    ipa_pass: ${9:# Password of administrative user}
+    ipa_port: ${10:# Port of FreeIPA / IPA server}
+    ipa_prot: ${11:# Protocol used by IPA server}
+    ipa_timeout: ${12:# Specifies idle timeout (in seconds) for the connection}
+    ipa_user: ${13:# Administrative account used on IPA server}
+    model: ${14:# Token model (informational only)}
+    newuniqueid: ${15:# If specified, the unique id specified will be changed to this}
+    notafter: ${16:# Last date/time the token can be used}
+    notbefore: ${17:# First date/time the token can be used}
+    offset: ${18:# TOTP token / IPA server time difference}
+    otptype: ${19:# Type of OTP}
+    owner: ${20:# Assigned user of the token}
+    secretkey: ${21:# Token secret (Base64)}
+    serial: ${22:# Token serial (informational only)}
+    state: ${23:# State to ensure}
+    uniqueid: ${24:# Unique ID of the token in IPA}
+    validate_certs: ${25:# This only applies if O(ipa_prot) is V(https)}
+    vendor: ${26:# Token vendor name (informational only)}
   tags:
     - community
     - general

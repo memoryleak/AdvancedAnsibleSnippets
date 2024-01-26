@@ -1,47 +1,47 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage a target group for an Application or Network load balancer}
   community.aws.elb_target_group:
-    deregistration_delay_timeout: ${2:# The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused}
-    deregistration_connection_termination: ${3:# Indicates whether the load balancer terminates connections at the end of the deregistration timeout}
-    health_check_protocol: ${4:# The protocol the load balancer uses when performing health checks on targets}
-    health_check_port: ${5:# The port the load balancer uses when performing health checks on targets}
-    health_check_path: ${6:# The ping path that is the destination on the targets for health checks}
-    health_check_interval: ${7:# The approximate amount of time, in seconds, between health checks of an individual target}
-    health_check_timeout: ${8:# The amount of time, in seconds, during which no response from a target means a failed health check}
-    healthy_threshold_count: ${9:# The number of consecutive health checks successes required before considering an unhealthy target healthy}
-    modify_targets: ${10:# Whether or not to alter existing targets in the group to match what is passed with the module}
-    name: ${11:# The name of the target group}
-    port: ${12:# The port on which the targets receive traffic}
-    protocol: ${13:# The protocol to use for routing traffic to the targets}
-    protocol_version: ${14:# Specifies protocol version}
-    state: ${15:# Create or destroy the target group}
-    stickiness_enabled: ${16:# Indicates whether sticky sessions are enabled}
-    stickiness_lb_cookie_duration: ${17:# The time period, in seconds, during which requests from a client should be routed to the same target}
-    stickiness_app_cookie_duration: ${18:# The time period, in seconds, during which requests from a client should be routed to the same target}
-    stickiness_app_cookie_name: ${19:# The name of the application cookie}
-    stickiness_type: ${20:# The type of sticky sessions}
-    load_balancing_algorithm_type: ${21:# The type of load balancing algorithm to use}
-    successful_response_codes: ${22:# The HTTP codes to use when checking for a successful response from a target}
-    target_type: ${23:# The type of target that you must specify when registering targets with this target group}
-    targets: ${24:# A list of targets to assign to the target group}
-    unhealthy_threshold_count: ${25:# The number of consecutive health check failures required before considering a target unhealthy}
-    vpc_id: ${26:# The identifier of the virtual private cloud (VPC)}
-    preserve_client_ip_enabled: ${27:# Indicates whether client IP preservation is enabled}
-    proxy_protocol_v2_enabled: ${28:# Indicates whether Proxy Protocol version 2 is enabled}
-    wait: ${29:# Whether or not to wait for the target group}
-    wait_timeout: ${30:# The time to wait for the target group}
-    access_key: ${31:# AWS access key ID}
-    secret_key: ${32:# AWS secret access key}
-    session_token: ${33:# AWS STS session token for use with temporary credentials}
-    profile: ${34:# A named AWS profile to use for authentication}
-    endpoint_url: ${35:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${36:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${37:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${38:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${39:# Use a C(botocore}
-    region: ${40:# The AWS region to use}
-    tags: ${41:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${42:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    deregistration_connection_termination: ${6:# Indicates whether the load balancer terminates connections at the end of the deregistration timeout}
+    deregistration_delay_timeout: ${7:# The amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
+    health_check_interval: ${9:# The approximate amount of time, in seconds, between health checks of an individual target}
+    health_check_path: ${10:# The ping path that is the destination on the targets for health checks}
+    health_check_port: ${11:# The port the load balancer uses when performing health checks on targets}
+    health_check_protocol: ${12:# The protocol the load balancer uses when performing health checks on targets}
+    health_check_timeout: ${13:# The amount of time, in seconds, during which no response from a target means a failed health check}
+    healthy_threshold_count: ${14:# The number of consecutive health checks successes required before considering an unhealthy target healthy}
+    load_balancing_algorithm_type: ${15:# The type of load balancing algorithm to use}
+    modify_targets: ${16:# Whether or not to alter existing targets in the group to match what is passed with the module}
+    name: ${17:# The name of the target group}
+    port: ${18:# The port on which the targets receive traffic}
+    preserve_client_ip_enabled: ${19:# Indicates whether client IP preservation is enabled}
+    profile: ${20:# A named AWS profile to use for authentication}
+    protocol: ${21:# The protocol to use for routing traffic to the targets}
+    protocol_version: ${22:# Specifies protocol version}
+    proxy_protocol_v2_enabled: ${23:# Indicates whether Proxy Protocol version 2 is enabled}
+    purge_tags: ${24:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${25:# The AWS region to use}
+    secret_key: ${26:# AWS secret access key}
+    session_token: ${27:# AWS STS session token for use with temporary credentials}
+    state: ${28:# Create or destroy the target group}
+    stickiness_app_cookie_duration: ${29:# The time period, in seconds, during which requests from a client should be routed to the same target}
+    stickiness_app_cookie_name: ${30:# The name of the application cookie}
+    stickiness_enabled: ${31:# Indicates whether sticky sessions are enabled}
+    stickiness_lb_cookie_duration: ${32:# The time period, in seconds, during which requests from a client should be routed to the same target}
+    stickiness_type: ${33:# The type of sticky sessions}
+    successful_response_codes: ${34:# The HTTP codes to use when checking for a successful response from a target}
+    tags: ${35:# A dictionary representing the tags to be applied to the resource}
+    target_type: ${36:# The type of target that you must specify when registering targets with this target group}
+    targets: ${37:# A list of targets to assign to the target group}
+    unhealthy_threshold_count: ${38:# The number of consecutive health check failures required before considering a target unhealthy}
+    validate_certs: ${39:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_id: ${40:# The identifier of the virtual private cloud (VPC)}
+    wait: ${41:# Whether or not to wait for the target group}
+    wait_timeout: ${42:# The time to wait for the target group}
   tags:
     - community
     - aws

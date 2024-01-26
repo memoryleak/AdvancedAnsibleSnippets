@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp Element Software Create Cluster}
   netapp.elementsw.na_elementsw_cluster:
-    management_virtual_ip: ${2:# Floating (virtual) IP address for the cluster on the management network}
-    storage_virtual_ip: ${3:# Floating (virtual) IP address for the cluster on the storage (iSCSI) network}
-    replica_count: ${4:# Number of replicas of each piece of data to store in the cluster}
+    accept_eula: ${2:# Required to indicate your acceptance of the End User License Agreement when creating this cluster}
+    attributes: ${3:# List of name-value pairs in JSON object format}
+    cluster_admin_password: ${4:# Initial password for the cluster admin account}
     cluster_admin_username: ${5:# Username for the cluster admin}
-    cluster_admin_password: ${6:# Initial password for the cluster admin account}
-    accept_eula: ${7:# Required to indicate your acceptance of the End User License Agreement when creating this cluster}
-    nodes: ${8:# Storage IP (SIP) addresses of the initial set of nodes making up the cluster}
-    attributes: ${9:# List of name-value pairs in JSON object format}
-    timeout: ${10:# Time to wait for cluster creation to complete}
-    fail_if_cluster_already_exists_with_larger_ensemble: ${11:# If the cluster exists, the default is to verify that I(nodes) is a superset of the existing ensemble}
-    encryption: ${12:# to enable or disable encryption at rest}
-    order_number: ${13:# (experimental) order number as provided by NetApp}
+    encryption: ${6:# to enable or disable encryption at rest}
+    fail_if_cluster_already_exists_with_larger_ensemble: ${7:# If the cluster exists, the default is to verify that I(nodes) is a superset of the existing ensemble}
+    hostname: ${8:# The hostname or IP address of the SolidFire cluster}
+    management_virtual_ip: ${9:# Floating (virtual) IP address for the cluster on the management network}
+    nodes: ${10:# Storage IP (SIP) addresses of the initial set of nodes making up the cluster}
+    order_number: ${11:# (experimental) order number as provided by NetApp}
+    password: ${12:# Password for the specified user}
+    replica_count: ${13:# Number of replicas of each piece of data to store in the cluster}
     serial_number: ${14:# (experimental) serial number as provided by NetApp}
-    hostname: ${15:# The hostname or IP address of the SolidFire cluster}
-    username: ${16:# Please ensure that the user has the adequate permissions}
-    password: ${17:# Password for the specified user}
+    storage_virtual_ip: ${15:# Floating (virtual) IP address for the cluster on the storage (iSCSI) network}
+    timeout: ${16:# Time to wait for cluster creation to complete}
+    username: ${17:# Please ensure that the user has the adequate permissions}
   tags:
     - netapp
     - elementsw

@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures VSANs on Cisco UCS Manager}
   cisco.ucs.ucs_vsans:
-    state: ${2:# If C(present), will verify VSANs are present and will create if needed}
-    name: ${3:# The name assigned to the VSAN}
-    vsan_id: ${4:# The unique identifier assigned to the VSAN}
-    vlan_id: ${5:# The unique string identifier assigned to the VLAN used for Fibre Channel connections}
-    fc_zoning: ${6:# Fibre Channel zoning configuration for the Cisco UCS domain}
-    fabric: ${7:# The fabric configuration of the VSAN}
-    hostname: ${8:# IP address or hostname of Cisco UCS Manager}
-    username: ${9:# Username for Cisco UCS Manager authentication}
-    password: ${10:# Password for Cisco UCS Manager authentication}
-    port: ${11:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
-    use_ssl: ${12:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    use_proxy: ${13:# If C(no), will not use the proxy as defined by system environment variable}
-    proxy: ${14:# If use_proxy is no, specfies proxy to be used for connection}
+    fabric: ${2:# The fabric configuration of the VSAN}
+    fc_zoning: ${3:# Fibre Channel zoning configuration for the Cisco UCS domain}
+    hostname: ${4:# IP address or hostname of Cisco UCS Manager}
+    name: ${5:# The name assigned to the VSAN}
+    password: ${6:# Password for Cisco UCS Manager authentication}
+    port: ${7:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    proxy: ${8:# If use_proxy is no, specfies proxy to be used for connection}
+    state: ${9:# If C(present), will verify VSANs are present and will create if needed}
+    use_proxy: ${10:# If C(no), will not use the proxy as defined by system environment variable}
+    use_ssl: ${11:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${12:# Username for Cisco UCS Manager authentication}
+    vlan_id: ${13:# The unique string identifier assigned to the VLAN used for Fibre Channel connections}
+    vsan_id: ${14:# The unique identifier assigned to the VSAN}
   tags:
     - cisco
     - ucs

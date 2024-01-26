@@ -1,32 +1,32 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Add/Delete a pool in the load balancing service from OpenStack Cloud}
+  <content><![CDATA[- name: ${1:Manage load-balancer pool in a OpenStack cloud}
   openstack.cloud.lb_pool:
-    name: ${2:# Name that has to be given to the pool}
-    state: ${3:# Should the resource be present or absent}
-    loadbalancer: ${4:# The name or id of the load balancer that this pool belongs to}
-    listener: ${5:# The name or id of the listener that this pool belongs to}
-    protocol: ${6:# The protocol for the pool}
-    lb_algorithm: ${7:# The load balancing algorithm for the pool}
-    wait: ${8:# If the module should wait for the pool to be ACTIVE}
-    timeout: ${9:# The amount of time the module should wait for the pool to get into ACTIVE state}
-    cloud: ${10:# Named cloud or cloud config to operate against}
-    auth: ${11:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${12:# Name of the auth plugin to use}
-    region_name: ${13:# Name of the region}
-    api_timeout: ${14:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${15:# Whether or not SSL API requests should be verified}
-    ca_cert: ${16:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${17:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${18:# A path to a client key to use as part of the SSL transaction}
-    interface: ${19:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${20:# Ignored}
-    sdk_log_path: ${21:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${22:# Log level of the OpenStackSDK}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    description: ${9:# A human-readable description for the load-balancer pool}
+    interface: ${10:# Endpoint URL type to fetch from the service catalog}
+    lb_algorithm: ${11:# The load balancing algorithm for the pool}
+    listener: ${12:# The name or id of the listener that this pool belongs to}
+    loadbalancer: ${13:# The name or id of the load balancer that this pool belongs to}
+    name: ${14:# Name that has to be given to the pool}
+    protocol: ${15:# The protocol for the pool}
+    region_name: ${16:# Name of the region}
+    sdk_log_level: ${17:# Log level of the OpenStackSDK}
+    sdk_log_path: ${18:# Path to the logfile of the OpenStackSDK}
+    state: ${19:# Should the resource be present or absent}
+    timeout: ${20:# How long should ansible wait for the requested resource}
+    validate_certs: ${21:# Whether or not SSL API requests should be verified}
+    wait: ${22:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud
     - lb_pool]]></content>
   <tabTrigger>openstack.cloud.lb_pool</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Add/Delete a pool in the load balancing service from OpenStack Cloud</description>
+  <description>Manage load-balancer pool in a OpenStack cloud</description>
 </snippet>

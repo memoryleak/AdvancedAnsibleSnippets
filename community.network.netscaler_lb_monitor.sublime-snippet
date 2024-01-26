@@ -1,111 +1,111 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage load balancing monitors}
   community.network.netscaler_lb_monitor:
-    monitorname: ${2:# Name for the monitor}
-    type: ${3:# Type of monitor that you want to create}
+    Snmpoid: ${2:# SNMP OID for C(SNMP) monitors}
+    acctapplicationid: ${3:# List of Acct-Application-Id attribute value pairs (AVPs) for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
     action: ${4:# Action to perform when the response to an inline monitor (a monitor of type C(HTTP-INLINE)) indicates that the service is down}
-    respcode: ${5:# Response codes for which to mark the service as UP}
-    httprequest: ${6:# HTTP request to send to the server (for example, C('HEAD /file}
-    rtsprequest: ${7:# RTSP request to send to the server (for example, C('OPTIONS *'))}
-    customheaders: ${8:# Custom header string to include in the monitoring probes}
-    maxforwards: ${9:# Maximum number of hops that the SIP request used for monitoring can traverse to reach the server}
-    sipmethod: ${10:# SIP method to use for the query}
-    sipuri: ${11:# SIP URI string to send to the service (for example, C(sip:sip}
-    sipreguri: ${12:# SIP user to be registered}
-    send: ${13:# String to send to the service}
-    recv: ${14:# String expected from the server for the service to be marked as UP}
-    query: ${15:# Domain name to resolve as part of monitoring the DNS service (for example, C(example}
-    querytype: ${16:# Type of DNS record for which to send monitoring queries}
-    scriptname: ${17:# Path and name of the script to execute}
-    scriptargs: ${18:# String of arguments for the script}
-    dispatcherip: ${19:# IP address of the dispatcher to which to send the probe}
-    dispatcherport: ${20:# Port number on which the dispatcher listens for the monitoring probe}
-    username: ${21:# User name with which to probe the C(RADIUS), C(NNTP), C(FTP), C(FTP-EXTENDED), C(MYSQL), C(MSSQL), C(POP3), C(CITRIX-AG), C(CITRIX-XD-DDC), C(CITRIX-WI-EXTENDED), C(CITRIX-XNC) or C(CITRIX-XDM) server}
-    password: ${22:# Password that is required for logging on to the C(RADIUS), C(NNTP), C(FTP), C(FTP-EXTENDED), C(MYSQL), C(MSSQL), C(POP3), C(CITRIX-AG), C(CITRIX-XD-DDC), C(CITRIX-WI-EXTENDED), C(CITRIX-XNC-ECV) or C(CITRIX-XDM) server}
-    secondarypassword: ${23:# Secondary password that users might have to provide to log on to the Access Gateway server}
-    logonpointname: ${24:# Name of the logon point that is configured for the Citrix Access Gateway Advanced Access Control software}
-    lasversion: ${25:# Version number of the Citrix Advanced Access Control Logon Agent}
-    radkey: ${26:# Authentication key (shared secret text string) for RADIUS clients and servers to exchange}
-    radnasid: ${27:# NAS-Identifier to send in the Access-Request packet}
-    radnasip: ${28:# Network Access Server (NAS) IP address to use as the source IP address when monitoring a RADIUS server}
-    radaccounttype: ${29:# Account Type to be used in Account Request Packet}
-    radframedip: ${30:# Source ip with which the packet will go out }
-    radapn: ${31:# Called Station Id to be used in Account Request Packet}
-    radmsisdn: ${32:# Calling Stations Id to be used in Account Request Packet}
-    radaccountsession: ${33:# Account Session ID to be used in Account Request Packet}
-    lrtm: ${34:# Calculate the least response times for bound services}
-    deviation: ${35:# Time value added to the learned average response time in dynamic response time monitoring (DRTM)}
-    units1: ${36:# Unit of measurement for the Deviation parameter}
-    interval: ${37:# Time interval between two successive probes}
-    units3: ${38:# monitor interval units}
-    resptimeout: ${39:# Amount of time for which the appliance must wait before it marks a probe as FAILED}
-    units4: ${40:# monitor response timeout units}
-    resptimeoutthresh: ${41:# Response time threshold, specified as a percentage of the Response Time-out parameter}
-    retries: ${42:# Maximum number of probes to send to establish the state of a service for which a monitoring probe failed}
-    failureretries: ${43:# Number of retries that must fail, out of the number specified for the Retries parameter, for a service to be marked as DOWN}
-    alertretries: ${44:# Number of consecutive probe failures after which the appliance generates an SNMP trap called monProbeFailed}
-    successretries: ${45:# Number of consecutive successful probes required to transition a service's state from DOWN to UP}
-    downtime: ${46:# Time duration for which to wait before probing a service that has been marked as DOWN}
-    units2: ${47:# Unit of measurement for the Down Time parameter}
-    destip: ${48:# IP address of the service to which to send probes}
-    destport: ${49:# TCP or UDP port to which to send the probe}
-    state: ${50:# State of the monitor}
-    reverse: ${51:# Mark a service as DOWN, instead of UP, when probe criteria are satisfied, and as UP instead of DOWN when probe criteria are not satisfied}
-    transparent: ${52:# The monitor is bound to a transparent device such as a firewall or router}
-    iptunnel: ${53:# Send the monitoring probe to the service through an IP tunnel}
-    tos: ${54:# Probe the service by encoding the destination IP address in the IP TOS (6) bits}
-    tosid: ${55:# The TOS ID of the specified destination IP}
-    secure: ${56:# Use a secure SSL connection when monitoring a service}
-    validatecred: ${57:# Validate the credentials of the Xen Desktop DDC server user}
-    domain: ${58:# Domain in which the XenDesktop Desktop Delivery Controller (DDC) servers or Web Interface servers are present}
-    ipaddress: ${59:# Set of IP addresses expected in the monitoring response from the DNS server, if the record type is A or AAAA}
-    group: ${60:# Name of a newsgroup available on the NNTP service that is to be monitored}
-    filename: ${61:# Name of a file on the FTP server}
-    basedn: ${62:# The base distinguished name of the LDAP service, from where the LDAP server can begin the search for the attributes in the monitoring query}
-    binddn: ${63:# The distinguished name with which an LDAP monitor can perform the Bind operation on the LDAP server}
-    filter: ${64:# Filter criteria for the LDAP query}
-    attribute: ${65:# Attribute to evaluate when the LDAP server responds to the query}
-    database: ${66:# Name of the database to connect to during authentication}
-    oraclesid: ${67:# Name of the service identifier that is used to connect to the Oracle database during authentication}
-    sqlquery: ${68:# SQL query for a C(MYSQL-ECV) or C(MSSQL-ECV) monitor}
-    evalrule: ${69:# Default syntax expression that evaluates the database server's response to a MYSQL-ECV or MSSQL-ECV monitoring query}
-    mssqlprotocolversion: ${70:# Version of MSSQL server that is to be monitored}
-    Snmpoid: ${71:# SNMP OID for C(SNMP) monitors}
-    snmpcommunity: ${72:# Community name for C(SNMP) monitors}
-    snmpthreshold: ${73:# Threshold for C(SNMP) monitors}
-    snmpversion: ${74:# SNMP version to be used for C(SNMP) monitors}
-    metrictable: ${75:# Metric table to which to bind metrics}
-    application: ${76:# Name of the application used to determine the state of the service}
-    sitepath: ${77:# URL of the logon page}
-    storename: ${78:# Store Name}
-    storefrontacctservice: ${79:# Enable/Disable probing for Account Service}
-    hostname: ${80:# Hostname in the FQDN format (Example: C(porche}
-    netprofile: ${81:# Name of the network profile}
-    originhost: ${82:# Origin-Host value for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
-    originrealm: ${83:# Origin-Realm value for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
-    hostipaddress: ${84:# Host-IP-Address value for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
-    vendorid: ${85:# Vendor-Id value for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
-    productname: ${86:# Product-Name value for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
-    firmwarerevision: ${87:# Firmware-Revision value for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
-    authapplicationid: ${88:# List of Auth-Application-Id attribute value pairs (AVPs) for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
-    acctapplicationid: ${89:# List of Acct-Application-Id attribute value pairs (AVPs) for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
-    inbandsecurityid: ${90:# Inband-Security-Id for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
-    supportedvendorids: ${91:# List of Supported-Vendor-Id attribute value pairs (AVPs) for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
-    vendorspecificvendorid: ${92:# Vendor-Id to use in the Vendor-Specific-Application-Id grouped attribute-value pair (AVP) in the monitoring CER message}
-    vendorspecificauthapplicationids: ${93:# List of Vendor-Specific-Auth-Application-Id attribute value pairs (AVPs) for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
-    vendorspecificacctapplicationids: ${94:# List of Vendor-Specific-Acct-Application-Id attribute value pairs (AVPs) to use for monitoring Diameter servers}
-    kcdaccount: ${95:# KCD Account used by C(MSSQL) monitor}
-    storedb: ${96:# Store the database list populated with the responses to monitor probes}
-    storefrontcheckbackendservices: ${97:# This option will enable monitoring of services running on storefront server}
-    trofscode: ${98:# Code expected when the server is under maintenance}
-    trofsstring: ${99:# String expected from the server for the service to be marked as trofs}
-    nsip: ${100:# The ip address of the netscaler appliance where the nitro API calls will be made}
-    nitro_user: ${101:# The username with which to authenticate to the netscaler node}
-    nitro_pass: ${102:# The password with which to authenticate to the netscaler node}
-    nitro_protocol: ${103:# Which protocol to use when accessing the nitro API objects}
-    validate_certs: ${104:# If C(no), SSL certificates will not be validated}
-    nitro_timeout: ${105:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
-    save_config: ${106:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+    alertretries: ${5:# Number of consecutive probe failures after which the appliance generates an SNMP trap called monProbeFailed}
+    application: ${6:# Name of the application used to determine the state of the service}
+    attribute: ${7:# Attribute to evaluate when the LDAP server responds to the query}
+    authapplicationid: ${8:# List of Auth-Application-Id attribute value pairs (AVPs) for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
+    basedn: ${9:# The base distinguished name of the LDAP service, from where the LDAP server can begin the search for the attributes in the monitoring query}
+    binddn: ${10:# The distinguished name with which an LDAP monitor can perform the Bind operation on the LDAP server}
+    customheaders: ${11:# Custom header string to include in the monitoring probes}
+    database: ${12:# Name of the database to connect to during authentication}
+    destip: ${13:# IP address of the service to which to send probes}
+    destport: ${14:# TCP or UDP port to which to send the probe}
+    deviation: ${15:# Time value added to the learned average response time in dynamic response time monitoring (DRTM)}
+    dispatcherip: ${16:# IP address of the dispatcher to which to send the probe}
+    dispatcherport: ${17:# Port number on which the dispatcher listens for the monitoring probe}
+    domain: ${18:# Domain in which the XenDesktop Desktop Delivery Controller (DDC) servers or Web Interface servers are present}
+    downtime: ${19:# Time duration for which to wait before probing a service that has been marked as DOWN}
+    evalrule: ${20:# Default syntax expression that evaluates the database server's response to a MYSQL-ECV or MSSQL-ECV monitoring query}
+    failureretries: ${21:# Number of retries that must fail, out of the number specified for the Retries parameter, for a service to be marked as DOWN}
+    filename: ${22:# Name of a file on the FTP server}
+    filter: ${23:# Filter criteria for the LDAP query}
+    firmwarerevision: ${24:# Firmware-Revision value for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
+    group: ${25:# Name of a newsgroup available on the NNTP service that is to be monitored}
+    hostipaddress: ${26:# Host-IP-Address value for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
+    hostname: ${27:# Hostname in the FQDN format (Example: C(porche}
+    httprequest: ${28:# HTTP request to send to the server (for example, C('HEAD /file}
+    inbandsecurityid: ${29:# Inband-Security-Id for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
+    interval: ${30:# Time interval between two successive probes}
+    ipaddress: ${31:# Set of IP addresses expected in the monitoring response from the DNS server, if the record type is A or AAAA}
+    iptunnel: ${32:# Send the monitoring probe to the service through an IP tunnel}
+    kcdaccount: ${33:# KCD Account used by C(MSSQL) monitor}
+    lasversion: ${34:# Version number of the Citrix Advanced Access Control Logon Agent}
+    logonpointname: ${35:# Name of the logon point that is configured for the Citrix Access Gateway Advanced Access Control software}
+    lrtm: ${36:# Calculate the least response times for bound services}
+    maxforwards: ${37:# Maximum number of hops that the SIP request used for monitoring can traverse to reach the server}
+    metrictable: ${38:# Metric table to which to bind metrics}
+    monitorname: ${39:# Name for the monitor}
+    mssqlprotocolversion: ${40:# Version of MSSQL server that is to be monitored}
+    netprofile: ${41:# Name of the network profile}
+    nitro_pass: ${42:# The password with which to authenticate to the netscaler node}
+    nitro_protocol: ${43:# Which protocol to use when accessing the nitro API objects}
+    nitro_timeout: ${44:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
+    nitro_user: ${45:# The username with which to authenticate to the netscaler node}
+    nsip: ${46:# The ip address of the netscaler appliance where the nitro API calls will be made}
+    oraclesid: ${47:# Name of the service identifier that is used to connect to the Oracle database during authentication}
+    originhost: ${48:# Origin-Host value for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
+    originrealm: ${49:# Origin-Realm value for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
+    password: ${50:# Password that is required for logging on to the C(RADIUS), C(NNTP), C(FTP), C(FTP-EXTENDED), C(MYSQL), C(MSSQL), C(POP3), C(CITRIX-AG), C(CITRIX-XD-DDC), C(CITRIX-WI-EXTENDED), C(CITRIX-XNC-ECV) or C(CITRIX-XDM) server}
+    productname: ${51:# Product-Name value for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
+    query: ${52:# Domain name to resolve as part of monitoring the DNS service (for example, C(example}
+    querytype: ${53:# Type of DNS record for which to send monitoring queries}
+    radaccountsession: ${54:# Account Session ID to be used in Account Request Packet}
+    radaccounttype: ${55:# Account Type to be used in Account Request Packet}
+    radapn: ${56:# Called Station Id to be used in Account Request Packet}
+    radframedip: ${57:# Source ip with which the packet will go out}
+    radkey: ${58:# Authentication key (shared secret text string) for RADIUS clients and servers to exchange}
+    radmsisdn: ${59:# Calling Stations Id to be used in Account Request Packet}
+    radnasid: ${60:# NAS-Identifier to send in the Access-Request packet}
+    radnasip: ${61:# Network Access Server (NAS) IP address to use as the source IP address when monitoring a RADIUS server}
+    recv: ${62:# String expected from the server for the service to be marked as UP}
+    respcode: ${63:# Response codes for which to mark the service as UP}
+    resptimeout: ${64:# Amount of time for which the appliance must wait before it marks a probe as FAILED}
+    resptimeoutthresh: ${65:# Response time threshold, specified as a percentage of the Response Time-out parameter}
+    retries: ${66:# Maximum number of probes to send to establish the state of a service for which a monitoring probe failed}
+    reverse: ${67:# Mark a service as DOWN, instead of UP, when probe criteria are satisfied, and as UP instead of DOWN when probe criteria are not satisfied}
+    rtsprequest: ${68:# RTSP request to send to the server (for example, C('OPTIONS *'))}
+    save_config: ${69:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+    scriptargs: ${70:# String of arguments for the script}
+    scriptname: ${71:# Path and name of the script to execute}
+    secondarypassword: ${72:# Secondary password that users might have to provide to log on to the Access Gateway server}
+    secure: ${73:# Use a secure SSL connection when monitoring a service}
+    send: ${74:# String to send to the service}
+    sipmethod: ${75:# SIP method to use for the query}
+    sipreguri: ${76:# SIP user to be registered}
+    sipuri: ${77:# SIP URI string to send to the service (for example, C(sip:sip}
+    sitepath: ${78:# URL of the logon page}
+    snmpcommunity: ${79:# Community name for C(SNMP) monitors}
+    snmpthreshold: ${80:# Threshold for C(SNMP) monitors}
+    snmpversion: ${81:# SNMP version to be used for C(SNMP) monitors}
+    sqlquery: ${82:# SQL query for a C(MYSQL-ECV) or C(MSSQL-ECV) monitor}
+    state: ${83:# State of the monitor}
+    storedb: ${84:# Store the database list populated with the responses to monitor probes}
+    storefrontacctservice: ${85:# Enable/Disable probing for Account Service}
+    storefrontcheckbackendservices: ${86:# This option will enable monitoring of services running on storefront server}
+    storename: ${87:# Store Name}
+    successretries: ${88:# Number of consecutive successful probes required to transition a service's state from DOWN to UP}
+    supportedvendorids: ${89:# List of Supported-Vendor-Id attribute value pairs (AVPs) for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
+    tos: ${90:# Probe the service by encoding the destination IP address in the IP TOS (6) bits}
+    tosid: ${91:# The TOS ID of the specified destination IP}
+    transparent: ${92:# The monitor is bound to a transparent device such as a firewall or router}
+    trofscode: ${93:# Code expected when the server is under maintenance}
+    trofsstring: ${94:# String expected from the server for the service to be marked as trofs}
+    type: ${95:# Type of monitor that you want to create}
+    units1: ${96:# Unit of measurement for the Deviation parameter}
+    units2: ${97:# Unit of measurement for the Down Time parameter}
+    units3: ${98:# monitor interval units}
+    units4: ${99:# monitor response timeout units}
+    username: ${100:# User name with which to probe the C(RADIUS), C(NNTP), C(FTP), C(FTP-EXTENDED), C(MYSQL), C(MSSQL), C(POP3), C(CITRIX-AG), C(CITRIX-XD-DDC), C(CITRIX-WI-EXTENDED), C(CITRIX-XNC) or C(CITRIX-XDM) server}
+    validate_certs: ${101:# If C(no), SSL certificates will not be validated}
+    validatecred: ${102:# Validate the credentials of the Xen Desktop DDC server user}
+    vendorid: ${103:# Vendor-Id value for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
+    vendorspecificacctapplicationids: ${104:# List of Vendor-Specific-Acct-Application-Id attribute value pairs (AVPs) to use for monitoring Diameter servers}
+    vendorspecificauthapplicationids: ${105:# List of Vendor-Specific-Auth-Application-Id attribute value pairs (AVPs) for the Capabilities-Exchange-Request (CER) message to use for monitoring Diameter servers}
+    vendorspecificvendorid: ${106:# Vendor-Id to use in the Vendor-Specific-Application-Id grouped attribute-value pair (AVP) in the monitoring CER message}
   tags:
     - community
     - network

@@ -1,22 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP NodeGroup}
   google.cloud.gcp_compute_node_group:
-    state: ${2:# Whether the given object should exist in GCP}
-    description: ${3:# An optional textual description of the resource}
-    name: ${4:# Name of the resource}
-    node_template: ${5:# The URL of the node template to which this node group belongs}
-    size: ${6:# The total number of nodes in the node group}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    auth_kind: ${3:# The type of credential used}
+    autoscaling_policy: ${4:# If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups}
+    description: ${5:# An optional textual description of the resource}
+    env_type: ${6:# Specifies which Ansible environment you're running this module within}
     maintenance_policy: ${7:# Specifies how to handle instances when a node in the group undergoes maintenance}
-    maintenance_window: ${8:# contains properties for the timeframe of maintenance }
-    autoscaling_policy: ${9:# If you use sole-tenant nodes for your workloads, you can use the node group autoscaler to automatically manage the sizes of your node groups}
-    zone: ${10:# Zone where this node group is located }
+    maintenance_window: ${8:# contains properties for the timeframe of maintenance}
+    name: ${9:# Name of the resource}
+    node_template: ${10:# The URL of the node template to which this node group belongs}
     project: ${11:# The Google Cloud Platform project to use}
-    auth_kind: ${12:# The type of credential used}
+    scopes: ${12:# Array of scopes to be used}
     service_account_contents: ${13:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${14:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${15:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${16:# Array of scopes to be used}
-    env_type: ${17:# Specifies which Ansible environment you're running this module within}
+    service_account_email: ${14:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    service_account_file: ${15:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    size: ${16:# The total number of nodes in the node group}
+    state: ${17:# Whether the given object should exist in GCP}
+    zone: ${18:# Zone where this node group is located}
   tags:
     - google
     - cloud

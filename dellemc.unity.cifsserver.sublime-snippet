@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage CIFS server on Unity storage system}
   dellemc.unity.cifsserver:
-    nas_server_name: ${2:# Name of the NAS server on which CIFS server will be hosted}
-    nas_server_id: ${3:# ID of the NAS server on which CIFS server will be hosted}
-    netbios_name: ${4:# The computer name of the SMB server in Windows network}
-    workgroup: ${5:# Standalone SMB server workgroup}
-    local_password: ${6:# Standalone SMB server administrator password}
-    domain: ${7:# The domain name where the SMB server is registered in Active Directory}
-    domain_username: ${8:# Active Directory domain user name}
-    domain_password: ${9:# Active Directory domain password}
-    cifs_server_name: ${10:# The name of the CIFS server}
-    cifs_server_id: ${11:# The ID of the CIFS server}
-    interfaces: ${12:# List of file IP interfaces that service CIFS protocol of SMB server}
-    unjoin_cifs_server_account: ${13:# Keep SMB server account unjoined in Active Directory after deletion}
+    cifs_server_id: ${2:# The ID of the CIFS server}
+    cifs_server_name: ${3:# The name of the CIFS server}
+    domain: ${4:# The domain name where the SMB server is registered in Active Directory}
+    domain_password: ${5:# Active Directory domain password}
+    domain_username: ${6:# Active Directory domain user name}
+    interfaces: ${7:# List of file IP interfaces that service CIFS protocol of SMB server}
+    local_password: ${8:# Standalone SMB server administrator password}
+    nas_server_id: ${9:# ID of the NAS server on which CIFS server will be hosted}
+    nas_server_name: ${10:# Name of the NAS server on which CIFS server will be hosted}
+    netbios_name: ${11:# The computer name of the SMB server in Windows network}
+    password: ${12:# The password of the Unity management server}
+    port: ${13:# Port number through which communication happens with Unity management server}
     state: ${14:# Define whether the CIFS server should exist or not}
     unispherehost: ${15:# IP or FQDN of the Unity management server}
-    username: ${16:# The username of the Unity management server}
-    password: ${17:# The password of the Unity management server}
+    unjoin_cifs_server_account: ${16:# Keep SMB server account unjoined in Active Directory after deletion}
+    username: ${17:# The username of the Unity management server}
     validate_certs: ${18:# Boolean variable to specify whether or not to validate SSL certificate}
-    port: ${19:# Port number through which communication happens with Unity management server}
+    workgroup: ${19:# Standalone SMB server workgroup}
   tags:
     - dellemc
     - unity

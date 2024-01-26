@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage custom images on the cloudscale}
   cloudscale_ch.cloud.custom_image:
-    url: ${2:# The URL used to download the image}
-    force_retry: ${3:# Retry the image import even if a failed import using the same name and URL already exists}
-    name: ${4:# The human readable name of the custom image}
-    uuid: ${5:# The unique identifier of the custom image import}
-    slug: ${6:# A string identifying the custom image for use within the API}
-    user_data_handling: ${7:# How user_data will be handled when creating a server}
-    zones: ${8:# Specify zones in which the custom image will be available (e}
+    api_timeout: ${2:# Timeout in seconds for calls to the cloudscale}
+    api_token: ${3:# cloudscale}
+    api_url: ${4:# cloudscale}
+    firmware_type: ${5:# The firmware type that will be used for servers created with this image}
+    force_retry: ${6:# Retry the image import even if a failed import using the same name and URL already exists}
+    name: ${7:# The human readable name of the custom image}
+    slug: ${8:# A string identifying the custom image for use within the API}
     source_format: ${9:# The file format of the image referenced in the url}
-    firmware_type: ${10:# The firmware type that will be used for servers created with this image}
+    state: ${10:# State of the coustom image}
     tags: ${11:# The tags assigned to the custom image}
-    state: ${12:# State of the coustom image}
-    api_url: ${13:# cloudscale}
-    api_token: ${14:# cloudscale}
-    api_timeout: ${15:# Timeout in seconds for calls to the cloudscale}
+    url: ${12:# The URL used to download the image}
+    user_data_handling: ${13:# How user_data will be handled when creating a server}
+    uuid: ${14:# The unique identifier of the custom image import}
+    zones: ${15:# Specify zones in which the custom image will be available (e}
   tags:
     - cloudscale_ch
     - cloud

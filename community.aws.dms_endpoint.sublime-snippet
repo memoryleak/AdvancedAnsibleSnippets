@@ -1,42 +1,42 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates or destroys a data migration services endpoint}
   community.aws.dms_endpoint:
-    state: ${2:# State of the endpoint}
-    endpointidentifier: ${3:# An identifier name for the endpoint}
-    endpointtype: ${4:# Type of endpoint we want to manage}
-    enginename: ${5:# Database engine that we want to use, please refer to the AWS DMS for more information on the supported engines and their limitations}
-    username: ${6:# Username our endpoint will use to connect to the database}
-    password: ${7:# Password used to connect to the database this attribute can only be written the AWS API does not return this parameter}
-    servername: ${8:# Servername that the endpoint will connect to}
-    port: ${9:# TCP port for access to the database}
-    databasename: ${10:# Name for the database on the origin or target side}
-    extraconnectionattributes: ${11:# Extra attributes for the database connection, the AWS documentation states ' For more information about extra connection attributes, see the documentation section for your data store}
-    kmskeyid: ${12:# Encryption key to use to encrypt replication storage and connection information}
-    tags: ${13:# A list of tags to add to the endpoint}
-    certificatearn: ${14:# Amazon Resource Name (ARN) for the certificate}
-    sslmode: ${15:# Mode used for the SSL connection}
-    serviceaccessrolearn: ${16:# Amazon Resource Name (ARN) for the service access role that you want to use to create the endpoint}
-    externaltabledefinition: ${17:# The external table definition}
-    dynamodbsettings: ${18:# Settings in JSON format for the target Amazon DynamoDB endpoint if source or target is dynamodb}
-    s3settings: ${19:# S3 buckets settings for the target Amazon S3 endpoint}
-    dmstransfersettings: ${20:# The settings in JSON format for the DMS transfer type of source endpoint}
-    mongodbsettings: ${21:# Settings in JSON format for the source MongoDB endpoint}
-    kinesissettings: ${22:# Settings in JSON format for the target Amazon Kinesis Data Streams endpoint}
-    elasticsearchsettings: ${23:# Settings in JSON format for the target Elasticsearch endpoint}
-    wait: ${24:# Whether Ansible should wait for the object to be deleted when I(state=absent)}
-    timeout: ${25:# Time in seconds we should wait for when deleting a resource}
-    retries: ${26:# number of times we should retry when deleting a resource}
-    access_key: ${27:# AWS access key ID}
-    secret_key: ${28:# AWS secret access key}
-    session_token: ${29:# AWS STS session token for use with temporary credentials}
-    profile: ${30:# A named AWS profile to use for authentication}
-    endpoint_url: ${31:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${32:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${33:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${34:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${35:# Use a C(botocore}
-    region: ${36:# The AWS region to use}
-    purge_tags: ${37:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    certificatearn: ${5:# Amazon Resource Name (ARN) for the certificate}
+    databasename: ${6:# Name for the database on the origin or target side}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    dmstransfersettings: ${8:# The settings in JSON format for the DMS transfer type of source endpoint}
+    dynamodbsettings: ${9:# Settings in JSON format for the target Amazon DynamoDB endpoint if source or target is dynamodb}
+    elasticsearchsettings: ${10:# Settings in JSON format for the target Elasticsearch endpoint}
+    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
+    endpointidentifier: ${12:# An identifier name for the endpoint}
+    endpointtype: ${13:# Type of endpoint we want to manage}
+    enginename: ${14:# Database engine that we want to use, please refer to the AWS DMS for more information on the supported engines and their limitations}
+    externaltabledefinition: ${15:# The external table definition}
+    extraconnectionattributes: ${16:# Extra attributes for the database connection, the AWS documentation states ' For more information about extra connection attributes, see the documentation section for your data store}
+    kinesissettings: ${17:# Settings in JSON format for the target Amazon Kinesis Data Streams endpoint}
+    kmskeyid: ${18:# Encryption key to use to encrypt replication storage and connection information}
+    mongodbsettings: ${19:# Settings in JSON format for the source MongoDB endpoint}
+    password: ${20:# Password used to connect to the database this attribute can only be written the AWS API does not return this parameter}
+    port: ${21:# TCP port for access to the database}
+    profile: ${22:# A named AWS profile to use for authentication}
+    purge_tags: ${23:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${24:# The AWS region to use}
+    retries: ${25:# number of times we should retry when deleting a resource}
+    s3settings: ${26:# S3 buckets settings for the target Amazon S3 endpoint}
+    secret_key: ${27:# AWS secret access key}
+    servername: ${28:# Servername that the endpoint will connect to}
+    serviceaccessrolearn: ${29:# Amazon Resource Name (ARN) for the service access role that you want to use to create the endpoint}
+    session_token: ${30:# AWS STS session token for use with temporary credentials}
+    sslmode: ${31:# Mode used for the SSL connection}
+    state: ${32:# State of the endpoint}
+    tags: ${33:# A list of tags to add to the endpoint}
+    timeout: ${34:# Time in seconds we should wait for when deleting a resource}
+    username: ${35:# Username our endpoint will use to connect to the database}
+    validate_certs: ${36:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${37:# Whether Ansible should wait for the object to be deleted when I(state=absent)}
   tags:
     - community
     - aws

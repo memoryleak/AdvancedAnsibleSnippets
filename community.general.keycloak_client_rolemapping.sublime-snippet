@@ -1,23 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Allows administration of Keycloak client_rolemapping with the Keycloak API}
   community.general.keycloak_client_rolemapping:
-    state: ${2:# State of the client_rolemapping}
-    realm: ${3:# They Keycloak realm under which this role_representation resides}
-    group_name: ${4:# Name of the group to be mapped}
-    gid: ${5:# Id of the group to be mapped}
-    client_id: ${6:# Name of the client to be mapped (different than I(cid))}
-    cid: ${7:# Id of the client to be mapped}
-    roles: ${8:# Roles to be mapped to the group}
-    auth_keycloak_url: ${9:# URL to the Keycloak instance}
-    auth_client_id: ${10:# OpenID Connect I(client_id) to authenticate to the API with}
-    auth_realm: ${11:# Keycloak realm name to authenticate to for API access}
-    auth_client_secret: ${12:# Client Secret to use in conjunction with I(auth_client_id) (if required)}
-    auth_username: ${13:# Username to authenticate for API access with}
-    auth_password: ${14:# Password to authenticate for API access with}
-    token: ${15:# Authentication token for Keycloak API}
-    validate_certs: ${16:# Verify TLS certificates (do not disable this in production)}
-    connection_timeout: ${17:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
-    http_agent: ${18:# Configures the HTTP User-Agent header}
+    auth_client_id: ${2:# OpenID Connect C(client_id) to authenticate to the API with}
+    auth_client_secret: ${3:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
+    auth_keycloak_url: ${4:# URL to the Keycloak instance}
+    auth_password: ${5:# Password to authenticate for API access with}
+    auth_realm: ${6:# Keycloak realm name to authenticate to for API access}
+    auth_username: ${7:# Username to authenticate for API access with}
+    cid: ${8:# Id of the client to be mapped}
+    client_id: ${9:# Name of the client to be mapped (different than O(cid))}
+    connection_timeout: ${10:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    gid: ${11:# Id of the group to be mapped}
+    group_name: ${12:# Name of the group to be mapped}
+    http_agent: ${13:# Configures the HTTP User-Agent header}
+    parents: ${14:# List of parent groups for the group to handle sorted top to bottom}
+    realm: ${15:# They Keycloak realm under which this role_representation resides}
+    roles: ${16:# Roles to be mapped to the group}
+    state: ${17:# State of the client_rolemapping}
+    token: ${18:# Authentication token for Keycloak API}
+    validate_certs: ${19:# Verify TLS certificates (do not disable this in production)}
   tags:
     - community
     - general

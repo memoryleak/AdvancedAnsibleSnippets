@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Gather information about resources}
   theforeman.foreman.resource_info:
-    resource: ${2:# Resource to search}
-    search: ${3:# Search query to use}
+    full_details: ${2:# If C(True) all details about the found resources are returned}
+    organization: ${3:# Scope the searched resource by organization}
     params: ${4:# Add parameters to the API call if necessary}
-    organization: ${5:# Scope the searched resource by organization}
-    full_details: ${6:# If C(True) all details about the found resources are returned}
-    server_url: ${7:# URL of the Foreman server}
-    username: ${8:# Username accessing the Foreman server}
-    password: ${9:# Password of the user accessing the Foreman server}
+    password: ${5:# Password of the user accessing the Foreman server}
+    resource: ${6:# Resource to search}
+    search: ${7:# Search query to use}
+    server_url: ${8:# URL of the Foreman server}
+    username: ${9:# Username accessing the Foreman server}
     validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman

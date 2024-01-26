@@ -1,78 +1,78 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of ControllerProperties Avi RESTful Object}
   community.network.avi_controllerproperties:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
-    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    allow_ip_forwarding: ${5:# Field introduced in 17}
-    allow_unauthenticated_apis: ${6:# Allow unauthenticated access for special apis}
-    allow_unauthenticated_nodes: ${7:# Boolean flag to set allow_unauthenticated_nodes}
-    api_idle_timeout: ${8:# Allowed values are 0-1440}
-    api_perf_logging_threshold: ${9:# Threshold to log request timing in portal_performance}
-    appviewx_compat_mode: ${10:# Export configuration in appviewx compatibility mode}
-    attach_ip_retry_interval: ${11:# Number of attach_ip_retry_interval}
-    attach_ip_retry_limit: ${12:# Number of attach_ip_retry_limit}
-    bm_use_ansible: ${13:# Use ansible for se creation in baremetal}
-    cleanup_expired_authtoken_timeout_period: ${14:# Period for auth token cleanup job}
-    cleanup_sessions_timeout_period: ${15:# Period for sessions cleanup job}
-    cloud_reconcile: ${16:# Enable/disable periodic reconcile for all the clouds}
-    cluster_ip_gratuitous_arp_period: ${17:# Period for cluster ip gratuitous arp job}
-    consistency_check_timeout_period: ${18:# Period for consistency check job}
-    crashed_se_reboot: ${19:# Number of crashed_se_reboot}
-    dead_se_detection_timer: ${20:# Number of dead_se_detection_timer}
-    dns_refresh_period: ${21:# Period for refresh pool and gslb dns job}
-    dummy: ${22:# Number of dummy}
-    enable_api_sharding: ${23:# This setting enables the controller leader to shard api requests to the followers (if any)}
-    enable_memory_balancer: ${24:# Enable/disable memory balancer}
-    fatal_error_lease_time: ${25:# Number of fatal_error_lease_time}
-    max_dead_se_in_grp: ${26:# Number of max_dead_se_in_grp}
-    max_pcap_per_tenant: ${27:# Maximum number of pcap files stored per tenant}
-    max_seq_attach_ip_failures: ${28:# Maximum number of consecutive attach ip failures that halts vs placement}
-    max_seq_vnic_failures: ${29:# Number of max_seq_vnic_failures}
-    persistence_key_rotate_period: ${30:# Period for rotate app persistence keys job}
-    portal_token: ${31:# Token used for uploading tech-support to portal}
-    process_locked_useraccounts_timeout_period: ${32:# Period for process locked user accounts job}
-    process_pki_profile_timeout_period: ${33:# Period for process pki profile job}
-    query_host_fail: ${34:# Number of query_host_fail}
-    safenet_hsm_version: ${35:# Version of the safenet package installed on the controller}
-    se_create_timeout: ${36:# Number of se_create_timeout}
-    se_failover_attempt_interval: ${37:# Interval between attempting failovers to an se}
-    se_from_marketplace: ${38:# This setting decides whether se is to be deployed from the cloud marketplace or to be created by the controller}
-    se_offline_del: ${39:# Number of se_offline_del}
-    se_vnic_cooldown: ${40:# Number of se_vnic_cooldown}
-    secure_channel_cleanup_timeout: ${41:# Period for secure channel cleanup job}
-    secure_channel_controller_token_timeout: ${42:# Number of secure_channel_controller_token_timeout}
-    secure_channel_se_token_timeout: ${43:# Number of secure_channel_se_token_timeout}
-    seupgrade_fabric_pool_size: ${44:# Pool size used for all fabric commands during se upgrade}
-    seupgrade_segroup_min_dead_timeout: ${45:# Time to wait before marking segroup upgrade as stuck}
-    ssl_certificate_expiry_warning_days: ${46:# Number of days for ssl certificate expiry warning}
-    unresponsive_se_reboot: ${47:# Number of unresponsive_se_reboot}
-    upgrade_dns_ttl: ${48:# Time to account for dns ttl during upgrade}
-    upgrade_lease_time: ${49:# Number of upgrade_lease_time}
-    url: ${50:# Avi controller URL of the object}
-    uuid: ${51:# Unique object identifier of the object}
-    vnic_op_fail_time: ${52:# Number of vnic_op_fail_time}
-    vs_apic_scaleout_timeout: ${53:# Time to wait for the scaled out se to become ready before marking the scaleout done, applies to apic configuration only}
-    vs_awaiting_se_timeout: ${54:# Number of vs_awaiting_se_timeout}
-    vs_key_rotate_period: ${55:# Period for rotate vs keys job}
-    vs_scaleout_ready_check_interval: ${56:# Interval for checking scaleout_ready status while controller is waiting for scaleoutready rpc from the service engine}
-    vs_se_attach_ip_fail: ${57:# Time to wait before marking attach ip operation on an se as failed}
-    vs_se_bootup_fail: ${58:# Number of vs_se_bootup_fail}
-    vs_se_create_fail: ${59:# Number of vs_se_create_fail}
-    vs_se_ping_fail: ${60:# Number of vs_se_ping_fail}
-    vs_se_vnic_fail: ${61:# Number of vs_se_vnic_fail}
-    vs_se_vnic_ip_fail: ${62:# Number of vs_se_vnic_ip_fail}
-    warmstart_se_reconnect_wait_time: ${63:# Number of warmstart_se_reconnect_wait_time}
-    warmstart_vs_resync_wait_time: ${64:# Timeout for warmstart vs resync}
-    controller: ${65:# IP address or hostname of the controller}
-    username: ${66:# Username used for accessing Avi controller}
-    password: ${67:# Password of Avi user in Avi controller}
-    tenant: ${68:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${69:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${70:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${71:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${72:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${73:# It disables avi session information to be cached as a fact}
+    allow_ip_forwarding: ${2:# Field introduced in 17}
+    allow_unauthenticated_apis: ${3:# Allow unauthenticated access for special apis}
+    allow_unauthenticated_nodes: ${4:# Boolean flag to set allow_unauthenticated_nodes}
+    api_context: ${5:# Avi API context that includes current session ID and CSRF Token}
+    api_idle_timeout: ${6:# Allowed values are 0-1440}
+    api_perf_logging_threshold: ${7:# Threshold to log request timing in portal_performance}
+    api_version: ${8:# Avi API version of to use for Avi API and objects}
+    appviewx_compat_mode: ${9:# Export configuration in appviewx compatibility mode}
+    attach_ip_retry_interval: ${10:# Number of attach_ip_retry_interval}
+    attach_ip_retry_limit: ${11:# Number of attach_ip_retry_limit}
+    avi_api_patch_op: ${12:# Patch operation to use when using avi_api_update_method as patch}
+    avi_api_update_method: ${13:# Default method for object update is HTTP PUT}
+    avi_credentials: ${14:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${15:# It disables avi session information to be cached as a fact}
+    bm_use_ansible: ${16:# Use ansible for se creation in baremetal}
+    cleanup_expired_authtoken_timeout_period: ${17:# Period for auth token cleanup job}
+    cleanup_sessions_timeout_period: ${18:# Period for sessions cleanup job}
+    cloud_reconcile: ${19:# Enable/disable periodic reconcile for all the clouds}
+    cluster_ip_gratuitous_arp_period: ${20:# Period for cluster ip gratuitous arp job}
+    consistency_check_timeout_period: ${21:# Period for consistency check job}
+    controller: ${22:# IP address or hostname of the controller}
+    crashed_se_reboot: ${23:# Number of crashed_se_reboot}
+    dead_se_detection_timer: ${24:# Number of dead_se_detection_timer}
+    dns_refresh_period: ${25:# Period for refresh pool and gslb dns job}
+    dummy: ${26:# Number of dummy}
+    enable_api_sharding: ${27:# This setting enables the controller leader to shard api requests to the followers (if any)}
+    enable_memory_balancer: ${28:# Enable/disable memory balancer}
+    fatal_error_lease_time: ${29:# Number of fatal_error_lease_time}
+    max_dead_se_in_grp: ${30:# Number of max_dead_se_in_grp}
+    max_pcap_per_tenant: ${31:# Maximum number of pcap files stored per tenant}
+    max_seq_attach_ip_failures: ${32:# Maximum number of consecutive attach ip failures that halts vs placement}
+    max_seq_vnic_failures: ${33:# Number of max_seq_vnic_failures}
+    password: ${34:# Password of Avi user in Avi controller}
+    persistence_key_rotate_period: ${35:# Period for rotate app persistence keys job}
+    portal_token: ${36:# Token used for uploading tech-support to portal}
+    process_locked_useraccounts_timeout_period: ${37:# Period for process locked user accounts job}
+    process_pki_profile_timeout_period: ${38:# Period for process pki profile job}
+    query_host_fail: ${39:# Number of query_host_fail}
+    safenet_hsm_version: ${40:# Version of the safenet package installed on the controller}
+    se_create_timeout: ${41:# Number of se_create_timeout}
+    se_failover_attempt_interval: ${42:# Interval between attempting failovers to an se}
+    se_from_marketplace: ${43:# This setting decides whether se is to be deployed from the cloud marketplace or to be created by the controller}
+    se_offline_del: ${44:# Number of se_offline_del}
+    se_vnic_cooldown: ${45:# Number of se_vnic_cooldown}
+    secure_channel_cleanup_timeout: ${46:# Period for secure channel cleanup job}
+    secure_channel_controller_token_timeout: ${47:# Number of secure_channel_controller_token_timeout}
+    secure_channel_se_token_timeout: ${48:# Number of secure_channel_se_token_timeout}
+    seupgrade_fabric_pool_size: ${49:# Pool size used for all fabric commands during se upgrade}
+    seupgrade_segroup_min_dead_timeout: ${50:# Time to wait before marking segroup upgrade as stuck}
+    ssl_certificate_expiry_warning_days: ${51:# Number of days for ssl certificate expiry warning}
+    state: ${52:# The state that should be applied on the entity}
+    tenant: ${53:# Name of tenant used for all Avi API calls and context of object}
+    tenant_uuid: ${54:# UUID of tenant used for all Avi API calls and context of object}
+    unresponsive_se_reboot: ${55:# Number of unresponsive_se_reboot}
+    upgrade_dns_ttl: ${56:# Time to account for dns ttl during upgrade}
+    upgrade_lease_time: ${57:# Number of upgrade_lease_time}
+    url: ${58:# Avi controller URL of the object}
+    username: ${59:# Username used for accessing Avi controller}
+    uuid: ${60:# Unique object identifier of the object}
+    vnic_op_fail_time: ${61:# Number of vnic_op_fail_time}
+    vs_apic_scaleout_timeout: ${62:# Time to wait for the scaled out se to become ready before marking the scaleout done, applies to apic configuration only}
+    vs_awaiting_se_timeout: ${63:# Number of vs_awaiting_se_timeout}
+    vs_key_rotate_period: ${64:# Period for rotate vs keys job}
+    vs_scaleout_ready_check_interval: ${65:# Interval for checking scaleout_ready status while controller is waiting for scaleoutready rpc from the service engine}
+    vs_se_attach_ip_fail: ${66:# Time to wait before marking attach ip operation on an se as failed}
+    vs_se_bootup_fail: ${67:# Number of vs_se_bootup_fail}
+    vs_se_create_fail: ${68:# Number of vs_se_create_fail}
+    vs_se_ping_fail: ${69:# Number of vs_se_ping_fail}
+    vs_se_vnic_fail: ${70:# Number of vs_se_vnic_fail}
+    vs_se_vnic_ip_fail: ${71:# Number of vs_se_vnic_ip_fail}
+    warmstart_se_reconnect_wait_time: ${72:# Number of warmstart_se_reconnect_wait_time}
+    warmstart_vs_resync_wait_time: ${73:# Timeout for warmstart vs resync}
   tags:
     - community
     - network

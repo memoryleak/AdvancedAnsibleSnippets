@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieve existing HTTPS Inspection section using section name or uid and layer name}
   check_point.mgmt.cp_mgmt_show_https_section:
-    name: ${2:# Object name}
+    details_level: ${2:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
     layer: ${3:# Layer that holds the Object}
-    details_level: ${4:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
-    wait_for_task: ${5:# Wait for the task to end}
-    wait_for_task_timeout: ${6:# How many minutes to wait until throwing a timeout error}
-    version: ${7:# Version of checkpoint}
+    name: ${4:# Object name}
+    version: ${5:# Version of checkpoint}
+    wait_for_task: ${6:# Wait for the task to end}
+    wait_for_task_timeout: ${7:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

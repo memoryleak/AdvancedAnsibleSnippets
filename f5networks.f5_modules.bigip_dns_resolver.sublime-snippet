@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage DNS resolvers on a BIG-IP}
   f5networks.f5_modules.bigip_dns_resolver:
-    name: ${2:# Specifies the name of the DNS resolver}
-    route_domain: ${3:# Specifies the route domain the resolver uses for outbound traffic}
-    cache_size: ${4:# Specifies the size of the internal DNS resolver cache}
-    answer_default_zones: ${5:# Specifies whether the system answers DNS queries for the default zones localhost, reverse 127}
-    randomize_query_case: ${6:# When C(yes), specifies the internal DNS resolver randomizes character case in domain name queries issued to the root DNS servers}
-    use_ipv4: ${7:# Specifies whether the system can use IPv4 to query backend nameservers}
-    use_ipv6: ${8:# Specifies whether the system can use IPv6 to query backend nameservers}
-    use_udp: ${9:# Specifies whether the system answers and issues UDP-formatted queries}
-    use_tcp: ${10:# Specifies whether the system answers and issues TCP-formatted queries}
-    state: ${11:# When C(present), ensures the resource exists}
-    partition: ${12:# Device partition to manage resources on}
-    provider: ${13:# A dict object containing connection details}
+    answer_default_zones: ${2:# Specifies whether the system answers DNS queries for the default zones localhost, reverse 127}
+    cache_size: ${3:# Specifies the size of the internal DNS resolver cache}
+    name: ${4:# Specifies the name of the DNS resolver}
+    partition: ${5:# Device partition to manage resources on}
+    provider: ${6:# A dict object containing connection details}
+    randomize_query_case: ${7:# When C(true), specifies the internal DNS resolver randomizes character case in domain name queries issued to the root DNS servers}
+    route_domain: ${8:# Specifies the route domain the resolver uses for outbound traffic}
+    state: ${9:# When C(present), ensures the resource exists}
+    use_ipv4: ${10:# Specifies whether the system can use IPv4 to query backend nameservers}
+    use_ipv6: ${11:# Specifies whether the system can use IPv6 to query backend nameservers}
+    use_tcp: ${12:# Specifies whether the system answers and issues TCP-formatted queries}
+    use_udp: ${13:# Specifies whether the system answers and issues UDP-formatted queries}
   tags:
     - f5networks
     - f5_modules

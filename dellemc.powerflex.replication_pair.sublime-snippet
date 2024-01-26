@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage replication pairs on Dell PowerFlex}
+  dellemc.powerflex.replication_pair:
+    hostname: ${2:# IP or FQDN of the PowerFlex host}
+    pair_id: ${3:# The ID of the replication pair}
+    pair_name: ${4:# The name of the replication pair}
+    pairs: ${5:# List of replication pairs to add to rcg}
+    password: ${6:# The password of the PowerFlex host}
+    pause: ${7:# Pause or resume the initial copy of replication pair}
+    port: ${8:# Port number through which communication happens with PowerFlex host}
+    rcg_id: ${9:# The ID of the replication consistency group}
+    rcg_name: ${10:# The name of the replication consistency group}
+    remote_peer: ${11:# Remote peer system}
+    state: ${12:# State of the replication pair}
+    timeout: ${13:# Time after which connection will get terminated}
+    username: ${14:# The username of the PowerFlex host}
+    validate_certs: ${15:# Boolean variable to specify whether or not to validate SSL certificate}
+  tags:
+    - dellemc
+    - powerflex
+    - replication_pair]]></content>
+  <tabTrigger>dellemc.powerflex.replication_pair</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage replication pairs on Dell PowerFlex</description>
+</snippet>

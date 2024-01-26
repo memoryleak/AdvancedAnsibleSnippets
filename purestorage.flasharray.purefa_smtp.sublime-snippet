@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure FlashArray SMTP settings}
   purestorage.flasharray.purefa_smtp:
-    state: ${2:# Set or delete SMTP configuration}
-    password: ${3:# The SMTP password}
-    user: ${4:# The SMTP username}
+    api_token: ${2:# FlashArray API token for admin privileged user}
+    fa_url: ${3:# FlashArray management IPv4 address or Hostname}
+    password: ${4:# The SMTP password}
     relay_host: ${5:# IPv4 or IPv6 address or FQDN}
     sender_domain: ${6:# Domain name}
-    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
-    api_token: ${8:# FlashArray API token for admin privileged user}
+    state: ${7:# Set or delete SMTP configuration}
+    user: ${8:# The SMTP username}
   tags:
     - purestorage
     - flasharray

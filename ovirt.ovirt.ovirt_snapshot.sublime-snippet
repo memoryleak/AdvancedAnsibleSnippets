@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module to manage Virtual Machine Snapshots in oVirt/RHV}
   ovirt.ovirt.ovirt_snapshot:
-    snapshot_id: ${2:# ID of the snapshot to manage}
-    vm_name: ${3:# Name of the Virtual Machine to manage}
-    vm_id: ${4:# ID of the Virtual Machine to manage}
-    state: ${5:# Should the Virtual Machine snapshot be restore/present/absent}
-    description: ${6:# Description of the snapshot}
-    disk_id: ${7:# Disk id which you want to upload or download}
-    disk_name: ${8:# Disk name which you want to upload or download}
-    download_image_path: ${9:# Path on a file system where snapshot should be downloaded}
-    upload_image_path: ${10:# Path to disk image, which should be uploaded}
-    use_memory: ${11:# If I(true) and C(state) is I(present) save memory of the Virtual Machine if it's running}
-    keep_days_old: ${12:# Number of days after which should snapshot be deleted}
-    disks: ${13:# List of disks which should be created with snapshot}
-    wait: ${14:# C(yes) if the module should wait for the entity to get into desired state}
-    fetch_nested: ${15:# If I(True) the module will fetch additional data from the API}
-    nested_attributes: ${16:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${17:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
-    timeout: ${18:# The amount of time in seconds the module should wait for the instance to get into desired state}
-    poll_interval: ${19:# Number of the seconds the module waits until another poll request on entity status is sent}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    description: ${3:# Description of the snapshot}
+    disk_id: ${4:# Disk id which you want to upload or download}
+    disk_name: ${5:# Disk name which you want to upload or download}
+    disks: ${6:# List of disks which should be created with snapshot}
+    download_image_path: ${7:# Path on a file system where snapshot should be downloaded}
+    fetch_nested: ${8:# If I(True) the module will fetch additional data from the API}
+    keep_days_old: ${9:# Number of days after which should snapshot be deleted}
+    nested_attributes: ${10:# Specifies list of the attributes which should be fetched from the API}
+    poll_interval: ${11:# Number of the seconds the module waits until another poll request on entity status is sent}
+    snapshot_id: ${12:# ID of the snapshot to manage}
+    state: ${13:# Should the Virtual Machine snapshot be restore/present/absent}
+    timeout: ${14:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    upload_image_path: ${15:# Path to disk image, which should be uploaded}
+    use_memory: ${16:# If I(true) and C(state) is I(present) save memory of the Virtual Machine if it's running}
+    vm_id: ${17:# ID of the Virtual Machine to manage}
+    vm_name: ${18:# Name of the Virtual Machine to manage}
+    wait: ${19:# C(yes) if the module should wait for the entity to get into desired state}
   tags:
     - ovirt
     - ovirt

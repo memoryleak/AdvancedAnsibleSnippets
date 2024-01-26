@@ -1,39 +1,39 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create or delete an AWS CloudFormation stack}
   amazon.aws.cloudformation:
-    stack_name: ${2:# Name of the CloudFormation stack}
-    disable_rollback: ${3:# If a stacks fails to form, rollback will remove the stack}
-    on_create_failure: ${4:# Action to take upon failure of stack creation}
-    create_timeout: ${5:# The amount of time (in minutes) that can pass before the stack status becomes CREATE_FAILED}
-    template_parameters: ${6:# A list of hashes of all the template variables for the stack}
-    state: ${7:# If I(state=present), stack will be created}
-    template: ${8:# The local path of the CloudFormation template}
-    notification_arns: ${9:# A comma separated list of Simple Notification Service (SNS) topic ARNs to publish stack related events}
-    stack_policy: ${10:# The path of the file containing the CloudFormation stack policy}
-    stack_policy_body: ${11:# The CloudFormation stack policy in JSON}
-    stack_policy_on_update_body: ${12:# the body of the cloudformation stack policy only applied during this update}
-    tags: ${13:# Dictionary of tags to associate with stack and its resources during stack creation}
-    template_url: ${14:# Location of file containing the template body}
-    create_changeset: ${15:# If stack already exists create a changeset instead of directly applying changes}
-    changeset_name: ${16:# Name given to the changeset when creating a changeset}
-    role_arn: ${17:# The role that AWS CloudFormation assumes to create the stack}
-    termination_protection: ${18:# Enable or disable termination protection on the stack}
-    template_body: ${19:# Template body}
-    events_limit: ${20:# Maximum number of CloudFormation events to fetch from a stack when creating or updating it}
-    backoff_delay: ${21:# Number of seconds to wait for the next retry}
-    backoff_max_delay: ${22:# Maximum amount of time to wait between retries}
-    backoff_retries: ${23:# Number of times to retry operation}
-    capabilities: ${24:# Specify capabilities that stack template contains}
-    access_key: ${25:# AWS access key ID}
-    secret_key: ${26:# AWS secret access key}
-    session_token: ${27:# AWS STS session token for use with temporary credentials}
-    profile: ${28:# A named AWS profile to use for authentication}
-    endpoint_url: ${29:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${30:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${31:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${32:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${33:# Use a C(botocore}
-    region: ${34:# The AWS region to use}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    backoff_delay: ${5:# Number of seconds to wait for the next retry}
+    backoff_max_delay: ${6:# Maximum amount of time to wait between retries}
+    backoff_retries: ${7:# Number of times to retry operation}
+    capabilities: ${8:# Specify capabilities that stack template contains}
+    changeset_name: ${9:# Name given to the changeset when creating a changeset}
+    create_changeset: ${10:# If stack already exists create a changeset instead of directly applying changes}
+    create_timeout: ${11:# The amount of time (in minutes) that can pass before the stack status becomes CREATE_FAILED}
+    debug_botocore_endpoint_logs: ${12:# Use a C(botocore}
+    disable_rollback: ${13:# If a stacks fails to form, rollback will remove the stack}
+    endpoint_url: ${14:# URL to connect to instead of the default AWS endpoints}
+    events_limit: ${15:# Maximum number of CloudFormation events to fetch from a stack when creating or updating it}
+    notification_arns: ${16:# A comma separated list of Simple Notification Service (SNS) topic ARNs to publish stack related events}
+    on_create_failure: ${17:# Action to take upon failure of stack creation}
+    profile: ${18:# A named AWS profile to use for authentication}
+    region: ${19:# The AWS region to use}
+    role_arn: ${20:# The role that AWS CloudFormation assumes to create the stack}
+    secret_key: ${21:# AWS secret access key}
+    session_token: ${22:# AWS STS session token for use with temporary credentials}
+    stack_name: ${23:# Name of the CloudFormation stack}
+    stack_policy: ${24:# The path of the file containing the CloudFormation stack policy}
+    stack_policy_body: ${25:# The CloudFormation stack policy in JSON}
+    stack_policy_on_update_body: ${26:# the body of the cloudformation stack policy only applied during this update}
+    state: ${27:# If I(state=present), stack will be created}
+    tags: ${28:# Dictionary of tags to associate with stack and its resources during stack creation}
+    template: ${29:# The local path of the CloudFormation template}
+    template_body: ${30:# Template body}
+    template_parameters: ${31:# A list of hashes of all the template variables for the stack}
+    template_url: ${32:# Location of file containing the template body}
+    termination_protection: ${33:# Enable or disable termination protection on the stack}
+    validate_certs: ${34:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - amazon
     - aws

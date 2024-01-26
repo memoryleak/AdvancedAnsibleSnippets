@@ -1,44 +1,44 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage objects in S3}
   amazon.aws.s3_object:
-    bucket: ${2:# Bucket name}
-    dest: ${3:# The destination file path when downloading an object/key when I(mode=get)}
-    encrypt: ${4:# Asks for server-side encryption of the objects when I(mode=put) or I(mode=copy)}
-    encryption_mode: ${5:# The encryption mode to use if I(encrypt=true)}
-    expiry: ${6:# Time limit (in seconds) for the URL generated and returned by S3/Walrus when performing a I(mode=put) or I(mode=geturl) operation}
-    headers: ${7:# Custom headers to use when I(mode=put) as a dictionary of key value pairs}
-    marker: ${8:# Specifies the key to start with when using list mode}
-    max_keys: ${9:# Max number of results to return when I(mode=list), set this if you want to retrieve fewer than the default 1000 keys}
-    metadata: ${10:# Metadata to use when I(mode=put) or I(mode=copy) as a dictionary of key value pairs}
-    mode: ${11:# Switches the module behaviour between}
-    object: ${12:# Keyname of the object inside the bucket}
-    sig_v4: ${13:# Forces the Boto SDK to use Signature Version 4}
-    permission: ${14:# This option lets the user set the canned permissions on the object/bucket that are created}
-    prefix: ${15:# Limits the response to keys that begin with the specified prefix for list mode}
-    version: ${16:# Version ID of the object inside the bucket}
-    overwrite: ${17:# Force overwrite either locally on the filesystem or remotely with the object/key}
-    retries: ${18:# On recoverable failure, how many times to retry before actually failing}
-    dualstack: ${19:# Enables Amazon S3 Dual-Stack Endpoints, allowing S3 communications using both IPv4 and IPv6}
-    ceph: ${20:# Enable API compatibility with Ceph RGW}
-    src: ${21:# The source file path when performing a C(put) operation}
-    content: ${22:# The content to C(put) into an object}
-    content_base64: ${23:# The base64-encoded binary data to C(put) into an object}
-    ignore_nonexistent_bucket: ${24:# Overrides initial bucket lookups in case bucket or IAM policies are restrictive}
-    encryption_kms_key_id: ${25:# KMS key id to use when encrypting objects using I(encrypting=aws:kms)}
-    copy_src: ${26:# The source details of the object to copy}
-    validate_bucket_name: ${27:# Whether the bucket name should be validated to conform to AWS S3 naming rules}
-    access_key: ${28:# AWS access key ID}
-    secret_key: ${29:# AWS secret access key}
-    session_token: ${30:# AWS STS session token for use with temporary credentials}
-    profile: ${31:# A named AWS profile to use for authentication}
-    endpoint_url: ${32:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${33:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${34:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${35:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${36:# Use a C(botocore}
-    region: ${37:# The AWS region to use}
-    tags: ${38:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${39:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    bucket: ${5:# Bucket name}
+    ceph: ${6:# Enable API compatibility with Ceph RGW}
+    content: ${7:# The content to C(put) into an object}
+    content_base64: ${8:# The base64-encoded binary data to C(put) into an object}
+    copy_src: ${9:# The source details of the object to copy}
+    debug_botocore_endpoint_logs: ${10:# Use a C(botocore}
+    dest: ${11:# The destination file path when downloading an object/key when I(mode=get)}
+    dualstack: ${12:# Enables Amazon S3 Dual-Stack Endpoints, allowing S3 communications using both IPv4 and IPv6}
+    encrypt: ${13:# Asks for server-side encryption of the objects when I(mode=put) or I(mode=copy)}
+    encryption_kms_key_id: ${14:# KMS key id to use when encrypting objects using I(encrypting=aws:kms)}
+    encryption_mode: ${15:# The encryption mode to use if I(encrypt=true)}
+    endpoint_url: ${16:# URL to connect to instead of the default AWS endpoints}
+    expiry: ${17:# Time limit (in seconds) for the URL generated and returned by S3/Walrus when performing a I(mode=put) or I(mode=geturl) operation}
+    headers: ${18:# Custom headers to use when I(mode=put) as a dictionary of key value pairs}
+    ignore_nonexistent_bucket: ${19:# Overrides initial bucket lookups in case bucket or IAM policies are restrictive}
+    marker: ${20:# Specifies the key to start with when using list mode}
+    max_keys: ${21:# Max number of results to return when I(mode=list), set this if you want to retrieve fewer than the default 1000 keys}
+    metadata: ${22:# Metadata to use when I(mode=put) or I(mode=copy) as a dictionary of key value pairs}
+    mode: ${23:# Switches the module behaviour between}
+    object: ${24:# Key name of the object inside the bucket}
+    overwrite: ${25:# Force overwrite either locally on the filesystem or remotely with the object/key}
+    permission: ${26:# This option lets the user set the canned permissions on the object/bucket that are created}
+    prefix: ${27:# Limits the response to keys that begin with the specified prefix for list mode}
+    profile: ${28:# A named AWS profile to use for authentication}
+    purge_tags: ${29:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${30:# The AWS region to use}
+    retries: ${31:# On recoverable failure, how many times to retry before actually failing}
+    secret_key: ${32:# AWS secret access key}
+    session_token: ${33:# AWS STS session token for use with temporary credentials}
+    sig_v4: ${34:# Forces the Boto SDK to use Signature Version 4}
+    src: ${35:# The source file path when performing a C(put) operation}
+    tags: ${36:# A dictionary representing the tags to be applied to the resource}
+    validate_bucket_name: ${37:# Whether the bucket name should be validated to conform to AWS S3 naming rules}
+    validate_certs: ${38:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    version: ${39:# Version ID of the object inside the bucket}
   tags:
     - amazon
     - aws

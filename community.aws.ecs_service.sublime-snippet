@@ -1,42 +1,45 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, terminate, start or stop a service in ECS}
   community.aws.ecs_service:
-    state: ${2:# The desired state of the service}
-    name: ${3:# The name of the service}
-    cluster: ${4:# The name of the cluster in which the service exists}
-    task_definition: ${5:# The task definition the service will run}
-    load_balancers: ${6:# The list of ELBs defined for this service}
-    desired_count: ${7:# The count of how many instances of the service}
-    client_token: ${8:# Unique, case-sensitive identifier you provide to ensure the idempotency of the request}
-    role: ${9:# The name or full Amazon Resource Name (ARN) of the IAM role that allows your Amazon ECS container agent to make calls to your load balancer on your behalf}
-    delay: ${10:# The time to wait before checking that the service is available}
-    repeat: ${11:# The number of times to check that the service is available}
-    force_new_deployment: ${12:# Force deployment of service even if there are no changes}
-    deployment_controller: ${13:# The deployment controller to use for the service}
-    deployment_configuration: ${14:# Optional parameters that control the deployment_configuration}
-    placement_constraints: ${15:# The placement constraints for the tasks in the service}
-    placement_strategy: ${16:# The placement strategy objects to use for tasks in your service}
-    force_deletion: ${17:# Forcibly delete the service}
-    network_configuration: ${18:# Network configuration of the service}
-    launch_type: ${19:# The launch type on which to run your service}
-    capacity_provider_strategy: ${20:# The capacity provider strategy to use with your service}
-    platform_version: ${21:# Numeric part of platform version or LATEST}
-    health_check_grace_period_seconds: ${22:# Seconds to wait before health checking the freshly added/updated services}
-    service_registries: ${23:# Describes service discovery registries this service will register with}
-    scheduling_strategy: ${24:# The scheduling strategy}
-    wait: ${25:# Whether or not to wait for the service to be inactive}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    capacity_provider_strategy: ${5:# The capacity provider strategy to use with your service}
+    client_token: ${6:# Unique, case-sensitive identifier you provide to ensure the idempotency of the request}
+    cluster: ${7:# The name of the cluster in which the service exists}
+    debug_botocore_endpoint_logs: ${8:# Use a C(botocore}
+    delay: ${9:# The time to wait before checking that the service is available}
+    deployment_configuration: ${10:# Optional parameters that control the deployment_configuration}
+    deployment_controller: ${11:# The deployment controller to use for the service}
+    desired_count: ${12:# The count of how many instances of the service}
+    enable_execute_command: ${13:# Whether or not to enable the execute command functionality for the containers in the ECS task}
+    endpoint_url: ${14:# URL to connect to instead of the default AWS endpoints}
+    force_deletion: ${15:# Forcibly delete the service}
+    force_new_deployment: ${16:# Force deployment of service even if there are no changes}
+    health_check_grace_period_seconds: ${17:# Seconds to wait before health checking the freshly added/updated services}
+    launch_type: ${18:# The launch type on which to run your service}
+    load_balancers: ${19:# The list of ELBs defined for this service}
+    name: ${20:# The name of the service}
+    network_configuration: ${21:# Network configuration of the service}
+    placement_constraints: ${22:# The placement constraints for the tasks in the service}
+    placement_strategy: ${23:# The placement strategy objects to use for tasks in your service}
+    platform_version: ${24:# Numeric part of platform version or LATEST}
+    profile: ${25:# A named AWS profile to use for authentication}
     propagate_tags: ${26:# Propagate tags from ECS task defintition or ECS service to ECS task}
-    tags: ${27:# A dictionary of tags to add or remove from the resource}
-    access_key: ${28:# AWS access key ID}
-    secret_key: ${29:# AWS secret access key}
-    session_token: ${30:# AWS STS session token for use with temporary credentials}
-    profile: ${31:# A named AWS profile to use for authentication}
-    endpoint_url: ${32:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${33:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${34:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${35:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${36:# Use a C(botocore}
-    region: ${37:# The AWS region to use}
+    purge_placement_constraints: ${27:# Toggle overwriting of existing placement constraints}
+    purge_placement_strategy: ${28:# Toggle overwriting of existing placement strategy}
+    region: ${29:# The AWS region to use}
+    repeat: ${30:# The number of times to check that the service is available}
+    role: ${31:# The name or full Amazon Resource Name (ARN) of the IAM role that allows your Amazon ECS container agent to make calls to your load balancer on your behalf}
+    scheduling_strategy: ${32:# The scheduling strategy}
+    secret_key: ${33:# AWS secret access key}
+    service_registries: ${34:# Describes service discovery registries this service will register with}
+    session_token: ${35:# AWS STS session token for use with temporary credentials}
+    state: ${36:# The desired state of the service}
+    tags: ${37:# A dictionary of tags to add or remove from the resource}
+    task_definition: ${38:# The task definition the service will run}
+    validate_certs: ${39:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${40:# Whether or not to wait for the service to be inactive}
   tags:
     - community
     - aws

@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage consistency groups on Unity storage system}
   dellemc.unity.consistencygroup:
-    cg_name: ${2:# The name of the consistency group}
-    cg_id: ${3:# The ID of the consistency group}
-    volumes: ${4:# This is a list of volumes}
-    vol_state: ${5:# String variable, describes the state of volumes inside consistency group}
-    new_cg_name: ${6:# The new name of the consistency group, used in rename operation}
-    description: ${7:# Description of the consistency group}
-    snap_schedule: ${8:# Snapshot schedule assigned to the consistency group}
-    tiering_policy: ${9:# Tiering policy choices for how the storage resource data will be distributed among the tiers available in the pool}
-    hosts: ${10:# This is a list of hosts}
-    mapping_state: ${11:# String variable, describes the state of hosts inside the consistency group}
-    replication_params: ${12:# Settings required for enabling replication}
-    replication_state: ${13:# State of the replication}
-    state: ${14:# Define whether the consistency group should exist or not}
+    cg_id: ${2:# The ID of the consistency group}
+    cg_name: ${3:# The name of the consistency group}
+    description: ${4:# Description of the consistency group}
+    hosts: ${5:# This is a list of hosts}
+    mapping_state: ${6:# String variable, describes the state of hosts inside the consistency group}
+    new_cg_name: ${7:# The new name of the consistency group, used in rename operation}
+    password: ${8:# The password of the Unity management server}
+    port: ${9:# Port number through which communication happens with Unity management server}
+    replication_params: ${10:# Settings required for enabling replication}
+    replication_state: ${11:# State of the replication}
+    snap_schedule: ${12:# Snapshot schedule assigned to the consistency group}
+    state: ${13:# Define whether the consistency group should exist or not}
+    tiering_policy: ${14:# Tiering policy choices for how the storage resource data will be distributed among the tiers available in the pool}
     unispherehost: ${15:# IP or FQDN of the Unity management server}
     username: ${16:# The username of the Unity management server}
-    password: ${17:# The password of the Unity management server}
-    validate_certs: ${18:# Boolean variable to specify whether or not to validate SSL certificate}
-    port: ${19:# Port number through which communication happens with Unity management server}
+    validate_certs: ${17:# Boolean variable to specify whether or not to validate SSL certificate}
+    vol_state: ${18:# String variable, describes the state of volumes inside consistency group}
+    volumes: ${19:# This is a list of volumes}
   tags:
     - dellemc
     - unity

@@ -1,38 +1,38 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of SSLKeyAndCertificate Avi RESTful Object}
   community.network.avi_sslkeyandcertificate:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
     avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    ca_certs: ${5:# Ca certificates in certificate chain}
-    certificate: ${6:# Sslcertificate settings for sslkeyandcertificate}
-    certificate_base64: ${7:# States if the certificate is base64 encoded}
-    certificate_management_profile_ref: ${8:# It is a reference to an object of type certificatemanagementprofile}
-    created_by: ${9:# Creator name}
-    dynamic_params: ${10:# Dynamic parameters needed for certificate management profile}
-    enckey_base64: ${11:# Encrypted private key corresponding to the private key (e}
-    enckey_name: ${12:# Name of the encrypted private key (e}
-    format: ${13:# Format of the key/certificate file}
-    hardwaresecuritymodulegroup_ref: ${14:# It is a reference to an object of type hardwaresecuritymodulegroup}
-    key: ${15:# Private key}
-    key_base64: ${16:# States if the private key is base64 encoded}
-    key_params: ${17:# Sslkeyparams settings for sslkeyandcertificate}
-    key_passphrase: ${18:# Passphrase used to encrypt the private key}
-    name: ${19:# Name of the object}
-    status: ${20:# Enum options - ssl_certificate_finished, ssl_certificate_pending}
-    tenant_ref: ${21:# It is a reference to an object of type tenant}
-    type: ${22:# Enum options - ssl_certificate_type_virtualservice, ssl_certificate_type_system, ssl_certificate_type_ca}
-    url: ${23:# Avi controller URL of the object}
-    uuid: ${24:# Unique object identifier of the object}
-    controller: ${25:# IP address or hostname of the controller}
-    username: ${26:# Username used for accessing Avi controller}
-    password: ${27:# Password of Avi user in Avi controller}
-    tenant: ${28:# Name of tenant used for all Avi API calls and context of object}
+    avi_api_update_method: ${5:# Default method for object update is HTTP PUT}
+    avi_credentials: ${6:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${7:# It disables avi session information to be cached as a fact}
+    ca_certs: ${8:# Ca certificates in certificate chain}
+    certificate: ${9:# Sslcertificate settings for sslkeyandcertificate}
+    certificate_base64: ${10:# States if the certificate is base64 encoded}
+    certificate_management_profile_ref: ${11:# It is a reference to an object of type certificatemanagementprofile}
+    controller: ${12:# IP address or hostname of the controller}
+    created_by: ${13:# Creator name}
+    dynamic_params: ${14:# Dynamic parameters needed for certificate management profile}
+    enckey_base64: ${15:# Encrypted private key corresponding to the private key (e}
+    enckey_name: ${16:# Name of the encrypted private key (e}
+    format: ${17:# Format of the key/certificate file}
+    hardwaresecuritymodulegroup_ref: ${18:# It is a reference to an object of type hardwaresecuritymodulegroup}
+    key: ${19:# Private key}
+    key_base64: ${20:# States if the private key is base64 encoded}
+    key_params: ${21:# Sslkeyparams settings for sslkeyandcertificate}
+    key_passphrase: ${22:# Passphrase used to encrypt the private key}
+    name: ${23:# Name of the object}
+    password: ${24:# Password of Avi user in Avi controller}
+    state: ${25:# The state that should be applied on the entity}
+    status: ${26:# Enum options - ssl_certificate_finished, ssl_certificate_pending}
+    tenant: ${27:# Name of tenant used for all Avi API calls and context of object}
+    tenant_ref: ${28:# It is a reference to an object of type tenant}
     tenant_uuid: ${29:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${30:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${31:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${32:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${33:# It disables avi session information to be cached as a fact}
+    type: ${30:# Enum options - ssl_certificate_type_virtualservice, ssl_certificate_type_system, ssl_certificate_type_ca}
+    url: ${31:# Avi controller URL of the object}
+    username: ${32:# Username used for accessing Avi controller}
+    uuid: ${33:# Unique object identifier of the object}
   tags:
     - community
     - network

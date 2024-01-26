@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp E-Series Web Services Proxy manage storage arrays}
   netapp_eseries.santricity.netapp_e_storage_system:
-    api_username: ${2:# The username to authenticate with the SANtricity WebServices Proxy or embedded REST API}
-    api_password: ${3:# The password to authenticate with the SANtricity WebServices Proxy or embedded REST API}
-    api_url: ${4:# The url to the SANtricity WebServices Proxy or embedded REST API}
-    validate_certs: ${5:# Should https certificates be validated?}
-    ssid: ${6:# The ID of the array to manage}
-    state: ${7:# Whether the specified array should be configured on the Web Services Proxy or not}
+    api_password: ${2:# The password to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    api_url: ${3:# The url to the SANtricity WebServices Proxy or embedded REST API}
+    api_username: ${4:# The username to authenticate with the SANtricity WebServices Proxy or embedded REST API}
+    array_password: ${5:# The management password of the array to manage, if set}
+    array_status_timeout_sec: ${6:# Array status timeout measured in seconds}
+    array_wwn: ${7:# The WWN of the array to manage}
     controller_addresses: ${8:# The list addresses for the out-of-band management adapter or the agent host}
-    array_wwn: ${9:# The WWN of the array to manage}
-    array_password: ${10:# The management password of the array to manage, if set}
-    enable_trace: ${11:# Enable trace logging for SYMbol calls to the storage system}
-    meta_tags: ${12:# Optional meta tags to associate to this storage system}
-    array_status_timeout_sec: ${13:# Array status timeout measured in seconds}
+    enable_trace: ${9:# Enable trace logging for SYMbol calls to the storage system}
+    meta_tags: ${10:# Optional meta tags to associate to this storage system}
+    ssid: ${11:# The ID of the array to manage}
+    state: ${12:# Whether the specified array should be configured on the Web Services Proxy or not}
+    validate_certs: ${13:# Should https certificates be validated?}
   tags:
     - netapp_eseries
     - santricity

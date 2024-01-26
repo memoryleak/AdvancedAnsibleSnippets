@@ -1,35 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure subnets}
   azure.azcollection.azure_rm_subnet:
-    resource_group: ${2:# Name of resource group}
-    name: ${3:# Name of the subnet}
-    address_prefix_cidr: ${4:# CIDR defining the IPv4 address space of the subnet}
-    address_prefixes_cidr: ${5:# CIDR defining the IPv4 and IPv6 address space of the subnet}
-    security_group: ${6:# Existing security group with which to associate the subnet}
-    state: ${7:# Assert the state of the subnet}
-    virtual_network_name: ${8:# Name of an existing virtual network with which the subnet is or will be associated}
-    route_table: ${9:# The reference of the RouteTable resource}
-    service_endpoints: ${10:# An array of service endpoints}
-    private_endpoint_network_policies: ${11:# C(Enabled) or C(Disabled) apply network policies on private endpoints in the subnet}
-    private_link_service_network_policies: ${12:# C(Enabled) or C(Disabled) apply network policies on private link service in the subnet}
-    delegations: ${13:# An array of delegations}
-    nat_gateway: ${14:# Existing NAT Gateway with which to associate the subnet}
-    ad_user: ${15:# Active Directory username}
+    ad_user: ${2:# Active Directory username}
+    address_prefix_cidr: ${3:# CIDR defining the IPv4 address space of the subnet}
+    address_prefixes_cidr: ${4:# CIDR defining the IPv4 and IPv6 address space of the subnet}
+    adfs_authority_url: ${5:# Azure AD authority url}
+    api_profile: ${6:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${7:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    delegations: ${11:# An array of delegations}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    name: ${14:# Name of the subnet}
+    nat_gateway: ${15:# Existing NAT Gateway with which to associate the subnet}
     password: ${16:# Active Directory user password}
-    profile: ${17:# Security profile found in ~/}
-    subscription_id: ${18:# Your Azure subscription Id}
-    client_id: ${19:# Azure client ID}
-    secret: ${20:# Azure client secret}
-    tenant: ${21:# Azure tenant ID}
-    cloud_environment: ${22:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${23:# Azure AD authority url}
-    cert_validation_mode: ${24:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${25:# Controls the source of the credentials to use for authentication}
-    api_profile: ${26:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${27:# Parent argument}
-    log_mode: ${28:# Parent argument}
-    x509_certificate_path: ${29:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${30:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    private_endpoint_network_policies: ${17:# C(Enabled) or C(Disabled) apply network policies on private endpoints in the subnet}
+    private_link_service_network_policies: ${18:# C(Enabled) or C(Disabled) apply network policies on private link service in the subnet}
+    profile: ${19:# Security profile found in ~/}
+    resource_group: ${20:# Name of resource group}
+    route_table: ${21:# The reference of the RouteTable resource}
+    secret: ${22:# Azure client secret}
+    security_group: ${23:# Existing security group with which to associate the subnet}
+    service_endpoints: ${24:# An array of service endpoints}
+    state: ${25:# Assert the state of the subnet}
+    subscription_id: ${26:# Your Azure subscription Id}
+    tenant: ${27:# Azure tenant ID}
+    thumbprint: ${28:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    virtual_network_name: ${29:# Name of an existing virtual network with which the subnet is or will be associated}
+    x509_certificate_path: ${30:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

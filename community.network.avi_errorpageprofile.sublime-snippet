@@ -1,26 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of ErrorPageProfile Avi RESTful Object}
   community.network.avi_errorpageprofile:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
-    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    app_name: ${5:# Name of the virtual service which generated the error page}
-    company_name: ${6:# Name of the company to show in error page}
-    error_pages: ${7:# Defined error pages for http status codes}
-    host_name: ${8:# Fully qualified domain name for which the error page is generated}
-    name: ${9:# Field introduced in 17}
-    tenant_ref: ${10:# It is a reference to an object of type tenant}
-    url: ${11:# Avi controller URL of the object}
-    uuid: ${12:# Field introduced in 17}
-    controller: ${13:# IP address or hostname of the controller}
-    username: ${14:# Username used for accessing Avi controller}
-    password: ${15:# Password of Avi user in Avi controller}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
+    app_name: ${4:# Name of the virtual service which generated the error page}
+    avi_api_patch_op: ${5:# Patch operation to use when using avi_api_update_method as patch}
+    avi_api_update_method: ${6:# Default method for object update is HTTP PUT}
+    avi_credentials: ${7:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${8:# It disables avi session information to be cached as a fact}
+    company_name: ${9:# Name of the company to show in error page}
+    controller: ${10:# IP address or hostname of the controller}
+    error_pages: ${11:# Defined error pages for http status codes}
+    host_name: ${12:# Fully qualified domain name for which the error page is generated}
+    name: ${13:# Field introduced in 17}
+    password: ${14:# Password of Avi user in Avi controller}
+    state: ${15:# The state that should be applied on the entity}
     tenant: ${16:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${17:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${18:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${19:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${20:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${21:# It disables avi session information to be cached as a fact}
+    tenant_ref: ${17:# It is a reference to an object of type tenant}
+    tenant_uuid: ${18:# UUID of tenant used for all Avi API calls and context of object}
+    url: ${19:# Avi controller URL of the object}
+    username: ${20:# Username used for accessing Avi controller}
+    uuid: ${21:# Field introduced in 17}
   tags:
     - community
     - network

@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage tunnels on a BIG-IP}
   f5networks.f5_modules.bigip_tunnel:
-    name: ${2:# Specifies the name of the tunnel}
+    auto_last_hop: ${2:# Allows you to configure auto last hop on a per-tunnel basis}
     description: ${3:# Description of the tunnel}
-    profile: ${4:# Specifies the profile to associate with the tunnel for handling traffic}
-    key: ${5:# When applied to a GRE tunnel, this value specifies an optional field in the GRE header, used to authenticate the source of the packet}
-    local_address: ${6:# Specifies the IP address of the local endpoint of the tunnel}
-    remote_address: ${7:# Specifies the IP address of the remote endpoint of the tunnel}
-    secondary_address: ${8:# Specifies a non-floating IP address for the tunnel, to be used with host-initiated traffic}
-    mtu: ${9:# Specifies the maximum transmission unit (MTU) of the tunnel}
-    use_pmtu: ${10:# Enables or disables the tunnel to use the PMTU (Path MTU) information provided by ICMP NeedFrag error messages}
-    tos: ${11:# Specifies the Type of Service (TOS) value to insert in the encapsulating header of transmitted packets}
-    auto_last_hop: ${12:# Allows you to configure auto last hop on a per-tunnel basis}
-    traffic_group: ${13:# Specifies the traffic group to associate with the tunnel}
-    mode: ${14:# Specifies how the tunnel carries traffic}
-    transparent: ${15:# Specifies that the tunnel operates in transparent mode}
-    partition: ${16:# Device partition to manage resources on}
-    state: ${17:# When C(present), ensures that the tunnel exists}
-    provider: ${18:# A dict object containing connection details}
+    key: ${4:# When applied to a GRE tunnel, this value specifies an optional field in the GRE header, used to authenticate the source of the packet}
+    local_address: ${5:# Specifies the IP address of the local endpoint of the tunnel}
+    mode: ${6:# Specifies how the tunnel carries traffic}
+    mtu: ${7:# Specifies the maximum transmission unit (MTU) of the tunnel}
+    name: ${8:# Specifies the name of the tunnel}
+    partition: ${9:# Device partition to manage resources on}
+    profile: ${10:# Specifies the profile to associate with the tunnel for handling traffic}
+    provider: ${11:# A dict object containing connection details}
+    remote_address: ${12:# Specifies the IP address of the remote endpoint of the tunnel}
+    secondary_address: ${13:# Specifies a non-floating IP address for the tunnel, to be used with host-initiated traffic}
+    state: ${14:# When C(present), ensures that the tunnel exists}
+    tos: ${15:# Specifies the Type of Service (TOS) value to insert in the encapsulating header of transmitted packets}
+    traffic_group: ${16:# Specifies the traffic group to associate with the tunnel}
+    transparent: ${17:# Specifies that the tunnel operates in transparent mode}
+    use_pmtu: ${18:# Enables or disables the tunnel to use the PMTU (Path MTU) information provided by ICMP NeedFrag error messages}
   tags:
     - f5networks
     - f5_modules

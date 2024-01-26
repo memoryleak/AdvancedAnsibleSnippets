@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage volumes on Pure Storage FlashArrays}
   purestorage.flasharray.purefa_volume:
-    name: ${2:# The name of the volume}
-    target: ${3:# The name of the target volume, if copying}
-    state: ${4:# Define whether the volume should exist or not}
-    eradicate: ${5:# Define whether to eradicate the volume on delete or leave in trash}
-    overwrite: ${6:# Define whether to overwrite a target volume if it already exisits}
-    size: ${7:# Volume size in M, G, T or P units}
-    count: ${8:# Number of volumes to be created in a multiple volume creation}
-    start: ${9:# Number at which to start the multiple volume creation index}
-    digits: ${10:# Number of digits to use for multiple volume count}
-    suffix: ${11:# Suffix string, if required, for multiple volume create}
-    bw_qos: ${12:# Bandwidth limit for volume in M or G units}
-    iops_qos: ${13:# IOPs limit for volume - use value or K or M K will mean 1000 M will mean 1000000 To clear an existing IOPs setting use 0 (zero)}
-    move: ${14:# Move a volume in and out of a pod or vgroup}
-    rename: ${15:# Value to rename the specified volume to}
-    pgroup: ${16:# Name of exisitng, not deleted, protection group to add volume to}
-    priority_operator: ${17:# DMM Priority Adjustment operator}
-    priority_value: ${18:# DMM Priority Adjustment value}
-    with_default_protection: ${19:# Whether to add the default container protection groups to those specified in I(add_to_pgs) as the inital protection of a new volume}
-    add_to_pgs: ${20:# A new volume will be added to the specified protection groups on creation}
-    promotion_state: ${21:# Promote or demote the volume so that the volume starts or stops accepting write requests}
-    fa_url: ${22:# FlashArray management IPv4 address or Hostname}
-    api_token: ${23:# FlashArray API token for admin privileged user}
+    add_to_pgs: ${2:# A new volume will be added to the specified protection groups on creation}
+    api_token: ${3:# FlashArray API token for admin privileged user}
+    bw_qos: ${4:# Bandwidth limit for volume in M or G units}
+    count: ${5:# Number of volumes to be created in a multiple volume creation}
+    digits: ${6:# Number of digits to use for multiple volume count}
+    eradicate: ${7:# Define whether to eradicate the volume on delete or leave in trash}
+    fa_url: ${8:# FlashArray management IPv4 address or Hostname}
+    iops_qos: ${9:# IOPs limit for volume - use value or K or M K will mean 1000 M will mean 1000000 To clear an existing IOPs setting use 0 (zero)}
+    move: ${10:# Move a volume in and out of a pod or vgroup}
+    name: ${11:# The name of the volume}
+    overwrite: ${12:# Define whether to overwrite a target volume if it already exisits}
+    pgroup: ${13:# Name of exisitng, not deleted, protection group to add volume to}
+    priority_operator: ${14:# DMM Priority Adjustment operator}
+    priority_value: ${15:# DMM Priority Adjustment value}
+    promotion_state: ${16:# Promote or demote the volume so that the volume starts or stops accepting write requests}
+    rename: ${17:# Value to rename the specified volume to}
+    size: ${18:# Volume size in M, G, T or P units}
+    start: ${19:# Number at which to start the multiple volume creation index}
+    state: ${20:# Define whether the volume should exist or not}
+    suffix: ${21:# Suffix string, if required, for multiple volume create}
+    target: ${22:# The name of the target volume, if copying}
+    with_default_protection: ${23:# Whether to add the default container protection groups to those specified in I(add_to_pgs) as the inital protection of a new volume}
   tags:
     - purestorage
     - flasharray

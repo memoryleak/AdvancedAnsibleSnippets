@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages external LTM monitors on a BIG-IP}
   f5networks.f5_modules.bigip_monitor_external:
-    name: ${2:# Specifies the name of the monitor}
+    arguments: ${2:# Specifies any command-line arguments the script requires}
     description: ${3:# The description of the monitor}
-    parent: ${4:# The parent template of this monitor template}
-    arguments: ${5:# Specifies any command-line arguments the script requires}
+    external_program: ${4:# Specifies the name of the file for the monitor to use}
+    interval: ${5:# The interval specifying how frequently the monitor instance of this template will run}
     ip: ${6:# IP address part of the IP/port definition}
-    port: ${7:# Port address part of the IP/port definition}
-    external_program: ${8:# Specifies the name of the file for the monitor to use}
-    interval: ${9:# The interval specifying how frequently the monitor instance of this template will run}
-    timeout: ${10:# The number of seconds in which the node or service must respond to the monitor request}
-    variables: ${11:# Specifies any variables the script requires}
-    partition: ${12:# Device partition to manage resources on}
-    state: ${13:# When C(present), ensures the monitor exists}
-    provider: ${14:# A dict object containing connection details}
+    name: ${7:# Specifies the name of the monitor}
+    parent: ${8:# The parent template of this monitor template}
+    partition: ${9:# Device partition to manage resources on}
+    port: ${10:# Port address part of the IP/port definition}
+    provider: ${11:# A dict object containing connection details}
+    state: ${12:# When C(present), ensures the monitor exists}
+    timeout: ${13:# The number of seconds in which the node or service must respond to the monitor request}
+    variables: ${14:# Specifies any variables the script requires}
   tags:
     - f5networks
     - f5_modules

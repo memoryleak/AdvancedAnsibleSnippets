@@ -1,15 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure Infoblox NIOS network object}
   infoblox.nios_modules.nios_network:
-    network: ${2:# Specifies the network to add or remove from the system}
-    network_view: ${3:# Configures the name of the network view to associate with this configured instance}
-    options: ${4:# Configures the set of DHCP options to be included as part of the configured network instance}
-    template: ${5:# If set on creation, the network is created according to the values specified in the selected template}
-    extattrs: ${6:# Allows for the configuration of Extensible Attributes on the instance of the object}
-    comment: ${7:# Configures a text string comment to be associated with the instance of this object}
-    container: ${8:# If set to true it'll create the network container to be added or removed from the system}
-    state: ${9:# Configures the intended state of the instance of the object on the NIOS server}
-    provider: ${10:# A dict object containing connection details}
+    comment: ${2:# Configures a text string comment to be associated with the instance of this object}
+    container: ${3:# If set to true it'll create the network container to be added or removed from the system}
+    extattrs: ${4:# Allows for the configuration of Extensible Attributes on the instance of the object}
+    members: ${5:# Configures the Nios Menber assignment for the configured network instance}
+    network: ${6:# Specifies the network to add or remove from the system}
+    network_view: ${7:# Configures the name of the network view to associate with this configured instance}
+    options: ${8:# Configures the set of DHCP options to be included as part of the configured network instance}
+    provider: ${9:# A dict object containing connection details}
+    state: ${10:# Configures the intended state of the instance of the object on the NIOS server}
+    template: ${11:# If set on creation, the network is created according to the values specified in the selected template}
   tags:
     - infoblox
     - nios_modules

@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage hosts on Pure Storage FlashArrays}
   purestorage.flasharray.purefa_host:
-    name: ${2:# The name of the host}
-    protocol: ${3:# Defines the host connection protocol for volumes}
-    rename: ${4:# The name to rename to}
-    state: ${5:# Define whether the host should exist or not}
-    wwns: ${6:# List of wwns of the host}
-    iqn: ${7:# List of IQNs of the host}
-    nqn: ${8:# List of NQNs of the host}
-    volume: ${9:# Volume name to map to the host}
-    lun: ${10:# LUN ID to assign to volume for host}
-    count: ${11:# Number of hosts to be created in a multiple host creation}
-    start: ${12:# Number at which to start the multiple host creation index}
-    digits: ${13:# Number of digits to use for multiple host count}
-    suffix: ${14:# Suffix string, if required, for multiple host create}
-    personality: ${15:# Define which operating system the host is}
-    preferred_array: ${16:# List of preferred arrays in an ActiveCluster environment}
-    target_user: ${17:# Sets the target user name for CHAP authentication}
-    target_password: ${18:# Sets the target password for CHAP authentication}
-    host_user: ${19:# Sets the host user name for CHAP authentication}
-    host_password: ${20:# Sets the host password for CHAP authentication}
+    api_token: ${2:# FlashArray API token for admin privileged user}
+    count: ${3:# Number of hosts to be created in a multiple host creation}
+    digits: ${4:# Number of digits to use for multiple host count}
+    fa_url: ${5:# FlashArray management IPv4 address or Hostname}
+    host_password: ${6:# Sets the host password for CHAP authentication}
+    host_user: ${7:# Sets the host user name for CHAP authentication}
+    iqn: ${8:# List of IQNs of the host}
+    lun: ${9:# LUN ID to assign to volume for host}
+    name: ${10:# The name of the host}
+    nqn: ${11:# List of NQNs of the host}
+    personality: ${12:# Define which operating system the host is}
+    preferred_array: ${13:# List of preferred arrays in an ActiveCluster environment}
+    protocol: ${14:# Defines the host connection protocol for volumes}
+    rename: ${15:# The name to rename to}
+    start: ${16:# Number at which to start the multiple host creation index}
+    state: ${17:# Define whether the host should exist or not}
+    suffix: ${18:# Suffix string, if required, for multiple host create}
+    target_password: ${19:# Sets the target password for CHAP authentication}
+    target_user: ${20:# Sets the target user name for CHAP authentication}
     vlan: ${21:# The VLAN ID that the host is associated with}
-    fa_url: ${22:# FlashArray management IPv4 address or Hostname}
-    api_token: ${23:# FlashArray API token for admin privileged user}
+    volume: ${22:# Volume name to map to the host}
+    wwns: ${23:# List of wwns of the host}
   tags:
     - purestorage
     - flasharray

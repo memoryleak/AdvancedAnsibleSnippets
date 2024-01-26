@@ -1,31 +1,32 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP ForwardingRule}
   google.cloud.gcp_compute_forwarding_rule:
-    state: ${2:# Whether the given object should exist in GCP}
-    is_mirroring_collector: ${3:# Indicates whether or not this load balancer can be used as a collector for packet mirroring}
-    description: ${4:# An optional description of this resource}
-    ip_address: ${5:# The IP address that this forwarding rule is serving on behalf of}
-    ip_protocol: ${6:# The IP protocol to which this rule applies}
-    backend_service: ${7:# A BackendService to receive the matched traffic}
-    load_balancing_scheme: ${8:# This signifies what the ForwardingRule will be used for and can be EXTERNAL, INTERNAL, or INTERNAL_MANAGED}
-    name: ${9:# Name of the resource; provided by the client when the resource is created}
-    network: ${10:# For internal load balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule}
-    port_range: ${11:# This field is used along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance}
-    ports: ${12:# This field is used along with the backend_service field for internal load balancing}
-    subnetwork: ${13:# The subnetwork that the load balanced IP should belong to for this Forwarding Rule}
-    target: ${14:# The URL of the target resource to receive the matched traffic}
-    allow_global_access: ${15:# If true, clients can access ILB from all regions}
-    all_ports: ${16:# For internal TCP/UDP load balancing (i}
-    network_tier: ${17:# The networking tier used for configuring this address}
-    service_label: ${18:# An optional prefix to the service name for this Forwarding Rule}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    all_ports: ${3:# For internal TCP/UDP load balancing (i}
+    allow_global_access: ${4:# If true, clients can access ILB from all regions}
+    auth_kind: ${5:# The type of credential used}
+    backend_service: ${6:# A BackendService to receive the matched traffic}
+    description: ${7:# An optional description of this resource}
+    env_type: ${8:# Specifies which Ansible environment you're running this module within}
+    ip_address: ${9:# The IP address that this forwarding rule is serving on behalf of}
+    ip_protocol: ${10:# The IP protocol to which this rule applies}
+    is_mirroring_collector: ${11:# Indicates whether or not this load balancer can be used as a collector for packet mirroring}
+    load_balancing_scheme: ${12:# This signifies what the ForwardingRule will be used for and can be EXTERNAL, INTERNAL, or INTERNAL_MANAGED}
+    name: ${13:# Name of the resource; provided by the client when the resource is created}
+    network: ${14:# For internal load balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule}
+    network_tier: ${15:# The networking tier used for configuring this address}
+    port_range: ${16:# This field is used along with the target field for TargetHttpProxy, TargetHttpsProxy, TargetSslProxy, TargetTcpProxy, TargetVpnGateway, TargetPool, TargetInstance}
+    ports: ${17:# This field is used along with the backend_service field for internal load balancing}
+    project: ${18:# The Google Cloud Platform project to use}
     region: ${19:# A reference to the region where the regional forwarding rule resides}
-    project: ${20:# The Google Cloud Platform project to use}
-    auth_kind: ${21:# The type of credential used}
-    service_account_contents: ${22:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    scopes: ${20:# Array of scopes to be used}
+    service_account_contents: ${21:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_email: ${22:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
     service_account_file: ${23:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${24:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${25:# Array of scopes to be used}
-    env_type: ${26:# Specifies which Ansible environment you're running this module within}
+    service_label: ${24:# An optional prefix to the service name for this Forwarding Rule}
+    state: ${25:# Whether the given object should exist in GCP}
+    subnetwork: ${26:# The subnetwork that the load balanced IP should belong to for this Forwarding Rule}
+    target: ${27:# The URL of the target resource to receive the matched traffic}
   tags:
     - google
     - cloud

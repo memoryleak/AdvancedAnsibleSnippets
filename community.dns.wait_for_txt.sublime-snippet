@@ -1,12 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Wait for TXT entries to be available on all authoritative nameservers}
   community.dns.wait_for_txt:
-    records: ${2:# A list of DNS names with TXT entries to look out for}
-    query_retry: ${3:# Number of retries for DNS query timeouts}
-    query_timeout: ${4:# Timeout per DNS query in seconds}
-    timeout: ${5:# Global timeout for waiting for all records in seconds}
-    max_sleep: ${6:# Maximal amount of seconds to sleep between two rounds of probing the TXT records}
-    always_ask_default_resolver: ${7:# When set to C(true) (default), will use the default resolver to find the authoritative nameservers of a subzone}
+    always_ask_default_resolver: ${2:# When set to V(true) (default), will use the default resolver to find the authoritative nameservers of a subzone}
+    max_sleep: ${3:# Maximal amount of seconds to sleep between two rounds of probing the TXT records}
+    query_retry: ${4:# Number of retries for DNS query timeouts}
+    query_timeout: ${5:# Timeout per DNS query in seconds}
+    records: ${6:# A list of DNS names with TXT entries to look out for}
+    servfail_retries: ${7:# How often to retry on SERVFAIL errors}
+    timeout: ${8:# Global timeout for waiting for all records in seconds}
   tags:
     - community
     - dns

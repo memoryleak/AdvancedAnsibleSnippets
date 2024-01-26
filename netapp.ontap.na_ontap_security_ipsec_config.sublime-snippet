@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP module to configure IPsec config}
   netapp.ontap.na_ontap_security_ipsec_config:
-    state: ${2:# modify IPsec configuration, only present is supported}
+    cert_filepath: ${2:# path to SSL client cert file (}
     enabled: ${3:# Indicates whether or not IPsec is enabled}
-    replay_window: ${4:# Replay window size in packets, where 0 indicates that the relay window is disabled}
-    hostname: ${5:# The hostname or IP address of the ONTAP instance}
-    username: ${6:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${7:# Password for the specified user}
-    cert_filepath: ${8:# path to SSL client cert file (}
+    feature_flags: ${4:# Enable or disable a new feature}
+    force_ontap_version: ${5:# Override the cluster ONTAP version when using REST}
+    hostname: ${6:# The hostname or IP address of the ONTAP instance}
+    http_port: ${7:# Override the default port (80 or 443) with this port}
+    https: ${8:# Enable and disable https}
     key_filepath: ${9:# path to SSL client key file}
-    https: ${10:# Enable and disable https}
-    validate_certs: ${11:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${12:# Override the default port (80 or 443) with this port}
-    ontapi: ${13:# The ontap api version to use}
+    ontapi: ${10:# The ontap api version to use}
+    password: ${11:# Password for the specified user}
+    replay_window: ${12:# Replay window size in packets, where 0 indicates that the relay window is disabled}
+    state: ${13:# modify IPsec configuration, only present is supported}
     use_rest: ${14:# Whether to use REST or ZAPI}
-    feature_flags: ${15:# Enable or disable a new feature}
-    force_ontap_version: ${16:# Override the cluster ONTAP version when using REST}
+    username: ${15:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${16:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

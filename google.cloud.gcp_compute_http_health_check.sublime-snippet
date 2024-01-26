@@ -1,23 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP HttpHealthCheck}
   google.cloud.gcp_compute_http_health_check:
-    state: ${2:# Whether the given object should exist in GCP}
-    check_interval_sec: ${3:# How often (in seconds) to send a health check}
-    description: ${4:# An optional description of this resource}
-    healthy_threshold: ${5:# A so-far unhealthy instance will be marked healthy after this many consecutive successes}
-    host: ${6:# The value of the host header in the HTTP health check request}
-    name: ${7:# Name of the resource}
-    port: ${8:# The TCP port number for the HTTP health check request}
-    request_path: ${9:# The request path of the HTTP health check request}
-    timeout_sec: ${10:# How long (in seconds) to wait before claiming failure}
-    unhealthy_threshold: ${11:# A so-far healthy instance will be marked unhealthy after this many consecutive failures}
-    project: ${12:# The Google Cloud Platform project to use}
-    auth_kind: ${13:# The type of credential used}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    auth_kind: ${3:# The type of credential used}
+    check_interval_sec: ${4:# How often (in seconds) to send a health check}
+    description: ${5:# An optional description of this resource}
+    env_type: ${6:# Specifies which Ansible environment you're running this module within}
+    healthy_threshold: ${7:# A so-far unhealthy instance will be marked healthy after this many consecutive successes}
+    host: ${8:# The value of the host header in the HTTP health check request}
+    name: ${9:# Name of the resource}
+    port: ${10:# The TCP port number for the HTTP health check request}
+    project: ${11:# The Google Cloud Platform project to use}
+    request_path: ${12:# The request path of the HTTP health check request}
+    scopes: ${13:# Array of scopes to be used}
     service_account_contents: ${14:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${15:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${16:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${17:# Array of scopes to be used}
-    env_type: ${18:# Specifies which Ansible environment you're running this module within}
+    service_account_email: ${15:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    service_account_file: ${16:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    state: ${17:# Whether the given object should exist in GCP}
+    timeout_sec: ${18:# How long (in seconds) to wait before claiming failure}
+    unhealthy_threshold: ${19:# A so-far healthy instance will be marked unhealthy after this many consecutive failures}
   tags:
     - google
     - cloud

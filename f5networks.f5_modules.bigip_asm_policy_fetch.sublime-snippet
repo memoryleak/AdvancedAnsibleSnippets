@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Exports the ASM policy from remote nodes}
   f5networks.f5_modules.bigip_asm_policy_fetch:
-    name: ${2:# The name of the policy exported to create a file on the remote device for downloading}
-    dest: ${3:# A directory to save the policy file into}
-    file: ${4:# The name of the file to be created on the remote device for downloading}
-    inline: ${5:# If C(yes), the ASM policy is exported C(inline) as a string instead of a file}
-    compact: ${6:# If C(yes), only the ASM policy custom settings is exported}
-    base64: ${7:# If C(yes), the returned C(inline) ASM policy content is Base64 encoded}
-    binary: ${8:# If C(yes), the exported ASM policy is in binary format}
-    force: ${9:# If C(no), the file will only be transferred if it does not exist in the the destination}
+    base64: ${2:# If C(true), the returned C(inline) ASM policy content is Base64 encoded}
+    binary: ${3:# If C(true), the exported ASM policy is in binary format}
+    compact: ${4:# If C(true), only the ASM policy custom settings is exported}
+    dest: ${5:# A directory to save the policy file into}
+    file: ${6:# The name of the file to be created on the remote device for downloading}
+    force: ${7:# If C(false), the file will only be transferred if it does not exist in the the destination}
+    inline: ${8:# If C(true), the ASM policy is exported C(inline) as a string instead of a file}
+    name: ${9:# The name of the policy exported to create a file on the remote device for downloading}
     partition: ${10:# Device partition which contains the ASM policy to export}
     provider: ${11:# A dict object containing connection details}
   tags:

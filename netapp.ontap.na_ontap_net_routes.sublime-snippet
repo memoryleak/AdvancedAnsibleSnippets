@@ -1,26 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP network routes}
   netapp.ontap.na_ontap_net_routes:
-    state: ${2:# Whether you want to create or delete a network route}
-    vserver: ${3:# The name of the vserver}
-    destination: ${4:# Specify the route destination}
-    gateway: ${5:# Specify the route gateway}
-    metric: ${6:# Specify the route metric}
-    from_destination: ${7:# Specify the route destination that should be changed}
-    from_gateway: ${8:# Specify the route gateway that should be changed}
-    from_metric: ${9:# Specify the route metric that should be changed}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    destination: ${3:# Specify the route destination}
+    feature_flags: ${4:# Enable or disable a new feature}
+    force_ontap_version: ${5:# Override the cluster ONTAP version when using REST}
+    from_destination: ${6:# Specify the route destination that should be changed}
+    from_gateway: ${7:# Specify the route gateway that should be changed}
+    from_metric: ${8:# Specify the route metric that should be changed}
+    gateway: ${9:# Specify the route gateway}
     hostname: ${10:# The hostname or IP address of the ONTAP instance}
-    username: ${11:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${12:# Password for the specified user}
-    cert_filepath: ${13:# path to SSL client cert file (}
-    key_filepath: ${14:# path to SSL client key file}
-    https: ${15:# Enable and disable https}
-    validate_certs: ${16:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${17:# Override the default port (80 or 443) with this port}
-    ontapi: ${18:# The ontap api version to use}
-    use_rest: ${19:# Whether to use REST or ZAPI}
-    feature_flags: ${20:# Enable or disable a new feature}
-    force_ontap_version: ${21:# Override the cluster ONTAP version when using REST}
+    http_port: ${11:# Override the default port (80 or 443) with this port}
+    https: ${12:# Enable and disable https}
+    key_filepath: ${13:# path to SSL client key file}
+    metric: ${14:# Specify the route metric}
+    ontapi: ${15:# The ontap api version to use}
+    password: ${16:# Password for the specified user}
+    state: ${17:# Whether you want to create or delete a network route}
+    use_rest: ${18:# Whether to use REST or ZAPI}
+    username: ${19:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${20:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${21:# The name of the vserver}
   tags:
     - netapp
     - ontap

@@ -1,19 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Gather information about ec2 instances in AWS}
   amazon.aws.ec2_instance_info:
-    instance_ids: ${2:# If you specify one or more instance IDs, only instances that have the specified IDs are returned}
-    filters: ${3:# A dict of filters to apply}
-    minimum_uptime: ${4:# Minimum running uptime in minutes of instances}
-    access_key: ${5:# AWS access key ID}
-    secret_key: ${6:# AWS secret access key}
-    session_token: ${7:# AWS STS session token for use with temporary credentials}
-    profile: ${8:# A named AWS profile to use for authentication}
-    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${10:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${11:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${12:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${13:# Use a C(botocore}
-    region: ${14:# The AWS region to use}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    endpoint_url: ${6:# URL to connect to instead of the default AWS endpoints}
+    filters: ${7:# A dict of filters to apply}
+    include_attributes: ${8:# Describes the specified attributes of the returned instances}
+    instance_ids: ${9:# If you specify one or more instance IDs, only instances that have the specified IDs are returned}
+    minimum_uptime: ${10:# Minimum running uptime in minutes of instances}
+    profile: ${11:# A named AWS profile to use for authentication}
+    region: ${12:# The AWS region to use}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - amazon
     - aws

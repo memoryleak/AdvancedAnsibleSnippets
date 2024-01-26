@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage buckets on StorageGRID}
   netapp.storagegrid.na_sg_org_container:
-    state: ${2:# Whether the specified bucket should exist or not}
-    name: ${3:# Name of the bucket}
-    region: ${4:# Set a region for the bucket}
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    bucket_versioning_enabled: ${4:# Enable versioning on the bucket}
     compliance: ${5:# Configure compliance settings for an S3 bucket}
-    s3_object_lock_enabled: ${6:# Enable S3 Object Lock on the bucket}
-    bucket_versioning_enabled: ${7:# Enable versioning on the bucket}
-    auth_token: ${8:# The authorization token for the API request}
-    api_url: ${9:# The url to the StorageGRID Admin Node REST API}
+    name: ${6:# Name of the bucket}
+    region: ${7:# Set a region for the bucket}
+    s3_object_lock_enabled: ${8:# Enable S3 Object Lock on the bucket}
+    state: ${9:# Whether the specified bucket should exist or not}
     validate_certs: ${10:# Should https certificates be validated?}
   tags:
     - netapp

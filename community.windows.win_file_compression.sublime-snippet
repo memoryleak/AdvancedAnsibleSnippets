@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[- name: ${1:Alters the compression of files and directories on NTFS partitions}
   community.windows.win_file_compression:
-    path: ${2:# The full path of the file or directory to modify}
-    state: ${3:# Set to C(present) to ensure the I(path) is compressed}
+    force: ${2:# This option only has an effect when I(recurse) is C(true)}
+    path: ${3:# The full path of the file or directory to modify}
     recurse: ${4:# Whether to recursively apply changes to all subdirectories and files}
-    force: ${5:# This option only has an effect when I(recurse) is C(true)}
+    state: ${5:# Set to C(present) to ensure the I(path) is compressed}
   tags:
     - community
     - windows

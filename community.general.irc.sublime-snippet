@@ -1,20 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Send a message to an IRC channel or a nick}
   community.general.irc:
-    server: ${2:# IRC server name/address}
-    port: ${3:# IRC server port number}
-    nick: ${4:# Nickname to send the message from}
+    channel: ${2:# Channel name}
+    color: ${3:# Text color for the message}
+    key: ${4:# Channel key}
     msg: ${5:# The message body}
-    topic: ${6:# Set the channel topic}
-    color: ${7:# Text color for the message}
-    channel: ${8:# Channel name}
-    nick_to: ${9:# A list of nicknames to send the message to}
-    key: ${10:# Channel key}
-    passwd: ${11:# Server password}
-    timeout: ${12:# Timeout to use while waiting for successful registration and join messages, this is to prevent an endless loop}
-    use_ssl: ${13:# Designates whether TLS/SSL should be used when connecting to the IRC server}
-    part: ${14:# Designates whether user should part from channel after sending message or not}
-    style: ${15:# Text style for the message}
+    nick: ${6:# Nickname to send the message from}
+    nick_to: ${7:# A list of nicknames to send the message to}
+    part: ${8:# Designates whether user should part from channel after sending message or not}
+    passwd: ${9:# Server password}
+    port: ${10:# IRC server port number}
+    server: ${11:# IRC server name/address}
+    style: ${12:# Text style for the message}
+    timeout: ${13:# Timeout to use while waiting for successful registration and join messages, this is to prevent an endless loop}
+    topic: ${14:# Set the channel topic}
+    use_tls: ${15:# Designates whether TLS/SSL should be used when connecting to the IRC server}
+    validate_certs: ${16:# If set to V(false), the SSL certificates will not be validated}
   tags:
     - community
     - general

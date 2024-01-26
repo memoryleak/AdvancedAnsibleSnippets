@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures NTP server on Cisco UCS Manager}
   cisco.ucs.ucs_ntp_server:
-    state: ${2:# If C(absent), will remove an NTP server}
-    ntp_server: ${3:# NTP server IP address or hostname}
-    description: ${4:# A user-defined description of the NTP server}
-    hostname: ${5:# IP address or hostname of Cisco UCS Manager}
-    username: ${6:# Username for Cisco UCS Manager authentication}
-    password: ${7:# Password for Cisco UCS Manager authentication}
-    port: ${8:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
-    use_ssl: ${9:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    use_proxy: ${10:# If C(no), will not use the proxy as defined by system environment variable}
-    proxy: ${11:# If use_proxy is no, specfies proxy to be used for connection}
+    description: ${2:# A user-defined description of the NTP server}
+    hostname: ${3:# IP address or hostname of Cisco UCS Manager}
+    ntp_server: ${4:# NTP server IP address or hostname}
+    password: ${5:# Password for Cisco UCS Manager authentication}
+    port: ${6:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    proxy: ${7:# If use_proxy is no, specfies proxy to be used for connection}
+    state: ${8:# If C(absent), will remove an NTP server}
+    use_proxy: ${9:# If C(no), will not use the proxy as defined by system environment variable}
+    use_ssl: ${10:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${11:# Username for Cisco UCS Manager authentication}
   tags:
     - cisco
     - ucs

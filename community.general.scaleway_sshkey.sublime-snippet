@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Scaleway SSH keys management module}
   community.general.scaleway_sshkey:
-    state: ${2:# Indicate desired state of the SSH key}
-    ssh_pub_key: ${3:# The public SSH key as a string to add}
+    api_timeout: ${2:# HTTP timeout to Scaleway API in seconds}
+    api_token: ${3:# Scaleway OAuth token}
     api_url: ${4:# Scaleway API URL}
-    api_token: ${5:# Scaleway OAuth token}
-    api_timeout: ${6:# HTTP timeout to Scaleway API in seconds}
-    query_parameters: ${7:# List of parameters passed to the query string}
+    query_parameters: ${5:# List of parameters passed to the query string}
+    ssh_pub_key: ${6:# The public SSH key as a string to add}
+    state: ${7:# Indicate desired state of the SSH key}
     validate_certs: ${8:# Validate SSL certs of the Scaleway API}
   tags:
     - community

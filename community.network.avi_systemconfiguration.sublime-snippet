@@ -1,37 +1,37 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of SystemConfiguration Avi RESTful Object}
   community.network.avi_systemconfiguration:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
-    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    admin_auth_configuration: ${5:# Adminauthconfiguration settings for systemconfiguration}
-    default_license_tier: ${6:# Specifies the default license tier which would be used by new clouds}
-    dns_configuration: ${7:# Dnsconfiguration settings for systemconfiguration}
-    dns_virtualservice_refs: ${8:# Dns virtualservices hosting fqdn records for applications across avi vantage}
-    docker_mode: ${9:# Boolean flag to set docker_mode}
-    email_configuration: ${10:# Emailconfiguration settings for systemconfiguration}
-    global_tenant_config: ${11:# Tenantconfiguration settings for systemconfiguration}
-    linux_configuration: ${12:# Linuxconfiguration settings for systemconfiguration}
-    mgmt_ip_access_control: ${13:# Configure ip access control for controller to restrict open access}
-    ntp_configuration: ${14:# Ntpconfiguration settings for systemconfiguration}
-    portal_configuration: ${15:# Portalconfiguration settings for systemconfiguration}
-    proxy_configuration: ${16:# Proxyconfiguration settings for systemconfiguration}
-    secure_channel_configuration: ${17:# Configure secure channel properties}
-    snmp_configuration: ${18:# Snmpconfiguration settings for systemconfiguration}
-    ssh_ciphers: ${19:# Allowed ciphers list for ssh to the management interface on the controller and service engines}
-    ssh_hmacs: ${20:# Allowed hmac list for ssh to the management interface on the controller and service engines}
-    url: ${21:# Avi controller URL of the object}
-    uuid: ${22:# Unique object identifier of the object}
-    welcome_workflow_complete: ${23:# This flag is set once the initial controller setup workflow is complete}
-    controller: ${24:# IP address or hostname of the controller}
-    username: ${25:# Username used for accessing Avi controller}
-    password: ${26:# Password of Avi user in Avi controller}
+    admin_auth_configuration: ${2:# Adminauthconfiguration settings for systemconfiguration}
+    api_context: ${3:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${4:# Avi API version of to use for Avi API and objects}
+    avi_api_patch_op: ${5:# Patch operation to use when using avi_api_update_method as patch}
+    avi_api_update_method: ${6:# Default method for object update is HTTP PUT}
+    avi_credentials: ${7:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${8:# It disables avi session information to be cached as a fact}
+    controller: ${9:# IP address or hostname of the controller}
+    default_license_tier: ${10:# Specifies the default license tier which would be used by new clouds}
+    dns_configuration: ${11:# Dnsconfiguration settings for systemconfiguration}
+    dns_virtualservice_refs: ${12:# Dns virtualservices hosting fqdn records for applications across avi vantage}
+    docker_mode: ${13:# Boolean flag to set docker_mode}
+    email_configuration: ${14:# Emailconfiguration settings for systemconfiguration}
+    global_tenant_config: ${15:# Tenantconfiguration settings for systemconfiguration}
+    linux_configuration: ${16:# Linuxconfiguration settings for systemconfiguration}
+    mgmt_ip_access_control: ${17:# Configure ip access control for controller to restrict open access}
+    ntp_configuration: ${18:# Ntpconfiguration settings for systemconfiguration}
+    password: ${19:# Password of Avi user in Avi controller}
+    portal_configuration: ${20:# Portalconfiguration settings for systemconfiguration}
+    proxy_configuration: ${21:# Proxyconfiguration settings for systemconfiguration}
+    secure_channel_configuration: ${22:# Configure secure channel properties}
+    snmp_configuration: ${23:# Snmpconfiguration settings for systemconfiguration}
+    ssh_ciphers: ${24:# Allowed ciphers list for ssh to the management interface on the controller and service engines}
+    ssh_hmacs: ${25:# Allowed hmac list for ssh to the management interface on the controller and service engines}
+    state: ${26:# The state that should be applied on the entity}
     tenant: ${27:# Name of tenant used for all Avi API calls and context of object}
     tenant_uuid: ${28:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${29:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${30:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${31:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${32:# It disables avi session information to be cached as a fact}
+    url: ${29:# Avi controller URL of the object}
+    username: ${30:# Username used for accessing Avi controller}
+    uuid: ${31:# Unique object identifier of the object}
+    welcome_workflow_complete: ${32:# This flag is set once the initial controller setup workflow is complete}
   tags:
     - community
     - network

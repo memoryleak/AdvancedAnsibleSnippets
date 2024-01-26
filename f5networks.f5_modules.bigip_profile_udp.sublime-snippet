@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage UDP profiles on a BIG-IP}
   f5networks.f5_modules.bigip_profile_udp:
-    name: ${2:# Specifies the name of the profile}
-    parent: ${3:# Specifies the profile from which this profile inherits settings}
-    idle_timeout: ${4:# Specifies the length of time a connection is idle (has no traffic) before the connection is eligible for deletion}
-    datagram_load_balancing: ${5:# When C(yes), specifies the system load balances UDP traffic packet-by-packet}
+    datagram_load_balancing: ${2:# When C(true), specifies the system load balances UDP traffic packet-by-packet}
+    idle_timeout: ${3:# Specifies the length of time a connection is idle (has no traffic) before the connection is eligible for deletion}
+    name: ${4:# Specifies the name of the profile}
+    parent: ${5:# Specifies the profile from which this profile inherits settings}
     partition: ${6:# Device partition to manage resources on}
-    state: ${7:# When C(present), ensures the profile exists}
-    provider: ${8:# A dict object containing connection details}
+    provider: ${7:# A dict object containing connection details}
+    state: ${8:# When C(present), ensures the profile exists}
   tags:
     - f5networks
     - f5_modules

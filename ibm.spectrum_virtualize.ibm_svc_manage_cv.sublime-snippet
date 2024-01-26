@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module manages the change volume for a given volume on IBM Spectrum Virtualize family storage systems}
   ibm.spectrum_virtualize.ibm_svc_manage_cv:
-    state: ${2:# Creates or updates (C(present)) or removes (C(absent)), a change volume}
-    rname: ${3:# Specifies the name of the remote copy relationship}
+    basevolume: ${2:# Specifies the base volume name (master or auxiliary)}
+    clustername: ${3:# The hostname or management IP of the Spectrum Virtualize storage system}
     cvname: ${4:# Specifies the name to assign to the master or auxiliary change volume}
-    basevolume: ${5:# Specifies the base volume name (master or auxiliary)}
+    domain: ${5:# Domain for the Spectrum Virtualize storage system}
     ismaster: ${6:# Specifies whether the change volume is being (dis)associated with master cluster}
-    clustername: ${7:# The hostname or management IP of the Spectrum Virtualize storage system}
-    domain: ${8:# Domain for the Spectrum Virtualize storage system}
-    username: ${9:# REST API username for the Spectrum Virtualize storage system}
-    password: ${10:# REST API password for the Spectrum Virtualize storage system}
+    log_path: ${7:# Path of debug log file}
+    password: ${8:# REST API password for the Spectrum Virtualize storage system}
+    rname: ${9:# Specifies the name of the remote copy relationship}
+    state: ${10:# Creates or updates (C(present)) or removes (C(absent)), a change volume}
     token: ${11:# The authentication token to verify a user on the Spectrum Virtualize storage system}
-    validate_certs: ${12:# Validates certification}
-    log_path: ${13:# Path of debug log file}
+    username: ${12:# REST API username for the Spectrum Virtualize storage system}
+    validate_certs: ${13:# Validates certification}
   tags:
     - ibm
     - spectrum_virtualize

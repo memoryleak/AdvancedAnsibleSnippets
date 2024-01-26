@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:CLI command to create/modify/delete snmp-vacm}
   community.network.pn_snmp_vacm:
-    pn_cliswitch: ${2:# Target switch to run the CLI on}
-    state: ${3:# State the action to perform}
+    pn_auth: ${2:# authentication required}
+    pn_cliswitch: ${3:# Target switch to run the CLI on}
     pn_oid_restrict: ${4:# restrict OID}
     pn_priv: ${5:# privileges}
-    pn_auth: ${6:# authentication required}
+    pn_user_name: ${6:# SNMP administrator name}
     pn_user_type: ${7:# SNMP user type}
-    pn_user_name: ${8:# SNMP administrator name}
+    state: ${8:# State the action to perform}
   tags:
     - community
     - network

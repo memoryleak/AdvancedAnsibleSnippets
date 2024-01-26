@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Enables/disables a module of the Apache2 webserver}
   community.general.apache2_module:
-    name: ${2:# Name of the module to enable/disable as given to C(a2enmod/a2dismod)}
+    force: ${2:# Force disabling of default modules and override Debian warnings}
     identifier: ${3:# Identifier of the module as listed by C(apache2ctl -M)}
-    force: ${4:# Force disabling of default modules and override Debian warnings}
-    state: ${5:# Desired state of the module}
-    ignore_configcheck: ${6:# Ignore configuration checks about inconsistent module configuration}
+    ignore_configcheck: ${4:# Ignore configuration checks about inconsistent module configuration}
+    name: ${5:# Name of the module to enable/disable as given to C(a2enmod/a2dismod)}
+    state: ${6:# Desired state of the module}
     warn_mpm_absent: ${7:# Control the behavior of the warning process for MPM modules}
   tags:
     - community

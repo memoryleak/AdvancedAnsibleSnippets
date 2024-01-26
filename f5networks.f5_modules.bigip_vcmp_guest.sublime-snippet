@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages vCMP guests on a BIG-IP}
   f5networks.f5_modules.bigip_vcmp_guest:
-    name: ${2:# The name of the vCMP guest to manage}
-    vlans: ${3:# VLANs the guest uses to communicate with other guests, the host, and with the external network}
-    initial_image: ${4:# Specifies the base software release ISO image file for installing the TMOS hypervisor instance and any licensed BIG-IP modules onto the guest's virtual disk}
+    allowed_slots: ${2:# Contains those slots to which the guest is allowed to be assigned}
+    cores_per_slot: ${3:# Specifies the number of cores the system allocates to the guest}
+    delete_virtual_disk: ${4:# When C(state) is C(absent), the system additionally deletes the virtual disk associated with the vCMP guest}
     initial_hotfix: ${5:# Specifies the hotfix ISO image file which is applied on top of the base image}
-    mgmt_network: ${6:# Specifies the method by which the management address is used in the vCMP guest}
-    delete_virtual_disk: ${7:# When C(state) is C(absent), the system additionally deletes the virtual disk associated with the vCMP guest}
-    mgmt_address: ${8:# Specifies the IP address and subnet or subnet mask you use to access the guest when you want to manage a module running within the guest}
+    initial_image: ${6:# Specifies the base software release ISO image file for installing the TMOS hypervisor instance and any licensed BIG-IP modules onto the guest's virtual disk}
+    mgmt_address: ${7:# Specifies the IP address and subnet or subnet mask you use to access the guest when you want to manage a module running within the guest}
+    mgmt_network: ${8:# Specifies the method by which the management address is used in the vCMP guest}
     mgmt_route: ${9:# Specifies the gateway address for the C(mgmt_address)}
-    state: ${10:# The state of the vCMP guest on the system}
-    cores_per_slot: ${11:# Specifies the number of cores the system allocates to the guest}
-    partition: ${12:# Device partition to manage resources on}
-    number_of_slots: ${13:# Specifies the number of slots for the system to use when creating the guest}
-    min_number_of_slots: ${14:# Specifies the minimum number of slots the guest must be assigned to in order to deploy}
-    allowed_slots: ${15:# Contains those slots to which the guest is allowed to be assigned}
-    provider: ${16:# A dict object containing connection details}
+    min_number_of_slots: ${10:# Specifies the minimum number of slots the guest must be assigned to in order to deploy}
+    name: ${11:# The name of the vCMP guest to manage}
+    number_of_slots: ${12:# Specifies the number of slots for the system to use when creating the guest}
+    partition: ${13:# Device partition to manage resources on}
+    provider: ${14:# A dict object containing connection details}
+    state: ${15:# The state of the vCMP guest on the system}
+    vlans: ${16:# VLANs the guest uses to communicate with other guests, the host, and with the external network}
   tags:
     - f5networks
     - f5_modules

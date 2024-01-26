@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module to control VDO}
   community.general.vdo:
-    name: ${2:# The name of the VDO volume}
-    state: ${3:# Whether this VDO volume should be 'present' or 'absent'}
-    activated: ${4:# The 'activate' status for a VDO volume}
-    running: ${5:# Whether this VDO volume is running}
-    device: ${6:# The full path of the device to use for VDO storage}
-    logicalsize: ${7:# The logical size of the VDO volume (in megabytes, or LVM suffix format)}
+    ackthreads: ${2:# Specifies the number of threads to use for acknowledging completion of requested VDO I/O operations}
+    activated: ${3:# The 'activate' status for a VDO volume}
+    biothreads: ${4:# Specifies the number of threads to use for submitting I/O operations to the storage device}
+    blockmapcachesize: ${5:# The amount of memory allocated for caching block map pages, in megabytes (or may be issued with an LVM-style suffix of K, M, G, or T)}
+    compression: ${6:# Configures whether compression is enabled}
+    cputhreads: ${7:# Specifies the number of threads to use for CPU-intensive work such as hashing or compression}
     deduplication: ${8:# Configures whether deduplication is enabled}
-    compression: ${9:# Configures whether compression is enabled}
-    blockmapcachesize: ${10:# The amount of memory allocated for caching block map pages, in megabytes (or may be issued with an LVM-style suffix of K, M, G, or T)}
-    readcache: ${11:# Enables or disables the read cache}
-    readcachesize: ${12:# Specifies the extra VDO device read cache size in megabytes}
-    emulate512: ${13:# Enables 512-byte emulation mode, allowing drivers or filesystems to access the VDO volume at 512-byte granularity, instead of the default 4096-byte granularity}
-    growphysical: ${14:# Specifies whether to attempt to execute a growphysical operation, if there is enough unused space on the device}
-    slabsize: ${15:# The size of the increment by which the physical size of a VDO volume is grown, in megabytes (or may be issued with an LVM-style suffix of K, M, G, or T)}
-    writepolicy: ${16:# Specifies the write policy of the VDO volume}
-    indexmem: ${17:# Specifies the amount of index memory in gigabytes}
-    indexmode: ${18:# Specifies the index mode of the Albireo index}
-    ackthreads: ${19:# Specifies the number of threads to use for acknowledging completion of requested VDO I/O operations}
-    biothreads: ${20:# Specifies the number of threads to use for submitting I/O operations to the storage device}
-    cputhreads: ${21:# Specifies the number of threads to use for CPU-intensive work such as hashing or compression}
-    logicalthreads: ${22:# Specifies the number of threads across which to subdivide parts of the VDO processing based on logical block addresses}
-    physicalthreads: ${23:# Specifies the number of threads across which to subdivide parts of the VDO processing based on physical block addresses}
-    force: ${24:# When creating a volume, ignores any existing file system or VDO signature already present in the storage device}
+    device: ${9:# The full path of the device to use for VDO storage}
+    emulate512: ${10:# Enables 512-byte emulation mode, allowing drivers or filesystems to access the VDO volume at 512-byte granularity, instead of the default 4096-byte granularity}
+    force: ${11:# When creating a volume, ignores any existing file system or VDO signature already present in the storage device}
+    growphysical: ${12:# Specifies whether to attempt to execute a growphysical operation, if there is enough unused space on the device}
+    indexmem: ${13:# Specifies the amount of index memory in gigabytes}
+    indexmode: ${14:# Specifies the index mode of the Albireo index}
+    logicalsize: ${15:# The logical size of the VDO volume (in megabytes, or LVM suffix format)}
+    logicalthreads: ${16:# Specifies the number of threads across which to subdivide parts of the VDO processing based on logical block addresses}
+    name: ${17:# The name of the VDO volume}
+    physicalthreads: ${18:# Specifies the number of threads across which to subdivide parts of the VDO processing based on physical block addresses}
+    readcache: ${19:# Enables or disables the read cache}
+    readcachesize: ${20:# Specifies the extra VDO device read cache size in megabytes}
+    running: ${21:# Whether this VDO volume is running}
+    slabsize: ${22:# The size of the increment by which the physical size of a VDO volume is grown, in megabytes (or may be issued with an LVM-style suffix of K, M, G, or T)}
+    state: ${23:# Whether this VDO volume should be 'present' or 'absent'}
+    writepolicy: ${24:# Specifies the write policy of the VDO volume}
   tags:
     - community
     - general

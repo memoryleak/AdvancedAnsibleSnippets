@@ -1,34 +1,34 @@
 <snippet>
   <content><![CDATA[- name: ${1:Managed private link service resource}
   azure.azcollection.azure_rm_privatelinkservice:
-    name: ${2:# The name of the private link service}
-    resource_group: ${3:# The name of the resource group}
-    location: ${4:# The resource location}
-    load_balancer_frontend_ip_configurations: ${5:# An array of references to the load balancer IP configurations}
-    fqdns: ${6:# The list of Fqdn}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
     auto_approval: ${7:# The auto-approval list of the private link service}
-    visibility: ${8:# The visibility list of the private link service}
-    enable_proxy_protocol: ${9:# Whether the private link service is enabled for proxy protocol or not}
-    ip_configurations: ${10:# An array of private link service IP configurations}
-    state: ${11:# Assert the state of the pirvate link service}
-    ad_user: ${12:# Active Directory username}
-    password: ${13:# Active Directory user password}
-    profile: ${14:# Security profile found in ~/}
-    subscription_id: ${15:# Your Azure subscription Id}
-    client_id: ${16:# Azure client ID}
-    secret: ${17:# Azure client secret}
-    tenant: ${18:# Azure tenant ID}
-    cloud_environment: ${19:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${20:# Azure AD authority url}
-    cert_validation_mode: ${21:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${22:# Controls the source of the credentials to use for authentication}
-    api_profile: ${23:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${24:# Parent argument}
-    log_mode: ${25:# Parent argument}
-    x509_certificate_path: ${26:# Path to the X509 certificate used to create the service principal in PEM format}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    enable_proxy_protocol: ${11:# Whether the private link service is enabled for proxy protocol or not}
+    fqdns: ${12:# The list of Fqdn}
+    ip_configurations: ${13:# An array of private link service IP configurations}
+    load_balancer_frontend_ip_configurations: ${14:# An array of references to the load balancer IP configurations}
+    location: ${15:# The resource location}
+    log_mode: ${16:# Parent argument}
+    log_path: ${17:# Parent argument}
+    name: ${18:# The name of the private link service}
+    password: ${19:# Active Directory user password}
+    profile: ${20:# Security profile found in ~/}
+    resource_group: ${21:# The name of the resource group}
+    secret: ${22:# Azure client secret}
+    state: ${23:# Assert the state of the pirvate link service}
+    subscription_id: ${24:# Your Azure subscription Id}
+    tags: ${25:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${26:# Azure tenant ID}
     thumbprint: ${27:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${28:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${29:# Use to control if tags field is canonical or just appends to existing tags}
+    visibility: ${28:# The visibility list of the private link service}
+    x509_certificate_path: ${29:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

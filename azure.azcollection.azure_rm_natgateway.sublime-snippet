@@ -1,32 +1,32 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure NAT Gateway instance}
   azure.azcollection.azure_rm_natgateway:
-    resource_group: ${2:# The name of the resource group}
-    name: ${3:# The name of the NAT Gateway}
-    location: ${4:# Resource location}
-    zones: ${5:# List of Availability Zones in which this NAT Gateway should be located}
-    sku: ${6:# SKU of the NAT gateway resource}
-    idle_timeout_in_minutes: ${7:# The idle timeout in minutes which should be used}
-    public_ip_addresses: ${8:# A list of Public IP Addresses which should be associated with the NAT Gateway resource}
-    state: ${9:# Assert the state of the NAT gateway}
-    ad_user: ${10:# Active Directory username}
-    password: ${11:# Active Directory user password}
-    profile: ${12:# Security profile found in ~/}
-    subscription_id: ${13:# Your Azure subscription Id}
-    client_id: ${14:# Azure client ID}
-    secret: ${15:# Azure client secret}
-    tenant: ${16:# Azure tenant ID}
-    cloud_environment: ${17:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${18:# Azure AD authority url}
-    cert_validation_mode: ${19:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${20:# Controls the source of the credentials to use for authentication}
-    api_profile: ${21:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${22:# Parent argument}
-    log_mode: ${23:# Parent argument}
-    x509_certificate_path: ${24:# Path to the X509 certificate used to create the service principal in PEM format}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    idle_timeout_in_minutes: ${10:# The idle timeout in minutes which should be used}
+    location: ${11:# Resource location}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    name: ${14:# The name of the NAT Gateway}
+    password: ${15:# Active Directory user password}
+    profile: ${16:# Security profile found in ~/}
+    public_ip_addresses: ${17:# A list of Public IP Addresses which should be associated with the NAT Gateway resource}
+    resource_group: ${18:# The name of the resource group}
+    secret: ${19:# Azure client secret}
+    sku: ${20:# SKU of the NAT gateway resource}
+    state: ${21:# Assert the state of the NAT gateway}
+    subscription_id: ${22:# Your Azure subscription Id}
+    tags: ${23:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${24:# Azure tenant ID}
     thumbprint: ${25:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${26:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${27:# Use to control if tags field is canonical or just appends to existing tags}
+    x509_certificate_path: ${26:# Path to the X509 certificate used to create the service principal in PEM format}
+    zones: ${27:# List of Availability Zones in which this NAT Gateway should be located}
   tags:
     - azure
     - azcollection

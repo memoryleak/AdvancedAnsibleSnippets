@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and manage reverse DNS entries on the Hetzner Cloud}
+  hetzner.hcloud.rdns:
+    api_endpoint: ${2:# The API Endpoint for the Hetzner Cloud}
+    api_token: ${3:# The API Token for the Hetzner Cloud}
+    dns_ptr: ${4:# The DNS address the I(ip_address) should resolve to}
+    floating_ip: ${5:# Name or ID of the Hetzner Cloud Floating IP you want to add the reverse DNS entry to}
+    ip_address: ${6:# The IP address that should point to I(dns_ptr)}
+    load_balancer: ${7:# Name or ID of the Hetzner Cloud Load Balancer you want to add the reverse DNS entry to}
+    primary_ip: ${8:# Name or ID of the Hetzner Cloud Primary IP you want to add the reverse DNS entry to}
+    server: ${9:# Name or ID of the Hetzner Cloud server you want to add the reverse DNS entry to}
+    state: ${10:# State of the reverse DNS entry}
+  tags:
+    - hetzner
+    - hcloud
+    - rdns]]></content>
+  <tabTrigger>hetzner.hcloud.rdns</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and manage reverse DNS entries on the Hetzner Cloud</description>
+</snippet>

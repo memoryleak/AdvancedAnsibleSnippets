@@ -1,25 +1,26 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Create, modify, or delete an Active Directory user group on OpenManage Enterprise and OpenManage Enterprise Modular}
+  <content><![CDATA[- name: ${1:Create, modify, or delete an Active Directory/LDAP user group on OpenManage Enterprise and OpenManage Enterprise Modular}
   dellemc.openmanage.ome_domain_user_groups:
-    state: ${2:# C(present) imports or modifies the Active Directory user group}
-    group_name: ${3:# The desired Active Directory user group name to be imported or removed}
-    role: ${4:# The desired roles and privilege for the imported Active Directory user group}
-    directory_name: ${5:# The directory name set while adding the Active Directory}
-    directory_id: ${6:# The ID of the Active Directory}
-    domain_username: ${7:# Active directory domain username}
-    domain_password: ${8:# Active directory domain password}
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    directory_id: ${3:# The ID of the Active Directory/LDAP}
+    directory_name: ${4:# The directory name set while adding the Active Directory/LDAP}
+    directory_type: ${5:# Type of the account}
+    domain_password: ${6:# Active Directory/LDAP domain password}
+    domain_username: ${7:# Active Directory/LDAP domain username}
+    group_name: ${8:# The desired Active Directory/LDAP user group name to be imported or removed}
     hostname: ${9:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
-    username: ${10:# OpenManage Enterprise or OpenManage Enterprise Modular username}
-    password: ${11:# OpenManage Enterprise or OpenManage Enterprise Modular password}
-    port: ${12:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
-    validate_certs: ${13:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${14:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${15:# The socket level timeout in seconds}
+    password: ${10:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${11:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    role: ${12:# The desired roles and privilege for the imported Active Directory/LDAP user group}
+    state: ${13:# C(present) imports or modifies the Active Directory/LDAP user group}
+    timeout: ${14:# The socket level timeout in seconds}
+    username: ${15:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    validate_certs: ${16:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage
     - ome_domain_user_groups]]></content>
   <tabTrigger>dellemc.openmanage.ome_domain_user_groups</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Create, modify, or delete an Active Directory user group on OpenManage Enterprise and OpenManage Enterprise Modular</description>
+  <description>Create, modify, or delete an Active Directory/LDAP user group on OpenManage Enterprise and OpenManage Enterprise Modular</description>
 </snippet>

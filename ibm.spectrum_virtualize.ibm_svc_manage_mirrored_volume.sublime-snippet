@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module manages mirrored volumes on IBM Spectrum Virtualize family storage systems}
   ibm.spectrum_virtualize.ibm_svc_manage_mirrored_volume:
-    name: ${2:# Specifies the name to assign to the new volume}
-    state: ${3:# Creates (C(present)) or removes (C(absent)) a mirrored volume}
-    clustername: ${4:# The hostname or management IP of the Spectrum Virtualize storage system}
+    clustername: ${2:# The hostname or management IP of the Spectrum Virtualize storage system}
+    compressed: ${3:# Specifies if the volume to be created is compressed}
+    deduplicated: ${4:# Specifies if the volume to be created is deduplicated}
     domain: ${5:# Domain for the Spectrum Virtualize storage system}
-    username: ${6:# REST API username for the Spectrum Virtualize storage system}
-    password: ${7:# REST API password for the Spectrum Virtualize storage system}
-    token: ${8:# The authentication token to verify a user on the Spectrum Virtualize storage system}
-    poolA: ${9:# Specifies the name of first storage pool to be used when creating a mirrored volume}
-    poolB: ${10:# Specifies the name of second storage pool to be used when creating a mirrored volume}
-    type: ${11:# Specifies the desired volume type}
-    thin: ${12:# Specifies if the volume to be created is thin-provisioned}
-    compressed: ${13:# Specifies if the volume to be created is compressed}
-    deduplicated: ${14:# Specifies if the volume to be created is deduplicated}
-    grainsize: ${15:# Specifies the grain size (in KB) to use when creating the HyperSwap volume}
-    rsize: ${16:# Specifies the rsize (buffersize) in %}
-    size: ${17:# Specifies the size of mirrored volume in MB}
-    validate_certs: ${18:# Validates certification}
-    log_path: ${19:# Path of debug log file}
+    grainsize: ${6:# Specifies the grain size (in KB) to use when creating the HyperSwap volume}
+    log_path: ${7:# Path of debug log file}
+    name: ${8:# Specifies the name to assign to the new volume}
+    password: ${9:# REST API password for the Spectrum Virtualize storage system}
+    poolA: ${10:# Specifies the name of first storage pool to be used when creating a mirrored volume}
+    poolB: ${11:# Specifies the name of second storage pool to be used when creating a mirrored volume}
+    rsize: ${12:# Specifies the rsize (buffersize) in %}
+    size: ${13:# Specifies the size of mirrored volume in MB}
+    state: ${14:# Creates (C(present)) or removes (C(absent)) a mirrored volume}
+    thin: ${15:# Specifies if the volume to be created is thin-provisioned}
+    token: ${16:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    type: ${17:# Specifies the desired volume type}
+    username: ${18:# REST API username for the Spectrum Virtualize storage system}
+    validate_certs: ${19:# Validates certification}
   tags:
     - ibm
     - spectrum_virtualize

@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure Infoblox NIOS DNS zones}
   infoblox.nios_modules.nios_zone:
-    fqdn: ${2:# Specifies the qualified domain name to either add or remove from the NIOS instance based on the configured C(state) value}
-    view: ${3:# Configures the DNS view name for the configured resource}
-    grid_primary: ${4:# Configures the grid primary servers for this zone}
-    grid_secondaries: ${5:# Configures the grid secondary servers for this zone}
-    ns_group: ${6:# Configures the name server group for this zone}
-    restart_if_needed: ${7:# If set to true, causes the NIOS DNS service to restart and load the new zone configuration}
-    zone_format: ${8:# Create an authorative Reverse-Mapping Zone which is an area of network space for which one or more name servers-primary and secondary-have the responsibility to respond to address-to-name queries}
-    extattrs: ${9:# Allows for the configuration of Extensible Attributes on the instance of the object}
-    comment: ${10:# Configures a text string comment to be associated with the instance of this object}
-    state: ${11:# Configures the intended state of the instance of the object on the NIOS server}
-    provider: ${12:# A dict object containing connection details}
+    comment: ${2:# Configures a text string comment to be associated with the instance of this object}
+    extattrs: ${3:# Allows for the configuration of Extensible Attributes on the instance of the object}
+    fqdn: ${4:# Specifies the qualified domain name to either add or remove from the NIOS instance based on the configured C(state) value}
+    grid_primary: ${5:# Configures the grid primary servers for this zone}
+    grid_secondaries: ${6:# Configures the grid secondary servers for this zone}
+    ns_group: ${7:# Configures the name server group for this zone}
+    provider: ${8:# A dict object containing connection details}
+    restart_if_needed: ${9:# If set to true, causes the NIOS DNS service to restart and load the new zone configuration}
+    state: ${10:# Configures the intended state of the instance of the object on the NIOS server}
+    view: ${11:# Configures the DNS view name for the configured resource}
+    zone_format: ${12:# Create an authorative Reverse-Mapping Zone which is an area of network space for which one or more name servers-primary and secondary-have the responsibility to respond to address-to-name queries}
   tags:
     - infoblox
     - nios_modules

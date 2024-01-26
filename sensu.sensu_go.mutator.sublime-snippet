@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Sensu mutators}
   sensu.sensu_go.mutator:
-    command: ${2:# The mutator command to be executed by the Sensu backend}
-    timeout: ${3:# The mutator execution duration timeout in seconds (hard stop)}
-    env_vars: ${4:# A mapping of environment variable names and values to use with command execution}
-    runtime_assets: ${5:# List of runtime assets, required to run the mutator I(command)}
-    auth: ${6:# Authentication parameters}
+    annotations: ${2:# Custom metadata fields with fewer restrictions, as key/value pairs}
+    auth: ${3:# Authentication parameters}
+    command: ${4:# The mutator command to be executed by the Sensu backend}
+    env_vars: ${5:# A mapping of environment variable names and values to use with command execution}
+    labels: ${6:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
     name: ${7:# The Sensu resource's name}
     namespace: ${8:# RBAC namespace to operate in}
-    state: ${9:# Target state of the Sensu object}
-    labels: ${10:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
-    annotations: ${11:# Custom metadata fields with fewer restrictions, as key/value pairs}
-    secrets: ${12:# List of secrets that are available to the command}
+    runtime_assets: ${9:# List of runtime assets, required to run the mutator I(command)}
+    secrets: ${10:# List of secrets that are available to the command}
+    state: ${11:# Target state of the Sensu object}
+    timeout: ${12:# The mutator execution duration timeout in seconds (hard stop)}
   tags:
     - sensu
     - sensu_go

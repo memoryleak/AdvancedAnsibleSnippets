@@ -1,32 +1,32 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Sensu checks}
   sensu.sensu_go.check:
-    command: ${2:# Check command to run}
-    subscriptions: ${3:# List of subscriptions which receive check requests}
-    handlers: ${4:# List of handlers which receive check results}
-    interval: ${5:# Check request interval}
+    annotations: ${2:# Custom metadata fields with fewer restrictions, as key/value pairs}
+    auth: ${3:# Authentication parameters}
+    check_hooks: ${4:# A mapping of response codes to hooks which will be run by the agent when that code is returned}
+    command: ${5:# Check command to run}
     cron: ${6:# Schedule check requests using crontab syntax}
-    publish: ${7:# Enables or disables scheduled publication of check requests}
-    timeout: ${8:# Check execution timeout}
-    ttl: ${9:# Amount of time after which a check result is considered stale}
-    stdin: ${10:# Enables writing of serialized JSON data to the check command's stdin}
-    low_flap_threshold: ${11:# Low flap threshold}
-    high_flap_threshold: ${12:# High flap threshold}
-    runtime_assets: ${13:# List of runtime assets required to run the check}
-    check_hooks: ${14:# A mapping of response codes to hooks which will be run by the agent when that code is returned}
-    proxy_entity_name: ${15:# Entity name to associate this check with instead of the agent it ran on}
-    proxy_requests: ${16:# Allows you to assign the check to run for multiple entities according to their entity_attributes}
-    output_metric_format: ${17:# Enable parsing of metrics in the specified format from this check's output}
-    output_metric_handlers: ${18:# List of handlers which receive check results}
-    round_robin: ${19:# An array of environment variables to use with command execution}
-    env_vars: ${20:# A mapping of environment variable names and values to use with command execution}
-    auth: ${21:# Authentication parameters}
-    name: ${22:# The Sensu resource's name}
-    namespace: ${23:# RBAC namespace to operate in}
-    state: ${24:# Target state of the Sensu object}
-    labels: ${25:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
-    annotations: ${26:# Custom metadata fields with fewer restrictions, as key/value pairs}
-    secrets: ${27:# List of secrets that are available to the command}
+    env_vars: ${7:# A mapping of environment variable names and values to use with command execution}
+    handlers: ${8:# List of handlers which receive check results}
+    high_flap_threshold: ${9:# High flap threshold}
+    interval: ${10:# Check request interval}
+    labels: ${11:# Custom metadata fields that can be accessed within Sensu, as key/value pairs}
+    low_flap_threshold: ${12:# Low flap threshold}
+    name: ${13:# The Sensu resource's name}
+    namespace: ${14:# RBAC namespace to operate in}
+    output_metric_format: ${15:# Enable parsing of metrics in the specified format from this check's output}
+    output_metric_handlers: ${16:# List of handlers which receive check results}
+    proxy_entity_name: ${17:# Entity name to associate this check with instead of the agent it ran on}
+    proxy_requests: ${18:# Allows you to assign the check to run for multiple entities according to their entity_attributes}
+    publish: ${19:# Enables or disables scheduled publication of check requests}
+    round_robin: ${20:# An array of environment variables to use with command execution}
+    runtime_assets: ${21:# List of runtime assets required to run the check}
+    secrets: ${22:# List of secrets that are available to the command}
+    state: ${23:# Target state of the Sensu object}
+    stdin: ${24:# Enables writing of serialized JSON data to the check command's stdin}
+    subscriptions: ${25:# List of subscriptions which receive check requests}
+    timeout: ${26:# Check execution timeout}
+    ttl: ${27:# Amount of time after which a check result is considered stale}
   tags:
     - sensu
     - sensu_go

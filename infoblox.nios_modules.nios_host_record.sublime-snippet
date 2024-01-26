@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure Infoblox NIOS host records}
   infoblox.nios_modules.nios_host_record:
-    name: ${2:# Specifies the fully qualified hostname to add or remove from the system}
-    view: ${3:# Sets the DNS view to associate this host record with}
+    aliases: ${2:# Configures an optional list of additional aliases to add to the host record}
+    comment: ${3:# Configures a text string comment to be associated with the instance of this object}
     configure_for_dns: ${4:# Sets the DNS to particular parent}
-    ipv4addrs: ${5:# Configures the IPv4 addresses for this host record}
-    ipv6addrs: ${6:# Configures the IPv6 addresses for the host record}
-    aliases: ${7:# Configures an optional list of additional aliases to add to the host record}
-    ttl: ${8:# Configures the TTL to be associated with this host record}
-    extattrs: ${9:# Allows for the configuration of Extensible Attributes on the instance of the object}
-    comment: ${10:# Configures a text string comment to be associated with the instance of this object}
-    state: ${11:# Configures the intended state of the instance of the object on the NIOS server}
-    provider: ${12:# A dict object containing connection details}
+    extattrs: ${5:# Allows for the configuration of Extensible Attributes on the instance of the object}
+    ipv4addrs: ${6:# Configures the IPv4 addresses for this host record}
+    ipv6addrs: ${7:# Configures the IPv6 addresses for the host record}
+    name: ${8:# Specifies the fully qualified hostname to add or remove from the system}
+    provider: ${9:# A dict object containing connection details}
+    state: ${10:# Configures the intended state of the instance of the object on the NIOS server}
+    ttl: ${11:# Configures the TTL to be associated with this host record}
+    view: ${12:# Sets the DNS view to associate this host record with}
   tags:
     - infoblox
     - nios_modules

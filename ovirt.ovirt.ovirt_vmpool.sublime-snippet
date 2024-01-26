@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module to manage VM pools in oVirt/RHV}
   ovirt.ovirt.ovirt_vmpool:
-    id: ${2:# ID of the vmpool to manage}
-    name: ${3:# Name of the VM pool to manage}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    cluster: ${3:# Name of the cluster, where VM pool should be created}
     comment: ${4:# Comment of the Virtual Machine pool}
-    state: ${5:# Should the VM pool be present/absent}
-    template: ${6:# Name of the template, which will be used to create VM pool}
-    description: ${7:# Description of the VM pool}
-    cluster: ${8:# Name of the cluster, where VM pool should be created}
-    type: ${9:# Type of the VM pool}
-    vm_per_user: ${10:# Maximum number of VMs a single user can attach to from this pool}
+    description: ${5:# Description of the VM pool}
+    fetch_nested: ${6:# If I(True) the module will fetch additional data from the API}
+    id: ${7:# ID of the vmpool to manage}
+    name: ${8:# Name of the VM pool to manage}
+    nested_attributes: ${9:# Specifies list of the attributes which should be fetched from the API}
+    poll_interval: ${10:# Number of the seconds the module waits until another poll request on entity status is sent}
     prestarted: ${11:# Number of pre-started VMs defines the number of VMs in run state, that are waiting to be attached to Users}
-    vm_count: ${12:# Number of VMs in the pool}
-    vm: ${13:# For creating vm pool without editing template}
-    wait: ${14:# C(yes) if the module should wait for the entity to get into desired state}
-    fetch_nested: ${15:# If I(True) the module will fetch additional data from the API}
-    nested_attributes: ${16:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${17:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
-    timeout: ${18:# The amount of time in seconds the module should wait for the instance to get into desired state}
-    poll_interval: ${19:# Number of the seconds the module waits until another poll request on entity status is sent}
+    state: ${12:# Should the VM pool be present/absent}
+    template: ${13:# Name of the template, which will be used to create VM pool}
+    timeout: ${14:# The amount of time in seconds the module should wait for the instance to get into desired state}
+    type: ${15:# Type of the VM pool}
+    vm: ${16:# For creating vm pool without editing template}
+    vm_count: ${17:# Number of VMs in the pool}
+    vm_per_user: ${18:# Maximum number of VMs a single user can attach to from this pool}
+    wait: ${19:# C(yes) if the module should wait for the entity to get into desired state}
   tags:
     - ovirt
     - ovirt

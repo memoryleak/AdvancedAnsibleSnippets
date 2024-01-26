@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Convert OpenSSL private keys}
   community.crypto.openssl_privatekey_convert:
-    dest_path: ${2:# Name of the file in which the generated TLS/SSL private key will be written}
+    attributes: ${2:# The attributes the resulting filesystem object should have}
     backup: ${3:# Create a backup file including a timestamp so you can get the original private key back if you overwrote it with a new one by accident}
-    mode: ${4:# The permissions the resulting filesystem object should have}
-    owner: ${5:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
-    group: ${6:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
-    seuser: ${7:# The user part of the SELinux filesystem object context}
-    serole: ${8:# The role part of the SELinux filesystem object context}
-    setype: ${9:# The type part of the SELinux filesystem object context}
+    dest_passphrase: ${4:# The passphrase for the private key to store}
+    dest_path: ${5:# Name of the file in which the generated TLS/SSL private key will be written}
+    format: ${6:# Determines which format the destination private key should be written in}
+    group: ${7:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    mode: ${8:# The permissions the resulting filesystem object should have}
+    owner: ${9:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
     selevel: ${10:# The level part of the SELinux filesystem object context}
-    unsafe_writes: ${11:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
-    attributes: ${12:# The attributes the resulting filesystem object should have}
-    src_path: ${13:# Name of the file containing the OpenSSL private key to convert}
+    serole: ${11:# The role part of the SELinux filesystem object context}
+    setype: ${12:# The type part of the SELinux filesystem object context}
+    seuser: ${13:# The user part of the SELinux filesystem object context}
     src_content: ${14:# The content of the file containing the OpenSSL private key to convert}
     src_passphrase: ${15:# The passphrase for the private key to load}
-    dest_passphrase: ${16:# The passphrase for the private key to store}
-    format: ${17:# Determines which format the destination private key should be written in}
+    src_path: ${16:# Name of the file containing the OpenSSL private key to convert}
+    unsafe_writes: ${17:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
   tags:
     - community
     - crypto

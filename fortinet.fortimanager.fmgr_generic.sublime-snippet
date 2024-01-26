@@ -1,10 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Build and send generic FortiManager API request}
   fortinet.fortimanager.fmgr_generic:
-    enable_log: ${2:# Enable/Disable logging for task}
-    method: ${3:# the method of the json-rpc}
-    params: ${4:# the parameter collection}
+    access_token: ${2:# The token to access FortiManager without using username and password}
+    enable_log: ${3:# Enable/Disable logging for task}
+    forticloud_access_token: ${4:# authenticate Ansible client with forticloud API access token}
     json: ${5:# the raw json-formatted payload to send to fortimanager}
+    method: ${6:# the method of the json-rpc}
+    params: ${7:# the parameter collection}
+    rc_failed: ${8:# the rc codes list with which the conditions to fail will be overriden}
+    rc_succeeded: ${9:# the rc codes list with which the conditions to succeed will be overriden}
+    workspace_locking_adom: ${10:# no description}
+    workspace_locking_timeout: ${11:# no description}
   tags:
     - fortinet
     - fortimanager

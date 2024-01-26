@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp Element Software Snapshot Schedules}
   netapp.elementsw.na_elementsw_snapshot_schedule:
-    state: ${2:# Whether the specified schedule should exist or not}
-    paused: ${3:# Pause / Resume a schedule}
-    recurring: ${4:# Should the schedule recur?}
-    schedule_type: ${5:# Schedule type for creating schedule}
-    time_interval_days: ${6:# Time interval in days}
-    time_interval_hours: ${7:# Time interval in hours}
-    time_interval_minutes: ${8:# Time interval in minutes}
-    days_of_week_weekdays: ${9:# List of days of the week (Sunday to Saturday)}
-    days_of_week_hours: ${10:# Time specified in hours}
-    days_of_week_minutes: ${11:# Time specified in minutes}
-    days_of_month_monthdays: ${12:# List of days of the month (1-31)}
-    days_of_month_hours: ${13:# Time specified in hours}
-    days_of_month_minutes: ${14:# Time specified in minutes}
-    name: ${15:# Name for the snapshot schedule}
+    account_id: ${2:# Account ID for the owner of this volume}
+    days_of_month_hours: ${3:# Time specified in hours}
+    days_of_month_minutes: ${4:# Time specified in minutes}
+    days_of_month_monthdays: ${5:# List of days of the month (1-31)}
+    days_of_week_hours: ${6:# Time specified in hours}
+    days_of_week_minutes: ${7:# Time specified in minutes}
+    days_of_week_weekdays: ${8:# List of days of the week (Sunday to Saturday)}
+    hostname: ${9:# The hostname or IP address of the SolidFire cluster}
+    name: ${10:# Name for the snapshot schedule}
+    password: ${11:# Password for the specified user}
+    paused: ${12:# Pause / Resume a schedule}
+    recurring: ${13:# Should the schedule recur?}
+    retention: ${14:# Retention period for the snapshot}
+    schedule_type: ${15:# Schedule type for creating schedule}
     snapshot_name: ${16:# Name for the created snapshots}
-    volumes: ${17:# Volume IDs that you want to set the snapshot schedule for}
-    account_id: ${18:# Account ID for the owner of this volume}
-    retention: ${19:# Retention period for the snapshot}
-    starting_date: ${20:# Starting date for the schedule}
-    hostname: ${21:# The hostname or IP address of the SolidFire cluster}
+    starting_date: ${17:# Starting date for the schedule}
+    state: ${18:# Whether the specified schedule should exist or not}
+    time_interval_days: ${19:# Time interval in days}
+    time_interval_hours: ${20:# Time interval in hours}
+    time_interval_minutes: ${21:# Time interval in minutes}
     username: ${22:# Please ensure that the user has the adequate permissions}
-    password: ${23:# Password for the specified user}
+    volumes: ${23:# Volume IDs that you want to set the snapshot schedule for}
   tags:
     - netapp
     - elementsw

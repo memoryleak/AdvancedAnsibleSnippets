@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP module to modify kerberos interface}
+  netapp.ontap.na_ontap_kerberos_interface:
+    admin_password: ${2:# Specifies the administrator password}
+    admin_username: ${3:# Specifies the administrator username}
+    cert_filepath: ${4:# path to SSL client cert file (}
+    enabled: ${5:# Specifies whether to enable or disable Kerberos for NFS on the specified Vserver and logical interface}
+    feature_flags: ${6:# Enable or disable a new feature}
+    force_ontap_version: ${7:# Override the cluster ONTAP version when using REST}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    http_port: ${9:# Override the default port (80 or 443) with this port}
+    https: ${10:# Enable and disable https}
+    interface_name: ${11:# Specifies the name of the logical interface associated with the NFS Kerberos configuration you want to modify}
+    key_filepath: ${12:# path to SSL client key file}
+    keytab_uri: ${13:# Specifies loading a keytab file from the specified URI}
+    machine_account: ${14:# Specifies the machine account to create in Active Directory}
+    ontapi: ${15:# The ontap api version to use}
+    organizational_unit: ${16:# Specifies the organizational unit (OU) under which the Microsoft Active Directory server account will be created when you enable Kerberos using a realm for Microsoft KDC}
+    password: ${17:# Password for the specified user}
+    service_principal_name: ${18:# Specifies the service principal name (SPN) of the Kerberos configuration you want to modify}
+    state: ${19:# Modify kerberos interface, only present is supported}
+    use_rest: ${20:# Whether to use REST or ZAPI}
+    username: ${21:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${22:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${23:# Specifies the Vserver associated with the NFS Kerberos configuration you want to modify}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_kerberos_interface]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_kerberos_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP module to modify kerberos interface</description>
+</snippet>

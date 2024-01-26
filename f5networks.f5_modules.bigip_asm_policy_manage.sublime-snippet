@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage BIG-IP ASM policies}
   f5networks.f5_modules.bigip_asm_policy_manage:
-    active: ${2:# If C(yes), applies and activates the existing inactive policy}
-    apply: ${3:# If C(yes) applies the policy if the policy has pending changes}
+    active: ${2:# If C(true), applies and activates the existing inactive policy}
+    apply: ${3:# If C(true) applies the policy if the policy has pending changes}
     name: ${4:# The ASM policy to manage or create}
-    state: ${5:# When C(state) is C(present), and the C(template) parameter is provided, a new ASM policy is created from the template with the given policy C(name)}
-    template: ${6:# An ASM policy built-in template}
-    partition: ${7:# Device partition to manage resources on}
-    provider: ${8:# A dict object containing connection details}
+    partition: ${5:# Device partition to manage resources on}
+    provider: ${6:# A dict object containing connection details}
+    state: ${7:# When C(state) is C(present), and the C(template) parameter is provided, a new ASM policy is created from the template with the given policy C(name)}
+    template: ${8:# An ASM policy built-in template}
   tags:
     - f5networks
     - f5_modules

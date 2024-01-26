@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages VPN instance address family on HUAWEI CloudEngine switches}
   community.network.ce_vrf_af:
-    vrf: ${2:# VPN instance}
-    vrf_aftype: ${3:# VPN instance address family}
-    route_distinguisher: ${4:# VPN instance route distinguisher,the RD used to distinguish same route prefix from different vpn}
+    evpn: ${2:# Is extend vpn or normal vpn}
+    route_distinguisher: ${3:# VPN instance route distinguisher,the RD used to distinguish same route prefix from different vpn}
+    state: ${4:# Manage the state of the af}
     vpn_target_state: ${5:# Manage the state of the vpn target}
     vpn_target_type: ${6:# VPN instance vpn target type}
     vpn_target_value: ${7:# VPN instance target value}
-    evpn: ${8:# Is extend vpn or normal vpn}
-    state: ${9:# Manage the state of the af}
+    vrf: ${8:# VPN instance}
+    vrf_aftype: ${9:# VPN instance address family}
   tags:
     - community
     - network

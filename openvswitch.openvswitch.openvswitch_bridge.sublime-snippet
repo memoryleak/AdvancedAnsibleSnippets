@@ -2,14 +2,14 @@
   <content><![CDATA[- name: ${1:Manage Open vSwitch bridges}
   openvswitch.openvswitch.openvswitch_bridge:
     bridge: ${2:# Name of bridge or fake bridge to manage}
-    parent: ${3:# Bridge parent of the fake bridge to manage}
-    vlan: ${4:# The VLAN id of the fake bridge to manage (must be between 0 and 4095)}
-    state: ${5:# Whether the bridge should exist}
-    timeout: ${6:# How long to wait for ovs-vswitchd to respond}
-    external_ids: ${7:# A dictionary of external-ids}
-    fail_mode: ${8:# Set bridge fail-mode}
-    set: ${9:# Run set command after bridge configuration}
-    database_socket: ${10:# Path/ip to datbase socket to use}
+    database_socket: ${3:# Path/ip to datbase socket to use}
+    external_ids: ${4:# A dictionary of external-ids}
+    fail_mode: ${5:# Set bridge fail-mode}
+    parent: ${6:# Bridge parent of the fake bridge to manage}
+    set: ${7:# Run set command after bridge configuration}
+    state: ${8:# Whether the bridge should exist}
+    timeout: ${9:# How long to wait for ovs-vswitchd to respond}
+    vlan: ${10:# The VLAN id of the fake bridge to manage (must be between 0 and 4095)}
   tags:
     - openvswitch
     - openvswitch

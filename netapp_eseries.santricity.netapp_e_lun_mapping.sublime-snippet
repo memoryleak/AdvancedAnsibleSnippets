@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp E-Series create, delete, or modify lun mappings}
   netapp_eseries.santricity.netapp_e_lun_mapping:
-    state: ${2:# Present will ensure the mapping exists, absent will remove the mapping}
-    target: ${3:# The name of host or hostgroup you wish to assign to the mapping}
-    volume_name: ${4:# The name of the volume you wish to include in the mapping}
+    api_password: ${2:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${3:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_username: ${4:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
     lun: ${5:# The LUN value you wish to give the mapping}
-    target_type: ${6:# This option specifies the whether the target should be a host or a group of hosts}
-    api_username: ${7:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_password: ${8:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_url: ${9:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    ssid: ${6:# The ID of the array to manage}
+    state: ${7:# Present will ensure the mapping exists, absent will remove the mapping}
+    target: ${8:# The name of host or hostgroup you wish to assign to the mapping}
+    target_type: ${9:# This option specifies the whether the target should be a host or a group of hosts}
     validate_certs: ${10:# Should https certificates be validated?}
-    ssid: ${11:# The ID of the array to manage}
+    volume_name: ${11:# The name of the volume you wish to include in the mapping}
   tags:
     - netapp_eseries
     - santricity

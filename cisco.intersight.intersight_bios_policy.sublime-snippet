@@ -1,0 +1,431 @@
+<snippet>
+  <content><![CDATA[- name: ${1:BIOS policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_bios_policy:
+    acs_control_gpu1state: ${2:# BIOS Token for setting ACS Control GPU 1 configuration}
+    acs_control_gpu2state: ${3:# BIOS Token for setting ACS Control GPU 2 configuration}
+    acs_control_gpu3state: ${4:# BIOS Token for setting ACS Control GPU 3 configuration}
+    acs_control_gpu4state: ${5:# BIOS Token for setting ACS Control GPU 4 configuration}
+    acs_control_gpu5state: ${6:# BIOS Token for setting ACS Control GPU 5 configuration}
+    acs_control_gpu6state: ${7:# BIOS Token for setting ACS Control GPU 6 configuration}
+    acs_control_gpu7state: ${8:# BIOS Token for setting ACS Control GPU 7 configuration}
+    acs_control_gpu8state: ${9:# BIOS Token for setting ACS Control GPU 8 configuration}
+    acs_control_slot11state: ${10:# BIOS Token for setting ACS Control Slot 11 configuration}
+    acs_control_slot12state: ${11:# BIOS Token for setting ACS Control Slot 12 configuration}
+    acs_control_slot13state: ${12:# BIOS Token for setting ACS Control Slot 13 configuration}
+    acs_control_slot14state: ${13:# BIOS Token for setting ACS Control Slot 14 configuration}
+    adaptive_refresh_mgmt_level: ${14:# BIOS Token for setting Adaptive Refresh Management Level configuration}
+    adjacent_cache_line_prefetch: ${15:# BIOS Token for setting Adjacent Cache Line Prefetcher configuration}
+    advanced_mem_test: ${16:# BIOS Token for setting Enhanced Memory Test configuration}
+    all_usb_devices: ${17:# BIOS Token for setting All USB Devices configuration}
+    altitude: ${18:# BIOS Token for setting altitude configuration}
+    api_key_id: ${19:# Public API Key ID associated with the private key}
+    api_private_key: ${20:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${21:# URI used to access the Intersight API}
+    aspm_support: ${22:# BIOS Token for setting ASPM Support configuration}
+    assert_nmi_on_perr: ${23:# BIOS Token for setting Assert NMI on PERR configuration}
+    assert_nmi_on_serr: ${24:# BIOS Token for setting Assert NMI on SERR configuration}
+    auto_cc_state: ${25:# BIOS Token for setting Autonomous Core C State configuration}
+    autonumous_cstate_enable: ${26:# BIOS Token for setting CPU Autonomous C State configuration}
+    baud_rate: ${27:# BIOS Token for setting Baud Rate configuration}
+    bme_dma_mitigation: ${28:# BIOS Token for setting BME DMA Mitigation configuration}
+    boot_option_num_retry: ${29:# BIOS Token for setting Number of Retries configuration}
+    boot_option_re_cool_down: ${30:# BIOS Token for setting Cool Down Time  (sec) configuration}
+    boot_option_retry: ${31:# BIOS Token for setting Boot Option Retry configuration}
+    boot_performance_mode: ${32:# BIOS Token for setting Boot Performance Mode configuration}
+    burst_and_postponed_refresh: ${33:# BIOS Token for setting Burst and Postponed Refresh configuration}
+    c1auto_demotion: ${34:# BIOS Token for setting C1 Auto Demotion configuration}
+    c1auto_un_demotion: ${35:# BIOS Token for setting C1 Auto UnDemotion configuration}
+    cbs_cmn_apbdis: ${36:# BIOS Token for setting APBDIS configuration}
+    cbs_cmn_cpu_cpb: ${37:# BIOS Token for setting Core Performance Boost configuration}
+    cbs_cmn_cpu_gen_downcore_ctrl: ${38:# BIOS Token for setting Downcore Control configuration}
+    cbs_cmn_cpu_global_cstate_ctrl: ${39:# BIOS Token for setting Global C State Control configuration}
+    cbs_cmn_cpu_l1stream_hw_prefetcher: ${40:# BIOS Token for setting L1 Stream HW Prefetcher configuration}
+    cbs_cmn_cpu_l2stream_hw_prefetcher: ${41:# BIOS Token for setting L2 Stream HW Prefetcher configuration}
+    cbs_cmn_cpu_smee: ${42:# BIOS Token for setting CPU SMEE configuration}
+    cbs_cmn_cpu_streaming_stores_ctrl: ${43:# BIOS Token for setting Streaming Stores Control configuration}
+    cbs_cmn_determinism_slider: ${44:# BIOS Token for setting Determinism Slider configuration}
+    cbs_cmn_efficiency_mode_en: ${45:# BIOS Token for setting Efficiency Mode Enable configuration}
+    cbs_cmn_fixed_soc_pstate: ${46:# BIOS Token for setting Fixed SOC P-State configuration}
+    cbs_cmn_gnb_nb_iommu: ${47:# BIOS Token for setting IOMMU configuration}
+    cbs_cmn_gnb_smu_df_cstates: ${48:# BIOS Token for setting DF C-States configuration}
+    cbs_cmn_gnb_smucppc: ${49:# BIOS Token for setting CPPC configuration}
+    cbs_cmn_mem_ctrl_bank_group_swap_ddr4: ${50:# BIOS Token for setting Bank Group Swap configuration}
+    cbs_cmn_mem_map_bank_interleave_ddr4: ${51:# BIOS Token for setting Chipset Interleave configuration}
+    cbs_cmnc_tdp_ctl: ${52:# BIOS Token for setting cTDP Control configuration}
+    cbs_cpu_ccd_ctrl_ssp: ${53:# BIOS Token for setting CCD Control configuration}
+    cbs_cpu_core_ctrl: ${54:# BIOS Token for setting CPU Downcore control configuration}
+    cbs_cpu_smt_ctrl: ${55:# BIOS Token for setting CPU SMT Mode configuration}
+    cbs_dbg_cpu_snp_mem_cover: ${56:# BIOS Token for setting SNP Memory Coverage configuration}
+    cbs_dbg_cpu_snp_mem_size_cover: ${57:# BIOS Token for setting SNP Memory Size to Cover in MiB configuration (0 - 1048576 MiB)}
+    cbs_df_cmn_acpi_srat_l3numa: ${58:# BIOS Token for setting ACPI SRAT L3 Cache As NUMA Domain configuration}
+    cbs_df_cmn_dram_nps: ${59:# BIOS Token for setting NUMA Nodes per Socket configuration}
+    cbs_df_cmn_mem_intlv: ${60:# BIOS Token for setting AMD Memory Interleaving configuration}
+    cbs_df_cmn_mem_intlv_size: ${61:# BIOS Token for setting AMD Memory Interleaving Size configuration}
+    cbs_sev_snp_support: ${62:# BIOS Token for setting SEV-SNP Support configuration}
+    cdn_enable: ${63:# BIOS Token for setting Consistent Device Naming configuration}
+    cdn_support: ${64:# BIOS Token for setting CDN Support for LOM configuration}
+    channel_inter_leave: ${65:# BIOS Token for setting Channel Interleaving configuration}
+    cisco_adaptive_mem_training: ${66:# BIOS Token for setting Adaptive Memory Training configuration}
+    cisco_debug_level: ${67:# BIOS Token for setting BIOS Techlog Level configuration}
+    cisco_oprom_launch_optimization: ${68:# BIOS Token for setting OptionROM Launch Optimization configuration}
+    cisco_xgmi_max_speed: ${69:# BIOS Token for setting Cisco xGMI Max Speed configuration}
+    cke_low_policy: ${70:# BIOS Token for setting CKE Low Policy configuration}
+    closed_loop_therm_throtl: ${71:# BIOS Token for setting Closed Loop Thermal Throttling configuration}
+    cmci_enable: ${72:# BIOS Token for setting Processor CMCI configuration}
+    config_tdp: ${73:# BIOS Token for setting Config TDP configuration}
+    config_tdp_level: ${74:# BIOS Token for setting Configurable TDP Level configuration}
+    console_redirection: ${75:# BIOS Token for setting Console Redirection configuration}
+    core_multi_processing: ${76:# BIOS Token for setting Core Multi Processing configuration}
+    cpu_energy_performance: ${77:# BIOS Token for setting Energy Performance configuration}
+    cpu_frequency_floor: ${78:# BIOS Token for setting Frequency Floor Override configuration}
+    cpu_pa_limit: ${79:# BIOS Token for setting Limit CPU PA to 46 Bits configuration}
+    cpu_perf_enhancement: ${80:# BIOS Token for setting Enhanced CPU Performance configuration}
+    cpu_performance: ${81:# BIOS Token for setting CPU Performance configuration}
+    cpu_power_management: ${82:# BIOS Token for setting Power Technology configuration}
+    cr_qos: ${83:# BIOS Token for setting CR QoS configuration}
+    crfastgo_config: ${84:# BIOS Token for setting CR FastGo Config configuration}
+    dcpmm_firmware_downgrade: ${85:# BIOS Token for setting DCPMM Firmware Downgrade configuration}
+    demand_scrub: ${86:# BIOS Token for setting Demand Scrub configuration}
+    description: ${87:# The user-defined description of the BIOS policy}
+    direct_cache_access: ${88:# BIOS Token for setting Direct Cache Access Support configuration}
+    dma_ctrl_opt_in: ${89:# BIOS Token for setting DMA Control Opt-In Flag configuration}
+    dram_clock_throttling: ${90:# BIOS Token for setting DRAM Clock Throttling configuration}
+    dram_refresh_rate: ${91:# BIOS Token for setting DRAM Refresh Rate configuration}
+    dram_sw_thermal_throttling: ${92:# BIOS Token for setting DRAM SW Thermal Throttling configuration}
+    eadr_support: ${93:# BIOS Token for setting eADR Support configuration}
+    edpc_en: ${94:# BIOS Token for setting IIO eDPC Support configuration}
+    enable_clock_spread_spec: ${95:# BIOS Token for setting External SSC Enable configuration}
+    enable_mktme: ${96:# BIOS Token for setting Multikey Total Memory Encryption  (MK-TME) configuration}
+    enable_rmt: ${97:# BIOS Token for setting Rank Margin Tool configuration}
+    enable_sgx: ${98:# BIOS Token for setting Software Guard Extensions  (SGX) configuration}
+    enable_tme: ${99:# BIOS Token for setting Total Memory Encryption  (TME) configuration}
+    energy_efficient_turbo: ${100:# BIOS Token for setting Energy Efficient Turbo configuration}
+    eng_perf_tuning: ${101:# BIOS Token for setting Energy Performance Tuning configuration}
+    enhanced_intel_speed_step_tech: ${102:# BIOS Token for setting Enhanced Intel Speedstep (R) Technology configuration}
+    epoch_update: ${103:# BIOS Token for setting Select Owner EPOCH Input Type configuration}
+    epp_enable: ${104:# BIOS Token for setting Processor EPP Enable configuration}
+    epp_profile: ${105:# BIOS Token for setting EPP Profile configuration}
+    error_check_scrub: ${106:# BIOS Token for setting Error Check Scrub configuration}
+    execute_disable_bit: ${107:# BIOS Token for setting Execute Disable Bit configuration}
+    extended_apic: ${108:# BIOS Token for setting Local X2 Apic configuration}
+    flow_control: ${109:# BIOS Token for setting Flow Control configuration}
+    frb2enable: ${110:# BIOS Token for setting FRB-2 Timer configuration}
+    hardware_prefetch: ${111:# BIOS Token for setting Hardware Prefetcher configuration}
+    hwpm_enable: ${112:# BIOS Token for setting CPU Hardware Power Management configuration}
+    imc_interleave: ${113:# BIOS Token for setting IMC Interleaving configuration}
+    intel_dynamic_speed_select: ${114:# BIOS Token for setting Intel Dynamic Speed Select configuration}
+    intel_hyper_threading_tech: ${115:# BIOS Token for setting Intel HyperThreading Tech configuration}
+    intel_speed_select: ${116:# BIOS Token for setting Intel Speed Select configuration}
+    intel_turbo_boost_tech: ${117:# BIOS Token for setting Intel Turbo Boost Tech configuration}
+    intel_virtualization_technology: ${118:# BIOS Token for setting Intel (R) VT configuration}
+    intel_vt_for_directed_io: ${119:# BIOS Token for setting Intel VT for Directed IO configuration}
+    intel_vtd_coherency_support: ${120:# BIOS Token for setting Intel (R) VT-d Coherency Support configuration}
+    intel_vtd_interrupt_remapping: ${121:# BIOS Token for setting Intel (R) VT-d Interrupt Remapping configuration}
+    intel_vtd_pass_through_dma_support: ${122:# BIOS Token for setting Intel (R) VT-d PassThrough DMA Support configuration}
+    intel_vtdats_support: ${123:# BIOS Token for setting Intel VTD ATS Support configuration}
+    ioh_error_enable: ${124:# BIOS Token for setting IIO Error Enable configuration}
+    ioh_resource: ${125:# BIOS Token for setting IOH Resource Allocation configuration}
+    ip_prefetch: ${126:# BIOS Token for setting DCU IP Prefetcher configuration}
+    ipv4http: ${127:# BIOS Token for setting IPV4 HTTP Support configuration}
+    ipv4pxe: ${128:# BIOS Token for setting IPv4 PXE Support configuration}
+    ipv6http: ${129:# BIOS Token for setting IPV6 HTTP Support configuration}
+    ipv6pxe: ${130:# BIOS Token for setting IPV6 PXE Support configuration}
+    kti_prefetch: ${131:# BIOS Token for setting KTI Prefetch configuration}
+    legacy_os_redirection: ${132:# BIOS Token for setting Legacy OS Redirection configuration}
+    legacy_usb_support: ${133:# BIOS Token for setting Legacy USB Support configuration}
+    llc_alloc: ${134:# BIOS Token for setting LLC Dead Line configuration}
+    llc_prefetch: ${135:# BIOS Token for setting LLC Prefetch configuration}
+    lom_port0state: ${136:# BIOS Token for setting LOM Port 0 OptionROM configuration}
+    lom_port1state: ${137:# BIOS Token for setting LOM Port 1 OptionROM configuration}
+    lom_port2state: ${138:# BIOS Token for setting LOM Port 2 OptionROM configuration}
+    lom_port3state: ${139:# BIOS Token for setting LOM Port 3 OptionROM configuration}
+    lom_ports_all_state: ${140:# BIOS Token for setting All Onboard LOM Ports configuration}
+    lv_ddr_mode: ${141:# BIOS Token for setting Low Voltage DDR Mode configuration}
+    make_device_non_bootable: ${142:# BIOS Token for setting Make Device Non Bootable configuration}
+    memory_bandwidth_boost: ${143:# BIOS Token for setting Memory Bandwidth Boost configuration}
+    memory_inter_leave: ${144:# BIOS Token for setting Intel Memory Interleaving configuration}
+    memory_mapped_io_above4gb: ${145:# BIOS Token for setting Memory Mapped IO above 4GiB configuration}
+    memory_refresh_rate: ${146:# BIOS Token for setting Memory Refresh Rate configuration}
+    memory_size_limit: ${147:# BIOS Token for setting Memory Size Limit in GiB configuration (0 - 65535 GiB)}
+    memory_thermal_throttling: ${148:# BIOS Token for setting Memory Thermal Throttling Mode configuration}
+    mirroring_mode: ${149:# BIOS Token for setting Mirroring Mode configuration}
+    mmcfg_base: ${150:# BIOS Token for setting MMCFG BASE configuration}
+    name: ${151:# The name assigned to the BIOS policy}
+    network_stack: ${152:# BIOS Token for setting Network Stack configuration}
+    numa_optimized: ${153:# BIOS Token for setting NUMA Optimized configuration}
+    nvmdimm_perform_config: ${154:# BIOS Token for setting NVM Performance Setting configuration}
+    onboard10gbit_lom: ${155:# BIOS Token for setting Onboard 10Gbit LOM configuration}
+    onboard_gbit_lom: ${156:# BIOS Token for setting Onboard Gbit LOM configuration}
+    onboard_scu_storage_support: ${157:# BIOS Token for setting Onboard SCU Storage Support configuration}
+    onboard_scu_storage_sw_stack: ${158:# BIOS Token for setting Onboard SCU Storage SW Stack configuration}
+    operation_mode: ${159:# BIOS Token for setting Operation Mode configuration}
+    organization: ${160:# The name of the Organization this resource is assigned to}
+    os_boot_watchdog_timer: ${161:# BIOS Token for setting OS Boot Watchdog Timer configuration}
+    os_boot_watchdog_timer_policy: ${162:# BIOS Token for setting OS Boot Watchdog Timer Policy configuration}
+    os_boot_watchdog_timer_timeout: ${163:# BIOS Token for setting OS Boot Watchdog Timer Timeout configuration}
+    out_of_band_mgmt_port: ${164:# BIOS Token for setting Out-of-Band Mgmt Port configuration}
+    package_cstate_limit: ${165:# BIOS Token for setting Package C State Limit configuration}
+    panic_high_watermark: ${166:# BIOS Token for setting Panic and High Watermark configuration}
+    partial_cache_line_sparing: ${167:# BIOS Token for setting Partial Cache Line Sparing configuration}
+    partial_mirror_mode_config: ${168:# BIOS Token for setting Partial Memory Mirror Mode configuration}
+    partial_mirror_percent: ${169:# BIOS Token for setting Partial Mirror Percentage configuration (0}
+    partial_mirror_value1: ${170:# BIOS Token for setting Partial Mirror1 Size in GiB configuration (0 - 65535 GiB)}
+    partial_mirror_value2: ${171:# BIOS Token for setting Partial Mirror2 Size in GiB configuration (0 - 65535 GiB)}
+    partial_mirror_value3: ${172:# BIOS Token for setting Partial Mirror3 Size in GiB configuration (0 - 65535 GiB)}
+    partial_mirror_value4: ${173:# BIOS Token for setting Partial Mirror4 Size in GiB configuration (0 - 65535 GiB)}
+    patrol_scrub: ${174:# BIOS Token for setting Patrol Scrub configuration}
+    patrol_scrub_duration: ${175:# BIOS Token for setting Patrol Scrub Interval configuration (5 - 23 Hour)}
+    pc_ie_ras_support: ${176:# BIOS Token for setting PCIe RAS Support configuration}
+    pc_ie_ssd_hot_plug_support: ${177:# BIOS Token for setting NVMe SSD Hot-Plug Support configuration}
+    pch_pcie_pll_ssc: ${178:# BIOS Token for setting PCIe PLL SSC Percent configuration (0 - 255 (n/10)%)}
+    pch_usb30mode: ${179:# BIOS Token for setting xHCI Mode configuration}
+    pci_option_ro_ms: ${180:# BIOS Token for setting All PCIe Slots OptionROM configuration}
+    pci_rom_clp: ${181:# BIOS Token for setting PCI ROM CLP configuration}
+    pcie_ari_support: ${182:# BIOS Token for setting PCIe ARI Support configuration}
+    pcie_pll_ssc: ${183:# BIOS Token for setting PCIe PLL SSC configuration}
+    pcie_slot_mraid1link_speed: ${184:# BIOS Token for setting MRAID1 Link Speed configuration}
+    pcie_slot_mraid1option_rom: ${185:# BIOS Token for setting MRAID1 OptionROM configuration}
+    pcie_slot_mraid2link_speed: ${186:# BIOS Token for setting MRAID2 Link Speed configuration}
+    pcie_slot_mraid2option_rom: ${187:# BIOS Token for setting MRAID2 OptionROM configuration}
+    pcie_slot_mstorraid_link_speed: ${188:# BIOS Token for setting PCIe Slot MSTOR Link Speed configuration}
+    pcie_slot_mstorraid_option_rom: ${189:# BIOS Token for setting PCIe Slot MSTOR RAID OptionROM configuration}
+    pcie_slot_nvme1link_speed: ${190:# BIOS Token for setting NVME 1 Link Speed configuration}
+    pcie_slot_nvme1option_rom: ${191:# BIOS Token for setting NVME 1 OptionROM configuration}
+    pcie_slot_nvme2link_speed: ${192:# BIOS Token for setting NVME 2 Link Speed configuration}
+    pcie_slot_nvme2option_rom: ${193:# BIOS Token for setting NVME 2 OptionROM configuration}
+    pcie_slot_nvme3link_speed: ${194:# BIOS Token for setting NVME 3 Link Speed configuration}
+    pcie_slot_nvme3option_rom: ${195:# BIOS Token for setting NVME 3 OptionROM configuration}
+    pcie_slot_nvme4link_speed: ${196:# BIOS Token for setting NVME 4 Link Speed configuration}
+    pcie_slot_nvme4option_rom: ${197:# BIOS Token for setting NVME 4 OptionROM configuration}
+    pcie_slot_nvme5link_speed: ${198:# BIOS Token for setting NVME 5 Link Speed configuration}
+    pcie_slot_nvme5option_rom: ${199:# BIOS Token for setting NVME 5 OptionROM configuration}
+    pcie_slot_nvme6link_speed: ${200:# BIOS Token for setting NVME 6 Link Speed configuration}
+    pcie_slot_nvme6option_rom: ${201:# BIOS Token for setting NVME 6 OptionROM configuration}
+    pcie_slots_cdn_enable: ${202:# BIOS Token for setting PCIe Slots CDN Control configuration}
+    pop_support: ${203:# BIOS Token for setting Power ON Password configuration}
+    post_error_pause: ${204:# BIOS Token for setting POST Error Pause configuration}
+    post_package_repair: ${205:# BIOS Token for setting Post Package Repair configuration}
+    processor_c1e: ${206:# BIOS Token for setting Processor C1E configuration}
+    processor_c3report: ${207:# BIOS Token for setting Processor C3 Report configuration}
+    processor_c6report: ${208:# BIOS Token for setting Processor C6 Report configuration}
+    processor_cstate: ${209:# BIOS Token for setting CPU C State configuration}
+    psata: ${210:# BIOS Token for setting P-SATA Mode configuration}
+    pstate_coord_type: ${211:# BIOS Token for setting P-STATE Coordination configuration}
+    putty_key_pad: ${212:# BIOS Token for setting Putty KeyPad configuration}
+    pwr_perf_tuning: ${213:# BIOS Token for setting Power Performance Tuning configuration}
+    qpi_link_frequency: ${214:# BIOS Token for setting QPI Link Frequency Select configuration}
+    qpi_link_speed: ${215:# BIOS Token for setting UPI Link Frequency Select configuration}
+    qpi_snoop_mode: ${216:# BIOS Token for setting QPI Snoop Mode configuration}
+    rank_inter_leave: ${217:# BIOS Token for setting Rank Interleaving configuration}
+    redirection_after_post: ${218:# BIOS Token for setting Redirection After BIOS POST configuration}
+    sata_mode_select: ${219:# BIOS Token for setting SATA Mode configuration}
+    select_memory_ras_configuration: ${220:# BIOS Token for setting Memory RAS Configuration configuration}
+    select_ppr_type: ${221:# BIOS Token for setting PPR Type configuration}
+    serial_port_aenable: ${222:# BIOS Token for setting Serial A Enable configuration}
+    sev: ${223:# BIOS Token for setting Secured Encrypted Virtualization configuration}
+    sgx_auto_registration_agent: ${224:# BIOS Token for setting SGX Auto MP Registration Agent configuration}
+    sgx_epoch0: ${225:# BIOS Token for setting SGX Epoch 0 configuration (0 - ffffffffffffffff Hash byte 7-0)}
+    sgx_epoch1: ${226:# BIOS Token for setting SGX Epoch 1 configuration (0 - ffffffffffffffff Hash byte 7-0)}
+    sgx_factory_reset: ${227:# BIOS Token for setting SGX Factory Reset configuration}
+    sgx_le_pub_key_hash0: ${228:# BIOS Token for setting SGX PubKey Hash0 configuration (0 - ffffffffffffffff Hash byte 7-0)}
+    sgx_le_pub_key_hash1: ${229:# BIOS Token for setting SGX PubKey Hash1 configuration (0 - ffffffffffffffff Hash byte 15-8)}
+    sgx_le_pub_key_hash2: ${230:# BIOS Token for setting SGX PubKey Hash2 configuration (0 - ffffffffffffffff Hash byte 23-16)}
+    sgx_le_pub_key_hash3: ${231:# BIOS Token for setting SGX PubKey Hash3 configuration (0 - ffffffffffffffff Hash byte 31-24)}
+    sgx_le_wr: ${232:# BIOS Token for setting SGX Write Enable configuration}
+    sgx_package_info_in_band_access: ${233:# BIOS Token for setting SGX Package Information In-Band Access configuration}
+    sgx_qos: ${234:# BIOS Token for setting SGX QoS configuration}
+    sha1pcr_bank: ${235:# BIOS Token for setting SHA-1 PCR Bank configuration}
+    sha256pcr_bank: ${236:# BIOS Token for setting SHA256 PCR Bank configuration}
+    single_pctl_enable: ${237:# BIOS Token for setting Single PCTL configuration}
+    slot10link_speed: ${238:# BIOS Token for setting PCIe Slot:10 Link Speed configuration}
+    slot10state: ${239:# BIOS Token for setting Slot 10 State configuration}
+    slot11link_speed: ${240:# BIOS Token for setting PCIe Slot:11 Link Speed configuration}
+    slot11state: ${241:# BIOS Token for setting Slot 11 State configuration}
+    slot12link_speed: ${242:# BIOS Token for setting PCIe Slot:12 Link Speed configuration}
+    slot12state: ${243:# BIOS Token for setting Slot 12 State configuration}
+    slot13state: ${244:# BIOS Token for setting Slot 13 State configuration}
+    slot14state: ${245:# BIOS Token for setting Slot 14 State configuration}
+    slot1link_speed: ${246:# BIOS Token for setting PCIe Slot: 1 Link Speed configuration}
+    slot1state: ${247:# BIOS Token for setting Slot 1 State configuration}
+    slot2link_speed: ${248:# BIOS Token for setting PCIe Slot: 2 Link Speed configuration}
+    slot2state: ${249:# BIOS Token for setting Slot 2 State configuration}
+    slot3link_speed: ${250:# BIOS Token for setting PCIe Slot: 3 Link Speed configuration}
+    slot3state: ${251:# BIOS Token for setting Slot 3 State configuration}
+    slot4link_speed: ${252:# BIOS Token for setting PCIe Slot: 4 Link Speed configuration}
+    slot4state: ${253:# BIOS Token for setting Slot 4 State configuration}
+    slot5link_speed: ${254:# BIOS Token for setting PCIe Slot: 5 Link Speed configuration}
+    slot5state: ${255:# BIOS Token for setting Slot 5 State configuration}
+    slot6link_speed: ${256:# BIOS Token for setting PCIe Slot: 6 Link Speed configuration}
+    slot6state: ${257:# BIOS Token for setting Slot 6 State configuration}
+    slot7link_speed: ${258:# BIOS Token for setting PCIe Slot: 7 Link Speed configuration}
+    slot7state: ${259:# BIOS Token for setting Slot 7 State configuration}
+    slot8link_speed: ${260:# BIOS Token for setting PCIe Slot: 8 Link Speed configuration}
+    slot8state: ${261:# BIOS Token for setting Slot 8 State configuration}
+    slot9link_speed: ${262:# BIOS Token for setting PCIe Slot: 9 Link Speed configuration}
+    slot9state: ${263:# BIOS Token for setting Slot 9 State configuration}
+    slot_flom_link_speed: ${264:# BIOS Token for setting PCIe Slot:FLOM Link Speed configuration}
+    slot_front_nvme10link_speed: ${265:# BIOS Token for setting Front NVME 10 Link Speed configuration}
+    slot_front_nvme10option_rom: ${266:# BIOS Token for setting Front NVME 10 OptionROM configuration}
+    slot_front_nvme11link_speed: ${267:# BIOS Token for setting Front NVME 11 Link Speed configuration}
+    slot_front_nvme11option_rom: ${268:# BIOS Token for setting Front NVME 11 OptionROM configuration}
+    slot_front_nvme12link_speed: ${269:# BIOS Token for setting Front NVME 12 Link Speed configuration}
+    slot_front_nvme12option_rom: ${270:# BIOS Token for setting Front NVME 12 OptionROM configuration}
+    slot_front_nvme13link_speed: ${271:# BIOS Token for setting Front NVME 13 Link Speed configuration}
+    slot_front_nvme13option_rom: ${272:# BIOS Token for setting Front NVME 13 OptionROM configuration}
+    slot_front_nvme14link_speed: ${273:# BIOS Token for setting Front NVME 14 Link Speed configuration}
+    slot_front_nvme14option_rom: ${274:# BIOS Token for setting Front NVME 14 OptionROM configuration}
+    slot_front_nvme15link_speed: ${275:# BIOS Token for setting Front NVME 15 Link Speed configuration}
+    slot_front_nvme15option_rom: ${276:# BIOS Token for setting Front NVME 15 OptionROM configuration}
+    slot_front_nvme16link_speed: ${277:# BIOS Token for setting Front NVME 16 Link Speed configuration}
+    slot_front_nvme16option_rom: ${278:# BIOS Token for setting Front NVME 16 OptionROM configuration}
+    slot_front_nvme17link_speed: ${279:# BIOS Token for setting Front NVME 17 Link Speed configuration}
+    slot_front_nvme17option_rom: ${280:# BIOS Token for setting Front NVME 17 OptionROM configuration}
+    slot_front_nvme18link_speed: ${281:# BIOS Token for setting Front NVME 18 Link Speed configuration}
+    slot_front_nvme18option_rom: ${282:# BIOS Token for setting Front NVME 18 OptionROM configuration}
+    slot_front_nvme19link_speed: ${283:# BIOS Token for setting Front NVME 19 Link Speed configuration}
+    slot_front_nvme19option_rom: ${284:# BIOS Token for setting Front NVME 19 OptionROM configuration}
+    slot_front_nvme1link_speed: ${285:# BIOS Token for setting PCIe Slot:Front NVME 1 Link Speed configuration}
+    slot_front_nvme1option_rom: ${286:# BIOS Token for setting Front NVME 1 OptionROM configuration}
+    slot_front_nvme20link_speed: ${287:# BIOS Token for setting Front NVME 20 Link Speed configuration}
+    slot_front_nvme20option_rom: ${288:# BIOS Token for setting Front NVME 20 OptionROM configuration}
+    slot_front_nvme21link_speed: ${289:# BIOS Token for setting Front NVME 21 Link Speed configuration}
+    slot_front_nvme21option_rom: ${290:# BIOS Token for setting Front NVME 21 OptionROM configuration}
+    slot_front_nvme22link_speed: ${291:# BIOS Token for setting Front NVME 22 Link Speed configuration}
+    slot_front_nvme22option_rom: ${292:# BIOS Token for setting Front NVME 22 OptionROM configuration}
+    slot_front_nvme23link_speed: ${293:# BIOS Token for setting Front NVME 23 Link Speed configuration}
+    slot_front_nvme23option_rom: ${294:# BIOS Token for setting Front NVME 23 OptionROM configuration}
+    slot_front_nvme24link_speed: ${295:# BIOS Token for setting Front NVME 24 Link Speed configuration}
+    slot_front_nvme24option_rom: ${296:# BIOS Token for setting Front NVME 24 OptionROM configuration}
+    slot_front_nvme2link_speed: ${297:# BIOS Token for setting PCIe Slot:Front NVME 2 Link Speed configuration}
+    slot_front_nvme2option_rom: ${298:# BIOS Token for setting Front NVME 2 OptionROM configuration}
+    slot_front_nvme3link_speed: ${299:# BIOS Token for setting Front NVME 3 Link Speed configuration}
+    slot_front_nvme3option_rom: ${300:# BIOS Token for setting Front NVME 3 OptionROM configuration}
+    slot_front_nvme4link_speed: ${301:# BIOS Token for setting Front NVME 4 Link Speed configuration}
+    slot_front_nvme4option_rom: ${302:# BIOS Token for setting Front NVME 4 OptionROM configuration}
+    slot_front_nvme5link_speed: ${303:# BIOS Token for setting Front NVME 5 Link Speed configuration}
+    slot_front_nvme5option_rom: ${304:# BIOS Token for setting Front NVME 5 OptionROM configuration}
+    slot_front_nvme6link_speed: ${305:# BIOS Token for setting Front NVME 6 Link Speed configuration}
+    slot_front_nvme6option_rom: ${306:# BIOS Token for setting Front NVME 6 OptionROM configuration}
+    slot_front_nvme7link_speed: ${307:# BIOS Token for setting Front NVME 7 Link Speed configuration}
+    slot_front_nvme7option_rom: ${308:# BIOS Token for setting Front NVME 7 OptionROM configuration}
+    slot_front_nvme8link_speed: ${309:# BIOS Token for setting Front NVME 8 Link Speed configuration}
+    slot_front_nvme8option_rom: ${310:# BIOS Token for setting Front NVME 8 OptionROM configuration}
+    slot_front_nvme9link_speed: ${311:# BIOS Token for setting Front NVME 9 Link Speed configuration}
+    slot_front_nvme9option_rom: ${312:# BIOS Token for setting Front NVME 9 OptionROM configuration}
+    slot_front_slot5link_speed: ${313:# BIOS Token for setting PCIe Slot:Front1 Link Speed configuration}
+    slot_front_slot6link_speed: ${314:# BIOS Token for setting PCIe Slot:Front2 Link Speed configuration}
+    slot_gpu1state: ${315:# BIOS Token for setting GPU 1 OptionROM configuration}
+    slot_gpu2state: ${316:# BIOS Token for setting GPU 2 OptionROM configuration}
+    slot_gpu3state: ${317:# BIOS Token for setting GPU 3 OptionROM configuration}
+    slot_gpu4state: ${318:# BIOS Token for setting GPU 4 OptionROM configuration}
+    slot_gpu5state: ${319:# BIOS Token for setting GPU 5 OptionROM configuration}
+    slot_gpu6state: ${320:# BIOS Token for setting GPU 6 OptionROM configuration}
+    slot_gpu7state: ${321:# BIOS Token for setting GPU 7 OptionROM configuration}
+    slot_gpu8state: ${322:# BIOS Token for setting GPU 8 OptionROM configuration}
+    slot_hba_link_speed: ${323:# BIOS Token for setting PCIe Slot:HBA Link Speed configuration}
+    slot_hba_state: ${324:# BIOS Token for setting PCIe Slot:HBA OptionROM configuration}
+    slot_lom1link: ${325:# BIOS Token for setting PCIe LOM:1 Link configuration}
+    slot_lom2link: ${326:# BIOS Token for setting PCIe LOM:2 Link configuration}
+    slot_mezz_state: ${327:# BIOS Token for setting Slot Mezz State configuration}
+    slot_mlom_link_speed: ${328:# BIOS Token for setting PCIe Slot:MLOM Link Speed configuration}
+    slot_mlom_state: ${329:# BIOS Token for setting PCIe Slot MLOM OptionROM configuration}
+    slot_mraid_link_speed: ${330:# BIOS Token for setting MRAID Link Speed configuration}
+    slot_mraid_state: ${331:# BIOS Token for setting PCIe Slot MRAID OptionROM configuration}
+    slot_n10state: ${332:# BIOS Token for setting PCIe Slot N10 OptionROM configuration}
+    slot_n11state: ${333:# BIOS Token for setting PCIe Slot N11 OptionROM configuration}
+    slot_n12state: ${334:# BIOS Token for setting PCIe Slot N12 OptionROM configuration}
+    slot_n13state: ${335:# BIOS Token for setting PCIe Slot N13 OptionROM configuration}
+    slot_n14state: ${336:# BIOS Token for setting PCIe Slot N14 OptionROM configuration}
+    slot_n15state: ${337:# BIOS Token for setting PCIe Slot N15 OptionROM configuration}
+    slot_n16state: ${338:# BIOS Token for setting PCIe Slot N16 OptionROM configuration}
+    slot_n17state: ${339:# BIOS Token for setting PCIe Slot N17 OptionROM configuration}
+    slot_n18state: ${340:# BIOS Token for setting PCIe Slot N18 OptionROM configuration}
+    slot_n19state: ${341:# BIOS Token for setting PCIe Slot N19 OptionROM configuration}
+    slot_n1state: ${342:# BIOS Token for setting PCIe Slot N1 OptionROM configuration}
+    slot_n20state: ${343:# BIOS Token for setting PCIe Slot N20 OptionROM configuration}
+    slot_n21state: ${344:# BIOS Token for setting PCIe Slot N21 OptionROM configuration}
+    slot_n22state: ${345:# BIOS Token for setting PCIe Slot N22 OptionROM configuration}
+    slot_n23state: ${346:# BIOS Token for setting PCIe Slot N23 OptionROM configuration}
+    slot_n24state: ${347:# BIOS Token for setting PCIe Slot N24 OptionROM configuration}
+    slot_n2state: ${348:# BIOS Token for setting PCIe Slot N2 OptionROM configuration}
+    slot_n3state: ${349:# BIOS Token for setting PCIe Slot N3 OptionROM configuration}
+    slot_n4state: ${350:# BIOS Token for setting PCIe Slot N4 OptionROM configuration}
+    slot_n5state: ${351:# BIOS Token for setting PCIe Slot N5 OptionROM configuration}
+    slot_n6state: ${352:# BIOS Token for setting PCIe Slot N6 OptionROM configuration}
+    slot_n7state: ${353:# BIOS Token for setting PCIe Slot N7 OptionROM configuration}
+    slot_n8state: ${354:# BIOS Token for setting PCIe Slot N8 OptionROM configuration}
+    slot_n9state: ${355:# BIOS Token for setting PCIe Slot N9 OptionROM configuration}
+    slot_raid_link_speed: ${356:# BIOS Token for setting RAID Link Speed configuration}
+    slot_raid_state: ${357:# BIOS Token for setting PCIe Slot RAID OptionROM configuration}
+    slot_rear_nvme1link_speed: ${358:# BIOS Token for setting PCIe Slot:Rear NVME 1 Link Speed configuration}
+    slot_rear_nvme1state: ${359:# BIOS Token for setting PCIe Slot:Rear NVME 1 OptionROM configuration}
+    slot_rear_nvme2link_speed: ${360:# BIOS Token for setting PCIe Slot:Rear NVME 2 Link Speed configuration}
+    slot_rear_nvme2state: ${361:# BIOS Token for setting PCIe Slot:Rear NVME 2 OptionROM configuration}
+    slot_rear_nvme3link_speed: ${362:# BIOS Token for setting Rear NVME 3 Link Speed configuration}
+    slot_rear_nvme3state: ${363:# BIOS Token for setting PCIe Slot:Rear NVME 3 OptionROM configuration}
+    slot_rear_nvme4link_speed: ${364:# BIOS Token for setting Rear NVME 4 Link Speed configuration}
+    slot_rear_nvme4state: ${365:# BIOS Token for setting PCIe Slot:Rear NVME 4 OptionROM configuration}
+    slot_rear_nvme5state: ${366:# BIOS Token for setting PCIe Slot:Rear NVME 5 OptionROM configuration}
+    slot_rear_nvme6state: ${367:# BIOS Token for setting PCIe Slot:Rear NVME 6 OptionROM configuration}
+    slot_rear_nvme7state: ${368:# BIOS Token for setting PCIe Slot:Rear NVME 7 OptionROM configuration}
+    slot_rear_nvme8state: ${369:# BIOS Token for setting PCIe Slot:Rear NVME 8 OptionROM configuration}
+    slot_riser1link_speed: ${370:# BIOS Token for setting PCIe Slot:Riser1 Link Speed configuration}
+    slot_riser1slot1link_speed: ${371:# BIOS Token for setting PCIe Slot:Riser1 Slot1 Link Speed configuration}
+    slot_riser1slot2link_speed: ${372:# BIOS Token for setting PCIe Slot:Riser1 Slot2 Link Speed configuration}
+    slot_riser1slot3link_speed: ${373:# BIOS Token for setting PCIe Slot:Riser1 Slot3 Link Speed configuration}
+    slot_riser2link_speed: ${374:# BIOS Token for setting PCIe Slot:Riser2 Link Speed configuration}
+    slot_riser2slot4link_speed: ${375:# BIOS Token for setting PCIe Slot:Riser2 Slot4 Link Speed configuration}
+    slot_riser2slot5link_speed: ${376:# BIOS Token for setting PCIe Slot:Riser2 Slot5 Link Speed configuration}
+    slot_riser2slot6link_speed: ${377:# BIOS Token for setting PCIe Slot:Riser2 Slot6 Link Speed configuration}
+    slot_sas_state: ${378:# BIOS Token for setting PCIe Slot:SAS OptionROM configuration}
+    slot_ssd_slot1link_speed: ${379:# BIOS Token for setting PCIe Slot:FrontSSD1 Link Speed configuration}
+    slot_ssd_slot2link_speed: ${380:# BIOS Token for setting PCIe Slot:FrontSSD2 Link Speed configuration}
+    smee: ${381:# BIOS Token for setting SMEE configuration}
+    smt_mode: ${382:# BIOS Token for setting SMT Mode configuration}
+    snc: ${383:# BIOS Token for setting Sub Numa Clustering configuration}
+    snoopy_mode_for2lm: ${384:# BIOS Token for setting Snoopy Mode for 2LM configuration}
+    snoopy_mode_for_ad: ${385:# BIOS Token for setting Snoopy Mode for AD configuration}
+    sparing_mode: ${386:# BIOS Token for setting Sparing Mode configuration}
+    sr_iov: ${387:# BIOS Token for setting SR-IOV Support configuration}
+    state: ${388:# If C(present), will verify the resource is present and will create if needed}
+    streamer_prefetch: ${389:# BIOS Token for setting DCU Streamer Prefetch configuration}
+    svm_mode: ${390:# BIOS Token for setting SVM Mode configuration}
+    tags: ${391:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    terminal_type: ${392:# BIOS Token for setting Terminal Type configuration}
+    tpm_control: ${393:# BIOS Token for setting Trusted Platform Module State configuration}
+    tpm_pending_operation: ${394:# BIOS Token for setting TPM Pending Operation configuration}
+    tpm_ppi_required: ${395:# BIOS Token for setting TPM Minimal Physical Presence configuration}
+    tpm_support: ${396:# BIOS Token for setting Security Device Support configuration}
+    tsme: ${397:# BIOS Token for setting Transparent Secure Memory Encryption configuration}
+    txt_support: ${398:# BIOS Token for setting Intel Trusted Execution Technology Support configuration}
+    ucsm_boot_order_rule: ${399:# BIOS Token for setting Boot Order Rules configuration}
+    ufs_disable: ${400:# BIOS Token for setting Uncore Frequency Scaling configuration}
+    uma_based_clustering: ${401:# BIOS Token for setting UMA Based Clustering configuration}
+    upi_link_enablement: ${402:# BIOS Token for setting UPI Link Enablement configuration}
+    upi_power_management: ${403:# BIOS Token for setting UPI Power Manangement configuration}
+    usb_emul6064: ${404:# BIOS Token for setting Port 60/64 Emulation configuration}
+    usb_port_front: ${405:# BIOS Token for setting USB Port Front configuration}
+    usb_port_internal: ${406:# BIOS Token for setting USB Port Internal configuration}
+    usb_port_kvm: ${407:# BIOS Token for setting USB Port KVM configuration}
+    usb_port_rear: ${408:# BIOS Token for setting USB Port Rear configuration}
+    usb_port_sd_card: ${409:# BIOS Token for setting USB Port SD Card configuration}
+    usb_port_vmedia: ${410:# BIOS Token for setting USB Port VMedia configuration}
+    usb_xhci_support: ${411:# BIOS Token for setting XHCI Legacy Support configuration}
+    use_proxy: ${412:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${413:# Boolean control for verifying the api_uri TLS certificate}
+    vga_priority: ${414:# BIOS Token for setting VGA Priority configuration}
+    virtual_numa: ${415:# BIOS Token for setting Virtual NUMA configuration}
+    vmd_enable: ${416:# BIOS Token for setting VMD Enablement configuration}
+    vol_memory_mode: ${417:# BIOS Token for setting Volatile Memory Mode configuration}
+    work_load_config: ${418:# BIOS Token for setting Workload Configuration configuration}
+    x2apic_opt_out: ${419:# BIOS Token for setting X2APIC Opt-Out Flag configuration}
+    xpt_prefetch: ${420:# BIOS Token for setting XPT Prefetch configuration}
+    xpt_remote_prefetch: ${421:# BIOS Token for setting XPT Remote Prefetch configuration}
+  tags:
+    - cisco
+    - intersight
+    - intersight_bios_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_bios_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>BIOS policy configuration for Cisco Intersight</description>
+</snippet>

@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Uploads a new or updates an existing runnable file into Radware vDirect server}
   community.network.vdirect_file:
-    vdirect_ip: ${2:# Primary vDirect server IP address, may be set as VDIRECT_IP environment variable}
-    vdirect_user: ${3:# vDirect server username, may be set as VDIRECT_USER environment variable}
-    vdirect_password: ${4:# vDirect server password, may be set as VDIRECT_PASSWORD environment variable}
-    vdirect_secondary_ip: ${5:# Secondary vDirect server IP address, may be set as VDIRECT_SECONDARY_IP environment variable}
-    vdirect_wait: ${6:# Wait for async operation to complete, may be set as VDIRECT_WAIT environment variable}
-    vdirect_https_port: ${7:# vDirect server HTTPS port number, may be set as VDIRECT_HTTPS_PORT environment variable}
-    vdirect_http_port: ${8:# vDirect server HTTP port number, may be set as VDIRECT_HTTP_PORT environment variable}
+    file_name: ${2:# vDirect runnable file name to be uploaded}
+    validate_certs: ${3:# If C(no), SSL certificates will not be validated,}
+    vdirect_http_port: ${4:# vDirect server HTTP port number, may be set as VDIRECT_HTTP_PORT environment variable}
+    vdirect_https_port: ${5:# vDirect server HTTPS port number, may be set as VDIRECT_HTTPS_PORT environment variable}
+    vdirect_ip: ${6:# Primary vDirect server IP address, may be set as VDIRECT_IP environment variable}
+    vdirect_password: ${7:# vDirect server password, may be set as VDIRECT_PASSWORD environment variable}
+    vdirect_secondary_ip: ${8:# Secondary vDirect server IP address, may be set as VDIRECT_SECONDARY_IP environment variable}
     vdirect_timeout: ${9:# Amount of time to wait for async operation completion [seconds],}
     vdirect_use_ssl: ${10:# If C(no), an HTTP connection will be used instead of the default HTTPS connection,}
-    validate_certs: ${11:# If C(no), SSL certificates will not be validated,}
-    file_name: ${12:# vDirect runnable file name to be uploaded}
+    vdirect_user: ${11:# vDirect server username, may be set as VDIRECT_USER environment variable}
+    vdirect_wait: ${12:# Wait for async operation to complete, may be set as VDIRECT_WAIT environment variable}
   tags:
     - community
     - network

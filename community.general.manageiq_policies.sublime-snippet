@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Management of resource policy_profiles in ManageIQ}
   community.general.manageiq_policies:
-    state: ${2:# C(absent) - policy_profiles should not exist,}
-    policy_profiles: ${3:# List of dictionaries, each includes the policy_profile C(name) key}
-    resource_type: ${4:# The type of the resource to which the profile should be [un]assigned}
+    manageiq_connection: ${2:# ManageIQ connection configuration information}
+    policy_profiles: ${3:# List of dictionaries, each includes the policy_profile V(name) key}
+    resource_id: ${4:# The ID of the resource to which the profile should be [un]assigned}
     resource_name: ${5:# The name of the resource to which the profile should be [un]assigned}
-    resource_id: ${6:# The ID of the resource to which the profile should be [un]assigned}
-    manageiq_connection: ${7:# ManageIQ connection configuration information}
+    resource_type: ${6:# The type of the resource to which the profile should be [un]assigned}
+    state: ${7:# V(absent) - policy_profiles should not exist,}
   tags:
     - community
     - general

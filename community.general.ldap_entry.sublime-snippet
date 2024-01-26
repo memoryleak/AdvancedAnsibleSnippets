@@ -1,19 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add or remove LDAP entries}
   community.general.ldap_entry:
-    attributes: ${2:# If I(state=present), attributes necessary to create an entry}
-    objectClass: ${3:# If I(state=present), value or list of values to use when creating the entry}
-    state: ${4:# The target state of the entry}
-    recursive: ${5:# If I(state=delete), a flag indicating whether a single entry or the whole branch must be deleted}
-    bind_dn: ${6:# A DN to bind with}
-    bind_pw: ${7:# The password to use with I(bind_dn)}
+    attributes: ${2:# If O(state=present), attributes necessary to create an entry}
+    bind_dn: ${3:# A DN to bind with}
+    bind_pw: ${4:# The password to use with O(bind_dn)}
+    ca_path: ${5:# Set the path to PEM file with CA certs}
+    client_cert: ${6:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${7:# PEM formatted file that contains your private key to be used for SSL client authentication}
     dn: ${8:# The DN of the entry to add or remove}
-    referrals_chasing: ${9:# Set the referrals chasing behavior}
-    server_uri: ${10:# The I(server_uri) parameter may be a comma- or whitespace-separated list of URIs containing only the schema, the host, and the port fields}
-    start_tls: ${11:# If true, we'll use the START_TLS LDAP extension}
-    validate_certs: ${12:# If set to C(false), SSL certificates will not be validated}
-    sasl_class: ${13:# The class to use for SASL authentication}
-    xorder_discovery: ${14:# Set the behavior on how to process Xordered DNs}
+    objectClass: ${9:# If O(state=present), value or list of values to use when creating the entry}
+    recursive: ${10:# If O(state=delete), a flag indicating whether a single entry or the whole branch must be deleted}
+    referrals_chasing: ${11:# Set the referrals chasing behavior}
+    sasl_class: ${12:# The class to use for SASL authentication}
+    server_uri: ${13:# The O(server_uri) parameter may be a comma- or whitespace-separated list of URIs containing only the schema, the host, and the port fields}
+    start_tls: ${14:# If true, we'll use the START_TLS LDAP extension}
+    state: ${15:# The target state of the entry}
+    validate_certs: ${16:# If set to V(false), SSL certificates will not be validated}
+    xorder_discovery: ${17:# Set the behavior on how to process Xordered DNs}
   tags:
     - community
     - general

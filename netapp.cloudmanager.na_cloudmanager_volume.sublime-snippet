@@ -1,40 +1,40 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp Cloud Manager volume}
   netapp.cloudmanager.na_cloudmanager_volume:
-    state: ${2:# Whether the specified volume should exist or not}
-    name: ${3:# The name of the volume}
-    working_environment_name: ${4:# The working environment name where the volume will be created}
-    working_environment_id: ${5:# The public ID of the working environment where the volume will be created}
-    client_id: ${6:# The connector ID of the Cloud Manager Connector}
-    size: ${7:# The size of the volume}
-    size_unit: ${8:# The size unit of volume}
-    snapshot_policy_name: ${9:# The snapshot policy name}
-    provider_volume_type: ${10:# The underlying cloud provider volume type}
-    enable_deduplication: ${11:# Enabling deduplication}
-    enable_compression: ${12:# Enabling cpmpression}
-    enable_thin_provisioning: ${13:# Enabling thin provisioning}
-    svm_name: ${14:# The name of the SVM}
-    aggregate_name: ${15:# The aggregate in which the volume will be created}
-    capacity_tier: ${16:# The volume's capacity tier for tiering cold data to object storage}
-    tiering_policy: ${17:# The tiering policy}
-    export_policy_type: ${18:# The export policy type (NFS protocol parameters)}
-    export_policy_ip: ${19:# Custom export policy list of IPs (NFS protocol parameters)}
-    export_policy_nfs_version: ${20:# Export policy protocol (NFS protocol parameters)}
-    iops: ${21:# Provisioned IOPS}
-    throughput: ${22:# Unit is Mb/s}
-    volume_protocol: ${23:# The protocol for the volume}
-    share_name: ${24:# Share name (CIFS protocol parameters)}
-    permission: ${25:# CIFS share permission type (CIFS protocol parameters)}
-    users: ${26:# List of users with the permission (CIFS protocol parameters)}
-    igroups: ${27:# List of igroups (iSCSI protocol parameters)}
-    os_name: ${28:# Operating system (iSCSI protocol parameters)}
+    aggregate_name: ${2:# The aggregate in which the volume will be created}
+    capacity_tier: ${3:# The volume's capacity tier for tiering cold data to object storage}
+    client_id: ${4:# The connector ID of the Cloud Manager Connector}
+    enable_compression: ${5:# Enabling cpmpression}
+    enable_deduplication: ${6:# Enabling deduplication}
+    enable_thin_provisioning: ${7:# Enabling thin provisioning}
+    environment: ${8:# The environment for NetApp Cloud Manager API operations}
+    export_policy_ip: ${9:# Custom export policy list of IPs (NFS protocol parameters)}
+    export_policy_nfs_version: ${10:# Export policy protocol (NFS protocol parameters)}
+    export_policy_type: ${11:# The export policy type (NFS protocol parameters)}
+    feature_flags: ${12:# Enable or disable a new feature}
+    igroups: ${13:# List of igroups (iSCSI protocol parameters)}
+    initiators: ${14:# Set of attributes of Initiators (iSCSI protocol parameters)}
+    iops: ${15:# Provisioned IOPS}
+    name: ${16:# The name of the volume}
+    os_name: ${17:# Operating system (iSCSI protocol parameters)}
+    permission: ${18:# CIFS share permission type (CIFS protocol parameters)}
+    provider_volume_type: ${19:# The underlying cloud provider volume type}
+    refresh_token: ${20:# The refresh token for NetApp Cloud Manager API operations}
+    sa_client_id: ${21:# The service account secret client ID for NetApp Cloud Manager API operations}
+    sa_secret_key: ${22:# The service account secret key for NetApp Cloud Manager API operations}
+    share_name: ${23:# Share name (CIFS protocol parameters)}
+    size: ${24:# The size of the volume}
+    size_unit: ${25:# The size unit of volume}
+    snapshot_policy_name: ${26:# The snapshot policy name}
+    state: ${27:# Whether the specified volume should exist or not}
+    svm_name: ${28:# The name of the SVM}
     tenant_id: ${29:# The NetApp account ID that the Connector will be associated with}
-    initiators: ${30:# Set of attributes of Initiators (iSCSI protocol parameters)}
-    refresh_token: ${31:# The refresh token for NetApp Cloud Manager API operations}
-    sa_secret_key: ${32:# The service account secret key for NetApp Cloud Manager API operations}
-    sa_client_id: ${33:# The service account secret client ID for NetApp Cloud Manager API operations}
-    environment: ${34:# The environment for NetApp Cloud Manager API operations}
-    feature_flags: ${35:# Enable or disable a new feature}
+    throughput: ${30:# Unit is Mb/s}
+    tiering_policy: ${31:# The tiering policy}
+    users: ${32:# List of users with the permission (CIFS protocol parameters)}
+    volume_protocol: ${33:# The protocol for the volume}
+    working_environment_id: ${34:# The public ID of the working environment where the volume will be created}
+    working_environment_name: ${35:# The working environment name where the volume will be created}
   tags:
     - netapp
     - cloudmanager

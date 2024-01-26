@@ -1,26 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:Execute command in Pod}
   kubernetes.core.k8s_exec:
-    proxy: ${2:# The URL of an HTTP proxy to use for the connection}
-    namespace: ${3:# The pod namespace name}
-    pod: ${4:# The pod name}
-    container: ${5:# The name of the container in the pod to connect to}
+    api_key: ${2:# Token used to authenticate with the API}
+    ca_cert: ${3:# Path to a CA certificate used to authenticate with the API}
+    client_cert: ${4:# Path to a certificate used to authenticate with the API}
+    client_key: ${5:# Path to a key file used to authenticate with the API}
     command: ${6:# The command to execute}
-    host: ${7:# Provide a URL for accessing the API}
-    api_key: ${8:# Token used to authenticate with the API}
-    kubeconfig: ${9:# Path to an existing Kubernetes config file}
-    context: ${10:# The name of a context found in the config file}
-    username: ${11:# Provide a username for authenticating with the API}
-    password: ${12:# Provide a password for authenticating with the API}
-    client_cert: ${13:# Path to a certificate used to authenticate with the API}
-    client_key: ${14:# Path to a key file used to authenticate with the API}
-    ca_cert: ${15:# Path to a CA certificate used to authenticate with the API}
-    validate_certs: ${16:# Whether or not to verify the API server's SSL certificates}
-    no_proxy: ${17:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
-    proxy_headers: ${18:# The Header used for the HTTP proxy}
-    persist_config: ${19:# Whether or not to save the kube config refresh tokens}
-    impersonate_user: ${20:# Username to impersonate for the operation}
-    impersonate_groups: ${21:# Group(s) to impersonate for the operation}
+    container: ${7:# The name of the container in the pod to connect to}
+    context: ${8:# The name of a context found in the config file}
+    host: ${9:# Provide a URL for accessing the API}
+    impersonate_groups: ${10:# Group(s) to impersonate for the operation}
+    impersonate_user: ${11:# Username to impersonate for the operation}
+    kubeconfig: ${12:# Path to an existing Kubernetes config file}
+    namespace: ${13:# The pod namespace name}
+    no_proxy: ${14:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
+    password: ${15:# Provide a password for authenticating with the API}
+    persist_config: ${16:# Whether or not to save the kube config refresh tokens}
+    pod: ${17:# The pod name}
+    proxy: ${18:# The URL of an HTTP proxy to use for the connection}
+    proxy_headers: ${19:# The Header used for the HTTP proxy}
+    username: ${20:# Provide a username for authenticating with the API}
+    validate_certs: ${21:# Whether or not to verify the API server's SSL certificates}
   tags:
     - kubernetes
     - core

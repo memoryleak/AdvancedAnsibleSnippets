@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Move a virtual machine using vMotion, and/or its vmdks using storage vMotion}
   community.vmware.vmware_vmotion:
-    vm_name: ${2:# Name of the VM to perform a vMotion on}
-    vm_uuid: ${3:# UUID of the virtual machine to perform a vMotion operation on}
-    moid: ${4:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
-    use_instance_uuid: ${5:# Whether to use the VMware instance UUID rather than the BIOS UUID}
+    destination_cluster: ${2:# Name of the destination cluster the virtual machine should be running on}
+    destination_datacenter: ${3:# Name of the destination datacenter the datastore is located on}
+    destination_datastore: ${4:# Name of the destination datastore the virtual machine's vmdk should be moved on}
+    destination_datastore_cluster: ${5:# Name of the destination datastore cluster (storage pod) the virtual machine's vmdk should be moved on}
     destination_host: ${6:# Name of the destination host the virtual machine should be running on}
-    destination_cluster: ${7:# Name of the destination cluster the virtual machine should be running on}
-    destination_datastore_cluster: ${8:# Name of the destination datastore cluster (storage pod) the virtual machine's vmdk should be moved on}
-    destination_datastore: ${9:# Name of the destination datastore the virtual machine's vmdk should be moved on}
-    destination_datacenter: ${10:# Name of the destination datacenter the datastore is located on}
-    destination_resourcepool: ${11:# Name of the destination resource pool where the virtual machine should be running}
-    timeout: ${12:# The timeout in seconds}
-    hostname: ${13:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${14:# The username of the vSphere vCenter or ESXi server}
-    password: ${15:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${16:# Allows connection when SSL certificates are not valid}
-    port: ${17:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${18:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${19:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    destination_resourcepool: ${7:# Name of the destination resource pool where the virtual machine should be running}
+    hostname: ${8:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    moid: ${9:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    password: ${10:# The password of the vSphere vCenter or ESXi server}
+    port: ${11:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${12:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    timeout: ${14:# The timeout in seconds}
+    use_instance_uuid: ${15:# Whether to use the VMware instance UUID rather than the BIOS UUID}
+    username: ${16:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${17:# Allows connection when SSL certificates are not valid}
+    vm_name: ${18:# Name of the VM to perform a vMotion on}
+    vm_uuid: ${19:# UUID of the virtual machine to perform a vMotion operation on}
   tags:
     - community
     - vmware

@@ -1,21 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:Resource module for Device Administration Network Conditions}
   cisco.ise.device_administration_network_conditions:
-    conditionType: ${2:# This field determines the content of the conditions field}
-    conditions: ${3:# Device Administration Network Conditions's conditions}
+    cliDnisList: ${2:# <p>This field should contain a Caller ID (CLI), comma, and Called ID (DNIS)}
+    conditionType: ${3:# This field determines the content of the conditions field}
     description: ${4:# Device Administration Network Conditions's description}
-    id: ${5:# Device Administration Network Conditions's id}
-    link: ${6:# Device Administration Network Conditions's link}
-    name: ${7:# Network Condition name}
-    ise_hostname: ${8:# The Identity Services Engine hostname}
-    ise_username: ${9:# The Identity Services Engine username to authenticate}
-    ise_password: ${10:# The Identity Services Engine password to authenticate}
-    ise_verify: ${11:# Flag to enable or disable SSL certificate verification}
-    ise_version: ${12:# Informs the SDK which version of Identity Services Engine to use}
-    ise_wait_on_rate_limit: ${13:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
-    ise_debug: ${14:# Flag for Identity Services Engine SDK to enable debugging}
-    ise_uses_api_gateway: ${15:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
-    ise_uses_csrf_token: ${16:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+    deviceGroupList: ${5:# <p>This field should contain a tuple with NDG Root, comma, and an NDG (that it under the root)}
+    deviceList: ${6:# <p>This field should contain Device Name}
+    id: ${7:# Device Administration Network Conditions's id}
+    ipAddrList: ${8:# <p>This field should contain IP address or subnet}
+    ise_debug: ${9:# Flag for Identity Services Engine SDK to enable debugging}
+    ise_hostname: ${10:# The Identity Services Engine hostname}
+    ise_password: ${11:# The Identity Services Engine password to authenticate}
+    ise_single_request_timeout: ${12:# Timeout (in seconds) for RESTful HTTP requests}
+    ise_username: ${13:# The Identity Services Engine username to authenticate}
+    ise_uses_api_gateway: ${14:# Flag that informs the SDK whether to use the Identity Services Engine's API Gateway to send requests}
+    ise_uses_csrf_token: ${15:# Flag that informs the SDK whether we send the CSRF token to ISE's ERS APIs}
+    ise_verify: ${16:# Flag to enable or disable SSL certificate verification}
+    ise_version: ${17:# Informs the SDK which version of Identity Services Engine to use}
+    ise_wait_on_rate_limit: ${18:# Flag for Identity Services Engine SDK to enable automatic rate-limit handling}
+    link: ${19:# Device Administration Network Conditions's link}
+    macAddrList: ${20:# <p>This field should contain Endstation MAC address, comma, and Destination MAC addresses}
+    name: ${21:# Network Condition name}
   tags:
     - cisco
     - ise

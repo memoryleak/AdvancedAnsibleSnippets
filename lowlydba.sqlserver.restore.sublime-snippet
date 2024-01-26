@@ -1,40 +1,40 @@
 <snippet>
   <content><![CDATA[- name: ${1:Performs a restore operation}
   lowlydba.sqlserver.restore:
-    database: ${2:# The database to process}
-    path: ${3:# Path to SQL Server backup files}
-    destination_data_directory: ${4:# Path to restore the SQL Server backups to on the target instance}
-    destination_log_directory: ${5:# Path to restore the database log files to}
-    destination_filestream_directory: ${6:# Path to restore FileStream data to}
-    restore_time: ${7:# Specify a datetime string C(HH:MM:SS MM/DD/YYYY) to which you want the database restored to}
-    with_replace: ${8:# Indicates if the restore is allowed to replace an existing database}
-    keep_replication: ${9:# Indicates whether replication configuration should be restored as part of the database restore operation}
-    xp_dirtree: ${10:# Switch that indicated file scanning should be performed by the SQL Server instance using C(xp_dirtree)}
-    no_xp_dir_recurse: ${11:# If specified, prevents the C(XpDirTree) process from recursing (its default behaviour)}
-    verify_only: ${12:# Indicates the restore should be verified only}
-    maintenance_solution_backup: ${13:# Switch to indicate the backup files are in a folder structure as created by Ola Hallengreen's maintenance scripts}
-    ignore_log_backup: ${14:# Indicates to skip restoring any log backups}
-    ignore_diff_backup: ${15:# Indicates to skip restoring any differential backups}
-    use_destination_default_directories: ${16:# Switch that tells the restore to use the default Data and Log locations on the target server}
-    reuse_source_folder_structure: ${17:# By default, databases will be migrated to the destination Sql Server's default data and log directories}
-    destination_file_prefix: ${18:# This value will be prefixed to B(all) restored files (log and data)}
-    restored_database_name_prefix: ${19:# A string which will be prefixed to the start of the restore Database's name}
-    directory_recurse: ${20:# If specified the specified directory will be recursed into (overriding the default behaviour)}
-    standby_directory: ${21:# If a directory is specified the database(s) will be restored into a standby state, with the standby file placed into this directory (which must exist, and be writable by the target Sql Server instance)}
-    replace_db_name_in_file: ${22:# If switch set any occurrence of the original database's name in a data or log file will be replace with the name specified in the I(database_name) option}
-    destination_file_suffix: ${23:# This value will be suffixed to B(all) restored files (log and data)}
-    keep_cdc: ${24:# Indicates whether CDC information should be restored as part of the database}
-    stop_before: ${25:# Switch to indicate the restore should stop before I(stop_mark) occurs, default is to stop when mark is created}
-    stop_mark: ${26:# Marked point in the transaction log to stop the restore at}
-    stop_after_date: ${27:# By default the restore will stop at the first occurence of I(stop_mark) found in the chain, passing a datetime string C(HH:MM:SS MM/DD/YYYY) will cause it to stop the first I(stop_mark) after that datetime}
-    no_recovery: ${28:# Indicates if the databases should be recovered after last restore}
-    max_transfer_size: ${29:# Sets the size of the unit of transfer}
-    block_size: ${30:# Specifies block size to use}
-    buffer_count: ${31:# Number of I/O buffers to use}
-    azure_credential: ${32:# The name of the SQL Server credential to be used if restoring from an Azure hosted backup using Storage Access Keys}
-    sql_instance: ${33:# The SQL Server instance to modify}
-    sql_username: ${34:# Username for SQL Authentication}
-    sql_password: ${35:# Password for SQL Authentication}
+    azure_credential: ${2:# The name of the SQL Server credential to be used if restoring from an Azure hosted backup using Storage Access Keys}
+    block_size: ${3:# Specifies block size to use}
+    buffer_count: ${4:# Number of I/O buffers to use}
+    database: ${5:# The database to process}
+    destination_data_directory: ${6:# Path to restore the SQL Server backups to on the target instance}
+    destination_file_prefix: ${7:# This value will be prefixed to B(all) restored files (log and data)}
+    destination_file_suffix: ${8:# This value will be suffixed to B(all) restored files (log and data)}
+    destination_filestream_directory: ${9:# Path to restore FileStream data to}
+    destination_log_directory: ${10:# Path to restore the database log files to}
+    directory_recurse: ${11:# If specified the specified directory will be recursed into (overriding the default behaviour)}
+    ignore_diff_backup: ${12:# Indicates to skip restoring any differential backups}
+    ignore_log_backup: ${13:# Indicates to skip restoring any log backups}
+    keep_cdc: ${14:# Indicates whether CDC information should be restored as part of the database}
+    keep_replication: ${15:# Indicates whether replication configuration should be restored as part of the database restore operation}
+    maintenance_solution_backup: ${16:# Switch to indicate the backup files are in a folder structure as created by Ola Hallengreen's maintenance scripts}
+    max_transfer_size: ${17:# Sets the size of the unit of transfer}
+    no_recovery: ${18:# Indicates if the databases should be recovered after last restore}
+    no_xp_dir_recurse: ${19:# If specified, prevents the C(XpDirTree) process from recursing (its default behaviour)}
+    path: ${20:# Path to SQL Server backup files}
+    replace_db_name_in_file: ${21:# If switch set any occurrence of the original database's name in a data or log file will be replace with the name specified in the I(database_name) option}
+    restore_time: ${22:# Specify a datetime string C(HH:MM:SS MM/DD/YYYY) to which you want the database restored to}
+    restored_database_name_prefix: ${23:# A string which will be prefixed to the start of the restore Database's name}
+    reuse_source_folder_structure: ${24:# By default, databases will be migrated to the destination Sql Server's default data and log directories}
+    sql_instance: ${25:# The SQL Server instance to modify}
+    sql_password: ${26:# Password for SQL Authentication}
+    sql_username: ${27:# Username for SQL Authentication}
+    standby_directory: ${28:# If a directory is specified the database(s) will be restored into a standby state, with the standby file placed into this directory (which must exist, and be writable by the target Sql Server instance)}
+    stop_after_date: ${29:# By default the restore will stop at the first occurence of I(stop_mark) found in the chain, passing a datetime string C(HH:MM:SS MM/DD/YYYY) will cause it to stop the first I(stop_mark) after that datetime}
+    stop_before: ${30:# Switch to indicate the restore should stop before I(stop_mark) occurs, default is to stop when mark is created}
+    stop_mark: ${31:# Marked point in the transaction log to stop the restore at}
+    use_destination_default_directories: ${32:# Switch that tells the restore to use the default Data and Log locations on the target server}
+    verify_only: ${33:# Indicates the restore should be verified only}
+    with_replace: ${34:# Indicates if the restore is allowed to replace an existing database}
+    xp_dirtree: ${35:# Switch that indicated file scanning should be performed by the SQL Server instance using C(xp_dirtree)}
   tags:
     - lowlydba
     - sqlserver

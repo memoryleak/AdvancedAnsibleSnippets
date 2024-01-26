@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module manages safeguarded policy configuration on IBM Spectrum Virtualize family storage systems}
   ibm.spectrum_virtualize.ibm_svc_manage_safeguarded_policy:
-    clustername: ${2:# The hostname or management IP of the Spectrum Virtualize storage system}
-    domain: ${3:# Domain for the Spectrum Virtualize storage system}
-    username: ${4:# REST API username for the Spectrum Virtualize storage system}
-    password: ${5:# REST API password for the Spectrum Virtualize storage system}
-    token: ${6:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    backupinterval: ${2:# Specifies the interval of backup}
+    backupstarttime: ${3:# Specifies the start time of backup in the format YYMMDDHHMM}
+    backupunit: ${4:# Specify the backup unit in mentioned metric}
+    clustername: ${5:# The hostname or management IP of the Spectrum Virtualize storage system}
+    domain: ${6:# Domain for the Spectrum Virtualize storage system}
     log_path: ${7:# Path of debug log file}
-    state: ${8:# Creates (C(present)) or deletes (C(absent)) a safeguarded policy}
-    name: ${9:# Specifies the name of safeguarded policy}
-    backupunit: ${10:# Specify the backup unit in mentioned metric}
-    backupinterval: ${11:# Specifies the interval of backup}
-    backupstarttime: ${12:# Specifies the start time of backup in the format YYMMDDHHMM}
-    retentiondays: ${13:# Specifies the retention days for the backup}
+    name: ${8:# Specifies the name of safeguarded policy}
+    password: ${9:# REST API password for the Spectrum Virtualize storage system}
+    retentiondays: ${10:# Specifies the retention days for the backup}
+    state: ${11:# Creates (C(present)) or deletes (C(absent)) a safeguarded policy}
+    token: ${12:# The authentication token to verify a user on the Spectrum Virtualize storage system}
+    username: ${13:# REST API username for the Spectrum Virtualize storage system}
     validate_certs: ${14:# Validates certification}
   tags:
     - ibm

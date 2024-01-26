@@ -1,16 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/update/delete Zabbix value maps}
   community.zabbix.zabbix_valuemap:
-    name: ${2:# Name of the value map}
-    state: ${3:# State of the value map}
+    http_login_password: ${2:# Basic Auth password}
+    http_login_user: ${3:# Basic Auth login}
     mappings: ${4:# List of value mappings for the value map}
-    server_url: ${5:# URL of Zabbix server, with protocol (http or https)}
-    login_user: ${6:# Zabbix user name}
-    login_password: ${7:# Zabbix user password}
-    http_login_user: ${8:# Basic Auth login}
-    http_login_password: ${9:# Basic Auth password}
-    timeout: ${10:# The timeout of API request (seconds)}
-    validate_certs: ${11:# If set to False, SSL certificates will not be validated}
+    name: ${5:# Name of the value map}
+    state: ${6:# State of the value map}
   tags:
     - community
     - zabbix

@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage the service graph association with a contract in schema template}
   cisco.mso.mso_schema_template_contract_service_graph:
-    schema: ${2:# The name of the schema}
-    template: ${3:# The name of the template}
-    contract: ${4:# The name of the contract}
-    service_graph: ${5:# The service graph to associate with this contract}
-    service_graph_template: ${6:# The template name in which the service graph is located}
-    service_graph_schema: ${7:# The schema name in which the service graph is located}
-    service_nodes: ${8:# A list of nodes and their connector details associated with the Service Graph}
-    state: ${9:# Use C(present) or C(absent) for adding or removing}
-    host: ${10:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${11:# Port number to be used for the REST connection}
-    username: ${12:# The username to use for authentication}
-    password: ${13:# The password to use for authentication}
-    output_level: ${14:# Influence the output of this MSO module}
+    contract: ${2:# The name of the contract}
+    host: ${3:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${4:# The login domain name to use for authentication}
+    output_level: ${5:# Influence the output of this MSO module}
+    password: ${6:# The password to use for authentication}
+    port: ${7:# Port number to be used for the REST connection}
+    schema: ${8:# The name of the schema}
+    service_graph: ${9:# The service graph to associate with this contract}
+    service_graph_schema: ${10:# The schema name in which the service graph is located}
+    service_graph_template: ${11:# The template name in which the service graph is located}
+    service_nodes: ${12:# A list of nodes and their connector details associated with the Service Graph}
+    state: ${13:# Use C(present) or C(absent) for adding or removing}
+    template: ${14:# The name of the template}
     timeout: ${15:# The socket level timeout in seconds}
-    use_proxy: ${16:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${17:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${18:# If C(no), SSL certificates will not be validated}
-    login_domain: ${19:# The login domain name to use for authentication}
+    use_proxy: ${16:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${17:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${18:# The username to use for authentication}
+    validate_certs: ${19:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - mso

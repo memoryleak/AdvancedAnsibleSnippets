@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP modify storage disk options}
   netapp.ontap.na_ontap_disk_options:
-    node: ${2:# The node to modify a disk option for}
-    bkg_firmware_update: ${3:# Whether or not background disk firmware updates should be enabled}
+    autoassign: ${2:# Whether or not disks should be automatically assigned to a node}
+    autoassign_policy: ${3:# the auto assign policy to use}
     autocopy: ${4:# Whether or not disk auto copies should be enabled}
-    autoassign: ${5:# Whether or not disks should be automatically assigned to a node}
-    autoassign_policy: ${6:# the auto assign policy to use}
-    hostname: ${7:# The hostname or IP address of the ONTAP instance}
-    username: ${8:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${9:# Password for the specified user}
-    cert_filepath: ${10:# path to SSL client cert file (}
-    key_filepath: ${11:# path to SSL client key file}
-    https: ${12:# Enable and disable https}
-    validate_certs: ${13:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${14:# Override the default port (80 or 443) with this port}
-    ontapi: ${15:# The ontap api version to use}
+    bkg_firmware_update: ${5:# Whether or not background disk firmware updates should be enabled}
+    cert_filepath: ${6:# path to SSL client cert file (}
+    feature_flags: ${7:# Enable or disable a new feature}
+    force_ontap_version: ${8:# Override the cluster ONTAP version when using REST}
+    hostname: ${9:# The hostname or IP address of the ONTAP instance}
+    http_port: ${10:# Override the default port (80 or 443) with this port}
+    https: ${11:# Enable and disable https}
+    key_filepath: ${12:# path to SSL client key file}
+    node: ${13:# The node to modify a disk option for}
+    ontapi: ${14:# The ontap api version to use}
+    password: ${15:# Password for the specified user}
     use_rest: ${16:# Whether to use REST or ZAPI}
-    feature_flags: ${17:# Enable or disable a new feature}
-    force_ontap_version: ${18:# Override the cluster ONTAP version when using REST}
+    username: ${17:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

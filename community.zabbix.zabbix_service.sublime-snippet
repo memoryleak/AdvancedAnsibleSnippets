@@ -1,31 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/update/delete Zabbix service}
   community.zabbix.zabbix_service:
-    name: ${2:# Name of Zabbix service}
-    parent: ${3:# Name of Zabbix service parent}
-    sla: ${4:# Sla value (i}
-    calculate_sla: ${5:# If yes, calculate the SLA value for this service, showsla in Zabbix API}
-    algorithm: ${6:# Algorithm used to calculate the sla with < Zabbix 6}
-    trigger_name: ${7:# Name of trigger linked to the service}
-    trigger_host: ${8:# Name of host linked to the service}
-    state: ${9:# State: present - create/update service; absent - delete service}
-    sortorder: ${10:# Position of the service used for sorting}
-    weight: ${11:# Service weight}
-    description: ${12:# Description of the service}
-    tags: ${13:# Service tags to be created for the service}
-    problem_tags: ${14:# Problem tags to be created for the service}
-    parents: ${15:# Parent services to be linked to the service}
-    children: ${16:# Child services to be linked to the service}
-    propagation_rule: ${17:# Status propagation value}
-    propagation_value: ${18:# Status propagation value}
-    status_rules: ${19:# Status rules for the service}
-    server_url: ${20:# URL of Zabbix server, with protocol (http or https)}
-    login_user: ${21:# Zabbix user name}
-    login_password: ${22:# Zabbix user password}
-    http_login_user: ${23:# Basic Auth login}
-    http_login_password: ${24:# Basic Auth password}
-    timeout: ${25:# The timeout of API request (seconds)}
-    validate_certs: ${26:# If set to False, SSL certificates will not be validated}
+    algorithm: ${2:# Status calculation rule}
+    children: ${3:# Child services to be linked to the service}
+    description: ${4:# Description of the service}
+    http_login_password: ${5:# Basic Auth password}
+    http_login_user: ${6:# Basic Auth login}
+    name: ${7:# Name of Zabbix service}
+    parents: ${8:# Parent services to be linked to the service}
+    problem_tags: ${9:# Problem tags to be created for the service}
+    propagation_rule: ${10:# Status propagation value}
+    propagation_value: ${11:# Status propagation value}
+    sortorder: ${12:# Position of the service used for sorting}
+    state: ${13:# State: present - create/update service; absent - delete service}
+    status_rules: ${14:# Status rules for the service}
+    tags: ${15:# Service tags to be created for the service}
+    weight: ${16:# Service weight}
   tags:
     - community
     - zabbix

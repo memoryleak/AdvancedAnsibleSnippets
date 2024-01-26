@@ -1,35 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure Traffic Manager endpoint}
   azure.azcollection.azure_rm_trafficmanagerendpoint:
-    resource_group: ${2:# Name of a resource group where the Traffic Manager endpoint exists or will be created}
-    name: ${3:# The name of the endpoint}
-    profile_name: ${4:# Name of Traffic Manager profile where this endpoints attaches to}
-    type: ${5:# The type of the endpoint}
-    target_resource_id: ${6:# The Azure Resource URI of the of the endpoint}
-    target: ${7:# The fully-qualified DNS name of the endpoint}
-    enabled: ${8:# The status of the endpoint}
-    weight: ${9:# The weight of this endpoint when traffic manager profile has routing_method of C(weighted)}
-    priority: ${10:# The priority of this endpoint when traffic manager profile has routing_method of I(priority)}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${5:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${6:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${7:# Azure client ID}
+    cloud_environment: ${8:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    enabled: ${9:# The status of the endpoint}
+    geo_mapping: ${10:# The list of countries/regions mapped to this endpoint when traffic manager profile has routing_method of C(geographic)}
     location: ${11:# Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method}
-    min_child_endpoints: ${12:# The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available}
-    geo_mapping: ${13:# The list of countries/regions mapped to this endpoint when traffic manager profile has routing_method of C(geographic)}
-    state: ${14:# Assert the state of the Traffic Manager endpoint}
-    ad_user: ${15:# Active Directory username}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    min_child_endpoints: ${14:# The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available}
+    name: ${15:# The name of the endpoint}
     password: ${16:# Active Directory user password}
-    profile: ${17:# Security profile found in ~/}
-    subscription_id: ${18:# Your Azure subscription Id}
-    client_id: ${19:# Azure client ID}
-    secret: ${20:# Azure client secret}
-    tenant: ${21:# Azure tenant ID}
-    cloud_environment: ${22:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${23:# Azure AD authority url}
-    cert_validation_mode: ${24:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${25:# Controls the source of the credentials to use for authentication}
-    api_profile: ${26:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${27:# Parent argument}
-    log_mode: ${28:# Parent argument}
-    x509_certificate_path: ${29:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${30:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    priority: ${17:# The priority of this endpoint when traffic manager profile has routing_method of I(priority)}
+    profile: ${18:# Security profile found in ~/}
+    profile_name: ${19:# Name of Traffic Manager profile where this endpoints attaches to}
+    resource_group: ${20:# Name of a resource group where the Traffic Manager endpoint exists or will be created}
+    secret: ${21:# Azure client secret}
+    state: ${22:# Assert the state of the Traffic Manager endpoint}
+    subscription_id: ${23:# Your Azure subscription Id}
+    target: ${24:# The fully-qualified DNS name of the endpoint}
+    target_resource_id: ${25:# The Azure Resource URI of the of the endpoint}
+    tenant: ${26:# Azure tenant ID}
+    thumbprint: ${27:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    type: ${28:# The type of the endpoint}
+    weight: ${29:# The weight of this endpoint when traffic manager profile has routing_method of C(weighted)}
+    x509_certificate_path: ${30:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

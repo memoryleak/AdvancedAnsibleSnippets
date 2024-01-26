@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP manage security certificates}
   netapp.ontap.na_ontap_security_certificates:
-    state: ${2:# Whether the specified security certificate should exist or not}
+    cert_filepath: ${2:# path to SSL client cert file (}
     common_name: ${3:# Common name of the certificate}
-    name: ${4:# The unique name of the security certificate per SVM}
-    svm: ${5:# The name of the SVM (vserver)}
-    type: ${6:# Type of certificate}
-    public_certificate: ${7:# Public key certificate in PEM format}
-    private_key: ${8:# Private key certificate in PEM format}
-    signing_request: ${9:# If present, the certificate identified by name and svm is used to sign the request}
-    expiry_time: ${10:# Certificate expiration time}
-    key_size: ${11:# Key size of the certificate in bits}
-    hash_function: ${12:# Hashing function}
-    intermediate_certificates: ${13:# Chain of intermediate Certificates in PEM format}
-    ignore_name_if_not_supported: ${14:# ONTAP 9}
-    hostname: ${15:# The hostname or IP address of the ONTAP instance}
-    username: ${16:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    expiry_time: ${4:# Certificate expiration time}
+    feature_flags: ${5:# Enable or disable a new feature}
+    force_ontap_version: ${6:# Override the cluster ONTAP version when using REST}
+    hash_function: ${7:# Hashing function}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    http_port: ${9:# Override the default port (80 or 443) with this port}
+    https: ${10:# Enable and disable https}
+    ignore_name_if_not_supported: ${11:# ONTAP 9}
+    intermediate_certificates: ${12:# Chain of intermediate Certificates in PEM format}
+    key_filepath: ${13:# path to SSL client key file}
+    key_size: ${14:# Key size of the certificate in bits}
+    name: ${15:# The unique name of the security certificate per SVM}
+    ontapi: ${16:# The ontap api version to use}
     password: ${17:# Password for the specified user}
-    cert_filepath: ${18:# path to SSL client cert file (}
-    key_filepath: ${19:# path to SSL client key file}
-    https: ${20:# Enable and disable https}
-    validate_certs: ${21:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${22:# Override the default port (80 or 443) with this port}
-    ontapi: ${23:# The ontap api version to use}
+    private_key: ${18:# Private key certificate in PEM format}
+    public_certificate: ${19:# Public key certificate in PEM format}
+    signing_request: ${20:# If present, the certificate identified by name and svm is used to sign the request}
+    state: ${21:# Whether the specified security certificate should exist or not}
+    svm: ${22:# The name of the SVM (vserver)}
+    type: ${23:# Type of certificate}
     use_rest: ${24:# Whether to use REST or ZAPI}
-    feature_flags: ${25:# Enable or disable a new feature}
-    force_ontap_version: ${26:# Override the cluster ONTAP version when using REST}
+    username: ${25:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${26:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

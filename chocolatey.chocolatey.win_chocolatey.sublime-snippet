@@ -7,27 +7,31 @@
     architecture: ${5:# Force Chocolatey to install the package of a specific process architecture}
     bootstrap_script: ${6:# Specify the bootstrap script URL that can be used to install Chocolatey if it is not already present on the system}
     bootstrap_tls_version: ${7:# Specify the TLS versions used when retrieving and invoking the I(bootstrap_script) to install Chocolatey if it is not already installed on the system}
-    force: ${8:# Forces the install of a package, even if it already is installed}
-    ignore_checksums: ${9:# Ignore the checksums provided by the package}
-    ignore_dependencies: ${10:# Ignore dependencies, only install/upgrade the package itself}
-    remove_dependencies: ${11:# Remove a package's dependencies on uninstall}
-    install_args: ${12:# Arguments to pass to the native installer}
-    name: ${13:# Name of the package(s) to be installed}
-    override_args: ${14:# Override arguments of native installer with arguments provided by user}
-    package_params: ${15:# Parameters to pass to the package}
-    choco_args: ${16:# Additional parameters to pass to choco}
-    pinned: ${17:# Whether to pin the Chocolatey package or not}
-    proxy_url: ${18:# Proxy URL used to install chocolatey and the package}
-    proxy_username: ${19:# Proxy username used to install Chocolatey and the package}
-    proxy_password: ${20:# Proxy password used to install Chocolatey and the package}
-    skip_scripts: ${21:# Do not run I(chocolateyInstall}
-    source: ${22:# Specify the source to retrieve the package from}
-    source_username: ${23:# A username to use with I(source) when accessing a feed that requires authentication}
-    source_password: ${24:# The password for I(source_username)}
-    state: ${25:# State of the package on the system}
-    timeout: ${26:# The time to allow chocolatey to finish before timing out}
-    validate_certs: ${27:# Used when downloading the Chocolatey install script if Chocolatey is not already installed, this does not affect the Chocolatey package install process}
-    version: ${28:# Specific version of the package to be installed}
+    checksum: ${8:# Override a package's checksums for files downloaded during installation}
+    checksum64: ${9:# Override a package's checksums for 64-bit files downloaded during installation}
+    checksum_type: ${10:# Override a package's checksum type for files downloaded during install}
+    checksum_type64: ${11:# Override a package's checksum type for files downloaded during install}
+    choco_args: ${12:# Additional parameters to pass to choco}
+    force: ${13:# Forces the install of a package, even if it already is installed}
+    ignore_checksums: ${14:# Ignore the checksums provided by the package}
+    ignore_dependencies: ${15:# Ignore dependencies, only install/upgrade the package itself}
+    install_args: ${16:# These are arguments that are passed directly to the installer run by the Chocolatey package, for example MSI properties or command-line arguments for the specific native installer used by the package}
+    name: ${17:# Name of the package(s) to be installed}
+    override_args: ${18:# Override arguments of native installer with arguments provided by user}
+    package_params: ${19:# Parameters to pass to the package's chocolateyInstall script}
+    pinned: ${20:# Whether to pin the Chocolatey package or not}
+    proxy_password: ${21:# Proxy password used to install Chocolatey and the package}
+    proxy_url: ${22:# Proxy URL used to install chocolatey and the package}
+    proxy_username: ${23:# Proxy username used to install Chocolatey and the package}
+    remove_dependencies: ${24:# Remove a package's dependencies on uninstall}
+    skip_scripts: ${25:# Do not run I(chocolateyInstall}
+    source: ${26:# Specify the source to retrieve the package from}
+    source_password: ${27:# The password for I(source_username)}
+    source_username: ${28:# A username to use with I(source) when accessing a feed that requires authentication}
+    state: ${29:# State of the package on the system}
+    timeout: ${30:# The time to allow chocolatey to finish before timing out}
+    validate_certs: ${31:# Used when downloading the Chocolatey install script if Chocolatey is not already installed, this does not affect the Chocolatey package install process}
+    version: ${32:# Specific version of the package to be installed}
   tags:
     - chocolatey
     - chocolatey

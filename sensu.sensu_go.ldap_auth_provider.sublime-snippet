@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Sensu LDAP authentication provider}
   sensu.sensu_go.ldap_auth_provider:
-    servers: ${2:# An array of LDAP servers for your directory}
+    auth: ${2:# Authentication parameters}
     groups_prefix: ${3:# The prefix added to all LDAP groups}
-    username_prefix: ${4:# The prefix added to all LDAP usernames}
-    auth: ${5:# Authentication parameters}
-    name: ${6:# The Sensu resource's name}
-    state: ${7:# Target state of the Sensu object}
+    name: ${4:# The Sensu resource's name}
+    servers: ${5:# An array of LDAP servers for your directory}
+    state: ${6:# Target state of the Sensu object}
+    username_prefix: ${7:# The prefix added to all LDAP usernames}
   tags:
     - sensu
     - sensu_go

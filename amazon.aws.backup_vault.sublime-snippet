@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage AWS Backup Vaults}
+  amazon.aws.backup_vault:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    backup_vault_name: ${5:# Name for the Backup Vault}
+    creator_request_id: ${6:# A unique string that identifies the request and allows failed requests to be retried without the risk of running the operation twice}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    encryption_key_arn: ${8:# The server-side encryption key that is used to protect the backups}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
+    profile: ${10:# A named AWS profile to use for authentication}
+    purge_tags: ${11:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${12:# The AWS region to use}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    state: ${15:# Add or remove Backup Vault configuration}
+    tags: ${16:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+  tags:
+    - amazon
+    - aws
+    - backup_vault]]></content>
+  <tabTrigger>amazon.aws.backup_vault</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage AWS Backup Vaults</description>
+</snippet>

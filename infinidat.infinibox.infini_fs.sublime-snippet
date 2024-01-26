@@ -2,13 +2,13 @@
   <content><![CDATA[- name: ${1:Create, Delete or Modify filesystems on Infinibox}
   infinidat.infinibox.infini_fs:
     name: ${2:# File system name}
-    state: ${3:# Creates/Modifies file system when present or removes when absent}
-    thin_provision: ${4:# Whether the master file system should be thin or thick provisioned}
-    pool: ${5:# Pool that will host file system}
-    size: ${6:# File system size in MB, GB or TB units}
+    password: ${3:# Infinibox User password}
+    pool: ${4:# Pool that will host file system}
+    size: ${5:# File system size in MB, GB or TB units}
+    state: ${6:# Creates/Modifies file system when present or removes when absent}
     system: ${7:# Infinibox Hostname or IPv4 Address}
-    user: ${8:# Infinibox User username with sufficient priveledges ( see notes )}
-    password: ${9:# Infinibox User password}
+    thin_provision: ${8:# Whether the master file system should be thin or thick provisioned}
+    user: ${9:# Infinibox User username with sufficient priveledges ( see notes )}
   tags:
     - infinidat
     - infinibox

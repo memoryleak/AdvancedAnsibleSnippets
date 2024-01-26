@@ -1,33 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of PoolGroup Avi RESTful Object}
   community.network.avi_poolgroup:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
     avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    cloud_config_cksum: ${5:# Checksum of cloud configuration for poolgroup}
-    cloud_ref: ${6:# It is a reference to an object of type cloud}
-    created_by: ${7:# Name of the user who created the object}
-    deployment_policy_ref: ${8:# When setup autoscale manager will automatically promote new pools into production when deployment goals are met}
-    description: ${9:# Description of pool group}
-    fail_action: ${10:# Enable an action - close connection, http redirect, or local http response - when a pool group failure happens}
-    implicit_priority_labels: ${11:# Whether an implicit set of priority labels is generated}
-    members: ${12:# List of pool group members object of type poolgroupmember}
-    min_servers: ${13:# The minimum number of servers to distribute traffic to}
-    name: ${14:# The name of the pool group}
-    priority_labels_ref: ${15:# Uuid of the priority labels}
-    service_metadata: ${16:# Metadata pertaining to the service provided by this poolgroup}
-    tenant_ref: ${17:# It is a reference to an object of type tenant}
-    url: ${18:# Avi controller URL of the object}
-    uuid: ${19:# Uuid of the pool group}
-    controller: ${20:# IP address or hostname of the controller}
-    username: ${21:# Username used for accessing Avi controller}
-    password: ${22:# Password of Avi user in Avi controller}
+    avi_api_update_method: ${5:# Default method for object update is HTTP PUT}
+    avi_credentials: ${6:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${7:# It disables avi session information to be cached as a fact}
+    cloud_config_cksum: ${8:# Checksum of cloud configuration for poolgroup}
+    cloud_ref: ${9:# It is a reference to an object of type cloud}
+    controller: ${10:# IP address or hostname of the controller}
+    created_by: ${11:# Name of the user who created the object}
+    deployment_policy_ref: ${12:# When setup autoscale manager will automatically promote new pools into production when deployment goals are met}
+    description: ${13:# Description of pool group}
+    fail_action: ${14:# Enable an action - close connection, http redirect, or local http response - when a pool group failure happens}
+    implicit_priority_labels: ${15:# Whether an implicit set of priority labels is generated}
+    members: ${16:# List of pool group members object of type poolgroupmember}
+    min_servers: ${17:# The minimum number of servers to distribute traffic to}
+    name: ${18:# The name of the pool group}
+    password: ${19:# Password of Avi user in Avi controller}
+    priority_labels_ref: ${20:# Uuid of the priority labels}
+    service_metadata: ${21:# Metadata pertaining to the service provided by this poolgroup}
+    state: ${22:# The state that should be applied on the entity}
     tenant: ${23:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${24:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${25:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${26:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${27:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${28:# It disables avi session information to be cached as a fact}
+    tenant_ref: ${24:# It is a reference to an object of type tenant}
+    tenant_uuid: ${25:# UUID of tenant used for all Avi API calls and context of object}
+    url: ${26:# Avi controller URL of the object}
+    username: ${27:# Username used for accessing Avi controller}
+    uuid: ${28:# Uuid of the pool group}
   tags:
     - community
     - network

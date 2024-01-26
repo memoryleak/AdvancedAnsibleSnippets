@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Bulk host create in Automation Platform Controller}
+  awx.awx.bulk_host_create:
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    hosts: ${7:# List of hosts to add to inventory}
+    inventory: ${8:# Inventory name, ID, or named URL the hosts should be made a member of}
+    request_timeout: ${9:# Specify the timeout Ansible should use in requests to the controller host}
+    validate_certs: ${10:# Whether to allow insecure connections to AWX}
+  tags:
+    - awx
+    - awx
+    - bulk_host_create]]></content>
+  <tabTrigger>awx.awx.bulk_host_create</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Bulk host create in Automation Platform Controller</description>
+</snippet>

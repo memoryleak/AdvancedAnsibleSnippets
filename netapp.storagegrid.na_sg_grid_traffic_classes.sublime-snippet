@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Traffic Classification Policy configuration on StorageGRID}
   netapp.storagegrid.na_sg_grid_traffic_classes:
-    state: ${2:# Whether the specified Traffic Classification Policy should exist}
-    name: ${3:# Name of the Traffic Classification Policy}
-    policy_id: ${4:# Traffic Classification Policy ID}
-    description: ${5:# Description of the Traffic Classification Policy}
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    description: ${4:# Description of the Traffic Classification Policy}
+    limits: ${5:# Optional limits to impose on client requests matched by this traffic class}
     matchers: ${6:# A set of parameters to match}
-    limits: ${7:# Optional limits to impose on client requests matched by this traffic class}
-    auth_token: ${8:# The authorization token for the API request}
-    api_url: ${9:# The url to the StorageGRID Admin Node REST API}
+    name: ${7:# Name of the Traffic Classification Policy}
+    policy_id: ${8:# Traffic Classification Policy ID}
+    state: ${9:# Whether the specified Traffic Classification Policy should exist}
     validate_certs: ${10:# Should https certificates be validated?}
   tags:
     - netapp

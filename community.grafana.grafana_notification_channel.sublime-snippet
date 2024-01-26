@@ -1,81 +1,81 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Grafana Notification Channels}
   community.grafana.grafana_notification_channel:
-    org_id: ${2:# The Grafana Organisation ID where the dashboard will be imported / exported}
-    state: ${3:# Status of the notification channel}
-    uid: ${4:# The channel unique identifier}
-    name: ${5:# The name of the notification channel}
-    type: ${6:# The channel notification type}
-    is_default: ${7:# Use this channel for all alerts}
-    include_image: ${8:# Capture a visualization image and attach it to notifications}
-    disable_resolve_message: ${9:# Disable the resolve message}
-    reminder_frequency: ${10:# Additional notifications interval for triggered alerts}
-    dingding_url: ${11:# DingDing webhook URL}
-    dingding_message_type: ${12:# DingDing message type}
-    discord_url: ${13:# Discord webhook URL}
-    discord_message_content: ${14:# Overrides message content}
-    email_addresses: ${15:# List of recipients}
-    email_single: ${16:# Send single email to all recipients}
-    googlechat_url: ${17:# Google Hangouts webhook URL}
-    hipchat_url: ${18:# HipChat webhook URL}
-    hipchat_api_key: ${19:# HipChat API key}
-    hipchat_room_id: ${20:# HipChat room ID}
-    kafka_url: ${21:# Kafka REST proxy URL}
-    kafka_topic: ${22:# Kafka topic name}
-    line_token: ${23:# LINE token}
-    teams_url: ${24:# Microsoft Teams webhook URL}
+    client_cert: ${2:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${3:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    dingding_message_type: ${4:# DingDing message type}
+    dingding_url: ${5:# DingDing webhook URL}
+    disable_resolve_message: ${6:# Disable the resolve message}
+    discord_message_content: ${7:# Overrides message content}
+    discord_url: ${8:# Discord webhook URL}
+    email_addresses: ${9:# List of recipients}
+    email_single: ${10:# Send single email to all recipients}
+    googlechat_url: ${11:# Google Hangouts webhook URL}
+    grafana_api_key: ${12:# The Grafana API key}
+    hipchat_api_key: ${13:# HipChat API key}
+    hipchat_room_id: ${14:# HipChat room ID}
+    hipchat_url: ${15:# HipChat webhook URL}
+    include_image: ${16:# Capture a visualization image and attach it to notifications}
+    is_default: ${17:# Use this channel for all alerts}
+    kafka_topic: ${18:# Kafka topic name}
+    kafka_url: ${19:# Kafka REST proxy URL}
+    line_token: ${20:# LINE token}
+    name: ${21:# The name of the notification channel}
+    opsgenie_api_key: ${22:# OpsGenie API key}
+    opsgenie_auto_close: ${23:# Automatically close alerts in OpsGenie once the alert goes back to ok}
+    opsgenie_override_priority: ${24:# Allow the alert priority to be set using the og_priority tag}
     opsgenie_url: ${25:# OpsGenie webhook URL}
-    opsgenie_api_key: ${26:# OpsGenie API key}
-    opsgenie_auto_close: ${27:# Automatically close alerts in OpsGenie once the alert goes back to ok}
-    opsgenie_override_priority: ${28:# Allow the alert priority to be set using the og_priority tag}
-    pagerduty_integration_key: ${29:# PagerDuty integration key}
+    org_id: ${26:# The Grafana Organisation ID where the dashboard will be imported / exported}
+    pagerduty_auto_resolve: ${27:# Resolve incidents in PagerDuty once the alert goes back to ok}
+    pagerduty_integration_key: ${28:# PagerDuty integration key}
+    pagerduty_message_in_details: ${29:# Move the alert message from the PD summary into the custom details}
     pagerduty_severity: ${30:# Alert severity in PagerDuty}
-    pagerduty_auto_resolve: ${31:# Resolve incidents in PagerDuty once the alert goes back to ok}
-    pagerduty_message_in_details: ${32:# Move the alert message from the PD summary into the custom details}
-    prometheus_url: ${33:# Prometheus API URL}
-    prometheus_username: ${34:# Prometheus username}
-    prometheus_password: ${35:# Prometheus password}
-    pushover_api_token: ${36:# Pushover API token}
-    pushover_user_key: ${37:# Pushover user key}
-    pushover_devices: ${38:# Devices list in Pushover}
+    prometheus_password: ${31:# Prometheus password}
+    prometheus_url: ${32:# Prometheus API URL}
+    prometheus_username: ${33:# Prometheus username}
+    pushover_alert_sound: ${34:# L(Alert sound in Pushover,https://pushover}
+    pushover_api_token: ${35:# Pushover API token}
+    pushover_devices: ${36:# Devices list in Pushover}
+    pushover_expire: ${37:# Expire alert in C(n) minutes}
+    pushover_ok_sound: ${38:# L(OK sound in Pushover,https://pushover}
     pushover_priority: ${39:# Alert priority in Pushover}
     pushover_retry: ${40:# Retry in C(n) minutes}
-    pushover_expire: ${41:# Expire alert in C(n) minutes}
-    pushover_alert_sound: ${42:# L(Alert sound in Pushover,https://pushover}
-    pushover_ok_sound: ${43:# L(OK sound in Pushover,https://pushover}
-    sensu_url: ${44:# Sensu webhook URL}
+    pushover_user_key: ${41:# Pushover user key}
+    reminder_frequency: ${42:# Additional notifications interval for triggered alerts}
+    sensu_handler: ${43:# Sensu handler name}
+    sensu_password: ${44:# Sensu password}
     sensu_source: ${45:# Source in Sensu}
-    sensu_handler: ${46:# Sensu handler name}
+    sensu_url: ${46:# Sensu webhook URL}
     sensu_username: ${47:# Sensu user}
-    sensu_password: ${48:# Sensu password}
-    slack_url: ${49:# Slack webhook URL}
-    slack_recipient: ${50:# Override default Slack channel or user}
-    slack_username: ${51:# Set the username for the bot's message}
-    slack_icon_emoji: ${52:# An emoji to use for the bot's message}
-    slack_icon_url: ${53:# URL to an image to use as the icon for the bot's message}
-    slack_mention_users: ${54:# Mention users list}
-    slack_mention_groups: ${55:# Mention groups list}
-    slack_mention_channel: ${56:# Mention whole channel or just active members}
-    slack_token: ${57:# Slack token}
-    telegram_bot_token: ${58:# Telegram bot token;}
-    telegram_chat_id: ${59:# Telegram chat id}
-    threema_gateway_id: ${60:# 8 character Threema Gateway ID (starting with a *)}
-    threema_recipient_id: ${61:# 8 character Threema ID that should receive the alerts}
-    threema_api_secret: ${62:# Threema Gateway API secret}
-    victorops_url: ${63:# VictorOps webhook URL}
-    victorops_auto_resolve: ${64:# Resolve incidents in VictorOps once the alert goes back to ok}
-    webhook_url: ${65:# Webhook URL}
-    webhook_username: ${66:# Webhook username}
-    webhook_password: ${67:# Webhook password}
-    webhook_http_method: ${68:# Webhook HTTP verb to use}
-    url: ${69:# The Grafana URL}
-    url_username: ${70:# The Grafana user for API authentication}
-    url_password: ${71:# The Grafana password for API authentication}
-    use_proxy: ${72:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    client_cert: ${73:# PEM formatted certificate chain file to be used for SSL client authentication}
-    client_key: ${74:# PEM formatted file that contains your private key to be used for SSL client authentication}
-    validate_certs: ${75:# If C(no), SSL certificates will not be validated}
-    grafana_api_key: ${76:# The Grafana API key}
+    slack_icon_emoji: ${48:# An emoji to use for the bot's message}
+    slack_icon_url: ${49:# URL to an image to use as the icon for the bot's message}
+    slack_mention_channel: ${50:# Mention whole channel or just active members}
+    slack_mention_groups: ${51:# Mention groups list}
+    slack_mention_users: ${52:# Mention users list}
+    slack_recipient: ${53:# Override default Slack channel or user}
+    slack_token: ${54:# Slack token}
+    slack_url: ${55:# Slack webhook URL}
+    slack_username: ${56:# Set the username for the bot's message}
+    state: ${57:# Status of the notification channel}
+    teams_url: ${58:# Microsoft Teams webhook URL}
+    telegram_bot_token: ${59:# Telegram bot token;}
+    telegram_chat_id: ${60:# Telegram chat id}
+    threema_api_secret: ${61:# Threema Gateway API secret}
+    threema_gateway_id: ${62:# 8 character Threema Gateway ID (starting with a *)}
+    threema_recipient_id: ${63:# 8 character Threema ID that should receive the alerts}
+    type: ${64:# The channel notification type}
+    uid: ${65:# The channel unique identifier}
+    url: ${66:# The Grafana URL}
+    url_password: ${67:# The Grafana password for API authentication}
+    url_username: ${68:# The Grafana user for API authentication}
+    use_proxy: ${69:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${70:# If C(no), SSL certificates will not be validated}
+    victorops_auto_resolve: ${71:# Resolve incidents in VictorOps once the alert goes back to ok}
+    victorops_url: ${72:# VictorOps webhook URL}
+    webhook_http_method: ${73:# Webhook HTTP verb to use}
+    webhook_password: ${74:# Webhook password}
+    webhook_url: ${75:# Webhook URL}
+    webhook_username: ${76:# Webhook username}
   tags:
     - community
     - grafana

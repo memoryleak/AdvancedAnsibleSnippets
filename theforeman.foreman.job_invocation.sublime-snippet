@@ -1,22 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Invoke Remote Execution Jobs}
   theforeman.foreman.job_invocation:
-    search_query: ${2:# Search query to identify hosts}
-    bookmark: ${3:# Bookmark to infer the search query from}
-    job_template: ${4:# Job template to execute}
-    targeting_type: ${5:# Dynamic query updates the search results before execution (useful for scheduled jobs)}
-    randomized_ordering: ${6:# Whether to order the selected hosts randomly}
-    execution_timeout_interval: ${7:# Override the timeout interval from the template for this invocation only}
-    ssh: ${8:# ssh related options}
-    command: ${9:# Command to be executed on host}
-    inputs: ${10:# Inputs to use}
+    bookmark: ${2:# Bookmark to infer the search query from}
+    command: ${3:# Command to be executed on host}
+    concurrency_control: ${4:# Control concurrency level and distribution over time}
+    description_format: ${5:# Override the description format from the template for this invocation only}
+    execution_timeout_interval: ${6:# Override the timeout interval from the template for this invocation only}
+    inputs: ${7:# Inputs to use}
+    job_template: ${8:# Job template to execute}
+    password: ${9:# Password of the user accessing the Foreman server}
+    randomized_ordering: ${10:# Whether to order the selected hosts randomly}
     recurrence: ${11:# Schedule a recurring job}
     scheduling: ${12:# Schedule the job to start at a later time}
-    concurrency_control: ${13:# Control concurrency level and distribution over time}
+    search_query: ${13:# Search query to identify hosts}
     server_url: ${14:# URL of the Foreman server}
-    username: ${15:# Username accessing the Foreman server}
-    password: ${16:# Password of the user accessing the Foreman server}
-    validate_certs: ${17:# Whether or not to verify the TLS certificates of the Foreman server}
+    ssh: ${15:# ssh related options}
+    targeting_type: ${16:# Dynamic query updates the search results before execution (useful for scheduled jobs)}
+    username: ${17:# Username accessing the Foreman server}
+    validate_certs: ${18:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

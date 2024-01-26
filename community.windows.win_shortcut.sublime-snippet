@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage shortcuts on Windows}
   community.windows.win_shortcut:
-    src: ${2:# Executable or URL the shortcut points to}
+    arguments: ${2:# Additional arguments for the executable defined in C(src)}
     description: ${3:# Description for the shortcut}
     dest: ${4:# Destination file for the shortcuting file}
-    arguments: ${5:# Additional arguments for the executable defined in C(src)}
-    directory: ${6:# Working directory for executable defined in C(src)}
+    directory: ${5:# Working directory for executable defined in C(src)}
+    hotkey: ${6:# Key combination for the shortcut}
     icon: ${7:# Icon used for the shortcut}
-    hotkey: ${8:# Key combination for the shortcut}
-    windowstyle: ${9:# Influences how the application is displayed when it is launched}
+    run_as_admin: ${8:# When C(src) is an executable, this can control whether the shortcut will be opened as an administrator or not}
+    src: ${9:# Executable or URL the shortcut points to}
     state: ${10:# When C(absent), removes the shortcut if it exists}
-    run_as_admin: ${11:# When C(src) is an executable, this can control whether the shortcut will be opened as an administrator or not}
+    windowstyle: ${11:# Influences how the application is displayed when it is launched}
   tags:
     - community
     - windows

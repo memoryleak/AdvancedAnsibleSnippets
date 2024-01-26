@@ -1,29 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Back up an Azure Virtual Machine using Azure Backup}
   azure.azcollection.azure_rm_backupazurevm:
-    resource_group: ${2:# The name of the resource group}
-    recovery_vault_name: ${3:# The name of the Azure Recovery Service Vault}
-    resource_id: ${4:# Azure Virtual Machine Resource ID}
-    backup_policy_id: ${5:# Backup Policy ID present under Recovery Service Vault mentioned in recovery_vault_name field}
-    state: ${6:# Assert the state of the protection item}
-    ad_user: ${7:# Active Directory username}
-    password: ${8:# Active Directory user password}
-    profile: ${9:# Security profile found in ~/}
-    subscription_id: ${10:# Your Azure subscription Id}
-    client_id: ${11:# Azure client ID}
-    secret: ${12:# Azure client secret}
-    tenant: ${13:# Azure tenant ID}
-    cloud_environment: ${14:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${15:# Azure AD authority url}
-    cert_validation_mode: ${16:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${17:# Controls the source of the credentials to use for authentication}
-    api_profile: ${18:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${19:# Parent argument}
-    log_mode: ${20:# Parent argument}
-    x509_certificate_path: ${21:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${22:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${23:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${24:# Use to control if tags field is canonical or just appends to existing tags}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    backup_policy_id: ${7:# Backup Policy ID present under Recovery Service Vault mentioned in recovery_vault_name field}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    log_mode: ${11:# Parent argument}
+    log_path: ${12:# Parent argument}
+    password: ${13:# Active Directory user password}
+    profile: ${14:# Security profile found in ~/}
+    recovery_point_expiry_time: ${15:# Recovery Point Expiry Time in UTC}
+    recovery_vault_name: ${16:# The name of the Azure Recovery Service Vault}
+    resource_group: ${17:# The name of the resource group}
+    resource_id: ${18:# Azure Virtual Machine Resource ID}
+    secret: ${19:# Azure client secret}
+    state: ${20:# Assert the state of the protection item}
+    subscription_id: ${21:# Your Azure subscription Id}
+    tags: ${22:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${23:# Azure tenant ID}
+    thumbprint: ${24:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

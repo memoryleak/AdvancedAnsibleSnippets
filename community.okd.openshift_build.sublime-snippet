@@ -1,35 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:Start a new build or Cancel running, pending, or new builds}
   community.okd.openshift_build:
-    state: ${2:# Determines if a Build should be started ,cancelled or restarted}
-    build_name: ${3:# Specify the name of a build which should be re-run}
+    api_key: ${2:# Token used to authenticate with the API}
+    build_args: ${3:# Specify a list of key-value pair to pass to Docker during the build}
     build_config_name: ${4:# Specify the name of a build config from which a new build will be run}
-    namespace: ${5:# Specify the namespace for the build or the build config}
-    build_args: ${6:# Specify a list of key-value pair to pass to Docker during the build}
-    commit: ${7:# Specify the source code commit identifier the build should use; requires a build based on a Git repository}
-    env_vars: ${8:# Specify a list of key-value pair for an environment variable to set for the build container}
-    incremental: ${9:# Overrides the incremental setting in a source-strategy build, ignored if not specified}
-    no_cache: ${10:# Overrides the noCache setting in a docker-strategy build, ignored if not specified}
-    wait: ${11:# When C(state=started), specify whether to wait for a build to complete and exit with a non-zero return code if the build fails}
-    wait_sleep: ${12:# Number of seconds to sleep between checks}
-    wait_timeout: ${13:# How long in seconds to wait for a build to complete}
-    build_phases: ${14:# List of state for build to cancel}
-    host: ${15:# Provide a URL for accessing the API}
-    api_key: ${16:# Token used to authenticate with the API}
+    build_name: ${5:# Specify the name of a build which should be re-run}
+    build_phases: ${6:# List of state for build to cancel}
+    ca_cert: ${7:# Path to a CA certificate used to authenticate with the API}
+    client_cert: ${8:# Path to a certificate used to authenticate with the API}
+    client_key: ${9:# Path to a key file used to authenticate with the API}
+    commit: ${10:# Specify the source code commit identifier the build should use; requires a build based on a Git repository}
+    context: ${11:# The name of a context found in the config file}
+    env_vars: ${12:# Specify a list of key-value pair for an environment variable to set for the build container}
+    host: ${13:# Provide a URL for accessing the API}
+    impersonate_groups: ${14:# Group(s) to impersonate for the operation}
+    impersonate_user: ${15:# Username to impersonate for the operation}
+    incremental: ${16:# Overrides the incremental setting in a source-strategy build, ignored if not specified}
     kubeconfig: ${17:# Path to an existing Kubernetes config file}
-    context: ${18:# The name of a context found in the config file}
-    username: ${19:# Provide a username for authenticating with the API}
-    password: ${20:# Provide a password for authenticating with the API}
-    client_cert: ${21:# Path to a certificate used to authenticate with the API}
-    client_key: ${22:# Path to a key file used to authenticate with the API}
-    ca_cert: ${23:# Path to a CA certificate used to authenticate with the API}
-    validate_certs: ${24:# Whether or not to verify the API server's SSL certificates}
-    proxy: ${25:# The URL of an HTTP proxy to use for the connection}
-    no_proxy: ${26:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
-    proxy_headers: ${27:# The Header used for the HTTP proxy}
-    persist_config: ${28:# Whether or not to save the kube config refresh tokens}
-    impersonate_user: ${29:# Username to impersonate for the operation}
-    impersonate_groups: ${30:# Group(s) to impersonate for the operation}
+    namespace: ${18:# Specify the namespace for the build or the build config}
+    no_cache: ${19:# Overrides the noCache setting in a docker-strategy build, ignored if not specified}
+    no_proxy: ${20:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
+    password: ${21:# Provide a password for authenticating with the API}
+    persist_config: ${22:# Whether or not to save the kube config refresh tokens}
+    proxy: ${23:# The URL of an HTTP proxy to use for the connection}
+    proxy_headers: ${24:# The Header used for the HTTP proxy}
+    state: ${25:# Determines if a Build should be started ,cancelled or restarted}
+    username: ${26:# Provide a username for authenticating with the API}
+    validate_certs: ${27:# Whether or not to verify the API server's SSL certificates}
+    wait: ${28:# When C(state=started), specify whether to wait for a build to complete and exit with a non-zero return code if the build fails}
+    wait_sleep: ${29:# Number of seconds to sleep between checks}
+    wait_timeout: ${30:# How long in seconds to wait for a build to complete}
   tags:
     - community
     - okd

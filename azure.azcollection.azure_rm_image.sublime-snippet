@@ -1,32 +1,32 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure image}
   azure.azcollection.azure_rm_image:
-    resource_group: ${2:# Name of resource group}
-    name: ${3:# Name of the image}
-    source: ${4:# OS disk source from the same region}
-    data_disk_sources: ${5:# List of data disk sources, including unmanaged blob URI, managed disk id or name, or snapshot id or name}
-    location: ${6:# Location of the image}
-    os_type: ${7:# The OS type of image}
-    hyper_v_generation: ${8:# Specifies the HyperVGenerationType of the VirtualMachine created from the image}
-    state: ${9:# Assert the state of the image}
-    ad_user: ${10:# Active Directory username}
-    password: ${11:# Active Directory user password}
-    profile: ${12:# Security profile found in ~/}
-    subscription_id: ${13:# Your Azure subscription Id}
-    client_id: ${14:# Azure client ID}
-    secret: ${15:# Azure client secret}
-    tenant: ${16:# Azure tenant ID}
-    cloud_environment: ${17:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${18:# Azure AD authority url}
-    cert_validation_mode: ${19:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${20:# Controls the source of the credentials to use for authentication}
-    api_profile: ${21:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${22:# Parent argument}
-    log_mode: ${23:# Parent argument}
-    x509_certificate_path: ${24:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${25:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${26:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${27:# Use to control if tags field is canonical or just appends to existing tags}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    data_disk_sources: ${10:# List of data disk sources, including unmanaged blob URI, managed disk id or name, or snapshot id or name}
+    hyper_v_generation: ${11:# Specifies the HyperVGenerationType of the VirtualMachine created from the image}
+    location: ${12:# Location of the image}
+    log_mode: ${13:# Parent argument}
+    log_path: ${14:# Parent argument}
+    name: ${15:# Name of the image}
+    os_type: ${16:# The OS type of image}
+    password: ${17:# Active Directory user password}
+    profile: ${18:# Security profile found in ~/}
+    resource_group: ${19:# Name of resource group}
+    secret: ${20:# Azure client secret}
+    source: ${21:# OS disk source from the same region}
+    state: ${22:# Assert the state of the image}
+    subscription_id: ${23:# Your Azure subscription Id}
+    tags: ${24:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${25:# Azure tenant ID}
+    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${27:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

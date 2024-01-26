@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Direct Connect LAG bundles}
   community.aws.directconnect_link_aggregation_group:
-    state: ${2:# The state of the Direct Connect link aggregation group}
-    name: ${3:# The name of the Direct Connect link aggregation group}
-    link_aggregation_group_id: ${4:# The ID of the Direct Connect link aggregation group}
-    num_connections: ${5:# The number of connections with which to initialize the link aggregation group}
-    min_links: ${6:# The minimum number of physical connections that must be operational for the LAG itself to be operational}
-    location: ${7:# The location of the link aggregation group}
-    bandwidth: ${8:# The bandwidth of the link aggregation group}
-    force_delete: ${9:# This allows the minimum number of links to be set to 0, any hosted connections disassociated, and any virtual interfaces associated to the LAG deleted}
-    connection_id: ${10:# A connection ID to link with the link aggregation group upon creation}
-    delete_with_disassociation: ${11:# To be used with I(state=absent) to delete connections after disassociating them with the LAG}
-    wait: ${12:# Whether or not to wait for the operation to complete}
-    wait_timeout: ${13:# The duration in seconds to wait if I(wait=true)}
-    access_key: ${14:# AWS access key ID}
-    secret_key: ${15:# AWS secret access key}
-    session_token: ${16:# AWS STS session token for use with temporary credentials}
-    profile: ${17:# A named AWS profile to use for authentication}
-    endpoint_url: ${18:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${19:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${20:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${21:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${22:# Use a C(botocore}
-    region: ${23:# The AWS region to use}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    bandwidth: ${5:# The bandwidth of the link aggregation group}
+    connection_id: ${6:# A connection ID to link with the link aggregation group upon creation}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    delete_with_disassociation: ${8:# To be used with I(state=absent) to delete connections after disassociating them with the LAG}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
+    force_delete: ${10:# This allows the minimum number of links to be set to 0, any hosted connections disassociated, and any virtual interfaces associated to the LAG deleted}
+    link_aggregation_group_id: ${11:# The ID of the Direct Connect link aggregation group}
+    location: ${12:# The location of the link aggregation group}
+    min_links: ${13:# The minimum number of physical connections that must be operational for the LAG itself to be operational}
+    name: ${14:# The name of the Direct Connect link aggregation group}
+    num_connections: ${15:# The number of connections with which to initialize the link aggregation group}
+    profile: ${16:# A named AWS profile to use for authentication}
+    region: ${17:# The AWS region to use}
+    secret_key: ${18:# AWS secret access key}
+    session_token: ${19:# AWS STS session token for use with temporary credentials}
+    state: ${20:# The state of the Direct Connect link aggregation group}
+    validate_certs: ${21:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${22:# Whether or not to wait for the operation to complete}
+    wait_timeout: ${23:# The duration in seconds to wait if I(wait=true)}
   tags:
     - community
     - aws

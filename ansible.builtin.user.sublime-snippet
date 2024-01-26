@@ -1,42 +1,43 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage user accounts}
   ansible.builtin.user:
-    name: ${2:# Name of the user to create, remove or modify}
-    uid: ${3:# Optionally sets the I(UID) of the user}
+    append: ${2:# If V(true), add the user to the groups specified in O(groups)}
+    authorization: ${3:# Sets the authorization of the user}
     comment: ${4:# Optionally sets the description (aka I(GECOS)) of user account}
-    hidden: ${5:# macOS only, optionally hide the user from the login window and system preferences}
-    non_unique: ${6:# Optionally when used with the -u option, this option allows to change the user ID to a non-unique value}
-    seuser: ${7:# Optionally sets the seuser type (user_u) on selinux enabled systems}
-    group: ${8:# Optionally sets the user's primary group (takes a group name)}
-    groups: ${9:# List of groups user will be added to}
-    append: ${10:# If C(true), add the user to the groups specified in C(groups)}
-    shell: ${11:# Optionally set the user's shell}
+    create_home: ${5:# Unless set to V(false), a home directory will be made for the user when the account is created or if the home directory does not exist}
+    expires: ${6:# An expiry time for the user in epoch, it will be ignored on platforms that do not support this}
+    force: ${7:# This only affects O(state=absent), it forces removal of the user and associated directories on supported platforms}
+    generate_ssh_key: ${8:# Whether to generate a SSH key for the user in question}
+    group: ${9:# Optionally sets the user's primary group (takes a group name)}
+    groups: ${10:# A list of supplementary groups which the user is also a member of}
+    hidden: ${11:# macOS only, optionally hide the user from the login window and system preferences}
     home: ${12:# Optionally set the user's home directory}
-    skeleton: ${13:# Optionally set a home skeleton directory}
-    password: ${14:# If provided, set the user's password to the provided encrypted hash (Linux) or plain text password (macOS)}
-    state: ${15:# Whether the account should exist or not, taking action if the state is different from what is stated}
-    create_home: ${16:# Unless set to C(false), a home directory will be made for the user when the account is created or if the home directory does not exist}
-    move_home: ${17:# If set to C(true) when used with C(home: ), attempt to move the user's old home directory to the specified directory if it isn't there already and the old home exists}
-    system: ${18:# When creating an account C(state=present), setting this to C(true) makes the user a system account}
-    force: ${19:# This only affects C(state=absent), it forces removal of the user and associated directories on supported platforms}
-    remove: ${20:# This only affects C(state=absent), it attempts to remove directories associated with the user}
-    login_class: ${21:# Optionally sets the user's login class, a feature of most BSD OSs}
-    generate_ssh_key: ${22:# Whether to generate a SSH key for the user in question}
-    ssh_key_bits: ${23:# Optionally specify number of bits in SSH key to create}
-    ssh_key_type: ${24:# Optionally specify the type of SSH key to generate}
-    ssh_key_file: ${25:# Optionally specify the SSH key filename}
-    ssh_key_comment: ${26:# Optionally define the comment for the SSH key}
-    ssh_key_passphrase: ${27:# Set a passphrase for the SSH key}
-    update_password: ${28:# C(always) will update passwords if they differ}
-    expires: ${29:# An expiry time for the user in epoch, it will be ignored on platforms that do not support this}
-    password_lock: ${30:# Lock the password (C(usermod -L), C(usermod -U), C(pw lock))}
-    local: ${31:# Forces the use of 'local' command alternatives on platforms that implement it}
-    profile: ${32:# Sets the profile of the user}
-    authorization: ${33:# Sets the authorization of the user}
-    role: ${34:# Sets the role of the user}
-    password_expire_max: ${35:# Maximum number of days between password change}
-    password_expire_min: ${36:# Minimum number of days between password change}
+    local: ${13:# Forces the use of 'local' command alternatives on platforms that implement it}
+    login_class: ${14:# Optionally sets the user's login class, a feature of most BSD OSs}
+    move_home: ${15:# If set to V(true) when used with O(home), attempt to move the user's old home directory to the specified directory if it isn't there already and the old home exists}
+    name: ${16:# Name of the user to create, remove or modify}
+    non_unique: ${17:# Optionally when used with the -u option, this option allows to change the user ID to a non-unique value}
+    password: ${18:# If provided, set the user's password to the provided encrypted hash (Linux) or plain text password (macOS)}
+    password_expire_max: ${19:# Maximum number of days between password change}
+    password_expire_min: ${20:# Minimum number of days between password change}
+    password_expire_warn: ${21:# Number of days of warning before password expires}
+    password_lock: ${22:# Lock the password (C(usermod -L), C(usermod -U), C(pw lock))}
+    profile: ${23:# Sets the profile of the user}
+    remove: ${24:# This only affects O(state=absent), it attempts to remove directories associated with the user}
+    role: ${25:# Sets the role of the user}
+    seuser: ${26:# Optionally sets the seuser type (user_u) on selinux enabled systems}
+    shell: ${27:# Optionally set the user's shell}
+    skeleton: ${28:# Optionally set a home skeleton directory}
+    ssh_key_bits: ${29:# Optionally specify number of bits in SSH key to create}
+    ssh_key_comment: ${30:# Optionally define the comment for the SSH key}
+    ssh_key_file: ${31:# Optionally specify the SSH key filename}
+    ssh_key_passphrase: ${32:# Set a passphrase for the SSH key}
+    ssh_key_type: ${33:# Optionally specify the type of SSH key to generate}
+    state: ${34:# Whether the account should exist or not, taking action if the state is different from what is stated}
+    system: ${35:# When creating an account O(state=present), setting this to V(true) makes the user a system account}
+    uid: ${36:# Optionally sets the I(UID) of the user}
     umask: ${37:# Sets the umask of the user}
+    update_password: ${38:# V(always) will update passwords if they differ}
   tags:
     - user]]></content>
   <tabTrigger>ansible.builtin.user</tabTrigger>

@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage replication session on Unity storage system}
+  dellemc.unity.replication_session:
+    failback: ${2:# Failback a replication session}
+    failover_with_sync: ${3:# If C(true), Sync the source and destination resources before failing over the asynchronous replication session or keep them in sync after failing over the synchronous replication session}
+    force: ${4:# Skip pre-checks on file system(s) replication sessions of a NAS server when a replication failover is issued from the source NAS server}
+    force_full_copy: ${5:# Indicates whether to sync back all data from the destination SP to the source SP during the failback session}
+    password: ${6:# The password of the Unity management server}
+    pause: ${7:# Pause or resume replication session}
+    port: ${8:# Port number through which communication happens with Unity management server}
+    session_id: ${9:# ID of replication session}
+    session_name: ${10:# Name of replication session}
+    state: ${11:# State variable to determine whether replication session will exist or not}
+    sync: ${12:# Sync a replication session}
+    unispherehost: ${13:# IP or FQDN of the Unity management server}
+    username: ${14:# The username of the Unity management server}
+    validate_certs: ${15:# Boolean variable to specify whether or not to validate SSL certificate}
+  tags:
+    - dellemc
+    - unity
+    - replication_session]]></content>
+  <tabTrigger>dellemc.unity.replication_session</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage replication session on Unity storage system</description>
+</snippet>

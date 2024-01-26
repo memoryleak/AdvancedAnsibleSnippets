@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Wait for a BIG-IP condition before continuing}
   f5networks.f5_modules.bigip_wait:
-    type: ${2:# The type of the BIG-IP}
-    timeout: ${3:# Maximum number of seconds to wait}
-    delay: ${4:# Number of seconds to wait before starting to poll}
+    delay: ${2:# Number of seconds to wait before starting to poll}
+    msg: ${3:# This overrides the normal error message from a failure to meet the required conditions}
+    provider: ${4:# A dict object containing connection details}
     sleep: ${5:# Number of seconds to sleep between checks}
-    msg: ${6:# This overrides the normal error message from a failure to meet the required conditions}
-    provider: ${7:# A dict object containing connection details}
+    timeout: ${6:# Maximum number of seconds to wait}
+    type: ${7:# The type of the BIG-IP}
   tags:
     - f5networks
     - f5_modules

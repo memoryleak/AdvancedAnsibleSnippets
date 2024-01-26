@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures MAC address pools on Cisco UCS Manager}
   cisco.ucs.ucs_mac_pool:
-    state: ${2:# If C(present), will verify MAC pool is present and will create if needed}
-    name: ${3:# The name of the MAC pool}
-    description: ${4:# A description of the MAC pool}
-    order: ${5:# The Assignment Order field}
-    first_addr: ${6:# The first MAC address in the block of addresses}
-    last_addr: ${7:# The last MAC address in the block of addresses}
+    description: ${2:# A description of the MAC pool}
+    first_addr: ${3:# The first MAC address in the block of addresses}
+    hostname: ${4:# IP address or hostname of Cisco UCS Manager}
+    last_addr: ${5:# The last MAC address in the block of addresses}
+    name: ${6:# The name of the MAC pool}
+    order: ${7:# The Assignment Order field}
     org_dn: ${8:# The distinguished name (dn) of the organization where the resource is assigned}
-    hostname: ${9:# IP address or hostname of Cisco UCS Manager}
-    username: ${10:# Username for Cisco UCS Manager authentication}
-    password: ${11:# Password for Cisco UCS Manager authentication}
-    port: ${12:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
-    use_ssl: ${13:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    use_proxy: ${14:# If C(no), will not use the proxy as defined by system environment variable}
-    proxy: ${15:# If use_proxy is no, specfies proxy to be used for connection}
+    password: ${9:# Password for Cisco UCS Manager authentication}
+    port: ${10:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    proxy: ${11:# If use_proxy is no, specfies proxy to be used for connection}
+    state: ${12:# If C(present), will verify MAC pool is present and will create if needed}
+    use_proxy: ${13:# If C(no), will not use the proxy as defined by system environment variable}
+    use_ssl: ${14:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${15:# Username for Cisco UCS Manager authentication}
   tags:
     - cisco
     - ucs

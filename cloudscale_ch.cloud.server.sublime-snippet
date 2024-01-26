@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages servers on the cloudscale}
   cloudscale_ch.cloud.server:
-    state: ${2:# State of the server}
-    name: ${3:# Name of the Server}
-    uuid: ${4:# UUID of the server}
-    flavor: ${5:# Flavor of the server}
-    image: ${6:# Image used to create the server}
-    zone: ${7:# Zone in which the server resides (e}
-    volume_size_gb: ${8:# Size of the root volume in GB}
-    bulk_volume_size_gb: ${9:# Size of the bulk storage volume in GB}
-    ssh_keys: ${10:# List of SSH public keys}
+    api_timeout: ${2:# Timeout in seconds for calls to the cloudscale}
+    api_token: ${3:# cloudscale}
+    api_url: ${4:# cloudscale}
+    bulk_volume_size_gb: ${5:# Size of the bulk storage volume in GB}
+    flavor: ${6:# Flavor of the server}
+    force: ${7:# Allow to stop the running server for updating if necessary}
+    image: ${8:# Image used to create the server}
+    interfaces: ${9:# List of network interface objects specifying the interfaces to be attached to the server}
+    name: ${10:# Name of the Server}
     password: ${11:# Password for the server}
-    use_public_network: ${12:# Attach a public network interface to the server}
-    use_private_network: ${13:# Attach a private network interface to the server}
-    use_ipv6: ${14:# Enable IPv6 on the public network interface}
-    interfaces: ${15:# List of network interface objects specifying the interfaces to be attached to the server}
-    server_groups: ${16:# List of UUID or names of server groups}
-    user_data: ${17:# Cloud-init configuration (cloud-config) data to use for the server}
-    force: ${18:# Allow to stop the running server for updating if necessary}
-    tags: ${19:# Tags assosiated with the servers}
-    api_url: ${20:# cloudscale}
-    api_token: ${21:# cloudscale}
-    api_timeout: ${22:# Timeout in seconds for calls to the cloudscale}
+    server_groups: ${12:# List of UUID or names of server groups}
+    ssh_keys: ${13:# List of SSH public keys}
+    state: ${14:# State of the server}
+    tags: ${15:# Tags assosiated with the servers}
+    use_ipv6: ${16:# Enable IPv6 on the public network interface}
+    use_private_network: ${17:# Attach a private network interface to the server}
+    use_public_network: ${18:# Attach a public network interface to the server}
+    user_data: ${19:# Cloud-init configuration (cloud-config) data to use for the server}
+    uuid: ${20:# UUID of the server}
+    volume_size_gb: ${21:# Size of the root volume in GB}
+    zone: ${22:# Zone in which the server resides (e}
   tags:
     - cloudscale_ch
     - cloud

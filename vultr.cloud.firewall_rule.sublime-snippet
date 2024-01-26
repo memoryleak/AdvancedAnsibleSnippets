@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages firewall rules on Vultr}
   vultr.cloud.firewall_rule:
-    group: ${2:# Name of the firewall group}
-    ip_type: ${3:# IP address version}
-    protocol: ${4:# Protocol of the firewall rule}
-    subnet: ${5:# The network or IP, e}
-    subnet_size: ${6:# The number of bits for the netmask in CIDR notation, e}
-    port: ${7:# Single port or port range, e}
-    source: ${8:# Possible values are C(cloudflare) or a loadbalancer label}
+    api_endpoint: ${2:# URL to API endpint (without trailing slash)}
+    api_key: ${3:# API key of the Vultr API}
+    api_retries: ${4:# Amount of retries in case of the Vultr API retuns an HTTP 503 code}
+    api_retry_max_delay: ${5:# Retry backoff delay in seconds is exponential up to this max}
+    api_timeout: ${6:# HTTP timeout to Vultr API}
+    group: ${7:# Name of the firewall group}
+    ip_type: ${8:# IP address version}
     notes: ${9:# Notes of the firewall rule}
-    state: ${10:# State of the firewall rule}
-    api_key: ${11:# API key of the Vultr API}
-    api_timeout: ${12:# HTTP timeout to Vultr API}
-    api_retries: ${13:# Amount of retries in case of the Vultr API retuns an HTTP 503 code}
-    api_retry_max_delay: ${14:# Retry backoff delay in seconds is exponential up to this max}
-    api_endpoint: ${15:# URL to API endpint (without trailing slash)}
+    port: ${10:# Single port or port range, e}
+    protocol: ${11:# Protocol of the firewall rule}
+    source: ${12:# Possible values are C(cloudflare) or a loadbalancer label}
+    state: ${13:# State of the firewall rule}
+    subnet: ${14:# The network or IP, e}
+    subnet_size: ${15:# The number of bits for the netmask in CIDR notation, e}
     validate_certs: ${16:# Validate SSL certs of the Vultr API}
   tags:
     - vultr

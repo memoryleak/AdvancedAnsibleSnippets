@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages OpenNebula Hosts}
   community.general.one_host:
-    name: ${2:# Hostname of the machine to manage}
-    state: ${3:# Takes the host to the desired lifecycle state}
-    im_mad_name: ${4:# The name of the information manager, this values are taken from the oned}
-    vmm_mad_name: ${5:# The name of the virtual machine manager mad name, this values are taken from the oned}
-    cluster_id: ${6:# The cluster ID}
-    cluster_name: ${7:# The cluster specified by name}
+    api_password: ${2:# The password or token for XMLRPC authentication}
+    api_url: ${3:# The ENDPOINT URL of the XMLRPC server}
+    api_username: ${4:# The name of the user for XMLRPC authentication}
+    cluster_id: ${5:# The cluster ID}
+    cluster_name: ${6:# The cluster specified by name}
+    im_mad_name: ${7:# The name of the information manager, this values are taken from the oned}
     labels: ${8:# The labels for this host}
-    template: ${9:# The template or attribute changes to merge into the host template}
-    api_url: ${10:# The ENDPOINT URL of the XMLRPC server}
-    api_username: ${11:# The name of the user for XMLRPC authentication}
-    api_password: ${12:# The password or token for XMLRPC authentication}
-    validate_certs: ${13:# Whether to validate the SSL certificates or not}
+    name: ${9:# Hostname of the machine to manage}
+    state: ${10:# Takes the host to the desired lifecycle state}
+    template: ${11:# The template or attribute changes to merge into the host template}
+    validate_certs: ${12:# Whether to validate the TLS/SSL certificates or not}
+    vmm_mad_name: ${13:# The name of the virtual machine manager mad name, this values are taken from the oned}
     wait_timeout: ${14:# Time to wait for the desired state to be reached before timeout, in seconds}
   tags:
     - community

@@ -1,34 +1,34 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP manage export policy rules}
   netapp.ontap.na_ontap_export_policy_rule:
-    state: ${2:# Whether the specified export policy rule should exist or not}
-    name: ${3:# The name of the export policy this rule will be added to (or modified, or removed from)}
-    client_match: ${4:# List of Client Match host names, IP Addresses, Netgroups, or Domains}
-    anonymous_user_id: ${5:# User name or ID to which anonymous users are mapped}
-    ro_rule: ${6:# List of Read only access specifications for the rule}
-    rw_rule: ${7:# List of Read Write access specifications for the rule}
-    super_user_security: ${8:# List of Read Write access specifications for the rule}
-    allow_suid: ${9:# If 'true', NFS server will honor SetUID bits in SETATTR operation}
-    protocol: ${10:# List of Client access protocols}
-    rule_index: ${11:# Index of the export policy rule}
-    from_rule_index: ${12:# index of the export policy rule to be re-indexed}
-    vserver: ${13:# Name of the vserver to use}
-    ntfs_unix_security: ${14:# NTFS export UNIX security options}
-    force_delete_on_first_match: ${15:# when rule_index is not set, the default is to report an error on multiple matches}
-    chown_mode: ${16:# Specifies who is authorized to change the ownership mode of a file}
-    allow_device_creation: ${17:# Specifies whether or not device creation is allowed}
-    hostname: ${18:# The hostname or IP address of the ONTAP instance}
-    username: ${19:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${20:# Password for the specified user}
-    cert_filepath: ${21:# path to SSL client cert file (}
-    key_filepath: ${22:# path to SSL client key file}
-    https: ${23:# Enable and disable https}
-    validate_certs: ${24:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${25:# Override the default port (80 or 443) with this port}
-    ontapi: ${26:# The ontap api version to use}
-    use_rest: ${27:# Whether to use REST or ZAPI}
-    feature_flags: ${28:# Enable or disable a new feature}
-    force_ontap_version: ${29:# Override the cluster ONTAP version when using REST}
+    allow_device_creation: ${2:# Specifies whether or not device creation is allowed}
+    allow_suid: ${3:# If 'true', NFS server will honor SetUID bits in SETATTR operation}
+    anonymous_user_id: ${4:# User name or ID to which anonymous users are mapped}
+    cert_filepath: ${5:# path to SSL client cert file (}
+    chown_mode: ${6:# Specifies who is authorized to change the ownership mode of a file}
+    client_match: ${7:# List of Client Match host names, IP Addresses, Netgroups, or Domains}
+    feature_flags: ${8:# Enable or disable a new feature}
+    force_delete_on_first_match: ${9:# when rule_index is not set, the default is to report an error on multiple matches}
+    force_ontap_version: ${10:# Override the cluster ONTAP version when using REST}
+    from_rule_index: ${11:# index of the export policy rule to be re-indexed}
+    hostname: ${12:# The hostname or IP address of the ONTAP instance}
+    http_port: ${13:# Override the default port (80 or 443) with this port}
+    https: ${14:# Enable and disable https}
+    key_filepath: ${15:# path to SSL client key file}
+    name: ${16:# The name of the export policy this rule will be added to (or modified, or removed from)}
+    ntfs_unix_security: ${17:# NTFS export UNIX security options}
+    ontapi: ${18:# The ontap api version to use}
+    password: ${19:# Password for the specified user}
+    protocol: ${20:# List of Client access protocols}
+    ro_rule: ${21:# List of Read only access specifications for the rule}
+    rule_index: ${22:# Index of the export policy rule}
+    rw_rule: ${23:# List of Read Write access specifications for the rule}
+    state: ${24:# Whether the specified export policy rule should exist or not}
+    super_user_security: ${25:# List of Read Write access specifications for the rule}
+    use_rest: ${26:# Whether to use REST or ZAPI}
+    username: ${27:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${28:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${29:# Name of the vserver to use}
   tags:
     - netapp
     - ontap

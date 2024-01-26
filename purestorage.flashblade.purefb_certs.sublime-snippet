@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage FlashBlade SSL Certificates}
   purestorage.flashblade.purefb_certs:
-    state: ${2:# Create or delete certificate}
-    name: ${3:# Name of the certificate}
-    contents: ${4:# SSL certificate text}
-    private_key: ${5:# SSL certificate private key test}
+    api_token: ${2:# FlashBlade API token for admin privileged user}
+    contents: ${3:# SSL certificate text}
+    fb_url: ${4:# FlashBlade management IP address or Hostname}
+    name: ${5:# Name of the certificate}
     passphrase: ${6:# Passphrase for the private_key}
-    fb_url: ${7:# FlashBlade management IP address or Hostname}
-    api_token: ${8:# FlashBlade API token for admin privileged user}
+    private_key: ${7:# SSL certificate private key test}
+    state: ${8:# Create or delete certificate}
   tags:
     - purestorage
     - flashblade

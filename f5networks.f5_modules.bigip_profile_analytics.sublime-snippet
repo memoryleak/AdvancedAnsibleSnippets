@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage HTTP analytics profiles on a BIG-IP}
   f5networks.f5_modules.bigip_profile_analytics:
-    name: ${2:# Specifies the name of the profile}
-    parent: ${3:# Specifies the profile from which this profile inherits settings}
-    description: ${4:# Description of the profile}
-    collect_geo: ${5:# Enables or disables the collection of the names of the countries from where the traffic was sent}
-    collect_ip: ${6:# Enables or disables the collection of client IPs statistics}
-    collect_max_tps_and_throughput: ${7:# Enables or disables the collection of maximum TPS and throughput for all collected entities}
-    collect_page_load_time: ${8:# Enables or disables the collection of the page load time statistics}
-    collect_url: ${9:# Enables or disables the collection of requested URL statistics}
-    collect_user_agent: ${10:# Enables or disables the collection of user agents}
-    collect_user_sessions: ${11:# Enables or disables the collection of the unique user sessions}
-    collected_stats_external_logging: ${12:# Enables or disables the external logging of the collected statistics}
-    collected_stats_internal_logging: ${13:# Enables or disables the internal logging of the collected statistics}
-    external_logging_publisher: ${14:# Specifies the external logging publisher used to send statistical data to one or more destinations}
+    collect_geo: ${2:# Enables or disables the collection of the names of the countries from where the traffic was sent}
+    collect_ip: ${3:# Enables or disables the collection of client IPs statistics}
+    collect_max_tps_and_throughput: ${4:# Enables or disables the collection of maximum TPS and throughput for all collected entities}
+    collect_page_load_time: ${5:# Enables or disables the collection of the page load time statistics}
+    collect_url: ${6:# Enables or disables the collection of requested URL statistics}
+    collect_user_agent: ${7:# Enables or disables the collection of user agents}
+    collect_user_sessions: ${8:# Enables or disables the collection of the unique user sessions}
+    collected_stats_external_logging: ${9:# Enables or disables the external logging of the collected statistics}
+    collected_stats_internal_logging: ${10:# Enables or disables the internal logging of the collected statistics}
+    description: ${11:# Description of the profile}
+    external_logging_publisher: ${12:# Specifies the external logging publisher used to send statistical data to one or more destinations}
+    name: ${13:# Specifies the name of the profile}
+    notification_by_email: ${14:# Enables or disables sending the analytics alerts by email}
     notification_by_syslog: ${15:# Enables or disables logging of the analytics alerts into the Syslog}
-    notification_by_email: ${16:# Enables or disables sending the analytics alerts by email}
-    notification_email_addresses: ${17:# Specifies which email addresses receive alerts by email when C(notification_by_email) is enabled}
+    notification_email_addresses: ${16:# Specifies which email addresses receive alerts by email when C(notification_by_email) is enabled}
+    parent: ${17:# Specifies the profile from which this profile inherits settings}
     partition: ${18:# Device partition to manage resources on}
-    state: ${19:# When C(present), ensures the profile exists}
-    provider: ${20:# A dict object containing connection details}
+    provider: ${19:# A dict object containing connection details}
+    state: ${20:# When C(present), ensures the profile exists}
   tags:
     - f5networks
     - f5_modules

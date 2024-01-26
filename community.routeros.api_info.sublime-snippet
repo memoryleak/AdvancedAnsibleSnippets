@@ -1,23 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieve information from API}
   community.routeros.api_info:
-    path: ${2:# Path to query}
-    unfiltered: ${3:# Whether to output all fields, and not just the ones supported as input for M(community}
-    handle_disabled: ${4:# How to handle unset values}
-    hide_defaults: ${5:# Whether to hide default values}
-    include_dynamic: ${6:# Whether to include dynamic values}
-    include_builtin: ${7:# Whether to include builtin values}
-    hostname: ${8:# RouterOS hostname API}
-    username: ${9:# RouterOS login user}
-    password: ${10:# RouterOS user password}
-    timeout: ${11:# Timeout for the request}
-    tls: ${12:# If is set TLS will be used for RouterOS API connection}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for certificate validation}
+    encoding: ${3:# Use the specified encoding when communicating with the RouterOS device}
+    force_no_cert: ${4:# Set to V(true) to connect without a certificate when O(tls=true)}
+    handle_disabled: ${5:# How to handle unset values}
+    hide_defaults: ${6:# Whether to hide default values}
+    hostname: ${7:# RouterOS hostname API}
+    include_builtin: ${8:# Whether to include builtin values}
+    include_dynamic: ${9:# Whether to include dynamic values}
+    include_read_only: ${10:# Whether to include read-only fields}
+    password: ${11:# RouterOS user password}
+    path: ${12:# Path to query}
     port: ${13:# RouterOS api port}
-    force_no_cert: ${14:# Set to C(true) to connect without a certificate when I(tls=true)}
-    validate_certs: ${15:# Set to C(false) to skip validation of TLS certificates}
-    validate_cert_hostname: ${16:# Set to C(true) to validate hostnames in certificates}
-    ca_path: ${17:# PEM formatted file that contains a CA certificate to be used for certificate validation}
-    encoding: ${18:# Use the specified encoding when communicating with the RouterOS device}
+    timeout: ${14:# Timeout for the request}
+    tls: ${15:# If is set TLS will be used for RouterOS API connection}
+    unfiltered: ${16:# Whether to output all fields, and not just the ones supported as input for M(community}
+    username: ${17:# RouterOS login user}
+    validate_cert_hostname: ${18:# Set to V(true) to validate hostnames in certificates}
+    validate_certs: ${19:# Set to V(false) to skip validation of TLS certificates}
   tags:
     - community
     - routeros

@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Load variables from files, dynamically within a task}
   ansible.builtin.include_vars:
-    file: ${2:# The file name from which variables should be loaded}
+    depth: ${2:# When using O(dir), this module will, by default, recursively go through each sub directory and load up the variables}
     dir: ${3:# The directory name from which the variables should be loaded}
-    name: ${4:# The name of a variable into which assign the included vars}
-    depth: ${5:# When using C(dir), this module will, by default, recursively go through each sub directory and load up the variables}
+    extensions: ${4:# List of file extensions to read when using O(dir)}
+    file: ${5:# The file name from which variables should be loaded}
     files_matching: ${6:# Limit the files that are loaded within any directory to this regular expression}
-    ignore_files: ${7:# List of file names to ignore}
-    extensions: ${8:# List of file extensions to read when using C(dir)}
-    ignore_unknown_extensions: ${9:# Ignore unknown file extensions within the directory}
-    hash_behaviour: ${10:# If set to C(merge), merges existing hash variables instead of overwriting them}
-    free-form: ${11:# This module allows you to specify the 'file' option directly without any other options}
+    free-form: ${7:# This module allows you to specify the 'file' option directly without any other options}
+    hash_behaviour: ${8:# If set to V(merge), merges existing hash variables instead of overwriting them}
+    ignore_files: ${9:# List of file names to ignore}
+    ignore_unknown_extensions: ${10:# Ignore unknown file extensions within the directory}
+    name: ${11:# The name of a variable into which assign the included vars}
   tags:
     - include_vars]]></content>
   <tabTrigger>ansible.builtin.include_vars</tabTrigger>

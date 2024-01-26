@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:CyberArk Authentication using PAS Web Services SDK}
   cyberark.pas.cyberark_authentication:
-    state: ${2:# Specifies if an authentication logon/logoff and a cyberark_session should be added/removed}
-    username: ${3:# The name of the user who will logon to the Vault}
-    password: ${4:# The password of the user}
-    new_password: ${5:# The new password of the user}
-    api_base_url: ${6:# A string containing the base URL of the server hosting CyberArk's Privileged Account Security Web Services SDK}
-    validate_certs: ${7:# If C(false), SSL certificates will not be validated}
-    use_ldap_authentication: ${8:# Whether or not LDAP will be used}
-    use_windows_authentication: ${9:# Whether or not Windows will be used}
+    api_base_url: ${2:# A string containing the base URL of the server hosting CyberArk's Privileged Account Security Web Services SDK}
+    concurrentSession: ${3:# Whether or not to allow concurrent sessions for the same user}
+    connection_number: ${4:# To support multiple connections for same user specify}
+    cyberark_session: ${5:# Dictionary set by a CyberArk authentication containing the different values to perform actions on a logged-on CyberArk session}
+    new_password: ${6:# The new password of the user}
+    password: ${7:# The password of the user}
+    state: ${8:# Specifies if an authentication logon/logoff and a cyberark_session should be added/removed}
+    timeout: ${9:# Allows you set a timeout for when your authenticating to Cyberark}
     use_cyberark_authentication: ${10:# Whether or not LDAP will be used}
-    use_radius_authentication: ${11:# Whether or not users will be authenticated via a RADIUS server}
-    connection_number: ${12:# To support multiple connections for same user specify}
-    concurrentSession: ${13:# Whether or not to allow concurrent sessions for the same user}
-    cyberark_session: ${14:# Dictionary set by a CyberArk authentication containing the different values to perform actions on a logged-on CyberArk session}
-    timeout: ${15:# Allows you set a timeout for when your authenticating to Cyberark}
+    use_ldap_authentication: ${11:# Whether or not LDAP will be used}
+    use_radius_authentication: ${12:# Whether or not users will be authenticated via a RADIUS server}
+    use_windows_authentication: ${13:# Whether or not Windows will be used}
+    username: ${14:# The name of the user who will logon to the Vault}
+    validate_certs: ${15:# If C(false), SSL certificates will not be validated}
   tags:
     - cyberark
     - pas

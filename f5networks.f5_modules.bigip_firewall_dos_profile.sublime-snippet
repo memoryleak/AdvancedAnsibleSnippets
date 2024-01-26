@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage AFM DoS profiles on a BIG-IP}
   f5networks.f5_modules.bigip_firewall_dos_profile:
-    name: ${2:# Specifies the name of the profile}
+    default_whitelist: ${2:# The default whitelist address list for the system to use to determine which IP addresses are legitimate}
     description: ${3:# The description of the DoS profile}
-    default_whitelist: ${4:# The default whitelist address list for the system to use to determine which IP addresses are legitimate}
-    threshold_sensitivity: ${5:# Specifies the threshold sensitivity for the DoS profile}
-    partition: ${6:# Device partition to manage resources on}
+    name: ${4:# Specifies the name of the profile}
+    partition: ${5:# Device partition to manage resources on}
+    provider: ${6:# A dict object containing connection details}
     state: ${7:# When C(present), ensures the resource exists}
-    provider: ${8:# A dict object containing connection details}
+    threshold_sensitivity: ${8:# Specifies the threshold sensitivity for the DoS profile}
   tags:
     - f5networks
     - f5_modules

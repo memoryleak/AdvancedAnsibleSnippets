@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage rabbitMQ exchange}
   community.rabbitmq.rabbitmq_exchange:
-    name: ${2:# Name of the exchange to create}
-    state: ${3:# Whether the exchange should be present or absent}
-    durable: ${4:# Whether exchange is durable or not}
-    exchange_type: ${5:# Type for the exchange}
-    auto_delete: ${6:# If the exchange should delete itself after all queues/exchanges unbound from it}
-    internal: ${7:# Exchange is available only for other exchanges}
-    arguments: ${8:# Extra arguments for exchange}
-    login_user: ${9:# RabbitMQ user for connection}
-    login_password: ${10:# RabbitMQ password for connection}
-    login_host: ${11:# RabbitMQ host for connection}
+    arguments: ${2:# Extra arguments for exchange}
+    auto_delete: ${3:# If the exchange should delete itself after all queues/exchanges unbound from it}
+    ca_cert: ${4:# CA certificate to verify SSL connection to management API}
+    client_cert: ${5:# Client certificate to send on SSL connections to management API}
+    client_key: ${6:# Private key matching the client certificate}
+    durable: ${7:# Whether exchange is durable or not}
+    exchange_type: ${8:# Type for the exchange}
+    internal: ${9:# Exchange is available only for other exchanges}
+    login_host: ${10:# RabbitMQ host for connection}
+    login_password: ${11:# RabbitMQ password for connection}
     login_port: ${12:# RabbitMQ management API port}
     login_protocol: ${13:# RabbitMQ management API protocol}
-    ca_cert: ${14:# CA certificate to verify SSL connection to management API}
-    client_cert: ${15:# Client certificate to send on SSL connections to management API}
-    client_key: ${16:# Private key matching the client certificate}
+    login_user: ${14:# RabbitMQ user for connection}
+    name: ${15:# Name of the exchange to create}
+    state: ${16:# Whether the exchange should be present or absent}
     vhost: ${17:# RabbitMQ virtual host}
   tags:
     - community

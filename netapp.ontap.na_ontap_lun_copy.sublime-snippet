@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP copy LUNs}
   netapp.ontap.na_ontap_lun_copy:
-    state: ${2:# Whether the specified LUN should exist or not}
-    destination_vserver: ${3:# the name of the Vserver that will host the new LUN}
-    destination_path: ${4:# Specifies the full path to the new LUN}
-    source_path: ${5:# Specifies the full path to the source LUN}
-    source_vserver: ${6:# Specifies the name of the vserver hosting the LUN to be copied}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    destination_path: ${3:# Specifies the full path to the new LUN}
+    destination_vserver: ${4:# the name of the Vserver that will host the new LUN}
+    feature_flags: ${5:# Enable or disable a new feature}
+    force_ontap_version: ${6:# Override the cluster ONTAP version when using REST}
     hostname: ${7:# The hostname or IP address of the ONTAP instance}
-    username: ${8:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${9:# Password for the specified user}
-    cert_filepath: ${10:# path to SSL client cert file (}
-    key_filepath: ${11:# path to SSL client key file}
-    https: ${12:# Enable and disable https}
-    validate_certs: ${13:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${14:# Override the default port (80 or 443) with this port}
-    ontapi: ${15:# The ontap api version to use}
+    http_port: ${8:# Override the default port (80 or 443) with this port}
+    https: ${9:# Enable and disable https}
+    key_filepath: ${10:# path to SSL client key file}
+    ontapi: ${11:# The ontap api version to use}
+    password: ${12:# Password for the specified user}
+    source_path: ${13:# Specifies the full path to the source LUN}
+    source_vserver: ${14:# Specifies the name of the vserver hosting the LUN to be copied}
+    state: ${15:# Whether the specified LUN should exist or not}
     use_rest: ${16:# Whether to use REST or ZAPI}
-    feature_flags: ${17:# Enable or disable a new feature}
-    force_ontap_version: ${18:# Override the cluster ONTAP version when using REST}
+    username: ${17:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

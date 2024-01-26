@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage logging on Ruckus ICX 7000 series switches}
   community.network.icx_logging:
-    dest: ${2:# Destination of the logs}
-    name: ${3:# ipv4 address/ipv6 address/name of  syslog server}
-    udp_port: ${4:# UDP port of destination host(syslog server)}
+    aggregate: ${2:# List of logging definitions}
+    check_running_config: ${3:# Check running configuration}
+    dest: ${4:# Destination of the logs}
     facility: ${5:# Specifies log facility to log messages from the device}
     level: ${6:# Specifies the message level}
-    aggregate: ${7:# List of logging definitions}
+    name: ${7:# ipv4 address/ipv6 address/name of  syslog server}
     state: ${8:# State of the logging configuration}
-    check_running_config: ${9:# Check running configuration}
+    udp_port: ${9:# UDP port of destination host(syslog server)}
   tags:
     - community
     - network

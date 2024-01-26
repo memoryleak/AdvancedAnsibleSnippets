@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Ruby Gem dependencies with Bundler}
   community.general.bundler:
-    executable: ${2:# The path to the bundler executable}
-    state: ${3:# The desired state of the Gem bundle}
-    chdir: ${4:# The directory to execute the bundler commands from}
-    exclude_groups: ${5:# A list of Gemfile groups to exclude during operations}
-    clean: ${6:# Only applies if state is C(present)}
-    gemfile: ${7:# Only applies if state is C(present)}
-    local: ${8:# If set only installs gems from the cache on the target host}
-    deployment_mode: ${9:# Only applies if state is C(present)}
-    user_install: ${10:# Only applies if state is C(present)}
-    gem_path: ${11:# Only applies if state is C(present)}
-    binstub_directory: ${12:# Only applies if state is C(present)}
-    extra_args: ${13:# A space separated string of additional commands that can be applied to the Bundler command}
+    binstub_directory: ${2:# Only applies if O(state=present)}
+    chdir: ${3:# The directory to execute the bundler commands from}
+    clean: ${4:# Only applies if O(state=present)}
+    deployment_mode: ${5:# Only applies if O(state=present)}
+    exclude_groups: ${6:# A list of Gemfile groups to exclude during operations}
+    executable: ${7:# The path to the bundler executable}
+    extra_args: ${8:# A space separated string of additional commands that can be applied to the Bundler command}
+    gem_path: ${9:# Only applies if O(state=present)}
+    gemfile: ${10:# Only applies if O(state=present)}
+    local: ${11:# If set only installs gems from the cache on the target host}
+    state: ${12:# The desired state of the Gem bundle}
+    user_install: ${13:# Only applies if O(state=present)}
   tags:
     - community
     - general

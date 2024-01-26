@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage ssl certificate keys}
   community.network.netscaler_ssl_certkey:
-    certkey: ${2:# Name for the certificate and private-key pair}
-    cert: ${3:# Name of and, optionally, path to the X509 certificate file that is used to form the certificate-key pair}
-    key: ${4:# Name of and, optionally, path to the private-key file that is used to form the certificate-key pair}
-    password: ${5:# Passphrase that was used to encrypt the private-key}
-    inform: ${6:# Input format of the certificate and the private-key files}
-    passplain: ${7:# Pass phrase used to encrypt the private-key}
-    expirymonitor: ${8:# Issue an alert when the certificate is about to expire}
-    notificationperiod: ${9:# Time, in number of days, before certificate expiration, at which to generate an alert that the certificate is about to expire}
-    nsip: ${10:# The ip address of the netscaler appliance where the nitro API calls will be made}
-    nitro_user: ${11:# The username with which to authenticate to the netscaler node}
-    nitro_pass: ${12:# The password with which to authenticate to the netscaler node}
-    nitro_protocol: ${13:# Which protocol to use when accessing the nitro API objects}
-    validate_certs: ${14:# If C(no), SSL certificates will not be validated}
-    nitro_timeout: ${15:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
+    cert: ${2:# Name of and, optionally, path to the X509 certificate file that is used to form the certificate-key pair}
+    certkey: ${3:# Name for the certificate and private-key pair}
+    expirymonitor: ${4:# Issue an alert when the certificate is about to expire}
+    inform: ${5:# Input format of the certificate and the private-key files}
+    key: ${6:# Name of and, optionally, path to the private-key file that is used to form the certificate-key pair}
+    nitro_pass: ${7:# The password with which to authenticate to the netscaler node}
+    nitro_protocol: ${8:# Which protocol to use when accessing the nitro API objects}
+    nitro_timeout: ${9:# Time in seconds until a timeout error is thrown when establishing a new session with Netscaler}
+    nitro_user: ${10:# The username with which to authenticate to the netscaler node}
+    notificationperiod: ${11:# Time, in number of days, before certificate expiration, at which to generate an alert that the certificate is about to expire}
+    nsip: ${12:# The ip address of the netscaler appliance where the nitro API calls will be made}
+    passplain: ${13:# Pass phrase used to encrypt the private-key}
+    password: ${14:# Passphrase that was used to encrypt the private-key}
+    save_config: ${15:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
     state: ${16:# The state of the resource being configured by the module on the netscaler node}
-    save_config: ${17:# If C(yes) the module will save the configuration on the netscaler node if it makes any changes}
+    validate_certs: ${17:# If C(no), SSL certificates will not be validated}
   tags:
     - community
     - network

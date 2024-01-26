@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add, change, or remove registry keys and values}
   ansible.windows.win_regedit:
-    path: ${2:# Name of the registry path}
-    name: ${3:# Name of the registry entry in the above C(path) parameters}
-    data: ${4:# Value of the registry entry C(name) in C(path)}
-    type: ${5:# The registry value data type}
-    state: ${6:# The state of the registry entry}
-    delete_key: ${7:# When C(state) is 'absent' then this will delete the entire key}
-    hive: ${8:# A path to a hive key like C:\\Users\\Default\\NTUSER}
+    data: ${2:# Value of the registry entry C(name) in C(path)}
+    delete_key: ${3:# When C(state) is 'absent' then this will delete the entire key}
+    hive: ${4:# A path to a hive key like C:\\Users\\Default\\NTUSER}
+    name: ${5:# Name of the registry entry in the above C(path) parameters}
+    path: ${6:# Name of the registry path}
+    state: ${7:# The state of the registry entry}
+    type: ${8:# The registry value data type}
   tags:
     - win_regedit]]></content>
   <tabTrigger>ansible.windows.win_regedit</tabTrigger>

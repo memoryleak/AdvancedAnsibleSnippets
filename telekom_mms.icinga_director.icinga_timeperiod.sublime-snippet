@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage timeperiods in Icinga2}
+  telekom_mms.icinga_director.icinga_timeperiod:
+    append: ${2:# Do not overwrite the whole object but instead append the defined properties}
+    client_cert: ${3:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${4:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    display_name: ${5:# Alternative name for this timeperiod}
+    force: ${6:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${7:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    http_agent: ${8:# Header to identify as, generally appears in web server logs}
+    imports: ${9:# Importable templates, add as many as you want}
+    object_name: ${10:# Name of the time period}
+    ranges: ${11:# A dict of days and timeperiods}
+    state: ${12:# Apply feature state}
+    url: ${13:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    url_password: ${14:# The password for use in HTTP basic authentication}
+    url_username: ${15:# The username for use in HTTP basic authentication}
+    use_gssapi: ${16:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${17:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${18:# If V(no), SSL certificates will not be validated}
+  tags:
+    - telekom_mms
+    - icinga_director
+    - icinga_timeperiod]]></content>
+  <tabTrigger>telekom_mms.icinga_director.icinga_timeperiod</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage timeperiods in Icinga2</description>
+</snippet>

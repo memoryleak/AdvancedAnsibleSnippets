@@ -1,32 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure virtual networks}
   azure.azcollection.azure_rm_virtualnetwork:
-    resource_group: ${2:# Name of resource group}
+    ad_user: ${2:# Active Directory username}
     address_prefixes_cidr: ${3:# List of IPv4 address ranges where each is formatted using CIDR notation}
-    dns_servers: ${4:# Custom list of DNS servers}
-    location: ${5:# Valid Azure location}
-    name: ${6:# Name of the virtual network}
-    purge_address_prefixes: ${7:# Use with I(state=present) to remove any existing I(address_prefixes)}
-    purge_dns_servers: ${8:# Use with I(state=present) to remove existing DNS servers, reverting to default Azure servers}
-    state: ${9:# State of the virtual network}
-    ad_user: ${10:# Active Directory username}
-    password: ${11:# Active Directory user password}
-    profile: ${12:# Security profile found in ~/}
-    subscription_id: ${13:# Your Azure subscription Id}
-    client_id: ${14:# Azure client ID}
-    secret: ${15:# Azure client secret}
-    tenant: ${16:# Azure tenant ID}
-    cloud_environment: ${17:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${18:# Azure AD authority url}
-    cert_validation_mode: ${19:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${20:# Controls the source of the credentials to use for authentication}
-    api_profile: ${21:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${22:# Parent argument}
-    log_mode: ${23:# Parent argument}
-    x509_certificate_path: ${24:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${25:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${26:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${27:# Use to control if tags field is canonical or just appends to existing tags}
+    adfs_authority_url: ${4:# Azure AD authority url}
+    api_profile: ${5:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${6:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${7:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    dns_servers: ${11:# Custom list of DNS servers}
+    flow_timeout_in_minutes: ${12:# The FlowTimeout value (in minutes) for the Virtual Network}
+    location: ${13:# Valid Azure location}
+    log_mode: ${14:# Parent argument}
+    log_path: ${15:# Parent argument}
+    name: ${16:# Name of the virtual network}
+    password: ${17:# Active Directory user password}
+    profile: ${18:# Security profile found in ~/}
+    purge_address_prefixes: ${19:# Use with I(state=present) to remove any existing I(address_prefixes)}
+    purge_dns_servers: ${20:# Use with I(state=present) to remove existing DNS servers, reverting to default Azure servers}
+    resource_group: ${21:# Name of resource group}
+    secret: ${22:# Azure client secret}
+    state: ${23:# State of the virtual network}
+    subscription_id: ${24:# Your Azure subscription Id}
+    tags: ${25:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${26:# Azure tenant ID}
+    thumbprint: ${27:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${28:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

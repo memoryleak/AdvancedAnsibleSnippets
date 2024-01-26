@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage templates in schemas}
   cisco.mso.mso_schema_template:
-    tenant: ${2:# The tenant used for this template}
-    schema: ${3:# The name of the schema}
-    schema_description: ${4:# The description of Schema is supported on versions of MSO that are 3}
-    template_description: ${5:# The description of template is supported on versions of MSO that are 3}
-    template: ${6:# The name of the template}
-    display_name: ${7:# The name as displayed on the MSO web interface}
-    state: ${8:# Use C(present) or C(absent) for adding or removing}
-    host: ${9:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${10:# Port number to be used for the REST connection}
-    username: ${11:# The username to use for authentication}
-    password: ${12:# The password to use for authentication}
-    output_level: ${13:# Influence the output of this MSO module}
+    display_name: ${2:# The name as displayed on the MSO web interface}
+    host: ${3:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${4:# The login domain name to use for authentication}
+    output_level: ${5:# Influence the output of this MSO module}
+    password: ${6:# The password to use for authentication}
+    port: ${7:# Port number to be used for the REST connection}
+    schema: ${8:# The name of the schema}
+    schema_description: ${9:# The description of Schema is supported on versions of MSO that are 3}
+    state: ${10:# Use C(present) or C(absent) for adding or removing}
+    template: ${11:# The name of the template}
+    template_description: ${12:# The description of template is supported on versions of MSO that are 3}
+    tenant: ${13:# The tenant used for this template}
     timeout: ${14:# The socket level timeout in seconds}
-    use_proxy: ${15:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${16:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${17:# If C(no), SSL certificates will not be validated}
-    login_domain: ${18:# The login domain name to use for authentication}
+    use_proxy: ${15:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${16:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${17:# The username to use for authentication}
+    validate_certs: ${18:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - mso

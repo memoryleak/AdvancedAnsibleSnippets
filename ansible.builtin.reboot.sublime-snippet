@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Reboot a machine}
   ansible.builtin.reboot:
-    pre_reboot_delay: ${2:# Seconds to wait before reboot}
-    post_reboot_delay: ${3:# Seconds to wait after the reboot command was successful before attempting to validate the system rebooted successfully}
-    reboot_timeout: ${4:# Maximum seconds to wait for machine to reboot and respond to a test command}
-    connect_timeout: ${5:# Maximum seconds to wait for a successful connection to the managed hosts before trying again}
-    test_command: ${6:# Command to run on the rebooted host and expect success from to determine the machine is ready for further tasks}
-    msg: ${7:# Message to display to users before reboot}
-    search_paths: ${8:# Paths to search on the remote machine for the C(shutdown) command}
-    boot_time_command: ${9:# Command to run that returns a unique string indicating the last time the system was booted}
-    reboot_command: ${10:# Command to run that reboots the system, including any parameters passed to the command}
+    boot_time_command: ${2:# Command to run that returns a unique string indicating the last time the system was booted}
+    connect_timeout: ${3:# Maximum seconds to wait for a successful connection to the managed hosts before trying again}
+    msg: ${4:# Message to display to users before reboot}
+    post_reboot_delay: ${5:# Seconds to wait after the reboot command was successful before attempting to validate the system rebooted successfully}
+    pre_reboot_delay: ${6:# Seconds to wait before reboot}
+    reboot_command: ${7:# Command to run that reboots the system, including any parameters passed to the command}
+    reboot_timeout: ${8:# Maximum seconds to wait for machine to reboot and respond to a test command}
+    search_paths: ${9:# Paths to search on the remote machine for the C(shutdown) command}
+    test_command: ${10:# Command to run on the rebooted host and expect success from to determine the machine is ready for further tasks}
   tags:
     - reboot]]></content>
   <tabTrigger>ansible.builtin.reboot</tabTrigger>

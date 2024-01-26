@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:manage Redshift cluster subnet groups}
   community.aws.redshift_subnet_group:
-    state: ${2:# Specifies whether the subnet group should be present or absent}
-    name: ${3:# Cluster subnet group name}
-    description: ${4:# Cluster subnet group description}
-    subnets: ${5:# List of subnet IDs that make up the cluster subnet group}
-    access_key: ${6:# AWS access key ID}
-    secret_key: ${7:# AWS secret access key}
-    session_token: ${8:# AWS STS session token for use with temporary credentials}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    description: ${6:# Cluster subnet group description}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    name: ${8:# Cluster subnet group name}
     profile: ${9:# A named AWS profile to use for authentication}
-    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${11:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${13:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${14:# Use a C(botocore}
-    region: ${15:# The AWS region to use}
+    region: ${10:# The AWS region to use}
+    secret_key: ${11:# AWS secret access key}
+    session_token: ${12:# AWS STS session token for use with temporary credentials}
+    state: ${13:# Specifies whether the subnet group should be present or absent}
+    subnets: ${14:# List of subnet IDs that make up the cluster subnet group}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

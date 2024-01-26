@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage BIG-IP ASM policy imports}
   f5networks.f5_modules.bigip_asm_policy_import:
-    name: ${2:# The ASM policy to create or override}
-    policy_type: ${3:# The type of the policy to import}
-    retain_inheritance_settings: ${4:# Indicates if an imported security type policy should retain settings when attached to parent policy}
-    parent_policy: ${5:# The parent policy to which the newly imported policy should be attached as child}
-    base64: ${6:# Indicates if the imported policy string is encoded in Base64}
-    inline: ${7:# When specified, the ASM policy is created from a provided string}
-    encoding: ${8:# Specifies the desired application language of the imported policy}
-    source: ${9:# Full path to a policy file to be imported into the BIG-IP ASM}
-    force: ${10:# When set to C(yes), any existing policy with the same name will be overwritten by the new import}
-    partition: ${11:# Device partition on which to create the policy}
-    provider: ${12:# A dict object containing connection details}
+    base64: ${2:# Indicates if the imported policy string is encoded in Base64}
+    encoding: ${3:# Specifies the desired application language of the imported policy}
+    force: ${4:# When set to C(true), any existing policy with the same name will be overwritten by the new import}
+    inline: ${5:# When specified, the ASM policy is created from a provided string}
+    name: ${6:# The ASM policy to create or override}
+    parent_policy: ${7:# The parent policy to which the newly imported policy should be attached as child}
+    partition: ${8:# Device partition on which to create the policy}
+    policy_type: ${9:# The type of the policy to import}
+    provider: ${10:# A dict object containing connection details}
+    retain_inheritance_settings: ${11:# Indicates if an imported security type policy should retain settings when attached to parent policy}
+    source: ${12:# Full path to a policy file to be imported into the BIG-IP ASM}
   tags:
     - f5networks
     - f5_modules

@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures a user within a database}
   lowlydba.sqlserver.user:
-    login: ${2:# Name of the login that the user is mapped to}
-    database: ${3:# Database for the user}
-    username: ${4:# Name of the user}
-    external_provider: ${5:# Specifies that the user is for Azure AD Authentication}
-    default_schema: ${6:# The default database schema for the user}
-    sql_instance: ${7:# The SQL Server instance to modify}
+    database: ${2:# Database for the user}
+    default_schema: ${3:# The default database schema for the user}
+    external_provider: ${4:# Specifies that the user is for Azure AD Authentication}
+    login: ${5:# Name of the login that the user is mapped to}
+    sql_instance: ${6:# The SQL Server instance to modify}
+    sql_password: ${7:# Password for SQL Authentication}
     sql_username: ${8:# Username for SQL Authentication}
-    sql_password: ${9:# Password for SQL Authentication}
-    state: ${10:# Whether or not the object should be C(present) or C(absent)}
+    state: ${9:# Whether or not the object should be C(present) or C(absent)}
+    username: ${10:# Name of the user}
   tags:
     - lowlydba
     - sqlserver

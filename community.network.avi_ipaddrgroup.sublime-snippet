@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of IpAddrGroup Avi RESTful Object}
   community.network.avi_ipaddrgroup:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
-    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    addrs: ${5:# Configure ip address(es)}
-    apic_epg_name: ${6:# Populate ip addresses from members of this cisco apic epg}
-    country_codes: ${7:# Populate the ip address ranges from the geo database for this country}
-    description: ${8:# User defined description for the object}
-    ip_ports: ${9:# Configure (ip address, port) tuple(s)}
-    marathon_app_name: ${10:# Populate ip addresses from tasks of this marathon app}
-    marathon_service_port: ${11:# Task port associated with marathon service port}
-    name: ${12:# Name of the ip address group}
-    prefixes: ${13:# Configure ip address prefix(es)}
-    ranges: ${14:# Configure ip address range(s)}
-    tenant_ref: ${15:# It is a reference to an object of type tenant}
-    url: ${16:# Avi controller URL of the object}
-    uuid: ${17:# Uuid of the ip address group}
-    controller: ${18:# IP address or hostname of the controller}
-    username: ${19:# Username used for accessing Avi controller}
-    password: ${20:# Password of Avi user in Avi controller}
+    addrs: ${2:# Configure ip address(es)}
+    api_context: ${3:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${4:# Avi API version of to use for Avi API and objects}
+    apic_epg_name: ${5:# Populate ip addresses from members of this cisco apic epg}
+    avi_api_patch_op: ${6:# Patch operation to use when using avi_api_update_method as patch}
+    avi_api_update_method: ${7:# Default method for object update is HTTP PUT}
+    avi_credentials: ${8:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${9:# It disables avi session information to be cached as a fact}
+    controller: ${10:# IP address or hostname of the controller}
+    country_codes: ${11:# Populate the ip address ranges from the geo database for this country}
+    description: ${12:# User defined description for the object}
+    ip_ports: ${13:# Configure (ip address, port) tuple(s)}
+    marathon_app_name: ${14:# Populate ip addresses from tasks of this marathon app}
+    marathon_service_port: ${15:# Task port associated with marathon service port}
+    name: ${16:# Name of the ip address group}
+    password: ${17:# Password of Avi user in Avi controller}
+    prefixes: ${18:# Configure ip address prefix(es)}
+    ranges: ${19:# Configure ip address range(s)}
+    state: ${20:# The state that should be applied on the entity}
     tenant: ${21:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${22:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${23:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${24:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${25:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${26:# It disables avi session information to be cached as a fact}
+    tenant_ref: ${22:# It is a reference to an object of type tenant}
+    tenant_uuid: ${23:# UUID of tenant used for all Avi API calls and context of object}
+    url: ${24:# Avi controller URL of the object}
+    username: ${25:# Username used for accessing Avi controller}
+    uuid: ${26:# Uuid of the ip address group}
   tags:
     - community
     - network

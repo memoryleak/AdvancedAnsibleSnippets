@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Cisco IMC hardware through its REST API}
   community.general.imc_rest:
-    hostname: ${2:# IP Address or hostname of Cisco IMC, resolvable by Ansible control host}
-    username: ${3:# Username used to login to the switch}
+    content: ${2:# When used instead of O(path), sets the content of the API requests directly}
+    hostname: ${3:# IP Address or hostname of Cisco IMC, resolvable by Ansible control host}
     password: ${4:# The password to use for authentication}
     path: ${5:# Name of the absolute path of the filename that includes the body of the http request being sent to the Cisco IMC REST API}
-    content: ${6:# When used instead of C(path), sets the content of the API requests directly}
-    protocol: ${7:# Connection protocol to use}
-    timeout: ${8:# The socket level timeout in seconds}
-    validate_certs: ${9:# If C(false), SSL certificates will not be validated}
+    protocol: ${6:# Connection protocol to use}
+    timeout: ${7:# The socket level timeout in seconds}
+    username: ${8:# Username used to login to the switch}
+    validate_certs: ${9:# If V(false), SSL certificates will not be validated}
   tags:
     - community
     - general

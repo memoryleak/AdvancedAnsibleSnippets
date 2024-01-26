@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage OCSP configurations on BIG-IP}
   f5networks.f5_modules.bigip_ssl_ocsp:
-    name: ${2:# Specifies the name of the OCSP certificate validator}
-    cache_error_timeout: ${3:# Specifies the lifetime of an error response in the cache, in seconds}
-    proxy_server_pool: ${4:# Specifies the proxy server pool the BIG-IP system uses to fetch the OCSP response}
-    cache_timeout: ${5:# Specifies the lifetime of the OCSP response in the cache, in seconds}
-    clock_skew: ${6:# Specifies the tolerable absolute difference in the clocks of the responder and the BIG-IP system, in seconds}
+    cache_error_timeout: ${2:# Specifies the lifetime of an error response in the cache, in seconds}
+    cache_timeout: ${3:# Specifies the lifetime of the OCSP response in the cache, in seconds}
+    certificate: ${4:# Specifies a certificate used to sign an OCSP request}
+    clock_skew: ${5:# Specifies the tolerable absolute difference in the clocks of the responder and the BIG-IP system, in seconds}
+    connection_timeout: ${6:# Specifies the time interval the BIG-IP system waits for before ending the connection to the OCSP responder, in seconds}
     connections_limit: ${7:# Specifies the maximum number of connections per second allowed for the OCSP certificate validator}
     dns_resolver: ${8:# Specifies the internal DNS resolver the BIG-IP system uses to fetch the OCSP response}
-    route_domain: ${9:# Specifies the route domain for fetching an OCSP response using HTTP forward proxy}
-    hash_algorithm: ${10:# Specifies a hash algorithm used to sign an OCSP request}
-    certificate: ${11:# Specifies a certificate used to sign an OCSP request}
-    key: ${12:# Specifies a key used to sign an OCSP request}
+    hash_algorithm: ${9:# Specifies a hash algorithm used to sign an OCSP request}
+    key: ${10:# Specifies a key used to sign an OCSP request}
+    name: ${11:# Specifies the name of the OCSP certificate validator}
+    partition: ${12:# Device partition to manage resources on}
     passphrase: ${13:# Specifies a passphrase used to sign an OCSP request}
-    status_age: ${14:# Specifies the maximum allowed lag time the BIG-IP system accepts for the 'thisUpdate' time in the OCSP response}
-    strict_responder_checking: ${15:# Specifies whether the responder's certificate is checked for an OCSP signing extension}
-    connection_timeout: ${16:# Specifies the time interval the BIG-IP system waits for before ending the connection to the OCSP responder, in seconds}
-    trusted_responders: ${17:# Specifies the certificates used for validating the OCSP response when the responder's certificate has been omitted from the response}
-    responder_url: ${18:# Specifies the absolute URL that overrides the OCSP responder URL obtained from the certificate's AIA extensions}
-    update_password: ${19:# C(always) allows the user to update passwords}
-    partition: ${20:# Device partition to manage resources on}
-    state: ${21:# When C(present), ensures the resource exists}
-    provider: ${22:# A dict object containing connection details}
+    provider: ${14:# A dict object containing connection details}
+    proxy_server_pool: ${15:# Specifies the proxy server pool the BIG-IP system uses to fetch the OCSP response}
+    responder_url: ${16:# Specifies the absolute URL that overrides the OCSP responder URL obtained from the certificate's AIA extensions}
+    route_domain: ${17:# Specifies the route domain for fetching an OCSP response using HTTP forward proxy}
+    state: ${18:# When C(present), ensures the resource exists}
+    status_age: ${19:# Specifies the maximum allowed lag time the BIG-IP system accepts for the 'thisUpdate' time in the OCSP response}
+    strict_responder_checking: ${20:# Specifies whether the responder's certificate is checked for an OCSP signing extension}
+    trusted_responders: ${21:# Specifies the certificates used for validating the OCSP response when the responder's certificate has been omitted from the response}
+    update_password: ${22:# C(always) allows the user to update passwords}
   tags:
     - f5networks
     - f5_modules

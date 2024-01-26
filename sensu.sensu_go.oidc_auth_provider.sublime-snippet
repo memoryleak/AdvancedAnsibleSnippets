@@ -2,18 +2,18 @@
   <content><![CDATA[- name: ${1:Manage Sensu OIDC authentication provider}
   sensu.sensu_go.oidc_auth_provider:
     additional_scopes: ${2:# Scopes to include in the claims}
-    client_id: ${3:# The OIDC provider application Client ID}
-    client_secret: ${4:# The OIDC provider application Client Secret}
-    disable_offline_access: ${5:# If C(true), the OIDC provider cannot include the offline_access scope in the authentication request}
-    redirect_uri: ${6:# Redirect URL to provide to the OIDC provider}
-    server: ${7:# The location of the OIDC server you wish to authenticate against}
-    groups_claim: ${8:# The claim to use to form the associated RBAC groups}
-    groups_prefix: ${9:# The prefix added to all OIDC groups}
-    username_claim: ${10:# The claim to use to form the final RBAC user name}
-    username_prefix: ${11:# The prefix added to all OIDC usernames}
-    auth: ${12:# Authentication parameters}
-    name: ${13:# The Sensu resource's name}
-    state: ${14:# Target state of the Sensu object}
+    auth: ${3:# Authentication parameters}
+    client_id: ${4:# The OIDC provider application Client ID}
+    client_secret: ${5:# The OIDC provider application Client Secret}
+    disable_offline_access: ${6:# If C(true), the OIDC provider cannot include the offline_access scope in the authentication request}
+    groups_claim: ${7:# The claim to use to form the associated RBAC groups}
+    groups_prefix: ${8:# The prefix added to all OIDC groups}
+    name: ${9:# The Sensu resource's name}
+    redirect_uri: ${10:# Redirect URL to provide to the OIDC provider}
+    server: ${11:# The location of the OIDC server you wish to authenticate against}
+    state: ${12:# Target state of the Sensu object}
+    username_claim: ${13:# The claim to use to form the final RBAC user name}
+    username_prefix: ${14:# The prefix added to all OIDC usernames}
   tags:
     - sensu
     - sensu_go

@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieve information about one or more oVirt/RHV users}
   ovirt.ovirt.ovirt_user_info:
-    pattern: ${2:# Search term which is accepted by oVirt/RHV search backend}
-    follow: ${3:# List of linked entities, which should be fetched along with the main entity}
-    fetch_nested: ${4:# If I(yes) the module will fetch additional data from the API}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    fetch_nested: ${3:# If I(yes) the module will fetch additional data from the API}
+    follow: ${4:# List of linked entities, which should be fetched along with the main entity}
     nested_attributes: ${5:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${6:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    pattern: ${6:# Search term which is accepted by oVirt/RHV search backend}
   tags:
     - ovirt
     - ovirt

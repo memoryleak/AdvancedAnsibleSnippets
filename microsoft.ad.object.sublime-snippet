@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Active Directory objects}
+  microsoft.ad.object:
+    attributes: ${2:# The attributes to either add, remove, or set on the AD object}
+    description: ${3:# The description of the AD object to set}
+    display_name: ${4:# The display name of the AD object to set}
+    domain_password: ${5:# The password for I(domain_username)}
+    domain_server: ${6:# Specified the Active Directory Domain Services instance to connect to}
+    domain_username: ${7:# The username to use when interacting with AD}
+    identity: ${8:# The identity of the AD object used to find the AD object to manage}
+    name: ${9:# The C(name) of the AD object to manage}
+    path: ${10:# The path of the OU or the container where the new object should exist in}
+    protect_from_deletion: ${11:# Marks the object as protected from accidental deletion}
+    state: ${12:# Set to C(present) to ensure the AD object exists}
+    type: ${13:# The object type of the AD object}
+  tags:
+    - microsoft
+    - ad
+    - object]]></content>
+  <tabTrigger>microsoft.ad.object</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Active Directory objects</description>
+</snippet>

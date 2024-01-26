@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp E-Series manage lun mappings}
   netapp_eseries.santricity.na_santricity_lun_mapping:
-    state: ${2:# Present will ensure the mapping exists, absent will remove the mapping}
-    target: ${3:# The name of host or hostgroup you wish to assign to the mapping}
-    volume_name: ${4:# The name of the volume you wish to include in the mapping}
+    api_password: ${2:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${3:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_username: ${4:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
     lun: ${5:# The LUN value you wish to give the mapping}
-    api_username: ${6:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_password: ${7:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_url: ${8:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    ssid: ${6:# The ID of the array to manage}
+    state: ${7:# Present will ensure the mapping exists, absent will remove the mapping}
+    target: ${8:# The name of host or hostgroup you wish to assign to the mapping}
     validate_certs: ${9:# Should https certificates be validated?}
-    ssid: ${10:# The ID of the array to manage}
+    volume_name: ${10:# The name of the volume you wish to include in the mapping}
   tags:
     - netapp_eseries
     - santricity

@@ -1,28 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Cloudflare DNS records}
   community.general.cloudflare_dns:
-    api_token: ${2:# API token}
-    account_api_key: ${3:# Account API key}
-    account_email: ${4:# Account email}
-    algorithm: ${5:# Algorithm number}
+    account_api_key: ${2:# Account API key}
+    account_email: ${3:# Account email}
+    algorithm: ${4:# Algorithm number}
+    api_token: ${5:# API token}
     cert_usage: ${6:# Certificate usage number}
-    hash_type: ${7:# Hash type number}
-    key_tag: ${8:# DNSSEC key tag}
-    port: ${9:# Service port}
-    priority: ${10:# Record priority}
-    proto: ${11:# Service protocol}
-    proxied: ${12:# Proxy through Cloudflare network or just use DNS}
-    record: ${13:# Record to add}
-    selector: ${14:# Selector number}
-    service: ${15:# Record service}
-    solo: ${16:# Whether the record should be the only one for that record type and record name}
-    state: ${17:# Whether the record(s) should exist or not}
-    timeout: ${18:# Timeout for Cloudflare API calls}
-    ttl: ${19:# The TTL to give the new record}
-    type: ${20:# The type of DNS record to create}
-    value: ${21:# The record value}
-    weight: ${22:# Service weight}
-    zone: ${23:# The name of the Zone to work with (e}
+    flag: ${7:# Issuer Critical Flag}
+    hash_type: ${8:# Hash type number}
+    key_tag: ${9:# DNSSEC key tag}
+    port: ${10:# Service port}
+    priority: ${11:# Record priority}
+    proto: ${12:# Service protocol}
+    proxied: ${13:# Proxy through Cloudflare network or just use DNS}
+    record: ${14:# Record to add}
+    selector: ${15:# Selector number}
+    service: ${16:# Record service}
+    solo: ${17:# Whether the record should be the only one for that record type and record name}
+    state: ${18:# Whether the record(s) should exist or not}
+    tag: ${19:# CAA issue restriction}
+    timeout: ${20:# Timeout for Cloudflare API calls}
+    ttl: ${21:# The TTL to give the new record}
+    type: ${22:# The type of DNS record to create}
+    value: ${23:# The record value}
+    weight: ${24:# Service weight}
+    zone: ${25:# The name of the Zone to work with (e}
   tags:
     - community
     - general

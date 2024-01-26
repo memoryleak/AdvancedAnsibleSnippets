@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add and remove Zypper repositories}
   community.general.zypper_repository:
-    name: ${2:# A name for the repository}
-    repo: ${3:# URI of the repository or }
-    state: ${4:# A source string state}
-    description: ${5:# A description of the repository}
-    disable_gpg_check: ${6:# Whether to disable GPG signature checking of all packages}
-    autorefresh: ${7:# Enable autorefresh of the repository}
-    priority: ${8:# Set priority of repository}
-    overwrite_multiple: ${9:# Overwrite multiple repository entries, if repositories with both name and URL already exist}
-    auto_import_keys: ${10:# Automatically import the gpg signing key of the new or changed repository}
+    auto_import_keys: ${2:# Automatically import the gpg signing key of the new or changed repository}
+    autorefresh: ${3:# Enable autorefresh of the repository}
+    description: ${4:# A description of the repository}
+    disable_gpg_check: ${5:# Whether to disable GPG signature checking of all packages}
+    enabled: ${6:# Set repository to enabled (or disabled)}
+    name: ${7:# A name for the repository}
+    overwrite_multiple: ${8:# Overwrite multiple repository entries, if repositories with both name and URL already exist}
+    priority: ${9:# Set priority of repository}
+    repo: ${10:# URI of the repository or}
     runrefresh: ${11:# Refresh the package list of the given repository}
-    enabled: ${12:# Set repository to enabled (or disabled)}
+    state: ${12:# A source string state}
   tags:
     - community
     - general

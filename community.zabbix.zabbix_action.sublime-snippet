@@ -1,31 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/Delete/Update Zabbix actions}
   community.zabbix.zabbix_action:
-    name: ${2:# Name of the action}
-    event_source: ${3:# Type of events that the action will handle}
-    state: ${4:# State of the action}
-    status: ${5:# Status of the action}
-    pause_in_maintenance: ${6:# Whether to pause escalation during maintenance periods or not}
-    esc_period: ${7:# Default operation step duration}
-    conditions: ${8:# List of conditions to use for filtering results}
-    eval_type: ${9:# Filter condition evaluation method}
-    formula: ${10:# User-defined expression to be used for evaluating conditions with a custom expression}
-    default_message: ${11:# Problem message default text}
-    default_subject: ${12:# Problem message default subject}
-    recovery_default_message: ${13:# Recovery message text}
-    recovery_default_subject: ${14:# Recovery message subject}
-    acknowledge_default_message: ${15:# Update operation (known as 'Acknowledge operation' before Zabbix 4}
-    acknowledge_default_subject: ${16:# Update operation (known as 'Acknowledge operation' before Zabbix 4}
-    operations: ${17:# List of action operations}
-    recovery_operations: ${18:# List of recovery operations}
-    acknowledge_operations: ${19:# List of acknowledge operations}
-    server_url: ${20:# URL of Zabbix server, with protocol (http or https)}
-    login_user: ${21:# Zabbix user name}
-    login_password: ${22:# Zabbix user password}
-    http_login_user: ${23:# Basic Auth login}
-    http_login_password: ${24:# Basic Auth password}
-    timeout: ${25:# The timeout of API request (seconds)}
-    validate_certs: ${26:# If set to False, SSL certificates will not be validated}
+    acknowledge_operations: ${2:# List of acknowledge operations}
+    conditions: ${3:# List of conditions to use for filtering results}
+    esc_period: ${4:# Default operation step duration}
+    eval_type: ${5:# Filter condition evaluation method}
+    event_source: ${6:# Type of events that the action will handle}
+    formula: ${7:# User-defined expression to be used for evaluating conditions with a custom expression}
+    http_login_password: ${8:# Basic Auth password}
+    http_login_user: ${9:# Basic Auth login}
+    name: ${10:# Name of the action}
+    notify_if_canceled: ${11:# Weather to notify when escalation is canceled}
+    operations: ${12:# List of action operations}
+    pause_in_maintenance: ${13:# Whether to pause escalation during maintenance periods or not}
+    pause_symptoms: ${14:# Whether to pause escalation if event is a symptom event}
+    recovery_operations: ${15:# List of recovery operations}
+    state: ${16:# State of the action}
+    status: ${17:# Status of the action}
   tags:
     - community
     - zabbix

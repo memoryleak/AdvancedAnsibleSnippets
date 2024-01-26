@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage OpenStack volume type encryption}
+  openstack.cloud.volume_type_encryption:
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    encryption_cipher: ${9:# encryption algorithm or mode}
+    encryption_control_location: ${10:# Set the notional service where the encryption is performed}
+    encryption_key_size: ${11:# Set the size of the encryption key of this volume type}
+    encryption_provider: ${12:# class that provides encryption support for the volume type}
+    interface: ${13:# Endpoint URL type to fetch from the service catalog}
+    region_name: ${14:# Name of the region}
+    sdk_log_level: ${15:# Log level of the OpenStackSDK}
+    sdk_log_path: ${16:# Path to the logfile of the OpenStackSDK}
+    state: ${17:# Indicate desired state of the resource}
+    timeout: ${18:# How long should ansible wait for the requested resource}
+    validate_certs: ${19:# Whether or not SSL API requests should be verified}
+    volume_type: ${20:# Volume type name or id}
+    wait: ${21:# Should ansible wait until the requested resource is complete}
+  tags:
+    - openstack
+    - cloud
+    - volume_type_encryption]]></content>
+  <tabTrigger>openstack.cloud.volume_type_encryption</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage OpenStack volume type encryption</description>
+</snippet>

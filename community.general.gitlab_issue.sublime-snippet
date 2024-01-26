@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update, or delete GitLab issues}
+  community.general.gitlab_issue:
+    api_job_token: ${2:# GitLab CI job token for logging in}
+    api_oauth_token: ${3:# GitLab OAuth token for logging in}
+    api_password: ${4:# The password to use for authentication against the API}
+    api_token: ${5:# GitLab access token with API permissions}
+    api_url: ${6:# The resolvable endpoint for the API}
+    api_username: ${7:# The username to use for authentication against the API}
+    assignee_ids: ${8:# A list of assignee usernames omitting V(@) character}
+    ca_path: ${9:# The CA certificates bundle to use to verify GitLab server certificate}
+    description: ${10:# A description of the issue}
+    description_path: ${11:# A path of file containing issue's description}
+    issue_type: ${12:# Type of the issue}
+    labels: ${13:# A list of label names}
+    milestone_group_id: ${14:# The path or numeric ID of the group hosting desired milestone}
+    milestone_search: ${15:# The name of the milestone}
+    project: ${16:# The path or name of the project}
+    state: ${17:# Create or delete issue}
+    state_filter: ${18:# Filter specifying state of issues while searching}
+    title: ${19:# A title for the issue}
+    validate_certs: ${20:# Whether or not to validate SSL certs when supplying a HTTPS endpoint}
+  tags:
+    - community
+    - general
+    - gitlab_issue]]></content>
+  <tabTrigger>community.general.gitlab_issue</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update, or delete GitLab issues</description>
+</snippet>

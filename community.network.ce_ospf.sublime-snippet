@@ -1,17 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages configuration of an OSPF instance on HUAWEI CloudEngine switches}
   community.network.ce_ospf:
-    process_id: ${2:# Specifies a process ID}
+    addr: ${2:# Specifies the address of the network segment where the interface resides}
     area: ${3:# Specifies the area ID}
-    addr: ${4:# Specifies the address of the network segment where the interface resides}
-    mask: ${5:# IP network wildcard bits in decimal format between 0 and 32}
-    auth_mode: ${6:# Specifies the authentication type}
+    auth_key_id: ${4:# Authentication key id when C(auth_mode) is 'hmac-sha256', 'md5' or 'hmac-md5}
+    auth_mode: ${5:# Specifies the authentication type}
+    auth_text_md5: ${6:# Specifies a password for MD5, HMAC-MD5, or HMAC-SHA256 authentication}
     auth_text_simple: ${7:# Specifies a password for simple authentication}
-    auth_key_id: ${8:# Authentication key id when C(auth_mode) is 'hmac-sha256', 'md5' or 'hmac-md5}
-    auth_text_md5: ${9:# Specifies a password for MD5, HMAC-MD5, or HMAC-SHA256 authentication}
+    mask: ${8:# IP network wildcard bits in decimal format between 0 and 32}
+    max_load_balance: ${9:# The maximum number of paths for forward packets over multiple paths}
     nexthop_addr: ${10:# IPv4 address for configure next-hop address's weight}
     nexthop_weight: ${11:# Indicates the weight of the next hop}
-    max_load_balance: ${12:# The maximum number of paths for forward packets over multiple paths}
+    process_id: ${12:# Specifies a process ID}
     state: ${13:# Determines whether the config should be present or not on the device}
   tags:
     - community

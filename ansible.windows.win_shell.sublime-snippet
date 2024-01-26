@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Execute shell commands on target hosts}
   ansible.windows.win_shell:
-    free_form: ${2:# The M(ansible}
+    chdir: ${2:# Set the specified path as the current working directory before executing a command}
     creates: ${3:# A path or path filter pattern; when the referenced path exists on the target host, the task will be skipped}
-    removes: ${4:# A path or path filter pattern; when the referenced path B(does not) exist on the target host, the task will be skipped}
-    chdir: ${5:# Set the specified path as the current working directory before executing a command}
-    executable: ${6:# Change the shell used to execute the command (eg, C(cmd))}
-    stdin: ${7:# Set the stdin of the command directly to the specified value}
-    no_profile: ${8:# Do not load the user profile before running a command}
-    output_encoding_override: ${9:# This option overrides the encoding of stdout/stderr output}
+    executable: ${4:# Change the shell used to execute the command (eg, C(cmd))}
+    free_form: ${5:# The M(ansible}
+    no_profile: ${6:# Do not load the user profile before running a command}
+    output_encoding_override: ${7:# This option overrides the encoding of stdout/stderr output}
+    removes: ${8:# A path or path filter pattern; when the referenced path B(does not) exist on the target host, the task will be skipped}
+    stdin: ${9:# Set the stdin of the command directly to the specified value}
   tags:
     - win_shell]]></content>
   <tabTrigger>ansible.windows.win_shell</tabTrigger>

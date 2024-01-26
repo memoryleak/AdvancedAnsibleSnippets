@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Authenticate to OpenShift clusters which require an explicit login step}
   community.okd.openshift_auth:
-    state: ${2:# If set to I(present) connect to the API server using the URL specified in C(host) and attempt to log in}
-    host: ${3:# Provide a URL for accessing the API server}
-    username: ${4:# Provide a username for authenticating with the API server}
+    api_key: ${2:# When C(state) is set to I(absent), this specifies the token to revoke}
+    ca_cert: ${3:# Path to a CA certificate file used to verify connection to the API server}
+    host: ${4:# Provide a URL for accessing the API server}
     password: ${5:# Provide a password for authenticating with the API server}
-    ca_cert: ${6:# Path to a CA certificate file used to verify connection to the API server}
-    validate_certs: ${7:# Whether or not to verify the API server's SSL certificates}
-    api_key: ${8:# When C(state) is set to I(absent), this specifies the token to revoke}
+    state: ${6:# If set to I(present) connect to the API server using the URL specified in C(host) and attempt to log in}
+    username: ${7:# Provide a username for authenticating with the API server}
+    validate_certs: ${8:# Whether or not to verify the API server's SSL certificates}
   tags:
     - community
     - okd

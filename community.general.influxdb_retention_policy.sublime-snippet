@@ -2,24 +2,24 @@
   <content><![CDATA[- name: ${1:Manage InfluxDB retention policies}
   community.general.influxdb_retention_policy:
     database_name: ${2:# Name of the database}
-    policy_name: ${3:# Name of the retention policy}
-    state: ${4:# State of the retention policy}
-    duration: ${5:# Determines how long InfluxDB should keep the data}
-    replication: ${6:# Determines how many independent copies of each point are stored in the cluster}
-    default: ${7:# Sets the retention policy as default retention policy}
-    shard_group_duration: ${8:# Determines the time range covered by a shard group}
-    hostname: ${9:# The hostname or IP address on which InfluxDB server is listening}
-    username: ${10:# Username that will be used to authenticate against InfluxDB server}
-    password: ${11:# Password that will be used to authenticate against InfluxDB server}
-    port: ${12:# The port on which InfluxDB server is listening}
-    path: ${13:# The path on which InfluxDB server is accessible}
-    validate_certs: ${14:# If set to C(false), the SSL certificates will not be validated}
-    ssl: ${15:# Use https instead of http to connect to InfluxDB server}
+    default: ${3:# Sets the retention policy as default retention policy}
+    duration: ${4:# Determines how long InfluxDB should keep the data}
+    hostname: ${5:# The hostname or IP address on which InfluxDB server is listening}
+    password: ${6:# Password that will be used to authenticate against InfluxDB server}
+    path: ${7:# The path on which InfluxDB server is accessible}
+    policy_name: ${8:# Name of the retention policy}
+    port: ${9:# The port on which InfluxDB server is listening}
+    proxies: ${10:# HTTP(S) proxy to use for Requests to connect to InfluxDB server}
+    replication: ${11:# Determines how many independent copies of each point are stored in the cluster}
+    retries: ${12:# Number of retries client will try before aborting}
+    shard_group_duration: ${13:# Determines the time range covered by a shard group}
+    ssl: ${14:# Use https instead of http to connect to InfluxDB server}
+    state: ${15:# State of the retention policy}
     timeout: ${16:# Number of seconds Requests will wait for client to establish a connection}
-    retries: ${17:# Number of retries client will try before aborting}
+    udp_port: ${17:# UDP port to connect to InfluxDB server}
     use_udp: ${18:# Use UDP to connect to InfluxDB server}
-    udp_port: ${19:# UDP port to connect to InfluxDB server}
-    proxies: ${20:# HTTP(S) proxy to use for Requests to connect to InfluxDB server}
+    username: ${19:# Username that will be used to authenticate against InfluxDB server}
+    validate_certs: ${20:# If set to V(false), the SSL certificates will not be validated}
   tags:
     - community
     - general

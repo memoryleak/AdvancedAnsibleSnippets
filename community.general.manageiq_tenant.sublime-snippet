@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Management of tenants in ManageIQ}
   community.general.manageiq_tenant:
-    state: ${2:# absent - tenant should not exist, present - tenant should be}
-    name: ${3:# The tenant name}
-    description: ${4:# The tenant description}
-    parent_id: ${5:# The id of the parent tenant}
-    parent: ${6:# The name of the parent tenant}
+    description: ${2:# The tenant description}
+    manageiq_connection: ${3:# ManageIQ connection configuration information}
+    name: ${4:# The tenant name}
+    parent: ${5:# The name of the parent tenant}
+    parent_id: ${6:# The id of the parent tenant}
     quotas: ${7:# The tenant quotas}
-    manageiq_connection: ${8:# ManageIQ connection configuration information}
+    state: ${8:# absent - tenant should not exist, present - tenant should be}
   tags:
     - community
     - general

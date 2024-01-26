@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp E-Series manage iSCSI target configuration}
   netapp_eseries.santricity.netapp_e_iscsi_target:
-    name: ${2:# The name/alias to assign to the iSCSI target}
-    ping: ${3:# Enable ICMP ping responses from the configured iSCSI ports}
-    chap_secret: ${4:# Enable Challenge-Handshake Authentication Protocol (CHAP), utilizing this value as the password}
-    unnamed_discovery: ${5:# When an initiator initiates a discovery session to an initiator port, it is considered an unnamed discovery session if the iSCSI target iqn is not specified in the request}
+    api_password: ${2:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${3:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_username: ${4:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    chap_secret: ${5:# Enable Challenge-Handshake Authentication Protocol (CHAP), utilizing this value as the password}
     log_path: ${6:# A local path (on the Ansible controller), to a file to be used for debug logging}
-    api_username: ${7:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_password: ${8:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_url: ${9:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
-    validate_certs: ${10:# Should https certificates be validated?}
-    ssid: ${11:# The ID of the array to manage}
+    name: ${7:# The name/alias to assign to the iSCSI target}
+    ping: ${8:# Enable ICMP ping responses from the configured iSCSI ports}
+    ssid: ${9:# The ID of the array to manage}
+    unnamed_discovery: ${10:# When an initiator initiates a discovery session to an initiator port, it is considered an unnamed discovery session if the iSCSI target iqn is not specified in the request}
+    validate_certs: ${11:# Should https certificates be validated?}
   tags:
     - netapp_eseries
     - santricity

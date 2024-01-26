@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, modify or delete FlashArray local user account}
   purestorage.flasharray.purefa_user:
-    state: ${2:# Create, delete or update local user account}
-    name: ${3:# The name of the local user account}
-    role: ${4:# Sets the local user's access level to the array}
-    password: ${5:# Password for the local user}
+    api: ${2:# Define whether to create an API token for this user}
+    api_token: ${3:# FlashArray API token for admin privileged user}
+    fa_url: ${4:# FlashArray management IPv4 address or Hostname}
+    name: ${5:# The name of the local user account}
     old_password: ${6:# If changing an existing password, you must provide the old password for security}
-    api: ${7:# Define whether to create an API token for this user}
-    fa_url: ${8:# FlashArray management IPv4 address or Hostname}
-    api_token: ${9:# FlashArray API token for admin privileged user}
+    password: ${7:# Password for the local user}
+    role: ${8:# Sets the local user's access level to the array}
+    state: ${9:# Create, delete or update local user account}
   tags:
     - purestorage
     - flasharray

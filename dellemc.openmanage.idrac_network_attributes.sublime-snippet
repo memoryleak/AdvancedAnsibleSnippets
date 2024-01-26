@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures the iDRAC network attributes}
+  dellemc.openmanage.idrac_network_attributes:
+    apply_time: ${2:# Apply time of the I(network_attributes) and I(oem_network_attributes)}
+    ca_path: ${3:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    clear_pending: ${4:# This parameter allows you to clear all the pending OEM network attributes changes}
+    idrac_ip: ${5:# iDRAC IP Address}
+    idrac_password: ${6:# iDRAC user password}
+    idrac_port: ${7:# iDRAC port}
+    idrac_user: ${8:# iDRAC username}
+    job_wait: ${9:# Provides the option to wait for job completion}
+    job_wait_timeout: ${10:# The maximum wait time of I(job_wait) in seconds}
+    maintenance_window: ${11:# This option allows you to schedule the maintenance window}
+    network_adapter_id: ${12:# FQDD of the network adapter device that represents the physical network adapter capable of connecting to a computer network}
+    network_attributes: ${13:# Dictionary of network attributes and value}
+    network_device_function_id: ${14:# FQDD of the network adapter device function that represents a logical interface exposed by the network adapter}
+    oem_network_attributes: ${15:# The attributes must be part of the Integrated Dell Remote Access Controller Attribute Registry}
+    resource_id: ${16:# Id of the resource}
+    timeout: ${17:# The socket level timeout in seconds}
+    validate_certs: ${18:# If C(false), the SSL certificates will not be validated}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_network_attributes]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_network_attributes</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures the iDRAC network attributes</description>
+</snippet>

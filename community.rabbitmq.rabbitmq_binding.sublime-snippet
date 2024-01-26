@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage rabbitMQ bindings}
   community.rabbitmq.rabbitmq_binding:
-    state: ${2:# Whether the bindings should be present or absent}
-    name: ${3:# source exchange to create binding on}
-    destination: ${4:# destination exchange or queue for the binding}
-    destination_type: ${5:# Either queue or exchange}
-    routing_key: ${6:# routing key for the binding}
-    arguments: ${7:# extra arguments for exchange}
-    login_user: ${8:# RabbitMQ user for connection}
+    arguments: ${2:# extra arguments for exchange}
+    ca_cert: ${3:# CA certificate to verify SSL connection to management API}
+    client_cert: ${4:# Client certificate to send on SSL connections to management API}
+    client_key: ${5:# Private key matching the client certificate}
+    destination: ${6:# destination exchange or queue for the binding}
+    destination_type: ${7:# Either queue or exchange}
+    login_host: ${8:# RabbitMQ host for connection}
     login_password: ${9:# RabbitMQ password for connection}
-    login_host: ${10:# RabbitMQ host for connection}
-    login_port: ${11:# RabbitMQ management API port}
-    login_protocol: ${12:# RabbitMQ management API protocol}
-    ca_cert: ${13:# CA certificate to verify SSL connection to management API}
-    client_cert: ${14:# Client certificate to send on SSL connections to management API}
-    client_key: ${15:# Private key matching the client certificate}
+    login_port: ${10:# RabbitMQ management API port}
+    login_protocol: ${11:# RabbitMQ management API protocol}
+    login_user: ${12:# RabbitMQ user for connection}
+    name: ${13:# source exchange to create binding on}
+    routing_key: ${14:# routing key for the binding}
+    state: ${15:# Whether the bindings should be present or absent}
     vhost: ${16:# RabbitMQ virtual host}
   tags:
     - community

@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Perform SAP Task list execution}
   community.sap_libs.sap_task_list_execute:
-    conn_username: ${2:# The required username for the SAP system}
+    client: ${2:# The client number to connect to}
     conn_password: ${3:# The required password for the SAP system}
-    host: ${4:# The required host for the SAP system}
-    sysnr: ${5:# The system number of the SAP system}
-    client: ${6:# The client number to connect to}
-    task_to_execute: ${7:# The task list which will be executed}
-    task_parameters: ${8:# The tasks and the parameters for execution}
-    task_settings: ${9:# Setting for the execution of the task list}
-    task_skip: ${10:# If this parameter is C(true), not defined tasks in I(task_parameters) are skipped}
+    conn_username: ${4:# The required username for the SAP system}
+    host: ${5:# The required host for the SAP system}
+    sysnr: ${6:# The system number of the SAP system}
+    task_parameters: ${7:# The tasks and the parameters for execution}
+    task_settings: ${8:# Setting for the execution of the task list}
+    task_skip: ${9:# If this parameter is C(true), not defined tasks in I(task_parameters) are skipped}
+    task_to_execute: ${10:# The task list which will be executed}
   tags:
     - community
     - sap_libs

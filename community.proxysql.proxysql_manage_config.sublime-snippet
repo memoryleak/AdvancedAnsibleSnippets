@@ -2,15 +2,15 @@
   <content><![CDATA[- name: ${1:Writes the proxysql configuration settings between layers}
   community.proxysql.proxysql_manage_config:
     action: ${2:# The supplied I(action) combines with the supplied I(direction) to provide the semantics of how we want to move the I(config_settings) between the I(config_layers)}
-    config_settings: ${3:# The I(config_settings) specifies which configuration we're writing}
-    direction: ${4:# FROM - denotes we're reading values FROM the supplied I(config_layer) and writing to the next layer}
-    config_layer: ${5:# RUNTIME - represents the in-memory data structures of ProxySQL used by the threads that are handling the requests}
-    login_user: ${6:# The username used to authenticate to ProxySQL admin interface}
-    login_password: ${7:# The password used to authenticate to ProxySQL admin interface}
-    login_host: ${8:# The host used to connect to ProxySQL admin interface}
-    login_unix_socket: ${9:# The socket used to connect to ProxySQL admin interface}
-    login_port: ${10:# The port used to connect to ProxySQL admin interface}
-    config_file: ${11:# Specify a config file from which I(login_user) and I(login_password) are to be read}
+    config_file: ${3:# Specify a config file from which I(login_user) and I(login_password) are to be read}
+    config_layer: ${4:# RUNTIME - represents the in-memory data structures of ProxySQL used by the threads that are handling the requests}
+    config_settings: ${5:# The I(config_settings) specifies which configuration we're writing}
+    direction: ${6:# FROM - denotes we're reading values FROM the supplied I(config_layer) and writing to the next layer}
+    login_host: ${7:# The host used to connect to ProxySQL admin interface}
+    login_password: ${8:# The password used to authenticate to ProxySQL admin interface}
+    login_port: ${9:# The port used to connect to ProxySQL admin interface}
+    login_unix_socket: ${10:# The socket used to connect to ProxySQL admin interface}
+    login_user: ${11:# The username used to authenticate to ProxySQL admin interface}
   tags:
     - community
     - proxysql

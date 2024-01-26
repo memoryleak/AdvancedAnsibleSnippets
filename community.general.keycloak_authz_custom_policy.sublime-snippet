@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Allows administration of Keycloak client custom Javascript policies via Keycloak API}
+  community.general.keycloak_authz_custom_policy:
+    auth_client_id: ${2:# OpenID Connect C(client_id) to authenticate to the API with}
+    auth_client_secret: ${3:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
+    auth_keycloak_url: ${4:# URL to the Keycloak instance}
+    auth_password: ${5:# Password to authenticate for API access with}
+    auth_realm: ${6:# Keycloak realm name to authenticate to for API access}
+    auth_username: ${7:# Username to authenticate for API access with}
+    client_id: ${8:# The V(clientId) of the Keycloak client that should have the custom policy attached to it}
+    connection_timeout: ${9:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    http_agent: ${10:# Configures the HTTP User-Agent header}
+    name: ${11:# Name of the custom policy to create}
+    policy_type: ${12:# The type of the policy}
+    realm: ${13:# The name of the Keycloak realm the Keycloak client is in}
+    state: ${14:# State of the custom policy}
+    token: ${15:# Authentication token for Keycloak API}
+    validate_certs: ${16:# Verify TLS certificates (do not disable this in production)}
+  tags:
+    - community
+    - general
+    - keycloak_authz_custom_policy]]></content>
+  <tabTrigger>community.general.keycloak_authz_custom_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Allows administration of Keycloak client custom Javascript policies via Keycloak API</description>
+</snippet>

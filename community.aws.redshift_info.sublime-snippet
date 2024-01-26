@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Gather information about Redshift cluster(s)}
   community.aws.redshift_info:
-    cluster_identifier: ${2:# The prefix of cluster identifier of the Redshift cluster you are searching for}
-    tags: ${3:# A dictionary/hash of tags in the format { tag1_name: 'tag1_value', tag2_name: 'tag2_value' } to match against the security group(s) you are searching for}
-    region: ${4:# The AWS region to use}
-    access_key: ${5:# AWS access key ID}
-    secret_key: ${6:# AWS secret access key}
-    session_token: ${7:# AWS STS session token for use with temporary credentials}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    cluster_identifier: ${5:# The prefix of cluster identifier of the Redshift cluster you are searching for}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
     profile: ${8:# A named AWS profile to use for authentication}
-    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${10:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${11:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${12:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${13:# Use a C(botocore}
+    region: ${9:# The AWS region to use}
+    secret_key: ${10:# AWS secret access key}
+    session_token: ${11:# AWS STS session token for use with temporary credentials}
+    tags: ${12:# A dictionary/hash of tags in the format  tag1_name: 'tag1_value', tag2_name: 'tag2_value'  to match against the security group(s) you are searching for}
+    validate_certs: ${13:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - community
     - aws

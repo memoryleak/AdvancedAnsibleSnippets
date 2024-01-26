@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Attempt to abort an on-going 'get-interfaces' operation}
+  check_point.mgmt.cp_mgmt_abort_get_interfaces:
+    force_cleanup: ${2:# Forcefully abort the 'get-interfaces' task}
+    task_id: ${3:# get-interfaces task UID}
+    version: ${4:# Version of checkpoint}
+    wait_for_task: ${5:# Wait for the task to end}
+    wait_for_task_timeout: ${6:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_abort_get_interfaces]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_abort_get_interfaces</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Attempt to abort an on-going &#39;get-interfaces&#39; operation</description>
+</snippet>

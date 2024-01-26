@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage remote roles on a BIG-IP}
   f5networks.f5_modules.bigip_remote_role:
-    name: ${2:# Specifies the name of the remote role}
-    line_order: ${3:# Specifies the order of the line in the file C(/config/bigip/auth/remoterole)}
-    attribute_string: ${4:# Specifies the user account attributes saved in the group, in the format C(cn=, ou=, dc=)}
-    remote_access: ${5:# Enables or disables remote access for the specified group of remotely authenticated users}
-    assigned_role: ${6:# Specifies the authorization (level of access) for the account}
-    partition_access: ${7:# Specifies the accessible partitions for the account}
-    terminal_access: ${8:# Specifies terminal-based accessibility for remote accounts not already explicitly assigned a user role}
+    assigned_role: ${2:# Specifies the authorization (level of access) for the account}
+    attribute_string: ${3:# Specifies the user account attributes saved in the group, in the format C(cn=, ou=, dc=)}
+    line_order: ${4:# Specifies the order of the line in the file C(/config/bigip/auth/remoterole)}
+    name: ${5:# Specifies the name of the remote role}
+    partition_access: ${6:# Specifies the accessible partitions for the account}
+    provider: ${7:# A dict object containing connection details}
+    remote_access: ${8:# Enables or disables remote access for the specified group of remotely authenticated users}
     state: ${9:# When C(present), guarantees the remote role exists}
-    provider: ${10:# A dict object containing connection details}
+    terminal_access: ${10:# Specifies terminal-based accessibility for remote accounts not already explicitly assigned a user role}
   tags:
     - f5networks
     - f5_modules

@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Send USB HID codes to the Virtual Machine's keyboard}
   community.vmware.vmware_guest_sendkey:
-    name: ${2:# Name of the virtual machine}
-    uuid: ${3:# UUID of the instance to gather facts if known, this is VMware's unique identifier}
-    moid: ${4:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    cluster: ${2:# The name of cluster where the virtual machine is running}
+    datacenter: ${3:# The datacenter name to which virtual machine belongs to}
+    esxi_hostname: ${4:# The ESXi hostname where the virtual machine is running}
     folder: ${5:# Destination folder, absolute or relative path to find an existing guest}
-    cluster: ${6:# The name of cluster where the virtual machine is running}
-    esxi_hostname: ${7:# The ESXi hostname where the virtual machine is running}
-    datacenter: ${8:# The datacenter name to which virtual machine belongs to}
-    string_send: ${9:# The string will be sent to the virtual machine}
-    keys_send: ${10:# The list of the keys will be sent to the virtual machine}
-    sleep_time: ${11:# Sleep time in seconds between two keys or string sent to the virtual machine}
-    hostname: ${12:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${13:# The username of the vSphere vCenter or ESXi server}
-    password: ${14:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${15:# Allows connection when SSL certificates are not valid}
-    port: ${16:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${17:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${18:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    hostname: ${6:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    keys_send: ${7:# The list of the keys will be sent to the virtual machine}
+    moid: ${8:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    name: ${9:# Name of the virtual machine}
+    password: ${10:# The password of the vSphere vCenter or ESXi server}
+    port: ${11:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${12:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    sleep_time: ${14:# Sleep time in seconds between two keys or string sent to the virtual machine}
+    string_send: ${15:# The string will be sent to the virtual machine}
+    username: ${16:# The username of the vSphere vCenter or ESXi server}
+    uuid: ${17:# UUID of the instance to gather facts if known, this is VMware's unique identifier}
+    validate_certs: ${18:# Allows connection when SSL certificates are not valid}
   tags:
     - community
     - vmware

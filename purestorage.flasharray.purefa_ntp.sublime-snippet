@@ -1,10 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure Pure Storage FlashArray NTP settings}
   purestorage.flasharray.purefa_ntp:
-    state: ${2:# Create or delete NTP servers configuration}
-    ntp_servers: ${3:# A list of up to 4 alternate NTP servers}
-    fa_url: ${4:# FlashArray management IPv4 address or Hostname}
-    api_token: ${5:# FlashArray API token for admin privileged user}
+    api_token: ${2:# FlashArray API token for admin privileged user}
+    fa_url: ${3:# FlashArray management IPv4 address or Hostname}
+    ntp_key: ${4:# The NTP symmetric key to be used for NTP authentication}
+    ntp_servers: ${5:# A list of up to 4 alternate NTP servers}
+    state: ${6:# Create or delete NTP servers configuration}
   tags:
     - purestorage
     - flasharray

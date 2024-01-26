@@ -1,17 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Check remote PostgreSQL server availability}
   community.postgresql.postgresql_ping:
-    db: ${2:# Name of a database to connect to}
-    session_role: ${3:# Switch to session_role after connecting}
-    trust_input: ${4:# If C(false), check whether a value of I(session_role) is potentially dangerous}
-    login_user: ${5:# The username this module should use to establish its PostgreSQL session}
+    ca_cert: ${2:# Specifies the name of a file containing SSL certificate authority (CA) certificate(s)}
+    connect_params: ${3:# Any additional parameters to be passed to libpg}
+    db: ${4:# Name of a database to connect to}
+    login_host: ${5:# Host running the database}
     login_password: ${6:# The password this module should use to establish its PostgreSQL session}
-    login_host: ${7:# Host running the database}
-    login_unix_socket: ${8:# Path to a Unix domain socket for local connections}
+    login_unix_socket: ${7:# Path to a Unix domain socket for local connections}
+    login_user: ${8:# The username this module should use to establish its PostgreSQL session}
     port: ${9:# Database port to connect to}
-    ssl_mode: ${10:# Determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the server}
-    ca_cert: ${11:# Specifies the name of a file containing SSL certificate authority (CA) certificate(s)}
-    connect_params: ${12:# Any additional parameters to be passed to libpg}
+    session_role: ${10:# Switch to session_role after connecting}
+    ssl_cert: ${11:# Specifies the file name of the client SSL certificate}
+    ssl_key: ${12:# Specifies the location for the secret key used for the client certificate}
+    ssl_mode: ${13:# Determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the server}
+    trust_input: ${14:# If C(false), check whether a value of I(session_role) is potentially dangerous}
   tags:
     - community
     - postgresql

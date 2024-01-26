@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Rundeck ACL policies}
   community.general.rundeck_acl_policy:
-    state: ${2:# Create or remove Rundeck project}
-    name: ${3:# Sets the project name}
-    url: ${4:# Sets the rundeck instance URL}
-    api_version: ${5:# Sets the API version used by module}
-    token: ${6:# Sets the token to authenticate against Rundeck API}
-    project: ${7:# Sets the project which receive the ACL policy}
-    policy: ${8:# Sets the ACL policy content}
-    client_cert: ${9:# PEM formatted certificate chain file to be used for SSL client authentication}
-    client_key: ${10:# PEM formatted file that contains your private key to be used for SSL client authentication}
-    force: ${11:# If C(yes) do not get a cached copy}
-    force_basic_auth: ${12:# Credentials specified with I(url_username) and I(url_password) should be passed in HTTP Header}
-    http_agent: ${13:# Header to identify as, generally appears in web server logs}
+    api_token: ${2:# Sets the token to authenticate against Rundeck API}
+    api_version: ${3:# Rundeck API version to be used}
+    client_cert: ${4:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${5:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    force: ${6:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${7:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    http_agent: ${8:# Header to identify as, generally appears in web server logs}
+    name: ${9:# Sets the project name}
+    policy: ${10:# Sets the ACL policy content}
+    project: ${11:# Sets the project which receive the ACL policy}
+    state: ${12:# Create or remove Rundeck project}
+    url: ${13:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
     url_password: ${14:# The password for use in HTTP basic authentication}
     url_username: ${15:# The username for use in HTTP basic authentication}
-    use_proxy: ${16:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    validate_certs: ${17:# If C(no), SSL certificates will not be validated}
-    use_gssapi: ${18:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_gssapi: ${16:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${17:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${18:# If V(no), SSL certificates will not be validated}
   tags:
     - community
     - general

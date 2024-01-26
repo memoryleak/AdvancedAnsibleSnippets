@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages F5 BIG-IP GTM HTTP monitors}
   f5networks.f5_modules.bigip_gtm_monitor_http:
-    name: ${2:# Monitor name}
-    parent: ${3:# The parent template of this monitor template}
-    send: ${4:# The send string for the monitor call}
-    receive: ${5:# The receive string for the monitor call}
-    ip: ${6:# IP address part of the IP/port definition}
-    port: ${7:# Port address part of the IP/port definition}
-    interval: ${8:# The interval specifying how frequently the monitor instance of this template will run}
-    timeout: ${9:# The number of seconds in which the node or service must respond to the monitor request}
-    partition: ${10:# Device partition to manage resources on}
-    state: ${11:# When C(present), ensures the monitor exists}
-    probe_timeout: ${12:# Specifies the number of seconds after which the system times out the probe request to the system}
-    ignore_down_response: ${13:# Specifies the monitor allows more than one probe attempt per interval}
-    transparent: ${14:# Specifies whether the monitor operates in transparent mode}
-    reverse: ${15:# Instructs the system to mark the target resource down when the test is successful}
+    ignore_down_response: ${2:# Specifies the monitor allows more than one probe attempt per interval}
+    interval: ${3:# The interval specifying how frequently the monitor instance of this template will run}
+    ip: ${4:# IP address part of the IP/port definition}
+    name: ${5:# Monitor name}
+    parent: ${6:# The parent template of this monitor template}
+    partition: ${7:# Device partition to manage resources on}
+    port: ${8:# Port address part of the IP/port definition}
+    probe_timeout: ${9:# Specifies the number of seconds after which the system times out the probe request to the system}
+    provider: ${10:# A dict object containing connection details}
+    receive: ${11:# The receive string for the monitor call}
+    reverse: ${12:# Instructs the system to mark the target resource down when the test is successful}
+    send: ${13:# The send string for the monitor call}
+    state: ${14:# When C(present), ensures the monitor exists}
+    target_password: ${15:# Specifies the password, if the monitored target requires authentication}
     target_username: ${16:# Specifies the user name, if the monitored target requires authentication}
-    target_password: ${17:# Specifies the password, if the monitored target requires authentication}
-    update_password: ${18:# C(always) updates passwords if the C(target_password) is specified}
-    provider: ${19:# A dict object containing connection details}
+    timeout: ${17:# The number of seconds in which the node or service must respond to the monitor request}
+    transparent: ${18:# Specifies whether the monitor operates in transparent mode}
+    update_password: ${19:# C(always) updates passwords if the C(target_password) is specified}
   tags:
     - f5networks
     - f5_modules

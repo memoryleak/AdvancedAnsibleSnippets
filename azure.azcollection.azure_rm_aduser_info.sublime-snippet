@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Get Azure Active Directory user info}
   azure.azcollection.azure_rm_aduser_info:
-    tenant: ${2:# The tenant ID}
-    object_id: ${3:# The object id for the user}
-    user_principal_name: ${4:# The principal name of the user}
-    attribute_name: ${5:# The name of an attribute that you want to match to attribute_value}
-    attribute_value: ${6:# The value to match attribute_name to}
-    odata_filter: ${7:# returns users based on the the OData filter passed into this parameter}
-    all: ${8:# If True, will return all users in tenant}
-    ad_user: ${9:# Active Directory username}
-    password: ${10:# Active Directory user password}
-    profile: ${11:# Security profile found in ~/}
-    subscription_id: ${12:# Your Azure subscription Id}
-    client_id: ${13:# Azure client ID}
-    secret: ${14:# Azure client secret}
-    cloud_environment: ${15:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${16:# Azure AD authority url}
-    cert_validation_mode: ${17:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${18:# Controls the source of the credentials to use for authentication}
-    api_profile: ${19:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${20:# Parent argument}
-    log_mode: ${21:# Parent argument}
-    x509_certificate_path: ${22:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${23:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    all: ${4:# If C(True), will return all users in tenant}
+    api_profile: ${5:# Selects an API profile to use when communicating with Azure services}
+    attribute_name: ${6:# The name of an attribute that you want to match to attribute_value}
+    attribute_value: ${7:# The value to match attribute_name to}
+    auth_source: ${8:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${9:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${10:# Azure client ID}
+    cloud_environment: ${11:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    object_id: ${14:# The object id for the user}
+    odata_filter: ${15:# Returns users based on the the OData filter passed into this parameter}
+    password: ${16:# Active Directory user password}
+    profile: ${17:# Security profile found in ~/}
+    secret: ${18:# Azure client secret}
+    subscription_id: ${19:# Your Azure subscription Id}
+    tenant: ${20:# The tenant ID}
+    thumbprint: ${21:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    user_principal_name: ${22:# The principal name of the user}
+    x509_certificate_path: ${23:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

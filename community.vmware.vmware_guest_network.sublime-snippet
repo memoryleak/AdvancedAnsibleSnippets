@@ -1,39 +1,39 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage network adapters of specified virtual machine in given vCenter infrastructure}
   community.vmware.vmware_guest_network:
-    name: ${2:# Name of virtual machine}
-    uuid: ${3:# vm uuid}
-    use_instance_uuid: ${4:# Whether to use the VMware instance UUID rather than the BIOS UUID}
-    moid: ${5:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
-    folder: ${6:# Folder location of given VM, this is only required when there's multiple VM's with the same name}
-    datacenter: ${7:# Datacenter the VM belongs to}
-    cluster: ${8:# Name of cluster where VM belongs to}
-    esxi_hostname: ${9:# The hostname of the ESXi host where the VM belongs to}
-    mac_address: ${10:# MAC address of the NIC that should be altered, if a MAC address is not supplied a new nic will be created}
-    label: ${11:# Label of the NIC that should be altered}
-    vlan_id: ${12:# VLAN id associated with the network}
-    network_name: ${13:# Name of network in vSphere}
-    device_type: ${14:# Type of virtual network device}
-    pvrdma_device_protocol: ${15:# The PVRDMA device protocol used}
-    switch: ${16:# Name of the (dv)switch for destination network, this is only required for dvswitches}
-    guest_control: ${17:# Enables guest control over whether the connectable device is connected}
-    state: ${18:# NIC state}
-    start_connected: ${19:# If NIC should be connected to network on startup}
-    wake_onlan: ${20:# Enable wake on LAN}
-    connected: ${21:# If NIC should be connected to the network}
-    directpath_io: ${22:# Enable Universal Pass-through (UPT)}
-    physical_function_backing: ${23:# If set, specifies the PCI ID of the physical function to use as backing for a SR-IOV network adapter}
-    virtual_function_backing: ${24:# If set, specifies the PCI ID of the physical function to use as backing for a SR-IOV network adapter}
-    allow_guest_os_mtu_change: ${25:# Allows the guest OS to change the MTU on a SR-IOV network adapter}
-    force: ${26:# Force adapter creation even if an existing adapter is attached to the same network}
-    gather_network_info: ${27:# Return information about current guest network adapters}
-    hostname: ${28:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    allow_guest_os_mtu_change: ${2:# Allows the guest OS to change the MTU on a SR-IOV network adapter}
+    cluster: ${3:# Name of cluster where VM belongs to}
+    connected: ${4:# If NIC should be connected to the network}
+    datacenter: ${5:# Datacenter the VM belongs to}
+    device_type: ${6:# Type of virtual network device}
+    directpath_io: ${7:# Enable Universal Pass-through (UPT)}
+    esxi_hostname: ${8:# The hostname of the ESXi host where the VM belongs to}
+    folder: ${9:# Folder location of given VM, this is only required when there's multiple VM's with the same name}
+    force: ${10:# Force adapter creation even if an existing adapter is attached to the same network}
+    gather_network_info: ${11:# Return information about current guest network adapters}
+    guest_control: ${12:# Enables guest control over whether the connectable device is connected}
+    hostname: ${13:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    label: ${14:# Label of the NIC that should be altered}
+    mac_address: ${15:# MAC address of the NIC that should be altered, if a MAC address is not supplied a new nic will be created}
+    moid: ${16:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    name: ${17:# Name of virtual machine}
+    network_name: ${18:# Name of network in vSphere}
+    password: ${19:# The password of the vSphere vCenter or ESXi server}
+    physical_function_backing: ${20:# If set, specifies the PCI ID of the physical function to use as backing for a SR-IOV network adapter}
+    port: ${21:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${22:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${23:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    pvrdma_device_protocol: ${24:# The PVRDMA device protocol used}
+    start_connected: ${25:# If NIC should be connected to network on startup}
+    state: ${26:# NIC state}
+    switch: ${27:# Name of the (dv)switch for destination network, this is only required for dvswitches}
+    use_instance_uuid: ${28:# Whether to use the VMware instance UUID rather than the BIOS UUID}
     username: ${29:# The username of the vSphere vCenter or ESXi server}
-    password: ${30:# The password of the vSphere vCenter or ESXi server}
+    uuid: ${30:# vm uuid}
     validate_certs: ${31:# Allows connection when SSL certificates are not valid}
-    port: ${32:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${33:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${34:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    virtual_function_backing: ${32:# If set, specifies the PCI ID of the physical function to use as backing for a SR-IOV network adapter}
+    vlan_id: ${33:# VLAN id associated with the network}
+    wake_onlan: ${34:# Enable wake on LAN}
   tags:
     - community
     - vmware

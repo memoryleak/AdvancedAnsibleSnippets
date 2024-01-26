@@ -1,37 +1,36 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Add/Delete rule from an existing security group}
+  <content><![CDATA[- name: ${1:Manage security group rules in OpenStack network (Neutron)}
   openstack.cloud.security_group_rule:
-    security_group: ${2:# Name or ID of the security group}
-    protocol: ${3:# IP protocols ANY TCP UDP ICMP and others, also number in range 0-255}
-    port_range_min: ${4:# Starting port}
-    port_range_max: ${5:# Ending port}
-    remote_ip_prefix: ${6:# Source IP address(es) in CIDR notation (exclusive with remote_group)}
-    remote_group: ${7:# Name or ID of the Security group to link (exclusive with remote_ip_prefix)}
-    ethertype: ${8:# Must be IPv4 or IPv6, and addresses represented in CIDR must match the ingress or egress rules}
-    direction: ${9:# The direction in which the security group rule is applied}
-    state: ${10:# Should the resource be present or absent}
-    project: ${11:# Unique name or ID of the project}
-    description: ${12:# Description of the rule}
-    cloud: ${13:# Named cloud or cloud config to operate against}
-    auth: ${14:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${15:# Name of the auth plugin to use}
-    region_name: ${16:# Name of the region}
-    wait: ${17:# Should ansible wait until the requested resource is complete}
-    timeout: ${18:# How long should ansible wait for the requested resource}
-    api_timeout: ${19:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${20:# Whether or not SSL API requests should be verified}
-    ca_cert: ${21:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${22:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${23:# A path to a client key to use as part of the SSL transaction}
-    interface: ${24:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${25:# Ignored}
-    sdk_log_path: ${26:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${27:# Log level of the OpenStackSDK}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    description: ${9:# Description of the security group rule}
+    direction: ${10:# The direction in which the security group rule is applied}
+    ether_type: ${11:# Must be IPv4 or IPv6, and addresses represented in CIDR must match the ingress or egress rules}
+    interface: ${12:# Endpoint URL type to fetch from the service catalog}
+    port_range_max: ${13:# The maximum port number in the range that is matched by the security group rule}
+    port_range_min: ${14:# The minimum port number in the range that is matched by the security group rule}
+    project: ${15:# Unique name or ID of the project}
+    protocol: ${16:# The IP protocol can be represented by a string, an integer, or null}
+    region_name: ${17:# Name of the region}
+    remote_group: ${18:# Name or ID of the security group to link}
+    remote_ip_prefix: ${19:# Source IP address(es) in CIDR notation}
+    sdk_log_level: ${20:# Log level of the OpenStackSDK}
+    sdk_log_path: ${21:# Path to the logfile of the OpenStackSDK}
+    security_group: ${22:# Name or ID of the security group}
+    state: ${23:# Should the resource be present or absent}
+    timeout: ${24:# How long should ansible wait for the requested resource}
+    validate_certs: ${25:# Whether or not SSL API requests should be verified}
+    wait: ${26:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud
     - security_group_rule]]></content>
   <tabTrigger>openstack.cloud.security_group_rule</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Add/Delete rule from an existing security group</description>
+  <description>Manage security group rules in OpenStack network (Neutron)</description>
 </snippet>

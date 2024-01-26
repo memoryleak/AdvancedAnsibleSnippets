@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage upload, installation, and removal of UCS files}
   f5networks.f5_modules.bigip_ucs:
-    include_chassis_level_config: ${2:# During restoration of the UCS file, includes chassis level configuration that is shared among boot volume sets}
-    ucs: ${3:# The path to the UCS file to install}
-    force: ${4:# If C(yes), the system uploads the file every time and replaces the file on the device}
-    no_license: ${5:# Performs a full restore of the UCS file and all the files it contains, with the exception of the license file}
-    no_platform_check: ${6:# Bypasses the platform check and allows installation of a UCS that was created using a different platform}
-    passphrase: ${7:# Specifies the passphrase that is necessary to load the specified UCS file}
+    force: ${2:# If C(true), the system uploads the file every time and replaces the file on the device}
+    include_chassis_level_config: ${3:# During restoration of the UCS file, includes chassis level configuration that is shared among boot volume sets}
+    no_license: ${4:# Performs a full restore of the UCS file and all the files it contains, with the exception of the license file}
+    no_platform_check: ${5:# Bypasses the platform check and allows installation of a UCS that was created using a different platform}
+    passphrase: ${6:# Specifies the passphrase that is necessary to load the specified UCS file}
+    provider: ${7:# A dict object containing connection details}
     reset_trust: ${8:# When specified, the device and trust domain certs and keys are not loaded from the UCS}
     state: ${9:# When C(installed), ensures the UCS is uploaded and installed on the system}
-    provider: ${10:# A dict object containing connection details}
+    ucs: ${10:# The path to the UCS file to install}
   tags:
     - f5networks
     - f5_modules

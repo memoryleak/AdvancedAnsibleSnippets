@@ -1,20 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage podman networks}
   containers.podman.podman_network:
-    name: ${2:# Name of the network}
-    executable: ${3:# Path to C(podman) executable if it is not in the C($PATH) on the machine running C(podman)}
-    disable_dns: ${4:# disable dns plugin (default 'false')}
-    driver: ${5:# Driver to manage the network (default 'bridge')}
-    gateway: ${6:# IPv4 or IPv6 gateway for the subnet}
-    internal: ${7:# Restrict external access from this network (default 'false')}
-    ip_range: ${8:# Allocate container IP from range}
-    ipv6: ${9:# Enable IPv6 (Dual Stack) networking}
-    subnet: ${10:# Subnet in CIDR format}
+    debug: ${2:# Return additional information which can be helpful for investigations}
+    disable_dns: ${3:# disable dns plugin (default 'false')}
+    driver: ${4:# Driver to manage the network (default 'bridge')}
+    executable: ${5:# Path to C(podman) executable if it is not in the C($PATH) on the machine running C(podman)}
+    force: ${6:# Remove all containers that use the network}
+    gateway: ${7:# IPv4 or IPv6 gateway for the subnet}
+    internal: ${8:# Restrict external access from this network (default 'false')}
+    ip_range: ${9:# Allocate container IP from range}
+    ipv6: ${10:# Enable IPv6 (Dual Stack) networking}
     macvlan: ${11:# Create a Macvlan connection based on this device}
-    opt: ${12:# Add network options}
-    debug: ${13:# Return additional information which can be helpful for investigations}
-    state: ${14:# State of network, default 'present'}
-    recreate: ${15:# Recreate network even if exists}
+    name: ${12:# Name of the network}
+    opt: ${13:# Add network options}
+    recreate: ${14:# Recreate network even if exists}
+    state: ${15:# State of network, default 'present'}
+    subnet: ${16:# Subnet in CIDR format}
   tags:
     - containers
     - podman

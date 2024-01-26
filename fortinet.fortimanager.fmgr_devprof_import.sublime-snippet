@@ -1,17 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:no description}
   fortinet.fortimanager.fmgr_devprof_import:
-    enable_log: ${2:# Enable/Disable logging for task}
-    bypass_validation: ${3:# only set to True when module schema diffs with FortiManager API structure,
- module continues to execute without validating parameters
-}
-    workspace_locking_adom: ${4:# the adom to lock for FortiManager running in workspace mode, the value can be global and others including root
-}
-    workspace_locking_timeout: ${5:# the maximum time in seconds to wait for other user to release the workspace lock}
-    rc_succeeded: ${6:# the rc codes list with which the conditions to succeed will be overriden}
-    rc_failed: ${7:# the rc codes list with which the conditions to fail will be overriden}
-    adom: ${8:# the parameter (adom) in requested url}
-    devprof_import: ${9:# the top level parameters set}
+    access_token: ${2:# The token to access FortiManager without using username and password}
+    adom: ${3:# the parameter (adom) in requested url}
+    bypass_validation: ${4:# Only set to True when module schema diffs with FortiManager API structure, module continues to execute without validating parameters}
+    devprof_import: ${5:# the top level parameters set}
+    enable_log: ${6:# Enable/Disable logging for task}
+    forticloud_access_token: ${7:# Authenticate Ansible client with forticloud API access token}
+    rc_failed: ${8:# The rc codes list with which the conditions to fail will be overriden}
+    rc_succeeded: ${9:# The rc codes list with which the conditions to succeed will be overriden}
+    workspace_locking_adom: ${10:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
+    workspace_locking_timeout: ${11:# The maximum time in seconds to wait for other user to release the workspace lock}
   tags:
     - fortinet
     - fortimanager

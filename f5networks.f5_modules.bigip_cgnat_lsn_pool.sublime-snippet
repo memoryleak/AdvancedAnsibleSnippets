@@ -1,32 +1,32 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage CGNAT LSN Pools}
   f5networks.f5_modules.bigip_cgnat_lsn_pool:
-    name: ${2:# Specifies the name of the LSN pool to manage}
-    description: ${3:# User created LSN pool description}
-    client_conn_limit: ${4:# Specifies the maximum number of simultaneous translated connections a client or subscriber is allowed to have}
-    harpin_mode: ${5:# Enables or disables hairpinning for incoming connections to active translation end-points}
-    icmp_echo: ${6:# Enables or disables ICMP echo on translated addresses}
-    inbound_connections: ${7:# Controls whether or not the BIG-IP system supports inbound connections for each outbound mapping}
-    mode: ${8:# Specifies the translation address mapping mode}
-    persistence_mode: ${9:# Specifies the persistence settings for LSN translation entries}
-    persistence_timeout: ${10:# Specifies the persistence timeout value for LSN translation entries}
-    route_advertisement: ${11:# Specifies whether the translation addresses are passed to the Advanced Routing Module for advertisement through dynamic routing protocols}
-    pba_block_idle_timeout: ${12:# Specifies the timeout duration subsequent to the point when the port block becomes idle}
-    pba_block_lifetime: ${13:# Specifies the timeout for the port block, after which the block is not used for new port allocations}
-    pba_block_size: ${14:# Specifies the number of ports in a block}
-    pba_client_block_limit: ${15:# Specifies the number of blocks that can be assigned to a single subscriber IP address}
-    pba_zombie_timeout: ${16:# Specifies the timeout duration for a zombie port block, which is a timed out port block with one or more active connections}
-    port_range_low: ${17:# Specifies the low end of the range of port numbers available for use with translation IP addresses}
-    port_range_high: ${18:# Specifies the high end of the range of port numbers available for use with translation IP addresses}
-    egress_intf_enabled: ${19:# Specifies how the system handles address translation on the interfaces specified in C(egress_interfaces)}
-    egress_interfaces: ${20:# Specifies the set of interfaces on which the source address translation is allowed or disallowed, as determined by the C(egress_intf_enabled) setting}
-    members: ${21:# Specifies the set of translation IP addresses available in the pool}
-    backup_members: ${22:# Specifies translation IP addresses available for backup members, which are used by Deterministic translation mode if C(deterministic) mode translation fails and falls back to C(napt) mode}
-    log_profile: ${23:# Specifies the name of the logging profile the pool uses}
-    log_publisher: ${24:# Specifies the name of the log publisher that logs translation events}
-    partition: ${25:# Device partition on which to manage resources}
-    state: ${26:# When C(state) is C(present), ensures the LSN pool exists}
-    provider: ${27:# A dict object containing connection details}
+    backup_members: ${2:# Specifies translation IP addresses available for backup members, which are used by Deterministic translation mode if C(deterministic) mode translation fails and falls back to C(napt) mode}
+    client_conn_limit: ${3:# Specifies the maximum number of simultaneous translated connections a client or subscriber is allowed to have}
+    description: ${4:# User created LSN pool description}
+    egress_interfaces: ${5:# Specifies the set of interfaces on which the source address translation is allowed or disallowed, as determined by the C(egress_intf_enabled) setting}
+    egress_intf_enabled: ${6:# Specifies how the system handles address translation on the interfaces specified in C(egress_interfaces)}
+    harpin_mode: ${7:# Enables or disables hairpinning for incoming connections to active translation end-points}
+    icmp_echo: ${8:# Enables or disables ICMP echo on translated addresses}
+    inbound_connections: ${9:# Controls whether or not the BIG-IP system supports inbound connections for each outbound mapping}
+    log_profile: ${10:# Specifies the name of the logging profile the pool uses}
+    log_publisher: ${11:# Specifies the name of the log publisher that logs translation events}
+    members: ${12:# Specifies the set of translation IP addresses available in the pool}
+    mode: ${13:# Specifies the translation address mapping mode}
+    name: ${14:# Specifies the name of the LSN pool to manage}
+    partition: ${15:# Device partition on which to manage resources}
+    pba_block_idle_timeout: ${16:# Specifies the timeout duration subsequent to the point when the port block becomes idle}
+    pba_block_lifetime: ${17:# Specifies the timeout for the port block, after which the block is not used for new port allocations}
+    pba_block_size: ${18:# Specifies the number of ports in a block}
+    pba_client_block_limit: ${19:# Specifies the number of blocks that can be assigned to a single subscriber IP address}
+    pba_zombie_timeout: ${20:# Specifies the timeout duration for a zombie port block, which is a timed out port block with one or more active connections}
+    persistence_mode: ${21:# Specifies the persistence settings for LSN translation entries}
+    persistence_timeout: ${22:# Specifies the persistence timeout value for LSN translation entries}
+    port_range_high: ${23:# Specifies the high end of the range of port numbers available for use with translation IP addresses}
+    port_range_low: ${24:# Specifies the low end of the range of port numbers available for use with translation IP addresses}
+    provider: ${25:# A dict object containing connection details}
+    route_advertisement: ${26:# Specifies whether the translation addresses are passed to the Advanced Routing Module for advertisement through dynamic routing protocols}
+    state: ${27:# When C(state) is C(present), ensures the LSN pool exists}
   tags:
     - f5networks
     - f5_modules

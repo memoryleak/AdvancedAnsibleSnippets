@@ -1,16 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Set passwords in LDAP}
   community.general.ldap_passwd:
-    passwd: ${2:# The (plaintext) password to be set for I(dn)}
-    bind_dn: ${3:# A DN to bind with}
-    bind_pw: ${4:# The password to use with I(bind_dn)}
-    dn: ${5:# The DN of the entry to add or remove}
-    referrals_chasing: ${6:# Set the referrals chasing behavior}
-    server_uri: ${7:# The I(server_uri) parameter may be a comma- or whitespace-separated list of URIs containing only the schema, the host, and the port fields}
-    start_tls: ${8:# If true, we'll use the START_TLS LDAP extension}
-    validate_certs: ${9:# If set to C(false), SSL certificates will not be validated}
+    bind_dn: ${2:# A DN to bind with}
+    bind_pw: ${3:# The password to use with O(bind_dn)}
+    ca_path: ${4:# Set the path to PEM file with CA certs}
+    client_cert: ${5:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${6:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    dn: ${7:# The DN of the entry to add or remove}
+    passwd: ${8:# The (plaintext) password to be set for O(dn)}
+    referrals_chasing: ${9:# Set the referrals chasing behavior}
     sasl_class: ${10:# The class to use for SASL authentication}
-    xorder_discovery: ${11:# Set the behavior on how to process Xordered DNs}
+    server_uri: ${11:# The O(server_uri) parameter may be a comma- or whitespace-separated list of URIs containing only the schema, the host, and the port fields}
+    start_tls: ${12:# If true, we'll use the START_TLS LDAP extension}
+    validate_certs: ${13:# If set to V(false), SSL certificates will not be validated}
+    xorder_discovery: ${14:# Set the behavior on how to process Xordered DNs}
   tags:
     - community
     - general

@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Update firmware}
   inspur.sm.update_fw:
-    url: ${2:# Firmware image url}
-    mode: ${3:# (BMC)active mode, Manual or Auto(default)}
-    type: ${4:# Firmware type}
-    over_ride: ${5:# Reserve Configrations,0-reserve, 1-override}
-    has_me: ${6:# (M5-BIOS)update me or not when update bios,only work in INTEL platform,0-no,1-yes}
-    dual_image: ${7:# (M5)update dual image(default) or not}
+    dual_image: ${2:# (M5)update dual image(default) or not}
+    has_me: ${3:# (M5-BIOS)update me or not when update bios,only work in INTEL platform,0-no,1-yes}
+    host: ${4:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    mode: ${5:# (BMC)active mode, Manual or Auto(default)}
+    over_ride: ${6:# Reserve Configrations,0-reserve, 1-override}
+    password: ${7:# Specifies the password to use to authenticate the connection to the remote device}
     provider: ${8:# A dict object containing connection details}
-    host: ${9:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
-    username: ${10:# Configures the username to use to authenticate the connection to the remote device}
-    password: ${11:# Specifies the password to use to authenticate the connection to the remote device}
+    type: ${9:# Firmware type}
+    url: ${10:# Firmware image url}
+    username: ${11:# Configures the username to use to authenticate the connection to the remote device}
   tags:
     - inspur
     - sm

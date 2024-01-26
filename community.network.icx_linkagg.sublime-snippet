@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage link aggregation groups on Ruckus ICX 7000 series switches}
   community.network.icx_linkagg:
-    group: ${2:# Channel-group number for the port-channel Link aggregation group}
-    name: ${3:# Name of the LAG}
-    mode: ${4:# Mode of the link aggregation group}
+    aggregate: ${2:# List of link aggregation definitions}
+    check_running_config: ${3:# Check running configuration}
+    group: ${4:# Channel-group number for the port-channel Link aggregation group}
     members: ${5:# List of port members or ranges of the link aggregation group}
-    state: ${6:# State of the link aggregation group}
-    check_running_config: ${7:# Check running configuration}
-    aggregate: ${8:# List of link aggregation definitions}
-    purge: ${9:# Purge links not defined in the I(aggregate) parameter}
+    mode: ${6:# Mode of the link aggregation group}
+    name: ${7:# Name of the LAG}
+    purge: ${8:# Purge links not defined in the I(aggregate) parameter}
+    state: ${9:# State of the link aggregation group}
   tags:
     - community
     - network

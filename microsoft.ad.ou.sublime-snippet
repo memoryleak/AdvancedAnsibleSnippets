@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Active Directory organizational units}
+  microsoft.ad.ou:
+    attributes: ${2:# The attributes to either add, remove, or set on the AD object}
+    city: ${3:# Configures the user's city}
+    country: ${4:# Configures the user's country code}
+    description: ${5:# The description of the AD object to set}
+    display_name: ${6:# The display name of the AD object to set}
+    domain_password: ${7:# The password for I(domain_username)}
+    domain_server: ${8:# Specified the Active Directory Domain Services instance to connect to}
+    domain_username: ${9:# The username to use when interacting with AD}
+    identity: ${10:# The identity of the AD object used to find the AD object to manage}
+    managed_by: ${11:# The user or group that manages the object}
+    name: ${12:# The C(name) of the AD object to manage}
+    path: ${13:# The path of the OU or the container where the new object should exist in}
+    postal_code: ${14:# Configures the user's postal code / zip code}
+    protect_from_deletion: ${15:# Marks the object as protected from accidental deletion}
+    state: ${16:# Set to C(present) to ensure the AD object exists}
+    state_province: ${17:# Configures the user's state}
+    street: ${18:# Configures the user's street address}
+  tags:
+    - microsoft
+    - ad
+    - ou]]></content>
+  <tabTrigger>microsoft.ad.ou</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Active Directory organizational units</description>
+</snippet>

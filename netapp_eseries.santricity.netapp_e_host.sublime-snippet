@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp E-Series manage eseries hosts}
   netapp_eseries.santricity.netapp_e_host:
-    name: ${2:# If the host doesn't yet exist, the label/name to assign at creation time}
-    state: ${3:# Set to absent to remove an existing host}
-    host_type: ${4:# This is the type of host to be mapped}
-    ports: ${5:# A list of host ports you wish to associate with the host}
-    force_port: ${6:# Allow ports that are already assigned to be re-assigned to your current host}
-    group: ${7:# The unique identifier of the host-group you want the host to be a member of; this is used for clustering}
+    api_password: ${2:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${3:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_username: ${4:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    force_port: ${5:# Allow ports that are already assigned to be re-assigned to your current host}
+    group: ${6:# The unique identifier of the host-group you want the host to be a member of; this is used for clustering}
+    host_type: ${7:# This is the type of host to be mapped}
     log_path: ${8:# A local path to a file to be used for debug logging}
-    api_username: ${9:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_password: ${10:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_url: ${11:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
-    validate_certs: ${12:# Should https certificates be validated?}
-    ssid: ${13:# The ID of the array to manage}
+    name: ${9:# If the host doesn't yet exist, the label/name to assign at creation time}
+    ports: ${10:# A list of host ports you wish to associate with the host}
+    ssid: ${11:# The ID of the array to manage}
+    state: ${12:# Set to absent to remove an existing host}
+    validate_certs: ${13:# Should https certificates be validated?}
   tags:
     - netapp_eseries
     - santricity

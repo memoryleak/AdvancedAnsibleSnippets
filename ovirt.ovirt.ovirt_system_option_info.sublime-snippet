@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieve information about one oVirt/RHV system options}
   ovirt.ovirt.ovirt_system_option_info:
-    name: ${2:# Name of system option}
-    version: ${3:# The version of the option}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    fetch_nested: ${3:# If I(yes) the module will fetch additional data from the API}
     follow: ${4:# List of linked entities, which should be fetched along with the main entity}
-    fetch_nested: ${5:# If I(yes) the module will fetch additional data from the API}
+    name: ${5:# Name of system option}
     nested_attributes: ${6:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${7:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    version: ${7:# The version of the option}
   tags:
     - ovirt
     - ovirt

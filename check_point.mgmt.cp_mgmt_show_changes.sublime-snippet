@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Show changes between two sessions}
+  check_point.mgmt.cp_mgmt_show_changes:
+    dereference_group_members: ${2:# Indicates whether to dereference 'members' field by details level for every object in reply}
+    dereference_max_depth: ${3:# When details level is full you can choose the number of levels in the API reply}
+    details_level: ${4:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    from_date: ${5:# The date from which tracking changes is to be performed}
+    from_session: ${6:# The session UID from which tracking changes is to be performed}
+    limit: ${7:# Maximum number of sessions to analyze}
+    offset: ${8:# Number of sessions to skip (beginning with from-session)}
+    show_membership: ${9:# Indicates whether to calculate and show 'groups' field for every object in reply}
+    to_date: ${10:# The date until which tracking changes is to be performed}
+    to_session: ${11:# The session UID until which tracking changes is to be performed}
+    version: ${12:# Version of checkpoint}
+    wait_for_task: ${13:# Wait for the task to end}
+    wait_for_task_timeout: ${14:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_show_changes]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_show_changes</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Show changes between two sessions</description>
+</snippet>

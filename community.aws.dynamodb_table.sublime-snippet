@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, update or delete AWS Dynamo DB tables}
   community.aws.dynamodb_table:
-    state: ${2:# Create or delete the table}
-    name: ${3:# Name of the table}
-    hash_key_name: ${4:# Name of the hash key}
-    hash_key_type: ${5:# Type of the hash key}
-    range_key_name: ${6:# Name of the range key}
-    range_key_type: ${7:# Type of the range key}
-    billing_mode: ${8:# Controls whether provisoned pr on-demand tables are created}
-    read_capacity: ${9:# Read throughput capacity (units) to provision}
-    write_capacity: ${10:# Write throughput capacity (units) to provision}
-    indexes: ${11:# list of dictionaries describing indexes to add to the table}
-    table_class: ${12:# The class of the table}
-    wait_timeout: ${13:# How long (in seconds) to wait for creation / update / deletion to complete}
-    wait: ${14:# When I(wait=True) the module will wait for up to I(wait_timeout) seconds for table creation or deletion to complete before returning}
-    access_key: ${15:# AWS access key ID}
-    secret_key: ${16:# AWS secret access key}
-    session_token: ${17:# AWS STS session token for use with temporary credentials}
-    profile: ${18:# A named AWS profile to use for authentication}
-    endpoint_url: ${19:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${20:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${21:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${22:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${23:# Use a C(botocore}
-    region: ${24:# The AWS region to use}
-    tags: ${25:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${26:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    billing_mode: ${5:# Controls whether provisoned pr on-demand tables are created}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    hash_key_name: ${8:# Name of the hash key}
+    hash_key_type: ${9:# Type of the hash key}
+    indexes: ${10:# list of dictionaries describing indexes to add to the table}
+    name: ${11:# Name of the table}
+    profile: ${12:# A named AWS profile to use for authentication}
+    purge_tags: ${13:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    range_key_name: ${14:# Name of the range key}
+    range_key_type: ${15:# Type of the range key}
+    read_capacity: ${16:# Read throughput capacity (units) to provision}
+    region: ${17:# The AWS region to use}
+    secret_key: ${18:# AWS secret access key}
+    session_token: ${19:# AWS STS session token for use with temporary credentials}
+    state: ${20:# Create or delete the table}
+    table_class: ${21:# The class of the table}
+    tags: ${22:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${23:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${24:# When I(wait=True) the module will wait for up to I(wait_timeout) seconds for index updates, table creation or deletion to complete before returning}
+    wait_timeout: ${25:# How long (in seconds) to wait for creation / update / deletion to complete}
+    write_capacity: ${26:# Write throughput capacity (units) to provision}
   tags:
     - community
     - aws

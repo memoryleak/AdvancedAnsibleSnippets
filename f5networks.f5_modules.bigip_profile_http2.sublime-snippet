@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage HTTP2 profiles on a BIG-IP}
   f5networks.f5_modules.bigip_profile_http2:
-    name: ${2:# Specifies the name of the profile}
-    parent: ${3:# Specifies the profile from which this profile inherits settings}
-    description: ${4:# Description of the profile}
-    streams: ${5:# Specifies the number of outstanding concurrent requests allowed on a single HTTP/2 connection}
-    idle_timeout: ${6:# Specifies the number of seconds an HTTP/2 connection is idly left open before being shut down}
-    insert_header: ${7:# Specifies whether an HTTP header indicating the use of HTTP/2 should be inserted into the request that goes to the server}
-    insert_header_name: ${8:# Specifies the name of the HTTP header controlled by C(insert_header) parameter}
-    enforce_tls_requirements: ${9:# Specifies whether the system requires TLS for communications between specified senders and recipients}
-    activation_modes: ${10:# Specifies what will cause an incoming connection to be handled as a HTTP/2 connection}
-    frame_size: ${11:# Specifies the size of data frames, in bytes, that HTTP/2 sends to the client}
-    write_size: ${12:# Specifies the total size of combined data frames, in bytes, that HTTP/2 sends in a single write}
-    receive_window: ${13:# Specifies the way the HTTP/2 profile performs flow control}
-    header_table_size: ${14:# Specifies the size of the header table, in bytes}
-    partition: ${15:# Device partition to manage resources on}
-    state: ${16:# When C(present), ensures the profile exists}
-    provider: ${17:# A dict object containing connection details}
+    activation_modes: ${2:# Specifies what will cause an incoming connection to be handled as a HTTP/2 connection}
+    description: ${3:# Description of the profile}
+    enforce_tls_requirements: ${4:# Specifies whether the system requires TLS for communications between specified senders and recipients}
+    frame_size: ${5:# Specifies the size of data frames, in bytes, that HTTP/2 sends to the client}
+    header_table_size: ${6:# Specifies the size of the header table, in bytes}
+    idle_timeout: ${7:# Specifies the number of seconds an HTTP/2 connection is idly left open before being shut down}
+    insert_header: ${8:# Specifies whether an HTTP header indicating the use of HTTP/2 should be inserted into the request that goes to the server}
+    insert_header_name: ${9:# Specifies the name of the HTTP header controlled by C(insert_header) parameter}
+    name: ${10:# Specifies the name of the profile}
+    parent: ${11:# Specifies the profile from which this profile inherits settings}
+    partition: ${12:# Device partition to manage resources on}
+    provider: ${13:# A dict object containing connection details}
+    receive_window: ${14:# Specifies the way the HTTP/2 profile performs flow control}
+    state: ${15:# When C(present), ensures the profile exists}
+    streams: ${16:# Specifies the number of outstanding concurrent requests allowed on a single HTTP/2 connection}
+    write_size: ${17:# Specifies the total size of combined data frames, in bytes, that HTTP/2 sends in a single write}
   tags:
     - f5networks
     - f5_modules

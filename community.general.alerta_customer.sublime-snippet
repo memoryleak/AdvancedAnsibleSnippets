@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage customers in Alerta}
   community.general.alerta_customer:
-    customer: ${2:# Name of the customer}
-    match: ${3:# The matching logged in user for the customer}
-    alerta_url: ${4:# The Alerta API endpoint}
+    alerta_url: ${2:# The Alerta API endpoint}
+    api_key: ${3:# The access token for the API}
+    api_password: ${4:# The password for the API using basic auth}
     api_username: ${5:# The username for the API using basic auth}
-    api_password: ${6:# The password for the API using basic auth}
-    api_key: ${7:# The access token for the API}
+    customer: ${6:# Name of the customer}
+    match: ${7:# The matching logged in user for the customer}
     state: ${8:# Whether the customer should exist or not}
   tags:
     - community

@@ -1,33 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage a Traffic Manager profile}
   azure.azcollection.azure_rm_trafficmanager:
-    resource_group: ${2:# Name of a resource group where the Traffic Manager profile exists or will be created}
-    name: ${3:# Name of the Traffic Manager profile}
-    state: ${4:# Assert the state of the Traffic Manager profile}
-    location: ${5:# Valid azure location}
-    profile_status: ${6:# The status of the Traffic Manager profile}
-    traffic_routing_method: ${7:# The traffic routing method of the Traffic Manager profile}
-    dns_config: ${8:# The DNS settings of the Traffic Manager profile}
-    monitor_config: ${9:# The endpoint monitoring settings of the Traffic Manager profile}
-    endpoints: ${10:# The list of endpoints in the Traffic Manager profile}
-    ad_user: ${11:# Active Directory username}
-    password: ${12:# Active Directory user password}
-    profile: ${13:# Security profile found in ~/}
-    subscription_id: ${14:# Your Azure subscription Id}
-    client_id: ${15:# Azure client ID}
-    secret: ${16:# Azure client secret}
-    tenant: ${17:# Azure tenant ID}
-    cloud_environment: ${18:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${19:# Azure AD authority url}
-    cert_validation_mode: ${20:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${21:# Controls the source of the credentials to use for authentication}
-    api_profile: ${22:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${23:# Parent argument}
-    log_mode: ${24:# Parent argument}
-    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    dns_config: ${10:# The DNS settings of the Traffic Manager profile}
+    endpoints: ${11:# The list of endpoints in the Traffic Manager profile}
+    location: ${12:# Valid azure location}
+    log_mode: ${13:# Parent argument}
+    log_path: ${14:# Parent argument}
+    monitor_config: ${15:# The endpoint monitoring settings of the Traffic Manager profile}
+    name: ${16:# Name of the Traffic Manager profile}
+    password: ${17:# Active Directory user password}
+    profile: ${18:# Security profile found in ~/}
+    profile_status: ${19:# The status of the Traffic Manager profile}
+    resource_group: ${20:# Name of a resource group where the Traffic Manager profile exists or will be created}
+    secret: ${21:# Azure client secret}
+    state: ${22:# Assert the state of the Traffic Manager profile}
+    subscription_id: ${23:# Your Azure subscription Id}
+    tags: ${24:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${25:# Azure tenant ID}
     thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${27:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${28:# Use to control if tags field is canonical or just appends to existing tags}
+    traffic_routing_method: ${27:# The traffic routing method of the Traffic Manager profile}
+    x509_certificate_path: ${28:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

@@ -1,26 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, modify, or delete a discovery job on OpenManage Enterprise}
   dellemc.openmanage.ome_discovery:
-    state: ${2:# C(present) creates a discovery job or modifies an existing discovery job}
-    discovery_job_name: ${3:# Name of the discovery configuration job}
-    discovery_id: ${4:# ID of the discovery configuration group}
-    new_name: ${5:# New name of the discovery configuration job}
-    schedule: ${6:# Provides the option to schedule the discovery job}
-    cron: ${7:# Provide a cron expression based on Quartz cron format}
-    trap_destination: ${8:# Enable OpenManage Enterprise to receive the incoming SNMP traps from the discovered devices}
-    community_string: ${9:# Enable the use of SNMP community strings to receive SNMP traps using Application Settings in OpenManage Enterprise}
-    email_recipient: ${10:# Enter the email address to which notifications are to be sent about the discovery job status}
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    community_string: ${3:# Enable the use of SNMP community strings to receive SNMP traps using Application Settings in OpenManage Enterprise}
+    cron: ${4:# Provide a cron expression based on Quartz cron format}
+    discovery_config_targets: ${5:# Provide the list of discovery targets}
+    discovery_id: ${6:# ID of the discovery configuration group}
+    discovery_job_name: ${7:# Name of the discovery configuration job}
+    email_recipient: ${8:# Enter the email address to which notifications are to be sent about the discovery job status}
+    hostname: ${9:# OpenManage Enterprise IP address or hostname}
+    ignore_partial_failure: ${10:# Provides the option to ignore partial failures}
     job_wait: ${11:# Provides the option to wait for job completion}
     job_wait_timeout: ${12:# The maximum wait time of I(job_wait) in seconds}
-    ignore_partial_failure: ${13:# Provides the option to ignore partial failures}
-    discovery_config_targets: ${14:# Provide the list of discovery targets}
-    hostname: ${15:# OpenManage Enterprise IP address or hostname}
-    username: ${16:# OpenManage Enterprise username}
-    password: ${17:# OpenManage Enterprise password}
-    port: ${18:# OpenManage Enterprise HTTPS port}
-    validate_certs: ${19:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${20:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${21:# The socket level timeout in seconds}
+    new_name: ${13:# New name of the discovery configuration job}
+    password: ${14:# OpenManage Enterprise password}
+    port: ${15:# OpenManage Enterprise HTTPS port}
+    schedule: ${16:# Provides the option to schedule the discovery job}
+    state: ${17:# C(present) creates a discovery job or modifies an existing discovery job}
+    timeout: ${18:# The socket level timeout in seconds}
+    trap_destination: ${19:# Enable OpenManage Enterprise to receive the incoming SNMP traps from the discovered devices}
+    username: ${20:# OpenManage Enterprise username}
+    validate_certs: ${21:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

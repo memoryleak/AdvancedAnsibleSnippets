@@ -1,26 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage VLANs on a BIG-IP system}
   f5networks.f5_modules.bigip_vlan:
-    description: ${2:# The description of the VLAN}
-    tagged_interfaces: ${3:# Specifies a list of tagged interfaces and trunks you want to configure for the VLAN}
-    untagged_interfaces: ${4:# Specifies a list of untagged interfaces and trunks you want to configure for the VLAN}
-    name: ${5:# The VLAN to manage}
-    state: ${6:# The state of the VLAN on the system}
-    tag: ${7:# Tag number for the VLAN}
-    mtu: ${8:# Specifies the maximum transmission unit (MTU) for traffic on this VLAN}
-    cmp_hash: ${9:# Specifies how the traffic on the VLAN is disaggregated}
-    dag_tunnel: ${10:# Specifies how the disaggregator (DAG) distributes received tunnel-encapsulated packets to TMM instances}
-    dag_round_robin: ${11:# Specifies whether some of the stateless traffic on the VLAN should be disaggregated in a round-robin order instead of using a static hash}
-    partition: ${12:# Device partition to manage resources on}
-    source_check: ${13:# When C(yes), specifies the system verifies the return route to an initial packet is the same VLAN from which the packet originated}
-    fail_safe: ${14:# When C(yes), specifies the VLAN takes the specified C(fail_safe_action) if the system detects a loss of traffic on this VLAN's interfaces}
-    fail_safe_timeout: ${15:# Specifies the number of seconds a system can run without detecting network traffic on this VLAN before it takes the C(fail_safe_action)}
-    fail_safe_action: ${16:# Specifies the action the system takes when it does not detect any traffic on this VLAN, and the C(fail_safe_timeout) has expired}
-    sflow_poll_interval: ${17:# Specifies the maximum interval in seconds between two pollings}
-    sflow_sampling_rate: ${18:# Specifies the ratio of packets observed to the samples generated}
-    interfaces: ${19:# Interfaces you want to add to the VLAN}
-    hw_syn_cookie: ${20:# Enables hardware syncookie mode on a VLAN}
-    provider: ${21:# A dict object containing connection details}
+    cmp_hash: ${2:# Specifies how the traffic on the VLAN is disaggregated}
+    dag_round_robin: ${3:# Specifies whether some of the stateless traffic on the VLAN should be disaggregated in a round-robin order instead of using a static hash}
+    dag_tunnel: ${4:# Specifies how the disaggregator (DAG) distributes received tunnel-encapsulated packets to TMM instances}
+    description: ${5:# The description of the VLAN}
+    fail_safe: ${6:# When C(true), specifies the VLAN takes the specified C(fail_safe_action) if the system detects a loss of traffic on this VLAN's interfaces}
+    fail_safe_action: ${7:# Specifies the action the system takes when it does not detect any traffic on this VLAN, and the C(fail_safe_timeout) has expired}
+    fail_safe_timeout: ${8:# Specifies the number of seconds a system can run without detecting network traffic on this VLAN before it takes the C(fail_safe_action)}
+    hw_syn_cookie: ${9:# Enables hardware syncookie mode on a VLAN}
+    interfaces: ${10:# Interfaces you want to add to the VLAN}
+    mtu: ${11:# Specifies the maximum transmission unit (MTU) for traffic on this VLAN}
+    name: ${12:# The VLAN to manage}
+    partition: ${13:# Device partition to manage resources on}
+    provider: ${14:# A dict object containing connection details}
+    sflow_poll_interval: ${15:# Specifies the maximum interval in seconds between two pollings}
+    sflow_sampling_rate: ${16:# Specifies the ratio of packets observed to the samples generated}
+    source_check: ${17:# When C(true), specifies the system verifies the return route to an initial packet is the same VLAN from which the packet originated}
+    state: ${18:# The state of the VLAN on the system}
+    tag: ${19:# Tag number for the VLAN}
+    tagged_interfaces: ${20:# Specifies a list of tagged interfaces and trunks you want to configure for the VLAN}
+    untagged_interfaces: ${21:# Specifies a list of untagged interfaces and trunks you want to configure for the VLAN}
   tags:
     - f5networks
     - f5_modules

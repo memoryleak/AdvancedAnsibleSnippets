@@ -1,117 +1,117 @@
 <snippet>
   <content><![CDATA[- name: ${1:manage Docker containers}
   community.docker.docker_container:
-    auto_remove: ${2:# Enable auto-removal of the container on daemon side when the container's process exits}
-    blkio_weight: ${3:# Block IO (relative weight), between 10 and 1000}
-    capabilities: ${4:# List of capabilities to add to the container}
-    cap_drop: ${5:# List of capabilities to drop from the container}
-    cgroupns_mode: ${6:# Specify the cgroup namespace mode for the container}
-    cgroup_parent: ${7:# Specify the parent cgroup for the container}
-    cleanup: ${8:# Use with I(detach=false) to remove the container after successful execution}
-    command: ${9:# Command to execute when the container starts}
-    comparisons: ${10:# Allows to specify how properties of existing containers are compared with module options to decide whether the container should be recreated / updated or not}
-    container_default_behavior: ${11:# In older versions of this module, various module options used to have default values}
-    command_handling: ${12:# The default behavior for I(command) (when provided as a list) and I(entrypoint) is to convert them to strings without considering shell quoting rules}
-    cpu_period: ${13:# Limit CPU CFS (Completely Fair Scheduler) period}
-    cpu_quota: ${14:# Limit CPU CFS (Completely Fair Scheduler) quota}
-    cpus: ${15:# Specify how much of the available CPU resources a container can use}
-    cpuset_cpus: ${16:# CPUs in which to allow execution C(1,3) or C(1-3)}
-    cpuset_mems: ${17:# Memory nodes (MEMs) in which to allow execution C(0-3) or C(0,1)}
-    cpu_shares: ${18:# CPU shares (relative weight)}
-    default_host_ip: ${19:# Define the default host IP to use}
-    detach: ${20:# Enable detached mode to leave the container running in background}
-    devices: ${21:# List of host device bindings to add to the container}
-    device_read_bps: ${22:# List of device path and read rate (bytes per second) from device}
-    device_write_bps: ${23:# List of device and write rate (bytes per second) to device}
-    device_read_iops: ${24:# List of device and read rate (IO per second) from device}
-    device_write_iops: ${25:# List of device and write rate (IO per second) to device}
-    device_requests: ${26:# Allows to request additional resources, such as GPUs}
-    dns_opts: ${27:# List of DNS options}
-    dns_servers: ${28:# List of custom DNS servers}
-    dns_search_domains: ${29:# List of custom DNS search domains}
-    domainname: ${30:# Container domainname}
-    env: ${31:# Dictionary of key,value pairs}
-    env_file: ${32:# Path to a file, present on the target, containing environment variables I(FOO=BAR)}
-    entrypoint: ${33:# Command that overwrites the default C(ENTRYPOINT) of the image}
-    etc_hosts: ${34:# Dict of host-to-IP mappings, where each host name is a key in the dictionary}
-    exposed_ports: ${35:# List of additional container ports which informs Docker that the container listens on the specified network ports at runtime}
-    force_kill: ${36:# Use the kill command when stopping a running container}
-    groups: ${37:# List of additional group names and/or IDs that the container process will run as}
-    healthcheck: ${38:# Configure a check that is run to determine whether or not containers for this service are 'healthy'}
-    hostname: ${39:# The container's hostname}
-    ignore_image: ${40:# When I(state) is C(present) or C(started), the module compares the configuration of an existing container to requested configuration}
-    image: ${41:# Repository path and tag used to create the container}
-    image_comparison: ${42:# Determines which image to use for idempotency checks that depend on image parameters}
-    image_label_mismatch: ${43:# How to handle labels inherited from the image that are not set explicitly}
-    image_name_mismatch: ${44:# Determines what the module does if the image matches, but the image name in the container's configuration does not match the image name provided to the module}
-    init: ${45:# Run an init inside the container that forwards signals and reaps processes}
-    interactive: ${46:# Keep stdin open after a container is launched, even if not attached}
-    ipc_mode: ${47:# Set the IPC mode for the container}
-    keep_volumes: ${48:# Retain anonymous volumes associated with a removed container}
-    kill_signal: ${49:# Override default signal used to kill a running container}
-    kernel_memory: ${50:# Kernel memory limit in format C(<number>[<unit>])}
-    labels: ${51:# Dictionary of key value pairs}
-    links: ${52:# List of name aliases for linked containers in the format C(container_name:alias)}
-    log_driver: ${53:# Specify the logging driver}
-    log_options: ${54:# Dictionary of options specific to the chosen I(log_driver)}
-    mac_address: ${55:# Container MAC address (for example, C(92:d0:c6:0a:29:33))}
-    memory: ${56:# Memory limit in format C(<number>[<unit>])}
-    memory_reservation: ${57:# Memory soft limit in format C(<number>[<unit>])}
-    memory_swap: ${58:# Total memory limit (memory + swap) in format C(<number>[<unit>]), or the special values C(unlimited) or C(-1) for unlimited swap usage}
-    memory_swappiness: ${59:# Tune a container's memory swappiness behavior}
-    mounts: ${60:# Specification for mounts to be added to the container}
-    name: ${61:# Assign a name to a new container or match an existing container}
-    network_mode: ${62:# Connect the container to a network}
-    userns_mode: ${63:# Set the user namespace mode for the container}
-    networks: ${64:# List of networks the container belongs to}
-    networks_cli_compatible: ${65:# If I(networks_cli_compatible) is set to C(true) (default), this module will behave as C(docker run --network) and will B(not) add the default network if I(networks) is specified}
-    oom_killer: ${66:# Whether or not to disable OOM Killer for the container}
-    oom_score_adj: ${67:# An integer value containing the score given to the container in order to tune OOM killer preferences}
-    output_logs: ${68:# If set to true, output of the container command will be printed}
-    paused: ${69:# Use with the started state to pause running processes inside the container}
-    pid_mode: ${70:# Set the PID namespace mode for the container}
-    pids_limit: ${71:# Set PIDs limit for the container}
-    platform: ${72:# Platform for the container in the format C(os[/arch[/variant]])}
-    privileged: ${73:# Give extended privileges to the container}
-    publish_all_ports: ${74:# Publish all ports to the host}
-    published_ports: ${75:# List of ports to publish from the container to the host}
-    pull: ${76:# If true, always pull the latest version of an image}
-    purge_networks: ${77:# Remove the container from ALL networks not included in I(networks) parameter}
-    read_only: ${78:# Mount the container's root file system as read-only}
-    recreate: ${79:# Use with present and started states to force the re-creation of an existing container}
-    removal_wait_timeout: ${80:# When removing an existing container, the docker daemon API call exists after the container is scheduled for removal}
-    restart: ${81:# Use with started state to force a matching container to be stopped and restarted}
-    restart_policy: ${82:# Container restart policy}
-    restart_retries: ${83:# Use with restart policy to control maximum number of restart attempts}
-    runtime: ${84:# Runtime to use for the container}
-    shm_size: ${85:# Size of C(/dev/shm) in format C(<number>[<unit>])}
-    security_opts: ${86:# List of security options in the form of C('label:user:User')}
-    state: ${87:# C(absent) - A container matching the specified name will be stopped and removed}
-    stop_signal: ${88:# Override default signal used to stop the container}
-    stop_timeout: ${89:# Number of seconds to wait for the container to stop before sending C(SIGKILL)}
-    storage_opts: ${90:# Storage driver options for this container as a key-value mapping}
-    tmpfs: ${91:# Mount a tmpfs directory}
-    tty: ${92:# Allocate a pseudo-TTY}
-    ulimits: ${93:# List of ulimit options}
-    sysctls: ${94:# Dictionary of key,value pairs}
-    user: ${95:# Sets the username or UID used and optionally the groupname or GID for the specified command}
-    uts: ${96:# Set the UTS namespace mode for the container}
-    volumes: ${97:# List of volumes to mount within the container}
-    volume_driver: ${98:# The container volume driver}
-    volumes_from: ${99:# List of container names or IDs to get volumes from}
-    working_dir: ${100:# Path to the working directory}
-    docker_host: ${101:# The URL or Unix socket path used to connect to the Docker API}
-    tls_hostname: ${102:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    api_version: ${103:# The version of the Docker API running on the Docker Host}
-    timeout: ${104:# The maximum amount of time in seconds to wait on a response from the API}
-    ca_cert: ${105:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
-    client_cert: ${106:# Path to the client's TLS certificate file}
-    client_key: ${107:# Path to the client's TLS key file}
-    ssl_version: ${108:# Provide a valid SSL version number}
-    tls: ${109:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    use_ssh_client: ${110:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
-    validate_certs: ${111:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
-    debug: ${112:# Debug mode}
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    auto_remove: ${3:# Enable auto-removal of the container on daemon side when the container's process exits}
+    blkio_weight: ${4:# Block IO (relative weight), between 10 and 1000}
+    ca_cert: ${5:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    cap_drop: ${6:# List of capabilities to drop from the container}
+    capabilities: ${7:# List of capabilities to add to the container}
+    cgroup_parent: ${8:# Specify the parent cgroup for the container}
+    cgroupns_mode: ${9:# Specify the cgroup namespace mode for the container}
+    cleanup: ${10:# Use with O(detach=false) to remove the container after successful execution}
+    client_cert: ${11:# Path to the client's TLS certificate file}
+    client_key: ${12:# Path to the client's TLS key file}
+    command: ${13:# Command to execute when the container starts}
+    command_handling: ${14:# The default behavior for O(command) (when provided as a list) and O(entrypoint) is to convert them to strings without considering shell quoting rules}
+    comparisons: ${15:# Allows to specify how properties of existing containers are compared with module options to decide whether the container should be recreated / updated or not}
+    container_default_behavior: ${16:# In older versions of this module, various module options used to have default values}
+    cpu_period: ${17:# Limit CPU CFS (Completely Fair Scheduler) period}
+    cpu_quota: ${18:# Limit CPU CFS (Completely Fair Scheduler) quota}
+    cpu_shares: ${19:# CPU shares (relative weight)}
+    cpus: ${20:# Specify how much of the available CPU resources a container can use}
+    cpuset_cpus: ${21:# CPUs in which to allow execution V(1,3) or V(1-3)}
+    cpuset_mems: ${22:# Memory nodes (MEMs) in which to allow execution V(0-3) or V(0,1)}
+    debug: ${23:# Debug mode}
+    default_host_ip: ${24:# Define the default host IP to use}
+    detach: ${25:# Enable detached mode to leave the container running in background}
+    device_read_bps: ${26:# List of device path and read rate (bytes per second) from device}
+    device_read_iops: ${27:# List of device and read rate (IO per second) from device}
+    device_requests: ${28:# Allows to request additional resources, such as GPUs}
+    device_write_bps: ${29:# List of device and write rate (bytes per second) to device}
+    device_write_iops: ${30:# List of device and write rate (IO per second) to device}
+    devices: ${31:# List of host device bindings to add to the container}
+    dns_opts: ${32:# List of DNS options}
+    dns_search_domains: ${33:# List of custom DNS search domains}
+    dns_servers: ${34:# List of custom DNS servers}
+    docker_host: ${35:# The URL or Unix socket path used to connect to the Docker API}
+    domainname: ${36:# Container domainname}
+    entrypoint: ${37:# Command that overwrites the default C(ENTRYPOINT) of the image}
+    env: ${38:# Dictionary of key,value pairs}
+    env_file: ${39:# Path to a file, present on the target, containing environment variables C(FOO=BAR)}
+    etc_hosts: ${40:# Dict of host-to-IP mappings, where each host name is a key in the dictionary}
+    exposed_ports: ${41:# List of additional container ports which informs Docker that the container listens on the specified network ports at runtime}
+    force_kill: ${42:# Use the kill command when stopping a running container}
+    groups: ${43:# List of additional group names and/or IDs that the container process will run as}
+    healthcheck: ${44:# Configure a check that is run to determine whether or not containers for this service are 'healthy'}
+    hostname: ${45:# The container's hostname}
+    ignore_image: ${46:# When O(state) is V(present) or V(started), the module compares the configuration of an existing container to requested configuration}
+    image: ${47:# Repository path and tag used to create the container}
+    image_comparison: ${48:# Determines which image to use for idempotency checks that depend on image parameters}
+    image_label_mismatch: ${49:# How to handle labels inherited from the image that are not set explicitly}
+    image_name_mismatch: ${50:# Determines what the module does if the image matches, but the image name in the container's configuration does not match the image name provided to the module}
+    init: ${51:# Run an init inside the container that forwards signals and reaps processes}
+    interactive: ${52:# Keep stdin open after a container is launched, even if not attached}
+    ipc_mode: ${53:# Set the IPC mode for the container}
+    keep_volumes: ${54:# Retain anonymous volumes associated with a removed container}
+    kernel_memory: ${55:# Kernel memory limit in format C(<number>[<unit>])}
+    kill_signal: ${56:# Override default signal used to kill a running container}
+    labels: ${57:# Dictionary of key value pairs}
+    links: ${58:# List of name aliases for linked containers in the format C(container_name:alias)}
+    log_driver: ${59:# Specify the logging driver}
+    log_options: ${60:# Dictionary of options specific to the chosen O(log_driver)}
+    mac_address: ${61:# Container MAC address (for example, V(92:d0:c6:0a:29:33))}
+    memory: ${62:# Memory limit in format C(<number>[<unit>])}
+    memory_reservation: ${63:# Memory soft limit in format C(<number>[<unit>])}
+    memory_swap: ${64:# Total memory limit (memory + swap) in format C(<number>[<unit>]), or the special values V(unlimited) or V(-1) for unlimited swap usage}
+    memory_swappiness: ${65:# Tune a container's memory swappiness behavior}
+    mounts: ${66:# Specification for mounts to be added to the container}
+    name: ${67:# Assign a name to a new container or match an existing container}
+    network_mode: ${68:# Connect the container to a network}
+    networks: ${69:# List of networks the container belongs to}
+    networks_cli_compatible: ${70:# If O(networks_cli_compatible=true) (default), this module will behave as C(docker run --network) and will B(not) add the default network if O(networks) is specified}
+    oom_killer: ${71:# Whether or not to disable OOM Killer for the container}
+    oom_score_adj: ${72:# An integer value containing the score given to the container in order to tune OOM killer preferences}
+    output_logs: ${73:# If set to true, output of the container command will be printed}
+    paused: ${74:# Use with the started state to pause running processes inside the container}
+    pid_mode: ${75:# Set the PID namespace mode for the container}
+    pids_limit: ${76:# Set PIDs limit for the container}
+    platform: ${77:# Platform for the container in the format C(os[/arch[/variant]])}
+    privileged: ${78:# Give extended privileges to the container}
+    publish_all_ports: ${79:# Publish all ports to the host}
+    published_ports: ${80:# List of ports to publish from the container to the host}
+    pull: ${81:# If true, always pull the latest version of an image}
+    purge_networks: ${82:# Remove the container from ALL networks not included in O(networks) parameter}
+    read_only: ${83:# Mount the container's root file system as read-only}
+    recreate: ${84:# Use with present and started states to force the re-creation of an existing container}
+    removal_wait_timeout: ${85:# When removing an existing container, the docker daemon API call exists after the container is scheduled for removal}
+    restart: ${86:# Use with started state to force a matching container to be stopped and restarted}
+    restart_policy: ${87:# Container restart policy}
+    restart_retries: ${88:# Use with restart policy to control maximum number of restart attempts}
+    runtime: ${89:# Runtime to use for the container}
+    security_opts: ${90:# List of security options in the form of C('label:user:User')}
+    shm_size: ${91:# Size of C(/dev/shm) in format C(<number>[<unit>])}
+    ssl_version: ${92:# Provide a valid SSL version number}
+    state: ${93:# V(absent) - A container matching the specified name will be stopped and removed}
+    stop_signal: ${94:# Override default signal used to stop the container}
+    stop_timeout: ${95:# Number of seconds to wait for the container to stop before sending C(SIGKILL)}
+    storage_opts: ${96:# Storage driver options for this container as a key-value mapping}
+    sysctls: ${97:# Dictionary of key,value pairs}
+    timeout: ${98:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${99:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${100:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    tmpfs: ${101:# Mount a tmpfs directory}
+    tty: ${102:# Allocate a pseudo-TTY}
+    ulimits: ${103:# List of ulimit options}
+    use_ssh_client: ${104:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    user: ${105:# Sets the username or UID used and optionally the groupname or GID for the specified command}
+    userns_mode: ${106:# Set the user namespace mode for the container}
+    uts: ${107:# Set the UTS namespace mode for the container}
+    validate_certs: ${108:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    volume_driver: ${109:# The container volume driver}
+    volumes: ${110:# List of volumes to mount within the container}
+    volumes_from: ${111:# List of container names or IDs to get volumes from}
+    working_dir: ${112:# Path to the working directory}
   tags:
     - community
     - docker

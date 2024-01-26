@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages base ACL configuration on HUAWEI CloudEngine switches}
   community.network.ce_acl:
-    state: ${2:# Specify desired state of the resource}
+    acl_description: ${2:# ACL description}
     acl_name: ${3:# ACL number or name}
     acl_num: ${4:# ACL number}
     acl_step: ${5:# ACL step}
-    acl_description: ${6:# ACL description}
-    rule_name: ${7:# Name of a basic ACL rule}
-    rule_id: ${8:# ID of a basic ACL rule in configuration mode}
-    rule_action: ${9:# Matching mode of basic ACL rules}
-    source_ip: ${10:# Source IP address}
-    src_mask: ${11:# Mask of a source IP address}
-    frag_type: ${12:# Type of packet fragmentation}
-    vrf_name: ${13:# VPN instance name}
-    time_range: ${14:# Name of a time range in which an ACL rule takes effect}
-    rule_description: ${15:# Description about an ACL rule}
-    log_flag: ${16:# Flag of logging matched data packets}
+    frag_type: ${6:# Type of packet fragmentation}
+    log_flag: ${7:# Flag of logging matched data packets}
+    rule_action: ${8:# Matching mode of basic ACL rules}
+    rule_description: ${9:# Description about an ACL rule}
+    rule_id: ${10:# ID of a basic ACL rule in configuration mode}
+    rule_name: ${11:# Name of a basic ACL rule}
+    source_ip: ${12:# Source IP address}
+    src_mask: ${13:# Mask of a source IP address}
+    state: ${14:# Specify desired state of the resource}
+    time_range: ${15:# Name of a time range in which an ACL rule takes effect}
+    vrf_name: ${16:# VPN instance name}
   tags:
     - community
     - network

@@ -1,21 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP Queue}
   google.cloud.gcp_cloudtasks_queue:
-    state: ${2:# Whether the given object should exist in GCP}
-    name: ${3:# The queue name}
-    app_engine_routing_override: ${4:# Overrides for task-level appEngineRouting}
-    rate_limits: ${5:# Rate limits for task dispatches}
-    retry_config: ${6:# Settings that determine the retry behavior}
-    stackdriver_logging_config: ${7:# Configuration options for writing logs to Stackdriver Logging}
-    status: ${8:# The current state of the queue}
-    location: ${9:# The location of the queue}
-    project: ${10:# The Google Cloud Platform project to use}
-    auth_kind: ${11:# The type of credential used}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    app_engine_routing_override: ${3:# Overrides for task-level appEngineRouting}
+    auth_kind: ${4:# The type of credential used}
+    env_type: ${5:# Specifies which Ansible environment you're running this module within}
+    location: ${6:# The location of the queue}
+    name: ${7:# The queue name}
+    project: ${8:# The Google Cloud Platform project to use}
+    rate_limits: ${9:# Rate limits for task dispatches}
+    retry_config: ${10:# Settings that determine the retry behavior}
+    scopes: ${11:# Array of scopes to be used}
     service_account_contents: ${12:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${13:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${14:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${15:# Array of scopes to be used}
-    env_type: ${16:# Specifies which Ansible environment you're running this module within}
+    service_account_email: ${13:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    service_account_file: ${14:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    stackdriver_logging_config: ${15:# Configuration options for writing logs to Stackdriver Logging}
+    state: ${16:# Whether the given object should exist in GCP}
+    status: ${17:# The current state of the queue}
   tags:
     - google
     - cloud

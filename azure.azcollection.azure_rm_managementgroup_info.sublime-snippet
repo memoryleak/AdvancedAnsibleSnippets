@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Get Azure Management Group facts}
   azure.azcollection.azure_rm_managementgroup_info:
-    name: ${2:# Limit results to a specific management group by name}
-    id: ${3:# Limit results to a specific management group by id}
-    flatten: ${4:# If c(True) then child management_groups and subscriptions will be copied to the root of the management_groups and subscriptions return list respectively}
-    children: ${5:# If c(False), then only I(name) or I(id) group will be fetched, or only the list of root groups}
-    recurse: ${6:# By default, c(False), only the direct children are returned if I(children) is c(True)}
-    ad_user: ${7:# Active Directory username}
-    password: ${8:# Active Directory user password}
-    profile: ${9:# Security profile found in ~/}
-    subscription_id: ${10:# Your Azure subscription Id}
-    client_id: ${11:# Azure client ID}
-    secret: ${12:# Azure client secret}
-    tenant: ${13:# Azure tenant ID}
-    cloud_environment: ${14:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${15:# Azure AD authority url}
-    cert_validation_mode: ${16:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${17:# Controls the source of the credentials to use for authentication}
-    api_profile: ${18:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${19:# Parent argument}
-    log_mode: ${20:# Parent argument}
-    x509_certificate_path: ${21:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${22:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${5:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${6:# Controls the certificate validation behavior for Azure endpoints}
+    children: ${7:# If c(False), then only I(name) or I(id) group will be fetched, or only the list of root groups}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    flatten: ${10:# If c(True) then child management_groups and subscriptions will be copied to the root of the management_groups and subscriptions return list respectively}
+    id: ${11:# Limit results to a specific management group by id}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    name: ${14:# Limit results to a specific management group by name}
+    password: ${15:# Active Directory user password}
+    profile: ${16:# Security profile found in ~/}
+    recurse: ${17:# By default, c(False), only the direct children are returned if I(children) is c(True)}
+    secret: ${18:# Azure client secret}
+    subscription_id: ${19:# Your Azure subscription Id}
+    tenant: ${20:# Azure tenant ID}
+    thumbprint: ${21:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${22:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

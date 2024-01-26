@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages power states of virtual machines in vCenter}
   community.vmware.vmware_guest_powerstate:
-    datacenter: ${2:# The I(datacenter) where the VM you'd like to operate the power}
-    state: ${3:# Set the state of the virtual machine}
-    name: ${4:# Name of the virtual machine to work with}
-    name_match: ${5:# If multiple virtual machines matching the name, use the first or last found}
-    uuid: ${6:# UUID of the instance to manage if known, this is VMware's unique identifier}
+    answer: ${2:# A list of questions to answer, should one or more arise while waiting for the task to complete}
+    datacenter: ${3:# The datacenter where the VM you'd like to operate the power}
+    folder: ${4:# Destination folder, absolute or relative path to find an existing guest}
+    force: ${5:# Ignore warnings and complete the actions}
+    hostname: ${6:# The hostname or IP address of the vSphere vCenter or ESXi server}
     moid: ${7:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
-    use_instance_uuid: ${8:# Whether to use the VMware instance UUID rather than the BIOS UUID}
-    folder: ${9:# Destination folder, absolute or relative path to find an existing guest}
-    scheduled_at: ${10:# Date and time in string format at which specified task needs to be performed}
-    schedule_task_name: ${11:# Name of schedule task}
-    schedule_task_description: ${12:# Description of schedule task}
-    schedule_task_enabled: ${13:# Flag to indicate whether the scheduled task is enabled or disabled}
-    force: ${14:# Ignore warnings and complete the actions}
-    state_change_timeout: ${15:# If the C(state) is set to C(shutdown-guest), by default the module will return immediately after sending the shutdown signal}
-    answer: ${16:# A list of questions to answer, should one or more arise while waiting for the task to complete}
-    hostname: ${17:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${18:# The username of the vSphere vCenter or ESXi server}
-    password: ${19:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${20:# Allows connection when SSL certificates are not valid}
-    port: ${21:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${22:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${23:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    name: ${8:# Name of the virtual machine to work with}
+    name_match: ${9:# If multiple virtual machines matching the name, use the first or last found}
+    password: ${10:# The password of the vSphere vCenter or ESXi server}
+    port: ${11:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${12:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    schedule_task_description: ${14:# Description of schedule task}
+    schedule_task_enabled: ${15:# Flag to indicate whether the scheduled task is enabled or disabled}
+    schedule_task_name: ${16:# Name of schedule task}
+    scheduled_at: ${17:# Date and time in string format at which specified task needs to be performed}
+    state: ${18:# Set the state of the virtual machine}
+    state_change_timeout: ${19:# If the O(state=shutdown-guest), by default the module will return immediately after sending the shutdown signal}
+    use_instance_uuid: ${20:# Whether to use the VMware instance UUID rather than the BIOS UUID}
+    username: ${21:# The username of the vSphere vCenter or ESXi server}
+    uuid: ${22:# UUID of the instance to manage if known, this is VMware's unique identifier}
+    validate_certs: ${23:# Allows connection when SSL certificates are not valid}
   tags:
     - community
     - vmware

@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:This module manages mirrored volumes on IBM Storage Virtualize family systems}
+  ibm.storage_virtualize.ibm_svc_manage_mirrored_volume:
+    clustername: ${2:# The hostname or management IP of the Storage Virtualize system}
+    compressed: ${3:# Specifies if the volume to be created is compressed}
+    deduplicated: ${4:# Specifies if the volume to be created is deduplicated}
+    domain: ${5:# Domain for the Storage Virtualize system}
+    grainsize: ${6:# Specifies the grain size (in KB) to use when creating the HyperSwap volume}
+    log_path: ${7:# Path of debug log file}
+    name: ${8:# Specifies the name to assign to the new volume}
+    password: ${9:# REST API password for the Storage Virtualize system}
+    poolA: ${10:# Specifies the name of first storage pool to be used when creating a mirrored volume}
+    poolB: ${11:# Specifies the name of second storage pool to be used when creating a mirrored volume}
+    rsize: ${12:# Specifies the rsize (buffersize) in %}
+    size: ${13:# Specifies the size of mirrored volume in MB}
+    state: ${14:# Creates (C(present)) or removes (C(absent)) a mirrored volume}
+    thin: ${15:# Specifies if the volume to be created is thin-provisioned}
+    token: ${16:# The authentication token to verify a user on the Storage Virtualize system}
+    type: ${17:# Specifies the desired volume type}
+    username: ${18:# REST API username for the Storage Virtualize system}
+    validate_certs: ${19:# Validates certification}
+  tags:
+    - ibm
+    - storage_virtualize
+    - ibm_svc_manage_mirrored_volume]]></content>
+  <tabTrigger>ibm.storage_virtualize.ibm_svc_manage_mirrored_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>This module manages mirrored volumes on IBM Storage Virtualize family systems</description>
+</snippet>

@@ -1,18 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:no description}
   fortinet.fortimanager.fmgr_pm_config_metafields_firewall_address:
-    enable_log: ${2:# Enable/Disable logging for task}
-    proposed_method: ${3:# The overridden method for the underlying Json RPC request}
-    bypass_validation: ${4:# only set to True when module schema diffs with FortiManager API structure,
- module continues to execute without validating parameters
-}
-    workspace_locking_adom: ${5:# the adom to lock for FortiManager running in workspace mode, the value can be global and others including root
-}
-    workspace_locking_timeout: ${6:# the maximum time in seconds to wait for other user to release the workspace lock}
-    state: ${7:# the directive to create, update or delete an object}
-    rc_succeeded: ${8:# the rc codes list with which the conditions to succeed will be overriden}
-    rc_failed: ${9:# the rc codes list with which the conditions to fail will be overriden}
-    pm_config_metafields_firewall_address: ${10:# the top level parameters set}
+    access_token: ${2:# The token to access FortiManager without using username and password}
+    bypass_validation: ${3:# Only set to True when module schema diffs with FortiManager API structure, module continues to execute without validating parameters}
+    enable_log: ${4:# Enable/Disable logging for task}
+    forticloud_access_token: ${5:# Authenticate Ansible client with forticloud API access token}
+    pm_config_metafields_firewall_address: ${6:# the top level parameters set}
+    proposed_method: ${7:# The overridden method for the underlying Json RPC request}
+    rc_failed: ${8:# The rc codes list with which the conditions to fail will be overriden}
+    rc_succeeded: ${9:# The rc codes list with which the conditions to succeed will be overriden}
+    workspace_locking_adom: ${10:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
+    workspace_locking_timeout: ${11:# The maximum time in seconds to wait for other user to release the workspace lock}
   tags:
     - fortinet
     - fortimanager

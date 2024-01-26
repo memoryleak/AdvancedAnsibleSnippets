@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures disk group policies on Cisco UCS Manager}
   cisco.ucs.ucs_disk_group_policy:
-    state: ${2:# Desired state of the disk group policy}
-    name: ${3:# The name of the disk group policy}
-    description: ${4:# The user-defined description of the storage profile}
-    raid_level: ${5:# The RAID level for the disk group policy}
-    configuration_mode: ${6:# Disk group configuration mode}
-    num_drives: ${7:# Specify the number of drives for the disk group}
-    drive_type: ${8:# Specify the drive type to use in the drive group}
+    configuration_mode: ${2:# Disk group configuration mode}
+    description: ${3:# The user-defined description of the storage profile}
+    drive_type: ${4:# Specify the drive type to use in the drive group}
+    hostname: ${5:# IP address or hostname of Cisco UCS Manager}
+    manual_disks: ${6:# List of manually configured disks}
+    min_drive_size: ${7:# Specify the minimum drive size or unspecified to allow all drive sizes}
+    name: ${8:# The name of the disk group policy}
     num_ded_hot_spares: ${9:# Specify the number of hot spares for the disk group}
-    num_glob_hot_spares: ${10:# Specify the number of global hot spares for the disk group}
-    min_drive_size: ${11:# Specify the minimum drive size or unspecified to allow all drive sizes}
-    use_remaining_disks: ${12:# Specifies whether you can use all the remaining disks in the disk group or not}
-    manual_disks: ${13:# List of manually configured disks}
-    virtual_drive: ${14:# Configuration of virtual drive options}
-    org_dn: ${15:# The distinguished name (dn) of the organization where the resource is assigned}
-    hostname: ${16:# IP address or hostname of Cisco UCS Manager}
-    username: ${17:# Username for Cisco UCS Manager authentication}
-    password: ${18:# Password for Cisco UCS Manager authentication}
-    port: ${19:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    num_drives: ${10:# Specify the number of drives for the disk group}
+    num_glob_hot_spares: ${11:# Specify the number of global hot spares for the disk group}
+    org_dn: ${12:# The distinguished name (dn) of the organization where the resource is assigned}
+    password: ${13:# Password for Cisco UCS Manager authentication}
+    port: ${14:# Port number to be used during connection (by default uses 443 for https and 80 for http connection)}
+    proxy: ${15:# If use_proxy is no, specfies proxy to be used for connection}
+    raid_level: ${16:# The RAID level for the disk group policy}
+    state: ${17:# Desired state of the disk group policy}
+    use_proxy: ${18:# If C(no), will not use the proxy as defined by system environment variable}
+    use_remaining_disks: ${19:# Specifies whether you can use all the remaining disks in the disk group or not}
     use_ssl: ${20:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    use_proxy: ${21:# If C(no), will not use the proxy as defined by system environment variable}
-    proxy: ${22:# If use_proxy is no, specfies proxy to be used for connection}
+    username: ${21:# Username for Cisco UCS Manager authentication}
+    virtual_drive: ${22:# Configuration of virtual drive options}
   tags:
     - cisco
     - ucs

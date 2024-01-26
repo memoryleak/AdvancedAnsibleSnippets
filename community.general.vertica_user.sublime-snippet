@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Adds or removes Vertica database users and assigns roles}
   community.general.vertica_user:
-    user: ${2:# Name of the user to add or remove}
-    profile: ${3:# Sets the user's profile}
-    resource_pool: ${4:# Sets the user's resource pool}
-    password: ${5:# The user's password encrypted by the MD5 algorithm}
-    expired: ${6:# Sets the user's password expiration}
-    ldap: ${7:# Set to true if users are authenticated via LDAP}
-    roles: ${8:# Comma separated list of roles to assign to the user}
-    state: ${9:# Whether to create C(present), drop C(absent) or lock C(locked) a user}
-    db: ${10:# Name of the Vertica database}
-    cluster: ${11:# Name of the Vertica cluster}
-    port: ${12:# Vertica cluster port to connect to}
-    login_user: ${13:# The username used to authenticate with}
-    login_password: ${14:# The password used to authenticate with}
+    cluster: ${2:# Name of the Vertica cluster}
+    db: ${3:# Name of the Vertica database}
+    expired: ${4:# Sets the user's password expiration}
+    ldap: ${5:# Set to true if users are authenticated via LDAP}
+    login_password: ${6:# The password used to authenticate with}
+    login_user: ${7:# The username used to authenticate with}
+    password: ${8:# The user's password encrypted by the MD5 algorithm}
+    port: ${9:# Vertica cluster port to connect to}
+    profile: ${10:# Sets the user's profile}
+    resource_pool: ${11:# Sets the user's resource pool}
+    roles: ${12:# Comma separated list of roles to assign to the user}
+    state: ${13:# Whether to create (V(present)), drop (V(absent)), or lock (V(locked)) a user}
+    user: ${14:# Name of the user to add or remove}
   tags:
     - community
     - general

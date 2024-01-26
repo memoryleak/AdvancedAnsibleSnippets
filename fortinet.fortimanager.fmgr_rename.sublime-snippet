@@ -1,13 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Rename an object in FortiManager}
   fortinet.fortimanager.fmgr_rename:
-    enable_log: ${2:# Enable/Disable logging for task}
-    bypass_validation: ${3:# only set to True when module schema diffs with FortiManager API structure, module continues to execute without validating parameters}
-    workspace_locking_adom: ${4:# the adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
-    workspace_locking_timeout: ${5:# the maximum time in seconds to wait for other user to release the workspace lock}
-    rc_succeeded: ${6:# the rc codes list with which the conditions to succeed will be overriden}
-    rc_failed: ${7:# the rc codes list with which the conditions to fail will be overriden}
-    rename: ${8:# the top level parameters set}
+    access_token: ${2:# The token to access FortiManager without using username and password}
+    enable_log: ${3:# Enable/Disable logging for task}
+    forticloud_access_token: ${4:# Access token of forticloud managed API users, this option is available with FortiManager later than 6}
+    rc_failed: ${5:# The rc codes list with which the conditions to fail will be overriden}
+    rc_succeeded: ${6:# The rc codes list with which the conditions to succeed will be overriden}
+    rename: ${7:# Rename An Object}
+    workspace_locking_adom: ${8:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
+    workspace_locking_timeout: ${9:# The maximum time in seconds to wait for other user to release the workspace lock}
   tags:
     - fortinet
     - fortimanager

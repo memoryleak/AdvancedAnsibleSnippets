@@ -1,21 +1,20 @@
 <snippet>
-  <content><![CDATA[- name: ${1:no description}
+  <content><![CDATA[- name: ${1:Log into the device with user name and password}
   fortinet.fortimanager.fmgr_sys_login_user:
-    enable_log: ${2:# Enable/Disable logging for task}
-    bypass_validation: ${3:# only set to True when module schema diffs with FortiManager API structure,
- module continues to execute without validating parameters
-}
-    workspace_locking_adom: ${4:# the adom to lock for FortiManager running in workspace mode, the value can be global and others including root
-}
-    workspace_locking_timeout: ${5:# the maximum time in seconds to wait for other user to release the workspace lock}
-    rc_succeeded: ${6:# the rc codes list with which the conditions to succeed will be overriden}
-    rc_failed: ${7:# the rc codes list with which the conditions to fail will be overriden}
+    access_token: ${2:# The token to access FortiManager without using username and password}
+    bypass_validation: ${3:# Only set to True when module schema diffs with FortiManager API structure, module continues to execute without validating parameters}
+    enable_log: ${4:# Enable/Disable logging for task}
+    forticloud_access_token: ${5:# Authenticate Ansible client with forticloud API access token}
+    rc_failed: ${6:# The rc codes list with which the conditions to fail will be overriden}
+    rc_succeeded: ${7:# The rc codes list with which the conditions to succeed will be overriden}
     sys_login_user: ${8:# the top level parameters set}
+    workspace_locking_adom: ${9:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
+    workspace_locking_timeout: ${10:# The maximum time in seconds to wait for other user to release the workspace lock}
   tags:
     - fortinet
     - fortimanager
     - fmgr_sys_login_user]]></content>
   <tabTrigger>fortinet.fortimanager.fmgr_sys_login_user</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>no description</description>
+  <description>Log into the device with user name and password</description>
 </snippet>

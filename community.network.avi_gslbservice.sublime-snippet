@@ -1,41 +1,41 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of GslbService Avi RESTful Object}
   community.network.avi_gslbservice:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
-    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    application_persistence_profile_ref: ${5:# The federated application persistence associated with gslbservice site persistence functionality}
-    controller_health_status_enabled: ${6:# Gs member's overall health status is derived based on a combination of controller and datapath health-status inputs}
-    created_by: ${7:# Creator name}
-    description: ${8:# User defined description for the object}
-    domain_names: ${9:# Fully qualified domain name of the gslb service}
-    down_response: ${10:# Response to the client query when the gslb service is down}
-    enabled: ${11:# Enable or disable the gslb service}
-    groups: ${12:# Select list of pools belonging to this gslb service}
-    health_monitor_refs: ${13:# Verify vs health by applying one or more health monitors}
-    health_monitor_scope: ${14:# Health monitor probe can be executed for all the members or it can be executed only for third-party members}
-    hm_off: ${15:# This field is an internal field and is used in se}
-    is_federated: ${16:# This field indicates that this object is replicated across gslb federation}
-    min_members: ${17:# The minimum number of members to distribute traffic to}
-    name: ${18:# Name for the gslb service}
-    num_dns_ip: ${19:# Number of ip addresses of this gslb service to be returned by the dns service}
-    pool_algorithm: ${20:# The load balancing algorithm will pick a gslb pool within the gslb service list of available pools}
-    site_persistence_enabled: ${21:# Enable site-persistence for the gslbservice}
-    tenant_ref: ${22:# It is a reference to an object of type tenant}
-    ttl: ${23:# Ttl value (in seconds) for records served for this gslb service by the dns service}
-    url: ${24:# Avi controller URL of the object}
-    use_edns_client_subnet: ${25:# Use the client ip subnet from the edns option as source ipaddress for client geo-location and consistent hash algorithm}
-    uuid: ${26:# Uuid of the gslb service}
-    wildcard_match: ${27:# Enable wild-card match of fqdn  if an exact match is not found in the dns table, the longest match is chosen by wild-carding the fqdn in the dns}
-    controller: ${28:# IP address or hostname of the controller}
-    username: ${29:# Username used for accessing Avi controller}
-    password: ${30:# Password of Avi user in Avi controller}
-    tenant: ${31:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${32:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${33:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${34:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${35:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${36:# It disables avi session information to be cached as a fact}
+    api_context: ${2:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${3:# Avi API version of to use for Avi API and objects}
+    application_persistence_profile_ref: ${4:# The federated application persistence associated with gslbservice site persistence functionality}
+    avi_api_patch_op: ${5:# Patch operation to use when using avi_api_update_method as patch}
+    avi_api_update_method: ${6:# Default method for object update is HTTP PUT}
+    avi_credentials: ${7:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${8:# It disables avi session information to be cached as a fact}
+    controller: ${9:# IP address or hostname of the controller}
+    controller_health_status_enabled: ${10:# Gs member's overall health status is derived based on a combination of controller and datapath health-status inputs}
+    created_by: ${11:# Creator name}
+    description: ${12:# User defined description for the object}
+    domain_names: ${13:# Fully qualified domain name of the gslb service}
+    down_response: ${14:# Response to the client query when the gslb service is down}
+    enabled: ${15:# Enable or disable the gslb service}
+    groups: ${16:# Select list of pools belonging to this gslb service}
+    health_monitor_refs: ${17:# Verify vs health by applying one or more health monitors}
+    health_monitor_scope: ${18:# Health monitor probe can be executed for all the members or it can be executed only for third-party members}
+    hm_off: ${19:# This field is an internal field and is used in se}
+    is_federated: ${20:# This field indicates that this object is replicated across gslb federation}
+    min_members: ${21:# The minimum number of members to distribute traffic to}
+    name: ${22:# Name for the gslb service}
+    num_dns_ip: ${23:# Number of ip addresses of this gslb service to be returned by the dns service}
+    password: ${24:# Password of Avi user in Avi controller}
+    pool_algorithm: ${25:# The load balancing algorithm will pick a gslb pool within the gslb service list of available pools}
+    site_persistence_enabled: ${26:# Enable site-persistence for the gslbservice}
+    state: ${27:# The state that should be applied on the entity}
+    tenant: ${28:# Name of tenant used for all Avi API calls and context of object}
+    tenant_ref: ${29:# It is a reference to an object of type tenant}
+    tenant_uuid: ${30:# UUID of tenant used for all Avi API calls and context of object}
+    ttl: ${31:# Ttl value (in seconds) for records served for this gslb service by the dns service}
+    url: ${32:# Avi controller URL of the object}
+    use_edns_client_subnet: ${33:# Use the client ip subnet from the edns option as source ipaddress for client geo-location and consistent hash algorithm}
+    username: ${34:# Username used for accessing Avi controller}
+    uuid: ${35:# Uuid of the gslb service}
+    wildcard_match: ${36:# Enable wild-card match of fqdn  if an exact match is not found in the dns table, the longest match is chosen by wild-carding the fqdn in the dns}
   tags:
     - community
     - network

@@ -2,16 +2,16 @@
   <content><![CDATA[- name: ${1:Manage system objects in Cobbler}
   community.general.cobbler_system:
     host: ${2:# The name or IP address of the Cobbler system}
-    port: ${3:# Port number to be used for REST connection}
-    username: ${4:# The username to log in to Cobbler}
+    interfaces: ${3:# A list of dictionaries containing interface options}
+    name: ${4:# The system name to manage}
     password: ${5:# The password to log in to Cobbler}
-    use_ssl: ${6:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${7:# If C(false), SSL certificates will not be validated}
-    name: ${8:# The system name to manage}
-    properties: ${9:# A dictionary with system properties}
-    interfaces: ${10:# A list of dictionaries containing interface options}
-    sync: ${11:# Sync on changes}
-    state: ${12:# Whether the system should be present, absent or a query is made}
+    port: ${6:# Port number to be used for REST connection}
+    properties: ${7:# A dictionary with system properties}
+    state: ${8:# Whether the system should be present, absent or a query is made}
+    sync: ${9:# Sync on changes}
+    use_ssl: ${10:# If V(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${11:# The username to log in to Cobbler}
+    validate_certs: ${12:# If V(false), SSL certificates will not be validated}
   tags:
     - community
     - general

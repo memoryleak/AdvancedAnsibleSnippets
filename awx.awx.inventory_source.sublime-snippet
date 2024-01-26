@@ -1,37 +1,40 @@
 <snippet>
   <content><![CDATA[- name: ${1:create, update, or destroy Automation Platform Controller inventory source}
   awx.awx.inventory_source:
-    name: ${2:# The name to use for the inventory source}
-    new_name: ${3:# A new name for this assets (will rename the asset)}
-    description: ${4:# The description to use for the inventory source}
-    inventory: ${5:# Inventory the group should be made a member of}
-    source: ${6:# The source to use for this group}
-    source_path: ${7:# For an SCM based inventory source, the source path points to the file within the repo to use as an inventory}
-    source_vars: ${8:# The variables or environment fields to apply to this source type}
-    enabled_var: ${9:# The variable to use to determine enabled state e}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    credential: ${7:# Credential name, ID, or named URL to use for the source}
+    custom_virtualenv: ${8:# Local absolute file path containing a custom Python virtualenv to use}
+    description: ${9:# The description to use for the inventory source}
     enabled_value: ${10:# Value when the host is considered enabled, e}
-    host_filter: ${11:# If specified, AWX will only import hosts that match this regular expression}
-    credential: ${12:# Credential to use for the source}
-    execution_environment: ${13:# Execution Environment to use for the source}
-    custom_virtualenv: ${14:# Local absolute file path containing a custom Python virtualenv to use}
-    overwrite: ${15:# Delete child groups and hosts not found in source}
-    overwrite_vars: ${16:# Override vars in child groups and hosts with those from external source}
-    timeout: ${17:# The amount of time (in seconds) to run before the task is canceled}
-    verbosity: ${18:# The verbosity level to run this inventory source under}
-    update_on_launch: ${19:# Refresh inventory data from its source each time a job is run}
-    update_cache_timeout: ${20:# Time in seconds to consider an inventory sync to be current}
-    source_project: ${21:# Project to use as source with scm option}
-    state: ${22:# Desired state of the resource}
-    notification_templates_started: ${23:# list of notifications to send on start}
-    notification_templates_success: ${24:# list of notifications to send on success}
-    notification_templates_error: ${25:# list of notifications to send on error}
-    organization: ${26:# Name of the inventory source's inventory's organization}
-    controller_host: ${27:# URL to your Automation Platform Controller instance}
-    controller_username: ${28:# Username for your controller instance}
-    controller_password: ${29:# Password for your controller instance}
-    controller_oauthtoken: ${30:# The OAuth token to use}
-    validate_certs: ${31:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${32:# Path to the controller config file}
+    enabled_var: ${11:# The variable to use to determine enabled state e}
+    execution_environment: ${12:# Execution Environment name, ID, or named URL to use for the source}
+    host_filter: ${13:# If specified, AWX will only import hosts that match this regular expression}
+    inventory: ${14:# Inventory name, ID, or named URL the group should be made a member of}
+    limit: ${15:# Enter host, group or pattern match}
+    name: ${16:# The name to use for the inventory source}
+    new_name: ${17:# A new name for this assets (will rename the asset)}
+    notification_templates_error: ${18:# list of notifications to send on error}
+    notification_templates_started: ${19:# list of notifications to send on start}
+    notification_templates_success: ${20:# list of notifications to send on success}
+    organization: ${21:# Name of the inventory source's inventory's organization}
+    overwrite: ${22:# Delete child groups and hosts not found in source}
+    overwrite_vars: ${23:# Override vars in child groups and hosts with those from external source}
+    request_timeout: ${24:# Specify the timeout Ansible should use in requests to the controller host}
+    scm_branch: ${25:# Inventory source SCM branch}
+    source: ${26:# The source to use for this group}
+    source_path: ${27:# For an SCM based inventory source, the source path points to the file within the repo to use as an inventory}
+    source_project: ${28:# Project name, ID, or named URL to use as source with scm option}
+    source_vars: ${29:# The variables or environment fields to apply to this source type}
+    state: ${30:# Desired state of the resource}
+    timeout: ${31:# The amount of time (in seconds) to run before the task is canceled}
+    update_cache_timeout: ${32:# Time in seconds to consider an inventory sync to be current}
+    update_on_launch: ${33:# Refresh inventory data from its source each time a job is run}
+    validate_certs: ${34:# Whether to allow insecure connections to AWX}
+    verbosity: ${35:# The verbosity level to run this inventory source under}
   tags:
     - awx
     - awx

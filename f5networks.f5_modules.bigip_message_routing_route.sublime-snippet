@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages static routes for routing message protocol messages}
   f5networks.f5_modules.bigip_message_routing_route:
-    name: ${2:# Specifies the name of the static route}
-    description: ${3:# The user-defined description of the static route}
-    type: ${4:# Parameter used to specify the type of the route to manage}
-    src_address: ${5:# Specifies the source address of the route}
-    dst_address: ${6:# Specifies the destination address of the route}
-    peer_selection_mode: ${7:# Specifies the method to use when selecting a peer from the provided list of C(peers)}
-    peers: ${8:# Specifies a list of ltm messagerouting-peer objects}
-    partition: ${9:# Device partition to create route object on}
+    description: ${2:# The user-defined description of the static route}
+    dst_address: ${3:# Specifies the destination address of the route}
+    name: ${4:# Specifies the name of the static route}
+    partition: ${5:# Device partition to create route object on}
+    peer_selection_mode: ${6:# Specifies the method to use when selecting a peer from the provided list of C(peers)}
+    peers: ${7:# Specifies a list of ltm messagerouting-peer objects}
+    provider: ${8:# A dict object containing connection details}
+    src_address: ${9:# Specifies the source address of the route}
     state: ${10:# When C(present), ensures the route exists}
-    provider: ${11:# A dict object containing connection details}
+    type: ${11:# Parameter used to specify the type of the route to manage}
   tags:
     - f5networks
     - f5_modules

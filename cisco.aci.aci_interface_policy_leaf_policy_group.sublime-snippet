@@ -1,42 +1,51 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage fabric interface policy leaf policy groups (infra:AccBndlGrp, infra:AccPortGrp)}
   cisco.aci.aci_interface_policy_leaf_policy_group:
-    policy_group: ${2:# Name of the leaf policy group to be added/deleted}
-    description: ${3:# Description for the leaf policy group to be created}
-    lag_type: ${4:# Selector for the type of leaf policy group we want to create}
-    link_level_policy: ${5:# Choice of link_level_policy to be used as part of the leaf policy group to be created}
-    cdp_policy: ${6:# Choice of cdp_policy to be used as part of the leaf policy group to be created}
-    mcp_policy: ${7:# Choice of mcp_policy to be used as part of the leaf policy group to be created}
-    lldp_policy: ${8:# Choice of lldp_policy to be used as part of the leaf policy group to be created}
-    stp_interface_policy: ${9:# Choice of stp_interface_policy to be used as part of the leaf policy group to be created}
-    egress_data_plane_policing_policy: ${10:# Choice of egress_data_plane_policing_policy to be used as part of the leaf policy group to be created}
-    ingress_data_plane_policing_policy: ${11:# Choice of ingress_data_plane_policing_policy to be used as part of the leaf policy group to be created}
-    priority_flow_control_policy: ${12:# Choice of priority_flow_control_policy to be used as part of the leaf policy group to be created}
-    fibre_channel_interface_policy: ${13:# Choice of fibre_channel_interface_policy to be used as part of the leaf policy group to be created}
-    slow_drain_policy: ${14:# Choice of slow_drain_policy to be used as part of the leaf policy group to be created}
-    port_channel_policy: ${15:# Choice of port_channel_policy to be used as part of the leaf policy group to be created}
-    monitoring_policy: ${16:# Choice of monitoring_policy to be used as part of the leaf policy group to be created}
-    storm_control_interface_policy: ${17:# Choice of storm_control_interface_policy to be used as part of the leaf policy group to be created}
-    l2_interface_policy: ${18:# Choice of l2_interface_policy to be used as part of the leaf policy group to be created}
-    port_security_policy: ${19:# Choice of port_security_policy to be used as part of the leaf policy group to be created}
-    aep: ${20:# Choice of attached_entity_profile (AEP) to be used as part of the leaf policy group to be created}
-    state: ${21:# Use C(present) or C(absent) for adding or removing}
+    aep: ${2:# The name of the attached entity profile (AEP) used by the leaf interface policy group}
+    annotation: ${3:# User-defined string for annotating an object}
+    cdp_policy: ${4:# The name of the cdp policy used by the leaf interface policy group}
+    certificate_name: ${5:# The X}
+    copp_policy: ${6:# The name of the copp policy used by the leaf interface policy group}
+    description: ${7:# The description of the leaf interface policy group}
+    dwdm: ${8:# The name of the dwdm used by the leaf interface policy group}
+    egress_data_plane_policing_policy: ${9:# The name of the egress data plane policing policy used by the leaf interface policy group}
+    fibre_channel_interface_policy: ${10:# The name of the fibre channel interface policy used by the leaf interface policy group}
+    host: ${11:# IP Address or hostname of APIC resolvable by Ansible control host}
+    ingress_data_plane_policing_policy: ${12:# The name of the ingress data plane policing policy used by the leaf interface policy group}
+    l2_interface_policy: ${13:# The name of the l2 interface policy used by the leaf interface policy group}
+    lag_type: ${14:# Selector for the type of leaf interface policy group}
+    link_flap_policy: ${15:# The name of the link flap policy used by the leaf interface policy group}
+    link_level_flow_control: ${16:# The name of the link level flow control used by the leaf interface policy group}
+    link_level_policy: ${17:# The name of the link level policy used by the leaf interface policy group}
+    lldp_policy: ${18:# The name of the lldp policy used by the leaf interface policy group}
+    mac_sec_interface_policy: ${19:# The name of the mac sec interface policy used by the leaf interface policy group}
+    mcp_policy: ${20:# The name of the mcp policy used by the leaf interface policy group}
+    monitoring_policy: ${21:# The name of the monitoring policy used by the leaf interface policy group}
     name_alias: ${22:# The alias for the current object}
-    host: ${23:# IP Address or hostname of APIC resolvable by Ansible control host}
-    port: ${24:# Port number to be used for REST connection}
-    username: ${25:# The username to use for authentication}
-    password: ${26:# The password to use for authentication}
-    private_key: ${27:# Either a PEM-formatted private key file or the private key content used for signature-based authentication}
-    certificate_name: ${28:# The X}
-    output_level: ${29:# Influence the output of this ACI module}
-    timeout: ${30:# The socket level timeout in seconds}
-    use_proxy: ${31:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${32:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${33:# If C(no), SSL certificates will not be validated}
-    output_path: ${34:# Path to a file that will be used to dump the ACI JSON configuration objects generated by the module}
-    annotation: ${35:# User-defined string for annotating an object}
-    owner_key: ${36:# User-defined string for the ownerKey attribute of an ACI object}
-    owner_tag: ${37:# User-defined string for the ownerTag attribute of an ACI object}
+    output_level: ${23:# Influence the output of this ACI module}
+    output_path: ${24:# Path to a file that will be used to dump the ACI JSON configuration objects generated by the module}
+    owner_key: ${25:# User-defined string for the ownerKey attribute of an ACI object}
+    owner_tag: ${26:# User-defined string for the ownerTag attribute of an ACI object}
+    password: ${27:# The password to use for authentication}
+    poe_interface_policy: ${28:# The name of the poe interface policy used by the leaf interface policy group}
+    policy_group: ${29:# The name of the leaf interface policy group}
+    port: ${30:# Port number to be used for REST connection}
+    port_authentication: ${31:# The name of the port authentication used by the leaf interface policy group}
+    port_channel_policy: ${32:# The name of the port channel policy used by the leaf interface policy group}
+    port_security_policy: ${33:# The name of the port security policy used by the leaf interface policy group}
+    priority_flow_control_policy: ${34:# The name of the priority flow control policy used by the leaf interface policy group}
+    private_key: ${35:# Either a PEM-formatted private key file or the private key content used for signature-based authentication}
+    slow_drain_policy: ${36:# The name of the slow drain policy used by the leaf interface policy group}
+    state: ${37:# Use C(present) or C(absent) for adding or removing}
+    storm_control_interface_policy: ${38:# The name of the storm control interface policy used by the leaf interface policy group}
+    stp_interface_policy: ${39:# The name of the stp interface policy used by the leaf interface policy group}
+    sync_e_interface_policy: ${40:# The name of the syncE interface policy used by the leaf interface policy group}
+    timeout: ${41:# The socket level timeout in seconds}
+    transceiver_policy: ${42:# The name of the transceiver policy used by the leaf interface policy group}
+    use_proxy: ${43:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${44:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${45:# The username to use for authentication}
+    validate_certs: ${46:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci

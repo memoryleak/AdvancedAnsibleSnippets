@@ -1,31 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create and delete AWS VPC endpoints}
   amazon.aws.ec2_vpc_endpoint:
-    vpc_id: ${2:# Required when creating a VPC endpoint}
-    vpc_endpoint_type: ${3:# The type of endpoint}
-    vpc_endpoint_subnets: ${4:# The list of subnets to attach to the endpoint}
-    vpc_endpoint_security_groups: ${5:# The list of security groups to attach to the endpoint}
-    service: ${6:# An AWS supported VPC endpoint service}
-    policy: ${7:# A properly formatted JSON policy as string, see U(https://github}
-    policy_file: ${8:# The path to the properly json formatted policy file, see U(https://github}
-    state: ${9:# C(present) to ensure resource is created}
-    wait: ${10:# When specified, will wait for status to reach C(available) for I(state=present)}
-    wait_timeout: ${11:# Used in conjunction with I(wait)}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    client_token: ${5:# Optional client token to ensure idempotency}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    policy: ${8:# A properly formatted JSON policy as string, see U(https://github}
+    profile: ${9:# A named AWS profile to use for authentication}
+    purge_tags: ${10:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${11:# The AWS region to use}
     route_table_ids: ${12:# List of one or more route table IDs to attach to the endpoint}
-    vpc_endpoint_id: ${13:# One or more VPC endpoint IDs to remove from the AWS account}
-    client_token: ${14:# Optional client token to ensure idempotency}
-    access_key: ${15:# AWS access key ID}
-    secret_key: ${16:# AWS secret access key}
-    session_token: ${17:# AWS STS session token for use with temporary credentials}
-    profile: ${18:# A named AWS profile to use for authentication}
-    endpoint_url: ${19:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${20:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${21:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${22:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${23:# Use a C(botocore}
-    region: ${24:# The AWS region to use}
-    tags: ${25:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${26:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    secret_key: ${13:# AWS secret access key}
+    service: ${14:# An AWS supported VPC endpoint service}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    state: ${16:# C(present) to ensure resource is created}
+    tags: ${17:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_endpoint_id: ${19:# One or more VPC endpoint IDs to remove from the AWS account}
+    vpc_endpoint_security_groups: ${20:# The list of security groups to attach to the endpoint}
+    vpc_endpoint_subnets: ${21:# The list of subnets to attach to the endpoint}
+    vpc_endpoint_type: ${22:# The type of endpoint}
+    vpc_id: ${23:# Required when creating a VPC endpoint}
+    wait: ${24:# When specified, will wait for status to reach C(available) for I(state=present)}
+    wait_timeout: ${25:# Used in conjunction with I(wait)}
   tags:
     - amazon
     - aws

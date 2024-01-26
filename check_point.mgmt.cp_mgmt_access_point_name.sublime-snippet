@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages access-point-name objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_access_point_name:
+    apn: ${2:# APN name}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    block_traffic_other_end_user_domains: ${4:# Block MS to MS traffic between this and other APN end user domains}
+    block_traffic_this_end_user_domain: ${5:# Block MS to MS traffic within this end user domain}
+    color: ${6:# Color of the object}
+    comments: ${7:# Comments string}
+    details_level: ${8:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    end_user_domain: ${9:# End user domain name or UID}
+    enforce_end_user_domain: ${10:# Enable enforce end user domain}
+    groups: ${11:# Collection of group identifiers}
+    ignore_errors: ${12:# Apply changes ignoring errors}
+    ignore_warnings: ${13:# Apply changes ignoring warnings}
+    name: ${14:# Object name}
+    state: ${15:# State of the access rule (present or absent)}
+    tags: ${16:# Collection of tag identifiers}
+    version: ${17:# Version of checkpoint}
+    wait_for_task: ${18:# Wait for the task to end}
+    wait_for_task_timeout: ${19:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_access_point_name]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_access_point_name</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages access-point-name objects on Checkpoint over Web Services API</description>
+</snippet>

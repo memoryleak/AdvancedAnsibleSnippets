@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Import the latest image information from a tag in a container image registry}
   community.okd.openshift_import_image:
-    namespace: ${2:# Use to specify namespace for image stream to create/update}
-    name: ${3:# Image stream to import tag into}
-    all: ${4:# If set to I(true), import all tags from the provided source on creation or if C(source) is specified}
-    validate_registry_certs: ${5:# If set to I(true), allow importing from registries that have invalid HTTPS certificates}
-    reference_policy: ${6:# Allow to request pullthrough for external image when set to I(local)}
-    scheduled: ${7:# Set each imported Docker image to be periodically imported from a remote repository}
-    source: ${8:# A Docker image repository to import images from}
-    host: ${9:# Provide a URL for accessing the API}
-    api_key: ${10:# Token used to authenticate with the API}
+    all: ${2:# If set to I(true), import all tags from the provided source on creation or if C(source) is specified}
+    api_key: ${3:# Token used to authenticate with the API}
+    ca_cert: ${4:# Path to a CA certificate used to authenticate with the API}
+    client_cert: ${5:# Path to a certificate used to authenticate with the API}
+    client_key: ${6:# Path to a key file used to authenticate with the API}
+    context: ${7:# The name of a context found in the config file}
+    host: ${8:# Provide a URL for accessing the API}
+    impersonate_groups: ${9:# Group(s) to impersonate for the operation}
+    impersonate_user: ${10:# Username to impersonate for the operation}
     kubeconfig: ${11:# Path to an existing Kubernetes config file}
-    context: ${12:# The name of a context found in the config file}
-    username: ${13:# Provide a username for authenticating with the API}
-    password: ${14:# Provide a password for authenticating with the API}
-    client_cert: ${15:# Path to a certificate used to authenticate with the API}
-    client_key: ${16:# Path to a key file used to authenticate with the API}
-    ca_cert: ${17:# Path to a CA certificate used to authenticate with the API}
-    validate_certs: ${18:# Whether or not to verify the API server's SSL certificates}
-    proxy: ${19:# The URL of an HTTP proxy to use for the connection}
-    no_proxy: ${20:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
-    proxy_headers: ${21:# The Header used for the HTTP proxy}
-    persist_config: ${22:# Whether or not to save the kube config refresh tokens}
-    impersonate_user: ${23:# Username to impersonate for the operation}
-    impersonate_groups: ${24:# Group(s) to impersonate for the operation}
+    name: ${12:# Image stream to import tag into}
+    namespace: ${13:# Use to specify namespace for image stream to create/update}
+    no_proxy: ${14:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
+    password: ${15:# Provide a password for authenticating with the API}
+    persist_config: ${16:# Whether or not to save the kube config refresh tokens}
+    proxy: ${17:# The URL of an HTTP proxy to use for the connection}
+    proxy_headers: ${18:# The Header used for the HTTP proxy}
+    reference_policy: ${19:# Allow to request pullthrough for external image when set to I(local)}
+    scheduled: ${20:# Set each imported Docker image to be periodically imported from a remote repository}
+    source: ${21:# A Docker image repository to import images from}
+    username: ${22:# Provide a username for authenticating with the API}
+    validate_certs: ${23:# Whether or not to verify the API server's SSL certificates}
+    validate_registry_certs: ${24:# If set to I(true), allow importing from registries that have invalid HTTPS certificates}
   tags:
     - community
     - okd

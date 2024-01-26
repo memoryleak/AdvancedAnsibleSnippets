@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage EKS Nodegroup module}
+  community.aws.eks_nodegroup:
+    access_key: ${2:# AWS access key ID}
+    ami_type: ${3:# The AMI type for your node group}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    capacity_type: ${6:# The capacity type for your node group}
+    cluster_name: ${7:# Name of EKS Cluster}
+    debug_botocore_endpoint_logs: ${8:# Use a C(botocore}
+    disk_size: ${9:# Size of disk in nodegroup nodes}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    instance_types: ${11:# Specify the instance types for a node group}
+    labels: ${12:# The Kubernetes labels to be applied to the nodes in the node group when they are created}
+    launch_template: ${13:# An object representing a node group's launch template specification}
+    name: ${14:# Name of EKS Nodegroup}
+    node_role: ${15:# ARN of IAM role used by the EKS cluster Nodegroup}
+    profile: ${16:# A named AWS profile to use for authentication}
+    purge_tags: ${17:# Purge existing tags that are not found in the nodegroup}
+    region: ${18:# The AWS region to use}
+    release_version: ${19:# The AMI version of the Amazon EKS optimized AMI to use with your node group}
+    remote_access: ${20:# The remote access (SSH) configuration to use with your node group}
+    scaling_config: ${21:# The scaling configuration details for the Auto Scaling group that is created for your node group}
+    secret_key: ${22:# AWS secret access key}
+    session_token: ${23:# AWS STS session token for use with temporary credentials}
+    state: ${24:# Create or delete the Nodegroup}
+    subnets: ${25:# list of subnet IDs for the Kubernetes cluster}
+    tags: ${26:# A dictionary of resource tags}
+    taints: ${27:# The Kubernetes taints to be applied to the nodes in the node group}
+    update_config: ${28:# The node group update configuration}
+    validate_certs: ${29:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${30:# Specifies whether the module waits until the profile is created or deleted before moving on}
+    wait_timeout: ${31:# The duration in seconds to wait for the nodegroup to become active}
+  tags:
+    - community
+    - aws
+    - eks_nodegroup]]></content>
+  <tabTrigger>community.aws.eks_nodegroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage EKS Nodegroup module</description>
+</snippet>

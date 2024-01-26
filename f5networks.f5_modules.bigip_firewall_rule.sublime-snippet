@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage AFM Firewall rules}
   f5networks.f5_modules.bigip_firewall_rule:
-    name: ${2:# Specifies the name of the rule}
-    parent_policy: ${3:# The policy which contains the rule to be managed}
-    parent_rule_list: ${4:# The rule list which contains the rule to be managed}
-    action: ${5:# Specifies the action for the firewall rule}
-    status: ${6:# Indicates the activity state of the rule or rule list}
-    schedule: ${7:# Specifies a schedule for the firewall rule}
-    description: ${8:# The rule description}
-    irule: ${9:# Specifies an iRule that is applied to the firewall rule}
-    protocol: ${10:# Specifies the protocol to which the rule applies}
-    source: ${11:# Specifies packet sources to which the rule applies}
-    destination: ${12:# Specifies packet destinations to which the rule applies}
-    logging: ${13:# Specifies whether logging is enabled or disabled for the firewall rule}
+    action: ${2:# Specifies the action for the firewall rule}
+    description: ${3:# The rule description}
+    destination: ${4:# Specifies packet destinations to which the rule applies}
+    icmp_message: ${5:# Specifies the Internet Control Message Protocol (ICMP) or ICMPv6 message C(type) and C(code) the rule uses}
+    irule: ${6:# Specifies an iRule that is applied to the firewall rule}
+    logging: ${7:# Specifies whether logging is enabled or disabled for the firewall rule}
+    name: ${8:# Specifies the name of the rule}
+    parent_policy: ${9:# The policy which contains the rule to be managed}
+    parent_rule_list: ${10:# The rule list which contains the rule to be managed}
+    partition: ${11:# Device partition to manage resources on}
+    protocol: ${12:# Specifies the protocol to which the rule applies}
+    provider: ${13:# A dict object containing connection details}
     rule_list: ${14:# Specifies an existing rule list to use in the rule}
-    icmp_message: ${15:# Specifies the Internet Control Message Protocol (ICMP) or ICMPv6 message C(type) and C(code) the rule uses}
-    partition: ${16:# Device partition to manage resources on}
+    schedule: ${15:# Specifies a schedule for the firewall rule}
+    source: ${16:# Specifies packet sources to which the rule applies}
     state: ${17:# When C(state) is C(present), ensures the rule exists}
-    provider: ${18:# A dict object containing connection details}
+    status: ${18:# Indicates the activity state of the rule or rule list}
   tags:
     - f5networks
     - f5_modules

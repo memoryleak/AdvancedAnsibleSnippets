@@ -1,27 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP manage Snapshot Policy}
   netapp.ontap.na_ontap_snapshot_policy:
-    state: ${2:# If you want to create, modify or delete a snapshot policy}
-    name: ${3:# Name of the snapshot policy to be managed}
-    enabled: ${4:# Status of the snapshot policy indicating whether the policy will be enabled or disabled}
-    comment: ${5:# A human readable comment attached with the snapshot}
-    count: ${6:# Retention count for the snapshots created by the schedule}
-    schedule: ${7:# Schedule to be added inside the policy}
-    prefix: ${8:# Snapshot name prefix for the schedule}
-    snapmirror_label: ${9:# SnapMirror label assigned to each schedule inside the policy}
-    vserver: ${10:# The name of the vserver to use}
-    hostname: ${11:# The hostname or IP address of the ONTAP instance}
-    username: ${12:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${13:# Password for the specified user}
-    cert_filepath: ${14:# path to SSL client cert file (}
-    key_filepath: ${15:# path to SSL client key file}
-    https: ${16:# Enable and disable https}
-    validate_certs: ${17:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${18:# Override the default port (80 or 443) with this port}
-    ontapi: ${19:# The ontap api version to use}
-    use_rest: ${20:# Whether to use REST or ZAPI}
-    feature_flags: ${21:# Enable or disable a new feature}
-    force_ontap_version: ${22:# Override the cluster ONTAP version when using REST}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    comment: ${3:# A human readable comment attached with the snapshot}
+    count: ${4:# Retention count for the snapshots created by the schedule}
+    enabled: ${5:# Status of the snapshot policy indicating whether the policy will be enabled or disabled}
+    feature_flags: ${6:# Enable or disable a new feature}
+    force_ontap_version: ${7:# Override the cluster ONTAP version when using REST}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    http_port: ${9:# Override the default port (80 or 443) with this port}
+    https: ${10:# Enable and disable https}
+    key_filepath: ${11:# path to SSL client key file}
+    name: ${12:# Name of the snapshot policy to be managed}
+    ontapi: ${13:# The ontap api version to use}
+    password: ${14:# Password for the specified user}
+    prefix: ${15:# Snapshot name prefix for the schedule}
+    schedule: ${16:# Schedule to be added inside the policy}
+    snapmirror_label: ${17:# SnapMirror label assigned to each schedule inside the policy}
+    state: ${18:# If you want to create, modify or delete a snapshot policy}
+    use_rest: ${19:# Whether to use REST or ZAPI}
+    username: ${20:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${21:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${22:# The name of the vserver to use}
   tags:
     - netapp
     - ontap

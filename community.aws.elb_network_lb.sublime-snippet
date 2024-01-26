@@ -1,30 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage a Network Load Balancer}
   community.aws.elb_network_lb:
-    cross_zone_load_balancing: ${2:# Indicates whether cross-zone load balancing is enabled}
-    deletion_protection: ${3:# Indicates whether deletion protection for the ELB is enabled}
-    listeners: ${4:# A list of dicts containing listeners to attach to the ELB}
-    name: ${5:# The name of the load balancer}
-    purge_listeners: ${6:# If I(purge_listeners=true), existing listeners will be purged from the ELB to match exactly what is defined by I(listeners) parameter}
-    subnet_mappings: ${7:# A list of dicts containing the IDs of the subnets to attach to the load balancer}
-    subnets: ${8:# A list of the IDs of the subnets to attach to the load balancer}
-    scheme: ${9:# Internet-facing or internal load balancer}
-    state: ${10:# Create or destroy the load balancer}
-    wait: ${11:# Whether or not to wait for the network load balancer to reach the desired state}
-    wait_timeout: ${12:# The duration in seconds to wait, used in conjunction with I(wait)}
-    ip_address_type: ${13:# Sets the type of IP addresses used by the subnets of the specified Application Load Balancer}
-    access_key: ${14:# AWS access key ID}
-    secret_key: ${15:# AWS secret access key}
-    session_token: ${16:# AWS STS session token for use with temporary credentials}
-    profile: ${17:# A named AWS profile to use for authentication}
-    endpoint_url: ${18:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${19:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${20:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${21:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${22:# Use a C(botocore}
-    region: ${23:# The AWS region to use}
-    tags: ${24:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${25:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    cross_zone_load_balancing: ${5:# Indicates whether cross-zone load balancing is enabled}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    deletion_protection: ${7:# Indicates whether deletion protection for the ELB is enabled}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
+    ip_address_type: ${9:# Sets the type of IP addresses used by the subnets of the specified Application Load Balancer}
+    listeners: ${10:# A list of dicts containing listeners to attach to the ELB}
+    name: ${11:# The name of the load balancer}
+    profile: ${12:# A named AWS profile to use for authentication}
+    purge_listeners: ${13:# If I(purge_listeners=true), existing listeners will be purged from the ELB to match exactly what is defined by I(listeners) parameter}
+    purge_tags: ${14:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${15:# The AWS region to use}
+    scheme: ${16:# Internet-facing or internal load balancer}
+    secret_key: ${17:# AWS secret access key}
+    session_token: ${18:# AWS STS session token for use with temporary credentials}
+    state: ${19:# Create or destroy the load balancer}
+    subnet_mappings: ${20:# A list of dicts containing the IDs of the subnets to attach to the load balancer}
+    subnets: ${21:# A list of the IDs of the subnets to attach to the load balancer}
+    tags: ${22:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${23:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${24:# Whether or not to wait for the network load balancer to reach the desired state}
+    wait_timeout: ${25:# The duration in seconds to wait, used in conjunction with I(wait)}
   tags:
     - community
     - aws

@@ -1,20 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP TargetSslProxy}
   google.cloud.gcp_compute_target_ssl_proxy:
-    state: ${2:# Whether the given object should exist in GCP}
-    description: ${3:# An optional description of this resource}
-    name: ${4:# Name of the resource}
-    proxy_header: ${5:# Specifies the type of proxy header to append before sending data to the backend}
-    service: ${6:# A reference to the BackendService resource}
-    ssl_certificates: ${7:# A list of SslCertificate resources that are used to authenticate connections between users and the load balancer}
-    ssl_policy: ${8:# A reference to the SslPolicy resource that will be associated with the TargetSslProxy resource}
-    project: ${9:# The Google Cloud Platform project to use}
-    auth_kind: ${10:# The type of credential used}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    auth_kind: ${3:# The type of credential used}
+    description: ${4:# An optional description of this resource}
+    env_type: ${5:# Specifies which Ansible environment you're running this module within}
+    name: ${6:# Name of the resource}
+    project: ${7:# The Google Cloud Platform project to use}
+    proxy_header: ${8:# Specifies the type of proxy header to append before sending data to the backend}
+    scopes: ${9:# Array of scopes to be used}
+    service: ${10:# A reference to the BackendService resource}
     service_account_contents: ${11:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${12:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${13:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${14:# Array of scopes to be used}
-    env_type: ${15:# Specifies which Ansible environment you're running this module within}
+    service_account_email: ${12:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    service_account_file: ${13:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    ssl_certificates: ${14:# A list of SslCertificate resources that are used to authenticate connections between users and the load balancer}
+    ssl_policy: ${15:# A reference to the SslPolicy resource that will be associated with the TargetSslProxy resource}
+    state: ${16:# Whether the given object should exist in GCP}
   tags:
     - google
     - cloud

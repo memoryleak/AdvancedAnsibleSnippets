@@ -1,36 +1,36 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates or terminates OpenNebula instances}
   community.general.one_vm:
-    api_url: ${2:# URL of the OpenNebula RPC server}
-    api_username: ${3:# Name of the user to login into the OpenNebula RPC server}
-    api_password: ${4:# Password of the user to login into OpenNebula RPC server}
-    template_name: ${5:# Name of VM template to use to create a new instace}
-    template_id: ${6:# ID of a VM template to use to create a new instance}
-    vm_start_on_hold: ${7:# Set to true to put vm on hold while creating}
-    instance_ids: ${8:# A list of instance ids used for states':' C(absent), C(running), C(rebooted), C(poweredoff)}
-    state: ${9:# C(present) - create instances from a template specified with C(template_id)/C(template_name)}
-    hard: ${10:# Reboot, power-off or terminate instances C(hard)}
-    wait: ${11:# Wait for the instance to reach its desired state before returning}
-    wait_timeout: ${12:# How long before wait gives up, in seconds}
-    attributes: ${13:# A dictionary of key/value attributes to add to new instances, or for}
-    labels: ${14:# A list of labels to associate with new instances, or for setting}
-    count_attributes: ${15:# A dictionary of key/value attributes that can only be used with}
-    count_labels: ${16:# A list of labels that can only be used with C(exact_count) to determine}
-    count: ${17:# Number of instances to launch}
-    exact_count: ${18:# Indicates how many instances that match C(count_attributes) and}
-    mode: ${19:# Set permission mode of the instance in octet format, e}
-    owner_id: ${20:# ID of the user which will be set as the owner of the instance}
-    group_id: ${21:# ID of the group which will be set as the group of the instance}
-    memory: ${22:# The size of the memory for new instances (in MB, GB, }
-    disk_size: ${23:# The size of the disk created for new instances (in MB, GB, TB,}
-    cpu: ${24:# Percentage of CPU divided by 100 required for the new instance}
-    vcpu: ${25:# Number of CPUs (cores) new VM will have}
-    networks: ${26:# A list of dictionaries with network parameters}
-    disk_saveas: ${27:# Creates an image from a VM disk}
-    persistent: ${28:# Create a private persistent copy of the template plus any image defined in DISK, and instantiate that copy}
-    datastore_id: ${29:# Name of Datastore to use to create a new instace}
-    datastore_name: ${30:# Name of Datastore to use to create a new instace}
-    updateconf: ${31:# When I(instance_ids) is provided, updates running VMs with the C(updateconf) API call}
+    api_password: ${2:# Password of the user to login into OpenNebula RPC server}
+    api_url: ${3:# URL of the OpenNebula RPC server}
+    api_username: ${4:# Name of the user to login into the OpenNebula RPC server}
+    attributes: ${5:# A dictionary of key/value attributes to add to new instances, or for setting C(state) of instances with these attributes}
+    count: ${6:# Number of instances to launch}
+    count_attributes: ${7:# A dictionary of key/value attributes that can only be used with O(exact_count) to determine how many nodes based on a specific attributes criteria should be deployed}
+    count_labels: ${8:# A list of labels that can only be used with O(exact_count) to determine how many nodes based on a specific labels criteria should be deployed}
+    cpu: ${9:# Percentage of CPU divided by 100 required for the new instance}
+    datastore_id: ${10:# Name of Datastore to use to create a new instance}
+    datastore_name: ${11:# Name of Datastore to use to create a new instance}
+    disk_saveas: ${12:# Creates an image from a VM disk}
+    disk_size: ${13:# The size of the disk created for new instances (in MB, GB, TB,}
+    exact_count: ${14:# Indicates how many instances that match O(count_attributes) and O(count_labels) parameters should be deployed}
+    group_id: ${15:# ID of the group which will be set as the group of the instance}
+    hard: ${16:# Reboot, power-off or terminate instances C(hard)}
+    instance_ids: ${17:# A list of instance ids used for states: V(absent), V(running), V(rebooted), V(poweredoff)}
+    labels: ${18:# A list of labels to associate with new instances, or for setting C(state) of instances with these labels}
+    memory: ${19:# The size of the memory for new instances (in MB, GB,}
+    mode: ${20:# Set permission mode of the instance in octet format, for example V(0600) to give owner C(use) and C(manage) and nothing to group and others}
+    networks: ${21:# A list of dictionaries with network parameters}
+    owner_id: ${22:# ID of the user which will be set as the owner of the instance}
+    persistent: ${23:# Create a private persistent copy of the template plus any image defined in DISK, and instantiate that copy}
+    state: ${24:# V(present) - create instances from a template specified with C(template_id)/C(template_name)}
+    template_id: ${25:# ID of a VM template to use to create a new instance}
+    template_name: ${26:# Name of VM template to use to create a new instance}
+    updateconf: ${27:# When O(instance_ids) is provided, updates running VMs with the C(updateconf) API call}
+    vcpu: ${28:# Number of CPUs (cores) new VM will have}
+    vm_start_on_hold: ${29:# Set to true to put vm on hold while creating}
+    wait: ${30:# Wait for the instance to reach its desired state before returning}
+    wait_timeout: ${31:# How long before wait gives up, in seconds}
   tags:
     - community
     - general

@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp AWS Cloud Volumes Service Manage Snapshots}
   netapp.aws.aws_netapp_cvs_snapshots:
-    state: ${2:# Whether the specified snapshot should exist or not}
-    region: ${3:# The region to which the snapshot belongs to}
-    name: ${4:# Name of the snapshot}
+    api_key: ${2:# The access key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API}
+    api_url: ${3:# The url to the AWSCVS Web Services Proxy or Embedded Web Services API}
+    feature_flags: ${4:# Enable or disable a new feature}
     fileSystemId: ${5:# Name or Id of the filesystem}
     from_name: ${6:# ID or Name of the snapshot to rename}
-    api_key: ${7:# The access key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API}
-    secret_key: ${8:# The secret_key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API}
-    api_url: ${9:# The url to the AWSCVS Web Services Proxy or Embedded Web Services API}
-    validate_certs: ${10:# Should https certificates be validated?}
-    feature_flags: ${11:# Enable or disable a new feature}
+    name: ${7:# Name of the snapshot}
+    region: ${8:# The region to which the snapshot belongs to}
+    secret_key: ${9:# The secret_key to authenticate with the AWSCVS Web Services Proxy or Embedded Web Services API}
+    state: ${10:# Whether the specified snapshot should exist or not}
+    validate_certs: ${11:# Should https certificates be validated?}
   tags:
     - netapp
     - aws

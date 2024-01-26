@@ -1,35 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:CLI command to modify port-config}
   community.network.pn_port_config:
-    pn_cliswitch: ${2:# Target switch to run the CLI on}
-    state: ${3:# State the action to perform}
-    pn_intf: ${4:# physical interface}
+    pn_allowed_tpid: ${2:# Allowed TPID in addition to 0x8100 on Vlan header}
+    pn_autoneg: ${3:# physical port autonegotiation}
+    pn_cliswitch: ${4:# Target switch to run the CLI on}
     pn_crc_check_enable: ${5:# CRC check on ingress and rewrite on egress}
-    pn_dscp_map: ${6:# DSCP map name to enable on port}
-    pn_autoneg: ${7:# physical port autonegotiation}
-    pn_speed: ${8:# physical port speed}
-    pn_port: ${9:# physical port}
-    pn_vxlan_termination: ${10:# physical port vxlan termination setting}
-    pn_pause: ${11:# physical port pause}
-    pn_loopback: ${12:# physical port loopback}
-    pn_loop_vlans: ${13:# looping vlans}
-    pn_routing: ${14:# routing}
-    pn_edge_switch: ${15:# physical port edge switch}
-    pn_enable: ${16:# physical port enable}
-    pn_description: ${17:# physical port description}
-    pn_host_enable: ${18:# Host facing port control setting}
-    pn_allowed_tpid: ${19:# Allowed TPID in addition to 0x8100 on Vlan header}
-    pn_mirror_only: ${20:# physical port mirror only}
-    pn_reflect: ${21:# physical port reflection}
-    pn_jumbo: ${22:# jumbo frames on physical port}
-    pn_egress_rate_limit: ${23:# max egress port data rate limit}
-    pn_eth_mode: ${24:# physical Ethernet mode}
-    pn_fabric_guard: ${25:# Fabric guard configuration}
-    pn_local_switching: ${26:# no-local-switching port cannot bridge traffic to another no-local-switching port}
-    pn_lacp_priority: ${27:# LACP priority from 1 to 65535}
-    pn_send_port: ${28:# send port}
-    pn_port_mac_address: ${29:# physical port MAC Address}
-    pn_defer_bringup: ${30:# defer port bringup}
+    pn_defer_bringup: ${6:# defer port bringup}
+    pn_description: ${7:# physical port description}
+    pn_dscp_map: ${8:# DSCP map name to enable on port}
+    pn_edge_switch: ${9:# physical port edge switch}
+    pn_egress_rate_limit: ${10:# max egress port data rate limit}
+    pn_enable: ${11:# physical port enable}
+    pn_eth_mode: ${12:# physical Ethernet mode}
+    pn_fabric_guard: ${13:# Fabric guard configuration}
+    pn_host_enable: ${14:# Host facing port control setting}
+    pn_intf: ${15:# physical interface}
+    pn_jumbo: ${16:# jumbo frames on physical port}
+    pn_lacp_priority: ${17:# LACP priority from 1 to 65535}
+    pn_local_switching: ${18:# no-local-switching port cannot bridge traffic to another no-local-switching port}
+    pn_loop_vlans: ${19:# looping vlans}
+    pn_loopback: ${20:# physical port loopback}
+    pn_mirror_only: ${21:# physical port mirror only}
+    pn_pause: ${22:# physical port pause}
+    pn_port: ${23:# physical port}
+    pn_port_mac_address: ${24:# physical port MAC Address}
+    pn_reflect: ${25:# physical port reflection}
+    pn_routing: ${26:# routing}
+    pn_send_port: ${27:# send port}
+    pn_speed: ${28:# physical port speed}
+    pn_vxlan_termination: ${29:# physical port vxlan termination setting}
+    state: ${30:# State the action to perform}
   tags:
     - community
     - network

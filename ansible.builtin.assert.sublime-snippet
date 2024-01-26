@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[- name: ${1:Asserts given expressions are true}
   ansible.builtin.assert:
-    that: ${2:# A list of string expressions of the same form that can be passed to the 'when' statement}
-    fail_msg: ${3:# The customized message used for a failing assertion}
+    fail_msg: ${2:# The customized message used for a failing assertion}
+    quiet: ${3:# Set this to V(true) to avoid verbose output}
     success_msg: ${4:# The customized message used for a successful assertion}
-    quiet: ${5:# Set this to C(true) to avoid verbose output}
+    that: ${5:# A list of string expressions of the same form that can be passed to the 'when' statement}
   tags:
     - assert]]></content>
   <tabTrigger>ansible.builtin.assert</tabTrigger>

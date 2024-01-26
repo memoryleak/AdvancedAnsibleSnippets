@@ -3,11 +3,11 @@
   f5networks.f5_modules.bigip_policy:
     description: ${2:# The description to attach to the policy}
     name: ${3:# The name of the policy to create}
-    state: ${4:# When C(state) is C(present), ensures the policy exists and is published}
-    strategy: ${5:# Specifies the method to determine which actions get executed when there are multiple rules that match}
+    partition: ${4:# Device partition to manage resources on}
+    provider: ${5:# A dict object containing connection details}
     rules: ${6:# Specifies a list of rules you want associated with this policy}
-    partition: ${7:# Device partition to manage resources on}
-    provider: ${8:# A dict object containing connection details}
+    state: ${7:# When C(state) is C(present), ensures the policy exists and is published}
+    strategy: ${8:# Specifies the method to determine which actions get executed when there are multiple rules that match}
   tags:
     - f5networks
     - f5_modules

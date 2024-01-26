@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Adds or removes Vertica database roles and assigns roles to them}
   community.general.vertica_role:
-    role: ${2:# Name of the role to add or remove}
-    assigned_roles: ${3:# Comma separated list of roles to assign to the role}
-    state: ${4:# Whether to create C(present), drop C(absent) or lock C(locked) a role}
-    db: ${5:# Name of the Vertica database}
-    cluster: ${6:# Name of the Vertica cluster}
+    assigned_roles: ${2:# Comma separated list of roles to assign to the role}
+    cluster: ${3:# Name of the Vertica cluster}
+    db: ${4:# Name of the Vertica database}
+    login_password: ${5:# The password used to authenticate with}
+    login_user: ${6:# The username used to authenticate with}
     port: ${7:# Vertica cluster port to connect to}
-    login_user: ${8:# The username used to authenticate with}
-    login_password: ${9:# The password used to authenticate with}
+    role: ${8:# Name of the role to add or remove}
+    state: ${9:# Whether to create V(present), drop V(absent) or lock V(locked) a role}
   tags:
     - community
     - general

@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages load balancer pools on the cloudscale}
+  cloudscale_ch.cloud.load_balancer_pool:
+    algorithm: ${2:# The algorithm according to which the incoming traffic is distributed between the pool members}
+    api_timeout: ${3:# Timeout in seconds for calls to the cloudscale}
+    api_token: ${4:# cloudscale}
+    api_url: ${5:# cloudscale}
+    load_balancer: ${6:# UUID of the load balancer for this pool}
+    name: ${7:# Name of the load balancer pool}
+    protocol: ${8:# The protocol used for traffic between the load balancer and the pool members}
+    state: ${9:# State of the load balancer pool}
+    tags: ${10:# Tags assosiated with the load balancer}
+    uuid: ${11:# UUID of the load balancer pool}
+  tags:
+    - cloudscale_ch
+    - cloud
+    - load_balancer_pool]]></content>
+  <tabTrigger>cloudscale_ch.cloud.load_balancer_pool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages load balancer pools on the cloudscale</description>
+</snippet>

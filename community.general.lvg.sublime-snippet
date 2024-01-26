@@ -1,14 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure LVM volume groups}
   community.general.lvg:
-    vg: ${2:# The name of the volume group}
-    pvs: ${3:# List of comma-separated devices to use as physical devices in this volume group}
-    pesize: ${4:# The size of the physical extent}
-    pv_options: ${5:# Additional options to pass to C(pvcreate) when creating the volume group}
-    pvresize: ${6:# If C(true), resize the physical volume to the maximum available size}
-    vg_options: ${7:# Additional options to pass to C(vgcreate) when creating the volume group}
-    state: ${8:# Control if the volume group exists}
-    force: ${9:# If C(true), allows to remove volume group with logical volumes}
+    force: ${2:# If V(true), allows to remove volume group with logical volumes}
+    pesize: ${3:# The size of the physical extent}
+    pv_options: ${4:# Additional options to pass to C(pvcreate) when creating the volume group}
+    pvresize: ${5:# If V(true), resize the physical volume to the maximum available size}
+    pvs: ${6:# List of comma-separated devices to use as physical devices in this volume group}
+    reset_pv_uuid: ${7:# Whether the volume group's physical volumes' UUIDs are regenerated}
+    reset_vg_uuid: ${8:# Whether the volume group's UUID is regenerated}
+    state: ${9:# Control if the volume group exists and it's state}
+    vg: ${10:# The name of the volume group}
+    vg_options: ${11:# Additional options to pass to C(vgcreate) when creating the volume group}
   tags:
     - community
     - general

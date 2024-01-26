@@ -1,31 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:grant or revoke an Automation Platform Controller role}
   awx.awx.role:
-    user: ${2:# User that receives the permissions specified by the role}
-    team: ${3:# Team that receives the permissions specified by the role}
-    role: ${4:# The role type to grant/revoke}
-    target_team: ${5:# Team that the role acts on}
-    target_teams: ${6:# Team that the role acts on}
-    inventory: ${7:# Inventory the role acts on}
-    inventories: ${8:# Inventory the role acts on}
-    job_template: ${9:# The job template the role acts on}
-    job_templates: ${10:# The job template the role acts on}
-    workflow: ${11:# The workflow job template the role acts on}
-    workflows: ${12:# The workflow job template the role acts on}
-    credential: ${13:# Credential the role acts on}
-    credentials: ${14:# Credential the role acts on}
-    organization: ${15:# Organization the role acts on}
-    organizations: ${16:# Organization the role acts on}
-    lookup_organization: ${17:# Organization the inventories, job templates, projects, or workflows the items exists in}
-    project: ${18:# Project the role acts on}
-    projects: ${19:# Project the role acts on}
-    state: ${20:# Desired state}
-    controller_host: ${21:# URL to your Automation Platform Controller instance}
-    controller_username: ${22:# Username for your controller instance}
-    controller_password: ${23:# Password for your controller instance}
-    controller_oauthtoken: ${24:# The OAuth token to use}
-    validate_certs: ${25:# Whether to allow insecure connections to AWX}
-    controller_config_file: ${26:# Path to the controller config file}
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    credential: ${7:# Credential name, ID, or named URL the role acts on}
+    credentials: ${8:# Credential names, IDs, or named URLs the role acts on}
+    instance_groups: ${9:# Instance Group names, IDs, or named URLs the role acts on}
+    inventories: ${10:# Inventory names, IDs, or named URLs the role acts on}
+    inventory: ${11:# Inventory name, ID, or named URL the role acts on}
+    job_template: ${12:# The job template name, ID, or named URL the role acts on}
+    job_templates: ${13:# The job template names, IDs, or named URLs the role acts on}
+    lookup_organization: ${14:# Organization name, ID, or named URL the inventories, job templates, projects, or workflows the items exists in}
+    organization: ${15:# Organization name, ID, or named URL the role acts on}
+    organizations: ${16:# Organization names, IDs, or named URLs the role acts on}
+    project: ${17:# Project name, ID, or named URL the role acts on}
+    projects: ${18:# Project names, IDs, or named URLs the role acts on}
+    request_timeout: ${19:# Specify the timeout Ansible should use in requests to the controller host}
+    role: ${20:# The role type to grant/revoke}
+    state: ${21:# Desired state}
+    target_team: ${22:# Team name, ID, or named URL that the role acts on}
+    target_teams: ${23:# Team names, IDs, or named URLs that the role acts on}
+    team: ${24:# Team name, ID, or named URL that receives the permissions specified by the role}
+    teams: ${25:# Team names, IDs, or named URLs that receive the permissions specified by the role}
+    user: ${26:# User name, ID, or named URL that receives the permissions specified by the role}
+    users: ${27:# User names, IDs, or named URLs that receive the permissions specified by the role}
+    validate_certs: ${28:# Whether to allow insecure connections to AWX}
+    workflow: ${29:# The workflow job template name, ID, or named URL the role acts on}
+    workflows: ${30:# The workflow job template names, IDs, or named URLs the role acts on}
   tags:
     - awx
     - awx

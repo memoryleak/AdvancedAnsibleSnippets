@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Set tagged and untagged vlans to native network card supported by a template on OpenManage Enterprise}
   dellemc.openmanage.ome_template_network_vlan:
-    template_name: ${2:# Name of the template}
-    template_id: ${3:# Id of the template}
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    hostname: ${3:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
     nic_identifier: ${4:# Display name of NIC port in the template for VLAN configuration}
-    propagate_vlan: ${5:# To deploy the modified VLAN settings immediately without rebooting the server}
-    untagged_networks: ${6:# List of untagged networks and their corresponding NIC ports}
-    tagged_networks: ${7:# List of tagged VLANs and their corresponding NIC ports}
-    hostname: ${8:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
-    username: ${9:# OpenManage Enterprise or OpenManage Enterprise Modular username}
-    password: ${10:# OpenManage Enterprise or OpenManage Enterprise Modular password}
-    port: ${11:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
-    validate_certs: ${12:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${13:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${14:# The socket level timeout in seconds}
+    password: ${5:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${6:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    propagate_vlan: ${7:# To deploy the modified VLAN settings immediately without rebooting the server}
+    tagged_networks: ${8:# List of tagged VLANs and their corresponding NIC ports}
+    template_id: ${9:# Id of the template}
+    template_name: ${10:# Name of the template}
+    timeout: ${11:# The socket level timeout in seconds}
+    untagged_networks: ${12:# List of untagged networks and their corresponding NIC ports}
+    username: ${13:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    validate_certs: ${14:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

@@ -1,35 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create and optionally attach an Elastic Network Interface (ENI) to an instance}
   amazon.aws.ec2_eni:
-    eni_id: ${2:# The ID of the ENI (to modify)}
-    instance_id: ${3:# Instance ID that you wish to attach ENI to}
-    private_ip_address: ${4:# Private IP address}
-    subnet_id: ${5:# ID of subnet in which to create the ENI}
-    description: ${6:# Optional description of the ENI}
-    security_groups: ${7:# List of security groups associated with the interface}
-    state: ${8:# Create or delete ENI}
-    device_index: ${9:# The index of the device for the network interface attachment on the instance}
-    attached: ${10:# Specifies if network interface should be attached or detached from instance}
-    force_detach: ${11:# Force detachment of the interface}
-    delete_on_termination: ${12:# Delete the interface when the instance it is attached to is terminated}
-    source_dest_check: ${13:# By default, interfaces perform source/destination checks}
-    secondary_private_ip_addresses: ${14:# A list of IP addresses to assign as secondary IP addresses to the network interface}
-    purge_secondary_private_ip_addresses: ${15:# To be used with I(secondary_private_ip_addresses) to determine whether or not to remove any secondary IP addresses other than those specified}
-    secondary_private_ip_address_count: ${16:# The number of secondary IP addresses to assign to the network interface}
-    allow_reassignment: ${17:# Indicates whether to allow an IP address that is already assigned to another network interface or instance to be reassigned to the specified network interface}
-    name: ${18:# Name for the ENI}
-    access_key: ${19:# AWS access key ID}
-    secret_key: ${20:# AWS secret access key}
-    session_token: ${21:# AWS STS session token for use with temporary credentials}
-    profile: ${22:# A named AWS profile to use for authentication}
-    endpoint_url: ${23:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${24:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${25:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${26:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${27:# Use a C(botocore}
-    region: ${28:# The AWS region to use}
+    access_key: ${2:# AWS access key ID}
+    allow_reassignment: ${3:# Indicates whether to allow an IP address that is already assigned to another network interface or instance to be reassigned to the specified network interface}
+    attached: ${4:# Specifies if network interface should be attached or detached from instance}
+    aws_ca_bundle: ${5:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${6:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    delete_on_termination: ${8:# Delete the interface when the instance it is attached to is terminated}
+    description: ${9:# Optional description of the ENI}
+    device_index: ${10:# The index of the device for the network interface attachment on the instance}
+    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
+    eni_id: ${12:# The ID of the ENI (to modify)}
+    force_detach: ${13:# Force detachment of the interface}
+    instance_id: ${14:# Instance ID that you wish to attach ENI to}
+    name: ${15:# Name for the ENI}
+    private_ip_address: ${16:# Private IP address}
+    profile: ${17:# A named AWS profile to use for authentication}
+    purge_secondary_private_ip_addresses: ${18:# To be used with I(secondary_private_ip_addresses) to determine whether or not to remove any secondary IP addresses other than those specified}
+    purge_tags: ${19:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${20:# The AWS region to use}
+    secondary_private_ip_address_count: ${21:# The number of secondary IP addresses to assign to the network interface}
+    secondary_private_ip_addresses: ${22:# A list of IP addresses to assign as secondary IP addresses to the network interface}
+    secret_key: ${23:# AWS secret access key}
+    security_groups: ${24:# List of security groups associated with the interface}
+    session_token: ${25:# AWS STS session token for use with temporary credentials}
+    source_dest_check: ${26:# By default, interfaces perform source/destination checks}
+    state: ${27:# Create or delete ENI}
+    subnet_id: ${28:# ID of subnet in which to create the ENI}
     tags: ${29:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${30:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    validate_certs: ${30:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - amazon
     - aws

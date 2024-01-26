@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp E-Series manage LDAP integration to use for authentication}
   netapp_eseries.santricity.netapp_e_ldap:
-    state: ${2:# Enable/disable LDAP support on the system}
-    identifier: ${3:# This is a unique identifier for the configuration (for cases where there are multiple domains configured)}
-    username: ${4:# This is the user account that will be used for querying the LDAP server}
-    password: ${5:# This is the password for the bind user account}
-    attributes: ${6:# The user attributes that should be considered for the group to role mapping}
-    server: ${7:# This is the LDAP server url}
+    api_password: ${2:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_url: ${3:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
+    api_username: ${4:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
+    attributes: ${5:# The user attributes that should be considered for the group to role mapping}
+    identifier: ${6:# This is a unique identifier for the configuration (for cases where there are multiple domains configured)}
+    log_path: ${7:# A local path to a file to be used for debug logging}
     name: ${8:# The domain name[s] that will be utilized when authenticating to identify which domain to utilize}
-    search_base: ${9:# The search base is used to find group memberships of the user}
+    password: ${9:# This is the password for the bind user account}
     role_mappings: ${10:# This is where you specify which groups should have access to what permissions for the storage-system}
-    user_attribute: ${11:# This is the attribute we will use to match the provided username when a user attempts to authenticate}
-    log_path: ${12:# A local path to a file to be used for debug logging}
-    api_username: ${13:# The username to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_password: ${14:# The password to authenticate with the SANtricity Web Services Proxy or Embedded Web Services API}
-    api_url: ${15:# The url to the SANtricity Web Services Proxy or Embedded Web Services API}
-    validate_certs: ${16:# Should https certificates be validated?}
-    ssid: ${17:# The ID of the array to manage}
+    search_base: ${11:# The search base is used to find group memberships of the user}
+    server: ${12:# This is the LDAP server url}
+    ssid: ${13:# The ID of the array to manage}
+    state: ${14:# Enable/disable LDAP support on the system}
+    user_attribute: ${15:# This is the attribute we will use to match the provided username when a user attempts to authenticate}
+    username: ${16:# This is the user account that will be used for querying the LDAP server}
+    validate_certs: ${17:# Should https certificates be validated?}
   tags:
     - netapp_eseries
     - santricity

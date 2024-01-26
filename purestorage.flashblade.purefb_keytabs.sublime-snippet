@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage FlashBlade Kerberos Keytabs}
   purestorage.flashblade.purefb_keytabs:
-    state: ${2:# Manage Kerberos Keytabs}
-    name: ${3:# Name of the Keytab}
-    prefix: ${4:# Only required for I(import) or I(rotate)}
+    api_token: ${2:# FlashBlade API token for admin privileged user}
+    fb_url: ${3:# FlashBlade management IP address or Hostname}
+    filetype: ${4:# Format of the keytab file}
     keytab_file: ${5:# Name of file holding Keytab}
-    filetype: ${6:# Format of the keytab file}
-    fb_url: ${7:# FlashBlade management IP address or Hostname}
-    api_token: ${8:# FlashBlade API token for admin privileged user}
+    name: ${6:# Name of the Keytab}
+    prefix: ${7:# Only required for I(import) or I(rotate)}
+    state: ${8:# Manage Kerberos Keytabs}
   tags:
     - purestorage
     - flashblade

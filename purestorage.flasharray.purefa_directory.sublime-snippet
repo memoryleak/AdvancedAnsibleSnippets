@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage FlashArray File System Directories}
   purestorage.flasharray.purefa_directory:
-    name: ${2:# Name of the directory}
-    state: ${3:# Define whether the directory should exist or not}
+    api_token: ${2:# FlashArray API token for admin privileged user}
+    fa_url: ${3:# FlashArray management IPv4 address or Hostname}
     filesystem: ${4:# Name of the filesystem the directory links to}
-    path: ${5:# Path of the managed directory in the file system}
-    rename: ${6:# Value to rename the specified directory to}
-    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
-    api_token: ${8:# FlashArray API token for admin privileged user}
+    name: ${5:# Name of the directory}
+    path: ${6:# Path of the managed directory in the file system}
+    rename: ${7:# Value to rename the specified directory to}
+    state: ${8:# Define whether the directory should exist or not}
   tags:
     - purestorage
     - flasharray

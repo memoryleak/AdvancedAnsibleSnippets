@@ -1,33 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Express Route Circuits}
   azure.azcollection.azure_rm_expressroute:
-    resource_group: ${2:# Name of the resource group to which the resource belongs}
-    name: ${3:# Unique name of the app service plan to create or update}
-    location: ${4:# Resource location}
-    service_provider_properties: ${5:# The service Provider properties}
-    sku: ${6:# The name of the SKU}
-    global_reach_enabled: ${7:# Flag denoting global reach status}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    allow_classic_operations: ${4:# Support for classic operations}
+    api_profile: ${5:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${6:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${7:# Controls the source of the credentials to use for authentication}
     authorizations: ${8:# The list of authorizations}
-    allow_classic_operations: ${9:# Support for classic operations}
-    state: ${10:# Assert the state of the express route}
-    ad_user: ${11:# Active Directory username}
-    password: ${12:# Active Directory user password}
-    profile: ${13:# Security profile found in ~/}
-    subscription_id: ${14:# Your Azure subscription Id}
-    client_id: ${15:# Azure client ID}
-    secret: ${16:# Azure client secret}
-    tenant: ${17:# Azure tenant ID}
-    cloud_environment: ${18:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${19:# Azure AD authority url}
-    cert_validation_mode: ${20:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${21:# Controls the source of the credentials to use for authentication}
-    api_profile: ${22:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${23:# Parent argument}
-    log_mode: ${24:# Parent argument}
-    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${27:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${28:# Use to control if tags field is canonical or just appends to existing tags}
+    cert_validation_mode: ${9:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${10:# Azure client ID}
+    cloud_environment: ${11:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    global_reach_enabled: ${12:# Flag denoting global reach status}
+    location: ${13:# Resource location}
+    log_mode: ${14:# Parent argument}
+    log_path: ${15:# Parent argument}
+    name: ${16:# Unique name of the app service plan to create or update}
+    password: ${17:# Active Directory user password}
+    profile: ${18:# Security profile found in ~/}
+    resource_group: ${19:# Name of the resource group to which the resource belongs}
+    secret: ${20:# Azure client secret}
+    service_provider_properties: ${21:# The service Provider properties}
+    sku: ${22:# The name of the SKU}
+    state: ${23:# Assert the state of the express route}
+    subscription_id: ${24:# Your Azure subscription Id}
+    tags: ${25:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${26:# Azure tenant ID}
+    thumbprint: ${27:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${28:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

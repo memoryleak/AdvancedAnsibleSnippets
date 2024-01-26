@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a resource of SMNTopic in Huaweicloud Cloud}
   community.general.hwc_smn_topic:
-    state: ${2:# Whether the given object should exist in Huaweicloud Cloud}
-    display_name: ${3:# Topic display name, which is presented as the name of the email sender in an email message}
-    name: ${4:# Name of the topic to be created}
+    display_name: ${2:# Topic display name, which is presented as the name of the email sender in an email message}
+    domain: ${3:# The name of the Domain to scope to (Identity v3)}
+    id: ${4:# The ID of resource to be managed}
     identity_endpoint: ${5:# The Identity authentication URL}
-    user: ${6:# The user name to login with (currently only user names are supported, and not user IDs)}
+    name: ${6:# Name of the topic to be created}
     password: ${7:# The password to login with}
-    domain: ${8:# The name of the Domain to scope to (Identity v3)}
-    project: ${9:# The name of the Tenant (Identity v2) or Project (Identity v3)}
-    region: ${10:# The region to which the project belongs}
-    id: ${11:# The id of resource to be managed}
+    project: ${8:# The name of the Tenant (Identity v2) or Project (Identity v3)}
+    region: ${9:# The region to which the project belongs}
+    state: ${10:# Whether the given object should exist in Huaweicloud Cloud}
+    user: ${11:# The user name to login with}
   tags:
     - community
     - general

@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Ensures the existence of a Windows domain}
+  microsoft.ad.domain:
+    create_dns_delegation: ${2:# Whether to create a DNS delegation that references the new DNS server that you install along with the domain controller}
+    database_path: ${3:# The path to a directory on a fixed disk of the Windows host where the domain database will be created}
+    dns_domain_name: ${4:# The DNS name of the domain which should exist and be reachable or reside on the target Windows host}
+    domain_mode: ${5:# Specifies the domain functional level of the first domain in the creation of a new forest}
+    domain_netbios_name: ${6:# The NetBIOS name for the root domain in the new forest}
+    forest_mode: ${7:# Specifies the forest functional level for the new forest}
+    install_dns: ${8:# Whether to install the DNS service when creating the domain controller}
+    log_path: ${9:# Specifies the fully qualified, non-UNC path to a directory on a fixed disk of the local computer where the log file for this operation is written}
+    reboot: ${10:# If C(true), this will reboot the host if a reboot was required to configure the domain}
+    safe_mode_password: ${11:# Safe mode password for the domain controller}
+    sysvol_path: ${12:# The path to a directory on a fixed disk of the Windows host where the Sysvol file will be created}
+  tags:
+    - microsoft
+    - ad
+    - domain]]></content>
+  <tabTrigger>microsoft.ad.domain</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Ensures the existence of a Windows domain</description>
+</snippet>

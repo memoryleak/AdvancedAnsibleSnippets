@@ -1,29 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Adds, removes, or updates a MySQL role}
   community.mysql.mysql_role:
-    name: ${2:# Name of the role to add or remove}
-    admin: ${3:# Supported by B(MariaDB)}
-    priv: ${4:# MySQL privileges string in the format: C(db}
-    append_privs: ${5:# Append the privileges defined by the I(priv) option to the existing ones for this role instead of overwriting them}
-    subtract_privs: ${6:# Revoke the privileges defined by the I(priv) option and keep other existing privileges}
-    members: ${7:# List of members of the role}
-    append_members: ${8:# Add members defined by the I(members) option to the existing ones for this role instead of overwriting them}
-    detach_members: ${9:# Detaches members defined by the I(members) option from the role instead of overwriting all the current members}
-    set_default_role_all: ${10:# Is not supported by MariaDB and is silently ignored when working with MariaDB}
-    state: ${11:# If C(present) and the role does not exist, creates the role}
-    check_implicit_admin: ${12:# Check if mysql allows login as root/nopassword before trying supplied credentials}
-    members_must_exist: ${13:# When C(yes), the module fails if any user in I(members) does not exist}
-    login_user: ${14:# The username used to authenticate with}
+    admin: ${2:# Supported by B(MariaDB)}
+    append_members: ${3:# Add members defined by the I(members) option to the existing ones for this role instead of overwriting them}
+    append_privs: ${4:# Append the privileges defined by the I(priv) option to the existing ones for this role instead of overwriting them}
+    ca_cert: ${5:# The path to a Certificate Authority (CA) certificate}
+    check_hostname: ${6:# Whether to validate the server host name when an SSL connection is required}
+    check_implicit_admin: ${7:# Check if mysql allows login as root/nopassword before trying supplied credentials}
+    client_cert: ${8:# The path to a client public key certificate}
+    client_key: ${9:# The path to the client private key}
+    column_case_sensitive: ${10:# The default is C(false)}
+    config_file: ${11:# Specify a config file from which user and password are to be read}
+    connect_timeout: ${12:# The connection timeout when connecting to the MySQL server}
+    detach_members: ${13:# Detaches members defined by the I(members) option from the role instead of overwriting all the current members}
+    login_host: ${14:# Host running the database}
     login_password: ${15:# The password used to authenticate with}
-    login_host: ${16:# Host running the database}
-    login_port: ${17:# Port of the MySQL server}
-    login_unix_socket: ${18:# The path to a Unix domain socket for local connections}
-    connect_timeout: ${19:# The connection timeout when connecting to the MySQL server}
-    config_file: ${20:# Specify a config file from which user and password are to be read}
-    ca_cert: ${21:# The path to a Certificate Authority (CA) certificate}
-    client_cert: ${22:# The path to a client public key certificate}
-    client_key: ${23:# The path to the client private key}
-    check_hostname: ${24:# Whether to validate the server host name when an SSL connection is required}
+    login_port: ${16:# Port of the MySQL server}
+    login_unix_socket: ${17:# The path to a Unix domain socket for local connections}
+    login_user: ${18:# The username used to authenticate with}
+    members: ${19:# List of members of the role}
+    members_must_exist: ${20:# When C(yes), the module fails if any user in I(members) does not exist}
+    name: ${21:# Name of the role to add or remove}
+    priv: ${22:# MySQL privileges string in the format: C(db}
+    set_default_role_all: ${23:# Is not supported by MariaDB and is silently ignored when working with MariaDB}
+    state: ${24:# If C(present) and the role does not exist, creates the role}
+    subtract_privs: ${25:# Revoke the privileges defined by the I(priv) option and keep other existing privileges}
   tags:
     - community
     - mysql

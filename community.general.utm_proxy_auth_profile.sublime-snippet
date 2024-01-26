@@ -1,39 +1,39 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, update or destroy reverse_proxy auth_profile entry in Sophos UTM}
   community.general.utm_proxy_auth_profile:
-    name: ${2:# The name of the object}
-    aaa: ${3:# List of references to utm_aaa objects (allowed users or groups)}
-    basic_prompt: ${4:# The message in the basic authentication prompt}
-    backend_mode: ${5:# Specifies if the backend server needs authentication ([Basic|None])}
-    backend_strip_basic_auth: ${6:# Should the login data be stripped when proxying the request to the backend host}
-    backend_user_prefix: ${7:# Prefix string to prepend to the username for backend authentication}
-    backend_user_suffix: ${8:# Suffix string to append to the username for backend authentication}
-    comment: ${9:# Optional comment string}
-    frontend_cookie: ${10:# Frontend cookie name}
-    frontend_cookie_secret: ${11:# Frontend cookie secret}
-    frontend_form: ${12:# Frontend authentication form name}
-    frontend_form_template: ${13:# Frontend authentication form template}
-    frontend_login: ${14:# Frontend login name}
-    frontend_logout: ${15:# Frontend logout name}
-    frontend_mode: ${16:# Frontend authentication mode (Form|Basic)}
-    frontend_realm: ${17:# Frontend authentication realm}
-    frontend_session_allow_persistency: ${18:# Allow session persistency}
-    frontend_session_lifetime: ${19:# session lifetime}
-    frontend_session_lifetime_limited: ${20:# Specifies if limitation of session lifetime is active}
-    frontend_session_lifetime_scope: ${21:# scope for frontend_session_lifetime (days|hours|minutes)}
-    frontend_session_timeout: ${22:# session timeout}
-    frontend_session_timeout_enabled: ${23:# Specifies if session timeout is active}
-    frontend_session_timeout_scope: ${24:# scope for frontend_session_timeout (days|hours|minutes)}
+    aaa: ${2:# List of references to utm_aaa objects (allowed users or groups)}
+    backend_mode: ${3:# Specifies if the backend server needs authentication ([Basic|None])}
+    backend_strip_basic_auth: ${4:# Should the login data be stripped when proxying the request to the backend host}
+    backend_user_prefix: ${5:# Prefix string to prepend to the username for backend authentication}
+    backend_user_suffix: ${6:# Suffix string to append to the username for backend authentication}
+    basic_prompt: ${7:# The message in the basic authentication prompt}
+    comment: ${8:# Optional comment string}
+    frontend_cookie: ${9:# Frontend cookie name}
+    frontend_cookie_secret: ${10:# Frontend cookie secret}
+    frontend_form: ${11:# Frontend authentication form name}
+    frontend_form_template: ${12:# Frontend authentication form template}
+    frontend_login: ${13:# Frontend login name}
+    frontend_logout: ${14:# Frontend logout name}
+    frontend_mode: ${15:# Frontend authentication mode (Form|Basic)}
+    frontend_realm: ${16:# Frontend authentication realm}
+    frontend_session_allow_persistency: ${17:# Allow session persistency}
+    frontend_session_lifetime: ${18:# session lifetime}
+    frontend_session_lifetime_limited: ${19:# Specifies if limitation of session lifetime is active}
+    frontend_session_lifetime_scope: ${20:# scope for frontend_session_lifetime (days|hours|minutes)}
+    frontend_session_timeout: ${21:# session timeout}
+    frontend_session_timeout_enabled: ${22:# Specifies if session timeout is active}
+    frontend_session_timeout_scope: ${23:# scope for frontend_session_timeout (days|hours|minutes)}
+    headers: ${24:# A dictionary of additional headers to be sent to POST and PUT requests}
     logout_delegation_urls: ${25:# List of logout URLs that logouts are delegated to}
     logout_mode: ${26:# Mode of logout (None|Delegation)}
-    redirect_to_requested_url: ${27:# Should a redirect to the requested URL be made}
-    headers: ${28:# A dictionary of additional headers to be sent to POST and PUT requests}
-    utm_host: ${29:# The REST Endpoint of the Sophos UTM}
-    utm_port: ${30:# The port of the REST interface}
-    utm_token: ${31:# The token used to identify at the REST-API}
+    name: ${27:# The name of the object}
+    redirect_to_requested_url: ${28:# Should a redirect to the requested URL be made}
+    state: ${29:# The desired state of the object}
+    utm_host: ${30:# The REST Endpoint of the Sophos UTM}
+    utm_port: ${31:# The port of the REST interface}
     utm_protocol: ${32:# The protocol of the REST Endpoint}
-    validate_certs: ${33:# Whether the REST interface's ssl certificate should be verified or not}
-    state: ${34:# The desired state of the object}
+    utm_token: ${33:# The token used to identify at the REST-API}
+    validate_certs: ${34:# Whether the REST interface's ssl certificate should be verified or not}
   tags:
     - community
     - general

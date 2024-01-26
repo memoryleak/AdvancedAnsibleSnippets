@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Lists S3 buckets in AWS}
+  amazon.aws.s3_bucket_info:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    bucket_facts: ${5:# Retrieve requested S3 bucket detailed information}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    name: ${8:# Name of bucket to query}
+    name_filter: ${9:# Limits buckets to only buckets who's name contain the string in I(name_filter)}
+    profile: ${10:# A named AWS profile to use for authentication}
+    region: ${11:# The AWS region to use}
+    secret_key: ${12:# AWS secret access key}
+    session_token: ${13:# AWS STS session token for use with temporary credentials}
+    transform_location: ${14:# S3 bucket location for default us-east-1 is normally reported as C(null)}
+    validate_certs: ${15:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+  tags:
+    - amazon
+    - aws
+    - s3_bucket_info]]></content>
+  <tabTrigger>amazon.aws.s3_bucket_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Lists S3 buckets in AWS</description>
+</snippet>

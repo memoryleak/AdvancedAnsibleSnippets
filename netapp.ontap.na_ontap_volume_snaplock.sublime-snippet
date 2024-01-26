@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP manage volume snaplock retention}
   netapp.ontap.na_ontap_volume_snaplock:
-    name: ${2:# The name of the volume to manage}
-    vserver: ${3:# Name of the vserver to use}
+    autocommit_period: ${2:# Specifies the autocommit-period for the snaplock volume}
+    cert_filepath: ${3:# path to SSL client cert file (}
     default_retention_period: ${4:# Specifies the default retention period that will be applied}
-    autocommit_period: ${5:# Specifies the autocommit-period for the snaplock volume}
-    is_volume_append_mode_enabled: ${6:# Specifies if the volume append mode must be enabled or disabled}
-    maximum_retention_period: ${7:# Specifies the allowed maximum retention period that will be applied}
-    minimum_retention_period: ${8:# Specifies the allowed minimum retention period that will be applied}
-    hostname: ${9:# The hostname or IP address of the ONTAP instance}
-    username: ${10:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${11:# Password for the specified user}
-    cert_filepath: ${12:# path to SSL client cert file (}
-    key_filepath: ${13:# path to SSL client key file}
-    https: ${14:# Enable and disable https}
-    validate_certs: ${15:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${16:# Override the default port (80 or 443) with this port}
-    ontapi: ${17:# The ontap api version to use}
-    use_rest: ${18:# This module only support ZAPI and will can not be swtich to REST}
-    feature_flags: ${19:# Enable or disable a new feature}
+    feature_flags: ${5:# Enable or disable a new feature}
+    hostname: ${6:# The hostname or IP address of the ONTAP instance}
+    http_port: ${7:# Override the default port (80 or 443) with this port}
+    https: ${8:# Enable and disable https}
+    is_volume_append_mode_enabled: ${9:# Specifies if the volume append mode must be enabled or disabled}
+    key_filepath: ${10:# path to SSL client key file}
+    maximum_retention_period: ${11:# Specifies the allowed maximum retention period that will be applied}
+    minimum_retention_period: ${12:# Specifies the allowed minimum retention period that will be applied}
+    name: ${13:# The name of the volume to manage}
+    ontapi: ${14:# The ontap api version to use}
+    password: ${15:# Password for the specified user}
+    use_rest: ${16:# This module only support ZAPI and will can not be swtich to REST}
+    username: ${17:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${19:# Name of the vserver to use}
   tags:
     - netapp
     - ontap

@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/delete a DNS domain in DigitalOcean}
   community.digitalocean.digital_ocean_domain:
-    state: ${2:# Indicate desired state of the target}
+    baseurl: ${2:# DigitalOcean API base url}
     id: ${3:# The droplet id you want to operate on}
-    name: ${4:# The name of the droplet - must be formatted by hostname rules, or the name of a SSH key, or the name of a domain}
-    ip: ${5:# An 'A' record for '@' ($ORIGIN) will be created with the value 'ip'}
-    ip6: ${6:# An 'AAAA' record for '@' ($ORIGIN) will be created with the value 'ip6'}
-    project_name: ${7:# Project to assign the resource to (project name, not UUID)}
-    baseurl: ${8:# DigitalOcean API base url}
-    oauth_token: ${9:# DigitalOcean OAuth token}
+    ip: ${4:# An 'A' record for '@' ($ORIGIN) will be created with the value 'ip'}
+    ip6: ${5:# An 'AAAA' record for '@' ($ORIGIN) will be created with the value 'ip6'}
+    name: ${6:# The name of the droplet - must be formatted by hostname rules, or the name of a SSH key, or the name of a domain}
+    oauth_token: ${7:# DigitalOcean OAuth token}
+    project_name: ${8:# Project to assign the resource to (project name, not UUID)}
+    state: ${9:# Indicate desired state of the target}
     timeout: ${10:# The timeout in seconds used for polling DigitalOcean's API}
     validate_certs: ${11:# If set to C(no), the SSL certificates will not be validated}
   tags:

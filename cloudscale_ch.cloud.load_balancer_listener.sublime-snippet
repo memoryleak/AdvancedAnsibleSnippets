@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages load balancer listeners on the cloudscale}
+  cloudscale_ch.cloud.load_balancer_listener:
+    allowed_cidrs: ${2:# Restrict the allowed source IPs for this listener}
+    api_timeout: ${3:# Timeout in seconds for calls to the cloudscale}
+    api_token: ${4:# cloudscale}
+    api_url: ${5:# cloudscale}
+    name: ${6:# Name of the load balancer listener}
+    pool: ${7:# The pool of the listener}
+    protocol: ${8:# The protocol used for receiving traffic}
+    protocol_port: ${9:# The port on which traffic is received}
+    state: ${10:# State of the load balancer listener}
+    tags: ${11:# Tags assosiated with the load balancer}
+    timeout_client_data_ms: ${12:# Client inactivity timeout in milliseconds}
+    timeout_member_connect_ms: ${13:# Pool member connection timeout in milliseconds}
+    timeout_member_data_ms: ${14:# Pool member inactivity timeout in milliseconds}
+    uuid: ${15:# UUID of the load balancer listener}
+  tags:
+    - cloudscale_ch
+    - cloud
+    - load_balancer_listener]]></content>
+  <tabTrigger>cloudscale_ch.cloud.load_balancer_listener</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages load balancer listeners on the cloudscale</description>
+</snippet>

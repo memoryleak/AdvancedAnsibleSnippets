@@ -2,10 +2,10 @@
   <content><![CDATA[- name: ${1:Manage Power State of Hosts}
   theforeman.foreman.host_power:
     name: ${2:# Name (FQDN) of the host}
-    state: ${3:# Desired power state}
+    password: ${3:# Password of the user accessing the Foreman server}
     server_url: ${4:# URL of the Foreman server}
-    username: ${5:# Username accessing the Foreman server}
-    password: ${6:# Password of the user accessing the Foreman server}
+    state: ${5:# Desired power state}
+    username: ${6:# Username accessing the Foreman server}
     validate_certs: ${7:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman

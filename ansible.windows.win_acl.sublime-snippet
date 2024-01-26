@@ -1,17 +1,17 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Set file/directory/registry permissions for a system user or group}
+  <content><![CDATA[- name: ${1:Set file/directory/registry/certificate permissions for a system user or group}
   ansible.windows.win_acl:
-    path: ${2:# The path to the file or directory}
-    user: ${3:# User or Group to add specified rights to act on src file/folder or registry key}
-    state: ${4:# Specify whether to add C(present) or remove C(absent) the specified access rule}
-    type: ${5:# Specify whether to allow or deny the rights specified}
+    follow: ${2:# Follow the symlinks and junctions to apply the ACLs to the target instead of the link}
+    inherit: ${3:# Inherit flags on the ACL rules}
+    path: ${4:# The path to the file or directory}
+    propagation: ${5:# Propagation flag on the ACL rules}
     rights: ${6:# The rights/permissions that are to be allowed/denied for the specified user or group for the item at C(path)}
-    inherit: ${7:# Inherit flags on the ACL rules}
-    propagation: ${8:# Propagation flag on the ACL rules}
-    follow: ${9:# Follow the symlinks and junctions to apply the ACLs to the target instead of the link}
+    state: ${7:# Specify whether to add C(present) or remove C(absent) the specified access rule}
+    type: ${8:# Specify whether to allow or deny the rights specified}
+    user: ${9:# User or Group to add specified rights to act on src file/folder or registry key}
   tags:
     - win_acl]]></content>
   <tabTrigger>ansible.windows.win_acl</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Set file/directory/registry permissions for a system user or group</description>
+  <description>Set file/directory/registry/certificate permissions for a system user or group</description>
 </snippet>

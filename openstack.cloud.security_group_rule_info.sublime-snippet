@@ -1,38 +1,37 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Querying security group rules}
+  <content><![CDATA[- name: ${1:Fetch OpenStack network (Neutron) security group rules}
   openstack.cloud.security_group_rule_info:
-    description: ${2:# Filter the list result by the human-readable description of the resource}
-    direction: ${3:# Filter the security group rule list result by the direction in which the security group rule is applied}
-    ethertype: ${4:# Filter the security group rule list result by the ethertype of network traffic}
-    port_range_min: ${5:# Starting port}
-    port_range_max: ${6:# Ending port}
-    project: ${7:# Unique name or ID of the project}
-    protocol: ${8:# Filter the security group rule list result by the IP protocol}
-    remote_group: ${9:# Filter the security group rule list result by the name or ID of the remote group that associates with this security group rule}
-    remote_ip_prefix: ${10:# Source IP address(es) in CIDR notation (exclusive with remote_group)}
-    revision_number: ${11:# Filter the list result by the revision number of the resource}
-    rule: ${12:# Filter the list result by the ID of the security group rule}
-    security_group: ${13:# Name or ID of the security group}
-    cloud: ${14:# Named cloud or cloud config to operate against}
-    auth: ${15:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${16:# Name of the auth plugin to use}
-    region_name: ${17:# Name of the region}
-    wait: ${18:# Should ansible wait until the requested resource is complete}
-    timeout: ${19:# How long should ansible wait for the requested resource}
-    api_timeout: ${20:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${21:# Whether or not SSL API requests should be verified}
-    ca_cert: ${22:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${23:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${24:# A path to a client key to use as part of the SSL transaction}
-    interface: ${25:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${26:# Ignored}
-    sdk_log_path: ${27:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${28:# Log level of the OpenStackSDK}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    description: ${9:# Filter the list result by the human-readable description of the resource}
+    direction: ${10:# Filter the security group rule list result by the direction in which the security group rule is applied}
+    ether_type: ${11:# Filter the security group rule list result by the ether_type of network traffic}
+    id: ${12:# Filter the list result by the ID of the security group rule}
+    interface: ${13:# Endpoint URL type to fetch from the service catalog}
+    port_range_max: ${14:# Ending port}
+    port_range_min: ${15:# Starting port}
+    project: ${16:# Unique name or ID of the project}
+    protocol: ${17:# Filter the security group rule list result by the IP protocol}
+    region_name: ${18:# Name of the region}
+    remote_group: ${19:# Filter the security group rule list result by the name or ID of the remote group that associates with this security group rule}
+    remote_ip_prefix: ${20:# Source IP address(es) in CIDR notation (exclusive with remote_group)}
+    revision_number: ${21:# Filter the list result by the revision number of the resource}
+    sdk_log_level: ${22:# Log level of the OpenStackSDK}
+    sdk_log_path: ${23:# Path to the logfile of the OpenStackSDK}
+    security_group: ${24:# Name or ID of the security group}
+    timeout: ${25:# How long should ansible wait for the requested resource}
+    validate_certs: ${26:# Whether or not SSL API requests should be verified}
+    wait: ${27:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud
     - security_group_rule_info]]></content>
   <tabTrigger>openstack.cloud.security_group_rule_info</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Querying security group rules</description>
+  <description>Fetch OpenStack network (Neutron) security group rules</description>
 </snippet>

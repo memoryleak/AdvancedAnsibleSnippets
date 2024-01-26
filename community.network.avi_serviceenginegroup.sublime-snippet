@@ -1,174 +1,174 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module for setup of ServiceEngineGroup Avi RESTful Object}
   community.network.avi_serviceenginegroup:
-    state: ${2:# The state that should be applied on the entity}
-    avi_api_update_method: ${3:# Default method for object update is HTTP PUT}
-    avi_api_patch_op: ${4:# Patch operation to use when using avi_api_update_method as patch}
-    accelerated_networking: ${5:# Enable accelerated networking option for azure se}
-    active_standby: ${6:# Service engines in active/standby mode for ha failover}
-    additional_config_memory: ${7:# Indicates the percent of config memory used for config updates}
-    advertise_backend_networks: ${8:# Advertise reach-ability of backend server networks via adc through bgp for default gateway feature}
-    aggressive_failure_detection: ${9:# Enable aggressive failover configuration for ha}
-    algo: ${10:# In compact placement, virtual services are placed on existing ses until max_vs_per_se limit is reached}
-    allow_burst: ${11:# Allow ses to be created using burst license}
-    app_cache_percent: ${12:# A percent value of total se memory reserved for application caching}
-    app_learning_memory_percent: ${13:# A percent value of total se memory reserved for application learning}
-    archive_shm_limit: ${14:# Amount of se memory in gb until which shared memory is collected in core archive}
-    async_ssl: ${15:# Ssl handshakes will be handled by dedicated ssl threads}
-    async_ssl_threads: ${16:# Number of async ssl threads per se_dp}
-    auto_rebalance: ${17:# If set, virtual services will be automatically migrated when load on an se is less than minimum or more than maximum thresholds}
-    auto_rebalance_capacity_per_se: ${18:# Capacities of se for auto rebalance for each criteria}
-    auto_rebalance_criteria: ${19:# Set of criteria for se auto rebalance}
-    auto_rebalance_interval: ${20:# Frequency of rebalance, if 'auto rebalance' is enabled}
-    auto_redistribute_active_standby_load: ${21:# Redistribution of virtual services from the takeover se to the replacement se can cause momentary traffic loss}
-    bgp_state_update_interval: ${22:# Bgp peer state update interval}
-    buffer_se: ${23:# Excess service engine capacity provisioned for ha failover}
-    cloud_ref: ${24:# It is a reference to an object of type cloud}
-    config_debugs_on_all_cores: ${25:# Enable config debugs on all cores of se}
-    connection_memory_percentage: ${26:# Percentage of memory for connection state}
-    cpu_reserve: ${27:# Boolean flag to set cpu_reserve}
-    cpu_socket_affinity: ${28:# Allocate all the cpu cores for the service engine virtual machines  on the same cpu socket}
-    custom_securitygroups_data: ${29:# Custom security groups to be associated with data vnics for se instances in openstack and aws clouds}
-    custom_securitygroups_mgmt: ${30:# Custom security groups to be associated with management vnic for se instances in openstack and aws clouds}
-    custom_tag: ${31:# Custom tag will be used to create the tags for se instance in aws}
-    data_network_id: ${32:# Subnet used to spin up the data nic for service engines, used only for azure cloud}
-    datascript_timeout: ${33:# Number of instructions before datascript times out}
-    dedicated_dispatcher_core: ${34:# Dedicate the core that handles packet receive/transmit from the network to just the dispatching function}
-    description: ${35:# User defined description for the object}
-    disable_avi_securitygroups: ${36:# By default, avi creates and manages security groups along with custom sg provided by user}
-    disable_csum_offloads: ${37:# Stop using tcp/udp and ip checksum offload features of nics}
-    disable_gro: ${38:# Disable generic receive offload (gro) in dpdk poll-mode driver packet receive path}
-    disable_se_memory_check: ${39:# If set, disable the config memory check done in service engine}
-    disable_tso: ${40:# Disable tcp segmentation offload (tso) in dpdk poll-mode driver packet transmit path}
-    disk_per_se: ${41:# Amount of disk space for each of the service engine virtual machines}
-    distribute_load_active_standby: ${42:# Use both the active and standby service engines for virtual service placement in the legacy active standby ha mode}
-    distribute_queues: ${43:# Distributes queue ownership among cores so multiple cores handle dispatcher duties}
-    enable_hsm_priming: ${44:# (this is a beta feature)}
-    enable_multi_lb: ${45:# Applicable only for azure cloud with basic sku lb}
-    enable_routing: ${46:# Enable routing for this serviceenginegroup }
-    enable_vip_on_all_interfaces: ${47:# Enable vip on all interfaces of se}
-    enable_vmac: ${48:# Use virtual mac address for interfaces on which floating interface ips are placed}
-    ephemeral_portrange_end: ${49:# End local ephemeral port number for outbound connections}
-    ephemeral_portrange_start: ${50:# Start local ephemeral port number for outbound connections}
-    extra_config_multiplier: ${51:# Multiplier for extra config to support large vs/pool config}
-    extra_shared_config_memory: ${52:# Extra config memory to support large geo db configuration}
-    floating_intf_ip: ${53:# If serviceenginegroup is configured for legacy 1+1 active standby ha mode, floating ip's will be advertised only by the active se in the pair}
-    floating_intf_ip_se_2: ${54:# If serviceenginegroup is configured for legacy 1+1 active standby ha mode, floating ip's will be advertised only by the active se in the pair}
-    flow_table_new_syn_max_entries: ${55:# Maximum number of flow table entries that have not completed tcp three-way handshake yet}
-    free_list_size: ${56:# Number of entries in the free list}
-    ha_mode: ${57:# High availability mode for all the virtual services using this service engine group}
-    hardwaresecuritymodulegroup_ref: ${58:# It is a reference to an object of type hardwaresecuritymodulegroup}
-    heap_minimum_config_memory: ${59:# Minimum required heap memory to apply any configuration}
-    hm_on_standby: ${60:# Enable active health monitoring from the standby se for all placed virtual services}
-    host_attribute_key: ${61:# Key of a (key, value) pair identifying a label for a set of nodes usually in container clouds}
-    host_attribute_value: ${62:# Value of a (key, value) pair identifying a label for a set of nodes usually in container clouds}
-    host_gateway_monitor: ${63:# Enable the host gateway monitor when service engine is deployed as docker container}
-    hypervisor: ${64:# Override default hypervisor}
-    ignore_rtt_threshold: ${65:# Ignore rtt samples if it is above threshold}
-    ingress_access_data: ${66:# Program se security group ingress rules to allow vip data access from remote cidr type}
-    ingress_access_mgmt: ${67:# Program se security group ingress rules to allow ssh/icmp management access from remote cidr type}
-    instance_flavor: ${68:# Instance/flavor name for se instance}
-    iptables: ${69:# Iptables rules}
-    least_load_core_selection: ${70:# Select core with least load for new flow}
-    license_tier: ${71:# Specifies the license tier which would be used}
-    license_type: ${72:# If no license type is specified then default license enforcement for the cloud type is chosen}
-    log_disksz: ${73:# Maximum disk capacity (in mb) to be allocated to an se}
-    max_cpu_usage: ${74:# When cpu usage on an se exceeds this threshold, virtual services hosted on this se may be rebalanced to other ses to reduce load}
-    max_memory_per_mempool: ${75:# Max bytes that can be allocated in a single mempool}
-    max_public_ips_per_lb: ${76:# Applicable to azure platform only}
-    max_rules_per_lb: ${77:# Applicable to azure platform only}
-    max_scaleout_per_vs: ${78:# Maximum number of active service engines for the virtual service}
-    max_se: ${79:# Maximum number of services engines in this group}
-    max_vs_per_se: ${80:# Maximum number of virtual services that can be placed on a single service engine}
-    mem_reserve: ${81:# Boolean flag to set mem_reserve}
-    memory_for_config_update: ${82:# Indicates the percent of memory reserved for config updates}
-    memory_per_se: ${83:# Amount of memory for each of the service engine virtual machines}
-    mgmt_network_ref: ${84:# Management network to use for avi service engines}
-    mgmt_subnet: ${85:# Management subnet to use for avi service engines}
-    min_cpu_usage: ${86:# When cpu usage on an se falls below the minimum threshold, virtual services hosted on the se may be consolidated onto other underutilized ses}
-    min_scaleout_per_vs: ${87:# Minimum number of active service engines for the virtual service}
-    min_se: ${88:# Minimum number of services engines in this group (relevant for se autorebalance only)}
-    minimum_connection_memory: ${89:# Indicates the percent of memory reserved for connections}
-    minimum_required_config_memory: ${90:# Required available config memory to apply any configuration}
-    n_log_streaming_threads: ${91:# Number of threads to use for log streaming}
-    name: ${92:# Name of the object}
-    non_significant_log_throttle: ${93:# This setting limits the number of non-significant logs generated per second per core on this se}
-    num_dispatcher_cores: ${94:# Number of dispatcher cores (0,1,2,4,8 or 16)}
-    num_flow_cores_sum_changes_to_ignore: ${95:# Number of changes in num flow cores sum to ignore}
-    openstack_availability_zone: ${96:# Field deprecated in 17}
-    openstack_availability_zones: ${97:# Field introduced in 17}
-    openstack_mgmt_network_name: ${98:# Avi management network name}
-    openstack_mgmt_network_uuid: ${99:# Management network uuid}
-    os_reserved_memory: ${100:# Amount of extra memory to be reserved for use by the operating system on a service engine}
-    per_app: ${101:# Per-app se mode is designed for deploying dedicated load balancers per app (vs)}
-    placement_mode: ${102:# If placement mode is 'auto', virtual services are automatically placed on service engines}
-    realtime_se_metrics: ${103:# Enable or disable real time se metrics}
-    reboot_on_stop: ${104:# Reboot the system if the se is stopped}
-    se_bandwidth_type: ${105:# Select the se bandwidth for the bandwidth license}
-    se_deprovision_delay: ${106:# Duration to preserve unused service engine virtual machines before deleting them}
-    se_dos_profile: ${107:# Dosthresholdprofile settings for serviceenginegroup}
-    se_dpdk_pmd: ${108:# Determines if dpdk pool mode driver should be used or not   0  automatically determine based on hypervisor/nic type 1  unconditionally use dpdk}
-    se_flow_probe_retries: ${109:# Flow probe retry count if no replies are received}
-    se_flow_probe_timer: ${110:# Timeout in milliseconds for flow probe entries}
-    se_ipc_udp_port: ${111:# Udp port for se_dp ipc in docker bridge mode}
-    se_name_prefix: ${112:# Prefix to use for virtual machine name of service engines}
-    se_pcap_lookahead: ${113:# Enables lookahead mode of packet receive in pcap mode}
-    se_pcap_reinit_frequency: ${114:# Frequency in seconds at which periodically a pcap reinit check is triggered}
-    se_pcap_reinit_threshold: ${115:# Threshold for input packet receive errors in pcap mode exceeding which a pcap reinit is triggered}
-    se_probe_port: ${116:# Tcp port on se where echo service will be run}
-    se_remote_punt_udp_port: ${117:# Udp port for punted packets in docker bridge mode}
-    se_routing: ${118:# Enable routing via service engine datapath}
-    se_sb_dedicated_core: ${119:# Sideband traffic will be handled by a dedicated core}
-    se_sb_threads: ${120:# Number of sideband threads per se}
-    se_thread_multiplier: ${121:# Multiplier for se threads based on vcpu}
-    se_tracert_port_range: ${122:# Traceroute port range}
-    se_tunnel_mode: ${123:# Determines if dsr from secondary se is active or not  0  automatically determine based on hypervisor type}
-    se_tunnel_udp_port: ${124:# Udp port for tunneled packets from secondary to primary se in docker bridge mode}
-    se_udp_encap_ipc: ${125:# Determines if se-se ipc messages are encapsulated in a udp header  0  automatically determine based on hypervisor type}
-    se_use_dpdk: ${126:# Determines if dpdk library should be used or not   0  automatically determine based on hypervisor type 1  use dpdk if pcap is not enabled 2}
-    se_vs_hb_max_pkts_in_batch: ${127:# Maximum number of aggregated vs heartbeat packets to send in a batch}
-    se_vs_hb_max_vs_in_pkt: ${128:# Maximum number of virtualservices for which heartbeat messages are aggregated in one packet}
-    self_se_election: ${129:# Enable ses to elect a primary amongst themselves in the absence of a connectivity to controller}
-    service_ip6_subnets: ${130:# Ipv6 subnets assigned to the se group}
-    service_ip_subnets: ${131:# Subnets assigned to the se group}
-    shm_minimum_config_memory: ${132:# Minimum required shared memory to apply any configuration}
-    significant_log_throttle: ${133:# This setting limits the number of significant logs generated per second per core on this se}
-    ssl_preprocess_sni_hostname: ${134:# (beta) preprocess ssl client hello for sni hostname extension}
-    tenant_ref: ${135:# It is a reference to an object of type tenant}
-    udf_log_throttle: ${136:# This setting limits the number of udf logs generated per second per core on this se}
-    url: ${137:# Avi controller URL of the object}
-    use_standard_alb: ${138:# Use standard sku azure load balancer}
-    uuid: ${139:# Unique object identifier of the object}
-    vcenter_clusters: ${140:# Vcenterclusters settings for serviceenginegroup}
-    vcenter_datastore_mode: ${141:# Enum options - vcenter_datastore_any, vcenter_datastore_local, vcenter_datastore_shared}
-    vcenter_datastores: ${142:# List of vcenterdatastore}
-    vcenter_datastores_include: ${143:# Boolean flag to set vcenter_datastores_include}
-    vcenter_folder: ${144:# Folder to place all the service engine virtual machines in vcenter}
-    vcenter_hosts: ${145:# Vcenterhosts settings for serviceenginegroup}
-    vcpus_per_se: ${146:# Number of vcpus for each of the service engine virtual machines}
-    vip_asg: ${147:# When vip_asg is set, vip configuration will be managed by avi}
-    vs_host_redundancy: ${148:# Ensure primary and secondary service engines are deployed on different physical hosts}
-    vs_scalein_timeout: ${149:# Time to wait for the scaled in se to drain existing flows before marking the scalein done}
-    vs_scalein_timeout_for_upgrade: ${150:# During se upgrade, time to wait for the scaled-in se to drain existing flows before marking the scalein done}
-    vs_scaleout_timeout: ${151:# Time to wait for the scaled out se to become ready before marking the scaleout done}
-    vs_se_scaleout_additional_wait_time: ${152:# Wait time for sending scaleout ready notification after virtual service is marked up}
-    vs_se_scaleout_ready_timeout: ${153:# Timeout in seconds for service engine to sendscaleout ready notification of a virtual service}
-    vs_switchover_timeout: ${154:# During se upgrade in a legacy active/standby segroup, time to wait for the new primary se to accept flows before marking the switchover done}
-    vss_placement: ${155:# Parameters to place virtual services on only a subset of the cores of an se}
-    vss_placement_enabled: ${156:# If set, virtual services will be placed on only a subset of the cores of an se}
-    waf_learning_interval: ${157:# Frequency with which se publishes waf learning}
-    waf_learning_memory: ${158:# Amount of memory reserved on se for waf learning}
-    waf_mempool: ${159:# Enable memory pool for waf}
-    waf_mempool_size: ${160:# Memory pool size used for waf}
-    controller: ${161:# IP address or hostname of the controller}
-    username: ${162:# Username used for accessing Avi controller}
-    password: ${163:# Password of Avi user in Avi controller}
-    tenant: ${164:# Name of tenant used for all Avi API calls and context of object}
-    tenant_uuid: ${165:# UUID of tenant used for all Avi API calls and context of object}
-    api_version: ${166:# Avi API version of to use for Avi API and objects}
-    avi_credentials: ${167:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
-    api_context: ${168:# Avi API context that includes current session ID and CSRF Token}
-    avi_disable_session_cache_as_fact: ${169:# It disables avi session information to be cached as a fact}
+    accelerated_networking: ${2:# Enable accelerated networking option for azure se}
+    active_standby: ${3:# Service engines in active/standby mode for ha failover}
+    additional_config_memory: ${4:# Indicates the percent of config memory used for config updates}
+    advertise_backend_networks: ${5:# Advertise reach-ability of backend server networks via adc through bgp for default gateway feature}
+    aggressive_failure_detection: ${6:# Enable aggressive failover configuration for ha}
+    algo: ${7:# In compact placement, virtual services are placed on existing ses until max_vs_per_se limit is reached}
+    allow_burst: ${8:# Allow ses to be created using burst license}
+    api_context: ${9:# Avi API context that includes current session ID and CSRF Token}
+    api_version: ${10:# Avi API version of to use for Avi API and objects}
+    app_cache_percent: ${11:# A percent value of total se memory reserved for application caching}
+    app_learning_memory_percent: ${12:# A percent value of total se memory reserved for application learning}
+    archive_shm_limit: ${13:# Amount of se memory in gb until which shared memory is collected in core archive}
+    async_ssl: ${14:# Ssl handshakes will be handled by dedicated ssl threads}
+    async_ssl_threads: ${15:# Number of async ssl threads per se_dp}
+    auto_rebalance: ${16:# If set, virtual services will be automatically migrated when load on an se is less than minimum or more than maximum thresholds}
+    auto_rebalance_capacity_per_se: ${17:# Capacities of se for auto rebalance for each criteria}
+    auto_rebalance_criteria: ${18:# Set of criteria for se auto rebalance}
+    auto_rebalance_interval: ${19:# Frequency of rebalance, if 'auto rebalance' is enabled}
+    auto_redistribute_active_standby_load: ${20:# Redistribution of virtual services from the takeover se to the replacement se can cause momentary traffic loss}
+    avi_api_patch_op: ${21:# Patch operation to use when using avi_api_update_method as patch}
+    avi_api_update_method: ${22:# Default method for object update is HTTP PUT}
+    avi_credentials: ${23:# Avi Credentials dictionary which can be used in lieu of enumerating Avi Controller login details}
+    avi_disable_session_cache_as_fact: ${24:# It disables avi session information to be cached as a fact}
+    bgp_state_update_interval: ${25:# Bgp peer state update interval}
+    buffer_se: ${26:# Excess service engine capacity provisioned for ha failover}
+    cloud_ref: ${27:# It is a reference to an object of type cloud}
+    config_debugs_on_all_cores: ${28:# Enable config debugs on all cores of se}
+    connection_memory_percentage: ${29:# Percentage of memory for connection state}
+    controller: ${30:# IP address or hostname of the controller}
+    cpu_reserve: ${31:# Boolean flag to set cpu_reserve}
+    cpu_socket_affinity: ${32:# Allocate all the cpu cores for the service engine virtual machines  on the same cpu socket}
+    custom_securitygroups_data: ${33:# Custom security groups to be associated with data vnics for se instances in openstack and aws clouds}
+    custom_securitygroups_mgmt: ${34:# Custom security groups to be associated with management vnic for se instances in openstack and aws clouds}
+    custom_tag: ${35:# Custom tag will be used to create the tags for se instance in aws}
+    data_network_id: ${36:# Subnet used to spin up the data nic for service engines, used only for azure cloud}
+    datascript_timeout: ${37:# Number of instructions before datascript times out}
+    dedicated_dispatcher_core: ${38:# Dedicate the core that handles packet receive/transmit from the network to just the dispatching function}
+    description: ${39:# User defined description for the object}
+    disable_avi_securitygroups: ${40:# By default, avi creates and manages security groups along with custom sg provided by user}
+    disable_csum_offloads: ${41:# Stop using tcp/udp and ip checksum offload features of nics}
+    disable_gro: ${42:# Disable generic receive offload (gro) in dpdk poll-mode driver packet receive path}
+    disable_se_memory_check: ${43:# If set, disable the config memory check done in service engine}
+    disable_tso: ${44:# Disable tcp segmentation offload (tso) in dpdk poll-mode driver packet transmit path}
+    disk_per_se: ${45:# Amount of disk space for each of the service engine virtual machines}
+    distribute_load_active_standby: ${46:# Use both the active and standby service engines for virtual service placement in the legacy active standby ha mode}
+    distribute_queues: ${47:# Distributes queue ownership among cores so multiple cores handle dispatcher duties}
+    enable_hsm_priming: ${48:# (this is a beta feature)}
+    enable_multi_lb: ${49:# Applicable only for azure cloud with basic sku lb}
+    enable_routing: ${50:# Enable routing for this serviceenginegroup}
+    enable_vip_on_all_interfaces: ${51:# Enable vip on all interfaces of se}
+    enable_vmac: ${52:# Use virtual mac address for interfaces on which floating interface ips are placed}
+    ephemeral_portrange_end: ${53:# End local ephemeral port number for outbound connections}
+    ephemeral_portrange_start: ${54:# Start local ephemeral port number for outbound connections}
+    extra_config_multiplier: ${55:# Multiplier for extra config to support large vs/pool config}
+    extra_shared_config_memory: ${56:# Extra config memory to support large geo db configuration}
+    floating_intf_ip: ${57:# If serviceenginegroup is configured for legacy 1+1 active standby ha mode, floating ip's will be advertised only by the active se in the pair}
+    floating_intf_ip_se_2: ${58:# If serviceenginegroup is configured for legacy 1+1 active standby ha mode, floating ip's will be advertised only by the active se in the pair}
+    flow_table_new_syn_max_entries: ${59:# Maximum number of flow table entries that have not completed tcp three-way handshake yet}
+    free_list_size: ${60:# Number of entries in the free list}
+    ha_mode: ${61:# High availability mode for all the virtual services using this service engine group}
+    hardwaresecuritymodulegroup_ref: ${62:# It is a reference to an object of type hardwaresecuritymodulegroup}
+    heap_minimum_config_memory: ${63:# Minimum required heap memory to apply any configuration}
+    hm_on_standby: ${64:# Enable active health monitoring from the standby se for all placed virtual services}
+    host_attribute_key: ${65:# Key of a (key, value) pair identifying a label for a set of nodes usually in container clouds}
+    host_attribute_value: ${66:# Value of a (key, value) pair identifying a label for a set of nodes usually in container clouds}
+    host_gateway_monitor: ${67:# Enable the host gateway monitor when service engine is deployed as docker container}
+    hypervisor: ${68:# Override default hypervisor}
+    ignore_rtt_threshold: ${69:# Ignore rtt samples if it is above threshold}
+    ingress_access_data: ${70:# Program se security group ingress rules to allow vip data access from remote cidr type}
+    ingress_access_mgmt: ${71:# Program se security group ingress rules to allow ssh/icmp management access from remote cidr type}
+    instance_flavor: ${72:# Instance/flavor name for se instance}
+    iptables: ${73:# Iptables rules}
+    least_load_core_selection: ${74:# Select core with least load for new flow}
+    license_tier: ${75:# Specifies the license tier which would be used}
+    license_type: ${76:# If no license type is specified then default license enforcement for the cloud type is chosen}
+    log_disksz: ${77:# Maximum disk capacity (in mb) to be allocated to an se}
+    max_cpu_usage: ${78:# When cpu usage on an se exceeds this threshold, virtual services hosted on this se may be rebalanced to other ses to reduce load}
+    max_memory_per_mempool: ${79:# Max bytes that can be allocated in a single mempool}
+    max_public_ips_per_lb: ${80:# Applicable to azure platform only}
+    max_rules_per_lb: ${81:# Applicable to azure platform only}
+    max_scaleout_per_vs: ${82:# Maximum number of active service engines for the virtual service}
+    max_se: ${83:# Maximum number of services engines in this group}
+    max_vs_per_se: ${84:# Maximum number of virtual services that can be placed on a single service engine}
+    mem_reserve: ${85:# Boolean flag to set mem_reserve}
+    memory_for_config_update: ${86:# Indicates the percent of memory reserved for config updates}
+    memory_per_se: ${87:# Amount of memory for each of the service engine virtual machines}
+    mgmt_network_ref: ${88:# Management network to use for avi service engines}
+    mgmt_subnet: ${89:# Management subnet to use for avi service engines}
+    min_cpu_usage: ${90:# When cpu usage on an se falls below the minimum threshold, virtual services hosted on the se may be consolidated onto other underutilized ses}
+    min_scaleout_per_vs: ${91:# Minimum number of active service engines for the virtual service}
+    min_se: ${92:# Minimum number of services engines in this group (relevant for se autorebalance only)}
+    minimum_connection_memory: ${93:# Indicates the percent of memory reserved for connections}
+    minimum_required_config_memory: ${94:# Required available config memory to apply any configuration}
+    n_log_streaming_threads: ${95:# Number of threads to use for log streaming}
+    name: ${96:# Name of the object}
+    non_significant_log_throttle: ${97:# This setting limits the number of non-significant logs generated per second per core on this se}
+    num_dispatcher_cores: ${98:# Number of dispatcher cores (0,1,2,4,8 or 16)}
+    num_flow_cores_sum_changes_to_ignore: ${99:# Number of changes in num flow cores sum to ignore}
+    openstack_availability_zone: ${100:# Field deprecated in 17}
+    openstack_availability_zones: ${101:# Field introduced in 17}
+    openstack_mgmt_network_name: ${102:# Avi management network name}
+    openstack_mgmt_network_uuid: ${103:# Management network uuid}
+    os_reserved_memory: ${104:# Amount of extra memory to be reserved for use by the operating system on a service engine}
+    password: ${105:# Password of Avi user in Avi controller}
+    per_app: ${106:# Per-app se mode is designed for deploying dedicated load balancers per app (vs)}
+    placement_mode: ${107:# If placement mode is 'auto', virtual services are automatically placed on service engines}
+    realtime_se_metrics: ${108:# Enable or disable real time se metrics}
+    reboot_on_stop: ${109:# Reboot the system if the se is stopped}
+    se_bandwidth_type: ${110:# Select the se bandwidth for the bandwidth license}
+    se_deprovision_delay: ${111:# Duration to preserve unused service engine virtual machines before deleting them}
+    se_dos_profile: ${112:# Dosthresholdprofile settings for serviceenginegroup}
+    se_dpdk_pmd: ${113:# Determines if dpdk pool mode driver should be used or not   0  automatically determine based on hypervisor/nic type 1  unconditionally use dpdk}
+    se_flow_probe_retries: ${114:# Flow probe retry count if no replies are received}
+    se_flow_probe_timer: ${115:# Timeout in milliseconds for flow probe entries}
+    se_ipc_udp_port: ${116:# Udp port for se_dp ipc in docker bridge mode}
+    se_name_prefix: ${117:# Prefix to use for virtual machine name of service engines}
+    se_pcap_lookahead: ${118:# Enables lookahead mode of packet receive in pcap mode}
+    se_pcap_reinit_frequency: ${119:# Frequency in seconds at which periodically a pcap reinit check is triggered}
+    se_pcap_reinit_threshold: ${120:# Threshold for input packet receive errors in pcap mode exceeding which a pcap reinit is triggered}
+    se_probe_port: ${121:# Tcp port on se where echo service will be run}
+    se_remote_punt_udp_port: ${122:# Udp port for punted packets in docker bridge mode}
+    se_routing: ${123:# Enable routing via service engine datapath}
+    se_sb_dedicated_core: ${124:# Sideband traffic will be handled by a dedicated core}
+    se_sb_threads: ${125:# Number of sideband threads per se}
+    se_thread_multiplier: ${126:# Multiplier for se threads based on vcpu}
+    se_tracert_port_range: ${127:# Traceroute port range}
+    se_tunnel_mode: ${128:# Determines if dsr from secondary se is active or not  0  automatically determine based on hypervisor type}
+    se_tunnel_udp_port: ${129:# Udp port for tunneled packets from secondary to primary se in docker bridge mode}
+    se_udp_encap_ipc: ${130:# Determines if se-se ipc messages are encapsulated in a udp header  0  automatically determine based on hypervisor type}
+    se_use_dpdk: ${131:# Determines if dpdk library should be used or not   0  automatically determine based on hypervisor type 1  use dpdk if pcap is not enabled 2}
+    se_vs_hb_max_pkts_in_batch: ${132:# Maximum number of aggregated vs heartbeat packets to send in a batch}
+    se_vs_hb_max_vs_in_pkt: ${133:# Maximum number of virtualservices for which heartbeat messages are aggregated in one packet}
+    self_se_election: ${134:# Enable ses to elect a primary amongst themselves in the absence of a connectivity to controller}
+    service_ip6_subnets: ${135:# Ipv6 subnets assigned to the se group}
+    service_ip_subnets: ${136:# Subnets assigned to the se group}
+    shm_minimum_config_memory: ${137:# Minimum required shared memory to apply any configuration}
+    significant_log_throttle: ${138:# This setting limits the number of significant logs generated per second per core on this se}
+    ssl_preprocess_sni_hostname: ${139:# (beta) preprocess ssl client hello for sni hostname extension}
+    state: ${140:# The state that should be applied on the entity}
+    tenant: ${141:# Name of tenant used for all Avi API calls and context of object}
+    tenant_ref: ${142:# It is a reference to an object of type tenant}
+    tenant_uuid: ${143:# UUID of tenant used for all Avi API calls and context of object}
+    udf_log_throttle: ${144:# This setting limits the number of udf logs generated per second per core on this se}
+    url: ${145:# Avi controller URL of the object}
+    use_standard_alb: ${146:# Use standard sku azure load balancer}
+    username: ${147:# Username used for accessing Avi controller}
+    uuid: ${148:# Unique object identifier of the object}
+    vcenter_clusters: ${149:# Vcenterclusters settings for serviceenginegroup}
+    vcenter_datastore_mode: ${150:# Enum options - vcenter_datastore_any, vcenter_datastore_local, vcenter_datastore_shared}
+    vcenter_datastores: ${151:# List of vcenterdatastore}
+    vcenter_datastores_include: ${152:# Boolean flag to set vcenter_datastores_include}
+    vcenter_folder: ${153:# Folder to place all the service engine virtual machines in vcenter}
+    vcenter_hosts: ${154:# Vcenterhosts settings for serviceenginegroup}
+    vcpus_per_se: ${155:# Number of vcpus for each of the service engine virtual machines}
+    vip_asg: ${156:# When vip_asg is set, vip configuration will be managed by avi}
+    vs_host_redundancy: ${157:# Ensure primary and secondary service engines are deployed on different physical hosts}
+    vs_scalein_timeout: ${158:# Time to wait for the scaled in se to drain existing flows before marking the scalein done}
+    vs_scalein_timeout_for_upgrade: ${159:# During se upgrade, time to wait for the scaled-in se to drain existing flows before marking the scalein done}
+    vs_scaleout_timeout: ${160:# Time to wait for the scaled out se to become ready before marking the scaleout done}
+    vs_se_scaleout_additional_wait_time: ${161:# Wait time for sending scaleout ready notification after virtual service is marked up}
+    vs_se_scaleout_ready_timeout: ${162:# Timeout in seconds for service engine to sendscaleout ready notification of a virtual service}
+    vs_switchover_timeout: ${163:# During se upgrade in a legacy active/standby segroup, time to wait for the new primary se to accept flows before marking the switchover done}
+    vss_placement: ${164:# Parameters to place virtual services on only a subset of the cores of an se}
+    vss_placement_enabled: ${165:# If set, virtual services will be placed on only a subset of the cores of an se}
+    waf_learning_interval: ${166:# Frequency with which se publishes waf learning}
+    waf_learning_memory: ${167:# Amount of memory reserved on se for waf learning}
+    waf_mempool: ${168:# Enable memory pool for waf}
+    waf_mempool_size: ${169:# Memory pool size used for waf}
   tags:
     - community
     - network

@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Trigger a graceful removal or insertion (GIR) of the switch}
   cisco.nxos.nxos_gir:
-    system_mode_maintenance: ${2:# When C(system_mode_maintenance=true) it puts all enabled protocols in maintenance mode (using the isolate command)}
-    system_mode_maintenance_dont_generate_profile: ${3:# When C(system_mode_maintenance_dont_generate_profile=true) it prevents the dynamic searching of enabled protocols and executes commands configured in a maintenance-mode profile}
-    system_mode_maintenance_timeout: ${4:# Keeps the switch in maintenance mode for a specified number of minutes}
-    system_mode_maintenance_shutdown: ${5:# Shuts down all protocols, vPC domains, and interfaces except the management interface (using the shutdown command)}
-    system_mode_maintenance_on_reload_reset_reason: ${6:# Boots the switch into maintenance mode automatically in the event of a specified system crash}
-    state: ${7:# Specify desired state of the resource}
+    state: ${2:# Specify desired state of the resource}
+    system_mode_maintenance: ${3:# When C(system_mode_maintenance=true) it puts all enabled protocols in maintenance mode (using the isolate command)}
+    system_mode_maintenance_dont_generate_profile: ${4:# When C(system_mode_maintenance_dont_generate_profile=true) it prevents the dynamic searching of enabled protocols and executes commands configured in a maintenance-mode profile}
+    system_mode_maintenance_on_reload_reset_reason: ${5:# Boots the switch into maintenance mode automatically in the event of a specified system crash}
+    system_mode_maintenance_shutdown: ${6:# Shuts down all protocols, vPC domains, and interfaces except the management interface (using the shutdown command)}
+    system_mode_maintenance_timeout: ${7:# Keeps the switch in maintenance mode for a specified number of minutes}
   tags:
     - cisco
     - nxos

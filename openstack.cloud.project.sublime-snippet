@@ -1,32 +1,31 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage OpenStack Projects}
+  <content><![CDATA[- name: ${1:Manage OpenStack Identity (Keystone) projects}
   openstack.cloud.project:
-    name: ${2:# Name for the project}
-    description: ${3:# Description for the project}
-    domain_id: ${4:# Domain id to create the project in if the cloud supports domains}
-    enabled: ${5:# Is the project enabled}
-    properties: ${6:# Additional properties to be associated with this project}
-    state: ${7:# Should the resource be present or absent}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
     cloud: ${8:# Named cloud or cloud config to operate against}
-    auth: ${9:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${10:# Name of the auth plugin to use}
-    region_name: ${11:# Name of the region}
-    wait: ${12:# Should ansible wait until the requested resource is complete}
-    timeout: ${13:# How long should ansible wait for the requested resource}
-    api_timeout: ${14:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${15:# Whether or not SSL API requests should be verified}
-    ca_cert: ${16:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${17:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${18:# A path to a client key to use as part of the SSL transaction}
-    interface: ${19:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${20:# Ignored}
-    sdk_log_path: ${21:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${22:# Log level of the OpenStackSDK}
+    description: ${9:# Description for the project}
+    domain: ${10:# Domain name or id to create the project in if the cloud supports domains}
+    extra_specs: ${11:# Additional properties to be associated with this project}
+    interface: ${12:# Endpoint URL type to fetch from the service catalog}
+    is_enabled: ${13:# Whether this project is enabled or not}
+    name: ${14:# Name for the project}
+    region_name: ${15:# Name of the region}
+    sdk_log_level: ${16:# Log level of the OpenStackSDK}
+    sdk_log_path: ${17:# Path to the logfile of the OpenStackSDK}
+    state: ${18:# Should the resource be present or absent}
+    timeout: ${19:# How long should ansible wait for the requested resource}
+    validate_certs: ${20:# Whether or not SSL API requests should be verified}
+    wait: ${21:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud
     - project]]></content>
   <tabTrigger>openstack.cloud.project</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage OpenStack Projects</description>
+  <description>Manage OpenStack Identity (Keystone) projects</description>
 </snippet>

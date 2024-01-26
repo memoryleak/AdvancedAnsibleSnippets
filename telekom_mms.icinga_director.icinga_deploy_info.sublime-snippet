@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get deployment information through the director API}
+  telekom_mms.icinga_director.icinga_deploy_info:
+    activities: ${2:# A list of checksums of activities to query information for}
+    client_cert: ${3:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${4:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    configs: ${5:# A list of checksums of configs to query information for}
+    force: ${6:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${7:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    http_agent: ${8:# Header to identify as, generally appears in web server logs}
+    url: ${9:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    url_password: ${10:# The password for use in HTTP basic authentication}
+    url_username: ${11:# The username for use in HTTP basic authentication}
+    use_gssapi: ${12:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${13:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${14:# If V(no), SSL certificates will not be validated}
+  tags:
+    - telekom_mms
+    - icinga_director
+    - icinga_deploy_info]]></content>
+  <tabTrigger>telekom_mms.icinga_director.icinga_deploy_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get deployment information through the director API</description>
+</snippet>

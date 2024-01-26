@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP manage broadcast domains}
   netapp.ontap.na_ontap_broadcast_domain:
-    state: ${2:# Whether the specified broadcast domain should exist or not}
-    name: ${3:# Specify the broadcast domain name}
-    from_name: ${4:# Specify the broadcast domain name to be split into new broadcast domain}
-    mtu: ${5:# Specify the required mtu for the broadcast domain}
-    ipspace: ${6:# Specify the required ipspace for the broadcast domain}
-    from_ipspace: ${7:# if used with C(from_name), it will try to find broadcast domain C(from_name) in C(from_ipspace), split action either rename broadcast_domain and ipspace or create a new broadcast domain}
-    ports: ${8:# Specify the ports associated with this broadcast domain}
-    hostname: ${9:# The hostname or IP address of the ONTAP instance}
-    username: ${10:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${11:# Password for the specified user}
-    cert_filepath: ${12:# path to SSL client cert file (}
-    key_filepath: ${13:# path to SSL client key file}
-    https: ${14:# Enable and disable https}
-    validate_certs: ${15:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${16:# Override the default port (80 or 443) with this port}
-    ontapi: ${17:# The ontap api version to use}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    feature_flags: ${3:# Enable or disable a new feature}
+    force_ontap_version: ${4:# Override the cluster ONTAP version when using REST}
+    from_ipspace: ${5:# if used with C(from_name), it will try to find broadcast domain C(from_name) in C(from_ipspace), split action either rename broadcast_domain and ipspace or create a new broadcast domain}
+    from_name: ${6:# Specify the broadcast domain name to be split into new broadcast domain}
+    hostname: ${7:# The hostname or IP address of the ONTAP instance}
+    http_port: ${8:# Override the default port (80 or 443) with this port}
+    https: ${9:# Enable and disable https}
+    ipspace: ${10:# Specify the required ipspace for the broadcast domain}
+    key_filepath: ${11:# path to SSL client key file}
+    mtu: ${12:# Specify the required mtu for the broadcast domain}
+    name: ${13:# Specify the broadcast domain name}
+    ontapi: ${14:# The ontap api version to use}
+    password: ${15:# Password for the specified user}
+    ports: ${16:# Specify the ports associated with this broadcast domain}
+    state: ${17:# Whether the specified broadcast domain should exist or not}
     use_rest: ${18:# Whether to use REST or ZAPI}
-    feature_flags: ${19:# Enable or disable a new feature}
-    force_ontap_version: ${20:# Override the cluster ONTAP version when using REST}
+    username: ${19:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${20:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:Modify video card configurations of specified virtual machine in given vCenter infrastructure}
   community.vmware.vmware_guest_video:
-    name: ${2:# Name of the virtual machine}
-    uuid: ${3:# UUID of the instance to gather facts if known, this is VMware's unique identifier}
-    moid: ${4:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    datacenter: ${2:# The datacenter name to which virtual machine belongs to}
+    display_number: ${3:# The number of display}
+    enable_3D: ${4:# Enable 3D for guest operating systems on which VMware supports 3D}
     folder: ${5:# Destination folder, absolute or relative path to find an existing guest}
-    datacenter: ${6:# The datacenter name to which virtual machine belongs to}
-    gather_video_facts: ${7:# If set to C(True), return settings of the video card, other attributes are ignored}
-    use_auto_detect: ${8:# If set to C(True), applies common video settings to the guest operating system, attributes C(display_number) and C(video_memory_mb) are ignored}
-    display_number: ${9:# The number of display}
-    video_memory_mb: ${10:# Valid total MB of video memory range of virtual machine is from 1}
-    enable_3D: ${11:# Enable 3D for guest operating systems on which VMware supports 3D}
-    renderer_3D: ${12:# If set to C(automatic), selects the appropriate option (software or hardware) for this virtual machine automatically}
-    memory_3D_mb: ${13:# The value of 3D Memory must be power of 2 and valid value is from 32 MB to 2048 MB}
-    hostname: ${14:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${15:# The username of the vSphere vCenter or ESXi server}
-    password: ${16:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${17:# Allows connection when SSL certificates are not valid}
-    port: ${18:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${19:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${20:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    gather_video_facts: ${6:# If set to V(true), return settings of the video card, other attributes are ignored}
+    hostname: ${7:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    memory_3D_mb: ${8:# The value of 3D Memory must be power of 2 and valid value is from 32 MB to 2048 MB}
+    moid: ${9:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    name: ${10:# Name of the virtual machine}
+    password: ${11:# The password of the vSphere vCenter or ESXi server}
+    port: ${12:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${13:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${14:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    renderer_3D: ${15:# If set to V(automatic), selects the appropriate option (software or hardware) for this virtual machine automatically}
+    use_auto_detect: ${16:# If set to V(true), applies common video settings to the guest operating system, attributes O(display_number) and O(video_memory_mb) are ignored}
+    username: ${17:# The username of the vSphere vCenter or ESXi server}
+    uuid: ${18:# UUID of the instance to gather facts if known, this is VMware's unique identifier}
+    validate_certs: ${19:# Allows connection when SSL certificates are not valid}
+    video_memory_mb: ${20:# Valid total MB of video memory range of virtual machine is from 1}
   tags:
     - community
     - vmware

@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage RabbitMQ users}
   community.rabbitmq.rabbitmq_user:
-    user: ${2:# Name of user to add}
-    password: ${3:# Password of user to add}
-    tags: ${4:# User tags specified as comma delimited}
-    permissions: ${5:# a list of dicts, each dict contains vhost, configure_priv, write_priv, and read_priv, and represents a permission rule for that vhost}
-    vhost: ${6:# vhost to apply access privileges}
-    node: ${7:# erlang node name of the rabbit we wish to configure}
-    configure_priv: ${8:# Regular expression to restrict configure actions on a resource for the specified vhost}
-    write_priv: ${9:# Regular expression to restrict configure actions on a resource for the specified vhost}
-    read_priv: ${10:# Regular expression to restrict configure actions on a resource for the specified vhost}
-    topic_permissions: ${11:# A list of dicts, each dict contains vhost, exchange, read_priv and write_priv, and represents a topic permission rule for that vhost}
-    force: ${12:# Deletes and recreates the user}
-    state: ${13:# Specify if user is to be added or removed}
-    update_password: ${14:# C(on_create) will only set the password for newly created users}
+    configure_priv: ${2:# Regular expression to restrict configure actions on a resource for the specified vhost}
+    force: ${3:# Deletes and recreates the user}
+    node: ${4:# erlang node name of the rabbit we wish to configure}
+    password: ${5:# Password of user to add}
+    permissions: ${6:# a list of dicts, each dict contains vhost, configure_priv, write_priv, and read_priv, and represents a permission rule for that vhost}
+    read_priv: ${7:# Regular expression to restrict configure actions on a resource for the specified vhost}
+    state: ${8:# Specify if user is to be added or removed}
+    tags: ${9:# User tags specified as comma delimited}
+    topic_permissions: ${10:# A list of dicts, each dict contains vhost, exchange, read_priv and write_priv, and represents a topic permission rule for that vhost}
+    update_password: ${11:# C(on_create) will only set the password for newly created users}
+    user: ${12:# Name of user to add}
+    vhost: ${13:# vhost to apply access privileges}
+    write_priv: ${14:# Regular expression to restrict configure actions on a resource for the specified vhost}
   tags:
     - community
     - rabbitmq

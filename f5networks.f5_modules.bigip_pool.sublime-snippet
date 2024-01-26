@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages F5 BIG-IP LTM pools}
   f5networks.f5_modules.bigip_pool:
-    description: ${2:# Specifies descriptive text that identifies the pool}
-    name: ${3:# Pool name}
+    aggregate: ${2:# List of pool definitions to be created, modified, or removed}
+    description: ${3:# Specifies descriptive text that identifies the pool}
     lb_method: ${4:# Load balancing method}
-    monitor_type: ${5:# Monitor rule type when C(monitors) is specified}
-    quorum: ${6:# Monitor quorum value when C(monitor_type) is C(m_of_n)}
-    monitors: ${7:# Monitor template name list}
-    slow_ramp_time: ${8:# Sets the ramp-up time (in seconds) to gradually ramp up the load on newly added or freshly detected up pool members}
-    reselect_tries: ${9:# Sets the number of times the system tries to contact a pool member after a passive failure}
-    service_down_action: ${10:# Sets the action to take when node goes down in pool}
-    partition: ${11:# Device partition to manage resources on}
-    state: ${12:# When C(present), guarantees the pool exists with the provided attributes}
-    metadata: ${13:# Arbitrary key/value pairs you can attach to a pool}
-    priority_group_activation: ${14:# Specifies whether the system load balances traffic according to the priority number assigned to the pool member}
-    min_up_members: ${15:# Specifies the minimum number of pool members that must be up,}
-    min_up_members_action: ${16:# Specifies the action to take if C(min_up_members_checking) is C(enabled) and the number of active pool members falls below the number specified in the C(min_up_members) option}
-    min_up_members_checking: ${17:# Enables or disables the C(min_up_members) feature}
-    aggregate: ${18:# List of pool definitions to be created, modified, or removed}
-    replace_all_with: ${19:# Removes pools not defined in the C(aggregate) parameter}
-    provider: ${20:# A dict object containing connection details}
+    metadata: ${5:# Arbitrary key/value pairs you can attach to a pool}
+    min_up_members: ${6:# Specifies the minimum number of pool members that must be up,}
+    min_up_members_action: ${7:# Specifies the action to take if C(min_up_members_checking) is C(enabled) and the number of active pool members falls below the number specified in the C(min_up_members) option}
+    min_up_members_checking: ${8:# Enables or disables the C(min_up_members) feature}
+    monitor_type: ${9:# Monitor rule type when C(monitors) is specified}
+    monitors: ${10:# Monitor template name list}
+    name: ${11:# Pool name}
+    partition: ${12:# Device partition on which to manage resources}
+    priority_group_activation: ${13:# Specifies whether the system load balances traffic according to the priority number assigned to the pool member}
+    provider: ${14:# A dict object containing connection details}
+    quorum: ${15:# Monitor quorum value when C(monitor_type) is C(m_of_n)}
+    replace_all_with: ${16:# Removes pools not defined in the C(aggregate) parameter}
+    reselect_tries: ${17:# Sets the number of times the system tries to contact a pool member after a passive failure}
+    service_down_action: ${18:# Sets the action to take when node goes down in pool}
+    slow_ramp_time: ${19:# Sets the ramp-up time (in seconds) to gradually ramp up the load on newly added or freshly detected up pool members}
+    state: ${20:# When C(present), guarantees the pool exists with the provided attributes}
   tags:
     - f5networks
     - f5_modules

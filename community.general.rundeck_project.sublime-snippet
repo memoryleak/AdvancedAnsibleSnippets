@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Rundeck projects}
   community.general.rundeck_project:
-    state: ${2:# Create or remove Rundeck project}
-    name: ${3:# Sets the project name}
-    url: ${4:# Sets the rundeck instance URL}
-    api_version: ${5:# Sets the API version used by module}
-    token: ${6:# Sets the token to authenticate against Rundeck API}
-    client_cert: ${7:# PEM formatted certificate chain file to be used for SSL client authentication}
-    client_key: ${8:# PEM formatted file that contains your private key to be used for SSL client authentication}
-    force: ${9:# If C(yes) do not get a cached copy}
-    force_basic_auth: ${10:# Credentials specified with I(url_username) and I(url_password) should be passed in HTTP Header}
-    http_agent: ${11:# Header to identify as, generally appears in web server logs}
+    api_token: ${2:# Sets the token to authenticate against Rundeck API}
+    api_version: ${3:# Rundeck API version to be used}
+    client_cert: ${4:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${5:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    force: ${6:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${7:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    http_agent: ${8:# Header to identify as, generally appears in web server logs}
+    name: ${9:# Sets the project name}
+    state: ${10:# Create or remove Rundeck project}
+    url: ${11:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
     url_password: ${12:# The password for use in HTTP basic authentication}
     url_username: ${13:# The username for use in HTTP basic authentication}
-    use_proxy: ${14:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    validate_certs: ${15:# If C(no), SSL certificates will not be validated}
-    use_gssapi: ${16:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_gssapi: ${14:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${15:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${16:# If V(no), SSL certificates will not be validated}
   tags:
     - community
     - general

@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage subnets in AWS virtual private clouds}
   amazon.aws.ec2_vpc_subnet:
-    az: ${2:# The availability zone for the subnet}
-    cidr: ${3:# The CIDR block for the subnet}
-    ipv6_cidr: ${4:# The IPv6 CIDR block for the subnet}
-    outpost_arn: ${5:# The Amazon Resource Name (ARN) of the Outpost}
-    state: ${6:# Create or remove the subnet}
-    vpc_id: ${7:# -'VPC ID of the VPC in which to create or delete the subnet}
-    map_public: ${8:# Whether instances launched into the subnet should default to being assigned public IP address}
-    assign_instances_ipv6: ${9:# Whether instances launched into the subnet should default to being automatically assigned an IPv6 address}
-    wait: ${10:# Whether to wait for changes to complete}
-    wait_timeout: ${11:# Number of seconds to wait for changes to complete}
-    access_key: ${12:# AWS access key ID}
-    secret_key: ${13:# AWS secret access key}
-    session_token: ${14:# AWS STS session token for use with temporary credentials}
-    profile: ${15:# A named AWS profile to use for authentication}
-    endpoint_url: ${16:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${17:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${19:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${20:# Use a C(botocore}
-    region: ${21:# The AWS region to use}
-    tags: ${22:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${23:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    access_key: ${2:# AWS access key ID}
+    assign_instances_ipv6: ${3:# Whether instances launched into the subnet should default to being automatically assigned an IPv6 address}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    az: ${6:# The availability zone for the subnet}
+    cidr: ${7:# The CIDR block for the subnet}
+    debug_botocore_endpoint_logs: ${8:# Use a C(botocore}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
+    ipv6_cidr: ${10:# The IPv6 CIDR block for the subnet}
+    map_public: ${11:# Whether instances launched into the subnet should default to being assigned public IP address}
+    outpost_arn: ${12:# The Amazon Resource Name (ARN) of the Outpost}
+    profile: ${13:# A named AWS profile to use for authentication}
+    purge_tags: ${14:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${15:# The AWS region to use}
+    secret_key: ${16:# AWS secret access key}
+    session_token: ${17:# AWS STS session token for use with temporary credentials}
+    state: ${18:# Create or remove the subnet}
+    tags: ${19:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${20:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_id: ${21:# -'VPC ID of the VPC in which to create or delete the subnet}
+    wait: ${22:# Whether to wait for changes to complete}
+    wait_timeout: ${23:# Number of seconds to wait for changes to complete}
   tags:
     - amazon
     - aws

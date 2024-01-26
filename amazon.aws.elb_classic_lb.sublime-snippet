@@ -1,39 +1,39 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates, updates or destroys an Amazon ELB}
   amazon.aws.elb_classic_lb:
-    state: ${2:# Create or destroy the ELB}
-    name: ${3:# The name of the ELB}
-    listeners: ${4:# List of ports/protocols for this ELB to listen on (see examples)}
-    purge_listeners: ${5:# Purge existing listeners on ELB that are not found in listeners}
-    instance_ids: ${6:# List of instance ids to attach to this ELB}
-    purge_instance_ids: ${7:# Purge existing instance ids on ELB that are not found in I(instance_ids)}
-    zones: ${8:# List of availability zones to enable on this ELB}
-    purge_zones: ${9:# Purge existing availability zones on ELB that are not found in I(zones)}
-    security_group_ids: ${10:# A list of security groups to apply to the ELB}
-    security_group_names: ${11:# A list of security group names to apply to the ELB}
-    health_check: ${12:# A dictionary of health check configuration settings (see examples)}
-    access_logs: ${13:# A dictionary of access logs configuration settings (see examples)}
-    subnets: ${14:# A list of VPC subnets to use when creating the ELB}
-    purge_subnets: ${15:# Purge existing subnets on the ELB that are not found in I(subnets)}
-    scheme: ${16:# The scheme to use when creating the ELB}
-    connection_draining_timeout: ${17:# Wait a specified timeout allowing connections to drain before terminating an instance}
-    idle_timeout: ${18:# ELB connections from clients and to servers are timed out after this amount of time}
-    cross_az_load_balancing: ${19:# Distribute load across all configured Availability Zones}
-    stickiness: ${20:# A dictionary of stickiness policy settings}
-    wait: ${21:# When creating, deleting, or adding instances to an ELB, if I(wait=true) Ansible will wait for both the load balancer and related network interfaces to finish creating/deleting}
-    wait_timeout: ${22:# Used in conjunction with wait}
-    access_key: ${23:# AWS access key ID}
-    secret_key: ${24:# AWS secret access key}
-    session_token: ${25:# AWS STS session token for use with temporary credentials}
-    profile: ${26:# A named AWS profile to use for authentication}
-    endpoint_url: ${27:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${28:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${29:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${30:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${31:# Use a C(botocore}
-    region: ${32:# The AWS region to use}
-    tags: ${33:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${34:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    access_key: ${2:# AWS access key ID}
+    access_logs: ${3:# A dictionary of access logs configuration settings (see examples)}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    connection_draining_timeout: ${6:# Wait a specified timeout allowing connections to drain before terminating an instance}
+    cross_az_load_balancing: ${7:# Distribute load across all configured Availability Zones}
+    debug_botocore_endpoint_logs: ${8:# Use a C(botocore}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
+    health_check: ${10:# A dictionary of health check configuration settings (see examples)}
+    idle_timeout: ${11:# ELB connections from clients and to servers are timed out after this amount of time}
+    instance_ids: ${12:# List of instance ids to attach to this ELB}
+    listeners: ${13:# List of ports/protocols for this ELB to listen on (see examples)}
+    name: ${14:# The name of the ELB}
+    profile: ${15:# A named AWS profile to use for authentication}
+    purge_instance_ids: ${16:# Purge existing instance ids on ELB that are not found in I(instance_ids)}
+    purge_listeners: ${17:# Purge existing listeners on ELB that are not found in listeners}
+    purge_subnets: ${18:# Purge existing subnets on the ELB that are not found in I(subnets)}
+    purge_tags: ${19:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    purge_zones: ${20:# Purge existing availability zones on ELB that are not found in I(zones)}
+    region: ${21:# The AWS region to use}
+    scheme: ${22:# The scheme to use when creating the ELB}
+    secret_key: ${23:# AWS secret access key}
+    security_group_ids: ${24:# A list of security groups to apply to the ELB}
+    security_group_names: ${25:# A list of security group names to apply to the ELB}
+    session_token: ${26:# AWS STS session token for use with temporary credentials}
+    state: ${27:# Create or destroy the ELB}
+    stickiness: ${28:# A dictionary of stickiness policy settings}
+    subnets: ${29:# A list of VPC subnets to use when creating the ELB}
+    tags: ${30:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${31:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${32:# When creating, deleting, or adding instances to an ELB, if I(wait=true) Ansible will wait for both the load balancer and related network interfaces to finish creating/deleting}
+    wait_timeout: ${33:# Used in conjunction with wait}
+    zones: ${34:# List of availability zones to enable on this ELB}
   tags:
     - amazon
     - aws

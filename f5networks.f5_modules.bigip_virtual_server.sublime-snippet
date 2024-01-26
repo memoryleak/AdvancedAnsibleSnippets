@@ -1,46 +1,46 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage LTM virtual servers on a BIG-IP}
   f5networks.f5_modules.bigip_virtual_server:
-    state: ${2:# The virtual server state}
-    type: ${3:# Specifies the network service provided by this virtual server}
-    name: ${4:# Virtual server name}
-    destination: ${5:# Destination IP of the virtual server}
-    source: ${6:# Specifies an IP address or network from which the virtual server accepts traffic}
-    port: ${7:# Port of the virtual server}
-    profiles: ${8:# List of profiles (HTTP, ClientSSL, ServerSSL, etc) to apply to both sides of the connection (client-side and server-side)}
-    irules: ${9:# Specifies a list of rules to be applied in priority order}
-    enabled_vlans: ${10:# List of VLANs to enable}
-    disabled_vlans: ${11:# List of VLANs to be disabled}
-    pool: ${12:# Default pool for the virtual server}
-    policies: ${13:# Specifies the policies for the virtual server}
-    snat: ${14:# Source network address policy}
-    default_persistence_profile: ${15:# Default profile which manages the session persistence}
-    description: ${16:# Virtual server description}
-    fallback_persistence_profile: ${17:# Specifies the persistence profile you want the system to use if it cannot use the specified default persistence profile}
-    partition: ${18:# Device partition to manage resources on}
-    metadata: ${19:# Arbitrary key/value pairs you can attach to a virtual server}
-    insert_metadata: ${20:# When set to C(no), the module does not set metadata on the device}
-    address_translation: ${21:# When C(enabled), specifies the system translates the address of the virtual server}
-    port_translation: ${22:# When C(enabled), specifies the system translates the port of the virtual server}
-    source_port: ${23:# Specifies whether the system preserves the source port of the connection}
-    mirror: ${24:# Specifies the system mirrors connections on each member of a redundant pair}
-    auto_last_hop: ${25:# Allows the BIG-IP system to track the source MAC address of incoming connections and return traffic from pools to the source MAC address, regardless of the routing table}
-    mask: ${26:# Specifies the destination address network mask}
-    ip_protocol: ${27:# Specifies a network protocol name you want the system to use to direct traffic on this virtual server}
-    firewall_enforced_policy: ${28:# Applies the specified AFM policy to the virtual in an enforcing way}
-    firewall_staged_policy: ${29:# Applies the specified AFM policy to the virtual in an enforcing way}
-    security_log_profiles: ${30:# Specifies the log profile applied to the virtual server}
-    security_nat_policy: ${31:# Specify the Firewall NAT policies for the virtual server}
-    ip_intelligence_policy: ${32:# Specifies the IP intelligence policy applied to the virtual server}
-    rate_limit: ${33:# Virtual server rate limit (connections-per-second)}
-    rate_limit_dst_mask: ${34:# Specifies a mask, in bits, to be applied to the destination address as part of the rate limiting}
-    rate_limit_src_mask: ${35:# Specifies a mask, in bits, to be applied to the source address as part of the rate limiting}
-    rate_limit_mode: ${36:# Indicates whether the rate limit is applied per virtual object, per source address, per destination address, or some combination thereof}
-    clone_pools: ${37:# Specifies a pool or list of pools that the virtual server uses to replicate either client-side or server-side traffic}
-    service_down_immediate_action: ${38:# Specifies the immediate action to take upon the receipt of the initial SYN packet if the availability status of the virtual server is Offline or Unavailable}
-    check_profiles: ${39:# Specifies whether the client and server SSL profiles specified by the user should be verified to be correct against the existing profiles}
-    bypass_module_checks: ${40:# Disables all built-in module verification checks that require BIG-IP device calls}
-    provider: ${41:# A dict object containing connection details}
+    address_translation: ${2:# When C(enabled), specifies the system translates the address of the virtual server}
+    auto_last_hop: ${3:# Allows the BIG-IP system to track the source MAC address of incoming connections and return traffic from pools to the source MAC address, regardless of the routing table}
+    bypass_module_checks: ${4:# Disables all built-in module verification checks that require BIG-IP device calls}
+    check_profiles: ${5:# Specifies whether the client and server SSL profiles specified by the user should be verified to be correct against the existing profiles}
+    clone_pools: ${6:# Specifies a pool or list of pools that the virtual server uses to replicate either client-side or server-side traffic}
+    default_persistence_profile: ${7:# Default profile which manages the session persistence}
+    description: ${8:# Virtual server description}
+    destination: ${9:# Destination IP of the virtual server}
+    disabled_vlans: ${10:# List of VLANs to be disabled}
+    enabled_vlans: ${11:# List of VLANs to enable}
+    fallback_persistence_profile: ${12:# Specifies the persistence profile you want the system to use if it cannot use the specified default persistence profile}
+    firewall_enforced_policy: ${13:# Applies the specified AFM policy to the virtual in an enforcing way}
+    firewall_staged_policy: ${14:# Applies the specified AFM policy to the virtual in an enforcing way}
+    insert_metadata: ${15:# When set to C(false), the module does not set metadata on the device}
+    ip_intelligence_policy: ${16:# Specifies the IP intelligence policy applied to the virtual server}
+    ip_protocol: ${17:# Specifies a network protocol name you want the system to use to direct traffic on this virtual server}
+    irules: ${18:# Specifies a list of rules to be applied in priority order}
+    mask: ${19:# Specifies the destination address network mask}
+    metadata: ${20:# Arbitrary key/value pairs you can attach to a virtual server}
+    mirror: ${21:# Specifies the system mirrors connections on each member of a redundant pair}
+    name: ${22:# Virtual server name}
+    partition: ${23:# Device partition to manage resources on}
+    policies: ${24:# Specifies the policies for the virtual server}
+    pool: ${25:# Default pool for the virtual server}
+    port: ${26:# Port of the virtual server}
+    port_translation: ${27:# When C(enabled), specifies the system translates the port of the virtual server}
+    profiles: ${28:# List of profiles (HTTP, ClientSSL, ServerSSL, etc) to apply to both sides of the connection (client-side and server-side)}
+    provider: ${29:# A dict object containing connection details}
+    rate_limit: ${30:# Virtual server rate limit (connections-per-second)}
+    rate_limit_dst_mask: ${31:# Specifies a mask, in bits, to be applied to the destination address as part of the rate limiting}
+    rate_limit_mode: ${32:# Indicates whether the rate limit is applied per virtual object, per source address, per destination address, or some combination thereof}
+    rate_limit_src_mask: ${33:# Specifies a mask, in bits, to be applied to the source address as part of the rate limiting}
+    security_log_profiles: ${34:# Specifies the log profile applied to the virtual server}
+    security_nat_policy: ${35:# Specify the Firewall NAT policies for the virtual server}
+    service_down_immediate_action: ${36:# Specifies the immediate action to take upon the receipt of the initial SYN packet if the availability status of the virtual server is Offline or Unavailable}
+    snat: ${37:# Source network address policy}
+    source: ${38:# Specifies an IP address or network from which the virtual server accepts traffic}
+    source_port: ${39:# Specifies whether the system preserves the source port of the connection}
+    state: ${40:# The virtual server state}
+    type: ${41:# Specifies the network service provided by this virtual server}
   tags:
     - f5networks
     - f5_modules

@@ -1,16 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure 1&1 public IPs}
   community.general.oneandone_public_ip:
-    state: ${2:# Define a public ip state to create, remove, or update}
+    api_url: ${2:# Custom API URL}
     auth_token: ${3:# Authenticating API token provided by 1&1}
-    api_url: ${4:# Custom API URL}
-    reverse_dns: ${5:# Reverse DNS name}
-    datacenter: ${6:# ID of the datacenter where the IP will be created (only for unassigned IPs)}
-    type: ${7:# Type of IP}
-    public_ip_id: ${8:# The ID of the public IP used with update and delete states}
+    datacenter: ${4:# ID of the datacenter where the IP will be created (only for unassigned IPs)}
+    public_ip_id: ${5:# The ID of the public IP used with update and delete states}
+    reverse_dns: ${6:# Reverse DNS name}
+    state: ${7:# Define a public ip state to create, remove, or update}
+    type: ${8:# Type of IP}
     wait: ${9:# wait for the instance to be in state 'running' before returning}
-    wait_timeout: ${10:# how long before wait gives up, in seconds}
-    wait_interval: ${11:# Defines the number of seconds to wait when using the _wait_for methods}
+    wait_interval: ${10:# Defines the number of seconds to wait when using the _wait_for methods}
+    wait_timeout: ${11:# how long before wait gives up, in seconds}
   tags:
     - community
     - general

@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Extract files from an ISO image}
   community.general.iso_extract:
-    image: ${2:# The ISO image to extract files from}
-    dest: ${3:# The destination directory to extract files to}
+    dest: ${2:# The destination directory to extract files to}
+    executable: ${3:# The path to the C(7z) executable to use for extracting files from the ISO}
     files: ${4:# A list of files to extract from the image}
-    force: ${5:# If C(true), which will replace the remote file when contents are different than the source}
-    executable: ${6:# The path to the C(7z) executable to use for extracting files from the ISO}
+    force: ${5:# If V(true), which will replace the remote file when contents are different than the source}
+    image: ${6:# The ISO image to extract files from}
   tags:
     - community
     - general

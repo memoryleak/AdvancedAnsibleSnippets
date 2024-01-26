@@ -1,18 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP Variable}
   google.cloud.gcp_runtimeconfig_variable:
-    state: ${2:# Whether the given object should exist in GCP}
-    value: ${3:# The binary value of the variable}
-    text: ${4:# The string value of the variable}
-    name: ${5:# The name of the variable resource}
-    config: ${6:# The name of the runtime config that this variable belongs to}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    auth_kind: ${3:# The type of credential used}
+    config: ${4:# The name of the runtime config that this variable belongs to}
+    env_type: ${5:# Specifies which Ansible environment you're running this module within}
+    name: ${6:# The name of the variable resource}
     project: ${7:# The Google Cloud Platform project to use}
-    auth_kind: ${8:# The type of credential used}
+    scopes: ${8:# Array of scopes to be used}
     service_account_contents: ${9:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${10:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${11:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${12:# Array of scopes to be used}
-    env_type: ${13:# Specifies which Ansible environment you're running this module within}
+    service_account_email: ${10:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    service_account_file: ${11:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    state: ${12:# Whether the given object should exist in GCP}
+    text: ${13:# The string value of the variable}
+    value: ${14:# The binary value of the variable}
   tags:
     - google
     - cloud

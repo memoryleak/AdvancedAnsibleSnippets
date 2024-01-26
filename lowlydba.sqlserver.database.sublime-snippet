@@ -1,19 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates and configures a database}
   lowlydba.sqlserver.database:
-    database: ${2:# Name of the target database}
-    recovery_model: ${3:# Choose the recovery model for the database}
-    data_file_path: ${4:# Directory where the data files should be placed}
+    compatibility: ${2:# Compatibility mode for the database}
+    data_file_path: ${3:# Directory where the data files should be placed}
+    database: ${4:# Name of the target database}
     log_file_path: ${5:# Directory where the log files should be placed}
-    owner: ${6:# Database owner login}
-    maxdop: ${7:# MAXDOP value for the database}
-    secondary_maxdop: ${8:# MAXDOP value for the database when it is a non-primary replica in an availability group}
-    compatibility: ${9:# Compatibility mode for the database}
-    rcsi: ${10:# Whether or not to enable Read Committed Snapshot Isolation}
-    sql_instance: ${11:# The SQL Server instance to modify}
-    sql_username: ${12:# Username for SQL Authentication}
+    maxdop: ${6:# MAXDOP value for the database}
+    only_accessible: ${7:# Whether or not to enable Read Committed Snapshot Isolation}
+    owner: ${8:# Database owner login}
+    rcsi: ${9:# Whether or not to enable Read Committed Snapshot Isolation}
+    recovery_model: ${10:# Choose the recovery model for the database}
+    secondary_maxdop: ${11:# MAXDOP value for the database when it is a non-primary replica in an availability group}
+    sql_instance: ${12:# The SQL Server instance to modify}
     sql_password: ${13:# Password for SQL Authentication}
-    state: ${14:# Whether or not the object should be C(present) or C(absent)}
+    sql_username: ${14:# Username for SQL Authentication}
+    state: ${15:# Whether or not the object should be C(present) or C(absent)}
   tags:
     - lowlydba
     - sqlserver

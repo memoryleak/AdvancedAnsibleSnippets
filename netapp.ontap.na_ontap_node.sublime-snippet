@@ -1,22 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP Modify or Rename a node}
   netapp.ontap.na_ontap_node:
-    name: ${2:# The name for the node}
-    from_name: ${3:# The name of the node to be renamed}
-    location: ${4:# The location for the node}
-    asset_tag: ${5:# The asset tag for the node, not supported by REST}
-    hostname: ${6:# The hostname or IP address of the ONTAP instance}
-    username: ${7:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${8:# Password for the specified user}
-    cert_filepath: ${9:# path to SSL client cert file (}
+    asset_tag: ${2:# The asset tag for the node, not supported by REST}
+    cert_filepath: ${3:# path to SSL client cert file (}
+    feature_flags: ${4:# Enable or disable a new feature}
+    force_ontap_version: ${5:# Override the cluster ONTAP version when using REST}
+    from_name: ${6:# The name of the node to be renamed}
+    hostname: ${7:# The hostname or IP address of the ONTAP instance}
+    http_port: ${8:# Override the default port (80 or 443) with this port}
+    https: ${9:# Enable and disable https}
     key_filepath: ${10:# path to SSL client key file}
-    https: ${11:# Enable and disable https}
-    validate_certs: ${12:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${13:# Override the default port (80 or 443) with this port}
-    ontapi: ${14:# The ontap api version to use}
+    location: ${11:# The location for the node}
+    name: ${12:# The name for the node}
+    ontapi: ${13:# The ontap api version to use}
+    password: ${14:# Password for the specified user}
     use_rest: ${15:# Whether to use REST or ZAPI}
-    feature_flags: ${16:# Enable or disable a new feature}
-    force_ontap_version: ${17:# Override the cluster ONTAP version when using REST}
+    username: ${16:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${17:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

@@ -1,35 +1,35 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates OpenSearch or ElasticSearch domain}
   community.aws.opensearch:
-    state: ${2:# Creates or modifies an existing OpenSearch domain}
-    domain_name: ${3:# The name of the Amazon OpenSearch/ElasticSearch Service domain}
-    engine_version: ${4:# -> The engine version to use}
+    access_key: ${2:# AWS access key ID}
+    access_policies: ${3:# IAM access policy as a JSON-formatted string}
+    advanced_security_options: ${4:# Specifies advanced security options}
     allow_intermediate_upgrades: ${5:# If true, allow OpenSearch domain to be upgraded through one or more intermediate versions}
-    cluster_config: ${6:# Parameters for the cluster configuration of an OpenSearch Service domain}
-    ebs_options: ${7:# Parameters to configure EBS-based storage for an OpenSearch Service domain}
-    vpc_options: ${8:# Options to specify the subnets and security groups for a VPC endpoint}
-    snapshot_options: ${9:# Option to set time, in UTC format, of the daily automated snapshot}
-    access_policies: ${10:# IAM access policy as a JSON-formatted string}
-    encryption_at_rest_options: ${11:# Parameters to enable encryption at rest}
-    node_to_node_encryption_options: ${12:# Node-to-node encryption options}
-    cognito_options: ${13:# Parameters to configure OpenSearch Service to use Amazon Cognito authentication for OpenSearch Dashboards}
-    domain_endpoint_options: ${14:# Options to specify configuration that will be applied to the domain endpoint}
-    advanced_security_options: ${15:# Specifies advanced security options}
-    auto_tune_options: ${16:# Specifies Auto-Tune options}
-    wait: ${17:# Whether or not to wait for completion of OpenSearch creation, modification or deletion}
-    wait_timeout: ${18:# how long before wait gives up, in seconds}
-    access_key: ${19:# AWS access key ID}
-    secret_key: ${20:# AWS secret access key}
-    session_token: ${21:# AWS STS session token for use with temporary credentials}
-    profile: ${22:# A named AWS profile to use for authentication}
-    endpoint_url: ${23:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${24:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${25:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${26:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${27:# Use a C(botocore}
-    region: ${28:# The AWS region to use}
-    tags: ${29:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${30:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    auto_tune_options: ${6:# Specifies Auto-Tune options}
+    aws_ca_bundle: ${7:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${8:# A dictionary to modify the botocore configuration}
+    cluster_config: ${9:# Parameters for the cluster configuration of an OpenSearch Service domain}
+    cognito_options: ${10:# Parameters to configure OpenSearch Service to use Amazon Cognito authentication for OpenSearch Dashboards}
+    debug_botocore_endpoint_logs: ${11:# Use a C(botocore}
+    domain_endpoint_options: ${12:# Options to specify configuration that will be applied to the domain endpoint}
+    domain_name: ${13:# The name of the Amazon OpenSearch/ElasticSearch Service domain}
+    ebs_options: ${14:# Parameters to configure EBS-based storage for an OpenSearch Service domain}
+    encryption_at_rest_options: ${15:# Parameters to enable encryption at rest}
+    endpoint_url: ${16:# URL to connect to instead of the default AWS endpoints}
+    engine_version: ${17:# -> The engine version to use}
+    node_to_node_encryption_options: ${18:# Node-to-node encryption options}
+    profile: ${19:# A named AWS profile to use for authentication}
+    purge_tags: ${20:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${21:# The AWS region to use}
+    secret_key: ${22:# AWS secret access key}
+    session_token: ${23:# AWS STS session token for use with temporary credentials}
+    snapshot_options: ${24:# Option to set time, in UTC format, of the daily automated snapshot}
+    state: ${25:# Creates or modifies an existing OpenSearch domain}
+    tags: ${26:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${27:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_options: ${28:# Options to specify the subnets and security groups for a VPC endpoint}
+    wait: ${29:# Whether or not to wait for completion of OpenSearch creation, modification or deletion}
+    wait_timeout: ${30:# how long before wait gives up, in seconds}
   tags:
     - community
     - aws

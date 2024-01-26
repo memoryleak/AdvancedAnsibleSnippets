@@ -1,36 +1,36 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP firmware upgrade for SP, shelf, ACP, and disk}
   netapp.ontap.na_ontap_firmware_upgrade:
-    state: ${2:# Whether the specified ONTAP firmware should be upgraded or not}
-    node: ${3:# Node on which the device is located}
-    clear_logs: ${4:# Clear logs on the device after update}
-    package: ${5:# Name of the package file containing the firmware to be installed}
-    package_url: ${6:# URL of the package file containing the firmware to be downloaded}
-    force_disruptive_update: ${7:# If set to C(False), and URL is given, the upgrade is non disruptive}
-    shelf_module_fw: ${8:# Shelf module firmware to be updated to}
-    disk_fw: ${9:# disk firmware to be updated to}
-    update_type: ${10:# Type of firmware update to be performed}
-    install_baseline_image: ${11:# Install the version packaged with ONTAP if this parameter is set to true}
-    firmware_type: ${12:# Type of firmware to be upgraded}
-    fail_on_502_error: ${13:# The firmware download may take time if the web server is slow and if there are many nodes in the cluster}
-    rename_package: ${14:# Rename the package}
-    replace_package: ${15:# Replace the local package}
-    reboot_sp: ${16:# Reboot service processor before downloading package}
-    reboot_sp_after_download: ${17:# Reboot service processor after downloading package}
-    server_username: ${18:# username to authenticate with the firmware package server}
-    server_password: ${19:# password to authenticate with the firmware package server}
-    hostname: ${20:# The hostname or IP address of the ONTAP instance}
-    username: ${21:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${22:# Password for the specified user}
-    cert_filepath: ${23:# path to SSL client cert file (}
-    key_filepath: ${24:# path to SSL client key file}
-    https: ${25:# Enable and disable https}
-    validate_certs: ${26:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${27:# Override the default port (80 or 443) with this port}
-    ontapi: ${28:# The ontap api version to use}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    clear_logs: ${3:# Clear logs on the device after update}
+    disk_fw: ${4:# disk firmware to be updated to}
+    fail_on_502_error: ${5:# The firmware download may take time if the web server is slow and if there are many nodes in the cluster}
+    feature_flags: ${6:# Enable or disable a new feature}
+    firmware_type: ${7:# Type of firmware to be upgraded}
+    force_disruptive_update: ${8:# If set to C(False), and URL is given, the upgrade is non disruptive}
+    force_ontap_version: ${9:# Override the cluster ONTAP version when using REST}
+    hostname: ${10:# The hostname or IP address of the ONTAP instance}
+    http_port: ${11:# Override the default port (80 or 443) with this port}
+    https: ${12:# Enable and disable https}
+    install_baseline_image: ${13:# Install the version packaged with ONTAP if this parameter is set to true}
+    key_filepath: ${14:# path to SSL client key file}
+    node: ${15:# Node on which the device is located}
+    ontapi: ${16:# The ontap api version to use}
+    package: ${17:# Name of the package file containing the firmware to be installed}
+    package_url: ${18:# URL of the package file containing the firmware to be downloaded}
+    password: ${19:# Password for the specified user}
+    reboot_sp: ${20:# Reboot service processor before downloading package}
+    reboot_sp_after_download: ${21:# Reboot service processor after downloading package}
+    rename_package: ${22:# Rename the package}
+    replace_package: ${23:# Replace the local package}
+    server_password: ${24:# password to authenticate with the firmware package server}
+    server_username: ${25:# username to authenticate with the firmware package server}
+    shelf_module_fw: ${26:# Shelf module firmware to be updated to}
+    state: ${27:# Whether the specified ONTAP firmware should be upgraded or not}
+    update_type: ${28:# Type of firmware update to be performed}
     use_rest: ${29:# Whether to use REST or ZAPI}
-    feature_flags: ${30:# Enable or disable a new feature}
-    force_ontap_version: ${31:# Override the cluster ONTAP version when using REST}
+    username: ${30:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${31:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

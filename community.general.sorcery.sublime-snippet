@@ -1,12 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Package manager for Source Mage GNU/Linux}
   community.general.sorcery:
-    name: ${2:# Name of the spell}
-    state: ${3:# Whether to cast, dispel or rebuild a package}
-    depends: ${4:# Comma-separated list of _optional_ dependencies to build a spell (or make sure it is built) with; use +/- in front of dependency to turn it on/off ('+' is optional though)}
-    update: ${5:# Whether or not to update sorcery scripts at the very first stage}
-    update_cache: ${6:# Whether or not to update grimoire collection before casting spells}
-    cache_valid_time: ${7:# Time in seconds to invalidate grimoire collection on update}
+    cache_valid_time: ${2:# Time in seconds to invalidate grimoire collection on update}
+    depends: ${3:# Comma-separated list of _optional_ dependencies to build a spell (or make sure it is built) with; use V(+)/V(-) in front of dependency to turn it on/off (V(+) is optional though)}
+    name: ${4:# Name of the spell or grimoire}
+    repository: ${5:# Repository location}
+    state: ${6:# Whether to cast, dispel or rebuild a package}
+    update: ${7:# Whether or not to update sorcery scripts at the very first stage}
+    update_cache: ${8:# Whether or not to update grimoire collection before casting spells}
   tags:
     - community
     - general

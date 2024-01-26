@@ -1,23 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates or drops indexes on MongoDB collections}
   community.mongodb.mongodb_index:
-    indexes: ${2:# List of indexes to create or drop}
-    replica_set: ${3:# Replica set to connect to (automatically connects to primary for writes)}
-    login_user: ${4:# The MongoDB user to login with}
-    login_password: ${5:# The password used to authenticate with}
+    atlas_auth: ${2:# Authentication path intended for MongoDB Atlas Instances}
+    auth_mechanism: ${3:# Authentication type}
+    connection_options: ${4:# Additional connection options}
+    indexes: ${5:# List of indexes to create or drop}
     login_database: ${6:# The database where login credentials are stored}
     login_host: ${7:# The host running MongoDB instance to login to}
-    login_port: ${8:# The MongoDB server port to login to}
-    strict_compatibility: ${9:# Enforce strict requirements for pymongo and MongoDB software versions}
-    ssl: ${10:# Whether to use an SSL connection when connecting to the database}
-    ssl_cert_reqs: ${11:# Specifies whether a certificate is required from the other side of the connection, and whether it will be validated if provided}
-    ssl_ca_certs: ${12:# The ssl_ca_certs option takes a path to a CA file}
-    ssl_crlfile: ${13:# The ssl_crlfile option takes a path to a CRL file}
-    ssl_certfile: ${14:# Present a client certificate using the ssl_certfile option}
-    ssl_keyfile: ${15:# Private key for the client certificate}
-    ssl_pem_passphrase: ${16:# Passphrase to decrypt encrypted private keys}
-    auth_mechanism: ${17:# Authentication type}
-    connection_options: ${18:# Additional connection options}
+    login_password: ${8:# The password used to authenticate with}
+    login_port: ${9:# The MongoDB server port to login to}
+    login_user: ${10:# The MongoDB user to login with}
+    replica_set: ${11:# Replica set to connect to (automatically connects to primary for writes)}
+    ssl: ${12:# Whether to use an SSL connection when connecting to the database}
+    ssl_ca_certs: ${13:# The ssl_ca_certs option takes a path to a CA file}
+    ssl_cert_reqs: ${14:# Specifies whether a certificate is required from the other side of the connection, and whether it will be validated if provided}
+    ssl_certfile: ${15:# Present a client certificate using the ssl_certfile option}
+    ssl_crlfile: ${16:# The ssl_crlfile option takes a path to a CRL file}
+    ssl_keyfile: ${17:# Private key for the client certificate}
+    ssl_pem_passphrase: ${18:# Passphrase to decrypt encrypted private keys}
+    strict_compatibility: ${19:# Enforce strict requirements for pymongo and MongoDB software versions}
   tags:
     - community
     - mongodb

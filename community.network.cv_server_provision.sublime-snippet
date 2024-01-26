@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Provision server port by applying or removing template configuration to an Arista CloudVision Portal configlet that is applied to a switch}
   community.network.cv_server_provision:
-    host: ${2:# The hostname or IP address of the CVP node being connected to}
-    port: ${3:# The port number to use when making API calls to the CVP node}
-    protocol: ${4:# The protocol to use when making API calls to CVP}
-    username: ${5:# The user that will be used to connect to CVP for making API calls}
-    password: ${6:# The password of the user that will be used to connect to CVP for API calls}
-    server_name: ${7:# The hostname or identifier for the server that is having it's switch port provisioned}
-    switch_name: ${8:# The hostname of the switch is being configured for the server being provisioned}
-    switch_port: ${9:# The physical port number on the switch that the new server is connected to}
-    port_vlan: ${10:# The vlan that should be applied to the port for this server}
-    template: ${11:# A path to a Jinja formatted template file that contains the configuration block that will be applied to the specified switch port}
-    action: ${12:# The action for the module to take}
-    auto_run: ${13:# Flag that determines whether or not the module will execute the CVP task spawned as a result of changes to a switch configlet}
+    action: ${2:# The action for the module to take}
+    auto_run: ${3:# Flag that determines whether or not the module will execute the CVP task spawned as a result of changes to a switch configlet}
+    host: ${4:# The hostname or IP address of the CVP node being connected to}
+    password: ${5:# The password of the user that will be used to connect to CVP for API calls}
+    port: ${6:# The port number to use when making API calls to the CVP node}
+    port_vlan: ${7:# The vlan that should be applied to the port for this server}
+    protocol: ${8:# The protocol to use when making API calls to CVP}
+    server_name: ${9:# The hostname or identifier for the server that is having it's switch port provisioned}
+    switch_name: ${10:# The hostname of the switch is being configured for the server being provisioned}
+    switch_port: ${11:# The physical port number on the switch that the new server is connected to}
+    template: ${12:# A path to a Jinja formatted template file that contains the configuration block that will be applied to the specified switch port}
+    username: ${13:# The user that will be used to connect to CVP for making API calls}
   tags:
     - community
     - network

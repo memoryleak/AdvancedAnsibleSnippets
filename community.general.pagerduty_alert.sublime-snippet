@@ -1,16 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Trigger, acknowledge or resolve PagerDuty incidents}
   community.general.pagerduty_alert:
-    name: ${2:# PagerDuty unique subdomain}
-    service_id: ${3:# ID of PagerDuty service when incidents will be triggered, acknowledged or resolved}
-    service_key: ${4:# The GUID of one of your 'Generic API' services}
-    integration_key: ${5:# The GUID of one of your 'Generic API' services}
-    state: ${6:# Type of event to be sent}
-    api_key: ${7:# The pagerduty API key (readonly access), generated on the pagerduty site}
-    desc: ${8:# For C(triggered) I(state) - Required}
-    incident_key: ${9:# Identifies the incident to which this I(state) should be applied}
-    client: ${10:# The name of the monitoring client that is triggering this event}
-    client_url: ${11:# The URL of the monitoring client that is triggering this event}
+    api_key: ${2:# The pagerduty API key (readonly access), generated on the pagerduty site}
+    api_version: ${3:# The API version we want to use to run the module}
+    client: ${4:# The name of the monitoring client that is triggering this event}
+    client_url: ${5:# The URL of the monitoring client that is triggering this event}
+    component: ${6:# Component of the source machine that is responsible for the event, for example C(mysql) or C(eth0)}
+    custom_details: ${7:# Additional details about the event and affected system}
+    desc: ${8:# For O(state=triggered) - Required}
+    incident_class: ${9:# The class/type of the event, for example C(ping failure) or C(cpu load)}
+    incident_key: ${10:# Identifies the incident to which this O(state) should be applied}
+    integration_key: ${11:# The GUID of one of your 'Generic API' services}
+    link_text: ${12:# A short description of the link_url}
+    link_url: ${13:# Relevant link url to the alert}
+    name: ${14:# PagerDuty unique subdomain}
+    service_id: ${15:# ID of PagerDuty service when incidents will be triggered, acknowledged or resolved}
+    service_key: ${16:# The GUID of one of your 'Generic API' services}
+    severity: ${17:# The perceived severity of the status the event is describing with respect to the affected system}
+    source: ${18:# The unique location of the affected system, preferably a hostname or FQDN}
+    state: ${19:# Type of event to be sent}
   tags:
     - community
     - general

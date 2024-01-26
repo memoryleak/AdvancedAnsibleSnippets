@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP Log Forward Configuration}
   netapp.ontap.na_ontap_log_forward:
-    state: ${2:# Whether the log forward configuration should exist or not}
+    cert_filepath: ${2:# path to SSL client cert file (}
     destination: ${3:# Destination address that the log messages will be forwarded to}
-    port: ${4:# The destination port used to forward the message}
-    facility: ${5:# Facility code used to indicate the type of software that generated the message}
+    facility: ${4:# Facility code used to indicate the type of software that generated the message}
+    feature_flags: ${5:# Enable or disable a new feature}
     force: ${6:# Skip the Connectivity Test}
-    protocol: ${7:# Log Forwarding Protocol}
-    verify_server: ${8:# Verify Destination Server Identity}
-    hostname: ${9:# The hostname or IP address of the ONTAP instance}
-    username: ${10:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${11:# Password for the specified user}
-    cert_filepath: ${12:# path to SSL client cert file (}
-    key_filepath: ${13:# path to SSL client key file}
-    https: ${14:# Enable and disable https}
-    validate_certs: ${15:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${16:# Override the default port (80 or 443) with this port}
-    ontapi: ${17:# The ontap api version to use}
-    use_rest: ${18:# Whether to use REST or ZAPI}
-    feature_flags: ${19:# Enable or disable a new feature}
-    force_ontap_version: ${20:# Override the cluster ONTAP version when using REST}
+    force_ontap_version: ${7:# Override the cluster ONTAP version when using REST}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    http_port: ${9:# Override the default port (80 or 443) with this port}
+    https: ${10:# Enable and disable https}
+    key_filepath: ${11:# path to SSL client key file}
+    ontapi: ${12:# The ontap api version to use}
+    password: ${13:# Password for the specified user}
+    port: ${14:# The destination port used to forward the message}
+    protocol: ${15:# Log Forwarding Protocol}
+    state: ${16:# Whether the log forward configuration should exist or not}
+    use_rest: ${17:# Whether to use REST or ZAPI}
+    username: ${18:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${19:# If set to C(no), the SSL certificates will not be validated}
+    verify_server: ${20:# Verify Destination Server Identity}
   tags:
     - netapp
     - ontap

@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieves facts about docker host and lists of objects of the services}
   community.docker.docker_host_info:
-    containers: ${2:# Whether to list containers}
-    containers_all: ${3:# By default, only running containers are returned}
-    containers_filters: ${4:# A dictionary of filter values used for selecting containers to list}
-    images: ${5:# Whether to list images}
-    images_filters: ${6:# A dictionary of filter values used for selecting images to list}
-    networks: ${7:# Whether to list networks}
-    networks_filters: ${8:# A dictionary of filter values used for selecting networks to list}
-    volumes: ${9:# Whether to list volumes}
-    volumes_filters: ${10:# A dictionary of filter values used for selecting volumes to list}
-    disk_usage: ${11:# Summary information on used disk space by all Docker layers}
-    verbose_output: ${12:# When set to C(true) and I(networks), I(volumes), I(images), I(containers) or I(disk_usage) is set to C(true) then output will contain verbose information about objects matching the full output of API method}
-    docker_host: ${13:# The URL or Unix socket path used to connect to the Docker API}
-    tls_hostname: ${14:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    api_version: ${15:# The version of the Docker API running on the Docker Host}
-    timeout: ${16:# The maximum amount of time in seconds to wait on a response from the API}
-    ca_cert: ${17:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
-    client_cert: ${18:# Path to the client's TLS certificate file}
-    client_key: ${19:# Path to the client's TLS key file}
-    ssl_version: ${20:# Provide a valid SSL version number}
-    tls: ${21:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    use_ssh_client: ${22:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
-    validate_certs: ${23:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
-    debug: ${24:# Debug mode}
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    ca_cert: ${3:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${4:# Path to the client's TLS certificate file}
+    client_key: ${5:# Path to the client's TLS key file}
+    containers: ${6:# Whether to list containers}
+    containers_all: ${7:# By default, only running containers are returned}
+    containers_filters: ${8:# A dictionary of filter values used for selecting containers to list}
+    debug: ${9:# Debug mode}
+    disk_usage: ${10:# Summary information on used disk space by all Docker layers}
+    docker_host: ${11:# The URL or Unix socket path used to connect to the Docker API}
+    images: ${12:# Whether to list images}
+    images_filters: ${13:# A dictionary of filter values used for selecting images to list}
+    networks: ${14:# Whether to list networks}
+    networks_filters: ${15:# A dictionary of filter values used for selecting networks to list}
+    ssl_version: ${16:# Provide a valid SSL version number}
+    timeout: ${17:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${18:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${19:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    use_ssh_client: ${20:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${21:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    verbose_output: ${22:# When set to V(true) and O(networks), O(volumes), O(images), O(containers), or O(disk_usage) is set to V(true) then output will contain verbose information about objects matching the full output of API method}
+    volumes: ${23:# Whether to list volumes}
+    volumes_filters: ${24:# A dictionary of filter values used for selecting volumes to list}
   tags:
     - community
     - docker

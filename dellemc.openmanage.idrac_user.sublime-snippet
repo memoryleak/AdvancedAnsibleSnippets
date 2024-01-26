@@ -1,25 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure settings for user accounts}
   dellemc.openmanage.idrac_user:
-    state: ${2:# Select C(present) to create or modify a user account}
-    user_name: ${3:# Provide the I(user_name) of the account to be created, deleted or modified}
-    user_password: ${4:# Provide the password for the user account}
-    new_user_name: ${5:# Provide the I(user_name) for the account to be modified}
-    privilege: ${6:# Following are the role-based privileges}
-    ipmi_lan_privilege: ${7:# The Intelligent Platform Management Interface LAN privilege level assigned to the user}
-    ipmi_serial_privilege: ${8:# The Intelligent Platform Management Interface Serial Port privilege level assigned to the user}
-    enable: ${9:# Provide the option to enable or disable a user from logging in to iDRAC}
-    sol_enable: ${10:# Enables Serial Over Lan (SOL) for an iDRAC user}
-    protocol_enable: ${11:# Enables protocol for the iDRAC user}
-    authentication_protocol: ${12:# This option allows to configure one of the following authentication protocol types to authenticate the iDRAC user}
+    authentication_protocol: ${2:# This option allows to configure one of the following authentication protocol types to authenticate the iDRAC user}
+    ca_path: ${3:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    custom_privilege: ${4:# The privilege level assigned to the user}
+    enable: ${5:# Provide the option to enable or disable a user from logging in to iDRAC}
+    idrac_ip: ${6:# iDRAC IP Address}
+    idrac_password: ${7:# iDRAC user password}
+    idrac_port: ${8:# iDRAC port}
+    idrac_user: ${9:# iDRAC username}
+    ipmi_lan_privilege: ${10:# The Intelligent Platform Management Interface LAN privilege level assigned to the user}
+    ipmi_serial_privilege: ${11:# The Intelligent Platform Management Interface Serial Port privilege level assigned to the user}
+    new_user_name: ${12:# Provide the I(user_name) for the account to be modified}
     privacy_protocol: ${13:# This option allows to configure one of the following privacy encryption protocols for the iDRAC user}
-    idrac_ip: ${14:# iDRAC IP Address}
-    idrac_user: ${15:# iDRAC username}
-    idrac_password: ${16:# iDRAC user password}
-    idrac_port: ${17:# iDRAC port}
-    validate_certs: ${18:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${19:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${20:# The socket level timeout in seconds}
+    privilege: ${14:# Following are the role-based privileges}
+    protocol_enable: ${15:# Enables protocol for the iDRAC user}
+    sol_enable: ${16:# Enables Serial Over Lan (SOL) for an iDRAC user}
+    state: ${17:# Select C(present) to create or modify a user account}
+    timeout: ${18:# The socket level timeout in seconds}
+    user_name: ${19:# Provide the I(user_name) of the account to be created, deleted or modified}
+    user_password: ${20:# Provide the password for the user account}
+    validate_certs: ${21:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

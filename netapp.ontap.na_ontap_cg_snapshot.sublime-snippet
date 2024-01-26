@@ -1,23 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP manage consistency group snapshot}
   netapp.ontap.na_ontap_cg_snapshot:
-    state: ${2:# If you want to create a snapshot}
-    vserver: ${3:# Name of the vserver}
-    volumes: ${4:# A list of volumes in this filer that is part of this CG operation}
-    snapshot: ${5:# The provided name of the snapshot that is created in each volume}
-    timeout: ${6:# Timeout selector}
-    snapmirror_label: ${7:# A human readable SnapMirror label to be attached with the consistency group snapshot copies}
-    hostname: ${8:# The hostname or IP address of the ONTAP instance}
-    username: ${9:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${10:# Password for the specified user}
-    cert_filepath: ${11:# path to SSL client cert file (}
-    key_filepath: ${12:# path to SSL client key file}
-    https: ${13:# Enable and disable https}
-    validate_certs: ${14:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${15:# Override the default port (80 or 443) with this port}
-    ontapi: ${16:# The ontap api version to use}
-    use_rest: ${17:# This module only support ZAPI and will can not be swtich to REST}
-    feature_flags: ${18:# Enable or disable a new feature}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    comment: ${3:# Comment for the snapshot copy}
+    consistency_group: ${4:# Name of the consistency group for which snapshot needs to be created or deleted}
+    feature_flags: ${5:# Enable or disable a new feature}
+    force_ontap_version: ${6:# Override the cluster ONTAP version when using REST}
+    hostname: ${7:# The hostname or IP address of the ONTAP instance}
+    http_port: ${8:# Override the default port (80 or 443) with this port}
+    https: ${9:# Enable and disable https}
+    key_filepath: ${10:# path to SSL client key file}
+    ontapi: ${11:# The ontap api version to use}
+    password: ${12:# Password for the specified user}
+    snapmirror_label: ${13:# A human readable SnapMirror label to be attached with the consistency group snapshot copies}
+    snapshot: ${14:# The provided name of the snapshot that is created in each volume}
+    state: ${15:# Specifies whether to create  or delete the snapshot}
+    timeout: ${16:# Timeout selector}
+    use_rest: ${17:# Whether to use REST or ZAPI}
+    username: ${18:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${19:# If set to C(no), the SSL certificates will not be validated}
+    volumes: ${20:# A list of volumes in this filer that is part of this CG operation}
+    vserver: ${21:# Name of the vserver}
   tags:
     - netapp
     - ontap

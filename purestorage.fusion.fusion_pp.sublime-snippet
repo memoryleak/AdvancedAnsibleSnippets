@@ -1,13 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage protection policies in Pure Storage Fusion}
   purestorage.fusion.fusion_pp:
-    name: ${2:# The name of the protection policy}
-    state: ${3:# Define whether the protection policy should exist or not}
+    access_token: ${2:# Access token for Fusion Service}
+    destroy_snapshots_on_delete: ${3:# Before deleting protection policy, snapshots within the protection policy will be deleted}
     display_name: ${4:# The human name of the protection policy}
-    local_rpo: ${5:# Recovery Point Objective for snapshots}
+    issuer_id: ${5:# Application ID from Pure1 Registration page}
     local_retention: ${6:# Retention Duration for periodic snapshots}
-    key_file: ${7:# Path to the private key file}
-    app_id: ${8:# Application ID from Pure1 Registration page}
+    local_rpo: ${7:# Recovery Point Objective for snapshots}
+    name: ${8:# The name of the protection policy}
+    private_key_file: ${9:# Path to the private key file}
+    private_key_password: ${10:# Password of the encrypted private key file}
+    state: ${11:# Define whether the protection policy should exist or not}
   tags:
     - purestorage
     - fusion

@@ -2,17 +2,17 @@
   <content><![CDATA[- name: ${1:Notify BigPanda about deployments}
   community.general.bigpanda:
     component: ${2:# The name of the component being deployed}
-    version: ${3:# The deployment version}
-    token: ${4:# API token}
-    state: ${5:# State of the deployment}
+    deployment_message: ${3:# Message about the deployment}
+    description: ${4:# Free text description of the deployment}
+    env: ${5:# The environment name, typically 'production', 'staging', etc}
     hosts: ${6:# Name of affected host name}
-    env: ${7:# The environment name, typically 'production', 'staging', etc}
-    owner: ${8:# The person responsible for the deployment}
-    description: ${9:# Free text description of the deployment}
-    url: ${10:# Base URL of the API server}
-    validate_certs: ${11:# If C(false), SSL certificates for the target url will not be validated}
-    deployment_message: ${12:# Message about the deployment}
-    source_system: ${13:# Source system used in the requests to the API}
+    owner: ${7:# The person responsible for the deployment}
+    source_system: ${8:# Source system used in the requests to the API}
+    state: ${9:# State of the deployment}
+    token: ${10:# API token}
+    url: ${11:# Base URL of the API server}
+    validate_certs: ${12:# If V(false), SSL certificates for the target url will not be validated}
+    version: ${13:# The deployment version}
   tags:
     - community
     - general

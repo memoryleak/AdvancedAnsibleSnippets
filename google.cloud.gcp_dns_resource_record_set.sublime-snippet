@@ -1,19 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP ResourceRecordSet}
   google.cloud.gcp_dns_resource_record_set:
-    state: ${2:# Whether the given object should exist in GCP}
-    name: ${3:# For example, U(www}
-    type: ${4:# One of valid DNS resource types}
-    ttl: ${5:# Number of seconds that this ResourceRecordSet can be cached by resolvers}
-    target: ${6:# As defined in RFC 1035 (section 5) and RFC 1034 (section 3}
-    managed_zone: ${7:# Identifies the managed zone addressed by this request}
-    project: ${8:# The Google Cloud Platform project to use}
-    auth_kind: ${9:# The type of credential used}
-    service_account_contents: ${10:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    auth_kind: ${3:# The type of credential used}
+    env_type: ${4:# Specifies which Ansible environment you're running this module within}
+    managed_zone: ${5:# Identifies the managed zone addressed by this request}
+    name: ${6:# For example, U(www}
+    project: ${7:# The Google Cloud Platform project to use}
+    scopes: ${8:# Array of scopes to be used}
+    service_account_contents: ${9:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_email: ${10:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
     service_account_file: ${11:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${12:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${13:# Array of scopes to be used}
-    env_type: ${14:# Specifies which Ansible environment you're running this module within}
+    state: ${12:# Whether the given object should exist in GCP}
+    target: ${13:# As defined in RFC 1035 (section 5) and RFC 1034 (section 3}
+    ttl: ${14:# Number of seconds that this ResourceRecordSet can be cached by resolvers}
+    type: ${15:# One of valid DNS resource types}
   tags:
     - google
     - cloud

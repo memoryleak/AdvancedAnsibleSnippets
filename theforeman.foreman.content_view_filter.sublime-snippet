@@ -2,29 +2,30 @@
   <content><![CDATA[- name: ${1:Manage Content View Filters}
   theforeman.foreman.content_view_filter:
     architecture: ${2:# package architecture}
-    name: ${3:# Name of the Content View Filter}
-    description: ${4:# Description of the Content View Filter}
-    content_view: ${5:# Name of the content view}
-    filter_state: ${6:# State of the content view filter}
-    repositories: ${7:# List of repositories that include name and product}
-    rule_state: ${8:# State of the content view filter rule}
+    content_view: ${3:# Name of the content view}
+    date_type: ${4:# Search using the 'Issued On' or 'Updated On'}
+    description: ${5:# Description of the Content View Filter}
+    end_date: ${6:# erratum end date (YYYY-MM-DD)}
+    errata_id: ${7:# erratum id}
+    filter_state: ${8:# State of the content view filter}
     filter_type: ${9:# Content view filter type}
-    rule_name: ${10:# Content view filter rule name or package name}
-    date_type: ${11:# Search using the 'Issued On' or 'Updated On'}
-    end_date: ${12:# erratum end date (YYYY-MM-DD)}
-    start_date: ${13:# erratum start date (YYYY-MM-DD)}
-    errata_id: ${14:# erratum id}
-    max_version: ${15:# package maximum version}
-    min_version: ${16:# package minimum version}
-    types: ${17:# erratum types (enhancement, bugfix, security)}
-    version: ${18:# package version}
-    inclusion: ${19:# Create an include filter}
-    original_packages: ${20:# Include all RPMs with no errata}
+    inclusion: ${10:# Create an include filter}
+    max_version: ${11:# package maximum version}
+    min_version: ${12:# package minimum version}
+    name: ${13:# Name of the Content View Filter}
+    organization: ${14:# Organization that the entity is in}
+    original_module_streams: ${15:# Include all module streams with no errata}
+    original_packages: ${16:# Include all RPMs with no errata}
+    password: ${17:# Password of the user accessing the Foreman server}
+    repositories: ${18:# List of repositories that include name and product}
+    rule_name: ${19:# Content view filter rule name or package name}
+    rule_state: ${20:# State of the content view filter rule}
     server_url: ${21:# URL of the Foreman server}
-    username: ${22:# Username accessing the Foreman server}
-    password: ${23:# Password of the user accessing the Foreman server}
-    validate_certs: ${24:# Whether or not to verify the TLS certificates of the Foreman server}
-    organization: ${25:# Organization that the entity is in}
+    start_date: ${22:# erratum start date (YYYY-MM-DD)}
+    types: ${23:# erratum types (enhancement, bugfix, security)}
+    username: ${24:# Username accessing the Foreman server}
+    validate_certs: ${25:# Whether or not to verify the TLS certificates of the Foreman server}
+    version: ${26:# package version}
   tags:
     - theforeman
     - foreman

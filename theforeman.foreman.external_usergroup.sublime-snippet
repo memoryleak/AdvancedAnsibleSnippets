@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage External User Groups}
   theforeman.foreman.external_usergroup:
-    name: ${2:# Name of the group}
-    usergroup: ${3:# Name of the linked usergroup}
-    auth_source: ${4:# Name of the authentication source to be used for this group}
+    auth_source: ${2:# Name of the authentication source to be used for this group}
+    name: ${3:# Name of the group}
+    password: ${4:# Password of the user accessing the Foreman server}
     server_url: ${5:# URL of the Foreman server}
-    username: ${6:# Username accessing the Foreman server}
-    password: ${7:# Password of the user accessing the Foreman server}
-    validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
-    state: ${9:# State of the entity}
+    state: ${6:# State of the entity}
+    usergroup: ${7:# Name of the linked usergroup}
+    username: ${8:# Username accessing the Foreman server}
+    validate_certs: ${9:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

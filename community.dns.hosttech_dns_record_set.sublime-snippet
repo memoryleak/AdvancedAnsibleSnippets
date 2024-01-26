@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add or delete record sets in Hosttech DNS service}
   community.dns.hosttech_dns_record_set:
-    hosttech_username: ${2:# The username for the Hosttech API user}
-    hosttech_password: ${3:# The password for the Hosttech API user}
-    hosttech_token: ${4:# The password for the Hosttech API user}
-    ttl: ${5:# The TTL to give the new record, in seconds}
-    type: ${6:# The type of DNS record to create or delete}
-    zone_id: ${7:# The ID of the DNS zone to modify}
+    hosttech_password: ${2:# The password for the Hosttech API user}
+    hosttech_token: ${3:# The password for the Hosttech API user}
+    hosttech_username: ${4:# The username for the Hosttech API user}
+    on_existing: ${5:# This option defines the behavior if the record set already exists, but differs from the specified record set}
+    prefix: ${6:# The prefix of the DNS record}
+    record: ${7:# The full DNS record to create or delete}
     state: ${8:# Specifies the state of the resource record}
-    zone_name: ${9:# The DNS zone to modify}
-    record: ${10:# The full DNS record to create or delete}
-    prefix: ${11:# The prefix of the DNS record}
-    value: ${12:# The new value when creating a DNS record}
-    on_existing: ${13:# This option defines the behavior if the record set already exists, but differs from the specified record set}
-    txt_transformation: ${14:# Determines how TXT entry values are converted between the API and this module's input and output}
-    txt_character_encoding: ${15:# Whether to treat numeric escape sequences (C(\\xyz)) as octal or decimal numbers}
+    ttl: ${9:# The TTL to give the new record, in seconds}
+    txt_character_encoding: ${10:# Whether to treat numeric escape sequences (V(\\\\xyz)) as octal or decimal numbers}
+    txt_transformation: ${11:# Determines how TXT entry values are converted between the API and this module's input and output}
+    type: ${12:# The type of DNS record to create or delete}
+    value: ${13:# The new value when creating a DNS record}
+    zone_id: ${14:# The ID of the DNS zone to modify}
+    zone_name: ${15:# The DNS zone to modify}
   tags:
     - community
     - dns

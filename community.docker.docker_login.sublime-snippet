@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Log into a Docker registry}
   community.docker.docker_login:
-    registry_url: ${2:# The registry URL}
-    username: ${3:# The username for the registry account}
-    password: ${4:# The plaintext password for the registry account}
-    reauthorize: ${5:# Refresh existing authentication found in the configuration file}
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    ca_cert: ${3:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${4:# Path to the client's TLS certificate file}
+    client_key: ${5:# Path to the client's TLS key file}
     config_path: ${6:# Custom path to the Docker CLI configuration file}
-    state: ${7:# This controls the current state of the user}
+    debug: ${7:# Debug mode}
     docker_host: ${8:# The URL or Unix socket path used to connect to the Docker API}
-    tls_hostname: ${9:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    api_version: ${10:# The version of the Docker API running on the Docker Host}
-    timeout: ${11:# The maximum amount of time in seconds to wait on a response from the API}
-    ca_cert: ${12:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
-    client_cert: ${13:# Path to the client's TLS certificate file}
-    client_key: ${14:# Path to the client's TLS key file}
-    ssl_version: ${15:# Provide a valid SSL version number}
-    tls: ${16:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    password: ${9:# The plaintext password for the registry account}
+    reauthorize: ${10:# Refresh existing authentication found in the configuration file}
+    registry_url: ${11:# The registry URL}
+    ssl_version: ${12:# Provide a valid SSL version number}
+    state: ${13:# This controls the current state of the user}
+    timeout: ${14:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${15:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${16:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
     use_ssh_client: ${17:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
-    validate_certs: ${18:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
-    debug: ${19:# Debug mode}
+    username: ${18:# The username for the registry account}
+    validate_certs: ${19:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
   tags:
     - community
     - docker

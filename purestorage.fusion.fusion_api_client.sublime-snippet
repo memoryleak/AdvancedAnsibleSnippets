@@ -1,11 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage API clients in Pure Storage Fusion}
   purestorage.fusion.fusion_api_client:
-    name: ${2:# The name of the client}
-    state: ${3:# Define whether the client should exist or not}
-    public_key: ${4:# The API clients PEM formatted (Base64 encoded) RSA public key}
-    key_file: ${5:# Path to the private key file}
-    app_id: ${6:# Application ID from Pure1 Registration page}
+    access_token: ${2:# Access token for Fusion Service}
+    issuer_id: ${3:# Application ID from Pure1 Registration page}
+    name: ${4:# The name of the client}
+    private_key_file: ${5:# Path to the private key file}
+    private_key_password: ${6:# Password of the encrypted private key file}
+    public_key: ${7:# The API clients PEM formatted (Base64 encoded) RSA public key}
+    state: ${8:# Define whether the client should exist or not}
   tags:
     - purestorage
     - fusion

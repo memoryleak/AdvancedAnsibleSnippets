@@ -2,18 +2,18 @@
   <content><![CDATA[- name: ${1:Manage users of ESXi}
   community.vmware.vmware_host_user_manager:
     esxi_hostname: ${2:# Name of the ESXi host that is managing the local user}
-    user_name: ${3:# Name of the local user}
-    user_password: ${4:# The local user password}
-    user_description: ${5:# The local user description}
-    override_user_password: ${6:# If the local user exists and updates the password, change this parameter value is true}
-    state: ${7:# If set to C(present), add a new local user or update information}
-    hostname: ${8:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${9:# The username of the vSphere vCenter or ESXi server}
-    password: ${10:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${11:# Allows connection when SSL certificates are not valid}
-    port: ${12:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${13:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${14:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    hostname: ${3:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    override_user_password: ${4:# If the local user exists and updates the password, change this parameter value is true}
+    password: ${5:# The password of the vSphere vCenter or ESXi server}
+    port: ${6:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${7:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${8:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    state: ${9:# If set to V(present), add a new local user or update information}
+    user_description: ${10:# The local user description}
+    user_name: ${11:# Name of the local user}
+    user_password: ${12:# The local user password}
+    username: ${13:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${14:# Allows connection when SSL certificates are not valid}
   tags:
     - community
     - vmware

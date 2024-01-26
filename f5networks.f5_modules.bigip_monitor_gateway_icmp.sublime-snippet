@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages F5 BIG-IP LTM gateway ICMP monitors}
   f5networks.f5_modules.bigip_monitor_gateway_icmp:
-    name: ${2:# Monitor name}
-    parent: ${3:# The parent template of this monitor template}
-    description: ${4:# The description of the monitor}
-    ip: ${5:# IP address part of the IP/port definition}
-    port: ${6:# Port address part of the IP/port definition}
+    adaptive: ${2:# Specifies whether adaptive response time monitoring is enabled for this monitor}
+    adaptive_limit: ${3:# Specifies the absolute number of milliseconds that may not be exceeded by a monitor probe, regardless of C(allowed_divergence) setting, for a probe to be considered successful}
+    allowed_divergence_type: ${4:# When specifying a new monitor, if C(adaptive) is C(true), the default is C(relative)}
+    allowed_divergence_value: ${5:# When specifying a new monitor, if C(adaptive) is C(true), and C(type) is C(relative), the default is C(25) percent}
+    description: ${6:# The description of the monitor}
     interval: ${7:# Specifies, in seconds, the frequency at which the system issues the monitor check when either the resource is down or the status of the resource is unknown}
-    timeout: ${8:# Specifies the number of seconds the target has in which to respond to the monitor request}
-    time_until_up: ${9:# Specifies the number of seconds to wait after a resource first responds correctly to the monitor before setting the resource to 'up'}
-    up_interval: ${10:# Specifies the interval for the system to use to perform the health check when a resource is up}
-    manual_resume: ${11:# Specifies whether the system automatically changes the status of a resource to B(enabled) at the next successful monitor check}
-    adaptive: ${12:# Specifies whether adaptive response time monitoring is enabled for this monitor}
-    allowed_divergence_type: ${13:# When specifying a new monitor, if C(adaptive) is C(yes), the default is C(relative)}
-    allowed_divergence_value: ${14:# When specifying a new monitor, if C(adaptive) is C(yes), and C(type) is C(relative), the default is C(25) percent}
-    adaptive_limit: ${15:# Specifies the absolute number of milliseconds that may not be exceeded by a monitor probe, regardless of C(allowed_divergence) setting, for a probe to be considered successful}
-    sampling_timespan: ${16:# Specifies the length, in seconds, of the probe history window that the system uses to calculate the mean latency and standard deviation of a monitor probe}
-    transparent: ${17:# Specifies whether the monitor operates in transparent mode}
-    partition: ${18:# Device partition to manage resources on}
-    state: ${19:# When C(present), ensures that the monitor exists}
-    provider: ${20:# A dict object containing connection details}
+    ip: ${8:# IP address part of the IP/port definition}
+    manual_resume: ${9:# Specifies whether the system automatically changes the status of a resource to B(enabled) at the next successful monitor check}
+    name: ${10:# Monitor name}
+    parent: ${11:# The parent template of this monitor template}
+    partition: ${12:# Device partition to manage resources on}
+    port: ${13:# Port address part of the IP/port definition}
+    provider: ${14:# A dict object containing connection details}
+    sampling_timespan: ${15:# Specifies the length, in seconds, of the probe history window that the system uses to calculate the mean latency and standard deviation of a monitor probe}
+    state: ${16:# When C(present), ensures that the monitor exists}
+    time_until_up: ${17:# Specifies the number of seconds to wait after a resource first responds correctly to the monitor before setting the resource to 'up'}
+    timeout: ${18:# Specifies the number of seconds the target has in which to respond to the monitor request}
+    transparent: ${19:# Specifies whether the monitor operates in transparent mode}
+    up_interval: ${20:# Specifies the interval for the system to use to perform the health check when a resource is up}
   tags:
     - f5networks
     - f5_modules

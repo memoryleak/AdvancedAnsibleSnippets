@@ -2,16 +2,16 @@
   <content><![CDATA[- name: ${1:Configures an availability group listener}
   lowlydba.sqlserver.ag_listener:
     ag_name: ${2:# Name of the target availability group}
-    listener_name: ${3:# Name of the Listener to be configured}
+    dhcp: ${3:# Indicates whether the listener uses DHCP}
     ip_address: ${4:# IP address(es) of the listener}
-    subnet_ip: ${5:# Subnet IP address(es) of the listener}
-    subnet_mask: ${6:# Sets the subnet IP mask(s) of the availability group listener}
-    port: ${7:# Sets the port number used to communicate with the availability group}
-    dhcp: ${8:# Indicates whether the listener uses DHCP}
-    sql_instance: ${9:# The SQL Server instance to modify}
-    sql_username: ${10:# Username for SQL Authentication}
-    sql_password: ${11:# Password for SQL Authentication}
-    state: ${12:# Whether or not the object should be C(present) or C(absent)}
+    listener_name: ${5:# Name of the Listener to be configured}
+    port: ${6:# Sets the port number used to communicate with the availability group}
+    sql_instance: ${7:# The SQL Server instance to modify}
+    sql_password: ${8:# Password for SQL Authentication}
+    sql_username: ${9:# Username for SQL Authentication}
+    state: ${10:# Whether or not the object should be C(present) or C(absent)}
+    subnet_ip: ${11:# Subnet IP address(es) of the listener}
+    subnet_mask: ${12:# Sets the subnet IP mask(s) of the availability group listener}
   tags:
     - lowlydba
     - sqlserver

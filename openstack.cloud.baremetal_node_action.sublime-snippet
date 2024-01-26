@@ -1,36 +1,33 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Activate/Deactivate Bare Metal Resources from OpenStack}
+  <content><![CDATA[- name: ${1:Activate/Deactivate Bare Metal nodes from OpenStack}
   openstack.cloud.baremetal_node_action:
-    name: ${2:# Name of the node to create}
-    state: ${3:# Indicates desired state of the resource}
-    deploy: ${4:# Indicates if the resource should be deployed}
-    uuid: ${5:# globally unique identifier (UUID) to be given to the resource}
-    ironic_url: ${6:# If noauth mode is utilized, this is required to be set to the endpoint URL for the Ironic API}
-    config_drive: ${7:# A configdrive file or HTTP(S) URL that will be passed along to the node}
-    instance_info: ${8:# Definition of the instance information which is used to deploy the node}
-    power: ${9:# A setting to allow power state to be asserted allowing nodes that are not yet deployed to be powered on, and nodes that are deployed to be powered off}
-    maintenance: ${10:# A setting to allow the direct control if a node is in maintenance mode}
-    maintenance_reason: ${11:# A string expression regarding the reason a node is in a maintenance mode}
-    wait: ${12:# A boolean value instructing the module to wait for node activation or deactivation to complete before returning}
-    timeout: ${13:# An integer value representing the number of seconds to wait for the node activation or deactivation to complete}
-    cloud: ${14:# Named cloud or cloud config to operate against}
-    auth: ${15:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
-    auth_type: ${16:# Name of the auth plugin to use}
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    config_drive: ${9:# A configdrive file or HTTP(S) URL that will be passed along to the node}
+    deploy: ${10:# Indicates if the resource should be deployed}
+    instance_info: ${11:# Definition of the instance information which is used to deploy the node}
+    interface: ${12:# Endpoint URL type to fetch from the service catalog}
+    maintenance: ${13:# Set node into maintenance mode}
+    maintenance_reason: ${14:# A string expression regarding the reason a node is in a maintenance mode}
+    name: ${15:# Name or ID of the Bare Metal node}
+    power: ${16:# A setting to allow power state to be asserted allowing nodes that are not yet deployed to be powered on, and nodes that are deployed to be powered off}
     region_name: ${17:# Name of the region}
-    api_timeout: ${18:# How long should the socket layer wait before timing out for API calls}
-    validate_certs: ${19:# Whether or not SSL API requests should be verified}
-    ca_cert: ${20:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
-    client_cert: ${21:# A path to a client certificate to use as part of the SSL transaction}
-    client_key: ${22:# A path to a client key to use as part of the SSL transaction}
-    interface: ${23:# Endpoint URL type to fetch from the service catalog}
-    availability_zone: ${24:# Ignored}
-    sdk_log_path: ${25:# Path to the logfile of the OpenStackSDK}
-    sdk_log_level: ${26:# Log level of the OpenStackSDK}
+    sdk_log_level: ${18:# Log level of the OpenStackSDK}
+    sdk_log_path: ${19:# Path to the logfile of the OpenStackSDK}
+    state: ${20:# Indicates desired state of the resource}
+    timeout: ${21:# Number of seconds to wait for the node activation or deactivation to complete}
+    validate_certs: ${22:# Whether or not SSL API requests should be verified}
+    wait: ${23:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud
     - baremetal_node_action]]></content>
   <tabTrigger>openstack.cloud.baremetal_node_action</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Activate/Deactivate Bare Metal Resources from OpenStack</description>
+  <description>Activate/Deactivate Bare Metal nodes from OpenStack</description>
 </snippet>

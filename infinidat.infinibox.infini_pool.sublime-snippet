@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, Delete and Modify Pools on Infinibox}
   infinidat.infinibox.infini_pool:
-    name: ${2:# Pool Name}
-    state: ${3:# Creates/Modifies Pool when present or removes when absent}
-    size: ${4:# Pool Physical Capacity in MB, GB or TB units}
-    vsize: ${5:# Pool Virtual Capacity in MB, GB or TB units}
+    compression: ${2:# Enable/Disable Compression on Pool}
+    name: ${3:# Pool Name}
+    password: ${4:# Infinibox User password}
+    size: ${5:# Pool Physical Capacity in MB, GB or TB units}
     ssd_cache: ${6:# Enable/Disable SSD Cache on Pool}
-    compression: ${7:# Enable/Disable Compression on Pool}
+    state: ${7:# Creates/Modifies Pool when present or removes when absent}
     system: ${8:# Infinibox Hostname or IPv4 Address}
     user: ${9:# Infinibox User username with sufficient priveledges ( see notes )}
-    password: ${10:# Infinibox User password}
+    vsize: ${10:# Pool Virtual Capacity in MB, GB or TB units}
   tags:
     - infinidat
     - infinibox

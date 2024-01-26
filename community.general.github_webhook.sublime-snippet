@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage GitHub webhooks}
   community.general.github_webhook:
-    repository: ${2:# Full name of the repository to configure a hook for}
-    url: ${3:# URL to which payloads will be delivered}
-    content_type: ${4:# The media type used to serialize the payloads}
-    secret: ${5:# The shared secret between GitHub and the payload URL}
+    active: ${2:# Whether or not the hook is active}
+    content_type: ${3:# The media type used to serialize the payloads}
+    events: ${4:# A list of GitHub events the hook is triggered for}
+    github_url: ${5:# Base URL of the GitHub API}
     insecure_ssl: ${6:# Flag to indicate that GitHub should skip SSL verification when calling the hook}
-    events: ${7:# A list of GitHub events the hook is triggered for}
-    active: ${8:# Whether or not the hook is active}
-    state: ${9:# Whether the hook should be present or absent}
-    user: ${10:# User to authenticate to GitHub as}
-    password: ${11:# Password to authenticate to GitHub with}
-    token: ${12:# Token to authenticate to GitHub with}
-    github_url: ${13:# Base URL of the GitHub API}
+    password: ${7:# Password to authenticate to GitHub with}
+    repository: ${8:# Full name of the repository to configure a hook for}
+    secret: ${9:# The shared secret between GitHub and the payload URL}
+    state: ${10:# Whether the hook should be present or absent}
+    token: ${11:# Token to authenticate to GitHub with}
+    url: ${12:# URL to which payloads will be delivered}
+    user: ${13:# User to authenticate to GitHub as}
   tags:
     - community
     - general

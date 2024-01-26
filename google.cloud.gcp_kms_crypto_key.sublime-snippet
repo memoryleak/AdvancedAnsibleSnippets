@@ -1,21 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP CryptoKey}
   google.cloud.gcp_kms_crypto_key:
-    state: ${2:# Whether the given object should exist in GCP}
-    name: ${3:# The resource name for the CryptoKey}
-    labels: ${4:# Labels with user-defined metadata to apply to this resource}
-    purpose: ${5:# Immutable purpose of CryptoKey}
-    rotation_period: ${6:# Every time this period passes, generate a new CryptoKeyVersion and set it as the primary}
-    version_template: ${7:# A template describing settings for new crypto key versions}
-    key_ring: ${8:# The KeyRing that this key belongs to}
-    skip_initial_version_creation: ${9:# If set to true, the request will create a CryptoKey without any CryptoKeyVersions}
-    project: ${10:# The Google Cloud Platform project to use}
-    auth_kind: ${11:# The type of credential used}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    auth_kind: ${3:# The type of credential used}
+    env_type: ${4:# Specifies which Ansible environment you're running this module within}
+    key_ring: ${5:# The KeyRing that this key belongs to}
+    labels: ${6:# Labels with user-defined metadata to apply to this resource}
+    name: ${7:# The resource name for the CryptoKey}
+    project: ${8:# The Google Cloud Platform project to use}
+    purpose: ${9:# Immutable purpose of CryptoKey}
+    rotation_period: ${10:# Every time this period passes, generate a new CryptoKeyVersion and set it as the primary}
+    scopes: ${11:# Array of scopes to be used}
     service_account_contents: ${12:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${13:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${14:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${15:# Array of scopes to be used}
-    env_type: ${16:# Specifies which Ansible environment you're running this module within}
+    service_account_email: ${13:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    service_account_file: ${14:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    skip_initial_version_creation: ${15:# If set to true, the request will create a CryptoKey without any CryptoKeyVersions}
+    state: ${16:# Whether the given object should exist in GCP}
+    version_template: ${17:# A template describing settings for new crypto key versions}
   tags:
     - google
     - cloud

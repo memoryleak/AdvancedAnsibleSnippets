@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:wait for changes in Amazons Route 53 DNS service to propagate}
+  community.aws.route53_wait:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    endpoint_url: ${6:# URL to connect to instead of the default AWS endpoints}
+    profile: ${7:# A named AWS profile to use for authentication}
+    region: ${8:# This setting is ignored by the module}
+    result: ${9:# The registered result of one or multiple M(amazon}
+    secret_key: ${10:# AWS secret access key}
+    session_token: ${11:# AWS STS session token for use with temporary credentials}
+    validate_certs: ${12:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait_timeout: ${13:# How long to wait for the changes to be replicated, in seconds}
+  tags:
+    - community
+    - aws
+    - route53_wait]]></content>
+  <tabTrigger>community.aws.route53_wait</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>wait for changes in Amazons Route 53 DNS service to propagate</description>
+</snippet>

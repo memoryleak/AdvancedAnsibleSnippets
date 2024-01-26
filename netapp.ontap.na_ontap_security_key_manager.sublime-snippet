@@ -1,25 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP security key manager}
   netapp.ontap.na_ontap_security_key_manager:
-    state: ${2:# Whether the specified key manager should exist or not}
-    ip_address: ${3:# The IP address of the external key management server}
-    tcp_port: ${4:# The TCP port on which the key management server listens for incoming connections}
-    node: ${5:# The node which key management server runs on}
-    external: ${6:# Configures external key manager}
-    onboard: ${7:# Configures onboard key management}
-    vserver: ${8:# SVM name when using an external key manager}
-    hostname: ${9:# The hostname or IP address of the ONTAP instance}
-    username: ${10:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${11:# Password for the specified user}
-    cert_filepath: ${12:# path to SSL client cert file (}
-    key_filepath: ${13:# path to SSL client key file}
-    https: ${14:# Enable and disable https}
-    validate_certs: ${15:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${16:# Override the default port (80 or 443) with this port}
-    ontapi: ${17:# The ontap api version to use}
-    use_rest: ${18:# Whether to use REST or ZAPI}
-    feature_flags: ${19:# Enable or disable a new feature}
-    force_ontap_version: ${20:# Override the cluster ONTAP version when using REST}
+    cert_filepath: ${2:# path to SSL client cert file (}
+    external: ${3:# Configures external key manager}
+    feature_flags: ${4:# Enable or disable a new feature}
+    force_ontap_version: ${5:# Override the cluster ONTAP version when using REST}
+    hostname: ${6:# The hostname or IP address of the ONTAP instance}
+    http_port: ${7:# Override the default port (80 or 443) with this port}
+    https: ${8:# Enable and disable https}
+    ip_address: ${9:# The IP address of the external key management server}
+    key_filepath: ${10:# path to SSL client key file}
+    node: ${11:# The node which key management server runs on}
+    onboard: ${12:# Configures onboard key management}
+    ontapi: ${13:# The ontap api version to use}
+    password: ${14:# Password for the specified user}
+    state: ${15:# Whether the specified key manager should exist or not}
+    tcp_port: ${16:# The TCP port on which the key management server listens for incoming connections}
+    use_rest: ${17:# Whether to use REST or ZAPI}
+    username: ${18:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${19:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${20:# SVM name when using an external key manager}
   tags:
     - netapp
     - ontap

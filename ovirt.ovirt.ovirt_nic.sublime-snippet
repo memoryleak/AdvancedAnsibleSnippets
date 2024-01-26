@@ -1,23 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Module to manage network interfaces of Virtual Machines in oVirt/RHV}
   ovirt.ovirt.ovirt_nic:
-    id: ${2:# ID of the nic to manage}
-    name: ${3:# Name of the network interface to manage}
-    vm: ${4:# Name of the Virtual Machine to manage}
-    template: ${5:# Name of the template to manage}
-    template_version: ${6:# Version number of the template}
-    state: ${7:# Should the Virtual Machine NIC be present/absent/plugged/unplugged}
-    network: ${8:# Logical network to which the VM network interface should use, by default Empty network is used if network is not specified}
-    profile: ${9:# Virtual network interface profile to be attached to VM network interface}
-    interface: ${10:# Type of the network interface}
-    mac_address: ${11:# Custom MAC address of the network interface, by default it's obtained from MAC pool}
-    linked: ${12:# Defines if the NIC is linked to the virtual machine}
-    wait: ${13:# C(yes) if the module should wait for the entity to get into desired state}
-    fetch_nested: ${14:# If I(True) the module will fetch additional data from the API}
-    nested_attributes: ${15:# Specifies list of the attributes which should be fetched from the API}
-    auth: ${16:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    auth: ${2:# Dictionary with values needed to create HTTP/HTTPS connection to oVirt:}
+    fetch_nested: ${3:# If I(True) the module will fetch additional data from the API}
+    id: ${4:# ID of the nic to manage}
+    interface: ${5:# Type of the network interface}
+    linked: ${6:# Defines if the NIC is linked to the virtual machine}
+    mac_address: ${7:# Custom MAC address of the network interface, by default it's obtained from MAC pool}
+    name: ${8:# Name of the network interface to manage}
+    nested_attributes: ${9:# Specifies list of the attributes which should be fetched from the API}
+    network: ${10:# Logical network to which the VM network interface should use, by default Empty network is used if network is not specified}
+    network_filter_parameters: ${11:# The list of network filter parameters}
+    poll_interval: ${12:# Number of the seconds the module waits until another poll request on entity status is sent}
+    profile: ${13:# Virtual network interface profile to be attached to VM network interface}
+    state: ${14:# Should the Virtual Machine NIC be present/absent/plugged/unplugged}
+    template: ${15:# Name of the template to manage}
+    template_version: ${16:# Version number of the template}
     timeout: ${17:# The amount of time in seconds the module should wait for the instance to get into desired state}
-    poll_interval: ${18:# Number of the seconds the module waits until another poll request on entity status is sent}
+    vm: ${18:# Name of the Virtual Machine to manage}
+    wait: ${19:# C(yes) if the module should wait for the entity to get into desired state}
   tags:
     - ovirt
     - ovirt

@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage the VRF definitions on Juniper JUNOS devices}
   junipernetworks.junos.junos_vrf:
-    name: ${2:# The name of the VRF definition to be managed on the remote IOS device}
-    description: ${3:# Provides a short description of the VRF definition in the current active configuration}
-    rd: ${4:# The router-distinguisher value uniquely identifies the VRF to routing processes on the remote IOS system}
+    active: ${2:# Specifies whether or not the configuration is active or deactivated}
+    aggregate: ${3:# The set of VRF definition objects to be configured on the remote JUNOS device}
+    description: ${4:# Provides a short description of the VRF definition in the current active configuration}
     interfaces: ${5:# Identifies the set of interfaces that should be configured in the VRF}
-    target: ${6:# It configures VRF target community configuration}
-    table_label: ${7:# Causes JUNOS to allocate a VPN label per VRF rather than per VPN FEC}
-    aggregate: ${8:# The set of VRF definition objects to be configured on the remote JUNOS device}
-    state: ${9:# Configures the state of the VRF definition as it relates to the device operational configuration}
-    active: ${10:# Specifies whether or not the configuration is active or deactivated}
+    name: ${6:# The name of the VRF definition to be managed on the remote IOS device}
+    rd: ${7:# The router-distinguisher value uniquely identifies the VRF to routing processes on the remote IOS system}
+    state: ${8:# Configures the state of the VRF definition as it relates to the device operational configuration}
+    table_label: ${9:# Causes JUNOS to allocate a VPN label per VRF rather than per VPN FEC}
+    target: ${10:# It configures VRF target community configuration}
   tags:
     - junipernetworks
     - junos

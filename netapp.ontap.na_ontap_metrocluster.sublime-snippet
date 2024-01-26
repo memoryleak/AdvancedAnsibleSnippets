@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP set up a MetroCluster}
   netapp.ontap.na_ontap_metrocluster:
-    state: ${2:# Present to set up a MetroCluster}
+    cert_filepath: ${2:# path to SSL client cert file (}
     dr_pairs: ${3:# disaster recovery pair}
-    partner_cluster_name: ${4:# The name of the partner Cluster}
-    hostname: ${5:# The hostname or IP address of the ONTAP instance}
-    username: ${6:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${7:# Password for the specified user}
-    cert_filepath: ${8:# path to SSL client cert file (}
+    feature_flags: ${4:# Enable or disable a new feature}
+    force_ontap_version: ${5:# Override the cluster ONTAP version when using REST}
+    hostname: ${6:# The hostname or IP address of the ONTAP instance}
+    http_port: ${7:# Override the default port (80 or 443) with this port}
+    https: ${8:# Enable and disable https}
     key_filepath: ${9:# path to SSL client key file}
-    https: ${10:# Enable and disable https}
-    validate_certs: ${11:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${12:# Override the default port (80 or 443) with this port}
-    ontapi: ${13:# The ontap api version to use}
+    ontapi: ${10:# The ontap api version to use}
+    partner_cluster_name: ${11:# The name of the partner Cluster}
+    password: ${12:# Password for the specified user}
+    state: ${13:# Present to set up a MetroCluster}
     use_rest: ${14:# Whether to use REST or ZAPI}
-    feature_flags: ${15:# Enable or disable a new feature}
-    force_ontap_version: ${16:# Override the cluster ONTAP version when using REST}
+    username: ${15:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${16:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

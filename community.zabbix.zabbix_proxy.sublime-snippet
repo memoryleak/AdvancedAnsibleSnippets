@@ -1,25 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/delete/get/update Zabbix proxies}
   community.zabbix.zabbix_proxy:
-    proxy_name: ${2:# Name of the proxy in Zabbix}
-    proxy_address: ${3:# Comma-delimited list of IP/CIDR addresses or DNS names to accept active proxy requests from}
-    description: ${4:# Description of the proxy}
-    status: ${5:# Type of proxy}
-    tls_connect: ${6:# Connections to proxy}
-    tls_accept: ${7:# Connections from proxy}
-    ca_cert: ${8:# Certificate issuer}
-    tls_subject: ${9:# Certificate subject}
-    tls_psk_identity: ${10:# PSK identity}
-    tls_psk: ${11:# The preshared key, at least 32 hex digits}
-    state: ${12:# State of the proxy}
-    interface: ${13:# Dictionary with params for the interface when proxy is in passive mode}
-    server_url: ${14:# URL of Zabbix server, with protocol (http or https)}
-    login_user: ${15:# Zabbix user name}
-    login_password: ${16:# Zabbix user password}
-    http_login_user: ${17:# Basic Auth login}
-    http_login_password: ${18:# Basic Auth password}
-    timeout: ${19:# The timeout of API request (seconds)}
-    validate_certs: ${20:# If set to False, SSL certificates will not be validated}
+    ca_cert: ${2:# Certificate issuer}
+    description: ${3:# Description of the proxy}
+    http_login_password: ${4:# Basic Auth password}
+    http_login_user: ${5:# Basic Auth login}
+    interface: ${6:# Dictionary with params for the interface when proxy is in passive mode}
+    proxy_address: ${7:# Comma-delimited list of IP/CIDR addresses or DNS names to accept active proxy requests from}
+    proxy_name: ${8:# Name of the proxy in Zabbix}
+    state: ${9:# State of the proxy}
+    status: ${10:# Type of proxy}
+    tls_accept: ${11:# Connections from proxy}
+    tls_connect: ${12:# Connections to proxy}
+    tls_psk: ${13:# The preshared key, at least 32 hex digits}
+    tls_psk_identity: ${14:# PSK identity}
+    tls_subject: ${15:# Certificate subject}
   tags:
     - community
     - zabbix

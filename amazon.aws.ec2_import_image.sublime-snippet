@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage AWS EC2 import image tasks}
+  amazon.aws.ec2_import_image:
+    access_key: ${2:# AWS access key ID}
+    architecture: ${3:# The architecture of the virtual machine}
+    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${5:# A dictionary to modify the botocore configuration}
+    boot_mode: ${6:# The boot mode of the virtual machine}
+    cancel_reason: ${7:# The reason for canceling the task}
+    client_data: ${8:# The client-specific data}
+    debug_botocore_endpoint_logs: ${9:# Use a C(botocore}
+    description: ${10:# A description string for the import image task}
+    disk_containers: ${11:# Information about the disk containers}
+    encrypted: ${12:# Specifies whether the destination AMI of the imported image should be encrypted}
+    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
+    hypervisor: ${14:# The target hypervisor platform}
+    kms_key_id: ${15:# An identifier for the symmetric KMS key to use when creating the encrypted AMI}
+    license_specifications: ${16:# The ARNs of the license configurations}
+    license_type: ${17:# The license type to be used for the Amazon Machine Image (AMI) after importing}
+    platform: ${18:# The operating system of the virtual machine}
+    profile: ${19:# A named AWS profile to use for authentication}
+    region: ${20:# The AWS region to use}
+    role_name: ${21:# The name of the role to use when not using the default role, 'vmimport'}
+    secret_key: ${22:# AWS secret access key}
+    session_token: ${23:# AWS STS session token for use with temporary credentials}
+    state: ${24:# Use I(state=present) to import single or multi-volume disk images or EBS snapshots into an Amazon Machine Image (AMI)}
+    tags: ${25:# The tags to apply to the import image task during creation}
+    task_name: ${26:# The name of the EC2 image import task}
+    usage_operation: ${27:# The usage operation value}
+    validate_certs: ${28:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+  tags:
+    - amazon
+    - aws
+    - ec2_import_image]]></content>
+  <tabTrigger>amazon.aws.ec2_import_image</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage AWS EC2 import image tasks</description>
+</snippet>

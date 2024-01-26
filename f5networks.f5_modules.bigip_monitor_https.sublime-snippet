@@ -1,26 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages F5 BIG-IP LTM HTTPS monitors}
   f5networks.f5_modules.bigip_monitor_https:
-    name: ${2:# Monitor name}
+    cipher_list: ${2:# Specifies the list of ciphers for this monitor}
     description: ${3:# The description of the monitor}
-    parent: ${4:# The parent template of this monitor template}
-    send: ${5:# The Send string for the monitor call}
-    receive: ${6:# The Receive string for the monitor call}
-    receive_disable: ${7:# This setting works like C(receive), except the system marks the node or pool member disabled when its response matches the C(receive_disable) string but not C(receive)}
-    ip: ${8:# IP address part of the IP/port definition}
+    interval: ${4:# The interval specifying how frequently the monitor instance of this template runs}
+    ip: ${5:# IP address part of the IP/port definition}
+    name: ${6:# Monitor name}
+    parent: ${7:# The parent template of this monitor template}
+    partition: ${8:# Device partition to manage resources on}
     port: ${9:# Port address part of the IP/port definition}
-    interval: ${10:# The interval specifying how frequently the monitor instance of this template runs}
-    timeout: ${11:# The number of seconds in which the node or service must respond to the monitor request}
-    time_until_up: ${12:# Specifies the amount of time in seconds after the first successful response before a node is marked up}
-    target_username: ${13:# Specifies the user name, if the monitored target requires authentication}
-    target_password: ${14:# Specifies the password, if the monitored target requires authentication}
-    reverse: ${15:# Specifies whether the monitor operates in reverse mode}
-    ssl_profile: ${16:# Specifies the SSL profile to use for the HTTPS monitor}
-    up_interval: ${17:# Specifies the interval for the system to use to perform the health check when a resource is up}
-    cipher_list: ${18:# Specifies the list of ciphers for this monitor}
-    partition: ${19:# Device partition to manage resources on}
-    state: ${20:# When C(present), ensures the monitor exists}
-    provider: ${21:# A dict object containing connection details}
+    provider: ${10:# A dict object containing connection details}
+    receive: ${11:# The Receive string for the monitor call}
+    receive_disable: ${12:# This setting works like C(receive), except the system marks the node or pool member disabled when its response matches the C(receive_disable) string but not C(receive)}
+    reverse: ${13:# Specifies whether the monitor operates in reverse mode}
+    send: ${14:# The Send string for the monitor call}
+    ssl_profile: ${15:# Specifies the SSL profile to use for the HTTPS monitor}
+    state: ${16:# When C(present), ensures the monitor exists}
+    target_password: ${17:# Specifies the password, if the monitored target requires authentication}
+    target_username: ${18:# Specifies the user name, if the monitored target requires authentication}
+    time_until_up: ${19:# Specifies the amount of time in seconds after the first successful response before a node is marked up}
+    timeout: ${20:# The number of seconds in which the node or service must respond to the monitor request}
+    up_interval: ${21:# Specifies the interval for the system to use to perform the health check when a resource is up}
   tags:
     - f5networks
     - f5_modules

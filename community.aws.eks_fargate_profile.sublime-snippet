@@ -1,26 +1,26 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage EKS Fargate Profile}
   community.aws.eks_fargate_profile:
-    name: ${2:# Name of EKS Fargate Profile}
-    cluster_name: ${3:# Name of EKS Cluster}
-    role_arn: ${4:# ARN of IAM role used by the EKS cluster}
-    subnets: ${5:# list of subnet IDs for the Kubernetes cluster}
-    selectors: ${6:# A list of selectors to use in fargate profile}
-    state: ${7:# Create or delete the Fargate Profile}
-    wait: ${8:# Specifies whether the module waits until the profile is created or deleted before moving on}
-    wait_timeout: ${9:# The duration in seconds to wait for the cluster to become active}
-    access_key: ${10:# AWS access key ID}
-    secret_key: ${11:# AWS secret access key}
-    session_token: ${12:# AWS STS session token for use with temporary credentials}
-    profile: ${13:# A named AWS profile to use for authentication}
-    endpoint_url: ${14:# URL to connect to instead of the default AWS endpoints}
-    aws_ca_bundle: ${15:# The location of a CA Bundle to use when validating SSL certificates}
-    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    aws_config: ${17:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${18:# Use a C(botocore}
-    region: ${19:# The AWS region to use}
-    tags: ${20:# A dictionary representing the tags to be applied to the resource}
-    purge_tags: ${21:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    cluster_name: ${5:# Name of EKS Cluster}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    name: ${8:# Name of EKS Fargate Profile}
+    profile: ${9:# A named AWS profile to use for authentication}
+    purge_tags: ${10:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${11:# The AWS region to use}
+    role_arn: ${12:# ARN of IAM role used by the EKS cluster}
+    secret_key: ${13:# AWS secret access key}
+    selectors: ${14:# A list of selectors to use in fargate profile}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    state: ${16:# Create or delete the Fargate Profile}
+    subnets: ${17:# list of subnet IDs for the Kubernetes cluster}
+    tags: ${18:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${19:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${20:# Specifies whether the module waits until the profile is created or deleted before moving on}
+    wait_timeout: ${21:# The duration in seconds to wait for the cluster to become active}
   tags:
     - community
     - aws

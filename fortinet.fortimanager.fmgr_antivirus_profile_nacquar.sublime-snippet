@@ -1,25 +1,23 @@
 <snippet>
-  <content><![CDATA[- name: ${1:no description}
+  <content><![CDATA[- name: ${1:Configure AntiVirus quarantine settings}
   fortinet.fortimanager.fmgr_antivirus_profile_nacquar:
-    enable_log: ${2:# Enable/Disable logging for task}
-    proposed_method: ${3:# The overridden method for the underlying Json RPC request}
-    bypass_validation: ${4:# only set to True when module schema diffs with FortiManager API structure,
- module continues to execute without validating parameters
-}
-    workspace_locking_adom: ${5:# the adom to lock for FortiManager running in workspace mode, the value can be global and others including root
-}
-    workspace_locking_timeout: ${6:# the maximum time in seconds to wait for other user to release the workspace lock}
-    state: ${7:# the directive to create, update or delete an object}
-    rc_succeeded: ${8:# the rc codes list with which the conditions to succeed will be overriden}
-    rc_failed: ${9:# the rc codes list with which the conditions to fail will be overriden}
-    adom: ${10:# the parameter (adom) in requested url}
-    profile: ${11:# the parameter (profile) in requested url}
-    antivirus_profile_nacquar: ${12:# the top level parameters set}
+    access_token: ${2:# The token to access FortiManager without using username and password}
+    adom: ${3:# the parameter (adom) in requested url}
+    antivirus_profile_nacquar: ${4:# the top level parameters set}
+    bypass_validation: ${5:# Only set to True when module schema diffs with FortiManager API structure, module continues to execute without validating parameters}
+    enable_log: ${6:# Enable/Disable logging for task}
+    forticloud_access_token: ${7:# Authenticate Ansible client with forticloud API access token}
+    profile: ${8:# the parameter (profile) in requested url}
+    proposed_method: ${9:# The overridden method for the underlying Json RPC request}
+    rc_failed: ${10:# The rc codes list with which the conditions to fail will be overriden}
+    rc_succeeded: ${11:# The rc codes list with which the conditions to succeed will be overriden}
+    workspace_locking_adom: ${12:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
+    workspace_locking_timeout: ${13:# The maximum time in seconds to wait for other user to release the workspace lock}
   tags:
     - fortinet
     - fortimanager
     - fmgr_antivirus_profile_nacquar]]></content>
   <tabTrigger>fortinet.fortimanager.fmgr_antivirus_profile_nacquar</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>no description</description>
+  <description>Configure AntiVirus quarantine settings</description>
 </snippet>

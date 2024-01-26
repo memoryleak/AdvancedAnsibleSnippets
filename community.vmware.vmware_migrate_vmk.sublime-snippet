@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Migrate a VMK interface from VSS to VDS}
   community.vmware.vmware_migrate_vmk:
-    esxi_hostname: ${2:# ESXi hostname to be managed}
-    device: ${3:# VMK interface name}
-    current_switch_name: ${4:# Switch VMK interface is currently on}
-    current_portgroup_name: ${5:# Portgroup name VMK interface is currently on}
-    migrate_switch_name: ${6:# Switch name to migrate VMK interface to}
+    current_portgroup_name: ${2:# Portgroup name VMK interface is currently on}
+    current_switch_name: ${3:# Switch VMK interface is currently on}
+    device: ${4:# VMK interface name}
+    esxi_hostname: ${5:# ESXi hostname to be managed}
+    hostname: ${6:# The hostname or IP address of the vSphere vCenter or ESXi server}
     migrate_portgroup_name: ${7:# Portgroup name to migrate VMK interface to}
-    migrate_vlan_id: ${8:# VLAN to use for the VMK interface when migrating from VDS to VSS}
-    hostname: ${9:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    username: ${10:# The username of the vSphere vCenter or ESXi server}
-    password: ${11:# The password of the vSphere vCenter or ESXi server}
-    validate_certs: ${12:# Allows connection when SSL certificates are not valid}
-    port: ${13:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${14:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${15:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    migrate_switch_name: ${8:# Switch name to migrate VMK interface to}
+    migrate_vlan_id: ${9:# VLAN to use for the VMK interface when migrating from VDS to VSS}
+    password: ${10:# The password of the vSphere vCenter or ESXi server}
+    port: ${11:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${12:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    username: ${14:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${15:# Allows connection when SSL certificates are not valid}
   tags:
     - community
     - vmware

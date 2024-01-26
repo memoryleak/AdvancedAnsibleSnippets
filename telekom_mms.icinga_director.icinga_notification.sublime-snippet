@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage notifications in Icinga2}
+  telekom_mms.icinga_director.icinga_notification:
+    append: ${2:# Do not overwrite the whole object but instead append the defined properties}
+    apply_to: ${3:# Whether this notification should affect hosts or services}
+    assign_filter: ${4:# The filter where the notification will take effect}
+    client_cert: ${5:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${6:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    disabled: ${7:# Disabled objects will not be deployed}
+    force: ${8:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${9:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    http_agent: ${10:# Header to identify as, generally appears in web server logs}
+    imports: ${11:# Importable templates, add as many as you want}
+    notification_interval: ${12:# The notification interval (in seconds)}
+    object_name: ${13:# Name of the notification}
+    period: ${14:# The name of a time period which determines when this notification should be triggered}
+    state: ${15:# Apply feature state}
+    states: ${16:# The host or service states you want to get notifications for}
+    times_begin: ${17:# First notification delay}
+    times_end: ${18:# Last notification}
+    types: ${19:# The state transition types you want to get notifications for}
+    url: ${20:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    url_password: ${21:# The password for use in HTTP basic authentication}
+    url_username: ${22:# The username for use in HTTP basic authentication}
+    use_gssapi: ${23:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${24:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    user_groups: ${25:# User Groups that should be notified by this notification}
+    users: ${26:# Users that should be notified by this notification}
+    validate_certs: ${27:# If V(no), SSL certificates will not be validated}
+    vars: ${28:# Custom properties of the notification}
+  tags:
+    - telekom_mms
+    - icinga_director
+    - icinga_notification]]></content>
+  <tabTrigger>telekom_mms.icinga_director.icinga_notification</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage notifications in Icinga2</description>
+</snippet>

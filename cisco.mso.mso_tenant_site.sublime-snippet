@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage tenants with cloud sites}
   cisco.mso.mso_tenant_site:
-    tenant: ${2:# The name of the tenant}
-    site: ${3:# The name of the site}
-    cloud_account: ${4:# Required for cloud site}
-    security_domains: ${5:# List of security domains for sites}
-    aws_account_org: ${6:# AWS account for organization}
-    aws_trusted: ${7:# AWS account's access in trusted mode}
-    aws_access_key: ${8:# AWS account's access key id}
-    azure_access_type: ${9:# Managed mode for Azure}
-    azure_active_directory_id: ${10:# Azure account's active directory id}
-    azure_active_directory_name: ${11:# Azure account's active directory name}
-    azure_subscription_id: ${12:# Azure account's subscription id}
-    azure_application_id: ${13:# Azure account's application id}
-    azure_credential_name: ${14:# Azure account's credential name}
-    secret_key: ${15:# secret key of AWS for untrusted account}
-    state: ${16:# Use C(present) or C(absent) for adding or removing}
-    host: ${17:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    port: ${18:# Port number to be used for the REST connection}
-    username: ${19:# The username to use for authentication}
-    password: ${20:# The password to use for authentication}
-    output_level: ${21:# Influence the output of this MSO module}
+    aws_access_key: ${2:# AWS account's access key id}
+    aws_account_org: ${3:# AWS account for organization}
+    aws_trusted: ${4:# AWS account's access in trusted mode}
+    azure_access_type: ${5:# Managed mode for Azure}
+    azure_active_directory_id: ${6:# Azure account's active directory id}
+    azure_active_directory_name: ${7:# Azure account's active directory name}
+    azure_application_id: ${8:# Azure account's application id}
+    azure_credential_name: ${9:# Azure account's credential name}
+    azure_subscription_id: ${10:# Azure account's subscription id}
+    cloud_account: ${11:# Required for cloud site}
+    host: ${12:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${13:# The login domain name to use for authentication}
+    output_level: ${14:# Influence the output of this MSO module}
+    password: ${15:# The password to use for authentication}
+    port: ${16:# Port number to be used for the REST connection}
+    secret_key: ${17:# secret key of AWS for untrusted account}
+    security_domains: ${18:# List of security domains for sites}
+    site: ${19:# The name of the site}
+    state: ${20:# Use C(present) or C(absent) for adding or removing}
+    tenant: ${21:# The name of the tenant}
     timeout: ${22:# The socket level timeout in seconds}
-    use_proxy: ${23:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${24:# If C(no), an HTTP connection will be used instead of the default HTTPS connection}
-    validate_certs: ${25:# If C(no), SSL certificates will not be validated}
-    login_domain: ${26:# The login domain name to use for authentication}
+    use_proxy: ${23:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${24:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${25:# The username to use for authentication}
+    validate_certs: ${26:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - mso

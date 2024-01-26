@@ -1,33 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp ONTAP Quotas}
   netapp.ontap.na_ontap_quotas:
-    state: ${2:# Whether the specified quota should exist or not}
-    vserver: ${3:# Name of the vserver to use}
-    volume: ${4:# The name of the volume that the quota resides on}
-    quota_target: ${5:# The quota target of the type specified}
-    qtree: ${6:# Name of the qtree for the quota}
-    type: ${7:# The type of quota rule}
-    policy: ${8:# Name of the quota policy from which the quota rule should be obtained}
-    set_quota_status: ${9:# Whether the specified volume should have quota status on or off}
-    perform_user_mapping: ${10:# Whether quota management will perform user mapping for the user specified in quota-target}
-    file_limit: ${11:# The number of files that the target can have}
-    disk_limit: ${12:# The amount of disk space that is reserved for the target}
-    soft_file_limit: ${13:# The number of files the target would have to exceed before a message is logged and an SNMP trap is generated}
-    soft_disk_limit: ${14:# The amount of disk space the target would have to exceed before a message is logged and an SNMP trap is generated}
-    threshold: ${15:# The amount of disk space the target would have to exceed before a message is logged}
-    activate_quota_on_change: ${16:# Method to use to activate quota on a change}
-    hostname: ${17:# The hostname or IP address of the ONTAP instance}
-    username: ${18:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    password: ${19:# Password for the specified user}
-    cert_filepath: ${20:# path to SSL client cert file (}
-    key_filepath: ${21:# path to SSL client key file}
-    https: ${22:# Enable and disable https}
-    validate_certs: ${23:# If set to C(no), the SSL certificates will not be validated}
-    http_port: ${24:# Override the default port (80 or 443) with this port}
-    ontapi: ${25:# The ontap api version to use}
-    use_rest: ${26:# Whether to use REST or ZAPI}
-    feature_flags: ${27:# Enable or disable a new feature}
-    force_ontap_version: ${28:# Override the cluster ONTAP version when using REST}
+    activate_quota_on_change: ${2:# Method to use to activate quota on a change}
+    cert_filepath: ${3:# path to SSL client cert file (}
+    disk_limit: ${4:# The amount of disk space that is reserved for the target}
+    feature_flags: ${5:# Enable or disable a new feature}
+    file_limit: ${6:# The number of files that the target can have}
+    force_ontap_version: ${7:# Override the cluster ONTAP version when using REST}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    http_port: ${9:# Override the default port (80 or 443) with this port}
+    https: ${10:# Enable and disable https}
+    key_filepath: ${11:# path to SSL client key file}
+    ontapi: ${12:# The ontap api version to use}
+    password: ${13:# Password for the specified user}
+    perform_user_mapping: ${14:# Whether quota management will perform user mapping for the user specified in quota-target}
+    policy: ${15:# Name of the quota policy from which the quota rule should be obtained}
+    qtree: ${16:# Name of the qtree for the quota}
+    quota_target: ${17:# The quota target of the type specified}
+    set_quota_status: ${18:# Whether the specified volume should have quota status on or off}
+    soft_disk_limit: ${19:# The amount of disk space the target would have to exceed before a message is logged and an SNMP trap is generated}
+    soft_file_limit: ${20:# The number of files the target would have to exceed before a message is logged and an SNMP trap is generated}
+    state: ${21:# Whether the specified quota should exist or not}
+    threshold: ${22:# The amount of disk space the target would have to exceed before a message is logged}
+    type: ${23:# The type of quota rule}
+    use_rest: ${24:# Whether to use REST or ZAPI}
+    username: ${25:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${26:# If set to C(no), the SSL certificates will not be validated}
+    volume: ${27:# The name of the volume that the quota resides on}
+    vserver: ${28:# Name of the vserver to use}
   tags:
     - netapp
     - ontap

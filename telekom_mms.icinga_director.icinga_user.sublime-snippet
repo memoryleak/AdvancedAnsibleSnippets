@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage users in Icinga2}
+  telekom_mms.icinga_director.icinga_user:
+    append: ${2:# Do not overwrite the whole object but instead append the defined properties}
+    client_cert: ${3:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${4:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    disabled: ${5:# Disabled objects will not be deployed}
+    display_name: ${6:# Alternative name for this user}
+    email: ${7:# The Email address of the user}
+    force: ${8:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${9:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    groups: ${10:# User groups that should be directly assigned to this user}
+    http_agent: ${11:# Header to identify as, generally appears in web server logs}
+    imports: ${12:# Importable templates, add as many as you want}
+    object_name: ${13:# Name of the user}
+    pager: ${14:# The pager address of the user}
+    period: ${15:# The name of a time period which determines when notifications to this User should be triggered}
+    state: ${16:# Apply feature state}
+    url: ${17:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    url_password: ${18:# The password for use in HTTP basic authentication}
+    url_username: ${19:# The username for use in HTTP basic authentication}
+    use_gssapi: ${20:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${21:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${22:# If V(no), SSL certificates will not be validated}
+  tags:
+    - telekom_mms
+    - icinga_director
+    - icinga_user]]></content>
+  <tabTrigger>telekom_mms.icinga_director.icinga_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage users in Icinga2</description>
+</snippet>

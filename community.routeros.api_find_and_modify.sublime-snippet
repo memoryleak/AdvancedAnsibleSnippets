@@ -1,23 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Find and modify information using the API}
   community.routeros.api_find_and_modify:
-    path: ${2:# Path to query}
-    find: ${3:# Fields to search for}
-    values: ${4:# On all entries matching the conditions in I(find), set the keys of this option to the values specified here}
-    require_matches_min: ${5:# Make sure that there are no less matches than this number}
-    require_matches_max: ${6:# Make sure that there are no more matches than this number}
-    allow_no_matches: ${7:# Whether to allow that no match is found}
-    hostname: ${8:# RouterOS hostname API}
-    username: ${9:# RouterOS login user}
-    password: ${10:# RouterOS user password}
-    timeout: ${11:# Timeout for the request}
-    tls: ${12:# If is set TLS will be used for RouterOS API connection}
-    port: ${13:# RouterOS api port}
-    force_no_cert: ${14:# Set to C(true) to connect without a certificate when I(tls=true)}
-    validate_certs: ${15:# Set to C(false) to skip validation of TLS certificates}
-    validate_cert_hostname: ${16:# Set to C(true) to validate hostnames in certificates}
-    ca_path: ${17:# PEM formatted file that contains a CA certificate to be used for certificate validation}
-    encoding: ${18:# Use the specified encoding when communicating with the RouterOS device}
+    allow_no_matches: ${2:# Whether to allow that no match is found}
+    ca_path: ${3:# PEM formatted file that contains a CA certificate to be used for certificate validation}
+    encoding: ${4:# Use the specified encoding when communicating with the RouterOS device}
+    find: ${5:# Fields to search for}
+    force_no_cert: ${6:# Set to V(true) to connect without a certificate when O(tls=true)}
+    hostname: ${7:# RouterOS hostname API}
+    password: ${8:# RouterOS user password}
+    path: ${9:# Path to query}
+    port: ${10:# RouterOS api port}
+    require_matches_max: ${11:# Make sure that there are no more matches than this number}
+    require_matches_min: ${12:# Make sure that there are no less matches than this number}
+    timeout: ${13:# Timeout for the request}
+    tls: ${14:# If is set TLS will be used for RouterOS API connection}
+    username: ${15:# RouterOS login user}
+    validate_cert_hostname: ${16:# Set to V(true) to validate hostnames in certificates}
+    validate_certs: ${17:# Set to V(false) to skip validation of TLS certificates}
+    values: ${18:# On all entries matching the conditions in O(find), set the keys of this option to the values specified here}
   tags:
     - community
     - routeros

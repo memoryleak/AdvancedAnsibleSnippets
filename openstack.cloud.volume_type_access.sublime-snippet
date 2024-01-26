@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage access to OpenStack block-storage volume type}
+  openstack.cloud.volume_type_access:
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    interface: ${9:# Endpoint URL type to fetch from the service catalog}
+    name: ${10:# Name or ID of the block-storage volume type}
+    project: ${11:# ID or Name of project to grant}
+    project_domain: ${12:# Domain the project belongs to (name or ID)}
+    region_name: ${13:# Name of the region}
+    sdk_log_level: ${14:# Log level of the OpenStackSDK}
+    sdk_log_path: ${15:# Path to the logfile of the OpenStackSDK}
+    state: ${16:# Indicate whether project should have access to volume type or not}
+    timeout: ${17:# How long should ansible wait for the requested resource}
+    validate_certs: ${18:# Whether or not SSL API requests should be verified}
+    wait: ${19:# Should ansible wait until the requested resource is complete}
+  tags:
+    - openstack
+    - cloud
+    - volume_type_access]]></content>
+  <tabTrigger>openstack.cloud.volume_type_access</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage access to OpenStack block-storage volume type</description>
+</snippet>

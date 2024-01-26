@@ -1,27 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure Infoblox NIOS members}
   infoblox.nios_modules.nios_member:
-    host_name: ${2:# Specifies the host name of the member to either add or remove from the NIOS instance}
-    vip_setting: ${3:# Configures the network settings for the grid member}
-    ipv6_setting: ${4:# Configures the IPv6 settings for the grid member}
-    config_addr_type: ${5:# Address configuration type (IPV4/IPV6/BOTH)}
-    comment: ${6:# A descriptive comment of the Grid member}
-    extattrs: ${7:# Extensible attributes associated with the object}
-    enable_ha: ${8:# If set to True, the member has two physical nodes (HA pair)}
-    router_id: ${9:# Virtual router identifier}
+    comment: ${2:# A descriptive comment of the Grid member}
+    config_addr_type: ${3:# Address configuration type (IPV4/IPV6/BOTH)}
+    create_token: ${4:# Flag for initiating a create token request for pre-provisioned members}
+    enable_ha: ${5:# If set to True, the member has two physical nodes (HA pair)}
+    extattrs: ${6:# Extensible attributes associated with the object}
+    external_syslog_server_enable: ${7:# Determines if external syslog servers should be enabled}
+    host_name: ${8:# Specifies the host name of the member to either add or remove from the NIOS instance}
+    ipv6_setting: ${9:# Configures the IPv6 settings for the grid member}
     lan2_enabled: ${10:# When set to 'true', the LAN2 port is enabled as an independent port or as a port for failover purposes}
     lan2_port_setting: ${11:# Settings for the Grid member LAN2 port if 'lan2_enabled' is set to 'true'}
-    platform: ${12:# Configures the Hardware Platform}
-    node_info: ${13:# Configures the node information list with detailed status report on the operations of the Grid Member}
-    mgmt_port_setting: ${14:# Settings for the member MGMT port}
-    upgrade_group: ${15:# The name of the upgrade group to which this Grid member belongs}
-    use_syslog_proxy_setting: ${16:# Use flag for external_syslog_server_enable , syslog_servers, syslog_proxy_setting, syslog_size}
-    external_syslog_server_enable: ${17:# Determines if external syslog servers should be enabled}
-    syslog_servers: ${18:# The list of external syslog servers}
-    pre_provisioning: ${19:# Pre-provisioning information}
-    create_token: ${20:# Flag for initiating a create token request for pre-provisioned members}
-    state: ${21:# Configures the intended state of the instance of the object on the NIOS server}
-    provider: ${22:# A dict object containing connection details}
+    master_candidate: ${12:# Configures the instance of this object to be enabled as a Grid Master Candidate or a regular member node}
+    mgmt_port_setting: ${13:# Settings for the member MGMT port}
+    node_info: ${14:# Configures the node information list with detailed status report on the operations of the Grid Member}
+    platform: ${15:# Configures the Hardware Platform}
+    pre_provisioning: ${16:# Pre-provisioning information}
+    provider: ${17:# A dict object containing connection details}
+    router_id: ${18:# Virtual router identifier}
+    state: ${19:# Configures the intended state of the instance of the object on the NIOS server}
+    syslog_servers: ${20:# The list of external syslog servers}
+    upgrade_group: ${21:# The name of the upgrade group to which this Grid member belongs}
+    use_syslog_proxy_setting: ${22:# Use flag for external_syslog_server_enable , syslog_servers, syslog_proxy_setting, syslog_size}
+    vip_setting: ${23:# Configures the network settings for the grid member}
   tags:
     - infoblox
     - nios_modules

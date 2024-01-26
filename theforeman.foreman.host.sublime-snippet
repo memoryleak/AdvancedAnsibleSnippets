@@ -1,51 +1,51 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Hosts}
   theforeman.foreman.host:
-    name: ${2:# Fully Qualified Domain Name of host}
-    hostgroup: ${3:# Title of related hostgroup}
-    location: ${4:# Name of related location}
-    organization: ${5:# Name of related organization}
-    build: ${6:# Whether or not to setup build context for the host}
-    enabled: ${7:# Include this host within reporting}
-    managed: ${8:# Whether a host is managed or unmanaged}
-    ip: ${9:# IP address of the primary interface of the host}
-    mac: ${10:# MAC address of the primary interface of the host}
-    comment: ${11:# Comment about the host}
-    owner: ${12:# Owner (user) of the host}
-    owner_group: ${13:# Owner (user group) of the host}
-    provision_method: ${14:# The method used to provision the host}
-    image: ${15:# The image to use when I(provision_method=image)}
-    compute_attributes: ${16:# Additional compute resource specific attributes}
+    activation_keys: ${2:# Activation Keys used for deployment}
+    architecture: ${3:# Architecture name}
+    build: ${4:# Whether or not to setup build context for the host}
+    comment: ${5:# Comment about the host}
+    compute_attributes: ${6:# Additional compute resource specific attributes}
+    compute_profile: ${7:# Compute profile name}
+    compute_resource: ${8:# Compute resource name}
+    config_groups: ${9:# Config groups list}
+    content_source: ${10:# Content Source (Smart Proxy with Content) name}
+    content_view: ${11:# Content view}
+    domain: ${12:# Domain name}
+    enabled: ${13:# Include this host within reporting}
+    environment: ${14:# Puppet environment name}
+    hostgroup: ${15:# Title of related hostgroup}
+    image: ${16:# The image to use when I(provision_method=image)}
     interfaces_attributes: ${17:# Additional interfaces specific attributes}
-    server_url: ${18:# URL of the Foreman server}
-    username: ${19:# Username accessing the Foreman server}
-    password: ${20:# Password of the user accessing the Foreman server}
-    validate_certs: ${21:# Whether or not to verify the TLS certificates of the Foreman server}
-    state: ${22:# State of the entity}
-    compute_resource: ${23:# Compute resource name}
-    compute_profile: ${24:# Compute profile name}
-    domain: ${25:# Domain name}
-    subnet: ${26:# IPv4 Subnet name}
-    subnet6: ${27:# IPv6 Subnet name}
-    root_pass: ${28:# Root password}
-    realm: ${29:# Realm name}
-    architecture: ${30:# Architecture name}
-    medium: ${31:# Medium name}
-    pxe_loader: ${32:# PXE Bootloader}
-    ptable: ${33:# Partition table name}
-    environment: ${34:# Puppet environment name}
-    puppetclasses: ${35:# List of puppet classes to include in this host group}
-    config_groups: ${36:# Config groups list}
-    puppet_proxy: ${37:# Puppet server proxy name}
-    puppet_ca_proxy: ${38:# Puppet CA proxy name}
-    openscap_proxy: ${39:# OpenSCAP proxy name}
-    content_source: ${40:# Content source}
-    lifecycle_environment: ${41:# Lifecycle environment}
-    kickstart_repository: ${42:# Kickstart repository name}
-    content_view: ${43:# Content view}
-    activation_keys: ${44:# Activation Keys used for deployment}
-    parameters: ${45:# Entity domain specific host parameters}
-    operatingsystem: ${46:# Operating systems are looked up by their title which is composed as '<name> <major>}
+    ip: ${18:# IP address of the primary interface of the host}
+    kickstart_repository: ${19:# Kickstart repository name}
+    lifecycle_environment: ${20:# Lifecycle environment}
+    location: ${21:# Name of related location}
+    mac: ${22:# MAC address of the primary interface of the host}
+    managed: ${23:# Whether a host is managed or unmanaged}
+    medium: ${24:# Medium name}
+    name: ${25:# Fully Qualified Domain Name of host}
+    openscap_proxy: ${26:# OpenSCAP proxy name}
+    operatingsystem: ${27:# Operating systems are looked up by their title which is composed as '<name> <major>}
+    organization: ${28:# Name of related organization}
+    owner: ${29:# Owner (user) of the host}
+    owner_group: ${30:# Owner (user group) of the host}
+    parameters: ${31:# Entity domain specific host parameters}
+    password: ${32:# Password of the user accessing the Foreman server}
+    provision_method: ${33:# The method used to provision the host}
+    ptable: ${34:# Partition table name}
+    puppet_ca_proxy: ${35:# Puppet CA proxy name}
+    puppet_proxy: ${36:# Puppet server proxy name}
+    puppetclasses: ${37:# List of puppet classes to include in this host group}
+    pxe_loader: ${38:# PXE Bootloader}
+    realm: ${39:# Realm name}
+    root_pass: ${40:# Root password}
+    server_url: ${41:# URL of the Foreman server}
+    state: ${42:# State of the entity}
+    subnet: ${43:# IPv4 Subnet name}
+    subnet6: ${44:# IPv6 Subnet name}
+    username: ${45:# Username accessing the Foreman server}
+    validate_certs: ${46:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

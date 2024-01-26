@@ -1,44 +1,48 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Application Gateway instance}
   azure.azcollection.azure_rm_appgateway:
-    resource_group: ${2:# The name of the resource group}
-    name: ${3:# The name of the application gateway}
-    location: ${4:# Resource location}
-    sku: ${5:# SKU of the application gateway resource}
-    ssl_policy: ${6:# SSL policy of the application gateway resource}
-    gateway_ip_configurations: ${7:# List of subnets used by the application gateway}
-    authentication_certificates: ${8:# Authentication certificates of the application gateway resource}
-    redirect_configurations: ${9:# Redirect configurations of the application gateway resource}
-    rewrite_rule_sets: ${10:# List of rewrite configurations for the application gateway resource}
-    ssl_certificates: ${11:# SSL certificates of the application gateway resource}
-    frontend_ip_configurations: ${12:# Frontend IP addresses of the application gateway resource}
-    frontend_ports: ${13:# List of frontend ports of the application gateway resource}
-    backend_address_pools: ${14:# List of backend address pool of the application gateway resource}
-    probes: ${15:# Probes available to the application gateway resource}
-    backend_http_settings_collection: ${16:# Backend http settings of the application gateway resource}
-    http_listeners: ${17:# List of HTTP listeners of the application gateway resource}
-    url_path_maps: ${18:# List of URL path maps of the application gateway resource}
-    request_routing_rules: ${19:# List of request routing rules of the application gateway resource}
-    gateway_state: ${20:# Start or Stop the application gateway}
-    state: ${21:# Assert the state of the application gateway}
-    ad_user: ${22:# Active Directory username}
-    password: ${23:# Active Directory user password}
-    profile: ${24:# Security profile found in ~/}
-    subscription_id: ${25:# Your Azure subscription Id}
-    client_id: ${26:# Azure client ID}
-    secret: ${27:# Azure client secret}
-    tenant: ${28:# Azure tenant ID}
-    cloud_environment: ${29:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    adfs_authority_url: ${30:# Azure AD authority url}
-    cert_validation_mode: ${31:# Controls the certificate validation behavior for Azure endpoints}
-    auth_source: ${32:# Controls the source of the credentials to use for authentication}
-    api_profile: ${33:# Selects an API profile to use when communicating with Azure services}
-    log_path: ${34:# Parent argument}
-    log_mode: ${35:# Parent argument}
-    x509_certificate_path: ${36:# Path to the X509 certificate used to create the service principal in PEM format}
-    thumbprint: ${37:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tags: ${38:# Dictionary of string:string pairs to assign as metadata to the object}
-    append_tags: ${39:# Use to control if tags field is canonical or just appends to existing tags}
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    authentication_certificates: ${7:# Authentication certificates of the application gateway resource}
+    autoscale_configuration: ${8:# Autoscale configuration of the application gateway resource}
+    backend_address_pools: ${9:# List of backend address pool of the application gateway resource}
+    backend_http_settings_collection: ${10:# Backend http settings of the application gateway resource}
+    cert_validation_mode: ${11:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${12:# Azure client ID}
+    cloud_environment: ${13:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    enable_http2: ${14:# Whether HTTP2 is enabled on the application gateway resource}
+    frontend_ip_configurations: ${15:# Frontend IP addresses of the application gateway resource}
+    frontend_ports: ${16:# List of frontend ports of the application gateway resource}
+    gateway_ip_configurations: ${17:# List of subnets used by the application gateway}
+    gateway_state: ${18:# Start or Stop the application gateway}
+    http_listeners: ${19:# List of HTTP listeners of the application gateway resource}
+    location: ${20:# Resource location}
+    log_mode: ${21:# Parent argument}
+    log_path: ${22:# Parent argument}
+    name: ${23:# The name of the application gateway}
+    password: ${24:# Active Directory user password}
+    probes: ${25:# Probes available to the application gateway resource}
+    profile: ${26:# Security profile found in ~/}
+    redirect_configurations: ${27:# Redirect configurations of the application gateway resource}
+    request_routing_rules: ${28:# List of request routing rules of the application gateway resource}
+    resource_group: ${29:# The name of the resource group}
+    rewrite_rule_sets: ${30:# List of rewrite configurations for the application gateway resource}
+    secret: ${31:# Azure client secret}
+    sku: ${32:# SKU of the application gateway resource}
+    ssl_certificates: ${33:# SSL certificates of the application gateway resource}
+    ssl_policy: ${34:# SSL policy of the application gateway resource}
+    state: ${35:# Assert the state of the application gateway}
+    subscription_id: ${36:# Your Azure subscription Id}
+    tags: ${37:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${38:# Azure tenant ID}
+    thumbprint: ${39:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    trusted_root_certificates: ${40:# Trusted Root certificates of the application gateway resource}
+    url_path_maps: ${41:# List of URL path maps of the application gateway resource}
+    web_application_firewall_configuration: ${42:# Web application firewall configuration of the application gateway reosurce}
+    x509_certificate_path: ${43:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

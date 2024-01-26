@@ -1,21 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create and delete a DigitalOcean Kubernetes cluster}
   community.digitalocean.digital_ocean_kubernetes:
-    oauth_token: ${2:# DigitalOcean OAuth token; can be specified in C(DO_API_KEY), C(DO_API_TOKEN), or C(DO_OAUTH_TOKEN) environment variables}
-    state: ${3:# The usual, C(present) to create, C(absent) to destroy}
-    name: ${4:# A human-readable name for a Kubernetes cluster}
-    region: ${5:# The slug identifier for the region where the Kubernetes cluster will be created}
-    version: ${6:# The slug identifier for the version of Kubernetes used for the cluster}
-    auto_upgrade: ${7:# A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window}
-    surge_upgrade: ${8:# A boolean value indicating whether surge upgrade is enabled/disabled for the cluster}
-    tags: ${9:# A flat array of tag names as strings to be applied to the Kubernetes cluster}
-    maintenance_policy: ${10:# An object specifying the maintenance window policy for the Kubernetes cluster (see table below)}
-    node_pools: ${11:# An object specifying the details of the worker nodes available to the Kubernetes cluster (see table below)}
-    vpc_uuid: ${12:# A string specifying the UUID of the VPC to which the Kubernetes cluster will be assigned}
-    return_kubeconfig: ${13:# Controls whether or not to return the C(kubeconfig)}
-    wait: ${14:# Wait for the cluster to be running before returning}
-    wait_timeout: ${15:# How long before wait gives up, in seconds, when creating a cluster}
-    ha: ${16:# A boolean value indicating whether the control plane is run in a highly available configuration in the cluster}
+    auto_upgrade: ${2:# A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window}
+    ha: ${3:# A boolean value indicating whether the control plane is run in a highly available configuration in the cluster}
+    maintenance_policy: ${4:# An object specifying the maintenance window policy for the Kubernetes cluster (see table below)}
+    name: ${5:# A human-readable name for a Kubernetes cluster}
+    node_pools: ${6:# An object specifying the details of the worker nodes available to the Kubernetes cluster (see table below)}
+    oauth_token: ${7:# DigitalOcean OAuth token; can be specified in C(DO_API_KEY), C(DO_API_TOKEN), or C(DO_OAUTH_TOKEN) environment variables}
+    region: ${8:# The slug identifier for the region where the Kubernetes cluster will be created}
+    return_kubeconfig: ${9:# Controls whether or not to return the C(kubeconfig)}
+    state: ${10:# The usual, C(present) to create, C(absent) to destroy}
+    surge_upgrade: ${11:# A boolean value indicating whether surge upgrade is enabled/disabled for the cluster}
+    tags: ${12:# A flat array of tag names as strings to be applied to the Kubernetes cluster}
+    version: ${13:# The slug identifier for the version of Kubernetes used for the cluster}
+    vpc_uuid: ${14:# A string specifying the UUID of the VPC to which the Kubernetes cluster will be assigned}
+    wait: ${15:# Wait for the cluster to be running before returning}
+    wait_timeout: ${16:# How long before wait gives up, in seconds, when creating a cluster}
   tags:
     - community
     - digitalocean

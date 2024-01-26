@@ -1,15 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, delete, retrieve, and update znodes using ZooKeeper}
   community.general.znode:
-    hosts: ${2:# A list of ZooKeeper servers (format '[server]:[port]')}
-    name: ${3:# The path of the znode}
-    value: ${4:# The value assigned to the znode}
-    op: ${5:# An operation to perform}
-    state: ${6:# The state to enforce}
-    timeout: ${7:# The amount of time to wait for a node to appear}
-    recursive: ${8:# Recursively delete node and all its children}
-    auth_scheme: ${9:# Authentication scheme}
-    auth_credential: ${10:# The authentication credential value}
+    auth_credential: ${2:# The authentication credential value}
+    auth_scheme: ${3:# Authentication scheme}
+    hosts: ${4:# A list of ZooKeeper servers (format '[server]:[port]')}
+    name: ${5:# The path of the znode}
+    op: ${6:# An operation to perform}
+    recursive: ${7:# Recursively delete node and all its children}
+    state: ${8:# The state to enforce}
+    timeout: ${9:# The amount of time to wait for a node to appear}
+    use_tls: ${10:# Using TLS/SSL or not}
+    value: ${11:# The value assigned to the znode}
   tags:
     - community
     - general

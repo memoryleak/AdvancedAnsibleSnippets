@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:NetApp StorageGRID manage groups}
   netapp.storagegrid.na_sg_grid_group:
-    state: ${2:# Whether the specified group should exist or not}
-    display_name: ${3:# Name of the group}
-    unique_name: ${4:# Unique Name for the group}
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    display_name: ${4:# Name of the group}
     management_policy: ${5:# Management access controls granted to the group within the tenancy}
-    auth_token: ${6:# The authorization token for the API request}
-    api_url: ${7:# The url to the StorageGRID Admin Node REST API}
+    state: ${6:# Whether the specified group should exist or not}
+    unique_name: ${7:# Unique Name for the group}
     validate_certs: ${8:# Should https certificates be validated?}
   tags:
     - netapp

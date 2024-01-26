@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add or delete record sets in Hetzner DNS service}
   community.dns.hetzner_dns_record_set:
-    prefix: ${2:# The prefix of the DNS record}
+    bulk_operation_threshold: ${2:# Determines the threshold from when on bulk operations are used}
     hetzner_token: ${3:# The token for the Hetzner API}
-    ttl: ${4:# The TTL to give the new record, in seconds}
-    type: ${5:# The type of DNS record to create or delete}
-    zone_id: ${6:# The ID of the DNS zone to modify}
+    on_existing: ${4:# This option defines the behavior if the record set already exists, but differs from the specified record set}
+    prefix: ${5:# The prefix of the DNS record}
+    record: ${6:# The full DNS record to create or delete}
     state: ${7:# Specifies the state of the resource record}
-    zone_name: ${8:# The DNS zone to modify}
-    record: ${9:# The full DNS record to create or delete}
-    value: ${10:# The new value when creating a DNS record}
-    on_existing: ${11:# This option defines the behavior if the record set already exists, but differs from the specified record set}
-    bulk_operation_threshold: ${12:# Determines the threshold from when on bulk operations are used}
-    txt_transformation: ${13:# Determines how TXT entry values are converted between the API and this module's input and output}
-    txt_character_encoding: ${14:# Whether to treat numeric escape sequences (C(\\xyz)) as octal or decimal numbers}
+    ttl: ${8:# The TTL to give the new record, in seconds}
+    txt_character_encoding: ${9:# Whether to treat numeric escape sequences (V(\\\\xyz)) as octal or decimal numbers}
+    txt_transformation: ${10:# Determines how TXT entry values are converted between the API and this module's input and output}
+    type: ${11:# The type of DNS record to create or delete}
+    value: ${12:# The new value when creating a DNS record}
+    zone_id: ${13:# The ID of the DNS zone to modify}
+    zone_name: ${14:# The DNS zone to modify}
   tags:
     - community
     - dns

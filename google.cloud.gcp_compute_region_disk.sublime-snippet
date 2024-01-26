@@ -1,26 +1,27 @@
 <snippet>
   <content><![CDATA[- name: ${1:Creates a GCP RegionDisk}
   google.cloud.gcp_compute_region_disk:
-    state: ${2:# Whether the given object should exist in GCP}
-    description: ${3:# An optional description of this resource}
-    labels: ${4:# Labels to apply to this disk}
-    licenses: ${5:# Any applicable publicly visible licenses}
-    name: ${6:# Name of the resource}
-    size_gb: ${7:# Size of the persistent disk, specified in GB}
-    physical_block_size_bytes: ${8:# Physical block size of the persistent disk, in bytes}
-    replica_zones: ${9:# URLs of the zones where the disk should be replicated to}
-    type: ${10:# URL of the disk type resource describing which disk type to use to create the disk}
-    region: ${11:# A reference to the region where the disk resides}
-    disk_encryption_key: ${12:# Encrypts the disk using a customer-supplied encryption key}
-    source_snapshot: ${13:# The source snapshot used to create this disk}
-    source_snapshot_encryption_key: ${14:# The customer-supplied encryption key of the source snapshot}
-    project: ${15:# The Google Cloud Platform project to use}
-    auth_kind: ${16:# The type of credential used}
-    service_account_contents: ${17:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
-    service_account_file: ${18:# The path of a Service Account JSON file if serviceaccount is selected as type}
-    service_account_email: ${19:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
-    scopes: ${20:# Array of scopes to be used}
-    env_type: ${21:# Specifies which Ansible environment you're running this module within}
+    access_token: ${2:# An OAuth2 access token if credential type is accesstoken}
+    auth_kind: ${3:# The type of credential used}
+    description: ${4:# An optional description of this resource}
+    disk_encryption_key: ${5:# Encrypts the disk using a customer-supplied encryption key}
+    env_type: ${6:# Specifies which Ansible environment you're running this module within}
+    labels: ${7:# Labels to apply to this disk}
+    licenses: ${8:# Any applicable publicly visible licenses}
+    name: ${9:# Name of the resource}
+    physical_block_size_bytes: ${10:# Physical block size of the persistent disk, in bytes}
+    project: ${11:# The Google Cloud Platform project to use}
+    region: ${12:# A reference to the region where the disk resides}
+    replica_zones: ${13:# URLs of the zones where the disk should be replicated to}
+    scopes: ${14:# Array of scopes to be used}
+    service_account_contents: ${15:# The contents of a Service Account JSON file, either in a dictionary or as a JSON string that represents it}
+    service_account_email: ${16:# An optional service account email address if machineaccount is selected and the user does not wish to use the default email}
+    service_account_file: ${17:# The path of a Service Account JSON file if serviceaccount is selected as type}
+    size_gb: ${18:# Size of the persistent disk, specified in GB}
+    source_snapshot: ${19:# The source snapshot used to create this disk}
+    source_snapshot_encryption_key: ${20:# The customer-supplied encryption key of the source snapshot}
+    state: ${21:# Whether the given object should exist in GCP}
+    type: ${22:# URL of the disk type resource describing which disk type to use to create the disk}
   tags:
     - google
     - cloud
