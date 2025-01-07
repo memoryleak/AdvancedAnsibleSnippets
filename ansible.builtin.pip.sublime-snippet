@@ -1,19 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages Python library dependencies}
   ansible.builtin.pip:
-    chdir: ${2:# cd into this directory before running the command}
-    editable: ${3:# Pass the editable flag}
-    executable: ${4:# The explicit executable or pathname for the pip executable, if different from the Ansible Python interpreter}
-    extra_args: ${5:# Extra arguments passed to pip}
-    name: ${6:# The name of a Python library to install or the url(bzr+,hg+,git+,svn+) of the remote package}
-    requirements: ${7:# The path to a pip requirements file, which should be local to the remote system}
-    state: ${8:# The state of module}
-    umask: ${9:# The system umask to apply before installing the pip package}
-    version: ${10:# The version number to install of the Python library specified in the O(name) parameter}
-    virtualenv: ${11:# An optional path to a I(virtualenv) directory to install into}
-    virtualenv_command: ${12:# The command or a pathname to the command to create the virtual environment with}
-    virtualenv_python: ${13:# The Python executable used for creating the virtual environment}
-    virtualenv_site_packages: ${14:# Whether the virtual environment will inherit packages from the global site-packages directory}
+    break_system_packages: ${2:# Allow C(pip) to modify an externally-managed Python installation as defined by PEP 668}
+    chdir: ${3:# cd into this directory before running the command}
+    editable: ${4:# Pass the editable flag}
+    executable: ${5:# The explicit executable or pathname for the C(pip) executable, if different from the Ansible Python interpreter}
+    extra_args: ${6:# Extra arguments passed to C(pip)}
+    name: ${7:# The name of a Python library to install or the url(bzr+,hg+,git+,svn+) of the remote package}
+    requirements: ${8:# The path to a pip requirements file, which should be local to the remote system}
+    state: ${9:# The state of module}
+    umask: ${10:# The system umask to apply before installing the pip package}
+    version: ${11:# The version number to install of the Python library specified in the O(name) parameter}
+    virtualenv: ${12:# An optional path to a I(virtualenv) directory to install into}
+    virtualenv_command: ${13:# The command or a pathname to the command to create the virtual environment with}
+    virtualenv_python: ${14:# The Python executable used for creating the virtual environment}
+    virtualenv_site_packages: ${15:# Whether the virtual environment will inherit packages from the global C(site-packages) directory}
   tags:
     - pip]]></content>
   <tabTrigger>ansible.builtin.pip</tabTrigger>

@@ -1,14 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Install Ansible roles or collections using ansible-galaxy}
   community.general.ansible_galaxy_install:
-    ack_ansible29: ${2:# This option has no longer any effect and will be removed in community}
-    ack_min_ansiblecore211: ${3:# This option has no longer any effect and will be removed in community}
-    dest: ${4:# The path to the directory containing your collections or roles, according to the value of O(type)}
-    force: ${5:# Force overwriting an existing role or collection}
-    name: ${6:# Name of the collection or role being installed}
-    no_deps: ${7:# Refrain from installing dependencies}
-    requirements_file: ${8:# Path to a file containing a list of requirements to be installed}
-    type: ${9:# The type of installation performed by C(ansible-galaxy)}
+    dest: ${2:# The path to the directory containing your collections or roles, according to the value of O(type)}
+    force: ${3:# Force overwriting existing roles and/or collections}
+    name: ${4:# Name of the collection or role being installed}
+    no_deps: ${5:# Refrain from installing dependencies}
+    requirements_file: ${6:# Path to a file containing a list of requirements to be installed}
+    state: ${7:# If O(state=present) then the collection or role will be installed}
+    type: ${8:# The type of installation performed by C(ansible-galaxy)}
   tags:
     - community
     - general

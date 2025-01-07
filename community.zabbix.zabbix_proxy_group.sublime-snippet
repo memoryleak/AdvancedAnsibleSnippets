@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/update/delete Zabbix proxy group}
+  community.zabbix.zabbix_proxy_group:
+    description: ${2:# Description of the proxy group}
+    failover_delay: ${3:# Failover period for each proxy in the group to have online/offline state}
+    http_login_password: ${4:# Basic Auth password}
+    http_login_user: ${5:# Basic Auth login}
+    min_online: ${6:# Minimum number of online proxies required for the group to be online}
+    name: ${7:# Name of the proxy group}
+    state: ${8:# State of the proxy group}
+  tags:
+    - community
+    - zabbix
+    - zabbix_proxy_group]]></content>
+  <tabTrigger>community.zabbix.zabbix_proxy_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/update/delete Zabbix proxy group</description>
+</snippet>

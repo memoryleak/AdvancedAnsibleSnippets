@@ -2,7 +2,7 @@
   <content><![CDATA[- name: ${1:WTP, FortiAP, or AP platform}
   fortinet.fortimanager.fmgr_wtpprofile_platform:
     access_token: ${2:# The token to access FortiManager without using username and password}
-    adom: ${3:# the parameter (adom) in requested url}
+    adom: ${3:# The parameter (adom) in requested url}
     bypass_validation: ${4:# Only set to True when module schema diffs with FortiManager API structure, module continues to execute without validating parameters}
     enable_log: ${5:# Enable/Disable logging for task}
     forticloud_access_token: ${6:# Authenticate Ansible client with forticloud API access token}
@@ -11,8 +11,9 @@
     rc_succeeded: ${9:# The rc codes list with which the conditions to succeed will be overriden}
     workspace_locking_adom: ${10:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
     workspace_locking_timeout: ${11:# The maximum time in seconds to wait for other user to release the workspace lock}
-    wtp-profile: ${12:# the parameter (wtp-profile) in requested url}
-    wtpprofile_platform: ${13:# the top level parameters set}
+    wtp-profile: ${12:# Deprecated, please use 'wtp_profile'}
+    wtp_profile: ${13:# The parameter (wtp-profile) in requested url}
+    wtpprofile_platform: ${14:# The top level parameters set}
   tags:
     - fortinet
     - fortimanager

@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Run Django admin commands}
+  community.general.django_command:
+    command: ${2:# Django admin command}
+    extra_args: ${3:# List of extra arguments passed to the django admin command}
+    pythonpath: ${4:# Adds the given filesystem path to the Python import search path}
+    settings: ${5:# Specifies the settings module to use}
+    skip_checks: ${6:# Skips running system checks prior to running the command}
+    traceback: ${7:# Provides a full stack trace in the output when a C(CommandError) is raised}
+    venv: ${8:# Use the the Python interpreter from this virtual environment}
+    verbosity: ${9:# Specifies the amount of notification and debug information in the output of C(django-admin)}
+  tags:
+    - community
+    - general
+    - django_command]]></content>
+  <tabTrigger>community.general.django_command</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Run Django admin commands</description>
+</snippet>

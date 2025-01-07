@@ -3,72 +3,77 @@
   azure.azcollection.azure_rm_virtualmachine:
     accept_terms: ${2:# Accept terms for Marketplace images that require it}
     ad_user: ${3:# Active Directory username}
-    adfs_authority_url: ${4:# Azure AD authority url}
-    admin_password: ${5:# Password for the admin username}
-    admin_username: ${6:# Admin username used to access the VM after it is created}
-    allocated: ${7:# Whether the VM is allocated or deallocated, only useful with I(state=present)}
-    api_profile: ${8:# Selects an API profile to use when communicating with Azure services}
-    append_tags: ${9:# Use to control if tags field is canonical or just appends to existing tags}
-    auth_source: ${10:# Controls the source of the credentials to use for authentication}
-    availability_set: ${11:# Name or ID of an existing availability set to add the VM to}
-    boot_diagnostics: ${12:# Manage boot diagnostics settings for a VM}
-    cert_validation_mode: ${13:# Controls the certificate validation behavior for Azure endpoints}
-    client_id: ${14:# Azure client ID}
-    cloud_environment: ${15:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    created_nsg: ${16:# Whether network security group created and attached to network interface or not}
-    custom_data: ${17:# Data made available to the VM and used by C(cloud-init)}
-    data_disks: ${18:# Describes list of data disks}
-    ephemeral_os_disk: ${19:# Parameters of ephemeral disk settings that can be specified for operating system disk}
-    eviction_policy: ${20:# Specifies the eviction policy for the Azure Spot virtual machine}
-    force: ${21:# Use more force during stop of VM}
-    generalized: ${22:# Whether the VM is generalized or not}
-    image: ${23:# The image used to build the VM}
-    license_type: ${24:# On-premise license for the image or disk}
-    linux_config: ${25:# Specifies the Linux operating system settings on the virtual machine}
-    location: ${26:# Valid Azure location for the VM}
-    log_mode: ${27:# Parent argument}
-    log_path: ${28:# Parent argument}
-    managed_disk_type: ${29:# Managed OS disk type}
-    max_price: ${30:# Specifies the maximum price you are willing to pay for a Azure Spot VM/VMSS}
-    name: ${31:# Name of the VM}
-    network_interface_names: ${32:# Network interface names to add to the VM}
-    open_ports: ${33:# List of ports to open in the security group for the VM, when a security group and network interface are created with a VM}
-    os_disk_caching: ${34:# Type of OS disk caching}
-    os_disk_name: ${35:# OS disk name}
-    os_disk_size_gb: ${36:# Size of OS disk in GB}
-    os_type: ${37:# Base type of operating system}
-    password: ${38:# Active Directory user password}
-    plan: ${39:# Third-party billing plan for the VM}
-    priority: ${40:# Priority of the VM}
-    profile: ${41:# Security profile found in ~/}
-    proximity_placement_group: ${42:# The name or ID of the proximity placement group the VM should be associated with}
-    public_ip_allocation_method: ${43:# Allocation method for the public IP of the VM}
-    remove_on_absent: ${44:# Associated resources to remove when removing a VM using I(state=absent)}
-    resource_group: ${45:# Name of the resource group containing the VM}
-    restarted: ${46:# Set to C(true) with I(state=present) to restart a running VM}
-    secret: ${47:# Azure client secret}
-    security_profile: ${48:# Specifies the Security related profile settings for the virtual machine}
-    short_hostname: ${49:# Name assigned internally to the host}
-    ssh_password_enabled: ${50:# Whether to enable or disable SSH passwords}
-    ssh_public_keys: ${51:# For I(os_type=Linux) provide a list of SSH keys}
-    started: ${52:# Whether the VM is started or stopped}
-    state: ${53:# State of the VM}
-    storage_account_name: ${54:# Name of a storage account that supports creation of VHD blobs}
-    storage_blob_name: ${55:# Name of the storage blob used to hold the OS disk image of the VM}
-    storage_container_name: ${56:# Name of the container to use within the storage account to store VHD blobs}
-    subnet_name: ${57:# Subnet for the VM}
-    subscription_id: ${58:# Your Azure subscription Id}
-    tags: ${59:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${60:# Azure tenant ID}
-    thumbprint: ${61:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    virtual_network_name: ${62:# The virtual network to use when creating a VM}
-    virtual_network_resource_group: ${63:# The resource group to use when creating a VM with another resource group's virtual network}
-    vm_identity: ${64:# Identity for the VM}
-    vm_size: ${65:# A valid Azure VM size value}
-    windows_config: ${66:# Specifies Windows operating system settings on the virtual machine}
-    winrm: ${67:# List of Windows Remote Management configurations of the VM}
-    x509_certificate_path: ${68:# Path to the X509 certificate used to create the service principal in PEM format}
-    zones: ${69:# A list of Availability Zones for your VM}
+    additional_capabilities: ${4:# Enables or disables a capability on the virtual machine}
+    adfs_authority_url: ${5:# Azure AD authority url}
+    admin_password: ${6:# Password for the admin username}
+    admin_username: ${7:# Admin username used to access the VM after it is created}
+    allocated: ${8:# Whether the VM is allocated or deallocated, only useful with I(state=present)}
+    api_profile: ${9:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${10:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${11:# Controls the source of the credentials to use for authentication}
+    availability_set: ${12:# Name or ID of an existing availability set to add the VM to}
+    boot_diagnostics: ${13:# Manage boot diagnostics settings for a VM}
+    capacity_reservation_group: ${14:# The name or ID of the capacity reservation group to be associated with}
+    cert_validation_mode: ${15:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${16:# Azure client ID}
+    cloud_environment: ${17:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    created_nsg: ${18:# Whether network security group created and attached to network interface or not}
+    custom_data: ${19:# Data made available to the VM and used by C(cloud-init)}
+    data_disks: ${20:# Describes list of data disks}
+    disable_instance_discovery: ${21:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    ephemeral_os_disk: ${22:# Parameters of ephemeral disk settings that can be specified for operating system disk}
+    eviction_policy: ${23:# Specifies the eviction policy for the Azure Spot virtual machine}
+    force: ${24:# Use more force during stop of VM}
+    generalized: ${25:# Whether the VM is generalized or not}
+    image: ${26:# The image used to build the VM}
+    license_type: ${27:# On-premise license for the image or disk}
+    linux_config: ${28:# Specifies the Linux operating system settings on the virtual machine}
+    location: ${29:# Valid Azure location for the VM}
+    log_mode: ${30:# Parent argument}
+    log_path: ${31:# Parent argument}
+    managed_disk_type: ${32:# Managed OS disk type}
+    max_price: ${33:# Specifies the maximum price you are willing to pay for a Azure Spot VM/VMSS}
+    name: ${34:# Name of the VM}
+    network_interface_names: ${35:# Network interface names to add to the VM}
+    open_ports: ${36:# List of ports to open in the security group for the VM, when a security group and network interface are created with a VM}
+    os_disk_caching: ${37:# Type of OS disk caching}
+    os_disk_encryption_set: ${38:# ID of disk encryption set for OS disk}
+    os_disk_name: ${39:# OS disk name}
+    os_disk_size_gb: ${40:# Size of OS disk in GB}
+    os_type: ${41:# Base type of operating system}
+    password: ${42:# Active Directory user password}
+    plan: ${43:# Third-party billing plan for the VM}
+    priority: ${44:# Priority of the VM}
+    profile: ${45:# Security profile found in ~/}
+    proximity_placement_group: ${46:# The name or ID of the proximity placement group to be associated with}
+    public_ip_allocation_method: ${47:# Allocation method for the public IP of the VM}
+    remove_on_absent: ${48:# Associated resources to remove when removing a VM using I(state=absent)}
+    resource_group: ${49:# Name of the resource group containing the VM}
+    restarted: ${50:# Set to C(true) with I(state=present) to restart a running VM}
+    secret: ${51:# Azure client secret}
+    security_profile: ${52:# Specifies the Security related profile settings for the virtual machine}
+    short_hostname: ${53:# Name assigned internally to the host}
+    ssh_password_enabled: ${54:# Whether to enable or disable SSH passwords}
+    ssh_public_keys: ${55:# For I(os_type=Linux) provide a list of SSH keys}
+    started: ${56:# Whether the VM is started or stopped}
+    state: ${57:# State of the VM}
+    storage_account_name: ${58:# Name of a storage account that supports creation of VHD blobs}
+    storage_blob_name: ${59:# Name of the storage blob used to hold the OS disk image of the VM}
+    storage_container_name: ${60:# Name of the container to use within the storage account to store VHD blobs}
+    subnet_name: ${61:# Subnet for the VM}
+    subscription_id: ${62:# Your Azure subscription Id}
+    swap_os_disk: ${63:# The swap OS disk parameters}
+    tags: ${64:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${65:# Azure tenant ID}
+    thumbprint: ${66:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    virtual_network_name: ${67:# The virtual network to use when creating a VM}
+    virtual_network_resource_group: ${68:# The resource group to use when creating a VM with another resource group's virtual network}
+    vm_identity: ${69:# Identity for the VM}
+    vm_size: ${70:# A valid Azure VM size value}
+    windows_config: ${71:# Specifies Windows operating system settings on the virtual machine}
+    winrm: ${72:# List of Windows Remote Management configurations of the VM}
+    x509_certificate_path: ${73:# Path to the X509 certificate used to create the service principal in PEM format}
+    zones: ${74:# A list of Availability Zones for your VM}
   tags:
     - azure
     - azcollection

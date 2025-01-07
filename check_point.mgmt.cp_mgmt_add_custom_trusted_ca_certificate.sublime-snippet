@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create new custom trusted CA certificate}
+  check_point.mgmt.cp_mgmt_add_custom_trusted_ca_certificate:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    base64_certificate: ${3:# Certificate file encoded in base64}
+    details_level: ${4:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    version: ${5:# Version of checkpoint}
+    wait_for_task: ${6:# Wait for the task to end}
+    wait_for_task_timeout: ${7:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_add_custom_trusted_ca_certificate]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_add_custom_trusted_ca_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create new custom trusted CA certificate</description>
+</snippet>

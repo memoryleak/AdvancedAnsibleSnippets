@@ -5,19 +5,21 @@
     age_stamp: ${3:# Choose the file property against which we compare age}
     contains: ${4:# A regular expression or pattern which should be matched against the file content}
     depth: ${5:# Set the maximum number of levels to descend into}
-    exact_mode: ${6:# Restrict mode matching to exact matches only, and not as a minimum set of permissions to match}
-    excludes: ${7:# One or more (shell or regex) patterns, which type is controlled by O(use_regex) option}
-    file_type: ${8:# Type of file to select}
-    follow: ${9:# Set this to V(true) to follow symlinks in path for systems with python 2}
-    get_checksum: ${10:# Set this to V(true) to retrieve a file's SHA1 checksum}
-    hidden: ${11:# Set this to V(true) to include hidden files, otherwise they will be ignored}
-    mode: ${12:# Choose objects matching a specified permission}
-    paths: ${13:# List of paths of directories to search}
-    patterns: ${14:# One or more (shell or regex) patterns, which type is controlled by O(use_regex) option}
-    read_whole_file: ${15:# When doing a C(contains) search, determines whether the whole file should be read into memory or if the regex should be applied to the file line-by-line}
-    recurse: ${16:# If target is a directory, recursively descend into the directory looking for files}
-    size: ${17:# Select files whose size is equal to or greater than the specified size}
-    use_regex: ${18:# If V(false), the patterns are file globs (shell)}
+    encoding: ${6:# When doing a O(contains) search, determine the encoding of the files to be searched}
+    exact_mode: ${7:# Restrict mode matching to exact matches only, and not as a minimum set of permissions to match}
+    excludes: ${8:# One or more (shell or regex) patterns, which type is controlled by O(use_regex) option}
+    file_type: ${9:# Type of file to select}
+    follow: ${10:# Set this to V(true) to follow symlinks in path for systems with python 2}
+    get_checksum: ${11:# Set this to V(true) to retrieve a file's SHA1 checksum}
+    hidden: ${12:# Set this to V(true) to include hidden files, otherwise they will be ignored}
+    limit: ${13:# Limit the maximum number of matching paths returned}
+    mode: ${14:# Choose objects matching a specified permission}
+    paths: ${15:# List of paths of directories to search}
+    patterns: ${16:# One or more (shell or regex) patterns, which type is controlled by O(use_regex) option}
+    read_whole_file: ${17:# When doing a C(contains) search, determines whether the whole file should be read into memory or if the regex should be applied to the file line-by-line}
+    recurse: ${18:# If target is a directory, recursively descend into the directory looking for files}
+    size: ${19:# Select files whose size is equal to or greater than the specified size}
+    use_regex: ${20:# If V(false), the patterns are file globs (shell)}
   tags:
     - find]]></content>
   <tabTrigger>ansible.builtin.find</tabTrigger>

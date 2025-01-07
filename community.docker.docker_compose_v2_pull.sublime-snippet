@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Pull a Docker compose project}
+  community.docker.docker_compose_v2_pull:
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    ca_path: ${3:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    check_files_existing: ${4:# If set to V(false), the module will not check whether one of the files C(compose}
+    cli_context: ${5:# The Docker CLI context to use}
+    client_cert: ${6:# Path to the client's TLS certificate file}
+    client_key: ${7:# Path to the client's TLS key file}
+    definition: ${8:# Compose file describing one or more services, networks and volumes}
+    docker_cli: ${9:# Path to the Docker CLI}
+    docker_host: ${10:# The URL or Unix socket path used to connect to the Docker API}
+    env_files: ${11:# By default environment files are loaded from a C(}
+    files: ${12:# List of Compose file names relative to O(project_src) to be used instead of the main Compose file (C(compose}
+    ignore_buildable: ${13:# If set to V(true), will not pull images that can be built}
+    include_deps: ${14:# If set to V(true), also pull services that are declared as dependencies}
+    policy: ${15:# Whether to pull images before running}
+    profiles: ${16:# List of profiles to enable when starting services}
+    project_name: ${17:# Provide a project name}
+    project_src: ${18:# Path to a directory containing a Compose file (C(compose}
+    services: ${19:# Specifies a subset of services to be targeted}
+    tls: ${20:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${21:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    validate_certs: ${22:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+  tags:
+    - community
+    - docker
+    - docker_compose_v2_pull]]></content>
+  <tabTrigger>community.docker.docker_compose_v2_pull</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Pull a Docker compose project</description>
+</snippet>

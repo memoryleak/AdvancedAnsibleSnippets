@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gathers information about one or more clusters}
+  vmware.vmware.cluster_info:
+    cluster: ${2:# The name of the cluster on which to gather info}
+    datacenter: ${3:# The name of the datacenter}
+    gather_tags: ${4:# If true, gather any tags attached to the cluster(s)}
+    hostname: ${5:# The hostname or IP address of the vSphere vCenter server}
+    password: ${6:# The password of the vSphere vCenter server}
+    port: ${7:# The port number of the vSphere vCenter server}
+    properties: ${8:# If the schema is 'vsphere', gather these specific properties only}
+    proxy_host: ${9:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${10:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    schema: ${11:# Specify the output schema desired}
+    username: ${12:# The username of the vSphere vCenter server}
+    validate_certs: ${13:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware
+    - cluster_info]]></content>
+  <tabTrigger>vmware.vmware.cluster_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gathers information about one or more clusters</description>
+</snippet>

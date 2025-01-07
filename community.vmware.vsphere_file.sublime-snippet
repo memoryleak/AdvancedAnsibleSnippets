@@ -3,13 +3,16 @@
   community.vmware.vsphere_file:
     datacenter: ${2:# The datacenter on the vCenter server that holds the datastore}
     datastore: ${3:# The datastore on the vCenter server to push files to}
-    host: ${4:# The vCenter server on which the datastore is available}
-    password: ${5:# The password to authenticate on the vCenter server}
+    hostname: ${4:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    password: ${5:# The password of the vSphere vCenter or ESXi server}
     path: ${6:# The file or directory on the datastore on the vCenter server}
-    state: ${7:# The state of or the action on the provided path}
-    timeout: ${8:# The timeout in seconds for the upload to the datastore}
-    username: ${9:# The user name to authenticate on the vCenter server}
-    validate_certs: ${10:# If V(false), SSL certificates will not be validated}
+    port: ${7:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${8:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${9:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    state: ${10:# The state of or the action on the provided path}
+    timeout: ${11:# The timeout in seconds for the upload to the datastore}
+    username: ${12:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${13:# Allows connection when SSL certificates are not valid}
   tags:
     - community
     - vmware

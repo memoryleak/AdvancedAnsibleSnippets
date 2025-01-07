@@ -2,9 +2,10 @@
   <content><![CDATA[- name: ${1:Configure Pure Storage FlashArray Maintence Windows}
   purestorage.flasharray.purefa_maintenance:
     api_token: ${2:# FlashArray API token for admin privileged user}
-    fa_url: ${3:# FlashArray management IPv4 address or Hostname}
-    state: ${4:# Create or delete maintennance window}
-    timeout: ${5:# Maintenance window period, specified in seconds}
+    disable_warnings: ${3:# Disable insecure certificate warnings in debug logs}
+    fa_url: ${4:# FlashArray management IPv4 address or Hostname}
+    state: ${5:# Create or delete maintennance window}
+    timeout: ${6:# Maintenance window period, specified in seconds}
   tags:
     - purestorage
     - flasharray

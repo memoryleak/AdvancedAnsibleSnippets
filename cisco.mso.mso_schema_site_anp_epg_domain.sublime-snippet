@@ -2,35 +2,44 @@
   <content><![CDATA[- name: ${1:Manage site-local EPG domains in schema template}
   cisco.mso.mso_schema_site_anp_epg_domain:
     allow_micro_segmentation: ${2:# Specifies microsegmentation is enabled or not}
-    anp: ${3:# The name of the ANP}
-    deployment_immediacy: ${4:# The deployment immediacy of the domain}
-    domain_association_type: ${5:# The type of domain to associate}
-    domain_profile: ${6:# The domain profile name}
-    enhanced_lagpolicy_dn: ${7:# Distinguished name of EPG lagpolicy}
-    enhanced_lagpolicy_name: ${8:# EPG enhanced lagpolicy name}
-    epg: ${9:# The name of the EPG}
-    host: ${10:# IP Address or hostname of the ACI Multi Site Orchestrator host}
-    login_domain: ${11:# The login domain name to use for authentication}
-    micro_seg_vlan: ${12:# Virtual LAN for microsegmentation}
-    micro_seg_vlan_type: ${13:# Virtual LAN type for microsegmentation}
-    output_level: ${14:# Influence the output of this MSO module}
-    password: ${15:# The password to use for authentication}
-    port: ${16:# Port number to be used for the REST connection}
-    port_encap_vlan: ${17:# Virtual LAN type for port encap}
-    port_encap_vlan_type: ${18:# Virtual LAN type for port encap}
-    resolution_immediacy: ${19:# Determines when the policies should be resolved and available}
-    schema: ${20:# The name of the schema}
-    site: ${21:# The name of the site}
-    state: ${22:# Use C(present) or C(absent) for adding or removing}
-    switch_type: ${23:# Which switch type to use with this domain association}
-    switching_mode: ${24:# Which switching mode to use with this domain association}
-    template: ${25:# The name of the template}
-    timeout: ${26:# The socket level timeout in seconds}
-    use_proxy: ${27:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${28:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${29:# The username to use for authentication}
-    validate_certs: ${30:# If C(false), SSL certificates will not be validated}
-    vlan_encap_mode: ${31:# Which VLAN enacap mode to use}
+    allow_promiscuous: ${3:# The allow promiscuous state of the domain association}
+    anp: ${4:# The name of the ANP}
+    binding_type: ${5:# Which binding_type to use with this domain association}
+    custom_epg_name: ${6:# Which custom_epg_name to use with this domain association}
+    delimiter: ${7:# Which delimiter to use with this domain association}
+    deployment_immediacy: ${8:# The deployment immediacy of the domain}
+    domain_association_type: ${9:# The type of domain to associate}
+    domain_profile: ${10:# The domain profile name}
+    enhanced_lagpolicy_dn: ${11:# Distinguished name of EPG lagpolicy}
+    enhanced_lagpolicy_name: ${12:# EPG enhanced lagpolicy name}
+    epg: ${13:# The name of the EPG}
+    forged_transmits: ${14:# The forged transmits state of the domain association}
+    host: ${15:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${16:# The login domain name to use for authentication}
+    mac_changes: ${17:# The mac changes state of the domain association}
+    micro_seg_vlan: ${18:# Virtual LAN for microsegmentation}
+    micro_seg_vlan_type: ${19:# Virtual LAN type for microsegmentation}
+    netflow_pref: ${20:# The netflow preference state of the domain association}
+    num_ports: ${21:# Number of ports for the binding type}
+    output_level: ${22:# Influence the output of this MSO module}
+    password: ${23:# The password to use for authentication}
+    port: ${24:# Port number to be used for the REST connection}
+    port_allocation: ${25:# Port allocation for the binding type}
+    port_encap_vlan: ${26:# Virtual LAN type for port encap}
+    port_encap_vlan_type: ${27:# Virtual LAN type for port encap}
+    resolution_immediacy: ${28:# Determines when the policies should be resolved and available}
+    schema: ${29:# The name of the schema}
+    site: ${30:# The name of the site}
+    state: ${31:# Use C(present) or C(absent) for adding or removing}
+    switch_type: ${32:# Which switch type to use with this domain association}
+    switching_mode: ${33:# Which switching mode to use with this domain association}
+    template: ${34:# The name of the template}
+    timeout: ${35:# The socket level timeout in seconds}
+    use_proxy: ${36:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${37:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${38:# The username to use for authentication}
+    validate_certs: ${39:# If C(false), SSL certificates will not be validated}
+    vlan_encap_mode: ${40:# Which VLAN enacap mode to use}
   tags:
     - cisco
     - mso

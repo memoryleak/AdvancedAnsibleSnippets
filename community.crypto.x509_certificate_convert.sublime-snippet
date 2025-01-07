@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Convert X}
+  community.crypto.x509_certificate_convert:
+    attributes: ${2:# The attributes the resulting filesystem object should have}
+    backup: ${3:# Create a backup file including a timestamp so you can get the original X}
+    dest_path: ${4:# Name of the file in which the generated TLS/SSL X}
+    format: ${5:# Determines which format the destination X}
+    group: ${6:# Name of the group that should own the filesystem object, as would be fed to C(chown)}
+    mode: ${7:# The permissions the resulting filesystem object should have}
+    owner: ${8:# Name of the user that should own the filesystem object, as would be fed to C(chown)}
+    selevel: ${9:# The level part of the SELinux filesystem object context}
+    serole: ${10:# The role part of the SELinux filesystem object context}
+    setype: ${11:# The type part of the SELinux filesystem object context}
+    seuser: ${12:# The user part of the SELinux filesystem object context}
+    src_content: ${13:# The content of the file containing the X}
+    src_content_base64: ${14:# If set to V(true) when O(src_content) is provided, the module assumes that the value of O(src_content) is Base64 encoded}
+    src_path: ${15:# Name of the file containing the X}
+    strict: ${16:# If the input is a PEM file, ensure that it contains a single PEM object, that the header and footer match, and are of type C(CERTIFICATE) or C(X509 CERTIFICATE)}
+    unsafe_writes: ${17:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
+  tags:
+    - community
+    - crypto
+    - x509_certificate_convert]]></content>
+  <tabTrigger>community.crypto.x509_certificate_convert</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Convert X</description>
+</snippet>

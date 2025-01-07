@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Edit Application Control & URL Filtering Blades' Settings}
+  check_point.mgmt.cp_mgmt_set_app_control_advanced_settings:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    block_request_when_web_service_is_unavailable: ${3:# Block requests when the web service is unavailable}
+    categorize_social_network_widgets: ${4:# When selected, the Security Gateway connects to the Check Point Online Web Service to identify social networking widgets that it does not recognize}
+    custom_categorization_settings: ${5:# Website categorization mode - select the mode that is used for website categorization}
+    domain_level_permission: ${6:# Allows the editing of applications, categories, and services}
+    enable_web_browsing: ${7:# If you do not enable URL Filtering on the Security Gateway, you can use a generic Web browser application called Web Browsing in the rule}
+    httpi_non_standard_ports: ${8:# Enable HTTP inspection on non standard ports for application and URL filtering}
+    internal_error_fail_mode: ${9:# In case of internal system error, allow or block all connections}
+    match_application_on_any_port: ${10:# Match Web application on 'Any' port when used in Block rule - By default this is set to true}
+    url_filtering_settings: ${11:# In this section user can enable  URL Filtering features}
+    version: ${12:# Version of checkpoint}
+    wait_for_task: ${13:# Wait for the task to end}
+    wait_for_task_timeout: ${14:# How many minutes to wait until throwing a timeout error}
+    web_browsing_services: ${15:# Web browsing services are the services that match a Web-based custom Application/Site}
+    website_categorization_mode: ${16:# Hold - Requests are blocked until categorization is complete}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_set_app_control_advanced_settings]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_set_app_control_advanced_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Edit Application Control &amp; URL Filtering Blades&#39; Settings</description>
+</snippet>

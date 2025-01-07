@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set network bond}
+  kaytus.ksmanage.edit_network_bond:
+    auto_config: ${2:# Enable this option to configure the interfaces in service configuration automatically}
+    bond: ${3:# Network bond status, If VLAN is enabled for slave interfaces, then Bonding cannot be enabled}
+    host: ${4:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    interface: ${5:# Interface name}
+    password: ${6:# Specifies the password to use to authenticate the connection to the remote device}
+    provider: ${7:# A dict object containing connection details}
+    username: ${8:# Configures the username to use to authenticate the connection to the remote device}
+  tags:
+    - kaytus
+    - ksmanage
+    - edit_network_bond]]></content>
+  <tabTrigger>kaytus.ksmanage.edit_network_bond</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set network bond</description>
+</snippet>

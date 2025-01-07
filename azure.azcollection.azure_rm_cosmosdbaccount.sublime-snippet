@@ -11,34 +11,37 @@
     cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
     consistency_policy: ${10:# The consistency policy for the Cosmos DB account}
     database_account_offer_type: ${11:# Database account offer type, for example I(Standard)}
-    enable_automatic_failover: ${12:# Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage}
-    enable_cassandra: ${13:# Enable Cassandra}
-    enable_free_tier: ${14:# If enabled the account is free-tier}
-    enable_gremlin: ${15:# Enable Gremlin}
-    enable_multiple_write_locations: ${16:# Enables the account to write in multiple locations}
-    enable_table: ${17:# Enable Table}
-    geo_rep_locations: ${18:# An array that contains the georeplication locations enabled for the Cosmos DB account}
-    ip_range_filter: ${19:# (deprecated) Cosmos DB Firewall support}
-    ip_rules: ${20:# The IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs}
-    is_virtual_network_filter_enabled: ${21:# Flag to indicate whether to enable/disable Virtual Network ACL rules}
-    kind: ${22:# Indicates the type of database account}
-    location: ${23:# The location of the resource group to which the resource belongs}
-    log_mode: ${24:# Parent argument}
-    log_path: ${25:# Parent argument}
-    mongo_version: ${26:# Server version for the MongoDB account, such as c(3}
-    name: ${27:# Cosmos DB database account name}
-    password: ${28:# Active Directory user password}
-    profile: ${29:# Security profile found in ~/}
-    public_network_access: ${30:# Enables or disables public network access to server}
-    resource_group: ${31:# Name of an Azure resource group}
-    secret: ${32:# Azure client secret}
-    state: ${33:# Assert the state of the Database Account}
-    subscription_id: ${34:# Your Azure subscription Id}
-    tags: ${35:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${36:# Azure tenant ID}
-    thumbprint: ${37:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    virtual_network_rules: ${38:# List of Virtual Network ACL rules configured for the Cosmos DB account}
-    x509_certificate_path: ${39:# Path to the X509 certificate used to create the service principal in PEM format}
+    default_identity: ${12:# The primary identity to access key vault in CMK related features}
+    disable_instance_discovery: ${13:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    enable_automatic_failover: ${14:# Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage}
+    enable_cassandra: ${15:# Enable Cassandra}
+    enable_free_tier: ${16:# If enabled the account is free-tier}
+    enable_gremlin: ${17:# Enable Gremlin}
+    enable_multiple_write_locations: ${18:# Enables the account to write in multiple locations}
+    enable_table: ${19:# Enable Table}
+    geo_rep_locations: ${20:# An array that contains the georeplication locations enabled for the Cosmos DB account}
+    identity: ${21:# Identity for the Object}
+    ip_range_filter: ${22:# (deprecated) Cosmos DB Firewall support}
+    ip_rules: ${23:# The IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs}
+    is_virtual_network_filter_enabled: ${24:# Flag to indicate whether to enable/disable Virtual Network ACL rules}
+    kind: ${25:# Indicates the type of database account}
+    location: ${26:# The location of the resource group to which the resource belongs}
+    log_mode: ${27:# Parent argument}
+    log_path: ${28:# Parent argument}
+    mongo_version: ${29:# Server version for the MongoDB account, such as c(3}
+    name: ${30:# Cosmos DB database account name}
+    password: ${31:# Active Directory user password}
+    profile: ${32:# Security profile found in ~/}
+    public_network_access: ${33:# Enables or disables public network access to server}
+    resource_group: ${34:# Name of an Azure resource group}
+    secret: ${35:# Azure client secret}
+    state: ${36:# Assert the state of the Database Account}
+    subscription_id: ${37:# Your Azure subscription Id}
+    tags: ${38:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${39:# Azure tenant ID}
+    thumbprint: ${40:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    virtual_network_rules: ${41:# List of Virtual Network ACL rules configured for the Cosmos DB account}
+    x509_certificate_path: ${42:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

@@ -1,20 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Export the primary Security Management Server database or the primary Multi-Domain Server database or the single Domain database and the applicable Check Point configuration}
   check_point.mgmt.cp_mgmt_export_management:
-    domain_name: ${2:# Domain name to be exported}
-    file_path: ${3:# Path in which the exported database file is saved}
-    ignore_warnings: ${4:# Ignoring the verification warnings}
-    include_endpoint_configuration: ${5:# Include export of the Endpoint Security Management configuration files}
-    include_endpoint_database: ${6:# Include export of the Endpoint Security Management database}
-    include_logs: ${7:# Export logs without log indexes}
-    include_logs_indexes: ${8:# Export logs with log indexes}
-    is_domain_backup: ${9:# If true, the exported Domain will be suitable for import on the same Multi-Domain Server only}
-    is_smc_to_mds: ${10:# If true, the exported Security Management Server will be suitable for import on the Multi-Domain Server only}
-    pre_export_verification_only: ${11:# If true, only runs the pre-export verifications instead of the full export}
-    target_version: ${12:# Target version}
-    version: ${13:# Version of checkpoint}
-    wait_for_task: ${14:# Wait for the task to end}
-    wait_for_task_timeout: ${15:# How many minutes to wait until throwing a timeout error}
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    domain_name: ${3:# Domain name to be exported}
+    file_path: ${4:# Path in which the exported database file is saved}
+    ignore_warnings: ${5:# Ignoring the verification warnings}
+    include_endpoint_configuration: ${6:# Include export of the Endpoint Security Management configuration files}
+    include_endpoint_database: ${7:# Include export of the Endpoint Security Management database}
+    include_logs: ${8:# Export logs without log indexes}
+    include_logs_indexes: ${9:# Export logs with log indexes}
+    is_domain_backup: ${10:# If true, the exported Domain will be suitable for import on the same Multi-Domain Server only}
+    is_smc_to_mds: ${11:# If true, the exported Security Management Server will be suitable for import on the Multi-Domain Server only}
+    pre_export_verification_only: ${12:# If true, only runs the pre-export verifications instead of the full export}
+    target_version: ${13:# Target version}
+    version: ${14:# Version of checkpoint}
+    wait_for_task: ${15:# Wait for the task to end}
+    wait_for_task_timeout: ${16:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

@@ -1,25 +1,32 @@
 <snippet>
   <content><![CDATA[- name: ${1:Play kubernetes YAML file using podman}
   containers.podman.podman_play:
-    authfile: ${2:# Path of the authentication file}
-    build: ${3:# Build images even if they are found in the local storage}
-    cert_dir: ${4:# Use certificates at path (*}
-    configmap: ${5:# Use Kubernetes configmap YAML at path to provide a source for environment variable values within the containers of the pod}
-    context_dir: ${6:# Use path as the build context directory for each image}
-    debug: ${7:# Enable debug for the module}
-    executable: ${8:# Name of executable to run, by default 'podman'}
-    kube_file: ${9:# Path to file with YAML configuration for a Pod}
-    log_driver: ${10:# Set logging driver for all created containers}
-    log_level: ${11:# Set logging level for podman calls}
-    network: ${12:# List of the names of CNI networks the pod should join}
-    password: ${13:# The username and password to use to authenticate with the registry if required}
-    quiet: ${14:# Hide image pulls logs from output}
-    recreate: ${15:# If pod already exists, delete it and run the new one}
-    seccomp_profile_root: ${16:# Directory path for seccomp profiles (default is '/var/lib/kubelet/seccomp')}
-    state: ${17:# Start the pod after creating it, or to leave it created only}
-    tls_verify: ${18:# Require HTTPS and verify certificates when contacting registries (default is true)}
-    username: ${19:# The username and password to use to authenticate with the registry if required}
-    userns: ${20:# Set the user namespace mode for all the containers in a pod}
+    annotation: ${2:# Add an annotation to the container or pod}
+    authfile: ${3:# Path of the authentication file}
+    build: ${4:# Build images even if they are found in the local storage}
+    cert_dir: ${5:# Use certificates at path (*}
+    configmap: ${6:# Use Kubernetes configmap YAML at path to provide a source for environment variable values within the containers of the pod}
+    context_dir: ${7:# Use path as the build context directory for each image}
+    debug: ${8:# Enable debug for the module}
+    executable: ${9:# Name of executable to run, by default 'podman'}
+    kube_file: ${10:# Path to file with YAML configuration for a Pod}
+    kube_file_content: ${11:# Content of the kube file}
+    log_driver: ${12:# Set logging driver for all created containers}
+    log_level: ${13:# Set logging level for podman calls}
+    log_opt: ${14:# Logging driver specific options}
+    network: ${15:# List of the names of CNI networks the pod should join}
+    password: ${16:# The username and password to use to authenticate with the registry if required}
+    quadlet_dir: ${17:# Path to the directory to write quadlet file in}
+    quadlet_file_mode: ${18:# The permissions of the quadlet file}
+    quadlet_filename: ${19:# Name of quadlet file to write}
+    quadlet_options: ${20:# Options for the quadlet file}
+    quiet: ${21:# Hide image pulls logs from output}
+    recreate: ${22:# If pod already exists, delete it and run the new one}
+    seccomp_profile_root: ${23:# Directory path for seccomp profiles (default is '/var/lib/kubelet/seccomp')}
+    state: ${24:# Start the pod after creating it, or to leave it created only}
+    tls_verify: ${25:# Require HTTPS and verify certificates when contacting registries (default is true)}
+    username: ${26:# The username and password to use to authenticate with the registry if required}
+    userns: ${27:# Set the user namespace mode for all the containers in a pod}
   tags:
     - containers
     - podman

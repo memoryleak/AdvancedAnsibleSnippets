@@ -2,9 +2,10 @@
   <content><![CDATA[- name: ${1:Configure Pure Storage FlashBlade NTP settings}
   purestorage.flashblade.purefb_ntp:
     api_token: ${2:# FlashBlade API token for admin privileged user}
-    fb_url: ${3:# FlashBlade management IP address or Hostname}
-    ntp_servers: ${4:# A list of up to 4 alternate NTP servers}
-    state: ${5:# Create or delete NTP servers configuration}
+    disable_warnings: ${3:# Disable insecure certificate warnings}
+    fb_url: ${4:# FlashBlade management IP address or Hostname}
+    ntp_servers: ${5:# A list of up to 4 alternate NTP servers}
+    state: ${6:# Create or delete NTP servers configuration}
   tags:
     - purestorage
     - flashblade

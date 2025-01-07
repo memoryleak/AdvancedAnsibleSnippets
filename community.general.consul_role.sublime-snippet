@@ -1,17 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manipulate Consul roles}
   community.general.consul_role:
-    description: ${2:# Description of the role}
-    host: ${3:# Host of the consul agent, defaults to V(localhost)}
-    name: ${4:# A name used to identify the role}
-    node_identities: ${5:# List of node identities to attach to the role}
-    policies: ${6:# List of policies to attach to the role}
-    port: ${7:# The port on which the consul agent is running}
-    scheme: ${8:# The protocol scheme on which the consul agent is running}
-    service_identities: ${9:# List of service identities to attach to the role}
-    state: ${10:# whether the role should be present or absent}
-    token: ${11:# A management token is required to manipulate the roles}
-    validate_certs: ${12:# Whether to verify the TLS certificate of the consul agent}
+    ca_path: ${2:# The CA bundle to use for https connections}
+    description: ${3:# Description of the role}
+    host: ${4:# Host of the consul agent, defaults to V(localhost)}
+    name: ${5:# A name used to identify the role}
+    node_identities: ${6:# List of node identities to attach to the role}
+    policies: ${7:# List of policies to attach to the role}
+    port: ${8:# The port on which the consul agent is running}
+    scheme: ${9:# The protocol scheme on which the consul agent is running}
+    service_identities: ${10:# List of service identities to attach to the role}
+    state: ${11:# whether the role should be present or absent}
+    templated_policies: ${12:# The list of templated policies that should be applied to the role}
+    token: ${13:# The token to use for authorization}
+    validate_certs: ${14:# Whether to verify the TLS certificate of the consul agent}
   tags:
     - community
     - general

@@ -6,22 +6,24 @@
     description: ${4:# The description of the AD object to set}
     display_name: ${5:# The display name of the AD object to set}
     dns_hostname: ${6:# Specifies the fully qualified domain name (FQDN) of the computer}
-    domain_password: ${7:# The password for I(domain_username)}
-    domain_server: ${8:# Specified the Active Directory Domain Services instance to connect to}
-    domain_username: ${9:# The username to use when interacting with AD}
-    enabled: ${10:# C(yes) will enable the group}
-    identity: ${11:# The identity of the AD object used to find the AD object to manage}
-    kerberos_encryption_types: ${12:# Specifies the Kerberos encryption types supported the AD computer account}
-    location: ${13:# Sets the location of the computer account}
-    managed_by: ${14:# The user or group that manages the object}
-    name: ${15:# The C(name) of the AD object to manage}
-    path: ${16:# The path of the OU or the container where the new object should exist in}
-    protect_from_deletion: ${17:# Marks the object as protected from accidental deletion}
-    sam_account_name: ${18:# The C(sAMAccountName) value to set for the group}
-    spn: ${19:# Specifies the service principal name(s) for the account to add, remove or set}
-    state: ${20:# Set to C(present) to ensure the AD object exists}
-    trusted_for_delegation: ${21:# Specifies whether an account is trusted for Kerberos delegation}
-    upn: ${22:# Configures the User Principal Name (UPN) for the account}
+    do_not_append_dollar_to_sam: ${7:# Do not automatically append C($) to the I(sam_account_name) value}
+    domain_credentials: ${8:# Specifies the credentials that should be used when using the server specified by I(name)}
+    domain_password: ${9:# The password for I(domain_username)}
+    domain_server: ${10:# Specified the Active Directory Domain Services instance to connect to}
+    domain_username: ${11:# The username to use when interacting with AD}
+    enabled: ${12:# C(yes) will enable the computer}
+    identity: ${13:# The identity of the AD object used to find the AD object to manage}
+    kerberos_encryption_types: ${14:# Specifies the Kerberos encryption types supported the AD computer account}
+    location: ${15:# Sets the location of the computer account}
+    managed_by: ${16:# The user or group that manages the object}
+    name: ${17:# The C(name) of the AD object to manage, this is not the C(sAMAccountName) of the object but the LDAP C(cn) or C(name) entry of the object in the path specified}
+    path: ${18:# The path of the OU or the container where the new object should exist in}
+    protect_from_deletion: ${19:# Marks the object as protected from accidental deletion}
+    sam_account_name: ${20:# The C(sAMAccountName) value to set for the computer account}
+    spn: ${21:# Specifies the service principal name(s) for the account to add, remove or set}
+    state: ${22:# Set to C(present) to ensure the AD object exists}
+    trusted_for_delegation: ${23:# Specifies whether an account is trusted for Kerberos delegation}
+    upn: ${24:# Configures the User Principal Name (UPN) for the account}
   tags:
     - microsoft
     - ad

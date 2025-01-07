@@ -11,28 +11,34 @@
     cert_validation_mode: ${9:# Controls the certificate validation behavior for Azure endpoints}
     client_id: ${10:# Azure client ID}
     cloud_environment: ${11:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    display_name: ${12:# The display name of the user}
-    given_name: ${13:# The given name for the user}
-    immutable_id: ${14:# The immutable_id of the user}
-    log_mode: ${15:# Parent argument}
-    log_path: ${16:# Parent argument}
-    mail: ${17:# The primary email address of the user}
-    mail_nickname: ${18:# The mail alias for the user}
-    object_id: ${19:# The object id for the user}
-    odata_filter: ${20:# Filter that can be used to specify a user to update or delete}
-    password: ${21:# Active Directory user password}
-    password_profile: ${22:# The password for the user}
-    profile: ${23:# Security profile found in ~/}
-    secret: ${24:# Azure client secret}
-    state: ${25:# State of the ad user}
-    subscription_id: ${26:# Your Azure subscription Id}
-    surname: ${27:# The surname for the user}
-    tenant: ${28:# The tenant ID}
-    thumbprint: ${29:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    usage_location: ${30:# A two letter country code, ISO standard 3166}
-    user_principal_name: ${31:# The principal name of the user}
-    user_type: ${32:# A string value that can be used to classify user types in your directory, such as Member and Guest}
-    x509_certificate_path: ${33:# Path to the X509 certificate used to create the service principal in PEM format}
+    company_name: ${12:# The name of the company that the user is associated with}
+    disable_instance_discovery: ${13:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    display_name: ${14:# The display name of the user}
+    given_name: ${15:# The given name for the user}
+    log_mode: ${16:# Parent argument}
+    log_path: ${17:# Parent argument}
+    mail: ${18:# The primary email address of the user}
+    mail_nickname: ${19:# The mail alias for the user}
+    mobile_phone: ${20:# Mobile phone number of the user}
+    object_id: ${21:# The object id for the user}
+    odata_filter: ${22:# Filter that can be used to specify a user to update or delete}
+    on_premises_extension_attributes: ${23:# Contains extensionAttributes1-15 for the user}
+    on_premises_immutable_id: ${24:# The on_premises_immutable_id of the user}
+    password: ${25:# Active Directory user password}
+    password_force_change: ${26:# Whether or not the user will be forced to change their password at next logon}
+    password_force_change_mfa: ${27:# Identical behavior to password_force_change except multi-factor authentication (MFA) must be performed prior to changing the password}
+    password_profile: ${28:# The password for the user}
+    profile: ${29:# Security profile found in ~/}
+    secret: ${30:# Azure client secret}
+    state: ${31:# State of the ad user}
+    subscription_id: ${32:# Your Azure subscription Id}
+    surname: ${33:# The surname for the user}
+    tenant: ${34:# Azure tenant ID}
+    thumbprint: ${35:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    usage_location: ${36:# A two letter country code, ISO standard 3166}
+    user_principal_name: ${37:# The principal name of the user}
+    user_type: ${38:# A string value that can be used to classify user types in your directory, such as Member and Guest}
+    x509_certificate_path: ${39:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Start a VM backup in Proxmox VE cluster}
+  community.general.proxmox_backup:
+    api_host: ${2:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${3:# Specify the password to authenticate with}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    backup_mode: ${8:# The mode how Proxmox performs backups}
+    bandwidth: ${9:# Limit the I/O bandwidth (in KiB/s) to write backup}
+    change_detection_mode: ${10:# Set the change detection mode (available from Proxmox VE 8}
+    compress: ${11:# Enable additional compression of the backup archive}
+    compression_threads: ${12:# The number of threads zstd will use to compress the backup}
+    description: ${13:# Specify the description of the backup}
+    fleecing: ${14:# Enable backup fleecing}
+    mode: ${15:# Specifices the mode to select backup targets}
+    node: ${16:# Only execute the backup job for the given node}
+    notification_mode: ${17:# Determine which notification system to use}
+    performance_tweaks: ${18:# Enable other performance-related settings}
+    pool: ${19:# Specify a pool name to limit backups to guests to the given pool}
+    protected: ${20:# Marks backups as protected}
+    retention: ${21:# Use custom retention options instead of those from the default cluster configuration (which is usually V('keep-all'))}
+    storage: ${22:# Store the backup archive on this storage}
+    validate_certs: ${23:# If V(false), SSL certificates will not be validated}
+    vmids: ${24:# The instance ids to be backed up}
+    wait: ${25:# Wait for the backup to be finished}
+    wait_timeout: ${26:# Seconds to wait for the backup to be finished}
+  tags:
+    - community
+    - general
+    - proxmox_backup]]></content>
+  <tabTrigger>community.general.proxmox_backup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Start a VM backup in Proxmox VE cluster</description>
+</snippet>

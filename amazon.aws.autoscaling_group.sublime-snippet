@@ -15,14 +15,14 @@
     health_check_type: ${13:# The service you want the health status from, Amazon EC2 or Elastic Load Balancer}
     launch_config_name: ${14:# Name of the Launch configuration to use for the group}
     launch_template: ${15:# Dictionary describing the Launch Template to use}
-    lc_check: ${16:# Check to make sure instances that are being replaced with I(replace_instances) do not already have the current I(launch_config)}
+    lc_check: ${16:# Check to make sure instances that are being replaced with O(replace_instances) do not already have the current launch config}
     load_balancers: ${17:# List of ELB names to use for the group}
-    lt_check: ${18:# Check to make sure instances that are being replaced with I(replace_instances) do not already have the current I(launch_template or I(launch_template) I(version)}
+    lt_check: ${18:# Check to make sure instances that are being replaced with O(replace_instances) do not already have the current O(launch_template) or O(launch_template) O(launch_template}
     max_instance_lifetime: ${19:# The maximum amount of time, in seconds, that an instance can be in service}
     max_size: ${20:# Maximum number of instances in group, if unspecified then the current group value will be used}
     metrics_collection: ${21:# Enable ASG metrics collection}
-    metrics_granularity: ${22:# When I(metrics_collection=true) this will determine the granularity of metrics collected by CloudWatch}
-    metrics_list: ${23:# List of autoscaling metrics to collect when I(metrics_collection=true)}
+    metrics_granularity: ${22:# When O(metrics_collection=true) this will determine the granularity of metrics collected by CloudWatch}
+    metrics_list: ${23:# List of autoscaling metrics to collect when O(metrics_collection=true)}
     min_size: ${24:# Minimum number of instances in group, if unspecified then the current group value will be used}
     mixed_instances_policy: ${25:# A mixed instance policy to use for the ASG}
     name: ${26:# Unique name for group to be created or deleted}
@@ -30,11 +30,11 @@
     notification_types: ${28:# A list of auto scaling events to trigger notifications on}
     placement_group: ${29:# Physical location of your cluster placement group created in Amazon EC2}
     profile: ${30:# A named AWS profile to use for authentication}
-    purge_tags: ${31:# If C(true), existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    purge_tags: ${31:# If V(true), existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
     region: ${32:# The AWS region to use}
     replace_all_instances: ${33:# In a rolling fashion, replace all instances that used the old launch configuration with one from the new launch configuration}
     replace_batch_size: ${34:# Number of instances you'd like to replace at a time}
-    replace_instances: ${35:# List of I(instance_ids) belonging to the named AutoScalingGroup that you would like to terminate and be replaced with instances matching the current launch configuration}
+    replace_instances: ${35:# List of instance ids belonging to the named AutoScalingGroup that you would like to terminate and be replaced with instances matching the current launch configuration}
     secret_key: ${36:# AWS secret access key}
     session_token: ${37:# AWS STS session token for use with temporary credentials}
     state: ${38:# Register or deregister the instance}

@@ -18,14 +18,15 @@
     dest: ${16:# The destination file for the certificate}
     force: ${17:# Enforces the execution of the challenge and validation, even if an existing certificate is still valid for more than O(remaining_days)}
     fullchain_dest: ${18:# The destination file for the full chain (that is, a certificate followed by chain of intermediate certificates)}
-    modify_account: ${19:# Boolean indicating whether the module should create the account if necessary, and update its contact data}
-    remaining_days: ${20:# The number of days the certificate must have left being valid}
-    request_timeout: ${21:# The time Ansible should wait for a response from the ACME API}
-    retrieve_all_alternates: ${22:# When set to V(true), will retrieve all alternate trust chains offered by the ACME CA}
-    select_chain: ${23:# Allows to specify criteria by which an (alternate) trust chain can be selected}
-    select_crypto_backend: ${24:# Determines which crypto backend to use}
-    terms_agreed: ${25:# Boolean indicating whether you agree to the terms of service document}
-    validate_certs: ${26:# Whether calls to the ACME directory will validate TLS certificates}
+    include_renewal_cert_id: ${19:# Determines whether to request renewal of an existing certificate according to L(the ACME ARI draft 3, https://www}
+    modify_account: ${20:# Boolean indicating whether the module should create the account if necessary, and update its contact data}
+    remaining_days: ${21:# The number of days the certificate must have left being valid}
+    request_timeout: ${22:# The time Ansible should wait for a response from the ACME API}
+    retrieve_all_alternates: ${23:# When set to V(true), will retrieve all alternate trust chains offered by the ACME CA}
+    select_chain: ${24:# Allows to specify criteria by which an (alternate) trust chain can be selected}
+    select_crypto_backend: ${25:# Determines which crypto backend to use}
+    terms_agreed: ${26:# Boolean indicating whether you agree to the terms of service document}
+    validate_certs: ${27:# Whether calls to the ACME directory will validate TLS certificates}
   tags:
     - community
     - crypto

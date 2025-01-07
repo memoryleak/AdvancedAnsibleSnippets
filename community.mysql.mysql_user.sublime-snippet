@@ -1,42 +1,46 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Adds or removes a user from a MySQL database}
+  <content><![CDATA[- name: ${1:Adds or removes a user from a MySQL or MariaDB database}
   community.mysql.mysql_user:
     append_privs: ${2:# Append the privileges defined by priv to the existing ones for this user instead of overwriting existing ones}
-    ca_cert: ${3:# The path to a Certificate Authority (CA) certificate}
-    check_hostname: ${4:# Whether to validate the server host name when an SSL connection is required}
-    check_implicit_admin: ${5:# Check if mysql allows login as root/nopassword before trying supplied credentials}
-    client_cert: ${6:# The path to a client public key certificate}
-    client_key: ${7:# The path to the client private key}
-    column_case_sensitive: ${8:# The default is C(false)}
-    config_file: ${9:# Specify a config file from which user and password are to be read}
-    connect_timeout: ${10:# The connection timeout when connecting to the MySQL server}
-    encrypted: ${11:# Indicate that the 'password' field is a `mysql_native_password` hash}
-    force_context: ${12:# Sets the С(mysql) system database as context for the executed statements (it will be used as a database to connect to)}
-    host: ${13:# The 'host' part of the MySQL username}
-    host_all: ${14:# Override the host option, making ansible apply changes to all hostnames for a given user}
-    login_host: ${15:# Host running the database}
-    login_password: ${16:# The password used to authenticate with}
-    login_port: ${17:# Port of the MySQL server}
-    login_unix_socket: ${18:# The path to a Unix domain socket for local connections}
-    login_user: ${19:# The username used to authenticate with}
-    name: ${20:# Name of the user (role) to add or remove}
-    password: ${21:# Set the user's password}
-    plugin: ${22:# User's plugin to authenticate (``CREATE USER user IDENTIFIED WITH plugin``)}
-    plugin_auth_string: ${23:# User's plugin auth_string (``CREATE USER user IDENTIFIED WITH plugin BY plugin_auth_string``)}
-    plugin_hash_string: ${24:# User's plugin hash string (``CREATE USER user IDENTIFIED WITH plugin AS plugin_hash_string``)}
-    priv: ${25:# MySQL privileges string in the format: C(db}
-    resource_limits: ${26:# Limit the user for certain server resources}
-    session_vars: ${27:# Dictionary of session variables in form of C(variable: value) to set at the beginning of module execution}
-    sql_log_bin: ${28:# Whether binary logging should be enabled or disabled for the connection}
-    state: ${29:# Whether the user should exist}
-    subtract_privs: ${30:# Revoke the privileges defined by the I(priv) option and keep other existing privileges}
-    tls_requires: ${31:# Set requirement for secure transport as a dictionary of requirements (see the examples)}
-    update_password: ${32:# C(always) will update passwords if they differ}
+    attributes: ${3:# Create, update, or delete user attributes (arbitrary 'key: value' comments) for the user}
+    ca_cert: ${4:# The path to a Certificate Authority (CA) certificate}
+    check_hostname: ${5:# Whether to validate the server host name when an SSL connection is required}
+    check_implicit_admin: ${6:# Check if mysql allows login as root/nopassword before trying supplied credentials}
+    client_cert: ${7:# The path to a client public key certificate}
+    client_key: ${8:# The path to the client private key}
+    column_case_sensitive: ${9:# The default is C(false)}
+    config_file: ${10:# Specify a config file from which user and password are to be read}
+    connect_timeout: ${11:# The connection timeout when connecting to the MySQL server}
+    encrypted: ${12:# Indicate that the 'password' field is a `mysql_native_password` hash}
+    force_context: ${13:# Sets the С(mysql) system database as context for the executed statements (it will be used as a database to connect to)}
+    host: ${14:# The 'host' part of the MySQL username}
+    host_all: ${15:# Override the host option, making ansible apply changes to all hostnames for a given user}
+    login_host: ${16:# Host running the database}
+    login_password: ${17:# The password used to authenticate with}
+    login_port: ${18:# Port of the MySQL server}
+    login_unix_socket: ${19:# The path to a Unix domain socket for local connections}
+    login_user: ${20:# The username used to authenticate with}
+    name: ${21:# Name of the user (role) to add or remove}
+    password: ${22:# Set the user's password}
+    password_expire: ${23:# C(never) - I(password) will never expire}
+    password_expire_interval: ${24:# Number of days I(password) will expire}
+    plugin: ${25:# User's plugin to authenticate (``CREATE USER user IDENTIFIED WITH plugin``)}
+    plugin_auth_string: ${26:# User's plugin auth_string (``CREATE USER user IDENTIFIED WITH plugin BY plugin_auth_string``)}
+    plugin_hash_string: ${27:# User's plugin hash string (``CREATE USER user IDENTIFIED WITH plugin AS plugin_hash_string``)}
+    priv: ${28:# MySQL privileges string in the format: C(db}
+    resource_limits: ${29:# Limit the user for certain server resources}
+    salt: ${30:# Salt used to generate password hash from I(plugin_auth_string)}
+    session_vars: ${31:# Dictionary of session variables in form of C(variable: value) to set at the beginning of module execution}
+    sql_log_bin: ${32:# Whether binary logging should be enabled or disabled for the connection}
+    state: ${33:# Whether the user should exist}
+    subtract_privs: ${34:# Revoke the privileges defined by the I(priv) option and keep other existing privileges}
+    tls_requires: ${35:# Set requirement for secure transport as a dictionary of requirements (see the examples)}
+    update_password: ${36:# C(always) will update passwords if they differ}
   tags:
     - community
     - mysql
     - mysql_user]]></content>
   <tabTrigger>community.mysql.mysql_user</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Adds or removes a user from a MySQL database</description>
+  <description>Adds or removes a user from a MySQL or MariaDB database</description>
 </snippet>

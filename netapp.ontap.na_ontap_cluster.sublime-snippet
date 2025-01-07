@@ -2,27 +2,28 @@
   <content><![CDATA[- name: ${1:NetApp ONTAP cluster - create a cluster and add/remove nodes}
   netapp.ontap.na_ontap_cluster:
     cert_filepath: ${2:# path to SSL client cert file (}
-    cluster_contact: ${3:# Cluster contact, only relevant if performing a modify action}
-    cluster_ip_address: ${4:# intra cluster IP address of the node to be added or removed}
-    cluster_location: ${5:# Cluster location, only relevant if performing a modify action}
-    cluster_name: ${6:# The name of the cluster to manage}
-    feature_flags: ${7:# Enable or disable a new feature}
-    force: ${8:# forcibly remove a node that is down and cannot be brought online to remove its shared resources}
-    force_ontap_version: ${9:# Override the cluster ONTAP version when using REST}
-    hostname: ${10:# The hostname or IP address of the ONTAP instance}
-    http_port: ${11:# Override the default port (80 or 443) with this port}
-    https: ${12:# Enable and disable https}
-    key_filepath: ${13:# path to SSL client key file}
-    node_name: ${14:# Name of the node to be added or removed from the cluster}
-    ontapi: ${15:# The ontap api version to use}
-    password: ${16:# Password for the specified user}
-    single_node_cluster: ${17:# Whether the cluster is a single node cluster}
-    state: ${18:# Whether the specified cluster should exist (deleting a cluster is not supported)}
-    time_out: ${19:# time to wait for cluster creation in seconds}
-    timezone: ${20:# timezone for the cluster}
-    use_rest: ${21:# Whether to use REST or ZAPI}
-    username: ${22:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${23:# If set to C(no), the SSL certificates will not be validated}
+    certificate: ${3:# Certificate used by cluster and node management interfaces for TLS connection requests}
+    cluster_contact: ${4:# Cluster contact, only relevant if performing a modify action}
+    cluster_ip_address: ${5:# intra cluster IP address of the node to be added or removed}
+    cluster_location: ${6:# Cluster location, only relevant if performing a modify action}
+    cluster_name: ${7:# The name of the cluster to manage}
+    feature_flags: ${8:# Enable or disable a new feature}
+    force: ${9:# forcibly remove a node that is down and cannot be brought online to remove its shared resources}
+    force_ontap_version: ${10:# Override the cluster ONTAP version when using REST}
+    hostname: ${11:# The hostname or IP address of the ONTAP instance}
+    http_port: ${12:# Override the default port (80 or 443) with this port}
+    https: ${13:# Enable and disable https}
+    key_filepath: ${14:# path to SSL client key file}
+    node_name: ${15:# Name of the node to be added or removed from the cluster}
+    ontapi: ${16:# The ontap api version to use}
+    password: ${17:# Password for the specified user}
+    single_node_cluster: ${18:# Whether the cluster is a single node cluster}
+    state: ${19:# Whether the specified cluster should exist (deleting a cluster is not supported)}
+    time_out: ${20:# time to wait for cluster creation in seconds}
+    timezone: ${21:# timezone for the cluster}
+    use_rest: ${22:# Whether to use REST or ZAPI}
+    username: ${23:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${24:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

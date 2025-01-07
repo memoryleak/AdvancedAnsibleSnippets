@@ -13,12 +13,14 @@
     private_key: ${11:# Either a PEM-formatted private key file or the private key content used for signature-based authentication}
     read_privilege: ${12:# Name of the custom privilege that will include read access to objects of the class}
     state: ${13:# Use C(present) or C(absent) for adding or removing}
-    timeout: ${14:# The socket level timeout in seconds}
-    use_proxy: ${15:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${16:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${17:# The username to use for authentication}
-    validate_certs: ${18:# If C(false), SSL certificates will not be validated}
-    write_privilege: ${19:# Name of the custom privilege that will include write access to objects of the class}
+    suppress_previous: ${14:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${15:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    timeout: ${16:# The socket level timeout in seconds}
+    use_proxy: ${17:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${18:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${19:# The username to use for authentication}
+    validate_certs: ${20:# If C(false), SSL certificates will not be validated}
+    write_privilege: ${21:# Name of the custom privilege that will include write access to objects of the class}
   tags:
     - cisco
     - aci

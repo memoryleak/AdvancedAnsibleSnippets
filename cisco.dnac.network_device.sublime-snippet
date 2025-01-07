@@ -2,8 +2,8 @@
   <content><![CDATA[- name: ${1:Resource module for Network Device}
   cisco.dnac.network_device:
     cleanConfig: ${2:# CleanConfig query parameter}
-    cliTransport: ${3:# Network Device's cliTransport}
-    computeDevice: ${4:# ComputeDevice flag}
+    cliTransport: ${3:# CLI transport}
+    computeDevice: ${4:# Compute Device or not}
     dnac_debug: ${5:# Flag for Cisco DNA Center SDK to enable debugging}
     dnac_host: ${6:# The Cisco DNA Center hostname}
     dnac_password: ${7:# The Cisco DNA Center password to authenticate}
@@ -11,32 +11,32 @@
     dnac_username: ${9:# The Cisco DNA Center username to authenticate}
     dnac_verify: ${10:# Flag to enable or disable SSL certificate verification}
     dnac_version: ${11:# Informs the SDK which version of Cisco DNA Center to use}
-    enablePassword: ${12:# Network Device's enablePassword}
-    extendedDiscoveryInfo: ${13:# Network Device's extendedDiscoveryInfo}
-    httpPassword: ${14:# Network Device's httpPassword}
-    httpPort: ${15:# Network Device's httpPort}
-    httpSecure: ${16:# HttpSecure flag}
-    httpUserName: ${17:# Network Device's httpUserName}
+    enablePassword: ${12:# CLI enable password of the device}
+    extendedDiscoveryInfo: ${13:# This field holds that info as whether to add device with canned data or not}
+    httpPassword: ${14:# HTTP password of the device / API key for Meraki Dashboard}
+    httpPort: ${15:# HTTP port of the device}
+    httpSecure: ${16:# Flag to select HTTP / HTTPS protocol}
+    httpUserName: ${17:# HTTP Username of the device}
     id: ${18:# Id path parameter}
-    ipAddress: ${19:# Network Device's ipAddress}
-    merakiOrgId: ${20:# Network Device's merakiOrgId}
-    netconfPort: ${21:# Network Device's netconfPort}
-    password: ${22:# Network Device's password}
-    serialNumber: ${23:# Network Device's serialNumber}
-    snmpAuthPassphrase: ${24:# Network Device's snmpAuthPassphrase}
-    snmpAuthProtocol: ${25:# Network Device's snmpAuthProtocol}
-    snmpMode: ${26:# Network Device's snmpMode}
-    snmpPrivPassphrase: ${27:# Network Device's snmpPrivPassphrase}
-    snmpPrivProtocol: ${28:# Network Device's snmpPrivProtocol}
-    snmpROCommunity: ${29:# Network Device's snmpROCommunity}
-    snmpRWCommunity: ${30:# Network Device's snmpRWCommunity}
-    snmpRetry: ${31:# Network Device's snmpRetry}
-    snmpTimeout: ${32:# Network Device's snmpTimeout}
-    snmpUserName: ${33:# Network Device's snmpUserName}
-    snmpVersion: ${34:# Network Device's snmpVersion}
-    type: ${35:# Network Device's type}
+    ipAddress: ${19:# IP Address of the device}
+    merakiOrgId: ${20:# Selected Meraki organization for which the devices needs to be imported}
+    netconfPort: ${21:# Netconf Port of the device}
+    password: ${22:# CLI Password of the device}
+    serialNumber: ${23:# Serial Number of the Device}
+    snmpAuthPassphrase: ${24:# SNMPv3 auth passphrase of the device}
+    snmpAuthProtocol: ${25:# SNMPv3 auth protocol}
+    snmpMode: ${26:# SNMPv3 mode}
+    snmpPrivPassphrase: ${27:# SNMPv3 priv passphrase}
+    snmpPrivProtocol: ${28:# SNMPv3 priv protocol}
+    snmpROCommunity: ${29:# SNMP Read Community of the device}
+    snmpRWCommunity: ${30:# SNMP Write Community of the device}
+    snmpRetry: ${31:# SNMP retry count}
+    snmpTimeout: ${32:# SNMP timeout in seconds}
+    snmpUserName: ${33:# SNMPV3 user name of the device}
+    snmpVersion: ${34:# SNMP version}
+    type: ${35:# Type of device being added}
     updateMgmtIPaddressList: ${36:# Network Device's updateMgmtIPaddressList}
-    userName: ${37:# Network Device's userName}
+    userName: ${37:# CLI user name of the device}
     validate_response_schema: ${38:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
   tags:
     - cisco

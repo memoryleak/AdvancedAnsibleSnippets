@@ -1,14 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, Delete or Modify filesystems on Infinibox}
   infinidat.infinibox.infini_fs:
-    name: ${2:# File system name}
-    password: ${3:# Infinibox User password}
-    pool: ${4:# Pool that will host file system}
-    size: ${5:# File system size in MB, GB or TB units}
-    state: ${6:# Creates/Modifies file system when present or removes when absent}
-    system: ${7:# Infinibox Hostname or IPv4 Address}
-    thin_provision: ${8:# Whether the master file system should be thin or thick provisioned}
-    user: ${9:# Infinibox User username with sufficient priveledges ( see notes )}
+    fs_type: ${2:# Specifies the file system type, regular or snapshot}
+    name: ${3:# File system name}
+    parent_fs_name: ${4:# Specify a fs name}
+    password: ${5:# Infinibox User password}
+    pool: ${6:# Pool that will host file system}
+    restore_fs_from_snapshot: ${7:# Specify true to restore a file system (parent_fs_name) from an existing snapshot specified by the name field}
+    serial: ${8:# Serial number matching an existing file system}
+    size: ${9:# File system size in MB, GB or TB units}
+    snapshot_lock_expires_at: ${10:# This will cause a snapshot to be locked at the specified date-time}
+    snapshot_lock_only: ${11:# This will lock an existing snapshot but will suppress refreshing the snapshot}
+    state: ${12:# Creates/Modifies file system when present or removes when absent}
+    system: ${13:# Infinibox Hostname or IPv4 Address}
+    thin_provision: ${14:# Whether the master file system should be thin or thick provisioned}
+    user: ${15:# Infinibox User username with sufficient priveledges ( see notes )}
+    write_protected: ${16:# Specifies if the file system should be write protected}
   tags:
     - infinidat
     - infinibox

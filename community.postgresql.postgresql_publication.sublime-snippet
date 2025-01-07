@@ -3,23 +3,26 @@
   community.postgresql.postgresql_publication:
     ca_cert: ${2:# Specifies the name of a file containing SSL certificate authority (CA) certificate(s)}
     cascade: ${3:# Drop publication dependencies}
-    connect_params: ${4:# Any additional parameters to be passed to libpg}
-    db: ${5:# Name of the database to connect to and where the publication state will be changed}
-    login_host: ${6:# Host running the database}
-    login_password: ${7:# The password this module should use to establish its PostgreSQL session}
-    login_unix_socket: ${8:# Path to a Unix domain socket for local connections}
-    login_user: ${9:# The username this module should use to establish its PostgreSQL session}
-    name: ${10:# Name of the publication to add, update, or remove}
-    owner: ${11:# Publication owner}
-    parameters: ${12:# Dictionary with optional publication parameters}
-    port: ${13:# Database port to connect to}
-    session_role: ${14:# Switch to session_role after connecting}
-    ssl_cert: ${15:# Specifies the file name of the client SSL certificate}
-    ssl_key: ${16:# Specifies the location for the secret key used for the client certificate}
-    ssl_mode: ${17:# Determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the server}
-    state: ${18:# The publication state}
-    tables: ${19:# List of tables to add to the publication}
-    trust_input: ${20:# If C(false), check whether values of parameters I(name), I(tables), I(owner), I(session_role), I(params) are potentially dangerous}
+    columns: ${4:# List of tables and its columns to add to the publication}
+    comment: ${5:# Sets a comment on the publication}
+    connect_params: ${6:# Any additional parameters to be passed to libpg}
+    db: ${7:# Name of the database to connect to and where the publication state will be changed}
+    login_host: ${8:# Host running the database}
+    login_password: ${9:# The password this module should use to establish its PostgreSQL session}
+    login_unix_socket: ${10:# Path to a Unix domain socket for local connections}
+    login_user: ${11:# The username this module should use to establish its PostgreSQL session}
+    name: ${12:# Name of the publication to add, update, or remove}
+    owner: ${13:# Publication owner}
+    parameters: ${14:# Dictionary with optional publication parameters}
+    port: ${15:# Database port to connect to}
+    session_role: ${16:# Switch to session_role after connecting}
+    ssl_cert: ${17:# Specifies the file name of the client SSL certificate}
+    ssl_key: ${18:# Specifies the location for the secret key used for the client certificate}
+    ssl_mode: ${19:# Determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the server}
+    state: ${20:# The publication state}
+    tables: ${21:# List of tables to add to the publication}
+    tables_in_schema: ${22:# Specifies a list of schemas to add to the publication to replicate changes for all tables in those schemas}
+    trust_input: ${23:# If C(false), check whether values of parameters I(name), I(tables), I(owner), I(session_role), I(params) are potentially dangerous}
   tags:
     - community
     - postgresql

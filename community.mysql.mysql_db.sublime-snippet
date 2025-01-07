@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Add or remove MySQL databases from a remote host}
+  <content><![CDATA[- name: ${1:Add or remove MySQL or MariaDB databases from a remote host}
   community.mysql.mysql_db:
     ca_cert: ${2:# The path to a Certificate Authority (CA) certificate}
     chdir: ${3:# Changes the current working directory}
@@ -23,7 +23,7 @@
     login_user: ${21:# The username used to authenticate with}
     master_data: ${22:# Option to dump a master replication server to produce a dump file that can be used to set up another server as a slave of the master}
     name: ${23:# Name of the database to add or remove}
-    pipefail: ${24:# Use C(bash) instead of C(sh) and add C(-o pipefail) to catch errors from the mysql_dump command when I(state=import) and compression is used}
+    pipefail: ${24:# Use C(bash) instead of C(sh) and add C(-o pipefail) to catch errors from the mysql_dump command when I(state=dump) and compression is used}
     quick: ${25:# Option used for dumping large tables}
     restrict_config_file: ${26:# Read only passed I(config_file)}
     single_transaction: ${27:# Execute the dump in a single transaction}
@@ -38,5 +38,5 @@
     - mysql_db]]></content>
   <tabTrigger>community.mysql.mysql_db</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Add or remove MySQL databases from a remote host</description>
+  <description>Add or remove MySQL or MariaDB databases from a remote host</description>
 </snippet>

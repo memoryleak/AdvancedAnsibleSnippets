@@ -8,11 +8,11 @@
     app_id: ${6:# Application ID}
     app_roles: ${7:# Declare the roles you want to associate with your application}
     auth_source: ${8:# Controls the source of the credentials to use for authentication}
-    available_to_other_tenants: ${9:# The application can be used from any Azure AD tenants}
-    cert_validation_mode: ${10:# Controls the certificate validation behavior for Azure endpoints}
-    client_id: ${11:# Azure client ID}
-    cloud_environment: ${12:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    credential_description: ${13:# The description of the password}
+    cert_validation_mode: ${9:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${10:# Azure client ID}
+    cloud_environment: ${11:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    credential_description: ${12:# The description of the password}
+    disable_instance_discovery: ${13:# Determines whether or not instance discovery is performed when attempting to authenticate}
     display_name: ${14:# The display name of the application}
     end_date: ${15:# Date or datetime after which credentials expire(e}
     homepage: ${16:# The url where users can sign in and use your app}
@@ -27,15 +27,18 @@
     optional_claims: ${25:# Declare the optional claims for the application}
     password: ${26:# App password, aka 'client secret'}
     profile: ${27:# Security profile found in ~/}
-    reply_urls: ${28:# Space-separated URIs to which Azure AD will redirect in response to an OAuth 2}
+    public_client_reply_urls: ${28:# The public client redirect urls}
     required_resource_accesses: ${29:# Resource scopes and roles the application requires access to}
     secret: ${30:# Azure client secret}
-    start_date: ${31:# Date or datetime at which credentials become valid, such as '2017-01-01'}
-    state: ${32:# Assert the state of Active Dirctory service principal}
-    subscription_id: ${33:# Your Azure subscription Id}
-    tenant: ${34:# The tenant ID}
-    thumbprint: ${35:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    x509_certificate_path: ${36:# Path to the X509 certificate used to create the service principal in PEM format}
+    sign_in_audience: ${31:# The application can be used from any Azure AD tenants}
+    spa_reply_urls: ${32:# The spa redirect urls}
+    start_date: ${33:# Date or datetime at which credentials become valid, such as '2017-01-01'}
+    state: ${34:# Assert the state of Active Dirctory service principal}
+    subscription_id: ${35:# Your Azure subscription Id}
+    tenant: ${36:# Azure tenant ID}
+    thumbprint: ${37:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    web_reply_urls: ${38:# The web redirect urls}
+    x509_certificate_path: ${39:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

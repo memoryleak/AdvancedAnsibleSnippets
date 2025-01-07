@@ -2,7 +2,7 @@
   <content><![CDATA[- name: ${1:Retrieves facts about Docker Swarm cluster}
   community.docker.docker_swarm_info:
     api_version: ${2:# The version of the Docker API running on the Docker Host}
-    ca_cert: ${3:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    ca_path: ${3:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
     client_cert: ${4:# Path to the client's TLS certificate file}
     client_key: ${5:# Path to the client's TLS key file}
     debug: ${6:# Debug mode}
@@ -11,16 +11,15 @@
     nodes_filters: ${9:# A dictionary of filter values used for selecting nodes to list}
     services: ${10:# Whether to list swarm services}
     services_filters: ${11:# A dictionary of filter values used for selecting services to list}
-    ssl_version: ${12:# Provide a valid SSL version number}
-    tasks: ${13:# Whether to list containers}
-    tasks_filters: ${14:# A dictionary of filter values used for selecting tasks to list}
-    timeout: ${15:# The maximum amount of time in seconds to wait on a response from the API}
-    tls: ${16:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    tls_hostname: ${17:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    unlock_key: ${18:# Whether to retrieve the swarm unlock key}
-    use_ssh_client: ${19:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
-    validate_certs: ${20:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
-    verbose_output: ${21:# When set to V(true) and O(nodes), O(services), or O(tasks) is set to V(true), then the module output will contain verbose information about objects matching the full output of API method}
+    tasks: ${12:# Whether to list containers}
+    tasks_filters: ${13:# A dictionary of filter values used for selecting tasks to list}
+    timeout: ${14:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${15:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${16:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    unlock_key: ${17:# Whether to retrieve the swarm unlock key}
+    use_ssh_client: ${18:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${19:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    verbose_output: ${20:# When set to V(true) and O(nodes), O(services), or O(tasks) is set to V(true), then the module output will contain verbose information about objects matching the full output of API method}
   tags:
     - community
     - docker

@@ -2,11 +2,13 @@
   <content><![CDATA[- name: ${1:Configure FlashArray Directory Service Roles}
   purestorage.flasharray.purefa_dsrole:
     api_token: ${2:# FlashArray API token for admin privileged user}
-    fa_url: ${3:# FlashArray management IPv4 address or Hostname}
-    group: ${4:# Sets the common Name (CN) of the configured directory service group containing users for the FlashBlade}
-    group_base: ${5:# Specifies where the configured group is located in the directory tree}
-    role: ${6:# The directory service role to work on}
-    state: ${7:# Create or delete directory service role}
+    disable_warnings: ${3:# Disable insecure certificate warnings in debug logs}
+    fa_url: ${4:# FlashArray management IPv4 address or Hostname}
+    group: ${5:# Sets the common Name (CN) of the configured directory service group containing users for the FlashBlade}
+    group_base: ${6:# Specifies where the configured group is located in the directory tree}
+    name: ${7:# Name of role}
+    role: ${8:# The directory service role to work on}
+    state: ${9:# Create or delete directory service role}
   tags:
     - purestorage
     - flasharray

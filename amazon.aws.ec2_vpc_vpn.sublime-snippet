@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, modify, and delete EC2 VPN connections}
+  amazon.aws.ec2_vpc_vpn:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    connection_type: ${5:# The type of VPN connection}
+    customer_gateway_id: ${6:# The ID of the customer gateway}
+    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
+    delay: ${8:# The time, in seconds, to wait before checking operation again}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
+    filters: ${10:# An alternative to using O(vpn_connection_id)}
+    local_ipv4_network_cidr: ${11:# The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection}
+    profile: ${12:# A named AWS profile to use for authentication}
+    purge_routes: ${13:# Whether or not to delete VPN connections routes that are not specified in the task}
+    purge_tags: ${14:# If O(purge_tags=true) and O(tags) is set, existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
+    region: ${15:# The AWS region to use}
+    routes: ${16:# Routes to add to the connection}
+    secret_key: ${17:# AWS secret access key}
+    session_token: ${18:# AWS STS session token for use with temporary credentials}
+    state: ${19:# The desired state of the VPN connection}
+    static_only: ${20:# Indicates whether the VPN connection uses static routes only}
+    tags: ${21:# A dictionary representing the tags to be applied to the resource}
+    transit_gateway_id: ${22:# The ID of the transit gateway}
+    tunnel_options: ${23:# An optional list object containing no more than two dict members, each of which may contain O(tunnel_options}
+    validate_certs: ${24:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpn_connection_id: ${25:# The ID of the VPN connection}
+    vpn_gateway_id: ${26:# The ID of the virtual private gateway}
+    wait_timeout: ${27:# How long, in seconds, before wait gives up}
+  tags:
+    - amazon
+    - aws
+    - ec2_vpc_vpn]]></content>
+  <tabTrigger>amazon.aws.ec2_vpc_vpn</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, modify, and delete EC2 VPN connections</description>
+</snippet>

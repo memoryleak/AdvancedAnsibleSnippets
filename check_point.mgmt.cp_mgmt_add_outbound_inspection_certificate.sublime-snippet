@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add outbound-inspection-certificate}
+  check_point.mgmt.cp_mgmt_add_outbound_inspection_certificate:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    base64_password: ${3:# Password (encoded in Base64 with padding) for the certificate file}
+    color: ${4:# Color of the object}
+    comments: ${5:# Comments string}
+    details_level: ${6:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_errors: ${7:# Apply changes ignoring errors}
+    ignore_warnings: ${8:# Apply changes ignoring warnings}
+    is_default: ${9:# Is the certificate the default certificate}
+    issued_by: ${10:# The DN (Distinguished Name) of the certificate}
+    name: ${11:# Object name}
+    tags: ${12:# Collection of tag identifiers}
+    valid_from: ${13:# The date, from which the certificate is valid}
+    valid_to: ${14:# The certificate expiration date}
+    version: ${15:# Version of checkpoint}
+    wait_for_task: ${16:# Wait for the task to end}
+    wait_for_task_timeout: ${17:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_add_outbound_inspection_certificate]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_add_outbound_inspection_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add outbound-inspection-certificate</description>
+</snippet>

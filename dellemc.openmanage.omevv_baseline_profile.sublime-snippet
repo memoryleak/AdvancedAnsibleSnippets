@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, modify, or delete baseline profile}
+  dellemc.openmanage.omevv_baseline_profile:
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    cluster: ${3:# List of cluster(s) for baseline profile creation}
+    days: ${4:# Required days of a week on when the job must run}
+    description: ${5:# Description of the baseline profile}
+    hostname: ${6:# IP address or hostname of the OpenManage Enterprise Modular}
+    job_wait: ${7:# Whether to wait till completion of the job}
+    job_wait_timeout: ${8:# The maximum wait time of I(job_wait) in seconds}
+    name: ${9:# Name of the baseline profile}
+    port: ${10:# OpenManage Enterprise HTTPS port}
+    repository_profile: ${11:# Repository profile for baseline creation}
+    state: ${12:# C(present) creates a baseline profile or modifies an existing profile if the profile with the same name already exists}
+    time: ${13:# Time at when the job must run, and is 24 hours format}
+    timeout: ${14:# The socket level timeout in seconds}
+    validate_certs: ${15:# Whether to check SSL certificate}
+    vcenter_password: ${16:# Password for OpenManage Enterprise Integration for VMware vCenter (OMEVV)}
+    vcenter_username: ${17:# Username for OpenManage Enterprise Integration for VMware vCenter (OMEVV)}
+    vcenter_uuid: ${18:# Universally Unique Identifier (UUID) of vCenter}
+  tags:
+    - dellemc
+    - openmanage
+    - omevv_baseline_profile]]></content>
+  <tabTrigger>dellemc.openmanage.omevv_baseline_profile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, modify, or delete baseline profile</description>
+</snippet>

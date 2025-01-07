@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set vlan information}
+  kaytus.ksmanage.edit_vlan:
+    host: ${2:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    interface_name: ${3:# Set interface name}
+    password: ${4:# Specifies the password to use to authenticate the connection to the remote device}
+    provider: ${5:# A dict object containing connection details}
+    username: ${6:# Configures the username to use to authenticate the connection to the remote device}
+    vlan_id: ${7:# The Identification for VLAN configuration(2-4094)}
+    vlan_priority: ${8:# The priority for VLAN configuration(1-7)}
+    vlan_status: ${9:# Enable or disable vlan}
+  tags:
+    - kaytus
+    - ksmanage
+    - edit_vlan]]></content>
+  <tabTrigger>kaytus.ksmanage.edit_vlan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set vlan information</description>
+</snippet>

@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Set and retrieve file ACL information}
   ansible.posix.acl:
-    default: ${2:# If the target is a directory, setting this to C(true) will make it the default ACL for entities created inside the directory}
+    default: ${2:# If O(path) is a directory, setting this to V(true) will make it the default ACL for entities created inside the directory}
     entity: ${3:# The actual user or group that the ACL applies to when matching entity types user or group are selected}
     entry: ${4:# DEPRECATED}
     etype: ${5:# The entity type of the ACL to apply, see C(setfacl) documentation for more info}
     follow: ${6:# Whether to follow symlinks on the path if a symlink is encountered}
     path: ${7:# The full path of the file or object}
-    permissions: ${8:# The permissions to apply/remove can be any combination of C(r), C(w), C(x)}
+    permissions: ${8:# The permissions to apply/remove can be any combination of C(r), C(w), C(x) (read, write and execute respectively), and C(X) (execute permission if the file is a directory or already has execute permission for some user)}
     recalculate_mask: ${9:# Select if and when to recalculate the effective right masks of the files}
     recursive: ${10:# Recursively sets the specified ACL}
     state: ${11:# Define whether the ACL should be present or not}

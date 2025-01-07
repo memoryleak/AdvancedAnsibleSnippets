@@ -2,18 +2,19 @@
   <content><![CDATA[- name: ${1:Configure Azure route table}
   fortinet.fortimanager.fmgr_system_sdnconnector_routetable:
     access_token: ${2:# The token to access FortiManager without using username and password}
-    adom: ${3:# the parameter (adom) in requested url}
+    adom: ${3:# The parameter (adom) in requested url}
     bypass_validation: ${4:# Only set to True when module schema diffs with FortiManager API structure, module continues to execute without validating parameters}
     enable_log: ${5:# Enable/Disable logging for task}
     forticloud_access_token: ${6:# Authenticate Ansible client with forticloud API access token}
     proposed_method: ${7:# The overridden method for the underlying Json RPC request}
     rc_failed: ${8:# The rc codes list with which the conditions to fail will be overriden}
     rc_succeeded: ${9:# The rc codes list with which the conditions to succeed will be overriden}
-    sdn-connector: ${10:# the parameter (sdn-connector) in requested url}
-    state: ${11:# The directive to create, update or delete an object}
-    system_sdnconnector_routetable: ${12:# the top level parameters set}
-    workspace_locking_adom: ${13:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
-    workspace_locking_timeout: ${14:# The maximum time in seconds to wait for other user to release the workspace lock}
+    sdn-connector: ${10:# Deprecated, please use 'sdn_connector'}
+    sdn_connector: ${11:# The parameter (sdn-connector) in requested url}
+    state: ${12:# The directive to create, update or delete an object}
+    system_sdnconnector_routetable: ${13:# The top level parameters set}
+    workspace_locking_adom: ${14:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
+    workspace_locking_timeout: ${15:# The maximum time in seconds to wait for other user to release the workspace lock}
   tags:
     - fortinet
     - fortimanager

@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Tag Docker images with new names and/or tags}
+  community.docker.docker_image_tag:
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    ca_path: ${3:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${4:# Path to the client's TLS certificate file}
+    client_key: ${5:# Path to the client's TLS key file}
+    debug: ${6:# Debug mode}
+    docker_host: ${7:# The URL or Unix socket path used to connect to the Docker API}
+    existing_images: ${8:# Defines the behavior if the image to be tagged already exists and is another image than the one identified by O(name) and O(tag)}
+    name: ${9:# Image name}
+    repository: ${10:# List of new image names to tag the image as}
+    tag: ${11:# Tag for the image name O(name) that is to be tagged}
+    timeout: ${12:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${13:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${14:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    use_ssh_client: ${15:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${16:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+  tags:
+    - community
+    - docker
+    - docker_image_tag]]></content>
+  <tabTrigger>community.docker.docker_image_tag</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Tag Docker images with new names and/or tags</description>
+</snippet>

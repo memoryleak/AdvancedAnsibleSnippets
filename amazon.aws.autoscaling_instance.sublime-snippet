@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:manage instances associated with AWS AutoScaling Groups (ASGs)}
+  amazon.aws.autoscaling_instance:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    decrement_desired_capacity: ${6:# When O(decrement_desired_capacity=True), detaching instances, terminating instances, or placing instances in standby mode will decrement the desired capacity of the AutoScaling Group}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    group_name: ${8:# Name of the AutoScaling Group to manage}
+    health: ${9:# Sets the health of an instance to a specific state}
+    instance_ids: ${10:# The IDs of the EC2 instances}
+    profile: ${11:# A named AWS profile to use for authentication}
+    protection: ${12:# Sets the scale-in protection attribute}
+    purge_instances: ${13:# Ignored unless O(state=present) or O(state=attached)}
+    region: ${14:# The AWS region to use}
+    respect_grace_period: ${15:# Set O(respect_grace_period=False) to ignore the grace period associated with the AutoScaling group when modifying the O(health)}
+    secret_key: ${16:# AWS secret access key}
+    session_token: ${17:# AWS STS session token for use with temporary credentials}
+    state: ${18:# The expected state of the instances}
+    validate_certs: ${19:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${20:# When O(wait=True) will wait for instances to reach the requested state before returning}
+    wait_timeout: ${21:# Maximum time to wait for instances to reach the desired state}
+  tags:
+    - amazon
+    - aws
+    - autoscaling_instance]]></content>
+  <tabTrigger>amazon.aws.autoscaling_instance</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>manage instances associated with AWS AutoScaling Groups (ASGs)</description>
+</snippet>

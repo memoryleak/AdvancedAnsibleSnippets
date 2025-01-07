@@ -3,20 +3,21 @@
   netapp.ontap.na_ontap_s3_users:
     cert_filepath: ${2:# path to SSL client cert file (}
     comment: ${3:# comment about the user}
-    feature_flags: ${4:# Enable or disable a new feature}
-    force_ontap_version: ${5:# Override the cluster ONTAP version when using REST}
-    hostname: ${6:# The hostname or IP address of the ONTAP instance}
-    http_port: ${7:# Override the default port (80 or 443) with this port}
-    https: ${8:# Enable and disable https}
-    key_filepath: ${9:# path to SSL client key file}
-    name: ${10:# The name of the S3 user}
-    ontapi: ${11:# The ontap api version to use}
+    delete_keys: ${4:# Specifies whether or not to delete the user keys}
+    feature_flags: ${5:# Enable or disable a new feature}
+    force_ontap_version: ${6:# Override the cluster ONTAP version when using REST}
+    hostname: ${7:# The hostname or IP address of the ONTAP instance}
+    http_port: ${8:# Override the default port (80 or 443) with this port}
+    https: ${9:# Enable and disable https}
+    key_filepath: ${10:# path to SSL client key file}
+    name: ${11:# The name of the S3 user}
     password: ${12:# Password for the specified user}
-    state: ${13:# Whether the specified S3 user should exist or not}
-    use_rest: ${14:# Whether to use REST or ZAPI}
-    username: ${15:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${16:# If set to C(no), the SSL certificates will not be validated}
-    vserver: ${17:# Name of the vserver to use}
+    regenerate_keys: ${13:# Specifies whether or not to regenerate the user keys}
+    state: ${14:# Whether the specified S3 user should exist or not}
+    use_rest: ${15:# This module only supports REST}
+    username: ${16:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${17:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${18:# Name of the vserver to use}
   tags:
     - netapp
     - ontap

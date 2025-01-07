@@ -3,7 +3,7 @@
   community.docker.docker_plugin:
     alias: ${2:# Local name for plugin}
     api_version: ${3:# The version of the Docker API running on the Docker Host}
-    ca_cert: ${4:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    ca_path: ${4:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
     client_cert: ${5:# Path to the client's TLS certificate file}
     client_key: ${6:# Path to the client's TLS key file}
     debug: ${7:# Debug mode}
@@ -12,13 +12,12 @@
     force_remove: ${10:# Remove even if the plugin is enabled}
     plugin_name: ${11:# Name of the plugin to operate on}
     plugin_options: ${12:# Dictionary of plugin settings}
-    ssl_version: ${13:# Provide a valid SSL version number}
-    state: ${14:# V(absent) remove the plugin}
-    timeout: ${15:# The maximum amount of time in seconds to wait on a response from the API}
-    tls: ${16:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    tls_hostname: ${17:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    use_ssh_client: ${18:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
-    validate_certs: ${19:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    state: ${13:# V(absent) remove the plugin}
+    timeout: ${14:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${15:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${16:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    use_ssh_client: ${17:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${18:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
   tags:
     - community
     - docker

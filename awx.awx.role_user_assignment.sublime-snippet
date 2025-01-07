@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gives a user permission to a resource or an organization}
+  awx.awx.role_user_assignment:
+    controller_config_file: ${2:# Path to the controller config file}
+    controller_host: ${3:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${4:# The OAuth token to use}
+    controller_password: ${5:# Password for your controller instance}
+    controller_username: ${6:# Username for your controller instance}
+    object_ansible_id: ${7:# Resource id of the object this role applies to}
+    object_id: ${8:# Primary key of the object this assignment applies to}
+    request_timeout: ${9:# Specify the timeout Ansible should use in requests to the controller host}
+    role_definition: ${10:# The name or id of the role definition to assign to the user}
+    state: ${11:# The desired state of the role definition}
+    user: ${12:# The name or id of the user to assign to the object}
+    user_ansible_id: ${13:# Resource id of the user who will receive permissions from this assignment}
+    validate_certs: ${14:# Whether to allow insecure connections to AWX}
+  tags:
+    - awx
+    - awx
+    - role_user_assignment]]></content>
+  <tabTrigger>awx.awx.role_user_assignment</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gives a user permission to a resource or an organization</description>
+</snippet>

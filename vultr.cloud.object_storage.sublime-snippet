@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages object storages on Vultr}
+  vultr.cloud.object_storage:
+    api_endpoint: ${2:# URL to API endpint (without trailing slash)}
+    api_key: ${3:# API key of the Vultr API}
+    api_retries: ${4:# Amount of retries in case of the Vultr API retuns an HTTP error code, such as - 429 Too Many Requests - 500 Internal Server Error - 504 Gateway Time-out}
+    api_retry_max_delay: ${5:# Retry backoff delay in seconds is exponential up to this max}
+    api_timeout: ${6:# HTTP timeout to Vultr API}
+    cluster: ${7:# Cluster hostname where the object storage will be created}
+    label: ${8:# Name of the object storage}
+    state: ${9:# State of the object storage}
+    validate_certs: ${10:# Validate SSL certs of the Vultr API}
+  tags:
+    - vultr
+    - cloud
+    - object_storage]]></content>
+  <tabTrigger>vultr.cloud.object_storage</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages object storages on Vultr</description>
+</snippet>

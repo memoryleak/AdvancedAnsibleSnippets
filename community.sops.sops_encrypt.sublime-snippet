@@ -1,40 +1,40 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Encrypt data with sops}
+  <content><![CDATA[- name: ${1:Encrypt data with SOPS}
   community.sops.sops_encrypt:
     age: ${2:# Age fingerprints to use}
     age_key: ${3:# One or more age private keys that can be used to decrypt encrypted files}
-    age_keyfile: ${4:# The file containing the age private keys that sops can use to decrypt encrypted files}
+    age_keyfile: ${4:# The file containing the age private keys that SOPS can use to decrypt encrypted files}
     attributes: ${5:# The attributes the resulting filesystem object should have}
     aws_access_key_id: ${6:# The AWS access key ID to use for requests to AWS}
     aws_profile: ${7:# The AWS profile to use for requests to AWS}
     aws_secret_access_key: ${8:# The AWS secret access key to use for requests to AWS}
     aws_session_token: ${9:# The AWS session token to use for requests to AWS}
     azure_kv: ${10:# Azure Key Vault URLs to use}
-    config_path: ${11:# Path to the sops configuration file}
+    config_path: ${11:# Path to the SOPS configuration file}
     content_binary: ${12:# The data to encrypt}
     content_json: ${13:# The data to encrypt}
     content_text: ${14:# The data to encrypt}
     content_yaml: ${15:# The data to encrypt}
-    enable_local_keyservice: ${16:# Tell sops to use local key service}
+    enable_local_keyservice: ${16:# Tell SOPS to use local key service}
     encrypted_regex: ${17:# Set the encrypted key suffix}
     encrypted_suffix: ${18:# Override the encrypted key suffix}
     encryption_context: ${19:# List of KMS encryption context pairs of format C(key:value)}
     force: ${20:# Force rewriting the encrypted file}
     gcp_kms: ${21:# GCP KMS resource IDs to use}
-    group: ${22:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    group: ${22:# Name of the group that should own the filesystem object, as would be fed to C(chown)}
     hc_vault_transit: ${23:# HashiCorp Vault key URIs to use}
     keyservice: ${24:# Specify key services to use next to the local one}
     kms: ${25:# List of KMS ARNs to use}
     mode: ${26:# The permissions the resulting filesystem object should have}
-    owner: ${27:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
-    path: ${28:# The sops encrypt file}
+    owner: ${27:# Name of the user that should own the filesystem object, as would be fed to C(chown)}
+    path: ${28:# The SOPS encrypt file}
     pgp: ${29:# PGP fingerprints to use}
     selevel: ${30:# The level part of the SELinux filesystem object context}
     serole: ${31:# The role part of the SELinux filesystem object context}
     setype: ${32:# The type part of the SELinux filesystem object context}
     seuser: ${33:# The user part of the SELinux filesystem object context}
     shamir_secret_sharing_threshold: ${34:# The number of distinct keys required to retrieve the data key with L(Shamir's Secret Sharing, https://en}
-    sops_binary: ${35:# Path to the sops binary}
+    sops_binary: ${35:# Path to the SOPS binary}
     unencrypted_regex: ${36:# Set the unencrypted key suffix}
     unencrypted_suffix: ${37:# Override the unencrypted key suffix}
     unsafe_writes: ${38:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
@@ -44,5 +44,5 @@
     - sops_encrypt]]></content>
   <tabTrigger>community.sops.sops_encrypt</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Encrypt data with sops</description>
+  <description>Encrypt data with SOPS</description>
 </snippet>

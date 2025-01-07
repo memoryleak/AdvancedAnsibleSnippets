@@ -2,13 +2,14 @@
   <content><![CDATA[- name: ${1:Configure FlashArray DNS settings}
   purestorage.flasharray.purefa_dns:
     api_token: ${2:# FlashArray API token for admin privileged user}
-    domain: ${3:# Domain suffix to be appended when perofrming DNS lookups}
-    fa_url: ${4:# FlashArray management IPv4 address or Hostname}
-    name: ${5:# Name of the DNS configuration}
-    nameservers: ${6:# List of up to 3 unique DNS server IP addresses}
-    service: ${7:# Type of ser vice the DNS will work with}
-    source: ${8:# A virtual network interface (vif)}
-    state: ${9:# Set or delete directory service configuration}
+    disable_warnings: ${3:# Disable insecure certificate warnings in debug logs}
+    domain: ${4:# Domain suffix to be appended when perofrming DNS lookups}
+    fa_url: ${5:# FlashArray management IPv4 address or Hostname}
+    name: ${6:# Name of the DNS configuration}
+    nameservers: ${7:# List of up to 3 unique DNS server IP addresses}
+    service: ${8:# Type of ser vice the DNS will work with}
+    source: ${9:# A virtual network interface (vif)}
+    state: ${10:# Set or delete directory service configuration}
   tags:
     - purestorage
     - flasharray

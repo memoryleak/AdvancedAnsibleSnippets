@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage sub port blocks of Fabric interface policy leaf profile interface selectors (infra:HPortS, infra:SubPortBlk)}
+  <content><![CDATA[- name: ${1:Manage sub port blocks of Fabric interface policy leaf profile interface selectors (infra:HPortS and infra:SubPortBlk)}
   cisco.aci.aci_access_sub_port_block_to_access_port:
     access_port_selector: ${2:# The name of the Fabric access policy leaf interface profile access port selector}
     annotation: ${3:# User-defined string for annotating an object}
@@ -17,19 +17,21 @@
     port: ${15:# Port number to be used for REST connection}
     private_key: ${16:# Either a PEM-formatted private key file or the private key content used for signature-based authentication}
     state: ${17:# Use C(present) or C(absent) for adding or removing}
-    timeout: ${18:# The socket level timeout in seconds}
-    to_card: ${19:# The end (to-range) of the card range block for the leaf access port block}
-    to_port: ${20:# The end (to-range) of the port range block for the leaf access port block}
-    to_sub_port: ${21:# The end (to-range) of the sub port range block for the leaf access port block}
-    use_proxy: ${22:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${23:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${24:# The username to use for authentication}
-    validate_certs: ${25:# If C(false), SSL certificates will not be validated}
+    suppress_previous: ${18:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${19:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    timeout: ${20:# The socket level timeout in seconds}
+    to_card: ${21:# The end (to-range) of the card range block for the leaf access port block}
+    to_port: ${22:# The end (to-range) of the port range block for the leaf access port block}
+    to_sub_port: ${23:# The end (to-range) of the sub port range block for the leaf access port block}
+    use_proxy: ${24:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${25:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${26:# The username to use for authentication}
+    validate_certs: ${27:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci
     - aci_access_sub_port_block_to_access_port]]></content>
   <tabTrigger>cisco.aci.aci_access_sub_port_block_to_access_port</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage sub port blocks of Fabric interface policy leaf profile interface selectors (infra:HPortS, infra:SubPortBlk)</description>
+  <description>Manage sub port blocks of Fabric interface policy leaf profile interface selectors (infra:HPortS and infra:SubPortBlk)</description>
 </snippet>

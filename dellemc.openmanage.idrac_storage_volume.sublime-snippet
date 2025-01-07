@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures the RAID configuration attributes}
+  dellemc.openmanage.idrac_storage_volume:
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    capacity: ${3:# Virtual disk size in GB}
+    controller_id: ${4:# Fully Qualified Device Descriptor (FQDD) of the storage controller, for example 'RAID}
+    disk_cache_policy: ${5:# Disk Cache Policy}
+    idrac_ip: ${6:# iDRAC IP Address}
+    idrac_password: ${7:# iDRAC user password}
+    idrac_port: ${8:# iDRAC port}
+    idrac_user: ${9:# iDRAC username}
+    job_wait: ${10:# This parameter provides the option to wait for the job completion}
+    job_wait_timeout: ${11:# This parameter is the maximum wait time of I(job_wait) in seconds}
+    media_type: ${12:# Media type}
+    number_dedicated_hot_spare: ${13:# Number of Dedicated Hot Spare}
+    protocol: ${14:# Bus protocol}
+    raid_init_operation: ${15:# This option represents initialization configuration operation to be performed on the virtual disk}
+    raid_reset_config: ${16:# This option represents whether a reset config operation needs to be performed on the RAID controller}
+    read_cache_policy: ${17:# Read cache policy}
+    span_depth: ${18:# Number of spans in the RAID configuration}
+    span_length: ${19:# Number of disks in a span}
+    state: ${20:# C(create), performs create volume operation}
+    stripe_size: ${21:# Stripe size value to be provided in multiples of 64 * 1024}
+    time_to_wait: ${22:# The maximum wait time before shutdown in seconds for the Server Configuration Profile (SCP) import operation}
+    timeout: ${23:# The socket level timeout in seconds}
+    validate_certs: ${24:# If C(false), the SSL certificates will not be validated}
+    volume_id: ${25:# Fully Qualified Device Descriptor (FQDD) of the virtual disk, for example 'Disk}
+    volume_type: ${26:# Provide the the required RAID level}
+    volumes: ${27:# A list of virtual disk specific iDRAC attributes}
+    write_cache_policy: ${28:# Write cache policy}
+    x_auth_token: ${29:# Authentication token}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_storage_volume]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_storage_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures the RAID configuration attributes</description>
+</snippet>

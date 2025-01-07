@@ -6,37 +6,44 @@
     ad_user: ${4:# Active Directory username}
     adfs_authority_url: ${5:# Azure AD authority url}
     allow_blob_public_access: ${6:# Allows blob containers in account to be set for anonymous public access}
-    api_profile: ${7:# Selects an API profile to use when communicating with Azure services}
-    append_tags: ${8:# Use to control if tags field is canonical or just appends to existing tags}
-    auth_source: ${9:# Controls the source of the credentials to use for authentication}
-    blob_cors: ${10:# Specifies CORS rules for the Blob service}
-    cert_validation_mode: ${11:# Controls the certificate validation behavior for Azure endpoints}
-    client_id: ${12:# Azure client ID}
-    cloud_environment: ${13:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    custom_domain: ${14:# User domain assigned to the storage account}
-    encryption: ${15:# The encryption settings on the storage account}
-    force_delete_nonempty: ${16:# Attempt deletion if resource already exists and cannot be updated}
-    https_only: ${17:# Allows https traffic only to storage service when set to C(True)}
-    is_hns_enabled: ${18:# Account HierarchicalNamespace enabled if sets to true}
-    kind: ${19:# The kind of storage}
-    location: ${20:# Valid Azure location}
-    log_mode: ${21:# Parent argument}
-    log_path: ${22:# Parent argument}
-    minimum_tls_version: ${23:# The minimum required version of Transport Layer Security (TLS) for requests to a storage account}
-    name: ${24:# Name of the storage account to update or create}
-    network_acls: ${25:# Manages the Firewall and virtual networks settings of the storage account}
-    password: ${26:# Active Directory user password}
-    profile: ${27:# Security profile found in ~/}
-    public_network_access: ${28:# Allow or disallow public network access to Storage Account}
-    resource_group: ${29:# Name of the resource group to use}
-    secret: ${30:# Azure client secret}
-    state: ${31:# State of the storage account}
-    static_website: ${32:# Manage static website configuration for the storage account}
-    subscription_id: ${33:# Your Azure subscription Id}
-    tags: ${34:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${35:# Azure tenant ID}
-    thumbprint: ${36:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    x509_certificate_path: ${37:# Path to the X509 certificate used to create the service principal in PEM format}
+    allow_cross_tenant_replication: ${7:# Allow or disallow cross AAD tenant object replication}
+    allow_shared_key_access: ${8:# Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key}
+    api_profile: ${9:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${10:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${11:# Controls the source of the credentials to use for authentication}
+    blob_cors: ${12:# Specifies CORS rules for the Blob service}
+    cert_validation_mode: ${13:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${14:# Azure client ID}
+    cloud_environment: ${15:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    custom_domain: ${16:# User domain assigned to the storage account}
+    default_to_o_auth_authentication: ${17:# A boolean flag which indicates whether the default authentication is OAuth or not}
+    disable_instance_discovery: ${18:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    enable_nfs_v3: ${19:# NFS 3}
+    encryption: ${20:# The encryption settings on the storage account}
+    force_delete_nonempty: ${21:# Attempt deletion if resource already exists and cannot be updated}
+    https_only: ${22:# Allows https traffic only to storage service when set to C(True)}
+    identity: ${23:# Identity for this resource}
+    is_hns_enabled: ${24:# Account HierarchicalNamespace enabled if sets to true}
+    kind: ${25:# The kind of storage}
+    large_file_shares_state: ${26:# Allow large file shares if sets to Enabled}
+    location: ${27:# Valid Azure location}
+    log_mode: ${28:# Parent argument}
+    log_path: ${29:# Parent argument}
+    minimum_tls_version: ${30:# The minimum required version of Transport Layer Security (TLS) for requests to a storage account}
+    name: ${31:# Name of the storage account to update or create}
+    network_acls: ${32:# Manages the Firewall and virtual networks settings of the storage account}
+    password: ${33:# Active Directory user password}
+    profile: ${34:# Security profile found in ~/}
+    public_network_access: ${35:# Allow or disallow public network access to Storage Account}
+    resource_group: ${36:# Name of the resource group to use}
+    secret: ${37:# Azure client secret}
+    state: ${38:# State of the storage account}
+    static_website: ${39:# Manage static website configuration for the storage account}
+    subscription_id: ${40:# Your Azure subscription Id}
+    tags: ${41:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${42:# Azure tenant ID}
+    thumbprint: ${43:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${44:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

@@ -7,23 +7,24 @@
     aws_config: ${5:# A dictionary to modify the botocore configuration}
     debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
     device_id: ${7:# The id of the device for the EIP}
-    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
-    in_vpc: ${9:# Allocate an EIP inside a VPC or not}
-    private_ip_address: ${10:# The primary or secondary private IP address to associate with the Elastic IP address}
-    profile: ${11:# A named AWS profile to use for authentication}
-    public_ip: ${12:# The IP address of a previously allocated EIP}
-    public_ipv4_pool: ${13:# Allocates the new Elastic IP from the provided public IPv4 pool (BYOIP) only applies to newly allocated Elastic IPs, isn't validated when I(reuse_existing_ip_allowed=true)}
-    purge_tags: ${14:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
-    region: ${15:# The AWS region to use}
-    release_on_disassociation: ${16:# Whether or not to automatically release the EIP when it is disassociated}
-    reuse_existing_ip_allowed: ${17:# Reuse an EIP that is not associated to a device (when available), instead of allocating a new one}
-    secret_key: ${18:# AWS secret access key}
-    session_token: ${19:# AWS STS session token for use with temporary credentials}
-    state: ${20:# When C(state=present), allocate an EIP or associate an existing EIP with a device}
-    tag_name: ${21:# When I(reuse_existing_ip_allowed=true), supplement with this option to only reuse an Elastic IP if it is tagged with I(tag_name)}
-    tag_value: ${22:# Supplements I(tag_name) but also checks that the value of the tag provided in I(tag_name) matches I(tag_value)}
-    tags: ${23:# A dictionary representing the tags to be applied to the resource}
-    validate_certs: ${24:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    domain_name: ${8:# The domain name to attach to the IP address}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
+    in_vpc: ${10:# Allocate an EIP inside a VPC or not}
+    private_ip_address: ${11:# The primary or secondary private IP address to associate with the Elastic IP address}
+    profile: ${12:# A named AWS profile to use for authentication}
+    public_ip: ${13:# The IP address of a previously allocated EIP}
+    public_ipv4_pool: ${14:# Allocates the new Elastic IP from the provided public IPv4 pool (BYOIP) only applies to newly allocated Elastic IPs, isn't validated when O(reuse_existing_ip_allowed=true)}
+    purge_tags: ${15:# If O(purge_tags=true) and O(tags) is set, existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
+    region: ${16:# The AWS region to use}
+    release_on_disassociation: ${17:# Whether or not to automatically release the EIP when it is disassociated}
+    reuse_existing_ip_allowed: ${18:# Reuse an EIP that is not associated to a device (when available), instead of allocating a new one}
+    secret_key: ${19:# AWS secret access key}
+    session_token: ${20:# AWS STS session token for use with temporary credentials}
+    state: ${21:# When O(state=present), allocate an EIP or associate an existing EIP with a device}
+    tag_name: ${22:# When O(reuse_existing_ip_allowed=true), supplement with this option to only reuse an Elastic IP if it is tagged with O(tag_name)}
+    tag_value: ${23:# Supplements O(tag_name) but also checks that the value of the tag provided in O(tag_name) matches O(tag_value)}
+    tags: ${24:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${25:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - amazon
     - aws

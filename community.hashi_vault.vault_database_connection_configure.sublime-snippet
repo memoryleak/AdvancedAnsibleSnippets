@@ -1,0 +1,49 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures the database engine}
+  community.hashi_vault.vault_database_connection_configure:
+    allowed_roles: ${2:# Allowed roles}
+    auth_method: ${3:# Authentication method to be used}
+    aws_access_key: ${4:# The AWS access key to use}
+    aws_iam_server_id: ${5:# If specified, sets the value to use for the C(X-Vault-AWS-IAM-Server-ID) header as part of C(GetCallerIdentity) request}
+    aws_profile: ${6:# The AWS profile}
+    aws_secret_key: ${7:# The AWS secret key that corresponds to the access key}
+    aws_security_token: ${8:# The AWS security token if using temporary access and secret keys}
+    azure_client_id: ${9:# The client ID (also known as application ID) of the Azure AD service principal or managed identity}
+    azure_client_secret: ${10:# The client secret of the Azure AD service principal}
+    azure_resource: ${11:# The resource URL for the application registered in Azure Active Directory}
+    azure_tenant_id: ${12:# The Azure Active Directory Tenant ID (also known as the Directory ID) of the service principal}
+    ca_cert: ${13:# Path to certificate to use for authentication}
+    cert_auth_private_key: ${14:# For C(cert) auth, path to the private key file to authenticate with, in PEM format}
+    cert_auth_public_key: ${15:# For C(cert) auth, path to the certificate file to authenticate with, in PEM format}
+    connection_name: ${16:# Name of the database connection}
+    connection_password: ${17:# Password to connect to the database}
+    connection_url: ${18:# Connection URL to the database}
+    connection_username: ${19:# Username to connect to the database}
+    engine_mount_point: ${20:# The path where the secret backend is mounted}
+    jwt: ${21:# The JSON Web Token (JWT) to use for JWT authentication to Vault}
+    mount_point: ${22:# Vault mount point}
+    namespace: ${23:# Vault namespace where secrets reside}
+    password: ${24:# Authentication password}
+    plugin_name: ${25:# Plugin name used to connect to the database}
+    proxies: ${26:# URL(s) to the proxies used to access the Vault service}
+    region: ${27:# The AWS region for which to create the connection}
+    retries: ${28:# Allows for retrying on errors, based on the L(Retry class in the urllib3 library,https://urllib3}
+    retry_action: ${29:# Controls whether and how to show messages on I(retries)}
+    role_id: ${30:# Vault Role ID or name}
+    secret_id: ${31:# Secret ID to be used for Vault AppRole authentication}
+    timeout: ${32:# Sets the connection timeout in seconds}
+    token: ${33:# Vault token}
+    token_file: ${34:# If no token is specified, will try to read the token from this file in I(token_path)}
+    token_path: ${35:# If no token is specified, will try to read the I(token_file) from this path}
+    token_validate: ${36:# For token auth, will perform a C(lookup-self) operation to determine the token's validity before using it}
+    url: ${37:# URL to the Vault service}
+    username: ${38:# Authentication user name}
+    validate_certs: ${39:# Controls verification and validation of SSL certificates, mostly you only want to turn off with self signed ones}
+  tags:
+    - community
+    - hashi_vault
+    - vault_database_connection_configure]]></content>
+  <tabTrigger>community.hashi_vault.vault_database_connection_configure</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures the database engine</description>
+</snippet>

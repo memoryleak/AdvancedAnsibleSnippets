@@ -27,13 +27,15 @@
     source_port_start: ${25:# Used to set the source start port when ip_protocol is tcp or udp}
     state: ${26:# present, absent, query}
     stateful: ${27:# Determines the statefulness of the filter entry}
-    tcp_flags: ${28:# The TCP flags of the filter entry}
-    tenant: ${29:# The name of the tenant}
-    timeout: ${30:# The socket level timeout in seconds}
-    use_proxy: ${31:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${32:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${33:# The username to use for authentication}
-    validate_certs: ${34:# If C(false), SSL certificates will not be validated}
+    suppress_previous: ${28:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${29:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    tcp_flags: ${30:# The TCP flags of the filter entry}
+    tenant: ${31:# The name of the tenant}
+    timeout: ${32:# The socket level timeout in seconds}
+    use_proxy: ${33:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${34:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${35:# The username to use for authentication}
+    validate_certs: ${36:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci

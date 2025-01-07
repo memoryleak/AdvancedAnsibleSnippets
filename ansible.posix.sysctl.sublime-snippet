@@ -2,11 +2,11 @@
   <content><![CDATA[- name: ${1:Manage entries in sysctl}
   ansible.posix.sysctl:
     ignoreerrors: ${2:# Use this option to ignore errors about unknown keys}
-    name: ${3:# The dot-separated path (also known as I(key)) specifying the sysctl variable}
-    reload: ${4:# If C(true), performs a I(/sbin/sysctl -p) if the C(sysctl_file) is updated}
+    name: ${3:# The dot-separated path (also known as O(key)) specifying the sysctl variable}
+    reload: ${4:# If V(true), performs a C(/sbin/sysctl -p) if the O(sysctl_file) is updated}
     state: ${5:# Whether the entry should be present or absent in the sysctl file}
     sysctl_file: ${6:# Specifies the absolute path to C(sysctl}
-    sysctl_set: ${7:# Verify token value with the sysctl command and set with -w if necessary}
+    sysctl_set: ${7:# Verify token value with the sysctl command and set with C(-w) if necessary}
     value: ${8:# Desired value of the sysctl key}
   tags:
     - sysctl]]></content>

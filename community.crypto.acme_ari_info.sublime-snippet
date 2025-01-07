@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieves ACME Renewal Information (ARI) for a certificate}
+  community.crypto.acme_ari_info:
+    acme_directory: ${2:# The ACME directory to use}
+    acme_version: ${3:# The ACME version of the endpoint}
+    certificate_content: ${4:# The content of the X}
+    certificate_path: ${5:# A path to the X}
+    request_timeout: ${6:# The time Ansible should wait for a response from the ACME API}
+    select_crypto_backend: ${7:# Determines which crypto backend to use}
+    validate_certs: ${8:# Whether calls to the ACME directory will validate TLS certificates}
+  tags:
+    - community
+    - crypto
+    - acme_ari_info]]></content>
+  <tabTrigger>community.crypto.acme_ari_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieves ACME Renewal Information (ARI) for a certificate</description>
+</snippet>

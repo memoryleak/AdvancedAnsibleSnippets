@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP network BGP configuration}
+  netapp.ontap.na_ontap_bgp_config:
+    asn: ${2:# Specifies the autonomous system number (ASN)}
+    cert_filepath: ${3:# path to SSL client cert file (}
+    feature_flags: ${4:# Enable or disable a new feature}
+    force_ontap_version: ${5:# Override the cluster ONTAP version when using REST}
+    hold_time: ${6:# Specifies the hold time in seconds}
+    hostname: ${7:# The hostname or IP address of the ONTAP instance}
+    http_port: ${8:# Override the default port (80 or 443) with this port}
+    https: ${9:# Enable and disable https}
+    key_filepath: ${10:# path to SSL client key file}
+    node: ${11:# Specifies the node on which configuration details will be managed}
+    password: ${12:# Password for the specified user}
+    router_id: ${13:# Specifies the local router ID}
+    state: ${14:# Specifies whether to create/ update or delete the border gateway protocol (BGP) configuration for a node}
+    use_rest: ${15:# This module only supports REST}
+    username: ${16:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${17:# If set to C(no), the SSL certificates will not be validated}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_bgp_config]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_bgp_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP network BGP configuration</description>
+</snippet>

@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage DNS Profile (dnsProfile) objects}
+  <content><![CDATA[- name: ${1:Manage DNS Profile objects (dns:Profile)}
   cisco.aci.aci_dns_profile:
     annotation: ${2:# User-defined string for annotating an object}
     certificate_name: ${3:# The X}
@@ -11,16 +11,18 @@
     port: ${9:# Port number to be used for REST connection}
     private_key: ${10:# Either a PEM-formatted private key file or the private key content used for signature-based authentication}
     state: ${11:# Use C(present) or C(absent) for adding or removing}
-    timeout: ${12:# The socket level timeout in seconds}
-    use_proxy: ${13:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${14:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${15:# The username to use for authentication}
-    validate_certs: ${16:# If C(false), SSL certificates will not be validated}
+    suppress_previous: ${12:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${13:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    timeout: ${14:# The socket level timeout in seconds}
+    use_proxy: ${15:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${16:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${17:# The username to use for authentication}
+    validate_certs: ${18:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci
     - aci_dns_profile]]></content>
   <tabTrigger>cisco.aci.aci_dns_profile</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage DNS Profile (dnsProfile) objects</description>
+  <description>Manage DNS Profile objects (dns:Profile)</description>
 </snippet>

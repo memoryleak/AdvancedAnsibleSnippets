@@ -2,9 +2,10 @@
   <content><![CDATA[- name: ${1:Securely connect the Management Server to Check Point's Infinity Portal}
   check_point.mgmt.cp_mgmt_connect_cloud_services:
     auth_token: ${2:# Copy the authentication token from the Smart-1 cloud service hosted in the Infinity Portal}
-    version: ${3:# Version of checkpoint}
-    wait_for_task: ${4:# Wait for the task to end}
-    wait_for_task_timeout: ${5:# How many minutes to wait until throwing a timeout error}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    version: ${4:# Version of checkpoint}
+    wait_for_task: ${5:# Wait for the task to end}
+    wait_for_task_timeout: ${6:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage multi-container Docker applications with Docker Compose CLI plugin}
+  community.docker.docker_compose_v2:
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    build: ${3:# Whether to build images before starting containers}
+    ca_path: ${4:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    check_files_existing: ${5:# If set to V(false), the module will not check whether one of the files C(compose}
+    cli_context: ${6:# The Docker CLI context to use}
+    client_cert: ${7:# Path to the client's TLS certificate file}
+    client_key: ${8:# Path to the client's TLS key file}
+    definition: ${9:# Compose file describing one or more services, networks and volumes}
+    dependencies: ${10:# When O(state) is V(present) or V(restarted), specify whether or not to include linked services}
+    docker_cli: ${11:# Path to the Docker CLI}
+    docker_host: ${12:# The URL or Unix socket path used to connect to the Docker API}
+    env_files: ${13:# By default environment files are loaded from a C(}
+    files: ${14:# List of Compose file names relative to O(project_src) to be used instead of the main Compose file (C(compose}
+    profiles: ${15:# List of profiles to enable when starting services}
+    project_name: ${16:# Provide a project name}
+    project_src: ${17:# Path to a directory containing a Compose file (C(compose}
+    pull: ${18:# Whether to pull images before running}
+    recreate: ${19:# By default containers will be recreated when their configuration differs from the service definition}
+    remove_images: ${20:# Use with O(state=absent) to remove all images or only local images}
+    remove_orphans: ${21:# Remove containers for services not defined in the Compose file}
+    remove_volumes: ${22:# Use with O(state=absent) to remove data volumes}
+    renew_anon_volumes: ${23:# Whether to recreate instead of reuse anonymous volumes from previous containers}
+    scale: ${24:# Define how to scale services when running C(docker compose up)}
+    services: ${25:# Specifies a subset of services to be targeted}
+    state: ${26:# Desired state of the project}
+    timeout: ${27:# Timeout in seconds for container shutdown when attached or when containers are already running}
+    tls: ${28:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${29:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    validate_certs: ${30:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    wait: ${31:# When running C(docker compose up), pass C(--wait) to wait for services to be running/healthy}
+    wait_timeout: ${32:# When O(wait=true), wait at most this amount of seconds}
+  tags:
+    - community
+    - docker
+    - docker_compose_v2]]></content>
+  <tabTrigger>community.docker.docker_compose_v2</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage multi-container Docker applications with Docker Compose CLI plugin</description>
+</snippet>

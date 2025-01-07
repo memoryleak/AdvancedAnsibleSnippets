@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Allows administration of Keycloak realm role mappings into groups with the Keycloak API}
+  community.general.keycloak_realm_rolemapping:
+    auth_client_id: ${2:# OpenID Connect C(client_id) to authenticate to the API with}
+    auth_client_secret: ${3:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
+    auth_keycloak_url: ${4:# URL to the Keycloak instance}
+    auth_password: ${5:# Password to authenticate for API access with}
+    auth_realm: ${6:# Keycloak realm name to authenticate to for API access}
+    auth_username: ${7:# Username to authenticate for API access with}
+    connection_timeout: ${8:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    gid: ${9:# ID of the group to be mapped}
+    group_name: ${10:# Name of the group to be mapped}
+    http_agent: ${11:# Configures the HTTP User-Agent header}
+    parents: ${12:# List of parent groups for the group to handle sorted top to bottom}
+    realm: ${13:# They Keycloak realm under which this role_representation resides}
+    roles: ${14:# Roles to be mapped to the group}
+    state: ${15:# State of the realm_rolemapping}
+    token: ${16:# Authentication token for Keycloak API}
+    validate_certs: ${17:# Verify TLS certificates (do not disable this in production)}
+  tags:
+    - community
+    - general
+    - keycloak_realm_rolemapping]]></content>
+  <tabTrigger>community.general.keycloak_realm_rolemapping</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Allows administration of Keycloak realm role mappings into groups with the Keycloak API</description>
+</snippet>

@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage database users in Atlas}
+  community.mongodb.mongodb_atlas_user:
+    api_password: ${2:# The password for use in authentication with the Atlas API}
+    api_username: ${3:# The username for use in authentication with the Atlas API}
+    database_name: ${4:# Database against which Atlas authenticates the user}
+    group_id: ${5:# Unique identifier for the Atlas project}
+    password: ${6:# User's password}
+    roles: ${7:# Array of this user's roles and the databases / collections on which the roles apply}
+    scopes: ${8:# List of clusters and Atlas Data Lakes that this user can access}
+    state: ${9:# State of the ressource}
+    username: ${10:# Username for authenticating to MongoDB}
+  tags:
+    - community
+    - mongodb
+    - mongodb_atlas_user]]></content>
+  <tabTrigger>community.mongodb.mongodb_atlas_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage database users in Atlas</description>
+</snippet>

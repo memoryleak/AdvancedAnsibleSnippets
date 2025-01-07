@@ -15,7 +15,7 @@
     hosted_zone_id: ${13:# The Hosted Zone ID of the DNS zone to modify}
     identifier: ${14:# Have to be specified for Weighted, latency-based and failover resource record sets only}
     overwrite: ${15:# Whether an existing record should be overwritten on create if values do not match}
-    private_zone: ${16:# If set to C(true), the private zone matching the requested name within the domain will be used if there are both public and private zones}
+    private_zone: ${16:# If set to V(true), the private zone matching the requested name within the domain will be used if there are both public and private zones}
     profile: ${17:# A named AWS profile to use for authentication}
     record: ${18:# The full DNS record to create or delete}
     region: ${19:# Latency-based resource record sets only Among resource record sets that have the same combination of DNS name and type, a value that determines which region this should be associated with for the latency-based routing}
@@ -27,7 +27,7 @@
     type: ${25:# The type of DNS record to create}
     validate_certs: ${26:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
     value: ${27:# The new value when creating a DNS record}
-    vpc_id: ${28:# When used in conjunction with private_zone: true, this will only modify records in the private hosted zone attached to this VPC}
+    vpc_id: ${28:# When used in conjunction with O(private_zone=true), this will only modify records in the private hosted zone attached to this VPC}
     wait: ${29:# Wait until the changes have been replicated to all Amazon Route 53 DNS servers}
     wait_timeout: ${30:# How long to wait for the changes to be replicated, in seconds}
     weight: ${31:# Weighted resource record sets only}

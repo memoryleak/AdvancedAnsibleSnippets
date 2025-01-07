@@ -1,12 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Promote a node as the primary node}
   cisco.ise.personas_promote_primary:
-    ip: ${2:# The IP address of the primary node}
-    ise_verify: ${3:# Whether or not to verify the identity of the node}
-    ise_version: ${4:# The version of the ISE node}
-    ise_wait_on_rate_limit: ${5:# Whether or not to wait on rate limit}
-    password: ${6:# The password to log into the primary node}
-    username: ${7:# The username to log into the primary node}
+    hostname: ${2:# The hostname of the primary node}
+    ip: ${3:# The public IP address of the primary node}
+    ise_verify: ${4:# Whether or not to verify the identity of the node}
+    ise_version: ${5:# The version of the ISE node}
+    ise_wait_on_rate_limit: ${6:# Whether or not to wait on rate limit}
+    password: ${7:# The password to log into the primary node}
+    roles: ${8:# The roles to be fulfilled by this node}
+    username: ${9:# The username to log into the primary node}
   tags:
     - cisco
     - ise

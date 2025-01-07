@@ -4,7 +4,7 @@
     activeDirectory: ${2:# The current setting for Active Directory}
     adultContentFilteringEnabled: ${3:# Boolean indicating whether or not adult content will be blocked}
     apTagsAndVlanIds: ${4:# The list of tags and VLAN IDs used for VLAN tagging}
-    authMode: ${5:# The association control method for the SSID ('open', 'open-enhanced', 'psk', 'open-with-radius', 'open-with-nac', '8021x-meraki', '8021x-nac', '8021x-radius', '8021x-google', '8021x-localradius', 'ipsk-with-radius' or 'ipsk-without-radius')}
+    authMode: ${5:# The association control method for the SSID ('open', 'open-enhanced', 'psk', 'open-with-radius', 'open-with-nac', '8021x-meraki', '8021x-nac', '8021x-radius', '8021x-google', '8021x-localradius', 'ipsk-with-radius', 'ipsk-without-radius' or 'ipsk-with-nac')}
     availabilityTags: ${6:# Accepts a list of tags for this SSID}
     availableOnAllAps: ${7:# Boolean indicating whether all APs should broadcast the SSID or if it should be restricted to APs matching any availability tags}
     bandSelection: ${8:# The client-serving radio frequencies of this SSID in the default indoor RF profile}
@@ -46,42 +46,43 @@
     meraki_wait_on_rate_limit: ${44:# meraki_wait_on_rate_limit (boolean), retry if 429 rate limit error encountered?}
     minBitrate: ${45:# The minimum bitrate in Mbps of this SSID in the default indoor RF profile}
     name: ${46:# The name of the SSID}
-    networkId: ${47:# NetworkId path parameter}
-    number: ${48:# Number path parameter}
-    oauth: ${49:# The OAuth settings of this SSID}
-    perClientBandwidthLimitDown: ${50:# The download bandwidth limit in Kbps}
-    perClientBandwidthLimitUp: ${51:# The upload bandwidth limit in Kbps}
-    perSsidBandwidthLimitDown: ${52:# The total download bandwidth limit in Kbps}
-    perSsidBandwidthLimitUp: ${53:# The total upload bandwidth limit in Kbps}
-    psk: ${54:# The passkey for the SSID}
-    radiusAccountingEnabled: ${55:# Whether or not RADIUS accounting is enabled}
-    radiusAccountingInterimInterval: ${56:# The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server}
-    radiusAccountingServers: ${57:# The RADIUS accounting 802}
-    radiusAttributeForGroupPolicies: ${58:# Specify the RADIUS attribute used to look up group policies ('Filter-Id', 'Reply-Message', 'Airespace-ACL-Name' or 'Aruba-User-Role')}
-    radiusAuthenticationNasId: ${59:# The template of the NAS identifier to be used for RADIUS authentication (ex}
-    radiusCalledStationId: ${60:# The template of the called station identifier to be used for RADIUS (ex}
-    radiusCoaEnabled: ${61:# If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server}
-    radiusFailoverPolicy: ${62:# This policy determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable ('Deny access' or 'Allow access')}
-    radiusFallbackEnabled: ${63:# Whether or not higher priority RADIUS servers should be retried after 60 seconds}
-    radiusGuestVlanEnabled: ${64:# Whether or not RADIUS Guest VLAN is enabled}
-    radiusGuestVlanId: ${65:# VLAN ID of the RADIUS Guest VLAN}
-    radiusLoadBalancingPolicy: ${66:# This policy determines which RADIUS server will be contacted first in an authentication attempt and the ordering of any necessary retry attempts ('Strict priority order' or 'Round robin')}
-    radiusOverride: ${67:# If true, the RADIUS response can override VLAN tag}
-    radiusProxyEnabled: ${68:# If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers}
-    radiusServerAttemptsLimit: ${69:# The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5)}
-    radiusServerTimeout: ${70:# The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds)}
-    radiusServers: ${71:# The RADIUS 802}
-    radiusTestingEnabled: ${72:# If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity 'meraki_8021x_test' to ensure that the RADIUS servers are reachable}
-    secondaryConcentratorNetworkId: ${73:# The secondary concentrator to use when the ipAssignmentMode is 'VPN'}
-    speedBurst: ${74:# The SpeedBurst setting for this SSID'}
-    splashGuestSponsorDomains: ${75:# Array of valid sponsor email domains for sponsored guest splash type}
-    splashPage: ${76:# The type of splash page for the SSID ('None', 'Click-through splash page', 'Billing', 'Password-protected with Meraki RADIUS', 'Password-protected with custom RADIUS', 'Password-protected with Active Directory', 'Password-protected with LDAP', 'SMS authentication', 'Systems Manager Sentry', 'Facebook Wi-Fi', 'Google OAuth', 'Sponsored guest', 'Cisco ISE' or 'Google Apps domain')}
-    useVlanTagging: ${77:# Whether or not traffic should be directed to use specific VLANs}
-    visible: ${78:# Boolean indicating whether APs should advertise or hide this SSID}
-    vlanId: ${79:# The VLAN ID used for VLAN tagging}
-    walledGardenEnabled: ${80:# Allow access to a configurable list of IP ranges, which users may access prior to sign-on}
-    walledGardenRanges: ${81:# Specify your walled garden by entering an array of addresses, ranges using CIDR notation, domain names, and domain wildcards (e}
-    wpaEncryptionMode: ${82:# The types of WPA encryption}
+    namedVlans: ${47:# Named VLAN settings}
+    networkId: ${48:# NetworkId path parameter}
+    number: ${49:# Number path parameter}
+    oauth: ${50:# The OAuth settings of this SSID}
+    perClientBandwidthLimitDown: ${51:# The download bandwidth limit in Kbps}
+    perClientBandwidthLimitUp: ${52:# The upload bandwidth limit in Kbps}
+    perSsidBandwidthLimitDown: ${53:# The total download bandwidth limit in Kbps}
+    perSsidBandwidthLimitUp: ${54:# The total upload bandwidth limit in Kbps}
+    psk: ${55:# The passkey for the SSID}
+    radiusAccountingEnabled: ${56:# Whether or not RADIUS accounting is enabled}
+    radiusAccountingInterimInterval: ${57:# The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server}
+    radiusAccountingServers: ${58:# The RADIUS accounting 802}
+    radiusAttributeForGroupPolicies: ${59:# Specify the RADIUS attribute used to look up group policies ('Filter-Id', 'Reply-Message', 'Airespace-ACL-Name' or 'Aruba-User-Role')}
+    radiusAuthenticationNasId: ${60:# The template of the NAS identifier to be used for RADIUS authentication (ex}
+    radiusCalledStationId: ${61:# The template of the called station identifier to be used for RADIUS (ex}
+    radiusCoaEnabled: ${62:# If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server}
+    radiusFailoverPolicy: ${63:# This policy determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable ('Deny access' or 'Allow access')}
+    radiusFallbackEnabled: ${64:# Whether or not higher priority RADIUS servers should be retried after 60 seconds}
+    radiusGuestVlanEnabled: ${65:# Whether or not RADIUS Guest VLAN is enabled}
+    radiusGuestVlanId: ${66:# VLAN ID of the RADIUS Guest VLAN}
+    radiusLoadBalancingPolicy: ${67:# This policy determines which RADIUS server will be contacted first in an authentication attempt and the ordering of any necessary retry attempts ('Strict priority order' or 'Round robin')}
+    radiusOverride: ${68:# If true, the RADIUS response can override VLAN tag}
+    radiusProxyEnabled: ${69:# If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers}
+    radiusServerAttemptsLimit: ${70:# The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5)}
+    radiusServerTimeout: ${71:# The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds)}
+    radiusServers: ${72:# The RADIUS 802}
+    radiusTestingEnabled: ${73:# If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity 'meraki_8021x_test' to ensure that the RADIUS servers are reachable}
+    secondaryConcentratorNetworkId: ${74:# The secondary concentrator to use when the ipAssignmentMode is 'VPN'}
+    speedBurst: ${75:# The SpeedBurst setting for this SSID'}
+    splashGuestSponsorDomains: ${76:# Array of valid sponsor email domains for sponsored guest splash type}
+    splashPage: ${77:# The type of splash page for the SSID ('None', 'Click-through splash page', 'Billing', 'Password-protected with Meraki RADIUS', 'Password-protected with custom RADIUS', 'Password-protected with Active Directory', 'Password-protected with LDAP', 'SMS authentication', 'Systems Manager Sentry', 'Facebook Wi-Fi', 'Google OAuth', 'Sponsored guest', 'Cisco ISE' or 'Google Apps domain')}
+    useVlanTagging: ${78:# Whether or not traffic should be directed to use specific VLANs}
+    visible: ${79:# Boolean indicating whether APs should advertise or hide this SSID}
+    vlanId: ${80:# The VLAN ID used for VLAN tagging}
+    walledGardenEnabled: ${81:# Allow access to a configurable list of IP ranges, which users may access prior to sign-on}
+    walledGardenRanges: ${82:# Specify your walled garden by entering an array of addresses, ranges using CIDR notation, domain names, and domain wildcards (e}
+    wpaEncryptionMode: ${83:# The types of WPA encryption}
   tags:
     - cisco
     - meraki

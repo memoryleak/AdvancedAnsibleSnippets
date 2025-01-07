@@ -10,29 +10,33 @@
     cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
     client_id: ${9:# Azure client ID}
     cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    enable_purge_protection: ${11:# Property specifying whether protection against purge is enabled for this vault}
-    enable_soft_delete: ${12:# Property to specify whether the soft delete functionality is enabled for this key vault}
-    enabled_for_deployment: ${13:# Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault}
-    enabled_for_disk_encryption: ${14:# Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys}
-    enabled_for_template_deployment: ${15:# Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault}
-    location: ${16:# Resource location}
-    log_mode: ${17:# Parent argument}
-    log_path: ${18:# Parent argument}
-    password: ${19:# Active Directory user password}
-    profile: ${20:# Security profile found in ~/}
-    recover_mode: ${21:# Create vault in recovery mode}
-    resource_group: ${22:# The name of the Resource Group to which the server belongs}
-    secret: ${23:# Azure client secret}
-    sku: ${24:# SKU details}
-    soft_delete_retention_in_days: ${25:# Property specifying the number of days to retain deleted vaults}
-    state: ${26:# Assert the state of the KeyVault}
-    subscription_id: ${27:# Your Azure subscription Id}
-    tags: ${28:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${29:# Azure tenant ID}
-    thumbprint: ${30:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    vault_name: ${31:# Name of the vault}
-    vault_tenant: ${32:# The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault}
-    x509_certificate_path: ${33:# Path to the X509 certificate used to create the service principal in PEM format}
+    disable_instance_discovery: ${11:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    enable_purge_protection: ${12:# Property specifying whether protection against purge is enabled for this vault}
+    enable_rbac_authorization: ${13:# Property that controls how data actions are authorized}
+    enable_soft_delete: ${14:# Property to specify whether the soft delete functionality is enabled for this key vault}
+    enabled_for_deployment: ${15:# Property to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault}
+    enabled_for_disk_encryption: ${16:# Property to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys}
+    enabled_for_template_deployment: ${17:# Property to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault}
+    location: ${18:# Resource location}
+    log_mode: ${19:# Parent argument}
+    log_path: ${20:# Parent argument}
+    network_acls: ${21:# A collection of rules governing the accessibility of the vault from specific network locations}
+    password: ${22:# Active Directory user password}
+    profile: ${23:# Security profile found in ~/}
+    public_network_access: ${24:# Property to specify whether the vault will accept traffic from public internet}
+    recover_mode: ${25:# Create vault in recovery mode}
+    resource_group: ${26:# The name of the Resource Group to which the server belongs}
+    secret: ${27:# Azure client secret}
+    sku: ${28:# SKU details}
+    soft_delete_retention_in_days: ${29:# Property specifying the number of days to retain deleted vaults}
+    state: ${30:# Assert the state of the KeyVault}
+    subscription_id: ${31:# Your Azure subscription Id}
+    tags: ${32:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${33:# Azure tenant ID}
+    thumbprint: ${34:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    vault_name: ${35:# Name of the vault}
+    vault_tenant: ${36:# The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault}
+    x509_certificate_path: ${37:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage NTP servers}
+  <content><![CDATA[- name: ${1:Manage NTP servers (datetime:NtpProv)}
   cisco.aci.aci_ntp_server:
     annotation: ${2:# User-defined string for annotating an object}
     certificate_name: ${3:# The X}
@@ -20,16 +20,18 @@
     preferred: ${18:# Is this the preferred NTP server}
     private_key: ${19:# Either a PEM-formatted private key file or the private key content used for signature-based authentication}
     state: ${20:# Use C(present) or C(absent) for adding or removing}
-    timeout: ${21:# The socket level timeout in seconds}
-    use_proxy: ${22:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${23:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${24:# The username to use for authentication}
-    validate_certs: ${25:# If C(false), SSL certificates will not be validated}
+    suppress_previous: ${21:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${22:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    timeout: ${23:# The socket level timeout in seconds}
+    use_proxy: ${24:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${25:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${26:# The username to use for authentication}
+    validate_certs: ${27:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci
     - aci_ntp_server]]></content>
   <tabTrigger>cisco.aci.aci_ntp_server</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage NTP servers</description>
+  <description>Manage NTP servers (datetime:NtpProv)</description>
 </snippet>

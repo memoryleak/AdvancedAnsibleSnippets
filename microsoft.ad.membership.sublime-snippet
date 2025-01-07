@@ -5,11 +5,13 @@
     domain_admin_password: ${3:# Password for the specified C(domain_admin_user)}
     domain_admin_user: ${4:# Username of a domain admin for the target domain (required to join or leave the domain)}
     domain_ou_path: ${5:# The desired OU path for adding the computer object}
-    hostname: ${6:# The desired hostname for the Windows host}
-    offline_join_blob: ${7:# The base64 string of the domain offline join blob to use when joining the host to a domain}
-    reboot: ${8:# If C(true), this will reboot the host if a reboot was required to configure the domain}
-    state: ${9:# Whether the target host should be a member of a domain or workgroup}
-    workgroup_name: ${10:# When I(state=workgroup), this is the name of the workgroup that the Windows host should be in}
+    domain_server: ${6:# Specifies the domain controller to use when joining the domain}
+    hostname: ${7:# The desired hostname for the Windows host}
+    offline_join_blob: ${8:# The base64 string of the domain offline join blob to use when joining the host to a domain}
+    reboot: ${9:# If C(true), this will reboot the host if a reboot was required by the module}
+    reboot_timeout: ${10:# Maximum seconds to wait for machine to re-appear after a reboot and respond to a test command}
+    state: ${11:# Whether the target host should be a member of a domain or workgroup}
+    workgroup_name: ${12:# When I(state=workgroup), this is the name of the workgroup that the Windows host should be in}
   tags:
     - microsoft
     - ad

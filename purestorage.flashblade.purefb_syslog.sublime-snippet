@@ -3,11 +3,13 @@
   purestorage.flashblade.purefb_syslog:
     address: ${2:# Syslog server address}
     api_token: ${3:# FlashBlade API token for admin privileged user}
-    fb_url: ${4:# FlashBlade management IP address or Hostname}
-    name: ${5:# Unique identifier for the syslog server address}
-    port: ${6:# Port at which the server is listening}
-    protocol: ${7:# Protocol which server uses}
-    state: ${8:# Create or delete syslog servers configuration}
+    disable_warnings: ${4:# Disable insecure certificate warnings}
+    fb_url: ${5:# FlashBlade management IP address or Hostname}
+    name: ${6:# Unique identifier for the syslog server address}
+    port: ${7:# Port at which the server is listening}
+    protocol: ${8:# Protocol which server uses}
+    services: ${9:# Syslog service type(s)}
+    state: ${10:# Create or delete syslog servers configuration}
   tags:
     - purestorage
     - flashblade

@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage VLAN Pools on Cisco Nexus Dashboard Orchestrator (NDO)}
+  cisco.mso.ndo_vlan_pool:
+    description: ${2:# The description of the VLAN Pool}
+    host: ${3:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${4:# The login domain name to use for authentication}
+    output_level: ${5:# Influence the output of this MSO module}
+    password: ${6:# The password to use for authentication}
+    port: ${7:# Port number to be used for the REST connection}
+    state: ${8:# Use C(absent) for removing}
+    template: ${9:# The name of the template}
+    timeout: ${10:# The socket level timeout in seconds}
+    use_proxy: ${11:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${12:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${13:# The username to use for authentication}
+    validate_certs: ${14:# If C(false), SSL certificates will not be validated}
+    vlan_pool: ${15:# The name of the VLAN Pool}
+    vlan_pool_uuid: ${16:# The uuid of the VLAN Pool}
+    vlan_ranges: ${17:# A list of vlan ranges attached to the VLAN Pool}
+  tags:
+    - cisco
+    - mso
+    - ndo_vlan_pool]]></content>
+  <tabTrigger>cisco.mso.ndo_vlan_pool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage VLAN Pools on Cisco Nexus Dashboard Orchestrator (NDO)</description>
+</snippet>

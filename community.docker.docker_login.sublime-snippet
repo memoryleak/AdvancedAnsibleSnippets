@@ -2,7 +2,7 @@
   <content><![CDATA[- name: ${1:Log into a Docker registry}
   community.docker.docker_login:
     api_version: ${2:# The version of the Docker API running on the Docker Host}
-    ca_cert: ${3:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    ca_path: ${3:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
     client_cert: ${4:# Path to the client's TLS certificate file}
     client_key: ${5:# Path to the client's TLS key file}
     config_path: ${6:# Custom path to the Docker CLI configuration file}
@@ -11,14 +11,13 @@
     password: ${9:# The plaintext password for the registry account}
     reauthorize: ${10:# Refresh existing authentication found in the configuration file}
     registry_url: ${11:# The registry URL}
-    ssl_version: ${12:# Provide a valid SSL version number}
-    state: ${13:# This controls the current state of the user}
-    timeout: ${14:# The maximum amount of time in seconds to wait on a response from the API}
-    tls: ${15:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    tls_hostname: ${16:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    use_ssh_client: ${17:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
-    username: ${18:# The username for the registry account}
-    validate_certs: ${19:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    state: ${12:# This controls the current state of the user}
+    timeout: ${13:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${14:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${15:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    use_ssh_client: ${16:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    username: ${17:# The username for the registry account}
+    validate_certs: ${18:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
   tags:
     - community
     - docker

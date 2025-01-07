@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Webhooks}
+  theforeman.foreman.webhook:
+    enabled: ${2:# Enable or disable the webhook}
+    event: ${3:# Name of the event that shall trigger the webhook}
+    http_content_type: ${4:# The HTTP content type for the webhook}
+    http_headers: ${5:# HTTP headers for the webhook}
+    http_method: ${6:# The HTTP method used in the webhook}
+    locations: ${7:# List of locations the entity should be assigned to}
+    name: ${8:# Name of the Webhook}
+    organizations: ${9:# List of organizations the entity should be assigned to}
+    password: ${10:# Password of the user accessing the Foreman server}
+    proxy_authorization: ${11:# Authorize with client certificate and validate CA from Settings}
+    server_url: ${12:# URL of the Foreman server}
+    ssl_ca_certs: ${13:# X509 Certification Authorities concatenated in PEM format}
+    state: ${14:# State of the entity}
+    target_url: ${15:# The URL to call when the webhook is triggered}
+    username: ${16:# Username accessing the Foreman server}
+    validate_certs: ${17:# Whether or not to verify the TLS certificates of the Foreman server}
+    verify_ssl: ${18:# Verify SSL certs for the webhook}
+    webhook_password: ${19:# Password for the webhook, if required}
+    webhook_template: ${20:# Name of the webhook template}
+    webhook_username: ${21:# Username for the webhook, if required}
+  tags:
+    - theforeman
+    - foreman
+    - webhook]]></content>
+  <tabTrigger>theforeman.foreman.webhook</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Webhooks</description>
+</snippet>

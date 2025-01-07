@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage LDAP users in Atlas}
+  community.mongodb.mongodb_atlas_ldap_user:
+    api_password: ${2:# The password for use in authentication with the Atlas API}
+    api_username: ${3:# The username for use in authentication with the Atlas API}
+    database_name: ${4:# Database against which Atlas authenticates the user}
+    group_id: ${5:# Unique identifier for the Atlas project}
+    ldap_auth_type: ${6:# Type of LDAP authorization for the user i}
+    roles: ${7:# Array of this user's roles and the databases / collections on which the roles apply}
+    state: ${8:# State of the ressource}
+    username: ${9:# Username for authenticating to MongoDB}
+  tags:
+    - community
+    - mongodb
+    - mongodb_atlas_ldap_user]]></content>
+  <tabTrigger>community.mongodb.mongodb_atlas_ldap_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage LDAP users in Atlas</description>
+</snippet>

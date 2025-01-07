@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage fabric interface policy leaf policy groups (infra:AccBndlGrp, infra:AccPortGrp)}
+  <content><![CDATA[- name: ${1:Manage fabric interface policy leaf policy groups (infra:AccBndlGrp and infra:AccPortGrp)}
   cisco.aci.aci_interface_policy_leaf_policy_group:
     aep: ${2:# The name of the attached entity profile (AEP) used by the leaf interface policy group}
     annotation: ${3:# User-defined string for annotating an object}
@@ -39,18 +39,20 @@
     state: ${37:# Use C(present) or C(absent) for adding or removing}
     storm_control_interface_policy: ${38:# The name of the storm control interface policy used by the leaf interface policy group}
     stp_interface_policy: ${39:# The name of the stp interface policy used by the leaf interface policy group}
-    sync_e_interface_policy: ${40:# The name of the syncE interface policy used by the leaf interface policy group}
-    timeout: ${41:# The socket level timeout in seconds}
-    transceiver_policy: ${42:# The name of the transceiver policy used by the leaf interface policy group}
-    use_proxy: ${43:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${44:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${45:# The username to use for authentication}
-    validate_certs: ${46:# If C(false), SSL certificates will not be validated}
+    suppress_previous: ${40:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${41:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    sync_e_interface_policy: ${42:# The name of the syncE interface policy used by the leaf interface policy group}
+    timeout: ${43:# The socket level timeout in seconds}
+    transceiver_policy: ${44:# The name of the transceiver policy used by the leaf interface policy group}
+    use_proxy: ${45:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${46:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${47:# The username to use for authentication}
+    validate_certs: ${48:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci
     - aci_interface_policy_leaf_policy_group]]></content>
   <tabTrigger>cisco.aci.aci_interface_policy_leaf_policy_group</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage fabric interface policy leaf policy groups (infra:AccBndlGrp, infra:AccPortGrp)</description>
+  <description>Manage fabric interface policy leaf policy groups (infra:AccBndlGrp and infra:AccPortGrp)</description>
 </snippet>

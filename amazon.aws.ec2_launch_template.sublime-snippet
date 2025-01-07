@@ -1,0 +1,52 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage EC2 launch templates}
+  amazon.aws.ec2_launch_template:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    block_device_mappings: ${5:# The block device mapping}
+    cpu_options: ${6:# Choose CPU settings for the EC2 instances that will be created with this template}
+    credit_specification: ${7:# The credit option for CPU usage of the instance}
+    debug_botocore_endpoint_logs: ${8:# Use a C(botocore}
+    default_version: ${9:# Which version should be the default when users spin up new instances based on this template? By default, the latest version will be made the default}
+    disable_api_termination: ${10:# This helps protect instances from accidental termination}
+    ebs_optimized: ${11:# Indicates whether the instance is optimized for Amazon EBS I/O}
+    elastic_gpu_specifications: ${12:# Settings for Elastic GPU attachments}
+    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
+    iam_instance_profile: ${14:# The name or ARN of an IAM instance profile}
+    image_id: ${15:# The AMI ID to use for new instances launched with this template}
+    instance_initiated_shutdown_behavior: ${16:# Indicates whether an instance stops or terminates when you initiate shutdown from the instance using the operating system shutdown command}
+    instance_market_options: ${17:# Options for alternative instance markets, currently only the spot market is supported}
+    instance_type: ${18:# The instance type, such as V(c5}
+    kernel_id: ${19:# The ID of the kernel}
+    key_name: ${20:# The name of the key pair}
+    metadata_options: ${21:# Configure EC2 Metadata options}
+    monitoring: ${22:# Settings for instance monitoring}
+    network_interfaces: ${23:# One or more network interfaces}
+    placement: ${24:# The placement group settings for the instance}
+    profile: ${25:# A named AWS profile to use for authentication}
+    purge_tags: ${26:# If O(purge_tags=true) and O(tags) is set, existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
+    ram_disk_id: ${27:# The ID of the RAM disk to launch the instance with}
+    region: ${28:# The AWS region to use}
+    secret_key: ${29:# AWS secret access key}
+    security_group_ids: ${30:# A list of security group IDs (VPC or EC2-Classic) that the new instances will be added to}
+    security_groups: ${31:# A list of security group names (Default VPC or EC2-Classic) that the new instances will be added to}
+    session_token: ${32:# AWS STS session token for use with temporary credentials}
+    source_version: ${33:# The version number of the launch template version on which to base the new version}
+    state: ${34:# Whether the launch template should exist or not}
+    tag_specifications: ${35:# The tags to apply to the resources when this Launch template is used}
+    tags: ${36:# A dictionary representing the tags to be applied to the resource}
+    template_id: ${37:# The ID for the launch template, can be used for all cases except creating a new Launch Template}
+    template_name: ${38:# The template name}
+    user_data: ${39:# The Base64-encoded user data to make available to the instance}
+    validate_certs: ${40:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    version_description: ${41:# The description of a launch template version}
+    versions_to_delete: ${42:# The version numbers of a launch template versions to delete}
+  tags:
+    - amazon
+    - aws
+    - ec2_launch_template]]></content>
+  <tabTrigger>amazon.aws.ec2_launch_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage EC2 launch templates</description>
+</snippet>

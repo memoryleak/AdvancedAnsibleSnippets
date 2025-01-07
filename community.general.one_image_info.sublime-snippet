@@ -1,11 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Gather information on OpenNebula images}
   community.general.one_image_info:
-    api_password: ${2:# Password of the user to login into OpenNebula RPC server}
-    api_url: ${3:# URL of the OpenNebula RPC server}
-    api_username: ${4:# Name of the user to login into the OpenNebula RPC server}
+    api_password: ${2:# The password or token for XMLRPC authentication}
+    api_url: ${3:# The ENDPOINT URL of the XMLRPC server}
+    api_username: ${4:# The name of the user for XMLRPC authentication}
     ids: ${5:# A list of images ids whose facts you want to gather}
     name: ${6:# A O(name) of the image whose facts will be gathered}
+    validate_certs: ${7:# Whether to validate the TLS/SSL certificates or not}
+    wait_timeout: ${8:# Time to wait for the desired state to be reached before timeout, in seconds}
   tags:
     - community
     - general

@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure vCenter Server Appliance settings}
+  vmware.vmware.vcsa_settings:
+    consolecli_enabled: ${2:# Enable/Disable state of the console-based controlled CLI (TTY1)}
+    dcui_enabled: ${3:# Enable/Disable state of Direct Console User Interface (DCUI TTY2)}
+    dns_append: ${4:# If V(true) items from O(dns_domains) and O(dns_servers) will be added to already configured DNS domains/servers}
+    dns_domains: ${5:# List of DNS domains}
+    dns_hostname: ${6:# DNS hostname}
+    dns_mode: ${7:# Set the DNS mode}
+    dns_servers: ${8:# List of DNS servers}
+    firewall_rules: ${9:# Set the ordered list of firewall rules to allow or deny traffic from one or more incoming IP addresses}
+    firewall_rules_append: ${10:# If false the rules overwrites the existing firewall rules and creates a new rule list}
+    global_fips: ${11:# Enable/Disable Global FIPS mode for the appliance}
+    hostname: ${12:# The hostname or IP address of the vSphere vCenter server}
+    noproxy: ${13:# List of hosts that should be ignored by proxy configuration}
+    ntp_servers: ${14:# List of NTP servers}
+    password: ${15:# The password of the vSphere vCenter server}
+    port: ${16:# The port number of the vSphere vCenter}
+    protocol: ${17:# The connection to protocol}
+    proxy: ${18:# A list of proxy configurations}
+    proxy_host: ${19:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${20:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    resize_storage: ${21:# Resize all partitions to 100 percent of disk size}
+    shell_enabled: ${22:# Enable/Disable state of BASH, that is, access to BASH from within the controlled CLI}
+    shell_timeout: ${23:# The timeout (in seconds) specifies how long you enable the Shell access}
+    ssh_enabled: ${24:# Enable/Disable state of the SSH-based controlled CLI}
+    timesync_mode: ${25:# Set time synchronization mode}
+    timezone: ${26:# Set time zone}
+    username: ${27:# The username of the vSphere vCenter server}
+    validate_certs: ${28:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware
+    - vcsa_settings]]></content>
+  <tabTrigger>vmware.vmware.vcsa_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure vCenter Server Appliance settings</description>
+</snippet>

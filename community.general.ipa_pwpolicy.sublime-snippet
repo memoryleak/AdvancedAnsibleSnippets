@@ -1,24 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage FreeIPA password policies}
   community.general.ipa_pwpolicy:
-    failinterval: ${2:# Period (in seconds) after which the number of failed login attempts is reset}
-    group: ${3:# Name of the group that the policy applies to}
-    historylength: ${4:# Number of previous passwords that are remembered}
-    ipa_host: ${5:# IP or hostname of IPA server}
-    ipa_pass: ${6:# Password of administrative user}
-    ipa_port: ${7:# Port of FreeIPA / IPA server}
-    ipa_prot: ${8:# Protocol used by IPA server}
-    ipa_timeout: ${9:# Specifies idle timeout (in seconds) for the connection}
-    ipa_user: ${10:# Administrative account used on IPA server}
-    lockouttime: ${11:# Period (in seconds) for which users are locked out}
-    maxfailcount: ${12:# Maximum number of consecutive failures before lockout}
-    maxpwdlife: ${13:# Maximum password lifetime (in days)}
-    minclasses: ${14:# Minimum number of character classes}
-    minlength: ${15:# Minimum password length}
-    minpwdlife: ${16:# Minimum password lifetime (in hours)}
-    priority: ${17:# Priority of the policy}
-    state: ${18:# State to ensure}
-    validate_certs: ${19:# This only applies if O(ipa_prot) is V(https)}
+    dictcheck: ${2:# Check whether the password (with possible modifications) matches a word in a dictionary (using cracklib)}
+    failinterval: ${3:# Period (in seconds) after which the number of failed login attempts is reset}
+    gracelimit: ${4:# Maximum number of LDAP logins after password expiration}
+    group: ${5:# Name of the group that the policy applies to}
+    historylength: ${6:# Number of previous passwords that are remembered}
+    ipa_host: ${7:# IP or hostname of IPA server}
+    ipa_pass: ${8:# Password of administrative user}
+    ipa_port: ${9:# Port of FreeIPA / IPA server}
+    ipa_prot: ${10:# Protocol used by IPA server}
+    ipa_timeout: ${11:# Specifies idle timeout (in seconds) for the connection}
+    ipa_user: ${12:# Administrative account used on IPA server}
+    lockouttime: ${13:# Period (in seconds) for which users are locked out}
+    maxfailcount: ${14:# Maximum number of consecutive failures before lockout}
+    maxpwdlife: ${15:# Maximum password lifetime (in days)}
+    maxrepeat: ${16:# Maximum number of allowed same consecutive characters in the new password}
+    maxsequence: ${17:# Maximum length of monotonic character sequences in the new password}
+    minclasses: ${18:# Minimum number of character classes}
+    minlength: ${19:# Minimum password length}
+    minpwdlife: ${20:# Minimum password lifetime (in hours)}
+    priority: ${21:# Priority of the policy}
+    state: ${22:# State to ensure}
+    usercheck: ${23:# Check whether the password (with possible modifications) contains the user name in some form (if the name has > 3 characters)}
+    validate_certs: ${24:# This only applies if O(ipa_prot) is V(https)}
   tags:
     - community
     - general

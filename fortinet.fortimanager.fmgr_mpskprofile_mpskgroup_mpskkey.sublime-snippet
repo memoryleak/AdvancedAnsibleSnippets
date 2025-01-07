@@ -2,19 +2,21 @@
   <content><![CDATA[- name: ${1:List of multiple PSK entries}
   fortinet.fortimanager.fmgr_mpskprofile_mpskgroup_mpskkey:
     access_token: ${2:# The token to access FortiManager without using username and password}
-    adom: ${3:# the parameter (adom) in requested url}
+    adom: ${3:# The parameter (adom) in requested url}
     bypass_validation: ${4:# Only set to True when module schema diffs with FortiManager API structure, module continues to execute without validating parameters}
     enable_log: ${5:# Enable/Disable logging for task}
     forticloud_access_token: ${6:# Authenticate Ansible client with forticloud API access token}
-    mpsk-group: ${7:# the parameter (mpsk-group) in requested url}
-    mpsk-profile: ${8:# the parameter (mpsk-profile) in requested url}
-    mpskprofile_mpskgroup_mpskkey: ${9:# the top level parameters set}
-    proposed_method: ${10:# The overridden method for the underlying Json RPC request}
-    rc_failed: ${11:# The rc codes list with which the conditions to fail will be overriden}
-    rc_succeeded: ${12:# The rc codes list with which the conditions to succeed will be overriden}
-    state: ${13:# The directive to create, update or delete an object}
-    workspace_locking_adom: ${14:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
-    workspace_locking_timeout: ${15:# The maximum time in seconds to wait for other user to release the workspace lock}
+    mpsk-group: ${7:# Deprecated, please use 'mpsk_group'}
+    mpsk-profile: ${8:# Deprecated, please use 'mpsk_profile'}
+    mpsk_group: ${9:# The parameter (mpsk-group) in requested url}
+    mpsk_profile: ${10:# The parameter (mpsk-profile) in requested url}
+    mpskprofile_mpskgroup_mpskkey: ${11:# The top level parameters set}
+    proposed_method: ${12:# The overridden method for the underlying Json RPC request}
+    rc_failed: ${13:# The rc codes list with which the conditions to fail will be overriden}
+    rc_succeeded: ${14:# The rc codes list with which the conditions to succeed will be overriden}
+    state: ${15:# The directive to create, update or delete an object}
+    workspace_locking_adom: ${16:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
+    workspace_locking_timeout: ${17:# The maximum time in seconds to wait for other user to release the workspace lock}
   tags:
     - fortinet
     - fortimanager

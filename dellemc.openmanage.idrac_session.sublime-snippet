@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage iDRAC sessions}
+  dellemc.openmanage.idrac_session:
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    hostname: ${3:# IP address or hostname of the iDRAC}
+    password: ${4:# Password of the iDRAC}
+    port: ${5:# Port of the iDRAC}
+    session_id: ${6:# Session ID of the iDRAC}
+    state: ${7:# The state of the session in an iDRAC}
+    timeout: ${8:# The https socket level timeout in seconds}
+    username: ${9:# Username of the iDRAC}
+    validate_certs: ${10:# If C(false), the SSL certificates will not be validated}
+    x_auth_token: ${11:# Authentication token}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_session]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_session</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage iDRAC sessions</description>
+</snippet>

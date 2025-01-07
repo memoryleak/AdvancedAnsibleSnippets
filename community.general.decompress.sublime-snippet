@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Decompresses compressed files}
+  community.general.decompress:
+    attributes: ${2:# The attributes the resulting filesystem object should have}
+    dest: ${3:# The file name of the destination file where the compressed file will be decompressed}
+    format: ${4:# The type of compression to use to decompress}
+    group: ${5:# Name of the group that should own the filesystem object, as would be fed to C(chown)}
+    mode: ${6:# The permissions the resulting filesystem object should have}
+    owner: ${7:# Name of the user that should own the filesystem object, as would be fed to C(chown)}
+    remove: ${8:# Remove original compressed file after decompression}
+    selevel: ${9:# The level part of the SELinux filesystem object context}
+    serole: ${10:# The role part of the SELinux filesystem object context}
+    setype: ${11:# The type part of the SELinux filesystem object context}
+    seuser: ${12:# The user part of the SELinux filesystem object context}
+    src: ${13:# Remote absolute path for the file to decompress}
+    unsafe_writes: ${14:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
+  tags:
+    - community
+    - general
+    - decompress]]></content>
+  <tabTrigger>community.general.decompress</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Decompresses compressed files</description>
+</snippet>

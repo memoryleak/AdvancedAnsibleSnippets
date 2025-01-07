@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather guest information}
+  vmware.vmware.guest_info:
+    gather_tags: ${2:# If true, gather any tags attached to the vm(s)}
+    guest_password: ${3:# The password of the user to be used to connect to guest vm and fetch environment info}
+    guest_username: ${4:# The username to be used to connect to guest vm and fetch environment info}
+    hostname: ${5:# The hostname or IP address of the vSphere vCenter server}
+    moid: ${6:# The MOID of the vm to gather info for}
+    name: ${7:# The name of the vm to gather info for}
+    name_match: ${8:# If using name and multiple VMs have the same name, specify which VM should be selected}
+    password: ${9:# The password of the vSphere vCenter server}
+    port: ${10:# The port number of the vSphere vCenter}
+    properties: ${11:# If the schema is 'vsphere', gather these specific properties only}
+    protocol: ${12:# The connection to protocol}
+    proxy_host: ${13:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${14:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    schema: ${15:# The type of info to gather from the vms}
+    use_instance_uuid: ${16:# If true, search by instance UUID instead of BIOS UUID}
+    username: ${17:# The username of the vSphere vCenter server}
+    uuid: ${18:# The UUID of the vm to gather info for}
+    validate_certs: ${19:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware
+    - guest_info]]></content>
+  <tabTrigger>vmware.vmware.guest_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather guest information</description>
+</snippet>

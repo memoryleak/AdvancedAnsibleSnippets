@@ -1,34 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create and manage cloud servers on the Hetzner Cloud}
   hetzner.hcloud.server:
-    allow_deprecated_image: ${2:# Allows the creation of servers with deprecated images}
-    api_endpoint: ${3:# The API Endpoint for the Hetzner Cloud}
-    api_token: ${4:# The API Token for the Hetzner Cloud}
-    backups: ${5:# Enable or disable Backups for the given Server}
-    datacenter: ${6:# Datacenter of Server}
-    delete_protection: ${7:# Protect the Server for deletion}
-    enable_ipv4: ${8:# Enables the public ipv4 address}
-    enable_ipv6: ${9:# Enables the public ipv6 address}
-    firewalls: ${10:# List of Firewall IDs that should be attached to the server on server creation}
-    force: ${11:# Force the update of the server}
-    force_upgrade: ${12:# Deprecated}
-    id: ${13:# The ID of the Hetzner Cloud server to manage}
-    image: ${14:# Image the server should be created from}
-    ipv4: ${15:# ID of the ipv4 Primary IP to use}
-    ipv6: ${16:# ID of the ipv6 Primary IP to use}
-    labels: ${17:# User-defined labels (key-value pairs)}
-    location: ${18:# Location of Server}
-    name: ${19:# The Name of the Hetzner Cloud server to manage}
-    placement_group: ${20:# Placement Group of the server}
-    private_networks: ${21:# List of private networks the server is attached to (name or ID)}
-    rebuild_protection: ${22:# Protect the Server for rebuild}
-    rescue_mode: ${23:# Add the Hetzner rescue system type you want the server to be booted into}
-    server_type: ${24:# The Server Type of the Hetzner Cloud server to manage}
-    ssh_keys: ${25:# List of SSH key names}
-    state: ${26:# State of the server}
-    upgrade_disk: ${27:# Resize the disk size, when resizing a server}
-    user_data: ${28:# User Data to be passed to the server on creation}
-    volumes: ${29:# List of Volumes IDs that should be attached to the server on server creation}
+    api_endpoint: ${2:# The API Endpoint for the Hetzner Cloud}
+    api_token: ${3:# The API Token for the Hetzner Cloud}
+    backups: ${4:# Enable or disable Backups for the given Server}
+    datacenter: ${5:# Hetzner Cloud Datacenter (name or ID) to create the server in}
+    delete_protection: ${6:# Protect the Server for deletion}
+    enable_ipv4: ${7:# Enables the public ipv4 address}
+    enable_ipv6: ${8:# Enables the public ipv6 address}
+    firewalls: ${9:# List of Hetzner Cloud Firewalls (name or ID) that should be attached to the server}
+    force: ${10:# Force the update of the server}
+    id: ${11:# ID of the Hetzner Cloud Server to manage}
+    image: ${12:# Hetzner Cloud Image (name or ID) to create the server from}
+    image_allow_deprecated: ${13:# Allows the creation of servers with deprecated images}
+    ipv4: ${14:# Hetzner Cloud Primary IPv4 (name or ID) to use}
+    ipv6: ${15:# Hetzner Cloud Primary IPv6 (name or ID) to use}
+    labels: ${16:# User-defined labels (key-value pairs)}
+    location: ${17:# Hetzner Cloud Location (name or ID) to create the server in}
+    name: ${18:# Name of the Hetzner Cloud Server to manage}
+    placement_group: ${19:# Hetzner Cloud Placement Group (name or ID) to create the server in}
+    private_networks: ${20:# List of Hetzner Cloud Networks (name or ID) the server should be attached to}
+    rebuild_protection: ${21:# Protect the Server for rebuild}
+    rescue_mode: ${22:# Add the Hetzner rescue system type you want the server to be booted into}
+    server_type: ${23:# Hetzner Cloud Server Type (name or ID) of the server}
+    ssh_keys: ${24:# List of Hetzner Cloud SSH Keys (name or ID) to create the server with}
+    state: ${25:# State of the server}
+    upgrade_disk: ${26:# Resize the disk size, when resizing a server}
+    user_data: ${27:# User Data to be passed to the server on creation}
+    volumes: ${28:# List of Hetzner Cloud Volumes (name or ID) that should be attached to the server}
   tags:
     - hetzner
     - hcloud

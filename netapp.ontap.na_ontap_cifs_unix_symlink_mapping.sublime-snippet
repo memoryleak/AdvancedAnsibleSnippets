@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP module to manage UNIX symbolic link mapping for CIFS clients}
+  netapp.ontap.na_ontap_cifs_unix_symlink_mapping:
+    cert_filepath: ${2:# path to SSL client cert file (}
+    cifs_path: ${3:# Specifies the CIFS path on the destination to which the symbolic link maps}
+    cifs_server: ${4:# Specifies the destination CIFS server (DNS name, IP address, or NetBIOS name)}
+    feature_flags: ${5:# Enable or disable a new feature}
+    force_ontap_version: ${6:# Override the cluster ONTAP version when using REST}
+    home_directory: ${7:# Specify if the destination share is a home directory}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    http_port: ${9:# Override the default port (80 or 443) with this port}
+    https: ${10:# Enable and disable https}
+    key_filepath: ${11:# path to SSL client key file}
+    locality: ${12:# Specifies whether the CIFS symbolic link is a local link or wide link}
+    password: ${13:# Password for the specified user}
+    share_name: ${14:# Specifies the CIFS share name on the destination CIFS server to which the UNIX symbolic link is pointing}
+    state: ${15:# Whether the specified symlink mapping should exist or not}
+    unix_path: ${16:# Specifies the UNIX path prefix to be matched for the mapping}
+    use_rest: ${17:# This module only supports REST}
+    username: ${18:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${19:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${20:# Name of the vserver to use}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_cifs_unix_symlink_mapping]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_cifs_unix_symlink_mapping</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP module to manage UNIX symbolic link mapping for CIFS clients</description>
+</snippet>

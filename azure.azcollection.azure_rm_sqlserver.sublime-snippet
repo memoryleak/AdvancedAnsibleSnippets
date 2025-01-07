@@ -13,25 +13,27 @@
     change_admin_password: ${11:# Whether or not the I(admin_password) should be updated for an existing server}
     client_id: ${12:# Azure client ID}
     cloud_environment: ${13:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    identity: ${14:# The identity type}
-    location: ${15:# Resource location}
-    log_mode: ${16:# Parent argument}
-    log_path: ${17:# Parent argument}
-    minimal_tls_version: ${18:# Require clients to use a specified TLS version}
-    name: ${19:# The name of the server}
-    password: ${20:# Active Directory user password}
-    profile: ${21:# Security profile found in ~/}
-    public_network_access: ${22:# Whether or not public endpoint access is allowed for the server}
-    resource_group: ${23:# The name of the resource group that contains the resource}
-    restrict_outbound_network_access: ${24:# Whether or not to restrict outbound network access for this server}
-    secret: ${25:# Azure client secret}
-    state: ${26:# State of the SQL server}
-    subscription_id: ${27:# Your Azure subscription Id}
-    tags: ${28:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${29:# Azure tenant ID}
-    thumbprint: ${30:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    version: ${31:# The version of the server}
-    x509_certificate_path: ${32:# Path to the X509 certificate used to create the service principal in PEM format}
+    disable_instance_discovery: ${14:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    identity: ${15:# Specifies the managed identity to be used with SqlServer}
+    location: ${16:# Resource location}
+    log_mode: ${17:# Parent argument}
+    log_path: ${18:# Parent argument}
+    minimal_tls_version: ${19:# Require clients to use a specified TLS version}
+    name: ${20:# The name of the server}
+    password: ${21:# Active Directory user password}
+    primary_user_assigned_identity_id: ${22:# Specifies the primary User Assigned Identity to use}
+    profile: ${23:# Security profile found in ~/}
+    public_network_access: ${24:# Whether or not public endpoint access is allowed for the server}
+    resource_group: ${25:# The name of the resource group that contains the resource}
+    restrict_outbound_network_access: ${26:# Whether or not to restrict outbound network access for this server}
+    secret: ${27:# Azure client secret}
+    state: ${28:# State of the SQL server}
+    subscription_id: ${29:# Your Azure subscription Id}
+    tags: ${30:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${31:# Azure tenant ID}
+    thumbprint: ${32:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    version: ${33:# The version of the server}
+    x509_certificate_path: ${34:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

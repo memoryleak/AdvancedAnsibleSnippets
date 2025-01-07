@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages passcode-profile objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_passcode_profile:
+    allow_simple_passcode: ${2:# The passcode length is 4 and only numeric values allowed}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    color: ${4:# Color of the object}
+    comments: ${5:# Comments string}
+    details_level: ${6:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${7:# Indicates which domains to process the commands on}
+    enable_inactivity_time_lock: ${8:# Lock the device if app is inactive}
+    enable_passcode_failed_attempts: ${9:# Exit after few failures in passcode verification}
+    enable_passcode_history: ${10:# Check passcode history for reparations}
+    force_passcode_expiration: ${11:# Enable/disable expiration date to the passcode}
+    ignore_errors: ${12:# Apply changes ignoring errors}
+    ignore_warnings: ${13:# Apply changes ignoring warnings}
+    max_inactivity_time_lock: ${14:# Time without user input before passcode must be re-entered (in minutes)}
+    max_passcode_failed_attempts: ${15:# Number of failed attempts allowed}
+    min_passcode_complex_characters: ${16:# Minimum number of complex characters (if 'require-alphanumeric-passcode' is enabled)}
+    min_passcode_length: ${17:# Minimum passcode length - relevant if 'allow-simple-passcode' is disable}
+    name: ${18:# Object name}
+    passcode_expiration_period: ${19:# The period in days after which the passcode will expire}
+    passcode_history: ${20:# Number of passcodes that will be kept in history}
+    require_alphanumeric_passcode: ${21:# Require alphanumeric characters in the passcode - relevant if 'allow-simple-passcode' is disable}
+    state: ${22:# State of the access rule (present or absent)}
+    tags: ${23:# Collection of tag identifiers}
+    version: ${24:# Version of checkpoint}
+    wait_for_task: ${25:# Wait for the task to end}
+    wait_for_task_timeout: ${26:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_passcode_profile]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_passcode_profile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages passcode-profile objects on Checkpoint over Web Services API</description>
+</snippet>

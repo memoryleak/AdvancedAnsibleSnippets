@@ -1,11 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Retrieve existing object using object uid}
   check_point.mgmt.cp_mgmt_show_place_holder:
-    details_level: ${2:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
-    uid: ${3:# Object unique identifier}
-    version: ${4:# Version of checkpoint}
-    wait_for_task: ${5:# Wait for the task to end}
-    wait_for_task_timeout: ${6:# How many minutes to wait until throwing a timeout error}
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    details_level: ${3:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    uid: ${4:# Object unique identifier}
+    version: ${5:# Version of checkpoint}
+    wait_for_task: ${6:# Wait for the task to end}
+    wait_for_task_timeout: ${7:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

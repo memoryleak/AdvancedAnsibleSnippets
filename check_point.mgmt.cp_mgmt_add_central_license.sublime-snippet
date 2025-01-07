@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add central license}
+  check_point.mgmt.cp_mgmt_add_central_license:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    license: ${3:# The license string received from the User Center - without 'cplic put'}
+    version: ${4:# Version of checkpoint}
+    wait_for_task: ${5:# Wait for the task to end}
+    wait_for_task_timeout: ${6:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_add_central_license]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_add_central_license</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add central license</description>
+</snippet>

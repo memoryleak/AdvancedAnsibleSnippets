@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages https-rule objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_https_rule:
+    action: ${2:# Rule inspect level}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    blade: ${4:# Blades for HTTPS Inspection}
+    certificate: ${5:# Internal Server Certificate identified by Name or UID, otherwise, 'Outbound Certificate' is a default value}
+    comments: ${6:# Comments string}
+    destination: ${7:# Collection of Network objects identified by Name or UID that represents connection destination}
+    destination_negate: ${8:# TRUE if 'negate' value is set for Destination}
+    details_level: ${9:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    enabled: ${10:# Enable/Disable the rule}
+    ignore_errors: ${11:# Apply changes ignoring errors}
+    ignore_warnings: ${12:# Apply changes ignoring warnings}
+    install_on: ${13:# Which Gateways identified by the name or UID to install the policy on}
+    layer: ${14:# Layer that holds the Object}
+    name: ${15:# Rule name}
+    position: ${16:# Position in the rulebase}
+    service: ${17:# Collection of Network objects identified by Name or UID that represents connection service}
+    service_negate: ${18:# TRUE if 'negate' value is set for Service}
+    site_category: ${19:# Collection of Site Categories objects identified by the name or UID}
+    site_category_negate: ${20:# TRUE if 'negate' value is set for Site Category}
+    source: ${21:# Collection of Network objects identified by Name or UID that represents connection source}
+    source_negate: ${22:# TRUE if 'negate' value is set for Source}
+    state: ${23:# State of the access rule (present or absent)}
+    tags: ${24:# Collection of tag identifiers}
+    track: ${25:# a 'None','Log','Alert','Mail','SNMP trap','Mail','User Alert 1', 'User Alert 2', 'User Alert 3'}
+    version: ${26:# Version of checkpoint}
+    wait_for_task: ${27:# Wait for the task to end}
+    wait_for_task_timeout: ${28:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_https_rule]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_https_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages https-rule objects on Checkpoint over Web Services API</description>
+</snippet>

@@ -3,24 +3,25 @@
   community.postgresql.postgresql_subscription:
     ca_cert: ${2:# Specifies the name of a file containing SSL certificate authority (CA) certificate(s)}
     cascade: ${3:# Drop subscription dependencies}
-    connect_params: ${4:# Any additional parameters to be passed to libpg}
-    connparams: ${5:# The connection dict param-value to connect to the publisher}
-    db: ${6:# Name of the database to connect to and where the subscription state will be changed}
-    login_host: ${7:# Host running the database}
-    login_password: ${8:# The password this module should use to establish its PostgreSQL session}
-    login_unix_socket: ${9:# Path to a Unix domain socket for local connections}
-    login_user: ${10:# The username this module should use to establish its PostgreSQL session}
-    name: ${11:# Name of the subscription to add, update, or remove}
-    owner: ${12:# Subscription owner}
-    port: ${13:# Database port to connect to}
-    publications: ${14:# The publication names on the publisher to use for the subscription}
-    session_role: ${15:# Switch to session_role after connecting}
-    ssl_cert: ${16:# Specifies the file name of the client SSL certificate}
-    ssl_key: ${17:# Specifies the location for the secret key used for the client certificate}
-    ssl_mode: ${18:# Determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the server}
-    state: ${19:# The subscription state}
-    subsparams: ${20:# Dictionary of optional parameters for a subscription, e}
-    trust_input: ${21:# If C(false), check whether values of parameters I(name), I(publications), I(owner), I(session_role), I(connparams), I(subsparams) are potentially dangerous}
+    comment: ${4:# Sets a comment on the subscription}
+    connect_params: ${5:# Any additional parameters to be passed to libpg}
+    connparams: ${6:# The connection dict param-value to connect to the publisher}
+    db: ${7:# Name of the database to connect to and where the subscription state will be changed}
+    login_host: ${8:# Host running the database}
+    login_password: ${9:# The password this module should use to establish its PostgreSQL session}
+    login_unix_socket: ${10:# Path to a Unix domain socket for local connections}
+    login_user: ${11:# The username this module should use to establish its PostgreSQL session}
+    name: ${12:# Name of the subscription to add, update, or remove}
+    owner: ${13:# Subscription owner}
+    port: ${14:# Database port to connect to}
+    publications: ${15:# The publication names on the publisher to use for the subscription}
+    session_role: ${16:# Switch to session_role after connecting}
+    ssl_cert: ${17:# Specifies the file name of the client SSL certificate}
+    ssl_key: ${18:# Specifies the location for the secret key used for the client certificate}
+    ssl_mode: ${19:# Determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the server}
+    state: ${20:# The subscription state}
+    subsparams: ${21:# Dictionary of optional parameters for a subscription, e}
+    trust_input: ${22:# If C(false), check whether values of parameters I(name), I(publications), I(owner), I(session_role), I(connparams), I(subsparams) are potentially dangerous}
   tags:
     - community
     - postgresql

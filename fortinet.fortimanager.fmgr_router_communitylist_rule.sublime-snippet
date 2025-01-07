@@ -2,18 +2,19 @@
   <content><![CDATA[- name: ${1:Community list rule}
   fortinet.fortimanager.fmgr_router_communitylist_rule:
     access_token: ${2:# The token to access FortiManager without using username and password}
-    adom: ${3:# the parameter (adom) in requested url}
+    adom: ${3:# The parameter (adom) in requested url}
     bypass_validation: ${4:# Only set to True when module schema diffs with FortiManager API structure, module continues to execute without validating parameters}
-    community-list: ${5:# the parameter (community-list) in requested url}
-    enable_log: ${6:# Enable/Disable logging for task}
-    forticloud_access_token: ${7:# Authenticate Ansible client with forticloud API access token}
-    proposed_method: ${8:# The overridden method for the underlying Json RPC request}
-    rc_failed: ${9:# The rc codes list with which the conditions to fail will be overriden}
-    rc_succeeded: ${10:# The rc codes list with which the conditions to succeed will be overriden}
-    router_communitylist_rule: ${11:# the top level parameters set}
-    state: ${12:# The directive to create, update or delete an object}
-    workspace_locking_adom: ${13:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
-    workspace_locking_timeout: ${14:# The maximum time in seconds to wait for other user to release the workspace lock}
+    community-list: ${5:# Deprecated, please use 'community_list'}
+    community_list: ${6:# The parameter (community-list) in requested url}
+    enable_log: ${7:# Enable/Disable logging for task}
+    forticloud_access_token: ${8:# Authenticate Ansible client with forticloud API access token}
+    proposed_method: ${9:# The overridden method for the underlying Json RPC request}
+    rc_failed: ${10:# The rc codes list with which the conditions to fail will be overriden}
+    rc_succeeded: ${11:# The rc codes list with which the conditions to succeed will be overriden}
+    router_communitylist_rule: ${12:# The top level parameters set}
+    state: ${13:# The directive to create, update or delete an object}
+    workspace_locking_adom: ${14:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
+    workspace_locking_timeout: ${15:# The maximum time in seconds to wait for other user to release the workspace lock}
   tags:
     - fortinet
     - fortimanager

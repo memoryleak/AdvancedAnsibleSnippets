@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage device replacement workflows in Cisco Catalyst Center}
+  cisco.dnac.rma_workflow_manager:
+    ccc_poll_interval: ${2:# The interval, in seconds, for polling Cisco Catalyst Center}
+    config: ${3:# A list of faulty and replacement device details for initiating the RMA workflow}
+    config_verify: ${4:# Set to True to verify the Cisco Catalyst Center configuration after applying the playbook config}
+    dnac_api_task_timeout: ${5:# Defines the timeout in seconds for API calls to retrieve task details}
+    dnac_debug: ${6:# Indicates whether debugging is enabled in the Cisco Catalyst Center SDK}
+    dnac_host: ${7:# The hostname of the Cisco Catalyst Center}
+    dnac_log: ${8:# Flag to enable/disable playbook execution logging}
+    dnac_log_append: ${9:# Determines the mode of the file}
+    dnac_log_file_path: ${10:# Governs logging}
+    dnac_log_level: ${11:# Sets the threshold for log level}
+    dnac_password: ${12:# The password for authentication at the Cisco Catalyst Center}
+    dnac_port: ${13:# Specifies the port number associated with the Cisco Catalyst Center}
+    dnac_task_poll_interval: ${14:# Specifies the interval in seconds between successive calls to the API to retrieve task details}
+    dnac_username: ${15:# The username for authentication at the Cisco Catalyst Center}
+    dnac_verify: ${16:# Flag to enable or disable SSL certificate verification}
+    dnac_version: ${17:# Specifies the version of the Cisco Catalyst Center that the SDK should use}
+    resync_retry_count: ${18:# The number of times to retry resynchronization}
+    resync_retry_interval: ${19:# The interval, in seconds, between resynchronization retries}
+    state: ${20:# The 'replaced' state is used to indicate the replacement of faulty network devices with}
+    timeout_interval: ${21:# The timeout interval, in seconds, for operations}
+    validate_response_schema: ${22:# Flag for Cisco Catalyst Center SDK to enable the validation of request bodies against a JSON schema}
+  tags:
+    - cisco
+    - dnac
+    - rma_workflow_manager]]></content>
+  <tabTrigger>cisco.dnac.rma_workflow_manager</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage device replacement workflows in Cisco Catalyst Center</description>
+</snippet>

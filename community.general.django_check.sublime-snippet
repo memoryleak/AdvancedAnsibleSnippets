@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Wrapper for C(django-admin check)}
+  community.general.django_check:
+    apps: ${2:# Restrict checks to specific applications}
+    database: ${3:# Specify databases to run checks against}
+    deploy: ${4:# Include additional checks relevant in a deployment setting}
+    fail_level: ${5:# Message level that will trigger failure}
+    pythonpath: ${6:# Adds the given filesystem path to the Python import search path}
+    settings: ${7:# Specifies the settings module to use}
+    skip_checks: ${8:# Skips running system checks prior to running the command}
+    tags: ${9:# Restrict checks to specific tags}
+    traceback: ${10:# Provides a full stack trace in the output when a C(CommandError) is raised}
+    venv: ${11:# Use the the Python interpreter from this virtual environment}
+    verbosity: ${12:# Specifies the amount of notification and debug information in the output of C(django-admin)}
+  tags:
+    - community
+    - general
+    - django_check]]></content>
+  <tabTrigger>community.general.django_check</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Wrapper for C(django-admin check)</description>
+</snippet>

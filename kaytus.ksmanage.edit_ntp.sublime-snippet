@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set NTP}
+  kaytus.ksmanage.edit_ntp:
+    auto_date: ${2:# Date auto synchronize}
+    host: ${3:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    max_variety: ${4:# NTP Maximum jump time(minute), max variety(1-60)}
+    ntp_time: ${5:# NTP time(YYYYmmddHHMMSS)}
+    password: ${6:# Specifies the password to use to authenticate the connection to the remote device}
+    provider: ${7:# A dict object containing connection details}
+    server1: ${8:# NTP Server1(ipv4 or ipv6 or domain name), set when auto_date is enable}
+    server2: ${9:# NTP Server2(ipv4 or ipv6 or domain name), set when auto_date is enable}
+    server3: ${10:# NTP Server3(ipv4 or ipv6 or domain name), set when auto_date is enable}
+    server4: ${11:# NTP Server4(ipv4 or ipv6 or domain name), set when auto_date is enable}
+    server5: ${12:# NTP Server5(ipv4 or ipv6 or domain name), set when auto_date is enable}
+    server6: ${13:# NTP Server6(ipv4 or ipv6 or domain name), set when auto_date is enable}
+    syn_cycle: ${14:# NTP syn cycle(minute), sync cycle(5-1440)}
+    time_zone: ${15:# UTC time zone, chose from -12, -11}
+    username: ${16:# Configures the username to use to authenticate the connection to the remote device}
+  tags:
+    - kaytus
+    - ksmanage
+    - edit_ntp]]></content>
+  <tabTrigger>kaytus.ksmanage.edit_ntp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set NTP</description>
+</snippet>

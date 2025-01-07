@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Copy file to/from a container}
+  containers.podman.podman_container_copy:
+    archive: ${2:# Chown copied files to the primary uid/gid of the destination container}
+    container: ${3:# Name/ID of the container to copy from/to}
+    dest: ${4:# Path of the destination file/folder to copy from/to the container}
+    executable: ${5:# Path to C(podman) executable if it is not in the C($PATH) on the machine running C(podman)}
+    from_container: ${6:# Specify whether or not the file must be copied from the container to the host}
+    overwrite: ${7:# Allow to overwrite directories with non-directories and vice versa}
+    src: ${8:# Path of the file/folder to copy from/to the container}
+  tags:
+    - containers
+    - podman
+    - podman_container_copy]]></content>
+  <tabTrigger>containers.podman.podman_container_copy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Copy file to/from a container</description>
+</snippet>

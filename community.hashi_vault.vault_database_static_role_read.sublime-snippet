@@ -1,0 +1,44 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Queries a static role definition}
+  community.hashi_vault.vault_database_static_role_read:
+    auth_method: ${2:# Authentication method to be used}
+    aws_access_key: ${3:# The AWS access key to use}
+    aws_iam_server_id: ${4:# If specified, sets the value to use for the C(X-Vault-AWS-IAM-Server-ID) header as part of C(GetCallerIdentity) request}
+    aws_profile: ${5:# The AWS profile}
+    aws_secret_key: ${6:# The AWS secret key that corresponds to the access key}
+    aws_security_token: ${7:# The AWS security token if using temporary access and secret keys}
+    azure_client_id: ${8:# The client ID (also known as application ID) of the Azure AD service principal or managed identity}
+    azure_client_secret: ${9:# The client secret of the Azure AD service principal}
+    azure_resource: ${10:# The resource URL for the application registered in Azure Active Directory}
+    azure_tenant_id: ${11:# The Azure Active Directory Tenant ID (also known as the Directory ID) of the service principal}
+    ca_cert: ${12:# Path to certificate to use for authentication}
+    cert_auth_private_key: ${13:# For C(cert) auth, path to the private key file to authenticate with, in PEM format}
+    cert_auth_public_key: ${14:# For C(cert) auth, path to the certificate file to authenticate with, in PEM format}
+    engine_mount_point: ${15:# The path where the secret backend is mounted}
+    jwt: ${16:# The JSON Web Token (JWT) to use for JWT authentication to Vault}
+    mount_point: ${17:# Vault mount point}
+    namespace: ${18:# Vault namespace where secrets reside}
+    password: ${19:# Authentication password}
+    proxies: ${20:# URL(s) to the proxies used to access the Vault service}
+    region: ${21:# The AWS region for which to create the connection}
+    retries: ${22:# Allows for retrying on errors, based on the L(Retry class in the urllib3 library,https://urllib3}
+    retry_action: ${23:# Controls whether and how to show messages on I(retries)}
+    role_id: ${24:# Vault Role ID or name}
+    role_name: ${25:# The role name to be read from Hashicorp Vault}
+    secret_id: ${26:# Secret ID to be used for Vault AppRole authentication}
+    timeout: ${27:# Sets the connection timeout in seconds}
+    token: ${28:# Vault token}
+    token_file: ${29:# If no token is specified, will try to read the token from this file in I(token_path)}
+    token_path: ${30:# If no token is specified, will try to read the I(token_file) from this path}
+    token_validate: ${31:# For token auth, will perform a C(lookup-self) operation to determine the token's validity before using it}
+    url: ${32:# URL to the Vault service}
+    username: ${33:# Authentication user name}
+    validate_certs: ${34:# Controls verification and validation of SSL certificates, mostly you only want to turn off with self signed ones}
+  tags:
+    - community
+    - hashi_vault
+    - vault_database_static_role_read]]></content>
+  <tabTrigger>community.hashi_vault.vault_database_static_role_read</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Queries a static role definition</description>
+</snippet>

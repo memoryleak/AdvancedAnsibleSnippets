@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Grafana Silences}
+  community.grafana.grafana_silence:
+    client_cert: ${2:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${3:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    comment: ${4:# The comment that describes the silence}
+    created_by: ${5:# The author that creates the silence}
+    ends_at: ${6:# ISO 8601 Timestamp with milliseconds  e}
+    grafana_api_key: ${7:# The Grafana API key}
+    matchers: ${8:# List of matchers to select which alerts are affected by the silence}
+    org_id: ${9:# The Grafana organization ID where the silence will be created or deleted}
+    org_name: ${10:# The Grafana organization name where the silence will be created or deleted}
+    skip_version_check: ${11:# Skip Grafana version check and try to reach api endpoint anyway}
+    starts_at: ${12:# ISO 8601 Timestamp with milliseconds  e}
+    state: ${13:# Delete the first occurrence of a silence with the same settings}
+    url: ${14:# The Grafana URL}
+    url_password: ${15:# The Grafana password for API authentication}
+    url_username: ${16:# The Grafana user for API authentication}
+    use_proxy: ${17:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${18:# If C(false), SSL certificates will not be validated}
+  tags:
+    - community
+    - grafana
+    - grafana_silence]]></content>
+  <tabTrigger>community.grafana.grafana_silence</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Grafana Silences</description>
+</snippet>

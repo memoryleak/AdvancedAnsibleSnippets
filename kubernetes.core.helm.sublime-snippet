@@ -23,14 +23,16 @@
     release_state: ${21:# Desirated state of release}
     release_values: ${22:# Value to pass to chart}
     replace: ${23:# Reuse the given name, only if that name is a deleted release which remains in the history}
-    set_values: ${24:# Values to pass to chart configuration}
-    skip_crds: ${25:# Skip custom resource definitions when installing or upgrading}
-    timeout: ${26:# A Go duration (described here I(https://pkg}
-    update_repo_cache: ${27:# Run C(helm repo update) before the operation}
-    validate_certs: ${28:# Whether or not to verify the API server's SSL certificates}
-    values_files: ${29:# Value files to pass to chart}
-    wait: ${30:# When I(release_state) is set to C(present), wait until all Pods, PVCs, Services, and minimum number of Pods of a Deployment are in a ready state before marking the release as successful}
-    wait_timeout: ${31:# Timeout when wait option is enabled (helm2 is a number of seconds, helm3 is a duration)}
+    reset_values: ${24:# When upgrading package, reset the values to the ones built into the chart}
+    reuse_values: ${25:# When upgrading package, specifies wether to reuse the last release's values and merge in any overrides from parameters I(release_values), I(values_files) or I(set_values)}
+    set_values: ${26:# Values to pass to chart configuration}
+    skip_crds: ${27:# Skip custom resource definitions when installing or upgrading}
+    timeout: ${28:# A Go duration (described here I(https://pkg}
+    update_repo_cache: ${29:# Run C(helm repo update) before the operation}
+    validate_certs: ${30:# Whether or not to verify the API server's SSL certificates}
+    values_files: ${31:# Value files to pass to chart}
+    wait: ${32:# When I(release_state) is set to C(present), wait until all Pods, PVCs, Services, and minimum number of Pods of a Deployment are in a ready state before marking the release as successful}
+    wait_timeout: ${33:# Timeout when wait option is enabled (helm2 is a number of seconds, helm3 is a duration)}
   tags:
     - kubernetes
     - core

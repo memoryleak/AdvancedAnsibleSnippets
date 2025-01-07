@@ -11,30 +11,35 @@
     client_id: ${9:# Azure client ID}
     cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
     create_option: ${11:# C(import) from a VHD file in I(source_uri) and C(copy) from previous managed disk I(source_uri)}
-    disk_size_gb: ${12:# Size in GB of the managed disk to be created}
-    location: ${13:# Valid Azure location}
-    log_mode: ${14:# Parent argument}
-    log_path: ${15:# Parent argument}
-    lun: ${16:# The logical unit number for data disk}
-    managed_by: ${17:# Name of an existing virtual machine with which the disk is or will be associated, this VM should be in the same resource group}
-    managed_by_extended: ${18:# List of name and resource group of the VMs that have the disk attached}
-    max_shares: ${19:# The maximum number of VMs that can attach to the disk at the same time}
-    name: ${20:# Name of the managed disk}
-    os_type: ${21:# Type of Operating System}
-    password: ${22:# Active Directory user password}
-    profile: ${23:# Security profile found in ~/}
-    resource_group: ${24:# Name of a resource group where the managed disk exists or will be created}
-    secret: ${25:# Azure client secret}
-    source_uri: ${26:# URI to a valid VHD file to be used or the resource ID of the managed disk to copy}
-    state: ${27:# Assert the state of the managed disk}
-    storage_account_id: ${28:# The full path to the storage account the image is to be imported from}
-    storage_account_type: ${29:# Type of storage for the managed disk}
-    subscription_id: ${30:# Your Azure subscription Id}
-    tags: ${31:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${32:# Azure tenant ID}
-    thumbprint: ${33:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    x509_certificate_path: ${34:# Path to the X509 certificate used to create the service principal in PEM format}
-    zone: ${35:# The Azure managed disk's zone}
+    disable_instance_discovery: ${12:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    disk_iops_read_only: ${13:# The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly}
+    disk_iops_read_write: ${14:# The number of IOPS allowed for this disk}
+    disk_m_bps_read_only: ${15:# The total throughput (MBps) that will be allowed across all VMs mounting the shared disk as ReadOnly}
+    disk_m_bps_read_write: ${16:# The bandwidth allowed for this disk}
+    disk_size_gb: ${17:# Size in GB of the managed disk to be created}
+    location: ${18:# Valid Azure location}
+    log_mode: ${19:# Parent argument}
+    log_path: ${20:# Parent argument}
+    lun: ${21:# The logical unit number for data disk}
+    managed_by: ${22:# Name of an existing virtual machine with which the disk is or will be associated, this VM should be in the same resource group}
+    managed_by_extended: ${23:# List of name and resource group of the VMs that have the disk attached}
+    max_shares: ${24:# The maximum number of VMs that can attach to the disk at the same time}
+    name: ${25:# Name of the managed disk}
+    os_type: ${26:# Type of Operating System}
+    password: ${27:# Active Directory user password}
+    profile: ${28:# Security profile found in ~/}
+    resource_group: ${29:# Name of a resource group where the managed disk exists or will be created}
+    secret: ${30:# Azure client secret}
+    source_uri: ${31:# URI to a valid VHD file to be used or the resource ID of the managed disk to copy}
+    state: ${32:# Assert the state of the managed disk}
+    storage_account_id: ${33:# The full path to the storage account the image is to be imported from}
+    storage_account_type: ${34:# Type of storage for the managed disk}
+    subscription_id: ${35:# Your Azure subscription Id}
+    tags: ${36:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${37:# Azure tenant ID}
+    thumbprint: ${38:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${39:# Path to the X509 certificate used to create the service principal in PEM format}
+    zone: ${40:# The Azure managed disk's zone}
   tags:
     - azure
     - azcollection

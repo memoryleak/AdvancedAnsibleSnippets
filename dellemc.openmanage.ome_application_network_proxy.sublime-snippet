@@ -5,15 +5,19 @@
     enable_authentication: ${3:# Enable or disable proxy authentication}
     enable_proxy: ${4:# Enables or disables the HTTP proxy configuration}
     hostname: ${5:# OpenManage Enterprise or OpenManage Enterprise Modular IP address or hostname}
-    ip_address: ${6:# Proxy server address}
-    password: ${7:# OpenManage Enterprise or OpenManage Enterprise Modular password}
-    port: ${8:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
-    proxy_password: ${9:# Proxy server password}
-    proxy_port: ${10:# Proxy server's port number}
-    proxy_username: ${11:# Proxy server username}
-    timeout: ${12:# The socket level timeout in seconds}
-    username: ${13:# OpenManage Enterprise or OpenManage Enterprise Modular username}
-    validate_certs: ${14:# If C(false), the SSL certificates will not be validated}
+    ignore_certificate_validation: ${6:# This option will ignore the integrated certificate checks like those used for the warranty and catalog updates}
+    ip_address: ${7:# Proxy server address}
+    password: ${8:# OpenManage Enterprise or OpenManage Enterprise Modular password}
+    port: ${9:# OpenManage Enterprise or OpenManage Enterprise Modular HTTPS port}
+    proxy_exclusion_list: ${10:# The list of IPv4 addresses, IPv6 addresses or the domain names of the devices that can bypass the proxy server to directly access the appliance}
+    proxy_password: ${11:# Proxy server password}
+    proxy_port: ${12:# Proxy server's port number}
+    proxy_username: ${13:# Proxy server username}
+    timeout: ${14:# The socket level timeout in seconds}
+    update_password: ${15:# This flag is used to update the I(proxy_password)}
+    username: ${16:# OpenManage Enterprise or OpenManage Enterprise Modular username}
+    validate_certs: ${17:# If C(false), the SSL certificates will not be validated}
+    x_auth_token: ${18:# Authentication token}
   tags:
     - dellemc
     - openmanage

@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manipulate Consul binding rules}
+  community.general.consul_binding_rule:
+    auth_method: ${2:# The name of the auth method that this rule applies to}
+    bind_name: ${3:# The name to bind to a token at login-time}
+    bind_type: ${4:# Specifies the way the binding rule affects a token created at login}
+    bind_vars: ${5:# Specifies the templated policy variables when O(bind_type) is set to V(templated-policy)}
+    ca_path: ${6:# The CA bundle to use for https connections}
+    description: ${7:# Free form human readable description of the binding rule}
+    host: ${8:# Host of the consul agent, defaults to V(localhost)}
+    name: ${9:# Specifies a name for the binding rule}
+    port: ${10:# The port on which the consul agent is running}
+    scheme: ${11:# The protocol scheme on which the consul agent is running}
+    selector: ${12:# Specifies the expression used to match this rule against valid identities returned from an auth method validation}
+    state: ${13:# Whether the binding rule should be present or absent}
+    token: ${14:# The token to use for authorization}
+    validate_certs: ${15:# Whether to verify the TLS certificate of the consul agent}
+  tags:
+    - community
+    - general
+    - consul_binding_rule]]></content>
+  <tabTrigger>community.general.consul_binding_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manipulate Consul binding rules</description>
+</snippet>

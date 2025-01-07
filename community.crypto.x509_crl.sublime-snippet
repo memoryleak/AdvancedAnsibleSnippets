@@ -7,7 +7,7 @@
     digest: ${5:# Digest algorithm to be used when signing the CRL}
     force: ${6:# Should the CRL be forced to be regenerated}
     format: ${7:# Whether the CRL file should be in PEM or DER format}
-    group: ${8:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    group: ${8:# Name of the group that should own the filesystem object, as would be fed to C(chown)}
     ignore_timestamps: ${9:# Whether the timestamps O(last_update), O(next_update) and O(revoked_certificates[]}
     issuer: ${10:# Key/value pairs that will be present in the issuer name field of the CRL}
     issuer_ordered: ${11:# A list of dictionaries, where every dictionary must contain one key/value pair}
@@ -15,7 +15,7 @@
     mode: ${13:# This parameter has been renamed to O(crl_mode)}
     name_encoding: ${14:# How to encode names (DNS names, URIs, email addresses) in return values}
     next_update: ${15:# The absolute latest point in time by which this O(issuer) is expected to have issued another CRL}
-    owner: ${16:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
+    owner: ${16:# Name of the user that should own the filesystem object, as would be fed to C(chown)}
     path: ${17:# Remote absolute path where the generated CRL file should be created or is already located}
     privatekey_content: ${18:# The content of the CA's private key to use when signing the CRL}
     privatekey_passphrase: ${19:# The passphrase for the O(privatekey_path)}
@@ -23,11 +23,12 @@
     return_content: ${21:# If set to V(true), will return the (current or generated) CRL's content as RV(crl)}
     revoked_certificates: ${22:# List of certificates to be revoked}
     selevel: ${23:# The level part of the SELinux filesystem object context}
-    serole: ${24:# The role part of the SELinux filesystem object context}
-    setype: ${25:# The type part of the SELinux filesystem object context}
-    seuser: ${26:# The user part of the SELinux filesystem object context}
-    state: ${27:# Whether the CRL file should exist or not, taking action if the state is different from what is stated}
-    unsafe_writes: ${28:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
+    serial_numbers: ${24:# This option determines which values will be accepted for O(revoked_certificates[]}
+    serole: ${25:# The role part of the SELinux filesystem object context}
+    setype: ${26:# The type part of the SELinux filesystem object context}
+    seuser: ${27:# The user part of the SELinux filesystem object context}
+    state: ${28:# Whether the CRL file should exist or not, taking action if the state is different from what is stated}
+    unsafe_writes: ${29:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
   tags:
     - community
     - crypto

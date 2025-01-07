@@ -6,59 +6,60 @@
     bandwidth: ${4:# Maximum available network bandwidth in bytes/second}
     baseurl: ${5:# URL to the directory where the yum repository's 'repodata' directory lives}
     cost: ${6:# Relative cost of accessing this repository}
-    deltarpm_metadata_percentage: ${7:# When the relative size of deltarpm metadata vs pkgs is larger than this, deltarpm metadata is not downloaded from the repo}
-    deltarpm_percentage: ${8:# When the relative size of delta vs pkg is larger than this, delta is not used}
-    description: ${9:# A human readable string describing the repository}
-    enabled: ${10:# This tells yum whether or not use this repository}
-    enablegroups: ${11:# Determines whether yum will allow the use of package groups for this repository}
-    exclude: ${12:# List of packages to exclude from updates or installs}
-    failovermethod: ${13:# V(roundrobin) randomly selects a URL out of the list of URLs to start with and proceeds through each of them as it encounters a failure contacting the host}
-    file: ${14:# File name without the C(}
-    gpgcakey: ${15:# A URL pointing to the ASCII-armored CA key file for the repository}
-    gpgcheck: ${16:# Tells yum whether or not it should perform a GPG signature check on packages}
-    gpgkey: ${17:# A URL pointing to the ASCII-armored GPG key file for the repository}
-    group: ${18:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
-    http_caching: ${19:# Determines how upstream HTTP caches are instructed to handle any HTTP downloads that Yum does}
-    include: ${20:# Include external configuration file}
-    includepkgs: ${21:# List of packages you want to only use from a repository}
-    ip_resolve: ${22:# Determines how yum resolves host names}
-    keepalive: ${23:# This tells yum whether or not HTTP/1}
-    keepcache: ${24:# Either V(1) or V(0)}
-    metadata_expire: ${25:# Time (in seconds) after which the metadata will expire}
-    metadata_expire_filter: ${26:# Filter the O(metadata_expire) time, allowing a trade of speed for accuracy if a command doesn't require it}
-    metalink: ${27:# Specifies a URL to a metalink file for the repomd}
-    mirrorlist: ${28:# Specifies a URL to a file containing a list of baseurls}
-    mirrorlist_expire: ${29:# Time (in seconds) after which the mirrorlist locally cached will expire}
-    mode: ${30:# The permissions the resulting filesystem object should have}
-    module_hotfixes: ${31:# Disable module RPM filtering and make all RPMs from the repository available}
-    name: ${32:# Unique repository ID}
-    owner: ${33:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
-    password: ${34:# Password to use with the username for basic authentication}
-    priority: ${35:# Enforce ordered protection of repositories}
-    protect: ${36:# Protect packages from updates from other repositories}
-    proxy: ${37:# URL to the proxy server that yum should use}
-    proxy_password: ${38:# Password for this proxy}
-    proxy_username: ${39:# Username to use for proxy}
-    repo_gpgcheck: ${40:# This tells yum whether or not it should perform a GPG signature check on the repodata from this repository}
-    reposdir: ${41:# Directory where the C(}
-    retries: ${42:# Set the number of times any attempt to retrieve a file should retry before returning an error}
-    s3_enabled: ${43:# Enables support for S3 repositories}
-    selevel: ${44:# The level part of the SELinux filesystem object context}
-    serole: ${45:# The role part of the SELinux filesystem object context}
-    setype: ${46:# The type part of the SELinux filesystem object context}
-    seuser: ${47:# The user part of the SELinux filesystem object context}
-    skip_if_unavailable: ${48:# If set to V(true) yum will continue running if this repository cannot be contacted for any reason}
-    ssl_check_cert_permissions: ${49:# Whether yum should check the permissions on the paths for the certificates on the repository (both remote and local)}
-    sslcacert: ${50:# Path to the directory containing the databases of the certificate authorities yum should use to verify SSL certificates}
-    sslclientcert: ${51:# Path to the SSL client certificate yum should use to connect to repos/remote sites}
-    sslclientkey: ${52:# Path to the SSL client key yum should use to connect to repos/remote sites}
-    sslverify: ${53:# Defines whether yum should verify SSL certificates/hosts at all}
-    state: ${54:# State of the repo file}
-    throttle: ${55:# Enable bandwidth throttling for downloads}
-    timeout: ${56:# Number of seconds to wait for a connection before timing out}
-    ui_repoid_vars: ${57:# When a repository id is displayed, append these yum variables to the string if they are used in the O(baseurl)/etc}
-    unsafe_writes: ${58:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
-    username: ${59:# Username to use for basic authentication to a repo or really any url}
+    countme: ${7:# Whether a special flag should be added to a randomly chosen metalink/mirrorlist query each week}
+    deltarpm_metadata_percentage: ${8:# When the relative size of deltarpm metadata vs pkgs is larger than this, deltarpm metadata is not downloaded from the repo}
+    deltarpm_percentage: ${9:# When the relative size of delta vs pkg is larger than this, delta is not used}
+    description: ${10:# A human-readable string describing the repository}
+    enabled: ${11:# This tells yum whether or not use this repository}
+    enablegroups: ${12:# Determines whether yum will allow the use of package groups for this repository}
+    exclude: ${13:# List of packages to exclude from updates or installs}
+    failovermethod: ${14:# V(roundrobin) randomly selects a URL out of the list of URLs to start with and proceeds through each of them as it encounters a failure contacting the host}
+    file: ${15:# File name without the C(}
+    gpgcakey: ${16:# A URL pointing to the ASCII-armored CA key file for the repository}
+    gpgcheck: ${17:# Tells yum whether or not it should perform a GPG signature check on packages}
+    gpgkey: ${18:# A URL pointing to the ASCII-armored GPG key file for the repository}
+    group: ${19:# Name of the group that should own the filesystem object, as would be fed to C(chown)}
+    http_caching: ${20:# Determines how upstream HTTP caches are instructed to handle any HTTP downloads that Yum does}
+    include: ${21:# Include external configuration file}
+    includepkgs: ${22:# List of packages you want to only use from a repository}
+    ip_resolve: ${23:# Determines how yum resolves host names}
+    keepalive: ${24:# This tells yum whether or not HTTP/1}
+    keepcache: ${25:# Either V(1) or V(0)}
+    metadata_expire: ${26:# Time (in seconds) after which the metadata will expire}
+    metadata_expire_filter: ${27:# Filter the O(metadata_expire) time, allowing a trade of speed for accuracy if a command doesn't require it}
+    metalink: ${28:# Specifies a URL to a metalink file for the repomd}
+    mirrorlist: ${29:# Specifies a URL to a file containing a list of baseurls}
+    mirrorlist_expire: ${30:# Time (in seconds) after which the mirrorlist locally cached will expire}
+    mode: ${31:# The permissions the resulting filesystem object should have}
+    module_hotfixes: ${32:# Disable module RPM filtering and make all RPMs from the repository available}
+    name: ${33:# Unique repository ID}
+    owner: ${34:# Name of the user that should own the filesystem object, as would be fed to C(chown)}
+    password: ${35:# Password to use with the username for basic authentication}
+    priority: ${36:# Enforce ordered protection of repositories}
+    protect: ${37:# Protect packages from updates from other repositories}
+    proxy: ${38:# URL to the proxy server that yum should use}
+    proxy_password: ${39:# Password for this proxy}
+    proxy_username: ${40:# Username to use for proxy}
+    repo_gpgcheck: ${41:# This tells yum whether or not it should perform a GPG signature check on the repodata from this repository}
+    reposdir: ${42:# Directory where the C(}
+    retries: ${43:# Set the number of times any attempt to retrieve a file should retry before returning an error}
+    s3_enabled: ${44:# Enables support for S3 repositories}
+    selevel: ${45:# The level part of the SELinux filesystem object context}
+    serole: ${46:# The role part of the SELinux filesystem object context}
+    setype: ${47:# The type part of the SELinux filesystem object context}
+    seuser: ${48:# The user part of the SELinux filesystem object context}
+    skip_if_unavailable: ${49:# If set to V(true) yum will continue running if this repository cannot be contacted for any reason}
+    ssl_check_cert_permissions: ${50:# Whether yum should check the permissions on the paths for the certificates on the repository (both remote and local)}
+    sslcacert: ${51:# Path to the directory containing the databases of the certificate authorities yum should use to verify SSL certificates}
+    sslclientcert: ${52:# Path to the SSL client certificate yum should use to connect to repos/remote sites}
+    sslclientkey: ${53:# Path to the SSL client key yum should use to connect to repos/remote sites}
+    sslverify: ${54:# Defines whether yum should verify SSL certificates/hosts at all}
+    state: ${55:# State of the repo file}
+    throttle: ${56:# Enable bandwidth throttling for downloads}
+    timeout: ${57:# Number of seconds to wait for a connection before timing out}
+    ui_repoid_vars: ${58:# When a repository id is displayed, append these yum variables to the string if they are used in the O(baseurl)/etc}
+    unsafe_writes: ${59:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
+    username: ${60:# Username to use for basic authentication to a repo or really any url}
   tags:
     - yum_repository]]></content>
   <tabTrigger>ansible.builtin.yum_repository</tabTrigger>

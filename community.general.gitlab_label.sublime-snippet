@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates/updates/deletes GitLab Labels belonging to project or group}
+  community.general.gitlab_label:
+    api_job_token: ${2:# GitLab CI job token for logging in}
+    api_oauth_token: ${3:# GitLab OAuth token for logging in}
+    api_password: ${4:# The password to use for authentication against the API}
+    api_token: ${5:# GitLab access token with API permissions}
+    api_url: ${6:# The resolvable endpoint for the API}
+    api_username: ${7:# The username to use for authentication against the API}
+    ca_path: ${8:# The CA certificates bundle to use to verify GitLab server certificate}
+    group: ${9:# The path of the group}
+    labels: ${10:# A list of dictionaries that represents gitlab project's or group's labels}
+    project: ${11:# The path and name of the project}
+    purge: ${12:# When set to V(true), delete all labels which are not mentioned in the task}
+    state: ${13:# Create or delete project or group label}
+    validate_certs: ${14:# Whether or not to validate SSL certs when supplying a HTTPS endpoint}
+  tags:
+    - community
+    - general
+    - gitlab_label]]></content>
+  <tabTrigger>community.general.gitlab_label</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates/updates/deletes GitLab Labels belonging to project or group</description>
+</snippet>

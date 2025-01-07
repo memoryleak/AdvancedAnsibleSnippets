@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:create, delete, accept, and reject VPC peering connections between two VPCs}
+  amazon.aws.ec2_vpc_peering:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    endpoint_url: ${6:# URL to connect to instead of the default AWS endpoints}
+    peer_owner_id: ${7:# The AWS account number for cross account peering}
+    peer_region: ${8:# Region of the accepting VPC}
+    peer_vpc_id: ${9:# VPC id of the accepting VPC}
+    peering_id: ${10:# Peering connection id}
+    profile: ${11:# A named AWS profile to use for authentication}
+    purge_tags: ${12:# If O(purge_tags=true) and O(tags) is set, existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
+    region: ${13:# The AWS region to use}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    state: ${16:# Create, delete, accept, reject a peering connection}
+    tags: ${17:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_id: ${19:# VPC id of the requesting VPC}
+    wait: ${20:# Wait for peering state changes to complete}
+  tags:
+    - amazon
+    - aws
+    - ec2_vpc_peering]]></content>
+  <tabTrigger>amazon.aws.ec2_vpc_peering</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>create, delete, accept, and reject VPC peering connections between two VPCs</description>
+</snippet>

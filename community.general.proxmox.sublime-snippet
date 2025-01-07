@@ -3,45 +3,48 @@
   community.general.proxmox:
     api_host: ${2:# Specify the target host of the Proxmox VE cluster}
     api_password: ${3:# Specify the password to authenticate with}
-    api_token_id: ${4:# Specify the token ID}
-    api_token_secret: ${5:# Specify the token secret}
-    api_user: ${6:# Specify the user to authenticate with}
-    clone: ${7:# ID of the container to be cloned}
-    clone_type: ${8:# Type of the clone created}
-    cores: ${9:# Specify number of cores per socket}
-    cpus: ${10:# numbers of allocated cpus for instance}
-    cpuunits: ${11:# CPU weight for a VM}
-    description: ${12:# Specify the description for the container}
-    disk: ${13:# This option was previously described as 'hard disk size in GB for instance' however several formats describing a lxc mount are permitted}
-    features: ${14:# Specifies a list of features to be enabled}
-    force: ${15:# Forcing operations}
-    hookscript: ${16:# Script that will be executed during various steps in the containers lifetime}
-    hostname: ${17:# the instance hostname}
-    ip_address: ${18:# specifies the address the container will be assigned}
-    memory: ${19:# memory size in MB for instance}
-    mounts: ${20:# specifies additional mounts (separate disks) for the container}
-    nameserver: ${21:# sets DNS server IP address for a container}
-    netif: ${22:# specifies network interfaces for the container}
-    node: ${23:# Proxmox VE node on which to operate}
-    onboot: ${24:# specifies whether a VM will be started during system bootup}
-    ostemplate: ${25:# the template for VM creating}
-    ostype: ${26:# Specifies the C(ostype) of the LXC container}
-    password: ${27:# the instance root password}
-    pool: ${28:# Add the new VM to the specified pool}
-    proxmox_default_behavior: ${29:# As of community}
-    pubkey: ${30:# Public key to add to /root/}
-    purge: ${31:# Remove container from all related configurations}
-    searchdomain: ${32:# sets DNS search domain for a container}
-    state: ${33:# Indicate desired state of the instance}
-    storage: ${34:# target storage}
-    swap: ${35:# swap memory size in MB for instance}
-    tags: ${36:# List of tags to apply to the container}
-    timeout: ${37:# timeout for operations}
-    timezone: ${38:# Timezone used by the container, accepts values like V(Europe/Paris)}
-    unprivileged: ${39:# Indicate if the container should be unprivileged}
-    update: ${40:# If V(true), the container will be updated with new values}
-    validate_certs: ${41:# If V(false), SSL certificates will not be validated}
-    vmid: ${42:# Specifies the instance ID}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    clone: ${8:# ID of the container to be cloned}
+    clone_type: ${9:# Type of the clone created}
+    cores: ${10:# Specify number of cores per socket}
+    cpus: ${11:# numbers of allocated cpus for instance}
+    cpuunits: ${12:# CPU weight for a VM}
+    description: ${13:# Specify the description for the container}
+    disk: ${14:# This option was previously described as 'hard disk size in GB for instance' however several formats describing a lxc mount are permitted}
+    disk_volume: ${15:# Specify a hash/dictionary of the C(rootfs) disk}
+    features: ${16:# Specifies a list of features to be enabled}
+    force: ${17:# Forcing operations}
+    hookscript: ${18:# Script that will be executed during various steps in the containers lifetime}
+    hostname: ${19:# the instance hostname}
+    ip_address: ${20:# specifies the address the container will be assigned}
+    memory: ${21:# memory size in MB for instance}
+    mount_volumes: ${22:# Specify additional mounts (separate disks) for the container}
+    mounts: ${23:# Specifies additional mounts (separate disks) for the container}
+    nameserver: ${24:# sets DNS server IP address for a container}
+    netif: ${25:# specifies network interfaces for the container}
+    node: ${26:# Proxmox VE node on which to operate}
+    onboot: ${27:# specifies whether a VM will be started during system bootup}
+    ostemplate: ${28:# the template for VM creating}
+    ostype: ${29:# Specifies the C(ostype) of the LXC container}
+    password: ${30:# the instance root password}
+    pool: ${31:# Add the new VM to the specified pool}
+    pubkey: ${32:# Public key to add to /root/}
+    purge: ${33:# Remove container from all related configurations}
+    searchdomain: ${34:# sets DNS search domain for a container}
+    startup: ${35:# Specifies the startup order of the container}
+    state: ${36:# Indicate desired state of the instance}
+    storage: ${37:# Target storage}
+    swap: ${38:# swap memory size in MB for instance}
+    tags: ${39:# List of tags to apply to the container}
+    timeout: ${40:# timeout for operations}
+    timezone: ${41:# Timezone used by the container, accepts values like V(Europe/Paris)}
+    unprivileged: ${42:# Indicate if the container should be unprivileged}
+    update: ${43:# If V(true), the container will be updated with new values}
+    validate_certs: ${44:# If V(false), SSL certificates will not be validated}
+    vmid: ${45:# Specifies the instance ID}
   tags:
     - community
     - general

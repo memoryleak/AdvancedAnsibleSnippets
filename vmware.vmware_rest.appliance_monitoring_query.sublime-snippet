@@ -2,9 +2,9 @@
   <content><![CDATA[- name: ${1:Get monitoring data}
   vmware.vmware_rest.appliance_monitoring_query:
     end_time: ${2:# End time in UTC This parameter is mandatory}
-    function: ${3:# C(function_type) Defines aggregation function This parameter is mandatory}
-    interval: ${4:# C(interval_type) Defines interval between the values in hours and mins,                    for which aggregation will apply This parameter is mandatory}
-    names: ${5:# monitored item IDs Ex: CPU, MEMORY This parameter is mandatory}
+    function: ${3:# I(function_type) enumerated type Defines aggregation function This parameter is mandatory}
+    interval: ${4:# I(interval_type) enumerated type Defines interval between the values in hours and mins, for which aggregation will apply This parameter is mandatory}
+    names: ${5:# monitored item IDs Ex: CPU, MEMORY}
     session_timeout: ${6:# Timeout settings for client session}
     start_time: ${7:# Start time in UTC This parameter is mandatory}
     vcenter_hostname: ${8:# The hostname or IP address of the vSphere vCenter}

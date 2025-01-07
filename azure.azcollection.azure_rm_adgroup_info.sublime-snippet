@@ -12,20 +12,22 @@
     check_membership: ${10:# The object ID of the contact, group, user, or service principal to check for membership against returned groups}
     client_id: ${11:# Azure client ID}
     cloud_environment: ${12:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    log_mode: ${13:# Parent argument}
-    log_path: ${14:# Parent argument}
-    object_id: ${15:# The object id for the ad group}
-    odata_filter: ${16:# returns groups based on the the OData filter passed into this parameter}
-    password: ${17:# Active Directory user password}
-    profile: ${18:# Security profile found in ~/}
-    return_group_members: ${19:# Indicate whether the members of a group should be returned with the returned groups}
-    return_member_groups: ${20:# Indicate whether the groups in which a groups is a member should be returned with the returned groups}
-    return_owners: ${21:# Indicate whether the owners of a group should be returned with the returned groups}
-    secret: ${22:# Azure client secret}
-    subscription_id: ${23:# Your Azure subscription Id}
-    tenant: ${24:# The tenant ID}
-    thumbprint: ${25:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    x509_certificate_path: ${26:# Path to the X509 certificate used to create the service principal in PEM format}
+    disable_instance_discovery: ${13:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    log_mode: ${14:# Parent argument}
+    log_path: ${15:# Parent argument}
+    object_id: ${16:# The object id for the ad group}
+    odata_filter: ${17:# returns groups based on the the OData filter passed into this parameter}
+    password: ${18:# Active Directory user password}
+    profile: ${19:# Security profile found in ~/}
+    raw_membership: ${20:# By default the group_members return property is flattened and partially filtered of non-User objects before return}
+    return_group_members: ${21:# Indicate whether the members of a group should be returned with the returned groups}
+    return_member_groups: ${22:# Indicate whether the groups in which a groups is a member should be returned with the returned groups}
+    return_owners: ${23:# Indicate whether the owners of a group should be returned with the returned groups}
+    secret: ${24:# Azure client secret}
+    subscription_id: ${25:# Your Azure subscription Id}
+    tenant: ${26:# Azure tenant ID}
+    thumbprint: ${27:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${28:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

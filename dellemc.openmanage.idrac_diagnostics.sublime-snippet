@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Run and Export iDRAC diagnostics}
+  dellemc.openmanage.idrac_diagnostics:
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    export: ${3:# Exports the diagnostics information to the given share}
+    idrac_ip: ${4:# iDRAC IP Address}
+    idrac_password: ${5:# iDRAC user password}
+    idrac_port: ${6:# iDRAC port}
+    idrac_user: ${7:# iDRAC username}
+    job_wait: ${8:# Provides the option to wait for job completion}
+    job_wait_timeout: ${9:# Time in seconds to wait for job completion}
+    reboot_type: ${10:# This option provides the choice to reboot the host immediately to run the diagnostics}
+    resource_id: ${11:# Id of the resource}
+    run: ${12:# Run the diagnostics job on iDRAC}
+    run_mode: ${13:# This option provides the choices to run the diagnostics}
+    scheduled_end_time: ${14:# Run the diagnostic until the specified end date and end time after the I(scheduled_start_time)}
+    scheduled_start_time: ${15:# Schedules the job at the specified time}
+    share_parameters: ${16:# Parameters that are required for the export operation of diagnostics}
+    timeout: ${17:# The socket level timeout in seconds}
+    validate_certs: ${18:# If C(false), the SSL certificates will not be validated}
+    x_auth_token: ${19:# Authentication token}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_diagnostics]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_diagnostics</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Run and Export iDRAC diagnostics</description>
+</snippet>

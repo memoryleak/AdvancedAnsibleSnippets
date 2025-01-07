@@ -7,23 +7,24 @@
     create: ${5:# If set to V(false), the module will fail if the file does not already exist}
     exclusive: ${6:# If set to V(true) (default), all matching O(option) lines are removed when O(state=absent), or replaced when O(state=present)}
     follow: ${7:# This flag indicates that filesystem links, if they exist, should be followed}
-    group: ${8:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    group: ${8:# Name of the group that should own the filesystem object, as would be fed to C(chown)}
     ignore_spaces: ${9:# Do not change a line if doing so would only add or remove spaces before or after the V(=) symbol}
     mode: ${10:# The permissions the resulting filesystem object should have}
     modify_inactive_option: ${11:# By default the module replaces a commented line that matches the given option}
     no_extra_spaces: ${12:# Do not insert spaces before and after '=' symbol}
     option: ${13:# If set (required for changing a O(value)), this is the name of the option}
-    owner: ${14:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
+    owner: ${14:# Name of the user that should own the filesystem object, as would be fed to C(chown)}
     path: ${15:# Path to the INI-style file; this file is created if required}
     section: ${16:# Section name in INI file}
-    selevel: ${17:# The level part of the SELinux filesystem object context}
-    serole: ${18:# The role part of the SELinux filesystem object context}
-    setype: ${19:# The type part of the SELinux filesystem object context}
-    seuser: ${20:# The user part of the SELinux filesystem object context}
-    state: ${21:# If set to V(absent) and O(exclusive) set to V(true) all matching O(option) lines are removed}
-    unsafe_writes: ${22:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
-    value: ${23:# The string value to be associated with an O(option)}
-    values: ${24:# The string value to be associated with an O(option)}
+    section_has_values: ${17:# Among possibly multiple sections of the same name, select the first one that contains matching options and values}
+    selevel: ${18:# The level part of the SELinux filesystem object context}
+    serole: ${19:# The role part of the SELinux filesystem object context}
+    setype: ${20:# The type part of the SELinux filesystem object context}
+    seuser: ${21:# The user part of the SELinux filesystem object context}
+    state: ${22:# If set to V(absent) and O(exclusive) set to V(true) all matching O(option) lines are removed}
+    unsafe_writes: ${23:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
+    value: ${24:# The string value to be associated with an O(option)}
+    values: ${25:# The string value to be associated with an O(option)}
   tags:
     - community
     - general

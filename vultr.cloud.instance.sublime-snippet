@@ -4,7 +4,7 @@
     activation_email: ${2:# Whether to send an activation email when the instance is ready or not}
     api_endpoint: ${3:# URL to API endpint (without trailing slash)}
     api_key: ${4:# API key of the Vultr API}
-    api_retries: ${5:# Amount of retries in case of the Vultr API retuns an HTTP 503 code}
+    api_retries: ${5:# Amount of retries in case of the Vultr API retuns an HTTP error code, such as - 429 Too Many Requests - 500 Internal Server Error - 504 Gateway Time-out}
     api_retry_max_delay: ${6:# Retry backoff delay in seconds is exponential up to this max}
     api_timeout: ${7:# HTTP timeout to Vultr API}
     app: ${8:# The app deploy name of Vultr OneClick apps}
@@ -19,14 +19,16 @@
     plan: ${17:# The plan name to use for the instance}
     region: ${18:# Region the instance is deployed into}
     reserved_ipv4: ${19:# IP address of the floating IP to use as the main IP of this instance}
-    snapshot: ${20:# Description or ID of the snapshot}
-    ssh_keys: ${21:# List of SSH key names passed to the instance on creation}
-    startup_script: ${22:# Name or ID of the startup script to execute on boot}
-    state: ${23:# State of the instance}
-    tags: ${24:# Tags for the instance}
-    user_data: ${25:# User data to be passed to the instance}
-    validate_certs: ${26:# Validate SSL certs of the Vultr API}
-    vpcs: ${27:# A list of VPCs identified by their description to be assigned to the instance}
+    skip_wait: ${20:# Whether to skip the wait for the instance to be completely ready for access}
+    snapshot: ${21:# Description or ID of the snapshot}
+    ssh_keys: ${22:# List of SSH key names passed to the instance on creation}
+    startup_script: ${23:# Name or ID of the startup script to execute on boot}
+    state: ${24:# State of the instance}
+    tags: ${25:# Tags for the instance}
+    user_data: ${26:# User data to be passed to the instance}
+    user_scheme: ${27:# The user scheme used as login user (Linux-only)}
+    validate_certs: ${28:# Validate SSL certs of the Vultr API}
+    vpcs: ${29:# A list of VPCs identified by their description to be assigned to the instance}
   tags:
     - vultr
     - cloud

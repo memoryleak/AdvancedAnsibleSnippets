@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage health-checks in Amazons Route53 DNS service}
+  <content><![CDATA[- name: ${1:Manage health checks in Amazons Route 53 DNS service}
   amazon.aws.route53_health_check:
     access_key: ${2:# AWS access key ID}
     aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
@@ -17,9 +17,9 @@
     measure_latency: ${15:# To enable/disable latency graphs to monitor the latency between health checkers in multiple Amazon Web Services regions and your endpoint}
     port: ${16:# The port on the endpoint on which you want Amazon Route 53 to perform health checks}
     profile: ${17:# A named AWS profile to use for authentication}
-    purge_tags: ${18:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    purge_tags: ${18:# If O(purge_tags=true) and O(tags) is set, existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
     region: ${19:# The AWS region to use}
-    request_interval: ${20:# The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health-check request}
+    request_interval: ${20:# The number of seconds between the time that Amazon Route 53 gets a response from your endpoint and the time that it sends the next health check request}
     resource_path: ${21:# The path that you want Amazon Route 53 to request when performing health checks}
     secret_key: ${22:# AWS secret access key}
     session_token: ${23:# AWS STS session token for use with temporary credentials}
@@ -27,7 +27,7 @@
     string_match: ${25:# If the check type is HTTP_STR_MATCH or HTTP_STR_MATCH, the string that you want Amazon Route 53 to search for in the response body from the specified resource}
     tags: ${26:# A dictionary representing the tags to be applied to the resource}
     type: ${27:# The type of health check that you want to create, which indicates how Amazon Route 53 determines whether an endpoint is healthy}
-    use_unique_names: ${28:# Used together with I(health_check_name) to set/make use of I(health_check_name) as a unique identifier}
+    use_unique_names: ${28:# Used together with O(health_check_name) to set/make use of O(health_check_name) as a unique identifier}
     validate_certs: ${29:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - amazon
@@ -35,5 +35,5 @@
     - route53_health_check]]></content>
   <tabTrigger>amazon.aws.route53_health_check</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage health-checks in Amazons Route53 DNS service</description>
+  <description>Manage health checks in Amazons Route 53 DNS service</description>
 </snippet>

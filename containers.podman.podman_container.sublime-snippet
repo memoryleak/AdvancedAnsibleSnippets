@@ -2,119 +2,169 @@
   <content><![CDATA[- name: ${1:Manage podman containers}
   containers.podman.podman_container:
     annotation: ${2:# Add an annotation to the container}
-    authfile: ${3:# Path of the authentication file}
-    blkio_weight: ${4:# Block IO weight (relative weight) accepts a weight value between 10 and 1000}
-    blkio_weight_device: ${5:# Block IO weight (relative device weight, format DEVICE_NAME[:]WEIGHT)}
-    cap_add: ${6:# List of capabilities to add to the container}
-    cap_drop: ${7:# List of capabilities to drop from the container}
-    cgroup_parent: ${8:# Path to cgroups under which the cgroup for the container will be created}
-    cgroupns: ${9:# Path to cgroups under which the cgroup for the container will be created}
-    cgroups: ${10:# Determines whether the container will create CGroups}
-    cidfile: ${11:# Write the container ID to the file}
-    cmd_args: ${12:# Any additional command options you want to pass to podman command itself, for example C(--log-level=debug) or C(--syslog)}
-    command: ${13:# Override command of container}
-    conmon_pidfile: ${14:# Write the pid of the conmon process to a file}
-    cpu_period: ${15:# Limit the CPU CFS (Completely Fair Scheduler) period}
-    cpu_quota: ${16:# Limit the CPU CFS (Completely Fair Scheduler) quota}
-    cpu_rt_period: ${17:# Limit the CPU real-time period in microseconds}
-    cpu_rt_runtime: ${18:# Limit the CPU real-time runtime in microseconds}
-    cpu_shares: ${19:# CPU shares (relative weight)}
-    cpus: ${20:# Number of CPUs}
-    cpuset_cpus: ${21:# CPUs in which to allow execution (0-3, 0,1)}
-    cpuset_mems: ${22:# Memory nodes (MEMs) in which to allow execution (0-3, 0,1)}
-    debug: ${23:# Return additional information which can be helpful for investigations}
-    detach: ${24:# Run container in detach mode}
-    detach_keys: ${25:# Override the key sequence for detaching a container}
-    device: ${26:# Add a host device to the container}
-    device_read_bps: ${27:# Limit read rate (bytes per second) from a device (e}
-    device_read_iops: ${28:# Limit read rate (IO per second) from a device (e}
-    device_write_bps: ${29:# Limit write rate (bytes per second) to a device (e}
-    device_write_iops: ${30:# Limit write rate (IO per second) to a device (e}
-    dns: ${31:# Set custom DNS servers}
-    dns_option: ${32:# Set custom DNS options}
-    dns_search: ${33:# Set custom DNS search domains (Use dns_search with '' if you don't wish to set the search domain)}
-    entrypoint: ${34:# Overwrite the default ENTRYPOINT of the image}
-    env: ${35:# Set environment variables}
-    env_file: ${36:# Read in a line delimited file of environment variables}
-    env_host: ${37:# Use all current host environment variables in container}
-    etc_hosts: ${38:# Dict of host-to-IP mappings, where each host name is a key in the dictionary}
-    executable: ${39:# Path to C(podman) executable if it is not in the C($PATH) on the machine running C(podman)}
-    expose: ${40:# Expose a port, or a range of ports (e}
-    force_restart: ${41:# Force restart of container}
-    generate_systemd: ${42:# Generate systemd unit file for container}
-    gidmap: ${43:# Run the container in a new user namespace using the supplied mapping}
-    group_add: ${44:# Add additional groups to run as}
-    healthcheck: ${45:# Set or alter a healthcheck command for a container}
-    healthcheck_failure_action: ${46:# The action to be taken when the container is considered unhealthy}
-    healthcheck_interval: ${47:# Set an interval for the healthchecks (a value of disable results in no automatic timer setup) (default '30s')}
-    healthcheck_retries: ${48:# The number of retries allowed before a healthcheck is considered to be unhealthy}
-    healthcheck_start_period: ${49:# The initialization time needed for a container to bootstrap}
-    healthcheck_timeout: ${50:# The maximum time allowed to complete the healthcheck before an interval is considered failed}
-    hooks_dir: ${51:# Each}
-    hostname: ${52:# Container host name}
-    http_proxy: ${53:# By default proxy environment variables are passed into the container if set for the podman process}
-    image: ${54:# Repository path (or image name) and tag used to create the container}
-    image_strict: ${55:# Whether to compare images in idempotency by taking into account a full name with registry and namespaces}
-    image_volume: ${56:# Tells podman how to handle the builtin image volumes}
-    init: ${57:# Run an init inside the container that forwards signals and reaps processes}
-    init_path: ${58:# Path to the container-init binary}
-    interactive: ${59:# Keep STDIN open even if not attached}
-    ip: ${60:# Specify a static IP address for the container, for example '10}
-    ipc: ${61:# Default is to create a private IPC namespace (POSIX SysV IPC) for the container}
-    kernel_memory: ${62:# Kernel memory limit (format <number>[<unit>], where unit = b, k, m or g) Note - idempotency is supported for integers only}
-    label: ${63:# Add metadata to a container, pass dictionary of label names and values}
-    label_file: ${64:# Read in a line delimited file of labels}
-    log_driver: ${65:# Logging driver}
-    log_level: ${66:# Logging level for Podman}
-    log_opt: ${67:# Logging driver specific options}
-    mac_address: ${68:# Specify a MAC address for the container, for example '92:d0:c6:0a:29:33'}
-    memory: ${69:# Memory limit (format 10k, where unit = b, k, m or g) Note - idempotency is supported for integers only}
-    memory_reservation: ${70:# Memory soft limit (format 100m, where unit = b, k, m or g) Note - idempotency is supported for integers only}
-    memory_swap: ${71:# A limit value equal to memory plus swap}
-    memory_swappiness: ${72:# Tune a container's memory swappiness behavior}
-    mount: ${73:# Attach a filesystem mount to the container}
-    name: ${74:# Name of the container}
-    network: ${75:# Set the Network mode for the container * bridge create a network stack on the default bridge * none no networking * container:<name|id> reuse another container's network stack * host use the podman host network stack}
-    network_aliases: ${76:# Add network-scoped alias for the container}
-    no_hosts: ${77:# Do not create /etc/hosts for the container Default is false}
-    oom_kill_disable: ${78:# Whether to disable OOM Killer for the container or not}
-    oom_score_adj: ${79:# Tune the host's OOM preferences for containers (accepts -1000 to 1000)}
-    pid: ${80:# Set the PID mode for the container}
-    pids_limit: ${81:# Tune the container's PIDs limit}
-    pod: ${82:# Run container in an existing pod}
-    privileged: ${83:# Give extended privileges to this container}
-    publish: ${84:# Publish a container's port, or range of ports, to the host}
-    publish_all: ${85:# Publish all exposed ports to random ports on the host interfaces}
-    read_only: ${86:# Mount the container's root filesystem as read only}
-    read_only_tmpfs: ${87:# If container is running in --read-only mode, then mount a read-write tmpfs on /run, /tmp, and /var/tmp}
-    recreate: ${88:# Use with present and started states to force the re-creation of an existing container}
-    requires: ${89:# Specify one or more requirements}
-    restart_policy: ${90:# Restart policy to follow when containers exit}
-    rm: ${91:# Automatically remove the container when it exits}
-    rootfs: ${92:# If true, the first argument refers to an exploded container on the file system}
-    sdnotify: ${93:# Determines how to use the NOTIFY_SOCKET, as passed with systemd and Type=notify}
-    secrets: ${94:# Add the named secrets into the container}
-    security_opt: ${95:# Security Options}
-    shm_size: ${96:# Size of /dev/shm}
-    sig_proxy: ${97:# Proxy signals sent to the podman run command to the container process}
-    state: ${98:# I(absent) - A container matching the specified name will be stopped and removed}
-    stop_signal: ${99:# Signal to stop a container}
-    stop_timeout: ${100:# Timeout (in seconds) to stop a container}
-    subgidname: ${101:# Run the container in a new user namespace using the map with 'name' in the /etc/subgid file}
-    subuidname: ${102:# Run the container in a new user namespace using the map with 'name' in the /etc/subuid file}
-    sysctl: ${103:# Configure namespaced kernel parameters at runtime}
-    systemd: ${104:# Run container in systemd mode}
-    timezone: ${105:# Set timezone in container}
-    tmpfs: ${106:# Create a tmpfs mount}
-    tty: ${107:# Allocate a pseudo-TTY}
-    uidmap: ${108:# Run the container in a new user namespace using the supplied mapping}
-    ulimit: ${109:# Ulimit options}
-    user: ${110:# Sets the username or UID used and optionally the groupname or GID for the specified command}
-    userns: ${111:# Set the user namespace mode for the container}
-    uts: ${112:# Set the UTS mode for the container}
-    volume: ${113:# Create a bind mount}
-    volumes_from: ${114:# Mount volumes from the specified container(s)}
-    workdir: ${115:# Working directory inside the container}
+    arch: ${3:# Set the architecture for the container}
+    attach: ${4:# Attach to STDIN, STDOUT or STDERR}
+    authfile: ${5:# Path of the authentication file}
+    blkio_weight: ${6:# Block IO weight (relative weight) accepts a weight value between 10 and 1000}
+    blkio_weight_device: ${7:# Block IO weight (relative device weight, format DEVICE_NAME[:]WEIGHT)}
+    cap_add: ${8:# List of capabilities to add to the container}
+    cap_drop: ${9:# List of capabilities to drop from the container}
+    cgroup_conf: ${10:# When running on cgroup v2, specify the cgroup file to write to and its value}
+    cgroup_parent: ${11:# Path to cgroups under which the cgroup for the container will be created}
+    cgroupns: ${12:# Path to cgroups under which the cgroup for the container will be created}
+    cgroups: ${13:# Determines whether the container will create CGroups}
+    chrootdirs: ${14:# Path to a directory inside the container that is treated as a chroot directory}
+    cidfile: ${15:# Write the container ID to the file}
+    cmd_args: ${16:# Any additional command options you want to pass to podman command itself, for example C(--log-level=debug) or C(--syslog)}
+    command: ${17:# Override command of container}
+    conmon_pidfile: ${18:# Write the pid of the conmon process to a file}
+    cpu_period: ${19:# Limit the CPU CFS (Completely Fair Scheduler) period}
+    cpu_quota: ${20:# Limit the CPU CFS (Completely Fair Scheduler) quota}
+    cpu_rt_period: ${21:# Limit the CPU real-time period in microseconds}
+    cpu_rt_runtime: ${22:# Limit the CPU real-time runtime in microseconds}
+    cpu_shares: ${23:# CPU shares (relative weight)}
+    cpus: ${24:# Number of CPUs}
+    cpuset_cpus: ${25:# CPUs in which to allow execution (0-3, 0,1)}
+    cpuset_mems: ${26:# Memory nodes (MEMs) in which to allow execution (0-3, 0,1)}
+    debug: ${27:# Return additional information which can be helpful for investigations}
+    decryption_key: ${28:# The 'key-passphrase' to be used for decryption of images}
+    delete_depend: ${29:# Remove selected container and recursively remove all containers that depend on it}
+    delete_time: ${30:# Seconds to wait before forcibly stopping the container}
+    delete_volumes: ${31:# Remove anonymous volumes associated with the container}
+    detach: ${32:# Run container in detach mode}
+    detach_keys: ${33:# Override the key sequence for detaching a container}
+    device: ${34:# Add a host device to the container}
+    device_cgroup_rule: ${35:# Add a rule to the cgroup allowed devices list}
+    device_read_bps: ${36:# Limit read rate (bytes per second) from a device (e}
+    device_read_iops: ${37:# Limit read rate (IO per second) from a device (e}
+    device_write_bps: ${38:# Limit write rate (bytes per second) to a device (e}
+    device_write_iops: ${39:# Limit write rate (IO per second) to a device (e}
+    dns: ${40:# Set custom DNS servers}
+    dns_option: ${41:# Set custom DNS options}
+    dns_search: ${42:# Set custom DNS search domains (Use dns_search with '' if you don't wish to set the search domain)}
+    entrypoint: ${43:# Overwrite the default ENTRYPOINT of the image}
+    env: ${44:# Set environment variables}
+    env_file: ${45:# Read in a line delimited file of environment variables}
+    env_host: ${46:# Use all current host environment variables in container}
+    env_merge: ${47:# Preprocess default environment variables for the containers}
+    etc_hosts: ${48:# Dict of host-to-IP mappings, where each host name is a key in the dictionary}
+    executable: ${49:# Path to C(podman) executable if it is not in the C($PATH) on the machine running C(podman)}
+    expose: ${50:# Expose a port, or a range of ports (e}
+    force_delete: ${51:# Force deletion of container when it's being deleted}
+    force_restart: ${52:# Force restart of container}
+    generate_systemd: ${53:# Generate systemd unit file for container}
+    gidmap: ${54:# Run the container in a new user namespace using the supplied mapping}
+    gpus: ${55:# GPU devices to add to the container}
+    group_add: ${56:# Add additional groups to run as}
+    group_entry: ${57:# Customize the entry that is written to the /etc/group file within the container when --user is used}
+    health_startup_cmd: ${58:# Set a startup healthcheck command for a container}
+    health_startup_interval: ${59:# Set an interval for the startup healthcheck}
+    health_startup_retries: ${60:# The number of attempts allowed before the startup healthcheck restarts the container}
+    health_startup_success: ${61:# The number of successful runs required before the startup healthcheck succeeds and the regular healthcheck begins}
+    health_startup_timeout: ${62:# The maximum time a startup healthcheck command has to complete before it is marked as failed}
+    healthcheck: ${63:# Set or alter a healthcheck command for a container}
+    healthcheck_failure_action: ${64:# The action to be taken when the container is considered unhealthy}
+    healthcheck_interval: ${65:# Set an interval for the healthchecks (a value of disable results in no automatic timer setup) (default '30s')}
+    healthcheck_retries: ${66:# The number of retries allowed before a healthcheck is considered to be unhealthy}
+    healthcheck_start_period: ${67:# The initialization time needed for a container to bootstrap}
+    healthcheck_timeout: ${68:# The maximum time allowed to complete the healthcheck before an interval is considered failed}
+    hooks_dir: ${69:# Each}
+    hostname: ${70:# Container host name}
+    hostuser: ${71:# Add a user account to /etc/passwd from the host to the container}
+    http_proxy: ${72:# By default proxy environment variables are passed into the container if set for the podman process}
+    image: ${73:# Repository path (or image name) and tag used to create the container}
+    image_strict: ${74:# Whether to compare images in idempotency by taking into account a full name with registry and namespaces}
+    image_volume: ${75:# Tells podman how to handle the builtin image volumes}
+    init: ${76:# Run an init inside the container that forwards signals and reaps processes}
+    init_ctr: ${77:# (Pods only)}
+    init_path: ${78:# Path to the container-init binary}
+    interactive: ${79:# Keep STDIN open even if not attached}
+    ip: ${80:# Specify a static IP address for the container, for example '10}
+    ip6: ${81:# Specify a static IPv6 address for the container}
+    ipc: ${82:# Default is to create a private IPC namespace (POSIX SysV IPC) for the container}
+    kernel_memory: ${83:# Kernel memory limit (format <number>[<unit>], where unit = b, k, m or g) Note - idempotency is supported for integers only}
+    label: ${84:# Add metadata to a container, pass dictionary of label names and values}
+    label_file: ${85:# Read in a line delimited file of labels}
+    log_driver: ${86:# Logging driver}
+    log_level: ${87:# Logging level for Podman}
+    log_opt: ${88:# Logging driver specific options}
+    mac_address: ${89:# Specify a MAC address for the container, for example '92:d0:c6:0a:29:33'}
+    memory: ${90:# Memory limit (format 10k, where unit = b, k, m or g) Note - idempotency is supported for integers only}
+    memory_reservation: ${91:# Memory soft limit (format 100m, where unit = b, k, m or g) Note - idempotency is supported for integers only}
+    memory_swap: ${92:# A limit value equal to memory plus swap}
+    memory_swappiness: ${93:# Tune a container's memory swappiness behavior}
+    mount: ${94:# Attach a filesystem mount to the container}
+    name: ${95:# Name of the container}
+    network: ${96:# Set the Network mode for the container * bridge create a network stack on the default bridge * none no networking * container:<name|id> reuse another container's network stack * host use the podman host network stack}
+    network_aliases: ${97:# Add network-scoped alias for the container}
+    no_healthcheck: ${98:# Disable any defined healthchecks for container}
+    no_hosts: ${99:# Do not create /etc/hosts for the container Default is false}
+    oom_kill_disable: ${100:# Whether to disable OOM Killer for the container or not}
+    oom_score_adj: ${101:# Tune the host's OOM preferences for containers (accepts -1000 to 1000)}
+    os: ${102:# Override the OS, defaults to hosts, of the image to be pulled}
+    passwd: ${103:# Allow Podman to add entries to /etc/passwd and /etc/group when used in conjunction with the --user option}
+    passwd_entry: ${104:# Customize the entry that is written to the /etc/passwd file within the container when --passwd is used}
+    personality: ${105:# Personality sets the execution domain via Linux personality(2)}
+    pid: ${106:# Set the PID mode for the container}
+    pid_file: ${107:# When the pidfile location is specified, the container process' PID is written to the pidfile}
+    pids_limit: ${108:# Tune the container's PIDs limit}
+    platform: ${109:# Specify the platform for selecting the image}
+    pod: ${110:# Run container in an existing pod}
+    pod_id_file: ${111:# Run container in an existing pod and read the pod's ID from the specified file}
+    preserve_fd: ${112:# Pass down to the process the additional file descriptors specified in the comma separated list}
+    preserve_fds: ${113:# Pass down to the process N additional file descriptors (in addition to 0, 1, 2)}
+    privileged: ${114:# Give extended privileges to this container}
+    publish: ${115:# Publish a container's port, or range of ports, to the host}
+    publish_all: ${116:# Publish all exposed ports to random ports on the host interfaces}
+    pull: ${117:# Pull image policy}
+    quadlet_dir: ${118:# Path to the directory to write quadlet file in}
+    quadlet_file_mode: ${119:# The permissions of the quadlet file}
+    quadlet_filename: ${120:# Name of quadlet file to write}
+    quadlet_options: ${121:# Options for the quadlet file}
+    rdt_class: ${122:# Rdt-class sets the class of service (CLOS or COS) for the container to run in}
+    read_only: ${123:# Mount the container's root filesystem as read only}
+    read_only_tmpfs: ${124:# If container is running in --read-only mode, then mount a read-write tmpfs on /run, /tmp, and /var/tmp}
+    recreate: ${125:# Use with present and started states to force the re-creation of an existing container}
+    requires: ${126:# Specify one or more requirements}
+    restart_policy: ${127:# Restart policy to follow when containers exit}
+    restart_time: ${128:# Seconds to wait before forcibly stopping the container when restarting}
+    retry: ${129:# Number of times to retry pulling or pushing images between the registry and local storage in case of failure}
+    retry_delay: ${130:# Duration of delay between retry attempts when pulling or pushing images between the registry and local storage in case of failure}
+    rm: ${131:# Automatically remove the container when it exits}
+    rmi: ${132:# After exit of the container, remove the image unless another container is using it}
+    rootfs: ${133:# If true, the first argument refers to an exploded container on the file system}
+    sdnotify: ${134:# Determines how to use the NOTIFY_SOCKET, as passed with systemd and Type=notify}
+    seccomp_policy: ${135:# Specify the policy to select the seccomp profile}
+    secrets: ${136:# Add the named secrets into the container}
+    security_opt: ${137:# Security Options}
+    shm_size: ${138:# Size of /dev/shm}
+    shm_size_systemd: ${139:# Size of systemd-specific tmpfs mounts such as /run, /run/lock, /var/log/journal and /tmp}
+    sig_proxy: ${140:# Proxy signals sent to the podman run command to the container process}
+    state: ${141:# I(absent) - A container matching the specified name will be stopped and removed}
+    stop_signal: ${142:# Signal to stop a container}
+    stop_time: ${143:# Seconds to wait before forcibly stopping the container}
+    stop_timeout: ${144:# Timeout (in seconds) to stop a container}
+    subgidname: ${145:# Run the container in a new user namespace using the map with 'name' in the /etc/subgid file}
+    subuidname: ${146:# Run the container in a new user namespace using the map with 'name' in the /etc/subuid file}
+    sysctl: ${147:# Configure namespaced kernel parameters at runtime}
+    systemd: ${148:# Run container in systemd mode}
+    timeout: ${149:# Maximum time (in seconds) a container is allowed to run before conmon sends it the kill signal}
+    timezone: ${150:# Set timezone in container}
+    tls_verify: ${151:# Require HTTPS and verify certificates when pulling images}
+    tmpfs: ${152:# Create a tmpfs mount}
+    tty: ${153:# Allocate a pseudo-TTY}
+    uidmap: ${154:# Run the container in a new user namespace using the supplied mapping}
+    ulimit: ${155:# Ulimit options}
+    umask: ${156:# Set the umask inside the container}
+    unsetenv: ${157:# Unset default environment variables for the container}
+    unsetenv_all: ${158:# Unset all default environment variables for the container}
+    user: ${159:# Sets the username or UID used and optionally the groupname or GID for the specified command}
+    userns: ${160:# Set the user namespace mode for the container}
+    uts: ${161:# Set the UTS mode for the container}
+    variant: ${162:# Use VARIANT instead of the default architecture variant of the container image}
+    volume: ${163:# Create a bind mount}
+    volumes_from: ${164:# Mount volumes from the specified container(s)}
+    workdir: ${165:# Working directory inside the container}
   tags:
     - containers
     - podman

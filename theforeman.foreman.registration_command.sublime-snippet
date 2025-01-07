@@ -1,0 +1,34 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Registration Command}
+  theforeman.foreman.registration_command:
+    activation_keys: ${2:# Activation keys for subscription-manager client, required for CentOS and Red Hat Enterprise Linux}
+    force: ${3:# Clear any previous registration and run C(subscription-manager) with C(--force)}
+    hostgroup: ${4:# Host group to register the host in}
+    ignore_subman_errors: ${5:# Ignore C(subscription-manager) errors for C(subscription-manager register) command}
+    insecure: ${6:# Enable insecure argument for the initial C(curl)}
+    jwt_expiration: ${7:# Expiration of the authorization token (in hours)}
+    lifecycle_environment: ${8:# Lifecycle environment for the host}
+    location: ${9:# Location to register the host in}
+    operatingsystem: ${10:# Operating System to register the host in}
+    organization: ${11:# Organization to register the host in}
+    packages: ${12:# Packages to install on the host when registered}
+    password: ${13:# Password of the user accessing the Foreman server}
+    remote_execution_interface: ${14:# Identifier of the Host interface for Remote execution}
+    repo: ${15:# Repository URL (yum/dnf) or full sources}
+    repo_gpg_key_url: ${16:# URL of the GPG key for the repository}
+    server_url: ${17:# URL of the Foreman server}
+    setup_insights: ${18:# If this is set to C(true), C(insights-client) will be installed and registered on Red Hat family operating systems}
+    setup_remote_execution: ${19:# If this is set to true, SSH keys will be installed on the host}
+    setup_remote_execution_pull: ${20:# If this is set to true, pull provider client will be deployed on the host}
+    smart_proxy: ${21:# Name of Smart Proxy}
+    update_packages: ${22:# Update all packages on the host}
+    username: ${23:# Username accessing the Foreman server}
+    validate_certs: ${24:# Whether or not to verify the TLS certificates of the Foreman server}
+  tags:
+    - theforeman
+    - foreman
+    - registration_command]]></content>
+  <tabTrigger>theforeman.foreman.registration_command</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Registration Command</description>
+</snippet>

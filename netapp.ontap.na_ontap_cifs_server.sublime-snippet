@@ -5,37 +5,40 @@
     admin_user_name: ${3:# Specifies the cifs server admin username}
     aes_netlogon_enabled: ${4:# Specifies whether or not an AES session key is enabled for the Netlogon channel}
     cert_filepath: ${5:# path to SSL client cert file (}
-    default_site: ${6:# Specifies the site within the Active Directory domain to associate with the CIFS server if Data ONTAP cannot determine an appropriate site}
-    domain: ${7:# The Fully Qualified Domain Name of the Windows Active Directory this CIFS server belongs to}
-    encrypt_dc_connection: ${8:# Specifies whether encryption is required for domain controller connections}
-    feature_flags: ${9:# Enable or disable a new feature}
-    force: ${10:# When state is present, if this is set and a machine account with the same name as specified in 'name' exists in the Active Directory, it will be overwritten and reused}
-    force_ontap_version: ${11:# Override the cluster ONTAP version when using REST}
-    from_name: ${12:# Specifies the existing cifs_server name}
-    hostname: ${13:# The hostname or IP address of the ONTAP instance}
-    http_port: ${14:# Override the default port (80 or 443) with this port}
-    https: ${15:# Enable and disable https}
-    kdc_encryption: ${16:# Specifies whether AES-128 and AES-256 encryption is enabled for all Kerberos-based communication with the Active Directory KDC}
-    key_filepath: ${17:# path to SSL client key file}
-    ldap_referral_enabled: ${18:# Specifies whether or not LDAP referral chasing is enabled for AD LDAP connections}
-    name: ${19:# Specifies the cifs_server name}
-    ontapi: ${20:# The ontap api version to use}
-    ou: ${21:# The Organizational Unit (OU) within the Windows Active Directory this CIFS server belongs to}
-    password: ${22:# Password for the specified user}
-    restrict_anonymous: ${23:# Specifies what level of access an anonymous user is granted}
-    service_state: ${24:# CIFS Server Administrative Status}
-    session_security: ${25:# Specifies client session security for AD LDAP connections}
-    smb_encryption: ${26:# Determine whether SMB encryption is required for incoming CIFS traffic}
-    smb_signing: ${27:# Specifies whether signing is required for incoming CIFS traffic}
-    state: ${28:# Whether the specified cifs_server should exist or not}
-    try_ldap_channel_binding: ${29:# Specifies whether or not channel binding is attempted in the case of TLS/LDAPS}
-    use_ldaps: ${30:# Specifies whether or not to use use LDAPS for secure Active Directory LDAP connections}
-    use_rest: ${31:# Whether to use REST or ZAPI}
-    use_start_tls: ${32:# Specifies whether or not to use SSL/TLS for allowing secure LDAP communication with Active Directory LDAP servers}
-    username: ${33:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${34:# If set to C(no), the SSL certificates will not be validated}
-    vserver: ${35:# The name of the vserver to use}
-    workgroup: ${36:# The NetBIOS name of the domain or workgroup this CIFS server belongs to}
+    comment: ${6:# A descriptive text comment for the CIFS server}
+    default_site: ${7:# Specifies the site within the Active Directory domain to associate with the CIFS server if Data ONTAP cannot determine an appropriate site}
+    domain: ${8:# The Fully Qualified Domain Name of the Windows Active Directory this CIFS server belongs to}
+    encrypt_dc_connection: ${9:# Specifies whether encryption is required for domain controller connections}
+    feature_flags: ${10:# Enable or disable a new feature}
+    force: ${11:# When state is present, if this is set and a machine account with the same name as specified in 'name' exists in the Active Directory, it will be overwritten and reused}
+    force_ontap_version: ${12:# Override the cluster ONTAP version when using REST}
+    from_name: ${13:# Specifies the existing cifs_server name}
+    hostname: ${14:# The hostname or IP address of the ONTAP instance}
+    http_port: ${15:# Override the default port (80 or 443) with this port}
+    https: ${16:# Enable and disable https}
+    is_multichannel_enabled: ${17:# Specifies whether the CIFS server supports Multichannel or not}
+    kdc_encryption: ${18:# Specifies whether AES-128 and AES-256 encryption is enabled for all Kerberos-based communication with the Active Directory KDC}
+    key_filepath: ${19:# path to SSL client key file}
+    ldap_referral_enabled: ${20:# Specifies whether or not LDAP referral chasing is enabled for AD LDAP connections}
+    lm_compatibility_level: ${21:# Specifies CIFS server minimum security level, also known as the LMCompatibilityLevel}
+    name: ${22:# Specifies the cifs_server name}
+    ontapi: ${23:# The ontap api version to use}
+    ou: ${24:# The Organizational Unit (OU) within the Windows Active Directory this CIFS server belongs to}
+    password: ${25:# Password for the specified user}
+    restrict_anonymous: ${26:# Specifies what level of access an anonymous user is granted}
+    service_state: ${27:# CIFS Server Administrative Status}
+    session_security: ${28:# Specifies client session security for AD LDAP connections}
+    smb_encryption: ${29:# Determine whether SMB encryption is required for incoming CIFS traffic}
+    smb_signing: ${30:# Specifies whether signing is required for incoming CIFS traffic}
+    state: ${31:# Whether the specified cifs_server should exist or not}
+    try_ldap_channel_binding: ${32:# Specifies whether or not channel binding is attempted in the case of TLS/LDAPS}
+    use_ldaps: ${33:# Specifies whether or not to use use LDAPS for secure Active Directory LDAP connections}
+    use_rest: ${34:# Whether to use REST or ZAPI}
+    use_start_tls: ${35:# Specifies whether or not to use SSL/TLS for allowing secure LDAP communication with Active Directory LDAP servers}
+    username: ${36:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${37:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${38:# The name of the vserver to use}
+    workgroup: ${39:# The NetBIOS name of the domain or workgroup this CIFS server belongs to}
   tags:
     - netapp
     - ontap

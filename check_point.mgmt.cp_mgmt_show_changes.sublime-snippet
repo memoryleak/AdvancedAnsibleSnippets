@@ -1,19 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Show changes between two sessions}
   check_point.mgmt.cp_mgmt_show_changes:
-    dereference_group_members: ${2:# Indicates whether to dereference 'members' field by details level for every object in reply}
-    dereference_max_depth: ${3:# When details level is full you can choose the number of levels in the API reply}
-    details_level: ${4:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
-    from_date: ${5:# The date from which tracking changes is to be performed}
-    from_session: ${6:# The session UID from which tracking changes is to be performed}
-    limit: ${7:# Maximum number of sessions to analyze}
-    offset: ${8:# Number of sessions to skip (beginning with from-session)}
-    show_membership: ${9:# Indicates whether to calculate and show 'groups' field for every object in reply}
-    to_date: ${10:# The date until which tracking changes is to be performed}
-    to_session: ${11:# The session UID until which tracking changes is to be performed}
-    version: ${12:# Version of checkpoint}
-    wait_for_task: ${13:# Wait for the task to end}
-    wait_for_task_timeout: ${14:# How many minutes to wait until throwing a timeout error}
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    dereference_group_members: ${3:# Indicates whether to dereference 'members' field by details level for every object in reply}
+    dereference_max_depth: ${4:# When details level is full you can choose the number of levels in the API reply}
+    details_level: ${5:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    from_date: ${6:# The date from which tracking changes is to be performed}
+    from_session: ${7:# The session UID from which tracking changes is to be performed}
+    limit: ${8:# Maximum number of sessions to analyze}
+    offset: ${9:# Number of sessions to skip (beginning with from-session)}
+    show_membership: ${10:# Indicates whether to calculate and show 'groups' field for every object in reply}
+    to_date: ${11:# The date until which tracking changes is to be performed}
+    to_session: ${12:# The session UID until which tracking changes is to be performed}
+    version: ${13:# Version of checkpoint}
+    wait_for_task: ${14:# Wait for the task to end}
+    wait_for_task_timeout: ${15:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

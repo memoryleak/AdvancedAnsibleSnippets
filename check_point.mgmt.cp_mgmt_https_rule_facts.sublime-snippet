@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get https-rule objects facts on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_https_rule_facts:
+    dereference_group_members: ${2:# Indicates whether to dereference 'members' field by details level for every object in reply}
+    details_level: ${3:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    filter: ${4:# Search expression to filter the rulebase}
+    filter_settings: ${5:# Sets filter preferences}
+    layer: ${6:# Layer that holds the Object}
+    limit: ${7:# The maximal number of returned results}
+    name: ${8:# Object name}
+    offset: ${9:# Number of the results to initially skip}
+    order: ${10:# Sorts the results by search criteria}
+    package: ${11:# Name of the package}
+    show_membership: ${12:# Indicates whether to calculate and show 'groups' field for every object in reply}
+    use_object_dictionary: ${13:# Receiving the mapping between the objects id and the whole objects}
+    version: ${14:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_https_rule_facts]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_https_rule_facts</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get https-rule objects facts on Checkpoint over Web Services API</description>
+</snippet>

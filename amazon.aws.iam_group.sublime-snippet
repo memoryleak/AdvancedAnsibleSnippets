@@ -7,16 +7,17 @@
     debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
     endpoint_url: ${6:# URL to connect to instead of the default AWS endpoints}
     managed_policies: ${7:# A list of managed policy ARNs or friendly names to attach to the role}
-    name: ${8:# The name of the group to create}
-    profile: ${9:# A named AWS profile to use for authentication}
-    purge_policies: ${10:# When I(purge_policies=true) any managed policies not listed in I(managed_policies) will be detatched}
-    purge_users: ${11:# When I(purge_users=true) users which are not included in I(users) will be detached}
-    region: ${12:# The AWS region to use}
-    secret_key: ${13:# AWS secret access key}
-    session_token: ${14:# AWS STS session token for use with temporary credentials}
-    state: ${15:# Create or remove the IAM group}
-    users: ${16:# A list of existing users to add as members of the group}
-    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    name: ${8:# The name of the group}
+    path: ${9:# The group path}
+    profile: ${10:# A named AWS profile to use for authentication}
+    purge_policies: ${11:# When O(purge_policies=true) any managed policies not listed in O(managed_policies) will be detatched}
+    purge_users: ${12:# When O(purge_users=true) users which are not included in I(users) will be detached}
+    region: ${13:# The AWS region to use}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    state: ${16:# Create or remove the IAM group}
+    users: ${17:# A list of existing users to add as members of the group}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - amazon
     - aws

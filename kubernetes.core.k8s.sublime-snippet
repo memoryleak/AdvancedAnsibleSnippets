@@ -10,35 +10,37 @@
     client_key: ${8:# Path to a key file used to authenticate with the API}
     context: ${9:# The name of a context found in the config file}
     continue_on_error: ${10:# Whether to continue on creation/deletion errors when multiple resources are defined}
-    delete_options: ${11:# Configure behavior when deleting an object}
-    force: ${12:# If set to C(yes), and I(state) is C(present), an existing object will be replaced}
-    generate_name: ${13:# Use to specify the basis of an object name and random characters will be added automatically on server to generate a unique name}
-    host: ${14:# Provide a URL for accessing the API}
-    impersonate_groups: ${15:# Group(s) to impersonate for the operation}
-    impersonate_user: ${16:# Username to impersonate for the operation}
-    kind: ${17:# Use to specify an object model}
-    kubeconfig: ${18:# Path to an existing Kubernetes config file}
-    label_selectors: ${19:# Selector (label query) to filter on}
-    merge_type: ${20:# Whether to override the default patch merge approach with a specific type}
-    name: ${21:# Use to specify an object name}
-    namespace: ${22:# Use to specify an object namespace}
-    no_proxy: ${23:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
-    password: ${24:# Provide a password for authenticating with the API}
-    persist_config: ${25:# Whether or not to save the kube config refresh tokens}
-    proxy: ${26:# The URL of an HTTP proxy to use for the connection}
-    proxy_headers: ${27:# The Header used for the HTTP proxy}
-    resource_definition: ${28:# Provide a valid YAML definition (either as a string, list, or dict) for an object when creating or updating}
-    server_side_apply: ${29:# When this option is set, apply runs in the server instead of the client}
-    src: ${30:# Provide a path to a file containing a valid YAML definition of an object or objects to be created or updated}
-    state: ${31:# Determines if an object should be created, patched, or deleted}
-    template: ${32:# Provide a valid YAML template definition file for an object when creating or updating}
-    username: ${33:# Provide a username for authenticating with the API}
-    validate: ${34:# how (if at all) to validate the resource definition against the kubernetes schema}
-    validate_certs: ${35:# Whether or not to verify the API server's SSL certificates}
-    wait: ${36:# Whether to wait for certain resource kinds to end up in the desired state}
-    wait_condition: ${37:# Specifies a custom condition on the status to wait for}
-    wait_sleep: ${38:# Number of seconds to sleep between checks}
-    wait_timeout: ${39:# How long in seconds to wait for the resource to end up in the desired state}
+    delete_all: ${11:# When this option is set to I(true) and I(state=absent), module will delete all resources of the specified resource type in the requested namespace}
+    delete_options: ${12:# Configure behavior when deleting an object}
+    force: ${13:# If set to C(yes), and I(state) is C(present), an existing object will be replaced}
+    generate_name: ${14:# Use to specify the basis of an object name and random characters will be added automatically on server to generate a unique name}
+    hidden_fields: ${15:# Hide fields matching this option in the result}
+    host: ${16:# Provide a URL for accessing the API}
+    impersonate_groups: ${17:# Group(s) to impersonate for the operation}
+    impersonate_user: ${18:# Username to impersonate for the operation}
+    kind: ${19:# Use to specify an object model}
+    kubeconfig: ${20:# Path to an existing Kubernetes config file}
+    label_selectors: ${21:# Selector (label query) to filter on}
+    merge_type: ${22:# Whether to override the default patch merge approach with a specific type}
+    name: ${23:# Use to specify an object name}
+    namespace: ${24:# Use to specify an object namespace}
+    no_proxy: ${25:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
+    password: ${26:# Provide a password for authenticating with the API}
+    persist_config: ${27:# Whether or not to save the kube config refresh tokens}
+    proxy: ${28:# The URL of an HTTP proxy to use for the connection}
+    proxy_headers: ${29:# The Header used for the HTTP proxy}
+    resource_definition: ${30:# Provide a valid YAML definition (either as a string, list, or dict) for an object when creating or updating}
+    server_side_apply: ${31:# When this option is set, apply runs in the server instead of the client}
+    src: ${32:# Provide a path to a file containing a valid YAML definition of an object or objects to be created or updated}
+    state: ${33:# Determines if an object should be created, patched, or deleted}
+    template: ${34:# Provide a valid YAML template definition file for an object when creating or updating}
+    username: ${35:# Provide a username for authenticating with the API}
+    validate: ${36:# how (if at all) to validate the resource definition against the kubernetes schema}
+    validate_certs: ${37:# Whether or not to verify the API server's SSL certificates}
+    wait: ${38:# Whether to wait for certain resource kinds to end up in the desired state}
+    wait_condition: ${39:# Specifies a custom condition on the status to wait for}
+    wait_sleep: ${40:# Number of seconds to sleep between checks}
+    wait_timeout: ${41:# How long in seconds to wait for the resource to end up in the desired state}
   tags:
     - kubernetes
     - core

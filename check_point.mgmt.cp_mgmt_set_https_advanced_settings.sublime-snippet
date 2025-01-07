@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure advanced settings for HTTPS Inspection}
+  check_point.mgmt.cp_mgmt_set_https_advanced_settings:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    blocked_certificate_tracking: ${3:# Controls whether to log and send a notification for dropped traffic}
+    blocked_certificates: ${4:# Collection of certificates objects identified by serial number}
+    bypass_on_client_failure: ${5:# Whether all requests should be bypassed or blocked-in case of client errors (Client closes the connection due to authentication issues during handshake)<br><ul style='list-style-type,square'><li>true - Fail-open (bypass all requests)}
+    bypass_on_failure: ${6:# Whether all requests should be bypassed or blocked-in case of server errors (for example validation error during GW-Server authentication)<br><ul style='list-style-type,square'><li>true - Fail-open (bypass all requests)}
+    bypass_under_load: ${7:# Bypass the HTTPS Inspection temporarily to improve connectivity during a heavy load on the Security Gateway}
+    bypass_update_services: ${8:# Configure the value 'true' to bypass traffic to well-known software update services}
+    certificate_pinned_apps_action: ${9:# Configure the value 'bypass' to bypass traffic from certificate-pinned applications approved by Check Point}
+    details_level: ${10:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${11:# Indicates which domains to process the commands on}
+    ignore_errors: ${12:# Apply changes ignoring errors}
+    ignore_warnings: ${13:# Apply changes ignoring warnings}
+    log_sessions: ${14:# The value 'true' configures the Security Gateway to send HTTPS Inspection session logs}
+    retrieve_intermediate_ca_certificates: ${15:# Configure the value 'true' to use the 'Certificate Authority Information Access' extension to retrieve certificates that are missing from the certificate chain}
+    server_certificate_validation_actions: ${16:# When a Security Gateway receives an untrusted certificate from a website server, define when to drop the connection and how to track it}
+    site_categorization_allow_mode: ${17:# Whether all requests should be allowed or blocked until categorization is complete}
+    version: ${18:# Version of checkpoint}
+    wait_for_task: ${19:# Wait for the task to end}
+    wait_for_task_timeout: ${20:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_set_https_advanced_settings]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_set_https_advanced_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure advanced settings for HTTPS Inspection</description>
+</snippet>

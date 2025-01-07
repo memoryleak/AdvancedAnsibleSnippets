@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set bmc system and audit log setting}
+  ieisystem.inmanage.edit_m6_log_setting:
+    host: ${2:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    host_tag: ${3:# System log host tag, set when I(status=enable)}
+    level: ${4:# Events Level, set when I(status=enable)}
+    log_type: ${5:# Remote Log Type, set when server_id is not none}
+    password: ${6:# Specifies the password to use to authenticate the connection to the remote device}
+    protocol_type: ${7:# Protocol Type, set when I(status=enable)}
+    provider: ${8:# A dict object containing connection details}
+    server_addr: ${9:# Server Address, set when server_id is not none}
+    server_id: ${10:# Syslog Server ID, set when I(status=enable)}
+    server_port: ${11:# Server Address, set when server_id is not none}
+    status: ${12:# System Log Status}
+    test: ${13:# Test remote log settings, set when server_id is not none}
+    username: ${14:# Configures the username to use to authenticate the connection to the remote device}
+  tags:
+    - ieisystem
+    - inmanage
+    - edit_m6_log_setting]]></content>
+  <tabTrigger>ieisystem.inmanage.edit_m6_log_setting</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set bmc system and audit log setting</description>
+</snippet>

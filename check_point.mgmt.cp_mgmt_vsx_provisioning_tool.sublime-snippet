@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Run the VSX provisioning tool with the specified parameters}
+  check_point.mgmt.cp_mgmt_vsx_provisioning_tool:
+    add_physical_interface_params: ${2:# Parameters for the operation to add a physical interface to a VSX gateway or VSX Cluster}
+    add_route_params: ${3:# Parameters for the operation to add a route to a Virtual System or Virtual Router}
+    add_vd_interface_params: ${4:# Parameters for the operation to add a new interface to a Virtual Device}
+    add_vd_params: ${5:# Parameters for the operation to add a new Virtual Device (VS/VSB/VSW/VR)}
+    add_vsx_cluster_params: ${6:# Parameters for the operation to add a new VSX Cluster}
+    add_vsx_gateway_params: ${7:# Parameters for the operation to add a new VSX Gateway}
+    attach_bridge_params: ${8:# Parameters for the operation to attach a new bridge interface to a Virtual System}
+    auto_publish_session: ${9:# Publish the current session if changes have been performed after task completes}
+    operation: ${10:# The name of the provisioning operation to run}
+    remove_physical_interface_params: ${11:# Parameters for the operation to remove a physical interface from a VSX (Gateway or Cluster)}
+    remove_route_params: ${12:# Parameters for the operation to remove a route from a Virtual System or Virtual Router}
+    remove_vd_interface_params: ${13:# Parameters for the operation to remove a logical interface from a Virtual Device}
+    remove_vd_params: ${14:# Parameters for the operation to remove a Virtual Device}
+    remove_vsx_params: ${15:# Parameters for the operation to remove a VSX Gateway or VSX Cluster}
+    set_physical_interface_params: ${16:# Parameters for the operation to change the configuration of a physical interface}
+    set_vd_interface_params: ${17:# Parameters for the operation to change the configuration of a logical interface}
+    set_vd_params: ${18:# Parameters for the operation to change the configuration of a Virtual Device}
+    version: ${19:# Version of checkpoint}
+    wait_for_task: ${20:# Wait for the task to end}
+    wait_for_task_timeout: ${21:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_vsx_provisioning_tool]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_vsx_provisioning_tool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Run the VSX provisioning tool with the specified parameters</description>
+</snippet>

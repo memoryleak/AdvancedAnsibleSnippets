@@ -3,7 +3,7 @@
   community.docker.docker_container_exec:
     api_version: ${2:# The version of the Docker API running on the Docker Host}
     argv: ${3:# The command to execute}
-    ca_cert: ${4:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    ca_path: ${4:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
     chdir: ${5:# The directory to run the command in}
     client_cert: ${6:# Path to the client's TLS certificate file}
     client_key: ${7:# Path to the client's TLS key file}
@@ -13,17 +13,16 @@
     detach: ${11:# Whether to run the command synchronously (O(detach=false), default) or asynchronously (O(detach=true))}
     docker_host: ${12:# The URL or Unix socket path used to connect to the Docker API}
     env: ${13:# Dictionary of environment variables with their respective values to be passed to the command ran inside the container}
-    ssl_version: ${14:# Provide a valid SSL version number}
-    stdin: ${15:# Set the stdin of the command directly to the specified value}
-    stdin_add_newline: ${16:# If set to V(true), appends a newline to O(stdin)}
-    strip_empty_ends: ${17:# Strip empty lines from the end of stdout/stderr in result}
-    timeout: ${18:# The maximum amount of time in seconds to wait on a response from the API}
-    tls: ${19:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    tls_hostname: ${20:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    tty: ${21:# Whether to allocate a TTY}
-    use_ssh_client: ${22:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
-    user: ${23:# If specified, the user to execute this command with}
-    validate_certs: ${24:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    stdin: ${14:# Set the stdin of the command directly to the specified value}
+    stdin_add_newline: ${15:# If set to V(true), appends a newline to O(stdin)}
+    strip_empty_ends: ${16:# Strip empty lines from the end of stdout/stderr in result}
+    timeout: ${17:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${18:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${19:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    tty: ${20:# Whether to allocate a TTY}
+    use_ssh_client: ${21:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    user: ${22:# If specified, the user to execute this command with}
+    validate_certs: ${23:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
   tags:
     - community
     - docker

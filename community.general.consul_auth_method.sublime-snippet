@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manipulate Consul auth methods}
+  community.general.consul_auth_method:
+    ca_path: ${2:# The CA bundle to use for https connections}
+    config: ${3:# The raw configuration to use for the chosen auth method}
+    description: ${4:# Free form human readable description of the auth method}
+    display_name: ${5:# An optional name to use instead of O(name) when displaying information about this auth method}
+    host: ${6:# Host of the consul agent, defaults to V(localhost)}
+    max_token_ttl: ${7:# This specifies the maximum life of any token created by this auth method}
+    name: ${8:# Specifies a name for the ACL auth method}
+    port: ${9:# The port on which the consul agent is running}
+    scheme: ${10:# The protocol scheme on which the consul agent is running}
+    state: ${11:# Whether the token should be present or absent}
+    token: ${12:# The token to use for authorization}
+    token_locality: ${13:# Defines the kind of token that this auth method should produce}
+    type: ${14:# The type of auth method being configured}
+    validate_certs: ${15:# Whether to verify the TLS certificate of the consul agent}
+  tags:
+    - community
+    - general
+    - consul_auth_method]]></content>
+  <tabTrigger>community.general.consul_auth_method</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manipulate Consul auth methods</description>
+</snippet>

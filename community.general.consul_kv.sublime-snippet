@@ -2,18 +2,19 @@
   <content><![CDATA[- name: ${1:Manipulate entries in the key/value store of a consul cluster}
   community.general.consul_kv:
     cas: ${2:# Used when acquiring a lock with a session}
-    flags: ${3:# Opaque positive integer value that can be passed when setting a value}
-    host: ${4:# Host of the consul agent}
-    key: ${5:# The key at which the value should be stored}
-    port: ${6:# The port on which the consul agent is running}
-    recurse: ${7:# If the key represents a prefix, each entry with the prefix can be retrieved by setting this to V(true)}
-    retrieve: ${8:# If the O(state) is V(present) and O(value) is set, perform a read after setting the value and return this value}
-    scheme: ${9:# The protocol scheme on which the consul agent is running}
-    session: ${10:# The session that should be used to acquire or release a lock associated with a key/value pair}
-    state: ${11:# The action to take with the supplied key and value}
-    token: ${12:# The token key identifying an ACL rule set that controls access to the key value pair}
-    validate_certs: ${13:# Whether to verify the tls certificate of the consul agent}
-    value: ${14:# The value should be associated with the given key, required if O(state) is V(present)}
+    datacenter: ${3:# The name of the datacenter to query}
+    flags: ${4:# Opaque positive integer value that can be passed when setting a value}
+    host: ${5:# Host of the consul agent}
+    key: ${6:# The key at which the value should be stored}
+    port: ${7:# The port on which the consul agent is running}
+    recurse: ${8:# If the key represents a prefix, each entry with the prefix can be retrieved by setting this to V(true)}
+    retrieve: ${9:# If the O(state) is V(present) and O(value) is set, perform a read after setting the value and return this value}
+    scheme: ${10:# The protocol scheme on which the consul agent is running}
+    session: ${11:# The session that should be used to acquire or release a lock associated with a key/value pair}
+    state: ${12:# The action to take with the supplied key and value}
+    token: ${13:# The token key identifying an ACL rule set that controls access to the key value pair}
+    validate_certs: ${14:# Whether to verify the tls certificate of the consul agent}
+    value: ${15:# The value should be associated with the given key, required if O(state) is V(present)}
   tags:
     - community
     - general

@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set snmp}
+  ieisystem.inmanage.edit_snmp:
+    auth_password: ${2:# Set the authentication password for the V3 trap or v3get/v3set}
+    auth_protocol: ${3:# Choose the authentication protocol for the V3 trap or v3get/v3set}
+    community: ${4:# Community of v1/v2c or v1get/v1set/v2cget/v2cset}
+    host: ${5:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    password: ${6:# Specifies the password to use to authenticate the connection to the remote device}
+    priv_password: ${7:# Set the privacy password for the V3 trap or v3get/v3set}
+    priv_protocol: ${8:# Choose the privacy protocol for the V3 trap or v3get/v3set}
+    provider: ${9:# A dict object containing connection details}
+    read_community: ${10:# Read Only Community, Community should between 1 and 16 characters}
+    read_write_community: ${11:# Read And Write Community, Community should between 1 and 16 characters}
+    snmp_status: ${12:# NMP read/write status of customize}
+    username: ${13:# Configures the username to use to authenticate the connection to the remote device}
+    v1status: ${14:# SNMP V1 enable}
+    v2status: ${15:# SNMP V2 enable}
+    v3status: ${16:# SNMP V3 enable}
+    v3username: ${17:# Set a username for the V3 trap or v3get/v3set}
+    version: ${18:# SNMP trap version option, 0 - 'v1', 1 - 'v2c', 2 - 'v3', 3 - 'all', 4 - 'customize'}
+  tags:
+    - ieisystem
+    - inmanage
+    - edit_snmp]]></content>
+  <tabTrigger>ieisystem.inmanage.edit_snmp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set snmp</description>
+</snippet>

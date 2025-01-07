@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage switch policy explicit vPC protection groups (fabric:ExplicitGEp, fabric:NodePEp)}
+  <content><![CDATA[- name: ${1:Manage switch policy explicit vPC protection groups (fabric:ExplicitGEp and fabric:NodePEp)}
   cisco.aci.aci_switch_policy_vpc_protection_group:
     annotation: ${2:# User-defined string for annotating an object}
     certificate_name: ${3:# The X}
@@ -13,19 +13,21 @@
     protection_group: ${11:# The name of the Explicit vPC Protection Group}
     protection_group_id: ${12:# The Explicit vPC Protection Group ID}
     state: ${13:# Use C(present) or C(absent) for adding or removing}
-    switch_1_id: ${14:# The ID of the first Leaf Switch for the Explicit vPC Protection Group}
-    switch_2_id: ${15:# The ID of the Second Leaf Switch for the Explicit vPC Protection Group}
-    timeout: ${16:# The socket level timeout in seconds}
-    use_proxy: ${17:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${18:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${19:# The username to use for authentication}
-    validate_certs: ${20:# If C(false), SSL certificates will not be validated}
-    vpc_domain_policy: ${21:# The vPC domain policy to be associated with the Explicit vPC Protection Group}
+    suppress_previous: ${14:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${15:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    switch_1_id: ${16:# The ID of the first Leaf Switch for the Explicit vPC Protection Group}
+    switch_2_id: ${17:# The ID of the Second Leaf Switch for the Explicit vPC Protection Group}
+    timeout: ${18:# The socket level timeout in seconds}
+    use_proxy: ${19:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${20:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${21:# The username to use for authentication}
+    validate_certs: ${22:# If C(false), SSL certificates will not be validated}
+    vpc_domain_policy: ${23:# The vPC domain policy to be associated with the Explicit vPC Protection Group}
   tags:
     - cisco
     - aci
     - aci_switch_policy_vpc_protection_group]]></content>
   <tabTrigger>cisco.aci.aci_switch_policy_vpc_protection_group</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage switch policy explicit vPC protection groups (fabric:ExplicitGEp, fabric:NodePEp)</description>
+  <description>Manage switch policy explicit vPC protection groups (fabric:ExplicitGEp and fabric:NodePEp)</description>
 </snippet>

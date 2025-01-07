@@ -1,14 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages OpenNebula images}
   community.general.one_image:
-    api_password: ${2:# Password of the user to login into OpenNebula RPC server}
-    api_url: ${3:# URL of the OpenNebula RPC server}
-    api_username: ${4:# Name of the user to login into the OpenNebula RPC server}
-    enabled: ${5:# Whether the image should be enabled or disabled}
-    id: ${6:# A O(id) of the image you would like to manage}
-    name: ${7:# A O(name) of the image you would like to manage}
-    new_name: ${8:# A name that will be assigned to the existing or new image}
-    state: ${9:# V(present) - state that is used to manage the image}
+    api_password: ${2:# The password or token for XMLRPC authentication}
+    api_url: ${3:# The ENDPOINT URL of the XMLRPC server}
+    api_username: ${4:# The name of the user for XMLRPC authentication}
+    create: ${5:# Whether the image should be created if not present}
+    datastore_id: ${6:# Use with O(create=true) to specify datastore for image}
+    enabled: ${7:# Whether the image should be enabled or disabled}
+    id: ${8:# A O(id) of the image you would like to manage}
+    name: ${9:# A O(name) of the image you would like to manage}
+    new_name: ${10:# A name that will be assigned to the existing or new image}
+    persistent: ${11:# Whether the image should be persistent or non-persistent}
+    state: ${12:# V(present) - state that is used to manage the image}
+    template: ${13:# Use with O(create=true) to specify image template}
+    validate_certs: ${14:# Whether to validate the TLS/SSL certificates or not}
+    wait_timeout: ${15:# Seconds to wait until image is ready, deleted or cloned}
   tags:
     - community
     - general

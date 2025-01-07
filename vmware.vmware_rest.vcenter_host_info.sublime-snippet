@@ -1,12 +1,12 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Returns information about at most 2500 visible (subject to permission checks) hosts in vCenter matching the @link FilterSpec}
+  <content><![CDATA[- name: ${1:Returns information about at most 2500 visible (subject to permission checks) hosts in vCenter matching the Host}
   vmware.vmware_rest.vcenter_host_info:
     clusters: ${2:# Clusters that must contain the hosts for the hosts to match the filter}
-    connection_states: ${3:# Connection states that a host must be in to match the filter (see @link Summary#connectionState}
+    connection_states: ${3:# Connection states that a host must be in to match the filter (see I()}
     datacenters: ${4:# Datacenters that must contain the hosts for the hosts to match the filter}
     folders: ${5:# Folders that must contain the hosts for the hosts to match the filter}
     hosts: ${6:# Identifiers of hosts that can match the filter}
-    names: ${7:# Names that hosts must have to match the filter (see @link Summary#name)}
+    names: ${7:# Names that hosts must have to match the filter (see I(name))}
     session_timeout: ${8:# Timeout settings for client session}
     standalone: ${9:# If true, only hosts that are not part of a cluster can match the filter, and if false, only hosts that are are part of a cluster can match the filter}
     vcenter_hostname: ${10:# The hostname or IP address of the vSphere vCenter}
@@ -20,5 +20,5 @@
     - vcenter_host_info]]></content>
   <tabTrigger>vmware.vmware_rest.vcenter_host_info</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Returns information about at most 2500 visible (subject to permission checks) hosts in vCenter matching the @link FilterSpec</description>
+  <description>Returns information about at most 2500 visible (subject to permission checks) hosts in vCenter matching the Host</description>
 </snippet>

@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Determine whether a certificate should be renewed or not}
+  community.crypto.acme_certificate_renewal_info:
+    acme_directory: ${2:# The ACME directory to use}
+    acme_version: ${3:# The ACME version of the endpoint}
+    ari_algorithm: ${4:# If ARI information is used, selects which algorithm is used to determine whether to renew now}
+    certificate_content: ${5:# The content of the X}
+    certificate_path: ${6:# A path to the X}
+    now: ${7:# Use this timestamp instead of the current timestamp to determine whether a certificate should be renewed}
+    remaining_days: ${8:# The number of days the certificate must have left being valid}
+    remaining_percentage: ${9:# The percentage of the certificate's validity period that should be left}
+    request_timeout: ${10:# The time Ansible should wait for a response from the ACME API}
+    select_crypto_backend: ${11:# Determines which crypto backend to use}
+    use_ari: ${12:# Whether to use ARI information, if available}
+    validate_certs: ${13:# Whether calls to the ACME directory will validate TLS certificates}
+  tags:
+    - community
+    - crypto
+    - acme_certificate_renewal_info]]></content>
+  <tabTrigger>community.crypto.acme_certificate_renewal_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Determine whether a certificate should be renewed or not</description>
+</snippet>

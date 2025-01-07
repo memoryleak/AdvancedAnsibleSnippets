@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for Compliance Check Run V1}
+  cisco.dnac.compliance_check_run_v1:
+    categories: ${2:# Category can have any value among 'INTENT'(mapped to compliance types NETWORK_SETTINGS,NETWORK_PROFILE,WORKFLOW,FABRIC,APPLICATION_VISIBILITY), 'RUNNING_CONFIG' , 'IMAGE' , 'PSIRT' , 'EOX' , 'NETWORK_SETTINGS'}
+    deviceUuids: ${3:# UUID of the device}
+    dnac_debug: ${4:# Flag for Cisco DNA Center SDK to enable debugging}
+    dnac_host: ${5:# The Cisco DNA Center hostname}
+    dnac_password: ${6:# The Cisco DNA Center password to authenticate}
+    dnac_port: ${7:# The Cisco DNA Center port}
+    dnac_username: ${8:# The Cisco DNA Center username to authenticate}
+    dnac_verify: ${9:# Flag to enable or disable SSL certificate verification}
+    dnac_version: ${10:# Informs the SDK which version of Cisco DNA Center to use}
+    triggerFull: ${11:# If it is true then compliance will be triggered for all categories}
+    validate_response_schema: ${12:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
+  tags:
+    - cisco
+    - dnac
+    - compliance_check_run_v1]]></content>
+  <tabTrigger>cisco.dnac.compliance_check_run_v1</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for Compliance Check Run V1</description>
+</snippet>

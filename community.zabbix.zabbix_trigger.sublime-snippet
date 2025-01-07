@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/delete Zabbix triggers}
+  community.zabbix.zabbix_trigger:
+    dependencies: ${2:# list of triggers that this trigger is dependent on}
+    desc: ${3:# Additional description of the trigger}
+    host_name: ${4:# Name of host to add trigger to}
+    http_login_password: ${5:# Basic Auth password}
+    http_login_user: ${6:# Basic Auth login}
+    name: ${7:# Name of trigger to create or delete}
+    params: ${8:# Parameters to create/update trigger with}
+    state: ${9:# Create or delete trigger}
+    template_name: ${10:# Name of template to add trigger to}
+  tags:
+    - community
+    - zabbix
+    - zabbix_trigger]]></content>
+  <tabTrigger>community.zabbix.zabbix_trigger</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/delete Zabbix triggers</description>
+</snippet>

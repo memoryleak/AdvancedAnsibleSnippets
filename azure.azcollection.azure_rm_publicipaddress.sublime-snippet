@@ -10,26 +10,28 @@
     cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
     client_id: ${9:# Azure client ID}
     cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    domain_name: ${11:# The customizable portion of the FQDN assigned to public IP address}
-    idle_timeout: ${12:# Idle timeout in minutes}
-    ip_tags: ${13:# List of IpTag associated with the public IP address}
-    location: ${14:# Valid Azure location}
-    log_mode: ${15:# Parent argument}
-    log_path: ${16:# Parent argument}
-    name: ${17:# Name of the Public IP}
-    password: ${18:# Active Directory user password}
-    profile: ${19:# Security profile found in ~/}
-    resource_group: ${20:# Name of resource group with which the Public IP is associated}
-    secret: ${21:# Azure client secret}
-    sku: ${22:# The public IP address SKU}
-    state: ${23:# Assert the state of the Public IP}
-    subscription_id: ${24:# Your Azure subscription Id}
-    tags: ${25:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${26:# Azure tenant ID}
-    thumbprint: ${27:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    version: ${28:# The public IP address version}
-    x509_certificate_path: ${29:# Path to the X509 certificate used to create the service principal in PEM format}
-    zones: ${30:# A list of availability zones denoting the IP allocated for the resource needs to come from}
+    disable_instance_discovery: ${11:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    domain_name: ${12:# The customizable portion of the FQDN assigned to public IP address}
+    idle_timeout: ${13:# Idle timeout in minutes}
+    ip_tags: ${14:# List of IpTag associated with the public IP address}
+    location: ${15:# Valid Azure location}
+    log_mode: ${16:# Parent argument}
+    log_path: ${17:# Parent argument}
+    name: ${18:# Name of the Public IP}
+    password: ${19:# Active Directory user password}
+    profile: ${20:# Security profile found in ~/}
+    resource_group: ${21:# Name of resource group with which the Public IP is associated}
+    reverse_fqdn: ${22:# The reverse FQDN}
+    secret: ${23:# Azure client secret}
+    sku: ${24:# The public IP address SKU}
+    state: ${25:# Assert the state of the Public IP}
+    subscription_id: ${26:# Your Azure subscription Id}
+    tags: ${27:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${28:# Azure tenant ID}
+    thumbprint: ${29:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    version: ${30:# The public IP address version}
+    x509_certificate_path: ${31:# Path to the X509 certificate used to create the service principal in PEM format}
+    zones: ${32:# A list of availability zones denoting the IP allocated for the resource needs to come from}
   tags:
     - azure
     - azcollection

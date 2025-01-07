@@ -1,20 +1,38 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/delete/get/update Zabbix proxies}
   community.zabbix.zabbix_proxy:
-    ca_cert: ${2:# Certificate issuer}
-    description: ${3:# Description of the proxy}
-    http_login_password: ${4:# Basic Auth password}
-    http_login_user: ${5:# Basic Auth login}
-    interface: ${6:# Dictionary with params for the interface when proxy is in passive mode}
-    proxy_address: ${7:# Comma-delimited list of IP/CIDR addresses or DNS names to accept active proxy requests from}
-    proxy_name: ${8:# Name of the proxy in Zabbix}
-    state: ${9:# State of the proxy}
-    status: ${10:# Type of proxy}
-    tls_accept: ${11:# Connections from proxy}
-    tls_connect: ${12:# Connections to proxy}
-    tls_psk: ${13:# The preshared key, at least 32 hex digits}
-    tls_psk_identity: ${14:# PSK identity}
-    tls_subject: ${15:# Certificate subject}
+    address: ${2:# Parameter introduced in Zabbix 7}
+    allowed_addresses: ${3:# Parameter introduced in Zabbix 7}
+    ca_cert: ${4:# Certificate issuer}
+    custom_timeouts: ${5:# Parameter introduced in Zabbix 7}
+    description: ${6:# Description of the proxy}
+    http_login_password: ${7:# Basic Auth password}
+    http_login_user: ${8:# Basic Auth login}
+    interface: ${9:# Deprecated for Zabbix version >= 7}
+    local_address: ${10:# Parameter introduced in Zabbix 7}
+    local_port: ${11:# Parameter introduced in Zabbix 7}
+    operating_mode: ${12:# Parameter introduced in Zabbix 7}
+    port: ${13:# Parameter introduced in Zabbix 7}
+    proxy_address: ${14:# Deprecated for Zabbix version >= 7}
+    proxy_group: ${15:# Parameter introduced in Zabbix 7}
+    proxy_name: ${16:# Name of the proxy in Zabbix}
+    state: ${17:# State of the proxy}
+    status: ${18:# Deprecated for Zabbix version >= 7}
+    timeout_browser: ${19:# Parameter introduced in Zabbix 7}
+    timeout_db_monitor: ${20:# Parameter introduced in Zabbix 7}
+    timeout_external_check: ${21:# Parameter introduced in Zabbix 7}
+    timeout_http_agent: ${22:# Parameter introduced in Zabbix 7}
+    timeout_script: ${23:# Parameter introduced in Zabbix 7}
+    timeout_simple_check: ${24:# Parameter introduced in Zabbix 7}
+    timeout_snmp_agent: ${25:# Parameter introduced in Zabbix 7}
+    timeout_ssh_agent: ${26:# Parameter introduced in Zabbix 7}
+    timeout_telnet_agent: ${27:# Parameter introduced in Zabbix 7}
+    timeout_zabbix_agent: ${28:# Parameter introduced in Zabbix 7}
+    tls_accept: ${29:# Connections from proxy}
+    tls_connect: ${30:# Connections to proxy}
+    tls_psk: ${31:# The preshared key, at least 32 hex digits}
+    tls_psk_identity: ${32:# PSK identity}
+    tls_subject: ${33:# Certificate subject}
   tags:
     - community
     - zabbix

@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get or list the containers blob facts}
+  azure.azcollection.azure_rm_storageblob_info:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    auth_mode: ${5:# The mode in which to run the command}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    blob_name: ${7:# Name of a blob object within the container}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    container_name: ${11:# Name of a blob container within the storage account}
+    disable_instance_discovery: ${12:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    include: ${13:# Specifies one or more additional datasets to include in the response}
+    log_mode: ${14:# Parent argument}
+    log_path: ${15:# Parent argument}
+    name_starts_with: ${16:# Filters the results to return only blobs whose names begin with the specified prefix}
+    password: ${17:# Active Directory user password}
+    profile: ${18:# Security profile found in ~/}
+    resource_group: ${19:# Name of the resource group to use}
+    secret: ${20:# Azure client secret}
+    storage_account_name: ${21:# Name of the storage account to use}
+    subscription_id: ${22:# Your Azure subscription Id}
+    tenant: ${23:# Azure tenant ID}
+    thumbprint: ${24:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_storageblob_info]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_storageblob_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get or list the containers blob facts</description>
+</snippet>

@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Get Azure Virtual Machine Scale Set Instance facts}
+  <content><![CDATA[- name: ${1:Manage Azure virtual machine scale set instance}
   azure.azcollection.azure_rm_virtualmachinescalesetinstance:
     ad_user: ${2:# Active Directory username}
     adfs_authority_url: ${3:# Azure AD authority url}
@@ -8,28 +8,29 @@
     cert_validation_mode: ${6:# Controls the certificate validation behavior for Azure endpoints}
     client_id: ${7:# Azure client ID}
     cloud_environment: ${8:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    instance_id: ${9:# The instance ID of the virtual machine}
-    latest_model: ${10:# Set to C(yes) to upgrade to the latest model}
-    log_mode: ${11:# Parent argument}
-    log_path: ${12:# Parent argument}
-    password: ${13:# Active Directory user password}
-    power_state: ${14:# Use this option to change power state of the instance}
-    profile: ${15:# Security profile found in ~/}
-    protect_from_scale_in: ${16:# turn on/off instance protection from scale in}
-    protect_from_scale_set_actions: ${17:# tun on/off instance protection from scale set actions}
-    resource_group: ${18:# The name of the resource group}
-    secret: ${19:# Azure client secret}
-    state: ${20:# State of the VMSS instance}
-    subscription_id: ${21:# Your Azure subscription Id}
-    tenant: ${22:# Azure tenant ID}
-    thumbprint: ${23:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    vmss_name: ${24:# The name of the VM scale set}
-    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
+    disable_instance_discovery: ${9:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    instance_id: ${10:# The instance ID of the virtual machine}
+    latest_model: ${11:# Set to C(yes) to upgrade to the latest model}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    password: ${14:# Active Directory user password}
+    power_state: ${15:# Use this option to change power state of the instance}
+    profile: ${16:# Security profile found in ~/}
+    protect_from_scale_in: ${17:# turn on/off instance protection from scale in}
+    protect_from_scale_set_actions: ${18:# tun on/off instance protection from scale set actions}
+    resource_group: ${19:# The name of the resource group}
+    secret: ${20:# Azure client secret}
+    state: ${21:# State of the VMSS instance}
+    subscription_id: ${22:# Your Azure subscription Id}
+    tenant: ${23:# Azure tenant ID}
+    thumbprint: ${24:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    vmss_name: ${25:# The name of the VM scale set}
+    x509_certificate_path: ${26:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection
     - azure_rm_virtualmachinescalesetinstance]]></content>
   <tabTrigger>azure.azcollection.azure_rm_virtualmachinescalesetinstance</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Get Azure Virtual Machine Scale Set Instance facts</description>
+  <description>Manage Azure virtual machine scale set instance</description>
 </snippet>

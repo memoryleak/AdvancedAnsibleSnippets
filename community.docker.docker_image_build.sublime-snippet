@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Build Docker images using Docker buildx}
+  community.docker.docker_image_build:
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    args: ${3:# Provide a dictionary of C(key:value) build arguments that map to Dockerfile ARG directive}
+    ca_path: ${4:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    cache_from: ${5:# List of image names to consider as cache source}
+    cli_context: ${6:# The Docker CLI context to use}
+    client_cert: ${7:# Path to the client's TLS certificate file}
+    client_key: ${8:# Path to the client's TLS key file}
+    docker_cli: ${9:# Path to the Docker CLI}
+    docker_host: ${10:# The URL or Unix socket path used to connect to the Docker API}
+    dockerfile: ${11:# Provide an alternate name for the Dockerfile to use when building an image}
+    etc_hosts: ${12:# Extra hosts to add to C(/etc/hosts) in building containers, as a mapping of hostname to IP address}
+    labels: ${13:# Dictionary of key value pairs}
+    name: ${14:# Image name}
+    network: ${15:# The network to use for C(RUN) build instructions}
+    nocache: ${16:# Do not use cache when building an image}
+    outputs: ${17:# Output destinations}
+    path: ${18:# The path for the build environment}
+    platform: ${19:# Platforms in the format C(os[/arch[/variant]])}
+    pull: ${20:# When building an image downloads any updates to the FROM image in Dockerfile}
+    rebuild: ${21:# Defines the behavior of the module if the image to build (as specified in O(name) and O(tag)) already exists}
+    secrets: ${22:# Secrets to expose to the build}
+    shm_size: ${23:# Size of C(/dev/shm) in format C(<number>[<unit>])}
+    tag: ${24:# Tag for the image name O(name) that is to be tagged}
+    target: ${25:# When building an image specifies an intermediate build stage by name as a final stage for the resulting image}
+    tls: ${26:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${27:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    validate_certs: ${28:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+  tags:
+    - community
+    - docker
+    - docker_image_build]]></content>
+  <tabTrigger>community.docker.docker_image_build</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Build Docker images using Docker buildx</description>
+</snippet>

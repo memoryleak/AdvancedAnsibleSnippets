@@ -1,0 +1,52 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage PostgreSQL Flexible Server instance}
+  azure.azcollection.azure_rm_postgresqlflexibleserver:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    administrator_login: ${4:# The administrator's login name of a server}
+    administrator_login_password: ${5:# The administrator login password (required for server creation)}
+    api_profile: ${6:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${7:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${8:# Controls the source of the credentials to use for authentication}
+    availability_zone: ${9:# Availability zone information of the server}
+    backup: ${10:# Backup properties of a server}
+    cert_validation_mode: ${11:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${12:# Azure client ID}
+    cloud_environment: ${13:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    create_mode: ${14:# The mode to create a new PostgreSQL server}
+    disable_instance_discovery: ${15:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    fully_qualified_domain_name: ${16:# The fully qualified domain name of a server}
+    high_availability: ${17:# High availability properties of a server}
+    identity: ${18:# Identity for the Server}
+    is_restart: ${19:# Whether to restart the Post gresql server}
+    is_start: ${20:# Whether to start the Post gresql server}
+    is_stop: ${21:# Whether to stop the Post gresql server}
+    location: ${22:# Resource location}
+    log_mode: ${23:# Parent argument}
+    log_path: ${24:# Parent argument}
+    maintenance_window: ${25:# Maintenance window properties of a server}
+    name: ${26:# The name of the flexible server}
+    network: ${27:# Network properties of a server}
+    password: ${28:# Active Directory user password}
+    point_in_time_utc: ${29:# Restore point creation time (ISO8601 format), specifying the time to restore from}
+    profile: ${30:# Security profile found in ~/}
+    resource_group: ${31:# The name of the resource group that contains the resource}
+    secret: ${32:# Azure client secret}
+    sku: ${33:# The SKU (pricing tier) of the server}
+    source_server_resource_id: ${34:# The source server resource ID to restore from}
+    state: ${35:# Assert the state of the PostgreSQL Flexible server}
+    storage: ${36:# Storage properties of a server}
+    subscription_id: ${37:# Your Azure subscription Id}
+    tags: ${38:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${39:# Azure tenant ID}
+    thumbprint: ${40:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    version: ${41:# PostgreSQL Server version}
+    x509_certificate_path: ${42:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_postgresqlflexibleserver]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_postgresqlflexibleserver</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage PostgreSQL Flexible Server instance</description>
+</snippet>

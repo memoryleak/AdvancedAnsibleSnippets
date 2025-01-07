@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[- name: ${1:Deploy software (or files) from git checkouts}
   ansible.builtin.git:
-    accept_hostkey: ${2:# Will ensure or not that '-o StrictHostKeyChecking=no' is present as an ssh option}
+    accept_hostkey: ${2:# Will ensure or not that C(-o StrictHostKeyChecking=no) is present as an ssh option}
     accept_newhostkey: ${3:# As of OpenSSH 7}
     archive: ${4:# Specify archive file path with extension}
     archive_prefix: ${5:# Specify a prefix to add to each file path in archive}
@@ -11,17 +11,17 @@
     dest: ${9:# The path of where the repository should be checked out}
     executable: ${10:# Path to git executable to use}
     force: ${11:# If V(true), any modified files in the working repository will be discarded}
-    gpg_whitelist: ${12:# A list of trusted GPG fingerprints to compare to the fingerprint of the GPG-signed commit}
+    gpg_allowlist: ${12:# A list of trusted GPG fingerprints to compare to the fingerprint of the GPG-signed commit}
     key_file: ${13:# Specify an optional private key file path, on the target host, to use for the checkout}
     recursive: ${14:# If V(false), repository will be cloned without the C(--recursive) option, skipping sub-modules}
-    reference: ${15:# Reference repository (see 'git clone --reference}
+    reference: ${15:# Reference repository (see C(git clone --reference}
     refspec: ${16:# Add an additional refspec to be fetched}
     remote: ${17:# Name of the remote}
     repo: ${18:# git, SSH, or HTTP(S) protocol address of the git repository}
     separate_git_dir: ${19:# The path to place the cloned repository}
     single_branch: ${20:# Clone only the history leading to the tip of the specified revision}
     ssh_opts: ${21:# Options git will pass to ssh when used as protocol, it works via C(git)'s E(GIT_SSH)/E(GIT_SSH_COMMAND) environment variables}
-    track_submodules: ${22:# If V(true), submodules will track the latest commit on their master branch (or other branch specified in}
+    track_submodules: ${22:# If V(true), submodules will track the latest commit on their master branch (or other branch specified in C(}
     umask: ${23:# The umask to set before doing any checkouts, or any other repository maintenance}
     update: ${24:# If V(false), do not retrieve new revisions from the origin repository}
     verify_commit: ${25:# If V(true), when cloning or checking out a O(version) verify the signature of a GPG signed commit}

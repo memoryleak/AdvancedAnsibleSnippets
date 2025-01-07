@@ -3,19 +3,28 @@
   containers.podman.podman_network:
     debug: ${2:# Return additional information which can be helpful for investigations}
     disable_dns: ${3:# disable dns plugin (default 'false')}
-    driver: ${4:# Driver to manage the network (default 'bridge')}
-    executable: ${5:# Path to C(podman) executable if it is not in the C($PATH) on the machine running C(podman)}
-    force: ${6:# Remove all containers that use the network}
-    gateway: ${7:# IPv4 or IPv6 gateway for the subnet}
-    internal: ${8:# Restrict external access from this network (default 'false')}
-    ip_range: ${9:# Allocate container IP from range}
-    ipv6: ${10:# Enable IPv6 (Dual Stack) networking}
-    macvlan: ${11:# Create a Macvlan connection based on this device}
-    name: ${12:# Name of the network}
-    opt: ${13:# Add network options}
-    recreate: ${14:# Recreate network even if exists}
-    state: ${15:# State of network, default 'present'}
-    subnet: ${16:# Subnet in CIDR format}
+    dns: ${4:# Set network-scoped DNS resolver/nameserver for containers in this network}
+    driver: ${5:# Driver to manage the network (default 'bridge')}
+    executable: ${6:# Path to C(podman) executable if it is not in the C($PATH) on the machine running C(podman)}
+    force: ${7:# Remove all containers that use the network}
+    gateway: ${8:# IPv4 or IPv6 gateway for the subnet}
+    interface_name: ${9:# For bridge, it uses the bridge interface name}
+    internal: ${10:# Restrict external access from this network (default 'false')}
+    ip_range: ${11:# Allocate container IP from range}
+    ipam_driver: ${12:# Set the ipam driver (IP Address Management Driver) for the network}
+    ipv6: ${13:# Enable IPv6 (Dual Stack) networking}
+    macvlan: ${14:# Create a Macvlan connection based on this device}
+    name: ${15:# Name of the network}
+    net_config: ${16:# List of dictionaries with network configuration}
+    opt: ${17:# Add network options}
+    quadlet_dir: ${18:# Path to the directory to write quadlet file in}
+    quadlet_file_mode: ${19:# The permissions of the quadlet file}
+    quadlet_filename: ${20:# Name of quadlet file to write}
+    quadlet_options: ${21:# Options for the quadlet file}
+    recreate: ${22:# Recreate network even if exists}
+    route: ${23:# A static route in the format <destination in CIDR notation>,<gateway>,<route metric (optional)>}
+    state: ${24:# State of network, default 'present'}
+    subnet: ${25:# Subnet in CIDR format}
   tags:
     - containers
     - podman

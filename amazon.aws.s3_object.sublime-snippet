@@ -10,35 +10,36 @@
     content_base64: ${8:# The base64-encoded binary data to C(put) into an object}
     copy_src: ${9:# The source details of the object to copy}
     debug_botocore_endpoint_logs: ${10:# Use a C(botocore}
-    dest: ${11:# The destination file path when downloading an object/key when I(mode=get)}
+    dest: ${11:# The destination file path when downloading an object/key when O(mode=get)}
     dualstack: ${12:# Enables Amazon S3 Dual-Stack Endpoints, allowing S3 communications using both IPv4 and IPv6}
-    encrypt: ${13:# Asks for server-side encryption of the objects when I(mode=put) or I(mode=copy)}
-    encryption_kms_key_id: ${14:# KMS key id to use when encrypting objects using I(encrypting=aws:kms)}
-    encryption_mode: ${15:# The encryption mode to use if I(encrypt=true)}
+    encrypt: ${13:# Asks for server-side encryption of the objects when O(mode=put) or O(mode=copy)}
+    encryption_kms_key_id: ${14:# KMS key id to use when encrypting objects using O(encryption_mode=aws:kms)}
+    encryption_mode: ${15:# The encryption mode to use if O(encrypt=true)}
     endpoint_url: ${16:# URL to connect to instead of the default AWS endpoints}
-    expiry: ${17:# Time limit (in seconds) for the URL generated and returned by S3/Walrus when performing a I(mode=put) or I(mode=geturl) operation}
-    headers: ${18:# Custom headers to use when I(mode=put) as a dictionary of key value pairs}
-    ignore_nonexistent_bucket: ${19:# Overrides initial bucket lookups in case bucket or IAM policies are restrictive}
-    marker: ${20:# Specifies the key to start with when using list mode}
-    max_keys: ${21:# Max number of results to return when I(mode=list), set this if you want to retrieve fewer than the default 1000 keys}
-    metadata: ${22:# Metadata to use when I(mode=put) or I(mode=copy) as a dictionary of key value pairs}
-    mode: ${23:# Switches the module behaviour between}
-    object: ${24:# Key name of the object inside the bucket}
-    overwrite: ${25:# Force overwrite either locally on the filesystem or remotely with the object/key}
-    permission: ${26:# This option lets the user set the canned permissions on the object/bucket that are created}
-    prefix: ${27:# Limits the response to keys that begin with the specified prefix for list mode}
-    profile: ${28:# A named AWS profile to use for authentication}
-    purge_tags: ${29:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
-    region: ${30:# The AWS region to use}
-    retries: ${31:# On recoverable failure, how many times to retry before actually failing}
-    secret_key: ${32:# AWS secret access key}
-    session_token: ${33:# AWS STS session token for use with temporary credentials}
-    sig_v4: ${34:# Forces the Boto SDK to use Signature Version 4}
-    src: ${35:# The source file path when performing a C(put) operation}
-    tags: ${36:# A dictionary representing the tags to be applied to the resource}
-    validate_bucket_name: ${37:# Whether the bucket name should be validated to conform to AWS S3 naming rules}
-    validate_certs: ${38:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    version: ${39:# Version ID of the object inside the bucket}
+    expected_bucket_owner: ${17:# The account ID of the expected bucket owner}
+    expiry: ${18:# Time limit (in seconds) for the URL generated and returned by S3/Walrus when performing a O(mode=put) or O(mode=geturl) operation}
+    headers: ${19:# Custom headers to use when O(mode=put) as a dictionary of key value pairs}
+    ignore_nonexistent_bucket: ${20:# Overrides initial bucket lookups in case bucket or IAM policies are restrictive}
+    marker: ${21:# Specifies the key to start with when using list mode}
+    max_keys: ${22:# Max number of results to return when O(mode=list)}
+    metadata: ${23:# Metadata to use when O(mode=put) or O(mode=copy) as a dictionary of key value pairs}
+    mode: ${24:# Switches the module behaviour between}
+    object: ${25:# Key name of the object inside the bucket}
+    overwrite: ${26:# Force overwrite either locally on the filesystem or remotely with the object/key}
+    permission: ${27:# This option lets the user set the canned permissions on the object/bucket that are created}
+    prefix: ${28:# Limits the response to keys that begin with the specified prefix for list mode}
+    profile: ${29:# A named AWS profile to use for authentication}
+    purge_tags: ${30:# If O(purge_tags=true) and O(tags) is set, existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
+    region: ${31:# The AWS region to use}
+    retries: ${32:# On recoverable failure, how many times to retry before actually failing}
+    secret_key: ${33:# AWS secret access key}
+    session_token: ${34:# AWS STS session token for use with temporary credentials}
+    sig_v4: ${35:# Forces the Boto SDK to use Signature Version 4}
+    src: ${36:# The source file path when performing a C(put) operation}
+    tags: ${37:# A dictionary representing the tags to be applied to the resource}
+    validate_bucket_name: ${38:# Whether the bucket name should be validated to conform to AWS S3 naming rules}
+    validate_certs: ${39:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    version: ${40:# Version ID of the object inside the bucket}
   tags:
     - amazon
     - aws

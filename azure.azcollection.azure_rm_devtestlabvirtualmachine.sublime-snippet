@@ -11,30 +11,32 @@
     cert_validation_mode: ${9:# Controls the certificate validation behavior for Azure endpoints}
     client_id: ${10:# Azure client ID}
     cloud_environment: ${11:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    disallow_public_ip_address: ${12:# Indicates whether the virtual machine is to be created without a public IP address}
-    expiration_date: ${13:# The expiration date for VM}
-    image: ${14:# The Microsoft Azure Marketplace image reference of the virtual machine}
-    lab_name: ${15:# The name of the lab}
-    lab_subnet: ${16:# An existing subnet within lab's virtual network}
-    log_mode: ${17:# Parent argument}
-    log_path: ${18:# Parent argument}
-    name: ${19:# The name of the virtual machine}
-    notes: ${20:# The notes of the virtual machine}
-    os_type: ${21:# Base type of operating system}
-    password: ${22:# The password of the virtual machine administrator}
-    profile: ${23:# Security profile found in ~/}
-    resource_group: ${24:# The name of the resource group}
-    secret: ${25:# Azure client secret}
-    ssh_key: ${26:# The SSH key of the virtual machine administrator}
-    state: ${27:# Assert the state of the Virtual Machine}
-    storage_type: ${28:# Storage type to use for virtual machine}
-    subscription_id: ${29:# Your Azure subscription Id}
-    tags: ${30:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${31:# Azure tenant ID}
-    thumbprint: ${32:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    user_name: ${33:# The user name of the virtual machine}
-    vm_size: ${34:# A valid Azure VM size value}
-    x509_certificate_path: ${35:# Path to the X509 certificate used to create the service principal in PEM format}
+    disable_instance_discovery: ${12:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    disallow_public_ip_address: ${13:# Indicates whether the virtual machine is to be created without a public IP address}
+    expiration_date: ${14:# The expiration date for VM}
+    image: ${15:# The Microsoft Azure Marketplace image reference of the virtual machine}
+    is_authentication_with_ssh_key: ${16:# Indicates whether this virtual machine uses an SSH key for authentication}
+    lab_name: ${17:# The name of the lab}
+    lab_subnet: ${18:# An existing subnet within lab's virtual network}
+    log_mode: ${19:# Parent argument}
+    log_path: ${20:# Parent argument}
+    name: ${21:# The name of the virtual machine}
+    notes: ${22:# The notes of the virtual machine}
+    os_type: ${23:# Base type of operating system}
+    password: ${24:# The password of the virtual machine administrator}
+    profile: ${25:# Security profile found in ~/}
+    resource_group: ${26:# The name of the resource group}
+    secret: ${27:# Azure client secret}
+    ssh_key: ${28:# The SSH key of the virtual machine administrator}
+    state: ${29:# Assert the state of the Virtual Machine}
+    storage_type: ${30:# Storage type to use for virtual machine}
+    subscription_id: ${31:# Your Azure subscription Id}
+    tags: ${32:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${33:# Azure tenant ID}
+    thumbprint: ${34:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    user_name: ${35:# The user name of the virtual machine}
+    vm_size: ${36:# A valid Azure VM size value}
+    x509_certificate_path: ${37:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

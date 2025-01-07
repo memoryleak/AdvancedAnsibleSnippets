@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieve mount information}
+  ansible.builtin.mount_facts:
+    devices: ${2:# A list of fnmatch patterns to filter mounts by the special device or remote file system}
+    fstypes: ${3:# A list of fnmatch patterns to filter mounts by the type of the file system}
+    include_aggregate_mounts: ${4:# Whether or not the module should return the C(aggregate_mounts) list in C(ansible_facts)}
+    mount_binary: ${5:# The O(mount_binary) is used if O(sources) contain the value 'mount', or if O(sources) contains a dynamic source, and none were found (as can be expected on BSD or AIX hosts)}
+    on_timeout: ${6:# The action to take when gathering mount information exceeds O(timeout)}
+    sources: ${7:# A list of sources used to determine the mounts}
+    timeout: ${8:# This is the maximum number of seconds to wait for each mount to complete}
+  tags:
+    - mount_facts]]></content>
+  <tabTrigger>ansible.builtin.mount_facts</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieve mount information</description>
+</snippet>

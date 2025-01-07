@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage AAA SSH auth (aaaSshAuth) objects}
+  <content><![CDATA[- name: ${1:Manage AAA SSH auth objects (aaa:SshAuth)}
   cisco.aci.aci_aaa_ssh_auth:
     aaa_user: ${2:# Name of an existing AAA user}
     annotation: ${3:# User-defined string for annotating an object}
@@ -15,16 +15,18 @@
     port: ${13:# Port number to be used for REST connection}
     private_key: ${14:# Either a PEM-formatted private key file or the private key content used for signature-based authentication}
     state: ${15:# Use C(present) or C(absent) for adding or removing}
-    timeout: ${16:# The socket level timeout in seconds}
-    use_proxy: ${17:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${18:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${19:# The username to use for authentication}
-    validate_certs: ${20:# If C(false), SSL certificates will not be validated}
+    suppress_previous: ${16:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${17:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    timeout: ${18:# The socket level timeout in seconds}
+    use_proxy: ${19:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${20:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${21:# The username to use for authentication}
+    validate_certs: ${22:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci
     - aci_aaa_ssh_auth]]></content>
   <tabTrigger>cisco.aci.aci_aaa_ssh_auth</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage AAA SSH auth (aaaSshAuth) objects</description>
+  <description>Manage AAA SSH auth objects (aaa:SshAuth)</description>
 </snippet>

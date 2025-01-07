@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create a template in a local VCenter folder from an existing VM}
+  vmware.vmware.folder_template_from_vm:
+    cluster: ${2:# The cluster to use when connecting to a vCenter}
+    datacenter: ${3:# The name of datacenter in which to operate}
+    datastore: ${4:# The name of datastore to use as storage for the template}
+    hostname: ${5:# The hostname or IP address of the vSphere vCenter server}
+    password: ${6:# The password of the vSphere vCenter server}
+    port: ${7:# The port number of the vSphere vCenter server}
+    proxy_host: ${8:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${9:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    resource_pool: ${10:# The resource pool to place the template in}
+    state: ${11:# If the template should be present or absent}
+    template_folder: ${12:# The name of the folder that the new template should be placed in}
+    template_name: ${13:# The name to give to the new template}
+    username: ${14:# The username of the vSphere vCenter server}
+    validate_certs: ${15:# Allows connection when SSL certificates are not valid}
+    vm_moid: ${16:# The MOID of the vm to be used to create the template}
+    vm_name: ${17:# The name of the vm to be used to create the template}
+    vm_name_match: ${18:# If using vm_name and multiple VMs have the same name, specify which VM should be selected}
+    vm_use_instance_uuid: ${19:# If true, search by instance UUID instead of BIOS UUID}
+    vm_uuid: ${20:# The UUID of the vm to be used to create the template}
+    wait_for_template: ${21:# If true, the module will wait until the template is created to exit}
+  tags:
+    - vmware
+    - vmware
+    - folder_template_from_vm]]></content>
+  <tabTrigger>vmware.vmware.folder_template_from_vm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create a template in a local VCenter folder from an existing VM</description>
+</snippet>

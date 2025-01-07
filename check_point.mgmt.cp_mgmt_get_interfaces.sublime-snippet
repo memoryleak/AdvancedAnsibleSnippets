@@ -1,13 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Get physical interfaces with or without their topology from a Gaia Security Gateway or Cluster}
   check_point.mgmt.cp_mgmt_get_interfaces:
-    group_interfaces_by_subnet: ${2:# Specify whether to group the cluster interfaces by a subnet}
-    target_name: ${3:# Target name}
-    use_defined_by_routes: ${4:# Specify whether to configure the topology 'Defined by Routes' where applicable}
-    version: ${5:# Version of checkpoint}
-    wait_for_task: ${6:# Wait for the task to end}
-    wait_for_task_timeout: ${7:# How many minutes to wait until throwing a timeout error}
-    with_topology: ${8:# Specify whether to fetch the interfaces with their topology}
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    group_interfaces_by_subnet: ${3:# Specify whether to group the cluster interfaces by a subnet}
+    target_name: ${4:# Target name}
+    use_defined_by_routes: ${5:# Specify whether to configure the topology 'Defined by Routes' where applicable}
+    version: ${6:# Version of checkpoint}
+    wait_for_task: ${7:# Wait for the task to end}
+    wait_for_task_timeout: ${8:# How many minutes to wait until throwing a timeout error}
+    with_topology: ${9:# Specify whether to fetch the interfaces with their topology}
   tags:
     - check_point
     - mgmt

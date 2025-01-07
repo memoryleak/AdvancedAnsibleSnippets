@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Infoblox NIOS DTC SIP monitors}
+  infoblox.nios_modules.nios_dtc_monitor_sip:
+    ciphers: ${2:# Configures an optional cipher list for the secure TLS/SIPS connection}
+    client_cert: ${3:# Configures an optional client certificate, supplied in TLS or SIPS mode if present}
+    comment: ${4:# Configures a text string comment to be associated with the instance of this object}
+    extattrs: ${5:# Allows for the configuration of Extensible Attributes on the instance of the object}
+    interval: ${6:# Configures the interval for SIP health check}
+    name: ${7:# Configures the display name for this DTC monitor}
+    port: ${8:# Configures the port value for SIP requests}
+    provider: ${9:# A dict object containing connection details}
+    request: ${10:# Configures the SIP request to send}
+    result: ${11:# Configures the type of the expected result}
+    result_code: ${12:# Configures the expected return code}
+    retry_down: ${13:# Configures the value of how many times the server should appear as down to be treated as dead after it was alive}
+    retry_up: ${14:# Configures the value of how many times the server should appear as up to be treated as alive after it was dead}
+    state: ${15:# Configures the intended state of the instance of the object on the NIOS server}
+    timeout: ${16:# Configures the timeout for SIP health check in seconds}
+    transport: ${17:# Configures the transport layer protocol to use for the SIP check}
+    validate_cert: ${18:# Configures whether the validation of the remote server's certificate is enabled}
+  tags:
+    - infoblox
+    - nios_modules
+    - nios_dtc_monitor_sip]]></content>
+  <tabTrigger>infoblox.nios_modules.nios_dtc_monitor_sip</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Infoblox NIOS DTC SIP monitors</description>
+</snippet>

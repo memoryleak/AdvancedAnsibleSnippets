@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Modify the CBS array capacity}
+  purestorage.flasharray.purefa_cbsexpand:
+    api_token: ${2:# FlashArray API token for admin privileged user}
+    capacity: ${3:# Requested capacity of CBS array in bytes}
+    disable_warnings: ${4:# Disable insecure certificate warnings in debug logs}
+    fa_url: ${5:# FlashArray management IPv4 address or Hostname}
+    state: ${6:# Action to be performed on the CBS array}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_cbsexpand]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_cbsexpand</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Modify the CBS array capacity</description>
+</snippet>

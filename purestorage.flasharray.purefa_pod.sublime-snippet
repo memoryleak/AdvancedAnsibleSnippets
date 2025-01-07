@@ -2,19 +2,22 @@
   <content><![CDATA[- name: ${1:Manage AC pods in Pure Storage FlashArrays}
   purestorage.flasharray.purefa_pod:
     api_token: ${2:# FlashArray API token for admin privileged user}
-    eradicate: ${3:# Define whether to eradicate the pod on delete or leave in trash}
-    fa_url: ${4:# FlashArray management IPv4 address or Hostname}
-    failover: ${5:# The name of the array given priority to stay online if arrays loose contact with eachother}
-    ignore_usage: ${6:# Flag used to override checks for quota management operations}
-    mediator: ${7:# Name of the mediator to use for a pod}
-    name: ${8:# The name of the pod}
-    promote: ${9:# Promote/demote any pod not in a stretched relationship}
-    quiesce: ${10:# Quiesce/Skip quiesce when I(promote) is false and demoting an ActiveDR pod}
-    quota: ${11:# Logical quota limit of the pod in K, M, G, T or P units, or bytes}
-    state: ${12:# Define whether the pod should exist or not}
-    stretch: ${13:# The name of the array to stretch to/unstretch from}
-    target: ${14:# Name of clone target pod}
-    undo: ${15:# Use the I(undo-remote) pod when I(promote) is true and promoting an ActiveDR pod}
+    delete_contents: ${3:# This enables you to eradicate pods with contents}
+    disable_warnings: ${4:# Disable insecure certificate warnings in debug logs}
+    eradicate: ${5:# Define whether to eradicate the pod on delete or leave in trash}
+    fa_url: ${6:# FlashArray management IPv4 address or Hostname}
+    failover: ${7:# The name of the array given priority to stay online if arrays loose contact with eachother}
+    ignore_usage: ${8:# Flag used to override checks for quota management operations}
+    mediator: ${9:# Name of the mediator to use for a pod}
+    name: ${10:# The name of the pod}
+    promote: ${11:# Promote/demote any pod not in a stretched relationship}
+    quiesce: ${12:# Quiesce/Skip quiesce when I(promote) is false and demoting an ActiveDR pod}
+    quota: ${13:# Logical quota limit of the pod in K, M, G, T or P units, or bytes}
+    state: ${14:# Define whether the pod should exist or not}
+    stretch: ${15:# The name of the array to stretch to/unstretch from}
+    target: ${16:# Name of clone target pod}
+    throttle: ${17:# Allows pod creation to fail if array health is not optimal}
+    undo: ${18:# Use the I(undo-remote) pod when I(promote) is true and promoting an ActiveDR pod}
   tags:
     - purestorage
     - flasharray

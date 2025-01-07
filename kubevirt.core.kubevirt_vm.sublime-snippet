@@ -1,0 +1,45 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or delete KubeVirt VirtualMachines}
+  kubevirt.core.kubevirt_vm:
+    annotations: ${2:# Specify annotations to set on the C(VirtualMachine)}
+    api_key: ${3:# Token used to authenticate with the API}
+    api_version: ${4:# Use this to set the API version of KubeVirt}
+    ca_cert: ${5:# Path to a CA certificate used to authenticate with the API}
+    client_cert: ${6:# Path to a certificate used to authenticate with the API}
+    client_key: ${7:# Path to a key file used to authenticate with the API}
+    context: ${8:# The name of a context found in the config file}
+    data_volume_templates: ${9:# Specify the C(DataVolume) templates of the C(VirtualMachine)}
+    delete_options: ${10:# Configure behavior when deleting an object}
+    force: ${11:# If set to O(force=yes), and O(state=present) is set, an existing object will be replaced}
+    generate_name: ${12:# Specify the basis of the C(VirtualMachine) name and random characters will be added automatically on the cluster to generate a unique name}
+    host: ${13:# Provide a URL for accessing the API}
+    impersonate_groups: ${14:# Group(s) to impersonate for the operation}
+    impersonate_user: ${15:# Username to impersonate for the operation}
+    instancetype: ${16:# Specify the C(Instancetype) matcher of the C(VirtualMachine)}
+    kubeconfig: ${17:# Path to an existing Kubernetes config file}
+    labels: ${18:# Specify labels to set on the C(VirtualMachine)}
+    name: ${19:# Specify the name of the C(VirtualMachine)}
+    namespace: ${20:# Specify the namespace of the C(VirtualMachine)}
+    no_proxy: ${21:# The comma separated list of hosts/domains/IP/CIDR that shouldn't go through proxy}
+    password: ${22:# Provide a password for authenticating with the API}
+    persist_config: ${23:# Whether or not to save the kube config refresh tokens}
+    preference: ${24:# Specify the C(Preference) matcher of the C(VirtualMachine)}
+    proxy: ${25:# The URL of an HTTP proxy to use for the connection}
+    proxy_headers: ${26:# The Header used for the HTTP proxy}
+    run_strategy: ${27:# Specify the C(RunStrategy) of the C(VirtualMachine)}
+    running: ${28:# Specify whether the C(VirtualMachine) should be running or not}
+    spec: ${29:# Specify the template spec of the C(VirtualMachine)}
+    state: ${30:# Determines if an object should be created, patched, or deleted}
+    username: ${31:# Provide a username for authenticating with the API}
+    validate_certs: ${32:# Whether or not to verify the API server's SSL certificates}
+    wait: ${33:# Whether to wait for the C(VirtualMachine) to end up in the ready state}
+    wait_sleep: ${34:# Number of seconds to sleep between checks}
+    wait_timeout: ${35:# How long in seconds to wait for the resource to end up in the ready state}
+  tags:
+    - kubevirt
+    - core
+    - kubevirt_vm]]></content>
+  <tabTrigger>kubevirt.core.kubevirt_vm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or delete KubeVirt VirtualMachines</description>
+</snippet>
