@@ -1,12 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Transfer files from or to remote devices running Junos}
   junipernetworks.junos.junos_scp:
-    src: ${2:# The C(src) argument takes a single path, or a list of paths to be transferred}
-    dest: ${3:# The C(dest) argument specifies the path in which to receive the files}
+    dest: ${2:# The C(dest) argument specifies the path in which to receive the files}
+    provider: ${3:# B(Deprecated)}
     recursive: ${4:# The C(recursive) argument enables recursive transfer of files and directories}
     remote_src: ${5:# The C(remote_src) argument enables the download of files (I(scp get)) from the remote device}
-    ssh_private_key_file: ${6:# The C(ssh_private_key_file) argument is path to the SSH private key file}
+    src: ${6:# The C(src) argument takes a single path, or a list of paths to be transferred}
     ssh_config: ${7:# The C(ssh_config) argument is path to the SSH configuration file}
+    ssh_private_key_file: ${8:# The C(ssh_private_key_file) argument is path to the SSH private key file}
   tags:
     - junipernetworks
     - junos

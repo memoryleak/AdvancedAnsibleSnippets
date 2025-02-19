@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for snapshots}
+  fedora.linux_system_roles.snapshot:
+    ansible_check_mode: ${2:# running in check mode}
+    snapshot_lvm_action: ${3:# action to perform}
+    snapshot_lvm_all_vgs: ${4:# This is a boolean value with default false}
+    snapshot_lvm_fstype: ${5:# file system type}
+    snapshot_lvm_lv: ${6:# If set, the role will create snapshots for the single logical volume in the volume group specified by snapshot_lvm_vg}
+    snapshot_lvm_mount_options: ${7:# Options to pass to the mount command for the filesystem}
+    snapshot_lvm_mount_origin: ${8:# If set to true, mount the origin of the snapshot rather than the snapshot}
+    snapshot_lvm_mountpoint: ${9:# The mount target for the block device}
+    snapshot_lvm_mountpoint_create: ${10:# If the mount point specified doesn't currently exist, create the mount point and any parent directories necessary for the mount point}
+    snapshot_lvm_percent_space_required: ${11:# See the LVM man page for lvcreate with the -s (snapshot) and -L (size) options}
+    snapshot_lvm_set: ${12:# set of volumes}
+    snapshot_lvm_snapset_name: ${13:# snapset name}
+    snapshot_lvm_unmount_all: ${14:# If set to true, unmount all mountpoint for the resulting blockdevice}
+    snapshot_lvm_verify_only: ${15:# If true, the check and remove commands verify that the system is in the correct state}
+    snapshot_lvm_vg: ${16:# If set, the role will create snapshots for all the logical volumes in the volume group}
+    snapshot_lvm_vg_include: ${17:# When using `snapshot_lvm_all_vgs`, there may be some subset of all volume groups that you want to use}
+  tags:
+    - fedora
+    - linux_system_roles
+    - snapshot]]></content>
+  <tabTrigger>fedora.linux_system_roles.snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for snapshots</description>
+</snippet>

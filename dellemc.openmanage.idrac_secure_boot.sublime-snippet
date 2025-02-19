@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure attributes, import, or export secure boot certificate, and reset keys}
+  dellemc.openmanage.idrac_secure_boot:
+    KEK: ${2:# A list of absolute paths of the Key Exchange Key (KEK) certificate file for UEFI secure boot}
+    boot_mode: ${3:# Boot mode of the iDRAC}
+    ca_path: ${4:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    database: ${5:# A list of absolute paths of the Allow Database(DB) certificate file for UEFI secure boot}
+    disallow_database: ${6:# A list of absolute paths of the Disallow Database(DBX) certificate file for UEFI secure boot}
+    export_certificates: ${7:# Export all the available certificates in the specified directory for the given keys}
+    force_int_10: ${8:# Determines whether the system BIOS loads the legacy video (INT 10h) option ROM from the video controller}
+    idrac_ip: ${9:# iDRAC IP Address}
+    idrac_password: ${10:# iDRAC user password}
+    idrac_port: ${11:# iDRAC port}
+    idrac_user: ${12:# iDRAC username}
+    import_certificates: ${13:# Import all the specified key certificates}
+    job_wait: ${14:# Whether to wait till completion of the secure boot certificate operation}
+    job_wait_timeout: ${15:# The maximum wait time of I(job_wait) in seconds}
+    platform_key: ${16:# The absolute path of the Platform key certificate file for UEFI secure boot}
+    reset_keys: ${17:# Resets the UEFI Secure Boot keys}
+    restart: ${18:# Secure boot certificate import operation requires a server restart}
+    restart_type: ${19:# Restart type of the server}
+    secure_boot: ${20:# UEFI Secure Boot}
+    secure_boot_mode: ${21:# The UEFI Secure Boot mode configures how to use the Secure Boot Policy}
+    secure_boot_policy: ${22:# The following are the types of Secure Boot policy}
+    timeout: ${23:# The socket level timeout in seconds}
+    validate_certs: ${24:# If C(false), the SSL certificates will not be validated}
+    x_auth_token: ${25:# Authentication token}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_secure_boot]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_secure_boot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure attributes, import, or export secure boot certificate, and reset keys</description>
+</snippet>

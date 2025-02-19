@@ -1,18 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Red Hat Network registration using the C(rhnreg_ks) command}
   community.general.rhn_register:
-    state: ${2:# Whether to register (C(present)), or unregister (C(absent)) a system}
-    username: ${3:# Red Hat Network username}
-    password: ${4:# Red Hat Network password}
-    server_url: ${5:# Specify an alternative Red Hat Network server URL}
-    activationkey: ${6:# Supply an activation key for use with registration}
-    profilename: ${7:# Supply an profilename for use with registration}
-    force: ${8:# Force registration, even if system is already registered}
-    ca_cert: ${9:# Supply a custom ssl CA certificate file for use with registration}
-    systemorgid: ${10:# Supply an organizational id for use with registration}
-    channels: ${11:# Optionally specify a list of channels to subscribe to upon successful registration}
-    enable_eus: ${12:# If C(false), extended update support will be requested}
-    nopackages: ${13:# If C(true), the registered node will not upload its installed packages information to Satellite server}
+    activationkey: ${2:# Supply an activation key for use with registration}
+    ca_cert: ${3:# Supply a custom ssl CA certificate file for use with registration}
+    channels: ${4:# Optionally specify a list of channels to subscribe to upon successful registration}
+    enable_eus: ${5:# If V(false), extended update support will be requested}
+    force: ${6:# Force registration, even if system is already registered}
+    nopackages: ${7:# If V(true), the registered node will not upload its installed packages information to Satellite server}
+    password: ${8:# Red Hat Network password}
+    profilename: ${9:# Supply an profilename for use with registration}
+    server_url: ${10:# Specify an alternative Red Hat Network server URL}
+    state: ${11:# Whether to register (V(present)), or unregister (V(absent)) a system}
+    systemorgid: ${12:# Supply an organizational id for use with registration}
+    username: ${13:# Red Hat Network username}
   tags:
     - community
     - general

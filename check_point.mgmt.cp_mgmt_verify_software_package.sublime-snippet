@@ -1,14 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Verifies the software package on target machines}
   check_point.mgmt.cp_mgmt_verify_software_package:
-    concurrency_limit: ${2:# The number of targets, on which the same package is installed at the same time}
-    download_package: ${3:# NOTE, Supported from Check Point version R81}
-    download_package_from: ${4:# NOTE, Supported from Check Point version R81}
-    name: ${5:# The name of the software package}
-    targets: ${6:# On what targets to execute this command}
-    version: ${7:# Version of checkpoint}
-    wait_for_task: ${8:# Wait for the task to end}
-    wait_for_task_timeout: ${9:# How many minutes to wait until throwing a timeout error}
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    concurrency_limit: ${3:# The number of targets, on which the same package is installed at the same time}
+    download_package: ${4:# NOTE, Supported from Check Point version R81}
+    download_package_from: ${5:# NOTE, Supported from Check Point version R81}
+    name: ${6:# The name of the software package}
+    targets: ${7:# On what targets to execute this command}
+    version: ${8:# Version of checkpoint}
+    wait_for_task: ${9:# Wait for the task to end}
+    wait_for_task_timeout: ${10:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

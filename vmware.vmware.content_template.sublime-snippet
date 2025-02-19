@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage template in content library from virtual machine}
+  vmware.vmware.content_template:
+    cluster: ${2:# Cluster onto which the virtual machine template should be placed}
+    folder: ${3:# Virtual machine folder into which the virtual machine template should be placed}
+    host: ${4:# Host onto which the virtual machine template should be placed}
+    hostname: ${5:# The hostname or IP address of the vSphere vCenter server}
+    library: ${6:# The name of the content library where the template will be created}
+    password: ${7:# The password of the vSphere vCenter server}
+    port: ${8:# The port number of the vSphere vCenter}
+    protocol: ${9:# The connection to protocol}
+    proxy_host: ${10:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${11:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    resource_pool: ${12:# Resource pool into which the virtual machine template should be placed}
+    state: ${13:# State of the template in content library}
+    template: ${14:# The name of template to manage}
+    username: ${15:# The username of the vSphere vCenter server}
+    validate_certs: ${16:# Allows connection when SSL certificates are not valid}
+    vm_name: ${17:# The name of the VM to be used to create template}
+  tags:
+    - vmware
+    - vmware
+    - content_template]]></content>
+  <tabTrigger>vmware.vmware.content_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage template in content library from virtual machine</description>
+</snippet>

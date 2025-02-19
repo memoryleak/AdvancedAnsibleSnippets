@@ -6,16 +6,18 @@
     deletepreferredmanagementcopy: ${4:# This parameter is to be used along with I(noreplicationpolicy) parameter and active management system must NOT be the same as the preferred management system}
     deletepreferredmanagementobjects: ${5:# If the storage partition has a replication policy and associated objects, such as volumes, volumes groups, hosts or host mappings, one of the two I(deletenonpreferredmanagementobjects) or I(deletepreferredmanagementobjects) parmeters is required}
     domain: ${6:# Domain for the Storage Virtualize system}
-    log_path: ${7:# Path of debug log file}
-    name: ${8:# Specifies the name of a storage partition}
-    noreplicationpolicy: ${9:# Unassigns the current replication policy from the volume group}
-    password: ${10:# REST API password for the Storage Virtualize system}
-    preferredmanagementsystem: ${11:# Changes the preferred management system for the storage partition}
-    replicationpolicy: ${12:# Specifies the replication policy for the storage partition}
-    state: ${13:# Creates, updates (C(present)) or deletes (C(absent)) a storage partition}
-    token: ${14:# The authentication token to verify a user on the Storage Virtualize system}
-    username: ${15:# REST API username for the Storage Virtualize system}
-    validate_certs: ${16:# Validates certification}
+    draft: ${7:# If specified and set to true, creates a partition in draft state}
+    log_path: ${8:# Path of debug log file}
+    name: ${9:# Specifies the name of a storage partition}
+    noreplicationpolicy: ${10:# Unassigns the current replication policy from the volume group}
+    partition_to_merge: ${11:# If specified, merges the I(partition_to_merge) and all its objects into partition specified with I(name)}
+    password: ${12:# REST API password for the Storage Virtualize system}
+    preferredmanagementsystem: ${13:# Changes the preferred management system for the storage partition}
+    replicationpolicy: ${14:# Specifies the replication policy for the storage partition}
+    state: ${15:# Creates, updates (C(present)) or deletes (C(absent)) a storage partition}
+    token: ${16:# The authentication token to verify a user on the Storage Virtualize system}
+    username: ${17:# REST API username for the Storage Virtualize system}
+    validate_certs: ${18:# Validates certification}
   tags:
     - ibm
     - storage_virtualize

@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages SELinux modules}
+  fedora.linux_system_roles.local_semodule:
+    name: ${2:# A module name, used with 'enabled' to enabled disabled module}
+    path: ${3:# A local module filename, used with 'enabled' to install a module}
+    priority: ${4:# SELinux module priority, 0 means SELinux store default (400) with 'path' and 'enabled', otherwise all priorities}
+    state: ${5:# Desired module state}
+    store: ${6:# Use other than current SELinux module store, e}
+  tags:
+    - fedora
+    - linux_system_roles
+    - local_semodule]]></content>
+  <tabTrigger>fedora.linux_system_roles.local_semodule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages SELinux modules</description>
+</snippet>

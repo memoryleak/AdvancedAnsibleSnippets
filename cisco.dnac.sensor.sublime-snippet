@@ -2,7 +2,7 @@
   <content><![CDATA[- name: ${1:Resource module for Sensor}
   cisco.dnac.sensor:
     apCoverage: ${2:# Sensor's apCoverage}
-    connection: ${3:# Connection}
+    connection: ${3:# Connection type of test WIRED, WIRELESS, BOTH}
     dnac_debug: ${4:# Flag for Cisco DNA Center SDK to enable debugging}
     dnac_host: ${5:# The Cisco DNA Center hostname}
     dnac_password: ${6:# The Cisco DNA Center password to authenticate}
@@ -10,11 +10,17 @@
     dnac_username: ${8:# The Cisco DNA Center username to authenticate}
     dnac_verify: ${9:# Flag to enable or disable SSL certificate verification}
     dnac_version: ${10:# Informs the SDK which version of Cisco DNA Center to use}
-    modelVersion: ${11:# Model Version}
-    name: ${12:# Name}
-    ssids: ${13:# Sensor's ssids}
-    templateName: ${14:# TemplateName query parameter}
-    validate_response_schema: ${15:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
+    encryptionMode: ${11:# Encryption mode}
+    locationInfoList: ${12:# Sensor's locationInfoList}
+    modelVersion: ${13:# Test template object model version (must be 2)}
+    name: ${14:# The sensor test template name}
+    profiles: ${15:# Sensor's profiles}
+    runNow: ${16:# Run now (YES, NO)}
+    sensors: ${17:# Sensor's sensors}
+    ssids: ${18:# Sensor's ssids}
+    templateName: ${19:# TemplateName query parameter}
+    validate_response_schema: ${20:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
+    version: ${21:# The sensor test template version (must be 2)}
   tags:
     - cisco
     - dnac

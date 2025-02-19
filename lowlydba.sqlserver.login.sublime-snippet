@@ -10,10 +10,11 @@
     password_must_change: ${8:# Enforces user must change password at next login}
     password_policy_enforced: ${9:# Enforces password complexity policy}
     sid: ${10:# Provide an explicit Sid that should be used when creating the account}
-    sql_instance: ${11:# The SQL Server instance to modify}
-    sql_password: ${12:# Password for SQL Authentication}
-    sql_username: ${13:# Username for SQL Authentication}
-    state: ${14:# Whether or not the object should be C(present) or C(absent)}
+    skip_password_reset: ${11:# Skips the password reset if the login exists and I(password) is set}
+    sql_instance: ${12:# The SQL Server instance to modify}
+    sql_password: ${13:# Password for SQL Authentication}
+    sql_username: ${14:# Username for SQL Authentication}
+    state: ${15:# Whether or not the object should be C(present) or C(absent)}
   tags:
     - lowlydba
     - sqlserver

@@ -12,38 +12,44 @@
     before_rule: ${10:# The index of the client rule to insert or move a client rule before}
     change: ${11:# The state of the SMB share principals Change access permission}
     client: ${12:# Specifies the clients that will be permitted to access the export}
-    desc: ${13:# A description of an object store policy, optionally specified when the policy is created}
-    destroy_snapshots: ${14:# This parameter must be set to true in order to modify a policy such that local or remote snapshots would be destroyed}
-    effect: ${15:# Allow S3 requests that match all of the I(actions) item selected}
-    enabled: ${16:# State of policy}
-    every: ${17:# Interval between snapshots in seconds}
-    fb_url: ${18:# FlashBlade management IP address or Hostname}
-    fileid_32bit: ${19:# Whether the file id is 32 bits or not}
-    filesystem: ${20:# List of filesystems to add to a policy on creation}
-    force_delete: ${21:# Force the deletion of a Object Store Access Policy is this has attached users}
-    full_control: ${22:# The state of the SMB share principals Full Control access permission}
-    ignore_enforcement: ${23:# Certain combinations of actions and other rule elements are inherently ignored if specified together in a rule}
-    keep_for: ${24:# How long to keep snapshots for}
-    name: ${25:# Name of the policy}
-    object_resources: ${26:# List of bucket names and object paths, with a wildcard (*) to specify objects in a bucket; e}
-    permission: ${27:# Specifies which read-write client access permissions are allowed for the export}
-    policy_type: ${28:# Type of policy}
-    principal: ${29:# The user or group who is the subject of this rule, and their domain}
-    read: ${30:# The state of the SMB share principals Read access permission}
-    rename: ${31:# New name for policy}
-    replica_link: ${32:# List of filesystem replica links to add to a policy on creation}
-    rule: ${33:# Name of the rule for the Object Store Access Policy}
-    s3_delimiters: ${34:# List of delimiter characters allowed in object list requests}
-    s3_prefixes: ${35:# List of 'folders' (object key prefixes) for which object listings may be requested}
-    secure: ${36:# If true, this prevents NFS access to client connections coming from non-reserved ports}
-    security: ${37:# The security flavors to use for accessing files on this mount point}
-    smb_encryption: ${38:# The status of SMB encryption in a client policy rule}
-    source_ips: ${39:# List of IPs and subnets from which this rule should allow requests; e}
-    state: ${40:# Create or delete policy}
-    target: ${41:# Name of policy to copy rule to}
-    target_rule: ${42:# Name of the rule to copy the exisitng rule to}
-    timezone: ${43:# Time Zone used for the I(at) parameter}
-    user: ${44:# User in the I(account) that the policy is granted to}
+    default_retention: ${13:# The retention period used for committing files to WORM status}
+    desc: ${14:# A description of an object store policy, optionally specified when the policy is created}
+    destroy_snapshots: ${15:# This parameter must be set to true in order to modify a policy such that local or remote snapshots would be destroyed}
+    disable_warnings: ${16:# Disable insecure certificate warnings}
+    effect: ${17:# Allow S3 requests that match all of the I(actions) item selected}
+    enabled: ${18:# State of policy}
+    every: ${19:# Interval between snapshots in seconds}
+    fb_url: ${20:# FlashBlade management IP address or Hostname}
+    fileid_32bit: ${21:# Whether the file id is 32 bits or not}
+    filesystem: ${22:# List of filesystems to add to a policy on creation}
+    force_delete: ${23:# Force the deletion of a Object Store Access Policy is this has attached users}
+    full_control: ${24:# The state of the SMB share principals Full Control access permission}
+    ignore_enforcement: ${25:# Certain combinations of actions and other rule elements are inherently ignored if specified together in a rule}
+    interfaces: ${26:# Specifies which product interfaces the network access policy rule applies to, whether it is permitting or denying access}
+    keep_for: ${27:# How long to keep snapshots for}
+    max_retention: ${28:# The maximum retention period of the WORM file system}
+    min_retention: ${29:# The minimum retention period of the WORM file system}
+    name: ${30:# Name of the policy}
+    object_resources: ${31:# List of bucket names and object paths, with a wildcard (*) to specify objects in a bucket; e}
+    permission: ${32:# Specifies which read-write client access permissions are allowed for the export}
+    policy_type: ${33:# Type of policy}
+    principal: ${34:# The user or group who is the subject of this rule, and their domain}
+    read: ${35:# The state of the SMB share principals Read access permission}
+    rename: ${36:# New name for policy}
+    replica_link: ${37:# List of filesystem replica links to add to a policy on creation}
+    retention_lock: ${38:# State of policy attributes after creation}
+    rule: ${39:# Name of the rule for the Object Store Access Policy}
+    s3_delimiters: ${40:# List of delimiter characters allowed in object list requests}
+    s3_prefixes: ${41:# List of 'folders' (object key prefixes) for which object listings may be requested}
+    secure: ${42:# If true, this prevents NFS access to client connections coming from non-reserved ports}
+    security: ${43:# The security flavors to use for accessing files on this mount point}
+    smb_encryption: ${44:# The status of SMB encryption in a client policy rule}
+    source_ips: ${45:# List of IPs and subnets from which this rule should allow requests; e}
+    state: ${46:# Create or delete policy}
+    target: ${47:# Name of policy to copy rule to}
+    target_rule: ${48:# Name of the rule to copy the exisitng rule to}
+    timezone: ${49:# Time Zone used for the I(at) parameter}
+    user: ${50:# User in the I(account) that the policy is granted to}
   tags:
     - purestorage
     - flashblade

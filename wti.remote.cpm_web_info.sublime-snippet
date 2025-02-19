@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get network Web parameters from WTI OOB and PDU devices}
+  wti.remote.cpm_web_info:
+    cpm_password: ${2:# This is the Password of the WTI device to send the module}
+    cpm_url: ${3:# This is the URL of the WTI device to send the module}
+    cpm_username: ${4:# This is the Username of the WTI device to send the module}
+    include_certs: ${5:# If true, will return the Signed, Private and Intermediate Keys from the WTI device}
+    interface: ${6:# This is the ethernet port name that is getting retrieved}
+    use_https: ${7:# Designates to use an https connection or http connection}
+    use_proxy: ${8:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+    validate_certs: ${9:# If false, SSL certificates will not be validated}
+  tags:
+    - wti
+    - remote
+    - cpm_web_info]]></content>
+  <tabTrigger>wti.remote.cpm_web_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get network Web parameters from WTI OOB and PDU devices</description>
+</snippet>

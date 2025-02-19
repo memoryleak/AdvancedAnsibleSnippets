@@ -2,15 +2,16 @@
   <content><![CDATA[- name: ${1:Run the VSX operation by its name and parameters}
   check_point.mgmt.cp_mgmt_vsx_run_operation:
     add_member_params: ${2:# Parameters for the operation to add a VSX Cluster member}
-    downgrade_params: ${3:# Parameters for the operation to downgrade a VSX Gateway or VSX Cluster object to a lower version}
-    operation: ${4:# The name of the operation to run}
-    reconf_gw_params: ${5:# Parameters for the operation to reconfigure a VSX Gateway after a clean install}
-    reconf_member_params: ${6:# Parameters for the operation to reconfigure a VSX Cluster member after a clean install}
-    remove_member_params: ${7:# Parameters for the operation to remove a VSX Cluster member object}
-    upgrade_params: ${8:# Parameters for the operation to upgrade a VSX Gateway or VSX Cluster object to a higher version}
-    version: ${9:# Version of checkpoint}
-    wait_for_task: ${10:# Wait for the task to end}
-    wait_for_task_timeout: ${11:# How many minutes to wait until throwing a timeout error}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    downgrade_params: ${4:# Parameters for the operation to downgrade a VSX Gateway or VSX Cluster object to a lower version}
+    operation: ${5:# The name of the operation to run}
+    reconf_gw_params: ${6:# Parameters for the operation to reconfigure a VSX Gateway after a clean install}
+    reconf_member_params: ${7:# Parameters for the operation to reconfigure a VSX Cluster member after a clean install}
+    remove_member_params: ${8:# Parameters for the operation to remove a VSX Cluster member object}
+    upgrade_params: ${9:# Parameters for the operation to upgrade a VSX Gateway or VSX Cluster object to a higher version}
+    version: ${10:# Version of checkpoint}
+    wait_for_task: ${11:# Wait for the task to end}
+    wait_for_task_timeout: ${12:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

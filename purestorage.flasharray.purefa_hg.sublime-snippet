@@ -2,13 +2,15 @@
   <content><![CDATA[- name: ${1:Manage hostgroups on Pure Storage FlashArrays}
   purestorage.flasharray.purefa_hg:
     api_token: ${2:# FlashArray API token for admin privileged user}
-    fa_url: ${3:# FlashArray management IPv4 address or Hostname}
-    host: ${4:# List of existing hosts to add to hostgroup}
-    lun: ${5:# LUN ID to assign to volume for hostgroup}
-    name: ${6:# The name of the hostgroup}
-    rename: ${7:# New name of hostgroup}
-    state: ${8:# Define whether the hostgroup should exist or not}
-    volume: ${9:# List of existing volumes to add to hostgroup}
+    disable_warnings: ${3:# Disable insecure certificate warnings in debug logs}
+    eradicate: ${4:# Whether to eradicate a deleted host group or not}
+    fa_url: ${5:# FlashArray management IPv4 address or Hostname}
+    host: ${6:# List of existing hosts to add to hostgroup}
+    lun: ${7:# LUN ID to assign to volume for hostgroup}
+    name: ${8:# The name of the hostgroup}
+    rename: ${9:# New name of hostgroup}
+    state: ${10:# Define whether the hostgroup should exist or not}
+    volume: ${11:# List of existing volumes to add to hostgroup}
   tags:
     - purestorage
     - flasharray

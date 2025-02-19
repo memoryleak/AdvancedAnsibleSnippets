@@ -32,9 +32,9 @@
     endpoint_url: ${30:# URL to connect to instead of the default AWS endpoints}
     engine: ${31:# The name of the database engine to be used for this DB instance}
     engine_version: ${32:# The version number of the database engine to use}
-    final_db_snapshot_identifier: ${33:# The DB instance snapshot identifier of the new DB instance snapshot created when I(skip_final_snapshot) is false}
-    force_failover: ${34:# Set to true to conduct the reboot through a MultiAZ failover}
-    force_update_password: ${35:# Set to C(True) to update your instance password with I(master_user_password)}
+    final_db_snapshot_identifier: ${33:# The DB instance snapshot identifier of the new DB instance snapshot created when I(skip_final_snapshot) is C(false)}
+    force_failover: ${34:# Set to C(true) to conduct the reboot through a MultiAZ failover}
+    force_update_password: ${35:# Set to C(true) to update your instance password with I(master_user_password)}
     iam_roles: ${36:# List of Amazon Web Services Identity and Access Management (IAM) roles to associate with DB instance}
     iops: ${37:# The Provisioned IOPS (I/O operations per second) value}
     kms_key_id: ${38:# The ARN of the AWS KMS key identifier for an encrypted DB instance}
@@ -56,11 +56,11 @@
     profile: ${54:# A named AWS profile to use for authentication}
     promotion_tier: ${55:# An integer that specifies the order in which an Aurora Replica is promoted to the primary instance after a failure of the existing primary instance}
     publicly_accessible: ${56:# Specifies the accessibility options for the DB instance}
-    purge_cloudwatch_logs_exports: ${57:# Set to False to retain any enabled cloudwatch logs that aren't specified in the task and are associated with the instance}
-    purge_iam_roles: ${58:# Set to C(True) to remove any IAM roles that aren't specified in the task and are associated with the instance}
-    purge_security_groups: ${59:# Set to False to retain any enabled security groups that aren't specified in the task and are associated with the instance}
+    purge_cloudwatch_logs_exports: ${57:# Set to C(false) to retain any enabled cloudwatch logs that aren't specified in the task and are associated with the instance}
+    purge_iam_roles: ${58:# Set to C(true) to remove any IAM roles that aren't specified in the task and are associated with the instance}
+    purge_security_groups: ${59:# Set to C(false) to retain any enabled security groups that aren't specified in the task and are associated with the instance}
     purge_tags: ${60:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
-    read_replica: ${61:# Set to C(False) to promote a read replica instance or true to create one}
+    read_replica: ${61:# Set to C(false) to promote a read replica instance or C(true) to create one}
     region: ${62:# The AWS region to use}
     restore_time: ${63:# If using I(creation_source=instance) this indicates the UTC date and time to restore from the source instance}
     s3_bucket_name: ${64:# The name of the Amazon S3 bucket that contains the data used to create the Amazon DB instance}

@@ -4,17 +4,20 @@
     editable: ${2:# Install the project in editable mode}
     executable: ${3:# Path to the C(pipx) installed in the system}
     force: ${4:# Force modification of the application's virtual environment}
-    include_injected: ${5:# Upgrade the injected packages along with the application}
-    index_url: ${6:# Base URL of Python Package Index}
-    inject_packages: ${7:# Packages to be injected into an existing virtual environment}
-    install_apps: ${8:# Add apps from the injected packages}
-    install_deps: ${9:# Include applications of dependent packages}
-    name: ${10:# The name of the application to be installed}
-    pip_args: ${11:# Arbitrary arguments to pass directly to C(pip)}
-    python: ${12:# Python version to be used when creating the application virtual environment}
-    source: ${13:# If the application source, such as a package with version specifier, or an URL, directory or any other accepted specification}
-    state: ${14:# Desired state for the application}
-    system_site_packages: ${15:# Give application virtual environment access to the system site-packages directory}
+    global: ${5:# The module will pass the C(--global) argument to C(pipx), to execute actions in global scope}
+    include_injected: ${6:# Upgrade the injected packages along with the application}
+    index_url: ${7:# Base URL of Python Package Index}
+    inject_packages: ${8:# Packages to be injected into an existing virtual environment}
+    install_apps: ${9:# Add apps from the injected packages}
+    install_deps: ${10:# Include applications of dependent packages}
+    name: ${11:# The name of the application}
+    pip_args: ${12:# Arbitrary arguments to pass directly to C(pip)}
+    python: ${13:# Python version to be used when creating the application virtual environment}
+    source: ${14:# Source for the package}
+    spec_metadata: ${15:# Spec metadata file for O(state=install_all)}
+    state: ${16:# Desired state for the application}
+    suffix: ${17:# Optional suffix for virtual environment and executable names}
+    system_site_packages: ${18:# Give application virtual environment access to the system site-packages directory}
   tags:
     - community
     - general

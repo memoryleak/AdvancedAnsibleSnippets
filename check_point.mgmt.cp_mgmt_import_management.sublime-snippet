@@ -1,21 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Import the primary Security Management Server database or the primary Multi-Domain Server database or the single Domain database and the applicable Check Point configuration}
   check_point.mgmt.cp_mgmt_import_management:
-    domain_ip_address: ${2:# IPv4 address for the imported Domain}
-    domain_name: ${3:# Domain name to be imported}
-    domain_server_name: ${4:# Multi-Domain Server name for the imported Domain}
-    file_path: ${5:# Path to the exported database file to be imported}
-    ignore_warnings: ${6:# Ignoring the verification warnings}
-    include_endpoint_configuration: ${7:# Include import of the Endpoint Security Management configuration files}
-    include_endpoint_database: ${8:# Include import of the Endpoint Security Management database}
-    include_logs: ${9:# Import logs without log indexes}
-    include_logs_indexes: ${10:# Import logs with log indexes}
-    keep_cloud_sharing: ${11:# Preserve the connection of the Management Server to Check Point's Infinity Portal}
-    pre_import_verification_only: ${12:# If true, only runs the pre-import verifications instead of the full import}
-    verify_domain_restore: ${13:# If true, verify that the restore operation is valid for this input file and this environment}
-    version: ${14:# Version of checkpoint}
-    wait_for_task: ${15:# Wait for the task to end}
-    wait_for_task_timeout: ${16:# How many minutes to wait until throwing a timeout error}
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    domain_ip_address: ${3:# IPv4 address for the imported Domain}
+    domain_name: ${4:# Domain name to be imported}
+    domain_server_name: ${5:# Multi-Domain Server name for the imported Domain}
+    file_path: ${6:# Path to the exported database file to be imported}
+    ignore_warnings: ${7:# Ignoring the verification warnings}
+    include_endpoint_configuration: ${8:# Include import of the Endpoint Security Management configuration files}
+    include_endpoint_database: ${9:# Include import of the Endpoint Security Management database}
+    include_logs: ${10:# Import logs without log indexes}
+    include_logs_indexes: ${11:# Import logs with log indexes}
+    keep_cloud_sharing: ${12:# Preserve the connection of the Management Server to Check Point's Infinity Portal}
+    pre_import_verification_only: ${13:# If true, only runs the pre-import verifications instead of the full import}
+    verify_domain_restore: ${14:# If true, verify that the restore operation is valid for this input file and this environment}
+    version: ${15:# Version of checkpoint}
+    wait_for_task: ${16:# Wait for the task to end}
+    wait_for_task_timeout: ${17:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

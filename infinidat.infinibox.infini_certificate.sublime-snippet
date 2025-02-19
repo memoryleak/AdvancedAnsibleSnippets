@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create (present state) or clear (absent state) SSL certificates on Infinibox}
+  infinidat.infinibox.infini_certificate:
+    certificate_file_name: ${2:# Name with full path of a certificate file}
+    password: ${3:# Infinibox User password}
+    state: ${4:# Creates/Modifies the systems SSL certificate by uploading one from a file, when using state present}
+    system: ${5:# Infinibox Hostname or IPv4 Address}
+    user: ${6:# Infinibox User username with sufficient priveledges ( see notes )}
+  tags:
+    - infinidat
+    - infinibox
+    - infini_certificate]]></content>
+  <tabTrigger>infinidat.infinibox.infini_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create (present state) or clear (absent state) SSL certificates on Infinibox</description>
+</snippet>

@@ -2,11 +2,12 @@
   <content><![CDATA[- name: ${1:Manage SafeMode default protection for a Pure Storage FlashArray}
   purestorage.flasharray.purefa_default_protection:
     api_token: ${2:# FlashArray API token for admin privileged user}
-    fa_url: ${3:# FlashArray management IPv4 address or Hostname}
-    name: ${4:# The name of the protection group to assign or remove as default for the scope}
-    pod: ${5:# name of the pod to apply the default protection to}
-    scope: ${6:# The scope of the default protection group}
-    state: ${7:# Define whether to add or delete the protection group to the default list}
+    disable_warnings: ${3:# Disable insecure certificate warnings in debug logs}
+    fa_url: ${4:# FlashArray management IPv4 address or Hostname}
+    name: ${5:# The name of the protection group to assign or remove as default for the scope}
+    pod: ${6:# name of the pod to apply the default protection to}
+    scope: ${7:# The scope of the default protection group}
+    state: ${8:# Define whether to add or delete the protection group to the default list}
   tags:
     - purestorage
     - flasharray

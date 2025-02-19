@@ -2,13 +2,16 @@
   <content><![CDATA[- name: ${1:Create or delete FlashBlade Object Store accounts}
   purestorage.flashblade.purefb_s3acc:
     api_token: ${2:# FlashBlade API token for admin privileged user}
-    default_hard_limit: ${3:# The value of this field will be used to configure the I(hard_limit) field of newly created buckets associated with this object store account, if the bucket creation does not specify its own value}
-    default_quota: ${4:# The value of this field will be used to configure the I(quota_limit) field of newly created buckets associated with this object store account, if the bucket creation does not specify its own value}
-    fb_url: ${5:# FlashBlade management IP address or Hostname}
-    hard_limit: ${6:# If set to true, the account size, as defined by I(quota_limit), is used as a hard limit quota}
-    name: ${7:# The name of object store account}
-    quota: ${8:# The effective quota limit to be applied against the size of the account in bytes}
-    state: ${9:# Create or delete object store account}
+    block_new_public_policies: ${3:# If set to true, adding bucket policies that grant public access to a bucket is not allowed}
+    block_public_access: ${4:# If set to true, access to a bucket with a public policy is restricted to only authenticated users within the account that bucket belongs to}
+    default_hard_limit: ${5:# The value of this field will be used to configure the I(hard_limit) field of newly created buckets associated with this object store account, if the bucket creation does not specify its own value}
+    default_quota: ${6:# The value of this field will be used to configure the I(quota_limit) field of newly created buckets associated with this object store account, if the bucket creation does not specify its own value}
+    disable_warnings: ${7:# Disable insecure certificate warnings}
+    fb_url: ${8:# FlashBlade management IP address or Hostname}
+    hard_limit: ${9:# If set to true, the account size, as defined by I(quota_limit), is used as a hard limit quota}
+    name: ${10:# The name of object store account}
+    quota: ${11:# The effective quota limit to be applied against the size of the account in bytes}
+    state: ${12:# Create or delete object store account}
   tags:
     - purestorage
     - flashblade

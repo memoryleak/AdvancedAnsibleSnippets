@@ -10,15 +10,18 @@
     hostname: ${8:# The hostname or IP address of the ONTAP instance}
     http_port: ${9:# Override the default port (80 or 443) with this port}
     https: ${10:# Enable and disable https}
-    key_filepath: ${11:# path to SSL client key file}
-    name: ${12:# The name of the S3 service}
-    ontapi: ${13:# The ontap api version to use}
-    password: ${14:# Password for the specified user}
-    state: ${15:# Whether the specified S3 bucket should exist or not}
-    use_rest: ${16:# Whether to use REST or ZAPI}
-    username: ${17:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
-    vserver: ${19:# Name of the vserver to use}
+    is_http_enabled: ${11:# Specifies whether HTTP is enabled on the S3 server being created or modified}
+    is_https_enabled: ${12:# Specifies whether HTTPS is enabled on the S3 server being created or modified}
+    key_filepath: ${13:# path to SSL client key file}
+    name: ${14:# The name of the S3 service}
+    password: ${15:# Password for the specified user}
+    port: ${16:# Specifies the HTTP listener port for the S3 server}
+    secure_port: ${17:# Specifies the HTTPS listener port for the S3 server}
+    state: ${18:# Whether the specified S3 bucket should exist or not}
+    use_rest: ${19:# This module only supports REST}
+    username: ${20:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${21:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${22:# Name of the vserver to use}
   tags:
     - netapp
     - ontap

@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Erase system and storage components of the server}
+  dellemc.openmanage.idrac_system_erase:
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    component: ${3:# List of system and storage components that can be deleted}
+    idrac_ip: ${4:# iDRAC IP Address}
+    idrac_password: ${5:# iDRAC user password}
+    idrac_port: ${6:# iDRAC port}
+    idrac_user: ${7:# iDRAC username}
+    job_wait: ${8:# Whether to wait till completion of the job}
+    job_wait_timeout: ${9:# The maximum wait time of I(job_wait) in seconds}
+    power_on: ${10:# This parameter allows you to power on the server after the erase operation is completed}
+    resource_id: ${11:# Manager ID of the iDRAC}
+    timeout: ${12:# The socket level timeout in seconds}
+    validate_certs: ${13:# If C(false), the SSL certificates will not be validated}
+    x_auth_token: ${14:# Authentication token}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_system_erase]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_system_erase</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Erase system and storage components of the server</description>
+</snippet>

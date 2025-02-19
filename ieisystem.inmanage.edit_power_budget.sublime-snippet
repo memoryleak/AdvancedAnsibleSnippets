@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set power budget information}
+  ieisystem.inmanage.edit_power_budget:
+    action: ${2:# Type to action}
+    domain: ${3:# Domain id}
+    end1: ${4:# Pause period of add, end time, must be greater than start time, from 0 to 24}
+    end2: ${5:# Pause period of add, end time, must be greater than start time, from 0 to 24}
+    end3: ${6:# Pause period of add, end time, must be greater than start time, from 0 to 24}
+    end4: ${7:# Pause period of add, end time, must be greater than start time, from 0 to 24}
+    end5: ${8:# Pause period of add, end time, must be greater than start time, from 0 to 24}
+    except_action: ${9:# Except action, 0 is do nothing, 1 is send alert, 2 is shutdown system, 3 is shutdown system and send alert}
+    host: ${10:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    id: ${11:# Policy id}
+    password: ${12:# Specifies the password to use to authenticate the connection to the remote device}
+    provider: ${13:# A dict object containing connection details}
+    range: ${14:# Range of power budget watts}
+    start1: ${15:# Pause period of add, start time, from 0 to 24}
+    start2: ${16:# Pause period of add, start time, from 0 to 24}
+    start3: ${17:# Pause period of add, start time, from 0 to 24}
+    start4: ${18:# Pause period of add, start time, from 0 to 24}
+    start5: ${19:# Period of add, start time, from 0 to 24}
+    username: ${20:# Configures the username to use to authenticate the connection to the remote device}
+    watts: ${21:# Power budget watts of add}
+    week1: ${22:# Pause period of add, repetition period}
+    week2: ${23:# Pause period of add, repetition period}
+    week3: ${24:# Pause period of add, repetition period}
+    week4: ${25:# Pause period of add, repetition period}
+    week5: ${26:# Pause period of add, repetition period}
+  tags:
+    - ieisystem
+    - inmanage
+    - edit_power_budget]]></content>
+  <tabTrigger>ieisystem.inmanage.edit_power_budget</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set power budget information</description>
+</snippet>

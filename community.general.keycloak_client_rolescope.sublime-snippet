@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Allows administration of Keycloak client roles scope to restrict the usage of certain roles to a other specific client applications}
+  community.general.keycloak_client_rolescope:
+    auth_client_id: ${2:# OpenID Connect C(client_id) to authenticate to the API with}
+    auth_client_secret: ${3:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
+    auth_keycloak_url: ${4:# URL to the Keycloak instance}
+    auth_password: ${5:# Password to authenticate for API access with}
+    auth_realm: ${6:# Keycloak realm name to authenticate to for API access}
+    auth_username: ${7:# Username to authenticate for API access with}
+    client_id: ${8:# Roles provided in O(role_names) while be added to this client scope}
+    client_scope_id: ${9:# If the O(role_names) are client role, the client ID under which it resides}
+    connection_timeout: ${10:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    http_agent: ${11:# Configures the HTTP User-Agent header}
+    realm: ${12:# The Keycloak realm under which clients resides}
+    role_names: ${13:# Names of roles to manipulate}
+    state: ${14:# State of the role mapping}
+    token: ${15:# Authentication token for Keycloak API}
+    validate_certs: ${16:# Verify TLS certificates (do not disable this in production)}
+  tags:
+    - community
+    - general
+    - keycloak_client_rolescope]]></content>
+  <tabTrigger>community.general.keycloak_client_rolescope</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Allows administration of Keycloak client roles scope to restrict the usage of certain roles to a other specific client applications</description>
+</snippet>

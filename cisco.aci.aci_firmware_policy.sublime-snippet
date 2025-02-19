@@ -19,13 +19,15 @@
     sr_upgrade: ${17:# The SR firware upgrade}
     sr_version: ${18:# The SR version of the firmware associated with this policy}
     state: ${19:# Use C(present) or C(absent) for adding or removing}
-    timeout: ${20:# The socket level timeout in seconds}
-    use_proxy: ${21:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${22:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${23:# The username to use for authentication}
-    validate_certs: ${24:# If C(false), SSL certificates will not be validated}
-    version: ${25:# The version of the firmware associated with this policy}
-    version_check_override: ${26:# The version check override}
+    suppress_previous: ${20:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${21:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    timeout: ${22:# The socket level timeout in seconds}
+    use_proxy: ${23:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${24:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${25:# The username to use for authentication}
+    validate_certs: ${26:# If C(false), SSL certificates will not be validated}
+    version: ${27:# The version of the firmware associated with this policy}
+    version_check_override: ${28:# The version check override}
   tags:
     - cisco
     - aci

@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage RDS cluster parameter groups}
+  amazon.aws.rds_cluster_param_group:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    db_parameter_group_family: ${5:# The RDS cluster parameter group family name}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    description: ${7:# The description for the RDS cluster parameter group}
+    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
+    name: ${9:# The name of the RDS cluster parameter group to create, modify or delete}
+    parameters: ${10:# A list of parameters to update}
+    profile: ${11:# A named AWS profile to use for authentication}
+    purge_tags: ${12:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${13:# The AWS region to use}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    state: ${16:# Specifies whether the RDS cluster parameter group should be present or absent}
+    tags: ${17:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+  tags:
+    - amazon
+    - aws
+    - rds_cluster_param_group]]></content>
+  <tabTrigger>amazon.aws.rds_cluster_param_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage RDS cluster parameter groups</description>
+</snippet>

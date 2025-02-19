@@ -2,17 +2,18 @@
   <content><![CDATA[- name: ${1:Configure Virus Outbreak Prevention settings}
   fortinet.fortimanager.fmgr_firewall_mmsprofile_outbreakprevention:
     access_token: ${2:# The token to access FortiManager without using username and password}
-    adom: ${3:# the parameter (adom) in requested url}
+    adom: ${3:# The parameter (adom) in requested url}
     bypass_validation: ${4:# Only set to True when module schema diffs with FortiManager API structure, module continues to execute without validating parameters}
     enable_log: ${5:# Enable/Disable logging for task}
-    firewall_mmsprofile_outbreakprevention: ${6:# the top level parameters set}
+    firewall_mmsprofile_outbreakprevention: ${6:# The top level parameters set}
     forticloud_access_token: ${7:# Authenticate Ansible client with forticloud API access token}
-    mms-profile: ${8:# the parameter (mms-profile) in requested url}
-    proposed_method: ${9:# The overridden method for the underlying Json RPC request}
-    rc_failed: ${10:# The rc codes list with which the conditions to fail will be overriden}
-    rc_succeeded: ${11:# The rc codes list with which the conditions to succeed will be overriden}
-    workspace_locking_adom: ${12:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
-    workspace_locking_timeout: ${13:# The maximum time in seconds to wait for other user to release the workspace lock}
+    mms-profile: ${8:# Deprecated, please use 'mms_profile'}
+    mms_profile: ${9:# The parameter (mms-profile) in requested url}
+    proposed_method: ${10:# The overridden method for the underlying Json RPC request}
+    rc_failed: ${11:# The rc codes list with which the conditions to fail will be overriden}
+    rc_succeeded: ${12:# The rc codes list with which the conditions to succeed will be overriden}
+    workspace_locking_adom: ${13:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
+    workspace_locking_timeout: ${14:# The maximum time in seconds to wait for other user to release the workspace lock}
   tags:
     - fortinet
     - fortimanager

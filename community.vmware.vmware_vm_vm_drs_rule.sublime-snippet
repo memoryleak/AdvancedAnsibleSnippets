@@ -3,18 +3,19 @@
   community.vmware.vmware_vm_vm_drs_rule:
     affinity_rule: ${2:# If set to V(true), the DRS rule will be an Affinity rule}
     cluster_name: ${3:# Desired cluster name where virtual machines are present for the DRS rule}
-    drs_rule_name: ${4:# The name of the DRS rule to manage}
-    enabled: ${5:# If set to V(true), the DRS rule will be enabled}
-    hostname: ${6:# The hostname or IP address of the vSphere vCenter or ESXi server}
-    mandatory: ${7:# If set to V(true), the DRS rule will be mandatory}
-    password: ${8:# The password of the vSphere vCenter or ESXi server}
-    port: ${9:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${10:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${11:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
-    state: ${12:# If set to V(present), then the DRS rule is created if not present}
-    username: ${13:# The username of the vSphere vCenter or ESXi server}
-    validate_certs: ${14:# Allows connection when SSL certificates are not valid}
-    vms: ${15:# List of virtual machines name for which DRS rule needs to be applied}
+    datacenter: ${4:# Datacenter to search for given cluster}
+    drs_rule_name: ${5:# The name of the DRS rule to manage}
+    enabled: ${6:# If set to V(true), the DRS rule will be enabled}
+    hostname: ${7:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    mandatory: ${8:# If set to V(true), the DRS rule will be mandatory}
+    password: ${9:# The password of the vSphere vCenter or ESXi server}
+    port: ${10:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${11:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${12:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    state: ${13:# If set to V(present), then the DRS rule is created if not present}
+    username: ${14:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${15:# Allows connection when SSL certificates are not valid}
+    vms: ${16:# List of virtual machines name for which DRS rule needs to be applied}
   tags:
     - community
     - vmware

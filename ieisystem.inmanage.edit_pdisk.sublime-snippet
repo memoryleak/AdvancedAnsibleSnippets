@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set physical disk}
+  ieisystem.inmanage.edit_pdisk:
+    action: ${2:# Action while set physical drive hotspare}
+    ctrl_id: ${3:# Raid controller ID}
+    device_id: ${4:# Physical drive id}
+    duration: ${5:# Duration range is 1-255, physical drive under PMC raid controller}
+    encl: ${6:# IsEnclAffinity while set physical drive hotspare}
+    host: ${7:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    logical_drivers: ${8:# Logical Drivers while set physical drive hotspare, input multiple Logical Drivers index like 0, 1, 2}
+    option: ${9:# Set operation options for a physical disk}
+    password: ${10:# Specifies the password to use to authenticate the connection to the remote device}
+    provider: ${11:# A dict object containing connection details}
+    revertible: ${12:# IsRevertible while set physical drive hotspare}
+    username: ${13:# Configures the username to use to authenticate the connection to the remote device}
+  tags:
+    - ieisystem
+    - inmanage
+    - edit_pdisk]]></content>
+  <tabTrigger>ieisystem.inmanage.edit_pdisk</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set physical disk</description>
+</snippet>

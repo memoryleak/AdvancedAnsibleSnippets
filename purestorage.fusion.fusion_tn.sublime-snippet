@@ -1,18 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage tenant networks in Pure Storage Fusion}
   purestorage.fusion.fusion_tn:
-    name: ${2:# The name of the tenant network}
-    display_name: ${3:# The human name of the tenant network}
-    state: ${4:# Define whether the tenant network should exist or not}
-    region: ${5:# The name of the region the availability zone is in}
-    availability_zone: ${6:# The name of the availability zone for the tenant network}
-    provider_subnets: ${7:# List of provider subnets to assign to the tenant networks subnet}
-    addresses: ${8:# List of IP addresses to be used in the subnet of the tenant network}
-    gateway: ${9:# Address of the subnet gateway}
-    mtu: ${10:# MTU setting for the subnet}
-    prefix: ${11:# Network prefix in CIDR format}
-    key_file: ${12:# Path to the private key file}
-    app_id: ${13:# Application ID from Pure1 Registration page}
+    access_token: ${2:# Access token for Fusion Service}
+    addresses: ${3:# List of IP addresses to be used in the subnet of the tenant network}
+    availability_zone: ${4:# The name of the availability zone for the tenant network}
+    display_name: ${5:# The human name of the tenant network}
+    gateway: ${6:# Address of the subnet gateway}
+    issuer_id: ${7:# Application ID from Pure1 Registration page}
+    mtu: ${8:# MTU setting for the subnet}
+    name: ${9:# The name of the tenant network}
+    prefix: ${10:# Network prefix in CIDR format}
+    private_key_file: ${11:# Path to the private key file}
+    private_key_password: ${12:# Password of the encrypted private key file}
+    provider_subnets: ${13:# List of provider subnets to assign to the tenant networks subnet}
+    region: ${14:# The name of the region the availability zone is in}
+    state: ${15:# Define whether the tenant network should exist or not}
   tags:
     - purestorage
     - fusion

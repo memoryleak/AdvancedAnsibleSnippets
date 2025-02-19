@@ -1,12 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Showing logs according to the given filter}
   check_point.mgmt.cp_mgmt_show_logs:
-    ignore_warnings: ${2:# Ignore warnings if exist}
-    new_query: ${3:# Running a new query}
-    query_id: ${4:# Get the next page of last run query with specified limit}
-    version: ${5:# Version of checkpoint}
-    wait_for_task: ${6:# Wait for the task to end}
-    wait_for_task_timeout: ${7:# How many minutes to wait until throwing a timeout error}
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    ignore_warnings: ${3:# Ignore warnings if exist}
+    new_query: ${4:# Running a new query}
+    query_id: ${5:# Get the next page of last run query with specified limit}
+    version: ${6:# Version of checkpoint}
+    wait_for_task: ${7:# Wait for the task to end}
+    wait_for_task_timeout: ${8:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

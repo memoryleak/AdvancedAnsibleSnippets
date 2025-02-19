@@ -27,13 +27,14 @@
     region_name: ${25:# Name of the region}
     sdk_log_level: ${26:# Log level of the OpenStackSDK}
     sdk_log_path: ${27:# Path to the logfile of the OpenStackSDK}
-    state: ${28:# Should the resource be present or absent}
+    state: ${28:# Should the resource be present, absent or inactive}
     tags: ${29:# List of tags to be applied to the image}
     timeout: ${30:# How long should ansible wait for the requested resource}
-    validate_certs: ${31:# Whether or not SSL API requests should be verified}
-    visibility: ${32:# The image visibility}
-    volume: ${33:# ID of a volume to create an image from}
-    wait: ${34:# Should ansible wait until the requested resource is complete}
+    use_import: ${31:# Use the 'glance-direct' method of the interoperable image import mechanism}
+    validate_certs: ${32:# Whether or not SSL API requests should be verified}
+    visibility: ${33:# The image visibility}
+    volume: ${34:# ID of a volume to create an image from}
+    wait: ${35:# Should ansible wait until the requested resource is complete}
   tags:
     - openstack
     - cloud

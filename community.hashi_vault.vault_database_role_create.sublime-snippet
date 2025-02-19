@@ -1,0 +1,51 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates or updates a (dynamic) role definition}
+  community.hashi_vault.vault_database_role_create:
+    auth_method: ${2:# Authentication method to be used}
+    aws_access_key: ${3:# The AWS access key to use}
+    aws_iam_server_id: ${4:# If specified, sets the value to use for the C(X-Vault-AWS-IAM-Server-ID) header as part of C(GetCallerIdentity) request}
+    aws_profile: ${5:# The AWS profile}
+    aws_secret_key: ${6:# The AWS secret key that corresponds to the access key}
+    aws_security_token: ${7:# The AWS security token if using temporary access and secret keys}
+    azure_client_id: ${8:# The client ID (also known as application ID) of the Azure AD service principal or managed identity}
+    azure_client_secret: ${9:# The client secret of the Azure AD service principal}
+    azure_resource: ${10:# The resource URL for the application registered in Azure Active Directory}
+    azure_tenant_id: ${11:# The Azure Active Directory Tenant ID (also known as the Directory ID) of the service principal}
+    ca_cert: ${12:# Path to certificate to use for authentication}
+    cert_auth_private_key: ${13:# For C(cert) auth, path to the private key file to authenticate with, in PEM format}
+    cert_auth_public_key: ${14:# For C(cert) auth, path to the certificate file to authenticate with, in PEM format}
+    connection_name: ${15:# The connection name under which the role should be created}
+    creation_statements: ${16:# Specifies the database statements executed to create and configure a user}
+    default_ttl: ${17:# Default TTL for the role}
+    engine_mount_point: ${18:# The path where the secret backend is mounted}
+    jwt: ${19:# The JSON Web Token (JWT) to use for JWT authentication to Vault}
+    max_ttl: ${20:# Max TTL for the role}
+    mount_point: ${21:# Vault mount point}
+    namespace: ${22:# Vault namespace where secrets reside}
+    password: ${23:# Authentication password}
+    proxies: ${24:# URL(s) to the proxies used to access the Vault service}
+    region: ${25:# The AWS region for which to create the connection}
+    renew_statements: ${26:# Specifies the database statements to be executed to renew a user}
+    retries: ${27:# Allows for retrying on errors, based on the L(Retry class in the urllib3 library,https://urllib3}
+    retry_action: ${28:# Controls whether and how to show messages on I(retries)}
+    revocation_statements: ${29:# Specifies the database statements to be executed to revoke a user}
+    role_id: ${30:# Vault Role ID or name}
+    role_name: ${31:# The name of the role that should be created}
+    rollback_statements: ${32:# Specifies the database statements to be executed to rollback a create operation in the event of an error}
+    secret_id: ${33:# Secret ID to be used for Vault AppRole authentication}
+    timeout: ${34:# Sets the connection timeout in seconds}
+    token: ${35:# Vault token}
+    token_file: ${36:# If no token is specified, will try to read the token from this file in I(token_path)}
+    token_path: ${37:# If no token is specified, will try to read the I(token_file) from this path}
+    token_validate: ${38:# For token auth, will perform a C(lookup-self) operation to determine the token's validity before using it}
+    url: ${39:# URL to the Vault service}
+    username: ${40:# Authentication user name}
+    validate_certs: ${41:# Controls verification and validation of SSL certificates, mostly you only want to turn off with self signed ones}
+  tags:
+    - community
+    - hashi_vault
+    - vault_database_role_create]]></content>
+  <tabTrigger>community.hashi_vault.vault_database_role_create</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates or updates a (dynamic) role definition</description>
+</snippet>

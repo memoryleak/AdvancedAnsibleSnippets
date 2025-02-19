@@ -1,40 +1,40 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures the iDRAC network attributes}
   dellemc.openmanage.idrac_network:
-    share_name: ${2:# (deprecated)Network share or a local path}
-    share_user: ${3:# (deprecated)Network share user name}
-    share_password: ${4:# (deprecated)Network share user password}
-    share_mnt: ${5:# (deprecated)Local mount path of the network share with read-write permission for ansible user}
-    setup_idrac_nic_vlan: ${6:# Allows to configure VLAN on iDRAC}
-    register_idrac_on_dns: ${7:# Registers iDRAC on a Domain Name System (DNS)}
-    dns_idrac_name: ${8:# Name of the DNS to register iDRAC}
-    auto_config: ${9:# Allows to enable or disable auto-provisioning to automatically acquire domain name from DHCP}
-    static_dns: ${10:# Enter the static DNS domain name}
-    vlan_id: ${11:# Enter the VLAN ID}
-    vlan_priority: ${12:# Enter the priority for the VLAN ID}
-    enable_nic: ${13:# Allows to enable or disable the Network Interface Controller (NIC) used by iDRAC}
-    nic_selection: ${14:# Select one of the available NICs}
-    failover_network: ${15:# Select one of the remaining LOMs}
-    auto_detect: ${16:# Allows to auto detect the available NIC types used by iDRAC}
-    auto_negotiation: ${17:# Allows iDRAC to automatically set the duplex mode and network speed}
+    auto_config: ${2:# Allows to enable or disable auto-provisioning to automatically acquire domain name from DHCP}
+    auto_detect: ${3:# Allows to auto detect the available NIC types used by iDRAC}
+    auto_negotiation: ${4:# Allows iDRAC to automatically set the duplex mode and network speed}
+    ca_path: ${5:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    dns_from_dhcp: ${6:# Allows to enable DHCP to obtain DNS server address}
+    dns_idrac_name: ${7:# Name of the DNS to register iDRAC}
+    duplex_mode: ${8:# Select the type of data transmission for the NIC}
+    enable_dhcp: ${9:# Allows to enable or disable Dynamic Host Configuration Protocol (DHCP) in iDRAC}
+    enable_ipv4: ${10:# Allows to enable or disable IPv4 configuration}
+    enable_nic: ${11:# Allows to enable or disable the Network Interface Controller (NIC) used by iDRAC}
+    failover_network: ${12:# Select one of the remaining LOMs}
+    idrac_ip: ${13:# iDRAC IP Address}
+    idrac_password: ${14:# iDRAC user password}
+    idrac_port: ${15:# iDRAC port}
+    idrac_user: ${16:# iDRAC username}
+    ip_address: ${17:# Enter a valid iDRAC static IPv4 address}
     network_speed: ${18:# Select the network speed for the selected NIC}
-    duplex_mode: ${19:# Select the type of data transmission for the NIC}
-    nic_mtu: ${20:# Maximum Transmission Unit of the NIC}
-    ip_address: ${21:# Enter a valid iDRAC static IPv4 address}
-    enable_dhcp: ${22:# Allows to enable or disable Dynamic Host Configuration Protocol (DHCP) in iDRAC}
-    enable_ipv4: ${23:# Allows to enable or disable IPv4 configuration}
-    dns_from_dhcp: ${24:# Allows to enable DHCP to obtain DNS server address}
-    static_dns_1: ${25:# Enter the preferred static DNS server IPv4 address}
-    static_dns_2: ${26:# Enter the preferred static DNS server IPv4 address}
-    static_gateway: ${27:# Enter the static IPv4 gateway address to iDRAC}
-    static_net_mask: ${28:# Enter the static IP subnet mask to iDRAC}
-    idrac_ip: ${29:# iDRAC IP Address}
-    idrac_user: ${30:# iDRAC username}
-    idrac_password: ${31:# iDRAC user password}
-    idrac_port: ${32:# iDRAC port}
-    validate_certs: ${33:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${34:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${35:# The socket level timeout in seconds}
+    nic_mtu: ${19:# Maximum Transmission Unit of the NIC}
+    nic_selection: ${20:# Select one of the available NICs}
+    register_idrac_on_dns: ${21:# Registers iDRAC on a Domain Name System (DNS)}
+    setup_idrac_nic_vlan: ${22:# Allows to configure VLAN on iDRAC}
+    share_mnt: ${23:# (deprecated)Local mount path of the network share with read-write permission for ansible user}
+    share_name: ${24:# (deprecated)Network share or a local path}
+    share_password: ${25:# (deprecated)Network share user password}
+    share_user: ${26:# (deprecated)Network share user name}
+    static_dns: ${27:# Enter the static DNS domain name}
+    static_dns_1: ${28:# Enter the preferred static DNS server IPv4 address}
+    static_dns_2: ${29:# Enter the preferred static DNS server IPv4 address}
+    static_gateway: ${30:# Enter the static IPv4 gateway address to iDRAC}
+    static_net_mask: ${31:# Enter the static IP subnet mask to iDRAC}
+    timeout: ${32:# The socket level timeout in seconds}
+    validate_certs: ${33:# If C(false), the SSL certificates will not be validated}
+    vlan_id: ${34:# Enter the VLAN ID}
+    vlan_priority: ${35:# Enter the priority for the VLAN ID}
   tags:
     - dellemc
     - openmanage

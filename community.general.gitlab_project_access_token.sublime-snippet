@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages GitLab project access tokens}
+  community.general.gitlab_project_access_token:
+    access_level: ${2:# Access level of the access token}
+    api_job_token: ${3:# GitLab CI job token for logging in}
+    api_oauth_token: ${4:# GitLab OAuth token for logging in}
+    api_password: ${5:# The password to use for authentication against the API}
+    api_token: ${6:# GitLab access token with API permissions}
+    api_url: ${7:# The resolvable endpoint for the API}
+    api_username: ${8:# The username to use for authentication against the API}
+    ca_path: ${9:# The CA certificates bundle to use to verify GitLab server certificate}
+    expires_at: ${10:# Expiration date of the access token in C(YYYY-MM-DD) format}
+    name: ${11:# Access token's name}
+    project: ${12:# ID or full path of project in the form of group/name}
+    recreate: ${13:# Whether the access token will be recreated if it already exists}
+    scopes: ${14:# Scope of the access token}
+    state: ${15:# When V(present) the access token will be added to the project if it does not exist}
+    validate_certs: ${16:# Whether or not to validate SSL certs when supplying a HTTPS endpoint}
+  tags:
+    - community
+    - general
+    - gitlab_project_access_token]]></content>
+  <tabTrigger>community.general.gitlab_project_access_token</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages GitLab project access tokens</description>
+</snippet>

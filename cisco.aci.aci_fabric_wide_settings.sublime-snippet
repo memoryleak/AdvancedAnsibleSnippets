@@ -23,11 +23,13 @@
     spine_opflex_client_auth: ${21:# Whether to enforce Opflex client certificate authentication on spine switches for GOLF and Linux}
     spine_ssl_opflex: ${22:# Whether to enable SSL Opflex transport for spine switches}
     state: ${23:# Use C(present) for updating configuration}
-    timeout: ${24:# The socket level timeout in seconds}
-    use_proxy: ${25:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${26:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${27:# The username to use for authentication}
-    validate_certs: ${28:# If C(false), SSL certificates will not be validated}
+    suppress_previous: ${24:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${25:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    timeout: ${26:# The socket level timeout in seconds}
+    use_proxy: ${27:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${28:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${29:# The username to use for authentication}
+    validate_certs: ${30:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci

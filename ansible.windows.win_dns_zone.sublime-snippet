@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Windows Server DNS Zones}
+  ansible.windows.win_dns_zone:
+    dns_servers: ${2:# Specifies an list of IP addresses of the primary servers of the zone}
+    dynamic_update: ${3:# Specifies how a zone handles dynamic updates}
+    forwarder_timeout: ${4:# Specifies a length of time, in seconds, that a DNS server waits for a remote DNS server to resolve a query}
+    name: ${5:# Fully qualified name of the DNS zone}
+    replication: ${6:# Specifies the replication scope for the DNS zone}
+    state: ${7:# Specifies the desired state of the DNS zone}
+    type: ${8:# Specifies the type of DNS zone}
+  tags:
+    - win_dns_zone]]></content>
+  <tabTrigger>ansible.windows.win_dns_zone</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Windows Server DNS Zones</description>
+</snippet>

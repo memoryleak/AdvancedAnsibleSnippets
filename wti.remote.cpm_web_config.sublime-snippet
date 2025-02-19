@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set network WEB parameters in WTI OOB and PDU devices}
+  wti.remote.cpm_web_config:
+    cpm_password: ${2:# This is the Password of the WTI device to send the module}
+    cpm_url: ${3:# This is the URL of the WTI device to send the module}
+    cpm_username: ${4:# This is the Username of the WTI device to send the module}
+    harden: ${5:# Security level for the WEB the device will respond to 0 = Off, 1 = Medium, 2 = High}
+    hsts: ${6:# If HTTP Strict Transport Security (HSTS) is enabled/disabled for the WEB}
+    httpenable: ${7:# Activates unsecure WEB for the specified interface}
+    httpport: ${8:# Port used by the insecure WEB}
+    httpsenable: ${9:# Activates secure WEB for the specified interface}
+    httpsport: ${10:# Port used by the secure WEB}
+    inter_filename: ${11:# Intermediate Certificate to be assigned to the Device}
+    interface: ${12:# The ethernet port for the SNMP we are defining}
+    ocsp: ${13:# Current state of the Online Certificate Status Protocol (OCSP) for the Web Server}
+    private_filename: ${14:# Private Certificate to be assigned to the Device}
+    signed_filename: ${15:# Signed Certificate to be assigned to the Device}
+    timeout: ${16:# Inactivity timeout of a user when logged into the web server (valid from 0 to 9999 minutes) 0 is no timeout}
+    tlsmode: ${17:# Which TLS the WEB will use 0 = TLSv1}
+    trace: ${18:# Current state of TRACE requests for thw Web Server}
+    use_https: ${19:# Designates to use an https connection or http connection}
+    use_proxy: ${20:# Flag to control if the lookup will observe HTTP proxy environment variables when present}
+    validate_certs: ${21:# If false, SSL certificates will not be validated}
+    webterm: ${22:# Current state of the CLI over Web for the Web Server}
+  tags:
+    - wti
+    - remote
+    - cpm_web_config]]></content>
+  <tabTrigger>wti.remote.cpm_web_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set network WEB parameters in WTI OOB and PDU devices</description>
+</snippet>

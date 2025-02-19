@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage keytab file in FreeIPA}
+  community.general.ipa_getkeytab:
+    bind_dn: ${2:# The LDAP DN to bind as when retrieving a keytab without Kerberos credentials}
+    bind_pw: ${3:# The LDAP password to use when not binding with Kerberos}
+    ca_cert: ${4:# The path to the IPA CA certificate used to validate LDAPS/STARTTLS connections}
+    encryption_types: ${5:# The list of encryption types to use to generate keys}
+    force: ${6:# Force recreation if exists already}
+    ipa_host: ${7:# The IPA server to retrieve the keytab from (FQDN)}
+    ldap_uri: ${8:# LDAP URI}
+    password: ${9:# Use this password for the key instead of one randomly generated}
+    path: ${10:# The base path where to put generated keytab file}
+    principal: ${11:# The non-realm part of the full principal name}
+    retrieve_mode: ${12:# Retrieve an existing key from the server instead of generating a new one}
+    sasl_mech: ${13:# SASL mechanism to use if O(bind_dn) and O(bind_pw) are not specified}
+    state: ${14:# The state of the keytab file}
+  tags:
+    - community
+    - general
+    - ipa_getkeytab]]></content>
+  <tabTrigger>community.general.ipa_getkeytab</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage keytab file in FreeIPA</description>
+</snippet>

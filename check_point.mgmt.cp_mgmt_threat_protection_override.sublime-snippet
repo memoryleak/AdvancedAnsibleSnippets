@@ -1,14 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Edit existing object using object name or uid}
   check_point.mgmt.cp_mgmt_threat_protection_override:
-    comments: ${2:# Protection comments}
-    details_level: ${3:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
-    follow_up: ${4:# Tag the protection with pre-defined follow-up flag}
-    name: ${5:# Object name}
-    overrides: ${6:# Overrides per profile for this protection<br> Note, Remove override for Core protections removes only the action's override}
-    version: ${7:# Version of checkpoint}
-    wait_for_task: ${8:# Wait for the task to end}
-    wait_for_task_timeout: ${9:# How many minutes to wait until throwing a timeout error}
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    comments: ${3:# Protection comments}
+    details_level: ${4:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    follow_up: ${5:# Tag the protection with pre-defined follow-up flag}
+    name: ${6:# Object name}
+    overrides: ${7:# Overrides per profile for this protection<br> Note, Remove override for Core protections removes only the action's override}
+    version: ${8:# Version of checkpoint}
+    wait_for_task: ${9:# Wait for the task to end}
+    wait_for_task_timeout: ${10:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

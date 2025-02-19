@@ -2,19 +2,20 @@
   <content><![CDATA[- name: ${1:Service level agreement}
   fortinet.fortimanager.fmgr_wanprof_system_virtualwanlink_healthcheck_sla:
     access_token: ${2:# The token to access FortiManager without using username and password}
-    adom: ${3:# the parameter (adom) in requested url}
+    adom: ${3:# The parameter (adom) in requested url}
     bypass_validation: ${4:# Only set to True when module schema diffs with FortiManager API structure, module continues to execute without validating parameters}
     enable_log: ${5:# Enable/Disable logging for task}
     forticloud_access_token: ${6:# Authenticate Ansible client with forticloud API access token}
-    health-check: ${7:# the parameter (health-check) in requested url}
-    proposed_method: ${8:# The overridden method for the underlying Json RPC request}
-    rc_failed: ${9:# The rc codes list with which the conditions to fail will be overriden}
-    rc_succeeded: ${10:# The rc codes list with which the conditions to succeed will be overriden}
-    state: ${11:# The directive to create, update or delete an object}
-    wanprof: ${12:# the parameter (wanprof) in requested url}
-    wanprof_system_virtualwanlink_healthcheck_sla: ${13:# the top level parameters set}
-    workspace_locking_adom: ${14:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
-    workspace_locking_timeout: ${15:# The maximum time in seconds to wait for other user to release the workspace lock}
+    health-check: ${7:# Deprecated, please use 'health_check'}
+    health_check: ${8:# The parameter (health-check) in requested url}
+    proposed_method: ${9:# The overridden method for the underlying Json RPC request}
+    rc_failed: ${10:# The rc codes list with which the conditions to fail will be overriden}
+    rc_succeeded: ${11:# The rc codes list with which the conditions to succeed will be overriden}
+    state: ${12:# The directive to create, update or delete an object}
+    wanprof: ${13:# The parameter (wanprof) in requested url}
+    wanprof_system_virtualwanlink_healthcheck_sla: ${14:# The top level parameters set}
+    workspace_locking_adom: ${15:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
+    workspace_locking_timeout: ${16:# The maximum time in seconds to wait for other user to release the workspace lock}
   tags:
     - fortinet
     - fortimanager

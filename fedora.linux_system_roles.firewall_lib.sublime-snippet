@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for firewall role}
+  fedora.linux_system_roles.firewall_lib:
+    __report_changed: ${2:# If false, do not report changed true even if changed}
+    description: ${3:# Creates or updates the description of a new or existing service or ipset}
+    destination: ${4:# List of IPv4/IPv6 addresses with optional mask format - address[/mask] Currently only supported for service configuration Only one IPv4 and one IPv6 address allowed in list}
+    firewalld_conf: ${5:# Modify firewalld}
+    forward_port: ${6:# List of forward port strings or dicts, or a single string or dict}
+    helper_module: ${7:# List of netfiler kernel helper module names}
+    icmp_block: ${8:# List of ICMP type strings to block}
+    icmp_block_inversion: ${9:# ICMP block inversion bool setting}
+    interface: ${10:# List of interface name strings}
+    interface_pci_id: ${11:# List of inteface PCI device ID strings}
+    ipset: ${12:# Name of the ipset being configured}
+    ipset_entries: ${13:# List of addresses to add/remove from ipset}
+    ipset_type: ${14:# Type of ipset being defined Will only do something when ipset argument is defined}
+    masquerade: ${15:# The masquerade bool setting}
+    permanent: ${16:# The permanent bool flag}
+    port: ${17:# List of ports or port range strings}
+    protocol: ${18:# list of protocols supported by managed system}
+    rich_rule: ${19:# List of rich rule strings}
+    runtime: ${20:# The runtime bool flag}
+    service: ${21:# List of service name strings}
+    set_default_zone: ${22:# Sets the default zone}
+    short: ${23:# Creates or updates a short description, generally just a full name of a new or existing service}
+    source: ${24:# List of source address, address range strings, or ipsets A source address or address range is either an IP address or a network IP address with a mask for IPv4 or IPv6}
+    source_port: ${25:# List of source port or port range strings}
+    state: ${26:# Ensure presence or absence of entries}
+    target: ${27:# The firewalld Zone target}
+    timeout: ${28:# The amount of time in seconds a setting is in effect}
+    zone: ${29:# The zone name string}
+  tags:
+    - fedora
+    - linux_system_roles
+    - firewall_lib]]></content>
+  <tabTrigger>fedora.linux_system_roles.firewall_lib</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for firewall role</description>
+</snippet>

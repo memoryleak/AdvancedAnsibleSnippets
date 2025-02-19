@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manipulate Consul tokens}
+  community.general.consul_token:
+    accessor_id: ${2:# Specifies a UUID to use as the token's Accessor ID}
+    ca_path: ${3:# The CA bundle to use for https connections}
+    description: ${4:# Free form human readable description of the token}
+    expiration_ttl: ${5:# This is a convenience field and if set will initialize the C(expiration_time)}
+    host: ${6:# Host of the consul agent, defaults to V(localhost)}
+    local: ${7:# If true, indicates that the token should not be replicated globally and instead be local to the current datacenter}
+    node_identities: ${8:# List of node identities to attach to the token}
+    policies: ${9:# List of policies to attach to the token}
+    port: ${10:# The port on which the consul agent is running}
+    roles: ${11:# List of roles to attach to the token}
+    scheme: ${12:# The protocol scheme on which the consul agent is running}
+    secret_id: ${13:# Specifies a UUID to use as the token's Secret ID}
+    service_identities: ${14:# List of service identities to attach to the token}
+    state: ${15:# Whether the token should be present or absent}
+    templated_policies: ${16:# The list of templated policies that should be applied to the role}
+    token: ${17:# The token to use for authorization}
+    validate_certs: ${18:# Whether to verify the TLS certificate of the consul agent}
+  tags:
+    - community
+    - general
+    - consul_token]]></content>
+  <tabTrigger>community.general.consul_token</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manipulate Consul tokens</description>
+</snippet>

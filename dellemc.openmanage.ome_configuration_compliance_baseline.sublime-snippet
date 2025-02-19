@@ -3,22 +3,26 @@
   dellemc.openmanage.ome_configuration_compliance_baseline:
     ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
     command: ${3:# C(create) creates a configuration baseline from an existing compliance template}
-    description: ${4:# Description of the compliance baseline}
-    device_group_names: ${5:# Name of the target device group}
-    device_ids: ${6:# IDs of the target devices}
-    device_service_tags: ${7:# Service tag of the target device}
-    hostname: ${8:# OpenManage Enterprise IP address or hostname}
-    job_wait: ${9:# Provides the option to wait for job completion}
-    job_wait_timeout: ${10:# The maximum wait time of I(job_wait) in seconds}
-    names: ${11:# Name(s) of the configuration compliance baseline}
-    new_name: ${12:# New name of the compliance baseline to be modified}
-    password: ${13:# OpenManage Enterprise password}
-    port: ${14:# OpenManage Enterprise HTTPS port}
-    template_id: ${15:# ID of the deployment template to be used for creating a compliance baseline}
-    template_name: ${16:# Name of the compliance template for creating the compliance baseline(s)}
-    timeout: ${17:# The socket level timeout in seconds}
-    username: ${18:# OpenManage Enterprise username}
-    validate_certs: ${19:# If C(false), the SSL certificates will not be validated}
+    cron: ${4:# Provide a cron expression based on Quartz cron format}
+    description: ${5:# Description of the compliance baseline}
+    device_group_names: ${6:# Name of the target device group}
+    device_ids: ${7:# IDs of the target devices}
+    device_service_tags: ${8:# Service tag of the target device}
+    hostname: ${9:# OpenManage Enterprise IP address or hostname}
+    job_wait: ${10:# Provides the option to wait for job completion}
+    job_wait_timeout: ${11:# The maximum wait time of I(job_wait) in seconds}
+    names: ${12:# Name(s) of the configuration compliance baseline}
+    new_name: ${13:# New name of the compliance baseline to be modified}
+    password: ${14:# OpenManage Enterprise password}
+    port: ${15:# OpenManage Enterprise HTTPS port}
+    run_later: ${16:# Indicates whether to remediate immediately or in the future}
+    staged_at_reboot: ${17:# Indicates whether remediate has to be executed on next reboot}
+    template_id: ${18:# ID of the deployment template to be used for creating a compliance baseline}
+    template_name: ${19:# Name of the compliance template for creating the compliance baseline(s)}
+    timeout: ${20:# The socket level timeout in seconds}
+    username: ${21:# OpenManage Enterprise username}
+    validate_certs: ${22:# If C(false), the SSL certificates will not be validated}
+    x_auth_token: ${23:# Authentication token}
   tags:
     - dellemc
     - openmanage

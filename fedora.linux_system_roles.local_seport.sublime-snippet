@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages SELinux network port type definitions}
+  fedora.linux_system_roles.local_seport:
+    ignore_selinux_state: ${2:# Run independent of selinux runtime state}
+    local: ${3:# Work with local modifications only}
+    ports: ${4:# Ports or port ranges}
+    proto: ${5:# Protocol for the specified port}
+    reload: ${6:# Reload SELinux policy after commit}
+    setype: ${7:# SELinux type for the specified port}
+    state: ${8:# Desired boolean value}
+  tags:
+    - fedora
+    - linux_system_roles
+    - local_seport]]></content>
+  <tabTrigger>fedora.linux_system_roles.local_seport</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages SELinux network port type definitions</description>
+</snippet>

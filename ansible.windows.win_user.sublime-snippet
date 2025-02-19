@@ -2,21 +2,22 @@
   <content><![CDATA[- name: ${1:Manages local Windows user accounts}
   ansible.windows.win_user:
     account_disabled: ${2:# C(true) will disable the user account}
-    account_locked: ${3:# Only C(false) can be set and it will unlock the user account if locked}
-    description: ${4:# Description of the user}
-    fullname: ${5:# Full name of the user}
-    groups: ${6:# Adds or removes the user from this comma-separated list of groups, depending on the value of I(groups_action)}
-    groups_action: ${7:# If C(add), the user is added to each group in I(groups) where not already a member}
-    home_directory: ${8:# The designated home directory of the user}
-    login_script: ${9:# The login script of the user}
-    name: ${10:# Name of the user to create, remove or modify}
-    password: ${11:# Optionally set the user's password to this (plain text) value}
-    password_expired: ${12:# C(true) will require the user to change their password at next login}
-    password_never_expires: ${13:# C(true) will set the password to never expire}
-    profile: ${14:# The profile path of the user}
-    state: ${15:# When C(absent), removes the user account if it exists}
-    update_password: ${16:# C(always) will update passwords if they differ}
-    user_cannot_change_password: ${17:# C(true) will prevent the user from changing their password}
+    account_expires: ${3:# Set the account expiration date for the user}
+    account_locked: ${4:# Only C(false) can be set and it will unlock the user account if locked}
+    description: ${5:# Description of the user}
+    fullname: ${6:# Full name of the user}
+    groups: ${7:# Adds or removes the user from this comma-separated list of groups, depending on the value of I(groups_action)}
+    groups_action: ${8:# If C(add), the user is added to each group in I(groups) where not already a member}
+    home_directory: ${9:# The designated home directory of the user}
+    login_script: ${10:# The login script of the user}
+    name: ${11:# Name of the user to create, remove or modify}
+    password: ${12:# Optionally set the user's password to this (plain text) value}
+    password_expired: ${13:# C(true) will require the user to change their password at next login}
+    password_never_expires: ${14:# C(true) will set the password to never expire}
+    profile: ${15:# The profile path of the user}
+    state: ${16:# When C(absent), removes the user account if it exists}
+    update_password: ${17:# C(always) will update passwords if they differ}
+    user_cannot_change_password: ${18:# C(true) will prevent the user from changing their password}
   tags:
     - win_user]]></content>
   <tabTrigger>ansible.windows.win_user</tabTrigger>

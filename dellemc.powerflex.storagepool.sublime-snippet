@@ -1,21 +1,34 @@
 <snippet>
   <content><![CDATA[- name: ${1:Managing Dell PowerFlex storage pool}
   dellemc.powerflex.storagepool:
-    hostname: ${2:# IP or FQDN of the PowerFlex host}
-    media_type: ${3:# Type of devices in the storage pool}
-    password: ${4:# The password of the PowerFlex host}
-    port: ${5:# Port number through which communication happens with PowerFlex host}
-    protection_domain_id: ${6:# The id of the protection domain}
-    protection_domain_name: ${7:# The name of the protection domain}
-    state: ${8:# State of the storage pool}
-    storage_pool_id: ${9:# The id of the storage pool}
-    storage_pool_name: ${10:# The name of the storage pool}
-    storage_pool_new_name: ${11:# New name for the storage pool can be provided}
-    timeout: ${12:# Time after which connection will get terminated}
-    use_rfcache: ${13:# Enable/Disable RFcache on a specific storage pool}
-    use_rmcache: ${14:# Enable/Disable RMcache on a specific storage pool}
-    username: ${15:# The username of the PowerFlex host}
-    validate_certs: ${16:# Boolean variable to specify whether or not to validate SSL certificate}
+    cap_alert_thresholds: ${2:# Set the threshold for triggering capacity usage alerts}
+    enable_fragmentation: ${3:# Enable/Disable fragmentation of a specific storage pool}
+    enable_rebalance: ${4:# Enable/Disable rebalance on a specific storage pool}
+    enable_rebuild: ${5:# Enable/Disable rebuild of a specific storage pool}
+    enable_zero_padding: ${6:# Enable/Disable zero padding on a specific storage pool}
+    hostname: ${7:# IP or FQDN of the PowerFlex host}
+    media_type: ${8:# Type of devices in the storage pool}
+    parallel_rebuild_rebalance_limit: ${9:# Set rebuild/rebalance parallelism limit of a storage pool}
+    password: ${10:# The password of the PowerFlex host}
+    persistent_checksum: ${11:# Enable/Disable persistent checksum of a specific storage pool}
+    port: ${12:# Port number through which communication happens with PowerFlex host}
+    protected_maintenance_mode_io_priority_policy: ${13:# Set protected maintenance mode I/O priority policy of a storage pool}
+    protection_domain_id: ${14:# The id of the protection domain}
+    protection_domain_name: ${15:# The name of the protection domain}
+    rebalance_io_priority_policy: ${16:# Set the rebalance I/O priority policy for a Storage Pool}
+    rep_cap_max_ratio: ${17:# Set replication journal capacity of a storage pool}
+    rmcache_write_handling_mode: ${18:# Set RM cache write handling mode of a storage pool}
+    spare_percentage: ${19:# Set the spare percentage of a specific storage pool}
+    state: ${20:# State of the storage pool}
+    storage_pool_id: ${21:# The id of the storage pool}
+    storage_pool_name: ${22:# The name of the storage pool}
+    storage_pool_new_name: ${23:# New name for the storage pool can be provided}
+    timeout: ${24:# Time after which connection will get terminated}
+    use_rfcache: ${25:# Enable/Disable RFcache on a specific storage pool}
+    use_rmcache: ${26:# Enable/Disable RMcache on a specific storage pool}
+    username: ${27:# The username of the PowerFlex host}
+    validate_certs: ${28:# Boolean variable to specify whether or not to validate SSL certificate}
+    vtree_migration_io_priority_policy: ${29:# Set the I/O priority policy for V-Tree migration for a specific Storage Pool}
   tags:
     - dellemc
     - powerflex

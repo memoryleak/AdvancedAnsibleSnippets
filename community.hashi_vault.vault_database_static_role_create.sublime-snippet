@@ -1,0 +1,48 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or update a static role}
+  community.hashi_vault.vault_database_static_role_create:
+    auth_method: ${2:# Authentication method to be used}
+    aws_access_key: ${3:# The AWS access key to use}
+    aws_iam_server_id: ${4:# If specified, sets the value to use for the C(X-Vault-AWS-IAM-Server-ID) header as part of C(GetCallerIdentity) request}
+    aws_profile: ${5:# The AWS profile}
+    aws_secret_key: ${6:# The AWS secret key that corresponds to the access key}
+    aws_security_token: ${7:# The AWS security token if using temporary access and secret keys}
+    azure_client_id: ${8:# The client ID (also known as application ID) of the Azure AD service principal or managed identity}
+    azure_client_secret: ${9:# The client secret of the Azure AD service principal}
+    azure_resource: ${10:# The resource URL for the application registered in Azure Active Directory}
+    azure_tenant_id: ${11:# The Azure Active Directory Tenant ID (also known as the Directory ID) of the service principal}
+    ca_cert: ${12:# Path to certificate to use for authentication}
+    cert_auth_private_key: ${13:# For C(cert) auth, path to the private key file to authenticate with, in PEM format}
+    cert_auth_public_key: ${14:# For C(cert) auth, path to the certificate file to authenticate with, in PEM format}
+    connection_name: ${15:# The connection name under which the role should be created}
+    db_username: ${16:# The database username - Note that the user must exist in the target database!}
+    engine_mount_point: ${17:# The path where the secret backend is mounted}
+    jwt: ${18:# The JSON Web Token (JWT) to use for JWT authentication to Vault}
+    mount_point: ${19:# Vault mount point}
+    namespace: ${20:# Vault namespace where secrets reside}
+    password: ${21:# Authentication password}
+    proxies: ${22:# URL(s) to the proxies used to access the Vault service}
+    region: ${23:# The AWS region for which to create the connection}
+    retries: ${24:# Allows for retrying on errors, based on the L(Retry class in the urllib3 library,https://urllib3}
+    retry_action: ${25:# Controls whether and how to show messages on I(retries)}
+    role_id: ${26:# Vault Role ID or name}
+    role_name: ${27:# The name of the role that should be created}
+    rotation_period: ${28:# Password rotation period in seconds (defaults to 24hs)}
+    rotation_statements: ${29:# SQL statements to rotate the password for the given O(db_username)}
+    secret_id: ${30:# Secret ID to be used for Vault AppRole authentication}
+    timeout: ${31:# Sets the connection timeout in seconds}
+    token: ${32:# Vault token}
+    token_file: ${33:# If no token is specified, will try to read the token from this file in I(token_path)}
+    token_path: ${34:# If no token is specified, will try to read the I(token_file) from this path}
+    token_validate: ${35:# For token auth, will perform a C(lookup-self) operation to determine the token's validity before using it}
+    url: ${36:# URL to the Vault service}
+    username: ${37:# Authentication user name}
+    validate_certs: ${38:# Controls verification and validation of SSL certificates, mostly you only want to turn off with self signed ones}
+  tags:
+    - community
+    - hashi_vault
+    - vault_database_static_role_create]]></content>
+  <tabTrigger>community.hashi_vault.vault_database_static_role_create</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or update a static role</description>
+</snippet>

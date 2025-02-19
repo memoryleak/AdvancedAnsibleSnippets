@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Install and uninstalls Windows hotfixes}
+  ansible.windows.win_hotfix:
+    hotfix_identifier: ${2:# The name of the hotfix as shown in DISM, see examples for details}
+    hotfix_kb: ${3:# The name of the KB the hotfix relates to, see examples for details}
+    source: ${4:# The path to the downloaded hotfix}
+    state: ${5:# Whether to install or uninstall the hotfix}
+  tags:
+    - win_hotfix]]></content>
+  <tabTrigger>ansible.windows.win_hotfix</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Install and uninstalls Windows hotfixes</description>
+</snippet>

@@ -22,14 +22,16 @@
     source_ip: ${20:# The source IP address or prefix}
     span_version: ${21:# SPAN version}
     state: ${22:# Use C(present) or C(absent) for adding or removing}
-    tenant: ${23:# The name of the tenant}
-    timeout: ${24:# The socket level timeout in seconds}
-    ttl: ${25:# The time to live of the span session packets}
-    use_proxy: ${26:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${27:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${28:# The username to use for authentication}
-    validate_certs: ${29:# If C(false), SSL certificates will not be validated}
-    version_enforced: ${30:# Enforce SPAN version}
+    suppress_previous: ${23:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${24:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    tenant: ${25:# The name of the tenant}
+    timeout: ${26:# The socket level timeout in seconds}
+    ttl: ${27:# The time to live of the span session packets}
+    use_proxy: ${28:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${29:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${30:# The username to use for authentication}
+    validate_certs: ${31:# If C(false), SSL certificates will not be validated}
+    version_enforced: ${32:# Enforce SPAN version}
   tags:
     - cisco
     - aci

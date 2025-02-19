@@ -2,11 +2,11 @@
   <content><![CDATA[- name: ${1:Manage of the posix group}
   community.general.udm_group:
     description: ${2:# Group description}
-    name: ${3:# Name of the posix group}
-    ou: ${4:# LDAP OU, e}
-    position: ${5:# define the whole ldap position of the group, e}
+    name: ${3:# Name of the POSIX group}
+    ou: ${4:# LDAP OU, for example V(school) for LDAP OU V(ou=school,dc=example,dc=com)}
+    position: ${5:# Define the whole LDAP position of the group, for example V(cn=g123m-1A,cn=classes,cn=schueler,cn=groups,ou=schule,dc=example,dc=com)}
     state: ${6:# Whether the group is present or not}
-    subpath: ${7:# Subpath inside the OU, e}
+    subpath: ${7:# Subpath inside the OU, for example V(cn=classes,cn=students,cn=groups)}
   tags:
     - community
     - general

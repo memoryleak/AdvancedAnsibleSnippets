@@ -3,19 +3,25 @@
   purestorage.flashblade.purefb_bucket:
     account: ${2:# Object Store Account for Bucket}
     api_token: ${3:# FlashBlade API token for admin privileged user}
-    default_retention: ${4:# The retention period, in days, used to apply locks on new objects if none is specified by the S3 client}
-    eradicate: ${5:# Define whether to eradicate the bucket on delete or leave in trash}
-    fb_url: ${6:# FlashBlade management IP address or Hostname}
-    freeze_locked_objects: ${7:# If set to true, a locked object will be read-only and no new versions of the object may be created due to modifications}
-    hard_limit: ${8:# Whether the I(quota) value is enforced or not}
-    mode: ${9:# The type of bucket to be created}
-    name: ${10:# Bucket Name}
-    object_lock_enabled: ${11:# If set to true, then S3 APIs relating to object lock may be used}
-    quota: ${12:# User quota in M, G, T or P units}
-    retention_lock: ${13:# Set retention lock level for the bucket}
-    retention_mode: ${14:# The retention mode used to apply locks on new objects if none is specified by the S3 client}
-    state: ${15:# Create, delete or modifies a bucket}
-    versioning: ${16:# State of S3 bucket versioning}
+    block_new_public_policies: ${4:# If set to true, adding bucket policies that grant public access to a bucket is not allowed}
+    block_public_access: ${5:# If set to true, access to a bucket with a public policy is restricted to only authenticated users within the account that bucket belongs to}
+    default_retention: ${6:# The retention period, in days, used to apply locks on new objects if none is specified by the S3 client}
+    disable_warnings: ${7:# Disable insecure certificate warnings}
+    eradicate: ${8:# Define whether to eradicate the bucket on delete or leave in trash}
+    eradication_delay: ${9:# Minimum eradication delay in days}
+    eradication_mode: ${10:# The eradication mode of the bucket}
+    fb_url: ${11:# FlashBlade management IP address or Hostname}
+    freeze_locked_objects: ${12:# If set to true, a locked object will be read-only and no new versions of the object may be created due to modifications}
+    hard_limit: ${13:# Whether the I(quota) value is enforced or not}
+    manual_eradication: ${14:# The manual eradication status of the bucket}
+    mode: ${15:# The type of bucket to be created}
+    name: ${16:# Bucket Name}
+    object_lock_enabled: ${17:# If set to true, then S3 APIs relating to object lock may be used}
+    quota: ${18:# The effective quota limit applied against the size of the bucket}
+    retention_lock: ${19:# Set retention lock level for the bucket}
+    retention_mode: ${20:# The retention mode used to apply locks on new objects if none is specified by the S3 client}
+    state: ${21:# Create, delete or modifies a bucket}
+    versioning: ${22:# State of S3 bucket versioning}
   tags:
     - purestorage
     - flashblade

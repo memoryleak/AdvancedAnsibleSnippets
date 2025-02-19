@@ -21,11 +21,13 @@
     source: ${19:# The name of the Access SPAN source}
     source_group: ${20:# The name of the Access SPAN source group}
     state: ${21:# Use C(present) or C(absent) for adding or removing}
-    timeout: ${22:# The socket level timeout in seconds}
-    use_proxy: ${23:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${24:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${25:# The username to use for authentication}
-    validate_certs: ${26:# If C(false), SSL certificates will not be validated}
+    suppress_previous: ${22:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${23:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    timeout: ${24:# The socket level timeout in seconds}
+    use_proxy: ${25:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${26:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${27:# The username to use for authentication}
+    validate_certs: ${28:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci

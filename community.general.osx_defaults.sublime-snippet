@@ -2,13 +2,14 @@
   <content><![CDATA[- name: ${1:Manage macOS user defaults}
   community.general.osx_defaults:
     array_add: ${2:# Add new elements to the array for a key which has an array as its value}
-    domain: ${3:# The domain is a domain name of the form C(com}
-    host: ${4:# The host on which the preference should apply}
-    key: ${5:# The key of the user preference}
-    path: ${6:# The path in which to search for C(defaults)}
-    state: ${7:# The state of the user defaults}
-    type: ${8:# The type of value to write}
-    value: ${9:# The value to write}
+    check_type: ${3:# Checks if the type of the provided O(value) matches the type of an existing default}
+    domain: ${4:# The domain is a domain name of the form C(com}
+    host: ${5:# The host on which the preference should apply}
+    key: ${6:# The key of the user preference}
+    path: ${7:# The path in which to search for C(defaults)}
+    state: ${8:# The state of the user defaults}
+    type: ${9:# The type of value to write}
+    value: ${10:# The value to write}
   tags:
     - community
     - general

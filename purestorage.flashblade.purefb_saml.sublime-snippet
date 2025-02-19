@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FlashBlade SAML2 service and identity providers}
+  purestorage.flashblade.purefb_saml:
+    api_token: ${2:# FlashBlade API token for admin privileged user}
+    array_url: ${3:# The URL of the FlashBlade}
+    decryption_credential: ${4:# The credential used by the service provider to decrypt encrypted SAML assertions from the identity provider}
+    disable_warnings: ${5:# Disable insecure certificate warnings}
+    enabled: ${6:# Defines the enabled state of the identity provider}
+    encrypt_asserts: ${7:# If set to true, SAML assertions will be encrypted by the identity provider}
+    fb_url: ${8:# FlashBlade management IP address or Hostname}
+    metadata_url: ${9:# The URL of the identity provider metadata}
+    name: ${10:# Name of the SAML2 identity provider (IdP)}
+    sign_request: ${11:# If set to true, SAML requests will be signed by the service provider}
+    signing_credential: ${12:# The credential used by the service provider to sign SAML requests}
+    state: ${13:# Define whether the API client should exist or not, or test}
+    url: ${14:# The URL of the identity provider}
+    x509_cert: ${15:# The X509 certificate that the service provider uses to verify the SAML response signature from the identity provider}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_saml]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_saml</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FlashBlade SAML2 service and identity providers</description>
+</snippet>

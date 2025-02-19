@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Change user privilege}
   inspur.sm.edit_priv_user:
-    uname: ${2:# User name}
-    role_id: ${3:# user group, default user group,'Administrator', 'Operator', 'Commonuser','OEM','NoAccess',}
+    host: ${2:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    password: ${3:# Specifies the password to use to authenticate the connection to the remote device}
     priv: ${4:# User access, select one or more from None/KVM/VMM/SOL}
     provider: ${5:# A dict object containing connection details}
-    host: ${6:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
-    username: ${7:# Configures the username to use to authenticate the connection to the remote device}
-    password: ${8:# Specifies the password to use to authenticate the connection to the remote device}
+    role_id: ${6:# user group, default user group,'Administrator', 'Operator', 'Commonuser','OEM','NoAccess',}
+    uname: ${7:# User name}
+    username: ${8:# Configures the username to use to authenticate the connection to the remote device}
   tags:
     - inspur
     - sm

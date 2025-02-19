@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Bootstrap ACLs in Consul}
+  community.general.consul_acl_bootstrap:
+    bootstrap_secret: ${2:# The secret to be used as secret ID for the initial token}
+    ca_path: ${3:# The CA bundle to use for https connections}
+    host: ${4:# Host of the consul agent, defaults to V(localhost)}
+    port: ${5:# The port on which the consul agent is running}
+    scheme: ${6:# The protocol scheme on which the consul agent is running}
+    state: ${7:# Whether the token should be present or absent}
+    validate_certs: ${8:# Whether to verify the TLS certificate of the consul agent}
+  tags:
+    - community
+    - general
+    - consul_acl_bootstrap]]></content>
+  <tabTrigger>community.general.consul_acl_bootstrap</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Bootstrap ACLs in Consul</description>
+</snippet>

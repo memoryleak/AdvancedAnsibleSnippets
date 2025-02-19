@@ -12,11 +12,13 @@
     private_key: ${10:# Either a PEM-formatted private key file or the private key content used for signature-based authentication}
     region: ${11:# The name of the cloud provider's region}
     state: ${12:# Use C(present) or C(absent) for adding or removing}
-    timeout: ${13:# The socket level timeout in seconds}
-    use_proxy: ${14:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${15:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${16:# The username to use for authentication}
-    validate_certs: ${17:# If C(false), SSL certificates will not be validated}
+    suppress_previous: ${13:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${14:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    timeout: ${15:# The socket level timeout in seconds}
+    use_proxy: ${16:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${17:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${18:# The username to use for authentication}
+    validate_certs: ${19:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci

@@ -2,13 +2,23 @@
   <content><![CDATA[- name: ${1:Gathering information about Dell PowerFlex}
   dellemc.powerflex.info:
     filters: ${2:# List of filters to support filtered output for storage entities}
-    gather_subset: ${3:# List of string variables to specify the Powerflex storage system entities for which information is required}
-    hostname: ${4:# IP or FQDN of the PowerFlex host}
-    password: ${5:# The password of the PowerFlex host}
-    port: ${6:# Port number through which communication happens with PowerFlex host}
-    timeout: ${7:# Time after which connection will get terminated}
-    username: ${8:# The username of the PowerFlex host}
-    validate_certs: ${9:# Boolean variable to specify whether or not to validate SSL certificate}
+    full: ${3:# Specify if response is full or brief}
+    gather_subset: ${4:# List of string variables to specify the PowerFlex storage system entities for which information is required}
+    hostname: ${5:# IP or FQDN of the PowerFlex host}
+    include_attachments: ${6:# Include attachments}
+    include_bundles: ${7:# Include software bundle entities}
+    include_components: ${8:# Include software component entities}
+    include_devices: ${9:# Include devices in response}
+    include_related: ${10:# Include related entities}
+    include_template: ${11:# Include service templates in response}
+    limit: ${12:# Page limit}
+    offset: ${13:# Pagination offset}
+    password: ${14:# The password of the PowerFlex host}
+    port: ${15:# Port number through which communication happens with PowerFlex host}
+    sort: ${16:# Sort the returned components based on specified field}
+    timeout: ${17:# Time after which connection will get terminated}
+    username: ${18:# The username of the PowerFlex host}
+    validate_certs: ${19:# Boolean variable to specify whether or not to validate SSL certificate}
   tags:
     - dellemc
     - powerflex

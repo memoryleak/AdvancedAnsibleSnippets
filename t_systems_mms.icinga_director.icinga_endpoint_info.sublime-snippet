@@ -1,19 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Query endpoints in Icinga2}
   t_systems_mms.icinga_director.icinga_endpoint_info:
-    query: ${2:# Text to filter search results}
-    resolved: ${3:# Resolve all inherited object properties and omit templates in output}
-    url: ${4:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
-    force: ${5:# If C(yes) do not get a cached copy}
+    client_cert: ${2:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${3:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    force: ${4:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${5:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
     http_agent: ${6:# Header to identify as, generally appears in web server logs}
-    use_proxy: ${7:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    validate_certs: ${8:# If C(no), SSL certificates will not be validated}
-    url_username: ${9:# The username for use in HTTP basic authentication}
+    query: ${7:# Text to filter search results}
+    resolved: ${8:# Resolve all inherited object properties and omit templates in output}
+    url: ${9:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
     url_password: ${10:# The password for use in HTTP basic authentication}
-    force_basic_auth: ${11:# Credentials specified with I(url_username) and I(url_password) should be passed in HTTP Header}
-    client_cert: ${12:# PEM formatted certificate chain file to be used for SSL client authentication}
-    client_key: ${13:# PEM formatted file that contains your private key to be used for SSL client authentication}
-    use_gssapi: ${14:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    url_username: ${11:# The username for use in HTTP basic authentication}
+    use_gssapi: ${12:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${13:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${14:# If V(no), SSL certificates will not be validated}
   tags:
     - t_systems_mms
     - icinga_director

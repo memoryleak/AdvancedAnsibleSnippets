@@ -1,32 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage encrypted (LUKS) devices}
   community.crypto.luks_device:
-    cipher: ${2:# This option allows the user to define the cipher specification string for the LUKS container}
-    device: ${3:# Device to work with (for example V(/dev/sda1))}
-    force_remove_last_key: ${4:# If set to V(true), allows removing the last key from a container}
-    hash: ${5:# This option allows the user to specify the hash function used in LUKS key setup scheme and volume key digest}
-    keyfile: ${6:# Used to unlock the container}
-    keysize: ${7:# Sets the key size only if LUKS container does not exist}
-    keyslot: ${8:# Adds the O(keyfile) or O(passphrase) to a specific keyslot when creating a new container on O(device)}
-    label: ${9:# This option allow the user to create a LUKS2 format container with label support, respectively to identify the container by label on later usages}
-    name: ${10:# Sets container name when O(state=opened)}
-    new_keyfile: ${11:# Adds additional key to given container on O(device)}
-    new_keyslot: ${12:# Adds the additional O(new_keyfile) or O(new_passphrase) to a specific keyslot on the given O(device)}
-    new_passphrase: ${13:# Adds additional passphrase to given container on O(device)}
-    passphrase: ${14:# Used to unlock the container}
-    pbkdf: ${15:# This option allows the user to configure the Password-Based Key Derivation Function (PBKDF) used}
-    perf_no_read_workqueue: ${16:# Allows the user to bypass dm-crypt internal workqueue and process read requests synchronously}
-    perf_no_write_workqueue: ${17:# Allows the user to bypass dm-crypt internal workqueue and process write requests synchronously}
-    perf_same_cpu_crypt: ${18:# Allows the user to perform encryption using the same CPU that IO was submitted on}
-    perf_submit_from_crypt_cpus: ${19:# Allows the user to disable offloading writes to a separate thread after encryption}
-    persistent: ${20:# Allows the user to store options into container's metadata persistently and automatically use them next time}
-    remove_keyfile: ${21:# Removes given key from the container on O(device)}
-    remove_keyslot: ${22:# Removes the key in the given slot on O(device)}
-    remove_passphrase: ${23:# Removes given passphrase from the container on O(device)}
-    sector_size: ${24:# This option allows the user to specify the sector size (in bytes) used for LUKS2 containers}
-    state: ${25:# Desired state of the LUKS container}
-    type: ${26:# This option allow the user explicit define the format of LUKS container that wants to work with}
-    uuid: ${27:# With this option user can identify the LUKS container by UUID}
+    allow_discards: ${2:# Allow discards (also known as TRIM) requests for device}
+    cipher: ${3:# This option allows the user to define the cipher specification string for the LUKS container}
+    device: ${4:# Device to work with (for example V(/dev/sda1))}
+    force_remove_last_key: ${5:# If set to V(true), allows removing the last key from a container}
+    hash: ${6:# This option allows the user to specify the hash function used in LUKS key setup scheme and volume key digest}
+    keyfile: ${7:# Used to unlock the container}
+    keysize: ${8:# Sets the key size only if LUKS container does not exist}
+    keyslot: ${9:# Adds the O(keyfile) or O(passphrase) to a specific keyslot when creating a new container on O(device)}
+    label: ${10:# This option allow the user to create a LUKS2 format container with label support, respectively to identify the container by label on later usages}
+    name: ${11:# Sets container name when O(state=opened)}
+    new_keyfile: ${12:# Adds additional key to given container on O(device)}
+    new_keyslot: ${13:# Adds the additional O(new_keyfile) or O(new_passphrase) to a specific keyslot on the given O(device)}
+    new_passphrase: ${14:# Adds additional passphrase to given container on O(device)}
+    passphrase: ${15:# Used to unlock the container}
+    pbkdf: ${16:# This option allows the user to configure the Password-Based Key Derivation Function (PBKDF) used}
+    perf_no_read_workqueue: ${17:# Allows the user to bypass dm-crypt internal workqueue and process read requests synchronously}
+    perf_no_write_workqueue: ${18:# Allows the user to bypass dm-crypt internal workqueue and process write requests synchronously}
+    perf_same_cpu_crypt: ${19:# Allows the user to perform encryption using the same CPU that IO was submitted on}
+    perf_submit_from_crypt_cpus: ${20:# Allows the user to disable offloading writes to a separate thread after encryption}
+    persistent: ${21:# Allows the user to store options into container's metadata persistently and automatically use them next time}
+    remove_keyfile: ${22:# Removes given key from the container on O(device)}
+    remove_keyslot: ${23:# Removes the key in the given slot on O(device)}
+    remove_passphrase: ${24:# Removes given passphrase from the container on O(device)}
+    sector_size: ${25:# This option allows the user to specify the sector size (in bytes) used for LUKS2 containers}
+    state: ${26:# Desired state of the LUKS container}
+    type: ${27:# This option allow the user explicit define the format of LUKS container that wants to work with}
+    uuid: ${28:# With this option user can identify the LUKS container by UUID}
   tags:
     - community
     - crypto

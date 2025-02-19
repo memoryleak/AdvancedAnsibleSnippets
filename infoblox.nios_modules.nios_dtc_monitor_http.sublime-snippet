@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Infoblox NIOS DTC HTTP monitors}
+  infoblox.nios_modules.nios_dtc_monitor_http:
+    ciphers: ${2:# Configures an optional cipher list for the secure HTTP/S connection}
+    client_cert: ${3:# Configures an optional client certificate, supplied in a secure HTTP/S mode if present}
+    comment: ${4:# Configures a text string comment to be associated with the instance of this object}
+    content_check: ${5:# Configures the content check type}
+    content_check_input: ${6:# Configures the portion of the response to use as input for content check}
+    content_check_op: ${7:# Configures the content check success criteria operator}
+    content_check_regex: ${8:# Configures the content check regular expression}
+    content_extract_group: ${9:# Configures the content extraction sub-expression to extract}
+    content_extract_type: ${10:# Configures the content extraction expected type for the extracted data}
+    content_extract_value: ${11:# Configures the content extraction value to compare with the extracted result}
+    enable_sni: ${12:# Configures whether or not Server Name Indication (SNI) for the HTTPS monitor is enabled}
+    extattrs: ${13:# Allows for the configuration of Extensible Attributes on the instance of the object}
+    interval: ${14:# Configures the interval for HTTP health check}
+    name: ${15:# Configures the display name for this DTC monitor}
+    port: ${16:# Configures the port value for HTTP requests}
+    provider: ${17:# A dict object containing connection details}
+    request: ${18:# Configures the HTTP request to send}
+    result: ${19:# Configures the type of the expected result}
+    result_code: ${20:# Configures the expected return code}
+    retry_down: ${21:# Configures the value of how many times the server should appear as down to be treated as dead after it was alive}
+    retry_up: ${22:# Configures the value of how many times the server should appear as up to be treated as alive after it was dead}
+    secure: ${23:# Configures the security status of the connection}
+    state: ${24:# Configures the intended state of the instance of the object on the NIOS server}
+    timeout: ${25:# Configures the timeout for HTTP health check in seconds}
+    validate_cert: ${26:# Configures whether the validation of the remote server's certificate is enabled}
+  tags:
+    - infoblox
+    - nios_modules
+    - nios_dtc_monitor_http]]></content>
+  <tabTrigger>infoblox.nios_modules.nios_dtc_monitor_http</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Infoblox NIOS DTC HTTP monitors</description>
+</snippet>

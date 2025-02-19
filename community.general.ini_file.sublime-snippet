@@ -16,14 +16,15 @@
     owner: ${14:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
     path: ${15:# Path to the INI-style file; this file is created if required}
     section: ${16:# Section name in INI file}
-    selevel: ${17:# The level part of the SELinux filesystem object context}
-    serole: ${18:# The role part of the SELinux filesystem object context}
-    setype: ${19:# The type part of the SELinux filesystem object context}
-    seuser: ${20:# The user part of the SELinux filesystem object context}
-    state: ${21:# If set to V(absent) and O(exclusive) set to V(true) all matching O(option) lines are removed}
-    unsafe_writes: ${22:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
-    value: ${23:# The string value to be associated with an O(option)}
-    values: ${24:# The string value to be associated with an O(option)}
+    section_has_values: ${17:# Among possibly multiple sections of the same name, select the first one that contains matching options and values}
+    selevel: ${18:# The level part of the SELinux filesystem object context}
+    serole: ${19:# The role part of the SELinux filesystem object context}
+    setype: ${20:# The type part of the SELinux filesystem object context}
+    seuser: ${21:# The user part of the SELinux filesystem object context}
+    state: ${22:# If set to V(absent) and O(exclusive) set to V(true) all matching O(option) lines are removed}
+    unsafe_writes: ${23:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
+    value: ${24:# The string value to be associated with an O(option)}
+    values: ${25:# The string value to be associated with an O(option)}
   tags:
     - community
     - general

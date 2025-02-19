@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages core NTP configuration}
   cisco.nxos.nxos_ntp:
-    server: ${2:# Network address of NTP server}
+    key_id: ${2:# Authentication key identifier to use with given NTP server or peer or keyword 'default'}
     peer: ${3:# Network address of NTP peer}
-    key_id: ${4:# Authentication key identifier to use with given NTP server or peer or keyword 'default'}
-    prefer: ${5:# Makes given NTP server or peer the preferred NTP server or peer for the device}
-    vrf_name: ${6:# Makes the device communicate with the given NTP server or peer over a specific VRF or keyword 'default'}
-    source_addr: ${7:# Local source address from which NTP messages are sent or keyword 'default'}
-    source_int: ${8:# Local source interface from which NTP messages are sent}
-    state: ${9:# Manage the state of the resource}
+    prefer: ${4:# Makes given NTP server or peer the preferred NTP server or peer for the device}
+    server: ${5:# Network address of NTP server}
+    source_addr: ${6:# Local source address from which NTP messages are sent or keyword 'default'}
+    source_int: ${7:# Local source interface from which NTP messages are sent}
+    state: ${8:# Manage the state of the resource}
+    vrf_name: ${9:# Makes the device communicate with the given NTP server or peer over a specific VRF or keyword 'default'}
   tags:
     - cisco
     - nxos

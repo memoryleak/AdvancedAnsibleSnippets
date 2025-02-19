@@ -1,9 +1,10 @@
 <snippet>
   <content><![CDATA[- name: ${1:Show all validation incidents limited to 500}
   check_point.mgmt.cp_mgmt_show_validations:
-    version: ${2:# Version of checkpoint}
-    wait_for_task: ${3:# Wait for the task to end}
-    wait_for_task_timeout: ${4:# How many minutes to wait until throwing a timeout error}
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    version: ${3:# Version of checkpoint}
+    wait_for_task: ${4:# Wait for the task to end}
+    wait_for_task_timeout: ${5:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

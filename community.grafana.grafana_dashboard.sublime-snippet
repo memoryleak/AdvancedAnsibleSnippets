@@ -8,17 +8,18 @@
     dashboard_revision: ${6:# Revision of the public grafana dashboard to import}
     folder: ${7:# The Grafana folder where this dashboard will be imported to}
     grafana_api_key: ${8:# The Grafana API key}
-    org_id: ${9:# The Grafana Organisation ID where the dashboard will be imported / exported}
-    overwrite: ${10:# Override existing dashboard when state is present}
-    path: ${11:# The path to the json file containing the Grafana dashboard to import or export}
-    slug: ${12:# Deprecated since Grafana 5}
-    state: ${13:# State of the dashboard}
-    uid: ${14:# uid of the dashboard to export when C(state) is C(export) or C(absent)}
-    url: ${15:# The Grafana URL}
-    url_password: ${16:# The Grafana password for API authentication}
-    url_username: ${17:# The Grafana user for API authentication}
-    use_proxy: ${18:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    validate_certs: ${19:# If C(no), SSL certificates will not be validated}
+    org_id: ${9:# The Grafana organization ID where the dashboard will be imported / exported / deleted}
+    org_name: ${10:# The Grafana organization name where the dashboard will be imported / exported / deleted}
+    overwrite: ${11:# Override existing dashboard when state is present}
+    path: ${12:# The path to the json file containing the Grafana dashboard to import or export}
+    slug: ${13:# Deprecated since Grafana 5}
+    state: ${14:# State of the dashboard}
+    uid: ${15:# uid of the dashboard to export when C(state) is C(export) or C(absent)}
+    url: ${16:# The Grafana URL}
+    url_password: ${17:# The Grafana password for API authentication}
+    url_username: ${18:# The Grafana user for API authentication}
+    use_proxy: ${19:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${20:# If C(false), SSL certificates will not be validated}
   tags:
     - community
     - grafana

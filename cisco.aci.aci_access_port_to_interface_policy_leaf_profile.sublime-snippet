@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage Fabric interface policy leaf profile interface selectors (infra:HPortS, infra:RsAccBaseGrp, infra:PortBlk)}
+  <content><![CDATA[- name: ${1:Manage Fabric interface policy leaf profile interface selectors (infra:HPortS, infra:RsAccBaseGrp, and infra:PortBlk)}
   cisco.aci.aci_access_port_to_interface_policy_leaf_profile:
     access_port_selector: ${2:# The name of the Fabric access policy leaf interface profile access port selector}
     annotation: ${3:# User-defined string for annotating an object}
@@ -23,19 +23,21 @@
     port_blk: ${21:# B(Deprecated)}
     private_key: ${22:# Either a PEM-formatted private key file or the private key content used for signature-based authentication}
     state: ${23:# Use C(present) or C(absent) for adding or removing}
-    timeout: ${24:# The socket level timeout in seconds}
-    to_card: ${25:# B(Deprecated)}
-    to_port: ${26:# B(Deprecated)}
-    type: ${27:# The type of access port to be created under respective profile}
-    use_proxy: ${28:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${29:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${30:# The username to use for authentication}
-    validate_certs: ${31:# If C(false), SSL certificates will not be validated}
+    suppress_previous: ${24:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${25:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    timeout: ${26:# The socket level timeout in seconds}
+    to_card: ${27:# B(Deprecated)}
+    to_port: ${28:# B(Deprecated)}
+    type: ${29:# The type of access port to be created under respective profile}
+    use_proxy: ${30:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${31:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${32:# The username to use for authentication}
+    validate_certs: ${33:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci
     - aci_access_port_to_interface_policy_leaf_profile]]></content>
   <tabTrigger>cisco.aci.aci_access_port_to_interface_policy_leaf_profile</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage Fabric interface policy leaf profile interface selectors (infra:HPortS, infra:RsAccBaseGrp, infra:PortBlk)</description>
+  <description>Manage Fabric interface policy leaf profile interface selectors (infra:HPortS, infra:RsAccBaseGrp, and infra:PortBlk)</description>
 </snippet>

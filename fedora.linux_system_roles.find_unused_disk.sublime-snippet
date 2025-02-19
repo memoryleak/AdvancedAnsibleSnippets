@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gets unused disks}
+  fedora.linux_system_roles.find_unused_disk:
+    match_sector_size: ${2:# Specifies whether all returned disks must have the same (logical) sector size}
+    max_return: ${3:# Sets the maximum number of unused disks to return}
+    max_size: ${4:# Specifies the maximum disk size to return an unused disk}
+    min_size: ${5:# Specifies the minimum disk size to return an unused disk}
+    with_interface: ${6:# Specifies which disk interface will be accepted (scsi, virtio, nvme)}
+  tags:
+    - fedora
+    - linux_system_roles
+    - find_unused_disk]]></content>
+  <tabTrigger>fedora.linux_system_roles.find_unused_disk</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gets unused disks</description>
+</snippet>

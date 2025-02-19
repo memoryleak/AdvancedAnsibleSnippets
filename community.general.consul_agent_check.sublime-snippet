@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add, modify, and delete checks within a consul cluster}
+  community.general.consul_agent_check:
+    args: ${2:# Specifies command arguments to run to update the status of the check}
+    ca_path: ${3:# The CA bundle to use for https connections}
+    host: ${4:# Host of the consul agent, defaults to V(localhost)}
+    http: ${5:# Checks can be registered with an HTTP endpoint}
+    id: ${6:# Specifies a unique ID for this check on the node}
+    interval: ${7:# The interval at which the service check will be run}
+    name: ${8:# Required name for the service check}
+    notes: ${9:# Notes to attach to check when registering it}
+    port: ${10:# The port on which the consul agent is running}
+    scheme: ${11:# The protocol scheme on which the consul agent is running}
+    service_id: ${12:# The ID for the service, must be unique per node}
+    state: ${13:# Whether the check should be present or absent}
+    tcp: ${14:# Checks can be registered with a TCP port}
+    timeout: ${15:# A custom HTTP check timeout}
+    token: ${16:# The token to use for authorization}
+    ttl: ${17:# Checks can be registered with a TTL instead of a O(args) and O(interval) this means that the service will check in with the agent before the TTL expires}
+    validate_certs: ${18:# Whether to verify the TLS certificate of the consul agent}
+  tags:
+    - community
+    - general
+    - consul_agent_check]]></content>
+  <tabTrigger>community.general.consul_agent_check</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add, modify, and delete checks within a consul cluster</description>
+</snippet>

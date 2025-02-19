@@ -1,18 +1,27 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Reset iDRAC}
+  <content><![CDATA[- name: ${1:Factory reset the iDRACs}
   dellemc.openmanage.idrac_reset:
     ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    idrac_ip: ${3:# iDRAC IP Address}
-    idrac_password: ${4:# iDRAC user password}
-    idrac_port: ${5:# iDRAC port}
-    idrac_user: ${6:# iDRAC username}
-    timeout: ${7:# The socket level timeout in seconds}
-    validate_certs: ${8:# If C(false), the SSL certificates will not be validated}
+    custom_defaults_buffer: ${3:# This parameter provides the option to import the buffer input in XML format as a custom default configuration}
+    custom_defaults_file: ${4:# Name of the custom default configuration file in the XML format}
+    default_password: ${5:# This parameter is only applied when I(reset_to_default) is C(All) or C(ResetAllWithRootDefaults)}
+    default_username: ${6:# This parameter is only applied when I(reset_to_default) is C(All) or C(ResetAllWithRootDefaults)}
+    force_reset: ${7:# This parameter provides the option to force reset the iDRAC without checking the iDRAC lifecycle controller status}
+    idrac_ip: ${8:# iDRAC IP Address}
+    idrac_password: ${9:# iDRAC user password}
+    idrac_port: ${10:# iDRAC port}
+    idrac_user: ${11:# iDRAC username}
+    job_wait_timeout: ${12:# Time in seconds to wait for job completion}
+    reset_to_default: ${13:# If this value is not set the default behaviour is to restart the iDRAC}
+    timeout: ${14:# The socket level timeout in seconds}
+    validate_certs: ${15:# If C(false), the SSL certificates will not be validated}
+    wait_for_idrac: ${16:# This parameter provides the option to wait for the iDRAC to reset and lifecycle controller status to be ready}
+    x_auth_token: ${17:# Authentication token}
   tags:
     - dellemc
     - openmanage
     - idrac_reset]]></content>
   <tabTrigger>dellemc.openmanage.idrac_reset</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Reset iDRAC</description>
+  <description>Factory reset the iDRACs</description>
 </snippet>

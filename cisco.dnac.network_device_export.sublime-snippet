@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[- name: ${1:Resource module for Network Device Export}
   cisco.dnac.network_device_export:
-    deviceUuids: ${2:# Network Device Export's deviceUuids}
+    deviceUuids: ${2:# List of device uuids}
     dnac_debug: ${3:# Flag for Cisco DNA Center SDK to enable debugging}
     dnac_host: ${4:# The Cisco DNA Center hostname}
     dnac_password: ${5:# The Cisco DNA Center password to authenticate}
@@ -9,11 +9,10 @@
     dnac_username: ${7:# The Cisco DNA Center username to authenticate}
     dnac_verify: ${8:# Flag to enable or disable SSL certificate verification}
     dnac_version: ${9:# Informs the SDK which version of Cisco DNA Center to use}
-    id: ${10:# Network Device Export's id}
-    operationEnum: ${11:# Network Device Export's operationEnum}
-    parameters: ${12:# Network Device Export's parameters}
-    password: ${13:# Network Device Export's password}
-    validate_response_schema: ${14:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
+    operationEnum: ${10:# 0 to export Device Credential Details Or 1 to export Device Details}
+    parameters: ${11:# List of device parameters that needs to be exported to file}
+    password: ${12:# Password is required when the operationEnum value is 0}
+    validate_response_schema: ${13:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
   tags:
     - cisco
     - dnac

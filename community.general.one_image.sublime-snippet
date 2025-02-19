@@ -1,14 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages OpenNebula images}
   community.general.one_image:
-    api_password: ${2:# Password of the user to login into OpenNebula RPC server}
-    api_url: ${3:# URL of the OpenNebula RPC server}
-    api_username: ${4:# Name of the user to login into the OpenNebula RPC server}
+    api_password: ${2:# The password or token for XMLRPC authentication}
+    api_url: ${3:# The ENDPOINT URL of the XMLRPC server}
+    api_username: ${4:# The name of the user for XMLRPC authentication}
     enabled: ${5:# Whether the image should be enabled or disabled}
     id: ${6:# A O(id) of the image you would like to manage}
     name: ${7:# A O(name) of the image you would like to manage}
     new_name: ${8:# A name that will be assigned to the existing or new image}
-    state: ${9:# V(present) - state that is used to manage the image}
+    persistent: ${9:# Whether the image should be persistent or non-persistent}
+    state: ${10:# V(present) - state that is used to manage the image}
+    validate_certs: ${11:# Whether to validate the TLS/SSL certificates or not}
+    wait_timeout: ${12:# Time to wait for the desired state to be reached before timeout, in seconds}
   tags:
     - community
     - general

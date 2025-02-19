@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Windows Server DHCP Leases}
+  ansible.windows.win_dhcp_lease:
+    description: ${2:# Specifies the description for reservation being created}
+    dns_hostname: ${3:# Specifies the DNS hostname of the client for which the IP address lease is to be added}
+    dns_regtype: ${4:# Indicates the type of DNS record to be registered by the DHCP}
+    duration: ${5:# Specifies the duration of the DHCP lease in days}
+    ip: ${6:# The IPv4 address of the client server/computer}
+    mac: ${7:# Specifies the client identifier to be set on the IPv4 address}
+    reservation_name: ${8:# Specifies the name of the reservation being created}
+    scope_id: ${9:# Specifies the scope identifier as defined by the DHCP server}
+    state: ${10:# Specifies the desired state of the DHCP lease or reservation}
+    type: ${11:# The type of DHCP address}
+  tags:
+    - win_dhcp_lease]]></content>
+  <tabTrigger>ansible.windows.win_dhcp_lease</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Windows Server DHCP Leases</description>
+</snippet>

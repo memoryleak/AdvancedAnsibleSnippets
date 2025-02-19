@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure iDRAC licenses}
+  dellemc.openmanage.idrac_license:
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    delete: ${3:# Delete the license from the iDRAC}
+    export: ${4:# Export the license from the iDRAC}
+    idrac_ip: ${5:# iDRAC IP Address}
+    idrac_password: ${6:# iDRAC user password}
+    idrac_port: ${7:# iDRAC port}
+    idrac_user: ${8:# iDRAC username}
+    import: ${9:# Import the license from the iDRAC}
+    license_id: ${10:# Entitlement ID of the license that is to be imported, exported or deleted}
+    resource_id: ${11:# Id of the resource}
+    share_parameters: ${12:# Parameters that are required for the import and export operation of a license}
+    timeout: ${13:# The socket level timeout in seconds}
+    validate_certs: ${14:# If C(false), the SSL certificates will not be validated}
+    x_auth_token: ${15:# Authentication token}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_license]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_license</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure iDRAC licenses</description>
+</snippet>

@@ -4,27 +4,28 @@
     allow_change_held_packages: ${2:# Allows changing the version of a package which is on the apt hold list}
     allow_downgrade: ${3:# Corresponds to the C(--allow-downgrades) option for I(apt)}
     allow_unauthenticated: ${4:# Ignore if packages cannot be authenticated}
-    autoclean: ${5:# If V(true), cleans the local repository of retrieved package files that can no longer be downloaded}
-    autoremove: ${6:# If V(true), remove unused dependency packages for all module states except V(build-dep)}
-    cache_valid_time: ${7:# Update the apt cache if it is older than the O(cache_valid_time)}
-    clean: ${8:# Run the equivalent of C(apt-get clean) to clear out the local repository of retrieved package files}
-    deb: ${9:# Path to a}
-    default_release: ${10:# Corresponds to the C(-t) option for I(apt) and sets pin priorities}
-    dpkg_options: ${11:# Add dpkg options to apt command}
-    fail_on_autoremove: ${12:# Corresponds to the C(--no-remove) option for C(apt)}
-    force: ${13:# Corresponds to the C(--force-yes) to I(apt-get) and implies O(allow_unauthenticated=yes) and O(allow_downgrade=yes)}
-    force_apt_get: ${14:# Force usage of apt-get instead of aptitude}
-    install_recommends: ${15:# Corresponds to the C(--no-install-recommends) option for I(apt)}
-    lock_timeout: ${16:# How many seconds will this action wait to acquire a lock on the apt db}
-    name: ${17:# A list of package names, like V(foo), or package specifier with version, like V(foo=1}
-    only_upgrade: ${18:# Only upgrade a package if it is already installed}
-    policy_rc_d: ${19:# Force the exit code of /usr/sbin/policy-rc}
-    purge: ${20:# Will force purging of configuration files if O(state=absent) or O(autoremove=yes)}
-    state: ${21:# Indicates the desired package state}
-    update_cache: ${22:# Run the equivalent of C(apt-get update) before the operation}
-    update_cache_retries: ${23:# Amount of retries if the cache update fails}
-    update_cache_retry_max_delay: ${24:# Use an exponential backoff delay for each retry (see O(update_cache_retries)) up to this max delay in seconds}
-    upgrade: ${25:# If yes or safe, performs an aptitude safe-upgrade}
+    auto_install_module_deps: ${5:# Automatically install dependencies required to run this module}
+    autoclean: ${6:# If V(true), cleans the local repository of retrieved package files that can no longer be downloaded}
+    autoremove: ${7:# If V(true), remove unused dependency packages for all module states except V(build-dep)}
+    cache_valid_time: ${8:# Update the apt cache if it is older than the O(cache_valid_time)}
+    clean: ${9:# Run the equivalent of C(apt-get clean) to clear out the local repository of retrieved package files}
+    deb: ${10:# Path to a}
+    default_release: ${11:# Corresponds to the C(-t) option for I(apt) and sets pin priorities}
+    dpkg_options: ${12:# Add dpkg options to apt command}
+    fail_on_autoremove: ${13:# Corresponds to the C(--no-remove) option for C(apt)}
+    force: ${14:# Corresponds to the C(--force-yes) to I(apt-get) and implies O(allow_unauthenticated=yes) and O(allow_downgrade=yes)}
+    force_apt_get: ${15:# Force usage of apt-get instead of aptitude}
+    install_recommends: ${16:# Corresponds to the C(--no-install-recommends) option for I(apt)}
+    lock_timeout: ${17:# How many seconds will this action wait to acquire a lock on the apt db}
+    name: ${18:# A list of package names, like V(foo), or package specifier with version, like V(foo=1}
+    only_upgrade: ${19:# Only upgrade a package if it is already installed}
+    policy_rc_d: ${20:# Force the exit code of /usr/sbin/policy-rc}
+    purge: ${21:# Will force purging of configuration files if O(state=absent) or O(autoremove=yes)}
+    state: ${22:# Indicates the desired package state}
+    update_cache: ${23:# Run the equivalent of C(apt-get update) before the operation}
+    update_cache_retries: ${24:# Amount of retries if the cache update fails}
+    update_cache_retry_max_delay: ${25:# Use an exponential backoff delay for each retry (see O(update_cache_retries)) up to this max delay in seconds}
+    upgrade: ${26:# If yes or safe, performs an aptitude safe-upgrade}
   tags:
     - apt]]></content>
   <tabTrigger>ansible.builtin.apt</tabTrigger>

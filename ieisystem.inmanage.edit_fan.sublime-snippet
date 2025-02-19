@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set fan information}
+  ieisystem.inmanage.edit_fan:
+    fan_speed: ${2:# Fan speed (duty ratio), range in 1 - 100}
+    host: ${3:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    id: ${4:# Fan id 255 is for all fans, 0~n}
+    mode: ${5:# Control mode, Manual or Automatic , Manual must be used with fans_peed}
+    password: ${6:# Specifies the password to use to authenticate the connection to the remote device}
+    provider: ${7:# A dict object containing connection details}
+    username: ${8:# Configures the username to use to authenticate the connection to the remote device}
+  tags:
+    - ieisystem
+    - inmanage
+    - edit_fan]]></content>
+  <tabTrigger>ieisystem.inmanage.edit_fan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set fan information</description>
+</snippet>

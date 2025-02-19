@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage database clusters in Atlas}
+  community.mongodb.mongodb_atlas_cluster:
+    api_password: ${2:# The password for use in authentication with the Atlas API}
+    api_username: ${3:# The username for use in authentication with the Atlas API}
+    auto_scaling: ${4:# Configure your cluster to automatically scale its storage and cluster tier}
+    cluster_type: ${5:# Type of the cluster that you want to create}
+    disk_size_gb: ${6:# Capacity, in gigabytes, of the host's root volume}
+    group_id: ${7:# Unique identifier for the Atlas project}
+    mongo_db_major_version: ${8:# Version of the cluster to deploy}
+    name: ${9:# Name of the cluster as it appears in Atlas}
+    pit_enabled: ${10:# Flag that indicates the cluster uses continuous cloud backups}
+    provider_backup_enabled: ${11:# Flag that indicates if the cluster uses Cloud Backups for backups}
+    provider_settings: ${12:# Configuration for the provisioned servers on which MongoDB runs}
+    replication_factor: ${13:# Number of replica set members}
+    state: ${14:# State of the ressource}
+  tags:
+    - community
+    - mongodb
+    - mongodb_atlas_cluster]]></content>
+  <tabTrigger>community.mongodb.mongodb_atlas_cluster</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage database clusters in Atlas</description>
+</snippet>

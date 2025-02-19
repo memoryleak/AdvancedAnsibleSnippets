@@ -10,17 +10,30 @@
     auto_devops_enabled: ${8:# Default to Auto DevOps pipeline for all projects within this group}
     avatar_path: ${9:# Absolute path image to configure avatar}
     ca_path: ${10:# The CA certificates bundle to use to verify GitLab server certificate}
-    description: ${11:# A description for the group}
-    force_delete: ${12:# Force delete group even if projects in it}
-    name: ${13:# Name of the group you want to create}
-    parent: ${14:# Allow to create subgroups}
-    path: ${15:# The path of the group you want to create, this will be api_url/group_path}
-    project_creation_level: ${16:# Determine if developers can create projects in the group}
-    require_two_factor_authentication: ${17:# Require all users in this group to setup two-factor authentication}
-    state: ${18:# create or delete group}
-    subgroup_creation_level: ${19:# Allowed to create subgroups}
-    validate_certs: ${20:# Whether or not to validate SSL certs when supplying a HTTPS endpoint}
-    visibility: ${21:# Default visibility of the group}
+    default_branch: ${11:# All merge requests and commits are made against this branch unless you specify a different one}
+    description: ${12:# A description for the group}
+    enabled_git_access_protocol: ${13:# V(all) means SSH and HTTP(S) is enabled}
+    force_delete: ${14:# Force delete group even if projects in it}
+    lfs_enabled: ${15:# Projects in this group can use Git LFS}
+    lock_duo_features_enabled: ${16:# Enforce GitLab Duo features for all subgroups}
+    membership_lock: ${17:# Users cannot be added to projects in this group}
+    mentions_disabled: ${18:# Group mentions are disabled}
+    name: ${19:# Name of the group you want to create}
+    parent: ${20:# Allow to create subgroups}
+    path: ${21:# The path of the group you want to create, this will be api_url/group_path}
+    prevent_forking_outside_group: ${22:# Prevent forking outside of the group}
+    prevent_sharing_groups_outside_hierarchy: ${23:# Members cannot invite groups outside of this group and its subgroups}
+    project_creation_level: ${24:# Determine if developers can create projects in the group}
+    request_access_enabled: ${25:# Users can request access (if visibility is public or internal)}
+    require_two_factor_authentication: ${26:# Require all users in this group to setup two-factor authentication}
+    service_access_tokens_expiration_enforced: ${27:# Service account token expiration}
+    share_with_group_lock: ${28:# Projects cannot be shared with other groups}
+    state: ${29:# Create or delete group}
+    subgroup_creation_level: ${30:# Allowed to create subgroups}
+    two_factor_grace_period: ${31:# Delay 2FA enforcement (hours)}
+    validate_certs: ${32:# Whether or not to validate SSL certs when supplying a HTTPS endpoint}
+    visibility: ${33:# Default visibility of the group}
+    wiki_access_level: ${34:# V(enabled) means everyone can access the wiki}
   tags:
     - community
     - general

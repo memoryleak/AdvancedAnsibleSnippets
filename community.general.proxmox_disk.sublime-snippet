@@ -4,65 +4,66 @@
     aio: ${2:# AIO type to use}
     api_host: ${3:# Specify the target host of the Proxmox VE cluster}
     api_password: ${4:# Specify the password to authenticate with}
-    api_token_id: ${5:# Specify the token ID}
-    api_token_secret: ${6:# Specify the token secret}
-    api_user: ${7:# Specify the user to authenticate with}
-    backup: ${8:# Whether the drive should be included when making backups}
-    bps_max_length: ${9:# Maximum length of total r/w I/O bursts in seconds}
-    bps_rd_max_length: ${10:# Maximum length of read I/O bursts in seconds}
-    bps_wr_max_length: ${11:# Maximum length of write I/O bursts in seconds}
-    bwlimit: ${12:# Override I/O bandwidth limit (in KB/s)}
-    cache: ${13:# The drive's cache mode}
-    create: ${14:# With O(create) flag you can control behavior of O(state=present)}
-    cyls: ${15:# Force the drive's physical geometry to have a specific cylinder count}
-    delete_moved: ${16:# Delete the original disk after successful copy}
-    detect_zeroes: ${17:# Control whether to detect and try to optimize writes of zeroes}
-    discard: ${18:# Control whether to pass discard/trim requests to the underlying storage}
-    disk: ${19:# The disk key (V(unused[n]), V(ide[n]), V(sata[n]), V(scsi[n]) or V(virtio[n])) you want to operate on}
-    format: ${20:# The drive's backing file's data format}
-    heads: ${21:# Force the drive's physical geometry to have a specific head count}
-    import_from: ${22:# Import volume from this existing one}
-    iops: ${23:# Maximum total r/w I/O in operations per second}
-    iops_max: ${24:# Maximum unthrottled total r/w I/O pool in operations per second}
-    iops_max_length: ${25:# Maximum length of total r/w I/O bursts in seconds}
-    iops_rd: ${26:# Maximum read I/O in operations per second}
-    iops_rd_max: ${27:# Maximum unthrottled read I/O pool in operations per second}
-    iops_rd_max_length: ${28:# Maximum length of read I/O bursts in seconds}
-    iops_wr: ${29:# Maximum write I/O in operations per second}
-    iops_wr_max: ${30:# Maximum unthrottled write I/O pool in operations per second}
-    iops_wr_max_length: ${31:# Maximum length of write I/O bursts in seconds}
-    iothread: ${32:# Whether to use iothreads for this drive (only for SCSI and VirtIO)}
-    iso_image: ${33:# The ISO image to be mounted on the specified in O(disk) CD-ROM}
-    mbps: ${34:# Maximum total r/w speed in megabytes per second}
-    mbps_max: ${35:# Maximum unthrottled total r/w pool in megabytes per second}
-    mbps_rd: ${36:# Maximum read speed in megabytes per second}
-    mbps_rd_max: ${37:# Maximum unthrottled read pool in megabytes per second}
-    mbps_wr: ${38:# Maximum write speed in megabytes per second}
-    mbps_wr_max: ${39:# Maximum unthrottled write pool in megabytes per second}
-    media: ${40:# The drive's media type}
-    name: ${41:# The unique name of the VM}
-    queues: ${42:# Number of queues (SCSI only)}
-    replicate: ${43:# Whether the drive should considered for replication jobs}
-    rerror: ${44:# Read error action}
-    ro: ${45:# Whether the drive is read-only}
-    scsiblock: ${46:# Whether to use scsi-block for full passthrough of host block device}
-    secs: ${47:# Force the drive's physical geometry to have a specific sector count}
-    serial: ${48:# The drive's reported serial number, url-encoded, up to 20 bytes long}
-    shared: ${49:# Mark this locally-managed volume as available on all nodes}
-    size: ${50:# Desired volume size in GB to allocate when O(state=present) (specify O(size) without suffix)}
-    snapshot: ${51:# Control qemu's snapshot mode feature}
-    ssd: ${52:# Whether to expose this drive as an SSD, rather than a rotational hard disk}
-    state: ${53:# Indicates desired state of the disk}
-    storage: ${54:# The drive's backing storage}
-    target_disk: ${55:# The config key the disk will be moved to on the target VM (for example, V(ide0) or V(scsi1))}
-    target_storage: ${56:# Move the disk to this storage when O(state=moved)}
-    target_vmid: ${57:# The (unique) ID of the VM where disk will be placed when O(state=moved)}
-    timeout: ${58:# Timeout in seconds to wait for slow operations such as importing disk or moving disk between storages}
-    trans: ${59:# Force disk geometry bios translation mode}
-    validate_certs: ${60:# If V(false), SSL certificates will not be validated}
-    vmid: ${61:# The unique ID of the VM}
-    werror: ${62:# Write error action}
-    wwn: ${63:# The drive's worldwide name, encoded as 16 bytes hex string, prefixed by V(0x)}
+    api_port: ${5:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${6:# Specify the token ID}
+    api_token_secret: ${7:# Specify the token secret}
+    api_user: ${8:# Specify the user to authenticate with}
+    backup: ${9:# Whether the drive should be included when making backups}
+    bps_max_length: ${10:# Maximum length of total r/w I/O bursts in seconds}
+    bps_rd_max_length: ${11:# Maximum length of read I/O bursts in seconds}
+    bps_wr_max_length: ${12:# Maximum length of write I/O bursts in seconds}
+    bwlimit: ${13:# Override I/O bandwidth limit (in KB/s)}
+    cache: ${14:# The drive's cache mode}
+    create: ${15:# With O(create) flag you can control behavior of O(state=present)}
+    cyls: ${16:# Force the drive's physical geometry to have a specific cylinder count}
+    delete_moved: ${17:# Delete the original disk after successful copy}
+    detect_zeroes: ${18:# Control whether to detect and try to optimize writes of zeroes}
+    discard: ${19:# Control whether to pass discard/trim requests to the underlying storage}
+    disk: ${20:# The disk key (V(unused[n]), V(ide[n]), V(sata[n]), V(scsi[n]) or V(virtio[n])) you want to operate on}
+    format: ${21:# The drive's backing file's data format}
+    heads: ${22:# Force the drive's physical geometry to have a specific head count}
+    import_from: ${23:# Import volume from this existing one}
+    iops: ${24:# Maximum total r/w I/O in operations per second}
+    iops_max: ${25:# Maximum unthrottled total r/w I/O pool in operations per second}
+    iops_max_length: ${26:# Maximum length of total r/w I/O bursts in seconds}
+    iops_rd: ${27:# Maximum read I/O in operations per second}
+    iops_rd_max: ${28:# Maximum unthrottled read I/O pool in operations per second}
+    iops_rd_max_length: ${29:# Maximum length of read I/O bursts in seconds}
+    iops_wr: ${30:# Maximum write I/O in operations per second}
+    iops_wr_max: ${31:# Maximum unthrottled write I/O pool in operations per second}
+    iops_wr_max_length: ${32:# Maximum length of write I/O bursts in seconds}
+    iothread: ${33:# Whether to use iothreads for this drive (only for SCSI and VirtIO)}
+    iso_image: ${34:# The ISO image to be mounted on the specified in O(disk) CD-ROM}
+    mbps: ${35:# Maximum total r/w speed in megabytes per second}
+    mbps_max: ${36:# Maximum unthrottled total r/w pool in megabytes per second}
+    mbps_rd: ${37:# Maximum read speed in megabytes per second}
+    mbps_rd_max: ${38:# Maximum unthrottled read pool in megabytes per second}
+    mbps_wr: ${39:# Maximum write speed in megabytes per second}
+    mbps_wr_max: ${40:# Maximum unthrottled write pool in megabytes per second}
+    media: ${41:# The drive's media type}
+    name: ${42:# The unique name of the VM}
+    queues: ${43:# Number of queues (SCSI only)}
+    replicate: ${44:# Whether the drive should considered for replication jobs}
+    rerror: ${45:# Read error action}
+    ro: ${46:# Whether the drive is read-only}
+    scsiblock: ${47:# Whether to use scsi-block for full passthrough of host block device}
+    secs: ${48:# Force the drive's physical geometry to have a specific sector count}
+    serial: ${49:# The drive's reported serial number, url-encoded, up to 20 bytes long}
+    shared: ${50:# Mark this locally-managed volume as available on all nodes}
+    size: ${51:# Desired volume size in GB to allocate when O(state=present) (specify O(size) without suffix)}
+    snapshot: ${52:# Control qemu's snapshot mode feature}
+    ssd: ${53:# Whether to expose this drive as an SSD, rather than a rotational hard disk}
+    state: ${54:# Indicates desired state of the disk}
+    storage: ${55:# The drive's backing storage}
+    target_disk: ${56:# The config key the disk will be moved to on the target VM (for example, V(ide0) or V(scsi1))}
+    target_storage: ${57:# Move the disk to this storage when O(state=moved)}
+    target_vmid: ${58:# The (unique) ID of the VM where disk will be placed when O(state=moved)}
+    timeout: ${59:# Timeout in seconds to wait for slow operations such as importing disk or moving disk between storages}
+    trans: ${60:# Force disk geometry bios translation mode}
+    validate_certs: ${61:# If V(false), SSL certificates will not be validated}
+    vmid: ${62:# The unique ID of the VM}
+    werror: ${63:# Write error action}
+    wwn: ${64:# The drive's worldwide name, encoded as 16 bytes hex string, prefixed by V(0x)}
   tags:
     - community
     - general

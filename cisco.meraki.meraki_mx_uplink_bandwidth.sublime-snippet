@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage uplinks on Meraki MX appliances}
   cisco.meraki.meraki_mx_uplink_bandwidth:
-    state: ${2:# Specifies whether object should be queried, created/modified, or removed}
-    org_name: ${3:# Name of organization associated to a network}
-    org_id: ${4:# ID of organization associated to a network}
-    net_name: ${5:# Name of network which VLAN is in or should be in}
+    auth_key: ${2:# Authentication key provided by the dashboard}
+    cellular: ${3:# Configuration of cellular uplink}
+    host: ${4:# Hostname for Meraki dashboard}
+    internal_error_retry_time: ${5:# Number of seconds to retry if server returns an internal server error}
     net_id: ${6:# ID of network which VLAN is in or should be in}
-    wan1: ${7:# Configuration of WAN1 uplink}
-    wan2: ${8:# Configuration of WAN2 uplink}
-    cellular: ${9:# Configuration of cellular uplink}
-    auth_key: ${10:# Authentication key provided by the dashboard}
-    host: ${11:# Hostname for Meraki dashboard}
-    use_proxy: ${12:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_https: ${13:# If C(no), it will use HTTP}
-    output_format: ${14:# Instructs module whether response keys should be snake case (ex}
-    output_level: ${15:# Set amount of debug output during module execution}
-    timeout: ${16:# Time to timeout for HTTP requests}
+    net_name: ${7:# Name of network which VLAN is in or should be in}
+    org_id: ${8:# ID of organization associated to a network}
+    org_name: ${9:# Name of organization associated to a network}
+    output_format: ${10:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${11:# Set amount of debug output during module execution}
+    rate_limit_retry_time: ${12:# Number of seconds to retry if rate limiter is triggered}
+    state: ${13:# Specifies whether object should be queried, created/modified, or removed}
+    timeout: ${14:# Time to timeout for HTTP requests}
+    use_https: ${15:# If C(no), it will use HTTP}
+    use_proxy: ${16:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
     validate_certs: ${17:# Whether to validate HTTP certificates}
-    rate_limit_retry_time: ${18:# Number of seconds to retry if rate limiter is triggered}
-    internal_error_retry_time: ${19:# Number of seconds to retry if server returns an internal server error}
+    wan1: ${18:# Configuration of WAN1 uplink}
+    wan2: ${19:# Configuration of WAN2 uplink}
   tags:
     - cisco
     - meraki

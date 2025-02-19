@@ -58,22 +58,23 @@
     s3_ingestion_role_arn: ${56:# The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that authorizes Amazon RDS to access the Amazon S3 bucket on your behalf}
     s3_prefix: ${57:# The prefix for all of the file names that contain the data used to create the Amazon Aurora DB cluster}
     secret_key: ${58:# AWS secret access key}
-    session_token: ${59:# AWS STS session token for use with temporary credentials}
-    skip_final_snapshot: ${60:# Whether a final DB cluster snapshot is created before the DB cluster is deleted}
-    snapshot_identifier: ${61:# The identifier for the DB snapshot or DB cluster snapshot to restore from}
-    source_db_cluster_identifier: ${62:# The identifier of the source DB cluster from which to restore}
-    source_engine: ${63:# The identifier for the database engine that was backed up to create the files stored in the Amazon S3 bucket}
-    source_engine_version: ${64:# The version of the database that the backup files were created from}
-    source_region: ${65:# The ID of the region that contains the source for the DB cluster}
-    state: ${66:# Whether the snapshot should exist or not}
-    storage_encrypted: ${67:# Whether the DB cluster is encrypted}
-    storage_type: ${68:# Specifies the storage type to be associated with the DB cluster}
-    tags: ${69:# A dictionary representing the tags to be applied to the resource}
-    use_earliest_time_on_point_in_time_unavailable: ${70:# If I(backtrack_to) is set to a timestamp earlier than the earliest backtrack time, this value backtracks the DB cluster to the earliest possible backtrack time}
-    use_latest_restorable_time: ${71:# Whether to restore the DB cluster to the latest restorable backup time}
-    validate_certs: ${72:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    vpc_security_group_ids: ${73:# A list of EC2 VPC security groups to associate with the DB cluster}
-    wait: ${74:# Whether to wait for the cluster to be available or deleted}
+    serverless_v2_scaling_configuration: ${59:# Contains the scaling configuration of an Aurora Serverless v2 DB cluster}
+    session_token: ${60:# AWS STS session token for use with temporary credentials}
+    skip_final_snapshot: ${61:# Whether a final DB cluster snapshot is created before the DB cluster is deleted}
+    snapshot_identifier: ${62:# The identifier for the DB snapshot or DB cluster snapshot to restore from}
+    source_db_cluster_identifier: ${63:# The identifier of the source DB cluster from which to restore}
+    source_engine: ${64:# The identifier for the database engine that was backed up to create the files stored in the Amazon S3 bucket}
+    source_engine_version: ${65:# The version of the database that the backup files were created from}
+    source_region: ${66:# The ID of the region that contains the source for the DB cluster}
+    state: ${67:# Whether the snapshot should exist or not}
+    storage_encrypted: ${68:# Whether the DB cluster is encrypted}
+    storage_type: ${69:# Specifies the storage type to be associated with the DB cluster}
+    tags: ${70:# A dictionary representing the tags to be applied to the resource}
+    use_earliest_time_on_point_in_time_unavailable: ${71:# If I(backtrack_to) is set to a timestamp earlier than the earliest backtrack time, this value backtracks the DB cluster to the earliest possible backtrack time}
+    use_latest_restorable_time: ${72:# Whether to restore the DB cluster to the latest restorable backup time}
+    validate_certs: ${73:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_security_group_ids: ${74:# A list of EC2 VPC security groups to associate with the DB cluster}
+    wait: ${75:# Whether to wait for the cluster to be available or deleted}
   tags:
     - amazon
     - aws

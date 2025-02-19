@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Enable or disable the Windows Firewall}
+  ansible.windows.win_firewall:
+    inbound_action: ${2:# Set to C(allow) or C(block) inbound network traffic in the profile}
+    outbound_action: ${3:# Set to C(allow) or C(block) inbound network traffic in the profile}
+    profiles: ${4:# Specify one or more profiles to change}
+    state: ${5:# Set state of firewall for given profile}
+  tags:
+    - win_firewall]]></content>
+  <tabTrigger>ansible.windows.win_firewall</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Enable or disable the Windows Firewall</description>
+</snippet>

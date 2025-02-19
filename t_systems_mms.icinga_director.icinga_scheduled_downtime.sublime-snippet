@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage downtimes in Icinga2}
   t_systems_mms.icinga_director.icinga_scheduled_downtime:
-    state: ${2:# Apply feature state}
-    object_name: ${3:# Icinga object name for this downtime}
-    disabled: ${4:# Disabled objects will not be deployed}
+    append: ${2:# Do not overwrite the whole object but instead append the defined properties}
+    apply_to: ${3:# Whether this dependency should affect hosts or services}
+    assign_filter: ${4:# The filter where the downtime will take effect}
     author: ${5:# Name of the downtime author}
-    comment: ${6:# A descriptive comment for the downtime}
-    fixed: ${7:# Whether this downtime is fixed or flexible}
-    with_services: ${8:# Whether you only downtime the hosts or add some services with it}
-    ranges: ${9:# The period which should be downtimed}
-    apply_to: ${10:# Whether this dependency should affect hosts or services}
-    assign_filter: ${11:# The filter where the downtime will take effect}
-    duration: ${12:# How long the downtime lasts}
-    append: ${13:# Do not overwrite the whole object but instead append the defined properties}
-    url: ${14:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
-    force: ${15:# If C(yes) do not get a cached copy}
-    http_agent: ${16:# Header to identify as, generally appears in web server logs}
-    use_proxy: ${17:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    validate_certs: ${18:# If C(no), SSL certificates will not be validated}
-    url_username: ${19:# The username for use in HTTP basic authentication}
-    url_password: ${20:# The password for use in HTTP basic authentication}
-    force_basic_auth: ${21:# Credentials specified with I(url_username) and I(url_password) should be passed in HTTP Header}
-    client_cert: ${22:# PEM formatted certificate chain file to be used for SSL client authentication}
-    client_key: ${23:# PEM formatted file that contains your private key to be used for SSL client authentication}
-    use_gssapi: ${24:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    client_cert: ${6:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${7:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    comment: ${8:# A descriptive comment for the downtime}
+    disabled: ${9:# Disabled objects will not be deployed}
+    duration: ${10:# How long the downtime lasts}
+    fixed: ${11:# Whether this downtime is fixed or flexible}
+    force: ${12:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${13:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    http_agent: ${14:# Header to identify as, generally appears in web server logs}
+    object_name: ${15:# Icinga object name for this downtime}
+    ranges: ${16:# The period which should be downtimed}
+    state: ${17:# Apply feature state}
+    url: ${18:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    url_password: ${19:# The password for use in HTTP basic authentication}
+    url_username: ${20:# The username for use in HTTP basic authentication}
+    use_gssapi: ${21:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${22:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${23:# If V(no), SSL certificates will not be validated}
+    with_services: ${24:# Whether you only downtime the hosts or add some services with it}
   tags:
     - t_systems_mms
     - icinga_director

@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Handle key management operations in a tang server}
+  fedora.linux_system_roles.nbde_server_tang:
+    cachedir: ${2:# cache directory}
+    force: ${3:# force to create keys}
+    keydir: ${4:# key database directory on the Tang server '/var/db/tang'}
+    keygen: ${5:# tang key generation tool '/usr/libexec/tangd-keygen'}
+    keys_to_deploy_dir: ${6:# deploys keys that are present in keys_to_deploy_dir}
+    state: ${7:# indicates the state to achieve, which basically maps to}
+    update: ${8:# the tool for performing a cache update '/usr/libexec/tangd-update'}
+  tags:
+    - fedora
+    - linux_system_roles
+    - nbde_server_tang]]></content>
+  <tabTrigger>fedora.linux_system_roles.nbde_server_tang</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Handle key management operations in a tang server</description>
+</snippet>

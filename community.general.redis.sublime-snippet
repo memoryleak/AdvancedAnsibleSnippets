@@ -2,20 +2,22 @@
   <content><![CDATA[- name: ${1:Various redis commands, replica and flush}
   community.general.redis:
     ca_certs: ${2:# Path to root certificates file}
-    command: ${3:# The selected redis command}
-    db: ${4:# The database to flush (used in db mode) [flush command]}
-    flush_mode: ${5:# Type of flush (all the dbs in a redis instance or a specific one) [flush command]}
-    login_host: ${6:# Specify the target host running the database}
-    login_password: ${7:# Specify the password to authenticate with}
-    login_port: ${8:# Specify the port to connect to}
-    login_user: ${9:# Specify the user to authenticate with}
-    master_host: ${10:# The host of the master instance [replica command]}
-    master_port: ${11:# The port of the master instance [replica command]}
-    name: ${12:# A redis config key}
-    replica_mode: ${13:# The mode of the redis instance [replica command]}
-    tls: ${14:# Specify whether or not to use TLS for the connection}
-    validate_certs: ${15:# Specify whether or not to validate TLS certificates}
-    value: ${16:# A redis config value}
+    client_cert_file: ${3:# Path to the client certificate file}
+    client_key_file: ${4:# Path to the client private key file}
+    command: ${5:# The selected redis command}
+    db: ${6:# The database to flush (used in db mode) [flush command]}
+    flush_mode: ${7:# Type of flush (all the dbs in a redis instance or a specific one) [flush command]}
+    login_host: ${8:# Specify the target host running the database}
+    login_password: ${9:# Specify the password to authenticate with}
+    login_port: ${10:# Specify the port to connect to}
+    login_user: ${11:# Specify the user to authenticate with}
+    master_host: ${12:# The host of the master instance [replica command]}
+    master_port: ${13:# The port of the master instance [replica command]}
+    name: ${14:# A redis config key}
+    replica_mode: ${15:# The mode of the redis instance [replica command]}
+    tls: ${16:# Specify whether or not to use TLS for the connection}
+    validate_certs: ${17:# Specify whether or not to validate TLS certificates}
+    value: ${18:# A redis config value}
   tags:
     - community
     - general

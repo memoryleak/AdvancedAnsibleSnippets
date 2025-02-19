@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Allows managing Keycloak User Profiles}
+  community.general.keycloak_userprofile:
+    auth_client_id: ${2:# OpenID Connect C(client_id) to authenticate to the API with}
+    auth_client_secret: ${3:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
+    auth_keycloak_url: ${4:# URL to the Keycloak instance}
+    auth_password: ${5:# Password to authenticate for API access with}
+    auth_realm: ${6:# Keycloak realm name to authenticate to for API access}
+    auth_username: ${7:# Username to authenticate for API access with}
+    config: ${8:# The configuration of the User Profile Provider}
+    connection_timeout: ${9:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    http_agent: ${10:# Configures the HTTP User-Agent header}
+    parent_id: ${11:# The parent ID of the realm key}
+    provider_id: ${12:# The name of the provider ID for the key (supported value is V(declarative-user-profile))}
+    provider_type: ${13:# Component type for User Profile (only supported value is V(org}
+    state: ${14:# State of the User Profile provider}
+    token: ${15:# Authentication token for Keycloak API}
+    validate_certs: ${16:# Verify TLS certificates (do not disable this in production)}
+  tags:
+    - community
+    - general
+    - keycloak_userprofile]]></content>
+  <tabTrigger>community.general.keycloak_userprofile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Allows managing Keycloak User Profiles</description>
+</snippet>

@@ -13,13 +13,15 @@
     port: ${11:# Port number to be used for REST connection}
     private_key: ${12:# Either a PEM-formatted private key file or the private key content used for signature-based authentication}
     state: ${13:# Use C(present) or C(absent) for adding or removing}
-    tenant: ${14:# The name of the existing tenant}
-    timeout: ${15:# The socket level timeout in seconds}
-    use_proxy: ${16:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${17:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${18:# The username to use for authentication}
-    validate_certs: ${19:# If C(false), SSL certificates will not be validated}
-    vrf: ${20:# The name of the VRF}
+    suppress_previous: ${14:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${15:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    tenant: ${16:# The name of the existing tenant}
+    timeout: ${17:# The socket level timeout in seconds}
+    use_proxy: ${18:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${19:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${20:# The username to use for authentication}
+    validate_certs: ${21:# If C(false), SSL certificates will not be validated}
+    vrf: ${22:# The name of the VRF}
   tags:
     - cisco
     - aci

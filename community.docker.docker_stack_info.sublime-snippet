@@ -1,6 +1,16 @@
 <snippet>
   <content><![CDATA[- name: ${1:Return information on all docker stacks}
   community.docker.docker_stack_info:
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    ca_path: ${3:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    cli_context: ${4:# The Docker CLI context to use}
+    client_cert: ${5:# Path to the client's TLS certificate file}
+    client_key: ${6:# Path to the client's TLS key file}
+    docker_cli: ${7:# Path to the Docker CLI}
+    docker_host: ${8:# The URL or Unix socket path used to connect to the Docker API}
+    tls: ${9:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${10:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    validate_certs: ${11:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
   tags:
     - community
     - docker

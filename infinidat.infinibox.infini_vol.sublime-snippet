@@ -1,20 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create, Delete or Modify volumes on Infinibox}
   infinidat.infinibox.infini_vol:
-    name: ${2:# Volume Name}
+    name: ${2:# Volume name}
     parent_volume_name: ${3:# Specify a volume name}
     password: ${4:# Infinibox User password}
     pool: ${5:# Pool that master volume will reside within}
     restore_volume_from_snapshot: ${6:# Specify true to restore a volume (parent_volume_name) from an existing snapshot specified by the name field}
-    size: ${7:# Volume size in MB, GB or TB units}
-    snapshot_lock_expires_at: ${8:# This will cause a snapshot to be locked at the specified date-time}
-    snapshot_lock_only: ${9:# This will lock an existing snapshot but will suppress refreshing the snapshot}
-    state: ${10:# Creates/Modifies master volume or snapshot when present or removes when absent}
-    system: ${11:# Infinibox Hostname or IPv4 Address}
-    thin_provision: ${12:# Whether the master volume should be thin or thick provisioned}
-    user: ${13:# Infinibox User username with sufficient priveledges ( see notes )}
-    volume_type: ${14:# Specifies the volume type, regular volume or snapshot}
-    write_protected: ${15:# Specifies if the volume should be write protected}
+    serial: ${7:# Volume serial number}
+    size: ${8:# Volume size in MB, GB or TB units}
+    snapshot_lock_expires_at: ${9:# This will cause a snapshot to be locked at the specified date-time}
+    snapshot_lock_only: ${10:# This will lock an existing snapshot but will suppress refreshing the snapshot}
+    state: ${11:# Creates/Modifies master volume or snapshot when present or removes when absent}
+    system: ${12:# Infinibox Hostname or IPv4 Address}
+    thin_provision: ${13:# Whether the master volume should be thin or thick provisioned}
+    user: ${14:# Infinibox User username with sufficient priveledges ( see notes )}
+    volume_type: ${15:# Specifies the volume type, regular volume or snapshot}
+    write_protected: ${16:# Specifies if the volume should be write protected}
   tags:
     - infinidat
     - infinibox

@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add, modify and delete services within a consul cluster}
+  community.general.consul_agent_service:
+    address: ${2:# The address to advertise that the service will be listening on}
+    ca_path: ${3:# The CA bundle to use for https connections}
+    enable_tag_override: ${4:# Specifies to disable the anti-entropy feature for this service's tags}
+    host: ${5:# Host of the consul agent, defaults to V(localhost)}
+    id: ${6:# Specifies a unique ID for this service}
+    meta: ${7:# Optional meta data used for filtering}
+    name: ${8:# Unique name for the service on a node, must be unique per node, required if registering a service}
+    port: ${9:# The port on which the consul agent is running}
+    scheme: ${10:# The protocol scheme on which the consul agent is running}
+    service_port: ${11:# The port on which the service is listening}
+    state: ${12:# Whether the service should be present or absent}
+    tags: ${13:# Tags that will be attached to the service registration}
+    token: ${14:# The token to use for authorization}
+    validate_certs: ${15:# Whether to verify the TLS certificate of the consul agent}
+    weights: ${16:# Specifies weights for the service}
+  tags:
+    - community
+    - general
+    - consul_agent_service]]></content>
+  <tabTrigger>community.general.consul_agent_service</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add, modify and delete services within a consul cluster</description>
+</snippet>

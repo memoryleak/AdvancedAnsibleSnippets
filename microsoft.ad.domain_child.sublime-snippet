@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage domain children in an existing Active Directory forest}
+  microsoft.ad.domain_child:
+    create_dns_delegation: ${2:# Whether to create a DNS delegation that references the new DNS server that was installed}
+    database_path: ${3:# The path to a directory on a fixed disk of the Windows host where the domain database will be created}
+    dns_domain_name: ${4:# The full DNS name of the domain to create}
+    domain_admin_password: ${5:# Password for the specified I(domain_admin_user)}
+    domain_admin_user: ${6:# Username of a domain admin for the parent domain}
+    domain_mode: ${7:# Specifies the domain functional level of child/tree}
+    domain_type: ${8:# Specifies the type of domain to create}
+    install_dns: ${9:# Whether to install the DNS service when creating the domain controller}
+    log_path: ${10:# Specified the fully qualified, non-UNC path to a directory on a fixed disk of the local computer that will contain the domain log files}
+    parent_domain_name: ${11:# The fully qualified domain name of an existing parent domain to create a new domain tree in}
+    reboot: ${12:# If C(true), this will reboot the host if a reboot was required by the module}
+    reboot_timeout: ${13:# Maximum seconds to wait for machine to re-appear after a reboot and respond to a test command}
+    safe_mode_password: ${14:# Safe mode password for the domain controller}
+    site_name: ${15:# Specifies the name of an existing site where you can place the new domain controller}
+    sysvol_path: ${16:# The path to a directory on a fixed disk of the Windows host where the Sysvol folder will be created}
+  tags:
+    - microsoft
+    - ad
+    - domain_child]]></content>
+  <tabTrigger>microsoft.ad.domain_child</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage domain children in an existing Active Directory forest</description>
+</snippet>

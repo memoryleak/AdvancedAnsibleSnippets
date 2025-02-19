@@ -1,20 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Uses keytool to import/remove certificate to/from java keystore (cacerts)}
   community.general.java_cert:
-    cert_alias: ${2:# Imported certificate alias}
-    cert_path: ${3:# Local path to load certificate from}
-    cert_port: ${4:# Port to connect to URL}
-    cert_url: ${5:# Basic URL to fetch SSL certificate from}
-    executable: ${6:# Path to keytool binary if not used we search in PATH for it}
-    keystore_create: ${7:# Create keystore if it does not exist}
-    keystore_pass: ${8:# Keystore password}
-    keystore_path: ${9:# Path to keystore}
-    keystore_type: ${10:# Keystore type (JCEKS, JKS)}
-    pkcs12_alias: ${11:# Alias in the PKCS12 keystore}
-    pkcs12_password: ${12:# Password for importing from PKCS12 keystore}
-    pkcs12_path: ${13:# Local path to load PKCS12 keystore from}
-    state: ${14:# Defines action which can be either certificate import or removal}
-    trust_cacert: ${15:# Trust imported cert as CAcert}
+    attributes: ${2:# The attributes the resulting filesystem object should have}
+    cert_alias: ${3:# Imported certificate alias}
+    cert_content: ${4:# Content of the certificate used to create the keystore}
+    cert_path: ${5:# Local path to load certificate from}
+    cert_port: ${6:# Port to connect to URL}
+    cert_url: ${7:# Basic URL to fetch SSL certificate from}
+    executable: ${8:# Path to keytool binary if not used we search in PATH for it}
+    group: ${9:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    keystore_create: ${10:# Create keystore if it does not exist}
+    keystore_pass: ${11:# Keystore password}
+    keystore_path: ${12:# Path to keystore}
+    keystore_type: ${13:# Keystore type (JCEKS, JKS)}
+    mode: ${14:# The permissions the resulting filesystem object should have}
+    owner: ${15:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
+    pkcs12_alias: ${16:# Alias in the PKCS12 keystore}
+    pkcs12_password: ${17:# Password for importing from PKCS12 keystore}
+    pkcs12_path: ${18:# Local path to load PKCS12 keystore from}
+    selevel: ${19:# The level part of the SELinux filesystem object context}
+    serole: ${20:# The role part of the SELinux filesystem object context}
+    setype: ${21:# The type part of the SELinux filesystem object context}
+    seuser: ${22:# The user part of the SELinux filesystem object context}
+    state: ${23:# Defines action which can be either certificate import or removal}
+    trust_cacert: ${24:# Trust imported cert as CAcert}
+    unsafe_writes: ${25:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
   tags:
     - community
     - general

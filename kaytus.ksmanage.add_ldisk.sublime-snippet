@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create logical disk}
+  kaytus.ksmanage.add_ldisk:
+    accelerator: ${2:# Driver accelerator, 1 - 1h, 2 - 2h, 3 - 3h}
+    access: ${3:# Access Policy, 1 - Read Write, 2 - Read Only, 3 - Blocked}
+    cache: ${4:# Drive Cache, 1 - Unchanged, 2 - Enabled, 3 - Disabled}
+    ctrl_id: ${5:# Raid controller ID}
+    host: ${6:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    init: ${7:# Init State, 1 - No Init, 2 - Quick Init, 3 - Full Init}
+    io: ${8:# IO Policy, 1 - Direct IO, 2 - Cached IO}
+    level: ${9:# RAID Level, 0 - RAID0, 1 - RAID1, 5 - RAID5, 6 - RAID6, 10 - RAID10}
+    password: ${10:# Specifies the password to use to authenticate the connection to the remote device}
+    provider: ${11:# A dict object containing connection details}
+    r: ${12:# Read Policy, 1 - Read Ahead, 2 - No Read Ahead}
+    select: ${13:# Select Size, from 1 to 100}
+    size: ${14:# Strip Size, 0 - 32k, 1 - 64k, 2 - 128k, 3 - 256k, 4 - 512k, 5 - 1024k}
+    slot: ${15:# Slot Num, input multiple slotNumber like 0, 1, 2}
+    username: ${16:# Configures the username to use to authenticate the connection to the remote device}
+    vname: ${17:# Virtual drive name}
+    w: ${18:# Write Policy, 1 - Write Through, 2 - Write Back, 3 - Write caching ok if bad BBU}
+  tags:
+    - kaytus
+    - ksmanage
+    - add_ldisk]]></content>
+  <tabTrigger>kaytus.ksmanage.add_ldisk</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create logical disk</description>
+</snippet>

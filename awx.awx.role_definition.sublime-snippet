@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add role definition to Automation Platform Controller}
+  awx.awx.role_definition:
+    content_type: ${2:# The type of resource this applies to}
+    controller_config_file: ${3:# Path to the controller config file}
+    controller_host: ${4:# URL to your Automation Platform Controller instance}
+    controller_oauthtoken: ${5:# The OAuth token to use}
+    controller_password: ${6:# Password for your controller instance}
+    controller_username: ${7:# Username for your controller instance}
+    description: ${8:# Optional description of this role definition}
+    name: ${9:# Name of this role definition}
+    permissions: ${10:# List of permissions to include in the role definition}
+    request_timeout: ${11:# Specify the timeout Ansible should use in requests to the controller host}
+    state: ${12:# The desired state of the role definition}
+    validate_certs: ${13:# Whether to allow insecure connections to AWX}
+  tags:
+    - awx
+    - awx
+    - role_definition]]></content>
+  <tabTrigger>awx.awx.role_definition</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add role definition to Automation Platform Controller</description>
+</snippet>

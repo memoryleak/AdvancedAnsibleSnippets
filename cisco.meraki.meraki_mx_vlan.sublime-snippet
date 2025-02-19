@@ -1,36 +1,36 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage VLANs in the Meraki cloud}
   cisco.meraki.meraki_mx_vlan:
-    state: ${2:# Specifies whether object should be queried, created/modified, or removed}
-    net_name: ${3:# Name of network which VLAN is in or should be in}
-    net_id: ${4:# ID of network which VLAN is in or should be in}
-    vlan_id: ${5:# ID number of VLAN}
-    name: ${6:# Name of VLAN}
-    subnet: ${7:# CIDR notation of network subnet}
-    appliance_ip: ${8:# IP address of appliance}
-    dns_nameservers: ${9:# Semi-colon delimited list of DNS IP addresses}
-    reserved_ip_range: ${10:# IP address ranges which should be reserve and not distributed via DHCP}
-    vpn_nat_subnet: ${11:# The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN}
+    appliance_ip: ${2:# IP address of appliance}
+    auth_key: ${3:# Authentication key provided by the dashboard}
+    dhcp_boot_filename: ${4:# Filename to boot from for DHCP boot}
+    dhcp_boot_next_server: ${5:# DHCP boot option to direct boot clients to the server to load boot file from}
+    dhcp_boot_options_enabled: ${6:# Enable DHCP boot options}
+    dhcp_handling: ${7:# How to handle DHCP packets on network}
+    dhcp_lease_time: ${8:# DHCP lease timer setting}
+    dhcp_options: ${9:# List of DHCP option values}
+    dhcp_relay_server_ips: ${10:# IP addresses to forward DHCP packets to}
+    dns_nameservers: ${11:# Semi-colon delimited list of DNS IP addresses}
     fixed_ip_assignments: ${12:# Static IP address assignments to be distributed via DHCP by MAC address}
-    dhcp_handling: ${13:# How to handle DHCP packets on network}
-    dhcp_relay_server_ips: ${14:# IP addresses to forward DHCP packets to}
-    dhcp_lease_time: ${15:# DHCP lease timer setting}
-    dhcp_boot_options_enabled: ${16:# Enable DHCP boot options}
-    dhcp_boot_next_server: ${17:# DHCP boot option to direct boot clients to the server to load boot file from}
-    dhcp_boot_filename: ${18:# Filename to boot from for DHCP boot}
-    dhcp_options: ${19:# List of DHCP option values}
-    auth_key: ${20:# Authentication key provided by the dashboard}
-    host: ${21:# Hostname for Meraki dashboard}
-    use_proxy: ${22:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_https: ${23:# If C(no), it will use HTTP}
-    output_format: ${24:# Instructs module whether response keys should be snake case (ex}
-    output_level: ${25:# Set amount of debug output during module execution}
+    host: ${13:# Hostname for Meraki dashboard}
+    internal_error_retry_time: ${14:# Number of seconds to retry if server returns an internal server error}
+    name: ${15:# Name of VLAN}
+    net_id: ${16:# ID of network which VLAN is in or should be in}
+    net_name: ${17:# Name of network which VLAN is in or should be in}
+    org_id: ${18:# ID of organization}
+    org_name: ${19:# Name of organization}
+    output_format: ${20:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${21:# Set amount of debug output during module execution}
+    rate_limit_retry_time: ${22:# Number of seconds to retry if rate limiter is triggered}
+    reserved_ip_range: ${23:# IP address ranges which should be reserve and not distributed via DHCP}
+    state: ${24:# Specifies whether object should be queried, created/modified, or removed}
+    subnet: ${25:# CIDR notation of network subnet}
     timeout: ${26:# Time to timeout for HTTP requests}
-    validate_certs: ${27:# Whether to validate HTTP certificates}
-    org_name: ${28:# Name of organization}
-    org_id: ${29:# ID of organization}
-    rate_limit_retry_time: ${30:# Number of seconds to retry if rate limiter is triggered}
-    internal_error_retry_time: ${31:# Number of seconds to retry if server returns an internal server error}
+    use_https: ${27:# If C(no), it will use HTTP}
+    use_proxy: ${28:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${29:# Whether to validate HTTP certificates}
+    vlan_id: ${30:# ID number of VLAN}
+    vpn_nat_subnet: ${31:# The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN}
   tags:
     - cisco
     - meraki

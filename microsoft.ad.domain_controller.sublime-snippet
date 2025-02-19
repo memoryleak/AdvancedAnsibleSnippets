@@ -10,11 +10,12 @@
     install_media_path: ${8:# The path to a directory on a fixed disk of the Windows host where the Install From Media C(IFC) data will be used}
     local_admin_password: ${9:# Password to be assigned to the local C(Administrator) user (required when I(state=member_server))}
     read_only: ${10:# Whether to install the domain controller as a read only replica for an existing domain}
-    reboot: ${11:# If C(true), this will reboot the host if a reboot was required to configure the server}
-    safe_mode_password: ${12:# Safe mode password for the domain controller (required when I(state=domain_controller))}
-    site_name: ${13:# Specifies the name of an existing site where you can place the new domain controller}
-    state: ${14:# Whether the target host should be a domain controller or a member server}
-    sysvol_path: ${15:# The path to a directory on a fixed disk of the Windows host where the Sysvol folder will be created}
+    reboot: ${11:# If C(true), this will reboot the host if a reboot was required by the module}
+    reboot_timeout: ${12:# Maximum seconds to wait for machine to re-appear after a reboot and respond to a test command}
+    safe_mode_password: ${13:# Safe mode password for the domain controller (required when I(state=domain_controller))}
+    site_name: ${14:# Specifies the name of an existing site where you can place the new domain controller}
+    state: ${15:# Whether the target host should be a domain controller or a member server}
+    sysvol_path: ${16:# The path to a directory on a fixed disk of the Windows host where the Sysvol folder will be created}
   tags:
     - microsoft
     - ad

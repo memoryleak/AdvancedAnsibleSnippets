@@ -11,28 +11,29 @@
     endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
     environment_variables: ${10:# A dictionary of environment variables the Lambda function is given}
     handler: ${11:# The function within your code that Lambda calls to begin execution}
-    kms_key_arn: ${12:# The KMS key ARN used to encrypt the function's environment variables}
-    layers: ${13:# A list of function layers to add to the function's execution environment}
-    memory_size: ${14:# The amount of memory, in MB, your Lambda function is given}
-    name: ${15:# The name you want to assign to the function you are uploading}
-    profile: ${16:# A named AWS profile to use for authentication}
-    purge_tags: ${17:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
-    region: ${18:# The AWS region to use}
-    role: ${19:# The Amazon Resource Name (ARN) of the IAM role that Lambda assumes when it executes your function to access any other Amazon Web Services (AWS) resources}
-    runtime: ${20:# The runtime environment for the Lambda function you are uploading}
-    s3_bucket: ${21:# Amazon S3 bucket name where the}
-    s3_key: ${22:# The Amazon S3 object (the deployment package) key name you want to upload}
-    s3_object_version: ${23:# The Amazon S3 object (the deployment package) version you want to upload}
-    secret_key: ${24:# AWS secret access key}
-    session_token: ${25:# AWS STS session token for use with temporary credentials}
-    state: ${26:# Create or delete Lambda function}
-    tags: ${27:# A dictionary representing the tags to be applied to the resource}
-    timeout: ${28:# The function maximum execution time in seconds after which Lambda should terminate the function}
-    tracing_mode: ${29:# Set mode to 'Active' to sample and trace incoming requests with AWS X-Ray}
-    validate_certs: ${30:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    vpc_security_group_ids: ${31:# List of VPC security group IDs to associate with the Lambda function}
-    vpc_subnet_ids: ${32:# List of subnet IDs to run Lambda function in}
-    zip_file: ${33:# A}
+    image_uri: ${12:# The Amazon ECR URI of the image to use}
+    kms_key_arn: ${13:# The KMS key ARN used to encrypt the function's environment variables}
+    layers: ${14:# A list of function layers to add to the function's execution environment}
+    memory_size: ${15:# The amount of memory, in MB, your Lambda function is given}
+    name: ${16:# The name you want to assign to the function you are uploading}
+    profile: ${17:# A named AWS profile to use for authentication}
+    purge_tags: ${18:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${19:# The AWS region to use}
+    role: ${20:# The Amazon Resource Name (ARN) of the IAM role that Lambda assumes when it executes your function to access any other Amazon Web Services (AWS) resources}
+    runtime: ${21:# The runtime environment for the Lambda function you are uploading}
+    s3_bucket: ${22:# Amazon S3 bucket name where the}
+    s3_key: ${23:# The Amazon S3 object (the deployment package) key name you want to upload}
+    s3_object_version: ${24:# The Amazon S3 object (the deployment package) version you want to upload}
+    secret_key: ${25:# AWS secret access key}
+    session_token: ${26:# AWS STS session token for use with temporary credentials}
+    state: ${27:# Create or delete Lambda function}
+    tags: ${28:# A dictionary representing the tags to be applied to the resource}
+    timeout: ${29:# The function maximum execution time in seconds after which Lambda should terminate the function}
+    tracing_mode: ${30:# Set mode to 'Active' to sample and trace incoming requests with AWS X-Ray}
+    validate_certs: ${31:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_security_group_ids: ${32:# List of VPC security group IDs to associate with the Lambda function}
+    vpc_subnet_ids: ${33:# List of subnet IDs to run Lambda function in}
+    zip_file: ${34:# A}
   tags:
     - amazon
     - aws

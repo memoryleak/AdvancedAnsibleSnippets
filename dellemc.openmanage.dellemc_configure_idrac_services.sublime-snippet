@@ -1,29 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures the iDRAC services related attributes}
   dellemc.openmanage.dellemc_configure_idrac_services:
-    idrac_ip: ${2:# iDRAC IP Address}
-    idrac_user: ${3:# iDRAC username}
-    idrac_password: ${4:# iDRAC user password}
-    idrac_port: ${5:# iDRAC port}
-    validate_certs: ${6:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${7:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    share_name: ${8:# (deprecated)Network share or a local path}
-    share_user: ${9:# (deprecated)Network share user in the format 'user@domain' or 'domain\\user' if user is part of a domain else 'user'}
-    share_password: ${10:# (deprecated)Network share user password}
-    share_mnt: ${11:# (deprecated)Local mount path of the network share with read-write permission for ansible user}
-    enable_web_server: ${12:# Whether to Enable or Disable webserver configuration for iDRAC}
-    ssl_encryption: ${13:# Secure Socket Layer encryption for webserver}
-    tls_protocol: ${14:# Transport Layer Security for webserver}
-    https_port: ${15:# HTTPS access port}
-    http_port: ${16:# HTTP access port}
-    timeout: ${17:# Timeout value}
+    alert_port: ${2:# The iDRAC port number that must be used for SNMP traps}
+    ca_path: ${3:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    community_name: ${4:# SNMP community name for iDRAC}
+    discovery_port: ${5:# The SNMP agent port on the iDRAC}
+    enable_web_server: ${6:# Whether to Enable or Disable webserver configuration for iDRAC}
+    http_port: ${7:# HTTP access port}
+    https_port: ${8:# HTTPS access port}
+    idrac_ip: ${9:# iDRAC IP Address}
+    idrac_password: ${10:# iDRAC user password}
+    idrac_port: ${11:# iDRAC port}
+    idrac_user: ${12:# iDRAC username}
+    ipmi_lan: ${13:# Community name set on iDRAC for SNMP settings}
+    share_mnt: ${14:# (deprecated)Local mount path of the network share with read-write permission for ansible user}
+    share_name: ${15:# (deprecated)Network share or a local path}
+    share_password: ${16:# (deprecated)Network share user password}
+    share_user: ${17:# (deprecated)Network share user in the format 'user@domain' or 'domain\\user' if user is part of a domain else 'user'}
     snmp_enable: ${18:# Whether to Enable or Disable SNMP protocol for iDRAC}
     snmp_protocol: ${19:# Type of the SNMP protocol}
-    community_name: ${20:# SNMP community name for iDRAC}
-    alert_port: ${21:# The iDRAC port number that must be used for SNMP traps}
-    discovery_port: ${22:# The SNMP agent port on the iDRAC}
+    ssl_encryption: ${20:# Secure Socket Layer encryption for webserver}
+    timeout: ${21:# Timeout value}
+    tls_protocol: ${22:# Transport Layer Security for webserver}
     trap_format: ${23:# SNMP trap format for iDRAC}
-    ipmi_lan: ${24:# Community name set on iDRAC for SNMP settings}
+    validate_certs: ${24:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

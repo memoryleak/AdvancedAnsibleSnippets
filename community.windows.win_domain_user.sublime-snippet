@@ -1,40 +1,40 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manages Windows Active Directory user accounts}
   community.windows.win_domain_user:
-    name: ${2:# Name of the user to create, remove or modify}
-    identity: ${3:# Identity parameter used to find the User in the Active Directory}
-    state: ${4:# When C(present), creates or updates the user account}
-    enabled: ${5:# C(yes) will enable the user account}
-    account_locked: ${6:# C(no) will unlock the user account if locked}
-    description: ${7:# Description of the user}
-    groups: ${8:# Adds or removes the user from this list of groups, depending on the value of I(groups_action)}
-    groups_action: ${9:# If C(add), the user is added to each group in I(groups) where not already a member}
-    groups_missing_behaviour: ${10:# Controls what happens when a group specified by C(groups) is an invalid group name}
-    spn: ${11:# Specifies the service principal name(s) for the account}
-    spn_action: ${12:# If C(add), the SPNs are added to the user}
-    password: ${13:# Optionally set the user's password to this (plain text) value}
-    update_password: ${14:# C(always) will always update passwords}
-    password_expired: ${15:# C(yes) will require the user to change their password at next login}
-    password_never_expires: ${16:# C(yes) will set the password to never expire}
-    user_cannot_change_password: ${17:# C(yes) will prevent the user from changing their password}
-    firstname: ${18:# Configures the user's first name (given name)}
-    surname: ${19:# Configures the user's last name (surname)}
-    display_name: ${20:# Configures the user's display name}
-    company: ${21:# Configures the user's company name}
-    upn: ${22:# Configures the User Principal Name (UPN) for the account}
-    sam_account_name: ${23:# Configures the SAM Account Name (C(sAMAccountName)) for the account}
-    email: ${24:# Configures the user's email address}
-    street: ${25:# Configures the user's street address}
-    city: ${26:# Configures the user's city}
-    state_province: ${27:# Configures the user's state or province}
-    postal_code: ${28:# Configures the user's postal code / zip code}
-    country: ${29:# Configures the user's country code}
-    path: ${30:# Container or OU for the new user; if you do not specify this, the user will be placed in the default container for users in the domain}
-    delegates: ${31:# Specifies an array of principal objects}
-    attributes: ${32:# A dict of custom LDAP attributes to set on the user}
-    domain_username: ${33:# The username to use when interacting with AD}
-    domain_password: ${34:# The password for I(username)}
-    domain_server: ${35:# Specifies the Active Directory Domain Services instance to connect to}
+    account_locked: ${2:# C(no) will unlock the user account if locked}
+    attributes: ${3:# A dict of custom LDAP attributes to set on the user}
+    city: ${4:# Configures the user's city}
+    company: ${5:# Configures the user's company name}
+    country: ${6:# Configures the user's country code}
+    delegates: ${7:# Specifies an array of principal objects}
+    description: ${8:# Description of the user}
+    display_name: ${9:# Configures the user's display name}
+    domain_password: ${10:# The password for I(username)}
+    domain_server: ${11:# Specifies the Active Directory Domain Services instance to connect to}
+    domain_username: ${12:# The username to use when interacting with AD}
+    email: ${13:# Configures the user's email address}
+    enabled: ${14:# C(yes) will enable the user account}
+    firstname: ${15:# Configures the user's first name (given name)}
+    groups: ${16:# Adds or removes the user from this list of groups, depending on the value of I(groups_action)}
+    groups_action: ${17:# If C(add), the user is added to each group in I(groups) where not already a member}
+    groups_missing_behaviour: ${18:# Controls what happens when a group specified by C(groups) is an invalid group name}
+    identity: ${19:# Identity parameter used to find the User in the Active Directory}
+    name: ${20:# Name of the user to create, remove or modify}
+    password: ${21:# Optionally set the user's password to this (plain text) value}
+    password_expired: ${22:# C(yes) will require the user to change their password at next login}
+    password_never_expires: ${23:# C(yes) will set the password to never expire}
+    path: ${24:# Container or OU for the new user; if you do not specify this, the user will be placed in the default container for users in the domain}
+    postal_code: ${25:# Configures the user's postal code / zip code}
+    sam_account_name: ${26:# Configures the SAM Account Name (C(sAMAccountName)) for the account}
+    spn: ${27:# Specifies the service principal name(s) for the account}
+    spn_action: ${28:# If C(add), the SPNs are added to the user}
+    state: ${29:# When C(present), creates or updates the user account}
+    state_province: ${30:# Configures the user's state or province}
+    street: ${31:# Configures the user's street address}
+    surname: ${32:# Configures the user's last name (surname)}
+    update_password: ${33:# C(always) will always update passwords}
+    upn: ${34:# Configures the User Principal Name (UPN) for the account}
+    user_cannot_change_password: ${35:# C(yes) will prevent the user from changing their password}
   tags:
     - community
     - windows

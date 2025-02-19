@@ -1,31 +1,31 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configures the iDRAC eventing related attributes}
   dellemc.openmanage.dellemc_configure_idrac_eventing:
-    share_name: ${2:# (deprecated)Network share or a local path}
-    share_user: ${3:# (deprecated)Network share user in the format 'user@domain' or 'domain\\user' if user is part of a domain else 'user'}
-    share_password: ${4:# (deprecated)Network share user password}
-    share_mnt: ${5:# (deprecated)Local mount path of the network share with read-write permission for ansible user}
-    destination_number: ${6:# Destination number for SNMP Trap}
+    address: ${2:# Email address for SNMP Trap}
+    alert_number: ${3:# Alert number for Email configuration}
+    authentication: ${4:# Simple Mail Transfer Protocol Authentication}
+    ca_path: ${5:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    custom_message: ${6:# Custom message for SNMP Trap reference}
     destination: ${7:# Destination for SNMP Trap}
-    snmp_v3_username: ${8:# SNMP v3 username for SNMP Trap}
-    snmp_trap_state: ${9:# Whether to Enable or Disable SNMP alert}
-    email_alert_state: ${10:# Whether to Enable or Disable Email alert}
-    alert_number: ${11:# Alert number for Email configuration}
-    address: ${12:# Email address for SNMP Trap}
-    custom_message: ${13:# Custom message for SNMP Trap reference}
-    enable_alerts: ${14:# Whether to Enable or Disable iDRAC alerts}
-    authentication: ${15:# Simple Mail Transfer Protocol Authentication}
-    smtp_ip_address: ${16:# SMTP IP address for communication}
-    smtp_port: ${17:# SMTP Port number for access}
-    username: ${18:# Username for SMTP authentication}
-    password: ${19:# Password for SMTP authentication}
-    idrac_ip: ${20:# iDRAC IP Address}
-    idrac_user: ${21:# iDRAC username}
-    idrac_password: ${22:# iDRAC user password}
-    idrac_port: ${23:# iDRAC port}
-    validate_certs: ${24:# If C(False), the SSL certificates will not be validated}
-    ca_path: ${25:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    timeout: ${26:# The socket level timeout in seconds}
+    destination_number: ${8:# Destination number for SNMP Trap}
+    email_alert_state: ${9:# Whether to Enable or Disable Email alert}
+    enable_alerts: ${10:# Whether to Enable or Disable iDRAC alerts}
+    idrac_ip: ${11:# iDRAC IP Address}
+    idrac_password: ${12:# iDRAC user password}
+    idrac_port: ${13:# iDRAC port}
+    idrac_user: ${14:# iDRAC username}
+    password: ${15:# Password for SMTP authentication}
+    share_mnt: ${16:# (deprecated)Local mount path of the network share with read-write permission for ansible user}
+    share_name: ${17:# (deprecated)Network share or a local path}
+    share_password: ${18:# (deprecated)Network share user password}
+    share_user: ${19:# (deprecated)Network share user in the format 'user@domain' or 'domain\\user' if user is part of a domain else 'user'}
+    smtp_ip_address: ${20:# Enter the IPv4 or IPv6 address of the SMTP server or the FQDN or DNS name}
+    smtp_port: ${21:# SMTP Port number for access}
+    snmp_trap_state: ${22:# Whether to Enable or Disable SNMP alert}
+    snmp_v3_username: ${23:# SNMP v3 username for SNMP Trap}
+    timeout: ${24:# The socket level timeout in seconds}
+    username: ${25:# Username for SMTP authentication}
+    validate_certs: ${26:# If C(false), the SSL certificates will not be validated}
   tags:
     - dellemc
     - openmanage

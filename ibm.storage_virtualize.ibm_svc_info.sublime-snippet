@@ -2,14 +2,16 @@
   <content><![CDATA[- name: ${1:This module gathers various information from the IBM Storage Virtualize family systems}
   ibm.storage_virtualize.ibm_svc_info:
     clustername: ${2:# The hostname or management IP of the Storage Virtualize system}
-    domain: ${3:# Domain for the Storage Virtualize system}
-    gather_subset: ${4:# List of string variables to specify the Storage Virtualize entities for which information is required}
-    log_path: ${5:# Path of debug log file}
-    objectname: ${6:# If specified, only the instance with the I(objectname) is returned}
-    password: ${7:# REST API password for the Storage Virtualize system}
-    token: ${8:# The authentication token to verify a user on the Storage Virtualize system}
-    username: ${9:# REST API username for the Storage Virtualize system}
-    validate_certs: ${10:# Validates certification}
+    command_list: ${3:# Specify to get information regarding any Storage Virtualize entities other than choices of gather_subset}
+    domain: ${4:# Domain for the Storage Virtualize system}
+    filtervalue: ${5:# Specifies (key=value) combination that helps in returning a subset of objects satisfying the condition}
+    gather_subset: ${6:# List of string variables to specify the Storage Virtualize entities for which information is required}
+    log_path: ${7:# Path of debug log file}
+    objectname: ${8:# If specified, only the instance with the I(objectname) is returned}
+    password: ${9:# REST API password for the Storage Virtualize system}
+    token: ${10:# The authentication token to verify a user on the Storage Virtualize system}
+    username: ${11:# REST API username for the Storage Virtualize system}
+    validate_certs: ${12:# Validates certification}
   tags:
     - ibm
     - storage_virtualize

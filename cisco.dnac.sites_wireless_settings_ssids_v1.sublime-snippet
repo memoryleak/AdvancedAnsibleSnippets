@@ -1,0 +1,87 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Resource module for Sites Wireless Settings Ssids V1}
+  cisco.dnac.sites_wireless_settings_ssids_v1:
+    aaaOverride: ${2:# Activate the AAA Override feature when set to true}
+    acctServers: ${3:# List of Accounting server IpAddresses}
+    aclName: ${4:# Pre-Auth Access Control List (ACL) Name}
+    authServer: ${5:# Authentication Server, Mandatory for Guest SSIDs with wlanType=Guest and l3AuthType=web_auth}
+    authServers: ${6:# List of Authentication/Authorization server IpAddresses}
+    authType: ${7:# L2 Authentication Type (If authType is not open , then atleast one RSN Cipher Suite and corresponding valid AKM must be enabled)}
+    basicServiceSetClientIdleTimeout: ${8:# This refers to the duration of inactivity, measured in seconds, before a client connected to the Basic Service Set is considered idle and timed out}
+    basicServiceSetMaxIdleEnable: ${9:# Activate the maximum idle feature for the Basic Service Set}
+    cckmTsfTolerance: ${10:# Cckm TImestamp Tolerance(in milliseconds)}
+    clientExclusionEnable: ${11:# Activate the feature that allows for the exclusion of clients}
+    clientExclusionTimeout: ${12:# This refers to the length of time, in seconds, a client is excluded or blocked from accessing the network after a specified number of unsuccessful attempts}
+    clientRateLimit: ${13:# This pertains to the maximum data transfer rate, specified in bits per second, that a client is permitted to achieve}
+    coverageHoleDetectionEnable: ${14:# Activate Coverage Hole Detection feature when set to true}
+    directedMulticastServiceEnable: ${15:# The Directed Multicast Service feature becomes operational when it is set to true}
+    dnac_debug: ${16:# Flag for Cisco DNA Center SDK to enable debugging}
+    dnac_host: ${17:# The Cisco DNA Center hostname}
+    dnac_password: ${18:# The Cisco DNA Center password to authenticate}
+    dnac_port: ${19:# The Cisco DNA Center port}
+    dnac_username: ${20:# The Cisco DNA Center username to authenticate}
+    dnac_verify: ${21:# Flag to enable or disable SSL certificate verification}
+    dnac_version: ${22:# Informs the SDK which version of Cisco DNA Center to use}
+    egressQos: ${23:# Egress QOS}
+    externalAuthIpAddress: ${24:# External WebAuth URL (Mandatory for Guest SSIDs with wlanType = Guest, l3AuthType = web_auth and authServer = auth_external)}
+    fastTransition: ${25:# Fast Transition}
+    fastTransitionOverTheDistributedSystemEnable: ${26:# Enable Fast Transition over the Distributed System when set to true}
+    ghz24Policy: ${27:# 2}
+    ghz6PolicyClientSteering: ${28:# True if 6 GHz Policy Client Steering is enabled, else False}
+    id: ${29:# Id path parameter}
+    ingressQos: ${30:# Ingress QOS}
+    isApBeaconProtectionEnabled: ${31:# When set to true, the Access Point (AP) Beacon Protection feature is activated, enhancing the security of the network}
+    isAuthKey8021x: ${32:# When set to true, the 802}
+    isAuthKey8021xPlusFT: ${33:# When set to true, the 802}
+    isAuthKey8021x_SHA256: ${34:# When set to true, the feature that enables 802}
+    isAuthKeyEasyPSK: ${35:# When set to true, the feature that enables the use of Easy Pre-shared Key (PSK) authentication is activated}
+    isAuthKeyOWE: ${36:# When set to true, the Opportunistic Wireless Encryption (OWE) authentication key feature is turned on}
+    isAuthKeyPSK: ${37:# When set to true, the Pre-shared Key (PSK) authentication feature is enabled}
+    isAuthKeyPSKPlusFT: ${38:# When set to true, the feature that enables the combination of Pre-shared Key (PSK) and Fast Transition (FT) authentication keys is activated}
+    isAuthKeyPSKSHA256: ${39:# The feature that allows the use of Pre-shared Key (PSK) authentication with the SHA256 algorithm is enabled when it is set to true}
+    isAuthKeySae: ${40:# When set to true, the feature enabling the Simultaneous Authentication of Equals (SAE) authentication key is activated}
+    isAuthKeySaeExt: ${41:# When set to true, the Simultaneous Authentication of Equals (SAE) Extended Authentication key feature is turned on}
+    isAuthKeySaeExtPlusFT: ${42:# When set to true, the Simultaneous Authentication of Equals (SAE) combined with Fast Transition (FT) Authentication Key feature is enabled}
+    isAuthKeySaePlusFT: ${43:# Activating this setting by switching it to true turns on the authentication key feature that supports both Simultaneous Authentication of Equals (SAE) and Fast Transition (FT)}
+    isAuthKeySuiteB1921x: ${44:# When set to true, the SuiteB192-1x authentication key feature is enabled}
+    isAuthKeySuiteB1x: ${45:# When activated by setting it to true, the SuiteB-1x authentication key feature is engaged}
+    isBroadcastSSID: ${46:# When activated by setting it to true, the Broadcast SSID feature will make the SSID publicly visible to wireless devices searching for available networks}
+    isCckmEnabled: ${47:# True if CCKM is enabled, else False}
+    isEnabled: ${48:# Set SSID's admin status as 'Enabled' when set to true}
+    isFastLaneEnabled: ${49:# True if FastLane is enabled, else False}
+    isHex: ${50:# True if passphrase is in Hex format, else False}
+    isMacFilteringEnabled: ${51:# When set to true, MAC Filtering will be activated, allowing control over network access based on the MAC address of the device}
+    isPosturingEnabled: ${52:# Applicable only for Enterprise SSIDs}
+    isRandomMacFilterEnabled: ${53:# Deny clients using randomized MAC addresses when set to true}
+    l3AuthType: ${54:# L3 Authentication Type}
+    managementFrameProtectionClientprotection: ${55:# Management Frame Protection Client}
+    multiPSKSettings: ${56:# Sites Wireless Settings Ssids's multiPSKSettings}
+    nasOptions: ${57:# Pre-Defined NAS Options AP ETH Mac Address, AP IP address, AP Location , AP MAC Address, AP Name, AP Policy Tag, AP Site Tag, SSID, System IP Address, System MAC Address, System Name}
+    neighborListEnable: ${58:# The Neighbor List feature is enabled when it is set to true}
+    openSsid: ${59:# Open SSID which is already created in the design and not associated to any other OPEN-SECURED SSID}
+    passphrase: ${60:# Passphrase (Only applicable for SSID with PERSONAL security level)}
+    profileName: ${61:# WLAN Profile Name, if not passed autogenerated profile name will be assigned}
+    protectedManagementFrame: ${62:# (REQUIRED is applicable for authType WPA3_PERSONAL, WPA3_ENTERPRISE, OPEN_SECURED) and (OPTIONAL/REQUIRED is applicable for authType WPA2_WPA3_PERSONAL and WPA2_WPA3_ENTERPRISE)}
+    rsnCipherSuiteCcmp128: ${63:# When set to true, the Robust Security Network (RSN) Cipher Suite CCMP128 encryption protocol is activated}
+    rsnCipherSuiteCcmp256: ${64:# When set to true, the Robust Security Network (RSN) Cipher Suite CCMP256 encryption protocol is activated}
+    rsnCipherSuiteGcmp128: ${65:# When set to true, the Robust Security Network (RSN) Cipher Suite GCMP128 encryption protocol is activated}
+    rsnCipherSuiteGcmp256: ${66:# When set to true, the Robust Security Network (RSN) Cipher Suite GCMP256 encryption protocol is activated}
+    sessionTimeOut: ${67:# This denotes the allotted time span, expressed in seconds, before a session is automatically terminated due to inactivity}
+    sessionTimeOutEnable: ${68:# Turn on the feature that imposes a time limit on user sessions}
+    siteId: ${69:# SiteId path parameter}
+    sleepingClientEnable: ${70:# When set to true, this will activate the timeout settings that apply to clients in sleep mode}
+    sleepingClientTimeout: ${71:# This refers to the amount of time, measured in minutes, before a sleeping (inactive) client is timed out of the network}
+    ssid: ${72:# Name of the SSID}
+    ssidRadioType: ${73:# Radio Policy Enum (default Triple band operation(2}
+    validate_response_schema: ${74:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
+    webPassthrough: ${75:# When set to true, the Web-Passthrough feature will be activated for the Guest SSID, allowing guests to bypass certain login requirements}
+    wlanBandSelectEnable: ${76:# Band select is allowed only when band options selected contains at least 2}
+    wlanType: ${77:# Wlan Type}
+  tags:
+    - cisco
+    - dnac
+    - sites_wireless_settings_ssids_v1]]></content>
+  <tabTrigger>cisco.dnac.sites_wireless_settings_ssids_v1</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Resource module for Sites Wireless Settings Ssids V1</description>
+</snippet>

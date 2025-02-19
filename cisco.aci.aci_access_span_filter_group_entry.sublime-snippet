@@ -19,11 +19,13 @@
     private_key: ${17:# Either a PEM-formatted private key file or the private key content used for signature-based authentication}
     source_ip: ${18:# The source IP Prefix}
     state: ${19:# Use C(present) or C(absent) for adding or removing}
-    timeout: ${20:# The socket level timeout in seconds}
-    use_proxy: ${21:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${22:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${23:# The username to use for authentication}
-    validate_certs: ${24:# If C(false), SSL certificates will not be validated}
+    suppress_previous: ${20:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${21:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    timeout: ${22:# The socket level timeout in seconds}
+    use_proxy: ${23:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${24:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${25:# The username to use for authentication}
+    validate_certs: ${26:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci

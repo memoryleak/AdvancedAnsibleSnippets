@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage VMware vSphere clusters}
+  vmware.vmware.cluster:
+    cluster: ${2:# The name of the cluster to be managed}
+    datacenter: ${3:# The name of the datacenter}
+    hostname: ${4:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    password: ${5:# The password of the vSphere vCenter or ESXi server}
+    port: ${6:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${7:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${8:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    state: ${9:# Create V(present) or remove V(absent) a VMware vSphere cluster}
+    username: ${10:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${11:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware
+    - cluster]]></content>
+  <tabTrigger>vmware.vmware.cluster</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage VMware vSphere clusters</description>
+</snippet>

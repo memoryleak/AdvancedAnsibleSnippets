@@ -3,23 +3,24 @@
   community.general.ipa_host:
     description: ${2:# A description of this host}
     force: ${3:# Force host name even if not in DNS}
-    fqdn: ${4:# Full qualified domain name}
-    ip_address: ${5:# Add the host to DNS with this IP address}
-    ipa_host: ${6:# IP or hostname of IPA server}
-    ipa_pass: ${7:# Password of administrative user}
-    ipa_port: ${8:# Port of FreeIPA / IPA server}
-    ipa_prot: ${9:# Protocol used by IPA server}
-    ipa_timeout: ${10:# Specifies idle timeout (in seconds) for the connection}
-    ipa_user: ${11:# Administrative account used on IPA server}
-    mac_address: ${12:# List of Hardware MAC address(es) off this host}
-    ns_hardware_platform: ${13:# Host hardware platform (e}
-    ns_host_location: ${14:# Host location (e}
-    ns_os_version: ${15:# Host operating system and version (e}
-    random_password: ${16:# Generate a random password to be used in bulk enrollment}
-    state: ${17:# State to ensure}
-    update_dns: ${18:# If set V(true) with O(state=absent), then removes DNS records of the host managed by FreeIPA DNS}
-    user_certificate: ${19:# List of Base-64 encoded server certificates}
-    validate_certs: ${20:# This only applies if O(ipa_prot) is V(https)}
+    force_creation: ${4:# Create host if O(state=disabled) or O(state=enabled) but not present}
+    fqdn: ${5:# Full qualified domain name}
+    ip_address: ${6:# Add the host to DNS with this IP address}
+    ipa_host: ${7:# IP or hostname of IPA server}
+    ipa_pass: ${8:# Password of administrative user}
+    ipa_port: ${9:# Port of FreeIPA / IPA server}
+    ipa_prot: ${10:# Protocol used by IPA server}
+    ipa_timeout: ${11:# Specifies idle timeout (in seconds) for the connection}
+    ipa_user: ${12:# Administrative account used on IPA server}
+    mac_address: ${13:# List of Hardware MAC address(es) off this host}
+    ns_hardware_platform: ${14:# Host hardware platform (e}
+    ns_host_location: ${15:# Host location (e}
+    ns_os_version: ${16:# Host operating system and version (e}
+    random_password: ${17:# Generate a random password to be used in bulk enrollment}
+    state: ${18:# State to ensure}
+    update_dns: ${19:# If set V(true) with O(state=absent), then removes DNS records of the host managed by FreeIPA DNS}
+    user_certificate: ${20:# List of Base-64 encoded server certificates}
+    validate_certs: ${21:# This only applies if O(ipa_prot) is V(https)}
   tags:
     - community
     - general

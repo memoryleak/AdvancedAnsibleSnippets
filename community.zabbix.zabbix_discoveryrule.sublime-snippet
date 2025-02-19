@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/delete Zabbix discovery rules}
+  community.zabbix.zabbix_discoveryrule:
+    host_name: ${2:# Name of host to add discovery rule to}
+    http_login_password: ${3:# Basic Auth password}
+    http_login_user: ${4:# Basic Auth login}
+    name: ${5:# Name of discovery rule to create or delete}
+    params: ${6:# Parameters to create/update discovery rule with}
+    state: ${7:# Create or delete discovery rule}
+    template_name: ${8:# Name of template to add discovery rule to}
+  tags:
+    - community
+    - zabbix
+    - zabbix_discoveryrule]]></content>
+  <tabTrigger>community.zabbix.zabbix_discoveryrule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/delete Zabbix discovery rules</description>
+</snippet>

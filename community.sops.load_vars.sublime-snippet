@@ -1,24 +1,24 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Load sops-encrypted variables from files, dynamically within a task}
+  <content><![CDATA[- name: ${1:Load SOPS-encrypted variables from files, dynamically within a task}
   community.sops.load_vars:
     age_key: ${2:# One or more age private keys that can be used to decrypt encrypted files}
-    age_keyfile: ${3:# The file containing the age private keys that sops can use to decrypt encrypted files}
+    age_keyfile: ${3:# The file containing the age private keys that SOPS can use to decrypt encrypted files}
     aws_access_key_id: ${4:# The AWS access key ID to use for requests to AWS}
     aws_profile: ${5:# The AWS profile to use for requests to AWS}
     aws_secret_access_key: ${6:# The AWS secret access key to use for requests to AWS}
     aws_session_token: ${7:# The AWS session token to use for requests to AWS}
-    config_path: ${8:# Path to the sops configuration file}
-    enable_local_keyservice: ${9:# Tell sops to use local key service}
+    config_path: ${8:# Path to the SOPS configuration file}
+    enable_local_keyservice: ${9:# Tell SOPS to use local key service}
     expressions: ${10:# This option controls how Jinja2 expressions in values in the loaded file are handled}
     file: ${11:# The file name from which variables should be loaded}
     keyservice: ${12:# Specify key services to use next to the local one}
     name: ${13:# The name of a variable into which assign the included vars}
-    sops_binary: ${14:# Path to the sops binary}
+    sops_binary: ${14:# Path to the SOPS binary}
   tags:
     - community
     - sops
     - load_vars]]></content>
   <tabTrigger>community.sops.load_vars</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Load sops-encrypted variables from files, dynamically within a task</description>
+  <description>Load SOPS-encrypted variables from files, dynamically within a task</description>
 </snippet>

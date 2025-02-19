@@ -2,10 +2,11 @@
   <content><![CDATA[- name: ${1:Configure Pure Storage FlashArray Eradication Timer}
   purestorage.flasharray.purefa_eradication:
     api_token: ${2:# FlashArray API token for admin privileged user}
-    disabled_delay: ${3:# Configures the eradication delay for destroyed objects that I(are) protected by SafeMode (objects for which eradication is disabled)}
-    enabled_delay: ${4:# Configures the eradication delay for destroyed objects that I(are not) protected by SafeMode (objects for which eradication is disabled)}
-    fa_url: ${5:# FlashArray management IPv4 address or Hostname}
-    timer: ${6:# Set the eradication timer for the FlashArray}
+    disable_warnings: ${3:# Disable insecure certificate warnings in debug logs}
+    disabled_delay: ${4:# Configures the eradication delay for destroyed objects that I(are) protected by SafeMode (objects for which eradication is disabled)}
+    enabled_delay: ${5:# Configures the eradication delay for destroyed objects that I(are not) protected by SafeMode (objects for which eradication is disabled)}
+    fa_url: ${6:# FlashArray management IPv4 address or Hostname}
+    timer: ${7:# Set the eradication timer for the FlashArray}
   tags:
     - purestorage
     - flasharray

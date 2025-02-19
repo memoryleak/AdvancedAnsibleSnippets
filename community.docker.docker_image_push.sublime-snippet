@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Push Docker images to registries}
+  community.docker.docker_image_push:
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    ca_path: ${3:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${4:# Path to the client's TLS certificate file}
+    client_key: ${5:# Path to the client's TLS key file}
+    debug: ${6:# Debug mode}
+    docker_host: ${7:# The URL or Unix socket path used to connect to the Docker API}
+    name: ${8:# Image name}
+    ssl_version: ${9:# Provide a valid SSL version number}
+    tag: ${10:# Select which image to push}
+    timeout: ${11:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${12:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${13:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    use_ssh_client: ${14:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${15:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+  tags:
+    - community
+    - docker
+    - docker_image_push]]></content>
+  <tabTrigger>community.docker.docker_image_push</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Push Docker images to registries</description>
+</snippet>

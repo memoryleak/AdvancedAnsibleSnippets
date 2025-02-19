@@ -2,18 +2,19 @@
   <content><![CDATA[- name: ${1:SMS notification receiver list}
   fortinet.fortimanager.fmgr_extensioncontroller_extenderprofile_cellular_smsnotification_receiver:
     access_token: ${2:# The token to access FortiManager without using username and password}
-    adom: ${3:# the parameter (adom) in requested url}
+    adom: ${3:# The parameter (adom) in requested url}
     bypass_validation: ${4:# Only set to True when module schema diffs with FortiManager API structure, module continues to execute without validating parameters}
     enable_log: ${5:# Enable/Disable logging for task}
-    extender-profile: ${6:# the parameter (extender-profile) in requested url}
-    extensioncontroller_extenderprofile_cellular_smsnotification_receiver: ${7:# the top level parameters set}
-    forticloud_access_token: ${8:# Authenticate Ansible client with forticloud API access token}
-    proposed_method: ${9:# The overridden method for the underlying Json RPC request}
-    rc_failed: ${10:# The rc codes list with which the conditions to fail will be overriden}
-    rc_succeeded: ${11:# The rc codes list with which the conditions to succeed will be overriden}
-    state: ${12:# The directive to create, update or delete an object}
-    workspace_locking_adom: ${13:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
-    workspace_locking_timeout: ${14:# The maximum time in seconds to wait for other user to release the workspace lock}
+    extender-profile: ${6:# Deprecated, please use 'extender_profile'}
+    extender_profile: ${7:# The parameter (extender-profile) in requested url}
+    extensioncontroller_extenderprofile_cellular_smsnotification_receiver: ${8:# The top level parameters set}
+    forticloud_access_token: ${9:# Authenticate Ansible client with forticloud API access token}
+    proposed_method: ${10:# The overridden method for the underlying Json RPC request}
+    rc_failed: ${11:# The rc codes list with which the conditions to fail will be overriden}
+    rc_succeeded: ${12:# The rc codes list with which the conditions to succeed will be overriden}
+    state: ${13:# The directive to create, update or delete an object}
+    workspace_locking_adom: ${14:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
+    workspace_locking_timeout: ${15:# The maximum time in seconds to wait for other user to release the workspace lock}
   tags:
     - fortinet
     - fortimanager

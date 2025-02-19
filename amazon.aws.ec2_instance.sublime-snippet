@@ -3,50 +3,51 @@
   amazon.aws.ec2_instance:
     aap_callback: ${2:# Preconfigured user-data to enable an instance to perform an Ansible Automation Platform callback (Linux only)}
     access_key: ${3:# AWS access key ID}
-    availability_zone: ${4:# Specify an availability zone to use the default subnet it}
-    aws_ca_bundle: ${5:# The location of a CA Bundle to use when validating SSL certificates}
-    aws_config: ${6:# A dictionary to modify the botocore configuration}
-    count: ${7:# Number of instances to launch}
-    cpu_credit_specification: ${8:# For T series instances, choose whether to allow increased charges to buy CPU credits if the default pool is depleted}
-    cpu_options: ${9:# Reduce the number of vCPU exposed to the instance}
-    debug_botocore_endpoint_logs: ${10:# Use a C(botocore}
-    detailed_monitoring: ${11:# Whether to allow detailed CloudWatch metrics to be collected, enabling more detailed alerting}
-    ebs_optimized: ${12:# Whether instance is should use optimized EBS volumes, see U(https://docs}
-    endpoint_url: ${13:# URL to connect to instead of the default AWS endpoints}
-    exact_count: ${14:# An integer value which indicates how many instances that match the I(filters) parameter should be running}
-    filters: ${15:# A dict of filters to apply when deciding whether existing instances match and should be altered}
-    hibernation_options: ${16:# Indicates whether an instance is enabled for hibernation}
-    iam_instance_profile: ${17:# The ARN or name of an EC2-enabled IAM instance profile to be used}
-    image: ${18:# An image to use for the instance}
-    image_id: ${19:# I(ami) ID to use for the instance}
-    instance_ids: ${20:# If you specify one or more instance IDs, only instances that have the specified IDs are returned}
-    instance_initiated_shutdown_behavior: ${21:# Whether to stop or terminate an instance upon shutdown}
-    instance_type: ${22:# Instance type to use for the instance, see U(https://docs}
-    key_name: ${23:# Name of the SSH access key to assign to the instance - must exist in the region the instance is created}
-    launch_template: ${24:# The EC2 launch template to base instance configuration on}
-    license_specifications: ${25:# The license specifications to be used for the instance}
-    metadata_options: ${26:# Modify the metadata options for the instance}
-    name: ${27:# The Name tag for the instance}
-    network: ${28:# Either a dictionary containing the key C(interfaces) corresponding to a list of network interface IDs or containing specifications for a single network interface}
-    placement: ${29:# The location where the instance launched, if applicable}
-    placement_group: ${30:# The placement group that needs to be assigned to the instance}
-    profile: ${31:# A named AWS profile to use for authentication}
-    purge_tags: ${32:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
-    region: ${33:# The AWS region to use}
-    secret_key: ${34:# AWS secret access key}
-    security_group: ${35:# A security group ID or name}
-    security_groups: ${36:# A list of security group IDs or names (strings)}
-    session_token: ${37:# AWS STS session token for use with temporary credentials}
-    state: ${38:# Goal state for the instances}
-    tags: ${39:# A dictionary representing the tags to be applied to the resource}
-    tenancy: ${40:# What type of tenancy to allow an instance to use}
-    termination_protection: ${41:# Whether to enable termination protection}
-    user_data: ${42:# Opaque blob of data which is made available to the EC2 instance}
-    validate_certs: ${43:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    volumes: ${44:# A list of block device mappings, by default this will always use the AMI root device so the volumes option is primarily for adding more storage}
-    vpc_subnet_id: ${45:# The subnet ID in which to launch the instance (VPC)}
-    wait: ${46:# Whether or not to wait for the desired I(state) (use (wait_timeout) to customize this)}
-    wait_timeout: ${47:# How long to wait (in seconds) for the instance to finish booting/terminating}
+    additional_info: ${4:# Reserved for Amazon's internal use}
+    availability_zone: ${5:# Specify an availability zone to use the default subnet it}
+    aws_ca_bundle: ${6:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${7:# A dictionary to modify the botocore configuration}
+    count: ${8:# Number of instances to launch}
+    cpu_credit_specification: ${9:# For T series instances, choose whether to allow increased charges to buy CPU credits if the default pool is depleted}
+    cpu_options: ${10:# Reduce the number of vCPU exposed to the instance}
+    debug_botocore_endpoint_logs: ${11:# Use a C(botocore}
+    detailed_monitoring: ${12:# Whether to allow detailed CloudWatch metrics to be collected, enabling more detailed alerting}
+    ebs_optimized: ${13:# Whether instance is should use optimized EBS volumes, see U(https://docs}
+    endpoint_url: ${14:# URL to connect to instead of the default AWS endpoints}
+    exact_count: ${15:# An integer value which indicates how many instances that match the I(filters) parameter should be running}
+    filters: ${16:# A dict of filters to apply when deciding whether existing instances match and should be altered}
+    hibernation_options: ${17:# Indicates whether an instance is enabled for hibernation}
+    iam_instance_profile: ${18:# The ARN or name of an EC2-enabled IAM instance profile to be used}
+    image: ${19:# An image to use for the instance}
+    image_id: ${20:# I(ami) ID to use for the instance}
+    instance_ids: ${21:# If you specify one or more instance IDs, only instances that have the specified IDs are returned}
+    instance_initiated_shutdown_behavior: ${22:# Whether to stop or terminate an instance upon shutdown}
+    instance_type: ${23:# Instance type to use for the instance, see U(https://docs}
+    key_name: ${24:# Name of the SSH access key to assign to the instance - must exist in the region the instance is created}
+    launch_template: ${25:# The EC2 launch template to base instance configuration on}
+    license_specifications: ${26:# The license specifications to be used for the instance}
+    metadata_options: ${27:# Modify the metadata options for the instance}
+    name: ${28:# The Name tag for the instance}
+    network: ${29:# Either a dictionary containing the key C(interfaces) corresponding to a list of network interface IDs or containing specifications for a single network interface}
+    placement: ${30:# The location where the instance launched, if applicable}
+    placement_group: ${31:# The placement group that needs to be assigned to the instance}
+    profile: ${32:# A named AWS profile to use for authentication}
+    purge_tags: ${33:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${34:# The AWS region to use}
+    secret_key: ${35:# AWS secret access key}
+    security_group: ${36:# A security group ID or name}
+    security_groups: ${37:# A list of security group IDs or names (strings)}
+    session_token: ${38:# AWS STS session token for use with temporary credentials}
+    state: ${39:# Goal state for the instances}
+    tags: ${40:# A dictionary representing the tags to be applied to the resource}
+    tenancy: ${41:# What type of tenancy to allow an instance to use}
+    termination_protection: ${42:# Whether to enable termination protection}
+    user_data: ${43:# Opaque blob of data which is made available to the EC2 instance}
+    validate_certs: ${44:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    volumes: ${45:# A list of block device mappings, by default this will always use the AMI root device so the volumes option is primarily for adding more storage}
+    vpc_subnet_id: ${46:# The subnet ID in which to launch the instance (VPC)}
+    wait: ${47:# Whether or not to wait for the desired I(state) (use (wait_timeout) to customize this)}
+    wait_timeout: ${48:# How long to wait (in seconds) for the instance to finish booting/terminating}
   tags:
     - amazon
     - aws

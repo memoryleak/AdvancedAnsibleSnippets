@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Module for management of linux block device stacks}
+  fedora.linux_system_roles.blivet:
+    disklabel_type: ${2:# disklabel type string (eg: 'gpt') to use, overriding the built-in logic in blivet}
+    diskvolume_mkfs_option_map: ${3:# dict which maps filesystem names to additional mkfs options that should be used when creating a disk volume (that is, a whole disk filesystem)}
+    packages_only: ${4:# packages_only}
+    pool_defaults: ${5:# pool_defaults}
+    pools: ${6:# pools}
+    safe_mode: ${7:# boolean indicating that we should fail rather than implicitly/automatically removing devices or formatting}
+    use_partitions: ${8:# boolean indicating whether to create partitions on disks for pool backing devices}
+    volume_defaults: ${9:# volume_defaults}
+    volumes: ${10:# volumes}
+  tags:
+    - fedora
+    - linux_system_roles
+    - blivet]]></content>
+  <tabTrigger>fedora.linux_system_roles.blivet</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Module for management of linux block device stacks</description>
+</snippet>

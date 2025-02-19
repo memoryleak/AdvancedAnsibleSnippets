@@ -4,25 +4,27 @@
     access_key: ${2:# AWS access key ID}
     aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
     aws_config: ${4:# A dictionary to modify the botocore configuration}
-    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
-    endpoint_url: ${6:# URL to connect to instead of the default AWS endpoints}
-    managed_policies: ${7:# A list of managed policy ARNs or friendly names to attach to the user}
-    name: ${8:# The name of the user to create}
-    password: ${9:# The password to apply to the user}
-    password_reset_required: ${10:# Defines if the user is required to set a new password after login}
-    profile: ${11:# A named AWS profile to use for authentication}
-    purge_policies: ${12:# When I(purge_policies=true) any managed policies not listed in I(managed_policies) will be detached}
-    purge_tags: ${13:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
-    region: ${14:# The AWS region to use}
-    remove_password: ${15:# Option to delete user login passwords}
-    secret_key: ${16:# AWS secret access key}
-    session_token: ${17:# AWS STS session token for use with temporary credentials}
-    state: ${18:# Create or remove the IAM user}
-    tags: ${19:# A dictionary representing the tags to be applied to the resource}
-    update_password: ${20:# When to update user passwords}
-    validate_certs: ${21:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    wait: ${22:# When I(wait=True) the module will wait for up to I(wait_timeout) seconds for IAM user creation before returning}
-    wait_timeout: ${23:# How long (in seconds) to wait for creation / updates to complete}
+    boundary: ${5:# The ARN of an IAM managed policy to apply as a boundary policy for this user}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    managed_policies: ${8:# A list of managed policy ARNs or friendly names to attach to the user}
+    name: ${9:# The name of the user}
+    password: ${10:# The password to apply to the user}
+    password_reset_required: ${11:# Defines if the user is required to set a new password when they log in}
+    path: ${12:# The path for the user}
+    profile: ${13:# A named AWS profile to use for authentication}
+    purge_policies: ${14:# When I(purge_policies=true) any managed policies not listed in I(managed_policies) will be detached}
+    purge_tags: ${15:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
+    region: ${16:# The AWS region to use}
+    remove_password: ${17:# Option to delete user login passwords}
+    secret_key: ${18:# AWS secret access key}
+    session_token: ${19:# AWS STS session token for use with temporary credentials}
+    state: ${20:# Create or remove the IAM user}
+    tags: ${21:# A dictionary representing the tags to be applied to the resource}
+    update_password: ${22:# When to update user passwords}
+    validate_certs: ${23:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${24:# When I(wait=True) the module will wait for up to I(wait_timeout) seconds for IAM user creation before returning}
+    wait_timeout: ${25:# How long (in seconds) to wait for creation / updates to complete}
   tags:
     - amazon
     - aws

@@ -2,12 +2,25 @@
   <content><![CDATA[- name: ${1:Manage FlashBlade SSL Certificates}
   purestorage.flashblade.purefb_certs:
     api_token: ${2:# FlashBlade API token for admin privileged user}
-    contents: ${3:# SSL certificate text}
-    fb_url: ${4:# FlashBlade management IP address or Hostname}
-    name: ${5:# Name of the certificate}
-    passphrase: ${6:# Passphrase for the private_key}
-    private_key: ${7:# SSL certificate private key test}
-    state: ${8:# Create or delete certificate}
+    certificate: ${3:# Required for I(import)}
+    common_name: ${4:# The fully qualified domain name (FQDN) of the current system}
+    country: ${5:# The two-letter ISO code for the country where your organization is located}
+    days: ${6:# The number of valid days for the self-signed certificate being generated}
+    disable_warnings: ${7:# Disable insecure certificate warnings}
+    email: ${8:# The email address used to contact your organization}
+    export_file: ${9:# Name of file to contain Certificate Signing Request when `status sign`}
+    fb_url: ${10:# FlashBlade management IP address or Hostname}
+    generate: ${11:# Generate a new private key}
+    intermediate_cert: ${12:# Intermeadiate certificate provided by the CA}
+    key: ${13:# If the Certificate Signed Request (CSR) was not constructed on the system or the private key has changed since construction the CSR, provide a new private key here}
+    key_size: ${14:# The key size in bits if you generate a new private key}
+    locality: ${15:# The full name of the city where your organization is located}
+    name: ${16:# Name of the SSL Certificate}
+    org_unit: ${17:# The department within your organization that is managing the certificate}
+    organization: ${18:# The full and exact legal name of your organization}
+    passphrase: ${19:# Passphrase if the private key is encrypted}
+    province: ${20:# The full name of the state or province where your organization is located}
+    state: ${21:# Action for the module to perform}
   tags:
     - purestorage
     - flashblade

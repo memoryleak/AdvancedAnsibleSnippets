@@ -2,11 +2,12 @@
   <content><![CDATA[- name: ${1:Configure Pure Storage FlashBlade DNS settings}
   purestorage.flashblade.purefb_dns:
     api_token: ${2:# FlashBlade API token for admin privileged user}
-    domain: ${3:# Domain suffix to be appended when perofrming DNS lookups}
-    fb_url: ${4:# FlashBlade management IP address or Hostname}
-    nameservers: ${5:# List of up to 3 unique DNS server IP addresses}
-    search: ${6:# Ordered list of domain names to search}
-    state: ${7:# Create or delete DNS servers configuration}
+    disable_warnings: ${3:# Disable insecure certificate warnings}
+    domain: ${4:# Domain suffix to be appended when perofrming DNS lookups}
+    fb_url: ${5:# FlashBlade management IP address or Hostname}
+    nameservers: ${6:# List of up to 3 unique DNS server IP addresses}
+    search: ${7:# Ordered list of domain names to search}
+    state: ${8:# Create or delete DNS servers configuration}
   tags:
     - purestorage
     - flashblade

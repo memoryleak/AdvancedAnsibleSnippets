@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Tagging of ACI objects}
+  <content><![CDATA[- name: ${1:Tagging of ACI objects (tag:Annotation, tag:Inst, and tag:Tag)}
   cisco.aci.aci_tag:
     certificate_name: ${2:# The X}
     dn: ${3:# Unique Distinguished Name (DN) from ACI object model}
@@ -10,19 +10,21 @@
     port: ${8:# Port number to be used for REST connection}
     private_key: ${9:# Either a PEM-formatted private key file or the private key content used for signature-based authentication}
     state: ${10:# Use C(present) or C(absent) for adding or removing}
-    tag_key: ${11:# Unique identifier of tag object}
-    tag_type: ${12:# Type of tag object}
-    tag_value: ${13:# Value of the property}
-    timeout: ${14:# The socket level timeout in seconds}
-    use_proxy: ${15:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${16:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${17:# The username to use for authentication}
-    validate_certs: ${18:# If C(false), SSL certificates will not be validated}
+    suppress_previous: ${11:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${12:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    tag_key: ${13:# Unique identifier of tag object}
+    tag_type: ${14:# Type of tag object}
+    tag_value: ${15:# Value of the property}
+    timeout: ${16:# The socket level timeout in seconds}
+    use_proxy: ${17:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${18:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${19:# The username to use for authentication}
+    validate_certs: ${20:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci
     - aci_tag]]></content>
   <tabTrigger>cisco.aci.aci_tag</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Tagging of ACI objects</description>
+  <description>Tagging of ACI objects (tag:Annotation, tag:Inst, and tag:Tag)</description>
 </snippet>

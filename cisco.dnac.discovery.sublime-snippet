@@ -1,12 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Resource module for Discovery}
   cisco.dnac.discovery:
-    attributeInfo: ${2:# Discovery's attributeInfo}
-    cdpLevel: ${3:# Discovery's cdpLevel}
-    deviceIds: ${4:# Discovery's deviceIds}
-    discoveryCondition: ${5:# Discovery's discoveryCondition}
-    discoveryStatus: ${6:# Discovery's discoveryStatus}
-    discoveryType: ${7:# Discovery's discoveryType}
+    attributeInfo: ${2:# Deprecated}
+    cdpLevel: ${3:# CDP level to which neighbor devices to be discovered}
+    deviceIds: ${4:# Ids of the devices discovered in a discovery}
+    discoveryCondition: ${5:# To indicate the discovery status}
+    discoveryStatus: ${6:# Status of the discovery}
+    discoveryType: ${7:# Type of the discovery}
     dnac_debug: ${8:# Flag for Cisco DNA Center SDK to enable debugging}
     dnac_host: ${9:# The Cisco DNA Center hostname}
     dnac_password: ${10:# The Cisco DNA Center password to authenticate}
@@ -14,44 +14,39 @@
     dnac_username: ${12:# The Cisco DNA Center username to authenticate}
     dnac_verify: ${13:# Flag to enable or disable SSL certificate verification}
     dnac_version: ${14:# Informs the SDK which version of Cisco DNA Center to use}
-    enablePasswordList: ${15:# Discovery's enablePasswordList}
-    globalCredentialIdList: ${16:# Discovery's globalCredentialIdList}
+    enablePasswordList: ${15:# Enable Password of the devices to be discovered}
+    globalCredentialIdList: ${16:# List of global credential ids to be used}
     httpReadCredential: ${17:# Discovery's httpReadCredential}
     httpWriteCredential: ${18:# Discovery's httpWriteCredential}
-    id: ${19:# Discovery's id}
-    ipAddressList: ${20:# Discovery's ipAddressList}
-    ipFilterList: ${21:# Discovery's ipFilterList}
-    isAutoCdp: ${22:# IsAutoCdp flag}
-    lldpLevel: ${23:# Discovery's lldpLevel}
-    name: ${24:# Discovery's name}
-    netconfPort: ${25:# Discovery's netconfPort}
-    numDevices: ${26:# Discovery's numDevices}
-    parentDiscoveryId: ${27:# Discovery's parentDiscoveryId}
-    passwordList: ${28:# Discovery's passwordList}
-    preferredMgmtIPMethod: ${29:# Discovery's preferredMgmtIPMethod}
-    protocolOrder: ${30:# Discovery's protocolOrder}
+    id: ${19:# Unique Discovery Id}
+    ipAddressList: ${20:# List of IP address of the devices to be discovered}
+    ipFilterList: ${21:# IP addresses of the devices to be filtered}
+    isAutoCdp: ${22:# Flag to mention if CDP discovery or not}
+    lldpLevel: ${23:# LLDP level to which neighbor devices to be discovered}
+    name: ${24:# Name for the discovery}
+    netconfPort: ${25:# Netconf port on the device}
+    numDevices: ${26:# Number of devices discovered in the discovery}
+    parentDiscoveryId: ${27:# Parent Discovery Id from which the discovery was initiated}
+    passwordList: ${28:# Password of the devices to be discovered}
+    preferredMgmtIPMethod: ${29:# Preferred management IP method}
+    protocolOrder: ${30:# Order of protocol (ssh/telnet) in which device connection will be tried}
     retry: ${31:# Number of times to try establishing connection to device}
-    retryCount: ${32:# Discovery's retryCount}
-    snmpAuthPassphrase: ${33:# Discovery's snmpAuthPassphrase}
-    snmpAuthProtocol: ${34:# Discovery's snmpAuthProtocol}
-    snmpMode: ${35:# Discovery's snmpMode}
-    snmpPrivPassphrase: ${36:# Discovery's snmpPrivPassphrase}
-    snmpPrivProtocol: ${37:# Discovery's snmpPrivProtocol}
-    snmpROCommunity: ${38:# Snmp RO community of the devices to be discovered}
-    snmpROCommunityDesc: ${39:# Description for Snmp RO community}
-    snmpRWCommunity: ${40:# Snmp RW community of the devices to be discovered}
-    snmpRWCommunityDesc: ${41:# Description for Snmp RW community}
-    snmpRoCommunity: ${42:# Discovery's snmpRoCommunity}
-    snmpRoCommunityDesc: ${43:# Discovery's snmpRoCommunityDesc}
-    snmpRwCommunity: ${44:# Discovery's snmpRwCommunity}
-    snmpRwCommunityDesc: ${45:# Discovery's snmpRwCommunityDesc}
-    snmpUserName: ${46:# Discovery's snmpUserName}
-    snmpVersion: ${47:# Version of SNMP}
-    timeOut: ${48:# Discovery's timeOut}
-    timeout: ${49:# Time to wait for device response in seconds}
-    updateMgmtIp: ${50:# UpdateMgmtIp flag}
-    userNameList: ${51:# Discovery's userNameList}
-    validate_response_schema: ${52:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
+    retryCount: ${32:# Number of times to try establishing connection to device}
+    snmpAuthPassphrase: ${33:# Auth passphrase for SNMP}
+    snmpAuthProtocol: ${34:# SNMP auth protocol}
+    snmpMode: ${35:# Mode of SNMP}
+    snmpPrivPassphrase: ${36:# Passphrase for SNMP privacy}
+    snmpPrivProtocol: ${37:# SNMP privacy protocol}
+    snmpRoCommunity: ${38:# SNMP RO community of the devices to be discovered}
+    snmpRoCommunityDesc: ${39:# Description for SNMP RO community}
+    snmpRwCommunity: ${40:# SNMP RW community of the devices to be discovered}
+    snmpRwCommunityDesc: ${41:# Description for SNMP RW community}
+    snmpUserName: ${42:# SNMP username of the device}
+    snmpVersion: ${43:# Version of SNMP}
+    timeOut: ${44:# Time to wait for device response}
+    updateMgmtIp: ${45:# Updates Management IP if multiple IPs are available for a device}
+    userNameList: ${46:# Username of the devices to be discovered}
+    validate_response_schema: ${47:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
   tags:
     - cisco
     - dnac

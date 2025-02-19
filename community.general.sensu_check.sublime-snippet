@@ -1,8 +1,8 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Sensu checks}
   community.general.sensu_check:
-    aggregate: ${2:# Classifies the check as an aggregate check,}
-    backup: ${3:# Create a backup file (if yes), including the timestamp information so}
+    aggregate: ${2:# Classifies the check as an aggregate check, making it available via the aggregate API}
+    backup: ${3:# Create a backup file (if yes), including the timestamp information so you can get the original file back if you somehow clobbered it incorrectly}
     command: ${4:# Path to the sensu check to run (not required when O(state=absent))}
     custom: ${5:# A hash/dictionary of custom parameters for mixing to the configuration}
     dependencies: ${6:# Other checks this check depends on, if dependencies fail handling of this check will be disabled}

@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set ipv6 information}
+  kaytus.ksmanage.edit_ipv6:
+    host: ${2:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
+    interface_name: ${3:# Set interface name}
+    ipv6_address: ${4:# If DHCP is disabled, specify a static IPv6 address to be configured for the selected interface}
+    ipv6_dhcp_enable: ${5:# Enable 'Enable DHCP' to dynamically configure IPv6 address using Dynamic Host Configuration Protocol (DHCP)}
+    ipv6_gateway: ${6:# If DHCP is disabled, specify a static Default Gateway to be configured for the selected interface}
+    ipv6_index: ${7:# Ipv6 index(0-15)}
+    ipv6_prefix: ${8:# The subnet prefix length for the IPv6 settings(0-128)}
+    ipv6_status: ${9:# Enable or disable IPV6}
+    password: ${10:# Specifies the password to use to authenticate the connection to the remote device}
+    provider: ${11:# A dict object containing connection details}
+    username: ${12:# Configures the username to use to authenticate the connection to the remote device}
+  tags:
+    - kaytus
+    - ksmanage
+    - edit_ipv6]]></content>
+  <tabTrigger>kaytus.ksmanage.edit_ipv6</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set ipv6 information</description>
+</snippet>

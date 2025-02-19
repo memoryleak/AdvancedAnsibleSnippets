@@ -2,10 +2,11 @@
   <content><![CDATA[- name: ${1:Retrieves a packet capture or blob data, according to the attributes of a log record}
   check_point.mgmt.cp_mgmt_get_attachment:
     attachment_id: ${2:# Attachment identifier from a log record}
-    id: ${3:# Log id from a log record}
-    version: ${4:# Version of checkpoint}
-    wait_for_task: ${5:# Wait for the task to end}
-    wait_for_task_timeout: ${6:# How many minutes to wait until throwing a timeout error}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    id: ${4:# Log id from a log record}
+    version: ${5:# Version of checkpoint}
+    wait_for_task: ${6:# Wait for the task to end}
+    wait_for_task_timeout: ${7:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

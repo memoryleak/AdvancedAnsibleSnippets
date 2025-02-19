@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the vCLS (vSphere Cluster Services) VM disk placement for this cluster}
+  vmware.vmware.cluster_vcls:
+    allowed_datastores: ${2:# Exclusive list of the allowed datastores}
+    cluster: ${3:# The name of the cluster to be managed}
+    datacenter: ${4:# The name of the datacenter where the cluster and datastores can be found}
+    datastores_to_add: ${5:# List of datastores to add to the vCLS config}
+    datastores_to_remove: ${6:# List of datastores to remove from the vCLS config}
+    hostname: ${7:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    password: ${8:# The password of the vSphere vCenter or ESXi server}
+    port: ${9:# The port number of the vSphere vCenter or ESXi server}
+    proxy_host: ${10:# Address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${11:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    username: ${12:# The username of the vSphere vCenter or ESXi server}
+    validate_certs: ${13:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware
+    - cluster_vcls]]></content>
+  <tabTrigger>vmware.vmware.cluster_vcls</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the vCLS (vSphere Cluster Services) VM disk placement for this cluster</description>
+</snippet>

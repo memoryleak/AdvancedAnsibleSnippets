@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Windows event logs}
+  ansible.windows.win_eventlog:
+    category_file: ${2:# For one or more sources specified, the path to a custom category resource file}
+    maximum_size: ${3:# The maximum size of the event log}
+    message_file: ${4:# For one or more sources specified, the path to a custom event message resource file}
+    name: ${5:# Name of the event log to manage}
+    overflow_action: ${6:# The action for the log to take once it reaches its maximum size}
+    parameter_file: ${7:# For one or more sources specified, the path to a custom parameter resource file}
+    retention_days: ${8:# The minimum number of days event entries must remain in the log}
+    sources: ${9:# A list of one or more sources to ensure are present/absent in the log}
+    state: ${10:# Desired state of the log and/or sources}
+  tags:
+    - win_eventlog]]></content>
+  <tabTrigger>ansible.windows.win_eventlog</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Windows event logs</description>
+</snippet>

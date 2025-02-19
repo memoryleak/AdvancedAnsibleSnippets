@@ -3,7 +3,7 @@
   community.docker.docker_swarm_service:
     api_version: ${2:# The version of the Docker API running on the Docker Host}
     args: ${3:# List arguments to be passed to the container}
-    ca_cert: ${4:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    ca_path: ${4:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
     cap_add: ${5:# List of capabilities to add to the container}
     cap_drop: ${6:# List of capabilities to drop from the container}
     client_cert: ${7:# Path to the client's TLS certificate file}
@@ -46,15 +46,16 @@
     state: ${44:# V(absent) - A service matching the specified name will be removed and have its tasks stopped}
     stop_grace_period: ${45:# Time to wait before force killing a container}
     stop_signal: ${46:# Override default signal used to stop the container}
-    timeout: ${47:# The maximum amount of time in seconds to wait on a response from the API}
-    tls: ${48:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    tls_hostname: ${49:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    tty: ${50:# Allocate a pseudo-TTY}
-    update_config: ${51:# Configures how the service should be updated}
-    use_ssh_client: ${52:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
-    user: ${53:# Sets the username or UID used for the specified command}
-    validate_certs: ${54:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
-    working_dir: ${55:# Path to the working directory}
+    sysctls: ${47:# Dictionary of key, value pairs}
+    timeout: ${48:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${49:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${50:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    tty: ${51:# Allocate a pseudo-TTY}
+    update_config: ${52:# Configures how the service should be updated}
+    use_ssh_client: ${53:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    user: ${54:# Sets the username or UID used for the specified command}
+    validate_certs: ${55:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    working_dir: ${56:# Path to the working directory}
   tags:
     - community
     - docker

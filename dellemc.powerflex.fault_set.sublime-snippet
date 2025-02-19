@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Fault Sets on Dell PowerFlex}
+  dellemc.powerflex.fault_set:
+    fault_set_id: ${2:# ID of the Fault Set}
+    fault_set_name: ${3:# Name of the Fault Set}
+    fault_set_new_name: ${4:# New name of the fault set}
+    hostname: ${5:# IP or FQDN of the PowerFlex host}
+    password: ${6:# The password of the PowerFlex host}
+    port: ${7:# Port number through which communication happens with PowerFlex host}
+    protection_domain_id: ${8:# ID of the protection domain}
+    protection_domain_name: ${9:# Name of protection domain}
+    state: ${10:# State of the Fault Set}
+    timeout: ${11:# Time after which connection will get terminated}
+    username: ${12:# The username of the PowerFlex host}
+    validate_certs: ${13:# Boolean variable to specify whether or not to validate SSL certificate}
+  tags:
+    - dellemc
+    - powerflex
+    - fault_set]]></content>
+  <tabTrigger>dellemc.powerflex.fault_set</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Fault Sets on Dell PowerFlex</description>
+</snippet>

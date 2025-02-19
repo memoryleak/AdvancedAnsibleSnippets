@@ -1,13 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Package manager for Homebrew}
   community.general.homebrew:
-    install_options: ${2:# options flags to install a package}
-    name: ${3:# A list of names of packages to install/remove}
-    path: ${4:# A V(:) separated list of paths to search for C(brew) executable}
-    state: ${5:# state of the package}
-    update_homebrew: ${6:# update homebrew itself first}
-    upgrade_all: ${7:# upgrade all homebrew packages}
-    upgrade_options: ${8:# Option flags to upgrade}
+    force_formula: ${2:# Force the package(s) to be treated as a formula (equivalent to C(brew --formula))}
+    install_options: ${3:# Options flags to install a package}
+    name: ${4:# A list of names of packages to install/remove}
+    path: ${5:# A V(:) separated list of paths to search for C(brew) executable}
+    state: ${6:# State of the package}
+    update_homebrew: ${7:# Update homebrew itself first}
+    upgrade_all: ${8:# Upgrade all homebrew packages}
+    upgrade_options: ${9:# Option flags to upgrade}
   tags:
     - community
     - general

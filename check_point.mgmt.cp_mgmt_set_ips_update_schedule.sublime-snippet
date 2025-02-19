@@ -1,12 +1,13 @@
 <snippet>
   <content><![CDATA[- name: ${1:Edit IPS Update Schedule}
   check_point.mgmt.cp_mgmt_set_ips_update_schedule:
-    enabled: ${2:# Enable/Disable IPS Update Schedule}
-    recurrence: ${3:# Days recurrence}
-    time: ${4:# Time in format HH,mm}
-    version: ${5:# Version of checkpoint}
-    wait_for_task: ${6:# Wait for the task to end}
-    wait_for_task_timeout: ${7:# How many minutes to wait until throwing a timeout error}
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    enabled: ${3:# Enable/Disable IPS Update Schedule}
+    recurrence: ${4:# Days recurrence}
+    time: ${5:# Time in format HH,mm}
+    version: ${6:# Version of checkpoint}
+    wait_for_task: ${7:# Wait for the task to end}
+    wait_for_task_timeout: ${8:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP module to modify SNMP configuration}
+  netapp.ontap.na_ontap_snmp_config:
+    auth_traps_enabled: ${2:# Specifies whether to enable or disable SNMP authentication traps}
+    cert_filepath: ${3:# path to SSL client cert file (}
+    enabled: ${4:# Specifies whether to enable or disable SNMP}
+    feature_flags: ${5:# Enable or disable a new feature}
+    force_ontap_version: ${6:# Override the cluster ONTAP version when using REST}
+    hostname: ${7:# The hostname or IP address of the ONTAP instance}
+    http_port: ${8:# Override the default port (80 or 443) with this port}
+    https: ${9:# Enable and disable https}
+    key_filepath: ${10:# path to SSL client key file}
+    password: ${11:# Password for the specified user}
+    state: ${12:# Modify SNMP configuration, only present is supported}
+    traps_enabled: ${13:# Specifies whether to enable or disable SNMP traps}
+    use_rest: ${14:# This module only supports REST}
+    username: ${15:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${16:# If set to C(no), the SSL certificates will not be validated}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_snmp_config]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_snmp_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP module to modify SNMP configuration</description>
+</snippet>

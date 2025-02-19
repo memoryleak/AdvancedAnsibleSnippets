@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages the Windows user profiles}
+  ansible.windows.win_user_profile:
+    name: ${2:# Specifies the base name for the profile path}
+    remove_multiple: ${3:# When I(state) is C(absent) and the value for I(name) matches multiple profiles the module will fail}
+    state: ${4:# Will ensure the profile exists when set to C(present)}
+    username: ${5:# The account name of security identifier (SID) for the profile}
+  tags:
+    - win_user_profile]]></content>
+  <tabTrigger>ansible.windows.win_user_profile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages the Windows user profiles</description>
+</snippet>

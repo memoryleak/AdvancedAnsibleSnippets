@@ -2,11 +2,12 @@
   <content><![CDATA[- name: ${1:Configure FlashBlade phonehome HTTPs proxy settings}
   purestorage.flashblade.purefb_proxy:
     api_token: ${2:# FlashBlade API token for admin privileged user}
-    fb_url: ${3:# FlashBlade management IP address or Hostname}
-    host: ${4:# The proxy host name}
-    port: ${5:# The proxy TCP/IP port number}
-    secure: ${6:# Use http or https as the proxy protocol}
-    state: ${7:# Set or delete proxy configuration}
+    disable_warnings: ${3:# Disable insecure certificate warnings}
+    fb_url: ${4:# FlashBlade management IP address or Hostname}
+    host: ${5:# The proxy host name}
+    port: ${6:# The proxy TCP/IP port number}
+    secure: ${7:# Use http or https as the proxy protocol}
+    state: ${8:# Set or delete proxy configuration}
   tags:
     - purestorage
     - flashblade

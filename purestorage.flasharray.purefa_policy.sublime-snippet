@@ -1,32 +1,43 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage FlashArray File System Policies}
   purestorage.flasharray.purefa_policy:
-    anongid: ${2:# The ID to which any users whose GID is affected by I(access) of I(root-squash) or I(all-squash) will be mapped to}
-    anonuid: ${3:# The ID to which any users whose UID is affected by I(access) of I(root-squash) or I(all-squash) will be mapped to}
-    api_token: ${4:# FlashArray API token for admin privileged user}
-    client: ${5:# Specifies which SMB or NFS clients are given access}
-    directory: ${6:# Directories to have the quota rule applied to}
-    enabled: ${7:# Define if policy is enabled or not}
-    fa_url: ${8:# FlashArray management IPv4 address or Hostname}
-    ignore_usage: ${9:# Flag used to override checks for quota management operations}
-    name: ${10:# Name of the policy}
-    nfs_access: ${11:# Specifies access control for the export}
-    nfs_permission: ${12:# Specifies which read-write client access permissions are allowed for the export}
-    nfs_version: ${13:# NFS protocol version allowed for the export}
-    policy: ${14:# The type of policy to use}
-    quota_enforced: ${15:# Defines if the directory quota is enforced}
-    quota_limit: ${16:# Logical space limit of the share in M, G, T or P units}
-    quota_notifications: ${17:# Targets to notify when usage approaches the quota limit}
-    rename: ${18:# New name of policy}
-    smb_anon_allowed: ${19:# Specifies whether access to information is allowed for anonymous users}
-    smb_encrypt: ${20:# Specifies whether the remote client is required to use SMB encryption}
-    snap_at: ${21:# Specifies the number of hours since midnight at which to take a snapshot or the hour including AM/PM}
-    snap_client_name: ${22:# The customizable portion of the client visible snapshot name}
-    snap_every: ${23:# Specifies the interval between snapshots, in minutes}
-    snap_keep_for: ${24:# Specifies the period that snapshots are retained before they are eradicated, in minutes}
-    snap_suffix: ${25:# The snapshot suffix name}
-    state: ${26:# Define whether the policy should exist or not}
-    user_mapping: ${27:# Defines if user mapping is enabled}
+    access_based_enumeration: ${2:# Defines if access based enumeration for SMB is enabled}
+    anongid: ${3:# The ID to which any users whose GID is affected by I(access) of I(root-squash) or I(all-squash) will be mapped to}
+    anonuid: ${4:# The ID to which any users whose UID is affected by I(access) of I(root-squash) or I(all-squash) will be mapped to}
+    api_token: ${5:# FlashArray API token for admin privileged user}
+    client: ${6:# Specifies which SMB or NFS clients are given access}
+    directory: ${7:# Directories to have the quota rule applied to}
+    disable_warnings: ${8:# Disable insecure certificate warnings in debug logs}
+    enabled: ${9:# Define if policy is enabled or not}
+    enforce_dictionary_check: ${10:# If I(true), test password against dictionary of known leaked passwords}
+    enforce_username_check: ${11:# If I(true), the username cannot be a substring of the password}
+    fa_url: ${12:# FlashArray management IPv4 address or Hostname}
+    ignore_usage: ${13:# Flag used to override checks for quota management operations}
+    lockout_duration: ${14:# Account lockout duration, in seconds, after I(max_login_attempts) exceeded}
+    max_login_attempts: ${15:# Maximum number of failed logins before account is locked}
+    min_character_groups: ${16:# The minimum number of character groups required to be present in a password}
+    min_characters_per_group: ${17:# The minimum number of characters per group to count the group as present}
+    min_password_length: ${18:# Minimum user password length}
+    name: ${19:# Name of the policy}
+    nfs_access: ${20:# Specifies access control for the export}
+    nfs_permission: ${21:# Specifies which read-write client access permissions are allowed for the export}
+    nfs_version: ${22:# NFS protocol version allowed for the export}
+    password_history: ${23:# The number of passwords tracked to prevent reuse of passwords}
+    policy: ${24:# The type of policy to use}
+    quota_enforced: ${25:# Defines if the directory quota is enforced}
+    quota_limit: ${26:# Logical space limit of the share in M, G, T or P units}
+    quota_notifications: ${27:# Targets to notify when usage approaches the quota limit}
+    rename: ${28:# New name of policy}
+    security: ${29:# The security flavors to use for accessing files on a mount point}
+    smb_anon_allowed: ${30:# Specifies whether access to information is allowed for anonymous users}
+    smb_encrypt: ${31:# Specifies whether the remote client is required to use SMB encryption}
+    snap_at: ${32:# Specifies the number of hours since midnight at which to take a snapshot or the hour including AM/PM}
+    snap_client_name: ${33:# The customizable portion of the client visible snapshot name}
+    snap_every: ${34:# Specifies the interval between snapshots, in minutes}
+    snap_keep_for: ${35:# Specifies the period that snapshots are retained before they are eradicated, in minutes}
+    snap_suffix: ${36:# The snapshot suffix name}
+    state: ${37:# Define whether the policy should exist or not}
+    user_mapping: ${38:# Defines if user mapping is enabled}
   tags:
     - purestorage
     - flasharray

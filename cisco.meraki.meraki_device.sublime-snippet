@@ -1,32 +1,32 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage devices in the Meraki cloud}
   cisco.meraki.meraki_device:
-    state: ${2:# Query an organization}
-    net_name: ${3:# Name of a network}
-    net_id: ${4:# ID of a network}
-    serial: ${5:# Serial number of a device to query}
-    hostname: ${6:# Hostname of network device to search for}
-    model: ${7:# Model of network device to search for}
-    tags: ${8:# Space delimited list of tags to assign to device}
-    lat: ${9:# Latitude of device's geographic location}
-    lng: ${10:# Longitude of device's geographic location}
-    address: ${11:# Postal address of device's location}
-    move_map_marker: ${12:# Whether or not to set the latitude and longitude of a device based on the new address}
-    lldp_cdp_timespan: ${13:# Timespan, in seconds, used to query LLDP and CDP information}
+    address: ${2:# Postal address of device's location}
+    auth_key: ${3:# Authentication key provided by the dashboard}
+    host: ${4:# Hostname for Meraki dashboard}
+    hostname: ${5:# Hostname of network device to search for}
+    internal_error_retry_time: ${6:# Number of seconds to retry if server returns an internal server error}
+    lat: ${7:# Latitude of device's geographic location}
+    lldp_cdp_timespan: ${8:# Timespan, in seconds, used to query LLDP and CDP information}
+    lng: ${9:# Longitude of device's geographic location}
+    model: ${10:# Model of network device to search for}
+    move_map_marker: ${11:# Whether or not to set the latitude and longitude of a device based on the new address}
+    net_id: ${12:# ID of a network}
+    net_name: ${13:# Name of a network}
     note: ${14:# Informational notes about a device}
-    query: ${15:# Specifies what information should be queried}
-    auth_key: ${16:# Authentication key provided by the dashboard}
-    host: ${17:# Hostname for Meraki dashboard}
-    use_proxy: ${18:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_https: ${19:# If C(no), it will use HTTP}
-    output_format: ${20:# Instructs module whether response keys should be snake case (ex}
-    output_level: ${21:# Set amount of debug output during module execution}
-    timeout: ${22:# Time to timeout for HTTP requests}
-    validate_certs: ${23:# Whether to validate HTTP certificates}
-    org_name: ${24:# Name of organization}
-    org_id: ${25:# ID of organization}
-    rate_limit_retry_time: ${26:# Number of seconds to retry if rate limiter is triggered}
-    internal_error_retry_time: ${27:# Number of seconds to retry if server returns an internal server error}
+    org_id: ${15:# ID of organization}
+    org_name: ${16:# Name of organization}
+    output_format: ${17:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${18:# Set amount of debug output during module execution}
+    query: ${19:# Specifies what information should be queried}
+    rate_limit_retry_time: ${20:# Number of seconds to retry if rate limiter is triggered}
+    serial: ${21:# Serial number of a device to query}
+    state: ${22:# Query an organization}
+    tags: ${23:# Space delimited list of tags to assign to device}
+    timeout: ${24:# Time to timeout for HTTP requests}
+    use_https: ${25:# If C(no), it will use HTTP}
+    use_proxy: ${26:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${27:# Whether to validate HTTP certificates}
   tags:
     - cisco
     - meraki

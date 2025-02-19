@@ -2,8 +2,10 @@
   <content><![CDATA[- name: ${1:Enable or Disable Pure Storage FlashBlade Remote Assist}
   purestorage.flashblade.purefb_ra:
     api_token: ${2:# FlashBlade API token for admin privileged user}
-    fb_url: ${3:# FlashBlade management IP address or Hostname}
-    state: ${4:# Define state of remote assist}
+    disable_warnings: ${3:# Disable insecure certificate warnings}
+    duration: ${4:# Specifies the duration of the remote-assist session in hours}
+    fb_url: ${5:# FlashBlade management IP address or Hostname}
+    state: ${6:# Define state of remote assist}
   tags:
     - purestorage
     - flashblade

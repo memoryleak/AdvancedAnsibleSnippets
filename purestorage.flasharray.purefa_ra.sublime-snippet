@@ -2,8 +2,10 @@
   <content><![CDATA[- name: ${1:Enable or Disable Pure Storage FlashArray Remote Assist}
   purestorage.flasharray.purefa_ra:
     api_token: ${2:# FlashArray API token for admin privileged user}
-    fa_url: ${3:# FlashArray management IPv4 address or Hostname}
-    state: ${4:# Define state of remote assist}
+    disable_warnings: ${3:# Disable insecure certificate warnings in debug logs}
+    duration: ${4:# Number of hours Remote Assist port statys open for}
+    fa_url: ${5:# FlashArray management IPv4 address or Hostname}
+    state: ${6:# Define state of remote assist}
   tags:
     - purestorage
     - flasharray

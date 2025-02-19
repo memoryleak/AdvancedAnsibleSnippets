@@ -17,35 +17,50 @@
     dns_opt: ${15:# Set custom DNS options in the /etc/resolv}
     dns_search: ${16:# Set custom DNS search domains in the /etc/resolv}
     executable: ${17:# Path to C(podman) executable if it is not in the C($PATH) on the machine running C(podman)}
-    generate_systemd: ${18:# Generate systemd unit file for container}
-    gidmap: ${19:# GID map for the user namespace}
-    hostname: ${20:# Set a hostname to the pod}
-    infra: ${21:# Create an infra container and associate it with the pod}
-    infra_command: ${22:# The command that will be run to start the infra container}
-    infra_conmon_pidfile: ${23:# Write the pid of the infra container's conmon process to a file}
-    infra_image: ${24:# The image that will be created for the infra container}
-    infra_name: ${25:# The name that will be used for the pod's infra container}
-    ip: ${26:# Set a static IP for the pod's shared network}
-    label: ${27:# Add metadata to a pod, pass dictionary of label keys and values}
-    label_file: ${28:# Read in a line delimited file of labels}
-    mac_address: ${29:# Set a static MAC address for the pod's shared network}
-    memory: ${30:# Set memory limit}
-    memory_swap: ${31:# Set limit value equal to memory plus swap}
-    name: ${32:# Assign a name to the pod}
-    network: ${33:# Set network mode for the pod}
-    network_alias: ${34:# Add a network-scoped alias for the pod, setting the alias for all networks that the pod joins}
-    no_hosts: ${35:# Disable creation of /etc/hosts for the pod}
-    pid: ${36:# Set the PID mode for the pod}
-    pod_id_file: ${37:# Write the pod ID to the file}
-    publish: ${38:# Publish a port or range of ports from the pod to the host}
-    recreate: ${39:# Use with present and started states to force the re-creation of an existing pod}
-    share: ${40:# A comma delimited list of kernel namespaces to share}
-    state: ${41:# This variable is set for state}
-    subgidname: ${42:# Name for GID map from the /etc/subgid file}
-    subuidname: ${43:# Name for UID map from the /etc/subuid file}
-    uidmap: ${44:# Run the container in a new user namespace using the supplied mapping}
-    userns: ${45:# Set the user namespace mode for all the containers in a pod}
-    volume: ${46:# Create a bind mount}
+    exit_policy: ${18:# Set the exit policy of the pod when the last container exits}
+    generate_systemd: ${19:# Generate systemd unit file for container}
+    gidmap: ${20:# GID map for the user namespace}
+    gpus: ${21:# GPU devices to add to the container ('all' to pass all GPUs)}
+    hostname: ${22:# Set a hostname to the pod}
+    infra: ${23:# Create an infra container and associate it with the pod}
+    infra_command: ${24:# The command that will be run to start the infra container}
+    infra_conmon_pidfile: ${25:# Write the pid of the infra container's conmon process to a file}
+    infra_image: ${26:# The image that will be created for the infra container}
+    infra_name: ${27:# The name that will be used for the pod's infra container}
+    ip: ${28:# Set a static IP for the pod's shared network}
+    ip6: ${29:# Set a static IPv6 for the pod's shared network}
+    label: ${30:# Add metadata to a pod, pass dictionary of label keys and values}
+    label_file: ${31:# Read in a line delimited file of labels}
+    mac_address: ${32:# Set a static MAC address for the pod's shared network}
+    memory: ${33:# Set memory limit}
+    memory_swap: ${34:# Set limit value equal to memory plus swap}
+    name: ${35:# Assign a name to the pod}
+    network: ${36:# Set network mode for the pod}
+    network_alias: ${37:# Add a network-scoped alias for the pod, setting the alias for all networks that the pod joins}
+    no_hosts: ${38:# Disable creation of /etc/hosts for the pod}
+    pid: ${39:# Set the PID mode for the pod}
+    pod_id_file: ${40:# Write the pod ID to the file}
+    publish: ${41:# Publish a port or range of ports from the pod to the host}
+    quadlet_dir: ${42:# Path to the directory to write quadlet file in}
+    quadlet_file_mode: ${43:# The permissions of the quadlet file}
+    quadlet_filename: ${44:# Name of quadlet file to write}
+    quadlet_options: ${45:# Options for the quadlet file}
+    recreate: ${46:# Use with present and started states to force the re-creation of an existing pod}
+    restart_policy: ${47:# Restart policy to follow when containers exit}
+    security_opt: ${48:# Security options for the pod}
+    share: ${49:# A comma delimited list of kernel namespaces to share}
+    share_parent: ${50:# This boolean determines whether or not all containers entering the pod use the pod as their cgroup parent}
+    shm_size: ${51:# Set the size of the /dev/shm shared memory space}
+    shm_size_systemd: ${52:# Size of systemd-specific tmpfs mounts such as /run, /run/lock, /var/log/journal and /tmp}
+    state: ${53:# This variable is set for state}
+    subgidname: ${54:# Name for GID map from the /etc/subgid file}
+    subuidname: ${55:# Name for UID map from the /etc/subuid file}
+    sysctl: ${56:# Set kernel parameters for the pod}
+    uidmap: ${57:# Run the container in a new user namespace using the supplied mapping}
+    userns: ${58:# Set the user namespace mode for all the containers in a pod}
+    uts: ${59:# Set the UTS namespace mode for the pod}
+    volume: ${60:# Create a bind mount}
+    volumes_from: ${61:# Mount volumes from the specified container}
   tags:
     - containers
     - podman

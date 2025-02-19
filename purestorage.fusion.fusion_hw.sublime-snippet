@@ -1,13 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create hardware types in Pure Storage Fusion}
   purestorage.fusion.fusion_hw:
-    name: ${2:# The name of the hardware type}
-    state: ${3:# Define whether the hardware type should exist or not}
+    access_token: ${2:# Access token for Fusion Service}
+    array_type: ${3:# The array type for the hardware type}
     display_name: ${4:# The human name of the hardware type}
-    media_type: ${5:# Volume size limit in M, G, T or P units}
-    array_type: ${6:# The array type for the hardware type}
-    key_file: ${7:# Path to the private key file}
-    app_id: ${8:# Application ID from Pure1 Registration page}
+    issuer_id: ${5:# Application ID from Pure1 Registration page}
+    media_type: ${6:# Volume size limit in M, G, T or P units}
+    name: ${7:# The name of the hardware type}
+    private_key_file: ${8:# Path to the private key file}
+    private_key_password: ${9:# Password of the encrypted private key file}
+    state: ${10:# Define whether the hardware type should exist or not}
   tags:
     - purestorage
     - fusion

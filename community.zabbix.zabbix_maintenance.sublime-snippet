@@ -1,17 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create Zabbix maintenance windows}
   community.zabbix.zabbix_maintenance:
-    collect_data: ${2:# Type of maintenance}
-    desc: ${3:# Short description of maintenance window}
-    host_groups: ${4:# Host groups to manage maintenance window for}
-    host_names: ${5:# Hosts to manage maintenance window for}
-    http_login_password: ${6:# Basic Auth password}
-    http_login_user: ${7:# Basic Auth login}
-    minutes: ${8:# Length of maintenance window in minutes}
-    name: ${9:# Unique name of maintenance window}
-    state: ${10:# Create or remove a maintenance window}
-    tags: ${11:# List of tags to assign to the hosts in maintenance}
-    visible_name: ${12:# Type of zabbix host name to use for identifying hosts to include in the maintenance}
+    active_since: ${2:# Time when the maintenance becomes active}
+    active_till: ${3:# Time when the maintenance stops being active}
+    collect_data: ${4:# Type of maintenance}
+    desc: ${5:# Short description of maintenance window}
+    host_groups: ${6:# Host groups to manage maintenance window for}
+    host_names: ${7:# Hosts to manage maintenance window for}
+    http_login_password: ${8:# Basic Auth password}
+    http_login_user: ${9:# Basic Auth login}
+    minutes: ${10:# Length of maintenance window in minutes}
+    name: ${11:# Unique name of maintenance window}
+    state: ${12:# Create or remove a maintenance window}
+    tags: ${13:# List of tags to assign to the hosts in maintenance}
+    visible_name: ${14:# Type of zabbix host name to use for identifying hosts to include in the maintenance}
   tags:
     - community
     - zabbix

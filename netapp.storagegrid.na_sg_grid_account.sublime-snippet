@@ -3,19 +3,21 @@
   netapp.storagegrid.na_sg_grid_account:
     account_id: ${2:# Account Id of the tenant}
     allow_platform_services: ${3:# Allows tenant to use platform services features such as CloudMirror}
-    api_url: ${4:# The url to the StorageGRID Admin Node REST API}
-    auth_token: ${5:# The authorization token for the API request}
-    management: ${6:# Whether the tenant can login to the StorageGRID tenant portal}
-    name: ${7:# Name of the tenant}
-    password: ${8:# Root password for tenant account}
-    protocol: ${9:# Object Storage protocol used by the tenancy}
-    quota_size: ${10:# Quota to apply to the tenant specified in I(quota_size_unit)}
-    quota_size_unit: ${11:# The unit used to interpret the size parameter}
-    root_access_group: ${12:# Existing federated group to have initial Root Access permissions for the tenant}
-    state: ${13:# Whether the specified account should exist or not}
-    update_password: ${14:# Choose when to update the password}
-    use_own_identity_source: ${15:# Whether the tenant account should configure its own identity source}
-    validate_certs: ${16:# Should https certificates be validated?}
+    allow_select_object_content: ${4:# Allows tenant to use the S3 SelectObjectContent API to filter and retrieve object data}
+    api_url: ${5:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${6:# The authorization token for the API request}
+    description: ${7:# Additional identifying information for the tenant account}
+    management: ${8:# Whether the tenant can login to the StorageGRID tenant portal}
+    name: ${9:# Name of the tenant}
+    password: ${10:# Root password for tenant account}
+    protocol: ${11:# Object Storage protocol used by the tenancy}
+    quota_size: ${12:# Quota to apply to the tenant specified in I(quota_size_unit)}
+    quota_size_unit: ${13:# The unit used to interpret the size parameter}
+    root_access_group: ${14:# Existing federated group to have initial Root Access permissions for the tenant}
+    state: ${15:# Whether the specified account should exist or not}
+    update_password: ${16:# Choose when to update the password}
+    use_own_identity_source: ${17:# Whether the tenant account should configure its own identity source}
+    validate_certs: ${18:# Should https certificates be validated?}
   tags:
     - netapp
     - storagegrid

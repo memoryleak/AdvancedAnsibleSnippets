@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage logging on network devices}
   vyos.vyos.vyos_logging:
-    dest: ${2:# Destination of the logs}
-    name: ${3:# If value of C(dest) is I(file) it indicates file-name, for I(user) it indicates username and for I(host) indicates the host name to be notified}
+    aggregate: ${2:# List of logging definitions}
+    dest: ${3:# Destination of the logs}
     facility: ${4:# Set logging facility}
     level: ${5:# Set logging severity levels}
-    aggregate: ${6:# List of logging definitions}
+    name: ${6:# If value of C(dest) is I(file) it indicates file-name, for I(user) it indicates username and for I(host) indicates the host name to be notified}
     state: ${7:# State of the logging configuration}
   tags:
     - vyos

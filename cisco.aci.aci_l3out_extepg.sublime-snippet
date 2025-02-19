@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage External Network Instance Profile (ExtEpg) objects (l3extInstP:instP)}
+  <content><![CDATA[- name: ${1:Manage External Network Instance Profile (ExtEpg) objects (l3ext:InstP)}
   cisco.aci.aci_l3out_extepg:
     annotation: ${2:# User-defined string for annotating an object}
     certificate_name: ${3:# The X}
@@ -20,17 +20,19 @@
     qos_class: ${18:# The priority class identifier}
     route_control_profiles: ${19:# The route control profiles}
     state: ${20:# Use C(present) or C(absent) for adding or removing}
-    tenant: ${21:# Name of an existing tenant}
-    timeout: ${22:# The socket level timeout in seconds}
-    use_proxy: ${23:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_ssl: ${24:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
-    username: ${25:# The username to use for authentication}
-    validate_certs: ${26:# If C(false), SSL certificates will not be validated}
+    suppress_previous: ${21:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
+    suppress_verification: ${22:# If C(true), a verifying GET will not be sent after a POST update to APIC}
+    tenant: ${23:# Name of an existing tenant}
+    timeout: ${24:# The socket level timeout in seconds}
+    use_proxy: ${25:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${26:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${27:# The username to use for authentication}
+    validate_certs: ${28:# If C(false), SSL certificates will not be validated}
   tags:
     - cisco
     - aci
     - aci_l3out_extepg]]></content>
   <tabTrigger>cisco.aci.aci_l3out_extepg</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage External Network Instance Profile (ExtEpg) objects (l3extInstP:instP)</description>
+  <description>Manage External Network Instance Profile (ExtEpg) objects (l3ext:InstP)</description>
 </snippet>

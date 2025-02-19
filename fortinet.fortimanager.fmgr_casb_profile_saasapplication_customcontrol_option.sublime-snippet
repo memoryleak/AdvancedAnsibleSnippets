@@ -2,20 +2,22 @@
   <content><![CDATA[- name: ${1:CASB custom control option}
   fortinet.fortimanager.fmgr_casb_profile_saasapplication_customcontrol_option:
     access_token: ${2:# The token to access FortiManager without using username and password}
-    adom: ${3:# the parameter (adom) in requested url}
+    adom: ${3:# The parameter (adom) in requested url}
     bypass_validation: ${4:# Only set to True when module schema diffs with FortiManager API structure, module continues to execute without validating parameters}
-    casb_profile_saasapplication_customcontrol_option: ${5:# the top level parameters set}
-    custom-control: ${6:# the parameter (custom-control) in requested url}
-    enable_log: ${7:# Enable/Disable logging for task}
-    forticloud_access_token: ${8:# Authenticate Ansible client with forticloud API access token}
-    profile: ${9:# the parameter (profile) in requested url}
-    proposed_method: ${10:# The overridden method for the underlying Json RPC request}
-    rc_failed: ${11:# The rc codes list with which the conditions to fail will be overriden}
-    rc_succeeded: ${12:# The rc codes list with which the conditions to succeed will be overriden}
-    saas-application: ${13:# the parameter (saas-application) in requested url}
-    state: ${14:# The directive to create, update or delete an object}
-    workspace_locking_adom: ${15:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
-    workspace_locking_timeout: ${16:# The maximum time in seconds to wait for other user to release the workspace lock}
+    casb_profile_saasapplication_customcontrol_option: ${5:# The top level parameters set}
+    custom-control: ${6:# Deprecated, please use 'custom_control'}
+    custom_control: ${7:# The parameter (custom-control) in requested url}
+    enable_log: ${8:# Enable/Disable logging for task}
+    forticloud_access_token: ${9:# Authenticate Ansible client with forticloud API access token}
+    profile: ${10:# The parameter (profile) in requested url}
+    proposed_method: ${11:# The overridden method for the underlying Json RPC request}
+    rc_failed: ${12:# The rc codes list with which the conditions to fail will be overriden}
+    rc_succeeded: ${13:# The rc codes list with which the conditions to succeed will be overriden}
+    saas-application: ${14:# Deprecated, please use 'saas_application'}
+    saas_application: ${15:# The parameter (saas-application) in requested url}
+    state: ${16:# The directive to create, update or delete an object}
+    workspace_locking_adom: ${17:# The adom to lock for FortiManager running in workspace mode, the value can be global and others including root}
+    workspace_locking_timeout: ${18:# The maximum time in seconds to wait for other user to release the workspace lock}
   tags:
     - fortinet
     - fortimanager

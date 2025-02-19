@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage SSL/TLS certificates}
+  fedora.linux_system_roles.certificate_request:
+    __header: ${2:# Ansible ansible_managed string to put in header of file}
+    auto_renew: ${3:# Indicates if the certificate should be renewed automatically before it expires}
+    ca: ${4:# CA that will issue the certificate}
+    common_name: ${5:# Common Name requested for the certificate subject}
+    contact_email: ${6:# Contact email requested for the certificate subject}
+    country: ${7:# Country requested for the certificate subject}
+    directory: ${8:# Directory where certificate and key will be stored}
+    dns: ${9:# Domain (or list of domains) to be included in the certificate}
+    email: ${10:# Email (or list of emails) to be included in the certificate}
+    extended_key_usage: ${11:# Extended Key Usage attributes to be present in the certificate request}
+    group: ${12:# Group name (or group id) for the certificate and key files}
+    ip: ${13:# IP (or list of IPs) to be included in the certificate}
+    key_size: ${14:# Generate keys with a specific keysize in bits, by default 2048}
+    key_usage: ${15:# Allowed Key Usage for the certificate}
+    locality: ${16:# Locality requested for the certificate subject (usually city)}
+    mode: ${17:# The file system permissions for the certificate and key files}
+    name: ${18:# Name of the certificate}
+    organization: ${19:# Organization requested for the certificate subject}
+    organizational_unit: ${20:# Organizational unit requested for the certificate subject}
+    owner: ${21:# User name (or user id) for the certificate and key files}
+    principal: ${22:# Kerberos principal}
+    provider: ${23:# The underlying method used to request and manage the certificate}
+    provider_config_directory: ${24:# Directory where pre/post run scripts will be stored}
+    run_after: ${25:# Command that should run after saving the certificate}
+    run_before: ${26:# Command that should run before saving the certificate}
+    state: ${27:# State requested for the certificate subject}
+    wait: ${28:# If the role should block while waiting for the certificate to be issued}
+  tags:
+    - fedora
+    - linux_system_roles
+    - certificate_request]]></content>
+  <tabTrigger>fedora.linux_system_roles.certificate_request</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage SSL/TLS certificates</description>
+</snippet>

@@ -1,40 +1,40 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage switchports on a switch in the Meraki cloud}
   cisco.meraki.meraki_ms_switchport:
-    state: ${2:# Specifies whether a switchport should be queried or modified}
+    access_policy_number: ${2:# Number of the access policy to apply}
     access_policy_type: ${3:# Type of access policy to apply to port}
-    access_policy_number: ${4:# Number of the access policy to apply}
-    allowed_vlans: ${5:# List of VLAN numbers to be allowed on switchport}
+    allowed_vlans: ${4:# List of VLAN numbers to be allowed on switchport}
+    auth_key: ${5:# Authentication key provided by the dashboard}
     enabled: ${6:# Whether a switchport should be enabled or disabled}
-    isolation_enabled: ${7:# Isolation status of switchport}
-    link_negotiation: ${8:# Link speed for the switchport}
-    name: ${9:# Switchport description}
-    number: ${10:# Port number}
-    poe_enabled: ${11:# Enable or disable Power Over Ethernet on a port}
-    rstp_enabled: ${12:# Enable or disable Rapid Spanning Tree Protocol on a port}
-    serial: ${13:# Serial nubmer of the switch}
-    stp_guard: ${14:# Set state of STP guard}
-    tags: ${15:# List of tags to assign to a port}
-    type: ${16:# Set port type}
-    vlan: ${17:# VLAN number assigned to port}
-    voice_vlan: ${18:# VLAN number assigned to a port for voice traffic}
-    voice_vlan_state: ${19:# Specifies whether voice vlan configuration should be present or absent}
-    mac_allow_list: ${20:# MAC addresses list that are allowed on a port}
-    sticky_mac_allow_list: ${21:# MAC addresses list that are allowed on a port}
-    sticky_mac_allow_list_limit: ${22:# The number of MAC addresses allowed in the sticky port allow list}
-    flexible_stacking_enabled: ${23:# Whether flexible stacking capabilities are supported on the port}
-    auth_key: ${24:# Authentication key provided by the dashboard}
-    host: ${25:# Hostname for Meraki dashboard}
-    use_proxy: ${26:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    use_https: ${27:# If C(no), it will use HTTP}
-    output_format: ${28:# Instructs module whether response keys should be snake case (ex}
-    output_level: ${29:# Set amount of debug output during module execution}
-    timeout: ${30:# Time to timeout for HTTP requests}
-    validate_certs: ${31:# Whether to validate HTTP certificates}
-    org_name: ${32:# Name of organization}
-    org_id: ${33:# ID of organization}
-    rate_limit_retry_time: ${34:# Number of seconds to retry if rate limiter is triggered}
-    internal_error_retry_time: ${35:# Number of seconds to retry if server returns an internal server error}
+    flexible_stacking_enabled: ${7:# Whether flexible stacking capabilities are supported on the port}
+    host: ${8:# Hostname for Meraki dashboard}
+    internal_error_retry_time: ${9:# Number of seconds to retry if server returns an internal server error}
+    isolation_enabled: ${10:# Isolation status of switchport}
+    link_negotiation: ${11:# Link speed for the switchport}
+    mac_allow_list: ${12:# MAC addresses list that are allowed on a port}
+    name: ${13:# Switchport description}
+    number: ${14:# Port number}
+    org_id: ${15:# ID of organization}
+    org_name: ${16:# Name of organization}
+    output_format: ${17:# Instructs module whether response keys should be snake case (ex}
+    output_level: ${18:# Set amount of debug output during module execution}
+    poe_enabled: ${19:# Enable or disable Power Over Ethernet on a port}
+    rate_limit_retry_time: ${20:# Number of seconds to retry if rate limiter is triggered}
+    rstp_enabled: ${21:# Enable or disable Rapid Spanning Tree Protocol on a port}
+    serial: ${22:# Serial nubmer of the switch}
+    state: ${23:# Specifies whether a switchport should be queried or modified}
+    sticky_mac_allow_list: ${24:# MAC addresses list that are allowed on a port}
+    sticky_mac_allow_list_limit: ${25:# The number of MAC addresses allowed in the sticky port allow list}
+    stp_guard: ${26:# Set state of STP guard}
+    tags: ${27:# List of tags to assign to a port}
+    timeout: ${28:# Time to timeout for HTTP requests}
+    type: ${29:# Set port type}
+    use_https: ${30:# If C(no), it will use HTTP}
+    use_proxy: ${31:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${32:# Whether to validate HTTP certificates}
+    vlan: ${33:# VLAN number assigned to port}
+    voice_vlan: ${34:# VLAN number assigned to a port for voice traffic}
+    voice_vlan_state: ${35:# Specifies whether voice vlan configuration should be present or absent}
   tags:
     - cisco
     - meraki

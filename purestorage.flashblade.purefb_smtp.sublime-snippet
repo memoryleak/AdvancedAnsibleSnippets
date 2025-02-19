@@ -2,9 +2,11 @@
   <content><![CDATA[- name: ${1:Configure SMTP for Pure Storage FlashBlade}
   purestorage.flashblade.purefb_smtp:
     api_token: ${2:# FlashBlade API token for admin privileged user}
-    domain: ${3:# Domain name for alert messages}
-    fb_url: ${4:# FlashBlade management IP address or Hostname}
-    host: ${5:# Relay server name}
+    disable_warnings: ${3:# Disable insecure certificate warnings}
+    domain: ${4:# Domain name for alert messages}
+    encryption: ${5:# Enforces an encryption mode when sending alert email messages}
+    fb_url: ${6:# FlashBlade management IP address or Hostname}
+    host: ${7:# Relay server name}
   tags:
     - purestorage
     - flashblade

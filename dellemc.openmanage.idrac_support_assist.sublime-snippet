@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Run and Export iDRAC SupportAssist collection logs}
+  dellemc.openmanage.idrac_support_assist:
+    accept_eula: ${2:# This parameter accepts the EULA terms and conditions that are required for SupportAssist registration}
+    ca_path: ${3:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    data_collector: ${4:# This option provides the choice of data to keep in SupportAssist collection}
+    export: ${5:# Exports the SupportAssist collection to the given network share}
+    filter_data: ${6:# This option provides the choice to filter data for privacy}
+    idrac_ip: ${7:# iDRAC IP Address}
+    idrac_password: ${8:# iDRAC user password}
+    idrac_port: ${9:# iDRAC port}
+    idrac_user: ${10:# iDRAC username}
+    job_wait: ${11:# This option determines whether to wait for the job completion or not}
+    job_wait_timeout: ${12:# Time in seconds to wait for job completion}
+    resource_id: ${13:# Id of the resource}
+    run: ${14:# Run the SupportAssist job based on the different types of logs in the collection on iDRAC}
+    share_parameters: ${15:# Parameters that are required for the export operation of SupportAssist collection}
+    timeout: ${16:# The socket level timeout in seconds}
+    validate_certs: ${17:# If C(false), the SSL certificates will not be validated}
+    x_auth_token: ${18:# Authentication token}
+  tags:
+    - dellemc
+    - openmanage
+    - idrac_support_assist]]></content>
+  <tabTrigger>dellemc.openmanage.idrac_support_assist</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Run and Export iDRAC SupportAssist collection logs</description>
+</snippet>

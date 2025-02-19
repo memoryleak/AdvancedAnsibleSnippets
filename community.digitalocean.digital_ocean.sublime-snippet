@@ -1,24 +1,24 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create/delete a droplet/SSH_key in DigitalOcean}
   community.digitalocean.digital_ocean:
-    command: ${2:# Which target you want to operate on}
-    state: ${3:# Indicate desired state of the target}
-    api_token: ${4:# DigitalOcean api token}
+    api_token: ${2:# DigitalOcean api token}
+    backups_enabled: ${3:# Optional, Boolean, enables backups for your droplet}
+    command: ${4:# Which target you want to operate on}
     id: ${5:# Numeric, the droplet id you want to operate on}
-    name: ${6:# String, this is the name of the droplet - must be formatted by hostname rules, or the name of a SSH key}
-    unique_name: ${7:# Bool, require unique hostnames}
-    size_id: ${8:# This is the slug of the size you would like the droplet created with}
-    image_id: ${9:# This is the slug of the image you would like the droplet created with}
+    image_id: ${6:# This is the slug of the image you would like the droplet created with}
+    ipv6: ${7:# Optional, Boolean, enable IPv6 for your droplet}
+    name: ${8:# String, this is the name of the droplet - must be formatted by hostname rules, or the name of a SSH key}
+    private_networking: ${9:# Bool, add an additional, private network interface to droplet for inter-droplet communication}
     region_id: ${10:# This is the slug of the region you would like your server to be created in}
-    ssh_key_ids: ${11:# Optional, array of SSH key (numeric) ID that you would like to be added to the server}
-    virtio: ${12:# Bool, turn on virtio driver in droplet for improved network and storage I/O}
-    private_networking: ${13:# Bool, add an additional, private network interface to droplet for inter-droplet communication}
-    backups_enabled: ${14:# Optional, Boolean, enables backups for your droplet}
-    user_data: ${15:# opaque blob of data which is made available to the droplet}
-    ipv6: ${16:# Optional, Boolean, enable IPv6 for your droplet}
-    wait: ${17:# Wait for the droplet to be in state 'running' before returning}
-    wait_timeout: ${18:# How long before wait gives up, in seconds}
-    ssh_pub_key: ${19:# The public SSH key you want to add to your account}
+    size_id: ${11:# This is the slug of the size you would like the droplet created with}
+    ssh_key_ids: ${12:# Optional, array of SSH key (numeric) ID that you would like to be added to the server}
+    ssh_pub_key: ${13:# The public SSH key you want to add to your account}
+    state: ${14:# Indicate desired state of the target}
+    unique_name: ${15:# Bool, require unique hostnames}
+    user_data: ${16:# opaque blob of data which is made available to the droplet}
+    virtio: ${17:# Bool, turn on virtio driver in droplet for improved network and storage I/O}
+    wait: ${18:# Wait for the droplet to be in state 'running' before returning}
+    wait_timeout: ${19:# How long before wait gives up, in seconds}
   tags:
     - community
     - digitalocean

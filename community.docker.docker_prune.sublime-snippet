@@ -3,25 +3,28 @@
   community.docker.docker_prune:
     api_version: ${2:# The version of the Docker API running on the Docker Host}
     builder_cache: ${3:# Whether to prune the builder cache}
-    ca_cert: ${4:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
-    client_cert: ${5:# Path to the client's TLS certificate file}
-    client_key: ${6:# Path to the client's TLS key file}
-    containers: ${7:# Whether to prune containers}
-    containers_filters: ${8:# A dictionary of filter values used for selecting containers to delete}
-    debug: ${9:# Debug mode}
-    docker_host: ${10:# The URL or Unix socket path used to connect to the Docker API}
-    images: ${11:# Whether to prune images}
-    images_filters: ${12:# A dictionary of filter values used for selecting images to delete}
-    networks: ${13:# Whether to prune networks}
-    networks_filters: ${14:# A dictionary of filter values used for selecting networks to delete}
-    ssl_version: ${15:# Provide a valid SSL version number}
-    timeout: ${16:# The maximum amount of time in seconds to wait on a response from the API}
-    tls: ${17:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    tls_hostname: ${18:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    use_ssh_client: ${19:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
-    validate_certs: ${20:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
-    volumes: ${21:# Whether to prune volumes}
-    volumes_filters: ${22:# A dictionary of filter values used for selecting volumes to delete}
+    builder_cache_all: ${4:# Whether to remove all types of build cache}
+    builder_cache_filters: ${5:# A dictionary of filter values used for selecting images to delete}
+    builder_cache_keep_storage: ${6:# Amount of disk space to keep for cache in format C(<number>[<unit>])}
+    ca_path: ${7:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    client_cert: ${8:# Path to the client's TLS certificate file}
+    client_key: ${9:# Path to the client's TLS key file}
+    containers: ${10:# Whether to prune containers}
+    containers_filters: ${11:# A dictionary of filter values used for selecting containers to delete}
+    debug: ${12:# Debug mode}
+    docker_host: ${13:# The URL or Unix socket path used to connect to the Docker API}
+    images: ${14:# Whether to prune images}
+    images_filters: ${15:# A dictionary of filter values used for selecting images to delete}
+    networks: ${16:# Whether to prune networks}
+    networks_filters: ${17:# A dictionary of filter values used for selecting networks to delete}
+    ssl_version: ${18:# Provide a valid SSL version number}
+    timeout: ${19:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${20:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${21:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    use_ssh_client: ${22:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${23:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    volumes: ${24:# Whether to prune volumes}
+    volumes_filters: ${25:# A dictionary of filter values used for selecting volumes to delete}
   tags:
     - community
     - docker

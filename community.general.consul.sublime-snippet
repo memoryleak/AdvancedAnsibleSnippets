@@ -2,26 +2,28 @@
   <content><![CDATA[- name: ${1:Add, modify & delete services within a consul cluster}
   community.general.consul:
     ack_params_state_absent: ${2:# This parameter has no more effect and is deprecated}
-    check_id: ${3:# An ID for the service check}
-    check_name: ${4:# Name for the service check}
-    host: ${5:# Host of the consul agent defaults to localhost}
-    http: ${6:# Checks can be registered with an HTTP endpoint}
-    interval: ${7:# The interval at which the service check will be run}
-    notes: ${8:# Notes to attach to check when registering it}
-    port: ${9:# The port on which the consul agent is running}
-    scheme: ${10:# The protocol scheme on which the consul agent is running}
-    script: ${11:# The script/command that will be run periodically to check the health of the service}
-    service_address: ${12:# The address to advertise that the service will be listening on}
-    service_id: ${13:# The ID for the service, must be unique per node}
-    service_name: ${14:# Unique name for the service on a node, must be unique per node, required if registering a service}
-    service_port: ${15:# The port on which the service is listening}
-    state: ${16:# Register or deregister the consul service, defaults to present}
-    tags: ${17:# Tags that will be attached to the service registration}
-    tcp: ${18:# Checks can be registered with a TCP port}
-    timeout: ${19:# A custom HTTP check timeout}
-    token: ${20:# The token key identifying an ACL rule set}
-    ttl: ${21:# Checks can be registered with a TTL instead of a O(script) and O(interval) this means that the service will check in with the agent before the TTL expires}
-    validate_certs: ${22:# Whether to verify the TLS certificate of the consul agent}
+    check_host: ${3:# Host name}
+    check_id: ${4:# An ID for the service check}
+    check_name: ${5:# Name for the service check}
+    check_node: ${6:# Node name}
+    host: ${7:# Host of the consul agent defaults to localhost}
+    http: ${8:# Checks can be registered with an HTTP endpoint}
+    interval: ${9:# The interval at which the service check will be run}
+    notes: ${10:# Notes to attach to check when registering it}
+    port: ${11:# The port on which the consul agent is running}
+    scheme: ${12:# The protocol scheme on which the consul agent is running}
+    script: ${13:# The script/command that will be run periodically to check the health of the service}
+    service_address: ${14:# The address to advertise that the service will be listening on}
+    service_id: ${15:# The ID for the service, must be unique per node}
+    service_name: ${16:# Unique name for the service on a node, must be unique per node, required if registering a service}
+    service_port: ${17:# The port on which the service is listening}
+    state: ${18:# Register or deregister the consul service, defaults to present}
+    tags: ${19:# Tags that will be attached to the service registration}
+    tcp: ${20:# Checks can be registered with a TCP port}
+    timeout: ${21:# A custom HTTP check timeout}
+    token: ${22:# The token key identifying an ACL rule set}
+    ttl: ${23:# Checks can be registered with a TTL instead of a O(script) and O(interval) this means that the service will check in with the agent before the TTL expires}
+    validate_certs: ${24:# Whether to verify the TLS certificate of the consul agent}
   tags:
     - community
     - general
