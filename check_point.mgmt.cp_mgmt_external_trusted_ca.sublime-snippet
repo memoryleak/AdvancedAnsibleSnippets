@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages external-trusted-ca objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_external_trusted_ca:
+    allow_certificates_from_branches: ${2:# Allow only certificates from listed branches}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    base64_certificate: ${4:# Certificate file encoded in base64}
+    branches: ${5:# Branches to allow certificates from}
+    color: ${6:# Color of the object}
+    comments: ${7:# Comments string}
+    crl_cache_method: ${8:# Weather to retrieve new Certificate Revocation List after the certificate expires or after a fixed period}
+    crl_cache_timeout: ${9:# When to fetch new Certificate Revocation List (in minutes)}
+    details_level: ${10:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${11:# Indicates which domains to process the commands on}
+    ignore_errors: ${12:# Apply changes ignoring errors}
+    ignore_warnings: ${13:# Apply changes ignoring warnings}
+    name: ${14:# Object name}
+    retrieve_crl_from_http_servers: ${15:# Whether to retrieve Certificate Revocation List from http servers}
+    state: ${16:# State of the access rule (present or absent)}
+    tags: ${17:# Collection of tag identifiers}
+    version: ${18:# Version of checkpoint}
+    wait_for_task: ${19:# Wait for the task to end}
+    wait_for_task_timeout: ${20:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_external_trusted_ca]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_external_trusted_ca</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages external-trusted-ca objects on Checkpoint over Web Services API</description>
+</snippet>

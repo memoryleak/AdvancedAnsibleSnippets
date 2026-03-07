@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Capacity Reservation Group}
+  azure.azcollection.azure_rm_capacityreservationgroup:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    disable_instance_discovery: ${10:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    location: ${11:# Valid Azure location}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    name: ${14:# The name of the Capacity Reservation Group}
+    password: ${15:# Active Directory user password}
+    profile: ${16:# Security profile found in ~/}
+    resource_group: ${17:# Name of resource group}
+    secret: ${18:# Azure client secret}
+    state: ${19:# State of the Capacity Reservation Group}
+    subscription_id: ${20:# Your Azure subscription Id}
+    tags: ${21:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${22:# Azure tenant ID}
+    thumbprint: ${23:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${24:# Path to the X509 certificate used to create the service principal in PEM format}
+    zones: ${25:# Availability Zones to use for this capacity reservation group}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_capacityreservationgroup]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_capacityreservationgroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Capacity Reservation Group</description>
+</snippet>

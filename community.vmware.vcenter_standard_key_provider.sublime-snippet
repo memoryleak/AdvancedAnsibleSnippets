@@ -1,20 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Add, reconfigure or remove Standard Key Provider on vCenter server}
   community.vmware.vcenter_standard_key_provider:
-    hostname: ${2:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    hostname: ${2:# The hostname or IP address of the vSphere vCenter server}
     kms_info: ${3:# The information of an external key server (KMS)}
     kms_password: ${4:# Password to authenticate to the KMS}
     kms_username: ${5:# Username to authenticate to the KMS}
     make_kms_trust_vc: ${6:# After adding the Standard Key Provider to the vCenter Server, you can establish a trusted connection, the exact process depends on the certificates that the key provider accepts, and on your company policy}
     mark_default: ${7:# Set specified Key Provider with name O(name) as the default Key Provider}
     name: ${8:# Name of the Key Provider to be added, reconfigured or removed from vCenter}
-    password: ${9:# The password of the vSphere vCenter or ESXi server}
-    port: ${10:# The port number of the vSphere vCenter or ESXi server}
-    proxy_host: ${11:# Address of a proxy that will receive all HTTPS requests and relay them}
+    password: ${9:# The password of the vSphere vCenter server}
+    port: ${10:# The port number of the vSphere vCenter server}
+    proxy_host: ${11:# The address of a proxy that will receive all HTTPS requests and relay them}
     proxy_port: ${12:# Port of the proxy server}
     proxy_server: ${13:# Address of the proxy server to connect to KMS}
     state: ${14:# If set to V(absent), the named Key Provider will be removed from vCenter}
-    username: ${15:# The username of the vSphere vCenter or ESXi server}
+    username: ${15:# The username of the vSphere vCenter server}
     validate_certs: ${16:# Allows connection when SSL certificates are not valid}
   tags:
     - community

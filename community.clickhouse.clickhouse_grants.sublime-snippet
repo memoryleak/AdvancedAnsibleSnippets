@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage grants for ClickHouse users and roles}
+  community.clickhouse.clickhouse_grants:
+    client_kwargs: ${2:# Any additional keyword arguments you want to pass to the Client interface when instantiating its object}
+    cluster: ${3:# Run the grant/revoke commands on all cluster hosts}
+    exclusive: ${4:# If set to C(false) (the default), the module will append the privileges specified in O(privileges) to the privileges the O(grantee) already has}
+    grantee: ${5:# A user or a role to grant, update, or revoke privileges for}
+    login_db: ${6:# The same as the V(Client(database='}
+    login_host: ${7:# The same as the V(Client(host='}
+    login_password: ${8:# The same as the V(Client(password='}
+    login_port: ${9:# The same as the V(Client(port='}
+    login_user: ${10:# The same as the V(Client(user='}
+    privileges: ${11:# Privileges to grant}
+    state: ${12:# If C(present), the module will grant or update privileges}
+  tags:
+    - community
+    - clickhouse
+    - clickhouse_grants]]></content>
+  <tabTrigger>community.clickhouse.clickhouse_grants</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage grants for ClickHouse users and roles</description>
+</snippet>

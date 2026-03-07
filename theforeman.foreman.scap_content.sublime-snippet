@@ -1,17 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage SCAP content}
   theforeman.foreman.scap_content:
-    locations: ${2:# List of locations the entity should be assigned to}
-    organizations: ${3:# List of organizations the entity should be assigned to}
-    original_filename: ${4:# Original file name of the XML file}
-    password: ${5:# Password of the user accessing the Foreman server}
-    scap_file: ${6:# File containing XML DataStream content}
-    server_url: ${7:# URL of the Foreman server}
-    state: ${8:# State of the entity}
-    title: ${9:# Title of SCAP content}
-    updated_title: ${10:# New SCAP content title}
-    username: ${11:# Username accessing the Foreman server}
-    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    locations: ${3:# List of locations the entity should be assigned to}
+    organizations: ${4:# List of organizations the entity should be assigned to}
+    original_filename: ${5:# Original file name of the XML file}
+    password: ${6:# Password of the user accessing the Foreman server}
+    scap_file: ${7:# File containing XML DataStream content}
+    server_url: ${8:# URL of the Foreman server}
+    state: ${9:# State of the entity}
+    title: ${10:# Title of SCAP content}
+    updated_title: ${11:# New SCAP content title}
+    use_gssapi: ${12:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${13:# Username accessing the Foreman server}
+    validate_certs: ${14:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

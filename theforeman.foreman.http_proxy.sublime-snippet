@@ -1,17 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage HTTP Proxies}
   theforeman.foreman.http_proxy:
-    locations: ${2:# List of locations the entity should be assigned to}
-    name: ${3:# The HTTP Proxy name}
-    organizations: ${4:# List of organizations the entity should be assigned to}
-    password: ${5:# Password of the user accessing the Foreman server}
-    proxy_password: ${6:# Password used to authenticate with the HTTP Proxy}
-    proxy_username: ${7:# Username used to authenticate with the HTTP Proxy}
-    server_url: ${8:# URL of the Foreman server}
-    state: ${9:# State of the entity}
-    url: ${10:# URL of the HTTP Proxy}
-    username: ${11:# Username accessing the Foreman server}
-    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    locations: ${3:# List of locations the entity should be assigned to}
+    name: ${4:# The HTTP Proxy name}
+    organizations: ${5:# List of organizations the entity should be assigned to}
+    password: ${6:# Password of the user accessing the Foreman server}
+    proxy_password: ${7:# Password used to authenticate with the HTTP Proxy}
+    proxy_username: ${8:# Username used to authenticate with the HTTP Proxy}
+    server_url: ${9:# URL of the Foreman server}
+    state: ${10:# State of the entity}
+    url: ${11:# URL of the HTTP Proxy}
+    use_gssapi: ${12:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${13:# Username accessing the Foreman server}
+    validate_certs: ${14:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

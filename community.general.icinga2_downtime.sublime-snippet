@@ -1,0 +1,38 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages Icinga 2 downtimes}
+  community.general.icinga2_downtime:
+    all_services: ${2:# Whether downtimes should be created for all services of the matched host objects}
+    author: ${3:# Name of the author}
+    ca_path: ${4:# CA certificates bundle to use to verify the Icinga 2 server certificate}
+    child_options: ${5:# Schedule child downtimes}
+    client_cert: ${6:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${7:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    comment: ${8:# A descriptive comment}
+    duration: ${9:# Duration of the downtime}
+    end_time: ${10:# End time of the downtime as UNIX timestamp}
+    filter: ${11:# Filter expression limiting the objects to operate on}
+    filter_vars: ${12:# Variable names and values used in the filter expression}
+    fixed: ${13:# Whether the downtime is fixed or flexible}
+    force: ${14:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${15:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    http_agent: ${16:# Header to identify as, generally appears in web server logs}
+    name: ${17:# Name of the downtime object}
+    object_type: ${18:# Use V(Host) for a host downtime and V(Service) for a service downtime}
+    start_time: ${19:# Start time of the downtime as UNIX timestamp}
+    state: ${20:# State of the downtime}
+    timeout: ${21:# How long to wait for the server to send data before giving up}
+    trigger_name: ${22:# Name of the downtime trigger}
+    url: ${23:# URL of the Icinga 2 REST API}
+    url_password: ${24:# The password for use in HTTP basic authentication}
+    url_username: ${25:# The username for use in HTTP basic authentication}
+    use_gssapi: ${26:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${27:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${28:# If V(no), SSL certificates will not be validated}
+  tags:
+    - community
+    - general
+    - icinga2_downtime]]></content>
+  <tabTrigger>community.general.icinga2_downtime</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages Icinga 2 downtimes</description>
+</snippet>

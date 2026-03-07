@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage firewall rules in Proxmox}
+  community.proxmox.proxmox_firewall:
+    aliases: ${2:# List of aliases}
+    api_host: ${3:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${4:# Specify the password to authenticate with}
+    api_port: ${5:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${6:# Specify the token ID}
+    api_token_secret: ${7:# Specify the token secret}
+    api_user: ${8:# Specify the user to authenticate with}
+    comment: ${9:# Comment for security group}
+    group: ${10:# Name of the group to which the rule belongs}
+    group_conf: ${11:# Whether security group should be created or deleted}
+    ip_sets: ${12:# List of IP set definitions to create, update, or remove}
+    level: ${13:# Level at which the firewall rule applies}
+    node: ${14:# Name of the node}
+    pos: ${15:# Position of the rule in the list}
+    rules: ${16:# List of individual rules to be applied}
+    state: ${17:# Create/update/delete firewall rules or security group}
+    update: ${18:# If O(state=present) and if one or more rule/alias/ipset already exists it will update them}
+    validate_certs: ${19:# If V(false), SSL certificates will not be validated}
+    vmid: ${20:# ID of the VM to which the rule applies}
+    vnet: ${21:# Name of the virtual network for the rule}
+  tags:
+    - community
+    - proxmox
+    - proxmox_firewall]]></content>
+  <tabTrigger>community.proxmox.proxmox_firewall</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage firewall rules in Proxmox</description>
+</snippet>

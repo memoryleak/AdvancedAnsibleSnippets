@@ -4,20 +4,21 @@
     add_to_pgs: ${2:# A volume created from a snapshot will be added to the specified protection groups}
     api_token: ${3:# FlashArray API token for admin privileged user}
     apply_retention: ${4:# Apply retention schedule settings to the snapshot}
-    disable_warnings: ${5:# Disable insecure certificate warnings in debug logs}
-    eradicate: ${6:# Define whether to eradicate the snapshot on delete or leave in trash}
-    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
-    name: ${8:# The name of the source protection group}
-    now: ${9:# Whether to initiate a snapshot of the protection group immeadiately}
-    offload: ${10:# Name of offload target on which the snapshot exists}
-    overwrite: ${11:# Define whether to overwrite the target volume if it already exists}
-    remote: ${12:# Force immeadiate snapshot to remote targets}
-    restore: ${13:# Restore a specific volume from a protection group snapshot}
-    state: ${14:# Define whether the protection group snapshot should exist or not}
-    suffix: ${15:# Suffix of snapshot name}
-    target: ${16:# Volume to restore a specified volume to}
-    throttle: ${17:# If set to true, allows snapshot to fail if array health is not optimal}
-    with_default_protection: ${18:# Whether to add the default container protection groups to those specified in I(add_to_pgs) as the inital protection of a volume created from a snapshot}
+    context: ${5:# Name of fleet member on which to perform the operation}
+    disable_warnings: ${6:# Disable insecure certificate warnings in debug logs}
+    eradicate: ${7:# Define whether to eradicate the snapshot on delete or leave in trash}
+    fa_url: ${8:# FlashArray management IPv4 address or Hostname}
+    name: ${9:# The name of the source protection group}
+    now: ${10:# Whether to initiate a snapshot of the protection group immediately}
+    offload: ${11:# Name of offload target on which the snapshot exists}
+    overwrite: ${12:# Define whether to overwrite the target volume if it already exists}
+    remote: ${13:# Force immediate snapshot to remote targets}
+    restore: ${14:# Restore a specific volume from a protection group snapshot}
+    state: ${15:# Define whether the protection group snapshot should exist or not}
+    suffix: ${16:# Suffix of snapshot name}
+    target: ${17:# Volume to restore a specified volume to}
+    throttle: ${18:# If set to true, allows snapshot to fail if array health is not optimal}
+    with_default_protection: ${19:# Whether to add the default container protection groups to those specified in I(add_to_pgs) as the initial protection of a volume created from a snapshot}
   tags:
     - purestorage
     - flasharray

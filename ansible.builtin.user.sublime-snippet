@@ -16,28 +16,31 @@
     login_class: ${14:# Optionally sets the user's login class, a feature of most BSD OSs}
     move_home: ${15:# If set to V(true) when used with O(home), attempt to move the user's old home directory to the specified directory if it isn't there already and the old home exists}
     name: ${16:# Name of the user to create, remove or modify}
-    non_unique: ${17:# Optionally when used with the -u option, this option allows to change the user ID to a non-unique value}
+    non_unique: ${17:# Optionally when used with the C(-u) option, this option allows to change the user ID to a non-unique value}
     password: ${18:# If provided, set the user's password to the provided encrypted hash (Linux) or plain text password (macOS)}
-    password_expire_max: ${19:# Maximum number of days between password change}
-    password_expire_min: ${20:# Minimum number of days between password change}
-    password_expire_warn: ${21:# Number of days of warning before password expires}
-    password_lock: ${22:# Lock the password (C(usermod -L), C(usermod -U), C(pw lock))}
-    profile: ${23:# Sets the profile of the user}
-    remove: ${24:# This only affects O(state=absent), it attempts to remove directories associated with the user}
-    role: ${25:# Sets the role of the user}
-    seuser: ${26:# Optionally sets the seuser type (user_u) on selinux enabled systems}
-    shell: ${27:# Optionally set the user's shell}
-    skeleton: ${28:# Optionally set a home skeleton directory}
-    ssh_key_bits: ${29:# Optionally specify number of bits in SSH key to create}
-    ssh_key_comment: ${30:# Optionally define the comment for the SSH key}
-    ssh_key_file: ${31:# Optionally specify the SSH key filename}
-    ssh_key_passphrase: ${32:# Set a passphrase for the SSH key}
-    ssh_key_type: ${33:# Optionally specify the type of SSH key to generate}
-    state: ${34:# Whether the account should exist or not, taking action if the state is different from what is stated}
-    system: ${35:# When creating an account O(state=present), setting this to V(true) makes the user a system account}
-    uid: ${36:# Optionally sets the I(UID) of the user}
-    umask: ${37:# Sets the umask of the user}
-    update_password: ${38:# V(always) will update passwords if they differ}
+    password_expire_account_disable: ${19:# Number of days after a password expires until the account is disabled}
+    password_expire_max: ${20:# Maximum number of days between password change}
+    password_expire_min: ${21:# Minimum number of days between password change}
+    password_expire_warn: ${22:# Number of days of warning before password expires}
+    password_lock: ${23:# Lock the password (C(usermod -L), C(usermod -U), C(pw lock))}
+    profile: ${24:# Sets the profile of the user}
+    remove: ${25:# This only affects O(state=absent), it attempts to remove directories associated with the user}
+    role: ${26:# Sets the role of the user}
+    seuser: ${27:# Optionally sets the C(seuser) type C(user_u) on SELinux enabled systems}
+    shell: ${28:# Optionally set the user's shell}
+    skeleton: ${29:# Optionally set a home skeleton directory}
+    ssh_key_bits: ${30:# Optionally specify number of bits in SSH key to create}
+    ssh_key_comment: ${31:# Optionally define the comment for the SSH key}
+    ssh_key_file: ${32:# Optionally specify the SSH key filename}
+    ssh_key_passphrase: ${33:# Set a passphrase for the SSH key}
+    ssh_key_type: ${34:# Optionally specify the type of SSH key to generate}
+    state: ${35:# Whether the account should exist or not, taking action if the state is different from what is stated}
+    system: ${36:# When creating an account O(state=present), setting this to V(true) makes the user a system account}
+    uid: ${37:# Optionally sets the I(UID) of the user}
+    uid_max: ${38:# Sets the UID_MAX value for user creation}
+    uid_min: ${39:# Sets the UID_MIN value for user creation}
+    umask: ${40:# Sets the umask of the user}
+    update_password: ${41:# V(always) will update passwords if they differ}
   tags:
     - user]]></content>
   <tabTrigger>ansible.builtin.user</tabTrigger>

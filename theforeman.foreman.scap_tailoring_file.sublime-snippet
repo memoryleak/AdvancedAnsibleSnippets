@@ -1,17 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage SCAP Tailoring Files}
   theforeman.foreman.scap_tailoring_file:
-    locations: ${2:# List of locations the entity should be assigned to}
-    name: ${3:# Name of the tailoring file}
-    organizations: ${4:# List of organizations the entity should be assigned to}
-    original_filename: ${5:# Original file name of the XML file}
-    password: ${6:# Password of the user accessing the Foreman server}
-    scap_file: ${7:# File containing XML DataStream content}
-    server_url: ${8:# URL of the Foreman server}
-    state: ${9:# State of the entity}
-    updated_name: ${10:# New name of the tailoring file}
-    username: ${11:# Username accessing the Foreman server}
-    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    locations: ${3:# List of locations the entity should be assigned to}
+    name: ${4:# Name of the tailoring file}
+    organizations: ${5:# List of organizations the entity should be assigned to}
+    original_filename: ${6:# Original file name of the XML file}
+    password: ${7:# Password of the user accessing the Foreman server}
+    scap_file: ${8:# File containing XML DataStream content}
+    server_url: ${9:# URL of the Foreman server}
+    state: ${10:# State of the entity}
+    updated_name: ${11:# New name of the tailoring file}
+    use_gssapi: ${12:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${13:# Username accessing the Foreman server}
+    validate_certs: ${14:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

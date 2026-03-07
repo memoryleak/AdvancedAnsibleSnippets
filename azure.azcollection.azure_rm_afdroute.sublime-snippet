@@ -1,0 +1,48 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage an Azure Front Door Route}
+  azure.azcollection.azure_rm_afdroute:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${5:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${6:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${7:# Azure client ID}
+    cloud_environment: ${8:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    content_types_to_compress: ${9:# The caching configuration/compression settings for this route}
+    custom_domains: ${10:# Domain names referenced by this endpoint}
+    disable_cache_configuration: ${11:# To disable cache configuration, set this to true and do not include cache_configuration}
+    disable_instance_discovery: ${12:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    enabled_state: ${13:# Whether to enable use of this rule}
+    endpoint_name: ${14:# Name of the endpoint under the profile which is unique globally}
+    forwarding_protocol: ${15:# Protocol this rule will use when forwarding traffic to backends}
+    https_redirect: ${16:# Whether to automatically redirect HTTP traffic to HTTPS traffic}
+    is_compression_enabled: ${17:# The caching configuration/compression settings for this route}
+    link_to_default_domain: ${18:# whether this route will be linked to the default endpoint domain}
+    log_mode: ${19:# Parent argument}
+    log_path: ${20:# Parent argument}
+    name: ${21:# Name of the routing rule}
+    origin_group: ${22:# A reference to the origin group}
+    origin_path: ${23:# A directory path on the origin that AzureFrontDoor can use to retrieve content from, e}
+    password: ${24:# Active Directory user password}
+    patterns_to_match: ${25:# The route patterns of the rule}
+    profile: ${26:# Security profile found in ~/}
+    profile_name: ${27:# Name of the Azure Front Door Standard or Azure Front Door Premium profile which is unique within the resource group}
+    query_parameters: ${28:# The caching configuration for this route}
+    query_string_caching_behavior: ${29:# The caching configuration for this route}
+    resource_group: ${30:# Name of the Resource group within the Azure subscription}
+    rule_sets: ${31:# List of rule set names referenced by this endpoint}
+    secret: ${32:# Azure client secret}
+    state: ${33:# Assert the state of the Route}
+    subscription_id: ${34:# Your Azure subscription Id}
+    supported_protocols: ${35:# List of supported protocols for this route}
+    tenant: ${36:# Azure tenant ID}
+    thumbprint: ${37:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${38:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_afdroute]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_afdroute</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage an Azure Front Door Route</description>
+</snippet>

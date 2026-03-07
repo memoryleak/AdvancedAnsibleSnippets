@@ -9,23 +9,26 @@
     attr_mail: ${7:# Attribute containing email address}
     attr_photo: ${8:# Attribute containing user photo}
     base_dn: ${9:# The base DN to use when searching}
-    groups_base: ${10:# Base DN where groups reside}
-    host: ${11:# The hostname of the LDAP server}
-    ldap_filter: ${12:# Filter to apply to LDAP searches}
-    locations: ${13:# List of locations the entity should be assigned to}
-    name: ${14:# The name of the LDAP authentication source}
-    onthefly_register: ${15:# Whether or not to register users on the fly}
-    organizations: ${16:# List of organizations the entity should be assigned to}
-    password: ${17:# Password of the user accessing the Foreman server}
-    port: ${18:# The port number of the LDAP server}
-    server_type: ${19:# Type of the LDAP server}
-    server_url: ${20:# URL of the Foreman server}
-    state: ${21:# State of the entity}
-    tls: ${22:# Whether or not to use TLS when contacting the LDAP server}
-    use_netgroups: ${23:# Whether to use NIS netgroups instead of posix groups, not valid for I(server_type=active_directory)}
-    usergroup_sync: ${24:# Whether or not to sync external user groups on login}
-    username: ${25:# Username accessing the Foreman server}
-    validate_certs: ${26:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${10:# PEM formatted file that contains a CA certificate to be used for validation}
+    groups_base: ${11:# Base DN where groups reside}
+    host: ${12:# The hostname of the LDAP server}
+    ldap_filter: ${13:# Filter to apply to LDAP searches}
+    ldap_group_membership: ${14:# Which group membership method to use, not valid for I(server_type=active_directory)}
+    locations: ${15:# List of locations the entity should be assigned to}
+    name: ${16:# The name of the LDAP authentication source}
+    onthefly_register: ${17:# Whether or not to register users on the fly}
+    organizations: ${18:# List of organizations the entity should be assigned to}
+    password: ${19:# Password of the user accessing the Foreman server}
+    port: ${20:# The port number of the LDAP server}
+    server_type: ${21:# Type of the LDAP server}
+    server_url: ${22:# URL of the Foreman server}
+    state: ${23:# State of the entity}
+    tls: ${24:# Whether or not to use TLS when contacting the LDAP server}
+    use_gssapi: ${25:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_netgroups: ${26:# Whether to use NIS netgroups instead of posix groups, not valid for I(server_type=active_directory)}
+    usergroup_sync: ${27:# Whether or not to sync external user groups on login}
+    username: ${28:# Username accessing the Foreman server}
+    validate_certs: ${29:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

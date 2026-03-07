@@ -1,36 +1,39 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage S3 buckets in AWS, DigitalOcean, Ceph, Walrus, FakeS3 and StorageGRID}
   amazon.aws.s3_bucket:
-    access_key: ${2:# AWS access key ID}
-    acl: ${3:# The canned ACL to apply to the bucket}
-    aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
-    aws_config: ${5:# A dictionary to modify the botocore configuration}
-    bucket_key_enabled: ${6:# Enable S3 Bucket Keys for SSE-KMS on new objects}
-    ceph: ${7:# Enable API compatibility with Ceph RGW}
-    debug_botocore_endpoint_logs: ${8:# Use a C(botocore}
-    delete_object_ownership: ${9:# Delete bucket's ownership controls}
-    delete_public_access: ${10:# Delete public access block configuration from bucket}
-    dualstack: ${11:# Enables Amazon S3 Dual-Stack Endpoints, allowing S3 communications using both IPv4 and IPv6}
-    encryption: ${12:# Describes the default server-side encryption to apply to new objects in the bucket}
-    encryption_key_id: ${13:# KMS master key ID to use for the default encryption}
-    endpoint_url: ${14:# URL to connect to instead of the default AWS endpoints}
-    force: ${15:# When trying to delete a bucket, delete all keys (including versions and delete markers) in the bucket first (an S3 bucket must be empty for a successful deletion)}
-    name: ${16:# Name of the S3 bucket}
-    object_lock_enabled: ${17:# Whether S3 Object Lock to be enabled}
-    object_ownership: ${18:# Allow bucket's ownership controls}
-    policy: ${19:# The JSON policy as a string}
-    profile: ${20:# A named AWS profile to use for authentication}
-    public_access: ${21:# Configure public access block for S3 bucket}
-    purge_tags: ${22:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
-    region: ${23:# The AWS region to use}
-    requester_pays: ${24:# With Requester Pays buckets, the requester instead of the bucket owner pays the cost of the request and the data download from the bucket}
-    secret_key: ${25:# AWS secret access key}
-    session_token: ${26:# AWS STS session token for use with temporary credentials}
-    state: ${27:# Create or remove the S3 bucket}
-    tags: ${28:# A dictionary representing the tags to be applied to the resource}
-    validate_bucket_name: ${29:# Whether the bucket name should be validated to conform to AWS S3 naming rules}
-    validate_certs: ${30:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    versioning: ${31:# Whether versioning is enabled or disabled (note that once versioning is enabled, it can only be suspended)}
+    accelerate_enabled: ${2:# Enables Amazon S3 Transfer Acceleration, sent data will be routed to Amazon S3 over an optimized network path}
+    access_key: ${3:# AWS access key ID}
+    acl: ${4:# The canned ACL to apply to the bucket}
+    aws_ca_bundle: ${5:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${6:# A dictionary to modify the botocore configuration}
+    bucket_key_enabled: ${7:# Enable S3 Bucket Keys for SSE-KMS on new objects}
+    ceph: ${8:# Enable API compatibility with Ceph RGW}
+    debug_botocore_endpoint_logs: ${9:# Use a C(botocore}
+    delete_object_ownership: ${10:# Delete bucket's ownership controls}
+    delete_public_access: ${11:# Delete public access block configuration from bucket}
+    dualstack: ${12:# Enables Amazon S3 Dual-Stack Endpoints, allowing S3 communications using both IPv4 and IPv6}
+    encryption: ${13:# Describes the default server-side encryption to apply to new objects in the bucket}
+    encryption_key_id: ${14:# KMS master key ID to use for the default encryption}
+    endpoint_url: ${15:# URL to connect to instead of the default AWS endpoints}
+    force: ${16:# When trying to delete a bucket, delete all keys (including versions and delete markers) in the bucket first (an S3 bucket must be empty for a successful deletion)}
+    inventory: ${17:# Enable S3 Inventory, saving list of the objects and their corresponding metadata on a daily or weekly basis for an S3 bucket}
+    name: ${18:# Name of the S3 bucket}
+    object_lock_default_retention: ${19:# Default Object Lock configuration that will be applied by default to every new object placed in the specified bucket}
+    object_lock_enabled: ${20:# Whether S3 Object Lock to be enabled}
+    object_ownership: ${21:# Allow bucket's ownership controls}
+    policy: ${22:# The JSON policy as a string}
+    profile: ${23:# A named AWS profile to use for authentication}
+    public_access: ${24:# Configure public access block for S3 bucket}
+    purge_tags: ${25:# If O(purge_tags=true) and O(tags) is set, existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
+    region: ${26:# The AWS region to use}
+    requester_pays: ${27:# With Requester Pays buckets, the requester instead of the bucket owner pays the cost of the request and the data download from the bucket}
+    secret_key: ${28:# AWS secret access key}
+    session_token: ${29:# AWS STS session token for use with temporary credentials}
+    state: ${30:# Create or remove the S3 bucket}
+    tags: ${31:# A dictionary representing the tags to be applied to the resource}
+    validate_bucket_name: ${32:# Whether the bucket name should be validated to conform to AWS S3 naming rules}
+    validate_certs: ${33:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    versioning: ${34:# Whether versioning is enabled or disabled (note that once versioning is enabled, it can only be suspended)}
   tags:
     - amazon
     - aws

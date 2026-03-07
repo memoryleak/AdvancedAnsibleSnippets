@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Allows administration of Keycloak clients via Keycloak API}
+  <content><![CDATA[- name: ${1:Allows administration of Keycloak clients using Keycloak API}
   community.general.keycloak_client:
     admin_url: ${2:# URL to the admin interface of the client}
     always_display_in_console: ${3:# Whether or not to display this client in account console, even if the user does not have an active session}
@@ -12,52 +12,56 @@
     auth_username: ${10:# Username to authenticate for API access with}
     authentication_flow_binding_overrides: ${11:# Override realm authentication flow bindings}
     authorization_services_enabled: ${12:# Are authorization services enabled for this client or not (OpenID connect)}
-    authorization_settings: ${13:# a data structure defining the authorization settings for this client}
-    base_url: ${14:# Default URL to use when the auth server needs to redirect or link back to the client This is 'baseUrl' in the Keycloak REST API}
-    bearer_only: ${15:# The access type of this client is bearer-only}
-    client_authenticator_type: ${16:# How do clients authenticate with the auth server? Either V(client-secret), V(client-jwt), or V(client-x509) can be chosen}
-    client_id: ${17:# Client id of client to be worked on}
-    client_template: ${18:# Client template to use for this client}
-    connection_timeout: ${19:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
-    consent_required: ${20:# If enabled, users have to consent to client access}
-    default_client_scopes: ${21:# List of default client scopes}
-    default_roles: ${22:# list of default roles for this client}
-    description: ${23:# Description of the client in Keycloak}
-    direct_access_grants_enabled: ${24:# Are direct access grants enabled for this client or not (OpenID connect)}
-    enabled: ${25:# Is this client enabled or not?}
-    frontchannel_logout: ${26:# Is frontchannel logout enabled for this client or not}
-    full_scope_allowed: ${27:# Is the 'Full Scope Allowed' feature set for this client or not}
-    http_agent: ${28:# Configures the HTTP User-Agent header}
-    id: ${29:# Id of client to be worked on}
-    implicit_flow_enabled: ${30:# Enable implicit flow for this client or not (OpenID connect)}
-    name: ${31:# Name of the client (this is not the same as O(client_id))}
-    node_re_registration_timeout: ${32:# Cluster node re-registration timeout for this client}
-    not_before: ${33:# Revoke any tokens issued before this date for this client (this is a UNIX timestamp)}
-    optional_client_scopes: ${34:# List of optional client scopes}
-    protocol: ${35:# Type of client}
-    protocol_mappers: ${36:# a list of dicts defining protocol mappers for this client}
-    public_client: ${37:# Is the access type for this client public or not}
-    realm: ${38:# The realm to create the client in}
-    redirect_uris: ${39:# Acceptable redirect URIs for this client}
-    registered_nodes: ${40:# dict of registered cluster nodes (with C(nodename) as the key and last registration time as the value)}
-    registration_access_token: ${41:# The registration access token provides access for clients to the client registration service}
-    root_url: ${42:# Root URL appended to relative URLs for this client}
-    secret: ${43:# When using O(client_authenticator_type=client-secret) (the default), you can specify a secret here (otherwise one will be generated if it does not exit)}
-    service_accounts_enabled: ${44:# Are service accounts enabled for this client or not (OpenID connect)}
-    standard_flow_enabled: ${45:# Enable standard flow for this client or not (OpenID connect)}
-    state: ${46:# State of the client}
-    surrogate_auth_required: ${47:# Whether or not surrogate auth is required}
-    token: ${48:# Authentication token for Keycloak API}
-    use_template_config: ${49:# Whether or not to use configuration from the O(client_template)}
-    use_template_mappers: ${50:# Whether or not to use mapper configuration from the O(client_template)}
-    use_template_scope: ${51:# Whether or not to use scope configuration from the O(client_template)}
-    validate_certs: ${52:# Verify TLS certificates (do not disable this in production)}
-    web_origins: ${53:# List of allowed CORS origins}
+    authorization_settings: ${13:# A data structure defining the authorization settings for this client}
+    backchannel_logout_url: ${14:# URL that will cause the client to log itself out when a logout request is sent to this realm}
+    base_url: ${15:# Default URL to use when the auth server needs to redirect or link back to the client This is C(baseUrl) in the Keycloak REST API}
+    bearer_only: ${16:# The access type of this client is bearer-only}
+    client_authenticator_type: ${17:# How do clients authenticate with the auth server? Either V(client-secret), V(client-jwt), or V(client-x509) can be chosen}
+    client_id: ${18:# Client ID of client to be worked on}
+    client_scopes_behavior: ${19:# Determine how O(default_client_scopes) and O(optional_client_scopes) behave when updating an existing client}
+    client_template: ${20:# Client template to use for this client}
+    connection_timeout: ${21:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    consent_required: ${22:# If enabled, users have to consent to client access}
+    default_client_scopes: ${23:# List of default client scopes}
+    default_roles: ${24:# List of default roles for this client}
+    description: ${25:# Description of the client in Keycloak}
+    direct_access_grants_enabled: ${26:# Are direct access grants enabled for this client or not (OpenID connect)}
+    enabled: ${27:# Is this client enabled or not?}
+    frontchannel_logout: ${28:# Is frontchannel logout enabled for this client or not}
+    full_scope_allowed: ${29:# Is the 'Full Scope Allowed' feature set for this client or not}
+    http_agent: ${30:# Configures the HTTP User-Agent header}
+    id: ${31:# ID of client to be worked on}
+    implicit_flow_enabled: ${32:# Enable implicit flow for this client or not (OpenID connect)}
+    name: ${33:# Name of the client (this is not the same as O(client_id))}
+    node_re_registration_timeout: ${34:# Cluster node re-registration timeout for this client}
+    not_before: ${35:# Revoke any tokens issued before this date for this client (this is a UNIX timestamp)}
+    optional_client_scopes: ${36:# List of optional client scopes}
+    protocol: ${37:# Type of client}
+    protocol_mappers: ${38:# A list of dicts defining protocol mappers for this client}
+    public_client: ${39:# Is the access type for this client public or not}
+    realm: ${40:# The realm to create the client in}
+    redirect_uris: ${41:# Acceptable redirect URIs for this client}
+    refresh_token: ${42:# Authentication refresh token for Keycloak API}
+    registered_nodes: ${43:# Dict of registered cluster nodes (with C(nodename) as the key and last registration time as the value)}
+    registration_access_token: ${44:# The registration access token provides access for clients to the client registration service}
+    root_url: ${45:# Root URL appended to relative URLs for this client}
+    secret: ${46:# When using O(client_authenticator_type=client-secret) (the default), you can specify a secret here (otherwise one is generated if it does not exit)}
+    service_accounts_enabled: ${47:# Are service accounts enabled for this client or not (OpenID connect)}
+    standard_flow_enabled: ${48:# Enable standard flow for this client or not (OpenID connect)}
+    state: ${49:# State of the client}
+    surrogate_auth_required: ${50:# Whether or not surrogate auth is required}
+    token: ${51:# Authentication token for Keycloak API}
+    use_template_config: ${52:# Whether or not to use configuration from the O(client_template)}
+    use_template_mappers: ${53:# Whether or not to use mapper configuration from the O(client_template)}
+    use_template_scope: ${54:# Whether or not to use scope configuration from the O(client_template)}
+    valid_post_logout_redirect_uris: ${55:# Valid post logout redirect URIs for this client}
+    validate_certs: ${56:# Verify TLS certificates (do not disable this in production)}
+    web_origins: ${57:# List of allowed CORS origins}
   tags:
     - community
     - general
     - keycloak_client]]></content>
   <tabTrigger>community.general.keycloak_client</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Allows administration of Keycloak clients via Keycloak API</description>
+  <description>Allows administration of Keycloak clients using Keycloak API</description>
 </snippet>

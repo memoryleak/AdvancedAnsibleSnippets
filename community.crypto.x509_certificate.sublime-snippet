@@ -9,50 +9,40 @@
     backup: ${7:# Create a backup file including a timestamp so you can get the original certificate back if you overwrote it with a new one by accident}
     csr_content: ${8:# Content of the Certificate Signing Request (CSR) used to generate this certificate}
     csr_path: ${9:# Path to the Certificate Signing Request (CSR) used to generate this certificate}
-    entrust_api_client_cert_key_path: ${10:# The path to the private key of the client certificate used to authenticate to the Entrust Certificate Services (ECS) API}
-    entrust_api_client_cert_path: ${11:# The path to the client certificate used to authenticate to the Entrust Certificate Services (ECS) API}
-    entrust_api_key: ${12:# The key (password) for authentication to the Entrust Certificate Services (ECS) API}
-    entrust_api_specification_path: ${13:# The path to the specification file defining the Entrust Certificate Services (ECS) API configuration}
-    entrust_api_user: ${14:# The username for authentication to the Entrust Certificate Services (ECS) API}
-    entrust_cert_type: ${15:# Specify the type of certificate requested}
-    entrust_not_after: ${16:# The point in time at which the certificate stops being valid}
-    entrust_requester_email: ${17:# The email of the requester of the certificate (for tracking purposes)}
-    entrust_requester_name: ${18:# The name of the requester of the certificate (for tracking purposes)}
-    entrust_requester_phone: ${19:# The phone number of the requester of the certificate (for tracking purposes)}
-    force: ${20:# Generate the certificate, even if it already exists}
-    group: ${21:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
-    ignore_timestamps: ${22:# Whether the 'not before' and 'not after' timestamps should be ignored for idempotency checks}
-    mode: ${23:# The permissions the resulting filesystem object should have}
-    ownca_content: ${24:# Content of the CA (Certificate Authority) certificate}
-    ownca_create_authority_key_identifier: ${25:# Create a Authority Key Identifier from the CA's certificate}
-    ownca_create_subject_key_identifier: ${26:# Whether to create the Subject Key Identifier (SKI) from the public key}
-    ownca_digest: ${27:# The digest algorithm to be used for the V(ownca) certificate}
-    ownca_not_after: ${28:# The point in time at which the certificate stops being valid}
-    ownca_not_before: ${29:# The point in time the certificate is valid from}
-    ownca_path: ${30:# Remote absolute path of the CA (Certificate Authority) certificate}
-    ownca_privatekey_content: ${31:# Content of the CA (Certificate Authority) private key to use when signing the certificate}
-    ownca_privatekey_passphrase: ${32:# The passphrase for the O(ownca_privatekey_path) resp}
-    ownca_privatekey_path: ${33:# Path to the CA (Certificate Authority) private key to use when signing the certificate}
-    ownca_version: ${34:# The version of the V(ownca) certificate}
-    owner: ${35:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
-    path: ${36:# Remote absolute path where the generated certificate file should be created or is already located}
-    privatekey_content: ${37:# Content of the private key to use when signing the certificate}
-    privatekey_passphrase: ${38:# The passphrase for the O(privatekey_path) resp}
-    privatekey_path: ${39:# Path to the private key to use when signing the certificate}
-    provider: ${40:# Name of the provider to use to generate/retrieve the OpenSSL certificate}
-    return_content: ${41:# If set to V(true), will return the (current or generated) certificate's content as RV(certificate)}
-    select_crypto_backend: ${42:# Determines which crypto backend to use}
-    selevel: ${43:# The level part of the SELinux filesystem object context}
-    selfsigned_create_subject_key_identifier: ${44:# Whether to create the Subject Key Identifier (SKI) from the public key}
-    selfsigned_digest: ${45:# Digest algorithm to be used when self-signing the certificate}
-    selfsigned_not_after: ${46:# The point in time at which the certificate stops being valid}
-    selfsigned_not_before: ${47:# The point in time the certificate is valid from}
-    selfsigned_version: ${48:# Version of the V(selfsigned) certificate}
-    serole: ${49:# The role part of the SELinux filesystem object context}
-    setype: ${50:# The type part of the SELinux filesystem object context}
-    seuser: ${51:# The user part of the SELinux filesystem object context}
-    state: ${52:# Whether the certificate should exist or not, taking action if the state is different from what is stated}
-    unsafe_writes: ${53:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
+    force: ${10:# Generate the certificate, even if it already exists}
+    group: ${11:# Name of the group that should own the filesystem object, as would be fed to C(chown)}
+    ignore_timestamps: ${12:# Whether the 'not before' and 'not after' timestamps should be ignored for idempotency checks}
+    mode: ${13:# The permissions the resulting filesystem object should have}
+    ownca_content: ${14:# Content of the CA (Certificate Authority) certificate}
+    ownca_create_authority_key_identifier: ${15:# Create a Authority Key Identifier from the CA's certificate}
+    ownca_create_subject_key_identifier: ${16:# Whether to create the Subject Key Identifier (SKI) from the public key}
+    ownca_digest: ${17:# The digest algorithm to be used for the V(ownca) certificate}
+    ownca_not_after: ${18:# The point in time at which the certificate stops being valid}
+    ownca_not_before: ${19:# The point in time the certificate is valid from}
+    ownca_path: ${20:# Remote absolute path of the CA (Certificate Authority) certificate}
+    ownca_privatekey_content: ${21:# Content of the CA (Certificate Authority) private key to use when signing the certificate}
+    ownca_privatekey_passphrase: ${22:# The passphrase for the O(ownca_privatekey_path) resp}
+    ownca_privatekey_path: ${23:# Path to the CA (Certificate Authority) private key to use when signing the certificate}
+    ownca_version: ${24:# The version of the V(ownca) certificate}
+    owner: ${25:# Name of the user that should own the filesystem object, as would be fed to C(chown)}
+    path: ${26:# Remote absolute path where the generated certificate file should be created or is already located}
+    privatekey_content: ${27:# Content of the private key to use when signing the certificate}
+    privatekey_passphrase: ${28:# The passphrase for the O(privatekey_path) resp}
+    privatekey_path: ${29:# Path to the private key to use when signing the certificate}
+    provider: ${30:# Name of the provider to use to generate/retrieve the OpenSSL certificate}
+    return_content: ${31:# If set to V(true), will return the (current or generated) certificate's content as RV(certificate)}
+    select_crypto_backend: ${32:# Determines which crypto backend to use}
+    selevel: ${33:# The level part of the SELinux filesystem object context}
+    selfsigned_create_subject_key_identifier: ${34:# Whether to create the Subject Key Identifier (SKI) from the public key}
+    selfsigned_digest: ${35:# Digest algorithm to be used when self-signing the certificate}
+    selfsigned_not_after: ${36:# The point in time at which the certificate stops being valid}
+    selfsigned_not_before: ${37:# The point in time the certificate is valid from}
+    selfsigned_version: ${38:# Version of the V(selfsigned) certificate}
+    serole: ${39:# The role part of the SELinux filesystem object context}
+    setype: ${40:# The type part of the SELinux filesystem object context}
+    seuser: ${41:# The user part of the SELinux filesystem object context}
+    state: ${42:# Whether the certificate should exist or not, taking action if the state is different from what is stated}
+    unsafe_writes: ${43:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
   tags:
     - community
     - crypto

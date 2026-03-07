@@ -2,7 +2,7 @@
   <content><![CDATA[- name: ${1:Search for entries in a LDAP server}
   community.general.ldap_search:
     attrs: ${2:# A list of attributes for limiting the result}
-    base64_attributes: ${3:# If provided, all attribute values returned that are listed in this option will be Base64 encoded}
+    base64_attributes: ${3:# If provided, all attribute values returned that are listed in this option are Base64 encoded}
     bind_dn: ${4:# A DN to bind with}
     bind_pw: ${5:# The password to use with O(bind_dn)}
     ca_path: ${6:# Set the path to PEM file with CA certs}
@@ -16,8 +16,8 @@
     schema: ${14:# Set to V(true) to return the full attribute schema of entries, not their attribute values}
     scope: ${15:# The LDAP scope to use}
     server_uri: ${16:# The O(server_uri) parameter may be a comma- or whitespace-separated list of URIs containing only the schema, the host, and the port fields}
-    start_tls: ${17:# If true, we'll use the START_TLS LDAP extension}
-    validate_certs: ${18:# If set to V(false), SSL certificates will not be validated}
+    start_tls: ${17:# Use the START_TLS LDAP extension if set to V(true)}
+    validate_certs: ${18:# If set to V(false), SSL certificates are not validated}
     xorder_discovery: ${19:# Set the behavior on how to process Xordered DNs}
   tags:
     - community

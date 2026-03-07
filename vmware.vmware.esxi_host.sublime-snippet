@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage VMware ESXi host status in vCenter}
+  vmware.vmware.esxi_host:
+    cluster: ${2:# The name of the cluster to be managed}
+    datacenter: ${3:# The name of the datacenter}
+    esxi_host_name: ${4:# ESXi hostname to manage}
+    esxi_password: ${5:# The password to use when authenticating to the ESXi host}
+    esxi_port: ${6:# The port on which the ESXi host's SSL certificate can be seen}
+    esxi_username: ${7:# The username to use when authenticating to the ESXi host}
+    folder: ${8:# Name of the folder under which host to add}
+    folder_paths_are_absolute: ${9:# If true, any folder path parameters are treated as absolute paths}
+    force_add: ${10:# Forces the ESXi host to be added to the vCenter server, even if it is already being managed by another server}
+    hostname: ${11:# The hostname or IP address of the vSphere vCenter server}
+    password: ${12:# The password of the vSphere vCenter server}
+    port: ${13:# The port number of the vSphere vCenter server}
+    proxy_host: ${14:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${15:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    ssl_thumbprint: ${16:# Specify the host system's SSL certificate thumbprint}
+    state: ${17:# If set to V(present), make sure the host is registered in vCenter in the desired folder or cluster}
+    username: ${18:# The username of the vSphere vCenter server}
+    validate_certs: ${19:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware
+    - esxi_host]]></content>
+  <tabTrigger>vmware.vmware.esxi_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage VMware ESXi host status in vCenter</description>
+</snippet>

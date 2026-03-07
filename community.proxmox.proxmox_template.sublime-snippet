@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Management of OS templates in Proxmox VE cluster}
+  community.proxmox.proxmox_template:
+    api_host: ${2:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${3:# Specify the password to authenticate with}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    checksum: ${8:# The checksum to validate against}
+    checksum_algorithm: ${9:# Algorithm used to verify the checksum}
+    content_type: ${10:# Content type of the template}
+    force: ${11:# It can only be used with O(state=present), existing template will be overwritten}
+    node: ${12:# Proxmox VE node on which to operate}
+    src: ${13:# Path to uploaded file}
+    state: ${14:# Indicate desired state of the template}
+    storage: ${15:# Target storage}
+    template: ${16:# The template name}
+    timeout: ${17:# Timeout for operations}
+    url: ${18:# URL to file to download}
+    validate_certs: ${19:# If V(false), SSL certificates will not be validated}
+  tags:
+    - community
+    - proxmox
+    - proxmox_template]]></content>
+  <tabTrigger>community.proxmox.proxmox_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Management of OS templates in Proxmox VE cluster</description>
+</snippet>

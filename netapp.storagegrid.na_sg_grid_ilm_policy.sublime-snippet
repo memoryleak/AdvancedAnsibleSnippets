@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage ILM policies on StorageGRID}
+  netapp.storagegrid.na_sg_grid_ilm_policy:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    default_rule: ${4:# The rule ID of the defailt rule in the policy}
+    name: ${5:# The unique name of the policy}
+    reason: ${6:# Policy description}
+    rules: ${7:# A list of ILM rule IDs, in the order in which they will be evaluated}
+    state: ${8:# Whether the specified policy should exist}
+    validate_certs: ${9:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_ilm_policy]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_ilm_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage ILM policies on StorageGRID</description>
+</snippet>

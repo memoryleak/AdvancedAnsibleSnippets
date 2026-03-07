@@ -2,13 +2,15 @@
   <content><![CDATA[- name: ${1:Manage External User Groups}
   theforeman.foreman.external_usergroup:
     auth_source: ${2:# Name of the authentication source to be used for this group}
-    name: ${3:# Name of the group}
-    password: ${4:# Password of the user accessing the Foreman server}
-    server_url: ${5:# URL of the Foreman server}
-    state: ${6:# State of the entity}
-    usergroup: ${7:# Name of the linked usergroup}
-    username: ${8:# Username accessing the Foreman server}
-    validate_certs: ${9:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${3:# PEM formatted file that contains a CA certificate to be used for validation}
+    name: ${4:# Name of the group}
+    password: ${5:# Password of the user accessing the Foreman server}
+    server_url: ${6:# URL of the Foreman server}
+    state: ${7:# State of the entity}
+    use_gssapi: ${8:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    usergroup: ${9:# Name of the linked usergroup}
+    username: ${10:# Username accessing the Foreman server}
+    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

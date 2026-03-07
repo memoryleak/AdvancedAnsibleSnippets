@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Deploy a VM from a template located in a folder}
+  vmware.vmware.deploy_folder_template:
+    cluster: ${2:# The name or MOID of the cluster where the VM should be deployed}
+    datacenter: ${3:# The name or MOID of the datacenter to use when searching for and deploying resources}
+    datastore: ${4:# Name or MOID of the datastore to store deployed VM and disk}
+    datastore_cluster: ${5:# Name or MOID of the datastore cluster to store deployed VM and disk}
+    esxi_host: ${6:# The name of the ESXi host onto which the virtual machine should be deployed}
+    folder_paths_are_absolute: ${7:# If true, any folder path parameters are treated as absolute paths}
+    hostname: ${8:# The hostname or IP address of the vSphere vCenter server}
+    password: ${9:# The password of the vSphere vCenter server}
+    port: ${10:# The port number of the vSphere vCenter server}
+    power_on_after_deploy: ${11:# Whether or not the VM should be powered on once it has been deployed}
+    proxy_host: ${12:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    resource_pool: ${14:# The name or MOID of a resource pool into which the virtual machine should be deployed}
+    template_folder: ${15:# The path to the folder where the template with O(template_name) exists}
+    template_folder_id: ${16:# The ID of the folder where the template with O(template_name) exists}
+    template_id: ${17:# The ID of the template to use when deploying}
+    template_name: ${18:# The name of the template to use when deploying}
+    username: ${19:# The username of the vSphere vCenter server}
+    validate_certs: ${20:# Allows connection when SSL certificates are not valid}
+    vm_folder: ${21:# Virtual machine folder into which the virtual machine should be deployed}
+    vm_name: ${22:# The name of the VM to deploy}
+  tags:
+    - vmware
+    - vmware
+    - deploy_folder_template]]></content>
+  <tabTrigger>vmware.vmware.deploy_folder_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Deploy a VM from a template located in a folder</description>
+</snippet>

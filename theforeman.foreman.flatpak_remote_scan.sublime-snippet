@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Scan a Flatpak Remote}
+  theforeman.foreman.flatpak_remote_scan:
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    flatpak_remote: ${3:# Flatpak remote}
+    organization: ${4:# Organization that the entity is in}
+    password: ${5:# Password of the user accessing the Foreman server}
+    server_url: ${6:# URL of the Foreman server}
+    use_gssapi: ${7:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${8:# Username accessing the Foreman server}
+    validate_certs: ${9:# Whether or not to verify the TLS certificates of the Foreman server}
+  tags:
+    - theforeman
+    - foreman
+    - flatpak_remote_scan]]></content>
+  <tabTrigger>theforeman.foreman.flatpak_remote_scan</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Scan a Flatpak Remote</description>
+</snippet>

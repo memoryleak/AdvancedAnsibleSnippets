@@ -3,15 +3,18 @@
   community.general.wdc_redfish_command:
     auth_token: ${2:# Security token for authentication with OOB controller}
     baseuri: ${3:# Base URI of OOB controller}
-    category: ${4:# Category to execute on OOB controller}
-    command: ${5:# List of commands to execute on OOB controller}
-    ioms: ${6:# List of IOM FQDNs for the enclosure}
-    password: ${7:# Password for authentication with OOB controller}
-    resource_id: ${8:# ID of the component to modify, such as V(Enclosure), V(IOModuleAFRU), V(PowerSupplyBFRU), V(FanExternalFRU3), or V(FanInternalFRU)}
-    timeout: ${9:# Timeout in seconds for URL requests to OOB controller}
-    update_creds: ${10:# The credentials for retrieving the update image}
-    update_image_uri: ${11:# The URI of the image for the update}
-    username: ${12:# User for authentication with OOB controller}
+    ca_path: ${4:# PEM formatted file that contains a CA certificate to be used for validation}
+    category: ${5:# Category to execute on OOB controller}
+    ciphers: ${6:# TLS/SSL Ciphers to use for the request}
+    command: ${7:# List of commands to execute on OOB controller}
+    ioms: ${8:# List of IOM FQDNs for the enclosure}
+    password: ${9:# Password for authentication with OOB controller}
+    resource_id: ${10:# ID of the component to modify, such as V(Enclosure), V(IOModuleAFRU), V(PowerSupplyBFRU), V(FanExternalFRU3), or V(FanInternalFRU)}
+    timeout: ${11:# Timeout in seconds for URL requests to OOB controller}
+    update_creds: ${12:# The credentials for retrieving the update image}
+    update_image_uri: ${13:# The URI of the image for the update}
+    username: ${14:# User for authentication with OOB controller}
+    validate_certs: ${15:# If V(false), TLS/SSL certificates are not validated}
   tags:
     - community
     - general

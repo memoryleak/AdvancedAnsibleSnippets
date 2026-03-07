@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:download a chart from a repository and (optionally) unpack it in local directory}
+  kubernetes.core.helm_pull:
+    binary_path: ${2:# The path of a helm binary to use}
+    chart_ca_cert: ${3:# Verify certificates of HTTPS-enabled servers using this CA bundle}
+    chart_devel: ${4:# Use development versions, too}
+    chart_ref: ${5:# chart name on chart repository}
+    chart_ssl_cert_file: ${6:# Identify HTTPS client using this SSL certificate file}
+    chart_ssl_key_file: ${7:# Identify HTTPS client using this SSL key file}
+    chart_version: ${8:# Specify a version constraint for the chart version to use}
+    destination: ${9:# location to write the chart}
+    force: ${10:# Force download of the chart even if it already exists in the destination directory}
+    pass_credentials: ${11:# Pass credentials to all domains}
+    plain_http: ${12:# Use HTTP instead of HTTPS when working with OCI registries}
+    provenance: ${13:# Fetch the provenance file, but don't perform verification}
+    repo_password: ${14:# Chart repository password where to locate the requested chart}
+    repo_url: ${15:# chart repository url where to locate the requested chart}
+    repo_username: ${16:# Chart repository username where to locate the requested chart}
+    skip_tls_certs_check: ${17:# Whether or not to check tls certificate for the chart download}
+    untar_chart: ${18:# if set to true, will untar the chart after downloading it}
+    verify_chart: ${19:# Verify the package before using it}
+    verify_chart_keyring: ${20:# location of public keys used for verification}
+  tags:
+    - kubernetes
+    - core
+    - helm_pull]]></content>
+  <tabTrigger>kubernetes.core.helm_pull</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>download a chart from a repository and (optionally) unpack it in local directory</description>
+</snippet>

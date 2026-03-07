@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Network Connectivity Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_network_connectivity_policy:
+    alternate_ipv4_dns_server: ${2:# IP address of the secondary DNS server}
+    alternate_ipv6_dns_server: ${3:# IP address of the secondary DNS server}
+    api_key_id: ${4:# Public API Key ID associated with the private key}
+    api_private_key: ${5:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${6:# URI used to access the Intersight API}
+    description: ${7:# The user-defined description for the Network Connectivity Policy}
+    dynamic_dns_domain: ${8:# The domain name appended to a hostname for a Dynamic DNS (DDNS) update}
+    enable_dynamic_dns: ${9:# If enabled, updates the resource records to the DNS from Cisco IMC}
+    enable_ipv4_dns_from_dhcp: ${10:# Enable IPv4 DNS from DHCP}
+    enable_ipv6: ${11:# If enabled, allows to configure IPv6 properties}
+    enable_ipv6_dns_from_dhcp: ${12:# If enabled, Cisco IMC retrieves the DNS server addresses from DHCP}
+    name: ${13:# The name assigned to the Network Connectivity Policy}
+    organization: ${14:# The name of the Organization this resource is assigned to}
+    preferred_ipv4_dns_server: ${15:# IP address of the primary DNS server}
+    preferred_ipv6_dns_server: ${16:# IP address of the primary DNS server}
+    state: ${17:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${18:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${19:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${20:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_network_connectivity_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_network_connectivity_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Network Connectivity Policy configuration for Cisco Intersight</description>
+</snippet>

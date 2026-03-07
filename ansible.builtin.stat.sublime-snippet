@@ -6,7 +6,8 @@
     get_attributes: ${4:# Get file attributes using lsattr tool if present}
     get_checksum: ${5:# Whether to return a checksum of the file}
     get_mime: ${6:# Use file magic and return data about the nature of the file}
-    path: ${7:# The full path of the file/object to get the facts of}
+    get_selinux_context: ${7:# Get file SELinux context in a list V([user, role, type, range]), and will get V([None, None, None, None]) if it is not possible to retrieve the context, either because it does not exist or some other issue}
+    path: ${8:# The full path of the file/object to get the facts of}
   tags:
     - stat]]></content>
   <tabTrigger>ansible.builtin.stat</tabTrigger>

@@ -3,13 +3,13 @@
   ansible.builtin.assemble:
     attributes: ${2:# The attributes the resulting filesystem object should have}
     backup: ${3:# Create a backup file (if V(true)), including the timestamp information so you can get the original file back if you somehow clobbered it incorrectly}
-    decrypt: ${4:# This option controls the autodecryption of source files using vault}
+    decrypt: ${4:# This option controls the auto-decryption of source files using vault}
     delimiter: ${5:# A delimiter to separate the file contents}
     dest: ${6:# A file to create using the concatenation of all of the source files}
-    group: ${7:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
-    ignore_hidden: ${8:# A boolean that controls if files that start with a '}
+    group: ${7:# Name of the group that should own the filesystem object, as would be fed to C(chown)}
+    ignore_hidden: ${8:# A boolean that controls if files that start with a C(}
     mode: ${9:# The permissions the resulting filesystem object should have}
-    owner: ${10:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
+    owner: ${10:# Name of the user that should own the filesystem object, as would be fed to C(chown)}
     regexp: ${11:# Assemble files only if the given regular expression matches the filename}
     remote_src: ${12:# If V(false), it will search for src at originating/master machine}
     selevel: ${13:# The level part of the SELinux filesystem object context}

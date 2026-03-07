@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Allows management of Keycloak realm localization overrides via the Keycloak API}
+  community.general.keycloak_realm_localization:
+    auth_client_id: ${2:# OpenID Connect C(client_id) to authenticate to the API with}
+    auth_client_secret: ${3:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
+    auth_keycloak_url: ${4:# URL to the Keycloak instance}
+    auth_password: ${5:# Password to authenticate for API access with}
+    auth_realm: ${6:# Keycloak realm name to authenticate to for API access}
+    auth_username: ${7:# Username to authenticate for API access with}
+    connection_timeout: ${8:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    force: ${9:# If V(false), only the keys listed in the O(overrides) are modified by this module}
+    http_agent: ${10:# Configures the HTTP User-Agent header}
+    locale: ${11:# Locale code for which the overrides apply (for example, V(en), V(fi), V(de))}
+    overrides: ${12:# List of overrides to ensure for the locale when O(state=present)}
+    parent_id: ${13:# Name of the realm that owns the locale overrides}
+    refresh_token: ${14:# Authentication refresh token for Keycloak API}
+    state: ${15:# Desired state of localization overrides for the given locale}
+    token: ${16:# Authentication token for Keycloak API}
+    validate_certs: ${17:# Verify TLS certificates (do not disable this in production)}
+  tags:
+    - community
+    - general
+    - keycloak_realm_localization]]></content>
+  <tabTrigger>community.general.keycloak_realm_localization</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Allows management of Keycloak realm localization overrides via the Keycloak API</description>
+</snippet>

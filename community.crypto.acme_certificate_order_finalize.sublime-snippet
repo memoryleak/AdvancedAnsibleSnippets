@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Finalize an ACME v2 order}
+  community.crypto.acme_certificate_order_finalize:
+    account_key_content: ${2:# Content of the ACME account RSA or Elliptic Curve key}
+    account_key_passphrase: ${3:# Phassphrase to use to decode the account key}
+    account_key_src: ${4:# Path to a file containing the ACME account RSA or Elliptic Curve key}
+    account_uri: ${5:# If specified, assumes that the account URI is as given}
+    acme_directory: ${6:# The ACME directory to use}
+    acme_version: ${7:# The ACME version of the endpoint}
+    cert_dest: ${8:# The destination file for the certificate}
+    chain_dest: ${9:# If specified, the intermediate certificate will be written to this file}
+    csr: ${10:# File containing the CSR for the new certificate}
+    csr_content: ${11:# Content of the CSR for the new certificate}
+    deactivate_authzs: ${12:# Deactivate authentication objects (authz) after issuing a certificate, or when issuing the certificate failed}
+    fullchain_dest: ${13:# The destination file for the full chain (that is, a certificate followed by chain of intermediate certificates)}
+    order_uri: ${14:# The order URI provided by RV(community}
+    request_timeout: ${15:# The time Ansible should wait for a response from the ACME API}
+    retrieve_all_alternates: ${16:# When set to V(true), will retrieve all alternate trust chains offered by the ACME CA}
+    select_chain: ${17:# Allows to specify criteria by which an (alternate) trust chain can be selected}
+    select_crypto_backend: ${18:# Determines which crypto backend to use}
+    validate_certs: ${19:# Whether calls to the ACME directory will validate TLS certificates}
+  tags:
+    - community
+    - crypto
+    - acme_certificate_order_finalize]]></content>
+  <tabTrigger>community.crypto.acme_certificate_order_finalize</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Finalize an ACME v2 order</description>
+</snippet>

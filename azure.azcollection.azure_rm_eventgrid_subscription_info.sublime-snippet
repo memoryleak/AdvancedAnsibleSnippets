@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:List Eventgrid Event Subscriptions}
+  azure.azcollection.azure_rm_eventgrid_subscription_info:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${5:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${6:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${7:# Azure client ID}
+    cloud_environment: ${8:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    disable_instance_discovery: ${9:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    location: ${10:# List by region}
+    log_mode: ${11:# Parent argument}
+    log_path: ${12:# Parent argument}
+    odata_query: ${13:# The query used to filter the search results using OData syntax}
+    password: ${14:# Active Directory user password}
+    profile: ${15:# Security profile found in ~/}
+    resource_group: ${16:# Name of a resource group to limit event subscriptions from}
+    secret: ${17:# Azure client secret}
+    source_resource_id: ${18:# Fully qualified identifier of the Azure resource whose event subscription needs to be listed}
+    subscription_id: ${19:# Your Azure subscription Id}
+    tenant: ${20:# Azure tenant ID}
+    thumbprint: ${21:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${22:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_eventgrid_subscription_info]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_eventgrid_subscription_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>List Eventgrid Event Subscriptions</description>
+</snippet>

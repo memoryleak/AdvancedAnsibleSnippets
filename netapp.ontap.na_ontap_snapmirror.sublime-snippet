@@ -24,26 +24,29 @@
     password: ${22:# Password for the specified user}
     peer_options: ${23:# IP address and connection options for the peer system}
     policy: ${24:# Specify the name of the SnapMirror policy that applies to this relationship}
-    relationship_info_only: ${25:# If relationship-info-only is set to true then only relationship information is removed}
-    relationship_state: ${26:# Specifies whether to break SnapMirror relation or establish a SnapMirror relationship}
-    relationship_type: ${27:# Specify the type of SnapMirror relationship}
-    schedule: ${28:# Specify the name of the current schedule, which is used to update the SnapMirror relationship}
-    source_cluster: ${29:# Requires ONTAP 9}
-    source_endpoint: ${30:# source endpoint of a SnapMirror relationship}
-    source_hostname: ${31:# DEPRECATED - please use C(peer_options)}
-    source_password: ${32:# DEPRECATED - please use C(peer_options)}
-    source_path: ${33:# Specifies the source endpoint of the SnapMirror relationship}
-    source_snapshot: ${34:# Specifies the Snapshot from the source to be restored}
-    source_username: ${35:# DEPRECATED - please use C(peer_options)}
-    source_volume: ${36:# Specifies the name of the source volume for the SnapMirror}
-    source_vserver: ${37:# Name of the source vserver for the SnapMirror}
-    state: ${38:# Whether the specified relationship should exist or not}
-    transferring_time_out: ${39:# How long to wait when a transfer is in progress (after initializing for instance)}
-    update: ${40:# Specifies whether to update the destination endpoint of the SnapMirror relationship only if the relationship is already present and active}
-    use_rest: ${41:# Whether to use REST or ZAPI}
-    username: ${42:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${43:# If set to C(no), the SSL certificates will not be validated}
-    validate_source_path: ${44:# The relationship is found based on the destination as it is unique}
+    quick_resync: ${25:# Set to true to reduce resync time by not preserving storage efficiency}
+    quiesced_time_out: ${26:# How long to wait for a relationship to quiesce}
+    relationship_info_only: ${27:# If relationship-info-only is set to true then only relationship information is removed}
+    relationship_state: ${28:# Specifies whether to break SnapMirror relation or establish a SnapMirror relationship}
+    relationship_type: ${29:# Specify the type of SnapMirror relationship}
+    schedule: ${30:# Specify the name of the current schedule, which is used to update the SnapMirror relationship}
+    source_cluster: ${31:# Requires ONTAP 9}
+    source_endpoint: ${32:# source endpoint of a SnapMirror relationship}
+    source_hostname: ${33:# DEPRECATED - please use C(peer_options)}
+    source_password: ${34:# DEPRECATED - please use C(peer_options)}
+    source_path: ${35:# Specifies the source endpoint of the SnapMirror relationship}
+    source_snapshot: ${36:# Specifies the Snapshot from the source to be restored}
+    source_username: ${37:# DEPRECATED - please use C(peer_options)}
+    source_volume: ${38:# Specifies the name of the source volume for the SnapMirror}
+    source_vserver: ${39:# Name of the source vserver for the SnapMirror}
+    state: ${40:# Whether the specified relationship should exist or not}
+    transferring_time_out: ${41:# How long to wait when a transfer is in progress (after initializing for instance)}
+    update: ${42:# Specifies whether to update the destination endpoint of the SnapMirror relationship only if the relationship is already present and active}
+    use_lambda: ${43:# Specifies if AWS Lambda proxy functionality should be used to connect to the ONTAP system}
+    use_rest: ${44:# Whether to use REST or ZAPI}
+    username: ${45:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${46:# If set to C(no), the SSL certificates will not be validated}
+    validate_source_path: ${47:# The relationship is found based on the destination as it is unique}
   tags:
     - netapp
     - ontap

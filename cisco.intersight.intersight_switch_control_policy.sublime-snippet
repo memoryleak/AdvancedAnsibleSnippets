@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Switch Control Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_switch_control_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    description: ${5:# The user-defined description for the Switch Control Policy}
+    ethernet_switching_mode: ${6:# Enable or Disable Ethernet End Host Switching Mode}
+    fabric_pc_vhba_reset: ${7:# When enabled, a Registered State Change Notification (RSCN) is sent to the VIC adapter}
+    fc_switching_mode: ${8:# Enable or Disable FC End Host Switching Mode}
+    mac_aging_option: ${9:# MAC address aging time configuration option}
+    mac_aging_time: ${10:# Define the MAC address aging time in seconds}
+    message_interval: ${11:# Configures the time between UDLD probe messages on the UDLD enabled ports}
+    name: ${12:# The name assigned to the Switch Control Policy}
+    organization: ${13:# The name of the Organization this resource is assigned to}
+    primary_key: ${14:# Encrypts MACsec keys in type-6 format}
+    recovery_action: ${15:# UDLD recovery action when enabled, attempts to bring an UDLD error-disabled port out of reset}
+    reserved_vlan_start_id: ${16:# The starting ID for VLANs reserved for internal use within the Fabric Interconnect}
+    state: ${17:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${18:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${19:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${20:# Boolean control for verifying the api_uri TLS certificate}
+    vlan_port_optimization_enabled: ${21:# To enable or disable the VLAN port count optimization}
+  tags:
+    - cisco
+    - intersight
+    - intersight_switch_control_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_switch_control_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Switch Control Policy configuration for Cisco Intersight</description>
+</snippet>

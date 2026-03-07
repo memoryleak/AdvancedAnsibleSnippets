@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure autosupport on StorageGRID}
+  netapp.storagegrid.na_sg_grid_autosupport:
+    aod_enable: ${2:# Enable or disable sending Autosupport on Demand}
+    api_url: ${3:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${4:# The authorization token for the API request}
+    available_updates_enable: ${5:# Whether to check for software updates}
+    cert_enable: ${6:# Enable AutoSupport certificate validation}
+    destinations: ${7:# AutoSupport destinations}
+    event_enable: ${8:# Enable event-triggered AutoSupport messages}
+    state: ${9:# The alert receiver should be present}
+    transport: ${10:# Protocol used for AutoSupport messages}
+    validate_certs: ${11:# Should https certificates be validated?}
+    weekly_enable: ${12:# Enable weekly AutoSupport messages}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_autosupport]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_autosupport</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure autosupport on StorageGRID</description>
+</snippet>

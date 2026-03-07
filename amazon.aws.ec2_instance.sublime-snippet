@@ -14,7 +14,7 @@
     detailed_monitoring: ${12:# Whether to allow detailed CloudWatch metrics to be collected, enabling more detailed alerting}
     ebs_optimized: ${13:# Whether instance is should use optimized EBS volumes, see U(https://docs}
     endpoint_url: ${14:# URL to connect to instead of the default AWS endpoints}
-    exact_count: ${15:# An integer value which indicates how many instances that match the I(filters) parameter should be running}
+    exact_count: ${15:# An integer value which indicates how many instances that match the O(filters) parameter should be running}
     filters: ${16:# A dict of filters to apply when deciding whether existing instances match and should be altered}
     hibernation_options: ${17:# Indicates whether an instance is enabled for hibernation}
     iam_instance_profile: ${18:# The ARN or name of an EC2-enabled IAM instance profile to be used}
@@ -29,25 +29,28 @@
     metadata_options: ${27:# Modify the metadata options for the instance}
     name: ${28:# The Name tag for the instance}
     network: ${29:# Either a dictionary containing the key C(interfaces) corresponding to a list of network interface IDs or containing specifications for a single network interface}
-    placement: ${30:# The location where the instance launched, if applicable}
-    placement_group: ${31:# The placement group that needs to be assigned to the instance}
-    profile: ${32:# A named AWS profile to use for authentication}
-    purge_tags: ${33:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
-    region: ${34:# The AWS region to use}
-    secret_key: ${35:# AWS secret access key}
-    security_group: ${36:# A security group ID or name}
-    security_groups: ${37:# A list of security group IDs or names (strings)}
-    session_token: ${38:# AWS STS session token for use with temporary credentials}
-    state: ${39:# Goal state for the instances}
-    tags: ${40:# A dictionary representing the tags to be applied to the resource}
-    tenancy: ${41:# What type of tenancy to allow an instance to use}
-    termination_protection: ${42:# Whether to enable termination protection}
-    user_data: ${43:# Opaque blob of data which is made available to the EC2 instance}
-    validate_certs: ${44:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    volumes: ${45:# A list of block device mappings, by default this will always use the AMI root device so the volumes option is primarily for adding more storage}
-    vpc_subnet_id: ${46:# The subnet ID in which to launch the instance (VPC)}
-    wait: ${47:# Whether or not to wait for the desired I(state) (use (wait_timeout) to customize this)}
-    wait_timeout: ${48:# How long to wait (in seconds) for the instance to finish booting/terminating}
+    network_interfaces: ${30:# A list of dictionaries containing specifications for network interfaces}
+    network_interfaces_ids: ${31:# A list of ENI ids to attach to the instance}
+    placement: ${32:# The location where the instance launched, if applicable}
+    placement_group: ${33:# The placement group that needs to be assigned to the instance}
+    profile: ${34:# A named AWS profile to use for authentication}
+    purge_tags: ${35:# If O(purge_tags=true) and O(tags) is set, existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
+    region: ${36:# The AWS region to use}
+    secret_key: ${37:# AWS secret access key}
+    security_group: ${38:# A security group ID or name}
+    security_groups: ${39:# A list of security group IDs or names (strings)}
+    session_token: ${40:# AWS STS session token for use with temporary credentials}
+    source_dest_check: ${41:# Controls whether source/destination checking is enabled on the interface}
+    state: ${42:# Goal state for the instances}
+    tags: ${43:# A dictionary representing the tags to be applied to the resource}
+    tenancy: ${44:# What type of tenancy to allow an instance to use}
+    termination_protection: ${45:# Whether to enable termination protection}
+    user_data: ${46:# Opaque blob of data which is made available to the EC2 instance}
+    validate_certs: ${47:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    volumes: ${48:# A list of block device mappings, by default this will always use the AMI root device so the volumes option is primarily for adding more storage}
+    vpc_subnet_id: ${49:# The subnet ID in which to launch the instance (VPC)}
+    wait: ${50:# Whether or not to wait for the desired O(state) (use O(wait_timeout) to customize this)}
+    wait_timeout: ${51:# How long to wait (in seconds) for the instance to finish booting/terminating}
   tags:
     - amazon
     - aws

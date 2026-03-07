@@ -1,8 +1,8 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Resource module for Site operations}
+  <content><![CDATA[- name: ${1:Manage hierarchical sites in Cisco Catalyst Center}
   cisco.dnac.site_workflow_manager:
-    config: ${2:# It represents a list of details for creating/managing/deleting sites, including areas, buildings, and floors}
-    config_verify: ${3:# Set to true to verify the Cisco Catalyst Center config after applying the playbook config}
+    config: ${2:# List of site configurations to be created, updated, or deleted}
+    config_verify: ${3:# Controls whether to verify site configurations after applying changes}
     dnac_api_task_timeout: ${4:# Defines the timeout in seconds for API calls to retrieve task details}
     dnac_debug: ${5:# Indicates whether debugging is enabled in the Cisco Catalyst Center SDK}
     dnac_host: ${6:# The hostname of the Cisco Catalyst Center}
@@ -16,7 +16,7 @@
     dnac_username: ${14:# The username for authentication at the Cisco Catalyst Center}
     dnac_verify: ${15:# Flag to enable or disable SSL certificate verification}
     dnac_version: ${16:# Specifies the version of the Cisco Catalyst Center that the SDK should use}
-    state: ${17:# The state of Catalyst Center after module completion}
+    state: ${17:# Defines the intended state of the sites after module execution}
     validate_response_schema: ${18:# Flag for Cisco Catalyst Center SDK to enable the validation of request bodies against a JSON schema}
   tags:
     - cisco
@@ -24,5 +24,5 @@
     - site_workflow_manager]]></content>
   <tabTrigger>cisco.dnac.site_workflow_manager</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Resource module for Site operations</description>
+  <description>Manage hierarchical sites in Cisco Catalyst Center</description>
 </snippet>

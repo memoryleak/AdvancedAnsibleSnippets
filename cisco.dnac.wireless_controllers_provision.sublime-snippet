@@ -1,18 +1,23 @@
 <snippet>
   <content><![CDATA[- name: ${1:Resource module for Wireless Controllers Provision}
   cisco.dnac.wireless_controllers_provision:
-    deviceId: ${2:# DeviceId path parameter}
-    dnac_debug: ${3:# Flag for Cisco DNA Center SDK to enable debugging}
-    dnac_host: ${4:# The Cisco DNA Center hostname}
-    dnac_password: ${5:# The Cisco DNA Center password to authenticate}
-    dnac_port: ${6:# The Cisco DNA Center port}
-    dnac_username: ${7:# The Cisco DNA Center username to authenticate}
-    dnac_verify: ${8:# Flag to enable or disable SSL certificate verification}
-    dnac_version: ${9:# Informs the SDK which version of Cisco DNA Center to use}
-    interfaces: ${10:# Wireless Controllers Provision's interfaces}
-    rollingApUpgrade: ${11:# Wireless Controllers Provision's rollingApUpgrade}
-    skipApProvision: ${12:# True if Skip AP Provision is enabled, else False}
-    validate_response_schema: ${13:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
+    apAuthorizationListName: ${2:# AP Authorization List name}
+    authorizeMeshAndNonMeshAccessPoints: ${3:# true if AP Authorization List should authorize against All Mesh/Non-Mesh APs, else false if AP Authorization List should only authorize against Mesh APs (Applicable only when Mesh is enabled on sites)}
+    deviceId: ${4:# DeviceId path parameter}
+    dnac_debug: ${5:# Flag for Cisco DNA Center SDK to enable debugging}
+    dnac_host: ${6:# The Cisco DNA Center hostname}
+    dnac_password: ${7:# The Cisco DNA Center password to authenticate}
+    dnac_port: ${8:# The Cisco DNA Center port}
+    dnac_username: ${9:# The Cisco DNA Center username to authenticate}
+    dnac_verify: ${10:# Flag to enable or disable SSL certificate verification}
+    dnac_version: ${11:# Informs the SDK which version of Cisco DNA Center to use}
+    featureTemplatesOverridenAttributes: ${12:# Wireless Controllers Provision's featureTemplatesOverridenAttributes}
+    interfaces: ${13:# Wireless Controllers Provision's interfaces}
+    lscPercentage: ${14:# Permissible values are 5, 15, and 25}
+    lscProfileName: ${15:# Obtain the LSC profile names by using the API call GET /dna/intent/api/v1/wirelessSettings/lscRene}
+    rollingApUpgrade: ${16:# Wireless Controllers Provision's rollingApUpgrade}
+    skipApProvision: ${17:# true if Skip AP Provision is enabled, else False}
+    validate_response_schema: ${18:# Flag for Cisco DNA Center SDK to enable the validation of request bodies against a JSON schema}
   tags:
     - cisco
     - dnac

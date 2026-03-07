@@ -1,47 +1,61 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Repositories}
   theforeman.foreman.repository:
-    ansible_collection_requirements: ${2:# Contents of requirement yaml file to sync from URL}
-    arch: ${3:# Architecture of content in the repository}
-    auto_enabled: ${4:# repositories will be automatically enabled on a registered host subscribed to this product}
-    checksum_type: ${5:# Checksum of the repository}
-    content_type: ${6:# The content type of the repository}
-    deb_architectures: ${7:# comma separated list of architectures to be synced from deb-archive}
-    deb_components: ${8:# comma separated list of repo components to be synced from deb-archive}
-    deb_errata_url: ${9:# URL to sync Debian or Ubuntu errata information from}
-    deb_releases: ${10:# comma separated list of releases to be synced from deb-archive}
-    description: ${11:# Description of the repository}
-    docker_tags_whitelist: ${12:# list of tags to sync for Container Image repository}
-    docker_upstream_name: ${13:# name of the upstream docker repository}
-    download_concurrency: ${14:# download concurrency for sync from upstream}
-    download_policy: ${15:# The download policy for sync from upstream}
-    exclude_tags: ${16:# List of tags to exclude when syncing a container image repository}
-    gpg_key: ${17:# Repository GPG key}
-    http_proxy: ${18:# Name of the http proxy to use for content synching}
-    http_proxy_policy: ${19:# Which proxy to use for content synching}
-    ignorable_content: ${20:# List of content units to ignore while syncing a yum repository}
-    ignore_global_proxy: ${21:# Whether content sync should use or ignore the global http proxy setting}
-    include_tags: ${22:# List of tags to sync for a container image repository}
-    label: ${23:# label of the repository}
-    mirror_on_sync: ${24:# toggle 'mirror on sync' where the state of the repository mirrors that of the upstream repository at sync time}
-    mirroring_policy: ${25:# Policy to set for mirroring content}
-    name: ${26:# Name of the repository}
-    organization: ${27:# Organization that the entity is in}
-    os_versions: ${28:# Identifies whether the repository should be disabled on a client with a non-matching OS version}
-    password: ${29:# Password of the user accessing the Foreman server}
-    product: ${30:# Product to which the repository lives in}
-    server_url: ${31:# URL of the Foreman server}
-    ssl_ca_cert: ${32:# Repository SSL CA certificate}
-    ssl_client_cert: ${33:# Repository SSL client certificate}
-    ssl_client_key: ${34:# Repository SSL client private key}
-    state: ${35:# State of the entity}
-    unprotected: ${36:# publish the repository via HTTP}
-    upstream_password: ${37:# Password to access upstream repository}
-    upstream_username: ${38:# username to access upstream repository}
-    url: ${39:# Repository URL to sync from}
-    username: ${40:# Username accessing the Foreman server}
-    validate_certs: ${41:# Whether or not to verify the TLS certificates of the Foreman server}
-    verify_ssl_on_sync: ${42:# verify the upstream certifcates are signed by a trusted CA}
+    ansible_collection_auth_token: ${2:# The token key to use for authentication}
+    ansible_collection_auth_url: ${3:# The URL to receive a session token from, e}
+    ansible_collection_requirements: ${4:# Contents of requirement yaml file to sync from URL}
+    arch: ${5:# Architecture of content in the repository}
+    auto_enabled: ${6:# repositories will be automatically enabled on a registered host subscribed to this product}
+    ca_path: ${7:# PEM formatted file that contains a CA certificate to be used for validation}
+    checksum_type: ${8:# Checksum of the repository}
+    content_type: ${9:# The content type of the repository}
+    deb_architectures: ${10:# comma separated list of architectures to be synced from deb-archive}
+    deb_components: ${11:# comma separated list of repo components to be synced from deb-archive}
+    deb_errata_url: ${12:# URL to sync Debian or Ubuntu errata information from}
+    deb_releases: ${13:# comma separated list of releases to be synced from deb-archive}
+    depth: ${14:# An option to specify how many ostree commits to traverse}
+    description: ${15:# Description of the repository}
+    docker_tags_whitelist: ${16:# list of tags to sync for Container Image repository}
+    docker_upstream_name: ${17:# name of the upstream docker repository}
+    download_concurrency: ${18:# download concurrency for sync from upstream}
+    download_policy: ${19:# The download policy for sync from upstream}
+    exclude_refs: ${20:# List of tags to exclude during an ostree sync}
+    exclude_tags: ${21:# List of tags to exclude when syncing a container image repository}
+    excludes: ${22:# Python packages to exclude from the upstream URL}
+    gpg_key: ${23:# Repository GPG key}
+    http_proxy: ${24:# Name of the http proxy to use for content synching}
+    http_proxy_policy: ${25:# Which proxy to use for content synching}
+    ignorable_content: ${26:# List of content units to ignore while syncing a yum repository}
+    ignore_global_proxy: ${27:# Whether content sync should use or ignore the global http proxy setting}
+    include_refs: ${28:# List of refs to include during an ostree sync}
+    include_tags: ${29:# List of tags to sync for a container image repository}
+    includes: ${30:# Python packages to include from the upstream URL,}
+    keep_latest_packages: ${31:# The amount of latest versions of a package to keep on sync, includes pre-releases if synced}
+    label: ${32:# label of the repository}
+    metadata_expire: ${33:# Set the metadata expiration time (in seconds) for a yum repository}
+    mirror_on_sync: ${34:# toggle 'mirror on sync' where the state of the repository mirrors that of the upstream repository at sync time}
+    mirroring_policy: ${35:# Policy to set for mirroring content}
+    name: ${36:# Name of the repository}
+    organization: ${37:# Organization that the entity is in}
+    os_versions: ${38:# Identifies whether the repository should be disabled on a client with a non-matching OS version}
+    package_types: ${39:# Package types to sync for Python content, separated by comma}
+    password: ${40:# Password of the user accessing the Foreman server}
+    product: ${41:# Product to which the repository lives in}
+    retain_package_versions_count: ${42:# The maximum number of versions of each package to keep}
+    server_url: ${43:# URL of the Foreman server}
+    ssl_ca_cert: ${44:# Repository SSL CA certificate}
+    ssl_client_cert: ${45:# Repository SSL client certificate}
+    ssl_client_key: ${46:# Repository SSL client private key}
+    state: ${47:# State of the entity}
+    unprotected: ${48:# publish the repository via HTTP}
+    upstream_authentication_token: ${49:# Upstream authentication token string for yum repositories}
+    upstream_password: ${50:# Password to access upstream repository}
+    upstream_username: ${51:# username to access upstream repository}
+    url: ${52:# Repository URL to sync from}
+    use_gssapi: ${53:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${54:# Username accessing the Foreman server}
+    validate_certs: ${55:# Whether or not to verify the TLS certificates of the Foreman server}
+    verify_ssl_on_sync: ${56:# verify the upstream certifcates are signed by a trusted CA}
   tags:
     - theforeman
     - foreman

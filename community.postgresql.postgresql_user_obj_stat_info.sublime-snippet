@@ -3,13 +3,13 @@
   community.postgresql.postgresql_user_obj_stat_info:
     ca_cert: ${2:# Specifies the name of a file containing SSL certificate authority (CA) certificate(s)}
     connect_params: ${3:# Any additional parameters to be passed to libpg}
-    db: ${4:# Name of database to connect}
-    filter: ${5:# Limit the collected information by comma separated string or YAML list}
+    filter: ${4:# Limit the collected information by comma separated string or YAML list}
+    login_db: ${5:# Name of database to connect}
     login_host: ${6:# Host running the database}
     login_password: ${7:# The password this module should use to establish its PostgreSQL session}
-    login_unix_socket: ${8:# Path to a Unix domain socket for local connections}
-    login_user: ${9:# The username this module should use to establish its PostgreSQL session}
-    port: ${10:# Database port to connect to}
+    login_port: ${8:# Database port to connect to}
+    login_unix_socket: ${9:# Path to a Unix domain socket for local connections}
+    login_user: ${10:# The username this module should use to establish its PostgreSQL session}
     schema: ${11:# Restrict the output by certain schema}
     session_role: ${12:# Switch to session_role after connecting}
     ssl_cert: ${13:# Specifies the file name of the client SSL certificate}

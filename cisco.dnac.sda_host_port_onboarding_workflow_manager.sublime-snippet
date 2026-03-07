@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage host port onboarding in SD-Access Fabric in Cisco Catalyst Center}
   cisco.dnac.sda_host_port_onboarding_workflow_manager:
-    config: ${2:# A list containing detailed configurations for Adding/Updating/Deleting port assignment(s) or port channel(s) of Network Devices in SD-Access Fabric roles in Cisco Catalyst Center}
+    config: ${2:# A list containing detailed configurations for Adding/Updating/Deleting Port assignment(s) or Port channel(s) for Network Devices in SDA Fabric roles or Adding/Updating/Deleting Wireless SSID(s) mapped to a VLAN in SDA Fabric in Cisco Catalyst Center}
     config_verify: ${3:# Set to True to verify the Cisco Catalyst Center configuration after applying the playbook configuration}
     dnac_api_task_timeout: ${4:# Defines the timeout in seconds for API calls to retrieve task details}
     dnac_debug: ${5:# Indicates whether debugging is enabled in the Cisco Catalyst Center SDK}
@@ -16,8 +16,9 @@
     dnac_username: ${14:# The username for authentication at the Cisco Catalyst Center}
     dnac_verify: ${15:# Flag to enable or disable SSL certificate verification}
     dnac_version: ${16:# Specifies the version of the Cisco Catalyst Center that the SDK should use}
-    state: ${17:# The desired state of Cisco Catalyst Center after the module execution}
-    validate_response_schema: ${18:# Flag for Cisco Catalyst Center SDK to enable the validation of request bodies against a JSON schema}
+    sda_fabric_port_channel_limit: ${17:# - Maximum number of port channels processed in a single API batch}
+    state: ${18:# The desired state of Cisco Catalyst Center after the module execution}
+    validate_response_schema: ${19:# Flag for Cisco Catalyst Center SDK to enable the validation of request bodies against a JSON schema}
   tags:
     - cisco
     - dnac

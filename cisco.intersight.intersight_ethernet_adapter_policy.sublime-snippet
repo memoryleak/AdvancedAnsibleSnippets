@@ -1,0 +1,59 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Ethernet Adapter Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_ethernet_adapter_policy:
+    advanced_filter: ${2:# Enables advanced filtering on the interface}
+    api_key_id: ${3:# Public API Key ID associated with the private key}
+    api_private_key: ${4:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${5:# URI used to access the Intersight API}
+    arfs_enabled: ${6:# Status of Accelerated Receive Flow Steering on the virtual ethernet interface}
+    completion_queue_count: ${7:# The number of completion queue resources to allocate}
+    completion_ring_size: ${8:# The number of descriptors in each completion queue}
+    description: ${9:# The user-defined description for the Ethernet Adapter Policy}
+    etherchannel_pinning_enabled: ${10:# Enables EtherChannel Pinning to combine multiple physical links between two network switches into a single logical link}
+    geneve_enabled: ${11:# GENEVE offload protocol allows you to create logical networks that span physical network boundaries}
+    interrupt_coalescing_time: ${12:# The time to wait between interrupts or the idle period that must be encountered before an interrupt is sent}
+    interrupt_coalescing_type: ${13:# Interrupt Coalescing Type}
+    interrupt_count: ${14:# The number of interrupt resources to allocate}
+    interrupt_mode: ${15:# Preferred driver interrupt mode}
+    interrupt_scaling: ${16:# Enables Interrupt Scaling on the interface}
+    name: ${17:# The name assigned to the Ethernet Adapter Policy}
+    nvgre_enabled: ${18:# Status of the Network Virtualization using Generic Routing Encapsulation on the virtual ethernet interface}
+    organization: ${19:# The name of the Organization this resource is assigned to}
+    ptp_enabled: ${20:# Status of Precision Time Protocol (PTP) on the virtual ethernet interface}
+    roce_class_of_service: ${21:# The Class of Service for RoCE on this virtual interface}
+    roce_enabled: ${22:# If enabled sets RDMA over Converged Ethernet (RoCE) on this virtual interface}
+    roce_memory_regions: ${23:# The number of memory regions per adapter}
+    roce_queue_pairs: ${24:# The number of queue pairs per adapter}
+    roce_resource_groups: ${25:# The number of resource groups per adapter}
+    roce_version: ${26:# Configure RDMA over Converged Ethernet (RoCE) version on the virtual interface}
+    rss_enabled: ${27:# Receive Side Scaling allows the incoming traffic to be spread across multiple CPU cores}
+    rss_ipv4_hash: ${28:# When enabled, the IPv4 address is used for traffic distribution}
+    rss_ipv6_ext_hash: ${29:# When enabled, the IPv6 extensions are used for traffic distribution}
+    rss_ipv6_hash: ${30:# When enabled, the IPv6 address is used for traffic distribution}
+    rss_tcp_ipv4_hash: ${31:# When enabled, both the IPv4 address and TCP port number are used for traffic distribution}
+    rss_tcp_ipv6_ext_hash: ${32:# When enabled, both the IPv6 extensions and TCP port number are used for traffic distribution}
+    rss_tcp_ipv6_hash: ${33:# When enabled, both the IPv6 address and TCP port number are used for traffic distribution}
+    rss_udp_ipv4_hash: ${34:# When enabled, both the IPv4 address and UDP port number are used for traffic distribution}
+    rss_udp_ipv6_hash: ${35:# When enabled, both the IPv6 address and UDP port number are used for traffic distribution}
+    rx_queue_count: ${36:# The number of receive queue resources to allocate}
+    rx_ring_size: ${37:# The number of descriptors in each receive queue}
+    state: ${38:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${39:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    tcp_large_receive: ${40:# Enables the reassembly of segmented packets in hardware before sending them to the CPU}
+    tcp_large_send: ${41:# Enables the CPU to send large packets to the hardware for segmentation}
+    tcp_rx_checksum: ${42:# When enabled, the CPU sends all packet checksums to the hardware for validation}
+    tcp_tx_checksum: ${43:# When enabled, the CPU sends all packets to the hardware so that the checksum can be calculated}
+    tx_queue_count: ${44:# The number of transmit queue resources to allocate}
+    tx_ring_size: ${45:# The number of descriptors in each transmit queue}
+    uplink_failback_timeout: ${46:# Uplink Failback Timeout in seconds when uplink failover is enabled for a vNIC}
+    use_proxy: ${47:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${48:# Boolean control for verifying the api_uri TLS certificate}
+    vxlan_enabled: ${49:# Status of the Virtual Extensible LAN Protocol on the virtual ethernet interface}
+  tags:
+    - cisco
+    - intersight
+    - intersight_ethernet_adapter_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_ethernet_adapter_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Ethernet Adapter Policy configuration for Cisco Intersight</description>
+</snippet>

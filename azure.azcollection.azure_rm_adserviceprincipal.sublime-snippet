@@ -1,25 +1,29 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Azure Active Directory service principal}
   azure.azcollection.azure_rm_adserviceprincipal:
-    ad_user: ${2:# Active Directory username}
-    adfs_authority_url: ${3:# Azure AD authority url}
-    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
-    app_id: ${5:# The application ID}
-    app_role_assignment_required: ${6:# Whether the Role of the Service Principal is set}
-    auth_source: ${7:# Controls the source of the credentials to use for authentication}
-    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
-    client_id: ${9:# Azure client ID}
-    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    log_mode: ${11:# Parent argument}
-    log_path: ${12:# Parent argument}
-    password: ${13:# Active Directory user password}
-    profile: ${14:# Security profile found in ~/}
-    secret: ${15:# Azure client secret}
-    state: ${16:# Assert the state of Active Dirctory service principal}
-    subscription_id: ${17:# Your Azure subscription Id}
-    tenant: ${18:# The tenant ID}
-    thumbprint: ${19:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    x509_certificate_path: ${20:# Path to the X509 certificate used to create the service principal in PEM format}
+    account_enabled: ${2:# Whether the service principal is enabled}
+    ad_user: ${3:# Active Directory username}
+    adfs_authority_url: ${4:# Azure AD authority url}
+    api_profile: ${5:# Selects an API profile to use when communicating with Azure services}
+    app_id: ${6:# The application ID}
+    app_role_assignment_required: ${7:# Whether the Role of the Service Principal is set}
+    auth_source: ${8:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${9:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${10:# Azure client ID}
+    cloud_environment: ${11:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    disable_instance_discovery: ${12:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    log_mode: ${13:# Parent argument}
+    log_path: ${14:# Parent argument}
+    notes: ${15:# Use this field to add information that is relevant for the management of the application}
+    password: ${16:# Active Directory user password}
+    profile: ${17:# Security profile found in ~/}
+    secret: ${18:# Azure client secret}
+    service_principal_type: ${19:# The type of the service principal}
+    state: ${20:# Assert the state of Active Dirctory service principal}
+    subscription_id: ${21:# Your Azure subscription Id}
+    tenant: ${22:# Azure tenant ID}
+    thumbprint: ${23:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${24:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

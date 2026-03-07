@@ -8,11 +8,11 @@
     app_id: ${6:# Application ID}
     app_roles: ${7:# Declare the roles you want to associate with your application}
     auth_source: ${8:# Controls the source of the credentials to use for authentication}
-    available_to_other_tenants: ${9:# The application can be used from any Azure AD tenants}
-    cert_validation_mode: ${10:# Controls the certificate validation behavior for Azure endpoints}
-    client_id: ${11:# Azure client ID}
-    cloud_environment: ${12:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    credential_description: ${13:# The description of the password}
+    cert_validation_mode: ${9:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${10:# Azure client ID}
+    cloud_environment: ${11:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    credential_description: ${12:# The description of the password}
+    disable_instance_discovery: ${13:# Determines whether or not instance discovery is performed when attempting to authenticate}
     display_name: ${14:# The display name of the application}
     end_date: ${15:# Date or datetime after which credentials expire(e}
     homepage: ${16:# The url where users can sign in and use your app}
@@ -23,19 +23,23 @@
     log_mode: ${21:# Parent argument}
     log_path: ${22:# Parent argument}
     native_app: ${23:# An application which can be installed on a user's device or computer}
-    oauth2_allow_implicit_flow: ${24:# Whether to allow implicit grant flow for OAuth2}
-    optional_claims: ${25:# Declare the optional claims for the application}
-    password: ${26:# App password, aka 'client secret'}
-    profile: ${27:# Security profile found in ~/}
-    reply_urls: ${28:# Space-separated URIs to which Azure AD will redirect in response to an OAuth 2}
-    required_resource_accesses: ${29:# Resource scopes and roles the application requires access to}
-    secret: ${30:# Azure client secret}
-    start_date: ${31:# Date or datetime at which credentials become valid, such as '2017-01-01'}
-    state: ${32:# Assert the state of Active Dirctory service principal}
-    subscription_id: ${33:# Your Azure subscription Id}
-    tenant: ${34:# The tenant ID}
-    thumbprint: ${35:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    x509_certificate_path: ${36:# Path to the X509 certificate used to create the service principal in PEM format}
+    notes: ${24:# Notes relevant for the management of the application}
+    oauth2_allow_implicit_flow: ${25:# Whether to allow implicit grant flow for OAuth2}
+    optional_claims: ${26:# Declare the optional claims for the application}
+    password: ${27:# App password, aka 'client secret'}
+    profile: ${28:# Security profile found in ~/}
+    public_client_reply_urls: ${29:# The public client redirect urls}
+    required_resource_accesses: ${30:# Resource scopes and roles the application requires access to}
+    secret: ${31:# Azure client secret}
+    sign_in_audience: ${32:# The application can be used from any Azure AD tenants}
+    spa_reply_urls: ${33:# The spa redirect urls}
+    start_date: ${34:# Date or datetime at which credentials become valid, such as '2017-01-01'}
+    state: ${35:# Assert the state of Active Dirctory service principal}
+    subscription_id: ${36:# Your Azure subscription Id}
+    tenant: ${37:# Azure tenant ID}
+    thumbprint: ${38:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    web_reply_urls: ${39:# The web redirect urls}
+    x509_certificate_path: ${40:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Allows administration of Keycloak groups via Keycloak API}
+  <content><![CDATA[- name: ${1:Allows administration of Keycloak groups using Keycloak API}
   community.general.keycloak_group:
     attributes: ${2:# A dict of key/value pairs to set as custom attributes for the group}
     auth_client_id: ${3:# OpenID Connect C(client_id) to authenticate to the API with}
@@ -14,14 +14,15 @@
     name: ${12:# Name of the group}
     parents: ${13:# List of parent groups for the group to handle sorted top to bottom}
     realm: ${14:# They Keycloak realm under which this group resides}
-    state: ${15:# State of the group}
-    token: ${16:# Authentication token for Keycloak API}
-    validate_certs: ${17:# Verify TLS certificates (do not disable this in production)}
+    refresh_token: ${15:# Authentication refresh token for Keycloak API}
+    state: ${16:# State of the group}
+    token: ${17:# Authentication token for Keycloak API}
+    validate_certs: ${18:# Verify TLS certificates (do not disable this in production)}
   tags:
     - community
     - general
     - keycloak_group]]></content>
   <tabTrigger>community.general.keycloak_group</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Allows administration of Keycloak groups via Keycloak API</description>
+  <description>Allows administration of Keycloak groups using Keycloak API</description>
 </snippet>

@@ -9,25 +9,27 @@
     cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
     client_id: ${8:# Azure client ID}
     cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    location: ${10:# Resource location}
-    log_mode: ${11:# Parent argument}
-    log_path: ${12:# Parent argument}
-    message_retention_in_days: ${13:# Number of days to retain the events for this Event Hub}
-    name: ${14:# Unique name of the Event Hub}
-    namespace_name: ${15:# Name of the namespace in which to create event hub}
-    partition_count: ${16:# Number of partitions created for the Event Hub}
-    password: ${17:# Active Directory user password}
-    profile: ${18:# Security profile found in ~/}
-    resource_group: ${19:# Name of the resource group to which the resource belongs}
-    secret: ${20:# Azure client secret}
-    sku: ${21:# The name of the SKU}
-    state: ${22:# Assert the state of the Event Hub}
-    status: ${23:# Enumerates the possible values for the status of the Event hub}
-    subscription_id: ${24:# Your Azure subscription Id}
-    tags: ${25:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${26:# Azure tenant ID}
-    thumbprint: ${27:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    x509_certificate_path: ${28:# Path to the X509 certificate used to create the service principal in PEM format}
+    disable_instance_discovery: ${10:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    identity: ${11:# Identity for the Object}
+    location: ${12:# Resource location}
+    log_mode: ${13:# Parent argument}
+    log_path: ${14:# Parent argument}
+    message_retention_in_days: ${15:# Number of days to retain the events for this Event Hub}
+    name: ${16:# Unique name of the Event Hub}
+    namespace_name: ${17:# Name of the namespace in which to create event hub}
+    partition_count: ${18:# Number of partitions created for the Event Hub}
+    password: ${19:# Active Directory user password}
+    profile: ${20:# Security profile found in ~/}
+    resource_group: ${21:# Name of the resource group to which the resource belongs}
+    secret: ${22:# Azure client secret}
+    sku: ${23:# The name of the SKU}
+    state: ${24:# Assert the state of the Event Hub}
+    status: ${25:# Enumerates the possible values for the status of the Event hub}
+    subscription_id: ${26:# Your Azure subscription Id}
+    tags: ${27:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${28:# Azure tenant ID}
+    thumbprint: ${29:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${30:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

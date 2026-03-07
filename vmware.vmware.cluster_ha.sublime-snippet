@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage High Availability services (HA) on VMware vSphere clusters}
+  vmware.vmware.cluster_ha:
+    admission_control_cpu_reserve_percentage: ${2:# Percentage of CPU resources in the cluster to reserve for failover}
+    admission_control_dedicated_hosts: ${3:# List of ESXi hosts to use as dedicated failover hosts}
+    admission_control_failover_level: ${4:# The number of host failures that should be tolerated by the cluster}
+    admission_control_memory_reserve_percentage: ${5:# Percentage of memory resources in the cluster to reserve for failover}
+    admission_control_policy: ${6:# Configures a the policy type used for HA admission control}
+    advanced_settings: ${7:# A dictionary of advanced HA settings}
+    cluster: ${8:# The name of the cluster to be managed}
+    datacenter: ${9:# The name of the datacenter}
+    enable: ${10:# Whether to enable HA}
+    host_failure_response: ${11:# Configures how VM workflows should be managed if an ESXi host is in a failure state}
+    host_isolation_response: ${12:# Specify how VMs should be handled if an ESXi host determines it can no longer reach the rest of the cluster}
+    hostname: ${13:# The hostname or IP address of the vSphere vCenter server}
+    password: ${14:# The password of the vSphere vCenter server}
+    port: ${15:# The port number of the vSphere vCenter server}
+    proxy_host: ${16:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${17:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    storage_apd_response: ${18:# Configures what steps are taken when storage All Paths Down (APD) events occur}
+    storage_pdl_response_mode: ${19:# Set the response in the event of permanent Device Loss (PDL) for storage}
+    username: ${20:# The username of the vSphere vCenter server}
+    validate_certs: ${21:# Allows connection when SSL certificates are not valid}
+    vm_monitoring: ${22:# Configures how VMs are monitored to determine health status, and what actions should be taken if they are unhealthy}
+  tags:
+    - vmware
+    - vmware
+    - cluster_ha]]></content>
+  <tabTrigger>vmware.vmware.cluster_ha</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage High Availability services (HA) on VMware vSphere clusters</description>
+</snippet>

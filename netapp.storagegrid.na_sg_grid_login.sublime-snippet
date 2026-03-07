@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Login to StorageGRID grid/tenant}
+  netapp.storagegrid.na_sg_grid_login:
+    hostname: ${2:# The ip or fqdn of the admin node for the grid}
+    password: ${3:# The password of the user authenticating}
+    tenant_id: ${4:# The uuid of the tenant to log into tenant manager}
+    username: ${5:# The username of the user authenticating}
+    validate_certs: ${6:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_login]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_login</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Login to StorageGRID grid/tenant</description>
+</snippet>

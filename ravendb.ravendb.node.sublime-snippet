@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add a RavenDB node to an existing cluster}
+  ravendb.ravendb.node:
+    ca_cert_path: ${2:# Path to a CA certificate bundle to verify the server certificate}
+    certificate_path: ${3:# Path to a client certificate in PEM format (combined certificate and key)}
+    leader_url: ${4:# The HTTP/HTTPS URL of the cluster leader the module will contact to add the node}
+    tag: ${5:# The unique tag for the node (uppercase alphanumeric, 1–4 chars)}
+    type: ${6:# Node type}
+    url: ${7:# The HTTP/HTTPS URL of the node being added}
+  tags:
+    - ravendb
+    - ravendb
+    - node]]></content>
+  <tabTrigger>ravendb.ravendb.node</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add a RavenDB node to an existing cluster</description>
+</snippet>

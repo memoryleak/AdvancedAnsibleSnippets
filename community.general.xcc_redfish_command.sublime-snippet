@@ -3,15 +3,18 @@
   community.general.xcc_redfish_command:
     auth_token: ${2:# Security token for authentication with OOB controller}
     baseuri: ${3:# Base URI of OOB controller}
-    category: ${4:# Category to execute on OOB controller}
-    command: ${5:# List of commands to execute on OOB controller}
-    password: ${6:# Password for authentication with OOB controller}
-    request_body: ${7:# The request body to patch or post}
-    resource_id: ${8:# The ID of the System, Manager or Chassis to modify}
-    resource_uri: ${9:# The resource uri to get or patch or post}
-    timeout: ${10:# Timeout in seconds for URL requests to OOB controller}
-    username: ${11:# Username for authentication with OOB controller}
-    virtual_media: ${12:# The options for VirtualMedia commands}
+    ca_path: ${4:# PEM formatted file that contains a CA certificate to be used for validation}
+    category: ${5:# Category to execute on OOB controller}
+    ciphers: ${6:# TLS/SSL Ciphers to use for the request}
+    command: ${7:# List of commands to execute on OOB controller}
+    password: ${8:# Password for authentication with OOB controller}
+    request_body: ${9:# The request body to patch or post}
+    resource_id: ${10:# The ID of the System, Manager or Chassis to modify}
+    resource_uri: ${11:# The resource URI to get or patch or post}
+    timeout: ${12:# Timeout in seconds for URL requests to OOB controller}
+    username: ${13:# Username for authentication with OOB controller}
+    validate_certs: ${14:# If V(false), TLS/SSL certificates are not validated}
+    virtual_media: ${15:# The options for VirtualMedia commands}
   tags:
     - community
     - general

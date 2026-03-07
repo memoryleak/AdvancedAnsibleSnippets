@@ -1,22 +1,25 @@
 <snippet>
   <content><![CDATA[- name: ${1:Get access-rule objects facts on Check Point over Web Services API}
   check_point.mgmt.cp_mgmt_access_rule_facts:
-    dereference_group_members: ${2:# Indicates whether to dereference 'members' field by details level for every object in reply}
-    details_level: ${3:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
-    filter: ${4:# Search expression to filter the rulebase}
-    filter_settings: ${5:# Sets filter preferences}
-    hits_settings: ${6:# N/A}
-    layer: ${7:# Layer that the rule belongs to identified by the name or UID}
-    limit: ${8:# No more than that many results will be returned}
-    name: ${9:# Object name}
-    offset: ${10:# Skip that many results before beginning to return them}
-    order: ${11:# Sorts results by the given field}
-    package: ${12:# Name of the package}
-    show_as_ranges: ${13:# When true, the source, destination and services & applications parameters are displayed as ranges of IP addresses and port numbers rather than network objects}
-    show_hits: ${14:# N/A}
-    show_membership: ${15:# Indicates whether to calculate and show 'groups' field for every object in reply}
-    use_object_dictionary: ${16:# N/A}
-    version: ${17:# Version of checkpoint}
+    async_response: ${2:# Run command in asynchronous mode and return task UID}
+    dereference_group_members: ${3:# Indicates whether to dereference 'members' field by details level for every object in reply}
+    details_level: ${4:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    filter: ${5:# Search expression to filter the rulebase}
+    filter_settings: ${6:# Sets filter preferences}
+    hits_settings: ${7:# N/A}
+    layer: ${8:# Layer that the rule belongs to identified by the name or UID}
+    limit: ${9:# No more than that many results will be returned}
+    name: ${10:# Object name}
+    offset: ${11:# Skip that many results before beginning to return them}
+    order: ${12:# Sorts results by the given field}
+    package: ${13:# Name of the package}
+    show_as_ranges: ${14:# When true, the source, destination and services & applications parameters are displayed as ranges of IP addresses and port numbers rather than network objects}
+    show_hits: ${15:# N/A}
+    show_membership: ${16:# Indicates whether to calculate and show 'groups' field for every object in reply}
+    use_object_dictionary: ${17:# N/A}
+    version: ${18:# Version of checkpoint}
+    wait_for_task: ${19:# Wait for the task to end}
+    wait_for_task_timeout: ${20:# How many minutes to wait until throwing a timeout error}
   tags:
     - check_point
     - mgmt

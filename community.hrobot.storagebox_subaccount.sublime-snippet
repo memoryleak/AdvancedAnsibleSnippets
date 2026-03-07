@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update, or delete a subaccount for a storage box}
+  community.hrobot.storagebox_subaccount:
+    comment: ${2:# A custom comment for the subaccount}
+    external_reachability: ${3:# Enable or disable external reachability (from outside Hetzner's networks)}
+    hetzner_password: ${4:# The password for the Robot web-service user}
+    hetzner_token: ${5:# The API token for the Robot web-service user}
+    hetzner_user: ${6:# The username for the Robot web-service user}
+    homedirectory: ${7:# Home directory of the subaccount}
+    idempotence: ${8:# Select which attribute to use to check subaccount existence}
+    password: ${9:# Password to use or change}
+    password_mode: ${10:# Controls how password updates are handled}
+    rate_limit_retry_timeout: ${11:# Timeout (in seconds) for waiting when rate limit exceeded errors are returned}
+    readonly: ${12:# Enable or disable read-only mode}
+    samba: ${13:# Enable or disable Samba}
+    ssh: ${14:# Enable or disable SSH access}
+    state: ${15:# Desired state of this subaccount}
+    storagebox_id: ${16:# The ID of the storage box to query}
+    username: ${17:# Username of the subaccount}
+    webdav: ${18:# Enable or disable WebDAV}
+  tags:
+    - community
+    - hrobot
+    - storagebox_subaccount]]></content>
+  <tabTrigger>community.hrobot.storagebox_subaccount</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update, or delete a subaccount for a storage box</description>
+</snippet>

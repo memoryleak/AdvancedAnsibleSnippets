@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage SDT (also called NVMe Target) on Dell PowerFlex}
+  dellemc.powerflex.sdt:
+    discovery_port: ${2:# Discovery port of the SDT}
+    hostname: ${3:# IP or FQDN of the PowerFlex host}
+    maintenance_mode: ${4:# Maintenance mode state of the SDT}
+    nvme_port: ${5:# NVMe port of the SDT}
+    password: ${6:# The password of the PowerFlex host}
+    port: ${7:# Port number through which communication happens with PowerFlex host}
+    protection_domain_name: ${8:# The name of the protection domain}
+    sdt_ip_list: ${9:# Dictionary of IPs and their roles for the SDT}
+    sdt_name: ${10:# The name of the SDT}
+    sdt_new_name: ${11:# SDT new name, can only be used for renaming the SDT}
+    state: ${12:# State of the SDT}
+    storage_port: ${13:# Storage port of the SDT}
+    timeout: ${14:# Time after which connection will get terminated}
+    username: ${15:# The username of the PowerFlex host}
+    validate_certs: ${16:# Boolean variable to specify whether or not to validate SSL certificate}
+  tags:
+    - dellemc
+    - powerflex
+    - sdt]]></content>
+  <tabTrigger>dellemc.powerflex.sdt</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage SDT (also called NVMe Target) on Dell PowerFlex</description>
+</snippet>

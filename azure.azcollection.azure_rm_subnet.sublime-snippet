@@ -10,26 +10,30 @@
     cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
     client_id: ${9:# Azure client ID}
     cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    delegations: ${11:# An array of delegations}
-    log_mode: ${12:# Parent argument}
-    log_path: ${13:# Parent argument}
-    name: ${14:# Name of the subnet}
-    nat_gateway: ${15:# Existing NAT Gateway with which to associate the subnet}
-    password: ${16:# Active Directory user password}
-    private_endpoint_network_policies: ${17:# C(Enabled) or C(Disabled) apply network policies on private endpoints in the subnet}
-    private_link_service_network_policies: ${18:# C(Enabled) or C(Disabled) apply network policies on private link service in the subnet}
-    profile: ${19:# Security profile found in ~/}
-    resource_group: ${20:# Name of resource group}
-    route_table: ${21:# The reference of the RouteTable resource}
-    secret: ${22:# Azure client secret}
-    security_group: ${23:# Existing security group with which to associate the subnet}
-    service_endpoints: ${24:# An array of service endpoints}
-    state: ${25:# Assert the state of the subnet}
-    subscription_id: ${26:# Your Azure subscription Id}
-    tenant: ${27:# Azure tenant ID}
-    thumbprint: ${28:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    virtual_network_name: ${29:# Name of an existing virtual network with which the subnet is or will be associated}
-    x509_certificate_path: ${30:# Path to the X509 certificate used to create the service principal in PEM format}
+    default_outbound_access: ${11:# Set this property to false to disable default outbound connectivity for all VMs in the subnet}
+    delegations: ${12:# An array of delegations}
+    disable_instance_discovery: ${13:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    log_mode: ${14:# Parent argument}
+    log_path: ${15:# Parent argument}
+    name: ${16:# Name of the subnet}
+    nat_gateway: ${17:# Existing NAT Gateway with which to associate the subnet}
+    password: ${18:# Active Directory user password}
+    private_endpoint_network_policies: ${19:# C(Enabled) or C(Disabled) apply network policies on private endpoints in the subnet}
+    private_link_service_network_policies: ${20:# C(Enabled) or C(Disabled) apply network policies on private link service in the subnet}
+    profile: ${21:# Security profile found in ~/}
+    resource_group: ${22:# Name of resource group}
+    route_table: ${23:# The reference of the RouteTable resource}
+    secret: ${24:# Azure client secret}
+    security_group: ${25:# Existing security group with which to associate the subnet}
+    service_endpoint_policies: ${26:# An array of service endpoint policies}
+    service_endpoints: ${27:# An array of service endpoints}
+    sharing_scope: ${28:# Set this property to Tenant to allow sharing subnet with other subscriptions in your AAD tenant}
+    state: ${29:# Assert the state of the subnet}
+    subscription_id: ${30:# Your Azure subscription Id}
+    tenant: ${31:# Azure tenant ID}
+    thumbprint: ${32:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    virtual_network_name: ${33:# Name of an existing virtual network with which the subnet is or will be associated}
+    x509_certificate_path: ${34:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

@@ -13,17 +13,20 @@
     https: ${11:# Enable and disable https}
     ignore_owners: ${12:# if this field is true, snapshot will be deleted even if some other processes are accessing it}
     key_filepath: ${13:# path to SSL client key file}
-    ontapi: ${14:# The ontap api version to use}
-    password: ${15:# Password for the specified user}
-    snapmirror_label: ${16:# A human readable SnapMirror Label attached with the snapshot}
-    snapshot: ${17:# Name of the snapshot to be managed}
-    snapshot_instance_uuid: ${18:# The 128 bit unique snapshot identifier expressed in the form of UUID}
-    state: ${19:# If you want to create/modify a snapshot, or delete it}
-    use_rest: ${20:# Whether to use REST or ZAPI}
-    username: ${21:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${22:# If set to C(no), the SSL certificates will not be validated}
-    volume: ${23:# Name of the volume on which the snapshot is to be created}
-    vserver: ${24:# The Vserver name}
+    lambda_config: ${14:# Configuration parameters for AWS Lambda proxy functionality}
+    ontapi: ${15:# The ontap api version to use}
+    password: ${16:# Password for the specified user}
+    snaplock_expiry_time: ${17:# SnapLock expiry time for the snapshot, if the snapshot is taken on a SnapLock volume}
+    snapmirror_label: ${18:# A human readable SnapMirror Label attached with the snapshot}
+    snapshot: ${19:# Name of the snapshot to be managed}
+    snapshot_instance_uuid: ${20:# The 128 bit unique snapshot identifier expressed in the form of UUID}
+    state: ${21:# If you want to create/modify a snapshot, or delete it}
+    use_lambda: ${22:# Specifies if AWS Lambda proxy functionality should be used to connect to the ONTAP system}
+    use_rest: ${23:# Whether to use REST or ZAPI}
+    username: ${24:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${25:# If set to C(no), the SSL certificates will not be validated}
+    volume: ${26:# Name of the volume on which the snapshot is to be created}
+    vserver: ${27:# The Vserver name}
   tags:
     - netapp
     - ontap

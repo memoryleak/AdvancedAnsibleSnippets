@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Submits generic command to ISC KEA server on target}
+  community.general.kea_command:
+    arguments: ${2:# The arguments sent along with the command, if any}
+    command: ${3:# The name of the command to send, for example V(status-get)}
+    rv_changed: ${4:# A list of C(result) codes to indicate success and changed system state}
+    rv_unchanged: ${5:# A list of C(result) codes to indicate success but unchanged system state}
+    socket: ${6:# The full pathname of the Unix Domain Socket to connect to}
+  tags:
+    - community
+    - general
+    - kea_command]]></content>
+  <tabTrigger>community.general.kea_command</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Submits generic command to ISC KEA server on target</description>
+</snippet>

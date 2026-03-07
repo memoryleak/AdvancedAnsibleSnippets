@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Storage Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_storage_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    controller_attached_nvme_slots: ${5:# Only U}
+    default_drive_mode: ${6:# All unconfigured drives will move to the selected state on deployment}
+    description: ${7:# The user-defined description for the Storage Policy}
+    direct_attached_nvme_slots: ${8:# Only U}
+    drive_groups: ${9:# List of drive groups to be created and attached to the storage policy}
+    m2_virtual_drive_config: ${10:# M}
+    name: ${11:# The name assigned to the Storage Policy}
+    organization: ${12:# The name of the Organization this resource is assigned to}
+    raid0_drive_config: ${13:# MRAID/RAID Single Drive RAID0 Configuration}
+    secure_jbods: ${14:# JBOD drives specified in this slot range will be encrypted}
+    state: ${15:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${16:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    unused_disks_state: ${17:# State to which drives, not used in this policy, are to be moved}
+    use_jbod_for_vd_creation: ${18:# Disks in JBOD State are used to create virtual drives}
+    use_proxy: ${19:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${20:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_storage_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_storage_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Storage Policy configuration for Cisco Intersight</description>
+</snippet>

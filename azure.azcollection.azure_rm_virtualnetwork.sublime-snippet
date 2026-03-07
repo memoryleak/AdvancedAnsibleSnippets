@@ -10,24 +10,25 @@
     cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
     client_id: ${9:# Azure client ID}
     cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    dns_servers: ${11:# Custom list of DNS servers}
-    flow_timeout_in_minutes: ${12:# The FlowTimeout value (in minutes) for the Virtual Network}
-    location: ${13:# Valid Azure location}
-    log_mode: ${14:# Parent argument}
-    log_path: ${15:# Parent argument}
-    name: ${16:# Name of the virtual network}
-    password: ${17:# Active Directory user password}
-    profile: ${18:# Security profile found in ~/}
-    purge_address_prefixes: ${19:# Use with I(state=present) to remove any existing I(address_prefixes)}
-    purge_dns_servers: ${20:# Use with I(state=present) to remove existing DNS servers, reverting to default Azure servers}
-    resource_group: ${21:# Name of resource group}
-    secret: ${22:# Azure client secret}
-    state: ${23:# State of the virtual network}
-    subscription_id: ${24:# Your Azure subscription Id}
-    tags: ${25:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${26:# Azure tenant ID}
-    thumbprint: ${27:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    x509_certificate_path: ${28:# Path to the X509 certificate used to create the service principal in PEM format}
+    disable_instance_discovery: ${11:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    dns_servers: ${12:# Custom list of DNS servers}
+    flow_timeout_in_minutes: ${13:# The FlowTimeout value (in minutes) for the Virtual Network}
+    location: ${14:# Valid Azure location}
+    log_mode: ${15:# Parent argument}
+    log_path: ${16:# Parent argument}
+    name: ${17:# Name of the virtual network}
+    password: ${18:# Active Directory user password}
+    profile: ${19:# Security profile found in ~/}
+    purge_address_prefixes: ${20:# Use with I(state=present) to remove any existing I(address_prefixes)}
+    purge_dns_servers: ${21:# Use with I(state=present) to remove existing DNS servers, reverting to default Azure servers}
+    resource_group: ${22:# Name of resource group}
+    secret: ${23:# Azure client secret}
+    state: ${24:# State of the virtual network}
+    subscription_id: ${25:# Your Azure subscription Id}
+    tags: ${26:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${27:# Azure tenant ID}
+    thumbprint: ${28:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${29:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

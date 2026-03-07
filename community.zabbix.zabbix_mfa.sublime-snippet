@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/update/delete Zabbix MFA method}
+  community.zabbix.zabbix_mfa:
+    api_hostname: ${2:# API hostname provided by the Duo authentication service}
+    client_secret: ${3:# Client secret provided by the Duo authentication service}
+    clientid: ${4:# Client ID provided by the Duo authentication service}
+    code_length: ${5:# Verification code length}
+    hash_function: ${6:# Type of the hash function for generating TOTP codes}
+    http_login_password: ${7:# Basic Auth password}
+    http_login_user: ${8:# Basic Auth login}
+    method_type: ${9:# A type of this MFA method}
+    name: ${10:# Name of this MFA method}
+    state: ${11:# State of this MFA}
+  tags:
+    - community
+    - zabbix
+    - zabbix_mfa]]></content>
+  <tabTrigger>community.zabbix.zabbix_mfa</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/update/delete Zabbix MFA method</description>
+</snippet>

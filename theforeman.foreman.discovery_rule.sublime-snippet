@@ -1,20 +1,22 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Host Discovery Rules}
   theforeman.foreman.discovery_rule:
-    enabled: ${2:# Enable or disable the rule}
-    hostgroup: ${3:# Hostgroup to assign hosts to}
-    hostname: ${4:# Hostname to assign to discovered host(s)}
-    locations: ${5:# List of locations the entity should be assigned to}
-    max_count: ${6:# Maximum amount of hosts to provision with the rule}
-    name: ${7:# Name of the Discovery Rule}
-    organizations: ${8:# List of organizations the entity should be assigned to}
-    password: ${9:# Password of the user accessing the Foreman server}
-    priority: ${10:# Priority of the rule}
-    search: ${11:# Expression to match newly discovered hosts with}
-    server_url: ${12:# URL of the Foreman server}
-    state: ${13:# State of the entity}
-    username: ${14:# Username accessing the Foreman server}
-    validate_certs: ${15:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    enabled: ${3:# Enable or disable the rule}
+    hostgroup: ${4:# Hostgroup to assign hosts to}
+    hostname: ${5:# Hostname to assign to discovered host(s)}
+    locations: ${6:# List of locations the entity should be assigned to}
+    max_count: ${7:# Maximum amount of hosts to provision with the rule}
+    name: ${8:# Name of the Discovery Rule}
+    organizations: ${9:# List of organizations the entity should be assigned to}
+    password: ${10:# Password of the user accessing the Foreman server}
+    priority: ${11:# Priority of the rule}
+    search: ${12:# Expression to match newly discovered hosts with}
+    server_url: ${13:# URL of the Foreman server}
+    state: ${14:# State of the entity}
+    use_gssapi: ${15:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${16:# Username accessing the Foreman server}
+    validate_certs: ${17:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

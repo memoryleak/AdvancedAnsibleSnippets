@@ -4,16 +4,17 @@
     host: ${2:# Specifies the DNS host name or address for connecting to the remote device over the specified transport}
     host_tag: ${3:# System log host tag, set when I(status=enable)}
     level: ${4:# Events Level, set when I(status=enable)}
-    log_type: ${5:# Remote Log Type, set when server_id is not none}
+    log_type: ${5:# Remote Log Type, set when I(server_status=enable)}
     password: ${6:# Specifies the password to use to authenticate the connection to the remote device}
     protocol_type: ${7:# Protocol Type, set when I(status=enable)}
     provider: ${8:# A dict object containing connection details}
-    server_addr: ${9:# Server Address, set when server_id is not none}
+    server_addr: ${9:# Server Address, set when I(server_status=enable)}
     server_id: ${10:# Syslog Server ID, set when I(status=enable)}
-    server_port: ${11:# Server Address, set when server_id is not none}
-    status: ${12:# System Log Status}
-    test: ${13:# Test remote log settings, set when server_id is not none}
-    username: ${14:# Configures the username to use to authenticate the connection to the remote device}
+    server_port: ${11:# Server Address, set when I(server_status=enable)}
+    server_status: ${12:# Syslog Server status, set when server_id is not none}
+    status: ${13:# System Log Status}
+    test: ${14:# Test remote log settings, set when server_id is not none}
+    username: ${15:# Configures the username to use to authenticate the connection to the remote device}
   tags:
     - ieisystem
     - inmanage

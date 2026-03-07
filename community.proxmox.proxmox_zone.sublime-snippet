@@ -1,0 +1,46 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Proxmox zone configurations}
+  community.proxmox.proxmox_zone:
+    advertise_subnets: ${2:# Advertise EVPN subnets if you have silent hosts}
+    api_host: ${3:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${4:# Specify the password to authenticate with}
+    api_port: ${5:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${6:# Specify the token ID}
+    api_token_secret: ${7:# Specify the token secret}
+    api_user: ${8:# Specify the user to authenticate with}
+    bridge: ${9:# Specify the bridge interface to use}
+    bridge_disable_mac_learning: ${10:# Disable auto MAC address learning on the bridge interface}
+    controller: ${11:# FRR router name}
+    dhcp: ${12:# Type of the DHCP backend for this zone}
+    disable_arp_nd_suppression: ${13:# Disable IPv4 ARP and IPv6 neighbour discovery suppression}
+    dns: ${14:# DNS API server}
+    dnszone: ${15:# DNS domain zone}
+    dp_id: ${16:# Faucet dataplane ID}
+    exitnodes: ${17:# List of cluster node names}
+    exitnodes_local_routing: ${18:# Allow exitnodes to connect to EVPN guests}
+    exitnodes_primary: ${19:# Force traffic to this exit node first}
+    fabric: ${20:# SDN fabric to use as underlay for this VXLAN zone}
+    ipam: ${21:# Use a specific IPAM}
+    mac: ${22:# Anycast logical router MAC address}
+    mtu: ${23:# Set the Maximum Transmission Unit (MTU)}
+    nodes: ${24:# List of cluster node names}
+    peers: ${25:# Peers address list (comma-separated IP addresses)}
+    reversedns: ${26:# Reverse DNS API server}
+    rt_import: ${27:# Route-Target import}
+    state: ${28:# The desired state of the zone configuration}
+    tag: ${29:# Service-VLAN tag}
+    type: ${30:# Specify the type of zone}
+    update: ${31:# If O(state=present) and zone exists it'll update}
+    validate_certs: ${32:# If V(false), SSL certificates will not be validated}
+    vlan_protocol: ${33:# Specify the VLAN protocol to use}
+    vrf_vxlan: ${34:# Specify the VRF VXLAN identifier}
+    vxlan_port: ${35:# VXLAN tunnel UDP port (default 4789)}
+    zone: ${36:# Unique zone name}
+  tags:
+    - community
+    - proxmox
+    - proxmox_zone]]></content>
+  <tabTrigger>community.proxmox.proxmox_zone</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Proxmox zone configurations</description>
+</snippet>

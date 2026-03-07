@@ -1,17 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Trigger deployment in Icinga2}
   telekom_mms.icinga_director.icinga_deploy:
-    client_cert: ${2:# PEM formatted certificate chain file to be used for SSL client authentication}
-    client_key: ${3:# PEM formatted file that contains your private key to be used for SSL client authentication}
-    force: ${4:# If V(yes) do not get a cached copy}
-    force_basic_auth: ${5:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
-    http_agent: ${6:# Header to identify as, generally appears in web server logs}
-    url: ${7:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
-    url_password: ${8:# The password for use in HTTP basic authentication}
-    url_username: ${9:# The username for use in HTTP basic authentication}
-    use_gssapi: ${10:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
-    use_proxy: ${11:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    validate_certs: ${12:# If V(no), SSL certificates will not be validated}
+    api_timeout: ${2:# Default timeout to wait for transaction to finish in seconds}
+    client_cert: ${3:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${4:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    force: ${5:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${6:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    http_agent: ${7:# Header to identify as, generally appears in web server logs}
+    timeout: ${8:# Default timeout to wait for deployment to finish in seconds}
+    url: ${9:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    url_password: ${10:# The password for use in HTTP basic authentication}
+    url_username: ${11:# The username for use in HTTP basic authentication}
+    use_gssapi: ${12:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${13:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${14:# If V(no), SSL certificates will not be validated}
   tags:
     - telekom_mms
     - icinga_director

@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure SNMP agent on StorageGRID}
+  netapp.storagegrid.na_sg_grid_snmp:
+    agent_addresses: ${2:# Local binding addresses for the SNMP agent}
+    api_url: ${3:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${4:# The authorization token for the API request}
+    auth_trap_enable: ${5:# 1 - enable SNMP authentication traps}
+    community_strings: ${6:# List of community strings}
+    disable_notifications: ${7:# Disable all SNMP notifications}
+    enable_snmp: ${8:# Enable or disable SNMP monitoring}
+    ro_users: ${9:# USM users allowed read-only access}
+    state: ${10:# The snmp agent should be present}
+    sys_contact: ${11:# SNMP system contact}
+    sys_location: ${12:# SNMP system location}
+    trap_community: ${13:# SNMP trap community}
+    trap_destinations: ${14:# SNMP trap destinations for V1, V2C, and Inform notifications}
+    usm_users: ${15:# USM user}
+    validate_certs: ${16:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_snmp]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_snmp</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure SNMP agent on StorageGRID</description>
+</snippet>

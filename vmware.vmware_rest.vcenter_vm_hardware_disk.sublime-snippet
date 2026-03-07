@@ -1,27 +1,28 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Adds a virtual disk to the virtual machine}
+  <content><![CDATA[- name: ${1:Adds a thin provisioned virtual disk to the virtual machine}
   vmware.vmware_rest.vcenter_vm_hardware_disk:
     backing: ${2:# Existing physical resource backing for the virtual disk}
     disk: ${3:# Virtual disk identifier}
     ide: ${4:# Address for attaching the device to a virtual IDE adapter}
     label: ${5:# The name of the item}
     new_vmdk: ${6:# Specification for creating a new VMDK backing for the virtual disk}
-    sata: ${7:# Address for attaching the device to a virtual SATA adapter}
-    scsi: ${8:# Address for attaching the device to a virtual SCSI adapter}
-    session_timeout: ${9:# Timeout settings for client session}
-    state: ${10:# No description available}
-    type: ${11:# The C(host_bus_adapter_type) defines the valid types of host bus adapters that may be used for attaching a virtual storage device to a virtual machine}
-    vcenter_hostname: ${12:# The hostname or IP address of the vSphere vCenter}
-    vcenter_password: ${13:# The vSphere vCenter password}
-    vcenter_rest_log_file: ${14:# You can use this optional parameter to set the location of a log file}
-    vcenter_username: ${15:# The vSphere vCenter username}
-    vcenter_validate_certs: ${16:# Allows connection when SSL certificates are not valid}
-    vm: ${17:# Virtual machine identifier}
+    nvme: ${7:# Address for attaching the device to a virtual NVMe adapter}
+    sata: ${8:# Address for attaching the device to a virtual SATA adapter}
+    scsi: ${9:# Address for attaching the device to a virtual SCSI adapter}
+    session_timeout: ${10:# Timeout settings for client session}
+    state: ${11:# No description available}
+    type: ${12:# The I(host_bus_adapter_type) enumerated type defines the valid types of host bus adapters that may be used for attaching a virtual storage device to a virtual machine}
+    vcenter_hostname: ${13:# The hostname or IP address of the vSphere vCenter}
+    vcenter_password: ${14:# The vSphere vCenter password}
+    vcenter_rest_log_file: ${15:# You can use this optional parameter to set the location of a log file}
+    vcenter_username: ${16:# The vSphere vCenter username}
+    vcenter_validate_certs: ${17:# Allows connection when SSL certificates are not valid}
+    vm: ${18:# Virtual machine identifier}
   tags:
     - vmware
     - vmware_rest
     - vcenter_vm_hardware_disk]]></content>
   <tabTrigger>vmware.vmware_rest.vcenter_vm_hardware_disk</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Adds a virtual disk to the virtual machine</description>
+  <description>Adds a thin provisioned virtual disk to the virtual machine</description>
 </snippet>

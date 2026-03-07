@@ -1,16 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Fetch information about Host Errata}
   theforeman.foreman.host_errata_info:
-    content_view: ${2:# Calculate Applicable Errata based on a particular Content View}
-    host: ${3:# Name of the host to fetch errata for}
-    lifecycle_environment: ${4:# Calculate Applicable Errata based on a particular Lifecycle Environment}
-    location: ${5:# Label of the Location to scope the search for}
-    organization: ${6:# Name of the Organization to scope the search for}
-    password: ${7:# Password of the user accessing the Foreman server}
-    search: ${8:# Search query to use}
-    server_url: ${9:# URL of the Foreman server}
-    username: ${10:# Username accessing the Foreman server}
-    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    content_view: ${3:# Calculate Applicable Errata based on a particular Content View}
+    host: ${4:# Name of the host to fetch errata for}
+    lifecycle_environment: ${5:# Calculate Applicable Errata based on a particular Lifecycle Environment}
+    location: ${6:# Label of the Location to scope the search for}
+    organization: ${7:# Name of the Organization to scope the search for}
+    password: ${8:# Password of the user accessing the Foreman server}
+    search: ${9:# Search query to use}
+    server_url: ${10:# URL of the Foreman server}
+    use_gssapi: ${11:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${12:# Username accessing the Foreman server}
+    validate_certs: ${13:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

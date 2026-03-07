@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages log-exporter objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_log_exporter:
+    attachments: ${2:# Log exporter attachments}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    color: ${4:# Color of the object}
+    comments: ${5:# Comments string}
+    data_manipulation: ${6:# Log exporter data manipulation}
+    details_level: ${7:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${8:# Indicates which domains to process the commands on}
+    enabled: ${9:# Indicates whether to enable export}
+    ignore_errors: ${10:# Apply changes ignoring errors}
+    ignore_warnings: ${11:# Apply changes ignoring warnings}
+    name: ${12:# Object name}
+    protocol: ${13:# Protocol used to send logs to the target server}
+    state: ${14:# State of the access rule (present or absent)}
+    tags: ${15:# Collection of tag identifiers}
+    target_port: ${16:# Port number of the target server}
+    target_server: ${17:# Target server port to which logs are exported}
+    version: ${18:# Version of checkpoint}
+    wait_for_task: ${19:# Wait for the task to end}
+    wait_for_task_timeout: ${20:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_log_exporter]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_log_exporter</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages log-exporter objects on Checkpoint over Web Services API</description>
+</snippet>

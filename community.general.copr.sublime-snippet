@@ -2,9 +2,9 @@
   <content><![CDATA[- name: ${1:Manage one of the Copr repositories}
   community.general.copr:
     chroot: ${2:# The name of the chroot that you want to enable/disable/remove in the project, for example V(epel-7-x86_64)}
-    excludepkgs: ${3:# List of packages to exclude}
+    excludepkgs: ${3:# List of packages in this repository to exclude from all operations}
     host: ${4:# The Copr host to work with}
-    includepkgs: ${5:# List of packages to include}
+    includepkgs: ${5:# List of packages to include in all operations}
     name: ${6:# Copr directory name, for example C(@copr/copr-dev)}
     protocol: ${7:# This indicate which protocol to use with the host}
     state: ${8:# Whether to set this project as V(enabled), V(disabled), or V(absent)}

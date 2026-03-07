@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Perform RavenDB node and cluster health checks}
+  ravendb.ravendb.healthcheck:
+    ca_cert_path: ${2:# Path to a CA bundle used to validate the server certificate}
+    certificate_path: ${3:# Path to a client certificate for secured clusters}
+    checks: ${4:# List of health checks to run}
+    db_retry_interval_seconds: ${5:# Interval in seconds between attempts for C(db_groups_available) and C(db_groups_available_excluding_target)}
+    max_time_to_wait: ${6:# Max time window in seconds for each selected check before timing out}
+    on_db_timeout: ${7:# Behavior when C(db_groups_available) times out}
+    retry_interval_seconds: ${8:# Interval in seconds between attempts for C(node_alive) and C(cluster_connectivity)}
+    url: ${9:# Base URL of the RavenDB node to check, e}
+    validate_certificate: ${10:# Verify the server TLS certificate when using HTTPS}
+  tags:
+    - ravendb
+    - ravendb
+    - healthcheck]]></content>
+  <tabTrigger>ravendb.ravendb.healthcheck</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Perform RavenDB node and cluster health checks</description>
+</snippet>

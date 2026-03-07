@@ -14,22 +14,23 @@
     docker_host: ${12:# The URL or Unix socket path used to connect to the Docker API}
     driver: ${13:# Specify the type of network}
     driver_options: ${14:# Dictionary of network settings}
-    enable_ipv6: ${15:# Enable IPv6 networking}
-    force: ${16:# With state V(absent) forces disconnecting all containers from the network prior to deleting the network}
-    internal: ${17:# Restrict external access to the network}
-    ipam_config: ${18:# List of IPAM config blocks}
-    ipam_driver: ${19:# Specify an IPAM driver}
-    ipam_driver_options: ${20:# Dictionary of IPAM driver options}
-    labels: ${21:# Dictionary of labels}
-    name: ${22:# Name of the network to operate on}
-    scope: ${23:# Specify the network's scope}
-    ssl_version: ${24:# Provide a valid SSL version number}
-    state: ${25:# V(absent) deletes the network}
-    timeout: ${26:# The maximum amount of time in seconds to wait on a response from the API}
-    tls: ${27:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    tls_hostname: ${28:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    use_ssh_client: ${29:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
-    validate_certs: ${30:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    enable_ipv4: ${15:# Enable IPv4 networking}
+    enable_ipv6: ${16:# Enable IPv6 networking}
+    force: ${17:# With state V(present) will disconnect all containers for existing networks, delete the network and re-create the network}
+    ingress: ${18:# Enable Swarm routing-mesh}
+    internal: ${19:# Restrict external access to the network}
+    ipam_config: ${20:# List of IPAM config blocks}
+    ipam_driver: ${21:# Specify an IPAM driver}
+    ipam_driver_options: ${22:# Dictionary of IPAM driver options}
+    labels: ${23:# Dictionary of labels}
+    name: ${24:# Name of the network to operate on}
+    scope: ${25:# Specify the network's scope}
+    state: ${26:# V(absent) deletes the network}
+    timeout: ${27:# The maximum amount of time in seconds to wait on a response from the API}
+    tls: ${28:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${29:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    use_ssh_client: ${30:# For SSH transports, use the C(ssh) CLI tool instead of paramiko}
+    validate_certs: ${31:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
   tags:
     - community
     - docker

@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update and delete Data Collection Rules}
+  azure.azcollection.azure_rm_monitordatacollectionrules:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    data_collection_endpoint_id: ${10:# The resource ID of the data collection endpoint that this rule can be used with}
+    data_flows: ${11:# Definition of which streams are sent to which destinations}
+    data_sources: ${12:# The specification of data sources}
+    description: ${13:# Description for the data collection rule}
+    destinations: ${14:# U(https://learn}
+    disable_instance_discovery: ${15:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    kind: ${16:# Kind of the data collection rule}
+    location: ${17:# Location of the data colelction rule}
+    log_mode: ${18:# Parent argument}
+    log_path: ${19:# Parent argument}
+    name: ${20:# The name of the data collection rule you're creating/changing}
+    password: ${21:# Active Directory user password}
+    profile: ${22:# Security profile found in ~/}
+    resource_group: ${23:# The name of the resource group}
+    secret: ${24:# Azure client secret}
+    state: ${25:# State of the data collection rule}
+    stream_declarations: ${26:# Declaration of a custom stream}
+    subscription_id: ${27:# Your Azure subscription Id}
+    tags: ${28:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${29:# Azure tenant ID}
+    thumbprint: ${30:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${31:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_monitordatacollectionrules]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_monitordatacollectionrules</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update and delete Data Collection Rules</description>
+</snippet>

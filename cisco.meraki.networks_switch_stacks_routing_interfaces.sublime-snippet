@@ -3,13 +3,13 @@
   cisco.meraki.networks_switch_stacks_routing_interfaces:
     defaultGateway: ${2:# The next hop for any traffic that isn't going to a directly connected subnet or over a static route}
     interfaceId: ${3:# InterfaceId path parameter}
-    interfaceIp: ${4:# The IP address this switch stack will use for layer 3 routing on this VLAN or subnet}
+    interfaceIp: ${4:# The IP address that will be used for Layer 3 routing on this VLAN or subnet}
     ipv6: ${5:# The IPv6 settings of the interface}
-    meraki_action_batch_retry_wait_time: ${6:# meraki_action_batch_retry_wait_time (integer), action batch concurrency error retry wait time}
-    meraki_api_key: ${7:# meraki_api_key (string), API key generated in dashboard; can also be set as an environment variable MERAKI_DASHBOARD_API_KEY}
-    meraki_base_url: ${8:# meraki_base_url (string), preceding all endpoint resources}
-    meraki_be_geo_id: ${9:# meraki_be_geo_id (string), optional partner identifier for API usage tracking; can also be set as an environment variable BE_GEO_ID}
-    meraki_caller: ${10:# meraki_caller (string), optional identifier for API usage tracking; can also be set as an environment variable MERAKI_PYTHON_SDK_CALLER}
+    loopback: ${6:# The loopback settings of the interface}
+    meraki_action_batch_retry_wait_time: ${7:# meraki_action_batch_retry_wait_time (integer), action batch concurrency error retry wait time}
+    meraki_api_key: ${8:# meraki_api_key (string), API key generated in dashboard; can also be set as an environment variable MERAKI_DASHBOARD_API_KEY}
+    meraki_base_url: ${9:# meraki_base_url (string), preceding all endpoint resources}
+    meraki_be_geo_id: ${10:# meraki_be_geo_id (string), optional partner identifier for API usage tracking; can also be set as an environment variable BE_GEO_ID}
     meraki_certificate_path: ${11:# meraki_certificate_path (string), path for TLS/SSL certificate verification if behind local proxy}
     meraki_inherit_logging_config: ${12:# meraki_inherit_logging_config (boolean), Inherits your own logger instance}
     meraki_log_file_prefix: ${13:# meraki_log_file_prefix (string), log file name appended with date and timestamp}
@@ -26,13 +26,16 @@
     meraki_suppress_logging: ${24:# meraki_suppress_logging (boolean), disable all logging? you're on your own then!}
     meraki_use_iterator_for_get_pages: ${25:# meraki_use_iterator_for_get_pages (boolean), list* methods will return an iterator with each object instead of a complete list with all items}
     meraki_wait_on_rate_limit: ${26:# meraki_wait_on_rate_limit (boolean), retry if 429 rate limit error encountered?}
-    multicastRouting: ${27:# Enable multicast support if, multicast routing between VLANs is required}
-    name: ${28:# A friendly name or description for the interface or VLAN}
-    networkId: ${29:# NetworkId path parameter}
-    ospfSettings: ${30:# The OSPF routing settings of the interface}
-    subnet: ${31:# The network that this routed interface is on, in CIDR notation (ex}
-    switchStackId: ${32:# SwitchStackId path parameter}
-    vlanId: ${33:# The VLAN this routed interface is on}
+    mode: ${27:# L3 Interface mode, can be one of 'vlan', 'routed', 'loopback'}
+    multicastRouting: ${28:# Enable multicast support if, multicast routing between VLANs is required}
+    name: ${29:# A friendly name or description for the interface or VLAN (max length 128 characters)}
+    networkId: ${30:# NetworkId path parameter}
+    ospfSettings: ${31:# The OSPF routing settings of the interface}
+    subnet: ${32:# The network that this L3 interface is on, in CIDR notation (ex}
+    switchPortId: ${33:# Switch Port ID when in Routed mode (CS 17}
+    switchStackId: ${34:# SwitchStackId path parameter}
+    vlanId: ${35:# The VLAN this L3 interface is on}
+    vrf: ${36:# The VRF settings of the interface}
   tags:
     - cisco
     - meraki

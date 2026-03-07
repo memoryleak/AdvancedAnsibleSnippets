@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP ASA r2 storage unit snapshot}
+  netapp.ontap.na_ontap_storage_unit_snapshot:
+    cert_filepath: ${2:# path to SSL client cert file (}
+    comment: ${3:# A comment associated with the snapshot}
+    expiry_time: ${4:# Specifies the expiry time for the snapshot}
+    feature_flags: ${5:# Enable or disable a new feature}
+    force_ontap_version: ${6:# Override the cluster ONTAP version when using REST}
+    from_name: ${7:# Specifies the name of the snapshot to be renamed}
+    hostname: ${8:# The hostname or IP address of the ONTAP instance}
+    http_port: ${9:# Override the default port (80 or 443) with this port}
+    https: ${10:# Enable and disable https}
+    key_filepath: ${11:# path to SSL client key file}
+    name: ${12:# Specifies the name of the snapshot}
+    password: ${13:# Password for the specified user}
+    snapmirror_label: ${14:# Specifies label for SnapMirror operations}
+    state: ${15:# Specifies whether the specified storage unit should exist or not}
+    storage_unit: ${16:# Specifies the storage unit in which the snapshot is located}
+    use_rest: ${17:# This module only supports REST}
+    username: ${18:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${19:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${20:# Specifies the SVM in which the storage unit is located}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_storage_unit_snapshot]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_storage_unit_snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP ASA r2 storage unit snapshot</description>
+</snippet>

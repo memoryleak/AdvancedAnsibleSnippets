@@ -33,49 +33,53 @@
     is_online: ${31:# Whether the specified volume is online, or not}
     junction_path: ${32:# Junction path of the volume}
     key_filepath: ${33:# path to SSL client key file}
-    language: ${34:# Language to use for Volume}
-    logical_space_enforcement: ${35:# This optionally specifies whether to perform logical space accounting on the volume}
-    logical_space_reporting: ${36:# This optionally specifies whether to report space logically on the volume}
-    max_files: ${37:# The maximum number of files (inodes) for user-visible data allowed on the volume}
-    max_wait_time: ${38:# Volume move and encryption operations might take longer time to complete}
-    name: ${39:# The name of the volume to manage}
-    nas_application_template: ${40:# additional options when using the application/applications REST API to create a volume}
-    nvfail_enabled: ${41:# If true, the controller performs additional work at boot and takeover times if it finds that there has been any potential data loss in the volume's constituents due to an NVRAM failure}
-    ontapi: ${42:# The ontap api version to use}
-    password: ${43:# Password for the specified user}
-    percent_snapshot_space: ${44:# Amount of space reserved for snapshot copies of the volume}
-    preserve_lun_ids: ${45:# If this field is set to 'true', LUNs in the volume being restored will remain mapped and their identities preserved such that host connectivity will not be disrupted during the restore operation}
-    qos_adaptive_policy_group: ${46:# Specifies a QoS adaptive policy group to be set on volume}
-    qos_policy_group: ${47:# Specifies a QoS policy group to be set on volume}
-    size: ${48:# The size of the volume in (size_unit)}
-    size_change_threshold: ${49:# Percentage in size change to trigger a resize}
-    size_unit: ${50:# The unit used to interpret the size parameter}
-    sizing_method: ${51:# Represents the method to modify the size of a FlexGroup}
-    snapdir_access: ${52:# This is an advanced option, the default is False}
-    snaplock: ${53:# Starting with ONTAP 9}
-    snapshot_auto_delete: ${54:# A dictionary for the auto delete options and values}
-    snapshot_locking: ${55:# Specifies whether or not snapshot copy locking is enabled on the volume}
-    snapshot_policy: ${56:# The name of the snapshot policy}
-    snapshot_restore: ${57:# Name of snapshot to restore from}
-    space_guarantee: ${58:# Space guarantee style for the volume}
-    space_slo: ${59:# Specifies the space SLO type for the volume}
-    state: ${60:# Whether the specified volume should exist or not}
-    tags: ${61:# Tags are an optional way to track the uses of a resource}
-    tiering_minimum_cooling_days: ${62:# Determines how many days must pass before inactive data in a volume using the Auto or Snapshot-Only policy is considered cold and eligible for tiering}
-    tiering_policy: ${63:# The tiering policy that is to be associated with the volume}
-    time_out: ${64:# With ZAPI - time to wait for Flexgroup creation, modification, or deletion in seconds}
-    type: ${65:# The volume type, either read-write (RW) or data-protection (DP)}
-    unix_permissions: ${66:# Unix permission bits in octal or symbolic format}
-    use_rest: ${67:# Whether to use REST or ZAPI}
-    user_id: ${68:# The UNIX user ID for the volume}
-    username: ${69:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${70:# If set to C(no), the SSL certificates will not be validated}
-    vol_full_threshold_percent: ${71:# Specifies the percentage at which the volume is considered full, and above which a critical EMS error will be generated}
-    vol_nearly_full_threshold_percent: ${72:# Specifies the percentage at which the volume is considered nearly full, and above which an EMS warning will be generated}
-    volume_security_style: ${73:# The security style associated with this volume}
-    vserver: ${74:# Name of the vserver to use}
-    vserver_dr_protection: ${75:# Specifies the protection type for the volume in a Vserver DR setup}
-    wait_for_completion: ${76:# Set this parameter to 'true' for synchronous execution during create (wait until volume status is online)}
+    lambda_config: ${34:# Configuration parameters for AWS Lambda proxy functionality}
+    language: ${35:# Language to use for Volume}
+    large_size_enabled: ${36:# Indicates if the support for large FlexVol volumes and large files is enabled on this volume}
+    logical_space_enforcement: ${37:# This optionally specifies whether to perform logical space accounting on the volume}
+    logical_space_reporting: ${38:# This optionally specifies whether to report space logically on the volume}
+    max_files: ${39:# The maximum number of files (inodes) for user-visible data allowed on the volume}
+    max_wait_time: ${40:# Volume move and encryption operations might take longer time to complete}
+    name: ${41:# The name of the volume to manage}
+    nas_application_template: ${42:# additional options when using the application/applications REST API to create a volume}
+    nvfail_enabled: ${43:# If true, the controller performs additional work at boot and takeover times if it finds that there has been any potential data loss in the volume's constituents due to an NVRAM failure}
+    ontapi: ${44:# The ontap api version to use}
+    password: ${45:# Password for the specified user}
+    percent_snapshot_space: ${46:# Amount of space reserved for snapshot copies of the volume}
+    preserve_lun_ids: ${47:# If this field is set to 'true', LUNs in the volume being restored will remain mapped and their identities preserved such that host connectivity will not be disrupted during the restore operation}
+    qos_adaptive_policy_group: ${48:# Specifies a QoS adaptive policy group to be set on volume}
+    qos_policy_group: ${49:# Specifies a QoS policy group to be set on volume}
+    size: ${50:# The size of the volume in (size_unit)}
+    size_change_threshold: ${51:# Percentage in size change to trigger a resize}
+    size_unit: ${52:# The unit used to interpret the size parameter}
+    sizing_method: ${53:# Represents the method to modify the size of a FlexGroup}
+    snapdir_access: ${54:# This is an advanced option, the default is False}
+    snaplock: ${55:# Starting with ONTAP 9}
+    snapshot_auto_delete: ${56:# A dictionary for the auto delete options and values}
+    snapshot_locking: ${57:# Specifies whether or not snapshot copy locking is enabled on the volume}
+    snapshot_policy: ${58:# The name of the snapshot policy}
+    snapshot_restore: ${59:# Name of snapshot to restore from}
+    space_guarantee: ${60:# Space guarantee style for the volume}
+    space_slo: ${61:# Specifies the space SLO type for the volume}
+    state: ${62:# Whether the specified volume should exist or not}
+    tags: ${63:# Tags are an optional way to track the uses of a resource}
+    tiering_minimum_cooling_days: ${64:# Determines how many days must pass before inactive data in a volume using the Auto or Snapshot-Only policy is considered cold and eligible for tiering}
+    tiering_object_tags: ${65:# This parameter specifies tags of a volume for objects stored on a FabricPool-enabled aggregate}
+    tiering_policy: ${66:# The tiering policy that is to be associated with the volume}
+    time_out: ${67:# With ZAPI - time to wait for Flexgroup creation, modification, or deletion in seconds}
+    type: ${68:# The volume type, either read-write (RW) or data-protection (DP)}
+    unix_permissions: ${69:# Unix permission bits in octal or symbolic format}
+    use_lambda: ${70:# Specifies if AWS Lambda proxy functionality should be used to connect to the ONTAP system}
+    use_rest: ${71:# Whether to use REST or ZAPI}
+    user_id: ${72:# The UNIX user ID for the volume}
+    username: ${73:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${74:# If set to C(no), the SSL certificates will not be validated}
+    vol_full_threshold_percent: ${75:# Specifies the percentage at which the volume is considered full, and above which a critical EMS error will be generated}
+    vol_nearly_full_threshold_percent: ${76:# Specifies the percentage at which the volume is considered nearly full, and above which an EMS warning will be generated}
+    volume_security_style: ${77:# The security style associated with this volume}
+    vserver: ${78:# Name of the vserver to use}
+    vserver_dr_protection: ${79:# Specifies the protection type for the volume in a Vserver DR setup}
+    wait_for_completion: ${80:# Set this parameter to 'true' for synchronous execution during create (wait until volume status is online)}
   tags:
     - netapp
     - ontap

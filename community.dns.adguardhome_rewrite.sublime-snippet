@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add, update or delete DNS rewrite rules from AdGuardHome}
+  community.dns.adguardhome_rewrite:
+    answer: ${2:# Value for the domain rewrite}
+    domain: ${3:# Domain or wildcard domain that you want to be rewritten by AdGuardHome}
+    host: ${4:# URL of AdGuardHome host}
+    password: ${5:# Related password for the AdGuardHome user}
+    state: ${6:# Wether a rewrite rule should be added/updated (O(state=present)) or removed (O(state=absent))}
+    username: ${7:# AdGuardHome user}
+    validate_certs: ${8:# Ability to disable TLS certificate validation}
+  tags:
+    - community
+    - dns
+    - adguardhome_rewrite]]></content>
+  <tabTrigger>community.dns.adguardhome_rewrite</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add, update or delete DNS rewrite rules from AdGuardHome</description>
+</snippet>

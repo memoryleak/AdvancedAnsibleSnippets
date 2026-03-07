@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Fabric SPAN Sessions Source on Cisco Nexus Dashboard Orchestrator (NDO)}
+  cisco.mso.ndo_fabric_span_session_source:
+    access_paths: ${2:# The Access Path of the SPAN Session source}
+    direction: ${3:# The direction of the SPAN Session source}
+    filter_epg: ${4:# The Filter EPG of the SPAN Session source}
+    filter_l3out: ${5:# The Filter L3Out of the SPAN Session source}
+    host: ${6:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${7:# The login domain name to use for authentication}
+    name: ${8:# The name of the SPAN Session source}
+    output_level: ${9:# Influence the output of this MSO module}
+    password: ${10:# The password to use for authentication}
+    port: ${11:# Port number to be used for the REST connection}
+    span_drop_packets: ${12:# The SPAN Drop Packets of the SPAN Session source}
+    span_session_name: ${13:# The name of the SPAN Session}
+    span_session_uuid: ${14:# The UUID of the SPAN Session}
+    state: ${15:# Use C(absent) for removing}
+    template: ${16:# The name of the template}
+    template_id: ${17:# The ID of the template}
+    timeout: ${18:# The socket level timeout in seconds}
+    use_proxy: ${19:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${20:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${21:# The username to use for authentication}
+    validate_certs: ${22:# If C(false), SSL certificates will not be validated}
+  tags:
+    - cisco
+    - mso
+    - ndo_fabric_span_session_source]]></content>
+  <tabTrigger>cisco.mso.ndo_fabric_span_session_source</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Fabric SPAN Sessions Source on Cisco Nexus Dashboard Orchestrator (NDO)</description>
+</snippet>

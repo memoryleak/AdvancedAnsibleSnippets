@@ -1,0 +1,32 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Syslog Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_syslog_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    description: ${5:# The user-defined description for the Syslog Policy}
+    first_remote_logging_enabled: ${6:# If C(true), enables the first remote syslog server destination}
+    first_remote_logging_hostname: ${7:# Hostname or IP Address of the first syslog server where log should be stored}
+    first_remote_logging_minimum_severity: ${8:# Lowest level of messages to be included in the first remote log}
+    first_remote_logging_port: ${9:# Port number used for logging on first syslog server}
+    first_remote_logging_protocol: ${10:# Transport layer protocol for transmission of log messages to first syslog server}
+    local_logging_minimum_severity: ${11:# Lowest level of messages to be included in the local log}
+    name: ${12:# The name assigned to the Syslog Policy}
+    organization: ${13:# The name of the Organization this resource is assigned to}
+    second_remote_logging_enabled: ${14:# If C(true), enables the second remote syslog server destination}
+    second_remote_logging_hostname: ${15:# Hostname or IP Address of the second syslog server where log should be stored}
+    second_remote_logging_minimum_severity: ${16:# Lowest level of messages to be included in the second remote log}
+    second_remote_logging_port: ${17:# Port number used for logging on second syslog server}
+    second_remote_logging_protocol: ${18:# Transport layer protocol for transmission of log messages to second syslog server}
+    state: ${19:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${20:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${21:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${22:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_syslog_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_syslog_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Syslog Policy configuration for Cisco Intersight</description>
+</snippet>

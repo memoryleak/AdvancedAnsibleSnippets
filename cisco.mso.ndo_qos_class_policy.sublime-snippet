@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage QoS Class Policies on Cisco Nexus Dashboard Orchestrator (NDO)}
+  cisco.mso.ndo_qos_class_policy:
+    description: ${2:# The description of the QoS Class Policy}
+    host: ${3:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${4:# The login domain name to use for authentication}
+    name: ${5:# The name of the QoS Class Policy}
+    output_level: ${6:# Influence the output of this MSO module}
+    password: ${7:# The password to use for authentication}
+    port: ${8:# Port number to be used for the REST connection}
+    preserve_cos: ${9:# Whether to preserve the Class of Service (CoS)}
+    qos_levels: ${10:# The list of configurable QoS levels for the QoS Class Policy}
+    state: ${11:# Use C(absent) for removing}
+    template: ${12:# The name of the template}
+    template_id: ${13:# The ID of the fabric policy template}
+    timeout: ${14:# The socket level timeout in seconds}
+    use_proxy: ${15:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${16:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${17:# The username to use for authentication}
+    uuid: ${18:# The UUID of the QoS Class Policy}
+    validate_certs: ${19:# If C(false), SSL certificates will not be validated}
+  tags:
+    - cisco
+    - mso
+    - ndo_qos_class_policy]]></content>
+  <tabTrigger>cisco.mso.ndo_qos_class_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage QoS Class Policies on Cisco Nexus Dashboard Orchestrator (NDO)</description>
+</snippet>

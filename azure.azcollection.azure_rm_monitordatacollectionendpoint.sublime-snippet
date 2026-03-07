@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Managed Data Collection Endpoints}
+  azure.azcollection.azure_rm_monitordatacollectionendpoint:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    description: ${10:# Description of the data collection endpoint}
+    disable_instance_discovery: ${11:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    kind: ${12:# The kind of the resource}
+    location: ${13:# The geo-location where the resource lives}
+    log_mode: ${14:# Parent argument}
+    log_path: ${15:# Parent argument}
+    name: ${16:# The name of the data collection endpoint}
+    network_acls: ${17:# Network access control rules for the endpoints}
+    password: ${18:# Active Directory user password}
+    profile: ${19:# Security profile found in ~/}
+    resource_group: ${20:# The name of the resource group in which the data collection endpoint is (if you use name)}
+    secret: ${21:# Azure client secret}
+    state: ${22:# State of the data colleciton endpoint}
+    subscription_id: ${23:# Your Azure subscription Id}
+    tags: ${24:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${25:# Azure tenant ID}
+    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${27:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_monitordatacollectionendpoint]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_monitordatacollectionendpoint</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Managed Data Collection Endpoints</description>
+</snippet>

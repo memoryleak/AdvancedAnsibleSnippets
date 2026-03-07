@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp StorageGRID manage tenant accounts}
+  netapp.storagegrid.na_sg_grid_tenant:
+    account_id: ${2:# Account Id of the tenant}
+    allow_compliance_mode: ${3:# Whether a tenant can use compliance mode for object lock and retention}
+    allow_platform_services: ${4:# Allows tenant to use platform services features such as CloudMirror}
+    allow_select_object_content: ${5:# Allows tenant to use the S3 SelectObjectContent API to filter and retrieve object data}
+    api_url: ${6:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${7:# The authorization token for the API request}
+    description: ${8:# Additional identifying information for the tenant account}
+    management: ${9:# Whether the tenant can login to the StorageGRID tenant portal}
+    max_retention_days: ${10:# The maximum retention period in days allowed for new objects in compliance or governance mode}
+    name: ${11:# Name of the tenant}
+    protocol: ${12:# Object Storage protocol used by the tenancy}
+    quota_size: ${13:# Quota to apply to the tenant specified in I(quota_size_unit)}
+    quota_size_unit: ${14:# The unit used to interpret the size parameter}
+    root_access_group: ${15:# Existing federated group to have initial Root Access permissions for the tenant}
+    state: ${16:# Whether the specified account should exist or not}
+    tenant_password: ${17:# Root password for tenant account}
+    update_password: ${18:# Choose when to update the tenant password}
+    use_own_identity_source: ${19:# Whether the tenant account should configure its own identity source}
+    validate_certs: ${20:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_tenant]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_tenant</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp StorageGRID manage tenant accounts</description>
+</snippet>

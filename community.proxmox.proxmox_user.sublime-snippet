@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:User management for Proxmox VE cluster}
+  community.proxmox.proxmox_user:
+    api_host: ${2:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${3:# Specify the password to authenticate with}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    comment: ${8:# Specify the description for the user}
+    email: ${9:# Email address for the user}
+    enable: ${10:# Whether or not the account is active}
+    expire: ${11:# Expiration date of the user in seconds after epoch}
+    firstname: ${12:# First name of the user}
+    groups: ${13:# List of groups the user is a member of}
+    keys: ${14:# Keys for two factor authentication (yubico)}
+    lastname: ${15:# Last name of the user}
+    password: ${16:# Initial password}
+    state: ${17:# Indicate desired state of the user}
+    userid: ${18:# The user name}
+    validate_certs: ${19:# If V(false), SSL certificates will not be validated}
+  tags:
+    - community
+    - proxmox
+    - proxmox_user]]></content>
+  <tabTrigger>community.proxmox.proxmox_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>User management for Proxmox VE cluster</description>
+</snippet>

@@ -1,15 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Fetch information about Repositories}
   theforeman.foreman.repository_info:
-    location: ${2:# Label of the Location to scope the search for}
-    name: ${3:# Name of the resource to fetch information for}
-    organization: ${4:# Name of the Organization to scope the search for}
-    password: ${5:# Password of the user accessing the Foreman server}
-    product: ${6:# Product to which the repository lives in}
-    search: ${7:# Search query to use}
-    server_url: ${8:# URL of the Foreman server}
-    username: ${9:# Username accessing the Foreman server}
-    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    location: ${3:# Label of the Location to scope the search for}
+    name: ${4:# Name of the resource to fetch information for}
+    organization: ${5:# Name of the Organization to scope the search for}
+    password: ${6:# Password of the user accessing the Foreman server}
+    product: ${7:# Product to which the repository lives in}
+    search: ${8:# Search query to use}
+    server_url: ${9:# URL of the Foreman server}
+    use_gssapi: ${10:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${11:# Username accessing the Foreman server}
+    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

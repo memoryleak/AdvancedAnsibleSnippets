@@ -1,0 +1,107 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Provision new virtual machines using virt-install tool}
+  community.libvirt.virt_install:
+    arch: ${2:# Request a non-native CPU architecture for the guest virtual machine}
+    audio: ${3:# Configure host audio output for the guest's sound hardware}
+    audio_devices: ${4:# Configure multiple audio backends for the guest}
+    autostart: ${5:# Set the autostart flag for a domain}
+    blkiotune: ${6:# Tune block I/O policy for the domain process}
+    boot: ${7:# Set the boot device priority for post-install configuration}
+    boot_opts: ${8:# Additional options for boot configuration}
+    cdrom: ${9:# ISO file or CDROM device to use for VM install media}
+    channel: ${10:# Attach a communication channel device to connect the guest and host machine}
+    channel_devices: ${11:# Configure multiple channel devices for the guest}
+    clock: ${12:# Configure the clock for the guest}
+    cloud_init: ${13:# Pass cloud-init metadata to the VM}
+    console: ${14:# Connect a text console between the guest and host}
+    console_devices: ${15:# Configure multiple console devices for the guest}
+    container: ${16:# This guest should be a container type guest}
+    controller: ${17:# Attach a controller device to the guest}
+    controller_devices: ${18:# Configure multiple controller devices for the guest}
+    cpu: ${19:# Configure the CPU model and CPU features exposed to the guest}
+    cputune: ${20:# Tune CPU parameters for the guest}
+    destroy_on_exit: ${21:# If set to V(true), the VM will be destroyed when the console window is exited}
+    disks: ${22:# Specify the storage devices for the guest}
+    events: ${23:# Specify events values for the guest}
+    extra_args: ${24:# Additional kernel command line arguments to pass to the installer when performing a guest install with O(location)}
+    features: ${25:# Enable or disable certain machine features}
+    filesystems: ${26:# Specifies directories on the host to export to the guest}
+    graphics: ${27:# Configure the graphical display for the guest virtual machine}
+    graphics_devices: ${28:# Configure multiple graphics devices for the guest}
+    host_devices: ${29:# Configure multiple host devices for the guest}
+    hostdev: ${30:# Attach a physical host device to the guest}
+    hvm: ${31:# Request the use of full virtualization}
+    idmap: ${32:# Configure the UID or GID mapping for the guest}
+    import: ${33:# Skip the OS installation process, and build a guest around an existing disk image}
+    initrd_inject: ${34:# Add PATH to the root of the initrd fetched with O(location)}
+    input: ${35:# Attach an input device to the guest}
+    input_devices: ${36:# Configure multiple input devices for the guest}
+    install: ${37:# Additional options for the installation}
+    iommu: ${38:# Add an IOMMU device to the guest}
+    iommu_devices: ${39:# Configure multiple IOMMU devices for the guest}
+    iothreads: ${40:# Number of I/O threads to configure for the guest}
+    iothreads_opts: ${41:# Additional options for I/O threads configuration}
+    keywrap: ${42:# Configure domain keywrap settings used for S390 cryptographic key management operations}
+    launch_security: ${43:# Enable launch security for the guest}
+    location: ${44:# The installation source, which can be a URL or a directory path containing the OS distribution installation media}
+    location_opts: ${45:# Additional options for the installation source}
+    machine: ${46:# The machine type to emulate}
+    memballoon: ${47:# Attach a virtual memory balloon device to the guest}
+    memballoon_devices: ${48:# Configure multiple memory balloon devices for the guest}
+    memory: ${49:# Memory to allocate for the guest, in MiB}
+    memory_opts: ${50:# Additional options for memory allocation}
+    memorybacking: ${51:# Specify how virtual memory pages are backed by host pages}
+    memtune: ${52:# Tune memory policy for the domain process}
+    metadata: ${53:# Specify the metadata for the guest virtual machine}
+    name: ${54:# Name of the new guest virtual machine instance}
+    networks: ${55:# Connect the guest to the host network}
+    noreboot: ${56:# If set to V(true), the VM will not automatically reboot after the install has completed}
+    numatune: ${57:# Tune NUMA policy for the domain process}
+    osinfo: ${58:# Optimize the guest configuration for a specific operating system}
+    panic: ${59:# Attach a panic notifier device to the guest}
+    panic_devices: ${60:# Configure multiple panic devices for the guest}
+    parallel: ${61:# Attach a parallel device to the guest}
+    parallel_devices: ${62:# Configure multiple parallel devices for the guest}
+    paravirt: ${63:# This guest should be a paravirtualized guest}
+    pm: ${64:# Configure the power management for the guest}
+    pxe: ${65:# Install the guest from PXE}
+    qemu_commandline: ${66:# Pass options directly to the qemu emulator}
+    recreate: ${67:# Use with present to force the re-creation of an existing VM}
+    redirdev: ${68:# Add a redirected device for USB or other device redirection}
+    redirected_devices: ${69:# Configure multiple redirected devices for the guest}
+    resource: ${70:# Specify resource partitioning for the guest}
+    rng: ${71:# Configure a virtual random number generator (RNG) device}
+    rng_devices: ${72:# Configure multiple RNG devices for the guest}
+    security: ${73:# Configure domain seclabel domain settings}
+    serial: ${74:# Attach a serial device to the guest with various redirection options}
+    serial_devices: ${75:# Configure multiple serial devices for the guest}
+    shmem: ${76:# Attach a shared memory device to the guest}
+    shmem_devices: ${77:# Configure multiple shared memory devices for the guest}
+    smartcard: ${78:# Configure a virtual smartcard device}
+    smartcard_devices: ${79:# Configure multiple smartcard devices for the guest}
+    sound: ${80:# Attach a virtual audio device to the guest}
+    sound_devices: ${81:# Configure multiple sound devices for the guest}
+    state: ${82:# If set to V(present), create the VM if it does not exist}
+    sysinfo: ${83:# Configure sysinfo/SMBIOS values exposed to the VM OS}
+    tpm: ${84:# Configure a virtual TPM (Trusted Platform Module) device}
+    tpm_devices: ${85:# Configure multiple TPM devices for the guest}
+    transient: ${86:# If set to V(true), libvirt forgets the XML configuration of the VM after shutdown or host restart}
+    unattended: ${87:# Perform an unattended install using libosinfo's install script support}
+    uri: ${88:# Libvirt connection uri}
+    vcpus: ${89:# Number of virtual cpus to configure for the guest}
+    vcpus_opts: ${90:# Additional options for virtual CPU configuration}
+    video: ${91:# Specify what video device model will be attached to the guest}
+    video_devices: ${92:# Configure multiple video devices for the guest}
+    virt_type: ${93:# The hypervisor used to create the VM guest}
+    vsock: ${94:# Configure a vsock host/guest interface}
+    vsock_devices: ${95:# Configure multiple vsock devices for the guest}
+    watchdog: ${96:# Attach a virtual hardware watchdog device to the guest}
+    watchdog_devices: ${97:# Configure multiple watchdog devices for the guest}
+  tags:
+    - community
+    - libvirt
+    - virt_install]]></content>
+  <tabTrigger>community.libvirt.virt_install</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Provision new virtual machines using virt-install tool</description>
+</snippet>

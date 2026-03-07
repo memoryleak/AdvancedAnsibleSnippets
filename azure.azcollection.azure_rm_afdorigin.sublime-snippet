@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage an Azure Front Door Origin to be used with Standard or Premium Frontdoor}
+  azure.azcollection.azure_rm_afdorigin:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${5:# Controls the source of the credentials to use for authentication}
+    azure_origin: ${6:# Resource reference to the AFD origin resource}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    disable_instance_discovery: ${10:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    enabled_state: ${11:# Whether to enable health probes to be made against backends defined under backend pools}
+    host_name: ${12:# The address of the origin}
+    http_port: ${13:# The value of the HTTP port}
+    https_port: ${14:# The value of the HTTPS port}
+    log_mode: ${15:# Parent argument}
+    log_path: ${16:# Parent argument}
+    name: ${17:# Name of the origin that is unique within the AFD Profile}
+    origin_group_name: ${18:# Name of the origin group which is unique within the profile}
+    origin_host_header: ${19:# The host header value sent to the origin with each request}
+    password: ${20:# Active Directory user password}
+    priority: ${21:# Priority of origin in given origin group for load balancing}
+    profile: ${22:# Security profile found in ~/}
+    profile_name: ${23:# Name of the AFD Profile}
+    resource_group: ${24:# Name of a resource group where the AFD Origin exists or will be created}
+    secret: ${25:# Azure client secret}
+    shared_private_link_resource: ${26:# The properties of the private link resource for private origin}
+    state: ${27:# Assert the state of the AFD Profile}
+    subscription_id: ${28:# Your Azure subscription Id}
+    tenant: ${29:# Azure tenant ID}
+    thumbprint: ${30:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    weight: ${31:# Weight of the origin in given origin group for load balancing}
+    x509_certificate_path: ${32:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_afdorigin]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_afdorigin</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage an Azure Front Door Origin to be used with Standard or Premium Frontdoor</description>
+</snippet>

@@ -4,14 +4,17 @@
     api_password: ${2:# The password or token for XMLRPC authentication}
     api_url: ${3:# The ENDPOINT URL of the XMLRPC server}
     api_username: ${4:# The name of the user for XMLRPC authentication}
-    enabled: ${5:# Whether the image should be enabled or disabled}
-    id: ${6:# A O(id) of the image you would like to manage}
-    name: ${7:# A O(name) of the image you would like to manage}
-    new_name: ${8:# A name that will be assigned to the existing or new image}
-    persistent: ${9:# Whether the image should be persistent or non-persistent}
-    state: ${10:# V(present) - state that is used to manage the image}
-    validate_certs: ${11:# Whether to validate the TLS/SSL certificates or not}
-    wait_timeout: ${12:# Time to wait for the desired state to be reached before timeout, in seconds}
+    create: ${5:# Whether the image should be created if not present}
+    datastore_id: ${6:# Use with O(create=true) to specify datastore for image}
+    enabled: ${7:# Whether the image should be enabled or disabled}
+    id: ${8:# A O(id) of the image you would like to manage}
+    name: ${9:# A O(name) of the image you would like to manage}
+    new_name: ${10:# A name that is assigned to the existing or new image}
+    persistent: ${11:# Whether the image should be persistent or non-persistent}
+    state: ${12:# V(present) - state that is used to manage the image}
+    template: ${13:# Use with O(create=true) to specify image template}
+    validate_certs: ${14:# Whether to validate the TLS/SSL certificates or not}
+    wait_timeout: ${15:# Seconds to wait until image is ready, deleted or cloned}
   tags:
     - community
     - general

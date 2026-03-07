@@ -2,16 +2,18 @@
   <content><![CDATA[- name: ${1:Enable/disable Red Hat Repositories available through subscriptions}
   theforeman.foreman.repository_set:
     all_repositories: ${2:# Affect all available repositories in the repository set instead of listing them in I(repositories)}
-    label: ${3:# Label of the repository set, can be used in place of I(name) & I(product)}
-    name: ${4:# Name of the repository set}
-    organization: ${5:# Organization that the entity is in}
-    password: ${6:# Password of the user accessing the Foreman server}
-    product: ${7:# Name of the parent product}
-    repositories: ${8:# Release version and base architecture of the repositories to enable}
-    server_url: ${9:# URL of the Foreman server}
-    state: ${10:# Whether the repositories are enabled or not}
-    username: ${11:# Username accessing the Foreman server}
-    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${3:# PEM formatted file that contains a CA certificate to be used for validation}
+    label: ${4:# Label of the repository set, can be used in place of I(name) & I(product)}
+    name: ${5:# Name of the repository set}
+    organization: ${6:# Organization that the entity is in}
+    password: ${7:# Password of the user accessing the Foreman server}
+    product: ${8:# Name of the parent product}
+    repositories: ${9:# Release version and base architecture of the repositories to enable}
+    server_url: ${10:# URL of the Foreman server}
+    state: ${11:# Whether the repositories are enabled or not}
+    use_gssapi: ${12:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${13:# Username accessing the Foreman server}
+    validate_certs: ${14:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

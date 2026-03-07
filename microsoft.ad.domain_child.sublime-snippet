@@ -13,9 +13,10 @@
     parent_domain_name: ${11:# The fully qualified domain name of an existing parent domain to create a new domain tree in}
     reboot: ${12:# If C(true), this will reboot the host if a reboot was required by the module}
     reboot_timeout: ${13:# Maximum seconds to wait for machine to re-appear after a reboot and respond to a test command}
-    safe_mode_password: ${14:# Safe mode password for the domain controller}
-    site_name: ${15:# Specifies the name of an existing site where you can place the new domain controller}
-    sysvol_path: ${16:# The path to a directory on a fixed disk of the Windows host where the Sysvol folder will be created}
+    replication_source_dc: ${14:# Specifies the name of an existing domain controller in the forest that will be used as the replication source for the new domain}
+    safe_mode_password: ${15:# Safe mode password for the domain controller}
+    site_name: ${16:# Specifies the name of an existing site where you can place the new domain controller}
+    sysvol_path: ${17:# The path to a directory on a fixed disk of the Windows host where the Sysvol folder will be created}
   tags:
     - microsoft
     - ad

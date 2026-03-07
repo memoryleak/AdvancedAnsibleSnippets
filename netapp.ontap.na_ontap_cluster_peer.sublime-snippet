@@ -15,16 +15,19 @@
     https: ${13:# Enable and disable https}
     ipspace: ${14:# IPspace of the local intercluster LIFs}
     key_filepath: ${15:# path to SSL client key file}
-    ontapi: ${16:# The ontap api version to use}
-    passphrase: ${17:# The arbitrary passphrase that matches the one given to the peer cluster}
-    password: ${18:# Password for the specified user}
-    peer_options: ${19:# IP address and connection options for the peer system}
-    source_cluster_name: ${20:# The name of the source cluster name in the peer relation to be modified or deleted}
-    source_intercluster_lifs: ${21:# List of intercluster addresses of the source cluster}
-    state: ${22:# Whether the specified cluster peer should exist or not}
-    use_rest: ${23:# Whether to use REST or ZAPI}
-    username: ${24:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${25:# If set to C(no), the SSL certificates will not be validated}
+    local_name_for_peer: ${16:# Specifies local name of the peer Cluster in the relationship}
+    local_name_for_source: ${17:# Specifies local name of the source Cluster in the relationship}
+    ontapi: ${18:# The ontap api version to use}
+    passphrase: ${19:# The arbitrary passphrase that matches the one given to the peer cluster}
+    password: ${20:# Password for the specified user}
+    peer_options: ${21:# IP address and connection options for the peer system}
+    source_cluster_name: ${22:# The name of the source cluster name in the peer relation to be modified or deleted}
+    source_intercluster_lifs: ${23:# List of intercluster addresses of the source cluster}
+    state: ${24:# Whether the specified cluster peer should exist or not}
+    use_lambda: ${25:# Specifies if AWS Lambda proxy functionality should be used to connect to the ONTAP system}
+    use_rest: ${26:# Whether to use REST or ZAPI}
+    username: ${27:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${28:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

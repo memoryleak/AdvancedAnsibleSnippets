@@ -2,18 +2,19 @@
   <content><![CDATA[- name: ${1:Add or delete record sets in Hetzner DNS service}
   community.dns.hetzner_dns_record_set:
     bulk_operation_threshold: ${2:# Determines the threshold from when on bulk operations are used}
-    hetzner_token: ${3:# The token for the Hetzner API}
-    on_existing: ${4:# This option defines the behavior if the record set already exists, but differs from the specified record set}
-    prefix: ${5:# The prefix of the DNS record}
-    record: ${6:# The full DNS record to create or delete}
-    state: ${7:# Specifies the state of the resource record}
-    ttl: ${8:# The TTL to give the new record, in seconds}
-    txt_character_encoding: ${9:# Whether to treat numeric escape sequences (V(\\\\xyz)) as octal or decimal numbers}
-    txt_transformation: ${10:# Determines how TXT entry values are converted between the API and this module's input and output}
-    type: ${11:# The type of DNS record to create or delete}
-    value: ${12:# The new value when creating a DNS record}
-    zone_id: ${13:# The ID of the DNS zone to modify}
-    zone_name: ${14:# The DNS zone to modify}
+    hetzner_api_token: ${3:# The token for the new Hetzner DNS API}
+    hetzner_token: ${4:# The token for the classic Hetzner DNS API}
+    on_existing: ${5:# This option defines the behavior if the record set already exists, but differs from the specified record set}
+    prefix: ${6:# The prefix of the DNS record}
+    record: ${7:# The full DNS record to create or delete}
+    state: ${8:# Specifies the state of the resource record}
+    ttl: ${9:# The TTL to give the new record, in seconds}
+    txt_character_encoding: ${10:# Whether to treat numeric escape sequences (V(\\\\xyz)) as octal or decimal numbers}
+    txt_transformation: ${11:# Determines how TXT entry values are converted between the API and this module's input and output}
+    type: ${12:# The type of DNS record to create or delete}
+    value: ${13:# The new value when creating a DNS record}
+    zone_id: ${14:# The ID of the DNS zone to modify}
+    zone_name: ${15:# The DNS zone to modify}
   tags:
     - community
     - dns

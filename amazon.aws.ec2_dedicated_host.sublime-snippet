@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update or delete (release) EC2 dedicated host}
+  amazon.aws.ec2_dedicated_host:
+    access_key: ${2:# AWS access key ID}
+    asset_ids: ${3:# The IDs of the Outpost hardware assets on which to allocate the Dedicated Hosts}
+    auto_placement: ${4:# Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID}
+    availability_zone: ${5:# The Availability Zone in which to allocate the Dedicated Host}
+    aws_ca_bundle: ${6:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${7:# A dictionary to modify the botocore configuration}
+    client_token: ${8:# case-sensitive identifier that you provide to ensure the idempotency of the request}
+    debug_botocore_endpoint_logs: ${9:# Use a C(botocore}
+    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
+    host_id: ${11:# The IDs of the Dedicated Hosts to release or modify}
+    host_maintenance: ${12:# Indicates whether to enable or disable host maintenance for the Dedicated Host}
+    host_recovery: ${13:# Indicates whether to enable or disable host recovery for the Dedicated Host}
+    instance_family: ${14:# Specifies the instance family to be supported by the Dedicated Hosts}
+    instance_type: ${15:# Specifies the instance type to be supported by the Dedicated Hosts}
+    lookup: ${16:# Look up EC2 dedicated host by either O(tags) or by O(host_id)}
+    outpost_arn: ${17:# The Amazon Resource Name (ARN) of the Amazon Web Services Outpost on which to allocate the Dedicated Host}
+    profile: ${18:# A named AWS profile to use for authentication}
+    purge_tags: ${19:# If O(purge_tags=true) and O(tags) is set, existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
+    quantity: ${20:# The number of Dedicated Hosts to allocate to your account with these parameters}
+    region: ${21:# The AWS region to use}
+    secret_key: ${22:# AWS secret access key}
+    session_token: ${23:# AWS STS session token for use with temporary credentials}
+    state: ${24:# Create or delete dedicated host}
+    tags: ${25:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${26:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+  tags:
+    - amazon
+    - aws
+    - ec2_dedicated_host]]></content>
+  <tabTrigger>amazon.aws.ec2_dedicated_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update or delete (release) EC2 dedicated host</description>
+</snippet>

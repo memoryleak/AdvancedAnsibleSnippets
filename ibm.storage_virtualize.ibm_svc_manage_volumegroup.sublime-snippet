@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module manages volume groups on IBM Storage Virtualize family systems}
   ibm.storage_virtualize.ibm_svc_manage_volumegroup:
-    clustername: ${2:# The hostname or management IP of the Storage Virtualize system}
+    clustername: ${2:# The hostname or management IP or Partition IP of the Storage Virtualize system}
     domain: ${3:# Domain for the Storage Virtualize system}
     draftpartition: ${4:# Specifies the name of the draft partition to be assigned to the volume group}
     evictvolumes: ${5:# If specified `True`, delete the volume group but does not remove volumes}
@@ -11,8 +11,8 @@
     iogrp: ${9:# Specifies the I/O group for new volumes}
     log_path: ${10:# Path of debug log file}
     name: ${11:# Specifies the name for the volume group}
-    noownershipgroup: ${12:# If specified `True`, the object is removed from the ownership group to which it belongs}
-    nopartition: ${13:# If specified `True`, removes the volume group from the storage partition}
+    nodrreplication: ${12:# If specified `True`, removes the volume group from the async-dr replication policy}
+    noownershipgroup: ${13:# If specified `True`, the object is removed from the ownership group to which it belongs}
     noreplicationpolicy: ${14:# If specified `True`, removes the replication policy assigned to the volume group}
     nosafeguardpolicy: ${15:# If specified `True`, removes the Safeguarded policy assigned to the volume group}
     nosnapshotpolicy: ${16:# If specified `True`, removes the snapshot policy assigned to the volume group}

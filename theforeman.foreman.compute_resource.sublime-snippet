@@ -1,18 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Compute Resources}
   theforeman.foreman.compute_resource:
-    description: ${2:# compute resource description}
-    locations: ${3:# List of locations the entity should be assigned to}
-    name: ${4:# compute resource name}
-    organizations: ${5:# List of organizations the entity should be assigned to}
-    password: ${6:# Password of the user accessing the Foreman server}
-    provider: ${7:# Compute resource provider}
-    provider_params: ${8:# Parameter specific to compute resource provider}
-    server_url: ${9:# URL of the Foreman server}
-    state: ${10:# State of the entity}
-    updated_name: ${11:# new compute resource name}
-    username: ${12:# Username accessing the Foreman server}
-    validate_certs: ${13:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    description: ${3:# compute resource description}
+    locations: ${4:# List of locations the entity should be assigned to}
+    name: ${5:# compute resource name}
+    organizations: ${6:# List of organizations the entity should be assigned to}
+    password: ${7:# Password of the user accessing the Foreman server}
+    provider: ${8:# Compute resource provider}
+    provider_params: ${9:# Parameter specific to compute resource provider}
+    server_url: ${10:# URL of the Foreman server}
+    state: ${11:# State of the entity}
+    updated_name: ${12:# new compute resource name}
+    use_gssapi: ${13:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${14:# Username accessing the Foreman server}
+    validate_certs: ${15:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

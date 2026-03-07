@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:MACsec Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_macsec_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    cipher_suite: ${5:# Cipher suite to be used for MACsec encryption}
+    confidentiality_offset: ${6:# The MACsec confidentiality offset specifies the number of bytes starting from the frame header}
+    configure_fallback_keychain: ${7:# Enable configuration of fallback keychain}
+    description: ${8:# The user-defined description for the MACsec Policy}
+    eapol_ethertype: ${9:# Ethertype to use in EAPoL frames for MKA PDUs}
+    eapol_mac_address: ${10:# MAC address to use in extensible authentication protocol over LAN (EAPoL) for MKA PDUs}
+    fallback_keychain_name: ${11:# Fallback keychain name}
+    fallback_keys: ${12:# List of security keys for the fallback keychain}
+    include_icv_indicator: ${13:# Configures inclusion of the optional integrity check value (ICV) indicator}
+    key_server_priority: ${14:# Key server is selected by comparing priority values during MKA message exchange}
+    name: ${15:# The name assigned to the MACsec Policy}
+    organization: ${16:# The name of the Organization this resource is assigned to}
+    primary_keychain_name: ${17:# Primary keychain name for managing the default set of security keys}
+    primary_keys: ${18:# List of security keys for the primary keychain}
+    replay_window_size: ${19:# Defines the size of the replay protection window}
+    sak_expiry_time: ${20:# Time in seconds to force secure association key (SAK) rekey}
+    security_policy: ${21:# The security policy specifies the level of MACsec enforcement on network traffic}
+    state: ${22:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${23:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${24:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${25:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_macsec_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_macsec_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>MACsec Policy configuration for Cisco Intersight</description>
+</snippet>

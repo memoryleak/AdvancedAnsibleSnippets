@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Management of HA groups in Proxmox VE Cluster}
+  community.proxmox.proxmox_cluster_ha_groups:
+    api_host: ${2:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${3:# Specify the password to authenticate with}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    comment: ${8:# Description}
+    name: ${9:# group name}
+    nodes: ${10:# List of cluster node members, where a priority can be given to each node}
+    nofailback: ${11:# The CRM tries to run services on the node with the highest priority}
+    restricted: ${12:# Resources bound to restricted groups may only run on nodes defined by the group}
+    state: ${13:# Whether the HA groups should be there (created if missing) or not (deleted if they exist)}
+    validate_certs: ${14:# If V(false), SSL certificates will not be validated}
+  tags:
+    - community
+    - proxmox
+    - proxmox_cluster_ha_groups]]></content>
+  <tabTrigger>community.proxmox.proxmox_cluster_ha_groups</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Management of HA groups in Proxmox VE Cluster</description>
+</snippet>

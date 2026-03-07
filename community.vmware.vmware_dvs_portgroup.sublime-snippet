@@ -1,29 +1,30 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create or remove a Distributed vSwitch portgroup}
   community.vmware.vmware_dvs_portgroup:
-    hostname: ${2:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    hostname: ${2:# The hostname or IP address of the vSphere vCenter server}
     in_traffic_shaping: ${3:# Dictionary which configures the ingress traffic shaping settings for the portgroup}
-    mac_learning: ${4:# Dictionary which configures MAC learning for portgroup}
+    mac_learning: ${4:# This option is deprecated in favour of O(network_policy}
     net_flow: ${5:# Indicate whether or not the virtual machine IP traffic that flows through a vds gets analyzed by sending reports to a NetFlow collector}
     network_policy: ${6:# Dictionary which configures the different security values for portgroup}
     num_ports: ${7:# The number of ports the portgroup should contain}
     out_traffic_shaping: ${8:# Dictionary which configures the egress traffic shaping settings for the portgroup}
-    password: ${9:# The password of the vSphere vCenter or ESXi server}
-    port: ${10:# The port number of the vSphere vCenter or ESXi server}
+    password: ${9:# The password of the vSphere vCenter server}
+    port: ${10:# The port number of the vSphere vCenter server}
     port_allocation: ${11:# Elastic port groups automatically increase or decrease the number of ports as needed}
     port_binding: ${12:# The type of port binding determines when ports in a port group are assigned to virtual machines}
     port_policy: ${13:# Dictionary which configures the advanced policy settings for the portgroup}
-    portgroup_name: ${14:# The name of the portgroup that is to be created or deleted}
-    proxy_host: ${15:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${16:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
-    state: ${17:# Determines if the portgroup should be present or not}
-    switch_name: ${18:# The name of the distributed vSwitch the port group should be created on}
-    teaming_policy: ${19:# Dictionary which configures the different teaming values for portgroup}
-    username: ${20:# The username of the vSphere vCenter or ESXi server}
-    validate_certs: ${21:# Allows connection when SSL certificates are not valid}
-    vlan_id: ${22:# The VLAN ID that should be configured with the portgroup, use 0 for no VLAN}
-    vlan_private: ${23:# Indicates whether this is for a private VLAN or not}
-    vlan_trunk: ${24:# Indicates whether this is a VLAN trunk or not}
+    portgroup_description: ${14:# Description of the portgroup}
+    portgroup_name: ${15:# The name of the portgroup that is to be created or deleted}
+    proxy_host: ${16:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${17:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    state: ${18:# Determines if the portgroup should be present or not}
+    switch_name: ${19:# The name of the distributed vSwitch the port group should be created on}
+    teaming_policy: ${20:# Dictionary which configures the different teaming values for portgroup}
+    username: ${21:# The username of the vSphere vCenter server}
+    validate_certs: ${22:# Allows connection when SSL certificates are not valid}
+    vlan_id: ${23:# The VLAN ID that should be configured with the portgroup, use 0 for no VLAN}
+    vlan_private: ${24:# Indicates whether this is for a private VLAN or not}
+    vlan_trunk: ${25:# Indicates whether this is a VLAN trunk or not}
   tags:
     - community
     - vmware

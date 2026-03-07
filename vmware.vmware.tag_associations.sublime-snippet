@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage the tags associated with a vSphere object}
+  vmware.vmware.tag_associations:
+    hostname: ${2:# The hostname or IP address of the vSphere vCenter server}
+    object_moid: ${3:# The managed object ID (MOID) of the object to manage}
+    object_name: ${4:# The name of the object to manage}
+    object_type: ${5:# The type of the object to manage}
+    password: ${6:# The password of the vSphere vCenter server}
+    port: ${7:# The port number of the vSphere vCenter server}
+    proxy_host: ${8:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${9:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    proxy_protocol: ${10:# The proxy connection protocol to use}
+    remove_extra_tags: ${11:# Whether to remove tags that are not in the list of tags to manage}
+    state: ${12:# Whether ensure the tags are present or absent on the object}
+    tags: ${13:# A list of tags to manage}
+    username: ${14:# The username of the vSphere vCenter server}
+    validate_certs: ${15:# Allows connection when SSL certificates are not valid}
+    validate_tags_before_attaching: ${16:# Whether to validate the tags before attaching them to the object}
+  tags:
+    - vmware
+    - vmware
+    - tag_associations]]></content>
+  <tabTrigger>vmware.vmware.tag_associations</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage the tags associated with a vSphere object</description>
+</snippet>

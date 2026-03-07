@@ -2,13 +2,17 @@
   <content><![CDATA[- name: ${1:Configure FlashArray SMTP settings}
   purestorage.flasharray.purefa_smtp:
     api_token: ${2:# FlashArray API token for admin privileged user}
-    disable_warnings: ${3:# Disable insecure certificate warnings in debug logs}
-    fa_url: ${4:# FlashArray management IPv4 address or Hostname}
-    password: ${5:# The SMTP password}
-    relay_host: ${6:# IPv4 or IPv6 address or FQDN}
-    sender_domain: ${7:# Domain name}
-    state: ${8:# Set or delete SMTP configuration}
-    user: ${9:# The SMTP username}
+    body_prefix: ${3:# Optional string added to the beginning of the email body when sending alert email messages}
+    disable_warnings: ${4:# Disable insecure certificate warnings in debug logs}
+    encryption_mode: ${5:# Enforces an encryption mode when sending alert email messages}
+    fa_url: ${6:# FlashArray management IPv4 address or Hostname}
+    password: ${7:# The SMTP password}
+    relay_host: ${8:# IPv4 or IPv6 address or FQDN}
+    sender: ${9:# The local-part of the email address used when sending alert email messages}
+    sender_domain: ${10:# Domain name}
+    state: ${11:# Set or delete SMTP configuration}
+    subject_prefix: ${12:# Optional string added to the beginning of the subject when sending alert email messages}
+    user: ${13:# The SMTP username}
   tags:
     - purestorage
     - flasharray

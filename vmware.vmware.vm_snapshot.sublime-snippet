@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages virtual machines snapshots in vCenter}
+  vmware.vmware.vm_snapshot:
+    datacenter: ${2:# Datacenter to search for the virtual machine}
+    description: ${3:# Define an arbitrary description to attach to snapshot}
+    folder: ${4:# Absolute or relative folder path to search for the virtual machine}
+    folder_paths_are_absolute: ${5:# If true, any folder path parameters are treated as absolute paths}
+    hostname: ${6:# The hostname or IP address of the vSphere vCenter server}
+    memory_dump: ${7:# If set to V(true), memory dump of virtual machine is also included in snapshot}
+    moid: ${8:# Managed Object ID of the virtual machine to manage}
+    name: ${9:# Name of the virtual machine to work with}
+    name_match: ${10:# If multiple VMs with the same name exist, use the first or last found}
+    new_snapshot_name: ${11:# If the snapshot already exists, it will be renamed to this value}
+    password: ${12:# The password of the vSphere vCenter server}
+    port: ${13:# The port number of the vSphere vCenter server}
+    proxy_host: ${14:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${15:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    quiesce: ${16:# If set to V(true) and virtual machine is powered on, it will quiesce the file system in virtual machine}
+    remove_all: ${17:# Removes all snapshots in VM if set to true}
+    remove_children: ${18:# If set to V(true) and O(state=absent), then the entire snapshot subtree will be removed}
+    snapshot_id: ${19:# The ID of the snapshot to manage}
+    snapshot_name: ${20:# The name of the snapshot to manage}
+    state: ${21:# Manage snapshot(s) attached to a specific virtual machine}
+    use_instance_uuid: ${22:# Whether to use the VMware instance UUID rather than the BIOS UUID}
+    username: ${23:# The username of the vSphere vCenter server}
+    uuid: ${24:# UUID of the instance to manage}
+    validate_certs: ${25:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware
+    - vm_snapshot]]></content>
+  <tabTrigger>vmware.vmware.vm_snapshot</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages virtual machines snapshots in vCenter</description>
+</snippet>

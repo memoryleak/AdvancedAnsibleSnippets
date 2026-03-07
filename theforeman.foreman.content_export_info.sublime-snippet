@@ -1,18 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:List content exports}
   theforeman.foreman.content_export_info:
-    content_view: ${2:# Content view name}
-    content_view_version: ${3:# Content view version}
-    destination_server: ${4:# Destination server name}
-    id: ${5:# Export history identifier}
-    location: ${6:# Label of the Location to scope the search for}
-    organization: ${7:# Name of the Organization to scope the search for}
-    password: ${8:# Password of the user accessing the Foreman server}
-    search: ${9:# Search query to use}
-    server_url: ${10:# URL of the Foreman server}
-    type: ${11:# Specify complete or incremental exports}
-    username: ${12:# Username accessing the Foreman server}
-    validate_certs: ${13:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    content_view: ${3:# Content view name}
+    content_view_version: ${4:# Content view version}
+    destination_server: ${5:# Destination server name}
+    id: ${6:# Export history identifier}
+    location: ${7:# Label of the Location to scope the search for}
+    organization: ${8:# Name of the Organization to scope the search for}
+    password: ${9:# Password of the user accessing the Foreman server}
+    search: ${10:# Search query to use}
+    server_url: ${11:# URL of the Foreman server}
+    type: ${12:# Specify complete or incremental exports}
+    use_gssapi: ${13:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${14:# Username accessing the Foreman server}
+    validate_certs: ${15:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

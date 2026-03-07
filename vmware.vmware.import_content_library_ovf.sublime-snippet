@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Import an OVF or OVA file to a content library from a remote source}
+  vmware.vmware.import_content_library_ovf:
+    checksum: ${2:# The checksum that should be used to validate the upload}
+    checksum_algorithm: ${3:# The checksum algorithm to use when validating uploads}
+    description: ${4:# A description for the OVF item in the content library}
+    dest: ${5:# The destination name of the OVF item in the content library}
+    fail_on_warnings: ${6:# Cause the module to treat any warnings thrown during the file upload process as errors}
+    hostname: ${7:# The hostname or IP address of the vSphere vCenter server}
+    library_id: ${8:# The ID of the library to search within}
+    library_name: ${9:# The name of the library to search within}
+    password: ${10:# The password of the vSphere vCenter server}
+    port: ${11:# The port number of the vSphere vCenter server}
+    proxy_host: ${12:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    proxy_protocol: ${14:# The proxy connection protocol to use}
+    src: ${15:# The source OVF or OVA file that should be imported to the content library}
+    ssl_thumbprint: ${16:# The SSL thumbprint of the source URL, if it uses HTTPS}
+    state: ${17:# Controls if the OVF file should be present or absent in the content library}
+    timeout: ${18:# The timeout period in seconds for uploads to complete}
+    username: ${19:# The username of the vSphere vCenter server}
+    validate_certs: ${20:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware
+    - import_content_library_ovf]]></content>
+  <tabTrigger>vmware.vmware.import_content_library_ovf</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Import an OVF or OVA file to a content library from a remote source</description>
+</snippet>

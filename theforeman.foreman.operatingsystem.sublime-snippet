@@ -2,23 +2,25 @@
   <content><![CDATA[- name: ${1:Manage Operating Systems}
   theforeman.foreman.operatingsystem:
     architectures: ${2:# architectures, the operating system can be installed on}
-    description: ${3:# Description of the Operating System}
-    major: ${4:# major version of the Operating System}
-    media: ${5:# list of installation media}
-    minor: ${6:# minor version of the Operating System}
-    name: ${7:# Name of the Operating System}
-    os_family: ${8:# Distribution family of the Operating System}
-    parameters: ${9:# Operating System specific host parameters}
-    password: ${10:# Password of the user accessing the Foreman server}
-    password_hash: ${11:# hashing algorithm for passwd}
-    provisioning_templates: ${12:# List of provisioning templates that are associated with the operating system}
-    ptables: ${13:# list of partitioning tables}
-    release_name: ${14:# Release name of the operating system (recommended for debian)}
-    server_url: ${15:# URL of the Foreman server}
-    state: ${16:# State of the entity}
-    updated_name: ${17:# New operating system name}
-    username: ${18:# Username accessing the Foreman server}
-    validate_certs: ${19:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${3:# PEM formatted file that contains a CA certificate to be used for validation}
+    description: ${4:# Description of the Operating System}
+    major: ${5:# major version of the Operating System}
+    media: ${6:# list of installation media}
+    minor: ${7:# minor version of the Operating System}
+    name: ${8:# Name of the Operating System}
+    os_family: ${9:# Distribution family of the Operating System}
+    parameters: ${10:# Operating System specific host parameters}
+    password: ${11:# Password of the user accessing the Foreman server}
+    password_hash: ${12:# hashing algorithm for passwd}
+    provisioning_templates: ${13:# List of provisioning templates that are associated with the operating system}
+    ptables: ${14:# list of partitioning tables}
+    release_name: ${15:# Release name of the operating system (recommended for debian)}
+    server_url: ${16:# URL of the Foreman server}
+    state: ${17:# State of the entity}
+    updated_name: ${18:# New operating system name}
+    use_gssapi: ${19:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${20:# Username accessing the Foreman server}
+    validate_certs: ${21:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

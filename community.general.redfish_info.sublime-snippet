@@ -3,14 +3,16 @@
   community.general.redfish_info:
     auth_token: ${2:# Security token for authenticating to OOB controller}
     baseuri: ${3:# Base URI of OOB controller}
-    category: ${4:# List of categories to execute on OOB controller}
-    ciphers: ${5:# SSL/TLS Ciphers to use for the request}
-    command: ${6:# List of commands to execute on OOB controller}
-    manager: ${7:# Name of manager on OOB controller to target}
-    password: ${8:# Password for authenticating to OOB controller}
-    timeout: ${9:# Timeout in seconds for HTTP requests to OOB controller}
-    update_handle: ${10:# Handle to check the status of an update in progress}
-    username: ${11:# Username for authenticating to OOB controller}
+    ca_path: ${4:# PEM formatted file that contains a CA certificate to be used for validation}
+    category: ${5:# List of categories to execute on OOB controller}
+    ciphers: ${6:# TLS/SSL Ciphers to use for the request}
+    command: ${7:# List of commands to execute on OOB controller}
+    manager: ${8:# Name of manager on OOB controller to target}
+    password: ${9:# Password for authenticating to OOB controller}
+    timeout: ${10:# Timeout in seconds for HTTP requests to OOB controller}
+    update_handle: ${11:# Handle to check the status of an update in progress}
+    username: ${12:# Username for authenticating to OOB controller}
+    validate_certs: ${13:# If V(false), TLS/SSL certificates are not validated}
   tags:
     - community
     - general

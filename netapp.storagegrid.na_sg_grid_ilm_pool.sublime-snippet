@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage ILM pools on StorageGRID}
+  netapp.storagegrid.na_sg_grid_ilm_pool:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    archives: ${3:# A list of the sites that use the Archive Nodes storage grade}
+    auth_token: ${4:# The authorization token for the API request}
+    disks: ${5:# A list of the sites and storage grades in the storage pool}
+    name: ${6:# The name of the storage pool}
+    state: ${7:# Whether the specified pool should be created or deleted}
+    validate_certs: ${8:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_ilm_pool]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_ilm_pool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage ILM pools on StorageGRID</description>
+</snippet>

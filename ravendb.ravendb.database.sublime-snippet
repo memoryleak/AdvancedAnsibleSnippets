@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage RavenDB databases}
+  ravendb.ravendb.database:
+    ca_cert_path: ${2:# Path to a trusted CA certificate file to verify the RavenDB server's certificate}
+    certificate_path: ${3:# Path to a client certificate (PEM format) for secured communication}
+    database_name: ${4:# Name of the database}
+    database_settings: ${5:# Dictionary of database-level settings to apply}
+    encrypted: ${6:# Create the database as encrypted}
+    encryption_key: ${7:# Path to a file that contains the raw encryption key (plain text)}
+    encryption_key_output_path: ${8:# When C(generate_encryption_key=true), write the generated key to this local file with safe permissions}
+    generate_encryption_key: ${9:# If C(true), asks the server to generate a new encryption key via the admin API}
+    replication_factor: ${10:# Number of server nodes to replicate the database to}
+    state: ${11:# Desired state of the database}
+    topology_members: ${12:# Optional list of cluster node tags to host this database (fixed placement)}
+    url: ${13:# URL of the RavenDB server}
+  tags:
+    - ravendb
+    - ravendb
+    - database]]></content>
+  <tabTrigger>ravendb.ravendb.database</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage RavenDB databases</description>
+</snippet>

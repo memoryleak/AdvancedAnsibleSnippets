@@ -1,15 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Gather information about resources}
   theforeman.foreman.resource_info:
-    full_details: ${2:# If C(True) all details about the found resources are returned}
-    organization: ${3:# Scope the searched resource by organization}
-    params: ${4:# Add parameters to the API call if necessary}
-    password: ${5:# Password of the user accessing the Foreman server}
-    resource: ${6:# Resource to search}
-    search: ${7:# Search query to use}
-    server_url: ${8:# URL of the Foreman server}
-    username: ${9:# Username accessing the Foreman server}
-    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    full_details: ${3:# If C(True) all details about the found resources are returned}
+    organization: ${4:# Scope the searched resource by organization}
+    params: ${5:# Add parameters to the API call if necessary}
+    password: ${6:# Password of the user accessing the Foreman server}
+    resource: ${7:# Resource to search}
+    search: ${8:# Search query to use}
+    server_url: ${9:# URL of the Foreman server}
+    use_gssapi: ${10:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${11:# Username accessing the Foreman server}
+    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

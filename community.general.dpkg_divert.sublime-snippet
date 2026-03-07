@@ -1,8 +1,8 @@
 <snippet>
   <content><![CDATA[- name: ${1:Override a debian package's version of a file}
   community.general.dpkg_divert:
-    divert: ${2:# The location where the versions of file will be diverted}
-    force: ${3:# When O(rename=true) and O(force=true), renaming is performed even if the target of the renaming exists, i}
+    divert: ${2:# The location where the versions of file are diverted}
+    force: ${3:# When O(rename=true) and O(force=true), renaming is performed even if the target of the renaming exists, in other words the existing contents of the file at this location are lost}
     holder: ${4:# The name of the package whose copy of file is not diverted, also known as the diversion holder or the package the diversion belongs to}
     path: ${5:# The original and absolute path of the file to be diverted or undiverted}
     rename: ${6:# Actually move the file aside (when O(state=present)) or back (when O(state=absent)), but only when changing the state of the diversion}

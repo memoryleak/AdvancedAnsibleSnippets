@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages resource-cifs objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_resource_cifs:
+    allowed_disk_and_print_shares: ${2:# The list of Allowed Disk and Print Shares}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    block_remote_registry_access: ${4:# Blocks the ability to remotely manipulate a the window's registry}
+    color: ${5:# Color of the object}
+    comments: ${6:# Comments string}
+    details_level: ${7:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_errors: ${8:# Apply changes ignoring errors}
+    ignore_warnings: ${9:# Apply changes ignoring warnings}
+    log_access_violation: ${10:# Logs any attempt to violate the restrictions imposed by the Resource}
+    log_mapped_shares: ${11:# Logs each share map attempt}
+    name: ${12:# Object name}
+    state: ${13:# State of the access rule (present or absent)}
+    tags: ${14:# Collection of tag identifiers}
+    version: ${15:# Version of checkpoint}
+    wait_for_task: ${16:# Wait for the task to end}
+    wait_for_task_timeout: ${17:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_resource_cifs]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_resource_cifs</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages resource-cifs objects on Checkpoint over Web Services API</description>
+</snippet>

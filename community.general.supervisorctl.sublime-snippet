@@ -1,11 +1,11 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manage the state of a program or group of programs running via supervisord}
+  <content><![CDATA[- name: ${1:Manage the state of a program or group of programs managed by C(supervisord)}
   community.general.supervisorctl:
     config: ${2:# The supervisor configuration file path}
     name: ${3:# The name of the supervisord program or group to manage}
     password: ${4:# Password to use for authentication}
     server_url: ${5:# URL on which supervisord server is listening}
-    signal: ${6:# The signal to send to the program/group, when combined with the 'signalled' state}
+    signal: ${6:# The signal to send to the program/group, when combined with the V(signalled) state}
     state: ${7:# The desired state of program/group}
     stop_before_removing: ${8:# Use O(stop_before_removing=true) to stop the program/group before removing it}
     supervisorctl_path: ${9:# Path to C(supervisorctl) executable}
@@ -16,5 +16,5 @@
     - supervisorctl]]></content>
   <tabTrigger>community.general.supervisorctl</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manage the state of a program or group of programs running via supervisord</description>
+  <description>Manage the state of a program or group of programs managed by C(supervisord)</description>
 </snippet>

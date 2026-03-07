@@ -1,16 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Roles}
   theforeman.foreman.role:
-    description: ${2:# Description of the role}
-    filters: ${3:# Filters with permissions for this role}
-    locations: ${4:# List of locations the entity should be assigned to}
-    name: ${5:# The name of the role}
-    organizations: ${6:# List of organizations the entity should be assigned to}
-    password: ${7:# Password of the user accessing the Foreman server}
-    server_url: ${8:# URL of the Foreman server}
-    state: ${9:# State of the entity}
-    username: ${10:# Username accessing the Foreman server}
-    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    description: ${3:# Description of the role}
+    filters: ${4:# Filters with permissions for this role}
+    locations: ${5:# List of locations the entity should be assigned to}
+    name: ${6:# The name of the role}
+    organizations: ${7:# List of organizations the entity should be assigned to}
+    password: ${8:# Password of the user accessing the Foreman server}
+    server_url: ${9:# URL of the Foreman server}
+    state: ${10:# State of the entity}
+    use_gssapi: ${11:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${12:# Username accessing the Foreman server}
+    validate_certs: ${13:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

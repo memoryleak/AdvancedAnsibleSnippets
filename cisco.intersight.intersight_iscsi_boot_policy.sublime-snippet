@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage iSCSI Boot Policies for Cisco Intersight}
+  cisco.intersight.intersight_iscsi_boot_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    auto_targetvendor_name: ${5:# Auto target interface that is represented via the Initiator name or the DHCP vendor ID}
+    chap: ${6:# CHAP authentication parameters for iSCSI Target}
+    description: ${7:# The user-defined description for the iSCSI Boot Policy}
+    initiator_ip_pool_name: ${8:# Name of the IP pool to use for initiator IP address assignment}
+    initiator_ip_source: ${9:# Method for assigning initiator IP address}
+    initiator_static_ipv4_address: ${10:# Static IPv4 address provided for iSCSI Initiator}
+    initiator_static_ipv4_gateway: ${11:# IP address of the default IPv4 gateway}
+    initiator_static_ipv4_netmask: ${12:# A subnet mask is a 32-bit number that masks an IP address and divides the IP address into network address and host address}
+    initiator_static_ipv4_primary_dns: ${13:# IP Address of the primary Domain Name System (DNS) server}
+    initiator_static_ipv4_secondary_dns: ${14:# IP Address of the secondary Domain Name System (DNS) server}
+    initiator_static_ipv6_address: ${15:# Static IPv6 address provided for iSCSI Initiator}
+    initiator_static_ipv6_gateway: ${16:# IP address of the default IPv6 gateway}
+    initiator_static_ipv6_prefix: ${17:# The integer length of the prefix that masks the IP address and divides it into network and host addresses}
+    iscsi_adapter_policy_name: ${18:# Relationship to the iSCSI Adapter Policy}
+    iscsi_ip_type: ${19:# Type of the IP address requested for iSCSI vNIC - IPv4/IPv6}
+    mutual_chap: ${20:# Mutual CHAP authentication parameters for iSCSI Initiator}
+    name: ${21:# The name assigned to the iSCSI Boot Policy}
+    organization: ${22:# The name of the Organization this resource is assigned to}
+    primary_target_policy_name: ${23:# Specifies Target Profile information for iSCSI Boot}
+    secondary_target_policy_name: ${24:# Specifies Target Profile information for iSCSI Boot}
+    state: ${25:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${26:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    target_source_type: ${27:# Target discovery method}
+    use_proxy: ${28:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${29:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_iscsi_boot_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_iscsi_boot_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage iSCSI Boot Policies for Cisco Intersight</description>
+</snippet>

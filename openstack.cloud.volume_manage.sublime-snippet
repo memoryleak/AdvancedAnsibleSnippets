@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage/Unmanage Volumes}
+  openstack.cloud.volume_manage:
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    availability_zone: ${5:# The availability zone}
+    bootable: ${6:# Bootable flag for volume}
+    ca_cert: ${7:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${8:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${9:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${10:# Named cloud or cloud config to operate against}
+    description: ${11:# String describing the volume}
+    host: ${12:# Cinder host on which the existing volume resides}
+    interface: ${13:# Endpoint URL type to fetch from the service catalog}
+    metadata: ${14:# Metadata for the volume}
+    name: ${15:# Name of the volume to be unmanaged or the new name of a managed volume}
+    region_name: ${16:# Name of the region}
+    sdk_log_level: ${17:# Log level of the OpenStackSDK}
+    sdk_log_path: ${18:# Path to the logfile of the OpenStackSDK}
+    source_id: ${19:# Identifier of existing volume}
+    source_name: ${20:# Name of existing volume}
+    state: ${21:# Should the resource be present or absent}
+    timeout: ${22:# How long should ansible wait for the requested resource}
+    validate_certs: ${23:# Whether or not SSL API requests should be verified}
+    volume_type: ${24:# Volume type for volume}
+    wait: ${25:# Should ansible wait until the requested resource is complete}
+  tags:
+    - openstack
+    - cloud
+    - volume_manage]]></content>
+  <tabTrigger>openstack.cloud.volume_manage</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage/Unmanage Volumes</description>
+</snippet>

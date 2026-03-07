@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and manage Zone RRSets on the Hetzner Cloud}
+  hetzner.hcloud.zone_rrset:
+    api_endpoint: ${2:# The endpoint for the Hetzner Cloud API}
+    api_endpoint_hetzner: ${3:# The endpoint for the Hetzner API}
+    api_token: ${4:# The token for the Hetzner Cloud API}
+    change_protection: ${5:# Protect the Zone RRSet from changes (deletion and updates)}
+    id: ${6:# ID of the Zone RRSet to manage}
+    labels: ${7:# User-defined key-value pairs}
+    name: ${8:# Name of the Zone RRSet to manage}
+    records: ${9:# Records of the Zone RRSet}
+    state: ${10:# State of the Zone RRSet}
+    ttl: ${11:# TTL of the Zone RRSet}
+    type: ${12:# Type of the Zone RRSet to manage}
+    zone: ${13:# Name or ID of the parent Zone}
+  tags:
+    - hetzner
+    - hcloud
+    - zone_rrset]]></content>
+  <tabTrigger>hetzner.hcloud.zone_rrset</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and manage Zone RRSets on the Hetzner Cloud</description>
+</snippet>

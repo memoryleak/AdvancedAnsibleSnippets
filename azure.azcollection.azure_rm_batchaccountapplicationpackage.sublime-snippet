@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages a Batch Account Application Package on Azure}
+  azure.azcollection.azure_rm_batchaccountapplicationpackage:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    application_name: ${5:# The name of the Batch Account Application}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    batch_account_name: ${7:# The name of the Batch Account}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    disable_instance_discovery: ${11:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    format: ${12:# The format of the application package, if the package is active}
+    is_activate: ${13:# Whether to activates the specified application package}
+    log_mode: ${14:# Parent argument}
+    log_path: ${15:# Parent argument}
+    name: ${16:# The name of the Batch Account Application Package}
+    password: ${17:# Active Directory user password}
+    profile: ${18:# Security profile found in ~/}
+    resource_group: ${19:# The name of the resource group in which to create the Batch Account Application Package}
+    secret: ${20:# Azure client secret}
+    state: ${21:# Assert the state of the Batch Account Application Package}
+    subscription_id: ${22:# Your Azure subscription Id}
+    tenant: ${23:# Azure tenant ID}
+    thumbprint: ${24:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_batchaccountapplicationpackage]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_batchaccountapplicationpackage</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages a Batch Account Application Package on Azure</description>
+</snippet>

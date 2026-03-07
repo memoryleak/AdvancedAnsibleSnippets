@@ -3,15 +3,15 @@
   community.postgresql.postgresql_slot:
     ca_cert: ${2:# Specifies the name of a file containing SSL certificate authority (CA) certificate(s)}
     connect_params: ${3:# Any additional parameters to be passed to libpg}
-    db: ${4:# Name of database to connect to}
-    immediately_reserve: ${5:# Optional parameter that when C(true) specifies that the LSN for this replication slot be reserved immediately, otherwise the default, C(false), specifies that the LSN is reserved on the first connection from a streaming replication client}
+    immediately_reserve: ${4:# Optional parameter that when C(true) specifies that the LSN for this replication slot be reserved immediately, otherwise the default, C(false), specifies that the LSN is reserved on the first connection from a streaming replication client}
+    login_db: ${5:# Name of database to connect to}
     login_host: ${6:# Host running the database}
     login_password: ${7:# The password this module should use to establish its PostgreSQL session}
-    login_unix_socket: ${8:# Path to a Unix domain socket for local connections}
-    login_user: ${9:# The username this module should use to establish its PostgreSQL session}
-    name: ${10:# Name of the replication slot to add or remove}
-    output_plugin: ${11:# All logical slots must indicate which output plugin decoder they're using}
-    port: ${12:# Database port to connect to}
+    login_port: ${8:# Database port to connect to}
+    login_unix_socket: ${9:# Path to a Unix domain socket for local connections}
+    login_user: ${10:# The username this module should use to establish its PostgreSQL session}
+    name: ${11:# Name of the replication slot to add or remove}
+    output_plugin: ${12:# All logical slots must indicate which output plugin decoder they're using}
     session_role: ${13:# Switch to session_role after connecting}
     slot_type: ${14:# Slot type}
     ssl_cert: ${15:# Specifies the file name of the client SSL certificate}

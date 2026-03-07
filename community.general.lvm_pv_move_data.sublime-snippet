@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Move data between LVM Physical Volumes (PVs)}
+  community.general.lvm_pv_move_data:
+    atomic: ${2:# Makes the C(pvmove) operation atomic, ensuring that all affected LVs are moved to the destination PV, or none are if the operation is aborted}
+    auto_answer: ${3:# Answer yes to all prompts automatically}
+    autobackup: ${4:# Automatically backup metadata before changes (strongly advised!)}
+    destination: ${5:# Path to the destination block device to move data to}
+    source: ${6:# Path to the source block device to move data from}
+  tags:
+    - community
+    - general
+    - lvm_pv_move_data]]></content>
+  <tabTrigger>community.general.lvm_pv_move_data</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Move data between LVM Physical Volumes (PVs)</description>
+</snippet>

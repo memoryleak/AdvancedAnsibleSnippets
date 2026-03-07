@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Install or remove Podman Quadlets}
+  containers.podman.podman_quadlet:
+    all: ${2:# Remove all installed quadlets when I(state=absent) (maps to C(podman quadlet rm --all))}
+    cmd_args: ${3:# Extra global arguments to pass to the C(podman) command (e}
+    debug: ${4:# Return additional information which can be helpful for investigations}
+    executable: ${5:# Path to C(podman) executable if it is not in the C($PATH) on the machine running C(podman)}
+    files: ${6:# Additional non-quadlet files or URLs to install along with the primary I(src) (quadlet application use-case)}
+    force: ${7:# Force removal when I(state=absent) (maps to C(podman quadlet rm --force))}
+    name: ${8:# Name (filename without path) of an installed quadlet to remove when I(state=absent)}
+    quadlet_dir: ${9:# Override the target quadlet directory used for idempotency checks}
+    reload_systemd: ${10:# Control systemd reload behavior in Podman}
+    src: ${11:# Path to a quadlet file, a directory containing a quadlet application, or a URL to install when I(state=present)}
+    state: ${12:# Desired state of quadlet(s)}
+  tags:
+    - containers
+    - podman
+    - podman_quadlet]]></content>
+  <tabTrigger>containers.podman.podman_quadlet</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Install or remove Podman Quadlets</description>
+</snippet>

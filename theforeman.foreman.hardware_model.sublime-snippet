@@ -1,15 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Hardware Models}
   theforeman.foreman.hardware_model:
-    hardware_model: ${2:# The class of CPU supplied in this machine}
-    info: ${3:# General description of the hardware model}
-    name: ${4:# Name of the hardware model}
-    password: ${5:# Password of the user accessing the Foreman server}
-    server_url: ${6:# URL of the Foreman server}
-    state: ${7:# State of the entity}
-    username: ${8:# Username accessing the Foreman server}
-    validate_certs: ${9:# Whether or not to verify the TLS certificates of the Foreman server}
-    vendor_class: ${10:# The class of the machine as reported by the OpenBoot PROM}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    hardware_model: ${3:# The class of CPU supplied in this machine}
+    info: ${4:# General description of the hardware model}
+    name: ${5:# Name of the hardware model}
+    password: ${6:# Password of the user accessing the Foreman server}
+    server_url: ${7:# URL of the Foreman server}
+    state: ${8:# State of the entity}
+    use_gssapi: ${9:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${10:# Username accessing the Foreman server}
+    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
+    vendor_class: ${12:# The class of the machine as reported by the OpenBoot PROM}
   tags:
     - theforeman
     - foreman

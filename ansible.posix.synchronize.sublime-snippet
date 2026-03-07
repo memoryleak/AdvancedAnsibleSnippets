@@ -1,34 +1,38 @@
 <snippet>
   <content><![CDATA[- name: ${1:A wrapper around rsync to make common tasks in your playbooks quick and easy}
   ansible.posix.synchronize:
-    archive: ${2:# Mirrors the rsync archive flag, enables recursive, links, perms, times, owner, group flags and -D}
-    checksum: ${3:# Skip based on checksum, rather than mod-time & size; Note that that 'archive' option is still enabled by default - the 'checksum' option will not disable it}
-    compress: ${4:# Compress file data during the transfer}
-    copy_links: ${5:# Copy symlinks as the item that they point to (the referent) is copied, rather than the symlink}
-    delay_updates: ${6:# This option puts the temporary file from each updated file into a holding directory until the end of the transfer, at which time all the files are renamed into place in rapid succession}
-    delete: ${7:# Delete files in I(dest) that do not exist (after transfer, not before) in the I(src) path}
-    dest: ${8:# Path on the destination host that will be synchronized from the source}
-    dest_port: ${9:# Port number for ssh on the destination host}
-    dirs: ${10:# Transfer directories without recursing}
-    existing_only: ${11:# Skip creating new files on receiver}
-    group: ${12:# Preserve group}
-    link_dest: ${13:# Add a destination to hard link against during the rsync}
-    links: ${14:# Copy symlinks as symlinks}
-    mode: ${15:# Specify the direction of the synchronization}
-    owner: ${16:# Preserve owner (super user only)}
-    partial: ${17:# Tells rsync to keep the partial file which should make a subsequent transfer of the rest of the file much faster}
-    perms: ${18:# Preserve permissions}
-    private_key: ${19:# Specify the private key to use for SSH-based rsync connections (e}
-    recursive: ${20:# Recurse into directories}
-    rsync_opts: ${21:# Specify additional rsync options by passing in an array}
-    rsync_path: ${22:# Specify the rsync command to run on the remote host}
-    rsync_timeout: ${23:# Specify a C(--timeout) for the rsync command in seconds}
-    set_remote_user: ${24:# Put user@ for the remote paths}
-    src: ${25:# Path on the source host that will be synchronized to the destination}
-    ssh_connection_multiplexing: ${26:# SSH connection multiplexing for rsync is disabled by default to prevent misconfigured ControlSockets from resulting in failed SSH connections}
-    times: ${27:# Preserve modification times}
-    use_ssh_args: ${28:# In Ansible 2}
-    verify_host: ${29:# Verify destination host key}
+    _local_rsync_password: ${2:# Internal use only, never logged}
+    _local_rsync_path: ${3:# Internal use only}
+    _ssh_args: ${4:# Internal use only}
+    _substitute_controller: ${5:# Internal use only}
+    archive: ${6:# Mirrors the rsync archive flag, enables recursive, links, perms, times, owner, group flags, and C(-D)}
+    checksum: ${7:# Skip based on checksum, rather than mod-time & size; Note that that O(archive) option is still enabled by default - the O(checksum) option will not disable it}
+    compress: ${8:# Compress file data during the transfer}
+    copy_links: ${9:# Copy symlinks as the item that they point to (the referent) is copied, rather than the symlink}
+    delay_updates: ${10:# This option puts the temporary file from each updated file into a holding directory until the end of the transfer, at which time all the files are renamed into place in rapid succession}
+    delete: ${11:# Delete files in O(dest) that do not exist (after transfer, not before) in the O(src) path}
+    dest: ${12:# Path on the destination host that will be synchronized from the source}
+    dest_port: ${13:# Port number for ssh on the destination host}
+    dirs: ${14:# Transfer directories without recursing}
+    existing_only: ${15:# Skip creating new files on receiver}
+    group: ${16:# Preserve group}
+    link_dest: ${17:# Add a destination to hard link against during the rsync}
+    links: ${18:# Copy symlinks as symlinks}
+    mode: ${19:# Specify the direction of the synchronization}
+    owner: ${20:# Preserve owner (super user only)}
+    partial: ${21:# Tells rsync to keep the partial file which should make a subsequent transfer of the rest of the file much faster}
+    perms: ${22:# Preserve permissions}
+    private_key: ${23:# Specify the private key to use for SSH-based rsync connections (e}
+    recursive: ${24:# Recurse into directories}
+    rsync_opts: ${25:# Specify additional rsync options by passing in an array}
+    rsync_path: ${26:# Specify the rsync command to run on the remote host}
+    rsync_timeout: ${27:# Specify a C(--timeout) for the rsync command in seconds}
+    set_remote_user: ${28:# Put C(user@) for the remote paths}
+    src: ${29:# Path on the source host that will be synchronized to the destination}
+    ssh_connection_multiplexing: ${30:# SSH connection multiplexing for rsync is disabled by default to prevent misconfigured ControlSockets from resulting in failed SSH connections}
+    times: ${31:# Preserve modification times}
+    use_ssh_args: ${32:# In Ansible 2}
+    verify_host: ${33:# Verify destination host key}
   tags:
     - synchronize]]></content>
   <tabTrigger>ansible.posix.synchronize</tabTrigger>

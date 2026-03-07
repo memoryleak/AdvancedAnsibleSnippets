@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage SAN Connectivity Policies and vHBAs for Cisco Intersight}
+  cisco.intersight.intersight_san_connectivity_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    description: ${5:# The user-defined description for the SAN Connectivity Policy}
+    name: ${6:# The name assigned to the SAN Connectivity Policy}
+    organization: ${7:# The name of the Organization this resource is assigned to}
+    placement_mode: ${8:# The mode used for placement of vHBAs on network adapters}
+    state: ${9:# If C(present), will verify the resource is present and will create if needed}
+    static_wwnn_address: ${10:# The WWNN address for the server node must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx}
+    tags: ${11:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    target_platform: ${12:# The platform type for which the SAN Connectivity policy is intended}
+    use_proxy: ${13:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${14:# Boolean control for verifying the api_uri TLS certificate}
+    vhbas: ${15:# List of vHBAs to be created and attached to the SAN Connectivity policy}
+    wwnn_address_type: ${16:# Type of WWNN address assignment}
+    wwnn_pool: ${17:# The WWNN pool that is assigned for WWNN address assignment}
+  tags:
+    - cisco
+    - intersight
+    - intersight_san_connectivity_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_san_connectivity_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage SAN Connectivity Policies and vHBAs for Cisco Intersight</description>
+</snippet>

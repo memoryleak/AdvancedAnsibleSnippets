@@ -2,19 +2,23 @@
   <content><![CDATA[- name: ${1:Manage packages on SUSE and openSUSE}
   community.general.zypper:
     allow_vendor_change: ${2:# Adds C(--allow_vendor_change) option to I(zypper) dist-upgrade command}
-    clean_deps: ${3:# Adds C(--clean-deps) option to I(zypper) remove command}
-    disable_gpg_check: ${4:# Whether to disable to GPG signature checking of the package signature being installed}
-    disable_recommends: ${5:# Corresponds to the C(--no-recommends) option for I(zypper)}
-    extra_args: ${6:# Add additional options to C(zypper) command}
-    extra_args_precommand: ${7:# Add additional global target options to C(zypper)}
-    force: ${8:# Adds C(--force) option to I(zypper)}
-    force_resolution: ${9:# Adds C(--force-resolution) option to I(zypper)}
-    name: ${10:# Package name V(name) or package specifier or a list of either}
-    oldpackage: ${11:# Adds C(--oldpackage) option to I(zypper)}
-    replacefiles: ${12:# Adds C(--replacefiles) option to I(zypper) install/update command}
-    state: ${13:# V(present) will make sure the package is installed}
-    type: ${14:# The type of package to be operated on}
-    update_cache: ${15:# Run the equivalent of C(zypper refresh) before the operation}
+    auto_import_keys: ${3:# Whether to automatically import new repository signing keys}
+    clean_deps: ${4:# Adds C(--clean-deps) option to I(zypper) remove command}
+    disable_gpg_check: ${5:# Whether to disable to GPG signature checking of the package signature being installed}
+    disable_recommends: ${6:# Corresponds to the C(--no-recommends) option for I(zypper)}
+    extra_args: ${7:# Add additional options to C(zypper) command}
+    extra_args_precommand: ${8:# Add additional global target options to C(zypper)}
+    force: ${9:# Adds C(--force) option to I(zypper)}
+    force_resolution: ${10:# Adds C(--force-resolution) option to I(zypper)}
+    name: ${11:# Package name V(name) or package specifier or a list of either}
+    oldpackage: ${12:# Adds C(--oldpackage) option to I(zypper)}
+    quiet: ${13:# Adds C(--quiet) option to I(zypper) install/update command}
+    replacefiles: ${14:# Adds C(--replacefiles) option to I(zypper) install/update command}
+    simple_errors: ${15:# When set to V(true), provide a simplified error output (parses only the C(<message>) tag text in the XML output)}
+    skip_post_errors: ${16:# When set to V(true), ignore I(zypper) return code 107 (post install script errors)}
+    state: ${17:# V(present) makes sure the package is installed}
+    type: ${18:# The type of package to be operated on}
+    update_cache: ${19:# Run the equivalent of C(zypper refresh) before the operation}
   tags:
     - community
     - general

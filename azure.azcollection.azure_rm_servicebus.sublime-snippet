@@ -9,21 +9,28 @@
     cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
     client_id: ${8:# Azure client ID}
     cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    location: ${10:# The servicebus's location}
-    log_mode: ${11:# Parent argument}
-    log_path: ${12:# Parent argument}
-    name: ${13:# Name of the servicebus namespace}
-    password: ${14:# Active Directory user password}
-    profile: ${15:# Security profile found in ~/}
-    resource_group: ${16:# Name of resource group}
-    secret: ${17:# Azure client secret}
-    sku: ${18:# Namespace SKU}
-    state: ${19:# Assert the state of the servicebus}
-    subscription_id: ${20:# Your Azure subscription Id}
-    tags: ${21:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${22:# Azure tenant ID}
-    thumbprint: ${23:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    x509_certificate_path: ${24:# Path to the X509 certificate used to create the service principal in PEM format}
+    disable_instance_discovery: ${10:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    disable_local_auth: ${11:# This property disables SAS authentication for the Service Bus namespace}
+    identity: ${12:# Identity for the Object}
+    location: ${13:# The servicebus's location}
+    log_mode: ${14:# Parent argument}
+    log_path: ${15:# Parent argument}
+    minimum_tls_version: ${16:# The minimum TLS version for the cluster to support}
+    name: ${17:# Name of the servicebus namespace}
+    password: ${18:# Active Directory user password}
+    premium_messaging_partitions: ${19:# The number of partitions of a Service Bus namespace}
+    profile: ${20:# Security profile found in ~/}
+    public_network_access: ${21:# This determines if traffic is allowed over public network}
+    resource_group: ${22:# Name of resource group}
+    secret: ${23:# Azure client secret}
+    sku: ${24:# Namespace SKU}
+    state: ${25:# Assert the state of the servicebus}
+    subscription_id: ${26:# Your Azure subscription Id}
+    tags: ${27:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${28:# Azure tenant ID}
+    thumbprint: ${29:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${30:# Path to the X509 certificate used to create the service principal in PEM format}
+    zone_redundant: ${31:# Enabling this property creates a Premium Service Bus Namespace in regions supported availability zones}
   tags:
     - azure
     - azcollection

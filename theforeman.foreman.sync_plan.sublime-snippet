@@ -1,19 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Sync Plans}
   theforeman.foreman.sync_plan:
-    cron_expression: ${2:# A cron expression as found in crontab files}
-    description: ${3:# Description of the sync plan}
-    enabled: ${4:# Whether the sync plan is active}
-    interval: ${5:# How often synchronization should run}
-    name: ${6:# Name of the sync plan}
-    organization: ${7:# Organization that the entity is in}
-    password: ${8:# Password of the user accessing the Foreman server}
-    products: ${9:# List of products to include in the sync plan}
-    server_url: ${10:# URL of the Foreman server}
-    state: ${11:# State of the entity}
-    sync_date: ${12:# Start date and time of the first synchronization}
-    username: ${13:# Username accessing the Foreman server}
-    validate_certs: ${14:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    cron_expression: ${3:# A cron expression as found in crontab files}
+    description: ${4:# Description of the sync plan}
+    enabled: ${5:# Whether the sync plan is active}
+    interval: ${6:# How often synchronization should run}
+    name: ${7:# Name of the sync plan}
+    organization: ${8:# Organization that the entity is in}
+    password: ${9:# Password of the user accessing the Foreman server}
+    products: ${10:# List of products to include in the sync plan}
+    server_url: ${11:# URL of the Foreman server}
+    state: ${12:# State of the entity}
+    sync_date: ${13:# Start date and time of the first synchronization}
+    use_gssapi: ${14:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${15:# Username accessing the Foreman server}
+    validate_certs: ${16:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

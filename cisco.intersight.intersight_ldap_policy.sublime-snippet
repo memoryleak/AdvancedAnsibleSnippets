@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage LDAP Policies for Cisco Intersight}
+  cisco.intersight.intersight_ldap_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    attribute: ${5:# Role and locale information of the user}
+    base_dn: ${6:# Base Distinguished Name (DN)}
+    bind_dn: ${7:# Distinguished Name (DN) of the user, that is used to authenticate against LDAP servers}
+    bind_method: ${8:# Authentication method to access LDAP servers}
+    description: ${9:# The user-defined description for the LDAP Policy}
+    dns_source: ${10:# Source of the domain name used for the DNS SRV request}
+    domain: ${11:# The IPv4 domain that all users must be in}
+    enable_dns: ${12:# Enables DNS to access LDAP servers}
+    enable_encryption: ${13:# If enabled, the endpoint encrypts all information it sends to the LDAP server}
+    enable_ldap: ${14:# If enabled, LDAP server performs authentication}
+    filter: ${15:# Criteria to identify entries in search requests}
+    group_attribute: ${16:# Groups to which an LDAP entry belongs}
+    group_authorization: ${17:# If enabled, user authorization is also done at the group level for LDAP users not in the local user database}
+    ldap_groups: ${18:# List of LDAP groups to be created and attached to the LDAP policy}
+    ldap_providers: ${19:# List of LDAP providers (servers) to be created and attached to the LDAP policy}
+    name: ${20:# The name assigned to the LDAP Policy}
+    nested_group_search: ${21:# If enabled, an extended search walks the chain of ancestry all the way to the root}
+    nested_group_search_depth: ${22:# Search depth to look for a nested LDAP group in an LDAP group map}
+    organization: ${23:# The name of the Organization this resource is assigned to}
+    password: ${24:# The password of the user for initial bind process}
+    search_domain: ${25:# Domain name that acts as a source for a DNS query}
+    search_forest: ${26:# Forest name that acts as a source for a DNS query}
+    state: ${27:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${28:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    timeout: ${29:# LDAP authentication timeout duration, in seconds}
+    use_proxy: ${30:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    user_search_precedence: ${31:# Search precedence between local user database and LDAP user database}
+    validate_certs: ${32:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_ldap_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_ldap_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage LDAP Policies for Cisco Intersight</description>
+</snippet>

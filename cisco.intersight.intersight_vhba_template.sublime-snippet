@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage vHBA Templates for Cisco Intersight}
+  cisco.intersight.intersight_vhba_template:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    description: ${5:# The user-defined description for the vHBA Template}
+    enable_override: ${6:# When enabled, the configuration of the derived instances may override the template configuration}
+    fibre_channel_adapter_policy_name: ${7:# Name of the Fibre Channel Adapter Policy}
+    fibre_channel_network_policy_name: ${8:# Name of the Fibre Channel Network Policy}
+    fibre_channel_qos_policy_name: ${9:# Name of the Fibre Channel QoS Policy}
+    fibre_channel_zone_policy_names: ${10:# List of Fibre Channel Zone Policy names}
+    name: ${11:# The name assigned to the vHBA Template}
+    organization: ${12:# The name of the Organization this resource is assigned to}
+    persistent_bindings: ${13:# Enables retention of LUN ID associations in memory until they are manually cleared}
+    pin_group_name: ${14:# Pingroup name associated to vHBA for static pinning}
+    state: ${15:# If C(present), will verify the resource is present and will create if needed}
+    switch_id: ${16:# The fabric port to which the vHBA will be associated}
+    tags: ${17:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${18:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${19:# Boolean control for verifying the api_uri TLS certificate}
+    vhba_type: ${20:# vHBA Type configuration for the template}
+    wwpn_pool_name: ${21:# The WWPN pool that is assigned to the vHBA Template}
+  tags:
+    - cisco
+    - intersight
+    - intersight_vhba_template]]></content>
+  <tabTrigger>cisco.intersight.intersight_vhba_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage vHBA Templates for Cisco Intersight</description>
+</snippet>

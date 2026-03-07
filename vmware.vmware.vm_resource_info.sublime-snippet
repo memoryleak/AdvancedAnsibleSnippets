@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about the resources of one or more VMs}
+  vmware.vmware.vm_resource_info:
+    gather_cpu_config: ${2:# If true, information is gathered about the VM(s) CPU configuration}
+    gather_cpu_stats: ${3:# If true, information is gathered about the VM(s) CPU usage metrics}
+    gather_memory_config: ${4:# If true, information is gathered about the VM(s) memory configuration}
+    gather_memory_stats: ${5:# If true, information is gathered about the VM(s) memory usage metrics}
+    hostname: ${6:# The hostname or IP address of the vSphere vCenter server}
+    moid: ${7:# The MOID of the vm to gather info for}
+    name: ${8:# The name of the vm to gather info for}
+    name_match: ${9:# If using name and multiple VMs have the same name, specify which VM should be selected}
+    password: ${10:# The password of the vSphere vCenter server}
+    port: ${11:# The port number of the vSphere vCenter server}
+    proxy_host: ${12:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    use_instance_uuid: ${14:# If true, search by instance UUID instead of BIOS UUID}
+    username: ${15:# The username of the vSphere vCenter server}
+    uuid: ${16:# The UUID of the vm to gather info for}
+    validate_certs: ${17:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware
+    - vm_resource_info]]></content>
+  <tabTrigger>vmware.vmware.vm_resource_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about the resources of one or more VMs</description>
+</snippet>

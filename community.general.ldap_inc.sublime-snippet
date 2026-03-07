@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Use the Modify-Increment LDAP V3 feature to increment an attribute value}
+  community.general.ldap_inc:
+    attribute: ${2:# The attribute to increment}
+    bind_dn: ${3:# A DN to bind with}
+    bind_pw: ${4:# The password to use with O(bind_dn)}
+    ca_path: ${5:# Set the path to PEM file with CA certs}
+    client_cert: ${6:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${7:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    dn: ${8:# The DN entry containing the attribute to increment}
+    increment: ${9:# The value of the increment to apply}
+    method: ${10:# If V(auto), the module determines automatically the method to use}
+    referrals_chasing: ${11:# Set the referrals chasing behavior}
+    sasl_class: ${12:# The class to use for SASL authentication}
+    server_uri: ${13:# The O(server_uri) parameter may be a comma- or whitespace-separated list of URIs containing only the schema, the host, and the port fields}
+    start_tls: ${14:# Use the START_TLS LDAP extension if set to V(true)}
+    validate_certs: ${15:# If set to V(false), SSL certificates are not validated}
+    xorder_discovery: ${16:# Set the behavior on how to process Xordered DNs}
+  tags:
+    - community
+    - general
+    - ldap_inc]]></content>
+  <tabTrigger>community.general.ldap_inc</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Use the Modify-Increment LDAP V3 feature to increment an attribute value</description>
+</snippet>

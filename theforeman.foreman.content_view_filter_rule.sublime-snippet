@@ -2,25 +2,27 @@
   <content><![CDATA[- name: ${1:Manage content view filter rules}
   theforeman.foreman.content_view_filter_rule:
     architecture: ${2:# set package, module_stream, etc}
-    content_view: ${3:# the name of the content view that the filter applies to}
-    content_view_filter: ${4:# the name of the content view filter that the rule applies to}
-    context: ${5:# the context for a module}
-    date_type: ${6:# set whether rule applied to erratum using the 'Issued On' or 'Updated On' date}
-    end_date: ${7:# the rule limit for erratum end date (YYYY-MM-DD)}
-    errata_id: ${8:# erratum id}
-    max_version: ${9:# package maximum version}
-    min_version: ${10:# package minimum version}
-    name: ${11:# Content view filter rule name, package name, package_group name, module stream or docker tag}
-    organization: ${12:# Organization that the entity is in}
-    password: ${13:# Password of the user accessing the Foreman server}
-    server_url: ${14:# URL of the Foreman server}
-    start_date: ${15:# the rule limit for erratum start date (YYYY-MM-DD)}
-    state: ${16:# State of the entity}
-    stream: ${17:# the context for a module}
-    types: ${18:# errata types the ruel applies to (enhancement, bugfix, security)}
-    username: ${19:# Username accessing the Foreman server}
-    validate_certs: ${20:# Whether or not to verify the TLS certificates of the Foreman server}
-    version: ${21:# package or module version}
+    ca_path: ${3:# PEM formatted file that contains a CA certificate to be used for validation}
+    content_view: ${4:# the name of the content view that the filter applies to}
+    content_view_filter: ${5:# the name of the content view filter that the rule applies to}
+    context: ${6:# the context for a module}
+    date_type: ${7:# set whether rule applied to erratum using the 'Issued On' or 'Updated On' date}
+    end_date: ${8:# the rule limit for erratum end date (YYYY-MM-DD)}
+    errata_id: ${9:# erratum id}
+    max_version: ${10:# package maximum version}
+    min_version: ${11:# package minimum version}
+    name: ${12:# Content view filter rule name, package name, package_group name, module stream or docker tag}
+    organization: ${13:# Organization that the entity is in}
+    password: ${14:# Password of the user accessing the Foreman server}
+    server_url: ${15:# URL of the Foreman server}
+    start_date: ${16:# the rule limit for erratum start date (YYYY-MM-DD)}
+    state: ${17:# State of the entity}
+    stream: ${18:# the context for a module}
+    types: ${19:# errata types the ruel applies to (enhancement, bugfix, security)}
+    use_gssapi: ${20:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${21:# Username accessing the Foreman server}
+    validate_certs: ${22:# Whether or not to verify the TLS certificates of the Foreman server}
+    version: ${23:# package or module version}
   tags:
     - theforeman
     - foreman

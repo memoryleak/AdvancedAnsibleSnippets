@@ -9,7 +9,7 @@
     check_implicit_admin: ${7:# Check if mysql allows login as root/nopassword before trying supplied credentials}
     client_cert: ${8:# The path to a client public key certificate}
     client_key: ${9:# The path to the client private key}
-    column_case_sensitive: ${10:# The default is C(false)}
+    column_case_sensitive: ${10:# The default is C(true)}
     config_file: ${11:# Specify a config file from which user and password are to be read}
     connect_timeout: ${12:# The connection timeout when connecting to the MySQL server}
     detach_members: ${13:# Detaches members defined by the I(members) option from the role instead of overwriting all the current members}
@@ -23,8 +23,9 @@
     name: ${21:# Name of the role to add or remove}
     priv: ${22:# MySQL privileges string in the format: C(db}
     set_default_role_all: ${23:# Is not supported by MariaDB and is silently ignored when working with MariaDB}
-    state: ${24:# If C(present) and the role does not exist, creates the role}
-    subtract_privs: ${25:# Revoke the privileges defined by the I(priv) option and keep other existing privileges}
+    sql_log_bin: ${24:# Whether binary logging should be enabled or disabled for the connection}
+    state: ${25:# If C(present) and the role does not exist, creates the role}
+    subtract_privs: ${26:# Revoke the privileges defined by the I(priv) option and keep other existing privileges}
   tags:
     - community
     - mysql

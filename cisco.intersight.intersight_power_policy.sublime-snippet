@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Power Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_power_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    description: ${5:# The user-defined description for the Power Policy}
+    dynamic_power_rebalancing: ${6:# Sets the dynamic power rebalancing mode of the chassis}
+    extended_power_capacity: ${7:# Sets the Extended Power Capacity of the Chassis}
+    name: ${8:# The name assigned to the Power Policy}
+    organization: ${9:# The name of the Organization this resource is assigned to}
+    power_allocation: ${10:# Sets the limit for the maximum input power consumption by the chassis (in Watts)}
+    power_priority: ${11:# Sets the Power Priority of the Server}
+    power_profiling: ${12:# Sets the Power Profiling of the Server}
+    power_redundancy: ${13:# Sets the Power Redundancy Mode of the Chassis}
+    power_restore: ${14:# Sets the Power Restore State of the Server}
+    power_save_mode: ${15:# Sets the power save mode of the chassis}
+    processor_package_power_limit: ${16:# Sets the Processor Package Power Limit (PPL) of a server}
+    state: ${17:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${18:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    target_platform: ${19:# The platform type for which the power policy is intended}
+    use_proxy: ${20:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${21:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_power_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_power_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Power Policy configuration for Cisco Intersight</description>
+</snippet>

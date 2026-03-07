@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP multi-admin verification (MAV) global setting}
+  netapp.ontap.na_ontap_mav_config:
+    approval_expiry: ${2:# Specifies the time, in ISO-8601 duration format, that the approvers have after a new execution request is submitted to approve or disapprove the request before the request expires}
+    approval_groups: ${3:# Specifies the list of global approval groups which are inherited by the rule if the approval-groups is not provided for the rule}
+    cert_filepath: ${4:# path to SSL client cert file (}
+    enabled: ${5:# Specifies whether multi-admin approval is currently configured or not}
+    execution_expiry: ${6:# Specifies the time, in ISO-8601 duration format, that the authorized users have after a request is approved to execute the requested operation before the request expires}
+    feature_flags: ${7:# Enable or disable a new feature}
+    force_ontap_version: ${8:# Override the cluster ONTAP version when using REST}
+    hostname: ${9:# The hostname or IP address of the ONTAP instance}
+    http_port: ${10:# Override the default port (80 or 443) with this port}
+    https: ${11:# Enable and disable https}
+    key_filepath: ${12:# path to SSL client key file}
+    password: ${13:# Password for the specified user}
+    required_approvers: ${14:# Specifies the required number of approvers to approve the request which is inherited by the rule if required-approvers is not provided for the rule}
+    state: ${15:# Modify MAV global setting, only present is supported}
+    use_rest: ${16:# This module only supports REST}
+    username: ${17:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${18:# If set to C(no), the SSL certificates will not be validated}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_mav_config]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_mav_config</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP multi-admin verification (MAV) global setting</description>
+</snippet>

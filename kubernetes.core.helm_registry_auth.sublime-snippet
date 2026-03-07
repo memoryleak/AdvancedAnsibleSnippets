@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Helm registry authentication module}
+  kubernetes.core.helm_registry_auth:
+    binary_path: ${2:# The path of a helm binary to use}
+    ca_file: ${3:# Path to the CA certificate SSL file for verify registry server certificate}
+    cert_file: ${4:# Path to the client certificate SSL file for identify registry client using this certificate file}
+    host: ${5:# Provide a URL for accessing the registry}
+    insecure: ${6:# Allow connections to SSL sites without certs}
+    key_file: ${7:# Path to the client key SSL file for identify registry client using this key file}
+    password: ${8:# Password for the registry}
+    state: ${9:# Desired state of the registry}
+    username: ${10:# Username for the registry}
+  tags:
+    - kubernetes
+    - core
+    - helm_registry_auth]]></content>
+  <tabTrigger>kubernetes.core.helm_registry_auth</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Helm registry authentication module</description>
+</snippet>

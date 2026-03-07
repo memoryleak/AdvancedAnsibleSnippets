@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage firewall rules in Proxmox}
+  community.proxmox.proxmox_firewall_info:
+    api_host: ${2:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${3:# Specify the password to authenticate with}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    group: ${8:# Name of the group to which the rule belongs}
+    level: ${9:# Level at which the firewall rule applies}
+    node: ${10:# Name of the node}
+    pos: ${11:# Position of the rule in the list}
+    validate_certs: ${12:# If V(false), SSL certificates will not be validated}
+    vmid: ${13:# ID of the VM to which the rule applies}
+    vnet: ${14:# Name of the virtual network for the rule}
+  tags:
+    - community
+    - proxmox
+    - proxmox_firewall_info]]></content>
+  <tabTrigger>community.proxmox.proxmox_firewall_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage firewall rules in Proxmox</description>
+</snippet>

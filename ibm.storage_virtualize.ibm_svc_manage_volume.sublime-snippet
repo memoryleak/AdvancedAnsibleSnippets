@@ -2,30 +2,36 @@
   <content><![CDATA[- name: ${1:This module manages standard volumes on IBM Storage Virtualize family systems}
   ibm.storage_virtualize.ibm_svc_manage_volume:
     allow_hs: ${2:# If specified `True`, manages the hyperswap volume by ignoring the volume type validation}
-    buffersize: ${3:# Specifies the pool capacity that the volume will reserve as a buffer for thin-provisioned and compressed volumes}
-    cloud_account_name: ${4:# Specifies the name of the cloud account name}
-    clustername: ${5:# The hostname or management IP of the Storage Virtualize system}
-    compressed: ${6:# Specifies that a compressed volume is to be created}
-    deduplicated: ${7:# Specifies that a deduplicated volume is to be created}
-    domain: ${8:# Domain for the Storage Virtualize system}
-    enable_cloud_snapshot: ${9:# Specify to enable or disable cloud snapshot}
-    fromsourcevolume: ${10:# Specifies the volume name in the snapshot used to pre-populate clone or thinclone volume}
-    iogrp: ${11:# Specifies the list of I/O group names}
-    log_path: ${12:# Path of debug log file}
-    name: ${13:# Specifies the name to assign to the new volume}
-    novolumegroup: ${14:# If specified `True`, the volume is removed from its associated volumegroup}
-    old_name: ${15:# Specifies the old name of the volume during renaming}
-    password: ${16:# REST API password for the Storage Virtualize system}
-    pool: ${17:# Specifies the name of the storage pool to use while creating the volume}
-    size: ${18:# Defines the size of the volume}
-    state: ${19:# Creates or updates (C(present)) or removes (C(absent)) a volume}
-    thin: ${20:# Specifies that a thin-provisioned volume is to be created}
-    token: ${21:# The authentication token to verify a user on the Storage Virtualize system}
-    type: ${22:# Specifies the type of volume to create}
-    unit: ${23:# Specifies the data units to use with the capacity that is specified by the 'size' parameter}
-    username: ${24:# REST API username for the Storage Virtualize system}
-    validate_certs: ${25:# Validates certification}
-    volumegroup: ${26:# Specifies the name of the volumegroup to which the volume is to be added}
+    autoexpand: ${3:# Specifies whether thin-provisioned volume copies automatically expand their real capacities}
+    buffersize: ${4:# Specifies the pool capacity that the volume will reserve as a buffer for thin-provisioned and compressed volumes}
+    cache: ${5:# Specifies the caching options for the volume}
+    cloud_account_name: ${6:# Specifies the name of the cloud account name}
+    clustername: ${7:# The hostname or management IP or Partition IP of the Storage Virtualize system}
+    compressed: ${8:# Specifies that a compressed volume is to be created}
+    deduplicated: ${9:# Specifies that a deduplicated volume is to be created}
+    domain: ${10:# Domain for the Storage Virtualize system}
+    enable_cloud_snapshot: ${11:# Specify to enable or disable cloud snapshot}
+    fromsourcevolume: ${12:# Specifies the volume name in the snapshot used to pre-populate clone or thinclone volume}
+    grainsize: ${13:# Sets the grain size for a thin-provisioned volume}
+    iogrp: ${14:# Specifies the list of I/O group names}
+    log_path: ${15:# Path of debug log file}
+    name: ${16:# Specifies the name to assign to the new volume}
+    novolumegroup: ${17:# If specified `True`, the volume is removed from its associated volumegroup}
+    old_name: ${18:# Specifies the old name of the volume during renaming}
+    password: ${19:# REST API password for the Storage Virtualize system}
+    pool: ${20:# Specifies the name of the storage pool to use while creating the volume}
+    preferrednode: ${21:# Specifies the preferred node name that is used to access the volume}
+    size: ${22:# Defines the size of the volume}
+    state: ${23:# Creates or updates (C(present)) or removes (C(absent)) a volume}
+    thin: ${24:# Specifies that a thin-provisioned volume is to be created}
+    token: ${25:# The authentication token to verify a user on the Storage Virtualize system}
+    type: ${26:# Specifies the type of volume to create}
+    unit: ${27:# Specifies the data units to use with the capacity that is specified by the 'size' parameter}
+    unmap: ${28:# Removes specified objects associated with the volume which is to be deleted}
+    username: ${29:# REST API username for the Storage Virtualize system}
+    validate_certs: ${30:# Validates certification}
+    volumegroup: ${31:# Specifies the name of the volumegroup to which the volume is to be added}
+    warning: ${32:# Raises a warning when the used disk capacity on the thin-provisioned copy first exceeds the specified threshold}
   tags:
     - ibm
     - storage_virtualize

@@ -2,12 +2,13 @@
   <content><![CDATA[- name: ${1:List FlashArray Alert Messages}
   purestorage.flasharray.purefa_messages:
     api_token: ${2:# FlashArray API token for admin privileged user}
-    disable_warnings: ${3:# Disable insecure certificate warnings in debug logs}
-    fa_url: ${4:# FlashArray management IPv4 address or Hostname}
-    flagged: ${5:# Show alerts that have been acknowledged or not}
-    history: ${6:# Historical time period to show alerts for, from present time}
-    severity: ${7:# severity of the alerts to show}
-    state: ${8:# State of alerts to show}
+    context: ${3:# Name of fleet member on which to perform the operation}
+    disable_warnings: ${4:# Disable insecure certificate warnings in debug logs}
+    fa_url: ${5:# FlashArray management IPv4 address or Hostname}
+    flagged: ${6:# Show alerts that have been acknowledged or not}
+    history: ${7:# Historical time period to show alerts for, from present time}
+    severity: ${8:# severity of the alerts to show}
+    state: ${9:# State of alerts to show}
   tags:
     - purestorage
     - flasharray

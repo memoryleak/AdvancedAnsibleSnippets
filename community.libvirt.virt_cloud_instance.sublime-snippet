@@ -1,0 +1,104 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Provision new virtual machines from cloud images via libvirt}
+  community.libvirt.virt_cloud_instance:
+    arch: ${2:# Request a non-native CPU architecture for the guest virtual machine}
+    audio: ${3:# Configure host audio output for the guest's sound hardware}
+    audio_devices: ${4:# Configure multiple audio backends for the guest}
+    autostart: ${5:# Set the autostart flag for a domain}
+    base_image: ${6:# Path or URL to the cloud image}
+    blkiotune: ${7:# Tune block I/O policy for the domain process}
+    boot: ${8:# Set the boot device priority for post-install configuration}
+    boot_opts: ${9:# Additional options for boot configuration}
+    channel: ${10:# Attach a communication channel device to connect the guest and host machine}
+    channel_devices: ${11:# Configure multiple channel devices for the guest}
+    clock: ${12:# Configure the clock for the guest}
+    cloud_init: ${13:# Pass cloud-init metadata to the VM}
+    cloud_init_auto_reboot: ${14:# When I(wait_for_cloud_init_reboot=true), automatically inject a reboot instruction into the cloud-init user-data}
+    cloud_init_reboot_timeout: ${15:# Maximum time in seconds to wait for the cloud-init reboot cycle to complete}
+    console: ${16:# Connect a text console between the guest and host}
+    console_devices: ${17:# Configure multiple console devices for the guest}
+    controller: ${18:# Attach a controller device to the guest}
+    controller_devices: ${19:# Configure multiple controller devices for the guest}
+    cpu: ${20:# Configure the CPU model and CPU features exposed to the guest}
+    cputune: ${21:# Tune CPU parameters for the guest}
+    disks: ${22:# Specify the storage devices for the guest}
+    events: ${23:# Specify events values for the guest}
+    features: ${24:# Enable or disable certain machine features}
+    filesystems: ${25:# Specifies directories on the host to export to the guest}
+    force_disk: ${26:# Force deletion and recreation of existing disk files}
+    force_pull: ${27:# Force pull of the cloud image even if it already exists in the cache}
+    graphics: ${28:# Configure the graphical display for the guest virtual machine}
+    graphics_devices: ${29:# Configure multiple graphics devices for the guest}
+    host_devices: ${30:# Configure multiple host devices for the guest}
+    hostdev: ${31:# Attach a physical host device to the guest}
+    hvm: ${32:# Request the use of full virtualization}
+    image_cache_dir: ${33:# Directory where downloaded cloud images will be cached}
+    image_checksum: ${34:# If specified, the digest of the downloaded image will be calculated to verify the integrity of the downloaded image}
+    input: ${35:# Attach an input device to the guest}
+    input_devices: ${36:# Configure multiple input devices for the guest}
+    iommu: ${37:# Add an IOMMU device to the guest}
+    iommu_devices: ${38:# Configure multiple IOMMU devices for the guest}
+    iothreads: ${39:# Number of I/O threads to configure for the guest}
+    iothreads_opts: ${40:# Additional options for I/O threads configuration}
+    keywrap: ${41:# Configure domain keywrap settings used for S390 cryptographic key management operations}
+    launch_security: ${42:# Enable launch security for the guest}
+    machine: ${43:# The machine type to emulate}
+    memballoon: ${44:# Attach a virtual memory balloon device to the guest}
+    memballoon_devices: ${45:# Configure multiple memory balloon devices for the guest}
+    memory: ${46:# Memory to allocate for the guest, in MiB}
+    memory_opts: ${47:# Additional options for memory allocation}
+    memorybacking: ${48:# Specify how virtual memory pages are backed by host pages}
+    memtune: ${49:# Tune memory policy for the domain process}
+    metadata: ${50:# Specify the metadata for the guest virtual machine}
+    name: ${51:# Name of the new guest virtual machine instance}
+    networks: ${52:# Connect the guest to the host network}
+    numatune: ${53:# Tune NUMA policy for the domain process}
+    osinfo: ${54:# Optimize the guest configuration for a specific operating system}
+    panic: ${55:# Attach a panic notifier device to the guest}
+    panic_devices: ${56:# Configure multiple panic devices for the guest}
+    parallel: ${57:# Attach a parallel device to the guest}
+    parallel_devices: ${58:# Configure multiple parallel devices for the guest}
+    paravirt: ${59:# This guest should be a paravirtualized guest}
+    pm: ${60:# Configure the power management for the guest}
+    qemu_commandline: ${61:# Pass options directly to the qemu emulator}
+    recreate: ${62:# Use with present to force the re-creation of an existing VM}
+    redirdev: ${63:# Add a redirected device for USB or other device redirection}
+    redirected_devices: ${64:# Configure multiple redirected devices for the guest}
+    resource: ${65:# Specify resource partitioning for the guest}
+    rng: ${66:# Configure a virtual random number generator (RNG) device}
+    rng_devices: ${67:# Configure multiple RNG devices for the guest}
+    security: ${68:# Configure domain seclabel domain settings}
+    serial: ${69:# Attach a serial device to the guest with various redirection options}
+    serial_devices: ${70:# Configure multiple serial devices for the guest}
+    shmem: ${71:# Attach a shared memory device to the guest}
+    shmem_devices: ${72:# Configure multiple shared memory devices for the guest}
+    smartcard: ${73:# Configure a virtual smartcard device}
+    smartcard_devices: ${74:# Configure multiple smartcard devices for the guest}
+    sound: ${75:# Attach a virtual audio device to the guest}
+    sound_devices: ${76:# Configure multiple sound devices for the guest}
+    state: ${77:# If set to V(present), create the VM if it does not exist}
+    sysinfo: ${78:# Configure sysinfo/SMBIOS values exposed to the VM OS}
+    tpm: ${79:# Configure a virtual TPM (Trusted Platform Module) device}
+    tpm_devices: ${80:# Configure multiple TPM devices for the guest}
+    uri: ${81:# Libvirt connection uri}
+    url_password: ${82:# The password for HTTP basic authentication}
+    url_timeout: ${83:# The timeout in seconds for downloading the base image from a URL}
+    url_username: ${84:# The username for HTTP basic authentication}
+    vcpus: ${85:# Number of virtual cpus to configure for the guest}
+    vcpus_opts: ${86:# Additional options for virtual CPU configuration}
+    video: ${87:# Specify what video device model will be attached to the guest}
+    video_devices: ${88:# Configure multiple video devices for the guest}
+    virt_type: ${89:# The hypervisor used to create the VM guest}
+    vsock: ${90:# Configure a vsock host/guest interface}
+    vsock_devices: ${91:# Configure multiple vsock devices for the guest}
+    wait_for_cloud_init_reboot: ${92:# If set to V(true), wait for cloud-init to trigger a reboot and for the VM to come back online}
+    watchdog: ${93:# Attach a virtual hardware watchdog device to the guest}
+    watchdog_devices: ${94:# Configure multiple watchdog devices for the guest}
+  tags:
+    - community
+    - libvirt
+    - virt_cloud_instance]]></content>
+  <tabTrigger>community.libvirt.virt_cloud_instance</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Provision new virtual machines from cloud images via libvirt</description>
+</snippet>

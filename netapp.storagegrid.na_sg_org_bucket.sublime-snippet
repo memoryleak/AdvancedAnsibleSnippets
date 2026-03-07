@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage buckets on StorageGRID}
+  netapp.storagegrid.na_sg_org_bucket:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    bucket_versioning_enabled: ${4:# Enable versioning on the bucket}
+    capacity_limit: ${5:# The maximum number of GB available for this buckets's objects}
+    compliance: ${6:# Configure compliance settings for an S3 bucket}
+    name: ${7:# Name of the bucket}
+    region: ${8:# Set a region for the bucket}
+    s3_object_lock_enabled: ${9:# Enable S3 Object Lock on the bucket}
+    state: ${10:# Whether the specified bucket should exist or not}
+    validate_certs: ${11:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_org_bucket]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_org_bucket</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage buckets on StorageGRID</description>
+</snippet>

@@ -2,14 +2,16 @@
   <content><![CDATA[- name: ${1:Manage filesystem snapshots on Pure Storage FlashBlades}
   purestorage.flashblade.purefb_snap:
     api_token: ${2:# FlashBlade API token for admin privileged user}
-    disable_warnings: ${3:# Disable insecure certificate warnings}
-    eradicate: ${4:# Define whether to eradicate the snapshot on delete or leave in trash}
-    fb_url: ${5:# FlashBlade management IP address or Hostname}
-    name: ${6:# The name of the source filesystem}
-    now: ${7:# Whether to initiate a snapshot replication immeadiately}
-    state: ${8:# Define whether the filesystem snapshot should exist or not}
-    suffix: ${9:# Suffix of snapshot name}
-    target: ${10:# Name of target to replicate snapshot to}
+    context: ${3:# Name of fleet member on which to perform the operation}
+    disable_warnings: ${4:# Disable insecure certificate warnings}
+    eradicate: ${5:# Define whether to eradicate the snapshot on delete or leave in trash}
+    fb_url: ${6:# FlashBlade management IP address or Hostname}
+    latest_replica: ${7:# Used when destroying a snapshot}
+    name: ${8:# The name of the source filesystem}
+    now: ${9:# Whether to initiate a snapshot replication immeadiately}
+    state: ${10:# Define whether the filesystem snapshot should exist or not}
+    suffix: ${11:# Suffix of snapshot name}
+    target: ${12:# Name of target to replicate snapshot to}
   tags:
     - purestorage
     - flashblade

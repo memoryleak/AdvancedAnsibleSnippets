@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Gather information about IQN Pool in Cisco Intersight}
+  cisco.intersight.intersight_iqn_pool_info:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    name: ${5:# The name of the IQN Pool that will have information gathered from}
+    organization: ${6:# The name of the organization that will have information gathered from}
+    use_proxy: ${7:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${8:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_iqn_pool_info]]></content>
+  <tabTrigger>cisco.intersight.intersight_iqn_pool_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Gather information about IQN Pool in Cisco Intersight</description>
+</snippet>

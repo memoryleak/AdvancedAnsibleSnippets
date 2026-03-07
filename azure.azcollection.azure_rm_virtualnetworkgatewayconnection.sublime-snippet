@@ -1,0 +1,47 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure Virtual Network Gateway Connection in a resource group}
+  azure.azcollection.azure_rm_virtualnetworkgatewayconnection:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    authorization_key: ${7:# The authorizationKey}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    connection_protocol: ${11:# Connection protocol used for this connection}
+    connection_type: ${12:# Gateway connection type}
+    disable_instance_discovery: ${13:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    dpd_timeout_seconds: ${14:# The dead peer detection timeout of this connection in seconds}
+    enable_bgp: ${15:# EnableBgp flag}
+    express_route_gateway_bypass: ${16:# Bypass ExpressRoute Gateway for data forwarding}
+    local_network_gateway2: ${17:# The reference to local network gateway resource}
+    location: ${18:# The location of the network gateway connection}
+    log_mode: ${19:# Parent argument}
+    log_path: ${20:# Parent argument}
+    name: ${21:# The name of the network gateway connection}
+    password: ${22:# Active Directory user password}
+    profile: ${23:# Security profile found in ~/}
+    resource_group: ${24:# The network gateway connection's resource group}
+    routing_weight: ${25:# The routing weight}
+    secret: ${26:# Azure client secret}
+    shared_key: ${27:# The IPSec shared key}
+    state: ${28:# Use C(present) to create or update a virtual network gateway connection}
+    subscription_id: ${29:# Your Azure subscription Id}
+    tags: ${30:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${31:# Azure tenant ID}
+    thumbprint: ${32:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    use_local_azure_ip_address: ${33:# Use private local Azure IP for the connection}
+    use_policy_based_traffic_selectors: ${34:# Enable policy-based traffic selectors}
+    virtual_network_gateway1: ${35:# The reference to virtual network gateway resource}
+    virtual_network_gateway2: ${36:# The reference to virtual network gateway resource}
+    x509_certificate_path: ${37:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_virtualnetworkgatewayconnection]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_virtualnetworkgatewayconnection</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure Virtual Network Gateway Connection in a resource group</description>
+</snippet>

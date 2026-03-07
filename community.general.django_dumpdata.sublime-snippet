@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Wrapper for C(django-admin dumpdata)}
+  community.general.django_dumpdata:
+    all: ${2:# Dump all records, including those which might otherwise be filtered or modified by a custom manager}
+    apps_models: ${3:# Dump only the applications and models listed in the dump}
+    database: ${4:# Specify the database to be used}
+    excludes: ${5:# Applications or models to be excluded}
+    fixture: ${6:# Path to the output file}
+    format: ${7:# Serialization format of the output data}
+    indent: ${8:# Indentation size for the output}
+    natural_foreign: ${9:# Use natural keys when serializing for foreign keys}
+    natural_primary: ${10:# Omit primary keys when serializing}
+    primary_keys: ${11:# List of primary keys to include in the dump}
+    pythonpath: ${12:# Adds the given filesystem path to the Python import search path}
+    settings: ${13:# Specifies the settings module to use}
+    skip_checks: ${14:# Skips running system checks prior to running the command}
+    traceback: ${15:# Provides a full stack trace in the output when a C(CommandError) is raised}
+    venv: ${16:# Use the Python interpreter from this virtual environment}
+    verbosity: ${17:# Specifies the amount of notification and debug information in the output of C(django-admin)}
+  tags:
+    - community
+    - general
+    - django_dumpdata]]></content>
+  <tabTrigger>community.general.django_dumpdata</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Wrapper for C(django-admin dumpdata)</description>
+</snippet>

@@ -3,20 +3,24 @@
   theforeman.foreman.templates_import:
     associate: ${2:# Associate to Operatingsystems, Locations and Organizations based on metadata}
     branch: ${3:# Branch of the I(repo)}
-    dirname: ${4:# The directory within Git repo containing the templates}
-    filter: ${5:# Sync only templates with name matching this regular expression, after I(prefix) was applied}
-    force: ${6:# Update templates that are locked}
-    locations: ${7:# List of locations the entity should be assigned to}
-    lock: ${8:# Lock imported templates}
-    negate: ${9:# Negate the filter condition}
-    organizations: ${10:# List of organizations the entity should be assigned to}
-    password: ${11:# Password of the user accessing the Foreman server}
-    prefix: ${12:# Adds specified string to beginning of all imported templates that do not yet have that prefix}
-    repo: ${13:# Filesystem path or repo (with protocol), for example /tmp/dir or git://example}
-    server_url: ${14:# URL of the Foreman server}
-    username: ${15:# Username accessing the Foreman server}
-    validate_certs: ${16:# Whether or not to verify the TLS certificates of the Foreman server}
-    verbose: ${17:# Add template reports to the output}
+    ca_path: ${4:# PEM formatted file that contains a CA certificate to be used for validation}
+    dirname: ${5:# The directory within Git repo containing the templates}
+    filter: ${6:# Sync only templates with name matching this regular expression, after I(prefix) was applied}
+    force: ${7:# Update templates that are locked}
+    http_proxy: ${8:# HTTP proxy to use for template sync}
+    http_proxy_policy: ${9:# HTTP proxy policy for template sync}
+    locations: ${10:# List of locations the entity should be assigned to}
+    lock: ${11:# Lock imported templates}
+    negate: ${12:# Negate the filter condition}
+    organizations: ${13:# List of organizations the entity should be assigned to}
+    password: ${14:# Password of the user accessing the Foreman server}
+    prefix: ${15:# Adds specified string to beginning of all imported templates that do not yet have that prefix}
+    repo: ${16:# Filesystem path or repo (with protocol), for example /tmp/dir or git://example}
+    server_url: ${17:# URL of the Foreman server}
+    use_gssapi: ${18:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${19:# Username accessing the Foreman server}
+    validate_certs: ${20:# Whether or not to verify the TLS certificates of the Foreman server}
+    verbose: ${21:# Add template reports to the output}
   tags:
     - theforeman
     - foreman

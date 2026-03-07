@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Apply hotfixes on StorageGRID}
+  netapp.storagegrid.na_sg_grid_hotfix:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    file_path: ${4:# The path to the software update file}
+    passphrase: ${5:# The provisioning passphrase}
+    state: ${6:# The hotfix will start applying if present}
+    timeout: ${7:# The time in seconds to wait for the software update to complete}
+    type: ${8:# the type of software update to deploy}
+    validate_certs: ${9:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_hotfix]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_hotfix</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Apply hotfixes on StorageGRID</description>
+</snippet>

@@ -2,16 +2,18 @@
   <content><![CDATA[- name: ${1:Manage User Groups}
   theforeman.foreman.usergroup:
     admin: ${2:# Whether or not the users in this group are administrators}
-    name: ${3:# Name of the group}
-    password: ${4:# Password of the user accessing the Foreman server}
-    roles: ${5:# List of roles assigned to the group}
-    server_url: ${6:# URL of the Foreman server}
-    state: ${7:# State of the entity}
-    updated_name: ${8:# New user group name}
-    usergroups: ${9:# List of other groups assigned to the group}
-    username: ${10:# Username accessing the Foreman server}
-    users: ${11:# List of users assigned to the group}
-    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${3:# PEM formatted file that contains a CA certificate to be used for validation}
+    name: ${4:# Name of the group}
+    password: ${5:# Password of the user accessing the Foreman server}
+    roles: ${6:# List of roles assigned to the group}
+    server_url: ${7:# URL of the Foreman server}
+    state: ${8:# State of the entity}
+    updated_name: ${9:# New user group name}
+    use_gssapi: ${10:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    usergroups: ${11:# List of other groups assigned to the group}
+    username: ${12:# Username accessing the Foreman server}
+    users: ${13:# List of users assigned to the group}
+    validate_certs: ${14:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

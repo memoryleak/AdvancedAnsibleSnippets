@@ -9,16 +9,17 @@
     client_cert: ${7:# Path to the client's TLS certificate file}
     client_key: ${8:# Path to the client's TLS key file}
     compose: ${9:# List of compose definitions}
-    docker_cli: ${10:# Path to the Docker CLI}
-    docker_host: ${11:# The URL or Unix socket path used to connect to the Docker API}
-    name: ${12:# Stack name}
-    prune: ${13:# If true will add the C(--prune) option to the C(docker stack deploy) command}
-    resolve_image: ${14:# If set will add the C(--resolve-image) option to the C(docker stack deploy) command}
-    state: ${15:# Service state}
-    tls: ${16:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
-    tls_hostname: ${17:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
-    validate_certs: ${18:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
-    with_registry_auth: ${19:# If true will add the C(--with-registry-auth) option to the C(docker stack deploy) command}
+    detach: ${10:# If V(false), the C(--detach=false) option is added to the C(docker stack deploy) command, allowing Docker to wait for tasks to converge before exiting}
+    docker_cli: ${11:# Path to the Docker CLI}
+    docker_host: ${12:# The URL or Unix socket path used to connect to the Docker API}
+    name: ${13:# Stack name}
+    prune: ${14:# If true will add the C(--prune) option to the C(docker stack deploy) command}
+    resolve_image: ${15:# If set will add the C(--resolve-image) option to the C(docker stack deploy) command}
+    state: ${16:# Service state}
+    tls: ${17:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${18:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    validate_certs: ${19:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    with_registry_auth: ${20:# If true will add the C(--with-registry-auth) option to the C(docker stack deploy) command}
   tags:
     - community
     - docker

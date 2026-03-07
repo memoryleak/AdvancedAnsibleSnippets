@@ -1,23 +1,23 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Enable or disable the syslog on iDRAC}
+  <content><![CDATA[- name: ${1:Configure the iDRAC attributes}
   dellemc.openmanage.idrac_syslog:
     ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
-    idrac_ip: ${3:# iDRAC IP Address}
-    idrac_password: ${4:# iDRAC user password}
-    idrac_port: ${5:# iDRAC port}
-    idrac_user: ${6:# iDRAC username}
-    share_mnt: ${7:# Local mount path of the network share with read-write permission for ansible user}
-    share_name: ${8:# Network share or a local path}
-    share_password: ${9:# Network share user password}
-    share_user: ${10:# Network share user name}
-    syslog: ${11:# Enables or disables an iDRAC syslog}
-    timeout: ${12:# The socket level timeout in seconds}
-    validate_certs: ${13:# If C(false), the SSL certificates will not be validated}
+    idrac_attributes: ${3:# Dictionary of iDRAC attributes and value}
+    idrac_ip: ${4:# iDRAC IP Address}
+    idrac_password: ${5:# iDRAC user password}
+    idrac_port: ${6:# iDRAC port}
+    idrac_user: ${7:# iDRAC username}
+    lifecycle_controller_attributes: ${8:# Dictionary of Lifecycle Controller attributes and value}
+    resource_id: ${9:# Redfish ID of the resource}
+    system_attributes: ${10:# Dictionary of System attributes and value}
+    timeout: ${11:# The socket level timeout in seconds}
+    validate_certs: ${12:# If C(false), the SSL certificates will not be validated}
+    x_auth_token: ${13:# Authentication token}
   tags:
     - dellemc
     - openmanage
     - idrac_syslog]]></content>
   <tabTrigger>dellemc.openmanage.idrac_syslog</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Enable or disable the syslog on iDRAC</description>
+  <description>Configure the iDRAC attributes</description>
 </snippet>

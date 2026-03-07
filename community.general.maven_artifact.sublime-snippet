@@ -3,20 +3,20 @@
   community.general.maven_artifact:
     artifact_id: ${2:# The maven artifactId coordinate}
     attributes: ${3:# The attributes the resulting filesystem object should have}
-    checksum_alg: ${4:# If V(md5), checksums will use the MD5 algorithm}
+    checksum_alg: ${4:# If V(md5), checksums use the MD5 algorithm}
     classifier: ${5:# The maven classifier coordinate}
     client_cert: ${6:# PEM formatted certificate chain file to be used for SSL client authentication}
     client_key: ${7:# PEM formatted file that contains your private key to be used for SSL client authentication}
     dest: ${8:# The path where the artifact should be written to}
     directory_mode: ${9:# Filesystem permission mode applied recursively to O(dest) when it is a directory}
     extension: ${10:# The maven type/extension coordinate}
-    force_basic_auth: ${11:# httplib2, the library used by the uri module only sends authentication information when a webservice responds to an initial request with a 401 status}
-    group: ${12:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    force_basic_auth: ${11:# C(httplib2), the library used by the URI module only sends authentication information when a webservice responds to an initial request with a 401 status}
+    group: ${12:# Name of the group that should own the filesystem object, as would be fed to C(chown)}
     group_id: ${13:# The Maven groupId coordinate}
     headers: ${14:# Add custom HTTP headers to a request in hash/dict format}
-    keep_name: ${15:# If V(true), the downloaded artifact's name is preserved, i}
+    keep_name: ${15:# If V(true), the downloaded artifact's name is preserved, in other words the version number remains part of it}
     mode: ${16:# The permissions the resulting filesystem object should have}
-    owner: ${17:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
+    owner: ${17:# Name of the user that should own the filesystem object, as would be fed to C(chown)}
     password: ${18:# The password to authenticate with to the Maven Repository}
     repository_url: ${19:# The URL of the Maven Repository to download from}
     selevel: ${20:# The level part of the SELinux filesystem object context}
@@ -28,8 +28,8 @@
     unredirected_headers: ${26:# A list of headers that should not be included in the redirection}
     unsafe_writes: ${27:# Influence when to use atomic operation to prevent data corruption or inconsistent reads from the target filesystem object}
     username: ${28:# The username to authenticate as to the Maven Repository}
-    validate_certs: ${29:# If V(false), SSL certificates will not be validated}
-    verify_checksum: ${30:# If V(never), the MD5/SHA1 checksum will never be downloaded and verified}
+    validate_certs: ${29:# If V(false), SSL certificates are not validated}
+    verify_checksum: ${30:# If V(never), the MD5/SHA1 checksum is never downloaded and verified}
     version: ${31:# The maven version coordinate}
     version_by_spec: ${32:# The maven dependency version ranges}
   tags:

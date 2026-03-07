@@ -1,0 +1,46 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage MySQL Flexible Server instance}
+  azure.azcollection.azure_rm_mysqlflexibleserver:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    administrator_login: ${4:# The administrator's login name of a server}
+    administrator_login_password: ${5:# The password of the administrator login}
+    api_profile: ${6:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${7:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${8:# Controls the source of the credentials to use for authentication}
+    availability_zone: ${9:# Availability Zone information of the server}
+    backup: ${10:# Backup related properties of a server}
+    cert_validation_mode: ${11:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${12:# Azure client ID}
+    cloud_environment: ${13:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    disable_instance_discovery: ${14:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    high_availability: ${15:# High availability related properties of a server}
+    location: ${16:# Resource location}
+    log_mode: ${17:# Parent argument}
+    log_path: ${18:# Parent argument}
+    name: ${19:# The name of the server}
+    network: ${20:# Network related properties of a server}
+    password: ${21:# Active Directory user password}
+    profile: ${22:# Security profile found in ~/}
+    resource_group: ${23:# The name of the resource group that contains the resource}
+    restore_point_in_time: ${24:# Restore point creation time (ISO8601 format), specifying the time to restore from}
+    secret: ${25:# Azure client secret}
+    sku: ${26:# The SKU (pricing tier) of the server}
+    source_server_resource_id: ${27:# The source MySQL server id}
+    state: ${28:# Assert the state of the MySQL Flexible Server}
+    status: ${29:# Set the server state}
+    storage: ${30:# Storage Profile properties of a server}
+    subscription_id: ${31:# Your Azure subscription Id}
+    tags: ${32:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${33:# Azure tenant ID}
+    thumbprint: ${34:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    version: ${35:# Server version}
+    x509_certificate_path: ${36:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_mysqlflexibleserver]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_mysqlflexibleserver</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage MySQL Flexible Server instance</description>
+</snippet>

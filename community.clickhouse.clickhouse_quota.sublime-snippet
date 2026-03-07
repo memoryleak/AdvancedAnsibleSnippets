@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates or removes a ClickHouse quota}
+  community.clickhouse.clickhouse_quota:
+    apply_to: ${2:# Apply this quota to the following list of users/roles dependent on O(apply_to_mode)}
+    apply_to_mode: ${3:# When V(listed_only) (default), the quota will only apply to the users/roles specified in O(apply_to)}
+    client_kwargs: ${4:# Any additional keyword arguments you want to pass to the Client interface when instantiating its object}
+    cluster: ${5:# Run the command on all cluster hosts}
+    keyed_by: ${6:# Keys the quota by the specified key (default is to not key)}
+    limits: ${7:# The limits that this quota should enforce}
+    login_db: ${8:# The same as the V(Client(database='}
+    login_host: ${9:# The same as the V(Client(host='}
+    login_password: ${10:# The same as the V(Client(password='}
+    login_port: ${11:# The same as the V(Client(port='}
+    login_user: ${12:# The same as the V(Client(user='}
+    name: ${13:# Quota name to add or remove}
+    state: ${14:# Quota state}
+  tags:
+    - community
+    - clickhouse
+    - clickhouse_quota]]></content>
+  <tabTrigger>community.clickhouse.clickhouse_quota</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates or removes a ClickHouse quota</description>
+</snippet>

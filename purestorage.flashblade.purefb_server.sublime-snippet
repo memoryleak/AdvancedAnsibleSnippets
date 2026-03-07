@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FlashBlade servers}
+  purestorage.flashblade.purefb_server:
+    api_token: ${2:# FlashBlade API token for admin privileged user}
+    directory_service: ${3:# The directory service configuration to be used for this server}
+    disable_warnings: ${4:# Disable insecure certificate warnings}
+    dns: ${5:# The DNS configuration to be used for this server}
+    fb_url: ${6:# FlashBlade management IP address or Hostname}
+    name: ${7:# Name of the server}
+    state: ${8:# Define whether the Object Store Virtual Host should be added or deleted}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_server]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_server</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FlashBlade servers</description>
+</snippet>

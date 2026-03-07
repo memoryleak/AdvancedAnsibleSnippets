@@ -5,19 +5,23 @@
     auth_token: ${3:# The authorization token for the API request}
     binding_mode: ${4:# Binding mode to restrict accessibility of the load balancer endpoint}
     ca_bundle: ${5:# Intermediate CA certificate bundle in concatenated PEM-encoding}
-    default_service_type: ${6:# The type of service to proxy through the load balancer}
-    display_name: ${7:# A display name for the configuration}
-    enable_ipv4: ${8:# Indicates whether to listen for connections on IPv4}
-    enable_ipv6: ${9:# Indicates whether to listen for connections on IPv6}
-    gateway_id: ${10:# ID of the load balancer endpoint}
-    ha_groups: ${11:# A set of StorageGRID HA Groups by name or UUID to bind the load balancer endpoint to}
-    node_interfaces: ${12:# A set of StorageGRID node interfaces to bind the load balancer endpoint to}
-    port: ${13:# The TCP port to serve traffic on}
-    private_key: ${14:# Certficate private key in PEM-encoding}
-    secure: ${15:# Whether the load balancer endpoint serves HTTP or HTTPS traffic}
-    server_certificate: ${16:# X}
-    state: ${17:# Whether the specified load balancer endpoint should be configured}
-    validate_certs: ${18:# Should https certificates be validated?}
+    closed_on_untrusted_client_network: ${6:# Whether to close the port on an untrusted Client Network}
+    default_service_type: ${7:# The type of service to proxy through the load balancer}
+    display_name: ${8:# A display name for the configuration}
+    enable_grid_manager: ${9:# Whether to use the port bind for grid manager traffic}
+    enable_ipv4: ${10:# Indicates whether to listen for connections on IPv4}
+    enable_ipv6: ${11:# Indicates whether to listen for connections on IPv6}
+    enable_tenant_manager: ${12:# Whether to use the port bind for tenant manager traffic}
+    gateway_id: ${13:# ID of the load balancer endpoint}
+    ha_groups: ${14:# A set of StorageGRID HA Groups by name or UUID to bind the load balancer endpoint to}
+    node_interfaces: ${15:# A set of StorageGRID node interfaces to bind the load balancer endpoint to}
+    node_type: ${16:# A list of node types to bind to}
+    port: ${17:# The TCP port to serve traffic on}
+    private_key: ${18:# Certficate private key in PEM-encoding}
+    secure: ${19:# Whether the load balancer endpoint serves HTTP or HTTPS traffic}
+    server_certificate: ${20:# X}
+    state: ${21:# Whether the specified load balancer endpoint should be configured}
+    validate_certs: ${22:# Should https certificates be validated?}
   tags:
     - netapp
     - storagegrid

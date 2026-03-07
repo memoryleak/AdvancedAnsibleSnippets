@@ -3,11 +3,14 @@
   community.general.idrac_redfish_info:
     auth_token: ${2:# Security token for authenticating to iDRAC}
     baseuri: ${3:# Base URI of iDRAC}
-    category: ${4:# Category to execute on iDRAC}
-    command: ${5:# List of commands to execute on iDRAC}
-    password: ${6:# Password for authenticating to iDRAC}
-    timeout: ${7:# Timeout in seconds for HTTP requests to iDRAC}
-    username: ${8:# Username for authenticating to iDRAC}
+    ca_path: ${4:# PEM formatted file that contains a CA certificate to be used for validation}
+    category: ${5:# Category to execute on iDRAC}
+    ciphers: ${6:# TLS/SSL Ciphers to use for the request}
+    command: ${7:# List of commands to execute on iDRAC}
+    password: ${8:# Password for authenticating to iDRAC}
+    timeout: ${9:# Timeout in seconds for HTTP requests to iDRAC}
+    username: ${10:# Username for authenticating to iDRAC}
+    validate_certs: ${11:# If V(false), TLS/SSL certificates are not validated}
   tags:
     - community
     - general

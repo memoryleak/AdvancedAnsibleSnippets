@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates or removes a ClickHouse user using the clickhouse-driver Client interface}
+  community.clickhouse.clickhouse_user:
+    client_kwargs: ${2:# Any additional keyword arguments you want to pass to the Client interface when instantiating its object}
+    cluster: ${3:# Run the command on all cluster hosts}
+    default_roles: ${4:# Sets specified roles as default for the user}
+    default_roles_mode: ${5:# When C(listed_only) (default), sets only roles specified in O(default_roles) as user default roles}
+    login_db: ${6:# The same as the V(Client(database='}
+    login_host: ${7:# The same as the V(Client(host='}
+    login_password: ${8:# The same as the V(Client(password='}
+    login_port: ${9:# The same as the V(Client(port='}
+    login_user: ${10:# The same as the V(Client(user='}
+    name: ${11:# User name to add or remove}
+    password: ${12:# Set the user's password}
+    roles: ${13:# Grants specified roles to the user}
+    roles_mode: ${14:# When C(listed_only) (default), makes the user a member of only roles specified in O(roles)}
+    settings: ${15:# Settings with their constraints applied by default at user login}
+    state: ${16:# User state}
+    type_password: ${17:# The type of password being transmitted(plaintext_password, sha256_password, sha256_hash}
+    update_password: ${18:# If C(on_create), will set the password only for newly created users}
+    user_hosts: ${19:# Host restrictions to apply to the user}
+  tags:
+    - community
+    - clickhouse
+    - clickhouse_user]]></content>
+  <tabTrigger>community.clickhouse.clickhouse_user</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates or removes a ClickHouse user using the clickhouse-driver Client interface</description>
+</snippet>

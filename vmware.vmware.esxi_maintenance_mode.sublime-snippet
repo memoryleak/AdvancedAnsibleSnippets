@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage an ESXi hosts maintenance mode setting in vCenter}
+  vmware.vmware.esxi_maintenance_mode:
+    enable_maintenance_mode: ${2:# If true, the ESXi host will be put into maintenance mode}
+    esxi_host_name: ${3:# Name of the host as defined in vCenter}
+    evacuate: ${4:# If set to V(true), evacuate all powered off VMs}
+    hostname: ${5:# The hostname or IP address of the vSphere vCenter server}
+    password: ${6:# The password of the vSphere vCenter server}
+    port: ${7:# The port number of the vSphere vCenter server}
+    proxy_host: ${8:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${9:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    timeout: ${10:# Specify a timeout for the operation}
+    username: ${11:# The username of the vSphere vCenter server}
+    validate_certs: ${12:# Allows connection when SSL certificates are not valid}
+    vsan_compliance_mode: ${13:# Specify which VSAN compliant mode to enter}
+  tags:
+    - vmware
+    - vmware
+    - esxi_maintenance_mode]]></content>
+  <tabTrigger>vmware.vmware.esxi_maintenance_mode</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage an ESXi hosts maintenance mode setting in vCenter</description>
+</snippet>

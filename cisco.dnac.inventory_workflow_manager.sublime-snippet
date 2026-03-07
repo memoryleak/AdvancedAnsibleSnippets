@@ -1,8 +1,8 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Resource module for Network Device}
+  <content><![CDATA[- name: ${1:Comprehensive network device inventory management for Cisco Catalyst Center}
   cisco.dnac.inventory_workflow_manager:
-    config: ${2:# List of devices with credentails to perform Add/Update/Delete/Resync operation}
-    config_verify: ${3:# Set to True to verify the Cisco Catalyst Center config after applying the playbook config}
+    config: ${2:# List of device configurations for inventory operations}
+    config_verify: ${3:# Enable verification of Cisco Catalyst Center configuration after applying playbook changes}
     dnac_api_task_timeout: ${4:# Defines the timeout in seconds for API calls to retrieve task details}
     dnac_debug: ${5:# Indicates whether debugging is enabled in the Cisco Catalyst Center SDK}
     dnac_host: ${6:# The hostname of the Cisco Catalyst Center}
@@ -16,7 +16,7 @@
     dnac_username: ${14:# The username for authentication at the Cisco Catalyst Center}
     dnac_verify: ${15:# Flag to enable or disable SSL certificate verification}
     dnac_version: ${16:# Specifies the version of the Cisco Catalyst Center that the SDK should use}
-    state: ${17:# The state of Cisco Catalyst Center after module completion}
+    state: ${17:# Desired state of the device inventory after module execution}
     validate_response_schema: ${18:# Flag for Cisco Catalyst Center SDK to enable the validation of request bodies against a JSON schema}
   tags:
     - cisco
@@ -24,5 +24,5 @@
     - inventory_workflow_manager]]></content>
   <tabTrigger>cisco.dnac.inventory_workflow_manager</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Resource module for Network Device</description>
+  <description>Comprehensive network device inventory management for Cisco Catalyst Center</description>
 </snippet>

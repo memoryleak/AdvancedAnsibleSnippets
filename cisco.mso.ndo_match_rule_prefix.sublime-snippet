@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Match Prefix List on Cisco Nexus Dashboard Orchestrator (NDO)}
+  cisco.mso.ndo_match_rule_prefix:
+    aggregate: ${2:# The aggregate flag enabling route aggregation}
+    description: ${3:# The description of the Match Prefix}
+    from_prefix: ${4:# The subnet value from which to aggregate}
+    host: ${5:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${6:# The login domain name to use for authentication}
+    match_rule_policy: ${7:# The name of the Match Rule Policy}
+    match_rule_policy_uuid: ${8:# The UUID of the Match Rule Policy}
+    output_level: ${9:# Influence the output of this MSO module}
+    password: ${10:# The password to use for authentication}
+    port: ${11:# Port number to be used for the REST connection}
+    prefix: ${12:# The Prefix IP to match}
+    state: ${13:# Use C(absent) for removing}
+    template: ${14:# The name of the template}
+    template_id: ${15:# The ID of the template}
+    timeout: ${16:# The socket level timeout in seconds}
+    to_prefix: ${17:# The subnet value to which to aggregate}
+    use_proxy: ${18:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${19:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${20:# The username to use for authentication}
+    validate_certs: ${21:# If C(false), SSL certificates will not be validated}
+  tags:
+    - cisco
+    - mso
+    - ndo_match_rule_prefix]]></content>
+  <tabTrigger>cisco.mso.ndo_match_rule_prefix</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Match Prefix List on Cisco Nexus Dashboard Orchestrator (NDO)</description>
+</snippet>

@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages ldap-group objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_ldap_group:
+    account_unit: ${2:# LDAP account unit of the group}
+    account_unit_branch: ${3:# Branch of the selected LDAP Account Unit}
+    apply_filter_for_dynamic_group: ${4:# Indicate whether to apply LDAP filter for dynamic group}
+    auto_publish_session: ${5:# Publish the current session if changes have been performed after task completes}
+    color: ${6:# Color of the object}
+    comments: ${7:# Comments string}
+    details_level: ${8:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${9:# Indicates which domains to process the commands on}
+    group_prefix: ${10:# Group name in the selected branch}
+    ignore_errors: ${11:# Apply changes ignoring errors}
+    ignore_warnings: ${12:# Apply changes ignoring warnings}
+    ldap_filter: ${13:# LDAP filter for the dynamic group}
+    name: ${14:# Object name}
+    scope: ${15:# Group's scope}
+    state: ${16:# State of the access rule (present or absent)}
+    sub_tree_prefix: ${17:# Sub tree prefix of the selected branch}
+    tags: ${18:# Collection of tag identifiers}
+    version: ${19:# Version of checkpoint}
+    wait_for_task: ${20:# Wait for the task to end}
+    wait_for_task_timeout: ${21:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_ldap_group]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_ldap_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages ldap-group objects on Checkpoint over Web Services API</description>
+</snippet>

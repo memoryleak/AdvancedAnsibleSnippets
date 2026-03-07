@@ -1,10 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Get status info}
   theforeman.foreman.status_info:
-    password: ${2:# Password of the user accessing the Foreman server}
-    server_url: ${3:# URL of the Foreman server}
-    username: ${4:# Username accessing the Foreman server}
-    validate_certs: ${5:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    password: ${3:# Password of the user accessing the Foreman server}
+    server_url: ${4:# URL of the Foreman server}
+    use_gssapi: ${5:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${6:# Username accessing the Foreman server}
+    validate_certs: ${7:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

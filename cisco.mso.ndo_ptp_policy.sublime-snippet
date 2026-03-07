@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage PTP Policies on Cisco Nexus Dashboard Orchestrator (NDO)}
+  cisco.mso.ndo_ptp_policy:
+    admin_state: ${2:# The administrative state of the PTP Policy}
+    description: ${3:# The description of the PTP Policy}
+    fabric_announce_interval: ${4:# Fabric announce interval for the PTP policy}
+    fabric_announce_timeout: ${5:# Fabric announce timeout for the PTP policy}
+    fabric_delay_interval: ${6:# Fabric delay interval for the PTP policy}
+    fabric_profile_template: ${7:# Fabric profile template for the PTP policy}
+    fabric_sync_interval: ${8:# Fabric synchronization interval for the PTP Policy}
+    global_domain: ${9:# Global domain number for the PTP Policy}
+    global_priority1: ${10:# Priority 1 for the PTP Policy}
+    global_priority2: ${11:# Priority 2 for the PTP Policy}
+    host: ${12:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    login_domain: ${13:# The login domain name to use for authentication}
+    output_level: ${14:# Influence the output of this MSO module}
+    password: ${15:# The password to use for authentication}
+    port: ${16:# Port number to be used for the REST connection}
+    ptp_policy: ${17:# The name of the PTP policy}
+    ptp_policy_uuid: ${18:# The UUID of the PTP policy}
+    state: ${19:# Use C(absent) for removing}
+    template: ${20:# The name of the template}
+    timeout: ${21:# The socket level timeout in seconds}
+    use_proxy: ${22:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${23:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${24:# The username to use for authentication}
+    validate_certs: ${25:# If C(false), SSL certificates will not be validated}
+  tags:
+    - cisco
+    - mso
+    - ndo_ptp_policy]]></content>
+  <tabTrigger>cisco.mso.ndo_ptp_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage PTP Policies on Cisco Nexus Dashboard Orchestrator (NDO)</description>
+</snippet>

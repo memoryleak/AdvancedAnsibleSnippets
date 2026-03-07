@@ -1,0 +1,54 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Run command in a new container of a Compose service}
+  community.docker.docker_compose_v2_run:
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    argv: ${3:# The command to execute}
+    build: ${4:# Build image before starting container}
+    ca_path: ${5:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    cap_add: ${6:# Linux capabilities to add to the container}
+    cap_drop: ${7:# Linux capabilities to drop from the container}
+    chdir: ${8:# The directory to run the command in}
+    check_files_existing: ${9:# If set to V(false), the module will not check whether one of the files C(compose}
+    cleanup: ${10:# Automatically remove th econtainer when it exits}
+    cli_context: ${11:# The Docker CLI context to use}
+    client_cert: ${12:# Path to the client's TLS certificate file}
+    client_key: ${13:# Path to the client's TLS key file}
+    command: ${14:# The command to execute}
+    definition: ${15:# Compose file describing one or more services, networks and volumes}
+    detach: ${16:# Whether to run the command synchronously (O(detach=false), default) or asynchronously (O(detach=true))}
+    docker_cli: ${17:# Path to the Docker CLI}
+    docker_host: ${18:# The URL or Unix socket path used to connect to the Docker API}
+    entrypoint: ${19:# Override the entrypoint of the container image}
+    env: ${20:# Dictionary of environment variables with their respective values to be passed to the command ran inside the container}
+    env_files: ${21:# By default environment files are loaded from a C(}
+    files: ${22:# List of Compose file names relative to O(project_src) to be used instead of the main Compose file (C(compose}
+    interactive: ${23:# Whether to keep STDIN open even if not attached}
+    labels: ${24:# Add or override labels to the container}
+    name: ${25:# Assign a name to the container}
+    no_deps: ${26:# Do not start linked services}
+    profiles: ${27:# List of profiles to enable when starting services}
+    project_name: ${28:# Provide a project name}
+    project_src: ${29:# Path to a directory containing a Compose file (C(compose}
+    publish: ${30:# Publish a container's port(s) to the host}
+    quiet_pull: ${31:# Pull without printing progress information}
+    remove_orphans: ${32:# Remove containers for services not defined in the Compose file}
+    service: ${33:# The service to run the command in}
+    service_ports: ${34:# Run command with all service's ports enabled and mapped to the host}
+    stdin: ${35:# Set the stdin of the command directly to the specified value}
+    stdin_add_newline: ${36:# If set to V(true), appends a newline to O(stdin)}
+    strip_empty_ends: ${37:# Strip empty lines from the end of stdout/stderr in result}
+    tls: ${38:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${39:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    tty: ${40:# Whether to allocate a TTY}
+    use_aliases: ${41:# Use the service's network C(useAliases) in the network(s) the container connects to}
+    user: ${42:# If specified, the user to execute this command with}
+    validate_certs: ${43:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+    volumes: ${44:# Bind mount one or more volumes}
+  tags:
+    - community
+    - docker
+    - docker_compose_v2_run]]></content>
+  <tabTrigger>community.docker.docker_compose_v2_run</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Run command in a new container of a Compose service</description>
+</snippet>

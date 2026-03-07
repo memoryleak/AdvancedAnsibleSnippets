@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Snapshots on Dell PowerFlex}
+  dellemc.powerflex.snapshot_v2:
+    desired_retention: ${2:# The retention value for the Snapshot}
+    hostname: ${3:# IP or FQDN of the PowerFlex host}
+    password: ${4:# The password of the PowerFlex host}
+    port: ${5:# Port number through which communication happens with PowerFlex host}
+    remove_mode: ${6:# Removal mode for the snapshot}
+    retention_unit: ${7:# The unit for retention}
+    snapshot_id: ${8:# The ID of the Snapshot}
+    snapshot_name: ${9:# The name of the snapshot}
+    snapshot_new_name: ${10:# New name of the snapshot}
+    state: ${11:# State of the snapshot}
+    timeout: ${12:# Time after which connection will get terminated}
+    username: ${13:# The username of the PowerFlex host}
+    validate_certs: ${14:# Boolean variable to specify whether or not to validate SSL certificate}
+    vol_id: ${15:# The ID of the volume}
+    vol_name: ${16:# The name of the volume for which snapshot will be taken}
+  tags:
+    - dellemc
+    - powerflex
+    - snapshot_v2]]></content>
+  <tabTrigger>dellemc.powerflex.snapshot_v2</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Snapshots on Dell PowerFlex</description>
+</snippet>

@@ -2,22 +2,25 @@
   <content><![CDATA[- name: ${1:Invoke Remote Execution Jobs}
   theforeman.foreman.job_invocation:
     bookmark: ${2:# Bookmark to infer the search query from}
-    command: ${3:# Command to be executed on host}
-    concurrency_control: ${4:# Control concurrency level and distribution over time}
-    description_format: ${5:# Override the description format from the template for this invocation only}
-    execution_timeout_interval: ${6:# Override the timeout interval from the template for this invocation only}
-    inputs: ${7:# Inputs to use}
-    job_template: ${8:# Job template to execute}
-    password: ${9:# Password of the user accessing the Foreman server}
-    randomized_ordering: ${10:# Whether to order the selected hosts randomly}
-    recurrence: ${11:# Schedule a recurring job}
-    scheduling: ${12:# Schedule the job to start at a later time}
-    search_query: ${13:# Search query to identify hosts}
-    server_url: ${14:# URL of the Foreman server}
-    ssh: ${15:# ssh related options}
-    targeting_type: ${16:# Dynamic query updates the search results before execution (useful for scheduled jobs)}
-    username: ${17:# Username accessing the Foreman server}
-    validate_certs: ${18:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${3:# PEM formatted file that contains a CA certificate to be used for validation}
+    command: ${4:# Command to be executed on host}
+    concurrency_control: ${5:# Control concurrency level and distribution over time}
+    description_format: ${6:# Override the description format from the template for this invocation only}
+    execution_timeout_interval: ${7:# Override the timeout interval from the template for this invocation only}
+    feature: ${8:# Feature label that should be triggered}
+    inputs: ${9:# Inputs to use}
+    job_template: ${10:# Job template to execute}
+    password: ${11:# Password of the user accessing the Foreman server}
+    randomized_ordering: ${12:# Whether to order the selected hosts randomly}
+    recurrence: ${13:# Schedule a recurring job}
+    scheduling: ${14:# Schedule the job to start at a later time}
+    search_query: ${15:# Search query to identify hosts}
+    server_url: ${16:# URL of the Foreman server}
+    ssh: ${17:# ssh related options}
+    targeting_type: ${18:# Dynamic query updates the search results before execution (useful for scheduled jobs)}
+    use_gssapi: ${19:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${20:# Username accessing the Foreman server}
+    validate_certs: ${21:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

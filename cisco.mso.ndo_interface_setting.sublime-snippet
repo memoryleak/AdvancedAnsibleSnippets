@@ -1,0 +1,51 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Interface Policy Groups on Cisco Nexus Dashboard Orchestrator (NDO)}
+  cisco.mso.ndo_interface_setting:
+    access_macsec_policy: ${2:# The access MACsec policy}
+    auto_negotiation: ${3:# The auto negotiation state of the port(s) in the interface policy group}
+    cdp_admin_state: ${4:# The CDP admin state enables Cisco Discovery Protocol (CDP) on the interface}
+    controls: ${5:# The port-channel control flags of the interface policy group}
+    description: ${6:# The description of the interface policy group}
+    domains: ${7:# The domains with which you want to associate this interface policy}
+    host: ${8:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    interface_type: ${9:# The type of the interface policy group}
+    l2_interface_qinq: ${10:# The QinQ state for the port(s) in the interface policy group to define how to map double-tagged VLAN traffic}
+    l2_interface_reflective_relay: ${11:# Enables or disables reflective relay (802}
+    link_level_bring_up_delay: ${12:# The time in milliseconds that the decision feedback equalizer (DFE) tuning is delayed when a port is coming up}
+    link_level_debounce_interval: ${13:# The debounce interval of the link level in milliseconds}
+    link_level_fec: ${14:# The type of Forwarding Error Correction (FEC) used by the port(s) in the interface policy group}
+    lldp: ${15:# The Link Layer Discovery Protocol (LLDP) configuration of the interface policy group}
+    llfc_receive_state: ${16:# The LLFC receive state allows LLFC packets to be received by the interface}
+    llfc_transmit_state: ${17:# The LLFC transmit state allows Link Level Flow Control (LLFC) packets to be sent from the interface}
+    load_balance_hashing: ${18:# The IP header information used by the port-channel load balance hashing algorithm of the interface policy group}
+    login_domain: ${19:# The login domain name to use for authentication}
+    max_links: ${20:# The maximum number of links in a port-channel of the interface policy group}
+    mcp: ${21:# The MisCabling Protocol (MCP) settings}
+    min_links: ${22:# The minimum number of active links in a port-channel of the interface policy group}
+    name: ${23:# The name of the interface policy group}
+    output_level: ${24:# Influence the output of this MSO module}
+    password: ${25:# The password to use for authentication}
+    pfc_admin_state: ${26:# The Priority Flow Control (PFC) admin state}
+    port: ${27:# Port number to be used for the REST connection}
+    port_channel_mode: ${28:# The port channel mode of the interface policy group}
+    speed: ${29:# The port speed for the port(s) associated with the interface policy group}
+    state: ${30:# Use C(absent) for removing}
+    stp_bpdu_filter: ${31:# Enabling the Bridge Protocol Data Unit (BPDU) filter prevents any BPDUs on the port(s)}
+    stp_bpdu_guard: ${32:# Enabling the STP BPDU guard shutdown the port(s) by placing them in 'error-disable' mode when BPDUs are received}
+    synce: ${33:# The syncE policy assigned to the interface policy group}
+    template: ${34:# The name of the template}
+    timeout: ${35:# The socket level timeout in seconds}
+    use_proxy: ${36:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${37:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${38:# The username to use for authentication}
+    uuid: ${39:# The UUID of the interface policy group}
+    validate_certs: ${40:# If C(false), SSL certificates will not be validated}
+    vlan_scope: ${41:# The scope of the VLAN encapsulation of the port(s) in the interface policy group}
+  tags:
+    - cisco
+    - mso
+    - ndo_interface_setting]]></content>
+  <tabTrigger>cisco.mso.ndo_interface_setting</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Interface Policy Groups on Cisco Nexus Dashboard Orchestrator (NDO)</description>
+</snippet>

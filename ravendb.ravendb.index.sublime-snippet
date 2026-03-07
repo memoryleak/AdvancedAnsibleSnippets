@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage RavenDB indexes}
+  ravendb.ravendb.index:
+    ca_cert_path: ${2:# Path to a trusted CA certificate file to verify the RavenDB server's certificate}
+    certificate_path: ${3:# Path to a client certificate (PEM format) for secured communication}
+    cluster_wide: ${4:# Whether to apply enable/disable operations cluster-wide}
+    database_name: ${5:# Name of the database}
+    index_configuration: ${6:# Per-index configuration key/value pairs to reconcile}
+    index_definition: ${7:# Dictionary defining the index (C(map) list and optional C(reduce) string)}
+    index_name: ${8:# Name of the index to create, delete, or modify}
+    mode: ${9:# Operational mode to apply to an existing index (one of enable/disable/pause/resume/reset)}
+    state: ${10:# Desired state of the index}
+    url: ${11:# URL of the RavenDB server}
+  tags:
+    - ravendb
+    - ravendb
+    - index]]></content>
+  <tabTrigger>ravendb.ravendb.index</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage RavenDB indexes</description>
+</snippet>

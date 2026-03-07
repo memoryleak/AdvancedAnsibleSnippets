@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:IP Pool configuration for Cisco Intersight}
+  cisco.intersight.intersight_ip_pool:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    description: ${5:# The user-defined description of the IP Pool}
+    enable_block_level_subnet_config: ${6:# Determines if the 'Netmask', 'Gateway', 'PrimaryDns' and 'SecondaryDns' is globally defined or specified per IPv4 block}
+    ipv4_blocks: ${7:# List of the IPv4 blocks}
+    ipv4_config: ${8:# Global definition of IPv4 'Netmask', 'Gateway', 'PrimaryDns' and 'SecondaryDns'}
+    ipv6_blocks: ${9:# Define the IPv6 blocks}
+    ipv6_config: ${10:# Global definition of IPv6 'Prefix', 'Gateway', 'PrimaryDns' and 'SecondaryDns'}
+    name: ${11:# The name assigned to the IP Pool}
+    organization: ${12:# The name of the Organization this resource is assigned to}
+    state: ${13:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${14:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${15:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${16:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_ip_pool]]></content>
+  <tabTrigger>cisco.intersight.intersight_ip_pool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>IP Pool configuration for Cisco Intersight</description>
+</snippet>

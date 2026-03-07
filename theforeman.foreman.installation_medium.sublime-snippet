@@ -1,18 +1,20 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Installation Media}
   theforeman.foreman.installation_medium:
-    locations: ${2:# List of locations the entity should be assigned to}
-    name: ${3:# The full installation medium name}
-    operatingsystems: ${4:# List of operating systems the entity should be assigned to}
-    organizations: ${5:# List of organizations the entity should be assigned to}
-    os_family: ${6:# The OS family the template shall be assigned with}
-    password: ${7:# Password of the user accessing the Foreman server}
-    path: ${8:# Path to the installation medium}
-    server_url: ${9:# URL of the Foreman server}
-    state: ${10:# State of the entity}
-    updated_name: ${11:# New full installation medium name}
-    username: ${12:# Username accessing the Foreman server}
-    validate_certs: ${13:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    locations: ${3:# List of locations the entity should be assigned to}
+    name: ${4:# The full installation medium name}
+    operatingsystems: ${5:# List of operating systems the entity should be assigned to}
+    organizations: ${6:# List of organizations the entity should be assigned to}
+    os_family: ${7:# The OS family the template shall be assigned with}
+    password: ${8:# Password of the user accessing the Foreman server}
+    path: ${9:# Path to the installation medium}
+    server_url: ${10:# URL of the Foreman server}
+    state: ${11:# State of the entity}
+    updated_name: ${12:# New full installation medium name}
+    use_gssapi: ${13:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${14:# Username accessing the Foreman server}
+    validate_certs: ${15:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieve information about LXD storage pools}
+  community.general.lxd_storage_pool_info:
+    client_cert: ${2:# The client certificate file path}
+    client_key: ${3:# The client certificate key file path}
+    name: ${4:# Name of a specific storage pool to retrieve information about}
+    project: ${5:# Project of the storage pool}
+    snap_url: ${6:# The Unix domain socket path when LXD is installed by snap package manager}
+    trust_password: ${7:# The client trusted password}
+    type: ${8:# Filter storage pools by driver/type (for example V(dir), V(zfs), V(btrfs), V(lvm), or V(ceph))}
+    url: ${9:# The Unix domain socket path or the https URL for the LXD server}
+  tags:
+    - community
+    - general
+    - lxd_storage_pool_info]]></content>
+  <tabTrigger>community.general.lxd_storage_pool_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieve information about LXD storage pools</description>
+</snippet>

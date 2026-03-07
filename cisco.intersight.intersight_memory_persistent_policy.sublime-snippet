@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Memory Persistent Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_memory_persistent_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    description: ${5:# The user-defined description for the Memory Persistent Policy}
+    enable_goal: ${6:# Enable goal configuration for Persistent Memory Modules}
+    enable_security_passphrase: ${7:# Enable secure passphrase for Persistent Memory Modules}
+    management_mode: ${8:# Configuration management mode for Persistent Memory}
+    memory_mode_percentage: ${9:# Volatile memory percentage for Memory Mode}
+    name: ${10:# The name assigned to the Memory Persistent Policy}
+    namespaces: ${11:# List of Logical Namespaces to be created or modified on the server}
+    organization: ${12:# The name of the Organization this resource is assigned to}
+    persistent_memory_type: ${13:# Type of Persistent Memory configuration}
+    retain_namespaces: ${14:# Retain existing Persistent Memory Namespaces}
+    secure_passphrase: ${15:# Secure passphrase to be applied on the Persistent Memory Modules on the server}
+    state: ${16:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${17:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${18:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${19:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_memory_persistent_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_memory_persistent_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Memory Persistent Policy configuration for Cisco Intersight</description>
+</snippet>

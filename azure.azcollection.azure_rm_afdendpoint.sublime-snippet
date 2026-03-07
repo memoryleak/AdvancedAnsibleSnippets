@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage an Azure Front Door Endpoint to be used with Standard or Premium Frontdoor}
+  azure.azcollection.azure_rm_afdendpoint:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    auto_generated_domain_name_label_scope: ${7:# Indicates the endpoint name reuse scope}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    disable_instance_discovery: ${11:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    enabled_state: ${12:# Whether to enable use of this rule}
+    location: ${13:# Valid Azure location}
+    log_mode: ${14:# Parent argument}
+    log_path: ${15:# Parent argument}
+    name: ${16:# Name of the AFD Endpoint}
+    password: ${17:# Active Directory user password}
+    profile: ${18:# Security profile found in ~/}
+    profile_name: ${19:# Name of the AFD Profile where the Endpoint will be attached to}
+    resource_group: ${20:# Name of a resource group where the Azure Front Door Endpoint exists or will be created}
+    secret: ${21:# Azure client secret}
+    state: ${22:# Assert the state of the AFD Endpoint}
+    subscription_id: ${23:# Your Azure subscription Id}
+    tags: ${24:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${25:# Azure tenant ID}
+    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${27:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_afdendpoint]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_afdendpoint</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage an Azure Front Door Endpoint to be used with Standard or Premium Frontdoor</description>
+</snippet>

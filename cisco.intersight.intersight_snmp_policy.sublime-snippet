@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:SNMP Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_snmp_policy:
+    access_community_string: ${2:# The default SNMPv1, SNMPv2c community name or SNMPv3 username to include on any trap messages sent to the SNMP host}
+    api_key_id: ${3:# Public API Key ID associated with the private key}
+    api_private_key: ${4:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${5:# URI used to access the Intersight API}
+    community_access: ${6:# Controls access to the information in the inventory tables}
+    description: ${7:# The user-defined description for the SNMP Policy}
+    enabled: ${8:# State of the SNMP Policy on the endpoint}
+    engine_input_id: ${9:# User-defined unique identification of the static engine}
+    name: ${10:# The name assigned to the SNMP Policy}
+    organization: ${11:# The name of the Organization this resource is assigned to}
+    snmp_port: ${12:# Port on which Cisco IMC SNMP agent runs}
+    snmp_traps: ${13:# List of SNMP trap destinations}
+    snmp_users: ${14:# List of SNMP users for SNMPv3 authentication}
+    state: ${15:# If C(present), will verify the resource is present and will create if needed}
+    sys_contact: ${16:# Contact person responsible for the SNMP implementation}
+    sys_location: ${17:# Location of the host on which the SNMP agent (server) runs}
+    tags: ${18:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    trap_community: ${19:# SNMP community group used for sending SNMP trap to other devices}
+    use_proxy: ${20:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    v2c_enabled: ${21:# State of the SNMPv2c protocol}
+    v3_enabled: ${22:# State of the SNMPv3 protocol}
+    validate_certs: ${23:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_snmp_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_snmp_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>SNMP Policy configuration for Cisco Intersight</description>
+</snippet>

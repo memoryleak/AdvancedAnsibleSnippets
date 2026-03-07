@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get override-categorization objects facts on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_override_categorization_facts:
+    details_level: ${2:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${3:# Indicates which domains to process the commands on}
+    filter: ${4:# Search expression to filter objects by}
+    limit: ${5:# The maximal number of returned results}
+    offset: ${6:# Number of the results to initially skip}
+    order: ${7:# Sorts the results by search criteria}
+    url: ${8:# The URL for which we want to update the category and risk definitions, the URL and the object name are the same for Override Categorization}
+    version: ${9:# Version of checkpoint}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_override_categorization_facts]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_override_categorization_facts</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get override-categorization objects facts on Checkpoint over Web Services API</description>
+</snippet>

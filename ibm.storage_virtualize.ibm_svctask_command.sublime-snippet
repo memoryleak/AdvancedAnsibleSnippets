@@ -1,13 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module implements SSH Client which helps to run svctask CLI command(s) on IBM Storage Virtualize family systems}
   ibm.storage_virtualize.ibm_svctask_command:
-    clustername: ${2:# The hostname or management IP of the Storage Virtualize system}
+    clustername: ${2:# The hostname or management IP or Partition IP of the Storage Virtualize system}
     command: ${3:# A list containing svctask CLI commands to be executed on storage}
-    key_filename: ${4:# SSH client private key filename}
-    log_path: ${5:# Path of debug log file}
-    password: ${6:# Password for the Storage Virtualize system}
-    username: ${7:# Username for the Storage Virtualize system}
-    usesshkey: ${8:# For key-pair based SSH connection, set this field as 'yes'}
+    domain: ${4:# Domain for the Storage Virtualize storage system}
+    key_filename: ${5:# SSH client private key filename}
+    log_path: ${6:# Path of debug log file}
+    password: ${7:# Password for the Storage Virtualize system}
+    username: ${8:# Username for the Storage Virtualize system}
+    usesshkey: ${9:# For key-pair based SSH connection, set this field as 'yes'}
   tags:
     - ibm
     - storage_virtualize

@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage L3Out Node Static Routes on Cisco Nexus Dashboard Orchestrator (NDO)}
+  cisco.mso.ndo_l3out_node_static_route:
+    administrative_distance: ${2:# The administrative distance of the static route}
+    bfd_tracking: ${3:# Enable BFD tracking for the static route}
+    description: ${4:# The description of the static route}
+    host: ${5:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    l3out: ${6:# The name of the L3Out}
+    l3out_uuid: ${7:# The UUID of the L3Out}
+    login_domain: ${8:# The login domain name to use for authentication}
+    next_hop_null: ${9:# Create a static route to Null0 interface}
+    node_id: ${10:# The ID of the node}
+    output_level: ${11:# Influence the output of this MSO module}
+    password: ${12:# The password to use for authentication}
+    pod_id: ${13:# The pod ID of the node (border leaf switch)}
+    port: ${14:# Port number to be used for the REST connection}
+    prefix: ${15:# The prefix of the static route}
+    state: ${16:# Determines the desired state of the resource}
+    template: ${17:# The name of the template}
+    template_id: ${18:# The ID of the L3Out template}
+    timeout: ${19:# The socket level timeout in seconds}
+    track_policy: ${20:# The track policy to be used}
+    track_policy_uuid: ${21:# The UUID of the track policy to be used}
+    use_proxy: ${22:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${23:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${24:# The username to use for authentication}
+    validate_certs: ${25:# If C(false), SSL certificates will not be validated}
+  tags:
+    - cisco
+    - mso
+    - ndo_l3out_node_static_route]]></content>
+  <tabTrigger>cisco.mso.ndo_l3out_node_static_route</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage L3Out Node Static Routes on Cisco Nexus Dashboard Orchestrator (NDO)</description>
+</snippet>

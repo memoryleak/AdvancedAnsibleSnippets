@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure Infoblox NIOS Adminuser}
+  infoblox.nios_modules.nios_adminuser:
+    admin_groups: ${2:# The names of the Admin Groups to which this Admin User belongs}
+    auth_method: ${3:# Authentication method for the admin user}
+    auth_type: ${4:# Authentication type for the admin user}
+    ca_certificate_issuer: ${5:# The CA certificate that is used for user lookup during authentication}
+    client_certificate_serial_number: ${6:# The serial number of the client certificate}
+    comment: ${7:# Configures a text string comment to be associated with the instance of this object}
+    disable: ${8:# Determines whether the admin user is disabled or not}
+    email: ${9:# Email address of the admin user}
+    enable_certificate_authentication: ${10:# Determines whether the user is allowed to log in only with the certificate}
+    extattrs: ${11:# Allows for the configuration of Extensible Attributes on the instance of the object}
+    name: ${12:# Specifies the adminuser name to add or remove from the system}
+    password: ${13:# The password for the administrator to use when logging in}
+    provider: ${14:# A dict object containing connection details}
+    ssh_keys: ${15:# List of SSH keys for the admin user}
+    state: ${16:# Configures the intended state of the instance of the object on the NIOS server}
+    time_zone: ${17:# The time zone for this admin user}
+    use_ssh_keys: ${18:# Enable/disable the ssh keypair authentication}
+    use_time_zone: ${19:# Use flag for I(time_zone)}
+  tags:
+    - infoblox
+    - nios_modules
+    - nios_adminuser]]></content>
+  <tabTrigger>infoblox.nios_modules.nios_adminuser</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure Infoblox NIOS Adminuser</description>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create an ACME v2 order}
+  community.crypto.acme_certificate_order_create:
+    account_key_content: ${2:# Content of the ACME account RSA or Elliptic Curve key}
+    account_key_passphrase: ${3:# Phassphrase to use to decode the account key}
+    account_key_src: ${4:# Path to a file containing the ACME account RSA or Elliptic Curve key}
+    account_uri: ${5:# If specified, assumes that the account URI is as given}
+    acme_directory: ${6:# The ACME directory to use}
+    acme_version: ${7:# The ACME version of the endpoint}
+    csr: ${8:# File containing the CSR for the new certificate}
+    csr_content: ${9:# Content of the CSR for the new certificate}
+    deactivate_authzs: ${10:# Deactivate authentication objects (authz) when issuing the certificate failed}
+    order_creation_error_strategy: ${11:# Selects the error handling strategy for ACME protocol errors if creating a new ACME order fails}
+    order_creation_max_retries: ${12:# Depending on the strategy selected in O(order_creation_error_strategy), will retry creating new orders for at most the specified amount of times}
+    profile: ${13:# Chose a specific profile for certificate selection}
+    replaces_cert_id: ${14:# If provided, will request the order to replace the certificate identified by this certificate ID according to L(Section 5 of RFC 9773, https://www}
+    request_timeout: ${15:# The time Ansible should wait for a response from the ACME API}
+    select_crypto_backend: ${16:# Determines which crypto backend to use}
+    validate_certs: ${17:# Whether calls to the ACME directory will validate TLS certificates}
+  tags:
+    - community
+    - crypto
+    - acme_certificate_order_create]]></content>
+  <tabTrigger>community.crypto.acme_certificate_order_create</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create an ACME v2 order</description>
+</snippet>

@@ -19,25 +19,27 @@
     ignore_pool_checks: ${17:# only valid when I(disks) option is used}
     is_mirrored: ${18:# Specifies that the new aggregate be mirrored (have two plexes)}
     key_filepath: ${19:# path to SSL client key file}
-    mirror_disks: ${20:# List of mirror disks to use}
-    name: ${21:# The name of the aggregate to manage}
-    nodes: ${22:# Node(s) for the aggregate to be created on}
-    object_store_name: ${23:# Name of the object store configuration attached to the aggregate}
-    ontapi: ${24:# The ontap api version to use}
-    password: ${25:# Password for the specified user}
-    raid_size: ${26:# Sets the maximum number of drives per raid group}
-    raid_type: ${27:# Specifies the type of RAID groups to use in the new aggregate}
-    service_state: ${28:# Whether the specified aggregate should be enabled or disabled}
-    snaplock_type: ${29:# Type of snaplock for the aggregate being created}
-    spare_pool: ${30:# Specifies the spare pool from which to select spare disks to use in creation of a new aggregate}
-    state: ${31:# Whether the specified aggregate should exist or not}
-    tags: ${32:# Tags are an optional way to track the uses of a resource}
-    time_out: ${33:# time to wait for aggregate creation in seconds}
-    unmount_volumes: ${34:# If set to 'true', this option specifies that all of the volumes hosted by the given aggregate are to be unmounted before the offline operation is executed}
-    use_rest: ${35:# Whether to use REST or ZAPI}
-    username: ${36:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${37:# If set to C(no), the SSL certificates will not be validated}
-    wait_for_online: ${38:# Set this parameter to 'true' for synchronous execution during create (wait until aggregate status is online)}
+    lambda_config: ${20:# Configuration parameters for AWS Lambda proxy functionality}
+    mirror_disks: ${21:# List of mirror disks to use}
+    name: ${22:# The name of the aggregate to manage}
+    nodes: ${23:# Node(s) for the aggregate to be created on}
+    object_store_name: ${24:# Name of the object store configuration attached to the aggregate}
+    ontapi: ${25:# The ontap api version to use}
+    password: ${26:# Password for the specified user}
+    raid_size: ${27:# Sets the maximum number of drives per raid group}
+    raid_type: ${28:# Specifies the type of RAID groups to use in the new aggregate}
+    service_state: ${29:# Whether the specified aggregate should be enabled or disabled}
+    snaplock_type: ${30:# Type of snaplock for the aggregate being created}
+    spare_pool: ${31:# Specifies the spare pool from which to select spare disks to use in creation of a new aggregate}
+    state: ${32:# Whether the specified aggregate should exist or not}
+    tags: ${33:# Tags are an optional way to track the uses of a resource}
+    time_out: ${34:# time to wait for aggregate creation in seconds}
+    unmount_volumes: ${35:# If set to 'true', this option specifies that all of the volumes hosted by the given aggregate are to be unmounted before the offline operation is executed}
+    use_lambda: ${36:# Specifies if AWS Lambda proxy functionality should be used to connect to the ONTAP system}
+    use_rest: ${37:# Whether to use REST or ZAPI}
+    username: ${38:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${39:# If set to C(no), the SSL certificates will not be validated}
+    wait_for_online: ${40:# Set this parameter to 'true' for synchronous execution during create (wait until aggregate status is online)}
   tags:
     - netapp
     - ontap

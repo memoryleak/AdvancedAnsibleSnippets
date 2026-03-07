@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage FlashBlade bucket access policies}
+  purestorage.flashblade.purefb_bucket_access:
+    actions: ${2:# List of permissions to grant}
+    api_token: ${3:# FlashBlade API token for admin privileged user}
+    context: ${4:# Name of fleet member on which to perform the operation}
+    disable_warnings: ${5:# Disable insecure certificate warnings}
+    effect: ${6:# Allow S3 requests that match all of the I(actions) item selected}
+    fb_url: ${7:# FlashBlade management IP address or Hostname}
+    headers: ${8:# A list of headers that are permitted to be included in cross-origin requests to access a bucket}
+    methods: ${9:# A list of HTTP methods that are permitted for cross-origin requests to access a bucket}
+    name: ${10:# Name of Object Store bucket the policy applies to}
+    origins: ${11:# A list of origins (domains) that are permitted to make cross-origin requests to access a bucket}
+    policy_type: ${12:# Type of policy}
+    principals: ${13:# Defines if the rule will apply to all object store users regardless of their origin or principal}
+    resources: ${14:# The list of resources which this rule applies to}
+    rule: ${15:# Name of the rule in the Bucket Policy}
+    state: ${16:# Create or delete policy or rule}
+  tags:
+    - purestorage
+    - flashblade
+    - purefb_bucket_access]]></content>
+  <tabTrigger>purestorage.flashblade.purefb_bucket_access</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage FlashBlade bucket access policies</description>
+</snippet>

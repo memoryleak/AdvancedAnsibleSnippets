@@ -9,7 +9,7 @@
     dhcpHandling: ${7:# The appliance's handling of DHCP requests on this VLAN}
     dhcpLeaseTime: ${8:# The term of DHCP leases if the appliance is running a DHCP server on this VLAN}
     dhcpOptions: ${9:# The list of DHCP options that will be included in DHCP responses}
-    dhcpRelayServerIps: ${10:# The IPs of the DHCP servers that DHCP requests should be relayed to}
+    dhcpRelayServerIps: ${10:# The IPs (IPv4) of the DHCP servers that DHCP requests should be relayed to}
     dnsNameservers: ${11:# The DNS nameservers used for DHCP responses, either 'upstream_dns', 'google_dns', 'opendns', or a newline seperated string of IP addresses or domain names}
     fixedIpAssignments: ${12:# The DHCP fixed IP assignments on the VLAN}
     groupPolicyId: ${13:# The id of the desired group policy to apply to the VLAN}
@@ -21,30 +21,29 @@
     meraki_api_key: ${19:# meraki_api_key (string), API key generated in dashboard; can also be set as an environment variable MERAKI_DASHBOARD_API_KEY}
     meraki_base_url: ${20:# meraki_base_url (string), preceding all endpoint resources}
     meraki_be_geo_id: ${21:# meraki_be_geo_id (string), optional partner identifier for API usage tracking; can also be set as an environment variable BE_GEO_ID}
-    meraki_caller: ${22:# meraki_caller (string), optional identifier for API usage tracking; can also be set as an environment variable MERAKI_PYTHON_SDK_CALLER}
-    meraki_certificate_path: ${23:# meraki_certificate_path (string), path for TLS/SSL certificate verification if behind local proxy}
-    meraki_inherit_logging_config: ${24:# meraki_inherit_logging_config (boolean), Inherits your own logger instance}
-    meraki_log_file_prefix: ${25:# meraki_log_file_prefix (string), log file name appended with date and timestamp}
-    meraki_log_path: ${26:# log_path (string), path to output log; by default, working directory of script if not specified}
-    meraki_maximum_retries: ${27:# meraki_maximum_retries (integer), retry up to this many times when encountering 429s or other server-side errors}
-    meraki_nginx_429_retry_wait_time: ${28:# meraki_nginx_429_retry_wait_time (integer), Nginx 429 retry wait time}
-    meraki_output_log: ${29:# meraki_output_log (boolean), create an output log file?}
-    meraki_print_console: ${30:# meraki_print_console (boolean), print logging output to console?}
-    meraki_requests_proxy: ${31:# meraki_requests_proxy (string), proxy server and port, if needed, for HTTPS}
-    meraki_retry_4xx_error: ${32:# meraki_retry_4xx_error (boolean), retry if encountering other 4XX error (besides 429)?}
-    meraki_retry_4xx_error_wait_time: ${33:# meraki_retry_4xx_error_wait_time (integer), other 4XX error retry wait time}
-    meraki_simulate: ${34:# meraki_simulate (boolean), simulate POST/PUT/DELETE calls to prevent changes?}
-    meraki_single_request_timeout: ${35:# meraki_single_request_timeout (integer), maximum number of seconds for each API call}
-    meraki_suppress_logging: ${36:# meraki_suppress_logging (boolean), disable all logging? you're on your own then!}
-    meraki_use_iterator_for_get_pages: ${37:# meraki_use_iterator_for_get_pages (boolean), list* methods will return an iterator with each object instead of a complete list with all items}
-    meraki_wait_on_rate_limit: ${38:# meraki_wait_on_rate_limit (boolean), retry if 429 rate limit error encountered?}
-    name: ${39:# The name of the new VLAN}
-    networkId: ${40:# NetworkId path parameter}
-    reservedIpRanges: ${41:# The DHCP reserved IP ranges on the VLAN}
-    subnet: ${42:# The subnet of the VLAN}
-    templateVlanType: ${43:# Type of subnetting of the VLAN}
-    vlanId: ${44:# VlanId path parameter}
-    vpnNatSubnet: ${45:# The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN}
+    meraki_certificate_path: ${22:# meraki_certificate_path (string), path for TLS/SSL certificate verification if behind local proxy}
+    meraki_inherit_logging_config: ${23:# meraki_inherit_logging_config (boolean), Inherits your own logger instance}
+    meraki_log_file_prefix: ${24:# meraki_log_file_prefix (string), log file name appended with date and timestamp}
+    meraki_log_path: ${25:# log_path (string), path to output log; by default, working directory of script if not specified}
+    meraki_maximum_retries: ${26:# meraki_maximum_retries (integer), retry up to this many times when encountering 429s or other server-side errors}
+    meraki_nginx_429_retry_wait_time: ${27:# meraki_nginx_429_retry_wait_time (integer), Nginx 429 retry wait time}
+    meraki_output_log: ${28:# meraki_output_log (boolean), create an output log file?}
+    meraki_print_console: ${29:# meraki_print_console (boolean), print logging output to console?}
+    meraki_requests_proxy: ${30:# meraki_requests_proxy (string), proxy server and port, if needed, for HTTPS}
+    meraki_retry_4xx_error: ${31:# meraki_retry_4xx_error (boolean), retry if encountering other 4XX error (besides 429)?}
+    meraki_retry_4xx_error_wait_time: ${32:# meraki_retry_4xx_error_wait_time (integer), other 4XX error retry wait time}
+    meraki_simulate: ${33:# meraki_simulate (boolean), simulate POST/PUT/DELETE calls to prevent changes?}
+    meraki_single_request_timeout: ${34:# meraki_single_request_timeout (integer), maximum number of seconds for each API call}
+    meraki_suppress_logging: ${35:# meraki_suppress_logging (boolean), disable all logging? you're on your own then!}
+    meraki_use_iterator_for_get_pages: ${36:# meraki_use_iterator_for_get_pages (boolean), list* methods will return an iterator with each object instead of a complete list with all items}
+    meraki_wait_on_rate_limit: ${37:# meraki_wait_on_rate_limit (boolean), retry if 429 rate limit error encountered?}
+    name: ${38:# The name of the new VLAN}
+    networkId: ${39:# NetworkId path parameter}
+    reservedIpRanges: ${40:# The DHCP reserved IP ranges on the VLAN}
+    subnet: ${41:# The subnet of the VLAN}
+    templateVlanType: ${42:# Type of subnetting of the VLAN}
+    vlanId: ${43:# VlanId path parameter}
+    vpnNatSubnet: ${44:# The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN}
   tags:
     - cisco
     - meraki

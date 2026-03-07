@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Edit existing Check Point trusted CA certificate using name or uid}
+  check_point.mgmt.cp_mgmt_set_cp_trusted_ca_certificate:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    details_level: ${3:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${4:# Indicates which domains to process the commands on}
+    name: ${5:# Object name}
+    status: ${6:# Indicates whether the trusted CP CA certificate is enabled/disabled}
+    version: ${7:# Version of checkpoint}
+    wait_for_task: ${8:# Wait for the task to end}
+    wait_for_task_timeout: ${9:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_set_cp_trusted_ca_certificate]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_set_cp_trusted_ca_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Edit existing Check Point trusted CA certificate using name or uid</description>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Virtual KVM Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_kvm_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    description: ${5:# The user-defined description for the KVM Policy}
+    enable_local_server_video: ${6:# If enabled, displays KVM session on any monitor attached to the server}
+    enable_video_encryption: ${7:# If enabled, encrypts all video information sent through KVM}
+    enabled: ${8:# State of the vKVM service on the endpoint}
+    maximum_sessions: ${9:# The maximum number of concurrent KVM sessions allowed}
+    name: ${10:# The name assigned to the KVM Policy}
+    organization: ${11:# The name of the Organization this resource is assigned to}
+    remote_port: ${12:# The port used for KVM communication}
+    state: ${13:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${14:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    tunneled_kvm_enabled: ${15:# Enables Tunneled vKVM on the endpoint}
+    use_proxy: ${16:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${17:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_kvm_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_kvm_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Virtual KVM Policy configuration for Cisco Intersight</description>
+</snippet>

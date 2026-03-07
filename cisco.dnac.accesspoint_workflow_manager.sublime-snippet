@@ -1,8 +1,8 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Automates bulk AP configuration changes}
+  <content><![CDATA[- name: ${1:Manage Cisco Catalyst Center access points}
   cisco.dnac.accesspoint_workflow_manager:
     config: ${2:# List of details of AP being managed}
-    config_verify: ${3:# Set to True to verify the Cisco Catalyst Center configuration after applying the playbook config}
+    config_verify: ${3:# Indicates whether configuration verification is enabled}
     dnac_api_task_timeout: ${4:# The number of times to retry resynchronization}
     dnac_debug: ${5:# Indicates whether debugging is enabled in the Cisco Catalyst Center SDK}
     dnac_host: ${6:# The hostname of the Cisco Catalyst Center}
@@ -16,7 +16,7 @@
     dnac_username: ${14:# The username for authentication at the Cisco Catalyst Center}
     dnac_verify: ${15:# Flag to enable or disable SSL certificate verification}
     dnac_version: ${16:# Specifies the version of the Cisco Catalyst Center that the SDK should use}
-    next_task_after_interval: ${17:# Time in second between Provision and AP updated execution}
+    next_task_after_interval: ${17:# Time in seconds between Provision and AP updated execution}
     state: ${18:# The desired state of the device replacement workflow}
     validate_response_schema: ${19:# Flag for Cisco Catalyst Center SDK to enable the validation of request bodies against a JSON schema}
   tags:
@@ -25,5 +25,5 @@
     - accesspoint_workflow_manager]]></content>
   <tabTrigger>cisco.dnac.accesspoint_workflow_manager</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Automates bulk AP configuration changes</description>
+  <description>Manage Cisco Catalyst Center access points</description>
 </snippet>

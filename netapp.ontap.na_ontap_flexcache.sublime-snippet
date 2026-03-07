@@ -3,33 +3,41 @@
   netapp.ontap.na_ontap_flexcache:
     aggr_list: ${2:# List of aggregates to host target FlexCache volume}
     aggr_list_multiplier: ${3:# Aggregate list repeat count}
-    auto_provision_as: ${4:# Use this parameter to automatically select existing aggregates for volume provisioning}
-    cert_filepath: ${5:# path to SSL client cert file (}
-    feature_flags: ${6:# Enable or disable a new feature}
-    force_offline: ${7:# Offline FlexCache volume before deleting the FlexCache relationship}
-    force_ontap_version: ${8:# Override the cluster ONTAP version when using REST}
-    force_unmount: ${9:# Unmount FlexCache volume}
-    hostname: ${10:# The hostname or IP address of the ONTAP instance}
-    http_port: ${11:# Override the default port (80 or 443) with this port}
-    https: ${12:# Enable and disable https}
-    junction_path: ${13:# Junction path of the cache volume}
-    key_filepath: ${14:# path to SSL client key file}
-    name: ${15:# Name of the target volume for the FlexCache}
-    ontapi: ${16:# The ontap api version to use}
-    origin_cluster: ${17:# Name of the origin cluster for the FlexCache}
-    origin_volume: ${18:# Name of the origin volume for the FlexCache}
-    origin_vserver: ${19:# Name of the origin vserver for the FlexCache}
-    password: ${20:# Password for the specified user}
-    prepopulate: ${21:# prepopulate FlexCache with data from origin volume}
-    size: ${22:# Size of cache volume}
-    size_unit: ${23:# The unit used to interpret the size parameter}
-    state: ${24:# Whether the specified relationship should exist or not}
-    time_out: ${25:# time to wait for flexcache creation or deletion in seconds}
-    use_rest: ${26:# Whether to use REST or ZAPI}
-    username: ${27:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${28:# If set to C(no), the SSL certificates will not be validated}
-    vserver: ${29:# Name of the target vserver for the FlexCache}
-    writeback: ${30:# FlexCache Writeback}
+    atime_scrub: ${4:# Only supported with REST and requires ONTAP 9}
+    auto_provision_as: ${5:# Use this parameter to automatically select existing aggregates for volume provisioning}
+    cert_filepath: ${6:# path to SSL client cert file (}
+    cifs_change_notify_enabled: ${7:# Specifies whether a CIFS change notification is enabled for the FlexCache volume}
+    dr_cache: ${8:# If set to true, a DR cache is created}
+    feature_flags: ${9:# Enable or disable a new feature}
+    force_offline: ${10:# Offline FlexCache volume before deleting the FlexCache relationship}
+    force_ontap_version: ${11:# Override the cluster ONTAP version when using REST}
+    force_unmount: ${12:# Unmount FlexCache volume}
+    global_file_locking_enabled: ${13:# Specifies whether or not a FlexCache volume has global file locking mode enabled}
+    guarantee_type: ${14:# Specifies The type of space guarantee of this volume in the aggregate}
+    hostname: ${15:# The hostname or IP address of the ONTAP instance}
+    http_port: ${16:# Override the default port (80 or 443) with this port}
+    https: ${17:# Enable and disable https}
+    junction_path: ${18:# Junction path of the cache volume}
+    key_filepath: ${19:# path to SSL client key file}
+    name: ${20:# Name of the target volume for the FlexCache}
+    ontapi: ${21:# The ontap api version to use}
+    origin_cluster: ${22:# Name of the origin cluster for the FlexCache}
+    origin_volume: ${23:# Name of the origin volume for the FlexCache}
+    origin_vserver: ${24:# Name of the origin vserver for the FlexCache}
+    override_encryption: ${25:# If set to true, a plaintext FlexCache volume for an encrypted origin volume is created}
+    password: ${26:# Password for the specified user}
+    prepopulate: ${27:# prepopulate FlexCache with data from origin volume}
+    relative_size: ${28:# Only supported with REST and requires ONTAP 9}
+    size: ${29:# Size of cache volume}
+    size_unit: ${30:# The unit used to interpret the size parameter}
+    state: ${31:# Whether the specified relationship should exist or not}
+    time_out: ${32:# time to wait for flexcache creation or deletion in seconds}
+    use_lambda: ${33:# Specifies if AWS Lambda proxy functionality should be used to connect to the ONTAP system}
+    use_rest: ${34:# Whether to use REST or ZAPI}
+    username: ${35:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${36:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${37:# Name of the target vserver for the FlexCache}
+    writeback: ${38:# FlexCache Writeback}
   tags:
     - netapp
     - ontap

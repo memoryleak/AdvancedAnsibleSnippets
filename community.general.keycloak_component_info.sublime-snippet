@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Retrive component info in Keycloak}
+  <content><![CDATA[- name: ${1:Retrieve component info in Keycloak}
   community.general.keycloak_component_info:
     auth_client_id: ${2:# OpenID Connect C(client_id) to authenticate to the API with}
     auth_client_secret: ${3:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
@@ -13,13 +13,14 @@
     parent_id: ${11:# Container ID of the components}
     provider_type: ${12:# Provider type of components}
     realm: ${13:# The name of the realm}
-    token: ${14:# Authentication token for Keycloak API}
-    validate_certs: ${15:# Verify TLS certificates (do not disable this in production)}
+    refresh_token: ${14:# Authentication refresh token for Keycloak API}
+    token: ${15:# Authentication token for Keycloak API}
+    validate_certs: ${16:# Verify TLS certificates (do not disable this in production)}
   tags:
     - community
     - general
     - keycloak_component_info]]></content>
   <tabTrigger>community.general.keycloak_component_info</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Retrive component info in Keycloak</description>
+  <description>Retrieve component info in Keycloak</description>
 </snippet>

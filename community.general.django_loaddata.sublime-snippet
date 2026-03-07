@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Wrapper for C(django-admin loaddata)}
+  community.general.django_loaddata:
+    app: ${2:# Specifies a single app to look for fixtures in rather than looking in all apps}
+    database: ${3:# Specify the database to be used}
+    excludes: ${4:# Applications or models to be excluded}
+    fixtures: ${5:# List of paths to the fixture files}
+    format: ${6:# Serialization format of the output data}
+    ignore_non_existent: ${7:# Ignores fields and models that may have been removed since the fixture was originally generated}
+    pythonpath: ${8:# Adds the given filesystem path to the Python import search path}
+    settings: ${9:# Specifies the settings module to use}
+    skip_checks: ${10:# Skips running system checks prior to running the command}
+    traceback: ${11:# Provides a full stack trace in the output when a C(CommandError) is raised}
+    venv: ${12:# Use the Python interpreter from this virtual environment}
+    verbosity: ${13:# Specifies the amount of notification and debug information in the output of C(django-admin)}
+  tags:
+    - community
+    - general
+    - django_loaddata]]></content>
+  <tabTrigger>community.general.django_loaddata</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Wrapper for C(django-admin loaddata)</description>
+</snippet>

@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages secondary IPs of an instance on Apache CloudStack based clouds}
+  ngine_io.cloudstack.instance_nic_secondaryip:
+    account: ${2:# Account the instance is related to}
+    api_http_method: ${3:# HTTP method used to query the API endpoint}
+    api_key: ${4:# API key of the CloudStack API}
+    api_secret: ${5:# Secret key of the CloudStack API}
+    api_timeout: ${6:# HTTP timeout in seconds}
+    api_url: ${7:# URL of the CloudStack API e}
+    api_verify_ssl_cert: ${8:# Verify CA authority cert file}
+    domain: ${9:# Domain the instance is related to}
+    network: ${10:# Name of the network}
+    poll_async: ${11:# Poll async jobs until job has finished}
+    project: ${12:# Name of the project the instance is deployed in}
+    state: ${13:# State of the ipaddress}
+    validate_certs: ${14:# If V(false), SSL certificates will not be validated}
+    vm: ${15:# Name of instance}
+    vm_guest_ip: ${16:# Secondary IP address to be added to the instance nic}
+    vpc: ${17:# Name of the VPC the I(vm) is related to}
+    zone: ${18:# Name of the zone in which the instance is deployed in}
+  tags:
+    - ngine_io
+    - cloudstack
+    - instance_nic_secondaryip]]></content>
+  <tabTrigger>ngine_io.cloudstack.instance_nic_secondaryip</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages secondary IPs of an instance on Apache CloudStack based clouds</description>
+</snippet>

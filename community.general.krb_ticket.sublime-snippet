@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Kerberos utils for managing tickets}
+  community.general.krb_ticket:
+    address_restricted: ${2:# Request tickets restricted to the host's local address or non-restricted}
+    anonymous: ${3:# Requests anonymous processing}
+    cache_name: ${4:# Use O(cache_name) as the ticket cache name and location}
+    canonicalization: ${5:# Requests canonicalization of the principal name, and allows the KDC to reply with a different client principal from the one requested}
+    enterprise: ${6:# Treats the principal name as an enterprise name (implies the O(canonicalization) option)}
+    forwardable: ${7:# Request forwardable or non-forwardable tickets}
+    kdestroy_all: ${8:# When O(state=absent) destroys all credential caches in collection}
+    keytab: ${9:# Requests a ticket, obtained from a key in the local host's keytab}
+    keytab_path: ${10:# Use when O(keytab=true) to specify path to a keytab file}
+    lifetime: ${11:# Requests a ticket with the lifetime, if the O(lifetime) is not specified, the default ticket lifetime is used}
+    password: ${12:# Principal password}
+    principal: ${13:# The principal name}
+    proxiable: ${14:# Request proxiable or non-proxiable tickets}
+    renewable: ${15:# Requests renewable tickets, with a total lifetime equal to O(renewable)}
+    renewal: ${16:# Requests renewal of the ticket-granting ticket}
+    start_time: ${17:# Requests a postdated ticket}
+    state: ${18:# The state of the Kerberos ticket}
+    validate: ${19:# Requests that the ticket-granting ticket in the cache (with the invalid flag set) be passed to the KDC for validation}
+  tags:
+    - community
+    - general
+    - krb_ticket]]></content>
+  <tabTrigger>community.general.krb_ticket</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Kerberos utils for managing tickets</description>
+</snippet>

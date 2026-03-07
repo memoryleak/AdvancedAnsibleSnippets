@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Run command in a container of a Compose service}
+  community.docker.docker_compose_v2_exec:
+    api_version: ${2:# The version of the Docker API running on the Docker Host}
+    argv: ${3:# The command to execute}
+    ca_path: ${4:# Use a CA certificate when performing server verification by providing the path to a CA certificate file}
+    chdir: ${5:# The directory to run the command in}
+    check_files_existing: ${6:# If set to V(false), the module will not check whether one of the files C(compose}
+    cli_context: ${7:# The Docker CLI context to use}
+    client_cert: ${8:# Path to the client's TLS certificate file}
+    client_key: ${9:# Path to the client's TLS key file}
+    command: ${10:# The command to execute}
+    definition: ${11:# Compose file describing one or more services, networks and volumes}
+    detach: ${12:# Whether to run the command synchronously (O(detach=false), default) or asynchronously (O(detach=true))}
+    docker_cli: ${13:# Path to the Docker CLI}
+    docker_host: ${14:# The URL or Unix socket path used to connect to the Docker API}
+    env: ${15:# Dictionary of environment variables with their respective values to be passed to the command ran inside the container}
+    env_files: ${16:# By default environment files are loaded from a C(}
+    files: ${17:# List of Compose file names relative to O(project_src) to be used instead of the main Compose file (C(compose}
+    index: ${18:# The index of the container to run the command in if the service has multiple replicas}
+    privileged: ${19:# Whether to give extended privileges to the process}
+    profiles: ${20:# List of profiles to enable when starting services}
+    project_name: ${21:# Provide a project name}
+    project_src: ${22:# Path to a directory containing a Compose file (C(compose}
+    service: ${23:# The service to run the command in}
+    stdin: ${24:# Set the stdin of the command directly to the specified value}
+    stdin_add_newline: ${25:# If set to V(true), appends a newline to O(stdin)}
+    strip_empty_ends: ${26:# Strip empty lines from the end of stdout/stderr in result}
+    tls: ${27:# Secure the connection to the API by using TLS without verifying the authenticity of the Docker host server}
+    tls_hostname: ${28:# When verifying the authenticity of the Docker Host server, provide the expected name of the server}
+    tty: ${29:# Whether to allocate a TTY}
+    user: ${30:# If specified, the user to execute this command with}
+    validate_certs: ${31:# Secure the connection to the API by using TLS and verifying the authenticity of the Docker host server}
+  tags:
+    - community
+    - docker
+    - docker_compose_v2_exec]]></content>
+  <tabTrigger>community.docker.docker_compose_v2_exec</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Run command in a container of a Compose service</description>
+</snippet>

@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and join Proxmox VE clusters}
+  community.proxmox.proxmox_cluster:
+    api_host: ${2:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${3:# Specify the password to authenticate with}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    cluster_name: ${8:# The cluster name to use for cluster creation}
+    fingerprint: ${9:# The fingerprint of the cluster master when joining the cluster}
+    link0: ${10:# The first IP address to use for cluster communication}
+    link1: ${11:# The second IP address to use for cluster communication}
+    master_api_password: ${12:# Specify the password to authenticate with the master node}
+    master_ip: ${13:# The IP address of the cluster master when joining the cluster}
+    state: ${14:# Possible module state to perform the required steps within the Proxmox VE API}
+    validate_certs: ${15:# If V(false), SSL certificates will not be validated}
+  tags:
+    - community
+    - proxmox
+    - proxmox_cluster]]></content>
+  <tabTrigger>community.proxmox.proxmox_cluster</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and join Proxmox VE clusters</description>
+</snippet>

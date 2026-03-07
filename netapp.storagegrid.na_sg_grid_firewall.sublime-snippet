@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp StorageGRID manage node firewall}
+  netapp.storagegrid.na_sg_grid_firewall:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    blocked_tcp_ports: ${4:# List of TCP ports to block for external communication}
+    blocked_udp_ports: ${5:# List of UDP ports to block for external communication}
+    grid_internal_access: ${6:# Whether to allow internal port access to the grid}
+    id: ${7:# The node UUID or the default list ID}
+    privileged_ips: ${8:# A list of privileged IP addresses, or subnets in CIDR notation}
+    state: ${9:# Whether the firewall should be present or absent}
+    validate_certs: ${10:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_firewall]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_firewall</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp StorageGRID manage node firewall</description>
+</snippet>

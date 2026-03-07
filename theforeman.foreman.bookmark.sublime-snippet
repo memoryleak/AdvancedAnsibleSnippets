@@ -1,15 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Bookmarks}
   theforeman.foreman.bookmark:
-    controller: ${2:# Controller for the bookmark}
-    name: ${3:# Name of the bookmark}
-    password: ${4:# Password of the user accessing the Foreman server}
-    public: ${5:# Make bookmark available for all users}
-    query: ${6:# Query of the bookmark}
-    server_url: ${7:# URL of the Foreman server}
-    state: ${8:# State of the entity}
-    username: ${9:# Username accessing the Foreman server}
-    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    controller: ${3:# Controller for the bookmark}
+    name: ${4:# Name of the bookmark}
+    password: ${5:# Password of the user accessing the Foreman server}
+    public: ${6:# Make bookmark available for all users}
+    query: ${7:# Query of the bookmark}
+    server_url: ${8:# URL of the Foreman server}
+    state: ${9:# State of the entity}
+    use_gssapi: ${10:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${11:# Username accessing the Foreman server}
+    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

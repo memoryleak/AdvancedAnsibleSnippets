@@ -1,15 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Host Collections}
   theforeman.foreman.host_collection:
-    description: ${2:# Description of the host collection}
-    name: ${3:# Name of the host collection}
-    organization: ${4:# Organization that the entity is in}
-    password: ${5:# Password of the user accessing the Foreman server}
-    server_url: ${6:# URL of the Foreman server}
-    state: ${7:# State of the entity}
-    updated_name: ${8:# New name of the host collection}
-    username: ${9:# Username accessing the Foreman server}
-    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    description: ${3:# Description of the host collection}
+    name: ${4:# Name of the host collection}
+    organization: ${5:# Organization that the entity is in}
+    password: ${6:# Password of the user accessing the Foreman server}
+    server_url: ${7:# URL of the Foreman server}
+    state: ${8:# State of the entity}
+    updated_name: ${9:# New name of the host collection}
+    use_gssapi: ${10:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${11:# Username accessing the Foreman server}
+    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

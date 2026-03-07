@@ -1,16 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Lifecycle Environments}
   theforeman.foreman.lifecycle_environment:
-    description: ${2:# Description of the lifecycle environment}
-    label: ${3:# Label of the lifecycle environment}
-    name: ${4:# Name of the lifecycle environment}
-    organization: ${5:# Organization that the entity is in}
-    password: ${6:# Password of the user accessing the Foreman server}
-    prior: ${7:# Name of the parent lifecycle environment}
-    server_url: ${8:# URL of the Foreman server}
-    state: ${9:# State of the entity}
-    username: ${10:# Username accessing the Foreman server}
-    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    description: ${3:# Description of the lifecycle environment}
+    label: ${4:# Label of the lifecycle environment}
+    name: ${5:# Name of the lifecycle environment}
+    organization: ${6:# Organization that the entity is in}
+    password: ${7:# Password of the user accessing the Foreman server}
+    prior: ${8:# Name of the parent lifecycle environment}
+    server_url: ${9:# URL of the Foreman server}
+    state: ${10:# State of the entity}
+    use_gssapi: ${11:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${12:# Username accessing the Foreman server}
+    validate_certs: ${13:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

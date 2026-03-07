@@ -9,37 +9,49 @@
     https: ${7:# Enable and disable https}
     key_filepath: ${8:# path to SSL client key file}
     nfsv3: ${9:# status of NFSv3}
-    nfsv3_fsid_change: ${10:# status of if NFSv3 clients see change in FSID as they traverse filesystems}
-    nfsv4: ${11:# status of NFSv4}
-    nfsv40_acl: ${12:# status of NFS v4}
-    nfsv40_read_delegation: ${13:# status for NFS v4}
-    nfsv40_referrals: ${14:# status for NFS v4}
-    nfsv40_write_delegation: ${15:# status for NFS v4}
-    nfsv41: ${16:# status of NFSv41}
-    nfsv41_acl: ${17:# status of NFS v4}
-    nfsv41_pnfs: ${18:# status of NFSv41 pNFS}
-    nfsv41_read_delegation: ${19:# status for NFS v4}
-    nfsv41_referrals: ${20:# status for NFS v4}
-    nfsv41_write_delegation: ${21:# status for NFS v4}
-    nfsv4_fsid_change: ${22:# status of if NFSv4 clients see change in FSID as they traverse filesystems}
-    nfsv4_id_domain: ${23:# Name of the nfsv4_id_domain to use}
-    nfsv4_numeric_ids: ${24:# status of NFSv4 numeric ID's}
-    ontapi: ${25:# The ontap api version to use}
-    password: ${26:# Password for the specified user}
-    root: ${27:# This option can be set or modified when using REST}
-    security: ${28:# This option can be set or modified when using REST}
-    service_state: ${29:# Whether the specified NFS should be enabled or disabled}
-    showmount: ${30:# Whether SVM allows showmount}
-    state: ${31:# Whether NFS should exist or not}
-    tcp: ${32:# Enable TCP (support from ONTAP 9}
-    tcp_max_xfer_size: ${33:# TCP Maximum Transfer Size (bytes)}
-    udp: ${34:# Enable UDP (support from ONTAP 9}
-    use_rest: ${35:# Whether to use REST or ZAPI}
-    username: ${36:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${37:# If set to C(no), the SSL certificates will not be validated}
-    vserver: ${38:# Name of the vserver to use}
-    vstorage_state: ${39:# status of vstorage_state}
-    windows: ${40:# This option can be set or modified when using REST}
+    nfsv3_64bit_identifiers_enabled: ${10:# Specifies whether 64-bit support for NFSv3 FSIDs and file IDs is enabled}
+    nfsv3_connection_drop: ${11:# Specifies whether the dropping of a connection when an NFSv3 request is dropped is enabled}
+    nfsv3_ejukebox_enabled: ${12:# Specifies whether NFSv3 EJUKEBOX error is enabled}
+    nfsv3_fsid_change: ${13:# status of if NFSv3 clients see change in FSID as they traverse filesystems}
+    nfsv3_hide_snapdir: ${14:# Specifies whether hiding a snapshot directory under a NFSv3 mount point is enabled (support from ONTAP 9}
+    nfsv3_mount_root_only: ${15:# Specifies whether the SVM allows MOUNT protocol calls only from privileged ports (port numbers less than 1024)}
+    nfsv4: ${16:# status of NFSv4}
+    nfsv40_acl: ${17:# status of NFS v4}
+    nfsv40_acl_preserve: ${18:# Specifies if the NFSv4 ACL is preserved or dropped when chmod is performed}
+    nfsv40_read_delegation: ${19:# status for NFS v4}
+    nfsv40_referrals: ${20:# status for NFS v4}
+    nfsv40_write_delegation: ${21:# status for NFS v4}
+    nfsv41: ${22:# status of NFSv41}
+    nfsv41_acl: ${23:# status of NFS v4}
+    nfsv41_pnfs: ${24:# status of NFSv41 pNFS}
+    nfsv41_read_delegation: ${25:# status for NFS v4}
+    nfsv41_referrals: ${26:# status for NFS v4}
+    nfsv41_write_delegation: ${27:# status for NFS v4}
+    nfsv42_seclabel_enabled: ${28:# Specifies whether NFSv4}
+    nfsv42_xattrs_enabled: ${29:# Specifies whether NFSv4}
+    nfsv4_64bit_identifiers_enabled: ${30:# Specifies whether 64-bit support for NFSv4}
+    nfsv4_fsid_change: ${31:# status of if NFSv4 clients see change in FSID as they traverse filesystems}
+    nfsv4_grace_seconds: ${32:# Specifies the grace period for clients to reclaim file locks after a server failure}
+    nfsv4_id_domain: ${33:# Name of the nfsv4_id_domain to use}
+    nfsv4_lease_seconds: ${34:# Specifies the lease seconds of the NFSv4 clients}
+    nfsv4_numeric_ids: ${35:# status of NFSv4 numeric ID's}
+    ontapi: ${36:# The ontap api version to use}
+    password: ${37:# Password for the specified user}
+    root: ${38:# This option can be set or modified when using REST}
+    security: ${39:# This option can be set or modified when using REST}
+    service_state: ${40:# Whether the specified NFS should be enabled or disabled}
+    showmount: ${41:# Whether SVM allows showmount}
+    state: ${42:# Whether NFS should exist or not}
+    tcp: ${43:# Enable TCP (support from ONTAP 9}
+    tcp_max_xfer_size: ${44:# TCP Maximum Transfer Size (bytes)}
+    udp: ${45:# Enable UDP (support from ONTAP 9}
+    use_lambda: ${46:# Specifies if AWS Lambda proxy functionality should be used to connect to the ONTAP system}
+    use_rest: ${47:# Whether to use REST or ZAPI}
+    username: ${48:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${49:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${50:# Name of the vserver to use}
+    vstorage_state: ${51:# status of vstorage_state}
+    windows: ${52:# This option can be set or modified when using REST}
   tags:
     - netapp
     - ontap

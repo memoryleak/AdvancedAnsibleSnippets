@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages a Batch Account Application on Azure}
+  azure.azcollection.azure_rm_batchaccountapplication:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    allow_updates: ${4:# A value indicating whether packages within the application may be overwritten using the same version string}
+    api_profile: ${5:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    batch_account_name: ${7:# The name of the Batch Account}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    default_version: ${11:# The package to use if a client requests the application but does not specify a version}
+    disable_instance_discovery: ${12:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    display_name: ${13:# The display name for the application}
+    log_mode: ${14:# Parent argument}
+    log_path: ${15:# Parent argument}
+    name: ${16:# The name of the Batch Account Application}
+    password: ${17:# Active Directory user password}
+    profile: ${18:# Security profile found in ~/}
+    resource_group: ${19:# The name of the resource group in which to create the Batch Account Application}
+    secret: ${20:# Azure client secret}
+    state: ${21:# Assert the state of the Batch Account Application}
+    subscription_id: ${22:# Your Azure subscription Id}
+    tenant: ${23:# Azure tenant ID}
+    thumbprint: ${24:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_batchaccountapplication]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_batchaccountapplication</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages a Batch Account Application on Azure</description>
+</snippet>

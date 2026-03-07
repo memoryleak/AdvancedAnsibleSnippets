@@ -1,15 +1,15 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Will update the backend configuration of OpenDJ via the dsconfig set-backend-prop command}
+  <content><![CDATA[- name: ${1:Update the backend configuration of OpenDJ using the dsconfig set-backend-prop command}
   community.general.opendj_backendprop:
     backend: ${2:# The name of the backend on which the property needs to be updated}
     hostname: ${3:# The hostname of the OpenDJ server}
     name: ${4:# The configuration setting to update}
     opendj_bindir: ${5:# The path to the bin directory of OpenDJ}
-    password: ${6:# The password for the cn=Directory Manager user}
-    passwordfile: ${7:# Location to the password file which holds the password for the cn=Directory Manager user}
+    password: ${6:# The password for O(username)}
+    passwordfile: ${7:# Location to the password file which holds the password for O(username)}
     port: ${8:# The Admin port on which the OpenDJ instance is available}
     state: ${9:# If configuration needs to be added/updated}
-    username: ${10:# The username to connect to}
+    username: ${10:# The username to connect with}
     value: ${11:# The value for the configuration item}
   tags:
     - community
@@ -17,5 +17,5 @@
     - opendj_backendprop]]></content>
   <tabTrigger>community.general.opendj_backendprop</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Will update the backend configuration of OpenDJ via the dsconfig set-backend-prop command</description>
+  <description>Update the backend configuration of OpenDJ using the dsconfig set-backend-prop command</description>
 </snippet>

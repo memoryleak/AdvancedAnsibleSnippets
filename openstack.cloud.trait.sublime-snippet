@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add/Delete a trait from OpenStack}
+  openstack.cloud.trait:
+    api_timeout: ${2:# How long should the socket layer wait before timing out for API calls}
+    auth: ${3:# Dictionary containing auth information as needed by the cloud's auth plugin strategy}
+    auth_type: ${4:# Name of the auth plugin to use}
+    ca_cert: ${5:# A path to a CA Cert bundle that can be used as part of verifying SSL API requests}
+    client_cert: ${6:# A path to a client certificate to use as part of the SSL transaction}
+    client_key: ${7:# A path to a client key to use as part of the SSL transaction}
+    cloud: ${8:# Named cloud or cloud config to operate against}
+    id: ${9:# ID/Name of this trait}
+    interface: ${10:# Endpoint URL type to fetch from the service catalog}
+    region_name: ${11:# Name of the region}
+    sdk_log_level: ${12:# Log level of the OpenStackSDK}
+    sdk_log_path: ${13:# Path to the logfile of the OpenStackSDK}
+    state: ${14:# Should the resource be present or absent}
+    timeout: ${15:# How long should ansible wait for the requested resource}
+    validate_certs: ${16:# Whether or not SSL API requests should be verified}
+    wait: ${17:# Should ansible wait until the requested resource is complete}
+  tags:
+    - openstack
+    - cloud
+    - trait]]></content>
+  <tabTrigger>openstack.cloud.trait</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add/Delete a trait from OpenStack</description>
+</snippet>

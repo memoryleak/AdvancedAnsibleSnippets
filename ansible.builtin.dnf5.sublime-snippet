@@ -5,25 +5,25 @@
     allowerasing: ${3:# If V(true) it allows  erasing  of  installed  packages to resolve dependencies}
     auto_install_module_deps: ${4:# Automatically install dependencies required to run this module}
     autoremove: ${5:# If V(true), removes all 'leaf' packages from the system that were originally installed as dependencies of user-installed packages but which are no longer required by any such package}
-    bugfix: ${6:# If set to V(true), and O(state=latest) then only installs updates that have been marked bugfix related}
-    cacheonly: ${7:# Tells dnf to run entirely from system cache; does not download or update metadata}
-    conf_file: ${8:# The remote dnf configuration file to use for the transaction}
-    disable_excludes: ${9:# Disable the excludes defined in DNF config files}
-    disable_gpg_check: ${10:# Whether to disable the GPG checking of signatures of packages being installed}
-    disable_plugin: ${11:# This is currently a no-op as dnf5 itself does not implement this feature}
-    disablerepo: ${12:# I(Repoid) of repositories to disable for the install/update operation}
-    download_dir: ${13:# Specifies an alternate directory to store packages}
-    download_only: ${14:# Only download the packages, do not install them}
-    enable_plugin: ${15:# This is currently a no-op as dnf5 itself does not implement this feature}
-    enablerepo: ${16:# I(Repoid) of repositories to enable for the install/update operation}
-    exclude: ${17:# Package name(s) to exclude when state=present, or latest}
-    install_repoquery: ${18:# This is effectively a no-op in DNF as it is not needed with DNF, but is an accepted parameter for feature parity/compatibility with the M(ansible}
+    best: ${6:# When set to V(true), either use a package with the highest version available or fail}
+    bugfix: ${7:# If set to V(true), and O(state=latest) then only installs updates that have been marked bugfix related}
+    cacheonly: ${8:# Tells dnf to run entirely from system cache; does not download or update metadata}
+    conf_file: ${9:# The remote dnf configuration file to use for the transaction}
+    disable_excludes: ${10:# Disable the excludes defined in DNF config files}
+    disable_gpg_check: ${11:# Whether to disable the GPG checking of signatures of packages being installed}
+    disable_plugin: ${12:# I(Plugin) name to disable for the install/update operation}
+    disablerepo: ${13:# I(Repoid) of repositories to disable for the install/update operation}
+    download_dir: ${14:# Specifies an alternate directory to store packages}
+    download_only: ${15:# Only download the packages, do not install them}
+    enable_plugin: ${16:# I(Plugin) name to enable for the install/update operation}
+    enablerepo: ${17:# I(Repoid) of repositories to enable for the install/update operation}
+    exclude: ${18:# Package name(s) to exclude when O(state=present) or O(state=latest)}
     install_weak_deps: ${19:# Will also install all packages linked by a weak dependency relation}
     installroot: ${20:# Specifies an alternative installroot, relative to which all packages will be installed}
     list: ${21:# Various (non-idempotent) commands for usage with C(/usr/bin/ansible) and I(not) playbooks}
     lock_timeout: ${22:# This is currently a no-op as dnf5 does not provide an option to configure it}
     name: ${23:# A package name or package specifier with version, like C(name-1}
-    nobest: ${24:# Set best option to False, so that transactions are not limited to best candidates only}
+    nobest: ${24:# This is the opposite of the O(best) option kept for backwards compatibility}
     releasever: ${25:# Specifies an alternative release from which all packages will be installed}
     security: ${26:# If set to V(true), and O(state=latest) then only installs updates that have been marked security related}
     skip_broken: ${27:# Skip all unavailable packages or packages with broken dependencies without raising an error}

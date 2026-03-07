@@ -4,14 +4,16 @@
     asn1_base64: ${2:# Whether to encode the ASN}
     ca_cert: ${3:# A PEM file containing one or more root certificates; if present, the cert will be validated against these root certs}
     ciphers: ${4:# SSL/TLS Ciphers to use for the request}
-    host: ${5:# The host to get the cert for (IP is fine)}
-    port: ${6:# The port to connect to}
-    proxy_host: ${7:# Proxy host used when get a certificate}
-    proxy_port: ${8:# Proxy port used when get a certificate}
-    select_crypto_backend: ${9:# Determines which crypto backend to use}
-    server_name: ${10:# Server name used for SNI (L(Server Name Indication,https://en}
-    starttls: ${11:# Requests a secure connection for protocols which require clients to initiate encryption}
-    timeout: ${12:# The timeout in seconds}
+    get_certificate_chain: ${5:# If set to V(true), will obtain the certificate chain next to the certificate itself}
+    host: ${6:# The host to get the cert for (IP is fine)}
+    port: ${7:# The port to connect to}
+    proxy_host: ${8:# Proxy host used when get a certificate}
+    proxy_port: ${9:# Proxy port used when get a certificate}
+    select_crypto_backend: ${10:# Determines which crypto backend to use}
+    server_name: ${11:# Server name used for SNI (L(Server Name Indication,https://en}
+    starttls: ${12:# Requests a secure connection for protocols which require clients to initiate encryption}
+    timeout: ${13:# The timeout in seconds}
+    tls_ctx_options: ${14:# TLS context options (TLS/SSL OP flags) to use for the request}
   tags:
     - community
     - crypto

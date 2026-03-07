@@ -1,0 +1,53 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages a Batch Account Pool on Azure}
+  azure.azcollection.azure_rm_batchaccountpool:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    application_licenses: ${5:# The list of application licenses must be a subset of available Batch service application licenses}
+    application_packages: ${6:# Changes to application package references affect all new compute nodes joining the pool}
+    auth_source: ${7:# Controls the source of the credentials to use for authentication}
+    batch_account_name: ${8:# The name of the Batch Account}
+    cert_validation_mode: ${9:# Controls the certificate validation behavior for Azure endpoints}
+    certificates: ${10:# For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location}
+    client_id: ${11:# Azure client ID}
+    cloud_environment: ${12:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    deployment_configuration: ${13:# Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS)}
+    disable_instance_discovery: ${14:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    display_name: ${15:# The display name for the pool}
+    identity: ${16:# The type of identity used for the Batch Pool}
+    inter_node_communication: ${17:# This imposes restrictions on which nodes can be assigned to the pool}
+    is_disable_auto_scale: ${18:# Whether disables automatic scaling for a pool}
+    is_stop_resize: ${19:# Whether stops an ongoing resize operation on the pool}
+    log_mode: ${20:# Parent argument}
+    log_path: ${21:# Parent argument}
+    metadata: ${22:# The Batch service does not assign any meaning to this metadata; it is solely for the use of user code}
+    mount_configuration: ${23:# This supports Azure Files, NFS, CIFS/SMB, and Blobfuse}
+    name: ${24:# The name of the Batch Account Pool}
+    network_configuration: ${25:# The network configuration for a pool}
+    password: ${26:# Active Directory user password}
+    profile: ${27:# Security profile found in ~/}
+    resource_group: ${28:# The name of the resource group in which to create the Batch Account Pool}
+    resource_tags: ${29:# The user-defined tags to be associated with the Azure Batch Pool}
+    scale_settings: ${30:# Defines the desired size of the pool}
+    secret: ${31:# Azure client secret}
+    start_task: ${32:# In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool}
+    state: ${33:# Assert the state of the Batch Account Pool}
+    subscription_id: ${34:# Your Azure subscription Id}
+    target_node_communication_mode: ${35:# If omitted, the default value is C(Default)}
+    task_scheduling_policy: ${36:# Specifies how tasks should be distributed across compute nodes}
+    task_slots_per_node: ${37:# The default value is C(1)}
+    tenant: ${38:# Azure tenant ID}
+    thumbprint: ${39:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    upgrade_policy: ${40:# Describes an upgrade policy}
+    user_accounts: ${41:# The list of user accounts to be created on each node in the pool}
+    vm_size: ${42:# For information about available sizes of virtual machines for Cloud Services Pools}
+    x509_certificate_path: ${43:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_batchaccountpool]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_batchaccountpool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages a Batch Account Pool on Azure</description>
+</snippet>

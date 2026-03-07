@@ -3,17 +3,18 @@
   community.hrobot.firewall:
     allowlist_hos: ${2:# Whether Hetzner services have access}
     filter_ipv6: ${3:# Whether to filter IPv6 traffic as well}
-    hetzner_password: ${4:# The password for the Robot webservice user}
-    hetzner_user: ${5:# The username for the Robot webservice user}
+    hetzner_password: ${4:# The password for the Robot web-service user}
+    hetzner_user: ${5:# The username for the Robot web-service user}
     port: ${6:# Switch port of firewall}
-    rules: ${7:# Firewall rules}
-    server_ip: ${8:# The server's main IP address}
-    server_number: ${9:# The server's number}
-    state: ${10:# Status of the firewall}
-    timeout: ${11:# Timeout (in seconds) for waiting for firewall to be configured}
-    update_timeout: ${12:# Timeout to use when configuring the firewall}
-    wait_delay: ${13:# Delay to wait (in seconds) before checking again whether the firewall has been configured}
-    wait_for_configured: ${14:# Whether to wait until the firewall has been successfully configured before determining what to do, and before returning from the module}
+    rate_limit_retry_timeout: ${7:# Timeout (in seconds) for waiting when rate limit exceeded errors are returned}
+    rules: ${8:# Firewall rules}
+    server_ip: ${9:# The server's main IP address}
+    server_number: ${10:# The server's number}
+    state: ${11:# Status of the firewall}
+    timeout: ${12:# Timeout (in seconds) for waiting for firewall to be configured}
+    update_timeout: ${13:# Timeout to use when configuring the firewall}
+    wait_delay: ${14:# Delay to wait (in seconds) before checking again whether the firewall has been configured}
+    wait_for_configured: ${15:# Whether to wait until the firewall has been successfully configured before determining what to do, and before returning from the module}
   tags:
     - community
     - hrobot

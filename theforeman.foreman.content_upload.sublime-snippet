@@ -1,15 +1,17 @@
 <snippet>
   <content><![CDATA[- name: ${1:Upload content to a repository}
   theforeman.foreman.content_upload:
-    organization: ${2:# Organization that the entity is in}
-    ostree_repository_name: ${3:# Name of repository within the OSTree archive}
-    password: ${4:# Password of the user accessing the Foreman server}
-    product: ${5:# Product to which the repository lives in}
-    repository: ${6:# Repository to upload file in to}
-    server_url: ${7:# URL of the Foreman server}
-    src: ${8:# File (on the remote/target machine) to upload}
-    username: ${9:# Username accessing the Foreman server}
-    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    organization: ${3:# Organization that the entity is in}
+    ostree_repository_name: ${4:# Name of repository within the OSTree archive}
+    password: ${5:# Password of the user accessing the Foreman server}
+    product: ${6:# Product to which the repository lives in}
+    repository: ${7:# Repository to upload file in to}
+    server_url: ${8:# URL of the Foreman server}
+    src: ${9:# File (on the remote/target machine) to upload}
+    use_gssapi: ${10:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${11:# Username accessing the Foreman server}
+    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

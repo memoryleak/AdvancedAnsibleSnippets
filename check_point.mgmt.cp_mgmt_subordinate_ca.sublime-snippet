@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages subordinate-ca objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_subordinate_ca:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    automatic_enrollment: ${3:# Certificate automatic enrollment}
+    base64_certificate: ${4:# Certificate file encoded in base64}
+    color: ${5:# Color of the object}
+    comments: ${6:# Comments string}
+    details_level: ${7:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${8:# Indicates which domains to process the commands on}
+    groups: ${9:# Collection of group identifiers}
+    ignore_errors: ${10:# Apply changes ignoring errors}
+    ignore_warnings: ${11:# Apply changes ignoring warnings}
+    name: ${12:# Object name}
+    state: ${13:# State of the access rule (present or absent)}
+    tags: ${14:# Collection of tag identifiers}
+    version: ${15:# Version of checkpoint}
+    wait_for_task: ${16:# Wait for the task to end}
+    wait_for_task_timeout: ${17:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_subordinate_ca]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_subordinate_ca</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages subordinate-ca objects on Checkpoint over Web Services API</description>
+</snippet>

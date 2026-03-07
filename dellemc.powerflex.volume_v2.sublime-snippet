@@ -1,0 +1,39 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage volumes on Dell PowerFlex}
+  dellemc.powerflex.volume_v2:
+    allow_multiple_mappings: ${2:# Specifies whether to allow or not allow multiple mappings}
+    auto_snap_remove_type: ${3:# Whether to remove or detach the snapshot policy}
+    cap_unit: ${4:# The unit of the volume size}
+    delete_snapshots: ${5:# If C(true), the volume and all its dependent snapshots will be deleted}
+    hostname: ${6:# IP or FQDN of the PowerFlex host}
+    password: ${7:# The password of the PowerFlex host}
+    port: ${8:# Port number through which communication happens with PowerFlex host}
+    protection_domain_id: ${9:# The ID of the protection domain}
+    protection_domain_name: ${10:# The name of the protection domain}
+    refresh_src_vol_id: ${11:# ID of the source volume/snapshot to refresh from}
+    refresh_src_vol_name: ${12:# Name of the source volume/snapshot to refresh from}
+    restore_src_vol_id: ${13:# ID of the source volume/snapshot to restore from}
+    restore_src_vol_name: ${14:# Name of the source volume/snapshot to restore from}
+    sdc: ${15:# Specifies SDC parameters}
+    sdc_state: ${16:# Mapping state of the SDC}
+    size: ${17:# The size of the volume}
+    snapshot_policy_id: ${18:# ID of the snapshot policy}
+    snapshot_policy_name: ${19:# Name of the snapshot policy}
+    state: ${20:# State of the volume}
+    storage_pool_id: ${21:# The ID of the storage pool}
+    storage_pool_name: ${22:# The name of the storage pool}
+    timeout: ${23:# Time after which connection will get terminated}
+    username: ${24:# The username of the PowerFlex host}
+    validate_certs: ${25:# Boolean variable to specify whether or not to validate SSL certificate}
+    vol_id: ${26:# The ID of the volume}
+    vol_name: ${27:# The name of the volume}
+    vol_new_name: ${28:# New name of the volume}
+    vol_type: ${29:# Type of volume provisioning}
+  tags:
+    - dellemc
+    - powerflex
+    - volume_v2]]></content>
+  <tabTrigger>dellemc.powerflex.volume_v2</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage volumes on Dell PowerFlex</description>
+</snippet>

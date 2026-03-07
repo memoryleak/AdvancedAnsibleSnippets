@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage VMware ESXi host connection status in vCenter}
+  vmware.vmware.esxi_connection:
+    datacenter: ${2:# The name of the datacenter}
+    esxi_host_name: ${3:# ESXi hostname to manage}
+    hostname: ${4:# The hostname or IP address of the vSphere vCenter server}
+    password: ${5:# The password of the vSphere vCenter server}
+    port: ${6:# The port number of the vSphere vCenter server}
+    proxy_host: ${7:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${8:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    state: ${9:# Sets the connection status of the host in vCenter}
+    username: ${10:# The username of the vSphere vCenter server}
+    validate_certs: ${11:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware
+    - esxi_connection]]></content>
+  <tabTrigger>vmware.vmware.esxi_connection</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage VMware ESXi host connection status in vCenter</description>
+</snippet>

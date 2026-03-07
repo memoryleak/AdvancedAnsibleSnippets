@@ -1,12 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage packages with XBPS}
   community.general.xbps:
-    name: ${2:# Name of the package to install, upgrade, or remove}
-    recurse: ${3:# When removing a package, also remove its dependencies, provided that they are not required by other packages and were not explicitly installed by a user}
-    state: ${4:# Desired state of the package}
-    update_cache: ${5:# Whether or not to refresh the master package lists}
-    upgrade: ${6:# Whether or not to upgrade whole system}
-    upgrade_xbps: ${7:# Whether or not to upgrade the xbps package when necessary}
+    accept_pubkey: ${2:# Whether or not repository signing keys should be automatically accepted}
+    name: ${3:# Name of the package to install, upgrade, or remove}
+    recurse: ${4:# When removing a package, also remove its dependencies, provided that they are not required by other packages and were not explicitly installed by a user}
+    repositories: ${5:# Repository URL(s) to prepend to the repository list for the package installation}
+    root: ${6:# The full path for the target root directory}
+    state: ${7:# Desired state of the package}
+    update_cache: ${8:# Whether or not to refresh the master package lists}
+    upgrade: ${9:# Whether or not to upgrade whole system}
+    upgrade_xbps: ${10:# Whether or not to upgrade the C(xbps) package when necessary}
   tags:
     - community
     - general

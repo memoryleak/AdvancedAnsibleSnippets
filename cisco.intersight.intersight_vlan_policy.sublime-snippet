@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage VLAN Policies and VLANs for Cisco Intersight}
+  cisco.intersight.intersight_vlan_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    description: ${5:# The user-defined description for the VLAN Policy}
+    name: ${6:# The name assigned to the VLAN Policy}
+    organization: ${7:# The name of the Organization this resource is assigned to}
+    state: ${8:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${9:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${10:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${11:# Boolean control for verifying the api_uri TLS certificate}
+    vlans: ${12:# List of VLANs to be created and attached to the VLAN policy}
+  tags:
+    - cisco
+    - intersight
+    - intersight_vlan_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_vlan_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage VLAN Policies and VLANs for Cisco Intersight</description>
+</snippet>

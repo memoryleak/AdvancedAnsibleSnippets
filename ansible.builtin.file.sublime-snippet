@@ -5,12 +5,12 @@
     access_time_format: ${3:# When used with O(access_time), indicates the time format that must be used}
     attributes: ${4:# The attributes the resulting filesystem object should have}
     follow: ${5:# This flag indicates that filesystem links, if they exist, should be followed}
-    force: ${6:# Force the creation of the symlinks in two cases: the source file does not exist (but will appear later); the destination exists and is a file (so, we need to unlink the O(path) file and create symlink to the O(src) file in place of it)}
-    group: ${7:# Name of the group that should own the filesystem object, as would be fed to I(chown)}
+    force: ${6:# Force the creation of the links in two cases: if the link type is symbolic and the source file does not exist (but will appear later); the destination exists and is a file (so, we need to unlink the O(path) file and create a link to the O(src) file in place of it)}
+    group: ${7:# Name of the group that should own the filesystem object, as would be fed to C(chown)}
     mode: ${8:# The permissions the resulting filesystem object should have}
     modification_time: ${9:# This parameter indicates the time the file's modification time should be set to}
     modification_time_format: ${10:# When used with O(modification_time), indicates the time format that must be used}
-    owner: ${11:# Name of the user that should own the filesystem object, as would be fed to I(chown)}
+    owner: ${11:# Name of the user that should own the filesystem object, as would be fed to C(chown)}
     path: ${12:# Path to the file being managed}
     recurse: ${13:# Recursively set the specified file attributes on directory contents}
     selevel: ${14:# The level part of the SELinux filesystem object context}

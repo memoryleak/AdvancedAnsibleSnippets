@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:add or delete Route53 zones}
+  <content><![CDATA[- name: ${1:add or delete Route 53 zones}
   amazon.aws.route53_zone:
     access_key: ${2:# AWS access key ID}
     aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
@@ -7,25 +7,26 @@
     comment: ${5:# Comment associated with the zone}
     debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
     delegation_set_id: ${7:# The reusable delegation set ID to be associated with the zone}
-    endpoint_url: ${8:# URL to connect to instead of the default AWS endpoints}
-    hosted_zone_id: ${9:# The unique zone identifier you want to delete or 'all' if there are many zones with the same domain name}
-    profile: ${10:# A named AWS profile to use for authentication}
-    purge_tags: ${11:# If I(purge_tags=true) and I(tags) is set, existing tags will be purged from the resource to match exactly what is defined by I(tags) parameter}
-    region: ${12:# The AWS region to use}
-    secret_key: ${13:# AWS secret access key}
-    session_token: ${14:# AWS STS session token for use with temporary credentials}
-    state: ${15:# Whether or not the zone should exist or not}
-    tags: ${16:# A dictionary representing the tags to be applied to the resource}
-    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
-    vpc_id: ${18:# The VPC ID the zone should be a part of (if this is going to be a private zone)}
-    vpc_region: ${19:# The VPC Region the zone should be a part of (if this is going to be a private zone)}
-    vpcs: ${20:# The VPCs the zone should be a part of (if this is going to be a private zone)}
-    zone: ${21:# The DNS zone record (eg: foo}
+    dnssec: ${8:# Enables DNSSEC signing in a specific hosted zone}
+    endpoint_url: ${9:# URL to connect to instead of the default AWS endpoints}
+    hosted_zone_id: ${10:# The unique zone identifier you want to delete or 'all' if there are many zones with the same domain name}
+    profile: ${11:# A named AWS profile to use for authentication}
+    purge_tags: ${12:# If O(purge_tags=true) and O(tags) is set, existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
+    region: ${13:# The AWS region to use}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    state: ${16:# Whether or not the zone should exist or not}
+    tags: ${17:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${18:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_id: ${19:# The VPC ID the zone should be a part of (if this is going to be a private zone)}
+    vpc_region: ${20:# The VPC Region the zone should be a part of (if this is going to be a private zone)}
+    vpcs: ${21:# The VPCs the zone should be a part of (if this is going to be a private zone)}
+    zone: ${22:# The DNS zone record (eg: foo}
   tags:
     - amazon
     - aws
     - route53_zone]]></content>
   <tabTrigger>amazon.aws.route53_zone</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>add or delete Route53 zones</description>
+  <description>add or delete Route 53 zones</description>
 </snippet>

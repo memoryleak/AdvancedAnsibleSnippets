@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage EC profiles on StorageGRID}
+  netapp.storagegrid.na_sg_grid_ec_profile:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    name: ${4:# The EC Profile's name}
+    pool_id: ${5:# The Storage Pool ID of the selected scheme}
+    scheme_id: ${6:# The selected scheme for the EC profile}
+    state: ${7:# Whether the specified policy should be created or deactivated}
+    validate_certs: ${8:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_ec_profile]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_ec_profile</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage EC profiles on StorageGRID</description>
+</snippet>

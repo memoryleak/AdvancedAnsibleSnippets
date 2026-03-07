@@ -2,13 +2,21 @@
   <content><![CDATA[- name: ${1:Manage the state of policies in RabbitMQ}
   community.rabbitmq.rabbitmq_policy:
     apply_to: ${2:# What the policy applies to}
-    name: ${3:# The name of the policy to manage}
-    node: ${4:# Erlang node name of the rabbit we wish to configure}
-    pattern: ${5:# A regex of queues to apply the policy to}
-    priority: ${6:# The priority of the policy}
-    state: ${7:# The state of the policy}
-    tags: ${8:# A dict or string describing the policy}
-    vhost: ${9:# The name of the vhost to apply to}
+    ca_cert: ${3:# CA certificate to verify SSL connection to management API}
+    client_cert: ${4:# Client certificate to send on SSL connections to management API}
+    client_key: ${5:# Private key matching the client certificate}
+    login_host: ${6:# RabbitMQ host for connection}
+    login_password: ${7:# RabbitMQ password for connection}
+    login_port: ${8:# RabbitMQ management API port}
+    login_protocol: ${9:# RabbitMQ management API protocol}
+    login_user: ${10:# RabbitMQ user for connection}
+    name: ${11:# The name of the policy to manage}
+    node: ${12:# Erlang node name of the rabbit we wish to configure}
+    pattern: ${13:# A regex of queues to apply the policy to}
+    priority: ${14:# The priority of the policy}
+    state: ${15:# The state of the policy}
+    tags: ${16:# A dict or string describing the policy}
+    vhost: ${17:# The name of the vhost to apply to}
   tags:
     - community
     - rabbitmq

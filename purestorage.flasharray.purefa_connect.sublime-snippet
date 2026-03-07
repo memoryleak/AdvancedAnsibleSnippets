@@ -3,13 +3,16 @@
   purestorage.flasharray.purefa_connect:
     api_token: ${2:# FlashArray API token for admin privileged user}
     connection: ${3:# Type of connection between arrays}
-    disable_warnings: ${4:# Disable insecure certificate warnings in debug logs}
-    encrypted: ${5:# Defines if the array connection will be encryted}
-    fa_url: ${6:# FlashArray management IPv4 address or Hostname}
-    state: ${7:# Create or delete array connection}
-    target_api: ${8:# API token for target array}
-    target_url: ${9:# Management IP address of remote array}
-    transport: ${10:# Type of transport protocol to use for replication}
+    context: ${4:# Name of fleet member on which to perform the operation}
+    disable_warnings: ${5:# Disable insecure certificate warnings in debug logs}
+    encrypted: ${6:# Defines if the array connection will be encrypted}
+    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
+    refresh: ${8:# Array will attempt to communicate with the connection peer in order to update the connection attributes on both arrays with any changes that have occurred}
+    renew_key: ${9:# Update array connection with a new encryption key}
+    state: ${10:# Create or delete array connection}
+    target_api: ${11:# API token for target array}
+    target_url: ${12:# Management IP address of remote array}
+    transport: ${13:# Type of transport protocol to use for replication}
   tags:
     - purestorage
     - flasharray

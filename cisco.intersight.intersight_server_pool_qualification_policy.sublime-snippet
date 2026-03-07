@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Server Pool Qualification Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_server_pool_qualification_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    blade_qualifier: ${5:# Blade qualifier for qualifying blade-based servers}
+    description: ${6:# The user-defined description for the Server Pool Qualification Policy}
+    domain_qualifier: ${7:# Domain qualifier for Fabric Interconnect and domain-based qualification}
+    gpu_qualifier: ${8:# GPU qualifier for qualifying servers based on GPU specifications}
+    memory_qualifier: ${9:# Memory qualifier for qualifying servers based on memory specifications}
+    name: ${10:# The name assigned to the Server Pool Qualification Policy}
+    network_adaptor_qualifier: ${11:# Network adaptor qualifier for qualifying servers based on network adaptor count}
+    organization: ${12:# The name of the Organization this resource is assigned to}
+    processor_qualifier: ${13:# Processor qualifier for qualifying servers based on CPU specifications}
+    rack_server_qualifier: ${14:# Rack server qualifier for qualifying rack-based servers}
+    state: ${15:# If C(present), will verify the resource is present and will create if needed}
+    tag_qualifier: ${16:# Tag qualifier for qualifying resources based on tags}
+    tags: ${17:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${18:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${19:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_server_pool_qualification_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_server_pool_qualification_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Server Pool Qualification Policy configuration for Cisco Intersight</description>
+</snippet>

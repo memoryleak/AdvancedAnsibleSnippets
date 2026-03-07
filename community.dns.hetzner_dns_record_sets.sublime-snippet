@@ -2,13 +2,14 @@
   <content><![CDATA[- name: ${1:Bulk synchronize DNS record sets in Hetzner DNS service}
   community.dns.hetzner_dns_record_sets:
     bulk_operation_threshold: ${2:# Determines the threshold from when on bulk operations are used}
-    hetzner_token: ${3:# The token for the Hetzner API}
-    prune: ${4:# If set to V(true), will remove all existing records in the zone that are not listed in O(record_sets)}
-    record_sets: ${5:# The records that should be present in the zone}
-    txt_character_encoding: ${6:# Whether to treat numeric escape sequences (V(\\\\xyz)) as octal or decimal numbers}
-    txt_transformation: ${7:# Determines how TXT entry values are converted between the API and this module's input and output}
-    zone_id: ${8:# The ID of the DNS zone to modify}
-    zone_name: ${9:# The DNS zone to modify}
+    hetzner_api_token: ${3:# The token for the new Hetzner DNS API}
+    hetzner_token: ${4:# The token for the classic Hetzner DNS API}
+    prune: ${5:# If set to V(true), will remove all existing records in the zone that are not listed in O(record_sets)}
+    record_sets: ${6:# The records that should be present in the zone}
+    txt_character_encoding: ${7:# Whether to treat numeric escape sequences (V(\\\\xyz)) as octal or decimal numbers}
+    txt_transformation: ${8:# Determines how TXT entry values are converted between the API and this module's input and output}
+    zone_id: ${9:# The ID of the DNS zone to modify}
+    zone_name: ${10:# The DNS zone to modify}
   tags:
     - community
     - dns

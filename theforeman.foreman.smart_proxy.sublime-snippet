@@ -1,17 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Smart Proxies}
   theforeman.foreman.smart_proxy:
-    download_policy: ${2:# The download policy for the Smart Proxy}
-    lifecycle_environments: ${3:# Lifecycle Environments synced to the Smart Proxy}
-    locations: ${4:# List of locations the entity should be assigned to}
-    name: ${5:# Name of the Smart Proxy}
-    organizations: ${6:# List of organizations the entity should be assigned to}
-    password: ${7:# Password of the user accessing the Foreman server}
-    server_url: ${8:# URL of the Foreman server}
-    state: ${9:# State of the entity}
-    url: ${10:# URL of the Smart Proxy}
-    username: ${11:# Username accessing the Foreman server}
-    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    download_policy: ${3:# The download policy for the Smart Proxy}
+    lifecycle_environments: ${4:# Lifecycle Environments synced to the Smart Proxy}
+    locations: ${5:# List of locations the entity should be assigned to}
+    name: ${6:# Name of the Smart Proxy}
+    organizations: ${7:# List of organizations the entity should be assigned to}
+    password: ${8:# Password of the user accessing the Foreman server}
+    server_url: ${9:# URL of the Foreman server}
+    state: ${10:# State of the entity}
+    url: ${11:# URL of the Smart Proxy}
+    use_gssapi: ${12:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${13:# Username accessing the Foreman server}
+    validate_certs: ${14:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

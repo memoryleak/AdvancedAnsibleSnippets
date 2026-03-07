@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage NVMe hosts on Dell PowerFlex}
+  dellemc.powerflex.nvme_host:
+    hostname: ${2:# IP or FQDN of the PowerFlex host}
+    max_num_paths: ${3:# Maximum number of paths per volume}
+    max_num_sys_ports: ${4:# Maximum number of ports per protection domain}
+    nqn: ${5:# NQN of the NVMe host}
+    nvme_host_name: ${6:# Name of the NVMe host}
+    nvme_host_new_name: ${7:# New name of the NVMe host}
+    password: ${8:# The password of the PowerFlex host}
+    port: ${9:# Port number through which communication happens with PowerFlex host}
+    state: ${10:# State of the NVMe host}
+    timeout: ${11:# Time after which connection will get terminated}
+    username: ${12:# The username of the PowerFlex host}
+    validate_certs: ${13:# Boolean variable to specify whether or not to validate SSL certificate}
+  tags:
+    - dellemc
+    - powerflex
+    - nvme_host]]></content>
+  <tabTrigger>dellemc.powerflex.nvme_host</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage NVMe hosts on Dell PowerFlex</description>
+</snippet>

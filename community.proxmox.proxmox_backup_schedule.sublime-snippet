@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Schedule VM backups and removing them}
+  community.proxmox.proxmox_backup_schedule:
+    api_host: ${2:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${3:# Specify the password to authenticate with}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    backup_id: ${8:# The backup job ID}
+    state: ${9:# If V(present), ensure that VM is present in the backup job on defined O(backup_id)}
+    validate_certs: ${10:# If V(false), SSL certificates will not be validated}
+    vm_id: ${11:# The ID of the Proxmox VM}
+    vm_name: ${12:# The name of the Proxmox VM}
+  tags:
+    - community
+    - proxmox
+    - proxmox_backup_schedule]]></content>
+  <tabTrigger>community.proxmox.proxmox_backup_schedule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Schedule VM backups and removing them</description>
+</snippet>

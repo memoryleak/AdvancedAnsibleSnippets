@@ -1,19 +1,21 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage content view version content exports}
   theforeman.foreman.content_export_version:
-    chunk_size_gb: ${2:# Split the exported content into archives no greater than the specified size in gigabytes}
-    content_view: ${3:# Content view name}
-    content_view_version: ${4:# Content view version, e}
-    destination_server: ${5:# Destination server name; optional parameter to differentiate between exports}
-    fail_on_missing_content: ${6:# Fails if any of the repositories belonging to this version are unexportable}
-    format: ${7:# Export format}
-    from_history_id: ${8:# Export history identifier used for incremental export}
-    incremental: ${9:# Export only the content that has changed since the last export}
-    organization: ${10:# Organization that the entity is in}
-    password: ${11:# Password of the user accessing the Foreman server}
-    server_url: ${12:# URL of the Foreman server}
-    username: ${13:# Username accessing the Foreman server}
-    validate_certs: ${14:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    chunk_size_gb: ${3:# Split the exported content into archives no greater than the specified size in gigabytes}
+    content_view: ${4:# Content view name}
+    content_view_version: ${5:# Content view version, e}
+    destination_server: ${6:# Destination server name; optional parameter to differentiate between exports}
+    fail_on_missing_content: ${7:# Fails if any of the repositories belonging to this version are unexportable}
+    format: ${8:# Export format}
+    from_history_id: ${9:# Export history identifier used for incremental export}
+    incremental: ${10:# Export only the content that has changed since the last export}
+    organization: ${11:# Organization that the entity is in}
+    password: ${12:# Password of the user accessing the Foreman server}
+    server_url: ${13:# URL of the Foreman server}
+    use_gssapi: ${14:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${15:# Username accessing the Foreman server}
+    validate_certs: ${16:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

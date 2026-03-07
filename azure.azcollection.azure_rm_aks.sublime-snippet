@@ -10,30 +10,37 @@
     api_server_access_profile: ${8:# Profile of API Access configuration}
     append_tags: ${9:# Use to control if tags field is canonical or just appends to existing tags}
     auth_source: ${10:# Controls the source of the credentials to use for authentication}
-    cert_validation_mode: ${11:# Controls the certificate validation behavior for Azure endpoints}
-    client_id: ${12:# Azure client ID}
-    cloud_environment: ${13:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    dns_prefix: ${14:# DNS prefix specified when creating the managed cluster}
-    enable_rbac: ${15:# Enable RBAC}
-    kubernetes_version: ${16:# Version of Kubernetes specified when creating the managed cluster}
-    linux_profile: ${17:# The Linux profile suboptions}
-    location: ${18:# Valid azure location}
-    log_mode: ${19:# Parent argument}
-    log_path: ${20:# Parent argument}
-    name: ${21:# Name of the managed Azure Container Services (AKS) instance}
-    network_profile: ${22:# Profile of network configuration}
-    node_resource_group: ${23:# Name of the resource group containing agent pool nodes}
-    password: ${24:# Active Directory user password}
-    profile: ${25:# Security profile found in ~/}
-    resource_group: ${26:# Name of a resource group where the managed Azure Container Services (AKS) exists or will be created}
-    secret: ${27:# Azure client secret}
-    service_principal: ${28:# The service principal suboptions}
-    state: ${29:# Assert the state of the AKS}
-    subscription_id: ${30:# Your Azure subscription Id}
-    tags: ${31:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${32:# Azure tenant ID}
-    thumbprint: ${33:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    x509_certificate_path: ${34:# Path to the X509 certificate used to create the service principal in PEM format}
+    auto_upgrade_profile: ${11:# Auto upgrade profile for a managed cluster}
+    cert_validation_mode: ${12:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${13:# Azure client ID}
+    cloud_environment: ${14:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    disable_instance_discovery: ${15:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    disable_local_accounts: ${16:# If set to true, getting static credentials will be disabled for this cluster}
+    dns_prefix: ${17:# DNS prefix specified when creating the managed cluster}
+    enable_rbac: ${18:# Enable RBAC}
+    identity: ${19:# Identity for the Server}
+    kubernetes_version: ${20:# Version of Kubernetes specified when creating the managed cluster}
+    linux_profile: ${21:# The Linux profile suboptions}
+    location: ${22:# Valid azure location}
+    log_mode: ${23:# Parent argument}
+    log_path: ${24:# Parent argument}
+    name: ${25:# Name of the managed Azure Container Services (AKS) instance}
+    network_profile: ${26:# Profile of network configuration}
+    node_resource_group: ${27:# Name of the resource group containing agent pool nodes}
+    password: ${28:# Active Directory user password}
+    pod_identity_profile: ${29:# Config pod identities in managed Kubernetes cluster}
+    profile: ${30:# Security profile found in ~/}
+    resource_group: ${31:# Name of a resource group where the managed Azure Container Services (AKS) exists or will be created}
+    secret: ${32:# Azure client secret}
+    security_profile: ${33:# Security profile for the container service cluster}
+    service_principal: ${34:# The service principal suboptions}
+    state: ${35:# Assert the state of the AKS}
+    subscription_id: ${36:# Your Azure subscription Id}
+    tags: ${37:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${38:# Azure tenant ID}
+    thumbprint: ${39:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    windows_profile: ${40:# The Windows profile suboptions}
+    x509_certificate_path: ${41:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

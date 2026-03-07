@@ -2,11 +2,12 @@
   <content><![CDATA[- name: ${1:Manage FlashArray syslog servers settings}
   purestorage.flasharray.purefa_syslog_settings:
     api_token: ${2:# FlashArray API token for admin privileged user}
-    ca_certificate: ${3:# The text of the CA certificate for condifured syslog servers}
-    disable_warnings: ${4:# Disable insecure certificate warnings in debug logs}
-    fa_url: ${5:# FlashArray management IPv4 address or Hostname}
-    severity: ${6:# Logging severity threshold for which events will be forwarded to the configured syslog servers}
-    tls_audit: ${7:# If messages that are necessary in order to audit TLS negotiations performed by the array are forwared to the syslog servers}
+    ca_certificate: ${3:# The text of the CA certificate for configured syslog servers}
+    context: ${4:# Name of fleet member on which to perform the operation}
+    disable_warnings: ${5:# Disable insecure certificate warnings in debug logs}
+    fa_url: ${6:# FlashArray management IPv4 address or Hostname}
+    severity: ${7:# Logging severity threshold for which events will be forwarded to the configured syslog servers}
+    tls_audit: ${8:# If messages that are necessary in order to audit TLS negotiations performed by the array are forwarded to the syslog servers}
   tags:
     - purestorage
     - flasharray

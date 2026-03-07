@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure untrusted Client Network on StorageGRID}
+  netapp.storagegrid.na_sg_grid_untrusted_client_network:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    default_node: ${4:# The default setting for the Client Network on nodes added to the grid}
+    state: ${5:# The untrusted Client Network should be present}
+    untrusted_nodes_id: ${6:# List of nodes IDs that have untrusted Client Networks}
+    untrusted_nodes_name: ${7:# List of nodes name that have untrusted Client Networks}
+    validate_certs: ${8:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_untrusted_client_network]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_untrusted_client_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure untrusted Client Network on StorageGRID</description>
+</snippet>

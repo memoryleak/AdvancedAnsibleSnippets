@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage libvirt volumes inside a storage pool}
+  community.libvirt.virt_volume:
+    clone_source: ${2:# Name of the volume to clone from}
+    cloudinit_config: ${3:# Ansible dict of cloud-init data to create a CIDATA CDROM}
+    command: ${4:# C(create) - Analagous to C(state) / C(present)}
+    name: ${5:# Name of the volume being managed}
+    pool: ${6:# Name of the storage pool, where the volume is located}
+    state: ${7:# If C(present), Creates a new volume with the XML provided, optionally cloning from the image in C(clone_source)}
+    uri: ${8:# Libvirt connection uri}
+    wipe: ${9:# Whether to wipe the volume before deleting it}
+    xml: ${10:# XML definition of the volume to be created}
+  tags:
+    - community
+    - libvirt
+    - virt_volume]]></content>
+  <tabTrigger>community.libvirt.virt_volume</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage libvirt volumes inside a storage pool</description>
+</snippet>

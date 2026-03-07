@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure ssh security on StorageGRID}
+  netapp.storagegrid.na_sg_grid_ssh_security:
+    allow_external_access: ${2:# Whether external SSH access to the grid is allowed}
+    api_url: ${3:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${4:# The authorization token for the API request}
+    state: ${5:# The ssh security should be present}
+    validate_certs: ${6:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_ssh_security]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_ssh_security</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure ssh security on StorageGRID</description>
+</snippet>

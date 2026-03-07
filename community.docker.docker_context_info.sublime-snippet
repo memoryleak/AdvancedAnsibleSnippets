@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Retrieve information on Docker contexts for the current user}
+  community.docker.docker_context_info:
+    cli_context: ${2:# Override for the default context's name}
+    name: ${3:# A specific Docker CLI context to query}
+    only_current: ${4:# If set to V(true), RV(contexts) will just contain the current context and none else}
+  tags:
+    - community
+    - docker
+    - docker_context_info]]></content>
+  <tabTrigger>community.docker.docker_context_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Retrieve information on Docker contexts for the current user</description>
+</snippet>

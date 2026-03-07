@@ -1,13 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Sync a Repository or Product}
   theforeman.foreman.repository_sync:
-    organization: ${2:# Organization that the entity is in}
-    password: ${3:# Password of the user accessing the Foreman server}
-    product: ${4:# Product to which the I(repository) lives in}
-    repository: ${5:# Name of the repository to sync}
-    server_url: ${6:# URL of the Foreman server}
-    username: ${7:# Username accessing the Foreman server}
-    validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    organization: ${3:# Organization that the entity is in}
+    password: ${4:# Password of the user accessing the Foreman server}
+    product: ${5:# Product to which the I(repository) lives in}
+    repository: ${6:# Name of the repository to sync}
+    server_url: ${7:# URL of the Foreman server}
+    use_gssapi: ${8:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${9:# Username accessing the Foreman server}
+    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

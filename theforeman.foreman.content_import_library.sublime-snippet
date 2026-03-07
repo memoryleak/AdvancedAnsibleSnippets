@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage library content imports}
+  theforeman.foreman.content_import_library:
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    metadata: ${3:# Contents of the metadata}
+    metadata_file: ${4:# Location of the metadata}
+    organization: ${5:# Organization that the entity is in}
+    password: ${6:# Password of the user accessing the Foreman server}
+    path: ${7:# Directory containing the exported repository, version or library}
+    server_url: ${8:# URL of the Foreman server}
+    use_gssapi: ${9:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${10:# Username accessing the Foreman server}
+    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
+  tags:
+    - theforeman
+    - foreman
+    - content_import_library]]></content>
+  <tabTrigger>theforeman.foreman.content_import_library</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage library content imports</description>
+</snippet>

@@ -8,20 +8,23 @@
     hostname: ${6:# The hostname or IP address of the ONTAP instance}
     http_port: ${7:# Override the default port (80 or 443) with this port}
     https: ${8:# Enable and disable https}
-    job_days_of_month: ${9:# The day(s) of the month when the job should be run}
-    job_days_of_week: ${10:# The day(s) in the week when the job should be run}
-    job_hours: ${11:# The hour(s) of the day when the job should be run}
-    job_minutes: ${12:# The minute(s) of each hour when the job should be run}
-    job_months: ${13:# The month(s) when the job should be run}
-    key_filepath: ${14:# path to SSL client key file}
-    month_offset: ${15:# whether January starts at 0 or 1}
-    name: ${16:# The name of the job-schedule to manage}
-    ontapi: ${17:# The ontap api version to use}
-    password: ${18:# Password for the specified user}
-    state: ${19:# Whether the specified job schedule should exist or not}
-    use_rest: ${20:# Whether to use REST or ZAPI}
-    username: ${21:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${22:# If set to C(no), the SSL certificates will not be validated}
+    interval: ${9:# The interval at which the job should be run}
+    job_days_of_month: ${10:# The day(s) of the month when the job should be run}
+    job_days_of_week: ${11:# The day(s) in the week when the job should be run}
+    job_hours: ${12:# The hour(s) of the day when the job should be run}
+    job_minutes: ${13:# The minute(s) of each hour when the job should be run}
+    job_months: ${14:# The month(s) when the job should be run}
+    key_filepath: ${15:# path to SSL client key file}
+    month_offset: ${16:# whether January starts at 0 or 1}
+    name: ${17:# The name of the job-schedule to manage}
+    ontapi: ${18:# The ontap api version to use}
+    password: ${19:# Password for the specified user}
+    state: ${20:# Whether the specified job schedule should exist or not}
+    use_lambda: ${21:# Specifies if AWS Lambda proxy functionality should be used to connect to the ONTAP system}
+    use_rest: ${22:# Whether to use REST or ZAPI}
+    username: ${23:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${24:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${25:# name of the vserver}
   tags:
     - netapp
     - ontap

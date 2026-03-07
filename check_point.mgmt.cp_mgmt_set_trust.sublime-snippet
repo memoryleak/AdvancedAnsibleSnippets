@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure a Trusted communication between the Management Server and the managed Security Gateway}
+  check_point.mgmt.cp_mgmt_set_trust:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    details_level: ${3:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${4:# Indicates which domains to process the commands on}
+    ipv4_address: ${5:# IP address of the object, for establishing trust with dynamic gateways}
+    name: ${6:# Object name}
+    one_time_password: ${7:# Shared password to establish SIC between the Security Management and the Security Gateway}
+    trust_method: ${8:# Establish the trust communication method}
+    trust_settings: ${9:# Settings for the trusted communication establishment}
+    version: ${10:# Version of checkpoint}
+    wait_for_task: ${11:# Wait for the task to end}
+    wait_for_task_timeout: ${12:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_set_trust]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_set_trust</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure a Trusted communication between the Management Server and the managed Security Gateway</description>
+</snippet>

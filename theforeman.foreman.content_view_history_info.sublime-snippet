@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Fetch history of a Content View}
+  theforeman.foreman.content_view_history_info:
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    content_view: ${3:# Content view to get the history for}
+    location: ${4:# Label of the Location to scope the search for}
+    organization: ${5:# Name of the Organization to scope the search for}
+    password: ${6:# Password of the user accessing the Foreman server}
+    search: ${7:# Search query to use}
+    server_url: ${8:# URL of the Foreman server}
+    use_gssapi: ${9:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${10:# Username accessing the Foreman server}
+    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
+  tags:
+    - theforeman
+    - foreman
+    - content_view_history_info]]></content>
+  <tabTrigger>theforeman.foreman.content_view_history_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Fetch history of a Content View</description>
+</snippet>

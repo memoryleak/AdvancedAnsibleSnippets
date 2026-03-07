@@ -1,26 +1,26 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Manipulate consul sessions}
+  <content><![CDATA[- name: ${1:Manipulate Consul sessions}
   community.general.consul_session:
     behavior: ${2:# The optional behavior that can be attached to the session when it is created}
     ca_path: ${3:# The CA bundle to use for https connections}
-    checks: ${4:# Checks that will be used to verify the session health}
+    checks: ${4:# Checks that are used to verify the session health}
     datacenter: ${5:# The name of the datacenter in which the session exists or should be created}
     delay: ${6:# The optional lock delay that can be attached to the session when it is created}
-    host: ${7:# Host of the consul agent, defaults to V(localhost)}
+    host: ${7:# Host of the Consul agent}
     id: ${8:# ID of the session, required when O(state) is either V(info) or V(remove)}
     name: ${9:# The name that should be associated with the session}
-    node: ${10:# The name of the node that with which the session will be associated}
+    node: ${10:# The name of the node that with which the session is associated}
     port: ${11:# The port on which the consul agent is running}
-    scheme: ${12:# The protocol scheme on which the consul agent is running}
-    state: ${13:# Whether the session should be present i}
+    scheme: ${12:# The protocol scheme on which the Consul agent is running}
+    state: ${13:# Whether the session should be present, in other words it should be created if it does not exist, or absent, removed if present}
     token: ${14:# The token to use for authorization}
     ttl: ${15:# Specifies the duration of a session in seconds (between 10 and 86400)}
-    validate_certs: ${16:# Whether to verify the TLS certificate of the consul agent}
+    validate_certs: ${16:# Whether to verify the TLS certificate of the Consul agent}
   tags:
     - community
     - general
     - consul_session]]></content>
   <tabTrigger>community.general.consul_session</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Manipulate consul sessions</description>
+  <description>Manipulate Consul sessions</description>
 </snippet>

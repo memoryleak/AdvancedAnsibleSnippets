@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Notify Rollbar about app deployments}
   community.general.rollbar_deployment:
-    comment: ${2:# Deploy comment (e}
-    environment: ${3:# Name of the environment being deployed, e}
+    comment: ${2:# Deploy comment (for example what is being deployed)}
+    environment: ${3:# Name of the environment being deployed, for example V(production)}
     revision: ${4:# Revision number/sha being deployed}
     rollbar_user: ${5:# Rollbar username of the user who deployed}
     token: ${6:# Your project access token}
     url: ${7:# Optional URL to submit the notification to}
     user: ${8:# User who deployed}
-    validate_certs: ${9:# If V(false), SSL certificates for the target url will not be validated}
+    validate_certs: ${9:# If V(false), SSL certificates for the target URL are not validated}
   tags:
     - community
     - general

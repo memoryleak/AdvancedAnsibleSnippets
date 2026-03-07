@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages interface objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_interface:
+    anti_spoofing: ${2:# Enable anti-spoofing}
+    anti_spoofing_settings: ${3:# Anti Spoofing Settings}
+    auto_publish_session: ${4:# Publish the current session if changes have been performed after task completes}
+    cluster_members: ${5:# Network interface settings for cluster members}
+    cluster_network_type: ${6:# Cluster interface type}
+    color: ${7:# Color of the object}
+    comments: ${8:# Comments string}
+    details_level: ${9:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${10:# Indicates which domains to process the commands on}
+    dynamic_ip: ${11:# Enable dynamic interface}
+    gateway_uid: ${12:# Gateway or cluster object uid that the interface belongs to}
+    ignore_errors: ${13:# Apply changes ignoring errors}
+    ignore_warnings: ${14:# Apply changes ignoring warnings}
+    ipv4_address: ${15:# IPv4 network address}
+    ipv4_mask_length: ${16:# IPv4 mask length}
+    ipv4_network_mask: ${17:# IPv4 network mask}
+    ipv6_address: ${18:# IPv6 address}
+    ipv6_mask_length: ${19:# IPv6 mask length}
+    ipv6_network_mask: ${20:# IPv6 network mask}
+    monitored_by_cluster: ${21:# When Private is selected as the Cluster interface type, cluster can monitor or not monitor the interface}
+    name: ${22:# Network interface name}
+    network_interface_type: ${23:# Network Interface Type}
+    security_zone_settings: ${24:# Security Zone Settings}
+    state: ${25:# State of the access rule (present or absent)}
+    tags: ${26:# Collection of tag identifiers}
+    topology: ${27:# Topology configuration}
+    topology_settings: ${28:# Topology Settings}
+    version: ${29:# Version of checkpoint}
+    wait_for_task: ${30:# Wait for the task to end}
+    wait_for_task_timeout: ${31:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_interface]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages interface objects on Checkpoint over Web Services API</description>
+</snippet>

@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:List content imports}
+  theforeman.foreman.content_import_info:
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    content_view: ${3:# Content view name}
+    content_view_version: ${4:# Content view version}
+    id: ${5:# Import history identifier}
+    location: ${6:# Label of the Location to scope the search for}
+    organization: ${7:# Name of the Organization to scope the search for}
+    password: ${8:# Password of the user accessing the Foreman server}
+    search: ${9:# Search query to use}
+    server_url: ${10:# URL of the Foreman server}
+    type: ${11:# Specify complete or incremental imports}
+    use_gssapi: ${12:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${13:# Username accessing the Foreman server}
+    validate_certs: ${14:# Whether or not to verify the TLS certificates of the Foreman server}
+  tags:
+    - theforeman
+    - foreman
+    - content_import_info]]></content>
+  <tabTrigger>theforeman.foreman.content_import_info</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>List content imports</description>
+</snippet>

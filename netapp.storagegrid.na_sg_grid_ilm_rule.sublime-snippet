@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage ILM rules on StorageGRID}
+  netapp.storagegrid.na_sg_grid_ilm_rule:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    bucket_filter: ${4:# S3 or Swift bucket(s) to which the ILM rule applies}
+    description: ${5:# A short description of the ILM rule to indicate its purpose}
+    filters: ${6:# Filtering criteria used to determine if the ILM rule shall be applied to the evaluated object}
+    ingest_behavior: ${7:# How objects matching this rule are stored on ingest}
+    name: ${8:# Displayed name of the ILM rule}
+    placements: ${9:# Specifies where and how object data that matches the ILM rule is stored}
+    reference_time: ${10:# Indicates the time from which the ILM rule is applied}
+    state: ${11:# Whether the specified rule should exist}
+    tenant_account_id: ${12:# One or more S3 or Swift tenant account IDs to which the ILM rule applies}
+    validate_certs: ${13:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_ilm_rule]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_ilm_rule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage ILM rules on StorageGRID</description>
+</snippet>

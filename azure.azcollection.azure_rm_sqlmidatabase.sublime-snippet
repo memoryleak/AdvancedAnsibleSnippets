@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage SQL Managed Instance databases}
+  azure.azcollection.azure_rm_sqlmidatabase:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    collation: ${10:# The collation of the Azure SQL Managed Database collation to use}
+    database_name: ${11:# The name of the SQL managed instance database}
+    disable_instance_discovery: ${12:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    location: ${13:# The resource location}
+    log_mode: ${14:# Parent argument}
+    log_path: ${15:# Parent argument}
+    managed_instance_name: ${16:# The name of the SQL managed instance}
+    password: ${17:# Active Directory user password}
+    profile: ${18:# Security profile found in ~/}
+    resource_group: ${19:# The name of the resource group that contains the resource}
+    secret: ${20:# Azure client secret}
+    state: ${21:# State of the SQL Managed Database}
+    subscription_id: ${22:# Your Azure subscription Id}
+    tags: ${23:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${24:# Azure tenant ID}
+    thumbprint: ${25:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${26:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_sqlmidatabase]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_sqlmidatabase</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage SQL Managed Instance databases</description>
+</snippet>

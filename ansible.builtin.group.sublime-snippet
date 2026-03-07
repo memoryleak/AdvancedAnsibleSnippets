@@ -3,11 +3,13 @@
   ansible.builtin.group:
     force: ${2:# Whether to delete a group even if it is the primary group of a user}
     gid: ${3:# Optional I(GID) to set for the group}
-    local: ${4:# Forces the use of 'local' command alternatives on platforms that implement it}
-    name: ${5:# Name of the group to manage}
-    non_unique: ${6:# This option allows to change the group ID to a non-unique value}
-    state: ${7:# Whether the group should be present or not on the remote host}
-    system: ${8:# If V(yes), indicates that the group created is a system group}
+    gid_max: ${4:# Sets the GID_MAX value for group creation}
+    gid_min: ${5:# Sets the GID_MIN value for group creation}
+    local: ${6:# Forces the use of 'local' command alternatives on platforms that implement it}
+    name: ${7:# Name of the group to manage}
+    non_unique: ${8:# This option allows to change the group ID to a non-unique value}
+    state: ${9:# Whether the group should be present or not on the remote host}
+    system: ${10:# If V(yes), indicates that the group created is a system group}
   tags:
     - group]]></content>
   <tabTrigger>ansible.builtin.group</tabTrigger>

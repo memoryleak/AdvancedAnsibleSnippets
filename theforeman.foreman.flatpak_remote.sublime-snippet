@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Flatpak Remotes}
+  theforeman.foreman.flatpak_remote:
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    description: ${3:# Description of the flatpak remote}
+    name: ${4:# name}
+    organization: ${5:# Organization that the entity is in}
+    password: ${6:# Password of the user accessing the Foreman server}
+    remote_username: ${7:# Username for the flatpak remote}
+    server_url: ${8:# URL of the Foreman server}
+    state: ${9:# State of the entity}
+    token: ${10:# Token/password for the flatpak remote}
+    url: ${11:# Base URL of the flatpak registry index, like C(https://flatpaks}
+    use_gssapi: ${12:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${13:# Username accessing the Foreman server}
+    validate_certs: ${14:# Whether or not to verify the TLS certificates of the Foreman server}
+  tags:
+    - theforeman
+    - foreman
+    - flatpak_remote]]></content>
+  <tabTrigger>theforeman.foreman.flatpak_remote</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Flatpak Remotes</description>
+</snippet>

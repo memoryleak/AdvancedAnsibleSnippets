@@ -1,0 +1,45 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update and delete metric alerts}
+  azure.azcollection.azure_rm_monitormetricalerts:
+    actions: ${2:# The actions that will activate when the condition is met}
+    ad_user: ${3:# Active Directory username}
+    adfs_authority_url: ${4:# Azure AD authority url}
+    api_profile: ${5:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${6:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${7:# Controls the source of the credentials to use for authentication}
+    auto_mitigate: ${8:# the flag that indicates whether the alert should be auto resolved or not}
+    cert_validation_mode: ${9:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${10:# Azure client ID}
+    cloud_environment: ${11:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    criteria: ${12:# Defines the specific alert criteria information}
+    description: ${13:# A description of this metric alert rule}
+    disable_instance_discovery: ${14:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    enabled: ${15:# Indicates whether this metric alert is enabled}
+    evaluation_frequency: ${16:# How often the metric alert is evaluated represented in ISO 8601 duration format}
+    location: ${17:# Location of the metric alert}
+    log_mode: ${18:# Parent argument}
+    log_path: ${19:# Parent argument}
+    name: ${20:# The name of the metric alert you're creating, updateing or deleting}
+    password: ${21:# Active Directory user password}
+    profile: ${22:# Security profile found in ~/}
+    resource_group: ${23:# The name of the resource group}
+    scopes: ${24:# A list of resource IDs that will be used as prefixes}
+    secret: ${25:# Azure client secret}
+    severity: ${26:# Severity 1-4 of the alert}
+    state: ${27:# State of the metric alert}
+    subscription_id: ${28:# Your Azure subscription Id}
+    tags: ${29:# Dictionary of string:string pairs to assign as metadata to the object}
+    target_resource_region: ${30:# The region of the target resource(s) on which the alert is created/updated}
+    target_resource_type: ${31:# The resource type of the target resource(s) on which the alert is created/updated}
+    tenant: ${32:# Azure tenant ID}
+    thumbprint: ${33:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    window_size: ${34:# The period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold}
+    x509_certificate_path: ${35:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_monitormetricalerts]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_monitormetricalerts</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update and delete metric alerts</description>
+</snippet>

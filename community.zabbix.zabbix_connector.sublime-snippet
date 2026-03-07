@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/Delete/Update Zabbix connectors}
+  community.zabbix.zabbix_connector:
+    attempt_interval: ${2:# Parameter introduced in Zabbix 7}
+    auth_type: ${3:# HTTP authentication method used by the connector}
+    data_type: ${4:# Type of data being streamed}
+    description: ${5:# Description of the connector}
+    enabled: ${6:# Whether the connector is enabled}
+    http_login_password: ${7:# Basic Auth password}
+    http_login_user: ${8:# Basic Auth login}
+    http_proxy: ${9:# HTTP(S) proxy used by the connector}
+    item_value_types: ${10:# Parameter introduced in Zabbix 7}
+    max_attempts: ${11:# Maximum number of attempts}
+    max_records: ${12:# Maximum number of records sent in one message}
+    max_senders: ${13:# Number of sender processes used by the connector}
+    name: ${14:# Name of the connector}
+    password: ${15:# Password to authenticate the connector with the receiver}
+    ssl_cert_file: ${16:# Public SSL key file path for client authentication}
+    ssl_key_file: ${17:# Private SSL key file path for client authentication}
+    ssl_key_password: ${18:# Password of the private SSL key file}
+    state: ${19:# State of the connector}
+    tags: ${20:# List of tags to filter streamed data}
+    tags_eval_type: ${21:# Tag filter evaluation method}
+    timeout: ${22:# Message sending timeout in seconds (value between 1 and 60)}
+    token: ${23:# Bearer token to authenticate the connector with the receiver}
+    url: ${24:# URL of the receiver used by the connector}
+    username: ${25:# Username to authenticate the connector with the receiver}
+    verify_host: ${26:# Whether the connector should verify the receiver's hostname against the certificate's CN or SAN fields}
+    verify_peer: ${27:# Whether the connector should verify the receiver's certificate}
+  tags:
+    - community
+    - zabbix
+    - zabbix_connector]]></content>
+  <tabTrigger>community.zabbix.zabbix_connector</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/Delete/Update Zabbix connectors</description>
+</snippet>

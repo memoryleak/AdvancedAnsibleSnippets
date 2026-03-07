@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Get app-control-status objects facts on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_show_app_control_update_schedule:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    version: ${3:# Version of checkpoint}
+    wait_for_task: ${4:# Wait for the task to end}
+    wait_for_task_timeout: ${5:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_show_app_control_update_schedule]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_show_app_control_update_schedule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Get app-control-status objects facts on Checkpoint over Web Services API</description>
+</snippet>

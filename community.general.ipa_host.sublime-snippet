@@ -12,15 +12,17 @@
     ipa_prot: ${10:# Protocol used by IPA server}
     ipa_timeout: ${11:# Specifies idle timeout (in seconds) for the connection}
     ipa_user: ${12:# Administrative account used on IPA server}
-    mac_address: ${13:# List of Hardware MAC address(es) off this host}
-    ns_hardware_platform: ${14:# Host hardware platform (e}
-    ns_host_location: ${15:# Host location (e}
-    ns_os_version: ${16:# Host operating system and version (e}
-    random_password: ${17:# Generate a random password to be used in bulk enrollment}
-    state: ${18:# State to ensure}
-    update_dns: ${19:# If set V(true) with O(state=absent), then removes DNS records of the host managed by FreeIPA DNS}
-    user_certificate: ${20:# List of Base-64 encoded server certificates}
-    validate_certs: ${21:# This only applies if O(ipa_prot) is V(https)}
+    l: ${13:# Host locality (for example V(Baltimore, MD))}
+    mac_address: ${14:# List of Hardware MAC address(es) off this host}
+    ns_hardware_platform: ${15:# Host hardware platform (for example V(Lenovo T61'))}
+    ns_host_location: ${16:# Host location (for example V(Lab 2))}
+    ns_os_version: ${17:# Host operating system and version (for example V(Fedora 9))}
+    random_password: ${18:# Generate a random password to be used in bulk enrollment}
+    state: ${19:# State to ensure}
+    update_dns: ${20:# If set V(true) with O(state=absent), then removes DNS records of the host managed by FreeIPA DNS}
+    user_certificate: ${21:# List of Base-64 encoded server certificates}
+    userclass: ${22:# Host category (semantics placed on this attribute are for local interpretation)}
+    validate_certs: ${23:# This only applies if O(ipa_prot) is V(https)}
   tags:
     - community
     - general

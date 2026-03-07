@@ -2,17 +2,18 @@
   <content><![CDATA[- name: ${1:Manage replication connections between two FlashBlades}
   purestorage.flashblade.purefb_connect:
     api_token: ${2:# FlashBlade API token for admin privileged user}
-    default_limit: ${3:# Default maximum bandwidth threshold for outbound traffic in bytes}
-    disable_warnings: ${4:# Disable insecure certificate warnings}
-    encrypted: ${5:# Define if replication connection is encrypted}
-    fb_url: ${6:# FlashBlade management IP address or Hostname}
-    state: ${7:# Create or delete replication connection}
-    target_api: ${8:# API token for target FlashBlade system}
-    target_repl: ${9:# Replication IP address of target FlashBlade system}
-    target_url: ${10:# Management IP address of target FlashBlade system}
-    window_end: ${11:# The window end time}
-    window_limit: ${12:# Maximum bandwidth threshold for outbound traffic during the specified time range in bytes}
-    window_start: ${13:# The window start time}
+    context: ${3:# Name of fleet member on which to perform the operation}
+    default_limit: ${4:# Default maximum bandwidth threshold for outbound traffic in bytes}
+    disable_warnings: ${5:# Disable insecure certificate warnings}
+    encrypted: ${6:# Define if replication connection is encrypted}
+    fb_url: ${7:# FlashBlade management IP address or Hostname}
+    state: ${8:# Create or delete replication connection}
+    target_api: ${9:# API token for target FlashBlade system}
+    target_repl: ${10:# Replication IP address of target FlashBlade system}
+    target_url: ${11:# Management IP address of target FlashBlade system}
+    window_end: ${12:# The window end time}
+    window_limit: ${13:# Maximum bandwidth threshold for outbound traffic during the specified time range in bytes}
+    window_start: ${14:# The window start time}
   tags:
     - purestorage
     - flashblade

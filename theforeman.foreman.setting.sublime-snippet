@@ -1,12 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Settings}
   theforeman.foreman.setting:
-    name: ${2:# Name of the Setting}
-    password: ${3:# Password of the user accessing the Foreman server}
-    server_url: ${4:# URL of the Foreman server}
-    username: ${5:# Username accessing the Foreman server}
-    validate_certs: ${6:# Whether or not to verify the TLS certificates of the Foreman server}
-    value: ${7:# value to set the Setting to}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    name: ${3:# Name of the Setting}
+    password: ${4:# Password of the user accessing the Foreman server}
+    server_url: ${5:# URL of the Foreman server}
+    use_gssapi: ${6:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${7:# Username accessing the Foreman server}
+    validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
+    value: ${9:# value to set the Setting to}
   tags:
     - theforeman
     - foreman

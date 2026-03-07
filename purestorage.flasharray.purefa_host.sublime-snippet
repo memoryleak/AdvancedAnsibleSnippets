@@ -2,28 +2,31 @@
   <content><![CDATA[- name: ${1:Manage hosts on Pure Storage FlashArrays}
   purestorage.flasharray.purefa_host:
     api_token: ${2:# FlashArray API token for admin privileged user}
-    count: ${3:# Number of hosts to be created in a multiple host creation}
-    digits: ${4:# Number of digits to use for multiple host count}
-    disable_warnings: ${5:# Disable insecure certificate warnings in debug logs}
-    fa_url: ${6:# FlashArray management IPv4 address or Hostname}
-    host_password: ${7:# Sets the host password for CHAP authentication}
-    host_user: ${8:# Sets the host user name for CHAP authentication}
-    iqn: ${9:# List of IQNs of the host}
-    lun: ${10:# LUN ID to assign to volume for host}
-    name: ${11:# The name of the host}
-    nqn: ${12:# List of NQNs of the host}
-    personality: ${13:# Define which operating system the host is}
-    preferred_array: ${14:# List of preferred arrays in an ActiveCluster environment}
-    protocol: ${15:# Defines the host connection protocol for volumes}
-    rename: ${16:# The name to rename to}
-    start: ${17:# Number at which to start the multiple host creation index}
-    state: ${18:# Define whether the host should exist or not}
-    suffix: ${19:# Suffix string, if required, for multiple host create}
-    target_password: ${20:# Sets the target password for CHAP authentication}
-    target_user: ${21:# Sets the target user name for CHAP authentication}
-    vlan: ${22:# The VLAN ID that the host is associated with}
-    volume: ${23:# Volume name to map to the host}
-    wwns: ${24:# List of wwns of the host}
+    context: ${3:# Name of fleet member on which to perform the operation}
+    count: ${4:# Number of hosts to be created in a multiple host creation}
+    digits: ${5:# Number of digits to use for multiple host count}
+    disable_warnings: ${6:# Disable insecure certificate warnings in debug logs}
+    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
+    host_password: ${8:# Sets the host password for CHAP authentication}
+    host_user: ${9:# Sets the host user name for CHAP authentication}
+    iqn: ${10:# List of IQNs of the host}
+    lun: ${11:# LUN ID to assign to volume for host}
+    modify_resource_access: ${12:# Describes how to modify a resource accesses of a resource when that resource is moved}
+    move: ${13:# Move a host in and out of a local member realm(s) or local array}
+    name: ${14:# The name of the host}
+    nqn: ${15:# List of NQNs of the host}
+    personality: ${16:# Define which operating system the host is}
+    preferred_array: ${17:# List of preferred arrays in an ActiveCluster environment}
+    protocol: ${18:# Defines the host connection protocol for volumes}
+    rename: ${19:# The name to rename to}
+    start: ${20:# Number at which to start the multiple host creation index}
+    state: ${21:# Define whether the host should exist or not}
+    suffix: ${22:# Suffix string, if required, for multiple host create}
+    target_password: ${23:# Sets the target password for CHAP authentication}
+    target_user: ${24:# Sets the target user name for CHAP authentication}
+    vlan: ${25:# The VLAN ID that the host is associated with}
+    volume: ${26:# Volume name to map to the host}
+    wwns: ${27:# List of wwns of the host}
   tags:
     - purestorage
     - flasharray

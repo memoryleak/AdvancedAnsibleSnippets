@@ -2,13 +2,14 @@
   <content><![CDATA[- name: ${1:Manage filesystem user quotas}
   purestorage.flashblade.purefb_userquota:
     api_token: ${2:# FlashBlade API token for admin privileged user}
-    disable_warnings: ${3:# Disable insecure certificate warnings}
-    fb_url: ${4:# FlashBlade management IP address or Hostname}
-    name: ${5:# Filesystem Name}
-    quota: ${6:# User quota in M, G, T or P units}
-    state: ${7:# Create, delete or modifies a quota}
-    uid: ${8:# The user id on which the quota is enforced}
-    uname: ${9:# The user name on which the quota is enforced}
+    context: ${3:# Name of fleet member on which to perform the operation}
+    disable_warnings: ${4:# Disable insecure certificate warnings}
+    fb_url: ${5:# FlashBlade management IP address or Hostname}
+    name: ${6:# Filesystem Name}
+    quota: ${7:# User quota in M, G, T or P units}
+    state: ${8:# Create, delete or modifies a quota}
+    uid: ${9:# The user id on which the quota is enforced}
+    uname: ${10:# The user name on which the quota is enforced}
   tags:
     - purestorage
     - flashblade

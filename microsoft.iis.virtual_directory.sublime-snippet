@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures a virtual directory in IIS}
+  microsoft.iis.virtual_directory:
+    application: ${2:# The application under which the virtual directory is created or exists}
+    connect_as: ${3:# The type of authentication to use for the virtual directory}
+    name: ${4:# The name of the virtual directory to create}
+    password: ${5:# The password associated with O(username)}
+    physical_path: ${6:# The physical path to the folder in which the new virtual directory is created}
+    site: ${7:# The site name under which the virtual directory should exist}
+    state: ${8:# Whether to add or remove the specified virtual directory}
+    username: ${9:# Specifies the username of an account that can access configuration files and content for the virtual directory}
+  tags:
+    - microsoft
+    - iis
+    - virtual_directory]]></content>
+  <tabTrigger>microsoft.iis.virtual_directory</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures a virtual directory in IIS</description>
+</snippet>

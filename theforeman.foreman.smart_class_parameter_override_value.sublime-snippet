@@ -1,16 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Smart Class Parameter Override Values}
   theforeman.foreman.smart_class_parameter_override_value:
-    match: ${2:# Override match}
-    omit: ${3:# Foreman will not send this parameter in classification output}
-    password: ${4:# Password of the user accessing the Foreman server}
-    puppetclass: ${5:# Puppet Class the Smart Class Parameter belongs to}
-    server_url: ${6:# URL of the Foreman server}
-    smart_class_parameter: ${7:# Smart Class Parameter the Override Value belongs to}
-    state: ${8:# State of the entity}
-    username: ${9:# Username accessing the Foreman server}
-    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
-    value: ${11:# Override value, required if omit is false}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    match: ${3:# Override match}
+    omit: ${4:# Foreman will not send this parameter in classification output}
+    password: ${5:# Password of the user accessing the Foreman server}
+    puppetclass: ${6:# Puppet Class the Smart Class Parameter belongs to}
+    server_url: ${7:# URL of the Foreman server}
+    smart_class_parameter: ${8:# Smart Class Parameter the Override Value belongs to}
+    state: ${9:# State of the entity}
+    use_gssapi: ${10:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${11:# Username accessing the Foreman server}
+    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
+    value: ${13:# Override value, required if omit is false}
   tags:
     - theforeman
     - foreman

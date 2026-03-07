@@ -1,16 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Locations}
   theforeman.foreman.location:
-    ignore_types: ${2:# List of resources types that will be automatically associated}
-    name: ${3:# Name of the Location}
-    organizations: ${4:# List of organizations the location should be assigned to}
-    parameters: ${5:# Entity domain specific host parameters}
-    parent: ${6:# Title of a parent Location for nesting}
-    password: ${7:# Password of the user accessing the Foreman server}
-    server_url: ${8:# URL of the Foreman server}
-    state: ${9:# State of the entity}
-    username: ${10:# Username accessing the Foreman server}
-    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    description: ${3:# Description of the Location}
+    ignore_types: ${4:# List of resources types that will be automatically associated}
+    name: ${5:# Name of the Location}
+    organizations: ${6:# List of organizations the location should be assigned to}
+    parameters: ${7:# Entity domain specific host parameters}
+    parent: ${8:# Title of a parent Location for nesting}
+    password: ${9:# Password of the user accessing the Foreman server}
+    server_url: ${10:# URL of the Foreman server}
+    state: ${11:# State of the entity}
+    use_gssapi: ${12:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${13:# Username accessing the Foreman server}
+    validate_certs: ${14:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

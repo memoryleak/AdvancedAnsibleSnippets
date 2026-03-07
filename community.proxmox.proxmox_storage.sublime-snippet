@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage storage in PVE clusters and nodes}
+  community.proxmox.proxmox_storage:
+    api_host: ${2:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${3:# Specify the password to authenticate with}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    cephfs_options: ${8:# Extended information for adding CephFS storage}
+    cifs_options: ${9:# Extended information for adding CIFS storage}
+    content: ${10:# The desired content that should be used with this storage type}
+    dir_options: ${11:# Extended information for adding Directory storage}
+    iscsi_options: ${12:# Extended information for adding iSCSI storage}
+    name: ${13:# The name of the storage displayed in the storage list}
+    nfs_options: ${14:# Extended information for adding NFS storage}
+    nodes: ${15:# A list of Proxmox VE nodes on which the target storage is enabled}
+    pbs_options: ${16:# Extended information for adding Proxmox Backup Server as storage}
+    state: ${17:# The state of the defined storage type to perform}
+    type: ${18:# The storage type/protocol to use when adding the storage}
+    validate_certs: ${19:# If V(false), SSL certificates will not be validated}
+    zfspool_options: ${20:# Extended information for adding ZFS storage}
+  tags:
+    - community
+    - proxmox
+    - proxmox_storage]]></content>
+  <tabTrigger>community.proxmox.proxmox_storage</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage storage in PVE clusters and nodes</description>
+</snippet>

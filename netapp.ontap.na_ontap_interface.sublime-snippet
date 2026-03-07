@@ -31,20 +31,22 @@
     is_dns_update_enabled: ${29:# Specifies if DNS update is enabled for this LIF}
     is_ipv4_link_local: ${30:# Specifies the LIF's are to acquire a ipv4 link local address}
     key_filepath: ${31:# path to SSL client key file}
-    listen_for_dns_query: ${32:# If True, this IP address will listen for DNS queries for the dnszone specified}
-    netmask: ${33:# Specifies the LIF's netmask}
-    ontapi: ${34:# The ontap api version to use}
-    password: ${35:# Password for the specified user}
-    probe_port: ${36:# Probe port for Cloud load balancer - only valid in the Azure environment}
-    protocols: ${37:# Specifies the list of data protocols configured on the LIF}
-    role: ${38:# Specifies the role of the LIF}
-    service_policy: ${39:# Starting with ONTAP 9}
-    state: ${40:# Whether the specified interface should exist or not}
-    subnet_name: ${41:# Subnet where the IP interface address is allocated from}
-    use_rest: ${42:# Whether to use REST or ZAPI}
-    username: ${43:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${44:# If set to C(no), the SSL certificates will not be validated}
-    vserver: ${45:# The name of the vserver to use}
+    lambda_config: ${32:# Configuration parameters for AWS Lambda proxy functionality}
+    listen_for_dns_query: ${33:# If True, this IP address will listen for DNS queries for the dnszone specified}
+    netmask: ${34:# Specifies the LIF's netmask}
+    ontapi: ${35:# The ontap api version to use}
+    password: ${36:# Password for the specified user}
+    probe_port: ${37:# Probe port for Cloud load balancer - only valid in the Azure environment}
+    protocols: ${38:# Specifies the list of data protocols configured on the LIF}
+    role: ${39:# Specifies the role of the LIF}
+    service_policy: ${40:# Starting with ONTAP 9}
+    state: ${41:# Whether the specified interface should exist or not}
+    subnet_name: ${42:# Subnet where the IP interface address is allocated from}
+    use_lambda: ${43:# Specifies if AWS Lambda proxy functionality should be used to connect to the ONTAP system}
+    use_rest: ${44:# Whether to use REST or ZAPI}
+    username: ${45:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${46:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${47:# The name of the vserver to use}
   tags:
     - netapp
     - ontap

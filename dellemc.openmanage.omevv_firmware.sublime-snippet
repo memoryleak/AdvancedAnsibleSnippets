@@ -1,0 +1,36 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Update the firmware of a specific host in the cluster}
+  dellemc.openmanage.omevv_firmware:
+    ca_path: ${2:# The Privacy Enhanced Mail (PEM) file that contains a CA certificate to be used for the validation}
+    check_vSAN_health: ${3:# Check vSAN health while updating the firmware}
+    date_time: ${4:# Date and time when the job must run}
+    delete_job_queue: ${5:# Whether to delete the job queue in iDRAC while updating firmware}
+    drs_check: ${6:# Allows you to check if DRS of the cluster is enabled or not}
+    enter_maintenance_mode_options: ${7:# VM migration policy during management mode}
+    enter_maintenance_mode_timeout: ${8:# Time out value during maintenance mode in minutes}
+    evacuate_VMs: ${9:# Allows to move the virtual machine (VM) to other host when current host is powered off}
+    exit_maintenance_mode: ${10:# Whether to exit management mode after Update}
+    hostname: ${11:# IP address or hostname of the OpenManage Enterprise Modular}
+    job_description: ${12:# Update job description}
+    job_name: ${13:# Update job name}
+    job_wait: ${14:# Whether to wait till completion of the job}
+    job_wait_timeout: ${15:# The maximum wait time of I(job_wait) in seconds}
+    maintenance_mode_count_check: ${16:# Allows to check if any host in cluster is in management mode}
+    port: ${17:# OpenManage Enterprise HTTPS port}
+    reboot_options: ${18:# Host reboot option for firmware update}
+    reset_idrac: ${19:# Whether to reset the iDRAC while performing firmware update}
+    run_now: ${20:# Whether to run the update job now or later}
+    targets: ${21:# The target details for the firmware update operation}
+    timeout: ${22:# The socket level timeout in seconds}
+    validate_certs: ${23:# Whether to check SSL certificate}
+    vcenter_password: ${24:# Password for OpenManage Enterprise Integration for VMware vCenter (OMEVV)}
+    vcenter_username: ${25:# Username for OpenManage Enterprise Integration for VMware vCenter (OMEVV)}
+    vcenter_uuid: ${26:# Universally Unique Identifier (UUID) of vCenter}
+  tags:
+    - dellemc
+    - openmanage
+    - omevv_firmware]]></content>
+  <tabTrigger>dellemc.openmanage.omevv_firmware</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Update the firmware of a specific host in the cluster</description>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp ONTAP support configuration backup}
+  netapp.ontap.na_ontap_support_config_backup:
+    cert_filepath: ${2:# path to SSL client cert file (}
+    feature_flags: ${3:# Enable or disable a new feature}
+    force_ontap_version: ${4:# Override the cluster ONTAP version when using REST}
+    hostname: ${5:# The hostname or IP address of the ONTAP instance}
+    http_port: ${6:# Override the default port (80 or 443) with this port}
+    https: ${7:# Enable and disable https}
+    key_filepath: ${8:# path to SSL client key file}
+    name: ${9:# Use this parameter to specify the user name to use to log in to the destination system and perform the upload}
+    password: ${10:# Password for the specified user}
+    set_password: ${11:# Password used to uploads configuration backups}
+    state: ${12:# This module supports only system backup configuration modify, hence only present state is supported}
+    url: ${13:# An external backup location for the cluster configuration}
+    use_rest: ${14:# This module only supports REST}
+    username: ${15:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certificate: ${16:# Use this parameter with the value 'true' to validate the digital certificate of the remote server}
+    validate_certs: ${17:# If set to C(no), the SSL certificates will not be validated}
+  tags:
+    - netapp
+    - ontap
+    - na_ontap_support_config_backup]]></content>
+  <tabTrigger>netapp.ontap.na_ontap_support_config_backup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp ONTAP support configuration backup</description>
+</snippet>

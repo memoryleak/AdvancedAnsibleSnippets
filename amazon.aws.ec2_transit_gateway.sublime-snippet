@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and delete AWS Transit Gateways}
+  amazon.aws.ec2_transit_gateway:
+    access_key: ${2:# AWS access key ID}
+    asn: ${3:# A private Autonomous System Number (ASN) for the Amazon side of a BGP session}
+    auto_associate: ${4:# Enable or disable automatic association with the default association route table}
+    auto_attach: ${5:# Enable or disable automatic acceptance of attachment requests}
+    auto_propagate: ${6:# Enable or disable automatic propagation of routes to the default propagation route table}
+    aws_ca_bundle: ${7:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${8:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${9:# Use a C(botocore}
+    description: ${10:# The description of the transit gateway}
+    dns_support: ${11:# Whether to enable AWS DNS support}
+    endpoint_url: ${12:# URL to connect to instead of the default AWS endpoints}
+    multicast_support: ${13:# Whether to enable AWS Multicast support}
+    profile: ${14:# A named AWS profile to use for authentication}
+    purge_tags: ${15:# If O(purge_tags=true) and O(tags) is set, existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
+    region: ${16:# The AWS region to use}
+    secret_key: ${17:# AWS secret access key}
+    session_token: ${18:# AWS STS session token for use with temporary credentials}
+    state: ${19:# V(present) to ensure resource is created}
+    tags: ${20:# A dictionary representing the tags to be applied to the resource}
+    transit_gateway_id: ${21:# The ID of the transit gateway}
+    validate_certs: ${22:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpn_ecmp_support: ${23:# Enable or disable Equal Cost Multipath Protocol support}
+    wait: ${24:# Whether to wait for status}
+    wait_timeout: ${25:# Number of seconds to wait for status}
+  tags:
+    - amazon
+    - aws
+    - ec2_transit_gateway]]></content>
+  <tabTrigger>amazon.aws.ec2_transit_gateway</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and delete AWS Transit Gateways</description>
+</snippet>

@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage L3Out Secondary IP Address on Cisco Nexus Dashboard Orchestrator (NDO)}
+  cisco.mso.ndo_l3out_secondary_ip:
+    dhcp_relay: ${2:# Whether to enable Dynamic Host Configuration Protocol (DHCP) relay}
+    domain: ${3:# The name of the domain}
+    domain_provider: ${4:# The provider of the domain}
+    domain_type: ${5:# The type of the domain}
+    encapsulation_type: ${6:# The encapsulation type of the interface}
+    encapsulation_value: ${7:# The encapsulation value of the interface}
+    host: ${8:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    ipv6_dad: ${9:# Whether to enable IPv6 Duplicate Address Detection (DAD)}
+    l3out: ${10:# The name of the L3Out}
+    l3out_uuid: ${11:# The UUID of the L3Out}
+    login_domain: ${12:# The login domain name to use for authentication}
+    nd_ra_prefix: ${13:# Whether to enable Neighbor Discovery (ND) Router Advertisement (RA)}
+    node_id: ${14:# The ID of the node (border leaf switch)}
+    output_level: ${15:# Influence the output of this MSO module}
+    parent_type: ${16:# The parent type of the L3Out}
+    password: ${17:# The password to use for authentication}
+    path: ${18:# The path of the interface}
+    port: ${19:# Port number to be used for the REST connection}
+    port_channel: ${20:# The port channel details}
+    secondary_address: ${21:# The secondary IP address}
+    state: ${22:# Use C(absent) for removing}
+    template: ${23:# The name of the L3Out template}
+    template_id: ${24:# The ID of the L3Out template}
+    timeout: ${25:# The socket level timeout in seconds}
+    use_proxy: ${26:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${27:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${28:# The username to use for authentication}
+    validate_certs: ${29:# If C(false), SSL certificates will not be validated}
+    virtual_port_channel: ${30:# The virtual port channel details}
+  tags:
+    - cisco
+    - mso
+    - ndo_l3out_secondary_ip]]></content>
+  <tabTrigger>cisco.mso.ndo_l3out_secondary_ip</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage L3Out Secondary IP Address on Cisco Nexus Dashboard Orchestrator (NDO)</description>
+</snippet>

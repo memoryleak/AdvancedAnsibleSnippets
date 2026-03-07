@@ -1,0 +1,41 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Azure Public IP prefix}
+  azure.azcollection.azure_rm_publicipprefix:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${8:# Azure client ID}
+    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    custom_ip_prefix: ${10:# The Custom IP prefix that this prefix is associated with}
+    disable_instance_discovery: ${11:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    extended_location: ${12:# The extended location of the public ip address}
+    ip_tags: ${13:# The list of tags associated with the public IP prefix}
+    location: ${14:# Valid Azure location}
+    log_mode: ${15:# Parent argument}
+    log_path: ${16:# Parent argument}
+    name: ${17:# Name of the Public IP prefix}
+    password: ${18:# Active Directory user password}
+    prefix_length: ${19:# The Length of the Public IP Prefix}
+    profile: ${20:# Security profile found in ~/}
+    public_ip_address_version: ${21:# The public IP address version}
+    resource_group: ${22:# Name of resource group with which the Public IP prefix is associated}
+    secret: ${23:# Azure client secret}
+    sku: ${24:# The public IP prefix SKU}
+    state: ${25:# Assert the state of the Public IP}
+    subscription_id: ${26:# Your Azure subscription Id}
+    tags: ${27:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${28:# Azure tenant ID}
+    thumbprint: ${29:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${30:# Path to the X509 certificate used to create the service principal in PEM format}
+    zones: ${31:# A list of availability zones denoting the IP prefix allocated for the resource needs to come from}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_publicipprefix]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_publicipprefix</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Azure Public IP prefix</description>
+</snippet>

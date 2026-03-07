@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Add or delete Ceph Monitor}
+  community.proxmox.proxmox_ceph_mon:
+    api_host: ${2:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${3:# Specify the password to authenticate with}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    node: ${8:# The cluster node name}
+    state: ${9:# Indicate whether the Ceph monitor should be present (created if missing) or absent (deleted if it exists)}
+    validate_certs: ${10:# If V(false), SSL certificates will not be validated}
+  tags:
+    - community
+    - proxmox
+    - proxmox_ceph_mon]]></content>
+  <tabTrigger>community.proxmox.proxmox_ceph_mon</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Add or delete Ceph Monitor</description>
+</snippet>

@@ -6,20 +6,21 @@
     commit_message: ${4:# Set a commit message for the version history}
     dashboard_id: ${5:# Public Grafana}
     dashboard_revision: ${6:# Revision of the public grafana dashboard to import}
-    folder: ${7:# The Grafana folder where this dashboard will be imported to}
+    folder: ${7:# UID of the folder where the dashboard will be created or imported}
     grafana_api_key: ${8:# The Grafana API key}
     org_id: ${9:# The Grafana organization ID where the dashboard will be imported / exported / deleted}
     org_name: ${10:# The Grafana organization name where the dashboard will be imported / exported / deleted}
     overwrite: ${11:# Override existing dashboard when state is present}
-    path: ${12:# The path to the json file containing the Grafana dashboard to import or export}
-    slug: ${13:# Deprecated since Grafana 5}
-    state: ${14:# State of the dashboard}
-    uid: ${15:# uid of the dashboard to export when C(state) is C(export) or C(absent)}
-    url: ${16:# The Grafana URL}
-    url_password: ${17:# The Grafana password for API authentication}
-    url_username: ${18:# The Grafana user for API authentication}
-    use_proxy: ${19:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
-    validate_certs: ${20:# If C(false), SSL certificates will not be validated}
+    parent_folder: ${12:# UID of the parent folder used to scope the search for the specified C(folder)}
+    path: ${13:# The path to the json file containing the Grafana dashboard to import or export}
+    slug: ${14:# Deprecated since Grafana 5}
+    state: ${15:# State of the dashboard}
+    uid: ${16:# Used to identify the dashboard when C(state) is C(export) or C(absent)}
+    url: ${17:# The Grafana URL}
+    url_password: ${18:# The Grafana password for API authentication}
+    url_username: ${19:# The Grafana user for API authentication}
+    use_proxy: ${20:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${21:# If C(false), SSL certificates will not be validated}
   tags:
     - community
     - grafana

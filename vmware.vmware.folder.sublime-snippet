@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage VMware vSphere folders}
+  vmware.vmware.folder:
+    absolute_path: ${2:# The absolute path of the folder to create}
+    datacenter: ${3:# The name of the datacenter where the folder should be created}
+    folder_type: ${4:# The type of folder that should be created}
+    hostname: ${5:# The hostname or IP address of the vSphere vCenter server}
+    password: ${6:# The password of the vSphere vCenter server}
+    port: ${7:# The port number of the vSphere vCenter server}
+    proxy_host: ${8:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${9:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    relative_path: ${10:# The relative path of the folder to create}
+    remove_vm_data: ${11:# Only used if state is V(absent)}
+    state: ${12:# Create V(present) or remove V(absent) a vSphere folder}
+    username: ${13:# The username of the vSphere vCenter server}
+    validate_certs: ${14:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware
+    - folder]]></content>
+  <tabTrigger>vmware.vmware.folder</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage VMware vSphere folders</description>
+</snippet>

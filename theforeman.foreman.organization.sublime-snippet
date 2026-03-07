@@ -1,16 +1,18 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Organizations}
   theforeman.foreman.organization:
-    description: ${2:# Description of the Organization}
-    ignore_types: ${3:# List of resources types that will be automatically associated}
-    label: ${4:# Label of the Organization}
-    name: ${5:# Name of the Organization}
-    parameters: ${6:# Entity domain specific host parameters}
-    password: ${7:# Password of the user accessing the Foreman server}
-    server_url: ${8:# URL of the Foreman server}
-    state: ${9:# State of the entity}
-    username: ${10:# Username accessing the Foreman server}
-    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    description: ${3:# Description of the Organization}
+    ignore_types: ${4:# List of resources types that will be automatically associated}
+    label: ${5:# Label of the Organization}
+    name: ${6:# Name of the Organization}
+    parameters: ${7:# Entity domain specific host parameters}
+    password: ${8:# Password of the user accessing the Foreman server}
+    server_url: ${9:# URL of the Foreman server}
+    state: ${10:# State of the entity}
+    use_gssapi: ${11:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${12:# Username accessing the Foreman server}
+    validate_certs: ${13:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

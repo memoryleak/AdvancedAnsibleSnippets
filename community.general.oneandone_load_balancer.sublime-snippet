@@ -1,28 +1,28 @@
 <snippet>
   <content><![CDATA[- name: ${1:Configure 1&1 load balancer}
   community.general.oneandone_load_balancer:
-    add_rules: ${2:# A list of rules that will be added to an existing load balancer}
+    add_rules: ${2:# A list of rules that are added to an existing load balancer}
     add_server_ips: ${3:# A list of server identifiers (id or name) to be assigned to a load balancer}
     api_url: ${4:# Custom API URL}
     auth_token: ${5:# Authenticating API token provided by 1&1}
-    datacenter: ${6:# ID or country code of the datacenter where the load balancer will be created}
+    datacenter: ${6:# ID or country code of the datacenter where the load balancer is created}
     description: ${7:# Description of the load balancer}
     health_check_interval: ${8:# Health check period in seconds}
     health_check_parse: ${9:# Regular expression to check}
-    health_check_path: ${10:# Url to call for checking}
+    health_check_path: ${10:# URL to call for checking}
     health_check_test: ${11:# Type of the health check}
     load_balancer: ${12:# The identifier (id or name) of the load balancer used with update state}
     method: ${13:# Balancing procedure}
     name: ${14:# Load balancer name used with present state}
     persistence: ${15:# Persistence}
     persistence_time: ${16:# Persistence time in seconds}
-    remove_rules: ${17:# A list of rule ids that will be removed from an existing load balancer}
-    remove_server_ips: ${18:# A list of server IP ids to be unassigned from a load balancer}
-    rules: ${19:# A list of rule objects that will be set for the load balancer}
+    remove_rules: ${17:# A list of rule IDs that are removed from an existing load balancer}
+    remove_server_ips: ${18:# A list of server IP IDs to be unassigned from a load balancer}
+    rules: ${19:# A list of rule objects that are set for the load balancer}
     state: ${20:# Define a load balancer state to create, remove, or update}
-    wait: ${21:# wait for the instance to be in state 'running' before returning}
+    wait: ${21:# Wait for the instance to be in state 'running' before returning}
     wait_interval: ${22:# Defines the number of seconds to wait when using the _wait_for methods}
-    wait_timeout: ${23:# how long before wait gives up, in seconds}
+    wait_timeout: ${23:# How long before wait gives up, in seconds}
   tags:
     - community
     - general

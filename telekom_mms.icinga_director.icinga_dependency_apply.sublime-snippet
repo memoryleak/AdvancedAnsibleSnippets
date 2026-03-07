@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage dependency apply rules in Icinga2}
+  telekom_mms.icinga_director.icinga_dependency_apply:
+    api_timeout: ${2:# Default timeout to wait for transaction to finish in seconds}
+    append: ${3:# Do not overwrite the whole object but instead append the defined properties}
+    apply_to: ${4:# Whether this notification should affect hosts or services}
+    assign_filter: ${5:# The filter where the service apply rule will take effect}
+    client_cert: ${6:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${7:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    disable_checks: ${8:# Whether to disable checks when this dependency fails}
+    disable_notifications: ${9:# Whether to disable notifications when this dependency fails}
+    force: ${10:# If V(yes) do not get a cached copy}
+    force_basic_auth: ${11:# Credentials specified with O(url_username) and O(url_password) should be passed in HTTP Header}
+    http_agent: ${12:# Header to identify as, generally appears in web server logs}
+    ignore_soft_states: ${13:# Whether to ignore soft states for the reachability calculation}
+    imports: ${14:# Importable templates, add as many as you want}
+    object_name: ${15:# Name for the Icinga dependency apply rule}
+    parent_host: ${16:# The parent host}
+    parent_service: ${17:# The parent service}
+    period: ${18:# The name of a time period which determines when this notification should be triggered}
+    state: ${19:# Apply feature state}
+    states: ${20:# The host/service states you want to get notifications for}
+    url: ${21:# HTTP, HTTPS, or FTP URL in the form (http|https|ftp)://[user[:pass]]@host}
+    url_password: ${22:# The password for use in HTTP basic authentication}
+    url_username: ${23:# The username for use in HTTP basic authentication}
+    use_gssapi: ${24:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    use_proxy: ${25:# If V(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${26:# If V(no), SSL certificates will not be validated}
+    zone: ${27:# Icinga cluster zone}
+  tags:
+    - telekom_mms
+    - icinga_director
+    - icinga_dependency_apply]]></content>
+  <tabTrigger>telekom_mms.icinga_director.icinga_dependency_apply</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage dependency apply rules in Icinga2</description>
+</snippet>

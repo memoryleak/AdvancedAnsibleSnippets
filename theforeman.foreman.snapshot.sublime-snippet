@@ -1,16 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage Snapshots}
   theforeman.foreman.snapshot:
-    description: ${2:# Description of Snapshot}
-    host: ${3:# Name of related Host}
-    id: ${4:# Id of Snapshot}
-    include_ram: ${5:# Option to add RAM (only available for VMWare compute-resource)}
-    name: ${6:# Name of Snapshot}
-    password: ${7:# Password of the user accessing the Foreman server}
-    server_url: ${8:# URL of the Foreman server}
-    state: ${9:# State of Snapshot}
-    username: ${10:# Username accessing the Foreman server}
-    validate_certs: ${11:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    description: ${3:# Description of Snapshot}
+    host: ${4:# Name of related Host}
+    id: ${5:# Id of Snapshot}
+    include_ram: ${6:# Option to add RAM (only available for VMWare compute-resource)}
+    name: ${7:# Name of Snapshot}
+    password: ${8:# Password of the user accessing the Foreman server}
+    quiesce: ${9:# Option to create quiesce snapshot (only available for VMWare compute-resource)}
+    server_url: ${10:# URL of the Foreman server}
+    state: ${11:# State of Snapshot}
+    use_gssapi: ${12:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${13:# Username accessing the Foreman server}
+    validate_certs: ${14:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

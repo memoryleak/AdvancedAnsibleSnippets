@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Proxmox VE nodes}
+  community.proxmox.proxmox_node:
+    api_host: ${2:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${3:# Specify the password to authenticate with}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    certificates: ${8:# Manages the x509 certificates of the node}
+    dns: ${9:# Manages the resolving DNS options of the node}
+    node_name: ${10:# The targeted node to perform actions on}
+    power_state: ${11:# Manages the power state of the node}
+    subscription: ${12:# Manages the license subscription of the node}
+    validate_certs: ${13:# If V(false), SSL certificates will not be validated}
+  tags:
+    - community
+    - proxmox
+    - proxmox_node]]></content>
+  <tabTrigger>community.proxmox.proxmox_node</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Proxmox VE nodes</description>
+</snippet>

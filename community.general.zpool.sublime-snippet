@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage ZFS zpools}
+  community.general.zpool:
+    altroot: ${2:# Alternate root for mounting filesystems}
+    disable_new_features: ${3:# If V(true), disable new ZFS feature flags when creating}
+    filesystem_properties: ${4:# Dictionary of ZFS filesystem properties to set on the root dataset (for example V(compression), V(dedup))}
+    force: ${5:# If V(true), force operations (for example overwrite existing devices)}
+    mountpoint: ${6:# Filesystem mountpoint for the root dataset}
+    name: ${7:# Name of the zpool to manage}
+    pool_properties: ${8:# Dictionary of ZFS pool properties to set (for example V(autoexpand), V(cachefile))}
+    state: ${9:# Whether the pool should exist}
+    temp_name: ${10:# Temporary name used during pool creation}
+    vdevs: ${11:# List of vdev definitions for the pool}
+  tags:
+    - community
+    - general
+    - zpool]]></content>
+  <tabTrigger>community.general.zpool</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage ZFS zpools</description>
+</snippet>

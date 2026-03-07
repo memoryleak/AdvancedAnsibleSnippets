@@ -12,10 +12,10 @@
     dst_range: ${10:# Specifies the destination IP range to match in the iprange module}
     flush: ${11:# Flushes the specified table and chain of all rules}
     fragment: ${12:# This means that the rule only refers to second and further fragments of fragmented packets}
-    gateway: ${13:# This specifies the IP address of host to send the cloned packets}
-    gid_owner: ${14:# Specifies the GID or group to use in match by owner rule}
-    goto: ${15:# This specifies that the processing should continue in a user specified chain}
-    icmp_type: ${16:# This allows specification of the ICMP type, which can be a numeric ICMP type, type/code pair, or one of the ICMP type names shown by the command 'iptables -p icmp -h'}
+    gateway: ${13:# This specifies the IP address of the host to send the cloned packets}
+    gid_owner: ${14:# Specifies the GID or group to use in the match by owner rule}
+    goto: ${15:# This specifies that the processing should continue in a user-specified chain}
+    icmp_type: ${16:# This allows specification of the ICMP type, which can be a numeric ICMP type, type/code pair, or one of the ICMP type names shown by the command C(iptables -p icmp -h)}
     in_interface: ${17:# Name of an interface via which a packet was received (only for packets entering the V(INPUT), V(FORWARD) and V(PREROUTING) chains)}
     ip_version: ${18:# Which version of the IP protocol this rule should apply to}
     jump: ${19:# This specifies the target of the rule; i}
@@ -24,7 +24,7 @@
     log_level: ${22:# Logging level according to the syslogd-defined priorities}
     log_prefix: ${23:# Specifies a log text for the rule}
     match: ${24:# Specifies a match to use, that is, an extension module that tests for a specific property}
-    match_set: ${25:# Specifies a set name which can be defined by ipset}
+    match_set: ${25:# Specifies a set name that can be defined by ipset}
     match_set_flags: ${26:# Specifies the necessary flags for the match_set parameter}
     numeric: ${27:# This parameter controls the running of the list -action of iptables, which is used internally by the module}
     out_interface: ${28:# Name of an interface via which a packet is going to be sent (for packets entering the V(FORWARD), V(OUTPUT) and V(POSTROUTING) chains)}
@@ -37,15 +37,15 @@
     set_dscp_mark_class: ${35:# This allows specifying a predefined DiffServ class which will be translated to the corresponding DSCP mark}
     source: ${36:# Source specification}
     source_port: ${37:# Source port or port range specification}
-    src_range: ${38:# Specifies the source IP range to match in the iprange module}
+    src_range: ${38:# Specifies the source IP range to match the iprange module}
     state: ${39:# Whether the rule should be absent or present}
     syn: ${40:# This allows matching packets that have the SYN bit set and the ACK and RST bits unset}
-    table: ${41:# This option specifies the packet matching table which the command should operate on}
+    table: ${41:# This option specifies the packet matching table on which the command should operate}
     tcp_flags: ${42:# TCP flags specification}
-    to_destination: ${43:# This specifies a destination address to use with C(DNAT)}
+    to_destination: ${43:# This specifies a destination address to use with O(ctstate=DNAT)}
     to_ports: ${44:# This specifies a destination port or range of ports to use, without this, the destination port is never altered}
-    to_source: ${45:# This specifies a source address to use with C(SNAT)}
-    uid_owner: ${46:# Specifies the UID or username to use in match by owner rule}
+    to_source: ${45:# This specifies a source address to use with O(ctstate=SNAT)}
+    uid_owner: ${46:# Specifies the UID or username to use in the match by owner rule}
     wait: ${47:# Wait N seconds for the xtables lock to prevent multiple instances of the program from running concurrently}
   tags:
     - iptables]]></content>

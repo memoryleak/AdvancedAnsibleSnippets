@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Import Zabbix configuration}
+  community.zabbix.zabbix_configuration:
+    content_json: ${2:# The content of the JSON file to be imported}
+    content_xml: ${3:# The content of the XML file to be imported}
+    content_yaml: ${4:# The content of the YAML file to be imported}
+    http_login_password: ${5:# Basic Auth password}
+    http_login_user: ${6:# Basic Auth login}
+    rules: ${7:# The rules for importing the configuration}
+  tags:
+    - community
+    - zabbix
+    - zabbix_configuration]]></content>
+  <tabTrigger>community.zabbix.zabbix_configuration</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Import Zabbix configuration</description>
+</snippet>

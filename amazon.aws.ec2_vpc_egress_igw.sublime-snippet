@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage an AWS VPC Egress Only Internet gateway}
+  amazon.aws.ec2_vpc_egress_igw:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    endpoint_url: ${6:# URL to connect to instead of the default AWS endpoints}
+    profile: ${7:# A named AWS profile to use for authentication}
+    purge_tags: ${8:# If O(purge_tags=true) and O(tags) is set, existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
+    region: ${9:# The AWS region to use}
+    secret_key: ${10:# AWS secret access key}
+    session_token: ${11:# AWS STS session token for use with temporary credentials}
+    state: ${12:# Create or delete the EIGW}
+    tags: ${13:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${14:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_id: ${15:# The VPC ID for the VPC that this Egress Only Internet Gateway should be attached}
+  tags:
+    - amazon
+    - aws
+    - ec2_vpc_egress_igw]]></content>
+  <tabTrigger>amazon.aws.ec2_vpc_egress_igw</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage an AWS VPC Egress Only Internet gateway</description>
+</snippet>

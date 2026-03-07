@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages if-map-server objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_if_map_server:
+    authentication: ${2:# Authentication configuration for the IF-MAP server}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    color: ${4:# Color of the object}
+    comments: ${5:# Comments string}
+    details_level: ${6:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${7:# Indicates which domains to process the commands on}
+    host: ${8:# Host that is IF-MAP server}
+    ignore_errors: ${9:# Apply changes ignoring errors}
+    ignore_warnings: ${10:# Apply changes ignoring warnings}
+    monitored_ips: ${11:# IP ranges to be monitored by the IF-MAP client}
+    name: ${12:# Object name}
+    path: ${13:# N/A}
+    port: ${14:# IF-MAP server port number}
+    query_whole_ranges: ${15:# Indicate whether to query whole ranges instead of single IP}
+    server_version: ${16:# IF-MAP version}
+    state: ${17:# State of the access rule (present or absent)}
+    tags: ${18:# Collection of tag identifiers}
+    version: ${19:# Version of checkpoint}
+    wait_for_task: ${20:# Wait for the task to end}
+    wait_for_task_timeout: ${21:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_if_map_server]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_if_map_server</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages if-map-server objects on Checkpoint over Web Services API</description>
+</snippet>

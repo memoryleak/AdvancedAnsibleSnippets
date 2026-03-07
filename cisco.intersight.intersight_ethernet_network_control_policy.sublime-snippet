@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Ethernet Network Control Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_ethernet_network_control_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    cdp_enabled: ${5:# Enables the CDP on an interface}
+    description: ${6:# The user-defined description for the Ethernet Network Control Policy}
+    forge_mac: ${7:# Determines if the MAC forging is allowed or denied on an interface}
+    lldp_receive_enabled: ${8:# Determines if the LLDP frames can be received by an interface on the switch}
+    lldp_transmit_enabled: ${9:# Determines if the LLDP frames can be transmitted by an interface on the switch}
+    mac_registration_mode: ${10:# Determines the MAC addresses that have to be registered with the switch}
+    name: ${11:# The name assigned to the Ethernet Network Control Policy}
+    organization: ${12:# The name of the Organization this resource is assigned to}
+    state: ${13:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${14:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    uplink_fail_action: ${15:# Determines the state of the virtual interface (vethernet / vfc) on the switch when a suitable uplink is not pinned}
+    use_proxy: ${16:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${17:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_ethernet_network_control_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_ethernet_network_control_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Ethernet Network Control Policy configuration for Cisco Intersight</description>
+</snippet>

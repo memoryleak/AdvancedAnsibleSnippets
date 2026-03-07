@@ -2,17 +2,18 @@
   <content><![CDATA[- name: ${1:Manage volume snapshots on Pure Storage FlashArrays}
   purestorage.flasharray.purefa_snap:
     api_token: ${2:# FlashArray API token for admin privileged user}
-    disable_warnings: ${3:# Disable insecure certificate warnings in debug logs}
-    eradicate: ${4:# Define whether to eradicate the snapshot on delete or leave in trash}
-    fa_url: ${5:# FlashArray management IPv4 address or Hostname}
-    ignore_repl: ${6:# Only valid for Purity//FA 6}
-    name: ${7:# The name of the source volume}
-    offload: ${8:# Only valid for Purity//FA 6}
-    overwrite: ${9:# Define whether to overwrite existing volume when creating from snapshot}
-    state: ${10:# Define whether the volume snapshot should exist or not}
-    suffix: ${11:# Suffix of snapshot name}
-    target: ${12:# Name of target volume if creating from snapshot}
-    throttle: ${13:# If set to true, allows snapshot to fail if array health is not optimal}
+    context: ${3:# Name of fleet member on which to perform the operation}
+    disable_warnings: ${4:# Disable insecure certificate warnings in debug logs}
+    eradicate: ${5:# Define whether to eradicate the snapshot on delete or leave in trash}
+    fa_url: ${6:# FlashArray management IPv4 address or Hostname}
+    ignore_repl: ${7:# Only valid for Purity//FA 6}
+    name: ${8:# The name of the source volume}
+    offload: ${9:# Only valid for Purity//FA 6}
+    overwrite: ${10:# Define whether to overwrite existing volume when creating from snapshot}
+    state: ${11:# Define whether the volume snapshot should exist or not}
+    suffix: ${12:# Suffix of snapshot name}
+    target: ${13:# Name of target volume if creating from snapshot}
+    throttle: ${14:# If set to true, allows snapshot to fail if array health is not optimal}
   tags:
     - purestorage
     - flasharray

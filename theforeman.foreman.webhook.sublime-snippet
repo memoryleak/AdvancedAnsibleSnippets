@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Webhooks}
+  theforeman.foreman.webhook:
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    enabled: ${3:# Enable or disable the webhook}
+    event: ${4:# Name of the event that shall trigger the webhook}
+    http_content_type: ${5:# The HTTP content type for the webhook}
+    http_headers: ${6:# HTTP headers for the webhook}
+    http_method: ${7:# The HTTP method used in the webhook}
+    locations: ${8:# List of locations the entity should be assigned to}
+    name: ${9:# Name of the Webhook}
+    organizations: ${10:# List of organizations the entity should be assigned to}
+    password: ${11:# Password of the user accessing the Foreman server}
+    proxy_authorization: ${12:# Authorize with client certificate and validate CA from Settings}
+    server_url: ${13:# URL of the Foreman server}
+    ssl_ca_certs: ${14:# X509 Certification Authorities concatenated in PEM format}
+    state: ${15:# State of the entity}
+    target_url: ${16:# The URL to call when the webhook is triggered}
+    use_gssapi: ${17:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${18:# Username accessing the Foreman server}
+    validate_certs: ${19:# Whether or not to verify the TLS certificates of the Foreman server}
+    verify_ssl: ${20:# Verify SSL certs for the webhook}
+    webhook_password: ${21:# Password for the webhook, if required}
+    webhook_template: ${22:# Name of the webhook template}
+    webhook_username: ${23:# Username for the webhook, if required}
+  tags:
+    - theforeman
+    - foreman
+    - webhook]]></content>
+  <tabTrigger>theforeman.foreman.webhook</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Webhooks</description>
+</snippet>

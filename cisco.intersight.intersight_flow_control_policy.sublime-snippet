@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Flow Control Policy configuration for Cisco Intersight}
+  cisco.intersight.intersight_flow_control_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    description: ${5:# The user-defined description for the Flow Control Policy}
+    name: ${6:# The name assigned to the Flow Control Policy}
+    organization: ${7:# The name of the Organization this resource is assigned to}
+    priority_flow_control_mode: ${8:# Configure the Priority Flow Control (PFC) for each port to enable the no-drop behavior for the CoS defined by the System QoS Policy}
+    receive_direction: ${9:# Link-level Flow Control configured in the receive direction}
+    send_direction: ${10:# Link-level Flow Control configured in the send direction}
+    state: ${11:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${12:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${13:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${14:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_flow_control_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_flow_control_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Flow Control Policy configuration for Cisco Intersight</description>
+</snippet>

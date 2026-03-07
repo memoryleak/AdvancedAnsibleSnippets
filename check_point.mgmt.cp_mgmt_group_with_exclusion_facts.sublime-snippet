@@ -2,12 +2,14 @@
   <content><![CDATA[- name: ${1:Get group-with-exclusion objects facts on Check Point over Web Services API}
   check_point.mgmt.cp_mgmt_group_with_exclusion_facts:
     details_level: ${2:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
-    limit: ${3:# No more than that many results will be returned}
-    name: ${4:# Object name}
-    offset: ${5:# Skip that many results before beginning to return them}
-    order: ${6:# Sorts results by the given field}
-    show_as_ranges: ${7:# When true, the group with exclusion's matched content is displayed as ranges of IP addresses rather than network objects}
-    version: ${8:# Version of checkpoint}
+    domains_to_process: ${3:# Indicates which domains to process the commands on}
+    filter: ${4:# Search expression to filter objects by}
+    limit: ${5:# No more than that many results will be returned}
+    name: ${6:# Object name}
+    offset: ${7:# Skip that many results before beginning to return them}
+    order: ${8:# Sorts results by the given field}
+    show_as_ranges: ${9:# When true, the group with exclusion's matched content is displayed as ranges of IP addresses rather than network objects}
+    version: ${10:# Version of checkpoint}
   tags:
     - check_point
     - mgmt

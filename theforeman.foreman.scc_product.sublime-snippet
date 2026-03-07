@@ -1,13 +1,15 @@
 <snippet>
   <content><![CDATA[- name: ${1:Subscribe SUSE Customer Center Account Products}
   theforeman.foreman.scc_product:
-    organization: ${2:# Organization that the entity is in}
-    password: ${3:# Password of the user accessing the Foreman server}
-    scc_account: ${4:# Name of the suse customer center account associated with product}
-    scc_product: ${5:# Full name of the product of suse customer center account}
-    server_url: ${6:# URL of the Foreman server}
-    username: ${7:# Username accessing the Foreman server}
-    validate_certs: ${8:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    organization: ${3:# Organization that the entity is in}
+    password: ${4:# Password of the user accessing the Foreman server}
+    scc_account: ${5:# Name of the suse customer center account associated with product}
+    scc_product: ${6:# Full name of the product of suse customer center account}
+    server_url: ${7:# URL of the Foreman server}
+    use_gssapi: ${8:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${9:# Username accessing the Foreman server}
+    validate_certs: ${10:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

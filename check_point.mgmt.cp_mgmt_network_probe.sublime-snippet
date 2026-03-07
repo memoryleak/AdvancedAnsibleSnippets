@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages network-probe objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_network_probe:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    color: ${3:# Color of the object}
+    comments: ${4:# Comments string}
+    details_level: ${5:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${6:# Indicates which domains to process the commands on}
+    http_options: ${7:# Additional options when [protocol] is set to 'http'}
+    icmp_options: ${8:# Additional options when [protocol] is set to 'icmp'}
+    ignore_errors: ${9:# Apply changes ignoring errors}
+    ignore_warnings: ${10:# Apply changes ignoring warnings}
+    install_on: ${11:# Collection of Check Point Security Gateways that generate the probe, identified by name or UID}
+    interval: ${12:# The time interval in the range of 5-300 (seconds) between each probe request}
+    name: ${13:# Object name}
+    protocol: ${14:# The probing protocol to use}
+    state: ${15:# State of the access rule (present or absent)}
+    tags: ${16:# Collection of tag identifiers}
+    timeout: ${17:# The probe expiration timeout in the range of 5-300 (seconds)}
+    version: ${18:# Version of checkpoint}
+    wait_for_task: ${19:# Wait for the task to end}
+    wait_for_task_timeout: ${20:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_network_probe]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_network_probe</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages network-probe objects on Checkpoint over Web Services API</description>
+</snippet>

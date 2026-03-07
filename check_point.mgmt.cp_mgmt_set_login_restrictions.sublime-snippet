@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set login restrictions}
+  check_point.mgmt.cp_mgmt_set_login_restrictions:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    display_access_denied_message: ${3:# Indicates whether to display informative message upon denying access}
+    failed_authentication_attempts: ${4:# Number of failed authentication attempts before lockout administrator account}
+    lockout_admin_account: ${5:# Indicates whether to lockout administrator's account after specified number of failed authentication attempts}
+    lockout_duration: ${6:# Number of minutes of administrator account lockout}
+    unlock_admin_account: ${7:# Indicates whether to unlock administrator account after specified number of minutes}
+    version: ${8:# Version of checkpoint}
+    wait_for_task: ${9:# Wait for the task to end}
+    wait_for_task_timeout: ${10:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_set_login_restrictions]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_set_login_restrictions</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set login restrictions</description>
+</snippet>

@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage vNIC Templates for Cisco Intersight}
+  cisco.intersight.intersight_vnic_template:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    cdn_source: ${5:# Source of the CDN}
+    cdn_value: ${6:# CDN value when cdn_source is 'user'}
+    connection_type: ${7:# Type of connection for the vNIC}
+    description: ${8:# The user-defined description for the vNIC Template}
+    enable_override: ${9:# When enabled, the configuration of the derived instances may override the template configuration}
+    eth_adapter_policy_name: ${10:# Relationship to the Ethernet Adapter Policy}
+    eth_qos_policy_name: ${11:# Relationship to the Ethernet QoS Policy}
+    fabric_eth_network_control_policy_name: ${12:# Relationship to the Fabric Ethernet Network Control Policy}
+    fabric_eth_network_group_policy_name: ${13:# Relationship to the Fabric Ethernet Group Policy}
+    failover_enabled: ${14:# Enables automatic vNIC failover to the secondary Fabric Interconnect if the primary path fails}
+    iscsi_boot_policy_name: ${15:# Relationship to the boot iSCSI Policy}
+    mac_pool_name: ${16:# The MAC pool that is assigned to the vNIC Template}
+    name: ${17:# The name assigned to the vNIC Template}
+    organization: ${18:# The name of the Organization this resource is assigned to}
+    pin_group_name: ${19:# Pingroup name associated to vNIC for static pinning}
+    sriov_settings: ${20:# SR-IOV settings when connection_type is 'sriov'}
+    state: ${21:# If C(present), will verify the resource is present and will create if needed}
+    switch_id: ${22:# The fabric port to which the vNIC will be associated}
+    tags: ${23:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${24:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    usnic_settings: ${25:# USNIC settings when connection_type is 'usnic'}
+    validate_certs: ${26:# Boolean control for verifying the api_uri TLS certificate}
+    vmq_settings: ${27:# VMQ settings when connection_type is 'vmq'}
+  tags:
+    - cisco
+    - intersight
+    - intersight_vnic_template]]></content>
+  <tabTrigger>cisco.intersight.intersight_vnic_template</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage vNIC Templates for Cisco Intersight</description>
+</snippet>

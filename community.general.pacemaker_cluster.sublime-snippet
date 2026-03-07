@@ -2,9 +2,9 @@
   <content><![CDATA[- name: ${1:Manage pacemaker clusters}
   community.general.pacemaker_cluster:
     force: ${2:# Force the change of the cluster state}
-    node: ${3:# Specify which node of the cluster you want to manage}
+    name: ${3:# Specify which node of the cluster you want to manage}
     state: ${4:# Indicate desired state of the cluster}
-    timeout: ${5:# Timeout when the module should considered that the action has failed}
+    timeout: ${5:# Timeout period (in seconds) for polling the cluster operation}
   tags:
     - community
     - general

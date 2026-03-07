@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:create and delete Network ACLs}
+  amazon.aws.ec2_vpc_nacl:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    egress: ${6:# A list of rules for outgoing traffic}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    ingress: ${8:# List of rules for incoming traffic}
+    nacl_id: ${9:# NACL id identifying a network ACL}
+    name: ${10:# Tagged name identifying a network ACL}
+    profile: ${11:# A named AWS profile to use for authentication}
+    purge_tags: ${12:# If O(purge_tags=true) and O(tags) is set, existing tags will be purged from the resource to match exactly what is defined by O(tags) parameter}
+    region: ${13:# The AWS region to use}
+    secret_key: ${14:# AWS secret access key}
+    session_token: ${15:# AWS STS session token for use with temporary credentials}
+    state: ${16:# Creates or modifies an existing NACL}
+    subnets: ${17:# The list of subnets that should be associated with the network ACL}
+    tags: ${18:# A dictionary representing the tags to be applied to the resource}
+    validate_certs: ${19:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    vpc_id: ${20:# VPC id of the requesting VPC}
+  tags:
+    - amazon
+    - aws
+    - ec2_vpc_nacl]]></content>
+  <tabTrigger>amazon.aws.ec2_vpc_nacl</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>create and delete Network ACLs</description>
+</snippet>

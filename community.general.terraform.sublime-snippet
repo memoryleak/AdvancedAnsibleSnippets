@@ -6,23 +6,24 @@
     binary_path: ${4:# The path of a C(terraform) binary to use, relative to the 'service_path' unless you supply an absolute path}
     check_destroy: ${5:# Apply only when no resources are destroyed}
     complex_vars: ${6:# Enable/disable capability to handle complex variable structures for C(terraform)}
-    force_init: ${7:# To avoid duplicating infra, if a state file can't be found this will force a C(terraform init)}
+    force_init: ${7:# To avoid duplicating infra, if a state file cannot be found this forces a C(terraform init)}
     init_reconfigure: ${8:# Forces backend reconfiguration during init}
     lock: ${9:# Enable statefile locking, if you use a service that accepts locks (such as S3+DynamoDB) to store your statefile}
     lock_timeout: ${10:# How long to maintain the lock on the statefile, if you use a service that accepts locks (such as S3+DynamoDB)}
-    overwrite_init: ${11:# Run init even if C(}
-    parallelism: ${12:# Restrict concurrent operations when Terraform applies the plan}
-    plan_file: ${13:# The path to an existing Terraform plan file to apply}
-    plugin_paths: ${14:# List of paths containing Terraform plugin executable files}
-    project_path: ${15:# The path to the root of the Terraform directory with the C(vars}
-    provider_upgrade: ${16:# Allows Terraform init to upgrade providers to versions specified in the project's version constraints}
-    purge_workspace: ${17:# Only works with state = absent}
-    state: ${18:# Goal state of given stage/project}
-    state_file: ${19:# The path to an existing Terraform state file to use when building plan}
-    targets: ${20:# A list of specific resources to target in this plan/application}
-    variables: ${21:# A group of key-values pairs to override template variables or those in variables files}
-    variables_files: ${22:# The path to a variables file for Terraform to fill into the TF configurations}
-    workspace: ${23:# The terraform workspace to work with}
+    no_color: ${11:# If V(true), suppress color codes in output from Terraform commands}
+    overwrite_init: ${12:# Run init even if C(}
+    parallelism: ${13:# Restrict concurrent operations when Terraform applies the plan}
+    plan_file: ${14:# The path to an existing Terraform plan file to apply}
+    plugin_paths: ${15:# List of paths containing Terraform plugin executable files}
+    project_path: ${16:# The path to the root of the Terraform directory with the C(vars}
+    provider_upgrade: ${17:# Allows Terraform init to upgrade providers to versions specified in the project's version constraints}
+    purge_workspace: ${18:# Only works with state = absent}
+    state: ${19:# Goal state of given stage/project}
+    state_file: ${20:# The path to an existing Terraform state file to use when building plan}
+    targets: ${21:# A list of specific resources to target in this plan/application}
+    variables: ${22:# A group of key-values pairs to override template variables or those in variables files}
+    variables_files: ${23:# The path to a variables file for Terraform to fill into the TF configurations}
+    workspace: ${24:# The terraform workspace to work with}
   tags:
     - community
     - general

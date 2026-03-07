@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages a key-signing key (KSK)}
+  amazon.aws.route53_key_signing_key:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    caller_reference: ${5:# A unique string that identifies the request}
+    debug_botocore_endpoint_logs: ${6:# Use a C(botocore}
+    endpoint_url: ${7:# URL to connect to instead of the default AWS endpoints}
+    hosted_zone_id: ${8:# The unique string (ID) used to identify a hosted zone}
+    key_management_service_arn: ${9:# The Amazon resource name (ARN) for a customer managed key in Key Management Service (KMS)}
+    name: ${10:# A string used to identify a key-signing key (KSK)}
+    profile: ${11:# A named AWS profile to use for authentication}
+    region: ${12:# The AWS region to use}
+    secret_key: ${13:# AWS secret access key}
+    session_token: ${14:# AWS STS session token for use with temporary credentials}
+    state: ${15:# Whether or not the zone should exist}
+    status: ${16:# A string specifying the initial status of the key-signing key (KSK)}
+    validate_certs: ${17:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    wait: ${18:# Wait until the changes have been replicated}
+    wait_timeout: ${19:# How long to wait for the changes to be replicated, in seconds}
+  tags:
+    - amazon
+    - aws
+    - route53_key_signing_key]]></content>
+  <tabTrigger>amazon.aws.route53_key_signing_key</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages a key-signing key (KSK)</description>
+</snippet>

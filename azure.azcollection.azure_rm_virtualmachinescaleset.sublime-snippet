@@ -8,59 +8,64 @@
     api_profile: ${6:# Selects an API profile to use when communicating with Azure services}
     append_tags: ${7:# Use to control if tags field is canonical or just appends to existing tags}
     application_gateway: ${8:# Application gateway name}
-    auth_source: ${9:# Controls the source of the credentials to use for authentication}
-    capacity: ${10:# Capacity of VMSS}
-    cert_validation_mode: ${11:# Controls the certificate validation behavior for Azure endpoints}
-    client_id: ${12:# Azure client ID}
-    cloud_environment: ${13:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    custom_data: ${14:# Data which is made available to the virtual machine and used by e}
-    data_disks: ${15:# Describes list of data disks}
-    enable_accelerated_networking: ${16:# Indicates whether user wants to allow accelerated networking for virtual machines in scaleset being created}
-    ephemeral_os_disk: ${17:# Parameters of ephemeral disk settings that can be specified for operating system disk}
-    eviction_policy: ${18:# Specifies the eviction policy for the Azure Spot virtual machine}
-    image: ${19:# Specifies the image used to build the VM}
-    load_balancer: ${20:# Load balancer name}
-    location: ${21:# Valid Azure location}
-    log_mode: ${22:# Parent argument}
-    log_path: ${23:# Parent argument}
-    managed_disk_type: ${24:# Managed disk type}
-    max_price: ${25:# Specifies the maximum price you are willing to pay for a Azure Spot VM/VMSS}
-    name: ${26:# Name of the virtual machine}
-    orchestration_mode: ${27:# Specifies the orchestration mode for the virtual machine scale set}
-    os_disk_caching: ${28:# Type of OS disk caching}
-    os_disk_size_gb: ${29:# Specifies the size of the operating system disk in gigabytes}
-    os_type: ${30:# Base type of operating system}
-    overprovision: ${31:# Specifies whether the Virtual Machine Scale Set should be overprovisioned}
-    password: ${32:# Active Directory user password}
-    plan: ${33:# Third-party billing plan for the VM}
-    platform_fault_domain_count: ${34:# Fault Domain count for each placement group}
-    priority: ${35:# Priority of the VMSS}
-    profile: ${36:# Security profile found in ~/}
-    public_ip_per_vm: ${37:# Assign a public IP to each virtual machine of the scale set}
-    remove_on_absent: ${38:# When removing a VM using I(state=absent), also remove associated resources}
-    resource_group: ${39:# Name of the resource group containing the virtual machine scale set}
-    scale_in_policy: ${40:# define the order in which vmss instances are scaled-in}
-    secret: ${41:# Azure client secret}
-    security_group: ${42:# Existing security group with which to associate the subnet}
-    security_profile: ${43:# Specifies the Security related profile settings for the virtual machine sclaset}
-    short_hostname: ${44:# Short host name}
-    single_placement_group: ${45:# When true this limits the scale set to a single placement group, of max size 100 virtual machines}
-    ssh_password_enabled: ${46:# When the os_type is Linux, setting I(ssh_password_enabled=false) will disable SSH password authentication and require use of SSH keys}
-    ssh_public_keys: ${47:# For I(os_type=Linux) provide a list of SSH keys}
-    state: ${48:# Assert the state of the virtual machine scale set}
-    subnet_name: ${49:# Subnet name}
-    subscription_id: ${50:# Your Azure subscription Id}
-    tags: ${51:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${52:# Azure tenant ID}
-    terminate_event_timeout_minutes: ${53:# timeout time for termination notification event}
-    thumbprint: ${54:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    tier: ${55:# SKU Tier}
-    upgrade_policy: ${56:# Upgrade policy}
-    virtual_network_name: ${57:# Virtual Network name}
-    virtual_network_resource_group: ${58:# When creating a virtual machine, if a specific virtual network from another resource group should be used}
-    vm_size: ${59:# A valid Azure VM size value}
-    x509_certificate_path: ${60:# Path to the X509 certificate used to create the service principal in PEM format}
-    zones: ${61:# A list of Availability Zones for your virtual machine scale set}
+    application_security_groups: ${9:# Specifies an array of references to application security group}
+    auth_source: ${10:# Controls the source of the credentials to use for authentication}
+    capacity: ${11:# Capacity of VMSS}
+    cert_validation_mode: ${12:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${13:# Azure client ID}
+    cloud_environment: ${14:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    custom_data: ${15:# Data which is made available to the virtual machine and used by e}
+    data_disks: ${16:# Describes list of data disks}
+    disable_instance_discovery: ${17:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    enable_accelerated_networking: ${18:# Indicates whether user wants to allow accelerated networking for virtual machines in scaleset being created}
+    ephemeral_os_disk: ${19:# Parameters of ephemeral disk settings that can be specified for operating system disk}
+    eviction_policy: ${20:# Specifies the eviction policy for the Azure Spot virtual machine}
+    identity: ${21:# Identity for the Object}
+    image: ${22:# Specifies the image used to build the VM}
+    load_balancer: ${23:# Load balancer name}
+    location: ${24:# Valid Azure location}
+    log_mode: ${25:# Parent argument}
+    log_path: ${26:# Parent argument}
+    managed_disk_type: ${27:# Managed disk type}
+    max_price: ${28:# Specifies the maximum price you are willing to pay for a Azure Spot VM/VMSS}
+    name: ${29:# Name of the virtual machine}
+    orchestration_mode: ${30:# Specifies the orchestration mode for the virtual machine scale set}
+    os_disk_caching: ${31:# Type of OS disk caching}
+    os_disk_encryption_set: ${32:# The resource ID of the disk encryption set for the OS disk}
+    os_disk_size_gb: ${33:# Specifies the size of the operating system disk in gigabytes}
+    os_type: ${34:# Base type of operating system}
+    overprovision: ${35:# Specifies whether the Virtual Machine Scale Set should be overprovisioned}
+    password: ${36:# Active Directory user password}
+    plan: ${37:# Third-party billing plan for the VM}
+    platform_fault_domain_count: ${38:# Fault Domain count for each placement group}
+    priority: ${39:# Priority of the VMSS}
+    private_ip_address_version: ${40:# Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is C(IPv4) or C(IPv6)}
+    profile: ${41:# Security profile found in ~/}
+    public_ip_per_vm: ${42:# Assign a public IP to each virtual machine of the scale set}
+    remove_on_absent: ${43:# When removing a VM using I(state=absent), also remove associated resources}
+    resource_group: ${44:# Name of the resource group containing the virtual machine scale set}
+    scale_in_policy: ${45:# define the order in which vmss instances are scaled-in}
+    secret: ${46:# Azure client secret}
+    security_group: ${47:# Existing security group with which to associate the subnet}
+    security_profile: ${48:# Specifies the Security related profile settings for the virtual machine sclaset}
+    short_hostname: ${49:# Short host name}
+    single_placement_group: ${50:# When true this limits the scale set to a single placement group, of max size 100 virtual machines}
+    ssh_password_enabled: ${51:# When the os_type is Linux, setting I(ssh_password_enabled=false) will disable SSH password authentication and require use of SSH keys}
+    ssh_public_keys: ${52:# For I(os_type=Linux) provide a list of SSH keys}
+    state: ${53:# Assert the state of the virtual machine scale set}
+    subnet_name: ${54:# Subnet name}
+    subscription_id: ${55:# Your Azure subscription Id}
+    tags: ${56:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${57:# Azure tenant ID}
+    terminate_event_timeout_minutes: ${58:# timeout time for termination notification event}
+    thumbprint: ${59:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    tier: ${60:# SKU Tier}
+    upgrade_policy: ${61:# Upgrade policy}
+    virtual_network_name: ${62:# Virtual Network name}
+    virtual_network_resource_group: ${63:# When creating a virtual machine, if a specific virtual network from another resource group should be used}
+    vm_size: ${64:# A valid Azure VM size value}
+    x509_certificate_path: ${65:# Path to the X509 certificate used to create the service principal in PEM format}
+    zones: ${66:# A list of Availability Zones for your virtual machine scale set}
   tags:
     - azure
     - azcollection

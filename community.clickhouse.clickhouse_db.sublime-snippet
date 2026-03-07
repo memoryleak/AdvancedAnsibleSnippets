@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates or removes a ClickHouse database using the clickhouse-driver Client interface}
+  community.clickhouse.clickhouse_db:
+    client_kwargs: ${2:# Any additional keyword arguments you want to pass to the Client interface when instantiating its object}
+    cluster: ${3:# Run the command on all cluster hosts}
+    comment: ${4:# Database comment}
+    engine: ${5:# Database engine}
+    login_db: ${6:# The same as the V(Client(database='}
+    login_host: ${7:# The same as the V(Client(host='}
+    login_password: ${8:# The same as the V(Client(password='}
+    login_port: ${9:# The same as the V(Client(port='}
+    login_user: ${10:# The same as the V(Client(user='}
+    name: ${11:# Database name to add or remove}
+    state: ${12:# Database state}
+    target: ${13:# Name for renaming the database}
+  tags:
+    - community
+    - clickhouse
+    - clickhouse_db]]></content>
+  <tabTrigger>community.clickhouse.clickhouse_db</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates or removes a ClickHouse database using the clickhouse-driver Client interface</description>
+</snippet>

@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create/Update/Delete subnets from SDN}
+  community.proxmox.proxmox_subnet:
+    api_host: ${2:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${3:# Specify the password to authenticate with}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    delete: ${8:# A list of settings you want to delete}
+    dhcp_dns_server: ${9:# IP address for the DNS server}
+    dhcp_range: ${10:# Range of IP addresses for DHCP}
+    dhcp_range_update_mode: ${11:# Only applicable for O(state=present) and it will honor and only make changes when O(update=true)}
+    dnszoneprefix: ${12:# Prefix for the DNS zone}
+    gateway: ${13:# Subnet Gateway}
+    lock_token: ${14:# the token for unlocking the global SDN configuration}
+    snat: ${15:# Enable Source NAT for the subnet}
+    state: ${16:# Desired state of the subnet configuration}
+    subnet: ${17:# Subnet CIDR}
+    update: ${18:# If O(state=present) then it will update the subnet if needed}
+    validate_certs: ${19:# If V(false), SSL certificates will not be validated}
+    vnet: ${20:# The virtual network to which the subnet belongs}
+    zone: ${21:# Vnet Zone}
+  tags:
+    - community
+    - proxmox
+    - proxmox_subnet]]></content>
+  <tabTrigger>community.proxmox.proxmox_subnet</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create/Update/Delete subnets from SDN</description>
+</snippet>

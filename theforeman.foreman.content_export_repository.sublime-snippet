@@ -1,17 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage repository content exports}
   theforeman.foreman.content_export_repository:
-    chunk_size_gb: ${2:# Split the exported content into archives no greater than the specified size in gigabytes}
-    format: ${3:# Export format}
-    from_history_id: ${4:# Export history identifier used for incremental export}
-    incremental: ${5:# Export only the content that has changed since the last export}
-    organization: ${6:# Organization that the entity is in}
-    password: ${7:# Password of the user accessing the Foreman server}
-    product: ${8:# Name of the product that the repository belongs to}
-    repository: ${9:# Name of the repository to export}
-    server_url: ${10:# URL of the Foreman server}
-    username: ${11:# Username accessing the Foreman server}
-    validate_certs: ${12:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    chunk_size_gb: ${3:# Split the exported content into archives no greater than the specified size in gigabytes}
+    format: ${4:# Export format}
+    from_history_id: ${5:# Export history identifier used for incremental export}
+    incremental: ${6:# Export only the content that has changed since the last export}
+    organization: ${7:# Organization that the entity is in}
+    password: ${8:# Password of the user accessing the Foreman server}
+    product: ${9:# Name of the product that the repository belongs to}
+    repository: ${10:# Name of the repository to export}
+    server_url: ${11:# URL of the Foreman server}
+    use_gssapi: ${12:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${13:# Username accessing the Foreman server}
+    validate_certs: ${14:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

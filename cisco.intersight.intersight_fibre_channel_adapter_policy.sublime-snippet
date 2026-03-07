@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Fibre Channel Adapter Policies for Cisco Intersight}
+  cisco.intersight.intersight_fibre_channel_adapter_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    description: ${5:# The user-defined description for the Fibre Channel Adapter Policy}
+    error_detection_timeout: ${6:# Error Detection Timeout, also referred to as EDTOV, is the number of milliseconds to wait}
+    error_recovery_enabled: ${7:# Enables Fibre Channel Error recovery}
+    flogi_retries: ${8:# The number of times that the system tries to log in to the fabric after the first failure}
+    flogi_timeout: ${9:# The number of milliseconds that the system waits before it tries to log in again}
+    interrupt_mode: ${10:# The preferred driver interrupt mode}
+    io_retry_timeout: ${11:# The number of seconds the adapter waits before aborting the pending command}
+    io_throttle_count: ${12:# The maximum number of data or control I/O operations that can be pending for the virtual interface at one time}
+    link_down_timeout: ${13:# The number of milliseconds the port should actually be down before it is marked down}
+    lun_count: ${14:# The maximum number of LUNs that the Fibre Channel driver will export or show}
+    lun_queue_depth: ${15:# The number of commands that the HBA can send and receive in a single transmission per LUN}
+    name: ${16:# The name assigned to the Fibre Channel Adapter Policy}
+    organization: ${17:# The name of the Organization this resource is assigned to}
+    plogi_retries: ${18:# The number of times that the system tries to log in to a port after the first failure}
+    plogi_timeout: ${19:# The number of milliseconds that the system waits before it tries to log in again}
+    port_down_io_retry_count: ${20:# The number of times an I/O request to a port is retried because the port is busy}
+    port_down_timeout: ${21:# The number of milliseconds a remote Fibre Channel port should be offline before informing the SCSI upper layer}
+    resource_allocation_timeout: ${22:# Resource Allocation Timeout, also referred to as RATOV, is the number of milliseconds to wait}
+    rx_ring_size: ${23:# The number of descriptors in each receive queue}
+    scsi_io_queue_count: ${24:# The number of SCSI I/O queue resources the system should allocate}
+    scsi_io_ring_size: ${25:# The number of descriptors in each SCSI I/O queue}
+    state: ${26:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${27:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    tx_ring_size: ${28:# The number of descriptors in each transmit queue}
+    use_proxy: ${29:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${30:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_fibre_channel_adapter_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_fibre_channel_adapter_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Fibre Channel Adapter Policies for Cisco Intersight</description>
+</snippet>

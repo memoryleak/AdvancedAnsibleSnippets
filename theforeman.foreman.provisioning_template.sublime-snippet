@@ -2,20 +2,22 @@
   <content><![CDATA[- name: ${1:Manage Provisioning Templates}
   theforeman.foreman.provisioning_template:
     audit_comment: ${2:# Content of the audit comment field}
-    file_name: ${3:# The path of a template file, that shall be imported}
-    kind: ${4:# The provisioning template kind}
-    locations: ${5:# List of locations the entity should be assigned to}
-    locked: ${6:# Determines whether the template shall be locked}
-    name: ${7:# The name of the Provisioning Template}
-    operatingsystems: ${8:# List of operating systems the entity should be assigned to}
-    organizations: ${9:# List of organizations the entity should be assigned to}
-    password: ${10:# Password of the user accessing the Foreman server}
-    server_url: ${11:# URL of the Foreman server}
-    state: ${12:# State of the entity}
-    template: ${13:# The content of the provisioning template}
-    updated_name: ${14:# New provisioning template name}
-    username: ${15:# Username accessing the Foreman server}
-    validate_certs: ${16:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${3:# PEM formatted file that contains a CA certificate to be used for validation}
+    file_name: ${4:# The path of a template file, that shall be imported}
+    kind: ${5:# The provisioning template kind}
+    locations: ${6:# List of locations the entity should be assigned to}
+    locked: ${7:# Determines whether the template shall be locked}
+    name: ${8:# The name of the Provisioning Template}
+    operatingsystems: ${9:# List of operating systems the entity should be assigned to}
+    organizations: ${10:# List of organizations the entity should be assigned to}
+    password: ${11:# Password of the user accessing the Foreman server}
+    server_url: ${12:# URL of the Foreman server}
+    state: ${13:# State of the entity}
+    template: ${14:# The content of the provisioning template}
+    updated_name: ${15:# New provisioning template name}
+    use_gssapi: ${16:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${17:# Username accessing the Foreman server}
+    validate_certs: ${18:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

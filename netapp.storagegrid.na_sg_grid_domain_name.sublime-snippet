@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure endpoint domain name on StorageGRID}
+  netapp.storagegrid.na_sg_grid_domain_name:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    domain_name: ${4:# List of domain names to be configured}
+    state: ${5:# The endpoint domain name should be present}
+    validate_certs: ${6:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_domain_name]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_domain_name</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure endpoint domain name on StorageGRID</description>
+</snippet>

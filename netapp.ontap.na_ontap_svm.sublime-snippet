@@ -3,34 +3,40 @@
   netapp.ontap.na_ontap_svm:
     admin_state: ${2:# when the SVM is created, it will be in the running state, unless specified otherwise}
     aggr_list: ${3:# List of aggregates assigned for volume operations}
-    allowed_protocols: ${4:# Allowed Protocols}
-    cert_filepath: ${5:# path to SSL client cert file (}
-    comment: ${6:# When specified as part of a vserver-create, this field represents the comment associated with the Vserver}
-    feature_flags: ${7:# Enable or disable a new feature}
-    force_ontap_version: ${8:# Override the cluster ONTAP version when using REST}
-    from_name: ${9:# Name of the SVM to be renamed}
-    hostname: ${10:# The hostname or IP address of the ONTAP instance}
-    http_port: ${11:# Override the default port (80 or 443) with this port}
-    https: ${12:# Enable and disable https}
-    ignore_rest_unsupported_options: ${13:# When true, ignore C(root_volume), C(root_volume_aggregate), C(root_volume_security_style) options if target supports REST}
-    ipspace: ${14:# IPSpace name}
-    key_filepath: ${15:# path to SSL client key file}
-    language: ${16:# Language to use for the SVM}
-    max_volumes: ${17:# Maximum number of volumes that can be created on the vserver}
-    name: ${18:# The name of the SVM to manage}
-    ontapi: ${19:# The ontap api version to use}
-    password: ${20:# Password for the specified user}
-    root_volume: ${21:# Root volume of the SVM}
-    root_volume_aggregate: ${22:# The aggregate on which the root volume will be created}
-    root_volume_security_style: ${23:# Security Style of the root volume}
-    services: ${24:# Enabled Protocols, only available with REST}
-    snapshot_policy: ${25:# Default snapshot policy setting for all volumes of the Vserver}
-    state: ${26:# Whether the specified SVM should exist or not}
-    subtype: ${27:# The subtype for vserver to be created}
-    use_rest: ${28:# Whether to use REST or ZAPI}
-    username: ${29:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${30:# If set to C(no), the SSL certificates will not be validated}
-    web: ${31:# web services security configuration}
+    allowed_protocols: ${4:# This field represents the list of protocols allowed on the Vserver}
+    auto_enable_activity_tracking: ${5:# Specifies whether volume activity tracking is automatically enabled on volumes that are created in the SVM}
+    auto_enable_analytics: ${6:# Specifies whether file system analytics is automatically enabled on volumes that are created in the SVM}
+    cert_filepath: ${7:# path to SSL client cert file (}
+    comment: ${8:# When specified as part of a vserver-create, this field represents the comment associated with the Vserver}
+    feature_flags: ${9:# Enable or disable a new feature}
+    force_ontap_version: ${10:# Override the cluster ONTAP version when using REST}
+    from_name: ${11:# Name of the SVM to be renamed}
+    hostname: ${12:# The hostname or IP address of the ONTAP instance}
+    http_port: ${13:# Override the default port (80 or 443) with this port}
+    https: ${14:# Enable and disable https}
+    ignore_rest_unsupported_options: ${15:# When true, ignore C(root_volume), C(root_volume_aggregate), C(root_volume_security_style) options if target supports REST}
+    ipspace: ${16:# IPSpace name}
+    key_filepath: ${17:# path to SSL client key file}
+    lambda_config: ${18:# Configuration parameters for AWS Lambda proxy functionality}
+    language: ${19:# Language to use for the SVM}
+    max_volumes: ${20:# Maximum number of volumes that can be created on the vserver}
+    name: ${21:# The name of the SVM to manage}
+    ontapi: ${22:# The ontap api version to use}
+    password: ${23:# Password for the specified user}
+    root_volume: ${24:# Root volume of the SVM}
+    root_volume_aggregate: ${25:# The aggregate on which the root volume will be created}
+    root_volume_security_style: ${26:# Security Style of the root volume}
+    services: ${27:# Enabled Protocols, only available with REST}
+    snapshot_policy: ${28:# Default snapshot policy setting for all volumes of the Vserver}
+    state: ${29:# Whether the specified SVM should exist or not}
+    storage_limit: ${30:# Specifies the maximum storage permitted on a single SVM, in bytes}
+    storage_limit_threshold_alert: ${31:# Specifies at what percentage of storage capacity an alert message is sent}
+    subtype: ${32:# The subtype for vserver to be created}
+    use_lambda: ${33:# Specifies if AWS Lambda proxy functionality should be used to connect to the ONTAP system}
+    use_rest: ${34:# Whether to use REST or ZAPI}
+    username: ${35:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${36:# If set to C(no), the SSL certificates will not be validated}
+    web: ${37:# web services security configuration}
   tags:
     - netapp
     - ontap

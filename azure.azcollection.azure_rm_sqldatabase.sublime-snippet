@@ -11,33 +11,34 @@
     cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
     collation: ${10:# The collation of the database}
     create_mode: ${11:# Specifies the mode of database creation}
-    edition: ${12:# (Deprecate)The edition of the database}
-    elastic_pool_name: ${13:# The name of the elastic pool the database is in}
-    force_update: ${14:# SQL Database will be updated if given parameters differ from existing resource state}
-    location: ${15:# Resource location}
-    log_mode: ${16:# Parent argument}
-    log_path: ${17:# Parent argument}
-    max_size_bytes: ${18:# The max size of the database expressed in bytes}
-    name: ${19:# The name of the database to be operated on (updated or created)}
-    password: ${20:# Active Directory user password}
-    profile: ${21:# Security profile found in ~/}
-    read_scale: ${22:# If the database is a geo-secondary, indicates whether read-only connections are allowed to this database or not}
-    recovery_services_recovery_point_resource_id: ${23:# Required if I(create_mode=restore_long_term_retention_backup), then this value is required}
-    resource_group: ${24:# The name of the resource group that contains the resource}
-    restore_point_in_time: ${25:# Required if I(create_mode=point_in_time_restore), this value is required}
-    sample_name: ${26:# Indicates the name of the sample schema to apply when creating this database}
-    secret: ${27:# Azure client secret}
-    server_name: ${28:# The name of the server}
-    sku: ${29:# The sku of the database}
-    source_database_deletion_date: ${30:# Required if I(create_mode=restore) and I(source_database_id) is the deleted database's original resource id when it existed (as opposed to its current restorable dropped database ID), then this value is required}
-    source_database_id: ${31:# Required unless I(create_mode=default) or I(create_mode=restore_long_term_retention_backup)}
-    state: ${32:# Assert the state of the SQL Database}
-    subscription_id: ${33:# Your Azure subscription Id}
-    tags: ${34:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${35:# Azure tenant ID}
-    thumbprint: ${36:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    x509_certificate_path: ${37:# Path to the X509 certificate used to create the service principal in PEM format}
-    zone_redundant: ${38:# Is this database is zone redundant? It means the replicas of this database will be spread across multiple availability zones}
+    disable_instance_discovery: ${12:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    edition: ${13:# (Deprecate)The edition of the database}
+    elastic_pool_name: ${14:# The name of the elastic pool the database is in}
+    force_update: ${15:# SQL Database will be updated if given parameters differ from existing resource state}
+    location: ${16:# Resource location}
+    log_mode: ${17:# Parent argument}
+    log_path: ${18:# Parent argument}
+    max_size_bytes: ${19:# The max size of the database expressed in bytes}
+    name: ${20:# The name of the database to be operated on (updated or created)}
+    password: ${21:# Active Directory user password}
+    profile: ${22:# Security profile found in ~/}
+    read_scale: ${23:# If the database is a geo-secondary, indicates whether read-only connections are allowed to this database or not}
+    recovery_services_recovery_point_resource_id: ${24:# Required if I(create_mode=restore_long_term_retention_backup), then this value is required}
+    resource_group: ${25:# The name of the resource group that contains the resource}
+    restore_point_in_time: ${26:# Required if I(create_mode=point_in_time_restore), this value is required}
+    sample_name: ${27:# Indicates the name of the sample schema to apply when creating this database}
+    secret: ${28:# Azure client secret}
+    server_name: ${29:# The name of the server}
+    sku: ${30:# The sku of the database}
+    source_database_deletion_date: ${31:# Required if I(create_mode=restore) and I(source_database_id) is the deleted database's original resource id when it existed (as opposed to its current restorable dropped database ID), then this value is required}
+    source_database_id: ${32:# Required unless I(create_mode=default) or I(create_mode=restore_long_term_retention_backup)}
+    state: ${33:# Assert the state of the SQL Database}
+    subscription_id: ${34:# Your Azure subscription Id}
+    tags: ${35:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${36:# Azure tenant ID}
+    thumbprint: ${37:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${38:# Path to the X509 certificate used to create the service principal in PEM format}
+    zone_redundant: ${39:# Is this database is zone redundant? It means the replicas of this database will be spread across multiple availability zones}
   tags:
     - azure
     - azcollection

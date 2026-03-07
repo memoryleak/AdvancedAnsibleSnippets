@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create and manage DNS Zone on the Hetzner Cloud}
+  hetzner.hcloud.zone:
+    api_endpoint: ${2:# The endpoint for the Hetzner Cloud API}
+    api_endpoint_hetzner: ${3:# The endpoint for the Hetzner API}
+    api_token: ${4:# The token for the Hetzner Cloud API}
+    delete_protection: ${5:# Protect the Zone from deletion}
+    id: ${6:# ID of the Zone to manage}
+    labels: ${7:# User-defined key-value pairs}
+    mode: ${8:# Mode of the Zone}
+    name: ${9:# Name of the Zone to manage}
+    primary_nameservers: ${10:# Primary nameservers of the Zone}
+    state: ${11:# State of the Zone}
+    ttl: ${12:# TTL of the Zone}
+    zonefile: ${13:# Zone file to import}
+  tags:
+    - hetzner
+    - hcloud
+    - zone]]></content>
+  <tabTrigger>hetzner.hcloud.zone</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create and manage DNS Zone on the Hetzner Cloud</description>
+</snippet>

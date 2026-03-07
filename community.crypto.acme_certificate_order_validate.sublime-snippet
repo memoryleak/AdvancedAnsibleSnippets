@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Validate authorizations of an ACME v2 order}
+  community.crypto.acme_certificate_order_validate:
+    account_key_content: ${2:# Content of the ACME account RSA or Elliptic Curve key}
+    account_key_passphrase: ${3:# Phassphrase to use to decode the account key}
+    account_key_src: ${4:# Path to a file containing the ACME account RSA or Elliptic Curve key}
+    account_uri: ${5:# If specified, assumes that the account URI is as given}
+    acme_directory: ${6:# The ACME directory to use}
+    acme_version: ${7:# The ACME version of the endpoint}
+    challenge: ${8:# The challenge to be performed for every pending authorization}
+    deactivate_authzs: ${9:# Deactivate authentication objects (authz) in case an error happens}
+    order_uri: ${10:# The order URI provided by RV(community}
+    request_timeout: ${11:# The time Ansible should wait for a response from the ACME API}
+    select_crypto_backend: ${12:# Determines which crypto backend to use}
+    validate_certs: ${13:# Whether calls to the ACME directory will validate TLS certificates}
+  tags:
+    - community
+    - crypto
+    - acme_certificate_order_validate]]></content>
+  <tabTrigger>community.crypto.acme_certificate_order_validate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Validate authorizations of an ACME v2 order</description>
+</snippet>

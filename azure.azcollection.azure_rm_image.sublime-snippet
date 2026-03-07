@@ -9,24 +9,27 @@
     cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
     client_id: ${8:# Azure client ID}
     cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    data_disk_sources: ${10:# List of data disk sources, including unmanaged blob URI, managed disk id or name, or snapshot id or name}
-    hyper_v_generation: ${11:# Specifies the HyperVGenerationType of the VirtualMachine created from the image}
-    location: ${12:# Location of the image}
-    log_mode: ${13:# Parent argument}
-    log_path: ${14:# Parent argument}
-    name: ${15:# Name of the image}
-    os_type: ${16:# The OS type of image}
-    password: ${17:# Active Directory user password}
-    profile: ${18:# Security profile found in ~/}
-    resource_group: ${19:# Name of resource group}
-    secret: ${20:# Azure client secret}
-    source: ${21:# OS disk source from the same region}
-    state: ${22:# Assert the state of the image}
-    subscription_id: ${23:# Your Azure subscription Id}
-    tags: ${24:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${25:# Azure tenant ID}
-    thumbprint: ${26:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    x509_certificate_path: ${27:# Path to the X509 certificate used to create the service principal in PEM format}
+    data_disk_encryption_set: ${10:# The resource ID of the disk encryption set for the data disks}
+    data_disk_sources: ${11:# List of data disk sources, including unmanaged blob URI, managed disk id or name, or snapshot id or name}
+    disable_instance_discovery: ${12:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    hyper_v_generation: ${13:# Specifies the HyperVGenerationType of the VirtualMachine created from the image}
+    location: ${14:# Location of the image}
+    log_mode: ${15:# Parent argument}
+    log_path: ${16:# Parent argument}
+    name: ${17:# Name of the image}
+    os_disk_encryption_set: ${18:# The resource ID of the disk encryption set for the OS disk}
+    os_type: ${19:# The OS type of image}
+    password: ${20:# Active Directory user password}
+    profile: ${21:# Security profile found in ~/}
+    resource_group: ${22:# Name of resource group}
+    secret: ${23:# Azure client secret}
+    source: ${24:# OS disk source from the same region}
+    state: ${25:# Assert the state of the image}
+    subscription_id: ${26:# Your Azure subscription Id}
+    tags: ${27:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${28:# Azure tenant ID}
+    thumbprint: ${29:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${30:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

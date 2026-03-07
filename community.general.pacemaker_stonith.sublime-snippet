@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Pacemaker STONITH}
+  community.general.pacemaker_stonith:
+    agent_validation: ${2:# Enabled agent validation for STONITH creation}
+    name: ${3:# Specify the STONITH name to create}
+    state: ${4:# Indicate desired state for cluster STONITH}
+    stonith_argument: ${5:# Action to associate with STONITH}
+    stonith_metas: ${6:# List of metadata to associate with STONITH}
+    stonith_operations: ${7:# List of operations to associate with STONITH}
+    stonith_options: ${8:# Specify the STONITH option to create}
+    stonith_type: ${9:# Specify the STONITH device type}
+    wait: ${10:# Timeout period for polling the STONITH creation}
+  tags:
+    - community
+    - general
+    - pacemaker_stonith]]></content>
+  <tabTrigger>community.general.pacemaker_stonith</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Pacemaker STONITH</description>
+</snippet>

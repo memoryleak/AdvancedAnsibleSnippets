@@ -1,0 +1,51 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Eventgrid Subscriptions}
+  azure.azcollection.azure_rm_eventgrid_subscription:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    advanced_filter: ${4:# An advanced filter enables filtering of events based on a specific event property}
+    api_profile: ${5:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    azure_active_directory_application_id_or_uri: ${7:# The Azure Active Directory Application Id or Uri to get the access token that will be included as the bearer token in delivery requests}
+    azure_active_directory_tenant_id: ${8:# The Azure Active Directory Tenant Id to get the access token that will be included as the bearer token in delivery requests}
+    cert_validation_mode: ${9:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${10:# Azure client ID}
+    cloud_environment: ${11:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    deadletter_endpoint: ${12:# The Azure resource ID of an Azure Storage blob container destination where EventGrid should deadletter undeliverable events for this event subscription}
+    delivery_attribute_mapping: ${13:# Add delivery attribute mapping to send additional information via HTTP headers when delivering events}
+    disable_instance_discovery: ${14:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    enable_advanced_filtering_on_arrays: ${15:# Allows advanced filters to be evaluated against an array of values instead of expecting a singular value}
+    endpoint: ${16:# Endpoint where EventGrid should deliver events matching this event subscription}
+    endpoint_type: ${17:# The type of the destination endpoint}
+    event_delivery_schema: ${18:# The schema in which events should be delivered for this event subscription}
+    event_ttl: ${19:# Event time to live (in minutes)}
+    expiration_date: ${20:# Date or datetime (in UTC, e}
+    included_event_types: ${21:# A list of event types (e}
+    labels: ${22:# A list of labels to associate with this event subscription}
+    log_mode: ${23:# Parent argument}
+    log_path: ${24:# Parent argument}
+    max_delivery_attempts: ${25:# Maximum number of delivery attempts}
+    max_events_per_batch: ${26:# Maximum number of events in a batch}
+    name: ${27:# Name of the subscription}
+    password: ${28:# Active Directory user password}
+    preferred_batch_size_in_kilobytes: ${29:# Preferred batch size in kilobytes}
+    profile: ${30:# Security profile found in ~/}
+    secret: ${31:# Azure client secret}
+    source_resource_id: ${32:# Name of a resource id where the subscription exists or will be created}
+    state: ${33:# State of the Eventgrid Event Subscription}
+    storage_queue_msg_ttl: ${34:# Storage queue message time to live in seconds}
+    subject_begins_with: ${35:# An optional string to filter events for an event subscription based on a prefix}
+    subject_case_sensitive: ${36:# Specify to indicate whether the subject fields should be compared in a case sensitive manner}
+    subject_ends_with: ${37:# An optional string to filter events for an event subscription based on a suffix}
+    subscription_id: ${38:# Your Azure subscription Id}
+    tenant: ${39:# Azure tenant ID}
+    thumbprint: ${40:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${41:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_eventgrid_subscription]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_eventgrid_subscription</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Eventgrid Subscriptions</description>
+</snippet>

@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Fusion Fleet Workloads}
+  purestorage.flasharray.purefa_workload:
+    api_token: ${2:# FlashArray API token for admin privileged user}
+    context: ${3:# Name of fleet member on which to perform the workload operation}
+    disable_warnings: ${4:# Disable insecure certificate warnings in debug logs}
+    eradicate: ${5:# whether to eradicate a workload}
+    fa_url: ${6:# FlashArray management IPv4 address or Hostname}
+    host: ${7:# Host to connect to the workload after provisioning}
+    name: ${8:# Name of the workload}
+    placement: ${9:# name of target on which the workload will be deployed}
+    preset: ${10:# name of existing preset to use as the basis of the workload}
+    recommendation: ${11:# whether to use the Fusion placement recommendation based on the workload preset definitions}
+    rename: ${12:# new name for a workload}
+    state: ${13:# Define whether to create or delete a fleet workload}
+    volume_configuration: ${14:# Name of the volume configuration to use for adding volumes to a workload}
+    volume_count: ${15:# Number of additional volumes to add to an existing workload}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_workload]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_workload</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Fusion Fleet Workloads</description>
+</snippet>

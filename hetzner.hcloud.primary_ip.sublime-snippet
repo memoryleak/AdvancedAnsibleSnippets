@@ -1,16 +1,19 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create and manage cloud Primary IPs on the Hetzner Cloud}
   hetzner.hcloud.primary_ip:
-    api_endpoint: ${2:# The API Endpoint for the Hetzner Cloud}
-    api_token: ${3:# The API Token for the Hetzner Cloud}
-    auto_delete: ${4:# Delete this Primary IP when the resource it is assigned to is deleted}
-    datacenter: ${5:# Home Location of the Hetzner Cloud Primary IP}
-    delete_protection: ${6:# Protect the Primary IP for deletion}
-    id: ${7:# The ID of the Hetzner Cloud Primary IPs to manage}
-    labels: ${8:# User-defined labels (key-value pairs)}
-    name: ${9:# The Name of the Hetzner Cloud Primary IPs to manage}
-    state: ${10:# State of the Primary IP}
-    type: ${11:# Type of the Primary IP}
+    api_endpoint: ${2:# The endpoint for the Hetzner Cloud API}
+    api_endpoint_hetzner: ${3:# The endpoint for the Hetzner API}
+    api_token: ${4:# The token for the Hetzner Cloud API}
+    auto_delete: ${5:# Delete the Primary IP when the resource it is assigned to is deleted}
+    datacenter: ${6:# B(Deprecated:) The O(datacenter) argument is deprecated and will be removed after 1 July 2026}
+    delete_protection: ${7:# Protect the Primary IP for deletion}
+    id: ${8:# The ID of the Hetzner Cloud Primary IPs to manage}
+    labels: ${9:# User-defined labels (key-value pairs)}
+    location: ${10:# ID or name of the Location the Hetzner Cloud Primary IP will be bound to}
+    name: ${11:# The Name of the Hetzner Cloud Primary IPs to manage}
+    server: ${12:# Name or ID of the Hetzner Cloud Server the Primary IP should be assigned to}
+    state: ${13:# State of the Primary IP}
+    type: ${14:# Type of the Primary IP}
   tags:
     - hetzner
     - hcloud

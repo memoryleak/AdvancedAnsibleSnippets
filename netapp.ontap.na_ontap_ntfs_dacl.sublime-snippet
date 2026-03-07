@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:NetApp Ontap create, delate or modify NTFS DACL (discretionary access control list)}
+  <content><![CDATA[- name: ${1:NetApp Ontap create, delete or modify NTFS DACL (discretionary access control list)}
   netapp.ontap.na_ontap_ntfs_dacl:
     access_type: ${2:# Specifies DACL ACE's access type}
     account: ${3:# Specifies DACL ACE's SID or domain account name of NTFS security descriptor}
@@ -17,15 +17,16 @@
     rights: ${15:# Specifies DACL ACE's access rights}
     security_descriptor: ${16:# Specifies the NTFS security descriptor}
     state: ${17:# Whether the specified NTFS DACL should exist or not}
-    use_rest: ${18:# Whether to use REST or ZAPI}
-    username: ${19:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_certs: ${20:# If set to C(no), the SSL certificates will not be validated}
-    vserver: ${21:# Specifies the vserver for the NTFS DACL}
+    use_lambda: ${18:# Specifies if AWS Lambda proxy functionality should be used to connect to the ONTAP system}
+    use_rest: ${19:# Whether to use REST or ZAPI}
+    username: ${20:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_certs: ${21:# If set to C(no), the SSL certificates will not be validated}
+    vserver: ${22:# Specifies the vserver for the NTFS DACL}
   tags:
     - netapp
     - ontap
     - na_ontap_ntfs_dacl]]></content>
   <tabTrigger>netapp.ontap.na_ontap_ntfs_dacl</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>NetApp Ontap create, delate or modify NTFS DACL (discretionary access control list)</description>
+  <description>NetApp Ontap create, delete or modify NTFS DACL (discretionary access control list)</description>
 </snippet>

@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manages opsec-trusted-ca objects on Checkpoint over Web Services API}
+  check_point.mgmt.cp_mgmt_opsec_trusted_ca:
+    allow_certificates_from_branches: ${2:# Allow only certificates from listed branches}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    automatic_enrollment: ${4:# Certificate automatic enrollment}
+    base64_certificate: ${5:# Certificate file encoded in base64}
+    branches: ${6:# Branches to allow certificates from}
+    cache_crl: ${7:# Cache Certificate Revocation List on the Security Gateway}
+    color: ${8:# Color of the object}
+    comments: ${9:# Comments string}
+    crl_cache_method: ${10:# Weather to retrieve new Certificate Revocation List after the certificate expires or after a fixed period}
+    crl_cache_timeout: ${11:# When to fetch new Certificate Revocation List (in minutes)}
+    details_level: ${12:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    domains_to_process: ${13:# Indicates which domains to process the commands on}
+    ignore_errors: ${14:# Apply changes ignoring errors}
+    ignore_warnings: ${15:# Apply changes ignoring warnings}
+    name: ${16:# Object name}
+    retrieve_crl_from_http_servers: ${17:# Whether to retrieve Certificate Revocation List from http servers}
+    retrieve_crl_from_ldap_servers: ${18:# Whether to retrieve Certificate Revocation List from ldap servers}
+    state: ${19:# State of the access rule (present or absent)}
+    tags: ${20:# Collection of tag identifiers}
+    version: ${21:# Version of checkpoint}
+    wait_for_task: ${22:# Wait for the task to end}
+    wait_for_task_timeout: ${23:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_opsec_trusted_ca]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_opsec_trusted_ca</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manages opsec-trusted-ca objects on Checkpoint over Web Services API</description>
+</snippet>

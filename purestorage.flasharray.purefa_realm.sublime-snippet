@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage realms on Pure Storage FlashArrays}
+  purestorage.flasharray.purefa_realm:
+    api_token: ${2:# FlashArray API token for admin privileged user}
+    bw_qos: ${3:# Bandwidth limit for realm in M or G units}
+    delete_contents: ${4:# This enables you to eradicate realms with contents}
+    disable_warnings: ${5:# Disable insecure certificate warnings in debug logs}
+    eradicate: ${6:# Define whether to eradicate the realm on delete or leave in trash}
+    fa_url: ${7:# FlashArray management IPv4 address or Hostname}
+    ignore_usage: ${8:# Flag used to override checks for quota management operations}
+    iops_qos: ${9:# IOPs limit for realm - use value or K or M K will mean 1000 M will mean 1000000 To clear an existing IOPs setting use 0 (zero)}
+    name: ${10:# The name of the realm}
+    quota: ${11:# Logical quota limit of the realm in K, M, G, T or P units, or bytes}
+    rename: ${12:# Value to rename the specified realm to}
+    state: ${13:# Define whether the realm should exist or not}
+  tags:
+    - purestorage
+    - flasharray
+    - purefa_realm]]></content>
+  <tabTrigger>purestorage.flasharray.purefa_realm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage realms on Pure Storage FlashArrays</description>
+</snippet>

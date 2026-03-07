@@ -2,19 +2,19 @@
   <content><![CDATA[- name: ${1:Create a VMware portgroup}
   community.vmware.vmware_portgroup:
     cluster_name: ${2:# Name of cluster name for host membership}
-    hostname: ${3:# The hostname or IP address of the vSphere vCenter or ESXi server}
+    hostname: ${3:# The hostname or IP address of the vSphere vCenter server}
     hosts: ${4:# List of name of host or hosts on which portgroup needs to be added}
-    password: ${5:# The password of the vSphere vCenter or ESXi server}
-    port: ${6:# The port number of the vSphere vCenter or ESXi server}
+    password: ${5:# The password of the vSphere vCenter server}
+    port: ${6:# The port number of the vSphere vCenter server}
     portgroup: ${7:# Portgroup name to add}
-    proxy_host: ${8:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${9:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    proxy_host: ${8:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${9:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
     security: ${10:# Network policy specifies layer 2 security settings for a portgroup such as promiscuous mode, where guest adapter listens to all the packets, MAC address changes and forged transmits}
     state: ${11:# Determines if the portgroup should be present or not}
     switch: ${12:# vSwitch to modify}
     teaming: ${13:# Dictionary which configures the different teaming values for portgroup}
     traffic_shaping: ${14:# Dictionary which configures traffic shaping for the switch}
-    username: ${15:# The username of the vSphere vCenter or ESXi server}
+    username: ${15:# The username of the vSphere vCenter server}
     validate_certs: ${16:# Allows connection when SSL certificates are not valid}
     vlan_id: ${17:# VLAN ID to assign to portgroup}
   tags:

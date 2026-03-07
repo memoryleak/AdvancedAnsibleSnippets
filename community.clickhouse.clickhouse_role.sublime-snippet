@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Creates or removes a ClickHouse role}
+  community.clickhouse.clickhouse_role:
+    client_kwargs: ${2:# Any additional keyword arguments you want to pass to the Client interface when instantiating its object}
+    cluster: ${3:# Run the command on all cluster hosts}
+    login_db: ${4:# The same as the V(Client(database='}
+    login_host: ${5:# The same as the V(Client(host='}
+    login_password: ${6:# The same as the V(Client(password='}
+    login_port: ${7:# The same as the V(Client(port='}
+    login_user: ${8:# The same as the V(Client(user='}
+    name: ${9:# Role name to add or remove}
+    settings: ${10:# Settings with their limitations that apply to the role}
+    state: ${11:# Role state}
+  tags:
+    - community
+    - clickhouse
+    - clickhouse_role]]></content>
+  <tabTrigger>community.clickhouse.clickhouse_role</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Creates or removes a ClickHouse role</description>
+</snippet>

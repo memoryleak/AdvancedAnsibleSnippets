@@ -3,17 +3,19 @@
   community.zabbix.zabbix_maintenance:
     active_since: ${2:# Time when the maintenance becomes active}
     active_till: ${3:# Time when the maintenance stops being active}
-    collect_data: ${4:# Type of maintenance}
-    desc: ${5:# Short description of maintenance window}
-    host_groups: ${6:# Host groups to manage maintenance window for}
-    host_names: ${7:# Hosts to manage maintenance window for}
-    http_login_password: ${8:# Basic Auth password}
-    http_login_user: ${9:# Basic Auth login}
-    minutes: ${10:# Length of maintenance window in minutes}
-    name: ${11:# Unique name of maintenance window}
-    state: ${12:# Create or remove a maintenance window}
-    tags: ${13:# List of tags to assign to the hosts in maintenance}
-    visible_name: ${14:# Type of zabbix host name to use for identifying hosts to include in the maintenance}
+    append: ${4:# Whether to append hosts and host groups to the existing maintenance}
+    collect_data: ${5:# Type of maintenance}
+    desc: ${6:# Short description of maintenance window}
+    host_groups: ${7:# Host groups to manage maintenance window for}
+    host_names: ${8:# Hosts to manage maintenance window for}
+    http_login_password: ${9:# Basic Auth password}
+    http_login_user: ${10:# Basic Auth login}
+    minutes: ${11:# Length of maintenance window in minutes}
+    name: ${12:# Unique name of maintenance window}
+    state: ${13:# Create or remove a maintenance window}
+    tags: ${14:# List of tags to assign to the hosts in maintenance}
+    time_periods: ${15:# List scheduled outages within the maintenance period}
+    visible_name: ${16:# Type of zabbix host name to use for identifying hosts to include in the maintenance}
   tags:
     - community
     - zabbix

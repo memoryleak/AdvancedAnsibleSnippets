@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Cloud Mirror Replication on StorageGRID}
+  netapp.storagegrid.na_sg_org_cloud_mirror_replication:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    bucket_name: ${4:# The name of the bucket for which to configure Cloud Mirror Replication}
+    rule: ${5:# The replication rule configuration}
+    state: ${6:# The Cloud Mirror Replication should be present}
+    validate_certs: ${7:# Should https certificates be validated?}
+    xmlns: ${8:# The XML namespace for the replication configuration}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_org_cloud_mirror_replication]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_org_cloud_mirror_replication</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Cloud Mirror Replication on StorageGRID</description>
+</snippet>

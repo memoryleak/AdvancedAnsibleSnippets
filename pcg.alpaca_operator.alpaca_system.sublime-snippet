@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage ALPACA Operator systems via REST API}
+  pcg.alpaca_operator.alpaca_system:
+    agents: ${2:# A list of agents to assign to the system}
+    api_connection: ${3:# Connection details for accessing the ALPACA Operator API}
+    checks_disabled: ${4:# Disable automatic system health checks}
+    description: ${5:# Description of the system}
+    group_id: ${6:# ID of the group (used if O(group_name) is not provided)}
+    group_name: ${7:# Name of the group to which the system should belong}
+    magic_number: ${8:# Custom numeric field between 0 and 59}
+    name: ${9:# Unique name (hostname) of the system}
+    new_name: ${10:# Optional new name for the system}
+    rfc_connection: ${11:# Connection details for accessing the ALPACA Operator API}
+    state: ${12:# Desired state of the system}
+    variables: ${13:# A list of variables to assign to the system}
+    variables_mode: ${14:# Controls how variables are handled when updating the system}
+  tags:
+    - pcg
+    - alpaca_operator
+    - alpaca_system]]></content>
+  <tabTrigger>pcg.alpaca_operator.alpaca_system</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage ALPACA Operator systems via REST API</description>
+</snippet>

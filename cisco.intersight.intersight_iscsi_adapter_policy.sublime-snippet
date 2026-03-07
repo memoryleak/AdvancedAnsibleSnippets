@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage iSCSI Adapter Policies for Cisco Intersight}
+  cisco.intersight.intersight_iscsi_adapter_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    connection_time_out: ${5:# The number of seconds to wait until Cisco UCS assumes that the initial login has failed and the iSCSI adapter is unavailable}
+    description: ${6:# The user-defined description for the iSCSI Adapter Policy}
+    dhcp_timeout: ${7:# The number of seconds to wait before the initiator assumes that the DHCP server is unavailable}
+    lun_busy_retry_count: ${8:# The number of times to retry the connection in case of a failure during iSCSI LUN discovery}
+    name: ${9:# The name assigned to the iSCSI Adapter Policy}
+    organization: ${10:# The name of the Organization this resource is assigned to}
+    state: ${11:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${12:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${13:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${14:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_iscsi_adapter_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_iscsi_adapter_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage iSCSI Adapter Policies for Cisco Intersight</description>
+</snippet>

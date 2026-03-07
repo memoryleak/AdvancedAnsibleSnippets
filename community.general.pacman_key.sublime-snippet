@@ -2,14 +2,15 @@
   <content><![CDATA[- name: ${1:Manage pacman's list of trusted keys}
   community.general.pacman_key:
     data: ${2:# The keyfile contents to add to the keyring}
-    file: ${3:# The path to a keyfile on the remote server to add to the keyring}
-    force_update: ${4:# This forces the key to be updated if it already exists in the keyring}
-    id: ${5:# The 40 character identifier of the key}
-    keyring: ${6:# The full path to the keyring folder on the remote server}
-    keyserver: ${7:# The keyserver used to retrieve key from}
-    state: ${8:# Ensures that the key is present (added) or absent (revoked)}
-    url: ${9:# The URL to retrieve keyfile from}
-    verify: ${10:# Whether or not to verify the keyfile's key ID against specified key ID}
+    ensure_trusted: ${3:# Ensure that the key is trusted (signed by the Pacman machine key and not expired)}
+    file: ${4:# The path to a keyfile on the remote server to add to the keyring}
+    force_update: ${5:# This forces the key to be updated if it already exists in the keyring}
+    id: ${6:# The 40 character identifier of the key}
+    keyring: ${7:# The full path to the keyring folder on the remote server}
+    keyserver: ${8:# The keyserver used to retrieve key from}
+    state: ${9:# Ensures that the key is V(present) (added) or V(absent) (revoked)}
+    url: ${10:# The URL to retrieve keyfile from}
+    verify: ${11:# Whether or not to verify the keyfile's key ID against specified key ID}
   tags:
     - community
     - general

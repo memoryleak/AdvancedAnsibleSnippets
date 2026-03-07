@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configures a login's  server roles}
+  lowlydba.sqlserver.login_role:
+    login: ${2:# Name of the login}
+    server_role: ${3:# The server role for the login to be modified}
+    sql_instance: ${4:# The SQL Server instance to modify}
+    sql_password: ${5:# Password for SQL Authentication}
+    sql_username: ${6:# Username for SQL Authentication}
+    state: ${7:# Whether or not the object should be C(present) or C(absent)}
+  tags:
+    - lowlydba
+    - sqlserver
+    - login_role]]></content>
+  <tabTrigger>lowlydba.sqlserver.login_role</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configures a login&#39;s server roles</description>
+</snippet>

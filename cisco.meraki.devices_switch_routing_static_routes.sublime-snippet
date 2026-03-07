@@ -2,11 +2,11 @@
   <content><![CDATA[- name: ${1:Resource module for devices _switch _routing _staticroutes}
   cisco.meraki.devices_switch_routing_static_routes:
     advertiseViaOspfEnabled: ${2:# Option to advertise static route via OSPF}
-    meraki_action_batch_retry_wait_time: ${3:# meraki_action_batch_retry_wait_time (integer), action batch concurrency error retry wait time}
-    meraki_api_key: ${4:# meraki_api_key (string), API key generated in dashboard; can also be set as an environment variable MERAKI_DASHBOARD_API_KEY}
-    meraki_base_url: ${5:# meraki_base_url (string), preceding all endpoint resources}
-    meraki_be_geo_id: ${6:# meraki_be_geo_id (string), optional partner identifier for API usage tracking; can also be set as an environment variable BE_GEO_ID}
-    meraki_caller: ${7:# meraki_caller (string), optional identifier for API usage tracking; can also be set as an environment variable MERAKI_PYTHON_SDK_CALLER}
+    managementNextHop: ${3:# Optional fallback IP address for management traffic}
+    meraki_action_batch_retry_wait_time: ${4:# meraki_action_batch_retry_wait_time (integer), action batch concurrency error retry wait time}
+    meraki_api_key: ${5:# meraki_api_key (string), API key generated in dashboard; can also be set as an environment variable MERAKI_DASHBOARD_API_KEY}
+    meraki_base_url: ${6:# meraki_base_url (string), preceding all endpoint resources}
+    meraki_be_geo_id: ${7:# meraki_be_geo_id (string), optional partner identifier for API usage tracking; can also be set as an environment variable BE_GEO_ID}
     meraki_certificate_path: ${8:# meraki_certificate_path (string), path for TLS/SSL certificate verification if behind local proxy}
     meraki_inherit_logging_config: ${9:# meraki_inherit_logging_config (boolean), Inherits your own logger instance}
     meraki_log_file_prefix: ${10:# meraki_log_file_prefix (string), log file name appended with date and timestamp}
@@ -29,6 +29,7 @@
     serial: ${27:# Serial path parameter}
     staticRouteId: ${28:# StaticRouteId path parameter}
     subnet: ${29:# The subnet which is routed via this static route and should be specified in CIDR notation (ex}
+    vrf: ${30:# The VRF settings of the interface}
   tags:
     - cisco
     - meraki

@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Allows administration of Keycloak client templates via Keycloak API}
+  <content><![CDATA[- name: ${1:Allows administration of Keycloak client templates using Keycloak API}
   community.general.keycloak_clienttemplate:
     attributes: ${2:# A dict of further attributes for this client template}
     auth_client_id: ${3:# OpenID Connect C(client_id) to authenticate to the API with}
@@ -12,19 +12,20 @@
     description: ${10:# Description of the client template in Keycloak}
     full_scope_allowed: ${11:# Is the 'Full Scope Allowed' feature set for this client template or not}
     http_agent: ${12:# Configures the HTTP User-Agent header}
-    id: ${13:# Id of client template to be worked on}
+    id: ${13:# ID of client template to be worked on}
     name: ${14:# Name of the client template}
     protocol: ${15:# Type of client template}
-    protocol_mappers: ${16:# a list of dicts defining protocol mappers for this client template}
+    protocol_mappers: ${16:# A list of dicts defining protocol mappers for this client template}
     realm: ${17:# Realm this client template is found in}
-    state: ${18:# State of the client template}
-    token: ${19:# Authentication token for Keycloak API}
-    validate_certs: ${20:# Verify TLS certificates (do not disable this in production)}
+    refresh_token: ${18:# Authentication refresh token for Keycloak API}
+    state: ${19:# State of the client template}
+    token: ${20:# Authentication token for Keycloak API}
+    validate_certs: ${21:# Verify TLS certificates (do not disable this in production)}
   tags:
     - community
     - general
     - keycloak_clienttemplate]]></content>
   <tabTrigger>community.general.keycloak_clienttemplate</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Allows administration of Keycloak client templates via Keycloak API</description>
+  <description>Allows administration of Keycloak client templates using Keycloak API</description>
 </snippet>

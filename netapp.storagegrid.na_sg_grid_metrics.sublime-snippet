@@ -1,0 +1,19 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp StorageGRID grab metrics}
+  netapp.storagegrid.na_sg_grid_metrics:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    end_time: ${4:# End time for the query range}
+    query: ${5:# Prometheus query string to execute}
+    step: ${6:# Step width/interval duration for the query range}
+    time: ${7:# Evaluation time for the query}
+    timeout: ${8:# Timeout duration for the query execution}
+    validate_certs: ${9:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_metrics]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_metrics</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp StorageGRID grab metrics</description>
+</snippet>

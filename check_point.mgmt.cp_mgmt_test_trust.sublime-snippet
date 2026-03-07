@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Test an existing Trusted communication between the Management Server and the managed Security Gateway}
+  check_point.mgmt.cp_mgmt_test_trust:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    domains_to_process: ${3:# Indicates which domains to process the commands on}
+    name: ${4:# Object name}
+    trust_method: ${5:# Establish the trust communication method}
+    version: ${6:# Version of checkpoint}
+    wait_for_task: ${7:# Wait for the task to end}
+    wait_for_task_timeout: ${8:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_test_trust]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_test_trust</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Test an existing Trusted communication between the Management Server and the managed Security Gateway</description>
+</snippet>

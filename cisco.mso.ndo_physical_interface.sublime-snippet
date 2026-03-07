@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Physical Interfaces on Cisco Nexus Dashboard Orchestrator (NDO)}
+  cisco.mso.ndo_physical_interface:
+    breakout_mode: ${2:# Breakout mode enables breaking down an ethernet port into multiple low-speed ports}
+    description: ${3:# The description of the Physical Interface}
+    host: ${4:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    interface_descriptions: ${5:# The interface settings defined in the interface settings policy will be applied to the interfaces on the node IDs configured in C(nodes)}
+    interfaces: ${6:# The interface names where the policy will be deployed}
+    login_domain: ${7:# The login domain name to use for authentication}
+    name: ${8:# The name of the Physical Interface}
+    nodes: ${9:# The node IDs where the Physical Interface policy will be deployed}
+    output_level: ${10:# Influence the output of this MSO module}
+    password: ${11:# The password to use for authentication}
+    physical_interface_type: ${12:# The type of the interface policy group}
+    physical_policy: ${13:# The interface group policy required for physical Interface Setting Policy}
+    physical_policy_uuid: ${14:# The UUID of the Interface Setting Policy}
+    port: ${15:# Port number to be used for the REST connection}
+    state: ${16:# Use C(absent) for removing}
+    template: ${17:# The name of the template}
+    timeout: ${18:# The socket level timeout in seconds}
+    use_proxy: ${19:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${20:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${21:# The username to use for authentication}
+    uuid: ${22:# The UUID of the Physical Interface}
+    validate_certs: ${23:# If C(false), SSL certificates will not be validated}
+  tags:
+    - cisco
+    - mso
+    - ndo_physical_interface]]></content>
+  <tabTrigger>cisco.mso.ndo_physical_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Physical Interfaces on Cisco Nexus Dashboard Orchestrator (NDO)</description>
+</snippet>

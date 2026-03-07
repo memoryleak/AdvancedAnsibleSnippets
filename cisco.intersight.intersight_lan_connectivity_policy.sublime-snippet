@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage LAN Connectivity Policies and vNICs for Cisco Intersight}
+  cisco.intersight.intersight_lan_connectivity_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    azure_qos_enabled: ${5:# Enable Azure QoS for the LAN Connectivity policy}
+    description: ${6:# The user-defined description for the LAN Connectivity Policy}
+    iqn_allocation_type: ${7:# IQN allocation type for the LAN Connectivity policy}
+    iqn_pool_name: ${8:# Relationship to the iSCSI Qualified Name Pool}
+    name: ${9:# The name assigned to the LAN Connectivity Policy}
+    organization: ${10:# The name of the Organization this resource is assigned to}
+    placement_mode: ${11:# Placement mode for vNIC assignment}
+    state: ${12:# If C(present), will verify the resource is present and will create if needed}
+    static_iqn_name: ${13:# User provided static iSCSI Qualified Name (IQN) for use as initiator identifiers by iSCSI vNICs in a Fabric Interconnect domain}
+    tags: ${14:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    target_platform: ${15:# The platform type for which the LAN Connectivity policy is intended}
+    use_proxy: ${16:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${17:# Boolean control for verifying the api_uri TLS certificate}
+    vnics: ${18:# List of vNICs to be created and attached to the LAN Connectivity policy}
+  tags:
+    - cisco
+    - intersight
+    - intersight_lan_connectivity_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_lan_connectivity_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage LAN Connectivity Policies and vNICs for Cisco Intersight</description>
+</snippet>

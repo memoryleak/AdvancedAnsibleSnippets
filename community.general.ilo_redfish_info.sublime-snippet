@@ -3,11 +3,14 @@
   community.general.ilo_redfish_info:
     auth_token: ${2:# Security token for authenticating to iLO}
     baseuri: ${3:# Base URI of iLO}
-    category: ${4:# List of categories to execute on iLO}
-    command: ${5:# List of commands to execute on iLO}
-    password: ${6:# Password for authenticating to iLO}
-    timeout: ${7:# Timeout in seconds for HTTP requests to iLO}
-    username: ${8:# Username for authenticating to iLO}
+    ca_path: ${4:# PEM formatted file that contains a CA certificate to be used for validation}
+    category: ${5:# List of categories to execute on iLO}
+    ciphers: ${6:# TLS/SSL Ciphers to use for the request}
+    command: ${7:# List of commands to execute on iLO}
+    password: ${8:# Password for authenticating to iLO}
+    timeout: ${9:# Timeout in seconds for HTTP requests to iLO}
+    username: ${10:# Username for authenticating to iLO}
+    validate_certs: ${11:# If V(false), TLS/SSL certificates are not validated}
   tags:
     - community
     - general

@@ -1,11 +1,12 @@
 <snippet>
   <content><![CDATA[- name: ${1:Set or remove reverse DNS entry for IP}
   community.hrobot.reverse_dns:
-    hetzner_password: ${2:# The password for the Robot webservice user}
-    hetzner_user: ${3:# The username for the Robot webservice user}
+    hetzner_password: ${2:# The password for the Robot web-service user}
+    hetzner_user: ${3:# The username for the Robot web-service user}
     ip: ${4:# The IP address to set or remove a reverse DNS entry for}
-    state: ${5:# Whether to set or update (V(present)) or delete (V(absent)) the reverse DNS entry for O(ip)}
-    value: ${6:# The reverse DNS entry for O(ip)}
+    rate_limit_retry_timeout: ${5:# Timeout (in seconds) for waiting when rate limit exceeded errors are returned}
+    state: ${6:# Whether to set or update (V(present)) or delete (V(absent)) the reverse DNS entry for O(ip)}
+    value: ${7:# The reverse DNS entry for O(ip)}
   tags:
     - community
     - hrobot

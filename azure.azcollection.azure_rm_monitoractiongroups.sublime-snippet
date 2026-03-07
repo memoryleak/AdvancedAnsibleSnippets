@@ -1,0 +1,47 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update and delete Action Groups}
+  azure.azcollection.azure_rm_monitoractiongroups:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    arm_role_receivers: ${6:# The list of ARM role receivers that are part of this action group}
+    auth_source: ${7:# Controls the source of the credentials to use for authentication}
+    automation_runbook_receivers: ${8:# The list of AutomationRunbook receivers that are part of this action group}
+    azure_app_push_receivers: ${9:# The list of AzureAppPush receivers that are part of this action group}
+    azure_function_receivers: ${10:# The list of azure function receivers that are part of this action group}
+    cert_validation_mode: ${11:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${12:# Azure client ID}
+    cloud_environment: ${13:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    disable_instance_discovery: ${14:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    email_receivers: ${15:# The list of email receivers that are part of this action group}
+    enabled: ${16:# Indicates whether this action group is enabled}
+    event_hub_receivers: ${17:# The list of event hub receivers that are part of this action group}
+    group_short_name: ${18:# The short name of the action group}
+    itsm_receivers: ${19:# The list of webhook receivers that are part of this action group}
+    location: ${20:# Location of the action group}
+    log_mode: ${21:# Parent argument}
+    log_path: ${22:# Parent argument}
+    logic_app_receivers: ${23:# The list of logic app receivers that are part of this action group}
+    name: ${24:# The name of the action group you're creating/changing}
+    password: ${25:# Active Directory user password}
+    profile: ${26:# Security profile found in ~/}
+    resource_group: ${27:# The name of the resource group}
+    secret: ${28:# Azure client secret}
+    sms_receivers: ${29:# The list of SMS receivers that are part of this action group}
+    state: ${30:# State of the action group}
+    subscription_id: ${31:# Your Azure subscription Id}
+    tags: ${32:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${33:# Azure tenant ID}
+    thumbprint: ${34:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    voice_receivers: ${35:# The list of voice receivers that are part of this action group}
+    webhook_receivers: ${36:# The list of webhook receivers that are part of this action group}
+    x509_certificate_path: ${37:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_monitoractiongroups]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_monitoractiongroups</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update and delete Action Groups</description>
+</snippet>

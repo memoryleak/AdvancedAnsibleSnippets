@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Edit existing Compliance Settings}
+  check_point.mgmt.cp_mgmt_set_compliance_settings:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    automatic_scan_scheduler: ${3:# Schedule for an automatic full Compliance scan}
+    enable_email_alerts: ${4:# Enables or disables sending email alerts to SmartEvent (only for alerts)}
+    enable_smart_event_logs: ${5:# Enables or disables sending logs to SmartEvent}
+    initialize_best_practices: ${6:# If true, creates all the default Best Practices again}
+    partial_scan_delay: ${7:# Controls when the partial scan starts after publishing a session}
+    version: ${8:# Version of checkpoint}
+    wait_for_task: ${9:# Wait for the task to end}
+    wait_for_task_timeout: ${10:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_set_compliance_settings]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_set_compliance_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Edit existing Compliance Settings</description>
+</snippet>

@@ -2,27 +2,30 @@
   <content><![CDATA[- name: ${1:Manage Activation Keys}
   theforeman.foreman.activation_key:
     auto_attach: ${2:# Set Auto-Attach on or off}
-    content_overrides: ${3:# List of content overrides that include label and override state}
-    content_view: ${4:# Name of the content view}
-    description: ${5:# Description of the activation key}
-    host_collections: ${6:# List of host collections to add to activation key}
-    lifecycle_environment: ${7:# Name of the lifecycle environment}
-    max_hosts: ${8:# Maximum number of registered content hosts}
-    name: ${9:# Name of the activation key}
-    new_name: ${10:# Name of the new activation key when state == copied}
-    organization: ${11:# Organization that the entity is in}
-    password: ${12:# Password of the user accessing the Foreman server}
-    purpose_addons: ${13:# Sets the system purpose add-ons}
-    purpose_role: ${14:# Sets the system purpose role}
-    purpose_usage: ${15:# Sets the system purpose usage}
-    release_version: ${16:# Set the content release version}
-    server_url: ${17:# URL of the Foreman server}
-    service_level: ${18:# Set the service level}
-    state: ${19:# State of the Activation Key}
-    subscriptions: ${20:# List of subscriptions that include either Name, Pool ID, or Upstream Pool ID}
-    unlimited_hosts: ${21:# Can the activation key have unlimited hosts}
-    username: ${22:# Username accessing the Foreman server}
-    validate_certs: ${23:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${3:# PEM formatted file that contains a CA certificate to be used for validation}
+    content_overrides: ${4:# List of content overrides that include label and override state}
+    content_view: ${5:# Name of the content view}
+    content_view_environments: ${6:# List of content view environments to add to activation key}
+    description: ${7:# Description of the activation key}
+    host_collections: ${8:# List of host collections to add to activation key}
+    lifecycle_environment: ${9:# Name of the lifecycle environment}
+    max_hosts: ${10:# Maximum number of registered content hosts}
+    name: ${11:# Name of the activation key}
+    new_name: ${12:# Name of the new activation key when state == copied}
+    organization: ${13:# Organization that the entity is in}
+    password: ${14:# Password of the user accessing the Foreman server}
+    purpose_addons: ${15:# Sets the system purpose add-ons}
+    purpose_role: ${16:# Sets the system purpose role}
+    purpose_usage: ${17:# Sets the system purpose usage}
+    release_version: ${18:# Set the content release version}
+    server_url: ${19:# URL of the Foreman server}
+    service_level: ${20:# Set the service level}
+    state: ${21:# State of the Activation Key}
+    subscriptions: ${22:# List of subscriptions that include either Name, Pool ID, or Upstream Pool ID}
+    unlimited_hosts: ${23:# Can the activation key have unlimited hosts}
+    use_gssapi: ${24:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${25:# Username accessing the Foreman server}
+    validate_certs: ${26:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

@@ -1,30 +1,33 @@
 <snippet>
   <content><![CDATA[- name: ${1:This module manages hosts on IBM Storage Virtualize family systems}
   ibm.storage_virtualize.ibm_svc_host:
-    clustername: ${2:# The hostname or management IP of the Storage Virtualize system}
+    clustername: ${2:# The hostname or management IP or Partition IP of the Storage Virtualize system}
     domain: ${3:# Domain for the Storage Virtualize system}
     draftpartition: ${4:# Specifies the name of the draft partition to be assigned to the host}
     fcwwpn: ${5:# List of Initiator WWPNs to be added to the host}
-    hostcluster: ${6:# Specifies the name of the host cluster to which the host object is to be added}
-    iogrp: ${7:# Specifies a set of one or more input/output (I/O) groups from which the host can access the volumes}
-    iscsiname: ${8:# List of Initiator IQNs to be added to the host}
-    log_path: ${9:# Path of debug log file}
-    name: ${10:# Specifies a name or label for the new host object}
-    nodraftpartition: ${11:# If specified as C(True), the host object is removed from the draft partition}
-    nohostcluster: ${12:# If specified as C(True), host object is removed from the host cluster}
-    nopartition: ${13:# If specified as C(True), the host object is removed from the storage partition}
-    nqn: ${14:# List of initiator NQNs to be added to the host}
-    old_name: ${15:# Specifies the old name of the host while renaming}
-    partition: ${16:# Specifies the storage partition to be associated with the host}
-    password: ${17:# REST API password for the Storage Virtualize system}
-    portset: ${18:# Specifies the portset to be associated with the host}
-    protocol: ${19:# Specifies the protocol used by the host to communicate with the storage system}
-    site: ${20:# Specifies the site name of the host}
-    state: ${21:# Creates or updates (C(present)) or removes (C(absent)) a host}
-    token: ${22:# The authentication token to verify a user on the Storage Virtualize system}
-    type: ${23:# Specifies the type of host}
-    username: ${24:# REST API username for the Storage Virtualize system}
-    validate_certs: ${25:# Validates certification}
+    fdminame: ${6:# Host object to be created from the fdminame}
+    hostcluster: ${7:# Specifies the name of the host cluster to which the host object is to be added}
+    iogrp: ${8:# Specifies a set of one or more input/output (I/O) groups from which the host can access the volumes}
+    iscsiname: ${9:# List of Initiator IQNs to be added to the host}
+    location: ${10:# Specifies the system ID or system name that is co-located with this host}
+    log_path: ${11:# Path of debug log file}
+    name: ${12:# Specifies a name or label for the new host object}
+    nodraftpartition: ${13:# If specified as C(True), the host object is removed from the draft partition}
+    nohostcluster: ${14:# If specified as C(True), host object is removed from the host cluster}
+    nopartition: ${15:# If specified as C(True), the host object is removed from the storage partition}
+    nqn: ${16:# List of initiator NQNs to be added to the host}
+    old_name: ${17:# Specifies the old name of the host while renaming}
+    partition: ${18:# Specifies the storage partition to be associated with the host}
+    password: ${19:# REST API password for the Storage Virtualize system}
+    portset: ${20:# Specifies the portset to be associated with the host}
+    protocol: ${21:# Specifies the protocol used by the host to communicate with the storage system}
+    site: ${22:# Specifies the site name of the host}
+    state: ${23:# Creates or updates (C(present)) or removes (C(absent)) a host}
+    suppressofflinealert: ${24:# If specified as C(yes), an event will not be generated if host is offline}
+    token: ${25:# The authentication token to verify a user on the Storage Virtualize system}
+    type: ${26:# Specifies the type of host}
+    username: ${27:# REST API username for the Storage Virtualize system}
+    validate_certs: ${28:# Validates certification}
   tags:
     - ibm
     - storage_virtualize

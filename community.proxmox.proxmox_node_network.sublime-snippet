@@ -1,0 +1,42 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage network interfaces on Proxmox nodes}
+  community.proxmox.proxmox_node_network:
+    api_host: ${2:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${3:# Specify the password to authenticate with}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    autostart: ${8:# Automatically start interface on boot}
+    bond_mode: ${9:# Bonding mode for C(bond) or C(OVSBond) interface types}
+    bond_primary: ${10:# Primary interface for active-backup bond}
+    bond_xmit_hash_policy: ${11:# Transmit hash policy for bond type}
+    bridge_ports: ${12:# Specify the interfaces you want to add to your bridge}
+    bridge_vids: ${13:# Specify the allowed VLANs (e}
+    bridge_vlan_aware: ${14:# Enable bridge VLAN support}
+    cidr: ${15:# IPv4 host address with prefix length (e}
+    cidr6: ${16:# IPv6 host address with prefix length (e}
+    comments: ${17:# Comments for the interface configuration}
+    gateway: ${18:# Default IPv4 gateway address}
+    gateway6: ${19:# Default IPv6 gateway address}
+    iface: ${20:# Network interface name}
+    iface_type: ${21:# Type of network interface}
+    mtu: ${22:# Maximum Transmission Unit (1280 - 65520)}
+    node: ${23:# The Proxmox node to manage network interfaces on}
+    ovs_bonds: ${24:# Interfaces used by OVS bonding device}
+    ovs_bridge: ${25:# OVS bridge name}
+    ovs_options: ${26:# OVS interface options}
+    ovs_ports: ${27:# Interfaces to add to OVS bridge}
+    ovs_tag: ${28:# VLAN tag (1 - 4094)}
+    slaves: ${29:# Interfaces used by the bonding device (space separated)}
+    state: ${30:# The desired state of the network interface}
+    validate_certs: ${31:# If V(false), SSL certificates will not be validated}
+    vlan_raw_device: ${32:# Raw device for VLAN interface}
+  tags:
+    - community
+    - proxmox
+    - proxmox_node_network]]></content>
+  <tabTrigger>community.proxmox.proxmox_node_network</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage network interfaces on Proxmox nodes</description>
+</snippet>

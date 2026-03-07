@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure VLAN interface on StorageGRID}
+  netapp.storagegrid.na_sg_grid_vlan_interface:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    description: ${4:# Description for this VLAN interface}
+    interfaces: ${5:# List of node interface pairs}
+    state: ${6:# Whether the vlan interface should be present or absent}
+    validate_certs: ${7:# Should https certificates be validated?}
+    vlan_id: ${8:# The numeric ID of the VLAN used for VLAN tagging}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_vlan_interface]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_vlan_interface</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure VLAN interface on StorageGRID</description>
+</snippet>

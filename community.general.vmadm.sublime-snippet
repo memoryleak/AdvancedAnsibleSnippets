@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage SmartOS virtual machines and zones}
   community.general.vmadm:
-    archive_on_delete: ${2:# When enabled, the zone dataset will be mounted on C(/zones/archive) upon removal}
+    archive_on_delete: ${2:# When enabled, the zone dataset is mounted on C(/zones/archive) upon removal}
     autoboot: ${3:# Whether or not a VM is booted when the system is rebooted}
     boot: ${4:# Set the boot order for KVM VMs}
     brand: ${5:# Type of virtual machine}
@@ -16,51 +16,53 @@
     docker: ${14:# Docker images need this flag enabled along with the O(brand) set to C(lx)}
     filesystems: ${15:# Mount additional filesystems into an OS VM}
     firewall_enabled: ${16:# Enables the firewall, allowing fwadm(1M) rules to be applied}
-    force: ${17:# Force a particular action (i}
-    fs_allowed: ${18:# Comma separated list of filesystem types this zone is allowed to mount}
-    hostname: ${19:# Zone/VM hostname}
-    image_uuid: ${20:# Image UUID}
-    indestructible_delegated: ${21:# Adds an C(@indestructible) snapshot to delegated datasets}
-    indestructible_zoneroot: ${22:# Adds an C(@indestructible) snapshot to zoneroot}
-    internal_metadata: ${23:# Metadata to be set and associated with this VM, this contains operator generated keys}
-    internal_metadata_namespace: ${24:# List of namespaces to be set as C(internal_metadata-only); these namespaces will come from O(internal_metadata) rather than O(customer_metadata)}
-    kernel_version: ${25:# Kernel version to emulate for LX VMs}
-    limit_priv: ${26:# Set (comma separated) list of privileges the zone is allowed to use}
-    maintain_resolvers: ${27:# Resolvers in C(/etc/resolv}
-    max_locked_memory: ${28:# Total amount of memory (in MiBs) on the host that can be locked by this VM}
-    max_lwps: ${29:# Maximum number of lightweight processes this VM is allowed to have running}
-    max_physical_memory: ${30:# Maximum amount of memory (in MiBs) on the host that the VM is allowed to use}
-    max_swap: ${31:# Maximum amount of virtual memory (in MiBs) the VM is allowed to use}
-    mdata_exec_timeout: ${32:# Timeout in seconds (or 0 to disable) for the C(svc:/smartdc/mdata:execute) service that runs user-scripts in the zone}
-    name: ${33:# Name of the VM}
-    nic_driver: ${34:# Default value for a virtual NIC model for KVM guests}
-    nics: ${35:# A list of nics to add, valid properties are documented in vmadm(1M)}
-    nowait: ${36:# Consider the provisioning complete when the VM first starts, rather than when the VM has rebooted}
-    qemu_extra_opts: ${37:# Additional qemu cmdline arguments for KVM guests}
-    qemu_opts: ${38:# Additional qemu arguments for KVM guests}
-    quota: ${39:# Quota on zone filesystems (in MiBs)}
-    ram: ${40:# Amount of virtual RAM for a KVM guest (in MiBs)}
-    resolvers: ${41:# List of resolvers to be put into C(/etc/resolv}
-    routes: ${42:# Dictionary that maps destinations to gateways, these will be set as static routes in the VM}
-    spice_opts: ${43:# Addition options for SPICE-enabled KVM VMs}
-    spice_password: ${44:# Password required to connect to SPICE}
-    state: ${45:# States for the VM to be in}
-    tmpfs: ${46:# Amount of memory (in MiBs) that will be available in the VM for the C(/tmp) filesystem}
-    uuid: ${47:# UUID of the VM}
-    vcpus: ${48:# Number of virtual CPUs for a KVM guest}
-    vga: ${49:# Specify VGA emulation used by KVM VMs}
-    virtio_txburst: ${50:# Number of packets that can be sent in a single flush of the tx queue of virtio NICs}
-    virtio_txtimer: ${51:# Timeout (in nanoseconds) for the TX timer of virtio NICs}
-    vnc_password: ${52:# Password required to connect to VNC}
-    vnc_port: ${53:# TCP port to listen of the VNC server}
-    zfs_data_compression: ${54:# Specifies compression algorithm used for this VMs data dataset}
-    zfs_data_recsize: ${55:# Suggested block size (power of 2) for files in the delegated dataset's filesystem}
-    zfs_filesystem_limit: ${56:# Maximum number of filesystems the VM can have}
-    zfs_io_priority: ${57:# IO throttle priority value relative to other VMs}
-    zfs_root_compression: ${58:# Specifies compression algorithm used for this VMs root dataset}
-    zfs_root_recsize: ${59:# Suggested block size (power of 2) for files in the zoneroot dataset's filesystem}
-    zfs_snapshot_limit: ${60:# Number of snapshots the VM can have}
-    zpool: ${61:# ZFS pool the VM's zone dataset will be created in}
+    flexible_disk_size: ${17:# This sets an upper bound for the amount of space that a bhyve instance may use for its disks and snapshots of those disks (in MiBs)}
+    force: ${18:# Force a particular action (in other words, stop or delete a VM)}
+    fs_allowed: ${19:# Comma separated list of filesystem types this zone is allowed to mount}
+    hostname: ${20:# Zone/VM hostname}
+    image_uuid: ${21:# Image UUID}
+    indestructible_delegated: ${22:# Adds an C(@indestructible) snapshot to delegated datasets}
+    indestructible_zoneroot: ${23:# Adds an C(@indestructible) snapshot to zoneroot}
+    internal_metadata: ${24:# Metadata to be set and associated with this VM, this contains operator generated keys}
+    internal_metadata_namespace: ${25:# List of namespaces to be set as C(internal_metadata-only); these namespaces come from O(internal_metadata) rather than O(customer_metadata)}
+    kernel_version: ${26:# Kernel version to emulate for LX VMs}
+    limit_priv: ${27:# Set (comma separated) list of privileges the zone is allowed to use}
+    maintain_resolvers: ${28:# Resolvers in C(/etc/resolv}
+    max_locked_memory: ${29:# Total amount of memory (in MiBs) on the host that can be locked by this VM}
+    max_lwps: ${30:# Maximum number of lightweight processes this VM is allowed to have running}
+    max_physical_memory: ${31:# Maximum amount of memory (in MiBs) on the host that the VM is allowed to use}
+    max_swap: ${32:# Maximum amount of virtual memory (in MiBs) the VM is allowed to use}
+    mdata_exec_timeout: ${33:# Timeout in seconds (or 0 to disable) for the C(svc:/smartdc/mdata:execute) service that runs user-scripts in the zone}
+    name: ${34:# Name of the VM}
+    nic_driver: ${35:# Default value for a virtual NIC model for KVM guests}
+    nics: ${36:# A list of nics to add, valid properties are documented in vmadm(1M)}
+    nowait: ${37:# Consider the provisioning complete when the VM first starts, rather than when the VM has rebooted}
+    owner_uuid: ${38:# Define the UUID of the owner of the VM}
+    qemu_extra_opts: ${39:# Additional qemu cmdline arguments for KVM guests}
+    qemu_opts: ${40:# Additional qemu arguments for KVM guests}
+    quota: ${41:# Quota on zone filesystems (in MiBs)}
+    ram: ${42:# Amount of virtual RAM for a KVM guest (in MiBs)}
+    resolvers: ${43:# List of resolvers to be put into C(/etc/resolv}
+    routes: ${44:# Dictionary that maps destinations to gateways, these are set as static routes in the VM}
+    spice_opts: ${45:# Addition options for SPICE-enabled KVM VMs}
+    spice_password: ${46:# Password required to connect to SPICE}
+    state: ${47:# States for the VM to be in}
+    tmpfs: ${48:# Amount of memory (in MiBs) that is available in the VM for the C(/tmp) filesystem}
+    uuid: ${49:# UUID of the VM}
+    vcpus: ${50:# Number of virtual CPUs for a KVM guest}
+    vga: ${51:# Specify VGA emulation used by KVM VMs}
+    virtio_txburst: ${52:# Number of packets that can be sent in a single flush of the tx queue of virtio NICs}
+    virtio_txtimer: ${53:# Timeout (in nanoseconds) for the TX timer of virtio NICs}
+    vnc_password: ${54:# Password required to connect to VNC}
+    vnc_port: ${55:# TCP port to listen of the VNC server}
+    zfs_data_compression: ${56:# Specifies compression algorithm used for this VMs data dataset}
+    zfs_data_recsize: ${57:# Suggested block size (power of 2) for files in the delegated dataset's filesystem}
+    zfs_filesystem_limit: ${58:# Maximum number of filesystems the VM can have}
+    zfs_io_priority: ${59:# IO throttle priority value relative to other VMs}
+    zfs_root_compression: ${60:# Specifies compression algorithm used for this VMs root dataset}
+    zfs_root_recsize: ${61:# Suggested block size (power of 2) for files in the zoneroot dataset's filesystem}
+    zfs_snapshot_limit: ${62:# Number of snapshots the VM can have}
+    zpool: ${63:# ZFS pool the VM's zone dataset is created in}
   tags:
     - community
     - general

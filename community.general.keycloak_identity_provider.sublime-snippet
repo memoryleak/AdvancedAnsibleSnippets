@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Allows administration of Keycloak identity providers via Keycloak API}
+  <content><![CDATA[- name: ${1:Allows administration of Keycloak identity providers using Keycloak API}
   community.general.keycloak_identity_provider:
     add_read_token_role_on_create: ${2:# Enable/disable whether new users can read any stored tokens}
     alias: ${3:# The alias uniquely identifies an identity provider and it is also used to build the redirect URI}
@@ -21,16 +21,17 @@
     post_broker_login_flow_alias: ${19:# Alias of authentication flow, which is triggered after each login with this identity provider}
     provider_id: ${20:# Protocol used by this provider (supported values are V(oidc) or V(saml))}
     realm: ${21:# The Keycloak realm under which this identity provider resides}
-    state: ${22:# State of the identity provider}
-    store_token: ${23:# Enable/disable whether tokens must be stored after authenticating users}
-    token: ${24:# Authentication token for Keycloak API}
-    trust_email: ${25:# If enabled, email provided by this provider is not verified even if verification is enabled for the realm}
-    validate_certs: ${26:# Verify TLS certificates (do not disable this in production)}
+    refresh_token: ${22:# Authentication refresh token for Keycloak API}
+    state: ${23:# State of the identity provider}
+    store_token: ${24:# Enable/disable whether tokens must be stored after authenticating users}
+    token: ${25:# Authentication token for Keycloak API}
+    trust_email: ${26:# If enabled, email provided by this provider is not verified even if verification is enabled for the realm}
+    validate_certs: ${27:# Verify TLS certificates (do not disable this in production)}
   tags:
     - community
     - general
     - keycloak_identity_provider]]></content>
   <tabTrigger>community.general.keycloak_identity_provider</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Allows administration of Keycloak identity providers via Keycloak API</description>
+  <description>Allows administration of Keycloak identity providers using Keycloak API</description>
 </snippet>

@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage an Azure Front Door OriginGroup to be used with Standard or Premium Frontdoor}
+  azure.azcollection.azure_rm_afdorigingroup:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    auth_source: ${5:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${6:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${7:# Azure client ID}
+    cloud_environment: ${8:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    disable_instance_discovery: ${9:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    health_probe_settings: ${10:# Health probe settings to the origin that is used to determine the health of the origin}
+    load_balancing_settings: ${11:# Load balancing settings for a backend pool}
+    log_mode: ${12:# Parent argument}
+    log_path: ${13:# Parent argument}
+    name: ${14:# Name of the AFD OriginGroup}
+    password: ${15:# Active Directory user password}
+    profile: ${16:# Security profile found in ~/}
+    profile_name: ${17:# Name of the AFD Profile where the OriginGroup will be added}
+    resource_group: ${18:# Name of a resource group where the AFD OriginGroup exists or will be created}
+    secret: ${19:# Azure client secret}
+    session_affinity_state: ${20:# Whether to allow session affinity on this host}
+    state: ${21:# Assert the state of the AFD OriginGroup}
+    subscription_id: ${22:# Your Azure subscription Id}
+    tenant: ${23:# Azure tenant ID}
+    thumbprint: ${24:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${25:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_afdorigingroup]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_afdorigingroup</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage an Azure Front Door OriginGroup to be used with Standard or Premium Frontdoor</description>
+</snippet>

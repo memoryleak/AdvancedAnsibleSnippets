@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Import Outbound Inspection certificate for HTTPS inspection}
+  check_point.mgmt.cp_mgmt_import_outbound_inspection_certificate:
+    auto_publish_session: ${2:# Publish the current session if changes have been performed after task completes}
+    base64_certificate: ${3:# Certificate file encoded in base64}
+    base64_password: ${4:# Password (encoded in Base64 with padding) for the certificate file}
+    color: ${5:# Color of the object}
+    comments: ${6:# Comments string}
+    details_level: ${7:# The level of detail for some of the fields in the response can vary from showing only the UID value of the object to a fully detailed representation of the object}
+    ignore_errors: ${8:# Apply changes ignoring errors}
+    ignore_warnings: ${9:# Apply changes ignoring warnings}
+    is_default: ${10:# Is the certificate is the default certificate}
+    name: ${11:# Object name}
+    tags: ${12:# Collection of tag identifiers}
+    version: ${13:# Version of checkpoint}
+    wait_for_task: ${14:# Wait for the task to end}
+    wait_for_task_timeout: ${15:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_import_outbound_inspection_certificate]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_import_outbound_inspection_certificate</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Import Outbound Inspection certificate for HTTPS inspection</description>
+</snippet>

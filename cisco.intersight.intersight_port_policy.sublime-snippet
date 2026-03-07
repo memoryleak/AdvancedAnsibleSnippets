@@ -1,0 +1,35 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Port Policies for Cisco Intersight}
+  cisco.intersight.intersight_port_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    appliance_port_channels: ${5:# List of appliance port channel configurations}
+    appliance_ports: ${6:# List of Appliance port configurations}
+    breakout_ports: ${7:# List of breakout port configurations}
+    description: ${8:# The user-defined description for the Port Policy}
+    device_model: ${9:# The device model for which the Port Policy is intended}
+    ethernet_uplink_port_channels: ${10:# List of Ethernet uplink port channel configurations}
+    ethernet_uplink_ports: ${11:# List of Ethernet Uplink port configurations}
+    fc_port_mode: ${12:# Configure Fibre Channel port mode for a range of ports}
+    fc_storage_ports: ${13:# List of FC Storage port configurations}
+    fc_uplink_port_channels: ${14:# List of FC uplink port channel configurations}
+    fc_uplink_ports: ${15:# List of FC Uplink port configurations}
+    fcoe_uplink_port_channels: ${16:# List of FCoE uplink port channel configurations}
+    fcoe_uplink_ports: ${17:# List of FCoE Uplink port configurations}
+    name: ${18:# The name assigned to the Port Policy}
+    organization: ${19:# The name of the Organization this resource is assigned to}
+    pin_groups: ${20:# List of pin group configurations (both LAN and SAN)}
+    server_ports: ${21:# List of server port configurations}
+    state: ${22:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${23:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${24:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${25:# Boolean control for verifying the api_uri TLS certificate}
+  tags:
+    - cisco
+    - intersight
+    - intersight_port_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_port_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Port Policies for Cisco Intersight</description>
+</snippet>

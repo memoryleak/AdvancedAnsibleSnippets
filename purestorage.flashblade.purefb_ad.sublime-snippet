@@ -9,15 +9,17 @@
     encryption: ${7:# The encryption types that will be supported for use by clients for Kerberos authentication}
     existing: ${8:# Does the account I(name) already exist in the AD environment}
     fb_url: ${9:# FlashBlade management IP address or Hostname}
-    join_ou: ${10:# Location where the Computer account will be created}
-    kerberos_servers: ${11:# A list of key distribution servers to use for Kerberos protocol}
-    local_only: ${12:# Do a local-only delete of an active directory account}
-    name: ${13:# Name of the AD account}
-    password: ${14:# Password string for I(username)}
-    service: ${15:# Service protocol for Active Directory principals}
-    service_principals: ${16:# A list of either FQDNs or SPNs for registering services with the domain}
-    state: ${17:# Define whether the AD sccount is deleted or not}
-    username: ${18:# A user capable of creating a computer account within the domain}
+    global_catalog_servers: ${10:# A list of global catalog servers that will be used for lookups related to user authorization}
+    join_ou: ${11:# Location where the Computer account will be created}
+    kerberos_servers: ${12:# A list of key distribution servers to use for Kerberos protocol}
+    local_only: ${13:# Do a local-only delete of an active directory account}
+    name: ${14:# Name of the AD account}
+    password: ${15:# Password string for I(username)}
+    server: ${16:# Name of the local array server into which the AD account is added}
+    service: ${17:# Service protocol for Active Directory principals}
+    service_principals: ${18:# A list of SPNs for registering services with the domain}
+    state: ${19:# Define whether the AD sccount is deleted or not}
+    username: ${20:# A user capable of creating a computer account within the domain}
   tags:
     - purestorage
     - flashblade

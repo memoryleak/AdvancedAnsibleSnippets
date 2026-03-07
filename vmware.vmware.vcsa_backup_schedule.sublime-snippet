@@ -1,0 +1,30 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure the vCenter Server Appliance backup schedule}
+  vmware.vmware.vcsa_backup_schedule:
+    always_update_password: ${2:# If true and O(encryption_password) or O(location}
+    db_fast_backup: ${3:# If true, the underlying Postgres DB/VCDB will use a fast backup method}
+    enabled: ${4:# Whether or not the schedule should be enabled}
+    encryption_password: ${5:# A password to use to encrypt the backup}
+    hostname: ${6:# The hostname or IP address of the vSphere vCenter server}
+    include_stats_events_and_tasks: ${7:# If true, historical data about stats, events, and tasks will be included in the backups}
+    include_supervisors_control_plane: ${8:# If true, the supervisors control plane will be included in the backups}
+    location: ${9:# Options describing the location where the backup should be stored}
+    name: ${10:# The name of the backup schedule}
+    password: ${11:# The password of the vSphere vCenter server}
+    port: ${12:# The port number of the vSphere vCenter server}
+    proxy_host: ${13:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${14:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    proxy_protocol: ${15:# The proxy connection protocol to use}
+    retain_count: ${16:# The number of backups to retain}
+    schedule: ${17:# Options describing the timing and recurrence of the backup schedule}
+    state: ${18:# Whether the schedule should be present or absent}
+    username: ${19:# The username of the vSphere vCenter server}
+    validate_certs: ${20:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware
+    - vcsa_backup_schedule]]></content>
+  <tabTrigger>vmware.vmware.vcsa_backup_schedule</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure the vCenter Server Appliance backup schedule</description>
+</snippet>

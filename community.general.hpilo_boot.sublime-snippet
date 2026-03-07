@@ -3,12 +3,13 @@
   community.general.hpilo_boot:
     force: ${2:# Whether to force a reboot (even when the system is already booted)}
     host: ${3:# The HP iLO hostname/address that is linked to the physical system}
-    image: ${4:# The URL of a cdrom, floppy or usb boot media image in the form V(protocol://username:password@hostname:port/filename)}
-    login: ${5:# The login name to authenticate to the HP iLO interface}
-    media: ${6:# The boot media to boot the system from}
-    password: ${7:# The password to authenticate to the HP iLO interface}
-    ssl_version: ${8:# Change the ssl_version used}
-    state: ${9:# The state of the boot media}
+    idempotent_boot_once: ${4:# This option makes O(state=boot_once) succeed instead of failing when the server is already powered on}
+    image: ${5:# The URL of a cdrom, floppy or usb boot media image in the form V(protocol://username:password@hostname:port/filename)}
+    login: ${6:# The login name to authenticate to the HP iLO interface}
+    media: ${7:# The boot media to boot the system from}
+    password: ${8:# The password to authenticate to the HP iLO interface}
+    ssl_version: ${9:# Change the ssl_version used}
+    state: ${10:# The state of the boot media}
   tags:
     - community
     - general

@@ -19,10 +19,11 @@
     stabilize_minutes: ${17:# Number of minutes that the update should wait after a takeover or giveback is completed}
     state: ${18:# This module downloads and optionally installs ONTAP software on a cluster}
     timeout: ${19:# how long to wait for the update to complete, in seconds}
-    use_rest: ${20:# Whether to use REST or ZAPI}
-    username: ${21:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
-    validate_after_download: ${22:# By default validation is not run after download, as it is already done in the update step}
-    validate_certs: ${23:# If set to C(no), the SSL certificates will not be validated}
+    use_lambda: ${20:# Specifies if AWS Lambda proxy functionality should be used to connect to the ONTAP system}
+    use_rest: ${21:# Whether to use REST or ZAPI}
+    username: ${22:# This can be a Cluster-scoped or SVM-scoped account, depending on whether a Cluster-level or SVM-level API is required}
+    validate_after_download: ${23:# By default validation is not run after download, as it is already done in the update step}
+    validate_certs: ${24:# If set to C(no), the SSL certificates will not be validated}
   tags:
     - netapp
     - ontap

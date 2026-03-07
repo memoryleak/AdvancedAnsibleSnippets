@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Management of HA groups in Proxmox VE Cluster}
+  community.proxmox.proxmox_cluster_ha_resources:
+    api_host: ${2:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${3:# Specify the password to authenticate with}
+    api_port: ${4:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${5:# Specify the token ID}
+    api_token_secret: ${6:# Specify the token secret}
+    api_user: ${7:# Specify the user to authenticate with}
+    comment: ${8:# Description}
+    group: ${9:# The HA group identifier}
+    hastate: ${10:# Requested resource state}
+    max_relocate: ${11:# Maximal number of service relocate tries when a service failes to start}
+    max_restart: ${12:# Maximal number of tries to restart the service on a node after its start failed}
+    name: ${13:# HA resource ID}
+    state: ${14:# create or delete}
+    validate_certs: ${15:# If V(false), SSL certificates will not be validated}
+  tags:
+    - community
+    - proxmox
+    - proxmox_cluster_ha_resources]]></content>
+  <tabTrigger>community.proxmox.proxmox_cluster_ha_resources</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Management of HA groups in Proxmox VE Cluster</description>
+</snippet>

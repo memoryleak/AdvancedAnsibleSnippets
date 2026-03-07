@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Send a Keycloak execute-actions email to a user}
+  community.general.keycloak_user_execute_actions_email:
+    actions: ${2:# List of required actions to include in the email}
+    auth_client_id: ${3:# OpenID Connect C(client_id) to authenticate to the API with}
+    auth_client_secret: ${4:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
+    auth_keycloak_url: ${5:# URL to the Keycloak instance}
+    auth_password: ${6:# Password to authenticate for API access with}
+    auth_realm: ${7:# Keycloak realm name to authenticate to for API access}
+    auth_username: ${8:# Username to authenticate for API access with}
+    client_id: ${9:# Optional client ID used for the redirect link}
+    connection_timeout: ${10:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
+    http_agent: ${11:# Configures the HTTP User-Agent header}
+    id: ${12:# The unique ID (UUID) of the user}
+    lifespan: ${13:# Optional lifespan (in seconds) for the action token (supported on newer Keycloak versions)}
+    realm: ${14:# The Keycloak realm where the user resides}
+    redirect_uri: ${15:# Optional redirect URI}
+    refresh_token: ${16:# Authentication refresh token for Keycloak API}
+    token: ${17:# Authentication token for Keycloak API}
+    username: ${18:# Username of the user}
+    validate_certs: ${19:# Verify TLS certificates (do not disable this in production)}
+  tags:
+    - community
+    - general
+    - keycloak_user_execute_actions_email]]></content>
+  <tabTrigger>community.general.keycloak_user_execute_actions_email</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Send a Keycloak execute-actions email to a user</description>
+</snippet>

@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create or delete an EC2 Placement Group}
+  amazon.aws.ec2_placement_group:
+    access_key: ${2:# AWS access key ID}
+    aws_ca_bundle: ${3:# The location of a CA Bundle to use when validating SSL certificates}
+    aws_config: ${4:# A dictionary to modify the botocore configuration}
+    debug_botocore_endpoint_logs: ${5:# Use a C(botocore}
+    endpoint_url: ${6:# URL to connect to instead of the default AWS endpoints}
+    name: ${7:# The name for the placement group}
+    partition_count: ${8:# The number of partitions}
+    profile: ${9:# A named AWS profile to use for authentication}
+    region: ${10:# The AWS region to use}
+    secret_key: ${11:# AWS secret access key}
+    session_token: ${12:# AWS STS session token for use with temporary credentials}
+    state: ${13:# Create or delete placement group}
+    strategy: ${14:# Placement group strategy}
+    tags: ${15:# A dict of key value pairs to associate with the placement group}
+    validate_certs: ${16:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+  tags:
+    - amazon
+    - aws
+    - ec2_placement_group]]></content>
+  <tabTrigger>amazon.aws.ec2_placement_group</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create or delete an EC2 Placement Group</description>
+</snippet>

@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Set default administrator settings}
+  check_point.mgmt.cp_mgmt_set_default_administrator_settings:
+    authentication_method: ${2:# Authentication method for new administrator}
+    auto_publish_session: ${3:# Publish the current session if changes have been performed after task completes}
+    days_to_indicate_expiration_in_admin_view: ${4:# Number of days in advanced to show 'about to expire' indication in administrator view}
+    days_to_notify_expiration_to_admin: ${5:# Number of days in advanced to notify administrator about expiration}
+    expiration_date: ${6:# Expiration date for new administrator in YYYY-MM-DD format}
+    expiration_period: ${7:# Expiration period for new administrator}
+    expiration_period_time_units: ${8:# Expiration period time units for new administrator}
+    expiration_type: ${9:# Expiration type for new administrator}
+    indicate_expiration_in_admin_view: ${10:# Indicates whether to notify administrator about expiration}
+    notify_expiration_to_admin: ${11:# Indicates whether to show 'about to expire' indication in administrator view}
+    version: ${12:# Version of checkpoint}
+    wait_for_task: ${13:# Wait for the task to end}
+    wait_for_task_timeout: ${14:# How many minutes to wait until throwing a timeout error}
+  tags:
+    - check_point
+    - mgmt
+    - cp_mgmt_set_default_administrator_settings]]></content>
+  <tabTrigger>check_point.mgmt.cp_mgmt_set_default_administrator_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Set default administrator settings</description>
+</snippet>

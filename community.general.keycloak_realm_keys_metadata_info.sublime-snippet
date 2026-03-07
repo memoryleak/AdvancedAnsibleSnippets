@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Allows obtaining Keycloak realm keys metadata via Keycloak API}
+  <content><![CDATA[- name: ${1:Allows obtaining Keycloak realm keys metadata using Keycloak API}
   community.general.keycloak_realm_keys_metadata_info:
     auth_client_id: ${2:# OpenID Connect C(client_id) to authenticate to the API with}
     auth_client_secret: ${3:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
@@ -10,13 +10,14 @@
     connection_timeout: ${8:# Controls the HTTP connections timeout period (in seconds) to Keycloak API}
     http_agent: ${9:# Configures the HTTP User-Agent header}
     realm: ${10:# They Keycloak realm to fetch keys metadata}
-    token: ${11:# Authentication token for Keycloak API}
-    validate_certs: ${12:# Verify TLS certificates (do not disable this in production)}
+    refresh_token: ${11:# Authentication refresh token for Keycloak API}
+    token: ${12:# Authentication token for Keycloak API}
+    validate_certs: ${13:# Verify TLS certificates (do not disable this in production)}
   tags:
     - community
     - general
     - keycloak_realm_keys_metadata_info]]></content>
   <tabTrigger>community.general.keycloak_realm_keys_metadata_info</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Allows obtaining Keycloak realm keys metadata via Keycloak API</description>
+  <description>Allows obtaining Keycloak realm keys metadata using Keycloak API</description>
 </snippet>

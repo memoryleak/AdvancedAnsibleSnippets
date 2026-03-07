@@ -1,0 +1,148 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Grafana Contact Points}
+  community.grafana.grafana_contact_point:
+    alertmanager_password: ${2:# Password for accessing Alertmanager}
+    alertmanager_url: ${3:# URL for accessing Alertmanager}
+    alertmanager_username: ${4:# Username for accessing Alertmanager}
+    client_cert: ${5:# PEM formatted certificate chain file to be used for SSL client authentication}
+    client_key: ${6:# PEM formatted file that contains your private key to be used for SSL client authentication}
+    dingding_message: ${7:# The message to send via DingDing}
+    dingding_message_type: ${8:# The type of message to send via DingDing}
+    dingding_title: ${9:# The title of the DingDing message}
+    dingding_url: ${10:# The URL for DingDing webhook}
+    disable_resolve_message: ${11:# Disables the resolve message}
+    discord_avatar_url: ${12:# The avatar URL for Discord messages}
+    discord_message: ${13:# The message to send via Discord}
+    discord_title: ${14:# The title of the Discord message}
+    discord_url: ${15:# The URL for Discord webhook}
+    discord_use_username: ${16:# Whether to use a custom username in Discord}
+    email_addresses: ${17:# List of email addresses to send the message to}
+    email_message: ${18:# The content of the email message}
+    email_single: ${19:# Whether to send a single email or individual emails}
+    email_subject: ${20:# The subject of the email}
+    googlechat_message: ${21:# The message to send via Google Chat}
+    googlechat_title: ${22:# The title of the Google Chat message}
+    googlechat_url: ${23:# The URL for Google Chat webhook}
+    grafana_api_key: ${24:# The Grafana API key}
+    include_image: ${25:# Whether to include an image in the notification}
+    kafka_api_version: ${26:# The API version for Kafka}
+    kafka_cluster_id: ${27:# The cluster ID for Kafka}
+    kafka_description: ${28:# The description for the Kafka configuration}
+    kafka_details: ${29:# Additional details for Kafka}
+    kafka_password: ${30:# Password for accessing Kafka}
+    kafka_rest_proxy_url: ${31:# URL for Kafka REST Proxy}
+    kafka_topic: ${32:# Kafka topic to publish to}
+    kafka_username: ${33:# Username for accessing Kafka}
+    line_description: ${34:# Description for the Line message}
+    line_title: ${35:# Title of the Line message}
+    line_token: ${36:# Access token for Line}
+    name: ${37:# The name of the contact point}
+    opsgenie_api_key: ${38:# API key for OpsGenie}
+    opsgenie_auto_close: ${39:# Whether to enable auto-closing of alerts in OpsGenie}
+    opsgenie_description: ${40:# Description of the OpsGenie alert}
+    opsgenie_message: ${41:# Message to send via OpsGenie}
+    opsgenie_override_priority: ${42:# Whether to override the priority in OpsGenie}
+    opsgenie_responders: ${43:# List of responders for OpsGenie alerts}
+    opsgenie_send_tags_as: ${44:# Format for sending tags in OpsGenie}
+    opsgenie_url: ${45:# URL for OpsGenie webhook}
+    org_id: ${46:# The organization ID}
+    org_name: ${47:# The name of the organization}
+    pagerduty_class: ${48:# Class of the PagerDuty alert}
+    pagerduty_client: ${49:# Client identifier for PagerDuty}
+    pagerduty_client_url: ${50:# Client URL for PagerDuty}
+    pagerduty_component: ${51:# Component involved in the PagerDuty alert}
+    pagerduty_details: ${52:# List of additional details for PagerDuty}
+    pagerduty_group: ${53:# Group associated with the PagerDuty alert}
+    pagerduty_integration_key: ${54:# Integration key for PagerDuty}
+    pagerduty_severity: ${55:# Severity level of the PagerDuty alert}
+    pagerduty_source: ${56:# Source of the PagerDuty alert}
+    pagerduty_summary: ${57:# Summary of the PagerDuty alert}
+    provisioning: ${58:# Indicates if provisioning is enabled}
+    pushover_api_token: ${59:# API token for Pushover}
+    pushover_devices: ${60:# List of devices for Pushover notifications}
+    pushover_expire: ${61:# Expiration time for Pushover notifications}
+    pushover_message: ${62:# Message to send via Pushover}
+    pushover_ok_priority: ${63:# Priority for OK messages in Pushover}
+    pushover_ok_sound: ${64:# Sound for OK messages in Pushover}
+    pushover_priority: ${65:# Priority for Pushover messages}
+    pushover_retry: ${66:# Retry interval for Pushover messages}
+    pushover_sound: ${67:# Sound for Pushover notifications}
+    pushover_title: ${68:# Title of the Pushover message}
+    pushover_upload_image: ${69:# Whether to upload an image with Pushover notification}
+    pushover_user_key: ${70:# User key for Pushover}
+    sensugo_api_key: ${71:# API key for Sensu Go}
+    sensugo_check: ${72:# Check name for Sensu Go}
+    sensugo_entity: ${73:# Entity name for Sensu Go}
+    sensugo_handler: ${74:# Handler for Sensu Go}
+    sensugo_message: ${75:# Message to send via Sensu Go}
+    sensugo_namespace: ${76:# Namespace for Sensu Go}
+    sensugo_url: ${77:# URL for Sensu Go}
+    slack_endpoint_url: ${78:# Endpoint URL for Slack webhook}
+    slack_icon_emoji: ${79:# Icon emoji for Slack messages}
+    slack_icon_url: ${80:# Icon URL for Slack messages}
+    slack_mention_channel: ${81:# Channel mention for Slack messages}
+    slack_mention_groups: ${82:# List of groups to mention in Slack messages}
+    slack_mention_users: ${83:# List of users to mention in Slack messages}
+    slack_recipient: ${84:# Recipient for Slack messages}
+    slack_text: ${85:# Text content for Slack messages}
+    slack_title: ${86:# Title of the Slack message}
+    slack_token: ${87:# Token for Slack authentication}
+    slack_url: ${88:# URL for Slack webhook}
+    slack_username: ${89:# Username to use in Slack messages}
+    state: ${90:# Status of the contact point}
+    teams_message: ${91:# Message to send via Microsoft Teams}
+    teams_section_title: ${92:# Section title for Microsoft Teams messages}
+    teams_title: ${93:# Title of the Microsoft Teams message}
+    teams_url: ${94:# URL for Microsoft Teams webhook}
+    telegram_chat_id: ${95:# Chat ID for Telegram}
+    telegram_disable_notifications: ${96:# Whether to disable notifications for Telegram messages}
+    telegram_message: ${97:# Message to send via Telegram}
+    telegram_parse_mode: ${98:# Parse mode for Telegram messages}
+    telegram_protect_content: ${99:# Whether to protect content in Telegram messages}
+    telegram_token: ${100:# Token for Telegram authentication}
+    telegram_web_page_view: ${101:# Whether to enable web page preview in Telegram messages}
+    threema_api_secret: ${102:# API secret for Threema}
+    threema_description: ${103:# Description for Threema messages}
+    threema_gateway_id: ${104:# Gateway ID for Threema}
+    threema_recipient_id: ${105:# Recipient ID for Threema messages}
+    threema_title: ${106:# Title of the Threema message}
+    type: ${107:# The type of the contact point}
+    uid: ${108:# The unique ID of the contact point}
+    url: ${109:# The Grafana URL}
+    url_password: ${110:# The Grafana password for API authentication}
+    url_username: ${111:# The Grafana user for API authentication}
+    use_proxy: ${112:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${113:# If C(false), SSL certificates will not be validated}
+    victorops_description: ${114:# Description for VictorOps messages}
+    victorops_message_type: ${115:# Message type for VictorOps}
+    victorops_title: ${116:# Title of the VictorOps message}
+    victorops_url: ${117:# URL for VictorOps webhook}
+    webex_api_url: ${118:# API URL for Webex}
+    webex_message: ${119:# Message to send via Webex}
+    webex_room_id: ${120:# Room ID for Webex messages}
+    webex_token: ${121:# Token for Webex authentication}
+    webhook_authorization_credentials: ${122:# Authorization credentials for webhook}
+    webhook_authorization_scheme: ${123:# Authorization scheme for webhook}
+    webhook_http_method: ${124:# HTTP method for webhook}
+    webhook_max_alerts: ${125:# Maximum number of alerts for webhook}
+    webhook_message: ${126:# Message to send via webhook}
+    webhook_password: ${127:# Password for webhook authentication}
+    webhook_title: ${128:# Title of the webhook message}
+    webhook_url: ${129:# URL for webhook}
+    webhook_username: ${130:# Username for webhook authentication}
+    wecom_agent_id: ${131:# Agent ID for WeCom}
+    wecom_corp_id: ${132:# Corporate ID for WeCom}
+    wecom_message: ${133:# Message to send via WeCom}
+    wecom_msg_type: ${134:# Message type for WeCom}
+    wecom_secret: ${135:# Secret for WeCom authentication}
+    wecom_title: ${136:# Title of the WeCom message}
+    wecom_to_user: ${137:# List of users to send the WeCom message to}
+    wecom_url: ${138:# URL for WeCom webhook}
+  tags:
+    - community
+    - grafana
+    - grafana_contact_point]]></content>
+  <tabTrigger>community.grafana.grafana_contact_point</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Grafana Contact Points</description>
+</snippet>

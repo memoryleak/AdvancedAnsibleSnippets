@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage ILM policy tags on StorageGRID}
+  netapp.storagegrid.na_sg_grid_ilm_policy_tag:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    description: ${4:# The description of this policy tag}
+    name: ${5:# The unique name of this tag}
+    policy_id: ${6:# The ID of the ILM policy that will use this tag}
+    state: ${7:# Whether the specified ILM policy tag should be created or deleted}
+    validate_certs: ${8:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_ilm_policy_tag]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_ilm_policy_tag</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage ILM policy tags on StorageGRID</description>
+</snippet>

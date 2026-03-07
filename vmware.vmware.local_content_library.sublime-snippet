@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage a local content library}
+  vmware.vmware.local_content_library:
+    authentication_current_password: ${2:# The current password for the library when the library is using BASIC authentication}
+    authentication_method: ${3:# The method of authentication to use if this is published local library}
+    authentication_password: ${4:# The password to use when O(authentication_method) is V(BASIC)}
+    datastore: ${5:# The name of the datastore that should be a storage backing for the library}
+    description: ${6:# The description for the content library}
+    hostname: ${7:# The hostname or IP address of the vSphere vCenter server}
+    name: ${8:# The name of the local content library to manage}
+    password: ${9:# The password of the vSphere vCenter server}
+    persist_json_enabled: ${10:# If true, a JSON file describing the library metadata will be kept in the library}
+    port: ${11:# The port number of the vSphere vCenter server}
+    proxy_host: ${12:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${13:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    proxy_protocol: ${14:# The proxy connection protocol to use}
+    publish: ${15:# If true, this library will be published so other libraries can subscribe to it}
+    state: ${16:# Whether the content library should be present or absent}
+    username: ${17:# The username of the vSphere vCenter server}
+    validate_certs: ${18:# Allows connection when SSL certificates are not valid}
+  tags:
+    - vmware
+    - vmware
+    - local_content_library]]></content>
+  <tabTrigger>vmware.vmware.local_content_library</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage a local content library</description>
+</snippet>

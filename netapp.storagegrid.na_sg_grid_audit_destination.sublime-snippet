@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Configure audit log destinations on StorageGRID}
+  netapp.storagegrid.na_sg_grid_audit_destination:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    defaults: ${4:# The defaults will be used to configure audit destinations on all nodes which are not in the nodes array}
+    nodes: ${5:# Optional per-node configuration stanzas in the nodes array override the default configuration}
+    state: ${6:# The audit destination should be present}
+    validate_certs: ${7:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_audit_destination]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_audit_destination</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Configure audit log destinations on StorageGRID</description>
+</snippet>

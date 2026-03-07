@@ -2,33 +2,35 @@
   <content><![CDATA[- name: ${1:Create/update or delete AWS CloudWatch 'metric alarms'}
   amazon.aws.cloudwatch_metric_alarm:
     access_key: ${2:# AWS access key ID}
-    alarm_actions: ${3:# A list of the names action(s) taken when the alarm is in the C(alarm) status, denoted as Amazon Resource Name(s)}
+    alarm_actions: ${3:# A list of the names action(s) taken when the alarm is in the V(alarm) status, denoted as Amazon Resource Name(s)}
     aws_ca_bundle: ${4:# The location of a CA Bundle to use when validating SSL certificates}
     aws_config: ${5:# A dictionary to modify the botocore configuration}
     comparison: ${6:# Determines how the threshold value is compared}
-    debug_botocore_endpoint_logs: ${7:# Use a C(botocore}
-    description: ${8:# A longer description of the alarm}
-    dimensions: ${9:# A dictionary describing which metric the alarm is applied to}
-    endpoint_url: ${10:# URL to connect to instead of the default AWS endpoints}
-    evaluation_periods: ${11:# The number of times in which the metric is evaluated before final calculation}
-    extended_statistic: ${12:# The percentile statistic for the metric specified in the metric name}
-    insufficient_data_actions: ${13:# A list of the names of action(s) to take when the alarm is in the C(insufficient_data) status}
-    metric_name: ${14:# Name of the monitored metric (e}
-    metrics: ${15:# An array of MetricDataQuery structures that enable you to create an alarm based on the result of a metric math expression}
-    name: ${16:# Unique name for the alarm}
-    namespace: ${17:# Name of the appropriate namespace (C(AWS/EC2), C(System/Linux), etc}
-    ok_actions: ${18:# A list of the names of action(s) to take when the alarm is in the C(ok) status, denoted as Amazon Resource Name(s)}
-    period: ${19:# The time (in seconds) between metric evaluations}
-    profile: ${20:# A named AWS profile to use for authentication}
-    region: ${21:# The AWS region to use}
-    secret_key: ${22:# AWS secret access key}
-    session_token: ${23:# AWS STS session token for use with temporary credentials}
-    state: ${24:# Register or deregister the alarm}
-    statistic: ${25:# Operation applied to the metric}
-    threshold: ${26:# Sets the min/max bound for triggering the alarm}
-    treat_missing_data: ${27:# Sets how the alarm handles missing data points}
-    unit: ${28:# The threshold's unit of measurement}
-    validate_certs: ${29:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
+    datapoints_to_alarm: ${7:# The number of data points that must be breaching to trigger the alarm}
+    debug_botocore_endpoint_logs: ${8:# Use a C(botocore}
+    description: ${9:# A longer description of the alarm}
+    dimensions: ${10:# A dictionary describing which metric the alarm is applied to}
+    endpoint_url: ${11:# URL to connect to instead of the default AWS endpoints}
+    evaluate_low_sample_count_percentile: ${12:# Used only for alarms based on percentiles}
+    evaluation_periods: ${13:# The number of times in which the metric is evaluated before final calculation}
+    extended_statistic: ${14:# The percentile statistic for the metric specified in the metric name}
+    insufficient_data_actions: ${15:# A list of the names of action(s) to take when the alarm is in the V(insufficient_data) status}
+    metric_name: ${16:# Name of the monitored metric (e}
+    metrics: ${17:# An array of MetricDataQuery structures that enable you to create an alarm based on the result of a metric math expression}
+    name: ${18:# Unique name for the alarm}
+    namespace: ${19:# Name of the appropriate namespace (V(AWS/EC2), V(System/Linux), etc}
+    ok_actions: ${20:# A list of the names of action(s) to take when the alarm is in the V(ok) status, denoted as Amazon Resource Name(s)}
+    period: ${21:# The time (in seconds) between metric evaluations}
+    profile: ${22:# A named AWS profile to use for authentication}
+    region: ${23:# The AWS region to use}
+    secret_key: ${24:# AWS secret access key}
+    session_token: ${25:# AWS STS session token for use with temporary credentials}
+    state: ${26:# Register or deregister the alarm}
+    statistic: ${27:# Operation applied to the metric}
+    threshold: ${28:# Sets the min/max bound for triggering the alarm}
+    treat_missing_data: ${29:# Sets how the alarm handles missing data points}
+    unit: ${30:# The threshold's unit of measurement}
+    validate_certs: ${31:# When set to C(false), SSL certificates will not be validated for communication with the AWS APIs}
   tags:
     - amazon
     - aws

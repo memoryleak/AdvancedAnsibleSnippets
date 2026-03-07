@@ -19,10 +19,10 @@
     private_key: ${17:# Either a PEM-formatted private key file or the private key content used for signature-based authentication}
     run_mode: ${18:# Whether the system pauses on error or just continues through it}
     scheduler: ${19:# The name of scheduler that is applied to the policy}
-    smu_operation: ${20:# Specifies SMU operation}
-    smu_operation_flags: ${21:# Specifies SMU operation flags}
-    sr_upgrade: ${22:# The SR firware upgrade}
-    sr_version: ${23:# The SR version of the compatibility catalog}
+    smu_operation: ${20:# Specifies that the upgrade is a Software Maintenance Upgrade (SMU) patch operation}
+    smu_operation_flags: ${21:# Specifies the Software Maintenance Upgrade (SMU) patch operation flags}
+    sr_upgrade: ${22:# Specifies that the upgrade is a Silent Roll (SR) package upgrade}
+    sr_version: ${23:# The target firmware version of the Silent Roll (SR) package upgrade to install}
     state: ${24:# Use C(present) or C(absent) for adding or removing}
     suppress_previous: ${25:# If C(true), a GET to check previous will not be sent before a POST update to APIC}
     suppress_verification: ${26:# If C(true), a verifying GET will not be sent after a POST update to APIC}
@@ -31,7 +31,7 @@
     use_ssl: ${29:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
     username: ${30:# The username to use for authentication}
     validate_certs: ${31:# If C(false), SSL certificates will not be validated}
-    version: ${32:# The version of the compatibility catalog}
+    version: ${32:# The target firmware version to install}
     version_check_override: ${33:# The version check override}
   tags:
     - cisco

@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage virtual networks in Proxmox SDN}
+  community.proxmox.proxmox_vnet:
+    alias: ${2:# An optional alias for the virtual network}
+    api_host: ${3:# Specify the target host of the Proxmox VE cluster}
+    api_password: ${4:# Specify the password to authenticate with}
+    api_port: ${5:# Specify the target port of the Proxmox VE cluster}
+    api_token_id: ${6:# Specify the token ID}
+    api_token_secret: ${7:# Specify the token secret}
+    api_user: ${8:# Specify the user to authenticate with}
+    delete: ${9:# A list of settings you want to delete}
+    isolate_ports: ${10:# Enable isolation of ports within the virtual network}
+    lock_token: ${11:# The token for unlocking the global SDN configuration}
+    state: ${12:# Desired state of the virtual network}
+    tag: ${13:# Tag for the virtual network}
+    update: ${14:# If O(state=present) then it will update the vnet if needed}
+    validate_certs: ${15:# If V(false), SSL certificates will not be validated}
+    vlanaware: ${16:# Enable VLAN awareness for the virtual network}
+    vnet: ${17:# The name of the virtual network to be managed}
+    zone: ${18:# zone for the virtual network}
+  tags:
+    - community
+    - proxmox
+    - proxmox_vnet]]></content>
+  <tabTrigger>community.proxmox.proxmox_vnet</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage virtual networks in Proxmox SDN</description>
+</snippet>

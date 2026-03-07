@@ -1,14 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Create a template in a local VCenter folder from an existing VM}
   vmware.vmware.folder_template_from_vm:
-    cluster: ${2:# The cluster to use when connecting to a vCenter}
-    datacenter: ${3:# The name of datacenter in which to operate}
-    datastore: ${4:# The name of datastore to use as storage for the template}
+    datacenter: ${2:# The name of datacenter in which to operate}
+    datastore: ${3:# The name of datastore to use as storage for the template}
+    folder_paths_are_absolute: ${4:# If true, any folder path parameters are treated as absolute paths}
     hostname: ${5:# The hostname or IP address of the vSphere vCenter server}
     password: ${6:# The password of the vSphere vCenter server}
     port: ${7:# The port number of the vSphere vCenter server}
-    proxy_host: ${8:# Address of a proxy that will receive all HTTPS requests and relay them}
-    proxy_port: ${9:# Port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    proxy_host: ${8:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${9:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
     resource_pool: ${10:# The resource pool to place the template in}
     state: ${11:# If the template should be present or absent}
     template_folder: ${12:# The name of the folder that the new template should be placed in}

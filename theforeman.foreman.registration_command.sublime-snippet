@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Registration Command}
+  theforeman.foreman.registration_command:
+    activation_keys: ${2:# Activation keys for subscription-manager client, required for CentOS and Red Hat Enterprise Linux}
+    ca_path: ${3:# PEM formatted file that contains a CA certificate to be used for validation}
+    force: ${4:# Clear any previous registration and run C(subscription-manager) with C(--force)}
+    hostgroup: ${5:# Host group to register the host in}
+    ignore_subman_errors: ${6:# Ignore C(subscription-manager) errors for C(subscription-manager register) command}
+    insecure: ${7:# Enable insecure argument for the initial C(curl)}
+    jwt_expiration: ${8:# Expiration of the authorization token (in hours)}
+    lifecycle_environment: ${9:# Lifecycle environment for the host}
+    location: ${10:# Location to register the host in}
+    operatingsystem: ${11:# Operating System to register the host in}
+    organization: ${12:# Organization to register the host in}
+    packages: ${13:# Packages to install on the host when registered}
+    password: ${14:# Password of the user accessing the Foreman server}
+    remote_execution_interface: ${15:# Identifier of the Host interface for Remote execution}
+    repo: ${16:# Repository URL (yum/dnf) or full sources}
+    repo_data: ${17:# Array with repository URL and corresponding GPG key URL}
+    repo_gpg_key_url: ${18:# URL of the GPG key for the repository}
+    server_url: ${19:# URL of the Foreman server}
+    setup_insights: ${20:# If this is set to C(true), C(insights-client) will be installed and registered on Red Hat family operating systems}
+    setup_remote_execution: ${21:# If this is set to true, SSH keys will be installed on the host}
+    setup_remote_execution_pull: ${22:# If this is set to true, pull provider client will be deployed on the host}
+    smart_proxy: ${23:# Name of Smart Proxy}
+    update_packages: ${24:# Update all packages on the host}
+    use_gssapi: ${25:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${26:# Username accessing the Foreman server}
+    validate_certs: ${27:# Whether or not to verify the TLS certificates of the Foreman server}
+  tags:
+    - theforeman
+    - foreman
+    - registration_command]]></content>
+  <tabTrigger>theforeman.foreman.registration_command</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Registration Command</description>
+</snippet>

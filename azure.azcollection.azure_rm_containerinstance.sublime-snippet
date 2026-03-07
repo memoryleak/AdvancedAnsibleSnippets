@@ -1,40 +1,43 @@
 <snippet>
   <content><![CDATA[- name: ${1:Manage an Azure Container Instance}
   azure.azcollection.azure_rm_containerinstance:
-    ad_user: ${2:# Active Directory username}
-    adfs_authority_url: ${3:# Azure AD authority url}
-    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
-    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
-    auth_source: ${6:# Controls the source of the credentials to use for authentication}
-    cert_validation_mode: ${7:# Controls the certificate validation behavior for Azure endpoints}
-    client_id: ${8:# Azure client ID}
-    cloud_environment: ${9:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
-    containers: ${10:# List of containers}
-    dns_name_label: ${11:# The Dns name label for the IP}
-    force_update: ${12:# Force update of existing container instance}
-    ip_address: ${13:# The IP address type of the container group}
-    location: ${14:# Valid azure location}
-    log_mode: ${15:# Parent argument}
-    log_path: ${16:# Parent argument}
-    name: ${17:# The name of the container group}
-    os_type: ${18:# The OS type of containers}
-    password: ${19:# Active Directory user password}
-    ports: ${20:# List of ports exposed within the container group}
-    profile: ${21:# Security profile found in ~/}
-    registry_login_server: ${22:# The container image registry login server}
-    registry_password: ${23:# The password to log in container image registry server}
-    registry_username: ${24:# The username to log in container image registry server}
-    resource_group: ${25:# Name of resource group}
-    restart_policy: ${26:# Restart policy for all containers within the container group}
-    secret: ${27:# Azure client secret}
-    state: ${28:# Assert the state of the container instance}
-    subnet_ids: ${29:# The subnet resource IDs for a container group}
-    subscription_id: ${30:# Your Azure subscription Id}
-    tags: ${31:# Dictionary of string:string pairs to assign as metadata to the object}
-    tenant: ${32:# Azure tenant ID}
-    thumbprint: ${33:# The thumbprint of the private key specified in I(x509_certificate_path)}
-    volumes: ${34:# List of Volumes that can be mounted by containers in this container group}
-    x509_certificate_path: ${35:# Path to the X509 certificate used to create the service principal in PEM format}
+    acr_identity: ${2:# The Identity to use for access to the registry server}
+    ad_user: ${3:# Active Directory username}
+    adfs_authority_url: ${4:# Azure AD authority url}
+    api_profile: ${5:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${6:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${7:# Controls the source of the credentials to use for authentication}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    containers: ${11:# List of containers}
+    disable_instance_discovery: ${12:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    dns_name_label: ${13:# The Dns name label for the IP}
+    force_update: ${14:# Force update of existing container instance}
+    identity: ${15:# Identity for the Server}
+    ip_address: ${16:# The IP address type of the container group}
+    location: ${17:# Valid azure location}
+    log_mode: ${18:# Parent argument}
+    log_path: ${19:# Parent argument}
+    name: ${20:# The name of the container group}
+    os_type: ${21:# The OS type of containers}
+    password: ${22:# Active Directory user password}
+    ports: ${23:# List of ports exposed within the container group}
+    profile: ${24:# Security profile found in ~/}
+    registry_login_server: ${25:# The container image registry login server}
+    registry_password: ${26:# The password to log in container image registry server}
+    registry_username: ${27:# The username to log in container image registry server}
+    resource_group: ${28:# Name of resource group}
+    restart_policy: ${29:# Restart policy for all containers within the container group}
+    secret: ${30:# Azure client secret}
+    state: ${31:# Assert the state of the container instance}
+    subnet_ids: ${32:# The subnet resource IDs for a container group}
+    subscription_id: ${33:# Your Azure subscription Id}
+    tags: ${34:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${35:# Azure tenant ID}
+    thumbprint: ${36:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    volumes: ${37:# List of Volumes that can be mounted by containers in this container group}
+    x509_certificate_path: ${38:# Path to the X509 certificate used to create the service principal in PEM format}
   tags:
     - azure
     - azcollection

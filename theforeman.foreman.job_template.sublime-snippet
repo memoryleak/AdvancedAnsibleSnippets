@@ -2,22 +2,24 @@
   <content><![CDATA[- name: ${1:Manage Job Templates}
   theforeman.foreman.job_template:
     audit_comment: ${2:# Content of the audit comment field}
-    description_format: ${3:# description of the job template}
-    file_name: ${4:# The path of a template file, that shall be imported}
-    job_category: ${5:# The category the template should be assigend to}
-    locations: ${6:# List of locations the entity should be assigned to}
-    locked: ${7:# Determines whether the template shall be locked}
-    name: ${8:# The name of the Job Template}
-    organizations: ${9:# List of organizations the entity should be assigned to}
-    password: ${10:# Password of the user accessing the Foreman server}
-    provider_type: ${11:# Determines via which provider the template shall be executed}
-    server_url: ${12:# URL of the Foreman server}
-    snippet: ${13:# Determines whether the template shall be a snippet}
-    state: ${14:# State of the entity}
-    template: ${15:# The content of the Job Template}
-    template_inputs: ${16:# The template inputs used in the Job Template}
-    username: ${17:# Username accessing the Foreman server}
-    validate_certs: ${18:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${3:# PEM formatted file that contains a CA certificate to be used for validation}
+    description_format: ${4:# description of the job template}
+    file_name: ${5:# The path of a template file, that shall be imported}
+    job_category: ${6:# The category the template should be assigend to}
+    locations: ${7:# List of locations the entity should be assigned to}
+    locked: ${8:# Determines whether the template shall be locked}
+    name: ${9:# The name of the Job Template}
+    organizations: ${10:# List of organizations the entity should be assigned to}
+    password: ${11:# Password of the user accessing the Foreman server}
+    provider_type: ${12:# Determines via which provider the template shall be executed}
+    server_url: ${13:# URL of the Foreman server}
+    snippet: ${14:# Determines whether the template shall be a snippet}
+    state: ${15:# State of the entity}
+    template: ${16:# The content of the Job Template}
+    template_inputs: ${17:# The template inputs used in the Job Template}
+    use_gssapi: ${18:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${19:# Username accessing the Foreman server}
+    validate_certs: ${20:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

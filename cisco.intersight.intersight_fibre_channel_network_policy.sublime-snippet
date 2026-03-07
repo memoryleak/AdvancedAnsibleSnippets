@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage Fibre Channel Network Policies for Cisco Intersight}
+  cisco.intersight.intersight_fibre_channel_network_policy:
+    api_key_id: ${2:# Public API Key ID associated with the private key}
+    api_private_key: ${3:# Filename (absolute path) or string of PEM formatted private key data to be used for Intersight API authentication}
+    api_uri: ${4:# URI used to access the Intersight API}
+    default_vlan: ${5:# The default VLAN ID for the Fibre Channel network}
+    description: ${6:# The user-defined description for the Fibre Channel Network Policy}
+    name: ${7:# The name assigned to the Fibre Channel Network Policy}
+    organization: ${8:# The name of the Organization this resource is assigned to}
+    state: ${9:# If C(present), will verify the resource is present and will create if needed}
+    tags: ${10:# List of tags in Key:<user-defined key> Value:<user-defined value> format}
+    use_proxy: ${11:# If C(no), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    validate_certs: ${12:# Boolean control for verifying the api_uri TLS certificate}
+    vsan_id: ${13:# The VSAN (Virtual Storage Area Network) ID for the Fibre Channel network}
+  tags:
+    - cisco
+    - intersight
+    - intersight_fibre_channel_network_policy]]></content>
+  <tabTrigger>cisco.intersight.intersight_fibre_channel_network_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage Fibre Channel Network Policies for Cisco Intersight</description>
+</snippet>

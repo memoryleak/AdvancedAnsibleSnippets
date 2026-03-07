@@ -1,5 +1,5 @@
 <snippet>
-  <content><![CDATA[- name: ${1:Allows administration of Keycloak user federations via Keycloak API}
+  <content><![CDATA[- name: ${1:Allows administration of Keycloak user federations using Keycloak API}
   community.general.keycloak_user_federation:
     auth_client_id: ${2:# OpenID Connect C(client_id) to authenticate to the API with}
     auth_client_secret: ${3:# Client Secret to use in conjunction with O(auth_client_id) (if required)}
@@ -18,15 +18,16 @@
     provider_id: ${16:# Provider for this user federation}
     provider_type: ${17:# Component type for user federation (only supported value is V(org}
     realm: ${18:# The Keycloak realm under which this user federation resides}
-    remove_unspecified_mappers: ${19:# Remove mappers that are not specified in the configuration for this federation}
-    state: ${20:# State of the user federation}
-    token: ${21:# Authentication token for Keycloak API}
-    validate_certs: ${22:# Verify TLS certificates (do not disable this in production)}
+    refresh_token: ${19:# Authentication refresh token for Keycloak API}
+    remove_unspecified_mappers: ${20:# Remove mappers that are not specified in the configuration for this federation}
+    state: ${21:# State of the user federation}
+    token: ${22:# Authentication token for Keycloak API}
+    validate_certs: ${23:# Verify TLS certificates (do not disable this in production)}
   tags:
     - community
     - general
     - keycloak_user_federation]]></content>
   <tabTrigger>community.general.keycloak_user_federation</tabTrigger>
   <scope>source.yaml,source.ansible</scope>
-  <description>Allows administration of Keycloak user federations via Keycloak API</description>
+  <description>Allows administration of Keycloak user federations using Keycloak API</description>
 </snippet>

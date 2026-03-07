@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[- name: ${1:NetApp StorageGRID manage proxy settings for the grid}
+  netapp.storagegrid.na_sg_grid_proxy_settings:
+    api_url: ${2:# The url to the StorageGRID Admin Node REST API}
+    auth_token: ${3:# The authorization token for the API request}
+    ca_bundle: ${4:# CA certificate bundle in concatenated PEM-encoding for TLS enabled connection; null when TLS is disabled}
+    enable: ${5:# Enable use of the Admin Node proxy}
+    host_name: ${6:# The IP address or hostname of the Admin Node proxy}
+    host_port: ${7:# Port for the Admin Node proxy}
+    password: ${8:# Password for the Admin Node proxy}
+    proxy: ${9:# The address of the Storage Node proxy to use for external requests}
+    state: ${10:# Proxy settings should be present}
+    username: ${11:# Username for the Admin Node proxy}
+    validate_certs: ${12:# Should https certificates be validated?}
+  tags:
+    - netapp
+    - storagegrid
+    - na_sg_grid_proxy_settings]]></content>
+  <tabTrigger>netapp.storagegrid.na_sg_grid_proxy_settings</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>NetApp StorageGRID manage proxy settings for the grid</description>
+</snippet>

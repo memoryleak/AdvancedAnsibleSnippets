@@ -1,0 +1,57 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, update, or delete a virtual machine}
+  vmware.vmware.vm:
+    allow_power_cycling: ${2:# Whether to allow the VM to be powered off and on when required by the changes detected by the module}
+    cdroms: ${3:# CD-ROMs to manage on the VM}
+    cdroms_remove_unmanaged: ${4:# Whether to remove CD-ROMs that are not specified in the O(cdroms) parameter}
+    cluster: ${5:# The cluster in which to place the VM}
+    cpu: ${6:# Options related to CPU resource allocation}
+    datacenter: ${7:# The datacenter in which to place the VM}
+    datastore: ${8:# The datastore on which to place the VM}
+    datastore_cluster: ${9:# The datastore cluster on which to place the VM}
+    delete_from_inventory: ${10:# Whether to delete the VM from the datastore when removing it, or just remove the VM from the vSphere inventory}
+    disks: ${11:# Disks to manage on the VM}
+    disks_detach_only: ${12:# Whether to detach disks that are to be removed, or delete them entirely}
+    disks_remove_unmanaged: ${13:# Whether to remove disks that are not specified in the O(disks) parameter}
+    esxi_host: ${14:# The ESXi host on which to place the VM}
+    folder: ${15:# Destination folder, absolute or relative path to find an existing guest}
+    folder_paths_are_absolute: ${16:# If true, any folder path parameters are treated as absolute paths}
+    guest_id: ${17:# The guest ID of the VM}
+    hardware_version: ${18:# Specify the hardware version for the new VM}
+    hostname: ${19:# The hostname or IP address of the vSphere vCenter server}
+    memory: ${20:# Options related to memory resource allocation}
+    moid: ${21:# Managed Object ID of the instance to manage if known, this is a unique identifier only within a single vCenter instance}
+    name: ${22:# Name of the virtual machine to manage}
+    name_match: ${23:# If multiple virtual machines matching the name, use the first or last found}
+    network_adapters: ${24:# A list of network adapters to manage on the VM}
+    network_adapters_remove_unmanaged: ${25:# Whether to remove network adapters that are not specified in the O(network_adapters) parameter}
+    nvdimms: ${26:# A list of non-volatile DIMMs to manage on the VM}
+    nvdimms_remove_unmanaged: ${27:# Whether to remove NVDIMMs that are not specified in the O(nvdimms) parameter}
+    nvme_controllers: ${28:# NVMe device controllers to manage on the VM}
+    nvme_controllers_remove_unmanaged: ${29:# Whether to remove NVMe controllers that are not specified in the O(nvme_controllers) parameter}
+    password: ${30:# The password of the vSphere vCenter server}
+    port: ${31:# The port number of the vSphere vCenter server}
+    proxy_host: ${32:# The address of a proxy that will receive all HTTPS requests and relay them}
+    proxy_port: ${33:# The port of the HTTP proxy that will receive all HTTPS requests and relay them}
+    resource_pool: ${34:# The resource pool in which to place the VM}
+    sata_controllers: ${35:# SATA controllers to manage on the VM}
+    sata_controllers_remove_unmanaged: ${36:# Whether to remove SATA controllers that are not specified in the O(sata_controllers) parameter}
+    scsi_controllers: ${37:# SCSI device controllers to manage on the VM}
+    scsi_controllers_remove_unmanaged: ${38:# Whether to remove SCSI controllers that are not specified in the O(scsi_controllers) parameter}
+    state: ${39:# Whether to ensure the VM is present or absent}
+    timeout: ${40:# The timeout in seconds for the module to wait for the VM to be created or updated}
+    usb_controllers: ${41:# USB device controllers to manage on the VM}
+    usb_controllers_remove_unmanaged: ${42:# Whether to remove USB controllers that are not specified in the O(usb_controllers) parameter}
+    use_instance_uuid: ${43:# Whether to use the VMware instance UUID rather than the BIOS UUID}
+    username: ${44:# The username of the vSphere vCenter server}
+    uuid: ${45:# UUID of the instance to manage if known, this is VMware's unique identifier}
+    validate_certs: ${46:# Allows connection when SSL certificates are not valid}
+    vm_options: ${47:# Advanced and miscellaneous options for the VM, including things like BIOS settings, remote console settings, and encryption settings}
+  tags:
+    - vmware
+    - vmware
+    - vm]]></content>
+  <tabTrigger>vmware.vmware.vm</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, update, or delete a virtual machine</description>
+</snippet>

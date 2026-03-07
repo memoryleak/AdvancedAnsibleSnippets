@@ -1,0 +1,40 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Create, delete and update a dedicated host}
+  azure.azcollection.azure_rm_dedicatedhost:
+    ad_user: ${2:# Active Directory username}
+    adfs_authority_url: ${3:# Azure AD authority url}
+    api_profile: ${4:# Selects an API profile to use when communicating with Azure services}
+    append_tags: ${5:# Use to control if tags field is canonical or just appends to existing tags}
+    auth_source: ${6:# Controls the source of the credentials to use for authentication}
+    auto_replace_on_failure: ${7:# Specifies whether the dedicated host should be replaced automatically in case of a failure}
+    cert_validation_mode: ${8:# Controls the certificate validation behavior for Azure endpoints}
+    client_id: ${9:# Azure client ID}
+    cloud_environment: ${10:# For cloud environments other than the US public cloud, the environment name (as defined by Azure Python SDK, eg, C(AzureChinaCloud), C(AzureUSGovernment)), or a metadata discovery endpoint URL (required for Azure Stack)}
+    disable_instance_discovery: ${11:# Determines whether or not instance discovery is performed when attempting to authenticate}
+    host_group_name: ${12:# The name of the host group}
+    is_restart: ${13:# Wether to restart the dedicated host}
+    license_type: ${14:# Specifies the software license type that will be applied to the VMs deployed on the dedicated host}
+    location: ${15:# Valid Azure location for dedicated host}
+    log_mode: ${16:# Parent argument}
+    log_path: ${17:# Parent argument}
+    name: ${18:# The name of the dedicated host}
+    password: ${19:# Active Directory user password}
+    platform_fault_domain: ${20:# Fault domain of the dedicated host within a dedicated host group}
+    profile: ${21:# Security profile found in ~/}
+    resource_group: ${22:# Name of resource group}
+    secret: ${23:# Azure client secret}
+    sku: ${24:# SKU of the dedicated host for Hardware Generation and VM family}
+    state: ${25:# Assert the state of the host group}
+    subscription_id: ${26:# Your Azure subscription Id}
+    tags: ${27:# Dictionary of string:string pairs to assign as metadata to the object}
+    tenant: ${28:# Azure tenant ID}
+    thumbprint: ${29:# The thumbprint of the private key specified in I(x509_certificate_path)}
+    x509_certificate_path: ${30:# Path to the X509 certificate used to create the service principal in PEM format}
+  tags:
+    - azure
+    - azcollection
+    - azure_rm_dedicatedhost]]></content>
+  <tabTrigger>azure.azcollection.azure_rm_dedicatedhost</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Create, delete and update a dedicated host</description>
+</snippet>

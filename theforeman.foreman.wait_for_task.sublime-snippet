@@ -1,12 +1,14 @@
 <snippet>
   <content><![CDATA[- name: ${1:Wait for a task}
   theforeman.foreman.wait_for_task:
-    password: ${2:# Password of the user accessing the Foreman server}
-    server_url: ${3:# URL of the Foreman server}
-    task: ${4:# Task id to wait for}
-    timeout: ${5:# How much time the task should take to be finished}
-    username: ${6:# Username accessing the Foreman server}
-    validate_certs: ${7:# Whether or not to verify the TLS certificates of the Foreman server}
+    ca_path: ${2:# PEM formatted file that contains a CA certificate to be used for validation}
+    password: ${3:# Password of the user accessing the Foreman server}
+    server_url: ${4:# URL of the Foreman server}
+    task: ${5:# Task id to wait for}
+    timeout: ${6:# How much time the task should take to be finished}
+    use_gssapi: ${7:# Use GSSAPI to perform the authentication, typically this is for Kerberos or Kerberos through Negotiate authentication}
+    username: ${8:# Username accessing the Foreman server}
+    validate_certs: ${9:# Whether or not to verify the TLS certificates of the Foreman server}
   tags:
     - theforeman
     - foreman

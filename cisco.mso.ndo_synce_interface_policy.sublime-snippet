@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[- name: ${1:Manage syncE Interface Policies on Cisco Nexus Dashboard Orchestrator (NDO)}
+  cisco.mso.ndo_synce_interface_policy:
+    admin_state: ${2:# The administrative state of the syncE Interface Policy}
+    description: ${3:# The description of the syncE Interface Policy}
+    host: ${4:# IP Address or hostname of the ACI Multi Site Orchestrator host}
+    interface_policy: ${5:# The name of the syncE Interface Policy}
+    interface_policy_uuid: ${6:# The uuid of the syncE Interface Policy}
+    login_domain: ${7:# The login domain name to use for authentication}
+    output_level: ${8:# Influence the output of this MSO module}
+    password: ${9:# The password to use for authentication}
+    port: ${10:# Port number to be used for the REST connection}
+    selection_input: ${11:# The selection input of the syncE Interface Policy}
+    src_priority: ${12:# The source priority of the syncE Interface Policy}
+    state: ${13:# Use C(absent) for removing}
+    sync_state_msg: ${14:# The sync state message of the syncE Interface Policy}
+    template: ${15:# The name of the template}
+    timeout: ${16:# The socket level timeout in seconds}
+    use_proxy: ${17:# If C(false), it will not use a proxy, even if one is defined in an environment variable on the target hosts}
+    use_ssl: ${18:# If C(false), an HTTP connection will be used instead of the default HTTPS connection}
+    username: ${19:# The username to use for authentication}
+    validate_certs: ${20:# If C(false), SSL certificates will not be validated}
+    wait_to_restore: ${21:# The delay before attempting to restore synchronization on a SyncE interface after a disruption}
+  tags:
+    - cisco
+    - mso
+    - ndo_synce_interface_policy]]></content>
+  <tabTrigger>cisco.mso.ndo_synce_interface_policy</tabTrigger>
+  <scope>source.yaml,source.ansible</scope>
+  <description>Manage syncE Interface Policies on Cisco Nexus Dashboard Orchestrator (NDO)</description>
+</snippet>
